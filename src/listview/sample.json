@@ -1,0 +1,12 @@
+{
+    "name": "ListView",
+    "directory": "listview",
+    "category": "Layout",
+    "samples": [
+        {	"url":"default", "name": "Default Functionalities", "category":"ListView"},
+        {   "url":"remote-data", "name": "Remote Data", "category":"ListView"},
+        {   "url":"nested-list", "name": "Nested List", "category":"ListView"},
+        {   "url":"rtl", "name": "RTL", "category":"ListView"}
+    ],
+    "dataSourcePath":"src/listview/datasource.js"
+}

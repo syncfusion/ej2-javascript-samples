@@ -1,0 +1,110 @@
+<style>
+    @media screen and (max-width: 590px) {
+        #property tr:nth-child(3) {
+            display: none;
+        }
+    }
+</style>
+
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Grid"></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 50%">
+                <div>Allow Paging</div>
+            </td>
+            <td style="width: 50%;padding-right: 10px">
+                <div>
+                    <input type="checkbox" id="allowCheck" class="checkbox" checked="checked" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%">
+                <div style="padding-top: 7px;">
+                    Page Size
+                </div>
+            </td>
+            <td style="width: 50%;  padding:10px 10px 10px 0px">
+                <div>
+                    <input type="number" id="pagesize" class="form-control" value="12" min="1" max="200" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%">
+                <div style="padding-top: 7px">
+                    Page Count
+                </div>
+            </td>
+            <td style="width: 50%; padding:10px 10px 10px 0px">
+                <div>
+                    <input type="number" id="counttxt" class="form-control" max="8" min="1" value="2" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%">
+                <div style="padding-top: 7px">
+                    Current Page
+                </div>
+            </td>
+            <td style="width: 50%; padding:10px 10px 10px 0px">
+                <div>
+                    <input type="number" id="pageno" class="form-control" value="1" min="1" max="17" pattern="[^-]" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates the usage of paging API in Grid. In this sample, use the properties panel to change the page size,
+        page count and current page of the Grid.
+    </p>
+</div>
+
+<div id="description">
+    <p>Paging allows you to display the contents of the Grid in page segments. 
+        The number of items on a page is determined
+        by the  <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-pageSettingsModel.html#pagesize-number">
+        pageSettings->pageSize
+        </a></code> property. 
+        If no value is specified for the  <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-pageSettingsModel.html#pagesize-number">
+        pageSettings->pageSize
+        </a></code> property, 
+        the Grid will display 12 items on a page. By default, paging is disabled. 
+        To enable paging, set <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowpaging-boolean">allowPaging
+        </a></code> property to true.</p>
+    <p>In this demo,</p>
+    <ul>
+        <li>Click the <strong>Allow Paging</strong> check box to enable/disable paging feature.</li>
+        <li>Change the value of <strong>Page Size</strong> textbox to change  <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-pageSettingsModel.html#pagesize-number">
+        pageSettings->pageSize
+        </a></code>.</li>
+        <li>Change the value of <strong>Page Count</strong> textbox to change <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-pageSettingsModel.html#pagecount-number">
+        pageSettings->pageCount
+        </a></code>.</li>
+        <li>Change the value of <strong>Current Page</strong> textbox to change 
+        <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-pageSettingsModel.html#currentpage-number">
+        pageSettings->currentPage
+        </a></code>.</li>
+    </ul>
+    <p>
+        More information on the paging configuration can be found in this
+        <a target="_blank" 
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#gotopage">
+        documentation section</a>.
+    </p>
+</div>

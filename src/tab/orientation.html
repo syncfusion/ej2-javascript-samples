@@ -1,0 +1,155 @@
+<div class="col-lg-8 control-section">
+    <div class="e-sample-resize-container">
+        <div id="tab_orientation">
+            <div class="e-tab-header">
+                <div>Rome</div>
+                <div>Paris</div>
+                <div>London</div>
+            </div>
+            <div class="e-content">
+                <div>
+                    <div class="content-title">
+                        <div class="cnt-text">Employee Info</div>
+                    </div>
+                    <div id="rome"></div>
+                </div>
+                <div>
+                    <div class="content-title">
+                        <div class="cnt-text">Employee Info</div>
+                    </div>
+                    <div id="paris"></div>
+                </div>
+                <div>
+                    <div class="content-title">
+                        <div class="cnt-text">Employee Info</div>
+                    </div>
+                    <div id="london"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tbody><tr>
+            <td style="width: 50%;">
+                <div>Header Placement</div>
+            </td>
+            <td style="width: 50%;">
+                <div>
+                    <select id="orientation" class="form-control">
+                        <option value="top">Top</option>
+                        <option value="bottom">Bottom</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+                <div>Header Styles</div>
+            </td>
+            <td style="width: 50%;">
+                <div>
+                    <select id="headerStyles" class="form-control">
+                        <option value="default">Default</option>
+                        <option value="fill">Fill</option>
+                        <option value="accent">Accent</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates the <code>header</code> orientation of the <code>Tab</code>. Select option from drop-downs to switch header placement and changing the header style in properties panel.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The <code>Tab</code> allows to place the header section inside the Tab component either at <code>top / bottom</code> position by using <code>headerPlacement</code> property.
+    </p>
+    <p>
+        This sample illustrates the use of header placement and <code>showCloseButton</code> property.
+        Users can change the header position by changing the drop-down value options and can close the Tab item by clicking close icon in header.<br/><br/>
+
+        The User can also view different header styles of Tab component by selecting options from `Header Styles` drop-down.
+        Header styles changed by adding predefined classes in Tab root element and it class names listed below
+        <br/>
+        <ul>
+            <li>Material and Fabric theme differentiates all the available tab header styles such as <code>e-fill</code>, <code>e-background e-accent</code>.</li>
+            <li>In bootstrap theme, all the styles such as <code>e-fill</code> & <code>e-background e-accent</code> will have the same look with no difference.</li>
+        </ul>
+        If above classes not included in root element default style will applied in Tab component.
+    </p>
+    <p>
+        More information about Tab can be found in this <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/getting-started.html">
+        documentation</a> section.
+    </p>
+</div>
+<style>
+    .e-content .e-item {
+        font-size: 12px;
+        padding: 10px;
+        text-align: justify;
+    }
+    .e-bigger .e-tab .e-list-item {
+        border-bottom: 1px solid gainsboro;
+    }
+    .e-tab .e-list-item {
+        height: 63px;
+        border-bottom: 1px solid gainsboro;
+    }
+    .e-bigger .e-tab .e-list-item {
+        height: 63px;
+    }
+    .e-tab .e-list-item:last-child {
+        border-bottom: 1px solid gainsboro;
+    }
+    .template-container {
+        height: 100%;
+        padding-top: 7px;
+    }
+    .left {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .empImg {
+        height: 48px;
+        width: 48px;
+    }
+    .name, .role {
+        line-height: normal;
+    }
+    .name {
+        font-weight: 500;
+    }
+    .role {
+        color: grey;
+        font-weight: 100;
+    }
+    .info {
+        padding: 7px 0 0 15px;
+    }
+    .content-title {
+        height: 50px;
+        display: table;
+        margin: 0 auto;
+    }
+    .cnt-text {
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .e-tab .e-listview .e-header {
+        height: 50px;
+    }
+    .e-tab .e-listview .e-text {
+        display: block;
+        text-align: center;
+    }
+    .property-panel-content {
+        padding: 10px;
+    }
+</style>

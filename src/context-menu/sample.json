@@ -1,0 +1,12 @@
+{
+    "name": "ContextMenu",
+    "directory": "context-menu",
+    "category": "Navigation",
+    "samples": [
+        {
+            "url": "context-menu",
+            "name": "Default Functionalities",
+            "category": "ContextMenu"
+        }
+    ]
+}

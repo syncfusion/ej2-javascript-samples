@@ -1,0 +1,15 @@
+{
+    "name": "ComboBox",
+    "directory": "combobox",
+    "category": "Editors",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "category": "ComboBox" },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "ComboBox" },
+        { "url": "databinding", "name": "Data Binding", "category": "ComboBox" },
+        { "url": "custom-value", "name": "Custom Value", "category": "ComboBox" },
+        { "url": "template", "name": "Template", "category": "ComboBox" },
+        { "url": "filtering", "name": "Filtering", "category": "ComboBox" },
+        { "url": "cascading", "name": "Cascading", "category": "ComboBox" }
+    ],
+    "dataSourcePath":"src/dropdownlist/datasource.js"
+}

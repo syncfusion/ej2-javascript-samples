@@ -1,0 +1,48 @@
+<div class="control-section">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-10">
+                    <div id="dynamic-container" style="height:400px;">
+                    </div>
+                </div>
+                <div class="col-sm-11">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="description">
+    <p>
+        Pointer values in the gauge can be updated dynamically using <code>setPointerValue</code> method. In this example
+        a speedometer is depicted with speed and fuel changes has been updated dynamically.
+    </p>
+    <p>
+        More information on the gauge can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation">documentation section</a>.
+    </p>
+</div>
+<svg style="height: 0">
+    <defs>
+        <lineargradient id="bordercolor" x1="1.8369701987210297e-16" y1="0" x2="0" y2="1">
+            <stop offset="30%" stop-color="#565656" stop-opacity="1" />
+            <stop offset="60%" stop-color="#565656" stop-opacity="1" />
+            <stop offset="90%" stop-color="#565656" stop-opacity="1" />
+            <stop offset="100%" stop-color="#565656" stop-opacity="1" />
+        </lineargradient>
+    </defs>
+</svg>
+
+</html>
+<script id="tool" type="text/x-template">
+    <div id='templateWrap'>
+        <img src="src/circulargauge/images/battery.png">
+    </div>
+</script>
+<script id="fuelContent" type="text/x-template">
+    <div id='templateWrap'>
+        <img src="src/circulargauge/images/fuel.png">
+    </div>
+</script>

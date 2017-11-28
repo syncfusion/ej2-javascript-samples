@@ -1,0 +1,7 @@
+{ "name": "Calendar", "directory": "calendar", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"Calendar"},
+    {"url":"disabled", "name": "Disabled Dates", "category":"Calendar"},
+    {"url":"range", "name": "Date Range", "category":"Calendar"},
+    {"url":"special", "name": "Special Dates", "category":"Calendar"},
+    {"url":"internationalization", "name": "Internationalization", "category":"Calendar"}
+]}

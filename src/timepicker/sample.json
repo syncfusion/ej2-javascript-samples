@@ -1,0 +1,6 @@
+{ "name": "TimePicker", "directory": "timepicker", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"TimePicker"},
+    {"url":"range", "name": "Time Range", "category":"TimePicker"},
+    {"url":"globalization", "name": "Globalization", "category":"TimePicker"},
+    {"url":"format", "name": "Time Format", "category":"TimePicker"}
+]}

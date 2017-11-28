@@ -1,0 +1,12 @@
+{
+    "name": "TextBoxes",
+    "directory": "textbox",
+    "category": "Editors",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "TextBoxes"
+        }
+    ]
+}

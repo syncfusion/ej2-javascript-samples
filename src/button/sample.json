@@ -1,0 +1,22 @@
+{
+    "name": "Button",
+    "directory": "button",
+    "category": "Editors",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Button"
+        },
+        {
+            "url": "check-box",
+            "name": "CheckBox",
+            "category": "Button"
+        },
+        {
+            "url": "radio-button",
+            "name": "RadioButton",
+            "category": "Button"
+        }
+    ]
+}

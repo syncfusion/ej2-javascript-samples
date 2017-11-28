@@ -1,0 +1,109 @@
+<div class="col-lg-12 control-section">
+    <div id="wrapper">
+        <input id="datepicker" type="text" /><br/><br/>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        In the following sample, specific dates are <code>highlighted</code> to notify the additional information of that date. Click the special date and the tooltip information about the date will be displayed when hovered.
+    </p>
+</div>
+<div id="description">
+    <p>
+        Special Dates sample demonstrates how to customize specific dates in the DatePicker by using <code>renderDayCell</code>
+        event. This event gets triggered on each day cell element creation, that allows you to customize, or disable specific
+        dates in the DatePicker. Here the Federal holidays in USA for the year of 2017 are highlighted with custom styles
+        and classes.
+    </p>
+    <p>More information on the DatePicker customization can be found in the <a href="http://ej2.syncfusion.com/documentation/datepicker/customization.html"
+            target="_blank"> documentation section</a>.</p>
+    </p>
+</div>
+<style>
+    #wrapper {
+        max-width: 246px;
+        margin: 30px auto;
+        padding-top: 50px;
+    }
+
+    span.e-icons.highlight {
+        margin-top: -13px;
+        display: block;
+        margin-left: 4px;
+    }
+
+    span.e-icons.highlight,
+    span.e-icons.highlight:before {
+        color: rgb(0, 0, 255);
+    }
+
+    span.e-icons.highlight:before {
+        content: "\e865";
+        vertical-align: middle;
+        margin-right: 3px;
+        font-size: 4px;
+        position: relative;
+        top: -1px;
+        font-weight: normal;
+    }
+
+    .e-bigger.e-calendar span.e-icons.highlight:before,
+    .e-bigger .e-calendar span.e-icons.highlight:before {
+        top: -3px;
+    }
+
+    .e-selected span.e-icons.highlight:before {
+        color: #fff;
+    }
+
+    span.e-icons.highlight,
+    .e-calendar .e-content span.special,
+    .e-calendar .e-content span.daycell {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .e-calendar .e-content span.special {
+        border-radius: 50%;
+    }
+
+    span.special.e-day.federal {
+        color: orangered;
+    }
+
+    span.special.e-day.luther {
+        color: rgba(0, 0, 255, 1);
+    }
+
+    span.special.e-day.Washington {
+        color: rgba(60, 118, 61, 1);
+    }
+
+    span.special.e-day.memorial {
+        color: rgba(138, 109, 59, 1);
+    }
+
+    span.special.e-day.independence {
+        color: rgba(64, 255, 229, 1);
+    }
+
+    span.special.e-day.labour {
+        color: rgba(169, 68, 66, 1);
+    }
+
+    span.special.e-day.columbus {
+        color: rgba(139, 0, 139, 1);
+    }
+
+    span.special.e-day.veterans {
+        color: rgba(152, 251, 152, 1);
+    }
+
+    span.special.e-day.thanksgiving {
+        color: rgba(100, 149, 237, 1);
+    }
+
+    span.special.e-day.christmas {
+        color: rgba(255, 69, 0, 1);
+    }
+</style>

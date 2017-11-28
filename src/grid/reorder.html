@@ -1,0 +1,57 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Grid"></div>
+    </div>
+</div>
+<div id="action-description">
+        <p>This sample demonstrates reordering of the Grid columns. Select column name and index from properties panel to reorder the columns.
+            You can also reorder by simply drag and drop in the desired columns position.
+        </p>
+    </div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr style="height: 50px">
+            <td style="width: 30%">
+                <div style="padding-top: 10px">Column</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div>
+                    <select id="columns" class="form-control" style="padding: 6px">
+                        <option value="EmployeeID">Employee ID</option>
+                        <option value="FirstName">Name</option>
+                        <option value="Title">Title</option>
+                        <option value="HireDate">Hire Date</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr style="height: 50px">
+            <td style="width: 30%">
+                <div>Column Index</div>
+            </td>
+            <td style="width: 70%;padding: 10px 10px 10px 0px">
+                <div>
+                    <select id="columnIndex" class="form-control">
+                        <option value="0" selected="selected">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="description">
+    <p>Reordering can be enabled by setting <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowreordering-boolean">
+        allowReordering
+        </a></code> property as true. 
+    Reordering can be done by drag and drop the column header 
+    from one index to another index within the Grid.</p>
+    <p>The location in which the column to be placed, will be indicated by two arrows symbols.</p>
+    <p>In this demo, you can either reorder columns by drag and drop or by selecting column name and 
+        column index to reorder from the dropdown.
+    </p>
+</div>

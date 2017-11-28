@@ -1,0 +1,7 @@
+{ "name": "DateRangePicker", "directory": "daterangepicker", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"DateRangePicker"},
+    {"url":"daterange", "name": "Date Range", "category":"DateRangePicker"},
+    {"url":"dayspan", "name": "Day Span", "category":"DateRangePicker"},
+    {"url":"globalization", "name": "Globalization", "category":"DateRangePicker"},
+    {"url":"presets", "name": "Preset Ranges", "category":"DateRangePicker"}
+]}

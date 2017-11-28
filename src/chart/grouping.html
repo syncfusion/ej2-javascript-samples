@@ -1,0 +1,33 @@
+<div>
+    <div class="col-lg-9 control-section">
+        <div class="content-wrapper">
+            <div id="grouping-container"></div>
+        </div>
+    </div>
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tr style="height: 50px">
+                <td style="width: 60%">
+                    <div>Group To:
+                        <p id="clubvalue" style="font-weight: normal;">10</p>
+                    </div>
+                </td>
+                <td style="width: 40%;">
+                    <div data-role="rangeslider">
+                        <input type="range" name="range-min" id="clubpoint" value="10" min="0" max="27" style="width:90%">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample illustrates the grouping functionality in pie series.  The grouping value can be changed by using <code>Group To</code> property.
+    </p>
+</div>
+<div id="description">
+    <p> In this example, you can see how to <code>group</code> points in pie chart.</p>
+    <p> Points having value below  the <code>'groupTo'</code> value are grouped and showed as separate point. You can customise the apearance of the point using <code>'poinRender'</code> event.</p>
+    <p> DataLabel is used to represent individual data and its value.</p>
+</div>

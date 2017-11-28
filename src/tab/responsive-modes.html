@@ -1,0 +1,66 @@
+<div class="col-lg-8 control-section">
+    <div class="e-sample-resize-container">
+        <div id="tab_adaptive">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%;">
+        <tbody><tr>
+            <td style="width: 50%;">
+                <div>Mode</div>
+            </td>
+            <td style="width: 50%; padding-right: 10px;">
+                <div>
+                    <select id="adaptive" class="form-control">
+                        <option value="scrollable">Scrollable</option>
+                        <option value="popup">Popup</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates both <code>scrollable</code> and <code>popup</code> modes of the <code>Tab</code>. Select option from down-down to change the responsive option in property panel.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The <code>Tab</code> is adaptable to the available space when the tab items exceed the view space.
+    </p>
+    <p>
+        You can assign overflowMode property value as <code>Scrollable / Popup</code>. By default scrollable mode of tab is enabled when 
+        tab item exceeds the view range.
+        In this sample, users can change the <code>overflowMode</code> by selecting the dropdown options.
+    </p>
+    <p>
+        More information about Tab can be found in this <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/getting-started.html">
+        documentation</a> section.
+    </p>
+</div>
+<style>
+    .e-content .e-item {
+        font-size: 12px;
+        padding: 10px;
+        text-align: justify;
+    }
+    .container {
+        min-width: 350px;
+        max-width: 500px;
+    }
+    .property-panel-content {
+        padding: 10px;
+    }
+    @media only screen and (min-width: 1824px) {
+        .e-sample-resize-container {
+            width: 65%;
+        }
+
+        .e-bigger .e-sample-resize-container {
+            width: 75%;
+        }
+    }
+</style>

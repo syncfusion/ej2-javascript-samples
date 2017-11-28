@@ -1,0 +1,14 @@
+{
+    "name": "DropDownList",
+    "directory": "dropdownlist",
+    "category": "Editors",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "category": "DropDownList" },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "DropDownList" },
+        { "url": "data-binding", "name": "Data Binding", "category": "DropDownList" },
+        { "url": "template", "name": "Template", "category": "DropDownList" },
+        { "url": "filtering", "name": "Filtering", "category": "DropDownList" },
+        { "url": "cascading", "name": "Cascading", "category": "DropDownList" }
+    ],
+    "dataSourcePath":"src/dropdownlist/datasource.js"
+}

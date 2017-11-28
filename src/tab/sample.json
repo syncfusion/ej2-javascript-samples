@@ -1,0 +1,11 @@
+{
+    "name": "Tab",
+    "directory": "tab",
+    "category": "Navigation",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "category": "Tab" },
+        { "url": "orientation", "name": "Orientation", "category": "Tab" },
+        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab" },
+        { "url": "rtl", "name": "RTL", "category": "Tab" }
+    ]
+}

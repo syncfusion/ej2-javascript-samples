@@ -1,0 +1,38 @@
+{
+  "name": "@syncfusion/ej2-javascript-samples",
+  "version": "1.0.0",
+  "description": "Pure Javascript Samples for Syncfusion Essential JS 2",
+  "author": "Syncfusion Inc.",
+  "license": "SEE LICENSE IN license",
+  "dependencies": {
+    "@syncfusion/ej2": "*",
+    "browser-sync": "^2.18.13",
+    "cheerio": "^1.0.0-rc.1",
+    "crossroads": "^0.12.2",
+    "gulp": "^3.9.1",
+    "gulp-jsoncombine": "^1.0.3",
+    "gulp-print": "^2.0.1",
+    "hasher": "^1.2.0",
+    "markdown-it": "^8.4.0",
+    "run-sequence": "^2.2.0",
+    "webpack": "2.5.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "devDependencies": {
+    "elasticlunr": "0.9.5",
+    "gulp-jshint": "^2.0.1",
+    "fuse.js": "^3.2.0",
+    "jshint": "^2.9.2"
+  },
+  "scripts": {
+    "test": "gulp js-hint && gulp build",
+    "serve": "gulp serve"
+  },
+  
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "gulp commit-message"
+    }
+  }
+}

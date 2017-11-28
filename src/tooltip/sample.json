@@ -1,0 +1,11 @@
+{ 
+   "name": "Tooltip", 
+   "directory": "tooltip", 
+   "category":"Layout", 
+   "samples" : [
+        {"url":"default", "name": "Default Functionalities", "category":"Tooltip"},
+        {"url":"template", "name": "Template", "category":"Tooltip"},
+        {"url":"ajaxcontent", "name": "Ajax Content", "category":"Tooltip"},
+        {"url":"smartposition", "name": "Smart Positioning", "category":"Tooltip"}
+    ]
+}
