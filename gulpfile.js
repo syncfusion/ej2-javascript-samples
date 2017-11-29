@@ -10,12 +10,8 @@ var webpack = require('webpack');
 var elasticlunr = require('elasticlunr');
 var runSequence = require('run-sequence');
 var sampleOrder = JSON.parse(fs.readFileSync(__dirname + '/src/common/sampleOrder.json'));
-//var localConfig = require('../../config.json');
-//var rootConfig = require(fs.realpathSync('./config.json'));
 var config =require(fs.realpathSync('./config.json'));
-
 var curDirectory = '';
-//var build = require("@syncfusion/ej2-build");
 require('./src/common/api-table-generator.js');
 var sampleList;
 
