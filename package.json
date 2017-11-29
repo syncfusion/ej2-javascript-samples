@@ -25,14 +25,8 @@
     "jshint": "^2.9.2"
   },
   "scripts": {
-    "test": "gulp js-hint && gulp build",
-    "serve": "gulp serve"
-  },
-  
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run test",
-      "commit-msg": "gulp commit-message"
-    }
+    "test": "gulp js-hint ",
+    "serve": "gulp serve",
+    "build": "gulp build"
   }
 }
