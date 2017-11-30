@@ -1,0 +1,1157 @@
+{
+    "name": "Chart",
+    "directory": "chart",
+    "category": "Data Visualization",
+    "type": "update",
+    "samples": [
+        {
+            "url": "line",
+            "name": "Line",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "spline",
+            "name": "Spline",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "step-line",
+            "name": "Step Line",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "dashed-line",
+            "name": "Dashed Line",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "spline-inversed",
+            "name": "Inversed Spline",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "area",
+            "name": "Area",
+            "category": "Area Charts"
+        },
+        {
+            "url": "step-area",
+            "name": "Step Area",
+            "category": "Area Charts",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "stacked-area",
+            "name": "Stacked Area",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "stacked-area100",
+            "name": "100% Stacked Area",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "area-empty",
+            "name": "Area - Empty Points",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "column",
+            "name": "Column",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "rounded-column",
+            "name": "Rounded Column",
+            "type": "updated",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "column-placement",
+            "name": "Back to Back Column",
+            "type": "updated",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "bar",
+            "name": "Bar",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "stacked-column",
+            "name": "Stacked Column",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "stacked-column100",
+            "name": "100% Stacked Column",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "range-column",
+            "name": "Range Column",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "range-bar",
+            "name": "Inversed Range Column",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "stacked-bar",
+            "name": "Stacked Bar",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "stacked-bar100",
+            "name": "100% Stacked Bar",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "tornado",
+            "name": "Negative Stack",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "scatter",
+            "name": "Scatter",
+            "category": "Scatter and Bubble",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "bubble",
+            "name": "Bubble",
+            "category": "Scatter and Bubble",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "pointRender"
+                ]
+            }
+        },
+        {
+            "url": "waterfall",
+            "name": "Waterfall",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "rangearea",
+            "name": "Range Area",
+            "type": "new",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "boxandwhisker",
+            "name": "Box and Whisker",
+            "type": "new",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings",
+                    "pointRender"
+                ]
+            }
+        },
+        {
+            "url": "error-bar",
+            "name": "Error Bar",
+            "type": "new",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings",
+                    "pointRender"
+                ]
+            }
+        },        
+        {
+            "url": "trend-lines",
+            "name": "Trendlines",
+            "category": "Other Types",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings",
+                    "pointRender"
+                ]
+            }
+        },
+        {
+            "url": "hilo",
+            "name": "Hilo",
+            "type": "new",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "hiloopenclose",
+            "name": "Hilo Open Close",
+            "type": "new",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "candle",
+            "name": "Candle",
+            "type": "new",
+            "category": "Financial Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "adindicator",
+            "name": "Accumulation Distribution",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "atrindicator",
+            "name": "ATR",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "bollinger",
+            "name": "Bollinger",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "emaindicator",
+            "name": "EMA",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "macd",
+            "name": "MACD",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "momentum",
+            "name": "Momentum",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "rsi",
+            "name": "RSI",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "smaindicator",
+            "name": "SMA",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "stochastic",
+            "name": "Stochastic",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "tmaindicator",
+            "name": "TMA",
+            "type": "new",
+            "category": "Technical Indicators",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "indicators",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "combination-series",
+            "name": "Combination Series",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "pareto",
+            "name": "Pareto Chart",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "performance",
+            "name": "Benchmark",
+            "category": "Performance",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "default-pie",
+            "name": "Pie",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "doughnut",
+            "name": "Doughnut",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pyramid",
+            "name": "Pyramid",
+            "type": "new",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "funnel",
+            "name": "Funnel",
+            "type": "new",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "default-doughnut",
+            "name": "Pie with Legend",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "semi-pie",
+            "name": "Semi Pie",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "smart-labels",
+            "name": "Smart Labels",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "drilldown-pie",
+            "name": "Drilldown",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "grouping",
+            "name": "Grouping",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-empty-point",
+            "name": "Empty Points",
+            "type": "new",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-line",
+            "name": "Line",
+            "type": "new",
+            "category": "Polar Radar"
+        },
+        {
+            "url": "polar-spline",
+            "name": "Spline",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-area",
+            "name": "Area",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-stackingarea",
+            "name": "Stacked Area",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-scatter",
+            "name": "Scatter",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-column",
+            "name": "Column",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-stackingcolumn",
+            "name": "Wind Rose",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "polar-rangecolumn",
+            "name": "Range Column",
+            "type": "new",
+            "category": "Polar Radar",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "local-data",
+            "name": "Local Data",
+            "category": "Data Binding",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "crosshair"
+                ]
+            }
+        },
+        {
+            "url": "remote-data",
+            "name": "Remote Data",
+            "category": "Data Binding",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "numeric",
+            "name": "Numeric Axis",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "date-time",
+            "name": "Datetime Axis",
+            "category": "Chart Axes"
+        },
+        {
+            "url": "category",
+            "name": "Category Axis",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "indexed-axis",
+            "name": "Indexed Category Axis",
+            "type": "new",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "logarithmic",
+            "name": "Log Axis",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "multiple-axes",
+            "name": "Multiple Axes",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "inversed",
+            "name": "Inversed Axis",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "stripline",
+            "name": "Strip Line",
+            "type": "new",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "stripline"
+                ]
+            }
+        },
+        {
+            "url": "smart-axis-labels",
+            "name": "Smart Labels",
+            "type": "new",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "symbols",
+            "name": "Symbols",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-annotation",
+            "name": "Annotation",
+            "type": "new",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "annotations"
+                ]
+            }
+        },
+        {
+            "url": "data-label-template",
+            "name": "DataLabel Template",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "textRender"
+                ]
+            }
+        },
+        {
+            "url": "vertical",
+            "name": "Vertical Chart",
+            "type": "new",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "isTransposed",
+                    "loaded",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "empty-point",
+            "name": "Empty Points",
+            "type": "new",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "isTransposed",
+                    "loaded",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "print",
+            "name": "Print",
+            "type": "new",
+            "category": "Print and Export",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "print",
+                    "chartMouseClick",
+                    "pointRender"
+                ]
+            }
+        },
+        {
+            "url": "export",
+            "name": "Export",
+            "type": "new",
+            "category": "Print and Export",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "export",
+                    "chartMouseClick",
+                    "pointRender"
+                ]
+            }
+        },
+        {
+            "url": "selection",
+            "name": "Selection",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "selectionMode"
+                ]
+            }
+        },
+        {
+            "url": "range-selection",
+            "name": "Range Selection",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "selectionMode"
+                ]
+            }
+        },
+        {
+            "url": "cross-hair",
+            "name": "Crosshair",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "crosshair"
+                ]
+            }
+        },
+        {
+            "url": "trackball",
+            "name": "Trackball",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "zooming",
+            "name": "Zooming and Panning",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "zoomSettings"
+                ]
+            }
+        }
+    ],
+    "dataSourcePath":"src/chart/financial-data.js"
+}

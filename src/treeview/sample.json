@@ -1,0 +1,18 @@
+{
+    "name": "TreeView",
+    "directory": "treeview",
+    "category":"Navigation",
+    "samples" : [
+        {"url":"default", "name": "Default Functionalities", "category": "TreeView"},
+        {"url":"localdata", "name": "Local Data", "category": "Data Binding"},
+        {"url":"remotedata", "name": "Remote Data", "category": "Data Binding"},
+        {"url":"icons", "name": "Icons and Images", "category": "TreeView"},
+        {"url":"checkbox", "name": "CheckBox", "category": "TreeView"},
+        {"url":"editing", "name": "Node Editing", "category": "TreeView"},
+        {"url":"multiselect", "name": "Multiple Selection", "category": "TreeView", "hideOnDevice": true},
+        {"url":"draganddrop", "name": "Drag and Drop", "category": "TreeView", "hideOnDevice": true},
+        {"url":"template", "name": "Template", "category": "TreeView"},
+        {"url":"rtl", "name": "RTL", "category": "TreeView"}
+     ],
+    "dataSourcePath":"src/treeview/datasource.js"
+ }

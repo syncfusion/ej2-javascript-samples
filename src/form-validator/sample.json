@@ -1,0 +1,3 @@
+{ "name": "Form Validator", "directory": "form-validator", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"Form Validator","api":{"FormValidator":["customPlacement","validate","validClass"]}}
+]}

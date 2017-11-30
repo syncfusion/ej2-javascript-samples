@@ -1,0 +1,87 @@
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper">
+        <div class="control-label">Formats</div>
+        <input id="mask1" type="text" />
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr>
+                <td style="width: 50%">
+                    <div>Mask</div>
+                </td>
+                <td style="width: 50%">
+                    <div>
+                        <!-- Input to customize mask format -->
+                        <input class="e-input" id="input1" type="text" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div>Prompt Character</div>
+                </td>
+                <td style="width: 50%">
+                    <div>
+                        <!-- Prompt character options -->
+                        <select id="ddl">
+                        <option value="_">_</option>
+                        <option value="#">#</option>
+                        <option value="@">@</option>
+                        <option value="*">*</option>
+			          </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:10px">
+                    <div>Value</div>
+                </td>
+                <td style="width: 50%;padding-top:10px">
+                    <!-- Display un-masked value -->
+                    <div id="val1" type="text"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:10px">
+                    <div>Masked Value</div>
+                </td>
+                <td style="width: 50%;padding-top:10px">
+                    <!-- Display masked value -->
+                    <div id="val2" type="text"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates that the different formats can be applied to MaskedTextBox component.
+        You can customize the mask and prompt character values in the property panel.
+    </p>
+</div>
+<div id="description">
+    <p>Here, the "Value" and "Masked Value" labels from the properties panel returns the raw value (unmasked value) and masked value of the MaskedTextBox component.
+        You can also get these raw value and masked value anytime through the
+        <b><a href="http://ej2.syncfusion.com/documentation/maskedtextbox/api-maskedTextBox.html#value-string" target="_blank">value</a></b> property
+        and <b><a href="http://ej2.syncfusion.com/documentation/maskedtextbox/api-maskedTextBox.html#getmaskedvalue" target="_blank">getMaskedValue</a></b> method.
+    </p>
+</div>
+
+<style>
+    .property-panel-content {
+        padding: 0 10px 10px 0;
+    }
+    
+    .content-wrapper {
+        width: 45%;
+        margin: 0 auto;
+        min-width: 185px;
+    }
+    
+    .control-label {
+        padding: 24px 0px 10px 0px;
+        font-size: 12px;
+    }
+</style>

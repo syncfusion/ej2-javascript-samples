@@ -1,0 +1,48 @@
+{
+    "name": "Linear Gauge",
+    "directory": "lineargauge",
+    "category": "Data Visualization",
+    "type": "update",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "container",
+            "name": "Container",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "ranges",
+            "name": "Ranges",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "data",
+            "name": "Data Sample",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "axes",
+            "name": "Axes and Pointers",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "annotation",
+            "name": "Annotation",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "style",
+            "name": "Styles",
+            "category": "Linear Gauge"
+        }
+    ]
+}

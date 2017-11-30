@@ -1,0 +1,55 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <div id="container">
+            <input id="timepicker" type="text" /><br/>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tr>
+            <td>
+                <div>Culture</div>
+            </td>
+            <td>
+                <div style="max-width:240px">
+                    <select id="culture" class="form-control">
+                        <option value="ar">ar</option>
+                        <option value="de">de</option>
+                        <option value="en">en</option>
+                        <option value="vi">vi</option>
+                        <option value="zh">zh</option> 
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        In this sample, the TimePicker has been configured with <code>German</code> culture. To change this current culture, go to the properties panel at the right side and select a culture from the dropdown options.
+    </p>
+</div>
+<div id="description">
+    <p>
+        TimePicker component was rendered with <code>German</code> culture. Here, the time separator and time format are
+        specific to the current culture.
+    </p>
+    <p>
+        You can also change the control culture by selecting it from the culture options in the properties panel.
+    </p>
+    <p>More information on the internationalization and it's configuration can be found in the <a href="http://ej2.syncfusion.com/documentation/base/intl.html"
+            target="_blank"> documentation section</a>.</p>
+</div>
+<style>
+    .property-panel-content {
+        padding: 0 10px 10px 0;
+    }
+
+    .control_wrapper {
+        padding: 5% 0;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+</style>

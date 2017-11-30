@@ -1,0 +1,12 @@
+{ 
+   "name": "NumericTextBox", 
+   "directory": "numerictextbox",
+   "category":"Editors", 
+   "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"NumericTextBox"},
+    {"url":"range", "name": "Range Validation", "category":"NumericTextBox"},
+    {"url":"internationalization", "name": "Internationalization", "category":"NumericTextBox"},
+    {"url":"format", "name": "Custom Format", "category":"NumericTextBox"},
+    {"url":"restrict", "name": "Restrict Decimals", "category":"NumericTextBox"}
+   ]
+}

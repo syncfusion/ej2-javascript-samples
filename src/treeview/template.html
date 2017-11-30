@@ -1,0 +1,53 @@
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize TreeView -->
+        <div id="tree"></div>
+    </div>
+</div>
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+    .custom.e-treeview .e-fullrow {
+        height: 72px;
+    }
+    .custom.e-treeview .e-list-text {
+        line-height: normal;
+    }
+    .eimage {
+        float: left;
+        padding: 11px 16px 11px 0;
+        height: 48px;
+        width: 48px;
+        box-sizing: content-box;
+    }
+    .ename {
+        font-size: 16px;
+        padding: 14px 0 0;
+    }
+    .ejob {
+        font-size: 14px;
+        opacity: .87;
+    }
+</style>
+<!-- Template to render tree node -->
+<script id="treeTemplate" type="text/x-template">
+    <div>
+        <img class="eimage" src="src/treeview/Employees/${eimg}.png" alt="${eimg}"/>
+        <div class="ename">${name}</div>
+        <div class="ejob">${job}</div>
+    </div>
+</script>
+
+<div id="action-description">
+    <p>This sample demonstrates the template functionalities of the TreeView. Select the customized root node by click on it, or expand the root node and select the customized child node.</p>
+</div>
+
+<div id="description">
+    <p>The <code>TreeView</code> component has an option to customize the node structure through the <code>nodeTemplate</code> property, so that the tree node can be formed with any custom structure.</p>
+    <p>In this demo, the node is formed with the employee's image, name and designation.</p>
+    <p>For more information, you can refer to the <a href="http://ej2.syncfusion.com/documentation/treeview/template.html" target="_blank">Templates</a> section from the documentation.</p>
+</div>

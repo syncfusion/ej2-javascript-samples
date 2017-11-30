@@ -1,0 +1,75 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Grid">
+        </div>
+    </div>
+</div>
+<div id="action-description">
+<p>This sample demonstrates dynamic show hide columns feature of Grid. 
+Select column name from the properties panel and click hide/show buttons to toggle visibility.</p>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 30%">
+                <div>Column</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div>
+                    <select id="drop" class="form-control" style="padding: 6px">
+                        <option value="CategoryName">Category Name</option>
+                        <option value="ProductName">Product Name</option>
+                        <option value="UnitsInStock">Units In Stock</option>
+                        <option value="Discontinued">Discontinued</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div>
+                    <button class="btn btn-default" type="button" id="hide" value="Hide">Hide</button>
+                </div>
+            </td>
+            <td style="width: 70%">
+                <div>
+                    <button class="btn btn-default" type="button" id="show" value="Show" disabled>Show</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div style="padding-top: 10px">
+                    Hidden Columns
+                </div>
+            </td>
+            <td style="width: 70%; padding:10px 10px 10px 0px">
+                <div>
+                    <textarea id="hiddencolumns" style="resize: none;height:65px;background-color: #fff; padding: 6px" 
+                    class="form-control" readonly="readonly"></textarea>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="description">
+    <p>The Grid column can be showed/hidden dynamically using <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#showcolumns">showColumns
+        </a></code> and <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#hidecolumns">hideColumns
+        </a></code>
+    method of the Grid.</p>
+    <p>In this demo, the columns can be showed and hidden by selecting the column name in the dropdown
+        and click the Show or Hide buttons to toggle visibility. And the column`s visibility is toggled based on the 
+        <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-column.html#headertext-string">columns->headerText
+        </a></code> value.</p>
+    <br/>
+    <p>The <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-column.html#visible-boolean">columns->visible
+        </a></code> property specifies the visibility of a column. 
+    To hide a column at the initial rendering, set the <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-column.html#visible-boolean">columns->visible
+        </a></code> property to false.</p>
+</div>
