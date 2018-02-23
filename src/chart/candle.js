@@ -5,11 +5,17 @@ this.default = function () {
     var getLabelText = function(value) {
         return (((value) / 1000000000)).toFixed(1) + 'bn';
     };
+    var date1 = new Date('2017-01-01');
+    var returnValue = chartData.filter(filterValue);
+    function filterValue(value) {         
+        return value.x >= date1;
+    }
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'DateTime',
-            skeleton: 'yMd', zoomFactor: 0.2, zoomPosition: 0.6,
+            minimum: new Date('2016-12-31'),
+            maximum: new Date('2017-09-31'),
             crosshairTooltip: { enable: true },
             majorGridLines: { width: 0 },
         },
@@ -38,30 +44,23 @@ this.default = function () {
         ],
         //Initializing Axes
         axes: [{
-                name: 'secondary', minimum: 50, maximum: 180, interval: 40, opposedPosition: true, rowIndex: 1, majorGridLines: { width: 1 },
+                name: 'secondary', minimum: 100, maximum: 180, interval: 20, opposedPosition: true, rowIndex: 1, majorGridLines: { width: 1 },
                 labelFormat: '${value}', title: 'Price', plotOffset: 30, lineStyle: { width: 0 }
             }],
         //Initializing Chart Series
         series: [
             {
                 type: 'Column',
-                dataSource: window.chartData, animation: { enable: true }, xName: 'x', yName: 'volume',
+                dataSource: returnValue, animation: { enable: true }, xName: 'x', yName: 'volume',
                 name: 'Volume'
             },
             {
                 type: 'Candle', yAxisName: 'secondary', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
-                dataSource: window.chartData, animation: { enable: true },
+                dataSource: returnValue, animation: { enable: true },
                 xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close', name: 'Apple Inc',
                 volume: 'volume'
             }
         ],
-        //Initializing Zooming
-        zoomSettings: {
-            enableMouseWheelZooming: true,
-            enablePinchZooming: true,
-            enableSelectionZooming: true,
-            mode: 'X'
-        },
         //Initializing Chart Title
         title: 'AAPL Historical',
         //Initializing Tooltip
@@ -70,8 +69,8 @@ this.default = function () {
         },
         tooltipRender: function(args) {
             if (!args.series.index) {
-                args.textCollections = 'Volume : <b>' +
-                    getLabelText(args.textCollections.split('<b>')[1].split('</b>')[0]) + '</b>';
+                args.text = 'Volume : <b>' +
+                    getLabelText(args.text.split('<b>')[1].split('</b>')[0]) + '</b>';
             }
         },
         axisLabelRender: function (args) {

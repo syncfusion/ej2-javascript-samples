@@ -3,17 +3,18 @@
  */
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         axes: [{
-            line: {
-                color: '#9E9E9E'
-            },
             pointers: [{
                 value: 10,
                 height: 15,
                 width: 15,
                 placement: 'Near',
-                color: '#757575',
                 offset: -50,
                 markerType: 'Triangle'
             }],
@@ -26,14 +27,11 @@ this.default = function () {
                 interval: 2
             },
             labelStyle: {
-                font: {
-                    color: '#424242'
-                },
                 offset: 48
             }
         }],
         annotations: [{
-            content: '<div id="pointer" style="width:70px"><h1 style="font-size:14px;color:#424242">10 MPH</h1></div>',
+            content: '<div id="pointer" style="width:70px"><h1 style="font-size:14px;">10 MPH</h1></div>',
             axisIndex: 0,
             axisValue: 10,
             x: 10,

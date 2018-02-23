@@ -2,10 +2,12 @@
     "name": "Tab",
     "directory": "tab",
     "category": "Navigation",
+    "type": "update",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Tab" },
-        { "url": "orientation", "name": "Orientation", "category": "Tab" },
-        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab" },
-        { "url": "rtl", "name": "RTL", "category": "Tab" }
+        { "url": "default", "name": "Default Functionalities", "category": "Tab", "api": { "Header": ["text", "iconCss"], "TabItem": ["content"], "Tab": ["items"] } },
+        { "url": "orientation", "name": "Orientation", "category": "Tab", "api": { "Tab": ["headerPlacement", "showCloseButton"] } },
+        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab", "api": { "Tab": ["overflowMode"] } },
+        { "url": "rtl", "name": "RTL", "category": "Tab", "api":{ "Tab": ["enableRtl"] } },
+        { "url": "wizard", "name": "Wizard", "category": "Tab", "type": "new", "api": { "TabItem": ["disabled"] } }
     ]
 }

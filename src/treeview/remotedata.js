@@ -1,8 +1,8 @@
 this.default = function () {
     // Use data manager to get tree data from remote source
     var data = new ej.data.DataManager({
-        url: 'http://services.odata.org/V4/Northwind/Northwind.svc',
-        adaptor: new ej.data.ODataV4Adaptor(),
+        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc',
+        adaptor: new ej.data.ODataAdaptor(),
         crossDomain: true
     });
     // Set queries to filter and fetch remote data

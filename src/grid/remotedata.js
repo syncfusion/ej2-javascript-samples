@@ -8,12 +8,12 @@ this.default = function () {
         dataSource: data,
         allowPaging: true,
         columns: [
-            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'right' },
+            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right' },
             { field: 'ProductName', headerText: 'Product Name', width: 170 },
-            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'right', format: 'C2', },
-            { field: 'UnitsInStock', headerText: 'Units In Stock', width: 160, textAlign: 'right' },
+            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2', },
+            { field: 'UnitsInStock', headerText: 'Units In Stock', width: 160, textAlign: 'Right' },
             {
-                field: 'Discontinued', headerText: 'Discontinued', width: 150, textAlign: 'center', type: 'boolean',
+                field: 'Discontinued', headerText: 'Discontinued', width: 150, textAlign: 'Center', type: 'boolean',
                 displayAsCheckBox: true
             },
         ],

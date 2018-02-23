@@ -70,13 +70,48 @@
             }
         },
         {
-            "url": "area",
-            "name": "Area",
-            "category": "Area Charts"
+            "url": "line-segments",
+            "name": "Line Zone",
+            "category": "Line Charts",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
         },
         {
-            "url": "step-area",
-            "name": "Step Area",
+            "url": "line-multi-color",
+            "name": "Multi Colored Line",
+            "category": "Line Charts",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "area",
+            "name": "Area",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "splineArea",
+            "name": "Spline Area",
             "category": "Area Charts",
             "type": "new",
             "api": {
@@ -84,6 +119,32 @@
                     "primaryXAxis",
                     "primaryYAxis",
                     "series"
+                ]
+            }
+        },
+        {
+            "url": "step-area",
+            "name": "Step Area",
+            "category": "Area Charts",            
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "rangearea",
+            "name": "Range Area",            
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
                 ]
             }
         },
@@ -124,6 +185,20 @@
             }
         },
         {
+            "url": "area-segments",
+            "name": "Area Zone",
+            "category": "Area Charts",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
             "url": "column",
             "name": "Column",
             "category": "Bar Charts",
@@ -140,7 +215,7 @@
         {
             "url": "rounded-column",
             "name": "Rounded Column",
-            "type": "updated",
+            "type": "update",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -154,8 +229,35 @@
         },
         {
             "url": "column-placement",
-            "name": "Back to Back Column",
-            "type": "updated",
+            "name": "Back to Back Column",            
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "range-column",
+            "name": "Range Column",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "range-bar",
+            "name": "Inversed Range Column",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -199,34 +301,6 @@
             "url": "stacked-column100",
             "name": "100% Stacked Column",
             "category": "Bar Charts",
-            "api": {
-                "Chart": [
-                    "primaryXAxis",
-                    "primaryYAxis",
-                    "series",
-                    "tooltip",
-                    "legendSettings"
-                ]
-            }
-        },
-        {
-            "url": "range-column",
-            "name": "Range Column",
-            "category": "Financial Charts",
-            "api": {
-                "Chart": [
-                    "primaryXAxis",
-                    "primaryYAxis",
-                    "series",
-                    "tooltip",
-                    "legendSettings"
-                ]
-            }
-        },
-        {
-            "url": "range-bar",
-            "name": "Inversed Range Column",
-            "category": "Financial Charts",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -322,24 +396,8 @@
             }
         },
         {
-            "url": "rangearea",
-            "name": "Range Area",
-            "type": "new",
-            "category": "Financial Charts",
-            "api": {
-                "Chart": [
-                    "primaryXAxis",
-                    "primaryYAxis",
-                    "series",
-                    "tooltip",
-                    "legendSettings"
-                ]
-            }
-        },
-        {
             "url": "boxandwhisker",
-            "name": "Box and Whisker",
-            "type": "new",
+            "name": "Box and Whisker",            
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -354,25 +412,8 @@
         },
         {
             "url": "error-bar",
-            "name": "Error Bar",
-            "type": "new",
+            "name": "Error Bar",            
             "category": "Other Types",
-            "api": {
-                "Chart": [
-                    "primaryXAxis",
-                    "primaryYAxis",
-                    "series",
-                    "tooltip",
-                    "legendSettings",
-                    "pointRender"
-                ]
-            }
-        },        
-        {
-            "url": "trend-lines",
-            "name": "Trendlines",
-            "category": "Other Types",
-            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -385,9 +426,13 @@
             }
         },
         {
+            "url": "trend-lines",
+            "name": "Trendlines",
+            "category": "Other Types"           
+        },
+        {
             "url": "hilo",
-            "name": "Hilo",
-            "type": "new",
+            "name": "Hilo",            
             "category": "Financial Charts",
             "api": {
                 "Chart": [
@@ -401,8 +446,7 @@
         },
         {
             "url": "hiloopenclose",
-            "name": "Hilo Open Close",
-            "type": "new",
+            "name": "Hilo Open Close",            
             "category": "Financial Charts",
             "api": {
                 "Chart": [
@@ -416,8 +460,7 @@
         },
         {
             "url": "candle",
-            "name": "Candle",
-            "type": "new",
+            "name": "Candle",            
             "category": "Financial Charts",
             "api": {
                 "Chart": [
@@ -431,8 +474,7 @@
         },
         {
             "url": "adindicator",
-            "name": "Accumulation Distribution",
-            "type": "new",
+            "name": "Accumulation Distribution",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -446,8 +488,7 @@
         },
         {
             "url": "atrindicator",
-            "name": "ATR",
-            "type": "new",
+            "name": "ATR",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -462,7 +503,7 @@
         {
             "url": "bollinger",
             "name": "Bollinger",
-            "type": "new",
+            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -476,8 +517,7 @@
         },
         {
             "url": "emaindicator",
-            "name": "EMA",
-            "type": "new",
+            "name": "EMA",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -491,8 +531,7 @@
         },
         {
             "url": "macd",
-            "name": "MACD",
-            "type": "new",
+            "name": "MACD",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -506,8 +545,7 @@
         },
         {
             "url": "momentum",
-            "name": "Momentum",
-            "type": "new",
+            "name": "Momentum",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -521,8 +559,7 @@
         },
         {
             "url": "rsi",
-            "name": "RSI",
-            "type": "new",
+            "name": "RSI",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -536,8 +573,7 @@
         },
         {
             "url": "smaindicator",
-            "name": "SMA",
-            "type": "new",
+            "name": "SMA",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -551,8 +587,7 @@
         },
         {
             "url": "stochastic",
-            "name": "Stochastic",
-            "type": "new",
+            "name": "Stochastic",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -566,8 +601,7 @@
         },
         {
             "url": "tmaindicator",
-            "name": "TMA",
-            "type": "new",
+            "name": "TMA",            
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -641,8 +675,7 @@
         },
         {
             "url": "pyramid",
-            "name": "Pyramid",
-            "type": "new",
+            "name": "Pyramid",            
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -654,8 +687,7 @@
         },
         {
             "url": "funnel",
-            "name": "Funnel",
-            "type": "new",
+            "name": "Funnel",           
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -727,8 +759,7 @@
         },
         {
             "url": "pie-empty-point",
-            "name": "Empty Points",
-            "type": "new",
+            "name": "Empty Points",            
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -740,14 +771,12 @@
         },
         {
             "url": "polar-line",
-            "name": "Line",
-            "type": "new",
+            "name": "Line",           
             "category": "Polar Radar"
         },
         {
             "url": "polar-spline",
-            "name": "Spline",
-            "type": "new",
+            "name": "Spline",          
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -760,8 +789,7 @@
         },
         {
             "url": "polar-area",
-            "name": "Area",
-            "type": "new",
+            "name": "Area",         
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -774,8 +802,7 @@
         },
         {
             "url": "polar-stackingarea",
-            "name": "Stacked Area",
-            "type": "new",
+            "name": "Stacked Area",          
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -788,8 +815,7 @@
         },
         {
             "url": "polar-scatter",
-            "name": "Scatter",
-            "type": "new",
+            "name": "Scatter",          
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -802,8 +828,7 @@
         },
         {
             "url": "polar-column",
-            "name": "Column",
-            "type": "new",
+            "name": "Column",         
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -816,8 +841,7 @@
         },
         {
             "url": "polar-stackingcolumn",
-            "name": "Wind Rose",
-            "type": "new",
+            "name": "Wind Rose",         
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -830,8 +854,7 @@
         },
         {
             "url": "polar-rangecolumn",
-            "name": "Range Column",
-            "type": "new",
+            "name": "Range Column",           
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -888,6 +911,20 @@
             "category": "Chart Axes"
         },
         {
+            "url": "date-time-category",
+            "name": "DateTime Category Axis",
+            "category": "Chart Axes",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
             "url": "category",
             "name": "Category Axis",
             "category": "Chart Axes",
@@ -902,8 +939,7 @@
         },
         {
             "url": "indexed-axis",
-            "name": "Indexed Category Axis",
-            "type": "new",
+            "name": "Indexed Category Axis",           
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -955,8 +991,7 @@
         },
         {
             "url": "stripline",
-            "name": "Strip Line",
-            "type": "new",
+            "name": "Strip Line",           
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -971,8 +1006,48 @@
         {
             "url": "smart-axis-labels",
             "name": "Smart Labels",
+            "type": "update",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "multi-level-label",
+            "name": "Multi Level Labels",
             "type": "new",
             "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "axes-crossing",
+            "name": "Axes Crossing",
+            "type": "new",
+            "category": "Chart Axes",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis"
+                ]
+            }
+        },
+        {
+            "url": "sorting",
+            "name": "Sorting",
+            "category": "Chart Customization",
+            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -997,8 +1072,7 @@
         },
         {
             "url": "pie-annotation",
-            "name": "Annotation",
-            "type": "new",
+            "name": "Annotation",            
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1025,8 +1099,7 @@
         },
         {
             "url": "vertical",
-            "name": "Vertical Chart",
-            "type": "new",
+            "name": "Vertical Chart",            
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1041,8 +1114,7 @@
         },
         {
             "url": "empty-point",
-            "name": "Empty Points",
-            "type": "new",
+            "name": "Empty Points",            
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1057,8 +1129,7 @@
         },
         {
             "url": "print",
-            "name": "Print",
-            "type": "new",
+            "name": "Print",            
             "category": "Print and Export",
             "api": {
                 "Chart": [
@@ -1073,8 +1144,7 @@
         },
         {
             "url": "export",
-            "name": "Export",
-            "type": "new",
+            "name": "Export",            
             "category": "Print and Export",
             "api": {
                 "Chart": [

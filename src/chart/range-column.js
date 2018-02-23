@@ -49,7 +49,7 @@ this.default = function () {
         },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         //Initializing Chart Title
-        title: 'Maximum and Minimum Temperature',
+        title: 'Temperature Variation',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';

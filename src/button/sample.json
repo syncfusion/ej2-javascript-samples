@@ -2,21 +2,39 @@
     "name": "Button",
     "directory": "button",
     "category": "Editors",
+    "type": "update",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "Button"
+            "category": "Button",
+            "api":{"Button":["isPrimary","cssClass", "iconCss", "isToggle", "iconPosition", "content"] }
         },
         {
             "url": "check-box",
             "name": "CheckBox",
-            "category": "Button"
+            "category": "Button",
+            "api":{"CheckBox":["label", "checked", "indeterminate", "disabled", "change"] }
         },
         {
             "url": "radio-button",
             "name": "RadioButton",
-            "category": "Button"
+            "category": "Button",
+            "api":{"RadioButton":["label", "name", "value", "checked"] }
+        },
+        {
+            "url": "drop-down-button",
+            "name": "DropDownButton",
+            "category": "Button",
+            "api":{"DropDownButton":["items", "cssClass", "iconCss"] },
+            "type": "preview"
+        },
+        {
+            "url": "split-button",
+            "name": "SplitButton",
+            "category": "Button",
+            "api":{"SplitButton":[ "items", "content", "iconCss", "beforeItemRender"] },
+            "type": "preview"
         }
     ]
 }

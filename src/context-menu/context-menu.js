@@ -55,7 +55,7 @@ this.default = function() {
         menuObj.animationSettings.effect = 'ZoomIn';
     }
     else {
-        ej.base.select('#contextmenutarget').textContent = 'Right click / Touch hold to open the ContextMenu';
+        ej.base.select('#contextmenutarget').textContent = 'Right click/Touch hold to open the ContextMenu';
         menuObj.animationSettings.effect = 'SlideDown';
     }
 };

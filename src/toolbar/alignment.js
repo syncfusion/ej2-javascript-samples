@@ -11,11 +11,11 @@ this.default = function() {
               prefixIcon: 'e-tbar-menu-icon tb-icons', tooltipText: 'Menu' },
             {
               template: ele,
-              align: 'center' },
+              align: 'Center' },
             {
-              prefixIcon: 'e-tbar-search-icon tb-icons', tooltipText: 'Search', align: 'right' },
+              prefixIcon: 'e-tbar-search-icon tb-icons', tooltipText: 'Search', align: 'Right' },
             {
-              prefixIcon: 'e-tbar-settings-icon tb-icons', tooltipText: 'Popup', align: 'right' } ]
+              prefixIcon: 'e-tbar-settings-icon tb-icons', tooltipText: 'Popup', align: 'Right' } ]
     });
     //Render initialized Toolbar component
     toolbarObj.appendTo('#toolbar_align');

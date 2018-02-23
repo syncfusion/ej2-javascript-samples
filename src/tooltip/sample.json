@@ -1,11 +1,67 @@
-{ 
-   "name": "Tooltip", 
-   "directory": "tooltip", 
-   "category":"Layout", 
-   "samples" : [
-        {"url":"default", "name": "Default Functionalities", "category":"Tooltip"},
-        {"url":"template", "name": "Template", "category":"Tooltip"},
-        {"url":"ajaxcontent", "name": "Ajax Content", "category":"Tooltip"},
-        {"url":"smartposition", "name": "Smart Positioning", "category":"Tooltip"}
+{
+    "name": "Tooltip",
+    "directory": "tooltip",
+    "category": "Layout",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Tooltip",
+            "api": {
+                "Tooltip": [
+                    "content",
+                    "appendTo",
+                    "position "
+                ]
+            }
+        },
+        {
+            "url": "template",
+            "name": "Template",
+            "category": "Tooltip",
+            "api": {
+                "Tooltip": [
+                    "content",
+                    "target",
+                    "beforeRender",
+                    "showTipPointer",
+                    "offsetX",
+                    "width",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "ajaxcontent",
+            "name": "Ajax Content",
+            "category": "Tooltip",
+            "api": {
+                "Tooltip": [
+                    "content",
+                    "target",
+                    "position",
+                    "beforeRender",
+                    "dataBind",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "smartposition",
+            "name": "Smart Positioning",
+            "category": "Tooltip",
+            "api": {
+                "Tooltip": [
+                    "content",
+                    "offsetX",
+                    "target",
+                    "animation",
+                    "open",
+                    "close",
+                    "refresh",
+                    "appendTo"
+                ]
+            }
+        }
     ]
 }

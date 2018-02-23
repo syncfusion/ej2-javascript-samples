@@ -3,7 +3,7 @@ this.default = function () {
     // initialize AutoComplete component
     var atcObj1 = new ej.dropdowns.AutoComplete({
         // bind the DataManager instance to dataSource property
-        dataSource: new ej.data.DataManager({ url: 'http://services.odata.org/V4/Northwind/Northwind.svc', adaptor: new ej.data.ODataV4Adaptor(), crossDomain: true}),
+        dataSource: new ej.data.DataManager({ url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc', adaptor: new ej.data.ODataAdaptor(), crossDomain: true}),
         // set the count for displays the suggestion items.
         suggestionCount: 5,
         // bind the Query instance to query property

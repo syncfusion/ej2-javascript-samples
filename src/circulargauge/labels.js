@@ -4,6 +4,11 @@
 this.default = function () {
     var isMajorTicks = true;
     var circulargauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             annotations: [{
                 content: '<div id="content" style="color:#518C03;font-size:20px;font-family:Segoe UI;font-weight:semibold;">145</div>',
@@ -13,7 +18,7 @@ this.default = function () {
             lineStyle: { width: 2, color: '#9E9E9E' },
             labelStyle: {
                 position: 'Outside', autoAngle: true,
-                font: { size: '10px', color: '#333333' }
+                font: { size: '10px'}
             }, majorTicks: {
                 position: 'Inside', color: '#757575', width: 2, height: 10, interval: 20
             }, minorTicks: {

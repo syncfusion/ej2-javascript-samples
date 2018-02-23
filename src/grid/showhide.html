@@ -1,4 +1,4 @@
-<div class="col-lg-9 control-section">
+<div class="col-lg-8 control-section">
     <div class="content-wrapper">
         <div id="Grid">
         </div>
@@ -15,25 +15,20 @@ Select column name from the properties panel and click hide/show buttons to togg
                 <div>Column</div>
             </td>
             <td style="width: 70%;padding-right: 10px">
-                <div>
-                    <select id="drop" class="form-control" style="padding: 6px">
-                        <option value="CategoryName">Category Name</option>
-                        <option value="ProductName">Product Name</option>
-                        <option value="UnitsInStock">Units In Stock</option>
-                        <option value="Discontinued">Discontinued</option>
-                    </select>
+                <div id='columnddl'>
+                    <input type="text" tabindex="1" id='ddlelement' />
                 </div>
             </td>
         </tr>
         <tr>
             <td style="width: 30%">
                 <div>
-                    <button class="btn btn-default" type="button" id="hide" value="Hide">Hide</button>
+                    <button id="hide">Hide</button>
                 </div>
             </td>
             <td style="width: 70%">
                 <div>
-                    <button class="btn btn-default" type="button" id="show" value="Show" disabled>Show</button>
+                    <button id="show" disabled>Show</button>
                 </div>
             </td>
         </tr>
@@ -52,6 +47,12 @@ Select column name from the properties panel and click hide/show buttons to togg
         </tr>
     </table>
 </div>
+
+<style>
+    #columnddl {
+        min-width: 150px;
+    }
+</style>
 
 <div id="description">
     <p>The Grid column can be showed/hidden dynamically using <code><a target="_blank" class="code"

@@ -2,13 +2,16 @@
     "name": "DropDownList",
     "directory": "dropdownlist",
     "category": "Editors",
+    "type": "update", 
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "DropDownList" },
-        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "DropDownList" },
-        { "url": "data-binding", "name": "Data Binding", "category": "DropDownList" },
-        { "url": "template", "name": "Template", "category": "DropDownList" },
-        { "url": "filtering", "name": "Filtering", "category": "DropDownList" },
-        { "url": "cascading", "name": "Cascading", "category": "DropDownList" }
+        { "url": "default", "name": "Default Functionalities", "category": "DropDownList", "api": {"DropDownList": ["popupHeight", "placeholder", "index", "change"]} },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields", "popupHeight", "placeholder"]} },
+        { "url": "data-binding", "name": "Data Binding", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields", "query", "sortOrder", "autofill", "popupHeight", "placeholder"]} },
+        { "url": "template", "name": "Template", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields","headerTemplate", "itemTemplate", "valueTemplate", "popupHeight", "placeholder"]} },
+        { "url": "filtering", "name": "Filtering", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields", "allowFiltering", "filtering", "filterBarPlaceholder", "popupHeight", "placeholder"]} },
+        { "url": "cascading", "name": "Cascading", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields", "change", "placeholder", "popupHeight", "value", "enabled"]} },
+        { "url": "inline", "name": "Inline", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "fields","value"]}, "type": "new" },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "category": "DropDownList", "api": {"DropDownList": ["dataSource", "ignoreAccent", "placeholder","allowFiltering"]}, "type": "new" }
     ],
     "dataSourcePath":"src/dropdownlist/datasource.js"
 }

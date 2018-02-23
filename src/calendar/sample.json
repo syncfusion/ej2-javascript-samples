@@ -1,7 +1,6 @@
-{ "name": "Calendar", "directory": "calendar", "category":"Editors", "samples" : [
-    {"url":"default", "name": "Default Functionalities", "category":"Calendar"},
-    {"url":"disabled", "name": "Disabled Dates", "category":"Calendar"},
-    {"url":"range", "name": "Date Range", "category":"Calendar"},
-    {"url":"special", "name": "Special Dates", "category":"Calendar"},
-    {"url":"internationalization", "name": "Internationalization", "category":"Calendar"}
+{ "name": "Calendar", "directory": "calendar", "category":"Calendar", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"Calendar", "api":{"Calendar": [ "change" ]}},
+    {"url":"disabled", "name": "Disabled Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}},
+    {"url":"range", "name": "Date Range", "category":"Calendar", "api":{"Calendar": [ "min", "max", "change" ]}},
+    {"url":"special", "name": "Special Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}}
 ]}

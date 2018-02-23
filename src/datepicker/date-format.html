@@ -1,50 +1,48 @@
 <div class="col-lg-8 control-section">
     <div id="wrapper">
-        <input id="datepicker" type="text" /><br/><br/>
+        <input id="datepicker" type="text" />
+        <br/>
+        <br/>
     </div>
 </div>
 
 <div class="col-lg-4 property-section">
-    <table id="property" title="Properties">
-        <tr>
-            <td>
-                <div>Date Format</div>
-            </td>
-            <td>
-                <div>
-                    <select id="dateFormats" class="form-control" style="height:30px">
-                       <option value="dd-MMM-yy">dd-MMM-yy</option>
-                        <option value="yyyy-MM-dd">yyyy-MM-dd</option>
-                        <option value="dd-MMMM">dd-MMMM</option>
-                    </select>
-                </div>
-            </td>
-        </tr>
-    </table>
+        <PropertyPane title='Properties'>
+    <div>
+        <select id="dateformats" class="form-control">
+            <option value="dd-MMM-yy">dd-MMM-yy</option>
+            <option value="yyyy-MM-dd">yyyy-MM-dd</option>
+            <option value="dd-MMMM">dd-MMMM</option>
+        </select>
+    </div>
+</PropertyPane>
 </div>
 <div id="action-description">
     <p>
-        In this sample, the DatePicker has been configured with the <code>dd-MMM-yy</code> date format. To change this current date format, go to the properties panel at the right side and select a date format from the dropdown options.
+        In this sample, the DatePicker has been configured with the
+        <code>dd-MMM-yy</code> date format. To change this current date format, go to the properties panel at the right side and select a date
+        format from the dropdown options.
     </p>
 </div>
 <div id="description">
     <p>
-        Date Formats sample illustrates the support of custom date format in the DatePicker component by
-        using the <code>format</code> property. You can also change the date format by selecting it from the format options in the properties
-        panel.
+        Format sample illustrates the support of custom date format in the DatePicker component by using the
+        <code>format</code> property. You can also change the date format by selecting it from the format options in the properties panel.
     </p>
-    <p> More information on the date format configuration can be found in the <a href="http://ej2.syncfusion.com/documentation/datepicker/globalization.html#date-format"
-            target="_blank"> documentation section</a>.</p>
+    <p> More information on the date format configuration can be found in the
+        <a href="http://ej2.syncfusion.com/documentation/datepicker/globalization.html#date-format" target="_blank"> documentation section</a>.</p>
     </p>
 </div>
 <style>
-    .property-panel-content {
-        padding: 0 10px 10px 0;
-    }
-
     #wrapper {
         max-width: 246px;
         margin: 30px auto;
         padding-top: 50px;
+    }
+
+    .property-section {
+        top: 55px;
+        width: 200px;
+        margin-left: 80px;
     }
 </style>

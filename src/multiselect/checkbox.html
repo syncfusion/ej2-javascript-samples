@@ -1,0 +1,68 @@
+<div class="control-section col-lg-9">
+    <div class="control-wrapper col-lg-12">
+        <div id='content'>
+            <div class="control-styles">
+                <h4>CheckBox</h4>
+                <input type="text" id='checkbox' />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <div id="property" title="Properties">
+        <table id="property" title="Properties">
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <div>
+                            <input id="selectall" type="checkbox" checked='true'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div>
+                            <input id="dropicon" type="checkbox" checked='true'>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div>
+                            <input id="reorder" type="checkbox" checked='true'>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the checkbox functionalities of the MultiSelect. Click the MultiSelect element and then type
+        a character in the search box. It will display the filtered list items based on the typed characters and then select
+        the multiple values through the checkbox.</p>
+</div>
+
+<div id="description">
+    <p>The MultiSelect has built-in support to select the multiple values through checkbox, when the <code>mode</code> property
+        is set as
+        <code>CheckBox</code>. To perform the checkbox feature in MultiSelect, the <code>CheckBoxSelection</code> module
+        have to be injected in the application end.</p>
+
+    <p>In this sample, the local data is bound to a collection of countries data. Also, provided options for the following:</p>
+    <p> To enable/disable the <code>Select All<code> feature in the property panel.</p>
+    <p> To enable/disable the <code>DropDown Button</code> feature in the property panel.</p>
+    <p> To enable/disable the <code>Selection Reorder</code> feature in the property panel.</p>
+
+    <p>The checkbox sample illustrates using the countries data.</p>
+
+</div>
+
+<style>
+    .control-styles {
+        margin: 0 auto;
+        width: 300px;
+        padding-top: 20px
+    }
+</style>

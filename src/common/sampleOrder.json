@@ -1,7 +1,8 @@
 {
-    "Data Visualization": ["Chart", "Circular Gauge", "Linear Gauge"],
+    "Data Visualization": ["Chart", "Maps" ,"Circular Gauge", "Linear Gauge"],
     "Grids": ["Grid"],
-    "Editors": ["Form Validator", "Button", "Calendar", "DatePicker", "DateRangePicker", "TimePicker","TextBoxes", "DropDownList", "ComboBox", "AutoComplete", "MultiSelect", "NumericTextBox", "MaskedTextBox"],
-    "Layout": ["Dialog", "ListView", "Tooltip"],
-    "Navigation": ["ContextMenu","Accordion", "TreeView", "Toolbar","Tab"]
+    "Calendar": ["Schedule", "Calendar"],
+    "Editors": ["AutoComplete", "Button",  "ComboBox", "DatePicker", "DateRangePicker", "DateTimePicker", "DropDownList", "Form Validator", "MultiSelect",  "MaskedTextBox", "NumericTextBox", "Slider", "TextBoxes","TimePicker", "Uploader"],
+    "Layout": ["ListView", "Dialog", "Tooltip", "Card"],
+    "Navigation": ["Sidebar","TreeView","Tab","Toolbar","ContextMenu","Accordion"]
 }

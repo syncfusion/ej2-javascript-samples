@@ -8,8 +8,8 @@ this.default = function () {
 
         //Initialize dataSource with the DataManager instance.
         dataSource: new ej.data.DataManager({
-            url: 'http://services.odata.org/V4/Northwind/Northwind.svc',
-            adaptor: new ej.data.ODataV4Adaptor()
+            url: '//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/',
+            crossDomain: true
         }),
 
         //Initialize query with the Query instance to get specified set of data

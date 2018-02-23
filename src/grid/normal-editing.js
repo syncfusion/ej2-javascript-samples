@@ -1,13 +1,13 @@
 this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.orderData,
-        editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'normal' },
+        editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
         allowPaging: true,
         pageSettings: { pageCount: 5 },
-        toolbar: ['add', 'edit', 'delete', 'update', 'cancel'],
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
         columns: [
             {
-                field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'right',
+                field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'Right',
                 validationRules: { required: true }, width: 120
             },
             {
@@ -15,7 +15,7 @@ this.default = function () {
                 validationRules: { required: true }, width: 140
             },
             {
-                field: 'Freight', headerText: 'Freight', textAlign: 'right', editType: 'numericedit',
+                field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit',
                 width: 120, format: 'C2', validationRules: { required: true }
             },
             { field: 'ShipName', headerText: 'Ship Name', width: 170 },

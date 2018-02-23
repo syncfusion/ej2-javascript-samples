@@ -23,6 +23,11 @@ this.default = function () {
         columnDrop: columnDrop
     });
     grid.appendTo('#Grid');
+    
+    // sets the clear button
+    var clear = new ej.buttons.Button();
+    clear.appendTo('#clear');
+
     document.getElementById('clear').onclick = function () {
         document.getElementById('EventLog').innerHTML = '';
     };

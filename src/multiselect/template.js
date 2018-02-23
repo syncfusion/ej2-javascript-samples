@@ -19,7 +19,7 @@ this.default = function () {
         // set placeholder to MultiSelect input element
         placeholder: 'Select employees',
         // set the type of mode for how to visualized the selected items in input element.
-        mode: 'box'
+        mode: 'Box'
     });
     listObj.appendTo('#template');
 };

@@ -3,9 +3,10 @@ var http = require('http');
 var md = require('markdown-it');
 var fs = require('fs');
 var zlib = require('zlib');
+var gutil = require('gulp-util');
 const packageRegex = /@syncfusion\/ej2-/;
 var config = require('../../package.json');
-var dataCollection = [];  
+var dataCollection = [];
 var match = ['Property', 'Method', 'Event'];
 var bucketName = process.env.AWS_STAGING_BUCKET || 'npmci.syncfusion.com';
 var link = 'http://' + bucketName + '/';
@@ -22,24 +23,26 @@ var sbMacth = config.name.match(/react|ng/);
 
 link += (sbMacth ? sbMacth[0] + '/' : '') + 'documentation/';
 gulp.task('process-api', function (done) {
+    var dependency = JSON.parse(fs.readFileSync('./node_modules/@syncfusion/ej2/package.json', 'utf8'));
     fs.writeFileSync('./src/common/api-table', JSON.stringify({}));
     var count = 0;
-    var dependenciesArray = Object.keys(config.dependencies).filter(function (value) {
+    var dependenciesArray = Object.keys(dependency.dependencies).filter(function (value) {
         return packageRegex.test(value);
     });
     var length = dependenciesArray.length;
-    if(!length){
+    if (!length) {
         done();
     }
     for (var i = 0; i < length; i++) {
         var curPackage = dependenciesArray[i];
-        getGzipped(apiLink+'api/' + curPackage.split('/')[1] + '/file.json', function (err, data, packageName) {
-            count++
+        getGzipped(apiLink + 'api/' + curPackage.split('/')[1] + '/file.json', function (err, data, packageName) {
+            count++;
             if (err) {
-                process.exit(1);
-                done();
+                console.log(gutil.colors.red('Unable to access file json for ' + packageName));
+            } else {
+                processApiJson(data);
+                console.log('Completed the api processing  for ' + packageName);
             }
-            processApiJson(data);
             if (count === length) {
                 var idata = fs.readFileSync('./src/common/api-table', 'utf8');
                 idata = JSON.parse(idata);
@@ -80,7 +83,7 @@ function getGzipped(url, callback, package) {
 function processApiJson(data) {
     var apiJson = JSON.parse(fs.readFileSync('./src/common/api-table', 'utf8'));
     var children = JSON.parse(data).children;
-    var typeCollection = preProcessChild(children); 
+    var typeCollection = preProcessChild(children);
     for (child of children) {
         var curModuleName = child.name.replace(/"/g, '').split('/')[0]
         var iChild = child.children || [];
@@ -116,13 +119,13 @@ function processApiJson(data) {
                         } else if (kString === 'Method') {
                             iType = 'Method';
                             dataLink = curLink + propName.toLowerCase();
-                            if(cChild.signatures){
+                            if (cChild.signatures) {
                                 description = getMessageText(cChild.signatures[0]);
                             }
                         } else if (kString === 'Event') {
                             description = getMessageText(cChild);
                             iType = 'Event';
-                            var etype = getType(cChild.type,typeCollection);
+                            var etype = getType(cChild.type, typeCollection);
                             dataLink = curLink + propName.toLowerCase() + '--' + etype;
                         }
                         var descriptionHTML = mdGen.render(description);
@@ -159,7 +162,7 @@ function getType(type, typeColl) {
     if (!type) {
         return '';
     }
-    if(type.id && typeColl.indexOf(type.id) !== -1) {
+    if (type.id && typeColl.indexOf(type.id) !== -1) {
         return 'string';
     }
     iType = type.name || (type.elementType ? (type.elementType.name ? type.elementType.name : '') : '');
@@ -169,14 +172,14 @@ function getType(type, typeColl) {
     if (!iType) {
         if (intType === 'union') {
             isUnion = true;
-            iType = processUnionObject(type,typeColl);
+            iType = processUnionObject(type, typeColl);
         } else if (decl) {
             iType = 'Object';
         }
     } else if (iType === 'EmitType') {
         var typeArguments = type.typeArguments;
         if (typeArguments && typeArguments.length) {
-            var etype = getType(typeArguments[0],[]).toLowerCase();
+            var etype = getType(typeArguments[0], []).toLowerCase();
             return 'emittype' + etype.replace(/[^a-zA-Z]/g, '');
         }
         return 'emittype';
@@ -188,7 +191,7 @@ function processUnionObject(obj, typeColl) {
     var types = obj.types;
     var typeString = [];
     for (var k = 0; k < types.length; k++) {
-        var name = getType(types[k],typeColl);
+        var name = getType(types[k], typeColl);
         if (name) {
             typeString.push(name);
         }
@@ -210,7 +213,7 @@ function getMessageText(msgObject, shortText) {
     var ret = msgText;
     var sampleIndex = msgText.indexOf('```');
     if (sampleIndex !== -1) {
-        ret = removeTableData(msgText,sampleIndex);
+        ret = removeTableData(msgText, sampleIndex);
     }
     return ret;
 }
@@ -218,13 +221,12 @@ function getMessageText(msgObject, shortText) {
 function removeTableData(str, index) {
     var codesnippetStart = str.slice(index + 3);
     var endIndex = codesnippetStart.indexOf('```');
-    var end = (index ? (str.slice(0, index - 1)): '')+ (codesnippetStart.slice(endIndex + 3) || '');
+    var end = (index ? (str.slice(0, index - 1)) : '') + (codesnippetStart.slice(endIndex + 3) || '');
     var endIndex = end.indexOf('```');
     if (endIndex !== -1) {
         end = removeTableData(end, endIndex);
     }
     return end;
-n
 }
 
 function preProcessChild(childs) {

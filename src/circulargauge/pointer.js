@@ -3,6 +3,11 @@
  */
 function pointeGauge1() {
     var pointeGauge1 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -42,6 +47,11 @@ function pointeGauge1() {
 }
 function pointeGauge2() {
     var pointeGauge2 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -82,6 +92,11 @@ function pointeGauge2() {
 }
 function pointeGauge3() {
     var pointeGauge3 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -127,6 +142,11 @@ function pointeGauge3() {
 }
 function pointeGauge4() {
     var pointeGauge4 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         centerY: '40%',
         axes: [{
             startAngle: 270,
@@ -168,6 +188,11 @@ function pointeGauge4() {
 }
 function pointeGauge5() {
     var pointeGauge5 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         centerY: '40%',
         axes: [{
             startAngle: 270,
@@ -224,6 +249,11 @@ this.default = function () {
     var thirdgauge = new ej.circulargauge.CircularGauge(pointeGauge3());
     thirdgauge.appendTo('#container3');
     var fourthgauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         centerY: '40%',
         axes: [{
             startAngle: 270,

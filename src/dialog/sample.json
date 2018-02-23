@@ -2,10 +2,12 @@
    "name": "Dialog", 
    "directory": "dialog", 
    "category":"Layout", 
+   "type": "update",
    "samples" : [
-        {"url":"basic", "name": "Basic Usage", "category":"Dialog"},
-        {"url":"modal", "name": "Modal", "category":"Dialog"},
-        {"url":"ajax", "name": "Ajax Content", "category":"Dialog"},
-        {"url":"rtl", "name": "RTL", "category":"Dialog"}
+		{"url":"default", "name": "Default Functionalities", "category":"Dialog", "api":{"Dialog": [ "header", "content", "target", "showCloseIcon", "buttons", "animationSettings", "closeOnEscape", "width", "open", "close", "visible", "show", "hide" ]}},
+        {"url":"basic", "name": "Custom Dialogs", "category":"Dialog", "type": "update", "api":{"Dialog": [ "header", "content", "target", "showCloseIcon", "buttons", "animationSettings", "closeOnEscape", "width", "open", "close", "visible", "show", "hide"]}},
+        {"url":"template", "name": "Template", "category":"Dialog", "type": "new", "api":{"Dialog": [ "header", "content", "target", "showCloseIcon", "buttons", "animationSettings", "isModal", "width", "open", "close", "show", "hide"]}},
+        {"url":"modal", "name": "Modal", "category":"Dialog", "api":{"Dialog": [ "header", "content", "target", "showCloseIcon", "buttons", "animationSettings", "isModal", "width", "open", "close", "show", "hide", "overlayClick"]}},
+        {"url":"ajax", "name": "Ajax Content", "category":"Dialog", "type": "update", "api":{"Dialog": [ "header", "content", "target", "showCloseIcon", "buttons", "animationSettings", "width", "open", "close", "show"]}}
     ]
 }

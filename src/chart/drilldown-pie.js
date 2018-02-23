@@ -45,6 +45,9 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            if (selectedTheme === 'highcontrast') {
+                args.accumulation.annotations[0].content = '#white' ;
+            }
         }
     };
     var pointClick = function (args) {

@@ -4,6 +4,11 @@
 function customGauge1() {
     var customGauge1 = new ej.circulargauge.CircularGauge({
         centerY: '70%',
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             annotations: [{
                 content: '<div style="color:#666666;font-size:35px;">1800</div>',
@@ -41,6 +46,11 @@ function customGauge1() {
 }
 function customGauge2() {
     var customGauge2 = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             annotations: [{
                 content: '<div style="color:#666666;font-size:35px;">50.5GB</div>',

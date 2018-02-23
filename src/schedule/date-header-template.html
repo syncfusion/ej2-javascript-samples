@@ -1,0 +1,55 @@
+<style>
+    .schedule-date-header-template.e-schedule .e-vertical-view .e-header-cells {
+        padding: 0;
+        text-align: center !important;
+    }
+
+    .schedule-date-header-template.e-schedule .date-text {
+        font-size: 14px;
+    }
+
+    .schedule-date-header-template.e-schedule.e-device .date-text {
+        font-size: 12px;
+    }
+
+    .schedule-date-header-template.e-schedule .weather-image {
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .schedule-date-header-template.e-schedule .weather-text {
+        font-size: 11px;
+    }
+
+    .schedule-date-header-template.e-schedule .e-month-view .weather-image {
+        float: right;
+        margin: -20px 2px 0 0;
+        width: 20px;
+        height: 20px;
+    }
+</style>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This demo depicts the way to add images and custom text to the date header bar by making use of the date header template
+        option.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the
+        <code>dateHeaderTemplate</code> option is used to customize the date header cells of day, week and workweek views. In month view, the date header
+        is not applicable and therefore the same customizations can be added beside the date text in the month cells by making
+        use of the
+        <code>renderCells</code> event.
+    </p>
+</div>

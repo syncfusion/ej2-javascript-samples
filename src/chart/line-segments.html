@@ -1,0 +1,60 @@
+<div class="control-section">
+    <div id="container" align='center'></div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the annual mean rainfall data with multi colored line series in the chart. 
+        Data points are enhanced with segments and tooltip.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure the points in a particular range by using <code>MultiColoredLine</code> series type. 
+        Points under the range can be configured with <code>color</code>, <code>width</code>, and <code>dashArray</code>.
+    </p>
+    <p>
+        Tooltip is enabled in this example, to see the tooltip in action, hover a point or tap a point in touch enabled devices.
+    </p>
+    <br>
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        Chart component features are segregated into individual feature-wise modules. To use line series, we need to inject
+        <code>MultiColoredLineSeries</code> module using
+        <code>Chart.Inject(MultiColoredLineSeries)</code> method.
+    </p>
+    <script id="templateWrap" type="text/x-template">
+            <div style="width:80px; padding: 5px;">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <div style='width: 10px; height: 10px; background:blue;border-radius: 15px;'></div>
+                        </td>
+                        <td style="padding-left: 5px;">
+                            High
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style='width: 10px; height: 10px; background:green;;border-radius: 15px;'></div>
+                        </td>
+                        <td style="padding-left: 5px;">
+                            Medium
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style='width: 10px; height: 10px; background:red;;border-radius: 15px;'></div>
+                        </td>
+                        <td style="padding-left: 5px;">
+                            Low
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </script>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>

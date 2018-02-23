@@ -5,6 +5,11 @@ this.default = function () {
     var content = '<div style="font-size: 14px;color:#E5C31C;font-weight: lighter;font-style: oblique;"><span>';
     var pointerValue;
     var circulargauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         enablePointerDrag: true,
         dragMove: function (args) {
             pointerValue = Math.round(args.currentValue);

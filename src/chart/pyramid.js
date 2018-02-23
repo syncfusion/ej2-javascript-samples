@@ -17,12 +17,12 @@ this.default = function () {
                     name: 'text', visible: true, position: 'Inside', font: {
                         fontWeight: '600'
                     }
-                }, explode: true, emptyPointSettings: { mode: 'Drop', fill: 'red' }
+                }, explode: true, emptyPointSettings: { mode: 'Drop', fill: 'red' }, name: 'Food'
             }],
         legendSettings: {
             visible: false
         },
-        tooltip: { enable: true, format: '${point.x} : ${point.y} cal' },
+        tooltip: { enable: true, header: 'Food', format: '${point.x} : <b>${point.y} cal</b>' },
         textRender: function (args) {
             args.text = args.text;
         },

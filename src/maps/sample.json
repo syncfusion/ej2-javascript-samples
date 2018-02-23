@@ -1,0 +1,118 @@
+{
+    "name": "Maps",
+    "directory": "maps",
+    "category": "Data Visualization",
+	"dataSourcePath":"src/maps/MapData.js",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Maps"
+           
+        },
+        {
+            "url": "projection",
+            "name": "Projection",
+            "category": "Features"
+           
+        },
+        {
+            "url": "multilayer",
+            "name": "Multi-layers",
+            "category": "Features"
+           
+        },
+        {
+            "url": "marker",
+            "name": "Marker",
+            "category": "Features"
+          
+        },
+        {
+            "url": "markertemplate",
+            "name": "Marker template",
+            "category": "Features"
+            
+        },
+        {
+            "url": "datalabel",
+            "name": "Labels",
+            "category": "Features"
+        },
+        {
+            "url": "bubble",
+            "name": "Bubble",
+            "category": "Features"
+        },
+        {
+            "url": "lineapenisular",
+            "name": "Navigation Line",
+            "category": "Features"
+        },
+        {
+            "url": "legend",
+            "name": "Legend",
+            "category": "Features"
+        },
+        {
+            "url": "annotation",
+            "name": "Annotations",
+            "category": "Features"
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "category": "User Interaction"
+        },
+        {
+            "url": "selection",
+            "name": "Selection & Highlight",
+            "category": "User Interaction"
+        },
+        {
+            "url": "zooming",
+            "name": "Zooming & Panning",
+            "category": "User Interaction"
+        },
+        {
+            "url": "drilldown",
+            "name": "Drill Down",
+            "category": "User Interaction"
+        },
+        {
+            "url": "heatmap",
+            "name": "Heat Map",
+            "category": "Use Cases"
+        },
+        {
+            "url": "curvedlines",
+            "name": "Flight routes",
+            "category": "Use Cases"
+        },       
+        {
+            "url": "earthquake",
+            "name": "Earthquake indication",
+            "category": "Use Cases"
+        },
+        {
+            "url": "highlightedregion",
+            "name": "Highlighted region",
+            "category": "Use Cases"
+        },
+        {
+            "url": "pie",
+            "name": "Map with Pie chart",
+            "category": "Use Cases"
+        },
+       
+        {
+            "url": "seatSelection",
+            "name": "Bus seat booking",
+            "category": "Use Cases"
+        }
+       
+      
+    ]
+	
+}

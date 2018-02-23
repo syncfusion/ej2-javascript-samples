@@ -29,10 +29,10 @@ this.default = function() {
     var toggleBtn = new ej.buttons.Button({ iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isToggle: true });
     toggleBtn.appendTo('#togglebtn');
 
-    button = new ej.buttons.Button({ iconCss: 'e-icons e-open-icon', cssClass: 'e-flat', iconPosition: 'right' });
+    button = new ej.buttons.Button({ iconCss: 'e-icons e-open-icon', cssClass: 'e-flat', iconPosition: 'Right' });
     button.appendTo('#openiconbtn');
 
-    button = new ej.buttons.Button({});
+    button = new ej.buttons.Button({ cssClass: 'e-small'});
     button.appendTo('#smallbtn');
 
     //Toggle button click event handler

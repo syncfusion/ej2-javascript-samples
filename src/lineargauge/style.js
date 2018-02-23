@@ -13,6 +13,11 @@ this.default = function () {
 };
 function firstGauge() {
     var gauge1 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         axes: [{
             line: {
@@ -23,7 +28,6 @@ function firstGauge() {
                 offset: 10,
                 height: 13,
                 width: 13,
-                color: '#424242',
             }],
             majorTicks: {
                 interval: 10,
@@ -32,17 +36,17 @@ function firstGauge() {
             minorTicks: {
                 color: '#9E9E9E'
             },
-            labelStyle: {
-                font: {
-                    color: '#424242'
-                }
-            }
         }]
     });
     return gauge1;
 }
 function secondGauge() {
     var gauge2 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -60,9 +64,6 @@ function secondGauge() {
                 interval: 10,
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 offset: 50
             },
             pointers: [{
@@ -71,7 +72,6 @@ function secondGauge() {
                 offset: -50,
                 height: 15,
                 width: 15,
-                color: '#424242',
                 markerType: 'Triangle'
             }],
             ranges: [
@@ -89,6 +89,11 @@ function secondGauge() {
 }
 function thirdGauge() {
     var gauge3 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         axes: [{
             line: {
@@ -101,7 +106,6 @@ function thirdGauge() {
                     offset: 20,
                     height: 13,
                     width: 13,
-                    color: '#424242',
                 },
                 {
                     value: 70,
@@ -117,17 +121,17 @@ function thirdGauge() {
             minorTicks: {
                 color: '#9E9E9E'
             },
-            labelStyle: {
-                font: {
-                    color: '#424242'
-                }
-            }
         }]
     });
     return gauge3;
 }
 function fourthGauge() {
     var gauge4 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -146,9 +150,6 @@ function fourthGauge() {
                 height: 0
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 offset: 55
             },
             pointers: [
@@ -156,7 +157,6 @@ function fourthGauge() {
                     value: 60,
                     height: 15,
                     width: 15,
-                    color: '#424242',
                     placement: 'Near',
                     offset: -50,
                     markerType: 'Triangle'

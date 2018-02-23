@@ -1,0 +1,112 @@
+<style>
+    .e-schedule .e-schedule-toolbar .user-icon {
+        background-image: url('./src/grid/images/1.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        height: 24px;
+        min-width: 24px !important;
+        width: 24px !important;
+    }
+
+    .e-schedule .e-schedule-toolbar .e-toolbar-items .e-schedule-user-icon .e-tbar-btn:hover {
+        background-color: inherit;
+    }
+
+    .e-schedule .e-schedule-toolbar .e-toolbar-items .e-schedule-user-icon .e-tbar-btn-text {
+        display: none;
+    }
+
+    .e-schedule .e-schedule-toolbar .e-toolbar-pop .e-schedule-user-icon .e-tbar-btn-text {
+        padding-left: 8px !important;
+    }
+
+    .e-profile-wrapper {
+        width: 210px;
+        height: 80px;
+        background-color: #fafafa;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    .e-profile-wrapper .profile-container {
+        display: flex;
+        padding: 10px;
+    }
+
+    .e-profile-wrapper .profile-image {
+        background-image: url('./src/grid/images/1.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+        width: 60px;
+        height: 60px;
+    }
+
+    .e-profile-wrapper .content-wrap {
+        padding-left: 10px;
+    }
+
+    .e-profile-wrapper .name {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        margin-top: 2px;
+    }
+
+    .e-profile-wrapper .destination {
+        font-size: 12px;
+    }
+
+    .e-profile-wrapper .status {
+        font-size: 11px;
+    }
+</style>
+
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 90%">
+                    <div>
+                        <input id="headerbar" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This demo shows the way of adding custom items into the Schedule header bar. Here, an employee image is added to the
+        header bar, clicking on which will open the popup showing that person's short profile information.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, a popup has been designed separately with a person’s profile info and kept in a hidden state initially. A custom
+        item has been added to the Schedule header bar within the
+        <code>actionBegin</code> event by checking for the request type as
+        <code>toolbarItemRendering</code> which triggers at the time of header bar items rendering on the Schedule.
+    </p>
+    <p>
+        Once the items are added, the click action is being bound to it in the
+        <code>actionComplete</code> event by checking for the request type as
+        <code>toolbarItemRendered</code> which triggers after the items are rendered on the Schedule. The appropriate action of showing or hiding the popup
+        on clicking the custom item has been done within it.
+    </p>
+    <p>
+        In case, if the header bar of Schedule needs to be hidden, it can be done by setting false to
+        <code>showHeaderBar</code> property.
+    </p>
+</div>

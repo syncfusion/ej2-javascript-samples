@@ -1,0 +1,45 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize Uploader -->
+        <input type='file' id='fileupload' name='UploadFiles'/>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <div  style='margin-left: 50px; padding-top:25px;'>
+            <input id="checkAutoUpload" type="checkbox">
+        </div>
+    </div>
+</div>
+
+<style>
+    .control_wrapper {
+        max-width: 400px;
+        margin: auto;
+    }
+    .e-upload {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+    }
+    .control_wrapper .e-upload .e-upload-drag-hover {
+        margin: 0;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the default functionalities of the <code>Uploader</code> component. Browse the files which you want to upload to the server. 
+        The selected files are submitted to server on upload button click. If you click on the clear button, the selected / uploaded files are cleared from list.</p>
+    <p>Also, provided option to enable/disable the auto upload feature in the property panel</p>
+</div>
+
+<div id="description">
+    <p>The <code>Uploader</code> component is useful to upload images, documents, and other files. By default, the component allows to upload multiple files to browse and upload it to server.
+       The selected files append to the file list that contains file details such as name, type, and size.</p>
+    <p>You can manage the files in server after received the uploaded files. When the files are successfully uploaded to server, the remove button will be change to bin button.
+       The uploaded files can be removed by click on the bin button.</p>
+    <p>The progress bar displays for each file upload to denote its upload progress. 
+       Once the file upload gets success, the progress bar disappear and corresponding upload status message will be displayed in same place.</p>
+    <p>More information on the Uploader instantiation can be found in this documentation section.</p>
+</div>

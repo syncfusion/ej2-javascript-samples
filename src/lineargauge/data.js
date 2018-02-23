@@ -11,6 +11,11 @@ this.default = function () {
 };
 function firstGauge() {
     var gauge1 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -25,9 +30,6 @@ function firstGauge() {
                 offset: 30
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 offset: 50
             },
             pointers: [{
@@ -36,7 +38,6 @@ function firstGauge() {
                 offset: -60,
                 height: 10,
                 width: 10,
-                color: '#424242',
                 markerType: 'Triangle'
             }],
             ranges: [
@@ -67,7 +68,7 @@ function firstGauge() {
                 y: -130, zIndex: '1'
             },
             {
-                content: '<div id="pointerText" style="width:60px;"><p style="font-size:15px;color:#30b32d;">10 MPH</p></div>',
+                content: '<div id="pointerText" style="width:60px;"><p style="font-size:15px;">10 MPH</p></div>',
                 axisIndex: 0,
                 axisValue: 10,
                 y: -65, zIndex: '1'
@@ -78,6 +79,11 @@ function firstGauge() {
 }
 function secondGauge() {
     var gauge1 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -92,9 +98,6 @@ function secondGauge() {
                 offset: 30
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 offset: 50
             },
             pointers: [{
@@ -103,7 +106,6 @@ function secondGauge() {
                 width: 10,
                 placement: 'Near',
                 offset: -60,
-                color: '#424242',
                 markerType: 'Triangle'
             }],
             ranges: [
@@ -125,7 +127,7 @@ function secondGauge() {
             y: -110, zIndex: '1'
         },
         {
-            content: '<div id="pointerText" style="width:60px;"><p style="font-size:15px;color:#30b32d;">28 MPH</p></div>',
+            content: '<div id="pointerText" style="width:60px;"><p style="font-size:15px;">28 MPH</p></div>',
             axisIndex: 0,
             axisValue: 28,
             y: -70, zIndex: '1'
@@ -135,6 +137,11 @@ function secondGauge() {
 }
 function thirdGauge() {
     var gauge3 = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -150,9 +157,6 @@ function thirdGauge() {
                 offset: 30
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 format: '{value}k',
                 offset: 50
             },
@@ -162,7 +166,6 @@ function thirdGauge() {
                 width: 10,
                 placement: 'Near',
                 offset: -60,
-                color: '#424242',
                 markerType: 'Triangle'
             }],
             ranges: [
@@ -184,7 +187,7 @@ function thirdGauge() {
             y: -120, zIndex: '1'
         },
         {
-            content: '<div id="pointerText" style="width:100px;"><p style="font-size:15px;color:#30b32d;">2000 Steps</p></div>',
+            content: '<div id="pointerText" style="width:100px;"><p style="font-size:15px;">2000 Steps</p></div>',
             axisIndex: 0,
             axisValue: 2.2,
             y: -65, zIndex: '1'

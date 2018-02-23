@@ -6,6 +6,9 @@ var labelRender = function (args) {
     else if (selectedTheme === 'material') {
         args.fill = window.materialColors[args.point.index % 10];
     }
+    else if (selectedTheme === 'highcontrast') {
+        args.fill = window.highcontrastColors[args.point.index % 10];
+    }
     else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }
@@ -29,7 +32,7 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelStyle: { color: 'white' },
+            labelStyle: { size: '0px'  },
             majorTickLines: { width: 0 },
             majorGridLines: { width: 0 },
             lineStyle: { width: 0 },
@@ -81,4 +84,15 @@ this.default = function () {
         }
     });
     edgeMode.appendTo('#edgemode');
+
+    var labelMode = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select Range Bar Color',
+        width: 120,
+        change: function () {
+            chart.primaryXAxis.labelPosition = labelMode.value;
+            chart.dataBind();
+        }
+    });
+    labelMode.appendTo('#labelmode');
 };

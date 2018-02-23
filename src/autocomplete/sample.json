@@ -2,13 +2,15 @@
     "name": "AutoComplete",
     "directory": "autocomplete",
     "category": "Editors",
+    "type": "update",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "category": "AutoComplete", "api": {"AutoComplete": ["dataSource", "value", "placeholder"]} },
         { "url": "grouping-icon", "name": "Grouping and Icons", "category": "AutoComplete", "api": {"AutoComplete": ["fields"]} },
         { "url": "databinding", "name": "Data Binding", "category": "AutoComplete", "api": {"AutoComplete": ["suggestionCount", "query", "sortOrder", "autofill", "filterType", "change", "actionBegin", "actionComplete", "actionFailure"]} },
         { "url": "template", "name": "Template", "category": "AutoComplete", "api": {"AutoComplete": ["headerTemplate", "itemTemplate"]} },
         { "url": "highlight", "name": "Highlight", "category": "AutoComplete", "api": {"AutoComplete": ["highlight"]} },
-        { "url": "custom-filtering", "name": "Custom Filtering", "category": "AutoComplete", "api": {"AutoComplete": ["dataSource", "filtering", "fields", "placeholder"]} }
+        { "url": "custom-filtering", "name": "Custom Filtering", "category": "AutoComplete", "api": {"AutoComplete": ["dataSource", "filtering", "fields", "placeholder"]} },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "category": "AutoComplete", "api": {"AutoComplete": ["dataSource","ignoreAccent", "placeholder"]}, "type": "new" }
     ],
     "dataSourcePath":"src/dropdownlist/datasource.js"
 }

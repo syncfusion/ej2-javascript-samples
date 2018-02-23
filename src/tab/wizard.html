@@ -1,0 +1,238 @@
+﻿<div class="col-lg-12 control-section">
+    <div class="e-sample-resize-container" id="dialog_target">
+        <div id="alertDialog"></div>
+        <div id="tab_wizard"> </div>
+        <div id="booking" style="display:none;">
+            <div class="wizard-title">Plan your journey</div>
+            <div class="responsive-align">
+                <div class='row'>
+                    <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 search-item">
+                        <input id="startPoint" class="e-input" type="text">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 search-item">
+                        <input id="endPoint" class="e-input" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 search-item">
+                        <input id="journey_date" class="e-input" type="text">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6 search-item">
+                        <input id="ticket_type" class="e-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button id="searchNext" class="e-btn">Search Train</button>
+            </div>
+
+            <span id="err1"></span>
+        </div>
+    </div>
+    <div id="selectTrain" style="display:none;">
+        <div class="wizard-title">Select the train from the list </div>
+        <div id="availableTrain"></div>
+        <br>
+        <div class="btn-container">
+            <button id="goToSearch" class="e-btn">Back</button>
+            <button id="bookTickets" class="e-btn">Continue</button>
+        </div>
+        <span id="err2"></span>
+    </div>
+    <div id="details" style="display:none;">
+        <div class="details-page wizard-title">Enter the passenger details</div>
+        <div id="PassengersList">
+            <table id="passenger-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="name-header">Name</th>
+                        <th class="age-header">Age</th>
+                        <th class="gender-header">Gender</th>
+                        <th class="type-header">Berth Preference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input id="pass_name1" class="e-input" type="text" placeholder="Passenger Name">
+                        </td>
+                        <td>
+                            <input id="pass_age1" class="e-input">
+                        </td>
+                        <td>
+                            <input id="pass_gender1" type="text">
+                        </td>
+                        <td>
+                            <input id="pass_berth1" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="pass_name2" class="e-input" type="text" placeholder="Passenger Name">
+                        </td>
+                        <td>
+                            <input id="pass_age2" class="e-input">
+                        </td>
+                        <td>
+                            <input id="pass_gender2" type="text">
+                        </td>
+                        <td>
+                            <input id="pass_berth2" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="pass_name3" class="e-input" type="text" placeholder="Passenger Name">
+                        </td>
+                        <td>
+                            <input id="pass_age3" class="e-input">
+                        </td>
+                        <td>
+                            <input id="pass_gender3" type="text">
+                        </td>
+                        <td>
+                            <input id="pass_berth3" type="text">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="btn-container">
+            <button id="goBackToBook" class="e-btn">Back</button>
+            <button id="confirmTickets" class="e-btn">Continue</button>
+        </div>
+        <span id="err3"></span>
+    </div>
+    <div id="confirm" style="display:none;">
+        <div class="tab-title1 wizard-title">Confirm the details and proceed</div>
+        <div id="ticketDetailGrid"></div>
+        <div id="amount"></div>
+        <br>
+        <div class="btn-container">
+            <button id="goBackDetails" class="e-btn">Back</button>
+            <button id="makePayment" class="e-btn">Pay</button>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates simple train reservation wizard that enable/disable Tab items based on sequential validation of
+        each Tab content.
+    </p>
+</div>
+<div id="description">
+    <p>
+        Tab items can be disabled dynamically by passing the index and boolean value to the
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/api-tab.html?lang=typescript#enabletab">enableTab</a> method.
+    </p>
+    <p>
+        You can design wizard like sample with Tab using the in-built API and customizing the content with proper validations.
+    </p>
+    <p>
+        More information about Tab can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/getting-started.html">
+            documentation</a> section.
+    </p>
+</div>
+<style>
+    .e-content .e-item {
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    #amount {
+        text-align: right;
+        font-size: 15px;
+        padding: 15px 0px;
+    }
+
+    #passenger-table th {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        border: 1px solid gainsboro;
+    }
+
+    #passenger-table td,
+    th {
+        padding: 10px;
+    }
+
+    #passenger-table td {
+        border: 1px solid gainsboro;
+    }
+
+    .name-header {
+        width: 200px;
+    }
+
+    .age-header {
+        width: 80px;
+    }
+
+    .gender-header {
+        width: 120px;
+    }
+
+    .type-header {
+        width: 150px;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    .search-item {
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
+
+    .item-title {
+        font-weight: 500;
+        padding-top: 10px;
+    }
+
+    @media (max-width: 450px) {
+        .e-sample-resize-container {
+            height: 450px;
+        }
+        .responsive-align {
+            width: 75%;
+            margin: 0 auto;
+        }
+        .search-item {
+            padding: 0 0 20px 0;
+            width: 100%;
+        }
+    }
+
+    #err1,
+    #err2,
+    #err3 {
+        font-weight: bold;
+        color: red;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .wizard-title {
+        font-size: 15px;
+    }
+
+    #PassengersList {
+        overflow: auto;
+    }
+    #passenger-table {
+        min-width: 500px;
+        width: 100%;
+    }
+</style>

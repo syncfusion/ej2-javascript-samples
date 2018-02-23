@@ -5,11 +5,9 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'DateTime',
-            intervalType: 'Months', 
+            valueType: 'DateTime',            
             zoomFactor: 0.4, zoomPosition: 0.6,
-            majorGridLines: { width: 0 },
-            skeleton: 'yMd',
+            majorGridLines: { width: 0 },            
             crosshairTooltip: { enable: true },
         },
         //Initializing Primary Y Axis
@@ -56,11 +54,10 @@ this.default = function () {
                 period: 3, animation: { enable: true }, upperLine: { color: '#e74c3d' }, lowerLine: { color: '#2ecd71' }
             }],
         //Initializing Zooming
-        zoomSettings: {
-            enableMouseWheelZooming: true,
-            enablePinchZooming: true,
+        zoomSettings: {            
             enableSelectionZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enablePan : true
         },
         //Initializing Tooltip
         tooltip: {

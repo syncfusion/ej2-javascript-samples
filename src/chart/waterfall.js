@@ -26,7 +26,7 @@ this.default = function () {
         series: [{
                 dataSource: chartData, width: 2, negativeFillColor: '#e56590',
                 xName: 'x', yName: 'y', intermediateSumIndexes: [4], sumIndexes: [7],
-                name: 'USA', columnWidth: 0.9,
+                columnWidth: 0.9,
                 type: 'Waterfall', animation: { enable: true },
                 marker: {
                     dataLabel: { visible: true, font: { color: '#ffffff' } }

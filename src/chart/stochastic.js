@@ -6,9 +6,8 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'DateTime',
-            intervalType: 'Months', majorGridLines: { width: 0 },
+            majorGridLines: { width: 0 },
             zoomFactor: 0.4, zoomPosition: 0.6,
-            skeleton: 'yMd',
             crosshairTooltip: { enable: true },
         },
         //Initializing Primary Y Axis
@@ -58,10 +57,9 @@ this.default = function () {
             }],
         //Initializing Zooming
         zoomSettings: {
-            enablePinchZooming: true,
-            enableMouseWheelZooming: true,
             enableSelectionZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enablePan : true
         },
         //Initializing Tooltip
         tooltip: {

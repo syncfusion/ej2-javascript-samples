@@ -2,7 +2,7 @@
 this.default = function () {
     var listObj = new ej.dropdowns.MultiSelect({
         // bind the DataManager instance to dataSource property
-        dataSource: new ej.data.DataManager({ url: 'http://services.odata.org/V4/Northwind/Northwind.svc', adaptor: new ej.data.ODataV4Adaptor(), crossDomain: true}),
+        dataSource: new ej.data.DataManager({ url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc', adaptor: new ej.data.ODataAdaptor(), crossDomain: true}),
         // bind the Query instance to query property
         query: new ej.data.Query().from('Customers').select(['ContactName', 'CustomerID']).take(25),
         // map the appropriate columns to fields property

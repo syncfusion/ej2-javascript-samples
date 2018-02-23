@@ -1,8 +1,7 @@
 { "name": "DatePicker", "directory": "datepicker", "category":"Editors", "samples" : [
-    {"url":"default", "name": "Default Functionalities", "category":"DatePicker"},
-    {"url":"disabled", "name": "Disabled Dates", "category":"DatePicker"},
-    {"url":"range", "name": "Date Range", "category":"DatePicker"},
-    {"url":"date-format", "name": "Date Formats", "category":"DatePicker"},
-    {"url":"globalization", "name": "Globalization", "category":"DatePicker"},
-    {"url":"special", "name": "Special Dates", "category":"DatePicker"}
+    {"url":"default", "name": "Default Functionalities", "category":"DatePicker", "api":{"DatePicker": [ "placeholder" ]} },
+    {"url":"disabled", "name": "Disabled Dates", "category":"DatePicker", "api":{"DatePicker": [ "placeholder", "renderDayCell" ]} },
+    {"url":"range", "name": "Date Range", "category":"DatePicker", "api":{"DatePicker": [ "min", "max", "value", "placeholder" ]}},
+    {"url":"date-format", "name": "Format", "category":"DatePicker", "api":{"DatePicker": [ "format", "value", "placeholder" ]} },
+    {"url":"special", "name": "Special Dates", "category":"DatePicker", "api":{"DatePicker": [ "value", "placeholder", "renderDayCell" ]}}
 ]}

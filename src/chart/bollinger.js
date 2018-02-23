@@ -10,11 +10,9 @@ this.default = function () {
         },
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'DateTime',
-            intervalType: 'Months',
+            valueType: 'DateTime',            
             majorGridLines: { width: 0 },
-            zoomFactor: 0.6, zoomPosition: 0.6,
-            skeleton: 'yMd',
+            zoomFactor: 0.2, zoomPosition: 0.6,            
             crosshairTooltip: { enable: true }
         },
         //Initializing Primary Y Axis
@@ -46,10 +44,9 @@ this.default = function () {
         crosshair: { enable: true, lineType: 'Vertical' },
         //Initializing Zooming
         zoomSettings: {
-            enableMouseWheelZooming: true,
             enableSelectionZooming: true,
-            enableDeferredZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enablePan : true
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         //Initializing Chart Title
