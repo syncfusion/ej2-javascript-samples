@@ -5,7 +5,7 @@
     "author": "Syncfusion Inc.",
     "license": "SEE LICENSE IN license",
     "dependencies": {
-        "@syncfusion/ej2": "*",
+        "@syncfusion/ej2": "16.1.24",
         "browser-sync": "^2.18.13",
         "cheerio": "^1.0.0-rc.1",
         "crossroads": "^0.12.2",
@@ -27,11 +27,5 @@
     "scripts": {
         "test": "gulp js-hint && gulp build",
         "ci-publish": "gulp publish-samples"
-    },
-    "config": {
-        "ghooks": {
-            "pre-commit": "npm run test",
-            "commit-msg": "gulp commit-message"
-        }
     }
 }
