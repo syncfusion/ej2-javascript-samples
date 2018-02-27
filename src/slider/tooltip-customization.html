@@ -1,0 +1,113 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="sliderwrap">
+            <label class="labeltext userselect">
+                <span class="label-text">Background color</span>
+            </label>
+            <div id="default"></div>
+        </div>
+        <div class="sliderwrap">
+            <label class="labeltext userselect">
+                <span class="label-text">Color and text</span>
+            </label>
+            <div id="out"></div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the customization of Slider's tooltip. Drag the thumb over the bar for selecting the values
+        between min and max.</p>
+</div>
+
+<div id="description">
+    <p>In this demo, customization of tooltip using CSS is demonstrated.</p>
+    <ul>
+        <li>Background color - In this sample, tooltip has been customized to custom color.</li>
+        <li>Color and text - In this sample, tooltip and its content has been customized to custom color.</li>
+    </ul>
+</div>
+
+
+<style>
+    .sliderwrap .label-text {
+        font-weight: 500;
+    }
+
+    .content-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        min-width: 185px;
+    }
+
+    .sliderwrap {
+        margin-top: 40px;
+    }
+
+    #default .e-material-handle,
+    #out .e-material-handle,
+    .bootstrap #out .e-handle,
+    .bootstrap #default .e-handle,
+    .fabric #out .e-handle,
+    .fabric #default .e-handle,
+    .highcontrast #out .e-handle,
+    .highcontrast #default .e-handle {
+        background-color: #ffd939;
+        border-color: #ffd939;
+        z-index: 1;
+    }
+
+    .e-bigger .content-wrapper {
+        width: 80%;
+    }
+
+    .sliderwrap label {
+        padding-bottom: 26px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+
+    .userselect {
+        -webkit-user-select: none;
+        /* Safari 3.1+ */
+        -moz-user-select: none;
+        /* Firefox 2+ */
+        -ms-user-select: none;
+        /* IE 10+ */
+        user-select: none;
+        /* Standard syntax */
+    }
+
+
+
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-slider-tooltip .e-tip-content,
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-material-range .e-tip-content.e-material-tooltip-show {
+        color: #333;
+    }
+
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-material-range .e-arrow-tip-inner {
+        color: #ffd939;
+    }
+
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-material-range.e-slider-horizontal-before .e-arrow-tip-outer {
+        border-top-color: #ffd939;
+
+    }
+
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-material-range.e-slider-horizontal-after .e-arrow-tip-outer {
+        border-bottom-color: #ffd939;
+    }
+
+    .e-slider-container .e-slider#default .e-range,
+    .e-slider-container .e-slider#out .e-range {
+        background-color: #0375be;
+        z-index: unset;
+    }
+
+    .e-slider-tooltip.e-tooltip-wrap.e-popup.e-material-range,
+    .e-slider-tooltip.e-tooltip-wrap.e-popup {
+        background-color: #ffd939;
+        border-color: #ffd939;
+    }
+</style>

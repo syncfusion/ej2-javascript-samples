@@ -2,11 +2,17 @@
  * Sample for Hilo Open Close Series
  */
 this.default = function () {
+    var date1 = new Date('2017-01-01');
+    var returnValue = chartData.filter(filterValue);
+   function filterValue(value) {
+         return value.x >= date1;
+    }
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'DateTime',
-            skeleton: 'yMd', zoomFactor: 0.2, zoomPosition: 0.6,
+            minimum: new Date('2016-12-31'),
+            maximum: new Date('2017-09-31'),
             crosshairTooltip: { enable: true },
             majorGridLines: { width: 0 }
         },
@@ -14,7 +20,7 @@ this.default = function () {
         primaryYAxis: {
             title: 'Price',
             labelFormat: '${value}',
-            minimum: 50, maximum: 170,
+            minimum: 100, maximum: 180,
             interval: 20,
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 }
@@ -28,18 +34,11 @@ this.default = function () {
         series: [
             {
                 type: 'HiloOpenClose',
-                dataSource: window.chartData, animation: { enable: true },
+                dataSource:  returnValue, animation: { enable: true },
                 bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
                 xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close', name: 'Apple Inc'
             }
         ],
-        //Initializing Tooltip
-        zoomSettings: {
-            enableMouseWheelZooming: true,
-            enablePinchZooming: true,
-            enableSelectionZooming: true,
-            mode: 'X'
-        },
         //Initializing Chart Title
         title: 'AAPL Historical',
         //Initializing Tooltip

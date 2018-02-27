@@ -3,6 +3,11 @@
  */
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         title: 'Temperature Measure',
         container: {
             width: 13,
@@ -14,11 +19,6 @@ this.default = function () {
             maximum: 180,
             line: {
                 width: 0
-            },
-            labelStyle: {
-                font: {
-                    color: '#000000'
-                }
             },
             majorTicks: {
                 interval: 20,
@@ -43,11 +43,6 @@ this.default = function () {
             maximum: 180,
             line: {
                 width: 0
-            },
-            labelStyle: {
-                font: {
-                    color: '#000000'
-                }
             },
             majorTicks: {
                 interval: 20

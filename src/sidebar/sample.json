@@ -1,0 +1,12 @@
+{
+    "name": "Sidebar",
+    "directory": "sidebar",
+    "category": "Navigation",
+    "type": "preview",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "category": "Sidebar", "api": { "Sidebar": ["type", "position", "showBackdrop", "closeOnDocumentClick", "change", "mediaQuery"] } },
+        { "url": "dock", "name": "Dock", "category": "Sidebar", "api": { "Sidebar": ["enableDock", "dockSize", "contextTo"]} },
+        { "url": "api", "name": "API", "category": "Sidebar", "api": { "Sidebar": ["showBackdrop", "position", "types", "closeOnDocumentClick"] }},
+        { "url": "sidebar-menu", "name": "Sidebar With ListView", "category": "Sidebar", "api": { "Sidebar": ["open", "close"] } }
+    ]
+}

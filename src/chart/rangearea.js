@@ -53,7 +53,7 @@ this.default = function () {
         ],
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         //Initializing Chart Title
-        title: 'Maximum and Minimum Temperature',
+        title: 'Temperature Variation',
         seriesRender: function (args) {
             var theme = args.series.chart.theme;
             var color;

@@ -1,182 +1,182 @@
 this.default = function () {
-    var firstGrid = new ej.grids.Grid({
-        dataSource: window.orderData.splice(0, 5),
+    var grid = new ej.grids.Grid({
+        dataSource: window.productData,
         allowExcelExport: true,
         allowPdfExport: true,
-        toolbar: ['excelexport', 'pdfexport'],
+        allowPaging: true,
+        pageSettings: { pageCount: 2, pageSize: 10 },
+        toolbar: ['ExcelExport', 'PdfExport'],
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', textAlign: 'right', width: 120, type: 'number' },
-            { field: 'OrderDate', headerText: 'Order Date', textAlign: 'right', width: 140, format: 'yMd' },
-            { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-            { field: 'Freight', headerText: 'Freight', textAlign: 'right', width: 120, format: 'C' },
-        ],
+            { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 120 },
+            { field: 'ProductName', headerText: 'Product Name', width: 200 },
+            { field: 'QuantityPerUnit', headerText: 'Quantity Per Unit', width: 145 },
+            { field: 'UnitsInStock', headerText: 'Units In Stock', textAlign: 'Right', width: 140 },
+            { field: 'UnitPrice', headerText: 'Unit Price', textAlign: 'Right', width: 140, format: 'C2' },
+        ]
     });
-    var secondGrid = new ej.grids.Grid({
-        dataSource: window.productData.splice(0, 5),
-        allowExcelExport: true,
-        allowPdfExport: true,
-        columns: [
-            { field: 'ProductID', headerText: 'Product ID', textAlign: 'right', width: 120 },
-            { field: 'ProductName', headerText: 'Product Name', width: 145 },
-            { field: 'UnitPrice', headerText: 'Unit Price', textAlign: 'right', width: 140, format: 'C2' },
-        ],
-    });
-    firstGrid.appendTo('#FirstGrid');
-    secondGrid.appendTo('#SecondGrid');
-    firstGrid.toolbarClick = function (args) {
-        if (args.item.id === 'FirstGrid_excelexport') {
-            var firstGridExcelExport = firstGrid.excelExport(getExcelExportProperties(), true);
-            firstGridExcelExport.then(function (bookData) {
-                secondGrid.excelExport(getExcelExportProperties(), false, bookData);
-            });
+    grid.appendTo('#Grid');
+    grid.toolbarClick = function (args) {
+        if (args.item.id === 'Grid_pdfexport') {
+            grid.pdfExport(getPdfExportProperties());
         }
-        if (args.item.id === 'FirstGrid_pdfexport') {
-            var firstGridPdfExport = firstGrid.pdfExport(getPdfExportProperties(), true);
-            firstGridPdfExport.then(function (pdfData) {
-                secondGrid.pdfExport(getPdfExportProperties(), false, pdfData);
-            });
+        if (args.item.id === 'Grid_excelexport') {
+            grid.excelExport(getExcelExportProperties());
         }
-
-        /* tslint:disable-next-line:no-any */
-        function getExcelExportProperties() {
-            return {
-                header: {
-                    headerRows: 7,
-                    rows: [
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: 'Northwind Traders',
-                                    style: { fontColor: '#C67878', fontSize: 20, hAlign: 'center', bold: true, }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: '2501 Aerial Center Parkway',
-                                    style: { fontColor: '#C67878', fontSize: 15, hAlign: 'center', bold: true, }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: 'Suite 200 Morrisville, NC 27560 USA',
-                                    style: { fontColor: '#C67878', fontSize: 15, hAlign: 'center', bold: true, }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: 'Tel +1 888.936.8638 Fax +1 919.573.0306',
-                                    style: { fontColor: '#C67878', fontSize: 15, hAlign: 'center', bold: true, }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    hyperlink: { target: 'https://www.northwind.com/', displayText: 'www.northwind.com' },
-                                    style: { hAlign: 'center' }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    hyperlink: { target: 'mailto:support@northwind.com' },
-                                    style: { hAlign: 'center' }
-                                }]
-                        },
-                    ]
-                },
-                footer: {
-                    footerRows: 4,
-                    rows: [
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: 'Thank you for your business!',
-                                    style: { hAlign: 'center', bold: true }
-                                }]
-                        },
-                        {
-                            cells: [
-                                {
-                                    colSpan: 6,
-                                    value: '!Visit Again!',
-                                    style: { hAlign: 'center', bold: true }
-                                }]
-                        }
-                    ]
-                },
-            };
-        }
-
-        /* tslint:disable-next-line:no-any */
-        function getPdfExportProperties() {
-            return {
-                header: {
-                    fromTop: 0,
-                    height: 120,
-                    contents: [
-                        {
-                            type: 'line',
-                            style: { penColor: '#000000', penSize: 1, dashStyle: 'solid' },
-                            points: { x1: 25, y1: 4, x2: 800, y2: 4 }
-                        },
-                        {
-                            type: 'line',
-                            style: { penColor: '#000000', penSize: 1, dashStyle: 'solid' },
-                            points: { x1: 25, y1: 100, x2: 800, y2: 100 }
-                        },
-                        {
-                            type: 'text',
-                            value: 'Northwind Traders',
-                            position: { x: 300, y: 20 },
-                            style: { textBrushColor: '#C67878', fontSize: 14 }
-                        },
-                        {
-                            type: 'text',
-                            value: '2501 Aerial Center Parkway',
-                            position: { x: 280, y: 45 },
-                            style: { textBrushColor: '#C67878', fontSize: 14 }
-                        },
-                        {
-                            type: 'text',
-                            value: 'Tel +1 888.936.8638 Fax +1 919.573.0306',
-                            position: { x: 240, y: 70 },
-                            style: { textBrushColor: '#C67878', fontSize: 14 }
-                        },
-                    ]
-                },
-                footer: {
-                    fromBottom: 160,
-                    height: 100,
-                    contents: [
-                        {
-                            type: 'line',
-                            style: { penColor: '#000000', penSize: 1, dashStyle: 'solid' },
-                            points: { x1: 25, y1: 4, x2: 800, y2: 4 }
-                        },
-                        {
-                            type: 'line',
-                            style: { penColor: '#000000', penSize: 1, dashStyle: 'solid' },
-                            points: { x1: 25, y1: 60, x2: 800, y2: 60 }
-                        },
-                        {
-                            type: 'text',
-                            value: '!! Thank you !!',
-                            position: { x: 300, y: 20 },
-                            style: { textBrushColor: '#C67878', fontSize: 14 }
-                        }
-                    ]
-                }
-            };
+        if (args.item.id === 'Grid_csvexport') {
+            grid.csvExport();
         }
     };
+
+    var date = '';
+    date += ((new Date()).getMonth().toString()) + '/' + ((new Date()).getDate().toString());
+    date += '/' + ((new Date()).getFullYear().toString());
+
+    function getExcelExportProperties() {
+        return {
+            header: {
+                headerRows: 7,
+                rows: [
+                    { index: 1, cells: [{ index: 1, colSpan: 5, value: 'INVOICE', style: { fontColor: '#C25050', fontSize: 25, hAlign: 'Center', bold: true } }] },
+                    {
+                        index: 3,
+                        cells: [
+                            { index: 1, colSpan: 2, value: "Advencture Traders", style: { fontColor: '#C67878', fontSize: 15, bold: true } },
+                            { index: 4, value: "INVOICE NUMBER", style: { fontColor: '#C67878', bold: true } },
+                            { index: 5, value: "DATE", style: { fontColor: '#C67878', bold: true }, width: 150 }
+                        ]
+                    },
+                    {
+                        index: 4,
+                        cells: [{ index: 1, colSpan: 2, value: "2501 Aerial Center Parkway" },
+                        { index: 4, value: 2034 }, { index: 5, value: date, width: 150 }
+
+                        ]
+                    },
+
+                    {
+                        index: 5,
+                        cells: [
+                            { index: 1, colSpan: 2, value: "Tel +1 888.936.8638 Fax +1 919.573.0306" },
+                            { index: 4, value: "CUSOTMER ID", style: { fontColor: '#C67878', bold: true } }, { index: 5, value: "TERMS", width: 150, style: { fontColor: '#C67878', bold: true } }
+
+                        ]
+                    },
+                    {
+                        index: 6,
+                        cells: [
+
+                            { index: 4, value: 564 }, { index: 5, value: "Net 30 days", width: 150 }
+                        ]
+                    }
+                ]
+            },
+
+            footer: {
+                footerRows: 8,
+                rows: [
+                    { cells: [{ colSpan: 6, value: "Thank you for your business!", style: { fontColor: '#C67878', hAlign: 'Center', bold: true } }] },
+                    { cells: [{ colSpan: 6, value: "!Visit Again!", style: { fontColor: '#C67878', hAlign: 'Center', bold: true } }] }
+                ]
+            }
+        };
+    }
+
+    function getPdfExportProperties() {
+        return {
+            header: {
+                fromTop: 0,
+                height: 120,
+                contents: [
+                    {
+                        type: 'Text',
+                        value: 'INVOICE',
+                        position: { x: 280, y: 0 },
+                        style: { textBrushColor: '#C25050', fontSize: 25 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'INVOICE NUMBER',
+                        position: { x: 500, y: 30 },
+                        style: { textBrushColor: '#C67878', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'Date',
+                        position: { x: 600, y: 30 },
+                        style: { textBrushColor: '#C67878', fontSize: 10 },
+                    }, {
+                        type: 'Text',
+                        value: '223344',
+                        position: { x: 500, y: 50 },
+                        style: { textBrushColor: '#000000', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: date,
+                        position: { x: 600, y: 50 },
+                        style: { textBrushColor: '#000000', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'CUSTOMER ID',
+                        position: { x: 500, y: 70 },
+                        style: { textBrushColor: '#C67878', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'TERMS',
+                        position: { x: 600, y: 70 },
+                        style: { textBrushColor: '#C67878', fontSize: 10 },
+                    }, {
+                        type: 'Text',
+                        value: '223',
+                        position: { x: 500, y: 90 },
+                        style: { textBrushColor: '#000000', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'Net 30 days',
+                        position: { x: 600, y: 90 },
+                        style: { textBrushColor: '#000000', fontSize: 10 },
+                    },
+                    {
+                        type: 'Text',
+                        value: 'Adventure Traders',
+                        position: { x: 20, y: 30 },
+                        style: { textBrushColor: '#C67878', fontSize: 20 }
+                    },
+                    {
+                        type: 'Text',
+                        value: '2501 Aerial Center Parkway',
+                        position: { x: 20, y: 65 },
+                        style: { textBrushColor: '#000000', fontSize: 11 }
+                    },
+                    {
+                        type: 'Text',
+                        value: 'Tel +1 888.936.8638 Fax +1 919.573.0306',
+                        position: { x: 20, y: 80 },
+                        style: { textBrushColor: '#000000', fontSize: 11 }
+                    },
+                ]
+            },
+            footer: {
+                fromBottom: 160,
+                height: 100,
+                contents: [
+                    {
+                        type: 'Text',
+                        value: 'Thank you for your business !',
+                        position: { x: 250, y: 20 },
+                        style: { textBrushColor: '#C67878', fontSize: 14 }
+                    },
+                    {
+                        type: 'Text',
+                        value: '! Visit Again !',
+                        position: { x: 300, y: 45 },
+                        style: { textBrushColor: '#C67878', fontSize: 14 }
+                    }
+                ]
+            }
+        };
+    }
 };

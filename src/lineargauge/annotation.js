@@ -59,6 +59,9 @@ this.default = function () {
     gauge.appendTo('#annotationContainer');
 };
 function gaugeLoad(args) {
+    var selectedTheme = location.hash.split('/')[1];
+    selectedTheme = selectedTheme ? selectedTheme : 'Material';
+    args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
     if (this.count === undefined) {
         gauge.annotations = [
             {

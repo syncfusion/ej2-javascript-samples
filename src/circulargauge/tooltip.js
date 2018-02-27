@@ -3,6 +3,11 @@
  */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         title: 'Tooltip Customization',
         titleStyle: { size: '15px', color: 'grey' },
         axes: [{
@@ -38,6 +43,7 @@ this.default = function () {
         }],
         tooltip: {
             enable: true,
+            fill: 'transparent',
             template: '#gauge-tooltip', border: {
                 color: '#33BCBD',
                 width: 2

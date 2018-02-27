@@ -6,22 +6,26 @@
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "Accordion"
+            "category": "Accordion",
+            "api": {"AccordionItem": ["header", "content", "expanded"], "Accordion":["items"] }
         },
         {
             "url": "ajax",
             "name": "Ajax Content",
-            "category": "Accordion"
+            "category": "Accordion",
+            "api": {"Accordion": ["expandMode","expanding"] }
         },
         {
             "url": "icons",
             "name": "Icons",
-            "category": "Accordion"
+            "category": "Accordion",
+            "api": {"AccordionItem": ["iconCss"] }
         },
         {
             "url": "rtl",
             "name": "RTL",
-            "category": "Accordion"
+            "category": "Accordion",
+            "api":{"Accordion":["enableRtl"] }
         }
     ]
 }

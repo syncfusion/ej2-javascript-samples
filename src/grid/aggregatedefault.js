@@ -5,24 +5,24 @@ this.default = function () {
         pageSettings: { pageCount: 5 },
         columns: [
             { field: 'CustomerName', headerText: 'Customer Name', width: 150 },
-            { field: 'Freight', width: 160, format: 'C2', textAlign: 'right' },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'right' },
+            { field: 'Freight', width: 160, format: 'C2', textAlign: 'Right' },
+            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
             { field: 'ShipCountry', headerText: 'Ship Country', width: 140 }
         ],
         aggregates: [{
             columns: [{
-                type: 'sum',
+                type: 'Sum',
                 field: 'Freight',
                 format: 'C2',
-                footerTemplate: 'Sum: ${sum}'
+                footerTemplate: 'Sum: ${Sum}'
             }]
         },
         {
             columns: [{
-                type: 'average',
+                type: 'Average',
                 field: 'Freight',
                 format: 'C2',
-                footerTemplate: 'Average: ${average}'
+                footerTemplate: 'Average: ${Average}'
             }]
         }]
     });

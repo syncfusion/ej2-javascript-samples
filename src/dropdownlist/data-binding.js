@@ -5,8 +5,8 @@ this.default = function () {
     var dropDownListObj = new ej.dropdowns.DropDownList({
         // bind the DataManager instance to dataSource property
         dataSource: new ej.data.DataManager({
-            url: 'http://services.odata.org/V4/Northwind/Northwind.svc',
-            adaptor: new ej.data.ODataV4Adaptor(),
+            url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc',
+            adaptor: new ej.data.ODataAdaptor(),
             crossDomain: true
         }),
         // bind the Query instance to query property

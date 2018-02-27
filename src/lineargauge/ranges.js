@@ -3,6 +3,11 @@
  */
 function linear() {
     var gauge = new ej.lineargauge.LinearGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         orientation: 'Horizontal',
         axes: [{
             line: {
@@ -10,9 +15,6 @@ function linear() {
             },
             labelStyle: {
                 format: '{value}%',
-                font: {
-                    color: '#424242'
-                },
                 offset: 30
             },
             pointers: [
@@ -23,7 +25,6 @@ function linear() {
                     markerType: 'Triangle',
                     placement: 'Near',
                     offset: -40,
-                    color: '#757575'
                 }
             ],
             majorTicks: {
@@ -55,7 +56,7 @@ function linear() {
             }]
         }],
         annotations: [{
-            content: '<div id="pointer" style="width:20px"><h1 style="font-size:18px;color:#424242">35</h1></div>',
+            content: '<div id="pointer" style="width:20px"><h1 style="font-size:18px;">35</h1></div>',
             axisIndex: 0,
             axisValue: 35,
             y: -50, zIndex: '1'

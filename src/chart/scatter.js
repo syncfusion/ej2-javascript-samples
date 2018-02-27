@@ -2,41 +2,15 @@
  * Sample for Scatter Series
  */
 this.default = function () {
-    var series1 = [];
-    var series2 = [];
-    var point1;
-    var value = 80;
-    var value1 = 70;
-    var i;
-    for (i = 1; i < 120; i++) {
-        if (Math.random() > 0.5) {
-            value += Math.random();
-        } else {
-            value -= Math.random();
-        }
-        value = value < 60 ? 60 : value > 90 ? 90 : value;
-        point1 = { x: (145 + (i / 3)).toFixed(1), y: value.toFixed(1) };
-        series1.push(point1);
-    }
-    for (i = 1; i < 120; i++) {
-        if (Math.random() > 0.5) {
-            value1 += Math.random();
-        } else {
-            value1 -= Math.random();
-        }
-        value1 = value1 < 60 ? 60 : value1 > 90 ? 90 : value1;
-        point1 = { x: (145 + (i / 3)).toFixed(1), y: value1.toFixed(1) };
-        series2.push(point1);
-    }
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Height (cm)',
-            minimum: 145,
-            maximum: 185,
+            minimum: 100,
+            maximum: 220,
             majorGridLines: { width: 0 },
             edgeLabelPlacement: 'Shift',
-            labelFormat: '{value}cm'
+            title: 'Height in Inches'
+
         },
         chartArea: {
             border: {
@@ -44,43 +18,54 @@ this.default = function () {
             }
         },
         //Initializing Primary X Axis
-        primaryYAxis: {
-            title: 'Weight (kg)',
-            minimum: 60,
-            maximum: 90,
-            labelFormat: '{value}kg',
-            rangePadding: 'None'
-        },
+         primaryYAxis:
+        {
+                minimum: 50,
+                maximum: 80,
+                majorTickLines: {
+                    width: 0
+                },
+                lineStyle: {
+                    width: 0
+                },
+                  title: 'Weight in Pounds',
+                rangePadding: 'None'
+            },
+
         //Initializing Chart Series
         series: [
             {
                 type: 'Scatter',
-                dataSource: series1,
+                dataSource: window.mendData,
                 xName: 'x', width: 2, marker: {
                     visible: false,
-                    width: 8,
-                    height: 8
+                    width: 12,
+                    height: 12,
+                    shape: 'Circle'
                 },
-                yName: 'y', name: 'Male', opacity: 0.7
+                yName: 'y', name: 'Male', opacity: 0.6
             },
             {
                 type: 'Scatter',
-                dataSource: series2,
+                dataSource: window.womenData,
                 xName: 'x', width: 2, marker: {
                     visible: false,
-                    width: 8,
-                    height: 8
+                    width: 12,
+                    height: 12,
+                    shape: 'Diamond'
                 },
-                yName: 'y', name: 'Female', opacity: 0.7
+                yName: 'y', name: 'Female', opacity: 0.6
             },
+
         ],
         //Initializing Chart Title
         title: 'Height vs Weight',
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true,
+            format:  'Weight: <b>${point.x} lbs</b> <br/> Height: <b>${point.y}"</b>'
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '80%',
         load: function (args) {
             var scatterTheme = location.hash.split('/')[1];
             scatterTheme = scatterTheme ? scatterTheme : 'Material';

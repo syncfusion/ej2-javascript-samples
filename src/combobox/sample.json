@@ -2,14 +2,16 @@
     "name": "ComboBox",
     "directory": "combobox",
     "category": "Editors",
+    "type": "update", 
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "ComboBox" },
-        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "ComboBox" },
-        { "url": "databinding", "name": "Data Binding", "category": "ComboBox" },
-        { "url": "custom-value", "name": "Custom Value", "category": "ComboBox" },
-        { "url": "template", "name": "Template", "category": "ComboBox" },
-        { "url": "filtering", "name": "Filtering", "category": "ComboBox" },
-        { "url": "cascading", "name": "Cascading", "category": "ComboBox" }
+        { "url": "default", "name": "Default Functionalities", "category": "ComboBox", "api": {"ComboBox": ["popupHeight", "index", "change", "placeholder"]} },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "fields", "placeholder", "popupHeight"]} },
+        { "url": "databinding", "name": "Data Binding", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "fields", "query", "sortOrder", "autofill", "popupHeight", "placeholder"]} },
+        { "url": "custom-value", "name": "Custom Value", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "fields", "placeholder", "popupHeight", "allowFiltering", "noRecordsTemplate", "filtering", "width"]} },
+        { "url": "template", "name": "Template", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "fields", "headerTemplate", "itemTemplate", "placeholder", "popupHeight"]} },
+        { "url": "filtering", "name": "Filtering", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "fields", "allowFiltering", "filtering", "placeholder", "popupHeight"]} },
+        { "url": "cascading", "name": "Cascading", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "allowCustom", "fields", "change", "placeholder", "popupHeight", "value", "enabled"]} },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "category": "ComboBox", "api": {"ComboBox": ["dataSource", "ignoreAccent", "placeholder","allowFiltering"]}, "type": "new" }
     ],
     "dataSourcePath":"src/dropdownlist/datasource.js"
 }

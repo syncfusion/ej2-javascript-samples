@@ -6,7 +6,8 @@
         {
             "url": "context-menu",
             "name": "Default Functionalities",
-            "category": "ContextMenu"
+            "category": "ContextMenu",
+            "api":{"ContextMenu":["target", "items", "beforeItemRender", "animationSettings"], "MenuItem":["text", "iconCss", "items", "separator"] }
         }
     ]
 }

@@ -5,8 +5,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'DateTime',
-            intervalType: 'Months',
+            valueType: 'DateTime',            
             majorGridLines: { width: 0 },
             crosshairTooltip: { enable: true },
             zoomFactor: 0.4, zoomPosition: 0.4,
@@ -41,11 +40,10 @@ this.default = function () {
         tooltip: {
             enable: true, shared: true
         },
-        zoomSettings: {
-            enableDeferredZooming: true,
+        zoomSettings: {           
             mode: 'X',
-            enableMouseWheelZooming: true,
             enableSelectionZooming: true,
+            enablePan : true
         },
         //Initializing Chart Title
         title: 'AAPL - 2012-2017',

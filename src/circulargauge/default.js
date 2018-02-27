@@ -3,6 +3,11 @@
  */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             radius: '80%',
             startAngle: 230,
@@ -16,7 +21,6 @@ this.default = function () {
             },
             labelStyle: {
                 font: {
-                    color: '#424242',
                     fontFamily: 'Roboto',
                     size: '12px',
                     fontWeight: 'Regular'
@@ -34,7 +38,8 @@ this.default = function () {
                     border: { width: 0 }
                 },
                 needleTail: {
-                    length: '25%'
+                    length: '25%',
+                    color: '#757575'
                 }
             }]
         }]

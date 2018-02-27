@@ -71,7 +71,7 @@ this.default = function () {
         loaded: function (args) {
             if (isRender) {
                 pie.destroy();
-                pie = new ej.charts.AccumulationChart(pie = new ej.charts.AccumulationChart({
+                pie = new ej.charts.AccumulationChart({
                     background: 'transparent',
                     series: [{
                         radius: '65%', animation: { enable: false },
@@ -87,7 +87,7 @@ this.default = function () {
                     resized: function (args) {
                         location.reload();
                     }
-                }));
+                });
                 pie.appendTo('#chart_annotation');
             }
         },

@@ -16,14 +16,6 @@ To compile the source files, use the below command
 npm run build
 ```
 
-## Testing
-
-To test the source files, use the below command
-
-```
-npm run test
-```
-
 ## Running
 
 To run the samples, use the below command

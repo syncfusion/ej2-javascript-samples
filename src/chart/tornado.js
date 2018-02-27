@@ -73,7 +73,7 @@ this.default = function () {
             enable: true
         },
         tooltipRender: function (args) {
-            args.textCollections = args.textCollections.indexOf('-') > 0 ? args.textCollections.replace('-', '') : args.textCollections;
+            args.text = args.text.indexOf('-') > 0 ? args.text.replace('-', '') : args.text;
         },
         legendSettings: {
             position: ej.base.Browser.isDevice ? 'Auto' : 'Right'

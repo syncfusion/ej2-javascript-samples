@@ -30,8 +30,8 @@
                 </div>
             </td>
             <td style="width: 50%;  padding:10px 10px 10px 0px">
-                <div>
-                    <input type="number" id="pagesize" class="form-control" value="12" min="1" max="200" />
+                <div id='numericbox'>
+                    <input type="text" id="pagesize" class="form-control" />
                 </div>
             </td>
         </tr>
@@ -43,7 +43,7 @@
             </td>
             <td style="width: 50%; padding:10px 10px 10px 0px">
                 <div>
-                    <input type="number" id="counttxt" class="form-control" max="8" min="1" value="2" />
+                    <input type="text" id="pagecount" class="form-control"/>
                 </div>
             </td>
         </tr>
@@ -55,7 +55,7 @@
             </td>
             <td style="width: 50%; padding:10px 10px 10px 0px">
                 <div>
-                    <input type="number" id="pageno" class="form-control" value="1" min="1" max="17" pattern="[^-]" />
+                    <input type="text" id="currentpage" class="form-control" />
                 </div>
             </td>
         </tr>
@@ -68,6 +68,12 @@
         page count and current page of the Grid.
     </p>
 </div>
+
+<style>
+    #numericbox {
+        min-width: 100px;
+    }
+</style>
 
 <div id="description">
     <p>Paging allows you to display the contents of the Grid in page segments. 

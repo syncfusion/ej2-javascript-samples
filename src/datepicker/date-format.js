@@ -2,15 +2,17 @@ this.default = function () {
     var datepicker = new ej.calendars.DatePicker({
         format: 'dd-MMM-yy',
         value: new Date(),
-        placeholder: 'Choose a date'
     });
     datepicker.appendTo('#datepicker');
+    var dropDownInstance = new ej.dropdowns.DropDownList({
+        placeholder: 'Format',
+        floatLabelType: 'Auto',
+        change: onChange
+    });
+    dropDownInstance.appendTo('#dateformats');
 
-    document.getElementById('dateFormats').addEventListener('change', changeLocale);
-
-    function changeLocale() {
-        var dateFormat = (document.getElementById('dateFormats')).value;
-        datepicker.format = dateFormat;
-        datepicker.dataBind();
+    function onChange() {
+        //dropdown change event handler
+        datepicker.format = dropDownInstance.value;
     }
 };

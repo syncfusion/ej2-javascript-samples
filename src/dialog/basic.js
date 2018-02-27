@@ -1,17 +1,18 @@
 this.default = function () {
-    // Render the alert Dialog 
     var alertContent = '<div>10% of battery remaining</div>';
     var confirmContent = '<span>Are you sure you want to permanently delete all of these items?</span>';
+    // Render the alert Dialog 
     var alertDialogObj = new ej.popups.Dialog({
         header: 'Low Battery',
         content: alertContent,
         showCloseIcon: false,
         buttons: [{
-                click: alertDlgBtnClick, buttonModel: { content: 'Dismiss', cssClass: 'e-flat', isPrimary: true }
+                click: alertDlgBtnClick, buttonModel: { content: 'Dismiss', isPrimary: true }
             }],
         closeOnEscape: false,
         target: document.getElementById('target'),
         width: '250px',
+        visible: false,
         animationSettings: { effect: 'None' },
         open: dialogOpen,
         close: dialogClose
@@ -27,9 +28,9 @@ this.default = function () {
         closeOnEscape: false,
         buttons: [{
                 click: confirmDlgBtnClick,
-                buttonModel: { content: 'Yes', cssClass: 'e-flat', isPrimary: true }
+                buttonModel: { content: 'Yes', isPrimary: true }
             },
-            { click: confirmDlgBtnClick, buttonModel: { cssClass: 'e-flat', content: 'No' } }],
+            { click: confirmDlgBtnClick, buttonModel: { content: 'No' } }],
         width: '400px',
         target: document.getElementById('target'),
         animationSettings: { effect: 'None' },
@@ -44,10 +45,10 @@ this.default = function () {
         showCloseIcon: false,
         closeOnEscape: false,
         buttons: [{
-                click: promptDlgBtnClick, buttonModel: { content: 'Connect', cssClass: 'e-flat', isPrimary: true }
+                click: promptDlgBtnClick, buttonModel: { content: 'Connect', isPrimary: true }
             },
             {
-                click: promptDlgBtnClick, buttonModel: { cssClass: 'e-flat', content: 'Cancel' }
+                click: promptDlgBtnClick, buttonModel: { content: 'Cancel' }
             }],
         width: '330px',
         target: document.getElementById('target'),

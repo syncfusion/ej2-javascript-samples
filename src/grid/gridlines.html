@@ -14,19 +14,19 @@
                 </div>
             </td>
             <td style="width: 70%;padding-right: 10px">
-                <div>
-                    <select id="ddl" name="ddl" class="form-control" style="padding: 6px;">
-                        <option value="default">Default</option>
-                        <option value="both">Both</option>
-                        <option value="none">None</option>
-                        <option value="horizontal">Horizontal</option>
-                        <option value="vertical">Vertical</option>
-                    </select>
+                <div id='linesddl'>
+                   <input type="text" tabindex="1" id='ddlelement' />
                 </div>
             </td>
         </tr>
     </table>
 </div>
+
+<style>
+    #linesddl {
+        min-width: 120px;
+    }
+</style>
 
 <div id="action-description">
         <p>This sample demonstrates visibility of the grid lines that separates the rows and columns. In this sample, you can change the gridline from the properties panel.</p>
@@ -40,11 +40,11 @@
         The Grid allow us to display the following grid lines,
     </p>
     <ul>
-        <li><code>default</code> - Shows the Horizontal line.</li>
-        <li><code>none</code> - Shows no line.</li>
-        <li><code>both</code> - Shows both Horizontal and Vertical lines.</li>
-        <li><code>horizontal</code> - Shows the Horizontal line.</li>
-        <li><code>vertical</code> - Shows the Vertical line.</li>
+        <li><code>Default</code> - Shows the Horizontal line.</li>
+        <li><code>None</code> - Shows no line.</li>
+        <li><code>Both</code> - Shows both Horizontal and Vertical lines.</li>
+        <li><code>Horizontal</code> - Shows the Horizontal line.</li>
+        <li><code>Vertical</code> - Shows the Vertical line.</li>
     </ul>
     <p> In this demo, you can modify the display of gridlines by selecting values in the dropdown.
     </p>

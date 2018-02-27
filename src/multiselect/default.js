@@ -6,7 +6,7 @@ this.default = function () {
         // set the placeholder to MultiSelect input element
         placeholder: 'Favorite Sports',
         // set the type of mode for how to visualized the selected items in input element.
-        mode: 'box'
+        mode: 'Box'
     });
     listObj.appendTo('#box');
 
@@ -15,7 +15,7 @@ this.default = function () {
         // set the placeholder to MultiSelect input element
         placeholder: 'Favorite Sports',
         // set the type of mode for how to visualized the selected items in input element.
-        mode: 'default'
+        mode: 'Default'
     });
     listObj1.appendTo('#default');
 
@@ -24,7 +24,7 @@ this.default = function () {
         // set the placeholder to MultiSelect input element
         placeholder: 'Favorite Sports',
         // set the type of mode for how to visualized the selected items in input element.
-        mode: 'delimiter'
+        mode: 'Delimiter'
     });
     listObj2.appendTo('#delimiter');
 };

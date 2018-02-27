@@ -17,9 +17,9 @@ this.default = function () {
             minimum: 0,
             maximum: 7,
             interval: 1,
-            majorGridLines: { width: 0 },
-            labelFormat: '{value}B',
-            opposedPosition: true,
+            lineStyle: { width: 0},
+            majorTickLines: { width: 0},
+            labelFormat: '{value}B'
         },
         chartArea: {
             border: {

@@ -1,0 +1,89 @@
+<style>
+    .e-schedule-event-tooltip .tooltip-wrap {
+        display: flex;
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .image {
+        background-image: url('./src/schedule/images/public-event.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .content-area {
+        padding-left: 6px;
+        font-size: 12px;
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .maintenance {
+        background-image: url('./src/schedule/images/maintenance.png');
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .public-event {
+        background-image: url('./src/schedule/images/public-event.png');
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .family-event {
+        background-image: url('./src/schedule/images/family-event.png');
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .commercial-event {
+        background-image: url('./src/schedule/images/commercial-event.png');
+    }
+
+    .e-schedule-event-tooltip .tooltip-wrap .name {
+        font-weight: 500;
+        font-size: 14px;
+    }
+</style>
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <div>
+                        <input id="enableTooltip" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <div>
+                        <input id="enableTooltipTemplate" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This demo illustrates how to enable tooltip on schedule events as well as the way to customize it. The tooltip can be
+        customized to display any of the information in a formatted style by making use of the tooltip template option.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the tooltip is enabled to display on events by setting true to
+        <code>enableTooltip</code> option within the
+        <code>eventSettings</code> property. After enabling the default tooltip, it is customized to display the needed event information along with
+        the appropriate images by making use of the
+        <code>tooltipTemplate</code> option within the
+        <code>eventSettings</code>.
+    </p>
+    <p>
+        The
+        <code>tooltipTemplate</code> option will not work, if
+        <code>enableTooltip</code> is set to false. In mobile devices, tap holding the events will open the tooltip.
+    </p>
+</div>

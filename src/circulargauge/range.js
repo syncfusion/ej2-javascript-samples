@@ -3,11 +3,16 @@
  */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [{
             lineStyle: { width: 10, color: 'transparent' },
             labelStyle: {
                 position: 'Inside', useRangeColor: false,
-                font: { size: '12px', color: '#424242', fontFamily: 'Roboto', fontStyle: 'Regular' }
+                font: { size: '12px', fontFamily: 'Roboto', fontStyle: 'Regular' }
             }, majorTicks: { height: 10, width: 0.5, offset: 10, color: 'black' }, minorTicks: { height: 0, width: 0.5 },
             annotations: [{
                 content: '<div><span style="font-size:14px; color:#9E9E9E; font-family:Regular">Speedometer</span></div>',
@@ -21,7 +26,7 @@ this.default = function () {
             { start: 80, end: 120, color: '#F03E3E' }],
             pointers: [{
                 value: 65, radius: '60%', color: '#757575', pointerWidth: 8,
-                cap: { radius: 7, color: '#757575' }, needleTail: { length: '18%' }
+                cap: { radius: 7, color: '#757575' }, needleTail: { length: '18%', color: '#757575' }
             }]
         }]
     });

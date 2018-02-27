@@ -16,13 +16,8 @@
                 <div style="padding-top: 10px">Column</div>
             </td>
             <td style="width: 70%;padding-right: 10px">
-                <div>
-                    <select id="columns" class="form-control" style="padding: 6px">
-                        <option value="EmployeeID">Employee ID</option>
-                        <option value="FirstName">Name</option>
-                        <option value="Title">Title</option>
-                        <option value="HireDate">Hire Date</option>
-                    </select>
+                <div id='reorderddl'>
+                     <input type="text" tabindex="1" id='columns' />
                 </div>
             </td>
         </tr>
@@ -32,17 +27,19 @@
             </td>
             <td style="width: 70%;padding: 10px 10px 10px 0px">
                 <div>
-                    <select id="columnIndex" class="form-control">
-                        <option value="0" selected="selected">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                        <option value="3">4</option>
-                    </select>
+                    <input type="text" tabindex="1" id='columnIndex' />
                 </div>
             </td>
         </tr>
     </table>
 </div>
+
+<style>
+    #reorderddl {
+        min-width: 130px;
+    }
+</style>
+
 <div id="description">
     <p>Reordering can be enabled by setting <code><a target="_blank" class="code"
         href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowreordering-boolean">

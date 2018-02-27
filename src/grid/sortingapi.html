@@ -6,7 +6,7 @@
 }
 </style>
 
-<div class="col-lg-9 control-section">
+<div class="col-lg-8 control-section">
     <div class="content-wrapper">
         <div id="Grid" class="sortingenabled"></div>
     </div>
@@ -19,13 +19,8 @@
                 <div>Column</div>
             </td>
             <td style="width: 70%;padding-right: 10px">
-                <div>
-                    <select id="columns" class="form-control" style="padding: 6px">
-                        <option value="OrderID">Order ID</option>
-                        <option value="CustomerName">Customer Name</option>
-                        <option value="OrderDate">Order Date</option>
-                        <option value="Freight">Freight</option>
-                    </select>
+                <div id='columnddl'>
+                    <input type="text" tabindex="1" id='columns' />
                 </div>
             </td>
         </tr>
@@ -35,10 +30,7 @@
             </td>
             <td style="width: 70%;padding-right: 10px">
                 <div>
-                    <select id="sortdirection" class="form-control" style="padding: 6px">
-                            <option value="ascending">Ascending</option>
-                            <option value="descending">Descending</option>
-                        </select>
+                    <input type="text" tabindex="1" id='direction' />
                 </div>
             </td>
         </tr>
@@ -57,6 +49,12 @@
         </tr>
     </table>
 </div>
+
+<style>
+    #columnddl {
+        min-width: 150px;
+    }
+</style>
 
 <div id="action-description">
     <p>

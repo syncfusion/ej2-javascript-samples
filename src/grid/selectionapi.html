@@ -35,7 +35,7 @@
             </td>
             <td style="width: 70%;padding-right: 10px">
                 <div>
-                    <input type="number" id="start" class="form-control" min="0" max="11" />
+                    <input type="text" id="start"/>
                 </div>
             </td>
         </tr>
@@ -45,13 +45,13 @@
             </td>
             <td style="width: 70%;padding-right: 10px">
                 <div>
-                    <input type="number" id="to" class="form-control" max="11" min="0" />
+                    <input type="text" id="to" />
                 </div>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <div class="col-md-6"><input type="submit" id="select" class="btn btn-default" value="Select Row" />
+                <div class="col-md-6"><button id="select">Select Row</button>
                 </div>
             </td>
         </tr>
@@ -63,7 +63,7 @@
         <tr>
             <td colspan="2">
                 <div class="col-md-6" style="padding-bottom: 10px">
-                    <input type="submit" id="clear" class="btn btn-default" value="Clear Selection" />
+                    <button id="clear">Clear Selection</button>
                 </div>
             </td>
         </tr>
@@ -91,8 +91,8 @@
         selectionSettings->type
         </a></code> property. They are,</p>
     <ul>
-        <li><code>single</code> - Enabled by default. Allows the user to select single row/cell at a time.</li>
-        <li><code>multiple</code> - Allows the user to select more than one row/cell at a time.</li>
+        <li><code>Single</code> - Enabled by default. Allows the user to select single row/cell at a time.</li>
+        <li><code>Multiple</code> - Allows the user to select more than one row/cell at a time.</li>
     </ul>
     <p>Also, supports three modes of selection which can be set using 
         <code><a target="_blank" class="code"
@@ -101,9 +101,9 @@
         </a></code> property. They are,
     </p>
     <ul>
-        <li><code>row</code> - Enabled by default. Enables row selection in Grid.</li>
-        <li><code>cell</code> - Enables cell selection in Grid.</li>
-        <li><code>both</code> - Enables both row and cell selection in Grid. 
+        <li><code>Row</code> - Enabled by default. Enables row selection in Grid.</li>
+        <li><code>Cell</code> - Enables cell selection in Grid.</li>
+        <li><code>Both</code> - Enables both row and cell selection in Grid. 
         Clicking any cell will select both the row and cell simultaneously.
         </li>
     </ul>

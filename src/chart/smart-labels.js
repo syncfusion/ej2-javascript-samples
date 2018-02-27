@@ -31,7 +31,7 @@ this.default = function () {
                 yName: 'y',
                 startAngle: 0,
                 endAngle: 360,
-                innerRadius: '0%',
+                innerRadius: '0%', name: 'RIO',
                 dataLabel: {
                     visible: true, position: 'Outside',
                     connectorStyle: { length: '10%' }, name: 'text',
@@ -42,7 +42,7 @@ this.default = function () {
             visible: false
         },
         //Initializing Tooltip
-        tooltip:  {  enable:  true,  format:  '${point.x} : ${point.y}%'  },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
         //Initializing Title
         title: 'RIO Olympics Gold',
         load: function (args) {

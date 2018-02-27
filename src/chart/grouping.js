@@ -30,7 +30,7 @@ this.default = function () {
                         size: '14px'
                     }
                 },
-                radius: '70%',
+                radius: '70%', name: 'RIO',
                 xName: 'x',
                 yName: 'y',
                 groupTo: '10',
@@ -52,7 +52,7 @@ this.default = function () {
             args.text = args.point.x + ' ' + args.point.y;
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} <br> ${point.y} Medals' },
+        tooltip: { enable: true, header: 'RIO', format: '${point.x} <b> ${point.y} Medals</b>' },
         //Initializing Title
         title: 'RIO Olympics Gold',
         load: function (args) {

@@ -2,13 +2,18 @@
     "name": "MultiSelect",
     "directory": "multiselect",
     "category": "Editors",
+    "type": "update",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "category": "MultiSelect", "api": {"MultiSelect": ["mode", "placeholder"]} },
         { "url": "data-binding", "name": "Data Binding", "category": "MultiSelect", "api": {"MultiSelect": ["query", "dataSource", "fields", "sortOrder", "actionBegin", "actionComplete", "actionFailure"]} },
         { "url": "grouping-icon", "name": "Grouping", "category": "MultiSelect", "api": {"MultiSelect": ["fields"]}  },
         { "url": "template", "name": "Template", "category": "MultiSelect", "api": {"MultiSelect": ["headerTemplate", "itemTemplate", "valueTemplate"]}  },
         { "url": "filtering", "name": "Filtering", "category": "MultiSelect", "api": {"MultiSelect": ["allowFiltering", "filtering"]}  },
-        { "url": "custom-value", "name": "Custom Value", "category": "MultiSelect", "api": {"MultiSelect": ["mode", "allowCustomValue"]}  }
+        { "url": "custom-value", "name": "Custom Value", "category": "MultiSelect", "api": {"MultiSelect": ["mode", "allowCustomValue"]}  },
+        { "url": "chip-customization", "name": "Chip Customization", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"]}, "type": "new"  },
+        { "url": "checkbox", "name": "CheckBox", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"]}, "type": "new"  },
+        { "url": "selectionlimit", "name": "Selection Limit", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "maximumSelectionLimit"]}, "type": "new"  },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "category": "MultiSelect","api": {"MultiSelect": ["dataSource", "placeholder", "allowFiltering","ignoreAccent"]}, "type": "new" }
     ],
     "dataSourcePath":"src/dropdownlist/datasource.js"
 }

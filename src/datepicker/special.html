@@ -1,22 +1,25 @@
 <div class="col-lg-12 control-section">
     <div id="wrapper">
-        <input id="datepicker" type="text" /><br/><br/>
+        <input id="datepicker" type="text" />
+        <br/>
+        <br/>
     </div>
 </div>
 <div id="action-description">
     <p>
-        In the following sample, specific dates are <code>highlighted</code> to notify the additional information of that date. Click the special date and the tooltip information about the date will be displayed when hovered.
+        In the following sample, specific dates are
+        <code>highlighted</code> to notify the additional information of that date. Click the special date and the tooltip information about the
+        date will be displayed when hovered.
     </p>
 </div>
 <div id="description">
     <p>
-        Special Dates sample demonstrates how to customize specific dates in the DatePicker by using <code>renderDayCell</code>
-        event. This event gets triggered on each day cell element creation, that allows you to customize, or disable specific
-        dates in the DatePicker. Here the Federal holidays in USA for the year of 2017 are highlighted with custom styles
-        and classes.
+        Special Dates sample demonstrates, how to customize a specific dates in a datepicker by using
+        <code>renderDayCell</code> event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific
+        dates in datepicker. Here 10, 15 and 25 date's are customized with custom styles and custom classes.
     </p>
-    <p>More information on the DatePicker customization can be found in the <a href="http://ej2.syncfusion.com/documentation/datepicker/customization.html"
-            target="_blank"> documentation section</a>.</p>
+    <p>More information on the DatePicker customization can be found in the
+        <a href="http://ej2.syncfusion.com/documentation/datepicker/customization.html" target="_blank"> documentation section</a>.</p>
     </p>
 </div>
 <style>
@@ -26,18 +29,37 @@
         padding-top: 50px;
     }
 
-    span.e-icons.highlight {
+    .e-customStyle span.e-icons.highlight {
         margin-top: -13px;
         display: block;
         margin-left: 4px;
     }
 
-    span.e-icons.highlight,
-    span.e-icons.highlight:before {
+    .e-customStyle span.e-icons.highlight,
+    .e-customStyle span.e-icons.highlight:before {
         color: rgb(0, 0, 255);
     }
 
-    span.e-icons.highlight:before {
+    body.highcontrast .e-customStyle td.birthday span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.birthday span.e-icons.highlight:before {
+        color: #ff6161;
+    }
+
+    body.highcontrast .e-customStyle td.farewell span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.farewell span.e-icons.highlight:before {
+        color: #2bc700;
+    }
+
+    body.highcontrast .e-customStyle td.vacation span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.vacation span.e-icons.highlight:before {
+        color: #ff7d1a;
+    }
+
+    .e-customStyle .e-other-month span.e-icons.highlight:before {
+        content: "";
+    }
+
+    .e-customStyle span.e-icons.highlight:before {
         content: "\e865";
         vertical-align: middle;
         margin-right: 3px;
@@ -47,63 +69,38 @@
         font-weight: normal;
     }
 
-    .e-bigger.e-calendar span.e-icons.highlight:before,
-    .e-bigger .e-calendar span.e-icons.highlight:before {
+    .e-bigger .e-customStyle .e-calendar span.e-icons.highlight:before,
+    .e-customStyle.e-bigger .e-calendar span.e-icons.highlight:before {
         top: -3px;
     }
 
-    .e-selected span.e-icons.highlight:before {
+    body.highcontrast.e-bigger .e-customStyle.e-calendar span.e-icons.highlight:before,
+    body.highcontrast .e-customStyle.e-bigger.e-calendar span.e-icons.highlight:before,
+    body.bootstrap.e-bigger .e-customStyle.e-calendar span.e-icons.highlight:before,
+    body.bootstrap .e-customStyle.e-bigger.e-calendar span.e-icons.highlight:before {
+        top: 1px;
+    }
+
+    .e-customStyle .e-selected span.e-icons.highlight:before {
         color: #fff;
     }
 
-    span.e-icons.highlight,
-    .e-calendar .e-content span.special,
-    .e-calendar .e-content span.daycell {
+    .e-customStyle span.e-icons.highlight,
+    .e-customStyle .e-calendar .e-content span.special,
+    .e-customStyle .e-calendar .e-content span.daycell {
         font-weight: bold;
         font-size: 14px;
     }
 
-    .e-calendar .e-content span.special {
-        border-radius: 50%;
-    }
-
-    span.special.e-day.federal {
+    .e-customStyle span.special.e-day.birthday {
         color: orangered;
     }
 
-    span.special.e-day.luther {
+    .e-customStyle span.special.e-day.farewell {
         color: rgba(0, 0, 255, 1);
     }
 
-    span.special.e-day.Washington {
+    .e-customStyle span.special.e-day.vacation {
         color: rgba(60, 118, 61, 1);
-    }
-
-    span.special.e-day.memorial {
-        color: rgba(138, 109, 59, 1);
-    }
-
-    span.special.e-day.independence {
-        color: rgba(64, 255, 229, 1);
-    }
-
-    span.special.e-day.labour {
-        color: rgba(169, 68, 66, 1);
-    }
-
-    span.special.e-day.columbus {
-        color: rgba(139, 0, 139, 1);
-    }
-
-    span.special.e-day.veterans {
-        color: rgba(152, 251, 152, 1);
-    }
-
-    span.special.e-day.thanksgiving {
-        color: rgba(100, 149, 237, 1);
-    }
-
-    span.special.e-day.christmas {
-        color: rgba(255, 69, 0, 1);
     }
 </style>

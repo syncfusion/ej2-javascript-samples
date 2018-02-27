@@ -27,7 +27,7 @@ this.default = function () {
         title: 'Annual Product-Wise Profit Analysis',
         legendSettings: { visible: false },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${series.name}<br>${point.x} : ${point.y}' },
+        tooltip: { enable: true, header: 'Profit', format: '${point.x} : <b>${point.y}</b>' },
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';

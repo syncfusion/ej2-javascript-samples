@@ -1,0 +1,374 @@
+{
+    "name": "Schedule",
+    "directory": "schedule",
+    "category": "Calendar",
+    "type": "preview",
+    "dataSourcePath": "src/schedule/datasource.js",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Schedule",
+            "api": {
+                "Schedule": [
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "default-events",
+            "name": "Normal",
+            "category": "Appointments",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "currentView",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "recurrence-events",
+            "name": "Recurrence",
+            "category": "Appointments",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "currentView",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "timezone",
+            "name": "Timezone",
+            "category": "Appointments",
+            "api": {
+                "Schedule": [
+                    "timezone",
+                    "selectedDate",
+                    "eventSettings",
+                    "eventRendered"
+                ]
+            }
+        },
+        {
+            "url": "views",
+            "name": "Basic",
+            "category": "Views",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "agenda",
+            "name": "Agenda",
+            "category": "Views",
+            "api": {
+                "Schedule": [
+                    "agendaDaysCount",
+                    "hideEmptyAgendaDays",
+                    "currentView",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "month-agenda",
+            "name": "Month Agenda",
+            "category": "Views",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "views-config",
+            "name": "View-based Settings",
+            "category": "Views",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "local-data",
+            "name": "Local Data",
+            "category": "Data Binding",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "remote-data",
+            "name": "Remote Data",
+            "category": "Data Binding",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "cell-template",
+            "name": "Cells",
+            "category": "Template",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "cellTemplate",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "date-header-template",
+            "name": "Date Header",
+            "category": "Template",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "dateHeaderTemplate",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "event-template",
+            "name": "Events",
+            "category": "Template",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "cellTemplate",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "category": "Template",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "editor-validation",
+            "name": "Field Validation",
+            "category": "Editor",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "editor-custom-field",
+            "name": "Additional Fields",
+            "category": "Editor",
+            "api": {
+                "Schedule": [
+                    "selectedDate",
+                    "eventSettings",
+                    "popupOpen"
+                ]
+            }
+        },
+        {
+            "url": "editor-template",
+            "name": "Editor Template",
+            "category": "Editor",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "cellTemplate",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "header-bar",
+            "name": "Header Bar",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "workHours",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "scroll-to",
+            "name": "Scroll Time",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "work-days",
+            "name": "Work Days",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "workDays",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "hide-weekend",
+            "name": "Hide Weekend",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "showWeekend"
+                ]
+            }
+        },
+        {
+            "url": "workhour",
+            "name": "Work Hours",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "workHours",
+                    "views",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "start-end-hour",
+            "name": "Day Hour Limit",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "startHour",
+                    "endHour",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "cell-dimension",
+            "name": "Cell Dimension",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "selectedDate",
+                    "showTimeIndicator",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "readonly-events",
+            "name": "Readonly Events",
+            "category": "Customization",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "eventRendered"
+                ]
+            }
+        },
+        {
+            "url": "rec-editor-generate-rule",
+            "name": "Rule Generator",
+            "category": "Recurrence Editor"
+        },
+        {
+            "url": "rec-editor-populate-rule",
+            "name": "Populate Rule",
+            "category": "Recurrence Editor"
+        },
+        {
+            "url": "keyboard",
+            "name": "Keyboard Interaction",
+            "category": "Miscellaneous",
+            "hideOnDevice": true,
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "eventSettings",
+                    "selectedDate",
+                    "allowKeyboardInteraction"
+                ]
+            }
+        },
+        {
+            "url": "events",
+            "name": "Events",
+            "category": "Miscellaneous",
+            "api": {
+                "Schedule": [
+                    "width",
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        }
+    ]
+}

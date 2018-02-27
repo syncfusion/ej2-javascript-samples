@@ -1,7 +1,6 @@
 this.default = function () {
     var datepicker = new ej.calendars.DatePicker({
-        renderDayCell: disableDate,
-        placeholder: 'Choose a date'
+        renderDayCell: disableDate
     });
     datepicker.appendTo('#datepicker');
 

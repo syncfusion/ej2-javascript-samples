@@ -67,9 +67,21 @@ this.default = function() {
     toolbarObj.enableRtl = true;
     //Render initialized Toolbar component
     toolbarObj.appendTo('#toolbar_rtl');
-    document.getElementById('drop').onchange = function (e) {
-        var ddl = document.getElementById('drop') ;
-        toolbarObj.overflowMode = ddl.value;
+
+    //Initialize DropDownList component
+    var overflowModes = new ej.dropdowns.DropDownList({
+        width: '100%',
+        change: changeOverFlowMode
+    });
+    //Render initialized DropDownList component
+    overflowModes.appendTo('#drop');
+
+    function changeOverFlowMode(args) {
+        if (args.itemData.value === 'Scrollable') {
+            toolbarObj.overflowMode = 'Scrollable';
+        } else {
+            toolbarObj.overflowMode = 'Popup';
+        }
         toolbarObj.dataBind();
-   };
+    }
 };

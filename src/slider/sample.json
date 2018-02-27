@@ -1,0 +1,253 @@
+{
+    "name": "Slider",
+    "directory": "slider",
+    "category": "Editors",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "ticks",
+            "name": "Ticks",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "enabled",
+                    "appendTo"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ]
+            }
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "showButtons",
+                    "appendTo"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "orientation",
+            "name": "Vertical Orientation",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "orientation",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "format",
+            "name": "Formatting",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "step",
+                    "tooltipChange",
+                    "renderingTicks"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks",
+                    "format"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "format"
+                ]
+            }
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "showButtons",
+                    "orientation",
+                    "readOnly",
+                    "enabled",
+                    "appendTo"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "events",
+            "name": "Events",
+            "category": "Slider",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo",
+                    "change",
+                    "created",
+                    "changed"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "thumb-customization",
+            "name": "Thumb",
+            "category": "Customization",
+            "api": {
+                "Slider": [
+                    "value",
+                    "min",
+                    "max",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "selection-bar-customization",
+            "name": "Bar",
+            "category": "Customization",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "change",
+                    "created"
+                ]
+            }
+        },
+        {
+            "url": "ticks-customization",
+            "name": "Ticks",
+            "category": "Customization",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "appendTo",
+                    "renderedTicks",
+                    "renderingTicks"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ]
+            }
+        },
+        {
+            "url": "tooltip-customization",
+            "name": "Tooltip",
+            "category": "Customization",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo",
+                    "min",
+                    "max",
+                    "step",
+                    "tooltipChange",
+                    "renderingTicks",
+                    "created"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement"
+                ]
+            }
+        },
+        {
+            "url": "azure-pricing",
+            "name": "Cloud Pricing",
+            "category": "Use Case",
+            "api": {
+                "Slider": [
+                    "value",
+                    "appendTo",
+                    "min",
+                    "max",
+                    "change",
+                    "created"
+                ]
+            }
+        }
+    ]
+}

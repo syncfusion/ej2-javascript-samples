@@ -1,0 +1,37 @@
+<div id="target" class="col-lg-12 control-section">
+    <button id="dialogButton" class='e-control e-btn' type="button">Open</button>
+    <div id="dlgWrapper" class="content-wrapper">
+        <!-- Initialize Dialog -->
+        <div id="dialog"></div>
+    </div>
+</div>
+<div id="action-description">
+	<p>
+		This sample demonstrates the default rendering of the dialog component with minimum configuration. Click close or press ESC  to close the dialog. Click “open” to show the dialog again, if it is closed.
+	</p>
+</div>
+<div id="description">
+	<p>
+		The dialog component is used to display information and get input from the user.
+		The dialog component is classified as modal and non-modal dialog depend on its interaction with parent application.  
+		<ul>
+			<li>Modal - It creates overlay that disable interaction with the parent application, 
+				and user should respond with modal before continuing with other applications.</li>
+			<li>Non-modal - It does not prevent user interaction with parent application.</li>
+		</ul>
+	</p>
+</div>
+<style>
+    #target {
+        height: 100%;
+        min-height: 350px;
+    }
+    @media screen and (min-width: 150px) and (max-width: 480px) {
+        .control-section {
+            margin-bottom: 30px;
+        }
+        .control-wrapper {
+            margin-bottom: 0px;
+        }
+    }
+</style>

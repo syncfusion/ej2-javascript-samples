@@ -1,0 +1,182 @@
+<div id="target" class="col-lg-8 control-section target-element" style="height:350px;">
+    <div style="position:relative; top:10px; left:10px;">
+        <!-- Button to open the Dialog -->
+        <button id="targetButton" class="e-control e-btn" type="button">Open</button>
+    </div>
+    <!-- Initialize template Dialog -->
+    <div id="template">
+    </div>
+</div>
+<div id="action-description">
+    <p>
+            This sample demonstrates the template functionalities of the dialog component. The dialog's header and footer is configured with HTML template.
+            The typed content will be replaced every time when clicking the "send" button.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The dialog component displays HTML template content on the header and footer.
+        The user can set any HTML element as header and footer with the usage of content and footer template properties.
+    </p>
+    <p>
+    More information on the Dialog instantiation can be found in the <a target="_blank" 
+        href="http://ej2.syncfusion.com/15.4.23/documentation/dialog/template.html?lang=typescript">
+        documentation section</a>.
+    </p>
+
+</div>
+<style>
+   .material button#sendButton {
+        top: 4px;
+        position: relative;
+    }
+    .e-bigger.material button#sendButton {
+        right: 7px;
+    }
+    .bootstrap button#sendbtn {
+        margin-right: 1%;
+    }
+    .material .e-dialog .e-dlg-header-content {
+        background-color: #3f51b5;
+    }
+    .fabric .e-dialog .e-dlg-header-content {
+        background-color: #0078d7;
+    }
+    .bootstrap .e-dialog .e-dlg-header-content {
+        background-color: #428bca;
+    }
+    .highcontrast .e-dialog .e-dlg-header-content {
+        background-color: #ffd939;
+    }
+    .material.e-bigger .e-dialog .e-footer-content {
+        padding-left: 23px;
+    }
+
+    .e-dlg-header-content .e-btn.e-dlg-closeicon-btn,  .e-bigger .e-dialog .e-btn.e-dlg-closeicon-btn {
+        top: 16px;
+        left: -11px;
+    }
+    .e-dialog .e-dlg-header {
+        position: relative;
+        top: 10px;
+        left: 7px;
+    }
+    .e-dialog .e-footer-content, .highcontrast.e-bigger .e-dialog .e-footer-content {
+        padding: 20px;
+    }
+    .e-dialog .e-dlg-content {
+        padding: 0;
+    }
+    .fabric button#sendButton, .highcontrast button#sendButton {
+        position: relative;
+    }
+
+	.fabric button#sendbtn, .highcontrast button#sendbtn {
+		top: -2px;
+	}
+
+     .fabric input.e-input,  .highcontrast input.e-input {
+        float: left;
+        height: 35px;
+        width: 70%;
+    }
+	
+	.e-bigger.highcontrast button#sendbtn {
+        margin-right: -17px;
+		margin-top: -2%;
+    }
+
+    .e-dialog .e-dlg-header-content {
+        padding: 6px;
+    }
+    .e-bigger.e-dialog .e-dlg-header-content, .e-bigger .e-dialog .e-dlg-header-content {
+        padding: 8px;
+    }
+    .e-open-icon::before {
+        content: '\e782';
+    }
+    .e-dialog .e-dlg-header >img.img2 {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    input.e-input {
+        width: 75%;
+        float: left;
+    }
+    .e-bigger.bootstrap input.e-input {
+        height: 39px;
+    }
+    .e-icon-settings.e-icons {
+		float: left;
+		position: relative;
+		left: 16%;
+		top: -33px;
+    }
+
+    .fabric .e-icon-settings.e-icons, .highcontrast .e-icon-settings.e-icons {
+		top: -37px;
+    }
+
+    .e-bigger.fabric .e-icon-settings.e-icons, .e-bigger.highcontrast .e-icon-settings.e-icons {
+		top: -35px;
+    }
+    .dialogContent .dialogText {
+        font-size: 13px;
+        padding: 5%;
+        word-wrap: break-word;
+        border-radius: 6px;
+        text-align: justify;
+        font-style: initial;
+		display: block;
+	}
+    .e-dlg-header .e-icon-settings, .e-icon-btn {
+        color: #fff;
+    }
+    
+    .dialogContent .dialogText, .dialogContent .dialogText  {
+        background-color: #f5f5f5;
+    }
+
+    .material .e-dialog .e-footer-content, .fabric .e-dialog .e-footer-content {
+        border-top: 0.5px solid rgba(0, 0, 0, 0.42);
+    }
+    .highcontrast .e-dialog .e-footer-content, .fabric .e-dialog .e-footer-content {
+        padding: 20px 25px;
+    }
+
+    .highcontrast .e-dialog .e-footer-content {
+        border-top: 0.5px solid #fff;
+    }
+	.highcontrast .dialogContent .dialogText { 
+	    background-color: #bfbfbf;
+	}
+    .dialogContent {
+        display: block;
+        font-size: 15px;
+        word-wrap: break-word;
+        text-align: center;
+        color: #DCDCDC;
+        font-style: italic;
+        border-radius: 6px;
+        padding: 3%;
+        position: relative;
+        top: 25px;
+    }
+    .e-bigger.e-dialog .e-dlg-content, .e-bigger .e-dialog .e-dlg-content {
+        padding: 0;
+    }
+    .e-bigger .e-dialog .dialogContent {
+        top: 20px;
+    }
+    .bootstrap .dialogContent {
+        top: 7px;
+    }
+    .control-wrapper .e-control.e-dialog {
+        width: 30%;
+    }
+    .e-dialog .e-dlg-header-content .e-icon-dlg-close {
+      color: #fff;
+    }
+</style>

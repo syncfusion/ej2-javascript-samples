@@ -1,4 +1,5 @@
 this.default = function () {
+    var refresh;
     var grid = new ej.grids.Grid({
         dataSource: window.categoryData,
         allowPaging: true,
@@ -8,28 +9,37 @@ this.default = function () {
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 160 },
             { field: 'ProductName', headerText: 'Product Name', width: 170 },
-            { field: 'QuantityPerUnit', headerText: 'Quantity Per Unit', width: 170, textAlign: 'right' },
-            { field: 'UnitsInStock', headerText: 'Units In Stock', width: 170, textAlign: 'right' },
+            { field: 'QuantityPerUnit', headerText: 'Quantity Per Unit', width: 170, textAlign: 'Right' },
+            { field: 'UnitsInStock', headerText: 'Units In Stock', width: 170, textAlign: 'Right' },
             {
                 field: 'Discontinued', headerText: 'Discontinued', width: 150,
-                textAlign: 'center', displayAsCheckBox: true, type: 'boolean'
+                textAlign: 'Center', displayAsCheckBox: true, type: 'boolean'
             }
         ],
+        load: function() {
+            refresh = grid.refreshing;
+        },
+        dataBound: function() {
+            if (refresh) {
+                grid.groupColumn('CategoryName');
+                refresh = false;
+            }
+        },
         aggregates: [{
             columns: [{
-                type: 'sum',
+                type: 'Sum',
                 field: 'UnitsInStock',
-                groupFooterTemplate: 'Total units: ${sum}'
+                groupFooterTemplate: 'Total units: ${Sum}'
             },
             {
-                type: 'truecount',
+                type: 'TrueCount',
                 field: 'Discontinued',
-                groupFooterTemplate: 'Discontinued: ${truecount}'
+                groupFooterTemplate: 'Discontinued: ${TrueCount}'
             },
             {
-                type: 'max',
+                type: 'Max',
                 field: 'UnitsInStock',
-                groupCaptionTemplate: 'Maximum: ${max}'
+                groupCaptionTemplate: 'Maximum: ${Max}'
             }]
         }]
     });

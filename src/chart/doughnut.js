@@ -21,7 +21,7 @@ this.default = function () {
                 },
                 radius: '70%', xName: 'x',
                 yName: 'y', startAngle: 0,
-                endAngle: 360, innerRadius: '40%',
+                endAngle: 360, innerRadius: '40%', name: 'Project',
                 explode: true, explodeOffset: '10%', explodeIndex: 3
             }
         ],
@@ -30,7 +30,7 @@ this.default = function () {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} <br> ${point.y} %' },
+        tooltip: { enable: true, format: '${point.x}:<b>${point.y}%<b>' },
         //Initializing Title
         title: 'Project Cost Breakdown',
         load: function (args) {

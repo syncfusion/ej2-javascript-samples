@@ -5,16 +5,38 @@
     "samples": [{
         "url": "default",
         "name": "Default Functionalities",
-        "category": "MaskedTextBox"
+        "category": "MaskedTextBox",
+        "api": {
+                "MaskedTextBox": [
+                    "mask"
+                ]
+            }
     },   
     {
         "url": "custommask",
         "name": "Custom Mask",
-        "category": "MaskedTextBox"
+        "category": "MaskedTextBox",
+        "api": {
+                "MaskedTextBox": [
+                    "mask",
+                    "customCharacters",
+                    "floatLabelType"
+                ]
+            }
     }, 
     {
         "url": "formats",
         "name": "Formats",
-        "category": "MaskedTextBox"
+        "category": "MaskedTextBox",
+        "api": {
+                "MaskedTextBox": [
+                    "mask",
+                    "floatLabelType",
+                    "change",
+                    "promptChar",
+                    "getMaskedValue",
+                    "value"
+                ]
+            }
     }]
 }

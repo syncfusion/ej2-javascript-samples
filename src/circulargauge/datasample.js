@@ -22,6 +22,11 @@ this.default = function () {
     ];
     function dataSampleGauge1() {
         var dataSampleGauge1 = new ej.circulargauge.CircularGauge({
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Material';
+                args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            },
             axes: [{
                 startAngle: 230,
                 endAngle: 130,
@@ -57,7 +62,8 @@ this.default = function () {
                         color: '#777777'
                     },
                     needleTail: {
-                        length: '25%'
+                        length: '25%',
+                        color: '#777777'
                     }
                 }]
             }]
@@ -66,6 +72,11 @@ this.default = function () {
     }
     function dataSampleGauge2() {
         var dataSampleGauge2 = new ej.circulargauge.CircularGauge({
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Material';
+                args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            },
             axes: [{
                 annotations: [{
                     content: '#usa',
@@ -101,7 +112,8 @@ this.default = function () {
                         color: '#777777'
                     },
                     needleTail: {
-                        length: '25%'
+                        length: '25%',
+                        color: '#777777'
                     }
                 }]
             }]
@@ -110,6 +122,11 @@ this.default = function () {
     }
     function dataSampleGauge3() {
         var dataSampleGauge3 = new ej.circulargauge.CircularGauge({
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Material';
+                args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            },
             axes: [{
                 annotations: [{
                     content: '#uk',
@@ -145,7 +162,8 @@ this.default = function () {
                         color: '#777777'
                     },
                     needleTail: {
-                        length: '25%'
+                        length: '25%',
+                        color: '#777777'
                     }
                 }]
             }]

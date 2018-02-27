@@ -5,6 +5,8 @@ var pointRender = function (args) {
         args.fill = window.fabricColors[args.point.index % 10];
     } else if (inverseTheme === 'material') {
         args.fill = window.materialColors[args.point.index % 10];
+    } else if (inverseTheme === 'highcontrast') {
+        args.fill = window.highcontrastColors[args.point.index % 10];
     } else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }

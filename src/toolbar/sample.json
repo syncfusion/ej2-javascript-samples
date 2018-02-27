@@ -2,10 +2,11 @@
     "name": "Toolbar",
     "directory": "toolbar",
     "category": "Navigation",
+    "type": "update",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Toolbar" },
-        { "url": "popup", "name": "Popup", "category": "Toolbar" },
-        { "url": "alignment", "name": "Alignment", "category": "Toolbar" },
-        { "url": "rtl", "name": "RTL", "category": "Toolbar" }
+        { "url": "default", "name": "Default Functionalities", "category": "Toolbar", "api":{"Item":["text","prefixIcon","type","tooltipText"],"Toolbar":["items"] } },
+        { "url": "popup", "name": "Popup", "category": "Toolbar", "type": "update", "api":{"Item":["showAlwaysInPopup", "showTextOn", "overflow"],"Toolbar":["overflowMode"] } },
+        { "url": "alignment", "name": "Alignment", "category": "Toolbar", "api":{"Item":["align", "template"] } },
+        { "url": "rtl", "name": "RTL", "category": "Toolbar", "api":{"Toolbar":["enableRtl"] } }
     ]
 }

@@ -1,0 +1,215 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper" style="margin-bottom: 25px">
+        <div id="confirmation">
+            <div class="form-title"><span>Job Application Form</span></div>
+            <form id="form" class="form-horizontal">
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="name" name="Name" data-required-message="*Name Required" required data-msg-containerid="nameError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="name">Name</label>
+                    </div>
+                    <div id="nameError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="email" name="Email" data-validation="email" data-required-message="*Email Required" required data-msg-containerid="mailError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="email">Email</label>
+                    </div>
+                    <div id="mailError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="emp" name="Emp" data-required-message="*Employer Required" required data-msg-containerid="empError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="emp">Employer</label>
+                    </div>
+                    <div id="empError"></div>
+                </div>
+                <div class="form-group">
+                    <div class="e-float-input" style="margin-bottom: 0px">
+                        <input type="text" id="position" name="Position" data-required-message="*Position Required" required>
+                        <span class="e-float-line"></span>
+                    </div>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <div class="e-float-input" style="margin-bottom: 0px">
+                        <input type="text" id="current-salary" name="cSalary" data-required-message="*Current Salary Required" required>
+                        <span class="e-float-line"></span>
+                    </div>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <div class="e-float-text e-custom-label">Expected Salary</div>
+                    <div class="col-sm-12">
+                        <div class="form-custom">
+                            <div id="expected-salary"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="e-float-text e-custom-label e-resume-label">Upload Resume</div>
+                    <div class="col-sm-12" style="padding-bottom: 25px;">
+                        <div class="form-group">
+                            <div class="e-float-input">
+                                <input type="file" id="resume">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="submit">
+                    <button id="submitBtn" style="height: 35px;">External Submit</button>
+                    <div class="desc"><span>*This button is not a submit type and the form submit handled from externally.</span></div>
+                </div>
+            </div>
+            <div id="confirmationDialog">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        The <code>External Submit</code> form is validated by the <code>external submit</code> button. Submit will be handled
+        externally.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The <code>External Submit</code> form enables the validation with the formvalidator rules by clicking on the submit
+        externally. All rules are validated by the <code>formvalidator</code> rules.
+    </p>
+    <br>
+    <p>
+        <table style="width:100%">
+            <tr>
+                <th>Field</th>
+                <th>Rule</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Required</td>
+                <td>The field must have any value</td>
+                <td>value</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>The input must have email format</td>
+                <td>ej2@syncfusion.com</td>
+            </tr>
+            <tr>
+                <td>Uploader</td>
+                <td>The input must have any file format to upload</td>
+                <td>'exmple.docx', 'example.pdf'</td>
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td>The input must have inbetween range values</td>
+                <td>123</td>
+            </tr>
+        </table>
+    </p>
+    <br>
+    <p>
+        Enter the above values in the corresponding input elements and click the <code>submit</code> button to submit the
+        form externally.
+    </p>
+</div>
+
+<style>
+    form {
+        padding-top: 20px;
+        margin-bottom: 45px;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
+        border-radius: 5px;
+        background: #f9f9f9;
+    }
+
+    .highcontrast form {
+        background: #000000;
+    }
+
+    .form-horizontal .form-group {
+        margin: 0 20px;
+    }
+
+    label.e-float-text,
+    label.salary,
+    input::placeholder,
+    .e-float-input label.e-float-text {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.70) !important;
+    }
+
+    .e-custom-label {
+        padding-top: 20px;
+        font-weight: 500;
+    }
+
+    .highcontrast label.e-custom-label,
+    .highcontrast label.e-float-text,
+    .highcontrast label.salary,
+    .highcontrast input::placeholder,
+    .highcontrast .e-float-input label.e-float-text {
+        color: #fff !important;
+        line-height: 2.3;
+    }
+
+    .form-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.70);
+    }
+
+    .form-custom {
+        margin-bottom: 8px;
+        margin-top: 17px;
+    }
+
+    .e-resume-label {
+        padding-bottom: 25px;
+    }
+
+    .error {
+        line-height: 1px;
+    }
+
+    .submit {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+    }
+
+    .desc {
+        margin: 2% 25% 0% 25%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .desc {
+            margin: 3%;
+        }
+    }
+
+
+    .e-slider-container.e-horizontal {
+        width: 96%;
+        margin-left: 20px;
+        height: 65px;
+        position: relative;
+        top: calc(50% - 16px);
+        padding-bottom: 12px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .e-slider-container.e-horizontal {
+            width: 90%;
+        }
+    }
+</style>

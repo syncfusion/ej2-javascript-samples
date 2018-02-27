@@ -5,12 +5,10 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'DateTime',
-            intervalType: 'Months',
+            valueType: 'DateTime',            
             majorGridLines: { width: 0 },
-            zoomFactor: 0.4, 
-            skeleton: 'yMd',
-            zoomPosition: 0.4,
+            zoomFactor: 0.2,            
+            zoomPosition: 0.6,
             crosshairTooltip: { enable: true },
         }, 
         //Initializing Chart Area
@@ -46,9 +44,8 @@ this.default = function () {
         //Initializing Zooming
         zoomSettings: {
             enableSelectionZooming: true,
-            enableMouseWheelZooming: true,
-            enableDeferredZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enablePan : true
         },
         //Initializing Chart Title
         title: 'AAPL - 2012-2017',

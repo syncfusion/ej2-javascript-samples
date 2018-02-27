@@ -4,6 +4,11 @@ function gauge1() {
         resized: function (args) {
             location.reload();
         },
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         titleStyle: { color: 'black', size: '16px' },
         axes: [
             {
@@ -100,6 +105,11 @@ function gauge1() {
 function gauge2() {
     var gauge2 = new ej.circulargauge.CircularGauge({
         titleStyle: { color: 'black' },
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         axes: [
             {
                 startAngle: 0, endAngle: 0,
@@ -200,6 +210,11 @@ this.default = function () {
     function updateSubGauge2() {
         var _this = this;
         subGauge2 = new ej.circulargauge.CircularGauge({
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Material';
+                args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            },
             axes: [{
                 ranges: [{ start: 0, end: 3, startWidth: 4, endWidth: 4, color: 'rgba(29,29,29,0.4)' },
                 { start: 3, end: 12, startWidth: 4, endWidth: 4, color: 'rgba(168,145,102,0.1)' }],

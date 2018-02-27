@@ -1,0 +1,16 @@
+{ 
+   "name": "Card", 
+   "directory": "card", 
+   "category":"Layout",
+   "dataSourcePath": "src/card/datasource.js", 
+   "type":"preview",
+   "samples" : [
+    {"url":"basic", "name": "Basic Card", "category":"Card" },
+    {"url":"vertical", "name": "Vertical Card", "category":"Card" },
+    {"url":"horizontal", "name": "Horizontal Card", "category":"Card" },
+    {"url":"swipeable", "name": "Swipeable Card", "category":"Card" },
+    {"url":"flip", "name": "Flip Card", "category":"Card" },
+    {"url":"reveal", "name": "Reveal Card", "category":"Card" },
+    {"url":"tile", "name": "Tile View", "category":"Card" }
+   ]
+}
