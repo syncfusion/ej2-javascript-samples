@@ -1,0 +1,47 @@
+<style>
+    #EventLog b {
+        color: #388e3c;
+    }
+
+    hr {
+        margin: 1px 10px 1px 0px;
+        border-top: 1px solid #eee;
+    }
+</style>
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Event Trace">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="eventarea" style="height: 245px;overflow: auto">
+                        <span class="EventLog" id="EventLog" style="word-break: normal;"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="evtbtn" style="padding-bottom: 10px">
+                        <input id="clear" type="button" value="Clear">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="action-description">
+    <p>This demo illustrates the client-side events that triggers on respective Schedule actions and the same is being displayed
+        on the event trace panel.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this demo, the client-side events that triggers based on the action taking place in Schedule has been demonstrated. The
+        user can make use of these events, if at some point they need to perform some custom actions or any needed additional
+        customizations on the available Schedule features.
+    </p>
+</div>

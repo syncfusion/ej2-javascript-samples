@@ -6,6 +6,9 @@ var labelRender = function (args) {
     else if (selectedTheme === 'material') {
         args.fill = window.materialColors[args.point.index % 10];
     }
+    else if (selectedTheme === 'highcontrast') {
+        args.fill = window.highcontrastColors[args.point.index % 10];
+    }
     else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }
@@ -29,7 +32,7 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelStyle: { color: 'white' },
+            labelStyle: { size: '0px'  },
             majorTickLines: { width: 0 },
             majorGridLines: { width: 0 },
             lineStyle: { width: 0 },
@@ -41,7 +44,7 @@ this.default = function () {
                 dataSource: [{ x: 'South Korea', y: 39 }, { x: 'India', y: 61 },
                 { x: 'Pakistan', y: 20 }, { x: 'Germany', y: 65 },
                 { x: 'Australia', y: 16 }, { x: 'Italy', y: 29 },
-                { x: 'France', y: 45 }, { x: 'Saudi Arabia', y: 10 },
+                { x: 'France', y: 45 }, { x: 'United Arab Emirates', y: 10 },
                 { x: 'Russia', y: 41 }, { x: 'Mexico', y: 31 },
                 { x: 'Brazil', y: 76 }, { x: 'China', y: 51 }],
                 xName: 'x', width: 2, name: 'Users',
@@ -81,4 +84,33 @@ this.default = function () {
         }
     });
     edgeMode.appendTo('#edgemode');
+
+    var labelMode = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select Range Bar Color',
+        width: 120,
+        change: function () {
+            chart.primaryXAxis.labelPosition = labelMode.value;
+            chart.dataBind();
+        }
+    });
+    labelMode.appendTo('#labelmode');
+    document.getElementById('Trim').onchange = function () {
+        var trim = document.getElementById('Trim');
+        if (trim.checked) {
+            chart.primaryXAxis.enableTrim = (trim.value === 'true');
+        }
+        else {
+            chart.primaryXAxis.enableTrim = (trim.value === 'false');
+        }
+        chart.refresh();
+    };
+    var labelWidth = new ej.inputs.NumericTextBox({
+        value: 34, min: 1, max: 120, width: 120, step: 1,
+        change: function () {
+            chart.primaryXAxis.maximumLabelWidth = labelWidth.value;
+            chart.refresh();
+        }
+    });
+    labelWidth.appendTo('#LabelWidth');
 };

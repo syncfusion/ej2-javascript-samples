@@ -1,5 +1,5 @@
 var dataManager = new ej.data.DataManager({
-    url: 'http://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/'
+    url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/'
 });
 var query = new ej.data.Query().take(5).where('Estimate', 'lessThan', 3, false);
 var labelRender = function (args) {
@@ -22,6 +22,8 @@ var materialColors = ['#00bdae', '#404041', '#357cd2', '#e56590', '#f8b883', '#7
     '#ea7a57', '#404041', '#00bdae'];
 var bootstrapColors = ['#a16ee5', '#f7ce69', '#55a5c2', '#7ddf1e', '#ff6ea6',
     '#7953ac', '#b99b4f', '#407c92', '#5ea716', '#b91c52'];
+var highcontrastColors = ['#79ECE4', '#E98272', '#DFE6B6', '#C6E773', '#BA98FF',
+    '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
 var pointRender = function (args) {
     var dataTheme = location.hash.split('/')[1];
     if (dataTheme && dataTheme.indexOf('fabric') > -1) {
@@ -29,6 +31,9 @@ var pointRender = function (args) {
     }
     else if (dataTheme === 'material') {
         args.fill = materialColors[args.point.index % 10];
+    }
+    else if (dataTheme === 'highcontrast') {
+        args.fill = highcontrastColors[args.point.index % 10];
     }
     else {
         args.fill = bootstrapColors[args.point.index % 10];

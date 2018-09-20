@@ -1,0 +1,62 @@
+/**
+ * Earthquake sample
+ */
+this.default = function () {
+    var maps = new ej.maps.Maps({
+        load: function (args) {
+            var earththeme = location.hash.split('/')[1];
+            earththeme = earththeme ? earththeme : 'Material';
+            args.maps.theme = (earththeme.charAt(0).toUpperCase() + earththeme.slice(1));
+        },
+        centerPosition: {
+            latitude: 1.5053645409602877,
+            longitude: 105.14038085937499
+        },
+        zoomSettings: {
+            enable: true,
+            zoomFactor: 7,
+            mouseWheelZoom: false,
+            toolbars: []
+        },
+        mapsArea: {
+            background: '#AEE2FA'
+        },
+        titleSettings: {
+            text: '7.6 Magnitude earthquake strikes Sumatra - 2009',
+            textStyle: {
+                size: '18px'
+            }
+        },
+        layers: [
+            {
+                animationDuration: 1000,
+                shapeDataPath: 'name',
+                shapePropertyPath: 'name',
+                shapeData: new ej.maps.MapAjax(location.origin + location.pathname + 'src/maps/map-data/asia.json'),
+                markerSettings: [{
+                        visible: true,
+                        height: 100,
+                        width: 100,
+                        template: '#template',
+                        animationDuration: 0,
+                        dataSource: [{
+                                latitude: 1.625758360412755, longitude: 98.5693359375
+                            }]
+                    }],
+                shapeSettings: {
+                    fill: '#FFFDCF',
+                    border: {
+                        color: '#3497C3 ',
+                        width: 0.5
+                    }
+                },
+                dataLabelSettings: {
+                    visible: true,
+                    labelPath: 'name',
+                    smartLabelMode: 'Hide'
+                }
+            }
+        ]
+    });
+    maps.appendTo('#maps');    
+};

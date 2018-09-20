@@ -1,0 +1,7 @@
+{ "name": "DateTimePicker", "directory": "date-time-picker", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"DateTimePicker", "api":{"DateTimePicker": []}},
+    {"url":"disabled", "name": "Disabled Dates", "category":"DateTimePicker", "api":{"DateTimePicker": ["renderDayCell" ]}},
+    {"url":"date-time-range", "name": "DateTime Range ", "category":"DateTimePicker", "api":{"DatePicker": [ "min", "max", "value" ]}},
+    {"url":"date-time-format", "name": "Format", "category":"DateTimePicker", "api":{"DateTimePicker": [ "format", "value"]} },
+    {"url":"special-dates", "name": "Special Dates", "category":"DateTimePicker", "api":{"DateTimePicker": [ "renderDayCell", "value"]} }
+]}

@@ -1,0 +1,104 @@
+﻿<div class="col-lg-9 control-section">
+    <div id="Schedule"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Interval </div>
+                    <span>(in Minutes)</span>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="interval">
+                            <option value="30">30</option>
+                            <option value="60" selected>60</option>
+                            <option value="90">90</option>
+                            <option value="120">120</option>
+                            <option value="150">150</option>
+                            <option value="180">180</option>
+                            <option value="240">240</option>
+                            <option value="300">300</option>
+                            <option value="720">720</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Slot Count
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="slotCount">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6" selected>6</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Grid lines
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="timescale">
+                            <option value="enable" selected>Show</option>
+                            <option value="disable">Hide</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Apply Template
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="template">
+                            <option value="yes">Yes</option>
+                            <option value="no" selected>No</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script id="majorSlotTemplate" type="text/x-template">
+    <div>${majorSlotTemplate(data.date)}</div>
+</script>
+<script id="minorSlotTemplate" type="text/x-template">
+    <div style="text-align: right; margin-right: 15px">${minorSlotTemplate(data.date)}</div>
+</script>
+
+<div id="action-description">
+    <p>
+        This demo depicts how to customize the grid lines of schedule with different duration, count and also, how to apply template
+        customizations on it.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, schedule has been allowed to display different number of grid lines per hour assigned with different duration
+        to each cell, by making use of the
+        <code>interval</code> and
+        <code>slotCount</code> properties. The grid lines can also be disabled on schedule, by setting
+        <code>false</code> to the
+        <code>enable</code> property available within
+        <code>timeScale</code>. The time header text can be customized by making use of the
+        <code>majorSlotTemplate</code> and
+        <code>minorSlotTemplate</code> properties.
+    </p>
+</div>

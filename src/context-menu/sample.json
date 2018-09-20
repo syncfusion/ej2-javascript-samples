@@ -2,11 +2,14 @@
     "name": "ContextMenu",
     "directory": "context-menu",
     "category": "Navigation",
+    "ftName": "context-menu",
     "samples": [
         {
-            "url": "context-menu",
+            "url": "default",
             "name": "Default Functionalities",
-            "category": "ContextMenu"
+            "category": "ContextMenu",
+            "api": { "ContextMenu": ["target", "items", "beforeItemRender", "animationSettings"], "MenuItem":["text", "iconCss", "items", "separator"] },
+            "description": "This demo for Essential JS2 ContextMenu control shows the context menu items with icons, text and separator. It supports multiple levels of submenus."
         }
     ]
 }

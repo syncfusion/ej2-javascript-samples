@@ -1,0 +1,112 @@
+<div>
+    <div class="col-lg-8 control-section">
+        <div class="content-wrapper">
+            <div id="defaultRTE"> 
+                <p>The rich text editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. 
+                    Users can format their content using standard toolbar commands.</p>
+                
+                <p><b>Key features:</b></p>
+                
+                <ul>
+                    <li>
+                        <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
+                    </li>
+                    <li>
+                        <p>Capable of handling markdown editing.</p>
+                    </li>
+                    <li>
+                        <p>Contains a modular library to load the necessary functionality on demand.</p>
+                    </li>
+                    <li>
+                        <p>Provides a fully customizable toolbar.</p>
+                    </li>
+                    <li>
+                        <p>Provides HTML view to edit the source directly for developers.</p>
+                    </li>
+                    <li>
+                        <p>Supports third-party library integration.</p>
+                    </li>
+                    <li>
+                        <p>Allows preview of modified content before saving it.</p>
+                    </li>
+                    <li>
+                        <p>Handles images, hyperlinks, video, hyperlinks, uploads, etc.</p>
+                    </li>
+                    <li>
+                        <p>Contains undo/redo manager.</p>
+                    </li>
+                    <li>
+                        <p>Creates bulleted and numbered lists.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 property-section">
+        <table id="property" title="Event Trace">
+            <tbody><tr>
+                <td>
+                    <div class="eventarea" style="height: 245px;overflow: auto">
+                        <span class="EventLog" id="EventLog" style="word-break: normal;"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="evtbtn" style="padding-bottom: 10px">
+                        <button id="clear">Clear</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+
+
+<style>
+        #EventLog b{
+            color: #388e3c;
+        }
+        hr {
+            margin: 1px 10px 1px 0px;
+            border-top: 1px solid #eee;
+        }
+        </style>
+        
+
+<div id="action-description">
+    <p>This sample demonstrates the events that trigger on every action of the rich text editor. The event details are showcased in the event trace panel.
+</div>
+    
+<div id="description">
+    <p>The rich text editor triggers the events based on its actions. 
+        The events can be used as an extension point to perform custom operations.</p>
+    <ul>
+        <li><code>change</code> - Triggers when the editor gets blurred and changes are made to the content.</li>
+        <li><code>focus</code> - Triggers when the editor is in focus.</li>
+        <li><code>blur</code> - Triggers when focused out of the editor.</li>
+        <li><code>actionBegin</code> - Triggers before the execution of command.</li>
+        <li><code>actionComplete</code> - Triggers after the execution of command.</li>
+        <li><code>created</code> - Triggers when the component is created.</li>
+        <li><code>destroyed</code> – Triggers when the component is destroyed.</li>
+    </ul>
+</div>
+
+<style>
+    .control-wrapper {
+        margin: 0 auto;
+    }
+
+    .property-section .right-side {
+        padding-left: 10px;
+    }
+
+    .property-section .left-side {
+        padding: 5px;
+        width: 25%
+    }
+
+    .sb-header {
+        z-index: 100;
+    }
+</style>

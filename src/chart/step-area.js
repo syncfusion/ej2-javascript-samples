@@ -13,7 +13,8 @@ this.default = function () {
         primaryYAxis: {
             title: 'Production (Billion as kWh)',
             valueType: 'Double',
-            majorGridLines: { width: 0 },
+            lineStyle: { width: 0},
+            majorTickLines: { width: 0},
             labelFormat: '{value}B'
         },
         chartArea: {

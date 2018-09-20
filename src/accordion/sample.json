@@ -2,26 +2,36 @@
     "name": "Accordion",
     "directory": "accordion",
     "category": "Navigation",
+    "ftName" :"accordion",
+    "dataSourcePath": "src/accordion/data-source.js", 
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "Accordion"
+            "category": "Accordion",
+            "description":"This demo for Essential JS2 Accordion control shows the default functionalities of the Accordion.",
+            "api": {"AccordionItem": ["header", "content", "expanded"], "Accordion":["items"] }
         },
         {
             "url": "ajax",
             "name": "Ajax Content",
-            "category": "Accordion"
+            "category": "Accordion",
+            "description":"This demo for Essential JS2 Accordion control shows rendering accordion content from external source using ajax library.",
+            "api": {"Accordion": ["expandMode","expanding"] }
         },
         {
             "url": "icons",
             "name": "Icons",
-            "category": "Accordion"
+            "category": "Accordion",
+            "description":"This demo for Essential JS2 Accordion control shows the icon representation of the Accordion.",
+            "api": {"AccordionItem": ["iconCss"] }
         },
         {
-            "url": "rtl",
+            "url": "right-to-left",
             "name": "RTL",
-            "category": "Accordion"
+            "category": "Accordion",
+            "description":"This demo for Essential JS2 Accordion control shows RTL mode of the Accordion.",
+            "api":{"Accordion":["enableRtl"] }
         }
     ]
 }

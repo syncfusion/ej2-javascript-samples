@@ -1,0 +1,22 @@
+{
+    "name": "Pivot Grid",
+    "directory": "pivotview",
+    "category": "Grid",
+    "type": "preview",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "category": "Pivot Grid" },
+        { "url": "local", "name": "Local Data", "category": "Data Binding" },
+        { "url": "remote", "name": "Remote Data", "category": "Data Binding" },
+        { "url": "field-list", "name": "Field List", "category": "User Interaction" },
+        { "url": "grouping-bar", "name": "Grouping Bar", "category": "User Interaction" },
+        { "url": "calculated-field", "name": "Calculated Field", "category": "Formula" },
+        { "url": "aggregation", "name": "Aggregation", "category": "Formula" },
+        { "url": "sorting", "name": "Default Sorting", "category": "Sorting" },
+        { "url": "valuesorting", "name": "Value Sorting", "category": "Sorting" },
+        { "url": "filtering", "name": "Default Filtering", "category": "Filtering" },
+        { "url": "charts", "name": "Chart", "category": "Integration" },
+        { "url": "exporting", "name": "Export", "category": "Miscellaneous" }
+
+    ],
+    "dataSourcePath": "src/pivotview/datasource.js"
+}

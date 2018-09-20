@@ -19,8 +19,9 @@ this.default = function () {
                 yName: 'y',
                 startAngle: 270,
                 endAngle: 90,
-                radius: '90%',
-                innerRadius: '40%',
+                radius: '90%', explode: true,
+                innerRadius: '40%', 
+                name: 'Agricultural',
                 dataLabel: {
                     visible: true, position: 'Outside',
                     connectorStyle: { length: '10%' }, name: 'text',
@@ -29,7 +30,7 @@ this.default = function () {
             }
         ],
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.text}' },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
         legendSettings: {
             visible: false,
         },

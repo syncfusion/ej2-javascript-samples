@@ -1,4 +1,3 @@
-
 this.default = function () {
     // initialize ComboBox component
     var comboBoxObj = new ej.dropdowns.ComboBox({
@@ -14,11 +13,11 @@ this.default = function () {
         allowFiltering: true,
         // bind the filtering event
         filtering: function (e) {
-            var query = new ej.data.Query();
+            var combobox_query = new ej.data.Query();
             // frame the query based on search string with filter type.
-            query = (e.text !== '') ? query.where('Name', 'startswith', e.text, true) : query;
+            combobox_query = (e.text !== '') ? combobox_query.where('Name', 'startswith', e.text, true) : combobox_query;
             // pass the filter data source, filter query to updateData method.
-            e.updateData(window.ddCountryData, query);
+            e.updateData(window.ddCountryData, combobox_query);
         }
     });
     comboBoxObj.appendTo('#country');

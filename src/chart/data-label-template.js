@@ -5,9 +5,13 @@ this.default = function () {
     var theme;
     var chart = new ej.charts.Chart({
         //Initializing Chart Title
-        title: 'Population of India ( 2010 - 2016 )',
+        title: 'Population of India Statistics',
+        subTitle: '(2010 - 2016)',
+        subTitleStyle: {
+            textAlignment: 'Far'
+        },
         titleStyle: {
-            color: '#606060', fontFamily: 'Roboto',
+            fontFamily: 'Roboto',
             fontStyle: 'medium', size: '14px'
         },
         chartArea: { border: { width: 0 } },
@@ -17,7 +21,6 @@ this.default = function () {
             interval: 1,
             edgeLabelPlacement: 'Shift',
             labelStyle: {
-                color: '#606060',
                 fontFamily: 'Roboto',
                 fontStyle: 'medium',
                 size: '14px'
@@ -28,15 +31,14 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             minimum: 900, maximum: 1300,
+            interval: 80,
             labelFormat: '{value}M',
             labelStyle: {
-                color: '#606060',
                 fontFamily: 'Roboto',
                 fontStyle: 'medium',
                 size: '14px'
             },
             title: 'Population',
-            interval: 80,
             majorGridLines: {
                 color: '#eaeaea',
                 width: 1

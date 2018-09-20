@@ -1,0 +1,117 @@
+<div class="col-lg-8 control-section">
+    <div id="colorpicker-control">
+        <h4>Choose a color</h4>
+        <input id="color-picker" type="color">
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr>
+                <td style="width: 50%">
+                    <div>Value</div>
+                </td>
+                <td style="width: 50%">
+                    <div style="max-width: 200px">
+                        <input id="hex-input" class="e-input" value="#008000" type="text" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:10px">
+                    <div>Mode</div>
+                </td>
+                <td style="width: 50%;padding-top:10px">
+                    <div style="max-width: 200px">
+                        <select id="ddl">
+                            <option value="Picker">Picker</option>
+                            <option value="Palette">Palette</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:10px">
+                    <div>Disable</div>
+                </td>
+                <td style="width: 50%;padding-top:10px">
+                    <input id="disabled" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:20px">
+                    <div>Show Buttons</div>
+                </td>
+                <td style="width: 50%;padding-top:20px">
+                    <input id="show-btn" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;padding-top:20px">
+                    <div>Mode Switcher</div>
+                </td>
+                <td style="width: 50%;padding-top:20px">
+                    <input id="mode-switch" type="checkbox" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates customization of the ColorPicker component by using its properties from the property pane. Select
+        any combination of properties from the property pane to customize the ColorPicker component.</p>
+</div>
+<div id="description">
+    <p>
+        The ColorPicker component is a user interface to select and adjust color values. This supports various color specifications
+        like RGB (Red Green Blue), HSV (Hue Saturation Value), and Hex codes.
+    </p>
+    <p>In this sample, ColorPicker is rendered with default configuration.</p>
+    <p>This sample can be customized further with the combination of ColorPicker properties from the property pane. For example,</p>
+    <ul>
+        <li>Control (apply/cancel) buttons can be enabled or disabled using
+            <i>Show Buttons</i> checkbox from the property pane.</li>
+        <li>You can select the color by entering the color value in the property pane
+            <i>Value</i> textbox.</li>
+        <li>You can switch to 'Picker' and 'Palette' modes by clicking and selecting the mode from
+            <i>Select Mode</i> dropdownlist.</li>
+        <li>you can enable or disable the ColorPicker using
+            <i>Disabled</i> checkbox from property pane.</li>
+        <li>you can enable or disable the mode switcher using
+            <i>Mode Switcher</i> checkbox from property pane.</li>
+    </ul>
+    <p>
+        More information about ColorPicker can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/colorpicker/getting-started.html">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+    .property-panel-content {
+        padding: 0 10px 10px 0;
+        overflow: auto;
+    }
+
+    .property-panel-section .property-panel-header {
+        padding-bottom: 15px;
+    }
+
+    #colorpicker-control {
+        margin: 30px auto;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    #colorpicker-control h4 {
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.64);
+    }
+
+    .highcontrast #colorpicker-control h4 {
+        color: #fff;
+    }
+
+    .e-bigger #colorpicker-control h4 {
+        font-size: 20px;
+    }
+</style>

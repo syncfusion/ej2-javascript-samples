@@ -1,0 +1,57 @@
+<div class="control-section">
+    <div id="container"></div>
+</div>
+<div style="float: right; margin-right: 10px;">Source:
+        <a href="http://www.samsung.com/semiconductor/about-us/location/" target="_blank">www.samsung.com</a>
+     </div>
+<div id="markercircle" style="display:none;">
+    <svg width="30" height="30">
+        <circle class="svgcircle" cx="15" cy="15" r="6" stroke='rgba(77, 77, 77, 0.8)'  fill='rgba(0, 77, 153, 0.8)'></circle>
+    </svg>
+</div>
+<style>
+    .markerTemplate {
+        font-size: 12px;
+        color: black;
+        font-weight: 500
+    }
+	
+	.svgcircle{
+        -webkit-animation: opac 1.5s ease-out infinite;
+        animation: opac 1.5s ease-out infinite;
+    }
+
+    @keyframes opac {
+        0% {
+            stroke-opacity: 0.6;
+            stroke-width: 0px;
+        }
+        100% {
+            stroke-opacity: 0.2;
+            stroke-width: 8px;
+        }
+    }
+</style></div>
+
+<div id="action-description">
+        <p>
+            This sample depicts the layers along with sublayers. Countries in the African and Australian continents are rendered in the sublayers.
+       </p>
+    </div>
+    <div id="description">
+        <p>
+        In this example, you can see how to render a sublayer in map. Sublayers are used to render the desired shapes over the existing layers. Any number of sublayers can be added to a map. You can use the <code>fill</code>, <code>width</code>, and <code>color</code> properties in the border to customize the appearance of the shapes. 
+    
+        </p>
+        <p>
+        Tooltip is enabled in this example. To see the tooltip in action, hover the mouse over a marker or tap a marker in touch enabled devices.
+        </p>
+    
+    </div>
+<style>
+    .markerTemplate {
+        font-size: 12px;
+        color: black;
+        font-weight: 500
+    }
+</style>

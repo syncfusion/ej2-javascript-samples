@@ -1,0 +1,38 @@
+{
+    "name": "Toast",
+    "directory": "toast",
+    "category": "Notifications",
+    "ftName" :"toast", 
+    "type": "preview",
+    "samples": [{
+        "url": "default",
+        "name": "Default Functionalites",
+        "category": "Toast",
+        "description": "This demo for Essential JS2 Toast control shows the basic layout of a Toast to show simple notification and hide them.",
+        "api":{"Toast":["title","content"] }
+    }, {
+        "url": "types",
+        "name": "Types",
+        "category": "Toast",
+        "description": "This demo for Essential JS2 Toast control shows 4-predefined toast colors for various scenarios which can be using CSS class.",
+        "api":{"Toast":["cssClass"] }
+    }, {
+        "url": "template",
+        "name": "Templates",
+        "category": "Toast",
+        "description": "This demo for Essential JS2 Toast control shows the Template rendering of the Toast.",
+        "api":{"Toast":["template","target"] }
+    }, {
+        "url": "positions",
+        "name": "Positions",
+        "category": "Toast",
+        "description": "This demo for Essential JS2 Toast control shows the different positioning of the Toast based on the target given.",
+        "api":{"Toast":["position","target"],"ToastPosition":["X","Y"] }
+    }, {
+        "url": "api",
+        "name": "API",
+        "category": "Toast",
+        "description": "This demo for Essential JS2 Toast control shows all the API functionalities available in Toast.",
+        "api":{"Toast":["title","content","newestOnTop", "showProgressBar", "showCloseButton","animation"]}
+    }]
+}

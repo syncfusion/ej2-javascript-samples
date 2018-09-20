@@ -8,11 +8,16 @@ var labelRender = function (args) {
         '#c1c1c1', '#6f6fe2', '#e269ae', '#9e480e', '#997300', '#4472c4', '#70ad47', '#ffc000', '#ed7d31'];
     var bootstrapColors = ['#a16ee5', '#f7ce69', '#55a5c2', '#7ddf1e', '#ff6ea6',
         '#7953ac', '#b99b4f', '#407c92', '#5ea716', '#b91c52'];
+    var highContrastColors = ['#79ECE4', '#E98272', '#DFE6B6', '#C6E773', '#BA98FF',
+    '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
     if (selectedTheme && selectedTheme.indexOf('fabric') > -1) {
-        args.fill = fabricColors[args.point.index];
+        args.fill = fabricColors[args.point.index % 10];
     }
     else if (selectedTheme === 'material') {
-        args.fill = materialColors[args.point.index];
+        args.fill = materialColors[args.point.index % 10];
+    }
+    else if (selectedTheme === 'highcontrast') {
+        args.fill = highContrastColors[args.point.index % 10];
     }
     else {
         args.fill = bootstrapColors[args.point.index % 10];
@@ -28,7 +33,8 @@ this.default = function () {
         primaryXAxis: {
             title: 'Country',
             valueType: 'Category',
-            majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 },
+            enableTrim: true
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
@@ -52,16 +58,16 @@ this.default = function () {
         //Initializing Chart Series
         series: [
             {
-                type: 'Bar',
+                type: 'Bar', tooltipMappingName: 'country',
                 dataSource: [
-                    { x: 'GER', y: 71.7 },
-                    { x: 'RUS', y: 103.1 },
-                    { x: 'BRZ', y: 139.1 },
-                    { x: 'IND', y: 462.1 },
-                    { x: 'CHN', y: 721.4 },
-                    { x: 'USA', y: 286.9 },
-                    { x: 'GBR', y: 115.1 },
-                    { x: 'NGR', y: 97.2 },
+                    { x: 'Germany', y: 72, country: 'GER: 72'},
+                    { x: 'Russia', y: 103.1, country: 'RUS: 103.1'},
+                    { x: 'Brazil', y: 139.1, country: 'BRZ: 139.1'},
+                    { x: 'India', y: 462.1, country: 'IND: 462.1'},
+                    { x: 'China', y: 721.4, country: 'CHN: 721.4'},
+                    { x: 'United States Of America', y: 286.9, country: 'USA: 286.9'},
+                    { x: 'Great Britain', y: 115.1, country: 'GBR: 115.1'},
+                    { x: 'Nigeria', y: 97.2, country: 'NGR: 97.2'},
                 ],
                 xName: 'x', width: 2,
                 yName: 'y', marker: {
@@ -80,10 +86,15 @@ this.default = function () {
             visible: false
         },
         pointRender: labelRender,
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         //Initializing Chart Title
         title: 'Internet Users – 2016',
         //Initializing Tooltip
-        tooltip: { enable: true }
+        tooltip: { enable: true, format: '${point.tooltip}' }
     });
     chart.appendTo('#category-container');
 };

@@ -1,0 +1,25 @@
+{
+    "name": "Smith Chart",
+    "directory": "smithchart",
+    "category": "Data Visualization",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default",
+            "category": "Smith Chart",
+            "api": {}
+        },
+        {
+            "url": "custom",
+            "name": "Customization",
+            "category": "Smith Chart",
+            "api": {}
+        },
+        {
+            "url": "print-export",
+            "name": "Print and Export",
+            "category": "Smith Chart",
+            "api": {}
+        }
+    ]
+}

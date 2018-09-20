@@ -12,8 +12,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 3.2,
             labelFormat: '{value}B',
             edgeLabelPlacement: 'Shift',
             majorGridLines: { width: 0 },

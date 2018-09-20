@@ -1,0 +1,337 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div class="schedule-demo-heading">
+            Cheapest one way fares from Barcelona to Los Angeles
+        </div>
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <div>
+                        <input id="airways-1" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <div>
+                        <input id="airways-2" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <div>
+                        <input id="airways-3" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo illustrates how to customize the schedule to showcase it as an
+        <strong>Airfare calendar</strong> depicting the lowest available price on each day of a month for a specific route, say between
+        Barcelona and Los Angeles.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, Schedule initially displays the fare of the airline service which offers lowest price on each day by comparing
+        between the 3 available airlines. Here, the 3 airline services acts as the Schedule resources. Appointment collection
+        has been dynamically generated for a month (for all the 3 resources) within the
+        <code>generateEvents</code> method and then filtered externally based on the ascending Fare value within the
+        <code>filterByFare</code> method. Since each day of the Schedule needs to display only a single appointment showing the fare value, therefore
+        it’s been queried to take only the first 30 values from the sorted list and assigned it to the Schedule
+        <code>dataSource</code>. Here, the filtering process needs to be carried out during the
+        <code>databinding</code> event and therefore, the dataSource of Schedule is assigned within this event.
+    </p>
+    <p>
+        Schedule has been rendered in a readonly mode and therefore no editing actions are allowed here. To customize the look of
+        the appointments that displays the fare value,
+        <code>template</code> option within the
+        <code>eventSettings</code> is being used. To highlight the day that holds the overall lowest price of a month, the background color of that
+        day’s cell is customized within the
+        <code>dataBound</code> event. Also, the tooltip has been enabled with
+        <code>template</code> option to display the flight details in a customized style.
+    </p>
+</div>
+
+<script id="event-template" type="text/x-template">
+    <div class='template-wrap'>
+        <div class='fare-detail'>$${Fare}</div>
+        <div class='airline-name' style='display:flex;padding-left:5px;'>
+            <div class="airline-logo ${getAirwaysImage(data.AirlineId)}"></div>
+            <div class='airway-name'>${getAirwaysName(data.AirlineId)}</div>
+        </div>
+    </div>
+</script>
+
+<script id="tooltip-template" type="text/x-template">
+    <div class='event-tooltip'>
+        <div class='airline-header'>
+            <div class='airline-logo ${getAirwaysImage(data.AirlineId)}'></div>
+            <div class='airline-name'>${getAirwaysName(data.AirlineId)}</div>
+        </div>
+        <div class='airline-details text-size'>
+            <div class='airline-title'>Fare Details:</div>
+            <div class='airline-fare'>$${Fare} per person</div>
+        </div>
+        <div class='airline-flex-row text-size'>
+            <div class='airline-flex-col airline-title border-right'>Arrival</div>
+            <div class='airline-flex-col airline-title text-right'>Depature</div>
+        </div>
+        <div class='airline-flex-row text-size'>
+            <div class='airline-flex-col border-right'>${getFormattedTime(data.StartTime)}</div>
+            <div class='airline-flex-col margin-right text-right'>${getFormattedTime(data.EndTime)}</div>
+        </div>
+    </div>
+</script>
+
+<style type="text/css">
+    .e-tooltip-wrap.e-schedule-event-tooltip .airline-flex-row {
+        display: flex;
+        padding: 0 5px;
+        line-height: 20px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .airline-flex-col {
+        flex: 0 0 50%;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .text-right {
+        text-align: right;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .margin-right {
+        margin-left: -21px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .text-size {
+        font-size: 14px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .border-right {
+        border-right: 1px solid #fff;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .airline-fare {
+        padding-left: 8px;
+    }
+
+    .e-schedule .e-appointment .template-wrap {
+        color: black;
+        width: 100%;
+    }
+
+    .highcontrast .e-schedule .e-appointment .template-wrap,
+    .highcontrast .e-schedule .best-price:not(.e-work-cells) {
+        color: #fff;
+    }
+
+    .e-schedule .e-work-cells.best-price {
+        background-color: #FFFBDF;
+    }
+
+    .e-schedule .best-price:not(.e-work-cells) {
+        color: #1A961A;
+        float: right;
+        margin-top: -22px;
+        margin-right: 3px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    .highcontrast .e-schedule .best-price:not(.e-work-cells) {
+        color: #33DB33;
+    }
+
+    .highcontrast .e-schedule .e-work-cells.best-price {
+        background-color: #393939;
+    }
+
+    .e-schedule.e-device .best-price:not(.e-work-cells) {
+        display: none;
+    }
+
+    .schedule-demo-heading {
+        font-size: 16px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-weight: 500
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .event-tooltip {
+        width: 217px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .airline {
+        width: 40%;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .event-tooltip .airline-header {
+        display: flex;
+        padding: 8px 0px 8px 0px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .event-tooltip .airline-details {
+        display: flex;
+        padding: 8px 5px 8px 5px;
+    }
+
+    .e-tooltip-wrap.e-schedule-event-tooltip .event-tooltip .airline-timings,
+    .e-tooltip-wrap.e-schedule-event-tooltip .event-tooltip .airline-timings-title {
+        display: flex;
+        padding: 5px;
+    }
+
+    .e-schedule-event-tooltip .event-tooltip .airline-header {
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .e-schedule-event-tooltip .event-tooltip .airline-logo,
+    .e-schedule .template-wrap .airline-logo {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: -3px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .e-schedule-event-tooltip .event-tooltip .airline-logo.airways-1,
+    .e-schedule .template-wrap .airline-logo.airways-1 {
+        background-image: url('./src/schedule/images/airways-1.svg');
+    }
+
+    .e-schedule-event-tooltip .event-tooltip .airline-logo.airways-2,
+    .e-schedule .template-wrap .airline-logo.airways-2 {
+        background-image: url('./src/schedule/images/airways-2.svg');
+    }
+
+    .e-schedule-event-tooltip .event-tooltip .airline-logo.airways-3,
+    .e-schedule .template-wrap .airline-logo.airways-3 {
+        background-image: url('./src/schedule/images/airways-3.svg');
+    }
+
+    .e-schedule .fare-detail {
+        color: #00837B;
+        font-size: 16px;
+        font-weight: 500;
+        height: 25px;
+        padding-left: 5px;
+    }
+
+    .highcontrast .e-schedule .fare-detail {
+        color: #1B96BB;
+    }
+
+    .e-schedule.e-device .fare-detail {
+        font-size: 11px;
+    }
+
+    .e-schedule .e-toolbar-item.e-date-range {
+        margin-left: 8px;
+        pointer-events: none;
+    }
+
+    .e-schedule .airway-name {
+        font-size: 12px;
+        overflow: hidden;
+        padding-left: 5px;
+        text-overflow: ellipsis;
+    }
+
+    .e-schedule.e-device .airway-name {
+        display: none;
+    }
+
+    .e-schedule .e-month-view .e-appointment {
+        height: 45px;
+        background: none;
+        border-width: 0;
+        top: 10px !important;
+    }
+
+    .e-schedule.e-device .e-month-view .e-appointment {
+        height: 45px;
+    }
+
+    .e-bigger .e-schedule .e-month-view .e-appointment {
+        height: 40px;
+    }
+
+    .e-schedule .e-month-view .e-appointment .e-appointment-details {
+        height: inherit;
+    }
+
+    .e-schedule .e-month-view .e-more-indicator {
+        display: none
+    }
+
+    .e-schedule .e-month-view .e-appointment.e-appointment-border,
+    .e-schedule .e-month-view .e-appointment:focus {
+        border-width: 0;
+    }
+
+    .e-tooltip-wrap.e-popup.e-schedule-event-tooltip {
+        opacity: 1;
+    }
+
+    .highcontrast .e-tooltip-wrap.e-popup.e-schedule-event-tooltip {
+        border-color: #e0e0e0;
+        background-color: #fff;
+    }
+
+    .highcontrast .e-tooltip-wrap.e-popup.e-schedule-event-tooltip .e-tip-content {
+        color: #000;
+    }
+
+    .e-tooltip-wrap.e-popup.e-schedule-event-tooltip .event-tooltip .airline-name {
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-top: 3px;
+    }
+
+    .e-tooltip-wrap.e-popup.e-schedule-event-tooltip .event-tooltip .airline-title {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .e-tooltip-wrap.e-popup.e-schedule-event-tooltip .event-tooltip .airline-logo {
+        margin-left: 5px;
+        background-size: 25px;
+        height: 25px;
+        width: 25px;
+        margin-top: 0px;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.e-resource.e-airways-1 .e-frame {
+        background-color: #EA7A57;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.e-resource.e-airways-2 .e-frame {
+        background-color: #357CD2;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.e-resource.e-airways-3 .e-frame {
+        background-color: #7FA900;
+        border-color: transparent;
+    }
+
+    @media (max-width: 550px) {
+        .schedule-demo-heading {
+            font-size: 14px;
+        }
+    }
+</style>

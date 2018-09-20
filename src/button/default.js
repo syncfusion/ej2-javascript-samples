@@ -8,7 +8,7 @@ this.default = function() {
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#outlinebtn');
 
-    button = new ej.buttons.Button({ cssClass: 'e-flat' });
+    button = new ej.buttons.Button({ cssClass: 'e-flat e-primary' });
     button.appendTo('#flatbtn');
 
     button = new ej.buttons.Button({ cssClass: 'e-success'  });
@@ -26,13 +26,13 @@ this.default = function() {
     button = new ej.buttons.Button({ iconCss: 'e-icons e-add-icon', cssClass: 'e-small e-round', isPrimary: true });
     button.appendTo('#roundbtn');
 
-    var toggleBtn = new ej.buttons.Button({ iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isToggle: true });
+    var toggleBtn = new ej.buttons.Button({ iconCss: 'e-icons e-play-icon', cssClass: 'e-flat e-primary', isToggle: true });
     toggleBtn.appendTo('#togglebtn');
 
-    button = new ej.buttons.Button({ iconCss: 'e-icons e-open-icon', cssClass: 'e-flat', iconPosition: 'right' });
+    button = new ej.buttons.Button({ iconCss: 'e-icons e-open-icon', cssClass: 'e-flat e-primary', iconPosition: 'Right' });
     button.appendTo('#openiconbtn');
 
-    button = new ej.buttons.Button({});
+    button = new ej.buttons.Button({ cssClass: 'e-small'});
     button.appendTo('#smallbtn');
 
     //Toggle button click event handler

@@ -1,0 +1,30 @@
+{
+    "name": "Avatar",
+    "directory": "avatar",
+    "category": "Layout",
+    "type": "preview",
+    "dataSourcePath": "src/avatar/datasource.js",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default",
+            "category": "Avatar"
+        }, {
+            "url": "types",
+            "name": "Types",
+            "category": "Avatar"
+        }, {
+            "url": "listview",
+            "name": "ListView",
+            "category": "Intergration"
+        }, {
+            "url": "badge",
+            "name": "Badge",
+            "category": "Intergration"
+        }, {
+            "url": "card",
+            "name": "Card",
+            "category": "Intergration"
+        }
+    ]
+}

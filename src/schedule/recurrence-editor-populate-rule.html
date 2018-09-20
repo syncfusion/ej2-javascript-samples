@@ -1,0 +1,35 @@
+<style>
+    .recurrence-editor-wrap {
+        margin: 0 25%;
+    }
+
+    @media (max-width: 580px) {
+        .recurrence-editor-wrap {
+            margin: 0 5%;
+        }
+    }
+</style>
+<div class="control-section">
+    <div class="content-wrapper recurrence-editor-wrap">
+        <div style="padding-bottom:15px;">
+            Select Rule
+            <input type="text" id="RecurrenceList" />
+        </div>
+        <div id="RecurrenceEditor"> </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo showcases how to fill the recurrence editor fields with appropriate values based on the user-provided recurrence
+        rule string.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the
+        <code>setRecurrenceRule</code> method is used to populate the fields of recurrence editor based on the static rule options selected from the dropdown
+        list.
+    </p>
+</div>

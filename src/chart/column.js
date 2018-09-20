@@ -10,7 +10,7 @@ this.default = function () {
         chartArea: { border: { width: 0 } },
         //Initializing Primary X Axis
         primaryYAxis: {
-            minimum: 0, maximum: 50, interval: 10, majorGridLines: { width: 0 },
+            majorGridLines: { width: 0 },
             majorTickLines: { width: 0 }, lineStyle: { width: 0 }, labelStyle: { color: 'transparent' }
         },
         //Initializing Chart Series
@@ -38,6 +38,11 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+             if (selectedTheme === 'highcontrast') {
+            args.chart.series[0].marker.dataLabel.font.color = '#000000';
+            args.chart.series[1].marker.dataLabel.font.color = '#000000';
+            args.chart.series[2].marker.dataLabel.font.color = '#000000';
+            }
         }
     });
     chart.appendTo('#column-container');

@@ -1,0 +1,110 @@
+<div class="control-section">
+    <div class="menu-control">
+        <div id="shoppingtoolbar"></div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the real use case of <code>Menu</code> component in web application. 
+</div>
+<div id="description">
+    <p>
+        Here, menu utilize the <code>items</code> property to repesent the menu bar in web application. The Toolbar component is used in this sample to make the impressive menu bar.
+    </p>
+    <p>
+        More information about Menu can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/menu/getting-started.html">
+        documentation</a> section.
+    </p>
+</div>
+<style>
+    /**
+    * ej2 Menu - toolbar integration styles
+    */
+    .e-menu-wrapper .e-menu{
+        border: none;
+    }
+
+    .menu-control {
+        margin: 45px auto 0;
+        max-width: 950px;
+    }
+
+    .fabric .e-toolbar-items .e-menu,
+    .fabric .e-toolbar-items .e-dropdown-btn {
+        background: transparent;
+    }
+
+    .e-toolbar-items {
+        width: 100%;
+    }
+
+    .e-toolbar,
+    .e-toolbar .e-toolbar-items.e-tbar-pos .e-toolbar-left {
+        position: static;
+    }
+
+    .e-toolbar .e-tool-name .e-shopping-cart {
+        font-size: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item:last-child {
+        float: right;
+        margin-top: 2px;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-menu-wrapper {
+        line-height: 0;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-input-group {
+        border: 1px solid #C0C0C0;
+        border-radius: 5px;
+        margin: 0;
+    }
+    
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-input-group input {
+        padding-left: 10px;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-input-group .e-search {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-btn-icon {
+        display: inline;
+        padding: 6px;
+    }
+    
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template .e-dropdown-btn {
+        margin: 0 10px;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.e-template {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        .e-toolbar .e-toolbar-items .e-toolbar-item:last-child {
+            float: none;
+        }
+        
+        .e-toolbar-items {
+            width: 100%;
+        }
+    }
+
+    .e-search::before {
+        content: '\e5b9';
+    }
+
+    .e-profile::before {
+        content: '\e7d4';
+    }
+
+    .e-shopping-cart::before {
+        content: '\e7e8';
+    }
+</style>

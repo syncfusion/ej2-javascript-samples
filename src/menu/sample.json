@@ -1,0 +1,39 @@
+{
+    "name": "Menu",
+    "directory": "menu",
+    "category": "Navigation",
+    "ftName": "menu",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Menu",
+            "api":{ "MenuItem":["text", "iconCss", "items", "separator"] }
+        },
+        {
+            "url": "data-binding",
+            "name": "Data Binding",
+            "category": "Menu",
+            "api":{ "Menu": ["items"] }
+        },
+        {
+            "url": "template",
+            "name": "Template",
+            "category": "Menu",
+            "api":{ "Menu": ["items"], "MenuField": ["text", "iconCss", "children", "template"] }
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Menu",
+            "api":{ "Menu": ["orientation", "showItemOnClick", "enableItems"] }
+        },
+        {
+            "url": "toolbar-integration",
+            "name": "Toolbar Integration",
+            "category": "Menu",
+            "api":{ "Menu": ["items", "beforeItemRender"] }
+        }
+    ]
+}

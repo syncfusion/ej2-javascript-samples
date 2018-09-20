@@ -1,0 +1,145 @@
+﻿<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class='schedule-demo-heading'>
+            Flight timings between Barcelona and Los Angeles
+        </div>
+        <div id="Schedule"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo illustrates the timings of different flight services on a specific route say between Barcelona and Los Angeles,
+        on a daily basis. Here, the Schedule is grouped based on the 3 Airline services.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the schedule has been grouped with multiple resources by making use of the property
+        <code>group</code>. The resources to be grouped depends on the values of
+        <code>resources</code> option within the
+        <code>group</code> property, which accepts the array of resource names. The resource header has been customized by making use of the
+        <code>resourceHeaderTemplate</code> property.
+    </p>
+    <p>
+        In mobile mode, when the grouping is enabled, the resources will be listed out in a treeview as a side-panel which opens
+        or closes, on clicking the hamburger icon at the resource header. Only a single resource will be viewable at a time,
+        due to the space constraints on mobile. If in case, the users want to view the grouped layout on mobile with scrolling
+        content, then it is necessary to set
+        <code>false</code> to the
+        <code>enableCompactView</code> option within the
+        <code>group</code> property which is set to
+        <code>true</code> by default. This option is not applicable on desktop mode. </p>
+    <p>
+        Note: If the
+        <code>group</code> property is not defined, then the default schedule will be rendered with no grouping on layout, but the appointments
+        of all the resources will be displayed on a single schedule.
+    </p>
+</div>
+
+<script id="restemplate" type="text/x-template">
+    <div class='template-wrap'>
+        <div class="airline-image ${getAirlineImage(data)}"></div>
+        <div class="airline-details">
+            <div class="airline-name">${getAirlineName(data)}</div>
+            <div class="airline-model">Model no: ${getAirlineModel(data)}</div>
+            <div class="airline-seats">No.of seats: ${getAirlineSeats(data)}</div>
+        </div>
+    </div>
+</script>
+
+<style>
+    .e-schedule .template-wrap {
+        display: flex;
+        text-align: left;
+    }
+
+    .schedule-demo-heading {
+        font-size: 16px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-weight: 500
+    }
+
+    .e-schedule .e-agenda-view .template-wrap {
+        display: table;
+        width: inherit;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .e-schedule:not(.e-device) .e-agenda-view .e-content-wrap table td:first-child {
+        width: 110px;
+    }
+
+    .e-schedule .template-wrap .airline-image {
+        width: 30px;
+        margin-top: 15px;
+        background-repeat: no-repeat;
+    }
+
+    .e-schedule.e-device .template-wrap .airline-image {
+        margin-top: 5px;
+    }
+
+    .e-schedule .e-agenda-view .template-wrap .airline-image {
+        height: 30px;
+        margin-top: 0;
+        margin-left: 35%;
+    }
+
+    .e-schedule .e-vertical-view .e-resource-cells {
+        height: 76px;
+    }
+
+    .e-bigger .e-schedule .e-vertical-view .e-resource-cells {
+        height: 80px;
+    }
+
+    .e-schedule .template-wrap .airline-details {
+        padding-left: 15px;
+    }
+
+    .e-schedule .e-agenda-view .template-wrap .airline-details {
+        padding: 0;
+    }
+
+    .e-schedule .template-wrap .airline-details .airline-name {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .e-schedule.e-device .template-wrap .airline-details .airline-name {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    .e-schedule .template-wrap .airline-image.airways-1 {
+        background-image: url('./src/schedule/images/airways-1.svg');
+    }
+
+    .e-schedule .template-wrap .airline-image.airways-2 {
+        background-image: url('./src/schedule/images/airways-2.svg');
+    }
+
+    .e-schedule .template-wrap .airline-image.airways-3 {
+        background-image: url('./src/schedule/images/airways-3.svg');
+    }
+
+    .e-schedule .e-agenda-view .template-wrap .airline-model,
+    .e-schedule .e-agenda-view .template-wrap .airline-seats {
+        display: none;
+    }
+
+    .e-schedule.e-device .template-wrap .airline-model,
+    .e-schedule.e-device .template-wrap .airline-seats {
+        display: none;
+    }
+
+    @media (max-width: 550px) {
+        .schedule-demo-heading {
+            font-size: 14px;
+        }
+    }
+</style>

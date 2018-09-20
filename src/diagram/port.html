@@ -1,0 +1,114 @@
+<style>
+    .sb-child-row {
+        margin-top: 8px;
+    }
+
+    .property-section .e-remove-selection {
+        cursor: not-allowed;
+    }
+
+    .row-header {
+        font-size: 13px;
+        font-weight: 500;
+        padding-left: 10px
+    }
+
+    .e-remove-selection .property-section-content {
+        pointer-events: none;
+    }
+</style>
+<div class="col-lg-8 control-section">
+    <div id="diagram"></div>
+</div>
+<div class="col-lg-4 property-section">
+    <div class="property-panel-header">
+        Properties
+    </div>
+    <div class="property-panel-content">
+        <div id="propertypanel" class="e-remove-selection">
+            <div class="property-section-content">
+                <div class="row sb-child-row">
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Visibility
+                        </div>
+                        <div>
+                            <input type="text" id='portsVisiblity' />
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Shape
+                        </div>
+                        <div>
+                            <input type="text" id='shape' />
+                        </div>
+                    </div>
+                </div>
+                <div class="row sb-child-row">
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Fill Color
+                        </div>
+                        <div style="padding-bottom: 8px">
+                            <input type="text" id='fill' />
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Stroke Color
+                        </div>
+                        <div style="padding-bottom: 8px">
+                            <input type="text" id='border' />
+                        </div>
+                    </div>
+                </div>
+                <div class="row sb-child-row">
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Stroke Width
+                        </div>
+                        <div style="padding-bottom: 8px">
+                            <input type="text" id='width' />
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div style="padding-bottom: 8px">
+                            Size
+                        </div>
+                        <div style="padding-bottom: 8px">
+                            <input type="text" id='size' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample visualizes the process flow of publishing a book using connection points. Connection points are static points
+        over the shapes that allow creating connections to the shapes. Customizing the size and appearance of the connection
+        points is illustrated in this example.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example shows how to add connection ports to shapes. The
+        <code>ports</code> property of the node defines the static connection ports. The
+        <code>offset</code>,
+        <code>horizontalAlignment</code>,
+        <code>verticalAlignment</code> and
+        <code>margin</code> properties of the ports define its position.
+    </p>
+    <p>
+        The
+        <code>style</code> property of the port can be used to customize its appearance. The
+        <code>visibility</code> property can also be used to define when the connection ports should be visible.
+    </p>
+
+    <p>
+        In this example, the appearance and visibility of the ports can be customized using the options added to the property panel.
+    </p>
+</div>

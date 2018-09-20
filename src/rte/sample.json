@@ -1,0 +1,105 @@
+{
+    "name": "RichTextEditor",
+    "directory": "rte",
+    "category": "Editors",
+    "type": "preview",
+    "samples": [{
+            "url": "tools",
+            "name": "Overview",
+            "type": "update",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "rich-text-editor",
+            "name": "Default Functionalities",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "appendTo"] }
+        },
+        {
+            "url": "image",
+            "name": "Image",
+            "type": "update",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarClick", "appendTo", "getRange"], "QuickToolbarSettings": ["image"] }
+        },
+        {
+            "url": "inline",
+            "name": "Inline",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "inlineMode", "toolbarSettings", "format", "fontFamily", "appendTo", "dataBind"], "InlineMode": ["enable", "onSelection"], "ToolbarSettings": ["items"], "Format": ["width"], "FontFamily": ["width"] }
+        },
+        {
+            "url": "iframe",
+            "name": "IFrame",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "height", "iframeSettings", "toolbarSettings", "actionBegin", "actionComplete", "appendTo"], "IFrameSettings": ["enable"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "print",
+            "name": "Print",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "print", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "ajax-load",
+            "name": "Ajax Content",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "value", "appendTo"] }
+        },
+        {
+            "url": "form-validation",
+            "name": "Form Validation",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "placeholder", "appendTo"] }
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "appendTo", "readonly", "enabled", "enableHtmlEncode", "value", "getSelection", "selectAll"] }
+        },
+        {
+            "url": "client-side-events",
+            "name": "Events",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "created", "actionBegin", "actionComplete", "focus", "blur", "change", "toolbarClick", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "blog-posting",
+            "name": "Use Case",
+            "category": "RichTextEditor",
+            "api": { "RichTextEditor": ["Inject", "placeholder", "value", "dataBind", "refresh", "appendTo"] }
+        },
+        {
+            "url": "types",
+            "name": "Type",
+            "category": "Toolbar",
+            "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
+        },
+        {
+            "url": "custom-toolbar",
+            "name": "Custom Tool",
+            "category": "Toolbar",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "created", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor",
+            "name": "Overview",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor-preview",
+            "name": "Preview",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "actionBegin", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor-custom-format",
+            "name": "Custom Format",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "formatter", "appendTo"], "ToolbarSettings": ["items"] }
+        }
+    ]
+}

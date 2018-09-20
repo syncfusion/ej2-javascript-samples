@@ -22,6 +22,7 @@ this.default = function () {
                 { 'x': 'Kenya', text: 'Kenya: 6', y: 6 },
                 ],
                 animation: { enable: true },
+                explode: true,
                 dataLabel: {
                     visible: true,
                     position: 'Outside',
@@ -30,17 +31,18 @@ this.default = function () {
                         size: '14px'
                     }
                 },
-                radius: '70%',
+                radius: '70%', name: 'RIO',
                 xName: 'x',
                 yName: 'y',
-                groupTo: '10',
+                groupTo: '9',
+				groupMode: 'Point',
                 startAngle: 0,
                 endAngle: 360,
                 innerRadius: '0%',
             }
         ],
         pointRender: function (args) {
-            if (args.point.x.indexOf('Others') > -1) {
+            if (args.point.isClubbed || args.point.isSliced) {
                 args.fill = '#D3D3D3';
             }
         },
@@ -52,7 +54,7 @@ this.default = function () {
             args.text = args.point.x + ' ' + args.point.y;
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} <br> ${point.y} Medals' },
+        tooltip: { enable: false },
         //Initializing Title
         title: 'RIO Olympics Gold',
         load: function (args) {
@@ -74,4 +76,16 @@ this.default = function () {
         document.getElementById('clubpoint').onchange = function (e) {
             clubchange(+document.getElementById('clubpoint').value);
         };
+    var mode = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select Range Bar Color',
+        width: 120,
+        change: function () {
+            var currentValue = mode.value === 'Point' ? 9 : 8;
+            document.getElementById('clubpoint').value = currentValue.toString();
+            pie.series[0].groupMode = mode.value;
+            clubchange(currentValue);
+        }
+    });
+    mode.appendTo('#mode');
 };

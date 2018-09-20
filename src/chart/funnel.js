@@ -19,7 +19,8 @@ this.default = function () {
                 }, explode: true,
             }],
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} : ${point.y} %' },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y} %</b>' },
+        legendSettings: { toggleVisibility: false },
         load: function (args) {
             var funnelTheme = location.hash.split('/')[1];
             funnelTheme = funnelTheme ? funnelTheme : 'Material';

@@ -1,0 +1,53 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+        <div style="float: right; margin-top: 10px;">Source:
+            <a href="http://www.fifa.com/worldcup/matches/index.html" target="_blank">www.fifa.com</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 30%">
+                    <div>Timezone
+                    </div>
+                </td>
+                <td style="width: 70%;">
+                    <div>
+                        <select id="scheduletimezone" name="ddl">
+                            <option value="America/New_York">(UTC-05:00) Eastern Time</option>
+                            <option value="UTC" selected>UTC</option>
+                            <option value="Europe/Moscow">(UTC+03:00) Moscow+00 - Moscow</option>
+                            <option value="Asia/Kolkata">(UTC+05:30) India Standard Time</option>
+                            <option value="Australia/Perth">(UTC+08:00) Western Time - Perth</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        This demo visualizes the 2018 FIFA football match schedule which is depicted as events here. The timings of each event are
+        associated with the timezone of the match location where it will be held. When the Schedule time zone changes, the
+        events in it displays according to the selected timezone's offset time difference.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this demo, the
+        <code>timezone</code> of Schedule is set to UTC and each events on it holds different
+        <code>startTimezone</code> and
+        <code>endTimezone</code> values, therefore the event timings will be converted based on timezone assigned to Schedule
+        and will be displayed appropriately in UTC timings.
+    </p>
+    <p>
+        When the user selects different timezone value listed out in a dropdown on properties panel, Schedule will display the events
+        accordingly to the selected timezone value as the selected timezone will be assigned to Schedule
+        <code>timezone</code> property.
+    </p>
+</div>

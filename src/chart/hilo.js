@@ -1,63 +1,64 @@
 /**
  * Sample for Hilo Series
  */
-this.default = function () {
-    var chart = new ej.charts.Chart({
-        //Initializing Primary X Axis
-        primaryXAxis: {
-            valueType: 'DateTime',
-            skeleton: 'yMd', zoomFactor: 0.2, zoomPosition: 0.6,
-            crosshairTooltip: { enable: true },
-            majorGridLines: { width: 0 }
-        },
-        chartArea: {
-            border: {
-                width: 0
+this.renderChart = function (chartData) {
+        var chart = new ej.charts.Chart({
+            primaryXAxis: {
+                valueType: 'DateTime',
+                crosshairTooltip: { enable: true },
+                minimum: new Date('2016-12-31'),
+                maximum: new Date('2017-09-30'),
+                majorGridLines: { width: 0 }
+            },
+            chartArea: {
+                border: {
+                    width: 0
+                }
+            },
+            primaryYAxis: {
+                title: 'Price',
+                minimum: 100,
+                maximum: 180,
+                interval: 20,
+                labelFormat: '${value}',
+                lineStyle: { width: 0 },
+                majorTickLines: { width: 0 }
+            },
+            legendSettings: { visible: false },
+            series: [
+                {
+                    type: 'Hilo',
+                    dataSource: chartData, animation: { enable: true },
+                    xName: 'x', low: 'low', high: 'high', name: 'Apple Inc'
+                }
+            ],
+            title: 'AAPL Historical',
+            tooltip: {
+                enable: true, shared: true
+            },
+            crosshair: {
+                enable: true, lineType: 'Vertical', line: {
+                    width: 0,
+                }
+            },
+            width: ej.base.Browser.isDevice ? '100%' : '80%',
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Material';
+                args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
             }
-        },
-        //Initializing Primary Y Axis
-        primaryYAxis: {
-            title: 'Price',
-            minimum: 50,
-            maximum: 170,
-            interval: 30,
-            labelFormat: '${value}',
-            lineStyle: { width: 0 },
-            majorTickLines: { width: 0 }
-        },
-        legendSettings: { visible: false },
-        //Initializing Chart Series
-        series: [
-            {
-                type: 'Hilo',
-                dataSource: window.chartData, animation: { enable: true },
-                xName: 'x', low: 'low', high: 'high', name: 'Apple Inc'
-            }
-        ],
-        //Initializing Tooltip
-        zoomSettings: {
-            enableMouseWheelZooming: true,
-            enablePinchZooming: true,
-            enableSelectionZooming: true,
-            mode: 'X'
-        },
-        //Initializing Chart Title
-        title: 'AAPL Historical',
-        //Initializing Tooltip
-        tooltip: {
-            enable: true, shared :true
-        },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
-        //Initializing Crosshair
-        crosshair: { 
-            enable: true, lineType: 'Vertical', line: {
-            width: 0 },
-        },
-        load: function (args) {
-            var hiloTheme = location.hash.split('/')[1];
-            hiloTheme = hiloTheme ? hiloTheme : 'Material';
-            args.chart.theme = (hiloTheme.charAt(0).toUpperCase() + hiloTheme.slice(1));
-        }
-    });
-    chart.appendTo('#hilo-container');
-};
+        });
+        chart.appendTo('#hilo-container');
+    };
+    this.default = function () {
+        var chartData;
+        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
+        ajax.send().then();
+        ajax.onSuccess = function (data) {
+            chartData = JSON.parse(data);
+            chartData.map(function (data) {
+                data.x = new Date(data.x);
+            });
+            renderChart(chartData);
+        };
+    };

@@ -1,7 +1,7 @@
 {
     "name": "TextBoxes",
     "directory": "textbox",
-    "category": "Editors",
+    "category": "Inputs",
     "samples": [
         {
             "url": "default",

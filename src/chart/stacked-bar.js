@@ -15,8 +15,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: -20,
-            maximum: 60,
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             labelFormat: '{value}%',

@@ -1,0 +1,92 @@
+<div class="col-lg-9 control-section">
+    <div id="Schedule"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Show / Hide Resource" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="personal" class="e-resource-calendar e-personal" type="checkbox" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="company" class="e-resource-calendar e-company" type="checkbox" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="birthdays" class="e-resource-calendar e-birthday" type="checkbox" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="holidays" class="e-resource-calendar e-holiday" type="checkbox" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo illustrates how to dynamically add or remove resources to and from the Schedule layout.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, Schedule is initially displayed with single resource with its related set of appointments. When the additional
+        checkboxes given are checked and unchecked, the respective resources gets added up or removed from the schedule layout.
+        To add new resources dynamically,
+        <code>addResource</code> method is used which accepts the arguments such as resource object, resource name (within which level, the resource
+        object to be added) and index (position where the resource needs to be added). To remove the resources dynamically,
+        <code>removeResource</code> method is used which accepts the index (position from where the resource to be removed) and resource name (within
+        which level, the resource object presents) as parameters.
+    </p>
+</div>
+
+<style>
+    .property-panel-content .e-checkbox-wrapper.personal .e-label {
+        color: #808080;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.personal .e-frame {
+        background-color: #c43081;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.company .e-frame {
+        background-color: #ff7f50;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.birthday .e-frame {
+        background-color: #AF27CD;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.holiday .e-frame {
+        background-color: #808000;
+        border-color: transparent;
+    }
+
+    .e-schedule .e-month-view .e-appointment {
+        border-color: transparent;
+    }
+
+    .highcontrast .property-panel-content .e-checkbox-wrapper .e-frame.e-check,
+    .bootstrap .property-panel-content .e-checkbox-wrapper .e-frame.e-check {
+        color: #fff;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td,
+    .e-schedule .e-timeline-month-view .e-resource-left-td {
+        width: 110px;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-text,
+    .e-schedule .e-timeline-month-view .e-resource-text {
+        padding: 0;
+    }
+</style>

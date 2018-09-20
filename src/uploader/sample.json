@@ -1,0 +1,16 @@
+{
+    "name": "File Upload",
+    "directory": "uploader",
+    "type": "update",	
+    "category":"Inputs",	
+    "samples" : [
+        {"url":"default", "name": "Default Functionalities", "category": "Uploader", "api":{"Uploader": [ "autoUpload", "asyncSettings", "success", "dropArea" ]}},
+        {"url":"chunk-upload", "name": "Chunk Upload", "category": "Uploader", "api":{"Uploader": [ "autoUpload", "asyncSettings", "dropArea" ]}, "type": "new"},
+        {"url":"custom-file-list", "name": "Template", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "success", "dropArea", "selected", "progress", "failure", "removing" ]}},
+        {"url":"preload-files", "name": "Preload Files", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "success", "dropArea", "files", "failure", "removing" ]}},
+        {"url":"file-validation", "name": "File Validation", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "autoUpload", "minFileSize", "allowedExtensions", "success", "dropArea", "selected" ]}},
+        {"url":"image-preview", "name": "Image Preview", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "failure", "progress", "template", "allowedExtensions", "success", "dropArea", "selected" ]}, "type": "update"},
+        {"url":"file-upload-with-forms", "name": "Form Support", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "failure", "progress", "template", "allowedExtensions", "success", "dropArea", "selected" ]}, "type": "new"},
+        {"url":"custom-drop-area", "name": "Custom Drop Area", "category": "Uploader", "api":{"Uploader": [ "asyncSettings", "autoUpload", "minFileSize", "allowedExtensions", "success", "dropArea", "selected" ]}, "type": "new"}
+     ]
+ }

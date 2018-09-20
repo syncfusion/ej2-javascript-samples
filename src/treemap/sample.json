@@ -1,0 +1,131 @@
+{
+    "name": "TreeMap",
+    "directory": "treemap",
+    "category": "Data Visualization",
+    "ftName": "treemap",
+    "dataSourcePath":"src/treemap/map-data.js",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "description": "This demo for Essential JS2 TreeMap control visualizes the sales of cars across various countries in 2017.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "default.html", "path":"src/treemap/default.html" },
+                { "displayName": "default.js", "path":"src/treemap/default.js" }
+            ]
+        },
+        {
+            "url": "layout",
+            "name": "Layout",
+            "description": "This demo for Essential JS2 TreeMap control illustrates the GDP nominal of top 10 countries in the year 2015. The layout of the TreeMap can also be changed.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "layout.html", "path":"src/treemap/layout.html" },
+                { "displayName": "layout.js", "path":"src/treemap/layout.js" }
+            ]
+        },
+        {
+            "url": "drilldown",
+            "name": "Drilldown",
+            "description": "This demo for Essential JS2 TreeMap control demonstrates drill-down with the continents at the top level followed by regions and countries.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "drilldown.html", "path":"src/treemap/drilldown.html" },
+                { "displayName": "drilldown.js", "path":"src/treemap/drilldown.js" }
+            ]
+        },
+        {
+            "url": "customization",
+            "name": "Customization",
+            "description": "This demo for Essential JS2 TreeMap control depicts the gold medal categories of the 2016 US Summer Olympics. Each category is denoted with label template.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "customization.html", "path":"src/treemap/customization.html" },
+                { "displayName": "customization.js", "path":"src/treemap/customization.js" }
+            ]
+        },
+        {
+            "url": "label",
+            "name": "Data Label",
+            "description": "This demo for Essential JS2 TreeMap control depicts the population level of various countries in 2017 along with data labels.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "label.html", "path":"src/treemap/label.html" },
+                { "displayName": "label.js", "path":"src/treemap/label.js" }                
+            ]
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "description": "This demo for Essential JS2 TreeMap control depicts the number of international airports available in various countries in South America along with tooltip.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "tooltip.html", "path":"src/treemap/tooltip.html" },
+                { "displayName": "tooltip.js", "path":"src/treemap/tooltip.js" }
+            ]
+        },
+        {
+            "url": "election",
+            "name": "Legend",
+            "description": "This demo for Essential JS2 TreeMap control visualizes the 2016 U.S.A. presidential election results. Default and interactive are the two types of legend.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "election.html", "path":"src/treemap/election.html" },
+                { "displayName": "election.js", "path":"src/treemap/election.js" }
+            ]
+        },
+        {
+            "url": "selection",
+            "name": "Selection & Highlight",
+            "description": "This demo for Essential JS2 TreeMap control depicts the details of goods imported by Japan. Selection and highlight options have been enabled.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "selection.html", "path":"src/treemap/selection.html" },
+                { "displayName": "selection.js", "path":"src/treemap/selection.js" }
+            ]
+        },
+        {
+            "url": "print",
+            "name": "Print & Export",
+            "description": "This demo for Essential JS2 TreeMap control depicts the top 10 best-selling smartphone brands. Print and export options have been enabled.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "print.html", "path":"src/treemap/print.html" },
+                { "displayName": "print.js", "path":"src/treemap/print.js" }
+            ]
+        },
+        {
+            "url": "pie",
+            "name": "TreeMap with Pie",
+            "description": "This demo for Essential JS2 TreeMap control visualizes the population level of various continents in 2011 based on the gender and age group.",
+            "category": "TreeMap",
+            "api": {},
+            "sourceFiles":[
+                { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
+                { "displayName": "pie.html", "path":"src/treemap/pie.html" },
+                { "displayName": "pie.js", "path":"src/treemap/pie.js" }
+            ]
+        }
+        
+        
+    ]
+}

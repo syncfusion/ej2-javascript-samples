@@ -1,4 +1,3 @@
-
 this.default = function () {
 
     // initialize DropDownList component
@@ -17,11 +16,11 @@ this.default = function () {
         allowFiltering: true,
         // bind the filtering event
         filtering: function (e) {
-            var query = new ej.data.Query();
+            var dropdown_query = new ej.data.Query();
             // frame the query based on search string with filter type.
-            query = (e.text !== '') ? query.where('Name', 'startswith', e.text, true) : query;
+            dropdown_query = (e.text !== '') ? dropdown_query.where('Name', 'startswith', e.text, true) : dropdown_query;
             // pass the filter data source, filter query to updateData method.
-            e.updateData(window.ddCountryData, query);
+            e.updateData(window.ddCountryData, dropdown_query);
         }
     });
     dropDownListObj.appendTo('#country');

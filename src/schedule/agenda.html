@@ -1,0 +1,72 @@
+<div class="col-lg-9 control-section">
+    <div id="Schedule"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Allow Virtual Scrolling
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="virtualscroll" name="ddl" style="padding: 6px;">
+                            <option value="true">True</option>
+                            <option value="false" selected>False</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Hide Empty Days
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="hideemptydays" name="ddl" style="padding: 6px;">
+                            <option value="true" selected>True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Days Count
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <input id="agendadayscount" type="text" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This demo showcases the agenda view and the configurations available in it.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this demo, Agenda view is set as active view on Schedule and made its
+        <code>allowVirtualScrolling</code> option as false. With this settings, the Agenda view loads the initial data for the next 7 days count from the date
+        value assigned to the
+        <code>selectedDate</code> property of the Schedule. The initial data loading for 7 days count is due to the default value assigned to the
+        <code>agendaDaysCount</code> property which can be customized as per the user needs.
+    </p>
+    <p>
+        When the
+        <code>allowVirtualScrolling</code> property is set to true, the user is allowed to scroll through all the events simply by scrolling up and down upto
+        the last event available in Schedule.
+    </p>
+    <p>
+        By default, the days which doesn’t have any events will be hidden on this view – but by setting
+        <code>hideEmptyAgendaDays</code> property to false will allow the
+        <code>No Events</code> text to be displayed against the dates that has no events.
+    </p>
+</div>

@@ -7,6 +7,9 @@ var labelRender = function (args) {
     else if (selectedTheme === 'material') {
         args.fill = window.materialColors[args.point.index % 10];
     }
+    else if (selectedTheme === 'highcontrast') {
+        args.fill = window.highcontrastColors[args.point.index % 10];
+    }
     else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }
@@ -18,7 +21,9 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category', interval: 1, majorGridLines: { width: 0 }
+            valueType: 'Category', interval: 1, majorGridLines: { width: 0 },
+            tickPosition: 'Inside',
+            labelPosition: 'Inside', labelStyle: { color: '#ffffff' }
         },
         chartArea: { border: { width: 0 } },
         //Initializing Primary Y Axis
@@ -47,8 +52,13 @@ this.default = function () {
         title: 'Tiger Population - 2016', tooltip: { enable: true },
         pointRender: labelRender,
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        },
         tooltipRender: function (args) {
-            var tooltip = args.textCollections;
+            var tooltip = args.text;
             if (tooltip.indexOf('BGD') > -1) {
                 tooltip = tooltip.replace('BGD', 'Bangladesh');
             }
@@ -64,7 +74,7 @@ this.default = function () {
             else {
                 tooltip = tooltip.replace('MYS', 'Malaysia');
             }
-            args.textCollections = tooltip;
+            args.text = tooltip;
         }
     });
     chart.appendTo('#container');

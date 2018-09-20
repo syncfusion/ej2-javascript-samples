@@ -1,0 +1,99 @@
+<style>
+    .image-pattern-style {
+        background-color: white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 75px;
+        width: calc((100% - 12px) / 3);
+        cursor: pointer;
+        border: 1px solid #D5D5D5;
+        background-position: center;
+        float: left;
+    }
+
+    .image-pattern-style:hover {
+        border-color: gray;
+        border-width: 2px;
+    }
+
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .row-header {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .e-selected-style {
+        border-color: #006CE6;
+        border-width: 2px;
+    }
+
+    .e-checkbox-wrapper .e-label {
+        font-size: 12px;
+    }
+</style>
+
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper" style="width: 100%">
+        <div id="diagram"></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <div class="property-panel-header">
+        Properties
+    </div>
+    <div class="row property-panel-content" id="appearance">
+        <div class="row row-header">
+            Appearance
+        </div>
+        <div class="row" style="padding-top: 3px;">
+            <div class="image-pattern-style" id="preview0" style="background-image: url(./src/diagram/Images/node/Nodes_1.png); margin-right: 3px">
+            </div>
+            <div class="image-pattern-style" id="preview1" style="background-image: url(./src/diagram/Images/node/Nodes_2.png); margin-right: 0px 3px">
+            </div>
+            <div class="image-pattern-style" id="preview2" style="background-image: url(./src/diagram/Images/node/Nodes_3.png); margin: 0px 3px">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 3px">
+            <div class="image-pattern-style" id="preview3" style="background-image: url(./src/diagram/Images/node/Nodes_4.png); margin-right: 3px">
+            </div>
+            <div class="image-pattern-style" id="preview4" style="background-image: url(./src/diagram/Images/node/Nodes_5.png); margin-right: 0px 3px">
+            </div>
+        </div>
+    </div>
+    <div class="row property-panel-content" style="padding-top: 10px">
+        <div class="row row-header">
+            Behavior
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id="aspectRatio" unchecked="false">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id="lock" unchecked="false">
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the different stages of a software development life cycle using a circular flow diagram. Customizing the appearance of the nodes is illustrated in this example.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example shows how to add nodes to a diagram control and how to customize the appearance of the nodes. The
+        <code>style</code> property of the node can be used to customize the appearance of the nodes.
+    </p>
+
+    <p>
+        To change the appearance, click different styles in the property panel.
+    </p>
+
+    <p>
+        Here, you can see how to lock nodes to disable editing and how to enable proportional resizing. The
+        <code>constraints</code> property of the node allows you to enable/disable editing and proportional resizing.
+    </p>
+    <br>
+</div>

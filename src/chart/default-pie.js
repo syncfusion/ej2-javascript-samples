@@ -22,7 +22,7 @@ this.default = function () {
                 radius: '70%', xName: 'x',
                 yName: 'y', startAngle: 0,
                 endAngle: 360, innerRadius: '0%',
-                explode: true, explodeOffset: '10%', explodeIndex: 0
+                explode: true, explodeOffset: '10%', explodeIndex: 0,  name: 'Browser'
             }
         ],
         enableSmartLabels: true,
@@ -30,7 +30,7 @@ this.default = function () {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} <br> ${point.y} %' },
+        tooltip: { enable: true,  header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
         //Initializing Title
         title: 'Mobile Browser Statistics',
         load: function (args) {

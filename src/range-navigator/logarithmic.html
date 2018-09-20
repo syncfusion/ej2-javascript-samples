@@ -1,0 +1,68 @@
+<div class="control-section">
+    <h4 align="center" style="font-family: Segoe UI;font-weight: 500; font-style:normal; font-size:15px;">Inflation vs Goods Consumers</h4>
+    <div id="container" align="center"></div>
+    <div id="chart" align="center"></div>
+
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates the rendering of logarithmic axis in the range navigator.
+    </p>
+</div>
+<div id="description">
+    <p>
+        Logarithmic axis uses logarithmic scale and it is very useful in visualizing when the data has values
+        with both lower order of magnitude (eg: 10^-6) and higher order of magnitude (eg: 10^6).
+        To render Logarithmic axis, set <code>valueType</code> to <code>Logarithmic</code>. 
+        Tooltip is enabled in this example, to see the tooltip in action, while the selected range is changed.
+    </p>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+    
+    #material-gradient-chart stop {
+        stop-color: #00bdae;
+    }
+    
+    #fabric-gradient-chart stop {
+        stop-color: #4472c4;
+    }
+    
+    #bootstrap-gradient-chart stop {
+        stop-color: #a16ee5;
+    }
+    
+    #highcontrast-gradient-chart stop {
+        stop-color: #79ECE4;
+    }
+    
+    .chart-gradient stop[offset="0"] {
+        stop-opacity: 0.9;
+    }
+    
+    .chart-gradient stop[offset="1"] {
+        stop-opacity: 0.3;
+    }
+</style>
+<svg style="height: 0">
+    <defs>
+        <linearGradient id="material-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="fabric-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="bootstrap-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="highcontrast-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+    </defs>
+</svg>

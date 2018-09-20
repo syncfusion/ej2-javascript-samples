@@ -1,4 +1,3 @@
-
 this.default = function () {
     // initialize AutoComplete component
     var atcObj = new ej.dropdowns.AutoComplete({
@@ -25,7 +24,7 @@ this.default = function () {
         width: '150px',
         // bind change event to modify the filter type of AutoComplete element.
         change: function (e) {
-            atcObj.filterType = e.itemData;
+            atcObj.filterType = e.itemData.value;
         }
     });
     ddlObj.appendTo('#filter-type');

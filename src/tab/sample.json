@@ -2,10 +2,12 @@
     "name": "Tab",
     "directory": "tab",
     "category": "Navigation",
+    "ftName" :"tabs",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Tab" },
-        { "url": "orientation", "name": "Orientation", "category": "Tab" },
-        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab" },
-        { "url": "rtl", "name": "RTL", "category": "Tab" }
+        { "url": "default", "name": "Default Functionalities", "category": "Tab", "description": "This demo for Essential JS2 Tab control shows the default functionalities of the Tab.", "api": { "Header": ["text", "iconCss"], "TabItem": ["content"], "Tab": ["items"] } },
+        { "url": "orientation", "name": "Orientation", "category": "Tab", "description": "This demo for Essential JS2 Tab control shows header orientation of the Tab.", "api": { "Tab": ["headerPlacement", "showCloseButton"] } },
+        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab", "description": "This demo for Essential JS2 Tab control shows responsive modes of the Tab.", "api": { "Tab": ["overflowMode"] } },
+        { "url": "right-to-left", "name": "RTL", "category": "Tab", "description": "This demo for Essential JS2 Tab control shows RTL mode of the Tab.", "api":{ "Tab": ["enableRtl"] } },
+        { "url": "wizard", "name": "Wizard", "category": "Tab", "description": "This demo for Essential JS2 Tab control shows simple train reservation wizard that enable/disable Tab items based on sequential validation of each Tab content.", "api": { "TabItem": ["disabled"] } }
     ]
 }

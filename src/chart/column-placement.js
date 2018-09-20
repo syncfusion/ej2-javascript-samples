@@ -10,7 +10,7 @@ this.default = function () {
         chartArea: { border: { width: 0 } },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0, maximum: 12, interval: 3, majorGridLines: { width: 0 },
+            majorGridLines: { width: 0 },
             majorTickLines: { width: 0 }, lineStyle: { width: 0 }, labelStyle: { color: 'transparent' }
         },
         //Initializing Side by Side Placement

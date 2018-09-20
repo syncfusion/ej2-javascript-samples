@@ -1,0 +1,345 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper" style="margin-bottom: 25px">
+        <div class="form-title"><span>Account Setup</span></div>
+        <form id="formId" class="form-horizontal">
+            <div class="tab">
+                <h4>Account Information</h4>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="name" name="Name" data-required-message="*Username Required" required data-msg-containerid="nameError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="name">User Name</label>
+                    </div>
+                    <div id="nameError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="password" id="pass" name="Pass" data-required-message="*Password Required" required data-msg-containerid="passError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="name">Password</label>
+                    </div>
+                    <div id="passError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="password" id="cpass" name="CPass" data-required-message="*Confirm Password Required" required equalTo="pass"
+                            data-equalTo-message="*Password does not match" data-msg-containerid="cpassError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="cpass">Confirm Password</label>
+                    </div>
+                    <div id="cpassError"></div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h4>Personal Information</h4>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="fn" name="fname" data-required-message="*First Name Required" required data-msg-containerid="fnError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="fn">First Name</label>
+                    </div>
+                    <div id="fnError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="ln" name="lname" data-required-message="*Last Name Required" required data-msg-containerid="lnError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="ln">Last Name</label>
+                    </div>
+                    <div id="lnError"></div>
+                </div>
+
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="age" name="Age" min="6" max="65" data-required-message="*Age Required" required data-msg-containerid="aError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="age">Age(6 to 65)</label>
+                    </div>
+                    <div id="aError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="datepicker" name="dob" data-required-message="*DOB Required" required data-msg-containerid="dError">
+                        <span class="e-float-line"></span>
+                    </div>
+                    <div id="dError"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 e-custom-label">Gender:</div>
+                    <div class="col-sm-12">
+                        <div class="form-custom">
+                            <div style="float:left ; padding-right:10px">
+                                <input id="radio1" type="radio" name="r1">
+                            </div>
+                            <div class="row">
+                                <input id="radio2" type="radio" name="r2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab">
+                <h4>Contact Information</h4>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="mail" data-validation="email" name="Email" data-required-message="*Email Required" required data-msg-containerid="mError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="mail">Email</label>
+                    </div>
+                    <div id="mError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="tel" id="tele" name="Tel" data-required-message="*Mobile Number Required" required data-msg-containerid="tError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="tel">Mobile Number</label>
+                    </div>
+                    <div id="tError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="city" name="City" data-required-message="*City Required" required data-msg-containerid="cityError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="city">City</label>
+                    </div>
+                    <div id="cityError"></div>
+                </div>
+                <div class="form-group" style="padding-top: 11px;">
+                    <div class="e-float-input">
+                        <input type="text" id="pin" data-validation="number" name="Pin" data-required-message="*Pincode Required" required data-msg-containerid="pinError">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="pin">Pincode</label>
+                    </div>
+                    <div id="pinError"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="prev">
+                    <button id="prevBtn" class="e-custom-button" type="button">Previous</button>
+                </div>
+                <div class="next">
+                    <button id="nextBtn" class="e-custom-button" type="button">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample is used to validate form using the <code>wizard Validation</code>. Type values in the input element and click
+        the <code>Next</code> to validate the current tab. If it has any invalid case, it will not navigate to next tab.
+        Once the current tab is valid then only it goes to the next tab. In Wizard form we can navigate between previous
+        and current tab. <code>Previous</code> button is used to navigate the previous tab.</p>
+</div>
+<div id="description">
+    <p>
+        The <code>wizard Validation</code> enables the current display tab validation with the formvalidator rules.
+    </p>
+    <br>
+    <p>
+        <table style="width:100%">
+            <tr>
+                <th>Field</th>
+                <th>Rule</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Required</td>
+                <td>The field must have any value</td>
+                <td>value</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>The input must have email format</td>
+                <td>ej2@syncfusion.com</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>The input must have password format</td>
+                <td>****</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>The input must have number format</td>
+                <td>123</td>
+            </tr>
+        </table>
+    </p>
+    <br>
+    <p>
+        Enter the above values in the corresponding input elements and click the next button to validate the current tab once it
+        is valid then go to the next tab. At the last tab, the <code>Next</code> button acts as a <code>submit</code>.
+    </p>
+</div>
+
+<style>
+    .prev {
+        float: left;
+        margin-left: 50px;
+    }
+
+    .next {
+        float: right;
+    }
+
+    .form-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.70);
+    }
+
+    .e-custom-label {
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 20px;
+        width: 180px;
+    }
+
+    .e-custom-button {
+        width: 125px;
+        height: 45px;
+        margin-right: 50px;
+    }
+
+    .form-custom {
+        margin-bottom: 8px;
+        margin-top: 17px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        opacity: 0.45;
+    }
+
+    h4 {
+        font-size: 15px;
+        color: #b07676;
+        padding-bottom: 11px;
+        margin-left: 12px;
+        padding-top: 3px;
+    }
+
+    #formId {
+        background-color: #f9f9f9;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    
+    form {
+        padding-top: 20px;
+        margin-bottom: 45px;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
+        border-radius: 5px;
+        background: #f9f9f9;
+    }
+
+    .highcontrast #formId {
+        color: #ffffff;
+        background: #000000;
+    }
+
+    .e-error,
+    .e-float-text {
+        font-weight: 500;
+    }
+
+    table,
+    td,
+    th {
+        padding: 5px;
+    }
+
+    .form-horizontal .form-group {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Tab  */
+
+    .tab {
+        display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .radio-control {
+            margin-left: 35%;
+            margin-top: 8%;
+        }
+
+        .control-section {
+            min-height: 200px;
+        }
+
+        .prev {
+            float: left;
+            margin: 0px 10% -50px 12%;
+        }
+
+        .next {
+            float: right;
+        }
+    }
+
+    .radio-control h4 {
+        color: rgba(0, 0, 0, 0.64);
+    }
+
+    .e-bigger .radio-control h4 {
+        font-size: 20px;
+    }
+
+    /* Datepicker Styles */
+
+    #wrapper {
+        margin: 30px auto;
+        padding-top: 30px;
+    }
+
+    /* Dropdownlist Styles */
+
+    .control-wrapper {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .e-c-error {
+        position: absolute;
+        top: 9px;
+        right: 0px;
+    }
+
+    .e-date-error {
+        position: relative;
+        top: -35px;
+        right: 35px;
+        float: right;
+    }
+
+    .e-c-error:after {
+        background: #333;
+        background: rgba(0, 0, 0, .8);
+        border-radius: 5px;
+        bottom: 26px;
+        color: #fff;
+        padding: 5px 15px;
+        position: absolute;
+    }
+
+    @media (max-width: 960px) {
+        .control-wrapper {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+</style>

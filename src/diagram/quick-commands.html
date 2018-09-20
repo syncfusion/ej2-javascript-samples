@@ -1,0 +1,88 @@
+<style>
+    .image-pattern-style {
+        background-color: white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: calc((100% - 18px) / 3);
+        cursor: pointer;
+        border: 1px solid #D5D5D5;
+        background-position: center;
+        float: left;
+    }
+
+    .image-pattern-style:hover {
+        border-color: gray;
+        border-width: 2px;
+    }
+
+    .row {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .e-selected-style {
+        border-color: #006CE6;
+        border-width: 2px;
+    }
+
+    .row-header {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 10px
+    }
+
+    .e-checkbox-wrapper .e-label {
+        font-size: 12px;
+    }
+</style>
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper" style="width: 100%">
+        <div id="diagram"></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <div class="row">
+        <div class="property-panel-header">
+            Properties
+        </div>
+        <div class="row property-panel-content"  id="appearance">
+            <div class="row row-header1">
+                Alignment
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="image-pattern-style e-selected-style" id="left" style="background-image: url(./src/diagram/Images/user-handle/bottoml.png); margin-right: 4px">
+                </div>
+                <div class="image-pattern-style" id="right" style="background-image: url(./src/diagram/Images/user-handle/bottomr.png); margin: 0px 4px">
+                </div>
+                <div class="image-pattern-style" id="topr" style="background-image: url(./src/diagram/Images/user-handle/topr.png);">
+                </div>
+            </div>
+        </div>
+        <div class="row property-panel-content" id="pattern">
+            <div class="row row-header1">
+                Appearance
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="image-pattern-style" id="pattern1" style="background-image: url(./src/diagram/Images/user-handle/pattern1.png); margin-right: 4px">
+                </div>
+                <div class="image-pattern-style" id="pattern2" style="background-image: url(./src/diagram/Images/user-handle/pattern2.png); margin: 0px 4px">
+                </div>
+                <div class="image-pattern-style" id="pattern3" style="background-image: url(./src/diagram/Images/user-handle/pattern3.png);">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes a simple flow diagram along with options to execute the frequently used commands using user handles.
+    </p>
+</div>
+<div id="description">
+    <p>
+        User handles are icons that are placed around the node to run the frequently used commands. This example shows how to render
+        and configure user handles and how to interact with the diagram using user handles. The <code>userHandles</code> property of the <code>selectedItems</code> can be used to add user handles to the diagram. Click the templates in the property
+        panel, to customize the size, position, and appearance of the user handles.
+    </p>
+    <br>
+</div>

@@ -1,0 +1,59 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize Uploader -->
+        <input type='file' id='fileupload' name='UploadFiles'/>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%;">
+        <tbody><tr>
+            <td class="left-side">Chunk size :</td>
+            <td>
+                    <div id="default">
+                            <select id="chunk-sizes"> 
+                                <option value="500000">500 KB</option>
+                                <option value="1000000">1 MB</option>
+                                <option value="2000000">2 MB</option>
+                            </select>
+                        </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+<style>
+    .control_wrapper {
+        max-width: 400px;
+        margin: auto;
+    }
+    .e-upload {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+        float: none;
+    }
+    .e-upload .e-upload-actions {
+        float: none;
+        text-align: right;
+    }
+    .control_wrapper .e-upload .e-upload-drag-hover {
+        margin: 0;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the chunk upload functionalities of the Uploader component. Browse the files which you want to upload to the server. The selected files are submitted to server on upload button click based on the selected chunk size. Also, You can pause the uploading file and resuming it.
+       Once the upload got failed, it will retry automatically.Even it fails to upload in auto retry, retry button will be enabled to retry the upload later.</p>
+    <p>Also, provided option to change the chunk size values from the property panel</p>
+</div>
+
+<div id="description">
+        <p>When the file size is larger or slow network connection, you can upload the files using 
+        <a href="https://ej2.syncfusion.com/documentation/uploader/api-uploader.html?lang=typescript#asyncsettings"
+        target="_blank">chunkSize</a> API. It will slice the files and upload it in sequential order.</p>
+        <p>While the uploading is in progress, you can pause the upload and resuming it later.</p>
+        <p>If the upload got failed, retry option will be enabled.</p>
+        <p>The sample is configured with maximum file size as `100 MB` to upload. </p>
+        <p>More information on the Uploader instantiation can be found in this documentation section.</p>
+</div>

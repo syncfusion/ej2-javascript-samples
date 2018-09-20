@@ -1,0 +1,12 @@
+{
+    "name": "PDF",
+    "directory": "pdf",
+    "category": "PDF",
+    "samples": [
+	    { "url": "gettingStarted", "name": "Getting Started", "category": "PDF" },
+        { "url": "encryption", "name": "Encryption", "category": "PDF" },
+        { "url": "formFill", "name": "Form Filling", "category": "PDF" },        
+        { "url": "interactiveFeature", "name": "Interactive Features", "category": "PDF" },
+		{ "url": "tableFeature", "name": "Table Features", "category": "PDF" }
+    ]  
+}

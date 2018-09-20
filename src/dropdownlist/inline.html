@@ -1,0 +1,65 @@
+<div class="col-lg-12 control-section" style="height: 400px;">
+    <div class="control-wrapper">
+        <div style="padding-top:75px;">
+            <span id="contentText" style="font-size: 14px;">React top expert of this week is
+                <input type="text" tabindex="1" id="inline" />
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p> The DropDownList appearing in line with highlighted content. Click that DropDownList value content and select an item
+        from the popup list.
+    </p>
+</div>
+
+<div id="description">
+    <p>The DropDownList component can be rendered in line with other content and you can override the styles of the dropdownlist
+        component.
+    </p>
+
+    <p>This sample illustrates using the user's data that has been used and customized DropDownList border.</p>
+</div>
+
+<style>
+    .control-wrapper {
+        margin: 0 auto;
+        width: 325px;
+    }
+
+    .inlinecss.e-ddl .e-input-group-icon.e-ddl-icon {
+        display: none;
+    }
+
+    .inlinecss.e-ddl .e-control.e-dropdownlist.e-input {
+        font-size: 17px;
+        font-weight: 500;
+        margin: -5px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .material .inlinecss.e-ddl .e-control.e-dropdownlist.e-input {
+        margin: 6px 0px 0px 0px;
+    }
+
+    .bootstrap .inlinecss.e-ddl .e-control.e-dropdownlist.e-input {
+        margin: 0px;
+    }
+
+    #contentText .e-input-group.e-control-wrapper.e-ddl::before,
+    #contentText .e-input-group.e-control-wrapper.e-ddl::after {
+        content: none;
+    }
+
+    #contentText .e-input-group.e-control-wrapper.e-ddl,
+    #contentText .e-input-group.e-control-wrapper.e-ddl:hover,
+    #contentText .e-input-group.e-ddl.e-input-focus,
+    #contentText .e-input-group.e-ddl.e-input-focus::before,
+    #contentText .e-input-group.e-ddl.e-input-focus::after {
+        border-width: 0px;
+        border: none;
+        border-bottom: 1px dashed black;
+        box-shadow: none;
+    }
+</style>

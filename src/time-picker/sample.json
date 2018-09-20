@@ -1,0 +1,6 @@
+{ "name": "TimePicker", "directory": "time-picker", "category":"Editors", "samples" : [
+    {"url":"default", "name": "Default Functionalities", "category":"TimePicker", "api":{"TimePicker": [ "placeholder" ]}},
+    {"url":"time-range", "name": "Time Range", "category":"TimePicker", "api":{"TimePicker": [ "placeholder", "value", "readonly", "enabled", "min", "change" ]}},
+    {"url":"time-format", "name": "Format", "category":"TimePicker", "api":{"TimePicker": [ "value", "step", "format" ]}},
+    {"url":"list-formatting", "name": "Time Duration", "category":"TimePicker", "api":{"TimePicker": [ "value", "itemRender" ]}}
+]}

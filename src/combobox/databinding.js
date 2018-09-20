@@ -3,7 +3,7 @@ this.default = function () {
     // initialize ComboBox component
     var comboBoxObj1 = new ej.dropdowns.ComboBox({
         // bind the DataManager instance to dataSource property
-        dataSource: new ej.data.DataManager({ url: 'http://services.odata.org/V4/Northwind/Northwind.svc', adaptor: new ej.data.ODataV4Adaptor(), crossDomain: true}),
+        dataSource: new ej.data.DataManager({ url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc', adaptor: new ej.data.ODataAdaptor(), crossDomain: true}),
         // bind the Query instance to query property
         query: new ej.data.Query().from('Customers').select(['ContactName', 'CustomerID']).take(24),
         // map the appropriate columns to fields property

@@ -8,7 +8,11 @@
         { "url": "grouping-icon", "name": "Grouping", "category": "MultiSelect", "api": {"MultiSelect": ["fields"]}  },
         { "url": "template", "name": "Template", "category": "MultiSelect", "api": {"MultiSelect": ["headerTemplate", "itemTemplate", "valueTemplate"]}  },
         { "url": "filtering", "name": "Filtering", "category": "MultiSelect", "api": {"MultiSelect": ["allowFiltering", "filtering"]}  },
-        { "url": "custom-value", "name": "Custom Value", "category": "MultiSelect", "api": {"MultiSelect": ["mode", "allowCustomValue"]}  }
+        { "url": "custom-value", "name": "Custom Value", "category": "MultiSelect", "api": {"MultiSelect": ["mode", "allowCustomValue"]}  },
+        { "url": "chip-customization", "name": "Chip Customization", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"]}  },
+        { "url": "checkbox", "name": "CheckBox", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"]}  },
+        { "url": "selectionlimit", "name": "Selection Limit", "category": "MultiSelect", "api": {"MultiSelect": ["dataSource", "fields", "placeholder", "mode", "maximumSelectionLimit"]} },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "category": "MultiSelect","api": {"MultiSelect": ["dataSource", "placeholder", "allowFiltering","ignoreAccent"]} }
     ],
     "dataSourcePath":"src/dropdownlist/datasource.js"
 }

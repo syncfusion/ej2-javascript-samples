@@ -1,7 +1,7 @@
 { "name": "DateRangePicker", "directory": "daterangepicker", "category":"Editors", "samples" : [
-    {"url":"default", "name": "Default Functionalities", "category":"DateRangePicker"},
-    {"url":"daterange", "name": "Date Range", "category":"DateRangePicker"},
-    {"url":"dayspan", "name": "Day Span", "category":"DateRangePicker"},
-    {"url":"globalization", "name": "Globalization", "category":"DateRangePicker"},
-    {"url":"presets", "name": "Preset Ranges", "category":"DateRangePicker"}
+    {"url":"default", "name": "Default Functionalities", "category":"DateRangePicker", "api":{"DateRangePicker": [ "placeholder" ]} },
+    {"url":"date-range", "name": "Date Range", "category":"DateRangePicker", "api":{"DateRangePicker": [ "placeholder", "min", "max" ]}},
+    {"url":"day-span", "name": "Day Span", "category":"DateRangePicker", "api":{"DateRangePicker": [ "placeholder", "minDays", "maxDays" ]}},
+    {"url":"date-format", "name": "Format", "category":"DateRangePicker", "api":{"DateRangePicker": [ "format", "value" ]}},
+    {"url":"presets", "name": "Preset Ranges", "category":"DateRangePicker",  "api":{"DateRangePicker": [ "placeholder", "presets" ]}}
 ]}

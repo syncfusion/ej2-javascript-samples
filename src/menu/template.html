@@ -1,0 +1,140 @@
+<div class="control-section">
+    <div class="menu-control">
+        <ul id="menu"></ul>
+    </div>
+    <!-- Template to render Menu -->
+    <script id="menuTemplate" type="text/x-template">
+        ${if(category)}
+        <a href="#">${category}</a>
+        ${else if (value)}
+        <img src="src/menu/images/${value}.png" /><a href="#">${value}</a>
+        ${else if (support)}
+        <ul>
+        ${for(val of support)}
+        <li>
+        <a href="#">${val.value}</a>
+        ${if(val.count)}
+        <span class='e-badge e-badge-success'>${val.count}</span>
+        ${/if}
+        </li>
+        ${/for}
+        </ul>
+        ${else}
+        <div tabindex="0" class="e-card" style="width: 350px;">
+            <div class="e-card-header">
+                <div class="e-card-header-caption">
+                    <div class="e-card-header-title">About Us</div>
+                </div>
+            </div>
+            <div class="e-card-content">
+                ${about.value}
+            </div>
+            <div class="e-card-actions">
+                <button class="e-btn e-outline">
+                    Read More
+                </button>
+            </div>
+        </div>
+        ${/if}
+    </script>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the template functionalities of the <code>Menu</code> component.
+        Mouse hover or touch on the menu items to show it's sub menu pop-up items with its customized templates.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The Menu component has an option to customize the menu items through the <code>template</code> property, so that the menu items can be rendered with any custom structure.
+    </p>
+    <p>
+        For more information, you can refer to the 
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/menu/template.html">
+        templates</a> section from the documentation.
+    </p>
+</div>
+<style>
+    /**
+    * ej2 Menu styles
+    */
+    .e-menu-wrapper {
+        text-align: center;
+    }
+
+    .menu-control {
+        margin-top: 45px;
+    }
+
+    .e-bigger .e-menu-wrapper ul.e-ul li,
+    .e-menu-wrapper ul.e-ul li {
+        height: auto;
+        display: flex;
+        padding: 0;
+    }
+
+    .e-bigger .e-menu-wrapper ul.e-ul li .e-menu-template img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .e-menu-wrapper ul.e-ul li .e-menu-template img {
+        width: 25px;
+        height: 25px;
+        margin-left: 6px;
+    }
+
+    .e-menu-wrapper ul.e-ul li .e-menu-template span.e-badge {
+        position: absolute;
+        margin-top: 16px;
+        margin-right: 6px;
+        right: 0;
+        height: 18px;
+        line-height: normal;
+    }
+
+    .e-menu-wrapper ul.e-ul li .e-menu-template li {
+        padding-right: 50px;
+    }
+
+    .e-menu-wrapper ul.e-ul li .e-menu-template .e-card-content {
+        white-space: normal;
+        color:rgba(0, 0, 0, 0.87);
+        text-align: justify;
+        padding: 0 16px 16px;
+    }
+
+    .e-menu-wrapper ul.e-ul li .e-menu-template ul {
+        display: block;
+    }
+
+    .e-menu-wrapper ul.e-ul li.e-focused,
+    .e-menu-wrapper ul.e-ul li.e-focused .e-menu-template {
+        background-color: #fff;
+        cursor: default;    
+    }
+
+    .e-menu-wrapper ul.e-ul li.e-focused span:not(.e-badge) {
+        cursor: pointer;
+        background-color: #eee;
+        width: 100%;
+    }
+    
+    .e-menu-wrapper ul .e-menu-template a {
+        text-decoration: none;
+        color:rgba(0, 0, 0, 0.87);
+    }
+    
+    .highcontrast .e-menu-wrapper ul .e-menu-template a,
+    .highcontrast .e-menu-wrapper ul.e-ul li .e-menu-template .e-card-content {
+        color: #fff;
+    }
+
+    .highcontrast .e-menu-wrapper ul.e-ul li.e-focused span:not(.e-badge) {
+        background-color: #685708;
+    }
+
+    .e-menu-wrapper ul:not(.e-menu) .e-menu-template a,
+    .e-menu-wrapper ul:not(.e-menu) .e-menu-template th {
+        padding: 0 12px;
+    }
+</style>

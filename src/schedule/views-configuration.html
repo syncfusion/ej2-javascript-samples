@@ -1,0 +1,52 @@
+<style>
+    .e-schedule .e-agenda-view .e-appointment .subject {
+        font-size: 14px;
+    }
+
+    .e-schedule .e-agenda-view .e-appointment .group {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .e-schedule .e-month-view .e-appointment .e-appointment-details {
+        padding: 1px;
+        padding-left: 3px;
+    }
+
+    .e-schedule .e-agenda-view .e-appointment .location {
+        font-size: 12px;
+    }
+
+    .e-schedule .e-date-header-wrap .e-resource-cells {
+        font-weight: 500;
+    }
+</style>
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo illustrates how to customize each view with specific configurations like applying event template on agenda view,
+        setting different start/end hour to day and week views and enabling grouping in month view. It also shows how to
+        hide the weekend days and to set different time intervals on week view.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the
+        <code>views</code> property is defined to accept the array of view options and therefore for each view, it is possible
+        to set different configurations. In day view, the
+        <code>startHour</code> is set to 7 and
+        <code>endHour</code> set to 18 whereas in week view, the same is set as 9 and 19 respectively. Also, the
+        <code>showWeekend</code> property is set to false only on week view along with different timescale interval. The
+        customized template is applied to the events on Agenda view and on month view, the grouping functionality is enabled
+        by setting
+        <code>group</code> property.
+    </p>
+</div>

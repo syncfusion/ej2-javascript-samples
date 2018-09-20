@@ -23,9 +23,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 25,
-            interval: 5,
             majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
             lineStyle: { width: 0 },
@@ -80,6 +77,10 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            if (selectedTheme === 'highcontrast') {
+               args.chart.series[0].fill = '#57BCFF';
+               args.chart.series[1].fill = '#E58184';
+            }
         },
         //Initializing Chart Title
         title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>' }

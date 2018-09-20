@@ -1,0 +1,169 @@
+<div class="col-lg-12 control-section toast-api-section">
+    <div class="e-sample-resize-container">
+        <div id="toastApi"></div>
+        <div class="row">
+            <div class="col-lg-6 padding">
+                <div class="input-form">
+                    <div class="e-float-input">
+                        <input class="e-input" id="toast_input_title" required="">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text">Enter the title</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <div class="e-float-input">
+                        <textarea class="e-input" id="toast_input_content" rows="3" required=""></textarea>
+                        <label class="e-float-text">Enter the content</label>
+                    </div>
+                </div>
+                <div class="group-form e-group">
+                    <input id="closeButton" type="checkbox">
+                </div>
+                <div class="group-form">
+                    <input id="progressBar" type="checkbox">
+                </div>
+                <div class="group-form">
+                    <input id="newestOnTop" type="checkbox">
+                </div>
+                <div class="group-form">
+                    <input id="prevDuplicates" type="checkbox">
+                </div>
+                <div class="group-form">
+                    <input id="actionButtons" type="checkbox">
+                </div>
+                <div class="input-form">
+                    <div class="e-float-input e-input-group">
+                        <input class="e-input" id="timeOut" name="Digits" value="5000" digits="true" data-digits-message="Please enter digits only." required="">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text" for="Digits">TimeOut</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 padding">
+                <div class="input-form">
+                    <h4> Show Animation</h4>
+                    <div class="e-float-input">
+                        <input class="e-input" id="showDuration" value="400" required="">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text">Duration</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <select id="ShowEasing">
+                        <option value="ease">Ease</option>
+                        <option value="linear">Linear</option>
+                    </select>
+                </div>
+                <div class="input-form">
+                    <select id="ShowAnimation">
+                        <option value="SlideBottomIn">Slide Bottom In</option>
+                        <option value="FadeIn">Fade In</option>
+                        <option value="FadeZoomIn">Fade Zoom In</option>
+                        <option value="FadeZoomOut">Fade Zoom Out</option>
+                        <option value="FlipLeftDownIn">Flip Left Down In</option>
+                        <option value="FlipLeftDownOut">Flip Left Down Out</option>
+                        <option value="FlipLeftUpIn">Flip Left Up In</option>
+                        <option value="FlipLeftUpOut">Flip Left Up Out</option>
+                        <option value="FlipRightDownIn">Flip Right Down In</option>
+                        <option value="FlipRightDownOut">Flip Right Down Out</option>
+                        <option value="FlipRightUpIn">Flip Right Up In</option>
+                        <option value="FlipRightUpOut">Flip Right Up Out</option>
+                        <option value="SlideBottomOut">Slide Bottom Out</option>
+                        <option value="SlideLeftIn">Slide Left In</option>
+                        <option value="SlideLeftOut">Slide Left Out</option>
+                        <option value="SlideRightIn">Slide Right In</option>
+                        <option value="SlideRightOut">Slide Right Out</option>
+                        <option value="SlideTopIn">Slide Top In</option>
+                        <option value="SlideTopOut">Slide Top Out</option>
+                        <option value="ZoomIn">Zoom In</option>
+                        <option value="ZoomOut">Zoom Out</option>
+                    </select>
+                </div>
+                <div class="input-form e-group">
+                    <h4> Hide Animation</h4>
+                    <div class="e-float-input">
+                        <input class="e-input" id="hideDuration" value="400" required="">
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text">Duration</label>
+                    </div>
+                </div>
+                <div class="input-form">
+                    <select id="HideEasing">
+                        <option value="ease">Ease</option>
+                        <option value="linear">Linear</option>
+                    </select>
+                </div>
+                <div class="input-form">
+                    <select id="HideAnimation">
+                        <option value="SlideBottomOut">Slide Bottom Out</option>
+                        <option value="FadeIn">Fade In</option>
+                        <option value="FadeZoomIn">Fade Zoom In</option>
+                        <option value="FadeZoomOut">Fade Zoom Out</option>
+                        <option value="FlipLeftDownIn">Flip Left Down In</option>
+                        <option value="FlipLeftDownOut">Flip Left Down Out</option>
+                        <option value="FlipLeftUpIn">Flip Left Up In</option>
+                        <option value="FlipLeftUpOut">Flip Left Up Out</option>
+                        <option value="FlipRightDownIn">Flip Right Down In</option>
+                        <option value="FlipRightDownOut">Flip Right Down Out</option>
+                        <option value="FlipRightUpIn">Flip Right Up In</option>
+                        <option value="FlipRightUpOut">Flip Right Up Out</option>
+                        <option value="SlideBottomIn">Slide Bottom In</option>
+                        <option value="SlideLeftIn">Slide Left In</option>
+                        <option value="SlideLeftOut">Slide Left Out</option>
+                        <option value="SlideRightIn">Slide Right In</option>
+                        <option value="SlideRightOut">Slide Right Out</option>
+                        <option value="SlideTopIn">Slide Top In</option>
+                        <option value="SlideTopOut">Slide Top Out</option>
+                        <option value="ZoomIn">Zoom In</option>
+                        <option value="ZoomOut">Zoom Out</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+            <button id="toastBtnShow" class="e-btn e-primary">Show Toasts</button>
+            <button id="toastBtnHide" class="e-btn e-primary" style='display: none'>Hide all</button>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates all the API functionalities available in <code>Toast</code>.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this sample, with help of text inputs <code>toast</code> header <code>title</code> and <code>content</code> text can be provided.
+    </p>
+    <p><code>Action Buttons</code> – Provide support to add a button inside toast to interact with it.</p>
+    <p><code>Prevent Duplicates</code> – Disable the user to create same toast message multiple times.</p>
+    <p><code>TimeOut</code> – Allows to set time in millisecond to close toast</p>
+    <p><code>Progress Bar</code> – Visualizes the time out of toast as an indicator</p>
+    <p><code>Animation</code> – Enables to define the toast show and hide animation </p>
+    <p><code>Close button</code> – Show close button to hide toast irrespective of time out.</p>
+    <p>More information about Toast can be found in this <a target="_blank" href="//ej2.syncfusion.com/documentation/toast/getting-started.html">documentation</a> section.</p>
+</div>
+
+<style>
+    .toast-api-section .input-form {
+        margin: 33px 0;
+    }
+
+    .toast-api-section .group-form {
+        margin: 25px 0;
+    }
+
+    .toast-api-section .group-form.e-group {
+        margin-top: 35px;
+    }
+    .toast-api-section .row .padding {
+        padding: 15px;
+    }
+    .toast-api-section .row.center {
+        text-align: center;
+    }
+    .toast-api-section .row {
+        padding: 0 15px;
+    }
+</style>

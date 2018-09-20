@@ -13,9 +13,6 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             title: 'Revenue in Millions',
-            minimum: 0,
-            maximum: 4,
-            interval: 1,
             labelFormat: '{value}M'
         },
         //Initializing Chart Series

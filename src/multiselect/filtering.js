@@ -1,4 +1,3 @@
-
 this.default = function () {
 
     var listObj = new ej.dropdowns.MultiSelect({
@@ -13,11 +12,11 @@ this.default = function () {
         allowFiltering: true,
         // bind the filtering event
         filtering: function (e) {
-            var query = new ej.data.Query();
+            var multiselect_query = new ej.data.Query();
             // frame the query based on search string with filter type.
-            query = (e.text !== '') ? query.where('Name', 'startswith', e.text, true) : query;
+            multiselect_query = (e.text !== '') ? multiselect_query.where('Name', 'startswith', e.text, true) : multiselect_query;
             // pass the filter data source, filter query to updateData method.
-            e.updateData(window.ddCountryData, query);
+            e.updateData(window.ddCountryData, multiselect_query);
         }
     });
     listObj.appendTo('#list');

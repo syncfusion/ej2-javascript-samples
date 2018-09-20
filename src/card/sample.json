@@ -1,0 +1,16 @@
+{ 
+   "name": "Card", 
+   "directory": "card", 
+   "category":"Layout",
+   "ftName" :"card",
+   "dataSourcePath": "src/card/data-source.js", 
+   "samples" : [
+    {"url":"basic", "name": "Basic Card", "category":"Card", "description": "This sample demonstrates card rendering with the following basic weather layout." },
+    {"url":"vertical", "name": "Vertical Card", "category":"Card", "description": "This sample demonstrates rendering of vertical layout card with business and profile card information." },
+    {"url":"horizontal", "name": "Horizontal Card", "category":"Card", "description": "This sample demonstrates card rendering with horizontal layout." },
+    {"url":"swipeable", "name": "Swipeable Card", "category":"Card", "description": "This sample demonstrates card rendering with stacked layout." },
+    {"url":"flip", "name": "Flip Card", "category":"Card", "description": "This sample demonstrates to flip(rotate) the card to show hidden information which is on back side of the card by clicking or focus-out of it." },
+    {"url":"reveal", "name": "Reveal Card", "category":"Card", "description": "This sample demonstrates rendering the card with reveal layouts." },
+    {"url":"tile", "name": "Tile View", "category":"Card", "description": "This sample demonstrates filter and search of the card based on categories, and text containing the card." }
+   ]
+}

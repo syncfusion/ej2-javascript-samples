@@ -1,0 +1,111 @@
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper" style="overflow:auto">
+        <div id="container">
+            <div id="calendar" class="e-customStyle"></div>
+            <br/>
+            <span id="date_label"> Selected Value: </span>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        In the following sample, specific dates are
+        <code>highlighted</code> to notify the additional information of that date. Click the
+        <code>special date</code>, and the tooltip information about the date will be displayed in the label below the Calendar.
+    </p>
+</div>
+<div id="description">
+    <p>
+        Special Dates sample demonstrates, how to customize a specific dates in a calendar by using
+        <code>renderDayCell</code> event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific
+        dates in calendar. Here 10, 15 and 25 date's are customized with custom styles and custom classes. </p>
+    <p>More information on the calendar customization can be found in this
+        <a href="http://ej2.syncfusion.com/documentation/calendar/customization.html" target="_blank"> documentation section</a>.</p>
+</div>
+<style>
+    #date_label {
+        display: block;
+        width: 248px;
+        color: rgba(0, 0, 0, 0.58);
+        margin-left: 5px;
+    }
+
+    .control_wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    body.highcontrast #date_label {
+        color: white;
+    }
+
+    .e-customStyle span.e-icons.highlight {
+        margin-top: -13px;
+        display: block;
+        margin-left: 4px;
+    }
+
+    .e-customStyle span.e-icons.highlight,
+    .e-customStyle span.e-icons.highlight:before {
+        color: rgb(0, 0, 255);
+    }
+
+    body.highcontrast .e-customStyle td.birthday span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.birthday span.e-icons.highlight:before {
+        color: #ff6161;
+    }
+
+    body.highcontrast .e-customStyle td.farewell span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.farewell span.e-icons.highlight:before {
+        color: #2bc700;
+    }
+
+    body.highcontrast .e-customStyle td.vacation span.e-icons.highlight,
+    body.highcontrast .e-customStyle td.vacation span.e-icons.highlight:before {
+        color: #ff7d1a;
+    }
+
+    .e-customStyle .e-other-month span.e-icons.highlight:before {
+        content: "";
+    }
+
+    body.highcontrast.e-bigger .e-customStyle.e-calendar span.e-icons.highlight:before,
+    body.highcontrast .e-customStyle.e-bigger.e-calendar span.e-icons.highlight:before,
+    body.bootstrap.e-bigger .e-customStyle.e-calendar span.e-icons.highlight:before,
+    body.bootstrap .e-customStyle.e-bigger.e-calendar span.e-icons.highlight:before{
+        top: 1px;
+    }
+
+    .e-bigger .e-customStyle.e-calendar span.e-icons.highlight:before,
+    .e-customStyle.e-bigger.e-calendar span.e-icons.highlight:before {
+        top: -3px;
+    }
+
+    .e-customStyle span.e-icons.highlight:before {
+        content: "\e865";
+        vertical-align: middle;
+        margin-right: 3px;
+        font-size: 4px;
+        position: relative;
+        top: -1px;
+        font-weight: normal;
+    }
+
+    .e-customStyle .e-selected span.e-icons.highlight:before {
+        color: #fff;
+    }
+
+    .e-customStyle span.e-icons.highlight,
+    .e-customStyle.e-calendar .e-content span.special,
+    .e-customStyle.e-calendar .e-content span.daycell {
+        font-weight: bold;
+    }
+
+    .e-customStyle.e-calendar .e-content span.special {
+        color: red;
+    }
+
+    .e-customStyle.e-calendar .e-content span.daycell {
+        color: #ff9e00;
+    }
+</style>

@@ -1,0 +1,116 @@
+<div class="col-lg-8 control-section">
+    <!-- Tooltip element -->
+    <button id="default">Show Tooltip</button>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tbody>
+            <tr>
+                <td style="width: 50%">
+                    <div class="userselect">Content</div>
+                </td>
+                <td style="width: 50%;padding-right: 10px">
+                    <div>
+                        <input id="value" type="text" placeholder="Tooltip content">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div class="userselect">Height</div>
+                </td>
+                <td style="width: 50%;padding-right: 10px">
+                    <div>
+                        <input id="height" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div class="userselect">Width</div>
+                </td>
+                <td style="width: 50%;padding-right: 10px">
+                    <div>
+                        <input id="width" class="e-input" type="text">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div class="userselect">Open Mode</div>
+                </td>
+                <td style="width: 50%;padding-right: 10px">
+                    <div>
+                        <input type="text" tabindex="1" id='ddlelement' />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div class="userselect">Sticky Mode</div>
+                </td>
+                <td style="width: 50%;padding-right: 10px">
+                    <div>
+                        <input id="sticky" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates how to customize the tooltip component by using its properties from the property pane. Select
+        any combination of properties from the property pane to customize tooltips.</p>
+</div>
+
+<div id="description">
+    <p>In this demo, the default tooltip is rendered with minimal configuration. This sample can be customized further with
+        the combination of tooltip properties from the property pane. For example,</p>
+    <ul>
+        <li>Any change made to a textbox in the property pane will be reflected in the tooltip <a href="https://ej2.syncfusion.com/documentation/tooltip/api-tooltip.html#content">content</a></li>
+        <li><a href="https://ej2.syncfusion.com/documentation/tooltip/api-tooltip.html?lang=typescript#issticky">StickyMode</a>can
+            be enabled by checking the sticky mode option in the property pane.</li>
+        <li><a href="https://ej2.syncfusion.com/documentation/tooltip/api-tooltip.html?lang=typescript#height">Height</a> and
+            <a href='https://ej2.syncfusion.com/documentation/tooltip/api-tooltip.html?lang=typescript#width'>width</a> can
+            be changed from the property pane.</li>
+        <li><a href="https://ej2.syncfusion.com/documentation/tooltip/api-tooltip.html?lang=typescript#openson">OpenMode</a> can be changed from the property pane.</li>
+    </ul>
+</div>
+
+<style type="text/css">
+    .userselect {
+        -webkit-user-select: none;
+        /* Safari 3.1+ */
+        -moz-user-select: none;
+        /* Firefox 2+ */
+        -ms-user-select: none;
+        /* IE 10+ */
+        user-select: none;
+        /* Standard syntax */
+    }
+
+    #property {
+        padding-top: 200px;
+    }
+
+    #default {
+        position: absolute;
+        left: calc( 50% - 60px);
+        top: 35%;
+    }
+
+    #value {
+        height: 34px;
+        width: 136px;
+        padding-left: 10px;
+    }
+
+    .highcontrast #value {
+        border: 1px solid;
+        border-width: 1px;
+        color: #fff;
+        background: #000;
+    }
+</style>

@@ -51,7 +51,8 @@ this.default = function () {
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
             enableSelectionZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enableScrollbar: true
         },
         //Initializing Chart Title
         title: 'Sales History of Product X',

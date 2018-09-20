@@ -1,0 +1,43 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This demo illustrates how to customize the background of the specific date cells by adding images and custom text to
+        it by using the cell template option.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the
+        <code>cellTemplate</code> option which accepts the template string is used to customize the cell background with specific images and appropriate
+        text on the given date values.
+    </p>
+</div>
+
+<style>
+    .e-schedule .e-month-view .e-work-cells {
+        position: relative;
+    }
+
+    .e-schedule .templatewrap {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+    }
+
+    .e-schedule .templatewrap img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .e-schedule .caption {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+</style>

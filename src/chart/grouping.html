@@ -7,14 +7,28 @@
     <div class="col-lg-3 property-section">
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div>GroupMode:
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="mode">				 
+                            <option value='Point'>Point</option>        
+                            <option value='Value'>Value</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
                 <td style="width: 60%">
                     <div>Group To:
-                        <p id="clubvalue" style="font-weight: normal;">10</p>
+                        <p id="clubvalue" style="font-weight: normal;">9</p>
                     </div>
                 </td>
                 <td style="width: 40%;">
                     <div data-role="rangeslider">
-                        <input type="range" name="range-min" id="clubpoint" value="10" min="0" max="27" style="width:90%">
+                        <input type="range" name="range-min" id="clubpoint" value="9" min="0" max="27" style="width:90%">
                     </div>
                 </td>
             </tr>

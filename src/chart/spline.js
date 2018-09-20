@@ -17,9 +17,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 40,
-            interval: 10,
             labelFormat: '{value}°C',
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
@@ -86,7 +83,6 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'NC Weather Report - 2016',
-        legendSettings: { toggleVisibility : false },
         tooltip: { enable: true },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         load: function (args) {

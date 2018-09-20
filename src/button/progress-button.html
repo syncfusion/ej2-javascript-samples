@@ -1,0 +1,148 @@
+<div class="control-section">
+    <div class="progress-button-section">
+        <div id="progress-button-control">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinleft"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinright"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spintop"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinbottom"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="roundbtn"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="contract"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="slideleftflat"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="sliderightoutline"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="zoomin"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="zoomout"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="download"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="disabled"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the default functionalities of a progress button. Clicking that button will display a spinner and a progress indicator.</p>
+</div>
+<div id="description">
+    <p>
+        The progress button visualizes the progression of an operation to indicates the user that a process is happening in the background.
+        The progress can be shown with graphics accompanied by a textual representation.
+    </p>
+    <p>
+        In this sample, the progress button contains the content, spinner, progress indicator, and a list of related features that can be achieved using
+        <code>
+                    <a target="_blank" class="code" href="http://ej2.syncfusion.com/documentation/progress-button/api-progressButton.html#content">content,
+                    </a>
+        </code>
+        <code>
+                    <a target="_blank" class="code" href="http://ej2.syncfusion.com/documentation/progress-button/api-progressButton.html#cssClass">cssClass,
+                    </a>
+        </code>and
+        <code>
+                <a target="_blank" class="code" href="http://ej2.syncfusion.com/documentation/progress-button/api-progressButton.html#enableProgress">enableProgress
+                </a>
+        </code>property.
+    </p>
+    <p>
+        More information about progress button can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/progress-button/getting-started.html">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+    #progress-button-control {
+        width: 100%;
+        margin: 8% 0;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 500px) {
+        #progress-button-control {
+            margin-left: -11%;
+        }
+    }
+
+    .progress-button-section {
+        width: 80%;
+        margin: auto;
+    }
+
+    #progress-button-control .col-xs-12 {
+        margin: 18px 0;
+    }
+
+    #contract.e-progress-active .e-btn-content {
+        display: none;
+    }
+
+    .e-btn.e-small.e-round .e-btn-icon.e-play-icon {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='#fff' d='M6 0l36 24L6 48z'/%3E%3C/svg%3E") no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+
+    .e-bigger .e-btn.e-small.e-round .e-btn-icon.e-play-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .e-round.e-progress-btn .e-btn-content {
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    .e-btn .e-btn-icon.e-icon-left.e-download-icon {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='#000' d='M13 35H35v2H12.999zm9.999-24h2v20.457l7.8-7.257 1.4 1.601-10 9.2-9.8-9.2 1.2-1.6 7.4 6.883z'/%3E%3C/svg%3E") no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    .e-bigger .e-btn .e-btn-icon.e-icon-left.e-download-icon {
+        width: 19px;
+        height: 19px;
+    }
+
+    .highcontrast .e-btn .e-btn-icon.e-icon-left.e-download-icon {
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='#fff' d='M13 35H35v2H12.999zm9.999-24h2v20.457l7.8-7.257 1.4 1.601-10 9.2-9.8-9.2 1.2-1.6 7.4 6.883z'/%3E%3C/svg%3E") no-repeat;
+    }
+</style>

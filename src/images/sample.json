@@ -1,0 +1,80 @@
+{
+    "name": "TreeView",
+    "directory": "treeview",
+    "category":"Navigation",
+    "samples" : [
+        {"url":"default", "name": "Default Functionalities", "category": "TreeView",
+        "api": {
+                "TreeView": [
+                    "fields"
+                ]
+            }
+        },
+        {"url":"localdata", "name": "Local Data", "category": "Data Binding","api": {
+                "TreeView": [
+                    "fields"
+                ]
+            }
+        },
+        {"url":"remotedata", "name": "Remote Data", "category": "Data Binding","api": {
+                "TreeView": [
+                    "fields",
+                    "created",
+                    "dataBound"
+                ]
+            }
+        },
+        {"url":"icons", "name": "Icons and Images", "category": "TreeView","api": {
+                "TreeView": [
+                    "fields",
+                    "sortOrder"
+                ]
+            }
+        },
+        {"url":"checkbox", "name": "CheckBox", "category": "TreeView","api": {
+                "TreeView": [
+                    "fields",
+                    "showCheckBox"
+                ]
+            }
+        },
+        {"url":"editing", "name": "Node Editing", "category": "TreeView","api": {
+                "TreeView": [
+                    "fields",
+                    "allowEditing"
+                ]
+            }
+        },
+        {"url":"multiselect", "name": "Multiple Selection", "category": "TreeView", "hideOnDevice": true,"api": {
+                "TreeView": [
+                    "fields",
+                    "allowMultiSelection"
+                ]
+            }
+        },
+        {"url":"draganddrop", "name": "Drag and Drop", "category": "TreeView", "hideOnDevice": true,"api": {
+                "TreeView": [
+                    "fields",
+                    "allowDragAndDrop",
+                    "allowMultiSelection"
+                ]
+            }
+        },
+        {"url":"template", "name": "Template", "category": "TreeView","api": {
+                "TreeView": [
+                    "fields",
+                    "cssClass",
+                    "nodeTemplate"
+                ]
+            }
+        },
+        {"url":"rtl", "name": "RTL", "category": "TreeView","api": {
+                "TreeView": [
+                    "fields",
+                    "enableRtl"
+                ]
+            }
+        }
+     ],
+    "dataSourcePath":"src/treeview/datasource.js"
+ }

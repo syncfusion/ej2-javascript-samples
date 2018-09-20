@@ -13,8 +13,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 20,
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             interval: 5,

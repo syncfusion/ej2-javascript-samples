@@ -1,0 +1,108 @@
+<div class="col-lg-8 control-section">
+    <div class="sample-container">
+        <div class="default-section">
+            <div id="defaultRTE">
+                <p>The rich text editor is WYSIWYG ("what you see is what you get") editor useful to create and edit content, and return the valid HTML markup or markdown of the content</p>
+        
+                <p><b>Toolbar</b></p>
+                    
+                <ol>
+                    <li>
+                        <p> Toolbar contains commands to align the text, insert link, insert image, insert list, undo/redo operations, HTML view, etc </p>
+                    </li>
+                    <li>
+                        <p> Toolbar is fully customizable </p>
+                    </li>
+                </ol>
+                    
+                <p><b>Links</b></p>
+                <ol>
+                    <li>
+                        <p>You can insert a hyperlink with its corresponding dialog </p> 
+                    </li>
+                    <li>
+                        <p>Attach a hyperlink to the displayed text. </p>
+                    </li>
+                    <li>
+                        <p> Customize the quick toolbar based on the hyperlink </p>
+                    </li>
+                </ol>
+                    
+                <p><b>Validation</b></p>
+                <ul>
+                    <li>
+                        <p>The editor’s content can be validated on form submission by applying validation rules and validation message</p>
+                    </li>
+                </ul>
+                    
+                <p><b>Locale.</p></b></p>
+                <ul>
+                    <li>
+                        <p>The editor provides an option to localize its static strings to adapt the editor to a local language.</p>
+                    </li>
+                </ul>
+                    
+                <p><b>Image.</p></b></p>
+                <ol>
+                    <li>
+                        <p> Allows you to insert images from an online source as well as the local computer </p>
+                    </li>
+                    <li>
+                        <p> You can upload an image </p>
+                    </li>
+                    <li>
+                        <p>Provides an option to customize quick toolbar for an image </p>
+                    </li>
+                </ol>
+                <img alt="Logo" src="./src/rte/images/RTEImage-Feather.png" style="width:300px; height: 300px" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <table id="property" title="Properties">
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="width: 200px">
+                            <select id="types" class="form-control">
+                            <option value="1">Expand</option>
+                            <option value="2">Multi Row</option>
+                        </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <input type="checkbox" id="float" checked="true">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the different behavior of toolbar support in the rich text editor. Change the toolbar type as multiRow or expand from the property panel to see its appearance . Check or uncheck the floating toolbar in property panel to look on its behavior.</p>
+</div>
+<div id="description">
+    <p><code>Floating</code>: set boolean value to toolbarSettings.enableFloating property to enable or disable the floating toolbar.</p>
+    <p> The rich text editor allows you to configure different types of toolbar using <code>toolbarSettings.type</code> property. The types of
+        toolbar are: </p>
+    <ul>
+        <li><code>Expand</code>: The toolbar hides the overflowing items in the next row. Click the expand arrow to view overflowing toolbar items</li>
+        <li><code>Multi Row</code>: The toolbar hides the overflowing items in the next row.</li>
+    </ul>
+</div>
+
+<style> 
+    .sb-header {
+        z-index: 100;
+    }
+    .property-panel-table div {
+        padding-left: 0;
+    }
+</style>
