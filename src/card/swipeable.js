@@ -41,33 +41,15 @@
                 ele.parentElement.querySelector('.card-out-left').classList.remove('card-out-left');
             }
             /*jshint -W030 */
-            e.swipeDirection === 'Right' ? ele.classList.add('card-out') : ele.classList.add('card-out-left');
+            if (e.swipeDirection === 'Right') {
+                ele.classList.add('card-out');
+            } else if (e.swipeDirection === 'Left') {
+                ele.classList.add('card-out-left');
+            } else {
+                return;
+            }
             ele.parentElement.insertBefore(ele, ele.parentElement.children[0]);
             swipeable();
             ele.style.removeProperty('left');
-        }
-        function touchScrollHandler(e) {
-            var ele = ej.base.closest(e.originalEvent.target, '.e-card');
-            var leftVal = Math.abs(parseInt(ele.style.left, 10));
-            if (!ele.classList.contains('e-card')) {
-                return;
-            }
-            if (isNaN(leftVal) || dir !== e.scrollDirection) {
-                leftVal = 0;
-            }
-            if (e.scrollDirection === 'Down') {
-                var index = [].slice.call(ele.parentElement.children).indexOf(ele);
-                var len = ele.parentElement.childElementCount;
-                var el = void 0;
-                for (var i = index + 1; i < len; i++) {
-                    el = ele.parentElement.children[i];
-                    el.style.top = (parseInt(el.style.top, 10) + e.distanceY) + 'px';
-                }
-            }
-            else {
-                /*jshint -W030 */
-                e.scrollDirection === 'Left' ? ele.style.left = -(leftVal + e.distanceX) + 'px' : ele.style.left = (leftVal + e.distanceX) + 'px';
-            }
-            dir = e.scrollDirection;
         }
     };

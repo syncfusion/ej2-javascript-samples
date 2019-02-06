@@ -1,0 +1,69 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 30%">
+                <div>Column</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div id='columnddl'>
+                    <input type="text" tabindex="1" id='ddlelement' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div>
+                    <button class="btn btn-default" type="button" id="hide" value="Hide">Hide</button>
+                </div>
+            </td>
+            <td style="width: 70%">
+                <div>
+                    <button class="btn btn-default" type="button" id="show" value="Show" disabled>Show</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div style="padding-top: 10px">
+                    Hidden Columns
+                </div>
+            </td>
+            <td style="width: 70%; padding:10px 10px 10px 0px">
+                <div>
+                    <textarea id="hiddencolumns" style="resize: none;height:65px;background-color: #fff; padding: 6px" 
+                    class="form-control" readonly="readonly"></textarea>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    #columnddl {
+        min-width: 120px;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates dynamic show/hide columns feature of TreeGrid.
+       Select column name from the properties panel and click hide/show to toggle visibility.
+    </p>
+</div>
+
+<div id="description">
+    <p>The TreeGrid column can be showed/hidden dynamically using <code>showColumns
+        </code> and <code>hideColumns</code> method of the Grid.</p>
+    <p>In this demo, the columns can be showed and hidden by selecting the column name in the dropdown
+        and click the Show or Hide buttons to toggle visibility. And the column`s visibility is toggled based on the 
+        <code>columns->headerText</code> value.</p>
+    <br/>
+    <p>The <code>columns->visible</code> property specifies the visibility of a column. 
+    To hide a column at the initial rendering, set the <code>columns->visible</code> property to false.</p>
+</div>

@@ -1,4 +1,4 @@
-var cBlock = ['js-src-tab', 'html-src-tab'];
+var cBlock = ['sb-src-code.hljs.javascript', 'sb-src-code.hljs.xml'];
 var switcherPopup;
 var themeSwitherPopup;
 var openedPopup;
@@ -28,11 +28,12 @@ var sbHeader = ej.base.select('#sample-header');
 var resetSearch = ej.base.select('.sb-reset-icon');
 var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|production)*/;
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
-var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspmvccore'];
+var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue'];
 var sbObj = {
     'angular': 'angular',
     'typescript': '',
-    'react': 'react'
+    'react': 'react',
+    'vue': 'vue'
 };
 var searchEle = ej.base.select('#search-popup');
 var inputele = ej.base.select('#search-input');
@@ -49,6 +50,7 @@ var samplesList = getSampleList();
 var samplesTreeList = [];
 var execFunction = {};
 var searchListView;
+var sourceTabItems = [];
 //window.apiList = window.apiList;
 var sampleNameElement = document.querySelector('#component-name>.sb-sample-text');
 var breadCrumbComponent = document.querySelector('.sb-bread-crumb-text>.category-text');
@@ -58,7 +60,7 @@ var breadCrumbSample = document.querySelector('.sb-bread-crumb-text>.crumb-sampl
 var hsplitter = '<div class="sb-toolbar-splitter sb-custom-item"></div>';
 var openNewTemplate = "<div class=\"sb-custom-item sb-open-new-wrapper\"><a id=\"openNew\" target=\"_blank\">\n<div class=\"sb-icons sb-icon-Popout\"></div></a></div>";
 var sampleNavigation = "<div class=\"sb-custom-item sample-navigation\"><button id='prev-sample' class=\"sb-navigation-prev\" \n    aria-label=\"previous sample\">\n<span class='sb-icons sb-icon-Previous'></span>\n</button>\n<button  id='next-sample' class=\"sb-navigation-next\" aria-label=\"next sample\">\n<span class='sb-icons sb-icon-Next'></span>\n</button>\n</div>";
-var plnrTemplate = '<span class="sb-icons sb-icons-plnkr"></span><span class="sb-plnkr-text">EDIT IN PLUNKER</span>';
+var plnrTemplate = '<span class="sb-icons sb-icons-plnkr"></span><span class="sb-plnkr-text">Edit in StackBlitz</span>';
 var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="open-plnkr" class="sb-custom-item sb-plnr-section">' +
     plnrTemplate + '</button>' + hsplitter + openNewTemplate + hsplitter +
     '</div>' + sampleNavigation + '<div class="sb-icons sb-mobile-setting"></div>';
@@ -148,6 +150,14 @@ function preventTabSwipe(e) {
         e.cancel = true;
     }
 }
+function dynamicTab(e) {
+    var blockEle = this.element.querySelector('#e-content_' + e.selectedIndex).children[0];
+    blockEle.innerHTML = this.items[e.selectedIndex].data;
+    blockEle.classList.add('sb-src-code');
+    if (blockEle) {
+        hljs.highlightBlock(blockEle);
+    }
+}
 
 function renderSbPopups() {
     switcherPopup = new ej.popups.Popup(document.getElementById('sb-switcher-popup'), {
@@ -170,7 +180,6 @@ function renderSbPopups() {
         collision: { X: 'flip', Y: 'flip' }
     });
     settingsPopup = new ej.popups.Popup(document.getElementById('settings-popup'), {
-        offsetX: -245,
         offsetY: 5,
         zIndex: 1001,
         relateTo: settingElement,
@@ -211,15 +220,17 @@ function renderSbPopups() {
         selecting: preventTabSwipe
     }, '#sb-content');
     sourceTab = new ej.navigations.Tab({
+        items: [],
         headerPlacement: 'Bottom',
         cssClass: 'sb-source-code-section',
-        selecting: preventTabSwipe
+        selecting: preventTabSwipe,
+        created: dynamicTabCreation,
+        selected: dynamicTab,
     }, '#sb-source-tab');
     sourceTab.selectedItem = 1;
     apiGrid = new ej.grids.Grid({
         width: '100%',
         dataSource: [],
-        toolbar: ['search'],
         allowTextWrap: true,
         columns: [
             { field: 'name', headerText: 'Name', template: '#template', width: 180, textAlign: 'center' },
@@ -248,10 +259,14 @@ function renderSbPopups() {
         content: 'Next Sample'
     });
 
+    ej.base.select('#right-pane').addEventListener('scroll', function (event) {
+        next.close();
+        openNew.close();
+        previous.close();
+    });
+
     next.appendTo('#next-sample');
-    var ele = ej.base.createElement('div', { className: 'copy-tooltip', innerHTML: '<div class="e-icons copycode"></div>' });
-    document.getElementById('sb-source-tab').appendChild(ele);
-    var copiedTooltip = new ej.popups.Tooltip({ content: 'Copied to clipboard ', position: 'BottomCenter', opensOn: 'Click', closeDelay: 500 }, '.copy-tooltip');
+
 }
 
 function checkApiTableDataSource() {
@@ -273,6 +288,29 @@ function changeTab(args) {
         } else {
             apiGrid.dataSource = [];
         }
+    }
+    if (args.selectedIndex === 1) {
+        sourceTab.items = sourceTabItems;
+        sourceTab.refresh();
+        rendercopycode();
+        dynamicTabCreation(sourceTab);
+    }
+}
+
+function dynamicTabCreation(obj) {
+    var tabObj;
+    if (obj) {
+        tabObj = obj;
+    } else { tabObj = this; }
+    var contentEle = tabObj.element.querySelector('#e-content_' + tabObj.selectedItem);
+    if (!contentEle) {
+        return;
+    }
+    var blockEle = tabObj.element.querySelector('#e-content_' + tabObj.selectedItem).children[0];
+    blockEle.innerHTML = tabObj.items[tabObj.selectedItem].data;
+    blockEle.classList.add('sb-src-code');
+    if (blockEle) {
+        hljs.highlightBlock(blockEle);
     }
 }
 
@@ -299,7 +337,7 @@ function tagShowmore(target) {
     target.querySelector('#showtag').classList.add('e-display');
     var hideEle = target.querySelector('#hidetag');
     if (!hideEle) {
-        var tag = ej.base.createElement('a', { id: 'hidetag', attrs: {}, innerHTML: 'hide less..' });
+        var tag = ej.base.createElement('a', { id: 'hidetag', attrs: {}, innerHTML: 'show less..' });
         target.appendChild(tag);
         tag.addEventListener('click', taghideless.bind(this, target));
     } else {
@@ -504,8 +542,9 @@ function onPrevButtonClick(arg) {
     setSelectList();
 }
 
+
 function processResize(e) {
-    var toggle = sidebar.isOpen();
+    var toggle = sidebar.isOpen;
 
     isMobile = window.matchMedia('(max-width:550px)').matches;
     isTablet = window.matchMedia('(min-width:550px) and (max-width: 850px)').matches;
@@ -558,7 +597,7 @@ function processResize(e) {
     if (isPc) {
         sidebar.target = document.querySelector('.sb-content ');
         sidebar.showBackdrop = false;
-       sidebar.closeOnDocumentClick = false;
+        sidebar.closeOnDocumentClick = false;
         ej.base.select('.sb-footer').appendChild(footer);
         if (isVisible('.sb-mobile-overlay')) {
             removeMobileOverlay();
@@ -635,7 +674,7 @@ function bindEvents() {
     ej.base.select('.sb-mobile-setting').addEventListener('click', viewMobilePropPane);
     resetSearch.addEventListener('click', resetInput);
     document.getElementById('open-plnkr').addEventListener('click', function () {
-        var plnkrForm = ej.base.select('#plnkr-form');
+        var plnkrForm = ej.base.select('#stack-form');
         if (plnkrForm) {
             plnkrForm.submit();
         }
@@ -659,7 +698,7 @@ function bindEvents() {
             toggleLeftPane();
         }
     });
-    ej.base.select('.copycode').addEventListener('click', copyCode);
+    // ej.base.select('.copycode').addEventListener('click', copyCode);
     searchEle.addEventListener('click', function (e) {
         var curEle = ej.base.closest(e.target, 'li');
         if (curEle && curEle.classList.contains('e-list-item')) {
@@ -687,6 +726,13 @@ function copyCode() {
     ej.base.detach(textArea);
     ej.base.select('.copy-tooltip').ej2_instances[0].close();
 }
+function rendercopycode() {
+    var ele = ej.base.createElement('div', { className: 'copy-tooltip', innerHTML: '<div class="e-icons copycode"></div>' });
+    document.getElementById('sb-source-tab').appendChild(ele);
+    ej.base.select('.copycode').addEventListener('click', copyCode);
+    var copiedTooltip = new ej.popups.Tooltip({ content: 'Copied to clipboard ', position: 'BottomCenter', opensOn: 'Click', closeDelay: 500 }, '.copy-tooltip');
+}
+
 
 function setSbLink() {
     var href = location.href;
@@ -696,9 +742,9 @@ function setSbLink() {
         var sb = sbArray[i];
         var ele = ej.base.select('#' + sb);
         if (sb === 'aspnetcore' || sb === 'aspnetmvc') {
-            ele.href = sb === 'aspnetcore' ? 'https://aspdotnetcore.syncfusion.com' : 'https://aspnetmvc.syncfusion.com';
+            ele.href = sb === 'aspnetcore' ? 'https://ej2.syncfusion.com/aspnetcore/' : 'https://ej2.syncfusion.com/aspnetmvc/';
 
-        }else {
+        } else {
             ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) :
                 ('https://ej2.syncfusion.com/')) + (sbObj[sb] ? (sb + '/') : '') +
                 'demos/#/' + (sample ? (sample[1] + (sb !== 'typescript' ? '' : '.html')) : '');
@@ -767,7 +813,7 @@ function removeMobileOverlay() {
 }
 
 function isLeftPaneOpen() {
-    return sidebar.isOpen();
+    return sidebar.isOpen;
 }
 
 function isVisible(elem) {
@@ -780,7 +826,7 @@ function setLeftPaneHeight() {
 }
 
 function toggleLeftPane() {
-    var reverse = sidebar.isOpen();
+    var reverse = sidebar.isOpen;
     ej.base.select('#left-sidebar').classList.remove('sb-hide');
     if (!reverse) {
         leftToggle.classList.add('toggle-active');
@@ -789,22 +835,33 @@ function toggleLeftPane() {
     }
 
     if (sidebar) {
-        reverse = sidebar.isOpen();
+        reverse = sidebar.isOpen;
         if (reverse) {
             sidebar.hide();
             if (!isMobile && !isTablet) {
                 resizeManualTrigger = true;
-                setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 400);
+                setTimeout(cusResize(), 400);
             }
         } else {
             sidebar.show();
             if (!isMobile && !isTablet) {
                 resizeManualTrigger = true;
-                setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 400);
+                setTimeout(cusResize(), 400);
             }
         }
     }
 
+}
+
+function cusResize() {
+    var event;
+    if (typeof (Event) === 'function') {
+        event = new Event('resize');
+    } else {
+        event = document.createEvent('Event');
+        event.initEvent('resize', true, true);
+    }
+    window.dispatchEvent(event);
 }
 
 function toggleRightPane() {
@@ -853,15 +910,17 @@ function renderLeftPaneComponents() {
             htmlAttributes: 'url'
         },
         nodeClicked: controlSelect,
-        nodeTemplate: '<div class="sb-tree-component"> <span class="e-component text" role="listitem">${name}' +
-            '${if(type)}<span class="e-samplestatus ${type}"></span>${/if}</span'
+        nodeTemplate: '<div><span class="tree-text">${name}</span>' +
+            '${if(type === "update")}<span class="e-badge sb-badge e-samplestatus ${type} tree tree-badge">Updated</span>' +
+            '${else}${if(type)}<span class="e-badge sb-badge e-samplestatus ${type} tree tree-badge">${type}</span>${/if}${/if}</div>'
     }, '#controlTree');
     var controlList = new ej.lists.ListView({
-        dataSource: controlSampleData[location.hash.split('/')[2]] || controlSampleData.chart,
+        dataSource: controlSampleData[location.hash.split('/')[2]] || controlSampleData.grid,
         fields: { id: 'uid', text: 'name', groupBy: 'order', htmlAttributes: 'data' },
         select: controlSelect,
-        template: '<div class="e-text-content e-icon-wrapper"> <span class="e-list-text" role="listitem">${name}' +
-            '${if(type)}<span class="e-samplestatus ${type}"></span>${/if}</span>' +
+        template: '<div class="e-text-content ${if(type)}e-icon-wrapper${/if}"> <span class="e-list-text" role="listitem">${name}' +
+            '</span>${if(type === "update")}<span class="e-badge sb-badge e-samplestatus ${type}">Updated</span>' +
+            '${else}${if(type)}<span class="e-badge sb-badge e-samplestatus ${type}">${type}</span>${/if}${/if}' +
             '${if(directory)}<div class="e-icons e-icon-collapsible"></div>${/if}</div>',
         groupTemplate: '${if(items[0]["category"])}<div class="e-text-content">' +
             '<span class="e-list-text">${items[0].category}</span>' +
@@ -978,6 +1037,7 @@ function setSelectList() {
         var samples = controlSampleData[control.getAttribute('control-name')];
         if (JSON.stringify(data) !== JSON.stringify(samples)) {
             list.dataSource = samples;
+            list.dataBind();
         }
         var selectSample = ej.base.select('[sample-name="' + hash.slice(-1)[0].split('.html')[0] + '"]');
         if (selectSample) {
@@ -988,7 +1048,7 @@ function setSelectList() {
         }
     } else {
         showHideControlTree();
-        list.selectItem(ej.base.select('[sample-name="line"]'));
+        list.selectItem(ej.base.select('[sample-name="grid-overview"]'));
     }
 }
 
@@ -1020,13 +1080,13 @@ function setPropertySectionHeight() {
 
 function routeDefault() {
     crossroads.addRoute('', function () {
-        window.location.href = '#/' + selectedTheme + '/chart/line.html';
+        window.location.href = '#/' + selectedTheme + '/grid/gridoverview.html';
         isInitRedirected = true;
     });
     crossroads.bypassed.add(function (request) {
         var hash = request.split('.html')[0].split('/');
         if (samplePath.indexOf(hash.slice(1).join('/')) === -1) {
-            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'chart/line.html');
+            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/gridoverview.html');
             isInitRedirected = true;
         }
     });
@@ -1083,26 +1143,33 @@ function errorHandler(error) {
 
 function plunker(results) {
     var plnkr = JSON.parse(results);
-    var prevForm = ej.base.select('#plnkr-form');
+    var prevForm = ej.base.select('#stack-form');
     if (prevForm) {
         ej.base.detach(prevForm);
     }
     var form = ej.base.createElement('form');
-    var res = ((location.href).includes('ej2.syncfusion.com') ? 'https:' : 'http:') + '//plnkr.co/edit/?p=preview';
+    var res = ((location.href).indexOf('ej2.syncfusion.com') !== -1 ? 'https:' : 'http:') + '//stackblitz.com/run';
     form.setAttribute('action', res);
     form.setAttribute('method', 'post');
     form.setAttribute('target', '_blank');
-    form.id = 'plnkr-form';
+    form.id = 'stack-form';
     form.style.display = 'none';
     document.body.appendChild(form);
     var plunks = Object.keys(plnkr);
     for (var x = 0; x < plunks.length; x++) {
-        var ip = ej.base.createElement('input');
-        ip.setAttribute('type', 'hidden');
-        ip.setAttribute('value', plnkr[plunks[x]]);
-        ip.setAttribute('name', 'files[' + plunks[x] + ']');
-        form.appendChild(ip);
+        createStackInput('project[files][' + plunks[x] + ']', plnkr[plunks[x]], form);
     }
+    createStackInput('project[template]', 'javascript', form);
+    createStackInput('project[description]', 'Essential JS 2 Sample', form);
+    createStackInput('project[settings]', '{"compile":{"clearConsole":true}}', form);
+}
+function createStackInput(name, value, form) {
+    var input = ej.base.createElement('input');
+    input.setAttribute('type', 'hidden');
+    input.setAttribute('name', name);
+    input.setAttribute('value', value.replace(/{{theme}}/g, selectedTheme).replace(/{{ripple}}/,
+        (selectedTheme === 'material') ? 'ej.base.enableRipple(true);\n' : ''));
+    form.appendChild(input);
 }
 
 function addRoutes(samplesList) {
@@ -1152,9 +1219,53 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     document.getElementById('open-plnkr').disabled = true;
     var openNew = ej.base.select('#openNew');
     if (openNew) {
-        openNew.href = location.href.split('#')[0] + 'samples/' + node.directory + '/' + subNode.url + '/index.html';
+        openNew.href = location.href.split('#')[0] +  node.directory + '/' + subNode.url + '/';
     }
     setSbLink();
+    var ajaxFile = [];
+    var nameFile = [];
+    var tabObj = [];
+    var jsFile = new ej.base.Ajax('src/' + control + '/' + sample + '.js', 'GET', false);
+    var jsname = sample + '.js';
+
+    var htmlFile = new ej.base.Ajax('src/' + control + '/' + sample + '.html', 'GET', false);
+    var htmlFileNme = sample + '.html';
+
+    ajaxFile = [jsFile, htmlFile];
+    nameFile = [jsname, htmlFileNme];
+    if (subNode.sourceFiles) {
+        ajaxFile.splice(0);
+        nameFile.splice(0);
+        var sourcefiles = subNode.sourceFiles;
+        for (var i = 0; i < sourcefiles.length; i++) {
+            ajaxFile.push(new ej.base.Ajax(sourcefiles[i].path, 'GET', false));
+            nameFile.push(sourcefiles[i].displayName);
+
+        }
+    }
+    var subfile = 0;
+    var content;
+    for (var file = 0; file < ajaxFile.length; file++) {
+
+        ajaxFile[file].send().then(function (value) {  // jshint ignore:line
+
+            if (value.indexOf('.html') > 0) {
+                content = getStringWithOutDescription(value.toString(), /(\'|\")description/g);
+                content = getStringWithOutDescription(content.toString(), /(\'|\")action-description/g);
+            }
+            content = value.indexOf('.html') > 0 ? content.replace(/@section (ActionDescription|Description){[^}]*}/g, '').replace(/&/g, '&amp;')
+                .replace(/"/g, '&quot;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            tabObj.push({
+                header: { text: nameFile[subfile] },
+                data: content,
+                content: nameFile[subfile]
+            });
+            subfile++;
+        });
+
+    }
+    sourceTabItems = tabObj;
     var ajaxHTML = new ej.base.Ajax('src/' + control + '/' + sample + '.html', 'GET', true);
     var p1 = ajaxHTML.send();
     var p2 = loadScriptfile('src/' + control + '/' + sample + '.js');
@@ -1172,29 +1283,19 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
         breadCrumSeperator.style.display = 'none';
     }
     breadCrumbSample.innerHTML = subNode.name;
-    for (var k = 0; k < 2; k++) {
-        var header = getSourceTabHeader(k);
-        if (header) {
-            header.innerHTML = sample + (k ? '.html' : '.js');
-        }
-    }
+    // for (var k = 0; k < 2; k++) {
+    //     var header = getSourceTabHeader(k);
+    //     if (header) {
+    //         header.innerHTML = sample + (k ? '.html' : '.js');
+    //     }
+    // }
     var title = document.querySelector('title');
-    txt = title.innerHTML;
-    num = txt.indexOf('-');
-    if (num !== -1) {
-        txt = txt.slice(0, num + 1);
-        txt += ' ' + node.name + ' > ' + subNode.name;
-    }
-    else {
-        txt += ' - ' + node.name + ' > ' + subNode.name;
-    }
-    title.innerHTML = txt;
-
-    ajaxJs.send().then(function (value) {
-        document.querySelector('.js-source-content').innerHTML = value.toString().replace(/</g, '&lt;').replace(/\>/g, '&gt;');
-        hljs.highlightBlock(document.querySelector('.js-source-content'));
-    });
-    var plunk = new ej.base.Ajax('src/' + control + '/' + sample + '-plnkr.json', 'GET', true);
+    title.innerHTML = node.name + ' · ' + subNode.name + ' · Syncfusion JavaScript (ES5) UI Controls ';
+    // ajaxJs.send().then(function (value) {
+    //     document.querySelector('.js-source-content').innerHTML = value.toString().replace(/</g, '&lt;').replace(/\>/g, '&gt;');
+    //     hljs.highlightBlock(document.querySelector('.js-source-content'));
+    // });
+    var plunk = new ej.base.Ajax('src/' + control + '/' + sample + '-stack.json', 'GET', true);
     var p3 = plunk.send();
     p3.then(function (result) {
         document.getElementById('open-plnkr').disabled = false;
@@ -1239,10 +1340,10 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
         if (actionDesc) {
             ej.base.detach(actionDesc);
         }
-        var htmlCodeSnippet = htmlCode.innerHTML.replace(/&/g, '&amp;')
-            .replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        document.querySelector('.html-source-content').innerHTML = htmlCodeSnippet;
-        hljs.highlightBlock(document.querySelector('.html-source-content'));
+        // var htmlCodeSnippet = htmlCode.innerHTML.replace(/&/g, '&amp;')
+        //     .replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        // document.querySelector('.html-source-content').innerHTML = htmlCodeSnippet;
+        // hljs.highlightBlock(document.querySelector('.html-source-content'));
         getExecFunction(control + sample)();
         window.navigateSample();
         isExternalNavigation = defaultTree = false;
@@ -1338,9 +1439,9 @@ function parseHash(newHash, oldHash) {
     crossroads.parse(newHash);
 }
 
-function getSourceTabHeader(index) {
-    return document.querySelectorAll('.sb-source-code-section>.e-tab-header .e-tab-text')[index];
-}
+// function getSourceTabHeader(index) {
+//     return document.querySelectorAll('.sb-source-code-section>.e-tab-header .e-tab-text')[index];
+// }
 
 function processDeviceDependables() {
     if (ej.base.Browser.isDevice) {
@@ -1399,10 +1500,39 @@ function renderActionDescription() {
     } else if (aDescElem) {
         aDescElem.style.display = 'none';
     }
+    var loadEle = document.getElementById('sb-content');
+     if (loadEle.ej2_instances[0])
+        loadEle.ej2_instances[0].tbObj.refreshOverflow();
+}
+function getStringWithOutDescription(code, descRegex) {
+    var lines = code.split('\n');
+    var desStartLine = null;
+    var desEndLine = null;
+    var desInsideDivCnt = 0;
+    for (var i = 0; i < lines.length; i++) {
+        var curLine = lines[i];
+        if (desStartLine) {
+            if (/<div/g.test(curLine)) {
+                desInsideDivCnt = desInsideDivCnt + 1;
+            }
+            if (desInsideDivCnt && /<\/div>/g.test(curLine)) {
+                desInsideDivCnt = desInsideDivCnt - 1;
+            } else if (!desEndLine && /<\/div>/g.test(curLine)) {
+                desEndLine = i + 1;
+            }
+        }
+        if (descRegex.test(curLine)) {
+            desStartLine = i;
+        }
+    }
+    if (desEndLine && desStartLine) {
+        lines.splice(desStartLine, desEndLine - desStartLine);
+    }
+    return lines.join('\n');
 }
 
 function loadJSON() {
-    var switchText = localStorage.getItem('ej2-switch') || 'touch';
+    var switchText = localStorage.getItem('ej2-switch') || 'mouse';
     if (ej.base.Browser.isDevice || window.screen.width <= 850) {
         switchText = 'touch';
     }

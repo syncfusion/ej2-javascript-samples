@@ -28,14 +28,14 @@ this.default = function () {
     var data = new ej.base.extend([], window.scheduleData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '550px',
+        height: '650px',
         dateHeaderTemplate: '<div class="date-text">${getDateHeaderText(data.date)}</div>${getWeather(data.date)}',
-        views: ['Day', 'Week', 'WorkWeek', 'Month'],
+        views: ['Day', 'Week', 'WorkWeek', 'Month', 'TimelineMonth'],
         selectedDate: new Date(2018, 1, 15),
         eventSettings: { dataSource: data },
         cssClass: 'schedule-date-header-template',
         renderCell: function (args) {
-            if (args.elementType === 'monthCells') {
+            if (args.elementType === 'monthCells' && this.currentView === 'Month') {
                 var ele = document.createElement('div');
                 ele.innerHTML = getWeather(args.date);
                 (args.element).appendChild(ele.firstChild);

@@ -48,7 +48,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     pie.appendTo('#container2');

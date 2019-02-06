@@ -8,8 +8,7 @@
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div>Pie Angle:
-                        <p id="anglevalue" style="font-weight: normal;">0</p>
+                    <div>Pie Angle
                     </div>
                 </td>
                 <td style="width: 70%;">
@@ -17,11 +16,15 @@
                         <input type="range" name="range-min" id="pieangle" value="0" min="0" max="360" style="width:90%">
                     </div>
                 </td>
+                <td style="width: 30%;">
+                    <div data-role="rangeslider">
+                        <p id="anglevalue" style="font-weight: normal; padding-top: 10px">0</p>
+                    </div>
+                </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div>Outer Radius:
-                        <p id="radius" style="font-weight: normal;">0.70</p>
+                    <div>Outer Radius
                     </div>
                 </td>
                 <td style="width: 70%;">
@@ -29,11 +32,15 @@
                         <input type="range" name="range-min" id="pieradius" value="70" min="0" max="80" style="width:90%">
                     </div>
                 </td>
+                <td style="width: 30%;">
+                    <div data-role="rangeslider">
+                        <p id="radius" style="font-weight: normal; padding-top: 10px">0.70</p>
+                    </div>
+                </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div>Explode Radius:
-                        <p id="exploderadius" style="font-weight: normal;">0.1</p>
+                    <div>Explode Radius
                     </div>
                 </td>
                 <td style="width: 70%;">
@@ -41,16 +48,59 @@
                         <input type="range" name="range-min" id="pieexploderadius" value="10" min="0" max="40" style="width:90%">
                     </div>
                 </td>
+                <td style="width: 30%;">
+                    <div data-role="rangeslider">
+                        <p id="exploderadius" style="font-weight: normal; padding-top: 10px">0.1</p>
+                    </div>
+                </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div>Explode Index:
-                        <p id="explodeindex" style="font-weight: normal;">0</p>
+                    <div>Explode Index
                     </div>
                 </td>
                 <td style="width: 70%;">
                     <div data-role="rangeslider">
                         <input type="range" name="range-min" id="pieexplodeindex" value="0" min="0" max="6" style="width:90%">
+                    </div>
+                </td>
+                <td style="width: 30%;">
+                    <div data-role="rangeslider">
+                        <p id="explodeindex" style="font-weight: normal; padding-top: 10px">0</p>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 30%">
+                    <div>
+                        Center X
+                    </div>
+                </td>
+                <td style="width: 70%;">
+                    <div data-role="rangeslider">
+                        <input type="range" name="range-min" id="x" value="50" min="0" max="100" style="width:90%">
+                    </div>
+                </td>
+                <td style="width: 60%;">
+                    <div data-role="rangeslider">
+                        <p id="xvalue" style="font-weight: normal;padding-top:10px;">50%</p>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 30%">
+                    <div>
+                        Center Y
+                    </div>
+                </td>
+                <td style="width: 70%;">
+                    <div data-role="rangeslider">
+                        <input type="range" name="range-min" id="y" value="50" min="0" max="100" style="width:90%">
+                    </div>
+                </td>
+                <td style="width: 60%;">
+                    <div data-role="rangeslider">
+                        <p id="yvalue" style="font-weight: normal;padding-top:10px;">50%</p>
                     </div>
                 </td>
             </tr>
@@ -59,10 +109,14 @@
 </div>
 <div id="action-description">
     <p>
-        This sample demonstrates pie chart for mobile browser usage statistics. For pie chart, you can change start angle of chart by <code>Pie Angle</code> in properties panel. Outer radius for pie chart can be changed by <code>Outer Radius</code>. Explode Index and explode radius for chart can be changed by <code>Explode Radius</code> and <code>Explode Index</code>
+        This sample demonstrates pie chart for mobile browser usage statistics. Datalabel shows the Information about the points.
     </p>
 </div>
 <div id="description">
-    <p> In this example, you can see how to render and configure the pie chart. You can use <code>border</code>, <code>fill</code> properties to customize the pie point. <code>dataLabel</code> is used to represent individual data and its value.</p>
-    <p> <code>Tooltip</code> is enabled in this example, to see the tooltip in action, hover a point or tap on a point in touch enabled devices.</p>
+    <p> In this example, you can see how to render and configure the pie chart. You can use
+        <code>border</code>,
+        <code>fill</code> properties to customize the pie point.
+        <code>dataLabel</code> is used to represent individual data and its value.</p>
+    <p>
+        <code>Tooltip</code> is enabled in this example, to see the tooltip in action, hover a point or tap on a point in touch enabled devices.</p>
 </div>

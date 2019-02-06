@@ -1,0 +1,246 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize Uploader -->
+        <div id='dropArea' style='height: auto; overflow: auto'>
+            <span id='drop'> Drop image (JPG, PNG) files here or <a href="" id='browse'><u>Browse</u></a></span>
+            <input type='file' name='UploadFiles' id='fileupload'/>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <div  style='margin-left: 50px; padding-top:25px;'>
+            <button class="e-btn e-css" id="clearbtn" title="Clear All" style="width:130px">Clear All</button>
+        </div>
+        <div  style='margin-left: 50px; padding-top:25px;'>
+            <button class="e-btn e-css" id="uploadbtn" title="Upload All" style="width:130px">Upload All</button>
+        </div>
+    </div>
+</div>
+
+<style>
+     .control_wrapper {
+        max-width: 505px;
+        margin: auto;
+    }
+    #uploadicon {    
+        cursor: pointer;
+        top: 5px;
+        left: 20px;
+        position: relative;
+    }
+    .e-file-select-wrap {
+        display: none;
+    }
+    .e-upload {
+        border: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+    #drop {
+        font-size: 14px;
+    }
+    .e-bigger #drop {
+        font-size: 15px;
+    }
+    #dropArea {
+        border: 1px dashed #c3c3cc;
+        position: relative;
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+    #dropArea .e-upload .e-upload-files {
+        text-align: initial;
+        border-top: none;
+    }
+    #dropArea .e-upload-files .e-file-delete-btn.e-icons,
+    #dropArea .e-upload-files .e-file-remove-btn.e-icons,
+    #dropArea .e-upload-files .e-file-abort-btn {
+        top: 120px;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        left: 80px;
+    }
+    #dropArea .e-upload-files li .e-file-remove-btn.e-icons.e-upload-icon {
+        font-size: 14px;
+        left: 20px;
+    }
+    #dropArea .e-upload-files li:hover .e-icons {
+        visibility: visible;
+    }
+    #dropArea .e-upload-files li .e-icons {
+        visibility: hidden;
+    }
+    @font-face {
+        font-family: 'Uploader_Icon';
+        src:
+        url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj1tSfIAAAEoAAAAVmNtYXDnEOdVAAABiAAAADZnbHlmoZcPvgAAAcgAAABAaGVhZBLQTSUAAADQAAAANmhoZWEINQQDAAAArAAAACRobXR4CAAAAAAAAYAAAAAIbG9jYQAgAAAAAAHAAAAABm1heHABDgAdAAABCAAAACBuYW1lQySinQAAAggAAAIxcG9zdLfl0usAAAQ8AAAAMgABAAAEAAAAAFwEAAAAAAAD2AABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAA2vKJUF8PPPUACwQAAAAAANftBBgAAAAA1+0EGAAAAAAD2AP4AAAACAACAAAAAAAAAAEAAAACABEAAgAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAAQAAAAAXAQAAAAAAAABAAAAAAAABAAAAAQAAAAAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wD//wAA5wD//wAAAAEABAAAAAEAAAAAAAAAIAAAAAIAAAAAA9gD+AAHABAAADchESMVITUjEzM3ETMRFzMBKAOwPvzMPp1mtUC1Zv7FCAF6vb0BO7X+EAHwtQE7AAAAABIA3gABAAAAAAAAAAEAAAABAAAAAAABAAgAAQABAAAAAAACAAcACQABAAAAAAADAAgAEAABAAAAAAAEAAgAGAABAAAAAAAFAAsAIAABAAAAAAAGAAgAKwABAAAAAAAKACwAMwABAAAAAAALABIAXwADAAEECQAAAAIAcQADAAEECQABABAAcwADAAEECQACAA4AgwADAAEECQADABAAkQADAAEECQAEABAAoQADAAEECQAFABYAsQADAAEECQAGABAAxwADAAEECQAKAFgA1wADAAEECQALACQBLyBVcGxvYWRlclJlZ3VsYXJVcGxvYWRlclVwbG9hZGVyVmVyc2lvbiAxLjBVcGxvYWRlckZvbnQgZ2VuZXJhdGVkIHVzaW5nIFN5bmNmdXNpb24gTWV0cm8gU3R1ZGlvd3d3LnN5bmNmdXNpb24uY29tACAAVQBwAGwAbwBhAGQAZQByAFIAZQBnAHUAbABhAHIAVQBwAGwAbwBhAGQAZQByAFUAcABsAG8AYQBkAGUAcgBWAGUAcgBzAGkAbwBuACAAMQAuADAAVQBwAGwAbwBhAGQAZQByAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAHUAcwBpAG4AZwAgAFMAeQBuAGMAZgB1AHMAaQBvAG4AIABNAGUAdAByAG8AIABTAHQAdQBkAGkAbwB3AHcAdwAuAHMAeQBuAGMAZgB1AHMAaQBvAG4ALgBjAG8AbQAAAAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAgEDAAhVcGxvYWRlcgAAAAA=) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    #dropArea .e-upload .e-upload-files .e-icons.e-upload-icon {
+        font-family: 'Uploader_Icon';
+        speak: none;
+        font-size: 16px;
+        left: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #dropArea .e-upload .e-upload-files .e-icons.e-upload-icon::before { 
+      content: '\e700';
+    }
+    #dropArea .e-upload .e-upload-files .e-icons:not(.e-uploaded):hover{
+        background-color: #e6e6e6;
+        border-color: #adadad;
+        color: #333;
+    }
+    .highcontrast #dropArea .e-upload-files .e-file-remove-btn.e-icons,
+    .highcontrast #dropArea .e-upload-files .e-file-delete-btn.e-icons {
+        background-color: #ffd939;
+    }
+    .highcontrast #dropArea .e-upload .e-upload-files .e-file-delete-btn.e-icons::before,
+    .highcontrast #dropArea .e-upload .e-upload-files .e-file-remove-btn.e-icons::before{
+        color: black;
+    }
+    #dropArea .e-upload .e-upload-files .e-upload-file-list {
+        border: 0;
+        display: inline-block;
+        width: 165px;
+    }
+    .upload-image {
+        width: 150px;
+        height: 150px;
+        display: inline-flex;
+        background-size: contain;
+        margin: 7px;
+        text-align: center;
+        line-height: 10;
+        border-radius: 5px;
+    }
+    .upload-image:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: inherit;
+        height: inherit;
+        background: lightgray url('http://via.placeholder.com/300?text=Loading...') no-repeat center;
+        color: transparent;
+        border-radius: 5px;
+    }
+    .highcontrast div.file-name {
+        color: white;
+    }
+    div.file-name {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 14px;
+        padding: 3px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 90%;
+        white-space: nowrap;
+    }
+    .highcontrast div.file-size {
+        color: white;
+    }
+    div.file-size {
+        font-size: 13px;
+        padding: 3px 10px;
+        overflow: hidden;
+    }
+    .progressbar {
+        background: #ff4081;
+        border: none;
+        border-radius: 10px;
+        height: 4px;
+        margin-left: 7px;
+        width: 90%;
+        top: -60px;
+        position: relative;
+    }
+    #dropArea progress {
+        border: none;
+        background: #fff;
+   }
+   .highcontrast #dropArea progress {
+        border: none;
+        background: black;
+   }
+    progress::-webkit-progress-bar {
+        border: none;
+        background-color: #ffffff;
+    }
+    .highcontrast progress::-webkit-progress-bar {
+        border: none;
+        background-color: #000000;
+    }
+    .material progress::-webkit-progress-value {
+        border-radius: 2px; 
+        background-color: #ff4081;
+    }
+    .bootstrap progress::-webkit-progress-value {
+        border-radius: 2px; 
+        background-color: #1f496e;
+    }
+    .fabric progress::-webkit-progress-value {
+        background-color: #1763ff;
+        border-radius: 2px; 
+        top: -66px;
+    }
+    .highcontrast progress::-webkit-progress-value {
+        background-color: #ffd939;
+        border-radius: 2px; 
+    }
+    .material progress::-moz-progress-bar {
+        border-radius: 2px; 
+        background-color: #ff4081;
+    }
+    .bootstrap progress::-moz-progress-bar {
+        border-radius: 2px; 
+        background-color: #1f496e;
+    }
+    .fabric progress::-moz-progress-bar {
+        background-color: #1763ff;
+        border-radius: 2px; 
+        top: -66px;
+    }
+    .highcontrast progress::-moz-progress-bar {
+        background-color: #ffd939;
+        border-radius: 2px; 
+    }
+    .material span a {
+        color:#ff4081;
+    }
+    .fabric span a {
+        color: #1763ff;
+    }
+    .bootstrap span a {
+        color: #1f496e;
+    }
+    .highcontrast span a,
+    .highcontrast span a:hover {
+        color: #ffd939;
+    }
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#dropArea .e-upload .e-upload-files .e-file-remove-btn.e-icons, .e-bigger #dropArea .e-upload .e-upload-files .e-file-remove-btn.e-icons {
+	   padding: 18px 25px 18px 12px;
+	}
+	}
+</style>
+
+<div id="action-description">
+    <p>This example demonstrates how to add an image preview of the uploaded files. Browse or drag-and-drop image files (PNG, JPG) to display preview for the selected files. </p>
+</div>
+
+<div id="description">
+    <p>The Uploader control allows to create preview images after uploaded it. The preview images created by reading the file using success event.  Also, the user can create preview images before uploading to server using select event.</p>
+        
+    <p>For more information, you can refer to the Image Preview section from this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/uploader/how-to/preview-images-before-uploading/">documentation section</a>.</p>
+</div>

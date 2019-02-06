@@ -20,9 +20,6 @@ this.default = function () {
         isTransposed: true,
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: -5,
-            maximum: 35,
-            interval: 10,
             labelFormat: '{value}°C',
             majorGridLines: { width: 0 }
         },
@@ -71,7 +68,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#container');

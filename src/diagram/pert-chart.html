@@ -1,0 +1,26 @@
+<div class="control-section">
+    <div style="width:100%">
+        <div id="diagram"></div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes a project development process using Program Evaluation Review Technique (PERT). Complex hierarchical tree layout algorithm is used to automatically arrange the nodes.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example shows how to generate a PERT chart from an external data source. The <code>dataSourceSettings</code> property can be used to map an external data source with the diagram control. 
+        The <code>layout</code> property can be used to automatically position the nodes. In this example, the nodes are arranged from left to right of the diagram. The <code>orientation</code> property can be used to define the orientation of the layouts.
+    </p>
+
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        The diagram component’s features are segregated into individual feature-wise modules. To generate diagrams from an external
+        data source, inject <code>DataBinding</code> module using <code>Diagram.Inject(DataBinding)</code> method. To automatically arrange the objects in a PERT Chart, inject
+        <code>ComplexHierarchicalTree</code> module using <code>Diagram.Inject(ComplexHierarchicalTree)</code> method.
+    </p>
+    <br>
+</div>
+<style>
+</style>

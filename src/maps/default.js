@@ -4,9 +4,9 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var defaulttheme = location.hash.split('/')[1];
+            defaulttheme = defaulttheme ? defaulttheme : 'Material';
+            args.maps.theme = (defaulttheme.charAt(0).toUpperCase() + defaulttheme.slice(1));
         },
         titleSettings: {
             text: 'YouTube office locations',
@@ -22,10 +22,10 @@ this.default = function () {
         },
         layers: [
             {
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapePropertyPath: 'continent',
                 shapeDataPath: 'continent',
-                dataSource: window.dafaultData,
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/default-datasource.json'),
                 shapeSettings: {
                     colorValuePath: 'color',
                 },

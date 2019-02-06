@@ -36,7 +36,8 @@ this.default = function () {
         load: function (args) {
             var emptyPointTheme = location.hash.split('/')[1];
             emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'MAterial';
-            args.chart.theme = (emptyPointTheme.charAt(0).toUpperCase() + emptyPointTheme.slice(1));
+            args.chart.theme = (emptyPointTheme.charAt(0).toUpperCase() +
+                emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#empty-container');

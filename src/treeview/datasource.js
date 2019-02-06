@@ -1,4 +1,3 @@
-// Data source for TreeView component
 window.checkBoxData = [
         { id: 1, name: 'Australia', hasChild: true, expanded: true },
         { id: 2, pid: 1, name: 'New South Wales' },
@@ -112,47 +111,43 @@ window.hierarchicalData = [
         ]
     }
 ];
-window.productTeamData = [
+// Hierarchical data source for first TreeView component
+window.productTeam1 = [
     {
-        id: 1, name: 'ASP.NET MVC Team', expanded: true,
-        child: [
-            { id: 2, pid: 1, name: 'Smith', isSelected: true },
-            { id: 3, pid: 1, name: 'Johnson', isSelected: true },
-            { id: 4, pid: 1, name: 'Anderson' },
-        ]
-    },
+            id: 't1', name: 'ASP.NET MVC Team', expanded: true,
+            child: [
+                { id: 't2' , pid: 't1', name: 'Smith' },
+                { id: 't3', pid: 't1', name: 'Johnson' },
+                { id: 't4', pid: 't1', name: 'Anderson' },
+            ]
+        },
+        {
+            id: 't5', name: 'Windows Team',  expanded: true,
+            child: [
+                { id: 't6', pid: 't5', name: 'Clark' },
+                { id: 't7', pid: 't5', name: 'Wright' },
+                { id: 't8', pid: 't5', name: 'Lopez' },
+            ]
+        },
+];
+// Hierarchical data source for second TreeView component
+window.productTeam2 = [
     {
-        id: 5, name: 'Windows Team',
-        child: [
-            { id: 6, pid: 5, name: 'Clark' },
-            { id: 7, pid: 5, name: 'Wright' },
-            { id: 8, pid: 5, name: 'Lopez' },
-        ]
-    },
-    {
-        id: 9, name: 'Web Team',
-        child: [
-            { id: 11, pid: 9, name: 'Joshua' },
-            { id: 12, pid: 9, name: 'Matthew' },
-            { id: 13, pid: 9, name: 'David' },
-        ]
-    },
-    {
-        id: 14, name: 'Build Team',
-        child: [
-            { id: 15, pid: 14, name: 'Ryan' },
-            { id: 16, pid: 14, name: 'Justin' },
-            { id: 17, pid: 14, name: 'Robert' },
-        ]
-    },
-    {
-        id: 18, name: 'WPF Team',
-        child: [
-            { id: 19, pid: 18, name: 'Brown' },
-            { id: 20, pid: 18, name: 'Johnson' },
-            { id: 21, pid: 18, name: 'Miller' },
-        ]
-    }
+            id: 't9' , name: 'Web Team',expanded: true,
+            child: [
+                { id: 't11' , pid: 't9' , name: 'Joshua' },
+                { id: 't12', pid: 't9' , name: 'Matthew' },
+                { id: 't13', pid: 't9' , name: 'David' },
+            ]
+        },
+        {
+            id: 't14', name: 'Build Team', expanded: true,
+            child: [
+                { id: 't15' , pid: 't14' , name: 'Ryan' },
+                { id: 't16' , pid: 't14' , name: 'Justin' },
+                { id: 't17' , pid: 't14', name: 'Robert' },
+            ]
+        },
 ];
 window.treeData = [
     {
@@ -228,8 +223,8 @@ window.treeViewData = [
             {
                 nodeId: '04-01', nodeText: 'Camera Roll', icon: 'folder', expanded: true,
                 nodeChild: [
-                    { nodeId: '04-01-01', nodeText: 'WIN_20160726_094117.JPG', image: 'src/images/employees/9.png' },
-                    { nodeId: '04-01-02', nodeText: 'WIN_20160726_094118.JPG', image: 'src/images/employees/3.png' },
+                    { nodeId: '04-01-01', nodeText: 'WIN_20160726_094117.JPG', image: 'src/treeview/images/employees/9.png' },
+                    { nodeId: '04-01-02', nodeText: 'WIN_20160726_094118.JPG', image: 'src/treeview/images/employees/3.png' },
                 ]
             },
             { nodeId: '04-02', nodeText: 'Wind.jpg', icon: 'images' },
@@ -325,64 +320,19 @@ window.localData = [
     { id: 28, pid: 25, name: 'Harry Potter' },
     { id: 29, pid: 25, name: 'The Hobbit' },
 ];
-window.rtlData = [
-    {
-        id: 1, name: 'Web Controls', expanded: true,
-        child: [
-            {
-                id: 2, pid: 1, name: 'Calendar', child: [
-                    { id: 7, pid: 2, name: 'Constructors' },
-                    { id: 8, pid: 2, name: 'Properties' },
-                    { id: 9, pid: 2, name: 'Methods' },
-                    { id: 10, pid: 2, name: 'Events' }
-                ]
-            },
-            {
-                id: 3, pid: 1, name: 'Data Grid', child: [
-                    { id: 11, pid: 3, name: 'Constructors' },
-                    { id: 12, pid: 3, name: 'Fields' },
-                    { id: 13, pid: 3, name: 'Properties' },
-                    { id: 14, pid: 3, name: 'Methods' },
-                    { id: 15, pid: 3, name: 'Events' }
-                ]
-            },
-            {
-                id: 4, pid: 1, name: 'DropDownList', child: [
-                    { id: 16, pid: 4, name: 'Constructors' },
-                    { id: 17, pid: 4, name: 'Properties' },
-                    { id: 18, pid: 4, name: 'Methods' }
-                ]
-            },
-            {
-                id: 5, pid: 1, name: 'Menu', child: [
-                    { id: 19, pid: 5, name: 'Constructors' },
-                    { id: 20, pid: 5, name: 'Fields' },
-                    { id: 21, pid: 5, name: 'Properties' },
-                    { id: 22, pid: 5, name: 'Methods' },
-                    { id: 23, pid: 5, name: 'Events' }
-                ]
-            },
-            {
-                id: 6, pid: 1, name: 'TextBox', child: [
-                    { id: 20, pid: 6, name: 'Constructors' },
-                    { id: 21, pid: 6, name: 'Properties' },
-                    { id: 22, pid: 6, name: 'Methods' },
-                    { id: 23, pid: 6, name: 'Events' }
-                ]
-            }
-        ]
-    }
-];
-window.employeeData = [
-    { id: 1, name: 'Steven Buchanan', eimg: '10', job: 'CEO', hasChild: true, expanded: true },
-    { id: 2, pid: 1, name: 'Laura Callahan', eimg: '2', job: 'Product Manager', hasChild: true },
-    { id: 3, pid: 2, name: 'Andrew Fuller', eimg: '7', job: 'Team Lead', hasChild: true },
-    { id: 4, pid: 3, name: 'Anne Dodsworth', eimg: '1', job: 'Developer' },
-    { id: 5, pid: 1, name: 'Nancy Davolio', eimg: '4', job: 'Product Manager', hasChild: true },
-    { id: 6, pid: 5, name: 'Michael Suyama', eimg: '9', job: 'Team Lead', hasChild: true },
-    { id: 7, pid: 6, name: 'Robert King', eimg: '8', job: 'Developer ' },
-    { id: 8, pid: 7, name: 'Margaret Peacock', eimg: '6', job: 'Developer' },
-    { id: 9, pid: 1, name: 'Janet Leverling', eimg: '3', job: 'HR' },
+window.mailBox = [
+  { id: 1, name: 'Favorites', hasChild: true },
+            { id: 2, pid: 1, name: 'Sales Reports', count: '4' },
+            { id: 3, pid: 1, name: 'Sent Items' },
+            { id: 4, pid: 1, name: 'Marketing Reports ', count: '6' },
+            { id: 5, name: 'My Folder', hasChild: true, expanded: true },
+            { id: 6, pid: 5, name: 'Inbox', selected: true, count: '20' },
+            { id: 7, pid: 5, name: 'Drafts', count: '5' },
+            { id: 8, pid: 5, name: 'Deleted Items' },
+            { id: 9, pid: 5, name: 'Sent Items' },
+            { id: 10, pid: 5, name: 'Sales Reports', count: '4' },
+            { id: 11, pid: 5, name: 'Marketing Reports', count: '6' },
+            { id: 13, pid: 5, name: 'Outbox' },
 ];
 window.countries = [
     { id: 1, name: 'Australia', hasChild: true, expanded: true },

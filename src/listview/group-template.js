@@ -12,17 +12,17 @@ this.default = function () {
             //Map the appropriate columns to fields property
             fields: { text: 'Name', groupBy: 'order' },
 
+            cssClass: 'e-list-template',
+
             //Set customized group-header template
-            groupTemplate: '<div><span class="category">${items[0].category}</span></div>',
+            groupTemplate: '<div class="e-list-wrapper"><span class="e-list-item-content">${items[0].category}</span></div>',
 
             //Set customized list template
-            template: '<div class="settings">' +
-                '<div class="icon ${class}"></div>' +
-                '<div class="_container"> ${if(content)}' +
-                '<div class="name">${Name}</div>' +
-                '<div class="content">${content}</div> ${else}' +
-                '<div class="_name">${Name}</div> ${/if} </div>' +
-                '</div>',
+            template: '<div class="settings e-list-wrapper e-list-multi-line e-list-avatar">' +
+            '<span class="icon ${class} e-avatar"></span>' +
+            '<span class="e-list-item-header">${Name}</span>' +
+            '<span class="e-list-content">${content}</span>' +
+            '</div>',
 
             //Set header title
             headerTitle: 'Settings',

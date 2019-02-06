@@ -73,17 +73,13 @@ this.default = function() {
     //Render initialized DropDownList component
     headerStyles.appendTo('#headerStyles');
 
-    // Change event funtion for DropDownList component
+    // Change event function for DropDownList component
     function changeHeaderPosition(args) {
-         if (args.itemData.value === 'bottom') {
-              tabObj.headerPlacement = 'Bottom';
-        } else {
-              tabObj.headerPlacement = 'Top';
-        }
+        tabObj.headerPlacement = args.itemData.value;
         tabObj.dataBind();
     }
 
-    // Change event funtion for DropDownList component
+    // Change event function for DropDownList component
     function changeHeaderStyle(args){
         removeStyleClass();
         var name = args.itemData.value;

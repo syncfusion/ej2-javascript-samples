@@ -4,9 +4,9 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var projecttheme = location.hash.split('/')[1];
+            projecttheme = projecttheme ? projecttheme : 'Material';
+            args.maps.theme = (projecttheme.charAt(0).toUpperCase() + projecttheme.slice(1));
         },
         titleSettings: {
             text: 'Members of the UN Security Council',
@@ -28,10 +28,10 @@ this.default = function () {
         },
         layers: [
             {
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapeDataPath: 'Country',
                 shapePropertyPath: 'name',
-                dataSource: window.unCountries,
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/projection-datasource.json'),
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'Country',

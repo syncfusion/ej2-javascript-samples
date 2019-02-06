@@ -1,0 +1,19 @@
+{
+    "name": "MultiSelect Dropdown",
+    "directory": "multi-select",
+    "category": "Dropdowns",
+    "ftName": "multiselect-dropdown",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "description": "This demo for Syncfusion JavaScript multiselect control shows the default rendering of the multiselect component with minimum configuration.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["mode", "placeholder"] } },
+        { "url": "data-binding", "name": "Data Binding", "description": "This demo for Syncfusion JavaScript multiselect control shows how to bind with  local data source and how to fetch data from remote data service.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["query", "dataSource", "fields", "sortOrder", "placeholder"] } },
+        { "url": "grouping-icon", "name": "Grouping", "description": "This demo explains the grouping of suggestions based on different categories with individual header and icon support in the Syncfusion JavaScript multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder"] } },
+        { "url": "template", "name": "Template", "description": "This demo explains on how to customize the appearance of each item in the pop-up list using template option in Syncfusion JavaScript multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "headerTemplate", "itemTemplate", "valueTemplate", "mode", "placeholder"] } },
+        { "url": "filtering", "name": "Filtering", "description": "This demo explains the filtering functionalities of the Syncfusion JavaScript multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["query", "dataSource", "fields", "placeholder", "allowFiltering", "filtering"] } },
+        { "url": "custom-value", "name": "Custom Value", "description": "This demo for Syncfusion JavaScript multiselect control demonstrates the addition of a new value that is not present in the predefined list.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "allowCustomValue"] } },
+        { "url": "chip-customization", "name": "Chip Customization", "description": "This demo for Syncfusion JavaScript multiselect control demonstrates on how to customize the selected chip element when select.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"] } },
+        { "url": "checkbox", "name": "CheckBox", "description": "This demo for Syncfusion JavaScript multiselect control demonstrates the built-in support to select the multiple values through checkbox.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder"] } },
+        { "url": "selection-limit", "name": "Selection Limit", "description": "This demo for Syncfusion JavaScript multiselect control demonstrates to limit the number of items that is selected in a component.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "maximumSelectionLimit"] } },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "description": "This demo explains the diacritics filter functionality of the Syncfusion JavaScript multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "placeholder", "allowFiltering", "ignoreAccent"] } }
+    ],
+    "dataSourcePath": "src/drop-down-list/data-source.js"
+}

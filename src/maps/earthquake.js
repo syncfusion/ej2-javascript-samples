@@ -4,9 +4,9 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var earththeme = location.hash.split('/')[1];
+            earththeme = earththeme ? earththeme : 'Material';
+            args.maps.theme = (earththeme.charAt(0).toUpperCase() + earththeme.slice(1));
         },
         centerPosition: {
             latitude: 1.5053645409602877,
@@ -14,7 +14,9 @@ this.default = function () {
         },
         zoomSettings: {
             enable: false,
-            zoomFactor: 3.5,
+            zoomFactor: 7,
+            mouseWheelZoom: false,
+            toolbars: []
         },
         mapsArea: {
             background: '#AEE2FA'
@@ -27,9 +29,10 @@ this.default = function () {
         },
         layers: [
             {
+                animationDuration: 1000,
                 shapeDataPath: 'name',
                 shapePropertyPath: 'name',
-                shapeData: window.Asia,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/asia.json'),
                 markerSettings: [{
                         visible: true,
                         height: 100,

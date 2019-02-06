@@ -1,0 +1,43 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo showcases how the multiple resources are grouped as well as how the events are portrayed in timeline view layouts.
+    </p>
+</div>
+
+<style>
+    .e-schedule:not(.e-device) .e-agenda-view .e-content-wrap table td:first-child {
+        width: 90px;
+    }
+
+    .e-schedule .e-agenda-view .e-resource-column {
+        width: 100px;
+    }
+</style>
+
+<div id="description">
+    <p>
+        In the timeline view, each row depicts a single resource whereas in vertical views, each resource are grouped parallelly
+        as columns. Here, the resource grouping follows the tree-view like hierarchical grouping structure and can contain
+        any level of child resources. In this sample, we have used two level hierarchy, where the
+        <code>PROJECT 1</code> and
+        <code>PROJECT 2</code> are the parent level and the
+        <code>development</code> and
+        <code>testing</code> are child level resources which are defined using the
+        <code>resources</code> property. They are grouped in layout by making use of the
+        <code>group</code> property and its order of grouping depends on the order of names passed onto the
+        <code>resources</code> option within
+        <code>group</code>.
+    </p>
+    <p>
+        Also, the colors defined for the child level resources will get applied to the events of those resources by default. In case,
+        if the colors of parent level needs to be applied to those child events, then it is necessary to define the
+        <code>resourceColorField</code> option within the
+        <code>eventSettings</code> property with the parent level resource name value.
+    </p>
+</div>

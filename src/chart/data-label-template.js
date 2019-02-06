@@ -5,7 +5,11 @@ this.default = function () {
     var theme;
     var chart = new ej.charts.Chart({
         //Initializing Chart Title
-        title: 'Population of India ( 2010 - 2016 )',
+        title: 'Population of India Statistics',
+        subTitle: '(2010 - 2016)',
+        subTitleStyle: {
+            textAlignment: 'Far'
+        },
         titleStyle: {
             fontFamily: 'Roboto',
             fontStyle: 'medium', size: '14px'
@@ -27,14 +31,13 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             minimum: 900, maximum: 1300,
+            interval: 80,
             labelFormat: '{value}M',
             labelStyle: {
                 fontFamily: 'Roboto',
                 fontStyle: 'medium',
                 size: '14px'
             },
-            title: 'Population',
-            interval: 80,
             majorGridLines: {
                 color: '#eaeaea',
                 width: 1
@@ -91,7 +94,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            theme = args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            theme = args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             args.chart.theme = theme;
         },
         legendSettings: {

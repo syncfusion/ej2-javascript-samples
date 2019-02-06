@@ -1,0 +1,100 @@
+{
+    "name": "Circular Gauge",
+    "directory": "circular-gauge",
+    "category": "Data Visualization",
+    "type": "update", 
+    "ftName": "circulargauge", 
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default",
+            "description": "This demo for Essential JS2 Circular Gauge control illustrates the default rendering of circular gauge.",
+            "category": "Circular Gauge"
+        },
+        {
+            "url": "range",
+            "name": "Range",
+            "description": "This demo for Essential JS2 Circular Gauge control illustrates how to highlight specific regions in an axis by using ranges.",
+            "category": "Circular Gauge"
+        },
+        {
+            "url": "labels",
+            "name": "Tick and Labels",
+            "description": "This demo for Essential JS2 Circular Gauge control shows various properties available to customize the ticks and labels of an axis.",
+            "category": "Circular Gauge",
+			"type": "update"
+        },
+        {
+            "url": "annotation",
+            "name": "Annotation",
+            "description": "This demo for Essential JS2 Circular Gauge control illustrates a clock by using annotation feature in the gauge.",
+            "category": "Circular Gauge"
+        },
+        {
+            "url": "customization",
+            "name": "Gauge Customization",
+            "description": "This demo for Essential JS2 Circular Gauge control shows the properties required to customize the pointers.",
+            "category": "Circular Gauge"
+        },
+        {
+            "url": "semi-circular-gauge",
+            "name": "Semi-circular Gauge",
+            "category": "Circular Gauge",
+            "type": "new"
+        },
+        {
+            "url": "arc-gauge",
+            "name": "Arc Gauge",
+            "category": "Circular Gauge",
+            "type": "new"
+        },
+        {
+            "url": "compass",
+            "name": "Direction Compass",
+            "description": "This demo for Essential JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge.",
+            "category": "Circular Gauge"
+        },
+        {
+            "url": "pointer-image",
+            "name": "Pointer Image",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the short-put distance covered by the athletes by using the image pointer.",
+            "category": "Pointer"
+        },
+        {
+            "url": "pointer",
+            "name": "Pointer Customization",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the different types of pointers available in the circular gauge.",
+            "category": "Pointer"
+        },
+        {
+            "url": "multiple-axis",
+            "name": "Multiple Axis",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the circular gauge with multiple axes.",
+            "category": "Axes"
+        },
+        {
+            "url": "user-interaction",
+            "name": "Pointer Drag",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the pointer drag support and its options.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the tooltip template for circular gauge pointer.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "data-sample",
+            "name": "Data Sample",
+            "description": "This demo for Essential JS2 Circular Gauge control demonstrates live data, along with the data grid control.",
+            "category": "Live"
+        },
+        {
+            "url": "speedometer",
+            "name": "Speedometer",
+            "category": "Live",
+            "type": "new"
+        }
+    ]
+}

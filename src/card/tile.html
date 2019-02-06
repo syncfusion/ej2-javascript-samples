@@ -1,38 +1,3 @@
-<script id="card_template" type="text/x-template">
-    <div class="e-card ${if(isHorizontal)} e-card-horizontal ${/if}">
-        ${if(cardImage)}
-        <div class="e-card-image" style="background-image:url(${cardImage.url})">
-            ${if(cardImage.title)}
-            <div class="e-card-title"> ${cardImage.title} </div>
-            ${/if}
-        </div>
-        ${/if} ${if(cardTitle)}
-        <div class="e-card-title"> ${cardTitle} </div>
-        ${/if} ${if(header_title || header_subtitle || header_img)}
-        <div class="e-card-header">
-            ${if(header_img)}
-            <div class="e-card-header-image ${if(header_img.isRounded)} e-card-corner ${/if}" style="background-image:url(${header_img.url})"></div>
-            ${/if} ${if(header_title || header_subtitle)}
-            <div class="e-card-header-caption">
-                ${if(header_title)}
-                <div class="e-card-header-title">${header_title}</div>${/if} ${if(header_subtitle)}
-                <div class="e-card-sub-title">${header_subtitle}</div>${/if}
-            </div>
-            ${/if}
-        </div>
-        ${/if} ${if(cardContent)}
-        <div class="e-card-content"> ${cardContent} </div>
-        ${/if} ${if(card_action_btn)}
-        <div class="e-card-actions ${if(card_action_btn.isVertical)} e-card-vertical ${/if}">
-            ${for(action_btn of card_action_btn.action_btns)} ${if(action_btn.tag === 'a')}
-            <a href="${action_btn.href}" target="${action_btn.target}">${action_btn.text}</a>
-            ${else}
-            <button class="e-card-btn">${action_btn.text}</button>
-            ${/if} ${/for}
-        </div>
-        ${/if}
-    </div>
-</script>
 <div class="control-section card-control-section tile_layout">
     <div class="row filter">
         <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
@@ -106,11 +71,11 @@
         Card is a small container in which user can show defined content in specific structure and it is flexible and extensible.
         This sample demonstrates to render the
         <code>Card</code> Using
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation/base/template-engine.html"> Template Engine</a> and it can be filtered based on
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation/data/getting-started.html">
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/common/template-engine/"> Template Engine</a> and it can be filtered based on
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/data/getting-started/">
             data Manager</a>.
         <p> More information about Card can be found in this
-            <a target="_blank" href="http://ej2.syncfusion.com/documentation/card/getting-started.html">
+            <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/card/es5-getting-started/">
                 documentation</a> section. </p>
     </p>
 </div>
@@ -205,3 +170,38 @@
         }
     }
 </style>
+<script id="card_template" type="text/x-template">
+    <div class="e-card ${if(isHorizontal)} e-card-horizontal ${/if}">
+        ${if(cardImage)}
+        <div class="e-card-image" style="background-image:url(${cardImage.url})">
+            ${if(cardImage.title)}
+            <div class="e-card-title"> ${cardImage.title} </div>
+            ${/if}
+        </div>
+        ${/if} ${if(cardTitle)}
+        <div class="e-card-title"> ${cardTitle} </div>
+        ${/if} ${if(header_title || header_subtitle || header_img)}
+        <div class="e-card-header">
+            ${if(header_img)}
+            <div class="e-card-header-image ${if(header_img.isRounded)} e-card-corner ${/if}" style="background-image:url(${header_img.url})"></div>
+            ${/if} ${if(header_title || header_subtitle)}
+            <div class="e-card-header-caption">
+                ${if(header_title)}
+                <div class="e-card-header-title">${header_title}</div>${/if} ${if(header_subtitle)}
+                <div class="e-card-sub-title">${header_subtitle}</div>${/if}
+            </div>
+            ${/if}
+        </div>
+        ${/if} ${if(cardContent)}
+        <div class="e-card-content"> ${cardContent} </div>
+        ${/if} ${if(card_action_btn)}
+        <div class="e-card-actions ${if(card_action_btn.isVertical)} e-card-vertical ${/if}">
+            ${for(action_btn of card_action_btn.action_btns)} ${if(action_btn.tag === 'a')}
+            <a href="${action_btn.href}" class="e-btn e-outline e-primary" target="${action_btn.target}">${action_btn.text}</a>
+            ${else}
+            <button class="e-card-btn">${action_btn.text}</button>
+            ${/if} ${/for}
+        </div>
+        ${/if}
+    </div>
+</script>

@@ -2,6 +2,17 @@
  *   Sample for CSS input boxes.
  */
 this.default = function () {
+    var inputobj1 = new ej.inputs.TextBox({
+        placeholder: 'First Name',
+        floatLabelType: 'Auto'
+    });
+    inputobj1.appendTo('#firstname');
+    var inputobj2 = new ej.inputs.TextBox({
+        placeholder: 'Last Name',
+        floatLabelType: 'Auto',
+        enableRtl: true
+    });
+    inputobj2.appendTo('#lastname');
     var inputObject = {};
     var input = document.querySelectorAll('.e-input-group .e-input,.e-float-input.e-input-group input');
     var inputIcon = document.querySelectorAll('.e-input-group-icon');

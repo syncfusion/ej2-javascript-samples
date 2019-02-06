@@ -1,0 +1,128 @@
+<div class="col-lg-8 control-section inplace-control-section drop-down-layout">
+    <div class="control_wrapper">
+        <table>
+            <tr>
+                <td>
+                    <label class="control-label">
+                        DropDownList </label>
+                </td>
+                <td>
+                    <div id='dropdownEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label">
+                        AutoComplete </label>
+                </td>
+                <td>
+                    <div id='autoCompleteEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label"> ComboBox
+                    </label>
+                </td>
+                <td>
+                    <div id='comboBoxEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label"> MultiSelect
+                    </label>
+                </td>
+                <td>
+                    <div id='multiSelectEle'></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tr>
+            <td>
+                <div> Mode</div>
+            </td>
+            <td>
+                <div>
+                    <select id="editorMode_dropdowns" class="form-control">
+                        <option value="Inline">Inline</option>
+                        <option value="Popup">Popup</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+    <div id="action-description">
+        <p>
+            This sample demonstrates the usage of drop-down controls such as AutoComplete, ComboBox, DropDownList, and MultiSelect. Click on the dotted input element to switch to the
+            editable state of the corresponding integrated component.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            This sample illustrates the way to integrate drop-down controls with <code>In-place Editor</code>. The
+            applicable types of components are:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <code>DropDownList</code>
+                </li>
+                <li>
+                    <code>AutoComplete</code>
+                </li>
+                <li>
+                    <code>ComboBox</code>
+                </li>
+                <li>
+                    <code>MultiSelect</code>
+                </li>
+            </ul>
+        </p>
+        <p>
+            The above components and their features are editable in place and can be customized with the model
+            properties of the specific component.
+        </p>
+        <p>
+            More information on the <code>In-place Editor</code> instantiation can be found in the <a target="_blank"
+                href="https://ej2.syncfusion.com/documentation/inplaceeditor/getting-started.html">
+                documentation section</a>.
+        </p>
+    </div>
+
+    <style>
+
+    .inplace-control-section.drop-down-layout .e-inplaceeditor .e-editable-component .e-clear-icon-hide,
+    .e-inplaceeditor-tip .e-editable-component .e-input-group .e-clear-icon.e-clear-icon-hide {
+        display: block;
+        visibility: hidden;
+    }
+
+        .inplace-control-section .control_wrapper  label {
+            padding: 15px;
+            text-align: left;
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        .inplace-control-section .control_wrapper {
+            margin: auto;
+            max-width: 400px;
+        }
+
+        .inplace-control-section .control_wrapper table {
+            margin: auto;
+        }
+
+        .inplace-control-section .control_wrapper table td {
+            width: 200px;
+            height: 100px;
+        }
+
+    </style>

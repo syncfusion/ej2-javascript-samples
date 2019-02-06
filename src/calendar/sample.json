@@ -1,6 +1,8 @@
-{ "name": "Calendar", "directory": "calendar", "category":"Calendar", "samples" : [
+{ "name": "Calendar", "directory": "calendar", "category":"Calendars","type": "update", "samples" : [
     {"url":"default", "name": "Default Functionalities", "category":"Calendar", "api":{"Calendar": [ "change" ]}},
     {"url":"disabled", "name": "Disabled Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}},
-    {"url":"range", "name": "Date Range", "category":"Calendar", "api":{"Calendar": [ "min", "max", "change" ]}},
-    {"url":"special", "name": "Special Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}}
+    {"url":"date-range", "name": "Date Range", "category":"Calendar", "api":{"Calendar": [ "min", "max", "change" ]}},
+    {"url":"special-dates", "name": "Special Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}},
+    {"url":"multi-selection", "name": "Multiple Selection", "category":"Calendar", "api":{"Calendar": [ "isMultiSelection", "values" ]}},
+    {"url":"islamic-calendar", "name": "Islamic Calendar", "category":"Calendar","type": "new", "api":{"Calendar": [ "renderDayCell", "values" ]}}
 ]}

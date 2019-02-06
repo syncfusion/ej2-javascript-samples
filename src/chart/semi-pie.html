@@ -8,8 +8,7 @@
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div>Start Angle
-                        <p id="startangle" style="font-weight: normal;">270</p>
+                    <div>Start Angle                       
                     </div>
                 </td>
                 <td style="width: 70%;">
@@ -17,11 +16,15 @@
                         <input type="range" name="range-min" id="range-min" value="270" min="0" max="360" style="width:90%">
                     </div>
                 </td>
+                <td style="width: 30%;">
+                        <div data-role="rangeslider">
+                            <p id="startangle" style="font-weight: normal; padding-top: 10px">270</p>
+                        </div>
+                </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 30%">
                     <div>End Angle
-                        <p id="endangle" style="font-weight: normal;">90</p>
                     </div>
                 </td>
                 <td style="width: 70%;">
@@ -29,17 +32,26 @@
                         <input type="range" name="range-max" id="range-max" value="90" min="0" max="360" style="width:90%">
                     </div>
                 </td>
+                <td style="width: 30%;">
+                        <div data-role="rangeslider">
+                            <p id="endangle" style="font-weight: normal; padding-top: 10px">90</p>
+                        </div>
+                </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 40%">
                     <div>Inner Radius
-                        <p id="innerradius" style="font-weight: normal;">0.40</p>
                     </div>
                 </td>
                 <td style="width: 60%;">
                     <div data-role="rangeslider">
                         <input type="range" name="range-max" id="inner-radius" value="40" min="0" max="50" style="width:90%">
                     </div>
+                </td>
+                <td style="width: 30%;">
+                        <div data-role="rangeslider">
+                            <p id="innerradius" style="font-weight: normal; padding-top: 10px">0.40</p>
+                        </div>
                 </td>
             </tr>
         </table>

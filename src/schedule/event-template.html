@@ -6,9 +6,9 @@
 </div>
 
 <div id="action-description">
-    <p>This demo showcases the way of customizing the look of events that are displayed on Schedule. Any kind of text, images
+    <p>This demo showcases the way of customizing the look of events that are displayed on Scheduler. Any kind of text, images
         and links can be added to customize the look of the events. Here, the webinar sessions on specific topic that are
-        scheduled on respective week days have been displayed on schedule across its respective time duration.
+        scheduled on respective week days have been displayed on scheduler across its respective time duration.
     </p>
 </div>
 
@@ -22,7 +22,8 @@
 </div>
 
 <style>
-    .e-schedule .e-vertical-view .e-content-wrap .e-appointment {
+    .e-schedule .e-vertical-view .e-content-wrap .e-appointment,
+    .e-schedule .e-timeline-view .e-content-wrap .e-appointment {
         border-radius: 8px;
     }
 
@@ -73,9 +74,25 @@
         height: 50px;
         width: 100%;
     }
+
+    .e-schedule .e-timeline-view .e-appointment .e-appointment-details {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .e-schedule .e-timeline-view .template-wrap {
+        width: 100%;
+    }
+
+    .e-schedule .e-timeline-view .template-wrap .subject {
+        font-size: 16px;
+        height: 36px;
+        text-align: center;
+    }
 </style>
 
-<script id="apptemplate" type="text/x-template">
+<script id="event-template" type="text/x-template">
     <div class='template-wrap' style='background:${SecondaryColor}'>
         <div class="subject" style='background:${PrimaryColor}'>${Subject}</div>
         <div class="time" style='background:${PrimaryColor}'>Time: ${getTimeString(data.StartTime)} - ${getTimeString(data.EndTime)}</div>
@@ -84,5 +101,10 @@
         </div>
         <div class="description">${Description}</div>
         <div class="footer" style='background:${PrimaryColor}'></div>
+    </div>
+</script>
+<script id="timeline-event-template" type="text/x-template">
+    <div class='template-wrap' style='background:${PrimaryColor}'>
+        <div class="subject" style='background:${SecondaryColor}; border-left: 15px solid ${PrimaryColor};border-right: 15px solid ${PrimaryColor};'>${Subject}</div>
     </div>
 </script>

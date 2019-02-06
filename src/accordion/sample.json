@@ -2,30 +2,29 @@
     "name": "Accordion",
     "directory": "accordion",
     "category": "Navigation",
+    "ftName" :"accordion",
+    "dataSourcePath": "src/accordion/data-source.js", 
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
             "category": "Accordion",
+            "description":"The sample demonstrates that default functionalities of the Accordion control which works by expand and collapse action in JavaScript platform.",
             "api": {"AccordionItem": ["header", "content", "expanded"], "Accordion":["items"] }
         },
         {
             "url": "ajax",
             "name": "Ajax Content",
             "category": "Accordion",
+            "description":"The sample demonstrates how to load the content to the Accordion control from external sources using Ajax library in JavaScript platform.",
             "api": {"Accordion": ["expandMode","expanding"] }
         },
         {
             "url": "icons",
             "name": "Icons",
             "category": "Accordion",
+            "description":"The sample demonstrates how to represent pane headers with an icon in Accordion control which populates from items collection in JavaScript platform.",
             "api": {"AccordionItem": ["iconCss"] }
-        },
-        {
-            "url": "rtl",
-            "name": "RTL",
-            "category": "Accordion",
-            "api":{"Accordion":["enableRtl"] }
         }
     ]
 }

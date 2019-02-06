@@ -1,10 +1,17 @@
 this.default = function () {
+    var touchmove = false;
     var maps = new ej.maps.Maps({
         
         load: function (args) {
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';
             args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+        },
+        loaded: function (args) {
+            var mapsSVG = document.getElementById('mapdrilldown_svg');
+            if(mapsSVG !== null){
+            mapsSVG.addEventListener('touchmove', function(e) { touchmove = true; }, false);
+            }
         },
         shapeSelected: function (args) {
             var shape = args.shapeData.continent;
@@ -40,7 +47,7 @@ this.default = function () {
                 document.getElementById('text').innerHTML = shape;
                 document.getElementById('symbol').style.visibility = 'visible';
             }
-            
+            touchmove = false;
         },
         zoomSettings: {
             enable: false
@@ -50,8 +57,8 @@ this.default = function () {
                 layerType: 'Geometry',
                 shapePropertyPath: 'continent',
                 shapeDataPath: 'continent',
-                dataSource: window.dafaultData,
-                shapeData: window.WorldMap,
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/default-datasource.json'),
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapeSettings: {
                     colorValuePath: 'drillColor'
                 },
@@ -121,7 +128,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.Africa,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/africa.json'),
                 shapeSettings: {
                     fill: '#80306A'
                 },
@@ -136,7 +143,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.Europe,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/europe.json'),
                 shapeSettings: {
                     fill: '#622D6C'
                 },
@@ -151,7 +158,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.Asia,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/asia.json'),
                 shapeSettings: {
                     fill: '#462A6D'
                 },
@@ -166,7 +173,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.NorthAmerica,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/north-america.json'),
                 shapeSettings: {
                     fill: '#C13664'
                 },
@@ -181,7 +188,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.SouthAmerica,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/south-america.json'),
                 shapeSettings: {
                     fill: '#9C3367'
                 },
@@ -196,7 +203,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.Oceania,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/oceania.json'),
                 shapeSettings: {
                     fill: '#2A2870'
                 },
@@ -211,7 +218,7 @@ this.default = function () {
             },
             {
                 layerType: 'Geometry',
-                shapeData: window.Australia,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/australia.json'),
                 shapeSettings: {
                     fill: '#2A2870'
                 },

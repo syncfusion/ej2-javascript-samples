@@ -1,14 +1,13 @@
 {
-    "name": "Form Validator",
+    "name": "Form Validation",
     "directory": "form-validator",
-    "category": "Editors",
-    "type": "update",
+    "category": "Inputs",
     "samples": [
         
-        { "url": "default", "name": "Default Functionalities ", "type": "update", "category": "Form Validator", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
-        { "url": "html5", "name": "HTML5 Validation", "category": "Form Validator", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
-        { "url": "external-submit", "name": "External Form Submit ", "type": "new", "category": "Form Validator", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
-        { "url": "wizardform", "name": "Wizard Form", "category": "Form Validator", "type": "new", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } }
+        { "url": "default", "name": "Default Functionalities ", "category": "Form Validation", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
+        { "url": "html5", "name": "HTML5 Validation", "category": "Form Validation", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
+        { "url": "external-submit", "name": "External Form Submit ", "category": "Form Validation", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },
+        { "url": "wizardform", "name": "Wizard Form", "category": "Form Validation", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } }
     ],
     "dataSourcePath":"src/form-validator/datasource.js"
 }

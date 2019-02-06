@@ -50,13 +50,11 @@
                 <div id="stateError"></div>
             </div>
             <div class="row">
-                <div style="width: 320px;margin:0px auto;height: 100px;padding-top: 25px;">
-                    <div style="display: inline-block;">
-                        <button id="validateSubmit" class="samplebtn e-control e-btn e-primary" type="submit" style="height:40px;width: 150px;" data-ripple="true">Add Customer</button>
-                    </div>
-                    <div style="float: right;">
-                        <button id="resetbtn" class="samplebtn e-control e-btn" type="reset" style="height:40px;width: 150px;" data-ripple="true">Clear</button>
-                    </div>
+                <div class="custom">
+                    <button id="validateSubmit" class="samplebtn" type="submit" style="height: 35px;">Submit</button>
+                </div>
+                <div>
+                    <button id="resetbtn" class="samplebtn" type="reset" style="height: 35px;">Reset</button>
                 </div>
             </div>
         </form>
@@ -156,5 +154,17 @@
     .row {
         padding-bottom: 30px;
         padding-top: 25px;
+    }
+
+    .custom {
+        float: left;
+        margin: 0 10% 0 38%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        .custom {
+            float: left;
+            margin: 0 10% 0 20%;
+        }
     }
 </style>

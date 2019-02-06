@@ -1,0 +1,121 @@
+{
+    "name": "Rich Text Editor",
+    "directory": "rich-text-editor",
+    "category": "Editors",
+    "type": "update",
+    "ftName": "wysiwyg-rich-text-editor",
+    "samples": [{
+            "url": "tools",
+            "name": "Overview",
+            "description": "This demo shows the overview of an HTML and markdown editor using Syncfusion JavaScript (ECMAScript 5) rich text editor control.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "rich-text-editor",
+            "name": "Default Functionalities",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the default rendering with minimum configuration.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "appendTo"] }
+        },
+        {
+            "url": "image",
+            "name": "Image",
+            "description": "The demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the option to insert images with image caption and link URLs to the images.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarClick", "appendTo", "getRange"], "QuickToolbarSettings": ["image"] }
+        },
+        {
+            "url": "inline",
+            "name": "Inline",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates on how to activate the editor on demand while editing the content.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "inlineMode", "toolbarSettings", "format", "fontFamily", "appendTo", "dataBind"], "InlineMode": ["enable", "onSelection"], "ToolbarSettings": ["items"], "Format": ["width"], "FontFamily": ["width"] }
+        },
+        {
+            "url": "iframe",
+            "name": "IFrame",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates the default rendering of the rich text editor in iframe mode.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "height", "iframeSettings", "toolbarSettings", "actionBegin", "actionComplete", "appendTo"], "IFrameSettings": ["enable"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "print",
+            "name": "Print",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to print the content of the editor with its styles.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "print", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "ajax-load",
+            "name": "Ajax Content",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to load content to the editor from an external source using Ajax library.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "value", "appendTo"] }
+        },
+        {
+            "url": "form-validation",
+            "name": "Form Validation",
+            "description": "This demo explains the HTML forms support of the Syncfusion JavaScript (ECMAScript 5) rich text editor control.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "placeholder", "appendTo"] }
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "description": "This demo demonstrate the usage of API in Syncfusion JavaScript (ECMAScript 5) rich text editor control.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "appendTo", "readonly", "enabled", "enableHtmlEncode", "value", "getSelection", "selectAll"] }
+        },
+        {
+            "url": "client-side-events",
+            "name": "Events",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the events that have been triggered during the rich text editor operations.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "created", "actionBegin", "actionComplete", "focus", "blur", "change", "toolbarClick", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "blog-posting",
+            "name": "Use Case",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates how to design forum application using rich text editor.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "placeholder", "value", "dataBind", "refresh", "appendTo"] }
+        },
+        {
+            "url": "types",
+            "name": "Type",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates the different behavior of toolbar support in the rich text editor.",
+            "category": "Toolbar",
+            "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
+        },
+        {
+            "url": "custom-toolbar",
+            "name": "Custom Tool",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to add their commands to the toolbar along with the built-in commands.",
+            "category": "Toolbar",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "created", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor",
+            "name": "Overview",
+            "type": "update",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the markdown editing in the rich text editor with complete features.",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor-preview",
+            "name": "Preview",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to switch between editing content and its visual preview in MD Editor.",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "actionBegin", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
+            "url": "markdown-editor-custom-format",
+            "name": "Custom Format",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates on how to customize tags of markdown formatting in rich text editor.",
+            "category": "Markdown",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "formatter", "appendTo"], "ToolbarSettings": ["items"] }
+        }
+    ]
+}

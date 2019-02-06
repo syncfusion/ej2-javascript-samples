@@ -1,0 +1,86 @@
+<div class="control-section">
+        <div id="spark-container" class="row">
+            <div class="cols-sample-area" align="center" style="margin-top: 8%;">
+                <div align="center" class="col-lg-2 col-md-3 col-sm-5 sparent">
+                    <div class="spark" id="line" align="center">
+                        <div class="sparktext" align="center" style="position: absolute; margin-top: 90px; margin-left: 2px; width: 100%;">Power production for a day</div>
+                    </div>
+                </div>
+                <div align="center" class="col-lg-2 col-md-3 col-sm-5 sparent">
+                    <div class="spark" id="area" align="center">
+                        <div class="sparktext" align="center" style="position: absolute; margin-top: 90px; margin-left: 3px; width: 100%;">Average weather comparision</div>
+                    </div>
+                </div>
+                <div align="center" class="col-lg-2 col-md-3 col-sm-5 sparent">
+                    <div class="spark" id="column" align="center">
+                        <div class="sparktext" align="center" style="position: absolute; margin-top: 90px; margin-left: 10px; width: 100%;">Revenue status</div>
+                    </div>
+                </div>
+                <div align="center" class="col-lg-2 col-md-5 col-sm-5 sparent">
+                    <div class="spark" id="winloss" align="center">
+                        <div class="sparktext" align="center" style="position: absolute; margin-top: 90px; margin-left: 5px; width: 100%;">Customer satisfaction score</div>
+                    </div>
+                </div>
+                <div align="center" class="col-lg-2 col-md-5 col-sm-10 sparent">
+                    <div class="spark" align="center" style="height: 87px;">
+                        <div class="sparkpie" id="pie1" style="height:40px;width: 29%;">
+                            <div align="center" class="pietext" style="position: absolute; margin-top: 40px; width: 50%;">USA</div>
+                        </div>
+                        <div class="sparkpie" id="pie2" style="height:40px;width: 29%;">
+                            <div align="center" class="pietext" style="position: absolute; margin-top: 40px; width: 50%;">GBR</div>
+                        </div>
+                        <div class="sparkpie" id="pie3" style="height:40px;width: 29%;">
+                            <div align="center" class="pietext" style="position: absolute; margin-top: 40px; width: 50%;">CHN</div>
+                        </div>
+                        <div class="sparktext" align="center" style="position: absolute; margin-top: 90px; width: 90%;">Olympics medal details</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="action-description">
+        <p>
+            This sample depicts the various types of series available in sparkline.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this example, you can see the sparkline with various series types such as line, area, column, win loss, and pie. Tooltip
+            is enabled in this example. To see the tooltip in action, hover the mouse over the data points or tap on a data point
+            in touch enabled devices.
+        </p>
+    </div>
+    <style>
+        td {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+            font-weight: 600;
+        }
+    
+        .spark {
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 2px;
+            width: 100%;
+        }
+        .sparent {
+            height: 110px;
+            margin-left: 3%;
+            margin-right: 0%;
+        }
+        .sparkpie {
+            float: left;
+            margin-top: 15px;
+            margin-left: 2%;
+        }
+        .pieparent {
+            width: 93%;
+        }
+        .pietext {
+            float: left;
+            margin-left: 25%;
+        }
+    
+        .sparktext {
+            text-anchor:middle;
+            width: 100%;
+        }
+    </style>

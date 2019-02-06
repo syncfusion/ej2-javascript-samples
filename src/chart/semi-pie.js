@@ -19,9 +19,9 @@ this.default = function () {
                 yName: 'y',
                 startAngle: 270,
                 endAngle: 90,
-                radius: '90%',
+                radius: '90%', explode: true,
                 innerRadius: '40%', 
-                name: 'Agricultural',
+                name: 'Agricultural',                
                 dataLabel: {
                     visible: true, position: 'Outside',
                     connectorStyle: { length: '10%' }, name: 'text',
@@ -29,6 +29,7 @@ this.default = function () {
                 },
             }
         ],
+        enableAnimation: false,
         //Initializing Tooltip
         tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
         legendSettings: {
@@ -39,7 +40,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     pie.appendTo('#semi-container');

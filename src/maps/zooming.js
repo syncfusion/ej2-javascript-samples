@@ -4,9 +4,9 @@
 this.default = function () {   
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var zoomtheme = location.hash.split('/')[1];
+            zoomtheme = zoomtheme ? zoomtheme : 'Material';
+            args.maps.theme = (zoomtheme.charAt(0).toUpperCase() + zoomtheme.slice(1));
         },
         zoomSettings: {
             enable: true,
@@ -15,18 +15,29 @@ this.default = function () {
         },
         layers: [
             {
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapePropertyPath: 'continent',
                 shapeDataPath: 'continent',
                 shapeSettings: {
                     autofill: true,
                     colorValuePath: 'color'
                 },
-                dataSource: window.randomcountriesData
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/zooming-datasource.json'),
             }
         ]
     });
     maps.appendTo('#mapszooming');
+    var sliderChange;
+        var slider = new ej.inputs.Slider({
+            value: 500,
+            min: 0, max: 1000, step: 250,
+            change: sliderChange
+        }, '#range');
+        slider.change = sliderChange = function (e) {
+            maps.layers[0].animationDuration = e.value;
+            maps.refresh();
+            document.getElementById('dur').innerHTML = e.value.toString() + ' ms';
+        };
     document.getElementById('mousewheel').onchange = function () {
         var element = (document.getElementById('mousewheel'));
         maps.zoomSettings.mouseWheelZoom = element.checked;

@@ -1,0 +1,28 @@
+{
+    "name": "PDF Viewer",
+    "directory": "pdfviewer",
+    "category": "Viewer",
+    "ftName": "pdfviewer",
+    "type": "preview",
+    "samples": [
+        {            
+            "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+            {
+                "url":"custom-toolbar", "name": "Custom Toolbar", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "PDF Viewer", "api": {
+                    "PdfViewer": [
+                        "documentPath",
+                        "enableToolbar",
+                        "enableThumbnail",
+                        "serviceUrl"
+                    ]
+            }
+            
+        }
+    ]
+}

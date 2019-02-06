@@ -24,7 +24,7 @@ this.default = function () {
             {
                 shapeDataPath: 'name',
                 shapePropertyPath: 'name',
-                shapeData: window.africa_continent,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/africa-continent.json'),
                 shapeSettings: {
                     fill: 'url(#grad1)'
                 },

@@ -28,7 +28,8 @@ this.default = function () {
         },
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            args.accumulation.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
                 args.accumulation.series[0].width = '80%';
                 args.accumulation.series[0].height = '60%';

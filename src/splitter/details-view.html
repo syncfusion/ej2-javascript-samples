@@ -1,0 +1,86 @@
+<div id="target" class="control-section" >
+    <div id="splitter">
+        <div>
+            <div id="ui-list"></div>
+        </div>
+        <div>
+            <div id="content"></div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This example demonstrates the Splitter control that is used to design details view page. 
+        Select the employee from left pane to display the corresponding employee details on the right pane.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The Splitter is the layout user interface (UI) control, which integrates other JavaScript UI controls within its pane. 
+        In this sample, the JavaScript ListView control is integrated within left pane to display the employee list and right pane 
+        to display the corresponding employee details. 
+    </p>
+</div>
+<style>
+    #splitter .e-avatar.e-avatar-xlarge {
+        font-size: 22px;
+    }
+    .header-image {
+        text-align: center;
+        margin-top: 7px;
+    }
+    .e-custom-card .e-avatar {
+        font-size: 40px;
+        position: absolute;
+        top: calc(0% - 1.5em);
+        left: calc(50% - 1.5em);
+        box-shadow: 0 16px 28px -8px rgba(0, 0, 0, .36), 0 4px 15px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+    }
+    #target {
+        margin: 20px auto;
+        max-width: 710px;
+    }
+    /* ListView template customization */
+
+    #ui-list.e-listview .showUI {
+        display: flex;
+    }
+    #ui-list.e-listview .hideUI {
+        display: none;
+    }
+    #ui-list.e-listview .e-list-item {
+        padding: 3px 0;
+    }
+    #ui-list.e-listview .R {
+        background: lightgrey;
+    }
+    #ui-list.e-listview .M {
+        background: lightblue;
+    }
+
+    .highcontrast #ui-list.e-listview .e-list-item.e-active {
+        background: #ffd939;
+        color: #000000;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    table th,
+    table td {
+        font-weight: normal;
+        padding: 5px;
+        text-align: left;
+        border: 1px solid #ddd
+    }
+    .e-bold {
+        font-weight: 550;
+    }
+    .profile-name {
+        font-weight: 550;
+        font-size: 14px;
+        text-align: center;
+    }
+</style>

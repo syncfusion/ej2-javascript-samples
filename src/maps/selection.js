@@ -5,9 +5,9 @@ this.default = function () {
     
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var selectiontheme = location.hash.split('/')[1];
+            selectiontheme = selectiontheme ? selectiontheme : 'Material';
+            args.maps.theme = (selectiontheme.charAt(0).toUpperCase() + selectiontheme.slice(1));
         },
         itemSelection: function (args) {
             if (args.shapeData !== ej.base.isNullOrUndefined) {
@@ -70,10 +70,10 @@ this.default = function () {
        
         layers: [
             {
-                shapeData: window.USA,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/usa.json'),
                 shapePropertyPath: 'name',
                 shapeDataPath: 'State',
-                dataSource: window.electionData,
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/selection-datasource.json'),
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'State'

@@ -1,0 +1,124 @@
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo showcases the scheduler that lists out the meeting rooms of an office and its availability. The slots which are
+        already booked and the lunch time can’t be allowed for any new bookings. Also, the existing bookings which were made
+        on past dates were not allowed to edit as well as the new bookings on those past dates will also be not allowed.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        Here, the timeline view is grouped with single level of resources by making use of the
+        <code>group</code> property. Also, the lunch time blocking is done by block event. The event editor and popup is prevented to open on those blocked time slots as well as on the past bookings
+        by making use of the
+        <code>popupOpen</code> event. The
+        <code>eventRendered</code> event is utilized in order to make the bookings done on past dates as read-only. To block more than one bookings
+        per slot, the
+        <code>isSlotAvailable</code> method is used. Also, the resource header displayed at the left panel is customized to render as columns with the
+        help of
+        <code>resourceHeaderTemplate</code>. The tooltip for resource header is customized by defining the
+        <code>headerTooltipTemplate</code> property within the
+        <code>group</code> API.
+    </p>
+    <p>
+        <b>Note:</b> The dates which lies beyond the current date set to scheduler through
+        <code>selectedDate</code> property is considered as the past dates here in this sample.
+    </p>
+</div>
+
+<script id="resource-template" type="text/x-template">
+    <div class='template-wrap'> 
+        <div class="room-name">${getRoomName(data)}</div>
+        <div class="room-type">${getRoomType(data)}</div>
+        <div class="room-capacity">${getRoomCapacity(data)}</div>
+    </div>
+</script>
+<style>
+    .e-schedule .e-timeline-view .e-resource-left-td {
+        vertical-align: bottom;
+    }
+
+    .e-schedule.e-device .e-timeline-view .e-resource-left-td {
+        width: 75px;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text {
+        display: flex;
+        font-weight: 500;
+        padding: 0;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        height: 36px;
+        line-height: 34px;
+        padding-left: 5px;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div:last-child {
+        border-right: 0;
+    }
+
+    .e-schedule .template-wrap {
+        display: flex;
+        height: 100%;
+        text-align: left;
+    }
+
+    .e-schedule .template-wrap>div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        line-height: 58px;
+        overflow: hidden;
+        padding-left: 5px;
+        text-overflow: ellipsis;
+    }
+
+    .e-schedule .template-wrap>div:last-child {
+        border-right: 0;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-cells,
+    .e-schedule .e-timeline-month-view .e-resource-cells {
+        padding-left: 0;
+    }
+
+    .e-schedule .e-timeline-view .e-date-header-wrap table col,
+    .e-schedule .e-timeline-view .e-content-wrap table col {
+        width: 100px;
+    }
+
+    .e-schedule .e-read-only {
+        opacity: .8;
+    }
+
+    @media (max-width: 550px) {
+        .e-schedule .e-timeline-view .e-resource-left-td {
+            width: 100px;
+        }
+        .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div,
+        .e-schedule .template-wrap>div {
+            flex: 0 0 100%;
+        }
+        .e-schedule .template-wrap>div:first-child {
+            border-right: 0;
+        }
+        .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div:first-child {
+            border-right: 0;
+        }
+        .e-schedule .room-type,
+        .e-schedule .room-capacity {
+            display: none;
+        }
+    }
+</style>

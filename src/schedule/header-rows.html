@@ -1,0 +1,34 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This demo showcases how to display the additional header rows on timeline view. In this demo, an additional row for displaying
+        <b>month</b> and
+        <b>week number</b> has been added.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        Unlike the usual date and time rows, timeline view can be displayed with additional header rows to display the years, months
+        and week numbers. To do so, define the
+        <code>headerRows</code> property which accepts an array of object and each object includes the
+        <code>option</code> API to define the specific header row type such as
+        <code>Year</code>,
+        <code>Month</code>,
+        <code>Week</code> and
+        <code>Date</code>. The object also includes the
+        <code>template</code> option to provide label customization on these rows. This
+        <code>headerRows</code> property is application only on timeline views.
+    </p>
+</div>
+<script id="month-template" type="text/x-template">
+    <span class="month">${getMonthDetails(data)}</span>
+</script>
+<script id="week-template" type="text/x-template">
+    <span class="week">${getWeekDetails(data)}</span>
+</script>

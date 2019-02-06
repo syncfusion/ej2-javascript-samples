@@ -4,7 +4,8 @@
 this.default = function() {
     //Initialize Tab component
      var tabObj = new ej.navigations.Tab({
-          heightAdjustMode: 'Auto',
+          heightAdjustMode: 'None',
+          height: 250,
           items: [
             {
                 header: { 'text': 'HTML' },
@@ -77,12 +78,24 @@ this.default = function() {
     //Render initialized DropDownList component
     overflowModes.appendTo('#adaptive');
 
+    var headerPositions = new ej.dropdowns.DropDownList({
+        width: '90%',
+        change: changeHeaderPosition
+    });
+    //Render initialized DropDownList component
+    headerPositions.appendTo('#orientation');
+
     function changeOverFlowMode(args) {
         if (args.itemData.value === 'scrollable') {
             tabObj.overflowMode = 'Scrollable';
         } else {
             tabObj.overflowMode = 'Popup';
         }
+        tabObj.dataBind();
+    }
+
+    function changeHeaderPosition(args) {
+        tabObj.headerPlacement = args.itemData.value;
         tabObj.dataBind();
     }
 };

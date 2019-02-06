@@ -3,13 +3,14 @@
  */
 this.default = function () {
 
-    var template = '<div id="postContainer" ${if(category!==null)} class = "clearfix desc"${else}' +
-    'class = "clearfix" ${/if}> ${if(imgSrc!=="")} <div id="postImg"> <img src=${imgSrc} /> </div>' +
-    '${/if}  <div id="content"> <div id="heading">${title} </div>' +
-    '<div class="description" >${description} </div> ${if(timeStamp!=="")}  <div id="info"><div id="logo"> <div id="share">' +
-    '<span class="share"></span> </div> <div id="comments"> <span class="comments"></span> </div>' +
-    '<div id="bookmark"> <span class="bookmark"></span> </div></div> <div class="timeStamp">' +
-    '${timeStamp} </div> ${/if} </div> </div></div>';
+    var template = '<div ${if(category!==null)} class = "clearfix desc e-list-wrapper e-list-multi-line e-list-avatar" ${else} ' +
+    'class = "clearfix e-list-wrapper e-list-multi-line e-list-avatar" ${/if}> ${if(imgSrc!=="")}' +
+    '<img class="e-avatar" src="src/listview/images/${imgSrc}.png" /> ' +
+    '${/if} <span class="e-list-item-header">${title} </span>' +
+    '<span class="e-list-content e-text-overflow" >${description} </span> ${if(timeStamp!=="")}  <div id="list-logo">' +
+    '<span class="bookmark"></span> <span class="comments"></span>' +
+    '<span class="share"></span></div> <div class="timeStamp">' +
+    '${timeStamp} </div> ${/if} </div>';
 
     //Initialize ListView component
     var templateObj = new ej.lists.ListView({
@@ -19,9 +20,11 @@ this.default = function () {
 
         //Set defined customized template
         template: template,
-        
+
         //Set header title
         headerTitle: 'Syncfusion Blog',
+
+        cssClass: 'e-list-template',
 
         //Set true to show header title
         showHeader: true,
@@ -38,7 +41,7 @@ this.default = function () {
     var share = document.getElementsByClassName('share');
     var comments = document.getElementsByClassName('comments');
     var bookmark = document.getElementsByClassName('bookmark');
-    var description = document.getElementsByClassName('description');
+    var description = document.getElementsByClassName('e-list-content');
     var timeStamp = document.getElementsByClassName('timeStamp');
     var i;
     for (i = 0; i < comments.length; i++) {
@@ -84,7 +87,7 @@ this.default = function () {
             }
         } else {
             var headerEle = templateObj.element.querySelector('.e-list-header');
-            var headerElement = templateObj.element.querySelector('#info');
+            var headerElement = templateObj.element.querySelector('#list-logo');
             var clone = headerElement.cloneNode(true);
             headerEle.appendChild(clone);
         }

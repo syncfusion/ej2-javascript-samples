@@ -1,9 +1,8 @@
 this.default = function () {
-    var content1 =  'In the Succinctly series, Syncfusion created a robust free library of more than 130 technical e-books formatted';
-    var content2 =	'for PDF, Kindle, and EPUB.The Succinctly series was born in 2012 out of a desire to provide concise technical';
-    var content3 =	'e-books for software developers. Each title in the Succinctly series is written by a carefully';
-    var content4 =	'chosen expert and provides essential content';
-	var dlgContent = content1 + content2 + content3 + content4;
+	var dlgContent = 'In the Succinctly series, Syncfusion created a robust free library of more than 130 technical e-books formatted' +
+					 'for PDF, Kindle, and EPUB. The Succinctly series was born in 2012 out of a desire to provide concise technical' + 
+					 'e-books for software developers.  Each title in the Succinctly series is written by a carefully' + 
+					 'chosen expert and provides essential content';
      var dlgObj = new ej.popups.Dialog({
         header: 'About SYNCFUSION Succinctly Series',
         content: dlgContent,
@@ -12,9 +11,9 @@ this.default = function () {
         buttons: [
             {
                 click: dlgButtonClick,
-                buttonModel: { content: 'LEARN ABOUT SYNCFUSION, INC.'}
+                buttonModel: { content: 'Learn More', isPrimary: true }
             }],
-        width: '50%',
+        width: '500px',
         open: dialogOpen,
         close: dialogClose,
         animationSettings: { effect: 'none' }

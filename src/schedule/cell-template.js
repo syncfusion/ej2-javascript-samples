@@ -21,7 +21,7 @@ this.default = function () {
     };
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '550px',
+        height: '650px',
         cellTemplate: '${if(type === "monthCells")}<div class="templatewrap">${getCellContent(data.date)}</div>${/if}',
         views: ['Month'],
         currentView: 'Month',

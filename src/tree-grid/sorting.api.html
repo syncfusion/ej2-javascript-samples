@@ -1,0 +1,82 @@
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid" class="sortingenabled"></div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 30%">
+                <div>Column</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div id='columnddl'>
+                     <input type="text" tabindex="1" id='columns' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div>Direction</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div>
+                    <input type="text" tabindex="1" id='direction' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div>
+                    <button class="btn btn-default" type="button" id="sort">Sort</button>
+                </div>
+
+            </td>
+            <td style="width: 70%; padding:10px 10px 10px 0px">
+                <div>
+                    <button class="btn btn-default" type="button" id="clear">Clear</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p> Sorting feature enables us to order the data in a particular direction. It can be enabled 
+        by setting the allowSorting as true.</p>
+</div>
+
+<div id="description">
+    <p>
+        Sorting feature enables us to order the data in a particular direction. It can be enabled by setting the <code>allowSorting</code> as true.
+    </p>
+    <p class="e-treegrid" style="border:none">To sort a TreeGrid column simply click the column header. The icons <span class="e-icons e-icon-ascending"></span>(ascending)
+        and <span class="e-icons e-icon-descending"></span>(descending) specifies the sort direction of a column.</p>
+    <p>By default, multi-sorting is enabled in TreeGrid, to sort multiple column hold <strong>CTRL</strong> key and click the column
+        header. To clear sort for a column, hold <strong>SHIFT</strong> key and click the column header.</p>
+    <p>
+        While using TreeGrid in a touch device, you have an option for multi sorting in single tap on the treegrid header. By tapping on
+        the treegrid header, it will show the toggle button in small popup with sort icon. Now tap the button to enable the multi-sorting
+        in single tap.
+    </p>
+    <p>In this demo, select the column and direction from the properties panel then click the Sort button. Use the Clear button
+        to remove sort for the selected column.
+    </p>
+    <p>
+        More information on the Sorting can be found in
+        documentation section.
+    </p>
+</div>
+<style>
+    @media screen and (max-width: 590px) {
+        .sortingenabled {
+            margin-top: 30px;
+        }
+    }
+</style>
+<style>
+    #columnddl {
+        min-width: 130px;
+    }
+</style>

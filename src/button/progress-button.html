@@ -1,0 +1,154 @@
+<div class="control-section">
+    <div class="progress-button-section">
+        <div id="progress-button-control">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinleft"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinright"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spintop"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="spinbottom"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="roundbtn"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="contract"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="slideleftflat"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="sliderightoutline"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="zoomin"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="zoomout"></button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="download"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                        <button id="disabled"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the default functionalities of a progress button. Clicking that button will display a spinner and a progress indicator.</p>
+</div>
+<div id="description">
+    <p>
+        The progress button visualizes the progression of an operation to indicates the user that a process is happening in the background.
+        The progress can be shown with graphics accompanied by a textual representation.
+    </p>
+    <p>
+        In this sample, the progress button contains the content, spinner, progress indicator, and a list of related features that can be achieved using
+        <code>
+                    <a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/progress-button/#content">content,
+                    </a>
+        </code>
+        <code>
+                    <a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/progress-button/#cssclass">cssClass,
+                    </a>
+        </code>and
+        <code>
+                <a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/progress-button/#enableprogress">enableProgress
+                </a>
+        </code>property.
+    </p>
+    <p>
+        More information about progress button can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/progress-button/es5-getting-started">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+    #progress-button-control {
+        width: 100%;
+        margin: 8% 0;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 500px) {
+        #progress-button-control {
+            margin-left: -11%;
+        }
+    }
+
+    .progress-button-section {
+        width: 80%;
+        margin: auto;
+    }
+
+    #progress-button-control .col-xs-12 {
+        margin: 18px 0;
+    }
+
+    #contract.e-progress-active .e-btn-content {
+        display: none;
+    }
+
+    #contract {
+        transition: all .3s cubic-bezier(.175, .885, .32, 1) 100ms;
+    }
+
+    @font-face {
+        font-family: 'button-icons';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .e-btn-sb-icons {
+        font-family: 'button-icons';
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .e-play-icon::before {
+        content: '\e701';
+        font-size: 12px;
+    }
+
+    .e-bigger .e-play-icon::before {
+        font-size: 14px;
+    }
+
+    .e-download-icon::before {
+        content: '\e702';
+    }
+
+    #roundbtn .e-play-icon {
+        margin-top: -2px;
+    }
+
+    .material #roundbtn .e-play-icon {
+        margin-top: 0;
+    }
+</style>

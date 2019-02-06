@@ -1,0 +1,64 @@
+<div class="col-md-8 control-section">
+    <div>
+        <!-- <div id="spinner"> </div> -->
+        <div id="container"></div>
+    </div>
+</div>
+<div class="col-md-4 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr style="height: 50px">
+            <td style="width: 40%">
+                <div>Lazy Load </div>
+            </td>
+            <td style="width: 60%;">
+                <select id="lazymode" style="width:98%;margin-left: -5px;">
+                    <option value="Range">Range</option>
+                    <option value="Points Length">Points Length</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Min </div>
+            </td>
+            <td>
+                <input id="datepickermin" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Max </div>
+            </td>
+            <td>
+                <input id="datepickermax" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Point Length </div>
+            </td>
+            <td>
+                <input id="pointslength" type="text" />
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        This sample illustrates lazy laoding feature in chart. Loads data for chart on demand.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to load data for chart on demand. Chart will fire the
+        <code>scrollEnd</code> event, in that can udpate the chart with required data based on point length and axis range.
+    </p>
+    <p>
+        <code>ScrollBar</code> is enable in the sample and <code>ScrollBar</code> module injected to the chart.
+    </p>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>

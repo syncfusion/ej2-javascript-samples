@@ -5,7 +5,10 @@ this.default = function () {
         max: 100,
         tooltip: { isVisible: true, placement: 'Before', showOn: 'Hover' },
         ticks: { placement: 'After', largeStep: 20 },
-        type: 'MinRange'
+        type: 'MinRange',
+        change: function (args) {
+            sliderValue.value =  args.value;
+        }
     });
     sliderObj.appendTo('#slider');
 
@@ -76,7 +79,7 @@ this.default = function () {
     var readOnlyMb = new ej.buttons.CheckBox({
         checked: false,
         change: function (args) {
-            sliderObj.readOnly = args.checked;
+            sliderObj.readonly = args.checked;
         }
     });
     readOnlyMb.appendTo('#mb-readOnly');
@@ -102,7 +105,7 @@ this.default = function () {
         checked: false,
         label: 'Readonly',
         change: function (args) {
-            sliderObj.readOnly = args.checked;
+            sliderObj.readonly = args.checked;
         }
     });
     readOnly.appendTo('#readOnly');

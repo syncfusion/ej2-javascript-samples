@@ -1,0 +1,14 @@
+{ 
+    "name": "Splitter", 
+    "directory": "splitter", 
+    "category":"Layout",
+    "ftName" :"splitter",
+    "type": "preview",
+    "samples" : [
+     {"url":"default", "name": "Default Functionalities", "category":"Splitter", "description": "This sample demonstrates the basic rendering of splitter.","api": { "Splitter": ["paneSettings", "height", "width", "orientation"] } },
+     {"url":"accordion-navigation-menu", "name": "Accordion Navigation Menu", "category":"Use Case", "description": "This sample demonstrates the implementation of ajax in splitter.", "api": { "Splitter": ["paneSettings", "height", "width", "expanded", "expanding", "items", "datasource", "select"] } },
+     {"url":"details-view", "name": "Details View", "category":"Use Case", "description": "This sample demonstrates the split view in splitter.", "api": { "Splitter": ["paneSettings", "height", "width","enableVirtualization", "cssClass", "template", "actionComplete", "datasource", "select"] } },
+     {"url":"outlook-style-layout", "name": "Outlook-style Layout", "category":"Use Case", "description": "This sample demonstrates the basic rendering of outlook preview using splitter.", "api": { "Splitter": ["paneSettings", "height", "width","fields", "nodeTemplate", "template", "groupTemplate", "cssClass", "datasource", "select"]} },
+     {"url":"code-editor-layout", "name": "Code Editor Layout", "category":"Use Case", "description": "This sample demonstrates the basic rendering of code editor using splitter.", "api": { "Splitter": ["paneSettings", "height", "width","orientation"]} }
+    ]
+ }

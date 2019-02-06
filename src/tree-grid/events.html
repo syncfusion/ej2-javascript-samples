@@ -1,0 +1,49 @@
+<style>
+        #EventLog b{
+            color: #388e3c;
+        }
+        hr {
+            margin: 1px 10px 1px 0px;
+            border-top: 1px solid #eee;
+        }
+        </style>
+        <div>
+            <div class="col-lg-9 control-section">
+                <div class="content-wrapper">
+                    <div id="TreeGrid"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 property-section">
+                <table id="property" title="Event Trace">
+                    <tr>
+                        <td>
+                            <div class="eventarea" style="height: 245px;overflow: auto">
+                                <span class="EventLog" id="EventLog" style="word-break: normal;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="evtbtn" style="padding-bottom: 10px">
+                                <button id="clear">Clear</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="action-description">
+            <p>This sample demonstrates all the events that have been triggered on all the TreeGrid operations with the help of Event Trace
+                panel.
+            </p>
+        </div>
+        <div id="description">
+            <p>The TreeGrid triggers events based on its actions. The events can be used as an extension
+                point to perform custom operations.
+            </p>
+            <p>In this demo, perform TreeGrid actions like paging, sorting, reordering, filtering etc. and see
+                the <strong>Event Trace</strong> panel for the events emitted.
+            </p>
+            <p>More information on the Grid events can be found in the documentation section.
+            </p>
+        </div>

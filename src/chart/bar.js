@@ -12,8 +12,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 3.2,
             labelFormat: '{value}B',
             edgeLabelPlacement: 'Shift',
             majorGridLines: { width: 0 },
@@ -75,8 +73,9 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
-        }
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+        },
     });
     chart.appendTo('#bar-container');
 };

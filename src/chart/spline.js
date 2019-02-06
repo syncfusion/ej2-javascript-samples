@@ -17,9 +17,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 40,
-            interval: 10,
             labelFormat: '{value}°C',
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
@@ -86,13 +83,13 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'NC Weather Report - 2016',
-        legendSettings: { toggleVisibility : false },
         tooltip: { enable: true },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         load: function (args) {
             var splineTheme = location.hash.split('/')[1];
             splineTheme = splineTheme ? splineTheme : 'Material';
-            args.chart.theme = (splineTheme.charAt(0).toUpperCase() + splineTheme.slice(1));
+            args.chart.theme = (splineTheme.charAt(0).toUpperCase() + 
+                splineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#spline-container');

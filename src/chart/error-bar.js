@@ -55,7 +55,8 @@ this.default = function () {
         load: function (args) {
             var errorBarTheme = location.hash.split('/')[1];
             errorBarTheme = errorBarTheme ? errorBarTheme : 'Material';
-            args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() + errorBarTheme.slice(1));
+            args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() +
+                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#error-container');

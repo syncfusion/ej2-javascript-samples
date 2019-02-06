@@ -1,25 +1,25 @@
 this.default = function () {
     var timeObj = new ej.inputs.Slider({
         // Set slider minimum and maximum values
-        // new Date(Year, Month, day, hours, minutes, seconds, millseconds)
-        min: new Date(2013, 6, 13, 11).getTime(), max: new Date(2013, 6, 13, 23).getTime(),
         // 3600000 milliseconds = 1 Hour, 3600000 / 6 milliseconds = 10 Minutes
         step: 3600000 / 6,
-        // Set the initial range values for slider
-        value: [new Date(2013, 6, 13, 12).getTime(), new Date(2013, 6, 13, 18).getTime()],
         // Bind Tooltip change event for custom formatting
         tooltipChange: tooltipChangeHandler,
+        // new Date(Year, Month, day, hours, minutes, seconds, millseconds)
+        min: new Date(2013, 6, 13, 11).getTime(), max: new Date(2013, 6, 13, 23).getTime(),
+        // Set the initial range values for slider
+        value: [new Date(2013, 6, 13, 12).getTime(), new Date(2013, 6, 13, 18).getTime()],
         // Initialize tooltip with placement
         tooltip: {
-            placement: 'Before', isVisible: true
-        },
-        created: function (args) {
-            timeObj.keyUp({ keyCode: 9, target: timeObj.secondHandle });
-            timeObj.secondHandle.focus();
+            placement: 'Before', isVisible: true, cssClass: 'e-tooltip-cutomization'
         },
         // Bind ticks event for custom formatting
         renderingTicks: renderingTicksHandler,
         // Initialize ticks with placement, largestep, smallstep
+        created: function (args) {
+            timeObj.keyUp({ keyCode: 9, target: timeObj.secondHandle });
+            timeObj.secondHandle.focus();
+        },
         ticks: {
             placement: 'After',
             // 3 * 3600000 milliseconds = 3 Hour
@@ -43,7 +43,7 @@ this.default = function () {
         tooltipChange: tooltipChangeHandler,
         // Initialize tooltip with placement
         tooltip: {
-            placement: 'Before', isVisible: true
+            placement: 'Before', isVisible: true, cssClass: 'e-tooltip-cutomization'
         },
         // Bind ticks event for custom formatting
         renderingTicks: renderingTicksHandler,

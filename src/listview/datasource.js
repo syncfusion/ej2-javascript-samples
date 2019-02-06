@@ -3,7 +3,7 @@ window.newsData = [
         'title': '	IBM Open-Sources WebSphere Liberty Code',
         'description': 'In late September, IBM announced that it would be open-sourcing the code for WebSphere...',
         'content': '<p>In late September, IBM announced that it would be open-sourcing the code for' +
-        ' WebSphere Liberty, an application server intended to facilitate the development of Java' + 
+        ' WebSphere Liberty, an application server intended to facilitate the development of Java' +
         'apps and microservices. Liberty is intended to allow developers to quickly develop and' +
         'deploy applications in a variety of environments while functioning seamlessly with other' +
         'solutions. IBM will continue to offer commercial versions of Liberty that include access to' +
@@ -344,13 +344,13 @@ window.listData = [
 window.groupData = [
     { Name: 'WI-FI', content: 'Disabled', id: '1', class: 'wifi', category: 'Wireless & networks', order: 0 },
     { Name: 'Bluetooth', content: 'Disabled', id: '2', class: 'bluetooth', category: 'Wireless & networks', order: 0 },
-    { Name: 'SIM cards', id: '3', class: 'sim', category: 'Wireless & networks', order: 0 },
+    { Name: 'SIM cards', id: '3', content: 'AT&T', class: 'sim', category: 'Wireless & networks', order: 0 },
     { Name: 'Display', content: 'Adaptive brightness is OFF', id: '4', class: 'display', category: 'Device', order: 1 },
     { Name: 'Sound', content: 'Ringer volume at 50%', id: '5', class: 'sound', category: 'Device', order: 1 },
     { Name: 'Battery', content: '85%', id: '5', class: 'battery', category: 'Device', order: 1 },
     { Name: 'Users', content: 'Signed in as Albert', id: '6', class: 'user', category: 'Device', order: 1 },
     { Name: 'Location', content: 'ON / High accuracy', id: '7', class: 'location', category: 'Personal', order: 2 },
-    { Name: 'Security', id: '8', class: 'security', category: 'Personal', order: 2 },
+    { Name: 'Security', id: '8', content: 'Screen Lock', class: 'security', category: 'Personal', order: 2 },
     { Name: 'Languages & input', content: 'English (US)', id: '9', class: 'language', category: 'Personal', order: 2 }
 ];
  window.listViewData= [
@@ -419,7 +419,7 @@ window.templateData = [
         title: newsData[0].title,
         description: newsData[0].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/1.png', timeStamp: 'Syncfusion Blog - October 19, 2017',
+        imgSrc: '1', timeStamp: 'Syncfusion Blog - October 19, 2017',
         child: [{
             id: '01_1', title: newsData[0].title, category: newsData[0].title, text: newsData[0].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[0].content
@@ -430,7 +430,7 @@ window.templateData = [
         title: newsData[1].title,
         description: newsData[1].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/2.png', timeStamp: 'Syncfusion Blog - October 18, 2017',
+        imgSrc: '2', timeStamp: 'Syncfusion Blog - October 18, 2017',
         child: [{
             id: '02_1', title: newsData[1].title, category: newsData[1].title, text: newsData[1].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[1].content
@@ -441,7 +441,7 @@ window.templateData = [
         title: newsData[2].title,
         description: newsData[2].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/3.png', timeStamp: 'Syncfusion Blog - October 18, 2017',
+        imgSrc: '3', timeStamp: 'Syncfusion Blog - October 18, 2017',
         child: [{
             id: '03_1', title: newsData[2].title, category: newsData[2].title, text: newsData[2].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[2].content
@@ -452,7 +452,7 @@ window.templateData = [
         title: newsData[3].title,
         description: newsData[3].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/4.png', timeStamp: 'Syncfusion Blog - October 18, 2017',
+        imgSrc: '4', timeStamp: 'Syncfusion Blog - October 18, 2017',
         child: [{
             id: '04_1', title: newsData[3].title, category: newsData[3].title, text: newsData[3].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[3].content
@@ -463,7 +463,7 @@ window.templateData = [
         title: newsData[4].title,
         description: newsData[4].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/5.png', timeStamp: 'Syncfusion Blog - October 17, 2017',
+        imgSrc: '5', timeStamp: 'Syncfusion Blog - October 17, 2017',
         child: [{
             id: '05_1', title: newsData[4].title, category: newsData[4].title, text: newsData[4].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[4].content
@@ -474,7 +474,7 @@ window.templateData = [
         title: newsData[5].title,
         description: newsData[5].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/6.png', timeStamp: 'Syncfusion Blog - October 17, 2017',
+        imgSrc: '6', timeStamp: 'Syncfusion Blog - October 17, 2017',
         child: [{
             id: '06_1', title: newsData[5].title, category: newsData[5].title, text: newsData[5].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[5].content
@@ -485,10 +485,71 @@ window.templateData = [
         title: newsData[6].title,
         description: newsData[6].description,
         text: 'Syncfusion Blog',
-        imgSrc: 'src/listview/images/7.png', timeStamp: 'Syncfusion Blog - October 13, 2017',
+        imgSrc: '7', timeStamp: 'Syncfusion Blog - October 13, 2017',
         child: [{
             id: '07_1', title: newsData[6].title, category: newsData[6].title, text: newsData[6].title,
             imgSrc: '', heading: '', timeStamp: '', description: newsData[6].content
         }]
     }
+];
+
+window.callHistoryData = [
+    { text: 'Smith', id: 'received-01', icon: 'e-custom', type: 'received', group: 'Received', time: '2 hours ago', category: 'Today' },
+    {
+        text: 'Johnson', id: 'received-02', icon: 'e-custom', type: 'received',
+        group: 'Received', time: 'Yesterday', category: 'Yesterday'
+    },
+    { text: 'Williams', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: '4 hours ago', category: 'Today' },
+    { text: 'Jones', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    {
+        text: 'Brown', id: 'received-03', icon: 'e-custom', type: 'received',
+        group: 'Received', time: 'Yesterday', category: 'Yesterday'
+    },
+    {
+        text: 'Anderson', id: 'received-01', icon: 'e-custom', type: 'received',
+        group: 'Received', time: '12 hours ago', category: 'Today'
+    },
+    {
+        text: 'Thomas', id: 'received-02', icon: 'e-custom', type: 'received',
+        group: 'Received', time: 'Yesterday', category: 'Yesterday'
+    },
+    { text: 'Jackson', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Emily', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: '14 hours ago', category: 'Today' },
+    { text: 'White', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Jones', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: '18 hours ago', category: 'Today' },
+    { text: 'Grace', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Brooklyn', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    {
+        text: 'Arianna', id: 'received-01', icon: 'e-custom', type: 'received',
+        group: 'Received', time: 'Yesterday', category: 'Yesterday'
+    },
+    {
+        text: 'Katherine', id: 'received-02', icon: 'e-custom', type: 'received',
+        group: 'Received', time: 'Yesterday', category: 'Yesterday'
+    },
+];
+
+window.CheckListData = [
+    { text: 'Hennessey Venom', id: 'list-01' },
+    { text: 'Bugatti Chiron', id: 'list-02' },
+    { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
+    { text: 'SSC Ultimate Aero', id: 'list-04' },
+    { text: 'Koenigsegg CCR', id: 'list-05' },
+    { text: 'McLaren F1', id: 'list-06' },
+    { text: 'Aston Martin One- 77', id: 'list-07' },
+    { text: 'Jaguar XJ220', id: 'list-08' },
+    { text: 'McLaren P1', id: 'list-09' },
+    { text: 'Ferrari LaFerrari', id: 'list-10' },
+];
+window.commonData = [
+    { name: 'Nancy', icon: 'N', id: '0', },
+    { name: 'Andrew', icon: 'A', id: '1' },
+    { name: 'Janet', icon: 'J', id: '2' },
+    { name: 'Margaret', imgUrl: './src/listview/images/margaret.png', id: '3' },
+    { name: 'Steven', icon: 'S', id: '4' },
+    { name: 'Laura', imgUrl: './src/listview/images/laura.png', id: '5' },
+    { name: 'Robert', icon: 'R', id: '6' },
+    { name: 'Michael', icon: 'M', id: '7' },
+    { name: 'Albert', imgUrl: './src/listview/images/albert.png', id: '8' },
+    { name: 'Nolan', icon: 'N', id: '9' }
 ];

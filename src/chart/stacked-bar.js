@@ -15,8 +15,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: -20,
-            maximum: 60,
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             labelFormat: '{value}%',
@@ -59,7 +57,8 @@ this.default = function () {
         load: function (args) {
             var stackedBarTheme = location.hash.split('/')[1];
             stackedBarTheme = stackedBarTheme ? stackedBarTheme : 'Material';
-            args.chart.theme = (stackedBarTheme.charAt(0).toUpperCase() + stackedBarTheme.slice(1));
+            args.chart.theme = (stackedBarTheme.charAt(0).toUpperCase() + 
+                stackedBarTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#sBar-container');

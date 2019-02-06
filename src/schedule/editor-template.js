@@ -2,7 +2,7 @@ this.default = function () {
     var data = new ej.base.extend([], window.doctorsEventData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '550px',
+        height: '650px',
         views: ['Day', 'Week', 'WorkWeek', 'Month'],
         showQuickInfo: false,
         selectedDate: new Date(2018, 1, 15),
@@ -43,8 +43,14 @@ this.default = function () {
             }
         },
         actionBegin: function (args) {
-            if (args.requestType === 'eventCreate') {
-                if (!scheduleObj.isSlotAvailable(args.data.StartTime, args.data.EndTime)) {
+            if (args.requestType === 'eventCreate' || args.requestType === 'eventChange') {
+                var data;
+                if (args.requestType === 'eventCreate') {
+                    data = args.data[0];
+                } else if (args.requestType === 'eventChange') {
+                    data = args.data;
+                }
+                if (!scheduleObj.isSlotAvailable(data.StartTime, data.EndTime)) {
                     args.cancel = true;
                 }
             }

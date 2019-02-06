@@ -1,13 +1,12 @@
 {
-    "name": "Tab",
+    "name": "Tabs",
     "directory": "tab",
     "category": "Navigation",
-    "type": "update",
+    "ftName" :"tabs",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Tab", "api": { "Header": ["text", "iconCss"], "TabItem": ["content"], "Tab": ["items"] } },
-        { "url": "orientation", "name": "Orientation", "category": "Tab", "api": { "Tab": ["headerPlacement", "showCloseButton"] } },
-        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tab", "api": { "Tab": ["overflowMode"] } },
-        { "url": "rtl", "name": "RTL", "category": "Tab", "api":{ "Tab": ["enableRtl"] } },
-        { "url": "wizard", "name": "Wizard", "category": "Tab", "type": "new", "api": { "TabItem": ["disabled"] } }
+        { "url": "default", "name": "Default Functionalities", "category": "Tabs", "description": "The sample demonstrates about default functionalities of the Tab control (also known as Tabbed UI) which is navigation component in JavaScript platform.", "api": { "Header": ["text", "iconCss"], "TabItem": ["content"], "Tab": ["items"] } },
+        { "url": "orientation", "name": "Orientation", "category": "Tabs", "description": "The sample demonstrates how to customize the orientation of Tab control along with feasibility to customize the Tab header styles in JavaScript platform.", "api": { "Tab": ["headerPlacement", "showCloseButton"] } },
+        { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tabs", "description": "The sample illustrates that responsive mode of Tab control that aligns tab items in a scrollable or popup mode in JavaScript platform.", "api": { "Tab": ["overflowMode"] } },
+        { "url": "wizard", "name": "Wizard", "category": "Tabs", "description": "This sample demonstrates how to design a wizard-like application with the sequential action using the Tab control in JavaScript platform.", "api": { "TabItem": ["disabled"] } }
     ]
 }

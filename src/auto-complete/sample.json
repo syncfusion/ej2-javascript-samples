@@ -1,0 +1,16 @@
+{
+    "name": "AutoComplete",
+    "directory": "auto-complete",
+    "category": "Dropdowns",
+    "ftName": "autocomplete",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "description": "This demo for Syncfusion JavaScript autocomplete control shows the default rendering of the autocomplete with minimum configuration.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "value", "placeholder"] } },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "description": "This demo explains the grouping based on different categories with individual header and icon support in the Syncfusion JavaScript autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["fields", "placeholder"] } },
+        { "url": "data-binding", "name": "Data Binding", "description": "This demo for Syncfusion JavaScript autocomplete control shows how to bind with  local data source and how to fetch data from remote data service.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "suggestionCount", "query", "sortOrder", "autofill", "filterType", "change"] } },
+        { "url": "template", "name": "Template", "description": "This demo for Syncfusion JavaScript autocomplete control shows how to customize the appearance of each item in the pop-up list using template option.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "headerTemplate", "itemTemplate", "placeholder", "popupHeight"] } },
+        { "url": "highlight", "name": "Highlight", "description": "This demo for Syncfusion JavaScript autocomplete control shows the built-in support to highlight the searched characters in the suggested list items.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "highlight", "placeholder"] } },
+        { "url": "custom-filtering", "name": "Custom Filtering", "description": "This demo explains the custom filtering functionalities of the Syncfusion JavaScript autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "filtering", "fields", "placeholder"] } },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "description": "This demo explains the diacritics filter functionality of the Syncfusion JavaScript autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "ignoreAccent", "placeholder"] } }
+    ],
+    "dataSourcePath": "src/drop-down-list/data-source.js"
+}

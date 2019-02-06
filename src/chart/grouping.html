@@ -7,15 +7,33 @@
     <div class="col-lg-3 property-section">
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
-                <td style="width: 60%">
-                    <div>Group To:
-                        <p id="clubvalue" style="font-weight: normal;">10</p>
+                <td style="width: 50%">
+                    <div>GroupMode:
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="mode">				 
+                            <option value='Point'>Point</option>        
+                            <option value='Value'>Value</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 30%">
+                    <div>Group To
                     </div>
                 </td>
                 <td style="width: 40%;">
                     <div data-role="rangeslider">
-                        <input type="range" name="range-min" id="clubpoint" value="10" min="0" max="27" style="width:90%">
+                        <input type="range" name="range-min" id="clubpoint" value="9" min="0" max="27" style="width:90%">
                     </div>
+                </td>
+                <td style="width: 30%;">
+                        <div data-role="rangeslider">
+                           <p id="clubvalue" style="font-weight: normal; padding-top: 10px">9</p>
+                        </div>
                 </td>
             </tr>
         </table>
@@ -28,6 +46,6 @@
 </div>
 <div id="description">
     <p> In this example, you can see how to <code>group</code> points in pie chart.</p>
-    <p> Points having value below  the <code>'groupTo'</code> value are grouped and showed as separate point. You can customise the apearance of the point using <code>'poinRender'</code> event.</p>
+    <p> Points having value below the <code>'groupTo'</code> value are grouped and showed as separate point. You can view this points on mouse click and can customize this point using <code>'pointRender'</code> event. </p>
     <p> DataLabel is used to represent individual data and its value.</p>
 </div>

@@ -3,12 +3,12 @@ this.default = function () {
     var template = '<div class="tooltip-wrap">' +
         '<div class="image ${EventType}"></div>' +
         '<div class="content-area"><div class="name">${Subject}</></div>' +
-        '<div class="city">${City}</></div>' +
+        '${if(City !== null && City !== undefined)}<div class="city">${City}</div>${/if}' +
         '<div class="time">From&nbsp;:&nbsp;${StartTime.toLocaleString()} </div>' +
         '<div class="time">To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;${EndTime.toLocaleString()} </div></div></div>';
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '550px',
+        height: '650px',
         selectedDate: new Date(2018, 1, 15),
         eventSettings: {
             dataSource: data,

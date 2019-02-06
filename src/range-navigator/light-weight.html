@@ -1,0 +1,51 @@
+<div class="control-section" align="center">
+    <div id="container">
+        <div class="row" align="center">
+            <h4 id="days" style="font-family: Segoe UI;font-weight: 500; font-style:normal; font-size:15px;">Calculate the Business and Weekend days in a period</h4>
+            <div id="datetime"></div><br>
+            <table style="font-family: Segoe UI;font-weight: 500; font-style:normal; font-size:15px;">
+                <tr>
+                    <td id="working">
+                        <table>
+                            <tr>
+                                <td id="working" style="width: 150px;">Total Business Days:</td>
+                                <td id="workingcount" style="width: 25px;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="padding-left: 20px;" id="holiday">
+                        <table>
+                            <tr>
+                                <td id="weekend" style="width: 150px;">Total Weekend Days: </td>
+                                <td id="weekendcount" style="width: 25px;"></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample represents the total number of business and weekend days in a selected period.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render a light-weight range navigator without series. You can use <code>width</code>,
+        <code>height</code>, <code>fill</code> and <code>border</code> properties to customize the <code>thumb</code> in
+        range navigator. You can also change the type of the thumb using <code>type</code> property.
+    </p>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+    
+    #container {
+        transform: translateY(25%);
+    }
+</style>

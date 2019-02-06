@@ -65,7 +65,8 @@ this.default = function () {
         load: function (args) {
             var polarLineTheme = location.hash.split('/')[1];
             polarLineTheme = polarLineTheme ? polarLineTheme : 'Material';
-            args.chart.theme = (polarLineTheme.charAt(0).toUpperCase() + polarLineTheme.slice(1));
+            args.chart.theme = (polarLineTheme.charAt(0).toUpperCase() + 
+                polarLineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#polar-line-container');

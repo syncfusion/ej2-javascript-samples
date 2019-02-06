@@ -45,10 +45,11 @@ this.default = function () {
         title: 'Inflation Rate',
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         load: function (args) {
-            var areaEmptyTheme = location.hash.split('/')[1];
-            areaEmptyTheme = areaEmptyTheme ? areaEmptyTheme : 'Material';
-            args.chart.theme = (areaEmptyTheme.charAt(0).toUpperCase() + areaEmptyTheme.slice(1));
-        }
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+        },
     });
     chart.appendTo('#area-container');
 };

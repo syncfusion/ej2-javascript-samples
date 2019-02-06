@@ -3,7 +3,7 @@
  */
 var acrdnObj,nestAcrdn;
 this.default = function () {
-    var ajax = new ej.base.Ajax('./src/accordion/Ajax_content.html', 'GET', true);
+    var ajax = new ej.base.Ajax('./src/accordion/ajax-content.html', 'GET', true);
     ajax.send().then();
     ajax.onSuccess = function (data) {
         //Initialize Accordion component

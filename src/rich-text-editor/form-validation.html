@@ -1,0 +1,33 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id='content' class='box-form' style="margin: 0 auto; width:750px; padding:25px">
+            <form id="form-element" class="form-vertical">
+                <div class="form-group">
+                    <textarea id="defaultRTE" name="defaultRTE" required maxlength="100" minlength="20" data-msg-containerid="dateError">
+                    </textarea>
+                    <div id="dateError" style="padding-top: 10px"></div>
+                </div>
+                <div style="text-align: center">
+                    <button id="validateSubmit" class="samplebtn e-control e-btn" type="submit" data-ripple="true">Submit</button>
+                    <button id="resetbtn" class="samplebtn e-control e-btn" type="reset" data-ripple="true">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample is used to validate form using the <code>obtrusive Validation</code>. Type the values in RichTextEditor and
+        click the button to validate the form. Clear the values by the using <code>Reset</code>button.</p>
+</div>
+
+<div id="description">
+    <p>The form enables the validation with the formvalidator rules by clicking on the submit externally. All rules are validated
+        by the <code>formvalidator</code> rules.</p>
+</div>
+
+<style>
+    .box-form {
+        webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+</style>

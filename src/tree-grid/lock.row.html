@@ -1,0 +1,61 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid"></div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr style="height: 50px">
+            <td >
+                <div>Disable Rows</div>
+            </td>
+            <td style="width: 30%;padding-right: 10px">
+                <div id='columnddl'>
+                    <input type="text" tabindex="1" id='lockrows' />
+               </div>
+            </td>
+         </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This samples demonstrates the way of preventing editing for certain row and disable the 
+        locked rows to differentiate edit and non-editable rows in TreeGrid.
+   </p>
+</div>
+
+<div id="description">
+    <p>
+        The TreeGrid supports CRUD operations. This CRUD operations can be configured in TreeGrid 
+        using <code>editSettings</code>. Also, it has different modes to manipulate the datasource.
+    </p>
+    <p>
+        The available modes are,
+    </p>
+    <ul>
+        <li><code>Row </code></li>
+        <li><code>Cell</code></li>
+        <li><code>Dialog</code></li>
+    </ul>
+    <p> In this sample, we have provided an option in property panel to prevent editing for certain rows. Using beginEdit 
+        event of treegrid, we prevent the editing for selected Task ID row in the dropdown and disable the corresponding row using rowDataBound event of TreeGrid.
+    <p>
+        More information on the Lock Row can be found in
+        documentation section.
+    </p>
+</div>
+<style>
+    .material .disableRow .e-rowcell{
+        color: rgba(0, 0, 0, .38);
+    }
+    .fabric .disableRow .e-rowcell{
+        color: #c8c8c8;
+    }
+    .bootstrap .disableRow .e-rowcell{
+        color: rgba(0, 0, 0, .35);
+    }
+    .highcontrast .disableRow .e-rowcell{
+        color: #757575;
+    }
+</style>

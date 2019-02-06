@@ -1,4 +1,5 @@
-<div class="col-lg-8 control-section">
+<div class="e-tab-section">
+<div class="col-lg-8 content-wrapper control-section">
     <div class="e-sample-resize-container">
         <div id="tab_orientation">
             <div class="e-tab-header">
@@ -38,8 +39,10 @@
             <td style="width: 50%;">
                 <div>
                     <select id="orientation" class="form-control">
-                        <option value="top">Top</option>
-                        <option value="bottom">Bottom</option>
+                        <option value="Top">Top</option>
+                        <option value="Bottom">Bottom</option>
+                        <option value="Left">Left</option>
+                        <option value="Right">Right</option>
                     </select>
                 </div>
             </td>
@@ -60,6 +63,7 @@
         </tr>
     </tbody></table>
 </div>
+</div>
 <div id="action-description">
     <p>
         This sample demonstrates the <code>header</code> orientation of the <code>Tab</code>. Select option from drop-downs to switch header placement and changing the header style in properties panel.
@@ -67,7 +71,7 @@
 </div>
 <div id="description">
     <p>
-        The <code>Tab</code> allows to place the header section inside the Tab component either at <code>top / bottom</code> position by using <code>headerPlacement</code> property.
+        The <code>Tab</code> allows to place the header section inside the Tab component either at <code>top / bottom / left / right</code> position by using <code>headerPlacement</code> property.
     </p>
     <p>
         This sample illustrates the use of header placement and <code>showCloseButton</code> property.
@@ -83,7 +87,7 @@
         If above classes not included in root element default style will applied in Tab component.
     </p>
     <p>
-        More information about Tab can be found in this <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/getting-started.html">
+        More information about Tab can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/tab/es5-getting-started/">
         documentation</a> section.
     </p>
 </div>
@@ -151,5 +155,56 @@
     }
     .property-panel-content {
         padding: 10px;
+    }
+    #tab_orientation .e-listview:not(.e-list-template) .e-list-item {
+        height: 63px;
+    }
+
+    #tab_orientation .e-tab-text {
+        display: inherit;
+    }
+
+    .e-vertical-tab .e-content .e-item.e-active,
+    .e-vertical-tab .e-content .e-item.e-active ul.e-list-parent {
+        width: 100%;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        .e-sample-resize-container {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 481px) {
+        .control-section.e-tab-section,
+        .container-fluid,
+        .e-tab-section .content-wrapper,
+        .sb-sample-content-area .e-active {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    @media screen and (max-width: 376px) {
+        #tab_orientation .e-listview:not(.e-list-template) .e-list-item {
+            padding: 0;
+        }
+        .e-tab-section {
+            padding: 0 5px;
+        }
+        .e-tab .e-content.sb-sample-content-area .e-item.e-active {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .template-container {
+            padding: 7px 5px 0;
+        }
+        #tab_orientation .e-content .e-item.e-active {
+            padding: 10px 0;
+        }
+        .info {
+            padding: 7px 0 0 8px;
+        }
     }
 </style>

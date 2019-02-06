@@ -22,22 +22,6 @@ this.default = function () {
             majorTickLines: { width: 0 }, majorGridLines: { width: 1 },
             minorGridLines: { width: 1 }, minorTickLines: { width: 0 }
         },
-
-        //Initializing Axes
-        axes: [
-            {
-                title: 'Cumulative Frequency',
-                minimum: 0,
-                opposedPosition: true,
-                name: 'secondary',
-                maximum: 100,
-                interval: 20,
-                lineStyle: { width: 0 },
-                majorTickLines: { width: 0 }, majorGridLines: { width: 1 },
-                minorGridLines: { width: 1 }, minorTickLines: { width: 0 },
-                labelFormat: '{value}%',
-            }
-        ],
         chartArea: {
             border: {
                 width: 0
@@ -46,27 +30,13 @@ this.default = function () {
         //Initializing Chart Series
         series: [
             {
-                type: 'Column',
+                type: 'Pareto',
                 dataSource: [
                     { x: 'Traffic', y: 56 }, { x: 'Child Care', y: 44.8 },
                     { x: 'Transport', y: 27.2 }, { x: 'Weather', y: 19.6 },
                     { x: 'Emergency', y: 6.6 }
-                ],
-                xName: 'x', yName: 'y', name: 'Defect',
-            }, {
-                type: 'Line',
-                dataSource: [
-                    { x: 'Traffic', y: 33.8 }, { x: 'Child Care', y: 60.9 },
-                    { x: 'Transport', y: 77.3 }, { x: 'Weather', y: 89.1 },
-                    { x: 'Emergency', y: 100 }
-                ],
-                xName: 'x', yName: 'y', name: 'Cumulative', yAxisName: 'secondary',
-                width: 2,
-                marker: {
-                    visible: true,
-                    width: 10,
-                    height: 10
-                },
+                ], marker: { visible: true, width: 10, height: 10 },
+                xName: 'x', yName: 'y', name: 'Defect', width: 2
             }
         ],
         width: ej.base.Browser.isDevice ? '100%' : '60%',
@@ -81,7 +51,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#container');

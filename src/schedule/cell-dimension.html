@@ -1,19 +1,22 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule">
+        </div>
+    </div>
+</div>
 <style>
-    .schedule-cell-dimension.e-schedule .e-vertical-view .e-date-header-wrap table th {
+    .schedule-cell-dimension.e-schedule .e-vertical-view .e-date-header-wrap table col,
+    .schedule-cell-dimension.e-schedule .e-vertical-view .e-content-wrap table col {
         width: 200px;
     }
 
-    .schedule-cell-dimension.e-schedule .e-vertical-view .e-time-cells-wrap table th {
-        height: 100px;
-    }
-
+    .schedule-cell-dimension.e-schedule .e-vertical-view .e-time-cells-wrap table td,
     .schedule-cell-dimension.e-schedule .e-vertical-view .e-work-cells {
-        width: 200px;
         height: 100px;
     }
 
     .schedule-cell-dimension.e-schedule .e-month-view .e-work-cells,
-    .schedule-cell-dimension.e-schedule .e-month-view .e-header-cells {
+    .schedule-cell-dimension.e-schedule .e-month-view .e-date-header-wrap table col {
         width: 200px;
     }
 
@@ -21,22 +24,14 @@
         height: 200px;
     }
 </style>
-<div class="control-section">
-    <div class="content-wrapper">
-        <div id="Schedule">
-        </div>
-    </div>
-</div>
 <div id="action-description">
     <p>
-        This demo shows how to set the width and height of the cells by overriding the default CSS classes, so that the Schedule
+        This demo shows how to set the width and height of the cells by overriding the default CSS classes, so that the Scheduler
         events are viewable in a zoomed in style.
     </p>
 </div>
 <div id="description">
     <p>
-        In this demo, the height and width of the Schedule cells are set by overriding the default CSS class. By doing so, it also
-        needs to adjust the outer event wrapper element to cope with the CSS changes which can be done by calling the
-        <code>adjustEventWrapper</code> method.
+        In this demo, the height and width of the Scheduler cells are set by overriding the default CSS class.
     </p>
 </div>

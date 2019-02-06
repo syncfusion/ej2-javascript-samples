@@ -38,10 +38,6 @@ var cities = [
     { name: 'Florida', fare: 150 }
 ];
 
-this.default = function() {
-    renderComponents();
-};
-
 function renderComponents() {
     /* Initialize Tab with disabled headers for the wizard */
     tabObj = new ej.navigations.Tab({
@@ -69,7 +65,7 @@ function renderComponents() {
     journeyDate = new ej.calendars.DatePicker({
         width: '100%', floatLabelType: 'Auto', placeholder: 'Journey Date', min: new Date(today.getTime()),
         max: new Date(today.getTime() + 60 * 24 * 60 * 60 * 1000),
-        focus: function () { journeyDate.show(); }
+        value: new Date(),
     });
     journeyDate.appendTo('#journey_date');
     ticketType = new ej.dropdowns.DropDownList({
@@ -81,6 +77,7 @@ function renderComponents() {
         content: 'Your payment successfully processed', target: document.getElementById('dialog_target'), created: dlgCreated
     });
     alertDlg.appendTo('#alertDialog');
+    alertDlg.hide();
     availTrainGrid = new ej.grids.Grid({
         width: "100%",
         columns: [
@@ -293,4 +290,8 @@ function finalizeDetails(args) {
 function trainSelected(args) {
     selectedTrain = args.data;
 }
+
+this.default = function() {
+    renderComponents();
+};
 // tslint:enable:max-line-length

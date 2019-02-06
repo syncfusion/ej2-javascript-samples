@@ -51,7 +51,8 @@ this.default = function () {
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
             enableSelectionZooming: true,
-            mode: 'X'
+            mode: 'X',
+            enableScrollbar: true
         },
         //Initializing Chart Title
         title: 'Sales History of Product X',
@@ -60,7 +61,7 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#zoom-container');

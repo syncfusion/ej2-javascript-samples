@@ -4,13 +4,13 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var tooltiptheme = location.hash.split('/')[1];
+            tooltiptheme = tooltiptheme ? tooltiptheme : 'Material';
+            args.maps.theme = (tooltiptheme.charAt(0).toUpperCase() + tooltiptheme.slice(1));
         },
         tooltipRender: function (args) {
-            if (args.content.toString().indexOf('undefined') > -1) {
-              args.cancel = true;
+            if (!args.options.data) {
+                args.cancel = true;
             }
             },
         titleSettings: {
@@ -32,10 +32,10 @@ this.default = function () {
             },
         layers: [
             {
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapePropertyPath: 'name',
                 shapeDataPath: 'name',
-                dataSource: window.worldCup,
+                dataSource: new ej.maps.MapAjax('./src/maps/map-data/tooltip-datasource.json'),
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'name',

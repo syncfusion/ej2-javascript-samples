@@ -1,0 +1,105 @@
+<div id="target" class="control-section">
+    <button class="e-control e-btn" id="dialogBtn" role="button" e-ripple="true" style="position: absolute;" >Open Dialog</button>
+    <div id='dialog'>
+      <table style="width:405px;" id ="poschange" >
+      <tr> 
+        <td ><input id="radio1" type="radio" name="xy" ></td> 
+        <td><input id="radio2" type="radio" name="xy" ></td> 
+        <td><input id="radio3" type="radio" name="xy" ></td> 
+      </tr> 
+      <tr> 
+        <td><input id="radio4" type="radio" name="xy" ></td>
+        <td><input id="radio5" type="radio" name="xy" ></td>
+        <td><input id="radio6" type="radio" name="xy" ></td>
+      </tr> 
+      <tr> 
+        <td><input id="radio7" type="radio" name="xy" ></td>
+        <td><input id="radio8" type="radio" name="xy" ></td>
+        <td><input id="radio9" type="radio" name="xy" ></td>
+      </tr>
+      </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This example demonstrates how to position the dialog control. Select the appropriate radio button to position where the dialog is displayed.
+        The current position of the dialog is at the bottom.  Enable the "open dialog" button to reopen the dialog if it is closed.
+    </p>
+</div>
+<div id="description">
+    <p>
+        By default, the dialog is displayed in the center of the target container. Use the <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript/documentation/api/dialog/#position">
+        position</a> property to set location where the dialog displays relative to the target.
+        The property point-out the horizontal and vertical coordinates.
+        You can set position with specific X and Y coordinates in pixel values.
+    </p>
+    <p>
+        More information on the positioning of Dialog can be found in the <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript/documentation/dialog/getting-started/#positioning">
+        documentation section</a>.
+    </p>
+</div>
+<style>
+     #container {
+        height: 365px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .control-section{            
+        min-height: 370px;
+        margin-bottom: 15px;
+        margin-top: 10px;    
+    }
+
+    #dialog table,
+    #dialog th,
+    #dialog td {
+        border: 1px solid #D8D8D8;
+        border-collapse: collapse;
+    }
+
+    #dialog.e-dialog .e-footer-content {
+        padding: 0px 10px 10px;
+    }
+
+    #loader {
+        color: #008cff;
+        height: 40px;
+        left: 45%;
+        position: absolute;
+        top: 45%;
+        width: 30%;
+    }
+
+    .e-dialog .e-dlgcontent{
+        padding: 10px 16px 10px;
+    }     
+
+    .e-radio +label .e-label {
+    line-height:18px;
+    }
+
+    td {
+    padding: 6px;
+    }
+    
+    .bootstrap .e-dialog .e-footer-content {
+        padding: 5px;
+    }
+
+    .fabric .e-dialog .e-footer-content, .highcontrast .e-dialog .e-footer-content {
+    padding-left: 2px;
+    }
+
+    .fabric .control-section, .highcontrast .control-section {
+        min-height: 370px;
+        margin-bottom: 38px;
+        margin-top: 10px;
+    }
+    
+    .highcontrast .e-dialog .e-dlg-content, .fabric .e-dialog .e-dlg-content {
+        padding: 28px 19px 20px;
+    }
+
+</style>
