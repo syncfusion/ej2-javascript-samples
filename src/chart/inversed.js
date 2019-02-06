@@ -68,7 +68,8 @@ this.default = function () {
         load: function (args) {
             var inversedTheme = location.hash.split('/')[1];
             inversedTheme = inversedTheme ? inversedTheme : 'Material';
-            args.chart.theme = (inversedTheme.charAt(0).toUpperCase() + inversedTheme.slice(1));
+            args.chart.theme = (inversedTheme.charAt(0).toUpperCase() +
+                inversedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#inverse-container');

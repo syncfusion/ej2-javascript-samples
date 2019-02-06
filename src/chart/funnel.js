@@ -20,10 +20,13 @@ this.default = function () {
             }],
         //Initializing Tooltip
         tooltip: { enable: true, format: '${point.x} : <b>${point.y} %</b>' },
+        legendSettings: { toggleVisibility: false },
+        enableAnimation: false,
         load: function (args) {
             var funnelTheme = location.hash.split('/')[1];
             funnelTheme = funnelTheme ? funnelTheme : 'Material';
-            args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() + funnelTheme.slice(1));
+            args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() +
+                funnelTheme.slice(1)).replace(/-dark/i, 'Dark');
             if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
                 args.accumulation.series[0].height = '70%';
                 args.accumulation.series[0].width = '80%';
@@ -66,4 +69,5 @@ this.default = function () {
         document.getElementById('chartneckheight').onchange = function (e) {
             neckHeight(+document.getElementById('chartneckheight').value);
         };
+
 };

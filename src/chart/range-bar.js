@@ -11,7 +11,6 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             labelFormat: '{value}˚F',
-            minimum: 0, maximum: 100, interval: 20,
             edgeLabelPlacement: 'Shift',
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 }
@@ -51,7 +50,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#container');

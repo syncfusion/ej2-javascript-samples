@@ -69,7 +69,8 @@ this.default = function () {
         load: function (args) {
             var lineTheme = location.hash.split('/')[1];
             lineTheme = lineTheme ? lineTheme: 'Material';
-            args.chart.theme = (lineTheme.charAt(0).toUpperCase() + lineTheme.slice(1));
+            args.chart.theme = (lineTheme.charAt(0).toUpperCase() + 
+                lineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#line-container');

@@ -10,52 +10,19 @@ this.default = function () {
         document.getElementsByClassName('tabContainer')[0].classList.add('e-visbile-layer');
     }
     //Define an array of JSON data
-    var data1 = [
-        { text: 'Smith', id: 'received-01', icon: 'e-custom', type: 'received', group: 'Received', time: '2 hours ago', category: 'Today' },
-        {
-            text: 'Johnson', id: 'received-02', icon: 'e-custom', type: 'received',
-            group: 'Received', time: 'Yesterday', category: 'Yesterday'
-        },
-        { text: 'Williams', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: '4 hours ago', category: 'Today' },
-        { text: 'Jones', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-        {
-            text: 'Brown', id: 'received-03', icon: 'e-custom', type: 'received',
-            group: 'Received', time: 'Yesterday', category: 'Yesterday'
-        },
-        {
-            text: 'Anderson', id: 'received-01', icon: 'e-custom', type: 'received',
-            group: 'Received', time: '12 hours ago', category: 'Today'
-        },
-        {
-            text: 'Thomas', id: 'received-02', icon: 'e-custom', type: 'received',
-            group: 'Received', time: 'Yesterday', category: 'Yesterday'
-        },
-        { text: 'Jackson', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-        { text: 'Emily', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: '14 hours ago', category: 'Today' },
-        { text: 'White', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-        { text: 'Jones', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: '18 hours ago', category: 'Today' },
-        { text: 'Grace', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-        { text: 'Brooklyn', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-        {
-            text: 'Arianna', id: 'received-01', icon: 'e-custom', type: 'received',
-            group: 'Received', time: 'Yesterday', category: 'Yesterday'
-        },
-        {
-            text: 'Katherine', id: 'received-02', icon: 'e-custom', type: 'received',
-            group: 'Received', time: 'Yesterday', category: 'Yesterday'
-        },
-    ];
 
     // Template of the list item
-    var template = '<div class="${icon} wrapper"> <div class="content">${text}</div> <div class="subContent">' +
-        '<span class="${type} subicons"></span><span>${group}, ${time}</span></div>  </div>';
+    var template = '<div class="e-list-wrapper e-list-avatar e-list-multi-line">' +
+        '<span class="e-avatar e-icon"></span><span class="e-list-item-header">${text}</span> <span class="${type} e-list-content">' +
+        '${group}, ${time}</span></div>';
 
     //Initialize ListView component
     var listObj1 = new ej.lists.ListView({
         // Set the datasource
-        dataSource: data1,
+        dataSource: window.callHistoryData,
         // Map the fields from the datasource into fields property
         fields: { text: 'text', groupBy: 'category' },
+        cssClass: 'e-list-template',
         //Map the template for list items
         template: template,
     });
@@ -63,9 +30,10 @@ this.default = function () {
 
     var listObj2 = new ej.lists.ListView({
         // Set the datasource
-        dataSource: data1,
+        dataSource: window.callHistoryData,
         // Map the fields from the datasource into fields property
         fields: { text: 'text', groupBy: 'category' },
+        cssClass: 'e-list-template',
         //Map the template for list items
         template: template,
     });
@@ -75,9 +43,10 @@ this.default = function () {
 
     var listObj3 = new ej.lists.ListView({
         // Set the datasource
-        dataSource: data1,
+        dataSource: window.callHistoryData,
         // Map the fields from the datasource into fields property
         fields: { text: 'text', groupBy: 'category' },
+        cssClass: 'e-list-template',
         //Map the template for list items
         template: template,
 
@@ -112,7 +81,7 @@ this.default = function () {
         ],
         selected: function (args) {
             var newData;
-            newData = filterData(data1, types[args.selectedIndex]);
+            newData = filterData(window.callHistoryData, types[args.selectedIndex]);
             listObjects[args.selectedIndex].dataSource = newData;
         }
     });

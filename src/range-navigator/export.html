@@ -1,0 +1,87 @@
+<div>
+    <div class="col-lg-9 control-section">
+        <div class="content-wrapper">
+            <br/>
+            <h4 id="days" align="center" style="font-family: Segoe UI;font-weight: 500; font-style:normal; font-size:15px;">Conns,Inc Stock Close Details</h4>
+            <div id="container" align="center"></div>
+            <br/> <br/>
+            <div id="chart" align="center"></div>
+        </div>
+    </div>
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tr style="height: 50px">
+                <td style="width: 40%">
+                    <div>Export Type:
+                    </div>
+                </td>
+                <td style="width: 60%;">
+                    <div style="margin-left: -10px">
+                        <select id="mode">
+                            <option value='JPEG'>JPEG</option>
+                            <option value='PNG'>PNG</option>
+                            <option value='SVG'>SVG</option>
+                            <option value='PDF'>PDF</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 40%">
+                    <div>File Name:</div>
+                </td>
+                <td style="width: 40%;">
+                    <div class="e-float-input" style='margin-top: 0px;'>
+                        <input type="text" value="Chart" id="fileName" style="margin-left: -10px">
+                    </div>
+                </td>
+            </tr>
+            <tr id="button-control" style="height: 50px" align='center'>
+                <td>
+                    <div>
+                        <button id="exportBtn">Export</button>
+                    </div>
+                </td>
+            </tr>
+            <tr id="button-control" style="height: 50px" align='center'>
+                <td align='center'>
+                    <div>
+                        <button id="printBtn">Print</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample illustrates the export feature in the range navigator. You can export the range navigator in PNG, SVG, PDF, or JPEG format by clicking <code>Export</code>.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure the export feature. The rendered range navigator can be exported as either JPEG, PNG, or SVG format. It can be achieved using the Blob. It is supported only in modern browsers.
+    </p>
+    <p>
+        More information on the export can be found in this 
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/chart/api-series.html#type-chartseriestype">documentation section</a>.
+    </p>
+</div>
+<style>
+    #button-control {
+        width: 100%;
+        text-align: center;
+    }
+
+    #control-container {
+        padding: 0px !important;
+    }
+
+    .e-export-icon::before {
+        content: '\e728';
+    }
+
+     .e-print-icon::before {
+        content: '\e813';
+    }
+</style>

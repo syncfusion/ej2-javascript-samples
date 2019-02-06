@@ -1,0 +1,40 @@
+<div class="control-section">
+    <div style="width: 90%">
+        <div id="stockRange" style="font-family: Segoe UI;font-weight: 500; font-style:normal; font-size:14px;">
+            <div id="title">AAPL 2012-2015</div>
+            <div id="close" style=" font-size:10px">
+                <div id="value" style="float: left;">159.67</div>
+                <div id="inc" style="float: left; color: green;">&nbsp;&nbsp;&nbsp;+11.49 (+1.06%)</div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div id="container" align="center"></div>
+    <div id="chart" align="center"></div>
+    <div id="action-description">
+        <p>
+            This sample illustrates a stock price for AAPL over a period. Period Selector shows the information about the stock values
+            without range navigator.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this example, you can see how to render and configure the period Selector with the financial chart. Tooltip is enabled
+            in this example, to see the tooltip in action, while the selected range is changed.
+        </p>
+        <br>
+    </div>
+    <style>
+        #control-container {
+            padding: 0px !important;
+        }
+
+        #chart_tooltip {
+            opacity: 0;
+        }
+
+        #chart_HorizontalLine,
+        #chart_VerticalLine {
+            stroke-dasharray: 2
+        }
+    </style>

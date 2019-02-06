@@ -1,0 +1,12 @@
+.npmrc
+.vscode/
+dist/
+node_modules/
+src/**/*.min.js
+src/**/*-plnkr.json
+src/common/search-index.js
+samples/*
+src/common/api-table
+src/common/api-table.json
+!src/common/api-table-generator.js
+!styles/highlight.css

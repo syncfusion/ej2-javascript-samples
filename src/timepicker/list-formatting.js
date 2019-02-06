@@ -59,7 +59,6 @@ this.default = function () {
 
         //disable the specific time from the selection
         if ((minutes / 60) % 3 === 0) {
-            span.classList.add('e-icons');
             //disable the time values by addeding the e-disabled class.
             args.element.classList.add('e-disabled');
         }

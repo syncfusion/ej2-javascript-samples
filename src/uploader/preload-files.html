@@ -1,0 +1,40 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize Uploader -->
+        <input type='file' id='fileupload' name='UploadFiles'/>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <div  style='margin-left: 50px; padding-top:25px;'>
+            <button class="e-btn e-css" id="clearbtn">Clear All</button>
+        </div>
+    </div>
+</div>
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+    }
+    .e-upload {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+        float: none;
+    }
+    .e-upload .e-upload-actions {
+        float: none;
+        text-align: right;
+    }
+</style>
+
+<div id="action-description">
+    <p>This example demonstrates how to pre-load the files of the Uploader. The already uploaded files are configured in file list to view and remove them.</p>
+</div>
+
+<div id="description">
+    <p>The Uploader control allows to load initial list of files which are already uploaded in server. The preload files are useful to view and remove from server. Also, you can achieve state persistence on page refresh.</p>
+    <p>For more information, you can refer to the Preload Files section from this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/uploader/async/#preload-files">documentation section</a>.</p>
+    <p>To achieve state persistence, you can refer to this How-to section.</p>
+</div>

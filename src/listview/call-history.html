@@ -19,32 +19,21 @@
     </div>
 </div>
 <div id="action-description">
-    <p>This sample demonstrates the call history application using listview. Click on the checklist to filter the data in contacts
-        list.
+    <p>This sample demonstrates the call history application using listview. Click on the checklist to filter the data in contacts list.
     </p>
 </div>
 
 <div id="description">
-    <p>This sample filters out the data from listview based on the data selected from the checklist. Here, listview utilizes
-        the
+    <p>This sample filters out the data from listview based on the data selected from the checklist. Here, listview utilizes the
         <code>template</code>
         <code>showIcon</code> properties to repesent the call history application. The Tab component is used in this sample for navigation purposes.
     </p>
 </div>
 <style>
-    .e-list-item {
-        cursor: pointer;
-    }
-
-    .layoutWrapper.e-device-layout {
-        visibility: visible;
-    }
-
-    .e-visbile-layer {
-        visibility: visible;
-    }
+    /* Layout customization */
 
     .layoutWrapper {
+        line-height: initial;
         border: 1px solid black;
         width: 285px;
         height: 505px;
@@ -55,7 +44,7 @@
         visibility: hidden;
     }
 
-    .speaker {
+    .layoutWrapper .speaker {
         border: 1px solid black;
         border-radius: 5px;
         width: 33.33333333%;
@@ -64,7 +53,7 @@
         position: relative;
     }
 
-    .outerButton {
+    .layoutWrapper .outerButton {
         width: 30px;
         height: 30px;
         border: 1px solid black;
@@ -74,7 +63,7 @@
         left: calc(50% - 15px);
     }
 
-    .camera {
+    .layoutWrapper .camera {
         position: absolute;
         left: calc(-15% - 10px);
         top: -100%;
@@ -87,16 +76,21 @@
     .layoutWrapper .layout {
         border: 1px solid black;
         margin: 20px 13px 0px 13px;
-
     }
 
-    .highcontrast .layoutWrapper .layout,
-    .highcontrast .layoutWrapper .camera,
-    .highcontrast .layoutWrapper .outerButton,
-    .highcontrast .layoutWrapper .speaker,
-    .highcontrast .layoutWrapper {
-        border-color: white;
+    .layout #list-container .e-list-item {
+        cursor: pointer;
     }
+
+    .layoutWrapper.e-device-layout {
+        visibility: visible;
+    }
+
+    .e-visbile-layer {
+        visibility: visible;
+    }
+
+    /* ListView customization */
 
     @font-face {
         font-family: 'Phone Icons';
@@ -112,108 +106,80 @@
         font-style: normal;
     }
 
-    #all {
+    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-multi-line,
+    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-multi-line,
+    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-multi-line {
+        padding: 5px;
+    }
+
+    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-avatar,
+    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-avatar,
+    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-avatar {
+        padding-left: 50px;
+        padding-right: 5px;
+    }
+
+    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar,
+    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar,
+    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar {
+        top: 5px;
+        left: 5px;
+    }
+
+    .layout #list-container #all,
+    .layout #list-container #received,
+    .layout #list-container #missed {
         max-height: 360px;
     }
 
-    #received {
-        max-height: 360px;
-    }
-
-    #missed {
-        max-height: 360px;
-    }
-
-    #list-container {
+    .layout #list-container {
         height: 405px;
     }
 
-    #list-container .wrapper {
-        position: relative;
-    }
-
-    #list-container .content {
-        position: absolute;
-        top: -10px;
-        left: 30px;
-        font-size: 14px;
-    }
-
-    #list-container .subContent {
-        position: absolute;
-        top: 6px;
-        left: 30px;
-        font-size: 11px;
-        font-style: italic;
-
-    }
-
-    #list-container .subContent .received {
+    .layout #list-container .received {
         font-family: Call-icons;
     }
 
-    #list-container .subContent .received:before {
+    .layout #list-container .received:before {
         content: '\e700';
         font-size: 8px;
+        margin-right: 6px;
     }
 
-    #list-container .subContent .missed {
+    .layout #list-container .missed {
         font-family: Call-icons;
     }
 
-    #list-container .subContent .missed:before {
+    .layout #list-container .missed:before {
         content: '\e702';
         font-size: 8px;
+        margin-right: 6px;
     }
 
-    #list-container .subContent .subicons+span {
-        margin-left: 6px;
+    .layout #list-container .e-icon {
+        font-family: 'e-customized-icons';
+        background: transparent;
+        color: black;
     }
 
-    .e-custom {
-        font-family: 'e-icons';
-    }
-
-    .e-custom:before {
+    .layout #list-container .e-icon:before {
         content: '\e902';
     }
 
-    #toDoList {
-        border: 1px solid #dddddd;
-        border-radius: 3px;
+    /* ListView theme customization */
+
+    .highcontrast .layoutWrapper .layout,
+    .highcontrast .layoutWrapper .camera,
+    .highcontrast .layoutWrapper .outerButton,
+    .highcontrast .layoutWrapper .speaker,
+    .highcontrast .layoutWrapper {
+        border-color: white;
     }
 
-    .control-section {
-        overflow: auto;
+    @font-face {
+        font-family: 'e-customized-icons';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
-
-    #list-container h4 {
-        padding-left: 16px;
-    }
-
-    .logs {
-        font-size: 15px;
-        padding: 25px;
-        /* border: 1px solid darkgray; */
-        margin-top: 15px;
-        font-weight: 500;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        user-select: none;
-    }
-
-    .logs * {
-        padding-bottom: 10px;
-    }
-
-    #list-container {
-        height: 410px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .layoutWrapper.e-device-layout {
-            visibility: hidden;
-        }
-        #list-container {
-            visibility: visible;
-        }
 </style>

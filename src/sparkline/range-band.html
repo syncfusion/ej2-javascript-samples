@@ -1,0 +1,69 @@
+<div class="col-lg-8 control-section">
+        <div id="spark-container" class="row">
+            <div class="cols-sample-area" align="center">
+                    <p>
+                        <font size=4px> Sales Growth Comparison with various Products</font>
+                    </p>
+                <script type="text/x-template" id="columnTemplate1">
+                    <div id="sparkline2010${id}" />
+                </script>
+                <script type="text/x-template" id="columnTemplate2">
+                    <div id="sparkline2011${id}" />
+                </script>
+                <div id="Grid"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div id="action-description">
+        <p>
+            This sample depicts the range band feature and its customization options available in sparklines.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this example, you can see how to render sparkline with range band and the customization options available in range band. Here, the sparklines are placed inside the data grid control.
+        </p>
+        
+    
+    </div>
+    <style>
+        td{
+            padding: 10px;
+        }
+        .e-headertext{
+            font-weight: bolder;
+        }
+        #range-min > * {
+            padding: 0px !important;
+        }
+        #range-max > * {
+            padding: 0px !important;
+        }
+    </style>
+    <div class="col-lg-4 property-section">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <br>
+        <table id="property" style="width:100%" title="Properties">
+            <tbody>
+                <tr style="height: 30px ">
+                    <td style="width: 50% ">
+                        Range Band Min 1
+                    </td>
+                    <td style="width: 50% ">
+                        <div id="range-min"></div>
+                    </td>
+                </tr>
+                <tr style="height: 30px ">
+                    <td style="width: 50% ">
+                        Range Band Max 3
+                    </td>
+                    <td style="width: 50% ">
+                        <div id="range-max"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

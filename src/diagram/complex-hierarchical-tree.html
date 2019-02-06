@@ -1,0 +1,143 @@
+<div class="col-lg-8 control-section">
+        <style>
+                .image-pattern-style {
+                    background-color: white;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 75px;
+                    width: calc((100% - 18px) / 3);
+                    cursor: pointer;
+                    border: 1px solid #D5D5D5;
+                    background-position: center;
+                    float: left;
+                }
+            
+                .image-pattern-style:hover {
+                    border-color: gray;
+                    border-width: 2px;
+                }
+            
+                .row {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+            
+                .row-header {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            
+                .e-selected-style {
+                    border-color: #006CE6;
+                    border-width: 2px;
+                }
+            
+                .property-panel-header {
+                    padding-top: 2px;
+                    padding-bottom: 5px;
+                }
+            
+                .e-checkbox-wrapper .e-label {
+                    font-size: 12px;
+                }
+            
+                .col-xs-6 {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+            </style>
+    <div class="content-wrapper" style="width: 100%">
+        <div id="diagram"></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section" style="float:right;">
+    <div class="property-panel-header">
+        Layout Settings
+    </div>
+    <div class="row property-panel-content" id="appearance" style="padding-top: 10px">
+        <div class="row row-header">
+            Orientation
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div class="image-pattern-style  e-selected-style" id="topToBottom" style="background-image: url(./src/diagram/Images/common-orientation/toptobottom.png); margin-right: 3px">
+            </div>
+            <div class="image-pattern-style" id="bottomToTop" style="background-image: url(./src/diagram/Images/common-orientation/bottomtotop.png);margin-right: 3px">
+            </div>
+            <div class="image-pattern-style" id="leftToRight" style="background-image: url(./src/diagram/Images/common-orientation/lefttoright.png);  margin: 0px 3px">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div class="image-pattern-style" id="rightToLeft" style="background-image: url(./src/diagram/Images/common-orientation/righttoleft.png); margin: 0px 3px">
+            </div>
+        </div>
+    </div>
+    <div class="row property-panel-content" style="padding-top: 10px">
+        <div class="row row-header">
+            Behavior
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div style="display: table;height: 35px; padding-left: 0px" class="col-xs-5">
+                <div style="display: table-cell; vertical-align: middle">Margin X</div>
+            </div>
+            <div class="col-xs-7">
+                <input type="text" id='marginLeft' />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div style="display: table;height: 35px; padding-left: 0px" class="col-xs-5">
+                <div style="display: table-cell; vertical-align: middle">Margin Y</div>
+            </div>
+            <div class="col-xs-7">
+                <input type="text" id='marginTop' />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div style="display: table;height: 35px; padding-left: 0px" class="col-xs-5">
+                <div style="display: table-cell; vertical-align: middle">Horizontal Spacing</div>
+            </div>
+            <div class="col-xs-7">
+                <input type="text" id='horiontal' />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <div style="display: table;height: 35px; padding-left: 0px" class="col-xs-5">
+                <div style="display: table-cell; vertical-align: middle">Vertical Spacing</div>
+            </div>
+            <div class="col-xs-7">
+                <input type="text" id='vertical' />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates a complex hierarchical template that is built from an external data source using complex hierarchical
+        tree algorithm.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to generate a complex hierarchical tree from external data sources. You can also customize
+        spacing between the objects in the tree. You can use the
+        <code>horizontalSpacing</code> and
+        <code>verticalSpacing</code> properties of
+        <code>layout</code> to customize the space between the objects in the tree. You can use the
+        <code>layoutOrientation</code> property of
+        <code>layout</code> to change the orientation of the tree.
+    </p>
+    <p>
+        To change the orientation of the tree, click the templates in the property panel.
+    </p>
+
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        Diagram component's features are segregated into individual feature-wise modules. To generate diagrams from an external data
+        source, we need to Inject
+        <code>DataBinding</code> module using
+        <code>Diagram.Inject(DataBinding)</code> method. To automatically arrange the objects in a hierarchical structure, we need to Inject
+        <code>ComplexHierarchicalTree</code> module using
+        <code>Diagram.Inject(ComplexHierarchicalTree)</code> method.
+    </p>
+    <br>
+</div>

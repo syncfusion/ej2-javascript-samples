@@ -8,7 +8,7 @@ this.default = function() {
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#outlinebtn');
 
-    button = new ej.buttons.Button({ cssClass: 'e-flat' });
+    button = new ej.buttons.Button({ cssClass: 'e-flat e-primary' });
     button.appendTo('#flatbtn');
 
     button = new ej.buttons.Button({ cssClass: 'e-success'  });
@@ -23,13 +23,13 @@ this.default = function() {
     button = new ej.buttons.Button({ cssClass: 'e-info' });
     button.appendTo('#infobtn');
 
-    button = new ej.buttons.Button({ iconCss: 'e-icons e-add-icon', cssClass: 'e-small e-round', isPrimary: true });
+    button = new ej.buttons.Button({ iconCss: 'e-btn-sb-icons e-add-icon', cssClass: 'e-small e-round', isPrimary: true });
     button.appendTo('#roundbtn');
 
-    var toggleBtn = new ej.buttons.Button({ iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isToggle: true });
+    var toggleBtn = new ej.buttons.Button({ iconCss: 'e-btn-sb-icons e-play-icon', cssClass: 'e-flat e-primary', isToggle: true });
     toggleBtn.appendTo('#togglebtn');
 
-    button = new ej.buttons.Button({ iconCss: 'e-icons e-open-icon', cssClass: 'e-flat', iconPosition: 'Right' });
+    button = new ej.buttons.Button({ iconCss: 'e-btn-sb-icons e-open-icon', cssClass: 'e-flat e-primary', iconPosition: 'Right' });
     button.appendTo('#openiconbtn');
 
     button = new ej.buttons.Button({ cssClass: 'e-small'});
@@ -39,10 +39,10 @@ this.default = function() {
     toggleBtn.element.onclick = function () {
         if (toggleBtn.element.classList.contains('e-active')) {
             toggleBtn.content = 'Pause';
-            toggleBtn.iconCss = 'e-icons e-pause-icon';
+            toggleBtn.iconCss = 'e-btn-sb-icons e-pause-icon';
         } else {
             toggleBtn.content = 'Play';
-            toggleBtn.iconCss = 'e-icons e-play-icon';
+            toggleBtn.iconCss = 'e-btn-sb-icons e-play-icon';
         }
     };  
 };

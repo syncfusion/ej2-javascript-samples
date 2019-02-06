@@ -1,0 +1,62 @@
+<div class="control-section">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row" style="width:80%; transform: translateX(13%)">
+                <div class="col-sm-8">
+                    <div id="text" style="
+                    display: flex; font-size: 36px; font-weight: 500;
+                    align-items: center;
+                    justify-content: space-between;" align="left;">
+                        Bitcoin (USD) Price
+                    </div>
+                </div>
+                <div class="col-sm-4" align="right" style="margin-top: 1%">
+                    <div>
+                        <label for="switch" style="font-size: 16px; margin-right: 2%">Closing Price </label>
+                        <input id="switch" type="checkbox">
+                        <label for="switch1" style="font-size: 16px; margin-left: 2%">OHLC</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="row" align="center">
+                <div id="container"></div>
+                <div id="chart" style="width: 90%"></div>
+                <div id="range"></div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualize the Bitcoin price change over the period with candle and line series. Period Selector shows the information about the data.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure the period selector with range navigator to see the price changes for Bitcoin. Tooltip is enabled in this example, to see the tooltip in action, while the selected range is changed.
+    </p>
+    <br>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+
+    .e-switch-wrapper {
+        margin-top: 5%;
+        width: 15%
+    }
+    #chart_tooltip {
+            opacity: 0;
+    }
+    #chart_HorizontalLine, #chart_VerticalLine {
+            stroke-dasharray: 2
+    }
+    @media only screen and (max-width: 300px) {
+    #text {
+        font-size: 10px
+    }
+}
+</style>

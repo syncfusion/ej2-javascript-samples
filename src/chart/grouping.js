@@ -22,6 +22,7 @@ this.default = function () {
                 { 'x': 'Kenya', text: 'Kenya: 6', y: 6 },
                 ],
                 animation: { enable: true },
+                explode: true,
                 dataLabel: {
                     visible: true,
                     position: 'Outside',
@@ -33,14 +34,15 @@ this.default = function () {
                 radius: '70%', name: 'RIO',
                 xName: 'x',
                 yName: 'y',
-                groupTo: '10',
+                groupTo: '9',
+				groupMode: 'Point',
                 startAngle: 0,
                 endAngle: 360,
                 innerRadius: '0%',
             }
         ],
         pointRender: function (args) {
-            if (args.point.x.indexOf('Others') > -1) {
+            if (args.point.isClubbed || args.point.isSliced) {
                 args.fill = '#D3D3D3';
             }
         },
@@ -52,13 +54,14 @@ this.default = function () {
             args.text = args.point.x + ' ' + args.point.y;
         },
         //Initializing Tooltip
-        tooltip: { enable: true, header: 'RIO', format: '${point.x} <b> ${point.y} Medals</b>' },
+        tooltip: { enable: false },
         //Initializing Title
         title: 'RIO Olympics Gold',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     pie.appendTo('#grouping-container');
@@ -70,8 +73,19 @@ this.default = function () {
         pie.refreshSeries();
         pie.refreshChart();
     }
-    document.getElementById('clubpoint').onpointermove = document.getElementById('clubpoint').ontouchmove =
-        document.getElementById('clubpoint').onchange = function (e) {
-            clubchange(+document.getElementById('clubpoint').value);
-        };
+    document.getElementById('clubpoint').onchange = function (e) {
+        clubchange(+document.getElementById('clubpoint').value);
+    };  
+    var mode = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select Range Bar Color',
+        width: 120,
+        change: function () {
+            var currentValue = mode.value === 'Point' ? 9 : 8;
+            document.getElementById('clubpoint').value = currentValue.toString();
+            pie.series[0].groupMode = mode.value;
+            clubchange(currentValue);
+        }
+    });
+    mode.appendTo('#mode');
 };

@@ -160,7 +160,7 @@ this.default = function () {
         var processorPrice = document.getElementById('processorPrice');
         onChange(processorPrice, processorSlider.value, 'CORE');
         var memoryPrice = document.getElementById('memoryPrice');
-        onChange(memoryPrice, processorSlider.value, 'GB');
+        onChange(memoryPrice, memorySlider.value, 'GB');
         var storgePrice = document.getElementById('storgePrice');
         onChange(storgePrice, storageSlider.value, 'GB');
         var cloudPrice = document.getElementById('cloudPrice');

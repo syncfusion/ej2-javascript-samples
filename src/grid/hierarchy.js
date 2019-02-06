@@ -1,12 +1,12 @@
 this.default = function () {
     var dataManger = new ej.data.DataManager({
-        url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Orders',
-        adaptor: new ej.data.ODataV4Adaptor(),
+        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders',
+        adaptor: new ej.data.ODataAdaptor(),
         crossDomain: true
     });
     var dataManger2 = new ej.data.DataManager({
-        url: 'http://services.odata.org/V4/Northwind/Northwind.svc/Customers',
-        adaptor: new ej.data.ODataV4Adaptor(),
+        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Customers',
+        adaptor: new ej.data.ODataAdaptor(),
         crossDomain: true
     });
     var grid = new ej.grids.Grid({

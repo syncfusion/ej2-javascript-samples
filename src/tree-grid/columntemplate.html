@@ -1,0 +1,44 @@
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+<script type="text/x-template" id="columnTemplate1">
+    <div id="spkline${EmployeeID}"></div>
+</script>
+<script type="text/x-template" id="columnTemplate2">
+    <div id="spkarea${EmployeeID}"></div>
+</script>
+<script type="text/x-template" id="columnTemplate3">
+    <div id="spkwl${EmployeeID}"></div>
+</script>
+
+<div>
+    <div class="control-section">
+        <div class="content-wrapper">
+            <div id="TreeGrid"></div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the usage of template columns in TreeGrid. 
+       In this sample, we have shown chart controls in the Employee Image column.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The TreeGrid provides a way to use a custom layout for each cell using column template feature. 
+        The <code>columns->template</code> property accepts either string or HTML element`s ID value, which will be used as the template for the cell.
+    </p>
+    <p>
+        In this demo, using column template, we have presented sparkLine charts for the "Tax per annum", "One day index" and "Year GR" columns. In <code>columns->template</code> we have assigned with the ID of a SCRIPT element whose content is used as the template.
+    </p>
+    <p>The template expression should be provided inside <code>${...}</code> interpolation syntax</p>
+    <p>
+        More information about Column Template can be found in this documentation section.
+    </p>
+</div>

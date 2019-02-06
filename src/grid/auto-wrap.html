@@ -1,0 +1,43 @@
+<style>
+    .datalink {
+        text-align: right;
+        padding-top: 25px;
+    }
+    @media screen and (max-width: 480px) {
+        .datalink {
+            padding-bottom: 0;
+            padding-top: 15px;
+        }
+    }
+</style>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Grid"></div>
+        <div class="datalink">Source:
+            <a href="https://en.wikipedia.org/wiki/List_of_prolific_inventors " target="_blank">
+            Wikipedia: List of Prolific inventors</a>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+        <p>This sample demonstrates the Grid component with the auto wrap column cell. In this sample, 
+            you can see that the main fields of invention column cell content exceeded the available width hence it has been wrapped into multiple lines.</p>
+    </div>
+
+<div id="description">
+    <p>Auto wrap cell content can be enabled using <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowtextwrap-boolean">
+        allowTextWrap
+        </a></code> 
+    property of the Grid. Setting this property will
+        wrap cell text on multiple lines. 
+        This feature is useful to view the cell content when it exceeds the cell width.</p>
+    <p>Setting this property will wrap the text in both content cell and header cell.</p>
+    <p>In this demo, the <code><a target="_blank" class="code"
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowtextwrap-boolean">
+        allowTextWrap
+        </a></code> property is enabled and you can also see that the <strong>main fields of invention</strong> column 
+        whose content exceeded the cell width is wrapped into multiple lines.
+    </p>
+</div>

@@ -23,7 +23,7 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            maximum: 250, interval: 50, minimum: 0, labelFormat: '{value}M'
+            labelFormat: '{value}M'
         },
         //Initializing Chart Series
         series: [
@@ -56,7 +56,8 @@ this.default = function () {
         load: function (args) {
             var polarColumnTheme = location.hash.split('/')[1];
             polarColumnTheme = polarColumnTheme ? polarColumnTheme : 'Material';
-            args.chart.theme = (polarColumnTheme.charAt(0).toUpperCase() + polarColumnTheme.slice(1));
+            args.chart.theme = (polarColumnTheme.charAt(0).toUpperCase() + 
+                polarColumnTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#polar-column-container');

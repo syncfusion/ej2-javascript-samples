@@ -1,0 +1,117 @@
+<div class="col-lg-12 control-section toast-pos-section">
+    <div class="e-sample-resize-container" id="toast_pos_target">
+        <div id="toast_pos"> </div>
+        <div id="toast_pos_property">
+            <table style="width: 100%">
+                <tbody><tr>
+                    <td>
+                        <div style="padding:25px 0 0 0;">
+                            <input id="dropdownRadio" type="radio">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="padding:25px 0 0 0;">
+                            <input id="customRedio" type="radio">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="dropdownChoose" colspan="2">
+                        <div id="dropdown" style="padding-top:25px;">
+                            <select id="position">
+                                <option value="topleft">Top Left</option>
+                                <option value="topright">Top Right</option>
+                                <option value="topcenter">Top Center</option>
+                                <option value="topfullwidth">Top Full Width</option>
+                                <option value="bottomleft">Bottom Left</option>
+                                <option value="bottomright">Bottom Right</option>
+                                <option value="bottomcenter">Bottom Center</option>
+                                <option value="bottomfullwidth">Bottom Full Width</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="customChoose" style="display: none">
+                        <form id="formId" class="form-horizontal">
+                            <div class="e-row">
+                                <div class="e-float-input">
+                                    <input class="e-input" id="xPos" name="Digits" value="50" digits="true" data-digits-message="Please enter digits only." required="">
+                                    <span class="e-float-line"></span>
+                                    <label class="e-float-text" for="Digits">X Position</label>
+                                </div>
+                            </div>
+                            <div class="e-row">
+                                <div class="e-float-input">
+                                    <input class="e-input" id="yPos" name="Digits" value="50" digits="true" data-digits-message="Please enter digits only." required="">
+                                    <span class="e-float-line"></span>
+                                    <label class="e-float-text" for="Digits">Y Position</label>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="padding:25px 0 0 0;">
+                            <input id="radio1" type="radio">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="padding:25px 0 0 0;">
+                            <input id="radio2" type="radio">
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+            <div id="toast_btn" style="padding-top: 25px">
+                <button class="e-btn e-control" id="show_Toast" style="margin-right: 15px"> Show Toasts </button>
+                <button class="e-btn e-control" id="hideTosat"> Hide All </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates the different positioning of the <code>Toast</code> based on the target given. 
+    </p>
+</div>
+<div id="description">
+    <p>
+        Based on the use case toast can take the body element or any specific element as target. In this sample, with help of custom inputs toast can be positioned in the target.
+    </p>
+    <p>Toast can be positioned in the 8 pre-defined places.</p>
+    <p>Custom option will enable to give X and Y values to align the toast based on the given inputs.</p>
+    <p>More information about Toast can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/toast/es5-getting-started/">documentation</a> section.</p>
+</div>
+
+<style>
+     .toast-pos-section #toast_pos_property {
+        height: 500px;
+        border: none;
+        margin: auto;
+    }
+
+    #toast_pos_property td {
+        width: 50%;
+    }
+
+    .e-toast-icon.e-laura.e-icons {
+        border-radius: 50%;
+        background-image: url('./src/toast/resource/laura.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50px !important;
+        width: 100px !important;
+        background-size: 50px 50px;
+        margin: 0;
+    }
+
+
+    @media (min-width: 740px) {
+        #toast_pos_property {
+            width: 450px;
+        }
+    }
+</style>

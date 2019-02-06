@@ -4,9 +4,9 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var markertheme = location.hash.split('/')[1];
+            markertheme = markertheme ? markertheme : 'Material';
+            args.maps.theme = (markertheme.charAt(0).toUpperCase() + markertheme.slice(1));
         },
         useGroupingSeparator: true,
         format: 'n',
@@ -21,7 +21,7 @@ this.default = function () {
         },
         layers: [
             {
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 dataSource: window.topPopulation,
                 shapeSettings: {
                     fill: '#C3E6ED'

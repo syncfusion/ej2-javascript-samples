@@ -1,4 +1,20 @@
 this.default = function () {
+    var alertDialogObj = new ej.popups.Dialog({
+        header: 'Copy with Header',
+        content: 'Atleast one row should be selected to copy with header',
+        showCloseIcon: false,
+        target: '.control-section',
+        buttons: [{
+            click: alertDlgBtnClick, buttonModel: { content: 'OK', isPrimary: true }
+        }],
+        width: '300px',
+        visible: false,
+        animationSettings: { effect: 'None' }
+    });
+    alertDialogObj.appendTo('#alertDialog');
+    function alertDlgBtnClick() {
+        alertDialogObj.hide();
+    }
     var grid = new ej.grids.Grid({
         dataSource: window.orderDatas,
         allowPaging: true,
@@ -15,11 +31,15 @@ this.default = function () {
         allowSelection: true,
         selectionSettings: { type: 'Multiple' },
         toolbarClick: function (args) {
-            var withHeader = false;
-            if (args.item.id === 'copyHeader') {
-                withHeader = true;
+            if(grid.getSelectedRecords().length>0) {
+                var withHeader = false;
+                if (args.item.id === 'copyHeader') {
+                    withHeader = true;
+                }
+                grid.copy(withHeader);
+            } else {
+                alertDialogObj.show();
             }
-            grid.copy(withHeader);
         }
     });
     grid.appendTo('#Grid');

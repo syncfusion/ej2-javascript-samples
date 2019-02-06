@@ -65,7 +65,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#export-container');
@@ -80,6 +81,6 @@ this.default = function () {
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {
         var fileName = (document.getElementById('fileName')).value;
-        chart.export(mode.value, fileName);
+        chart.exportModule.export(mode.value, fileName);
     };
 };

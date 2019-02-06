@@ -1,0 +1,125 @@
+{
+    "name": "DocumentEditor",
+    "directory": "document-editor",
+    "category": "Editors",
+    "ftName":"document-editor",
+    "type": "update",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "DocumentEditor",
+            "type": "update",            
+            "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+<div class="col-lg-8 control-section inplace-control-section pickers-layout">
+    <div class="control_wrapper form-horizontal ">
+        <table>
+            <tr>
+                <td>
+                    <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400"> DatePicker
+                    </label>
+                </td>
+                <td>
+                    <div id='datePickerEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400"> TimePicker
+                    </label>
+                </td>
+                <td>
+                    <div id='timePickerEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400">
+                        DateTimePicker </label>
+                </td>
+                <td>
+                    <div id='dateTimePickerEle'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400">
+                        DateRangePicker </label>
+                </td>
+                <td>
+                    <div id='dateRangePickerEle'></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tr>
+            <td>
+                <div> Mode</div>
+            </td>
+            <td>
+                <div>
+                    <select id="editorMode_pickers" class="form-control">
+                        <option value="Inline">Inline</option>
+                        <option value="Popup">Popup</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+    <div id="action-description">
+        <p>
+            This sample demonstrates the usage of picker controls such as Date, Time, DateTime, and DateRange.
+            Click on the dotted input element to switch to the editable state of the corresponding integrated component.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            This sample illustrates the way to integrate picker controls with the <code>In-place Editor</code> control. The
+            applicable types of 
+            components are:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <code>DatePicker</code>
+                </li>
+                <li>
+                    <code>TimePicker</code>
+                </li>
+                <li>
+                    <code>DateTimePicker</code>
+                </li>
+                <li>
+                    <code>DateRangePicker</code>
+                </li>
+            </ul>
+        </p>
+        <p>
+            The above components and their features are editable in place and can be customized with the model
+            properties
+            of the specific component.
+        </p>
+        <p>
+            More information on the <code>In-place Editor</code> instantiation can be found in the <a target="_blank"
+                href="https://ej2.syncfusion.com/documentation/inplaceeditor/getting-started.html">
+                documentation section</a>.
+        </p>
+    </div>
+
+    <style>
+
+.e-inplaceeditor-tip .e-editable-component .e-input-group .e-clear-icon.e-clear-icon-hide,
+.inplace-control-section.pickers-layout .e-inplaceeditor .e-editable-component .e-clear-icon-hide {
+display: block;
+visibility: hidden;
+}
+
+        .inplace-control-section .control_wrapper {
+            margin: auto;
+            max-width: 400px;
+        }
+
+        .inplace-control-section .control_wrapper table {
+            margin: auto;
+        }
+
+        .inplace-control-section .control_wrapper table td {
+            width: 200px;
+            height: 100px;
+        }
+
+        .inplace-control-section.pickers-layout .control_wrapper table td .control-label {
+            margin-bottom: 0px;
+        }
+    </style>

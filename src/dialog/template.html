@@ -1,4 +1,4 @@
-<div id="target" class="col-lg-8 control-section target-element" style="height:350px;">
+<div id="target" class="col-lg-12 control-section target-element" style="height:350px;">
     <div style="position:relative; top:10px; left:10px;">
         <!-- Button to open the Dialog -->
         <button id="targetButton" class="e-control e-btn" type="button">Open</button>
@@ -9,24 +9,25 @@
 </div>
 <div id="action-description">
     <p>
-            This sample demonstrates the template functionalities of the dialog component. The dialog's header and footer is configured with HTML template.
+            This example demonstrates the template functionalities of the dialog control. The dialog's header and footer is configured with HTML template.
             The typed content will be replaced every time when clicking the "send" button.
     </p>
 </div>
 <div id="description">
     <p>
-        The dialog component displays HTML template content on the header and footer.
+        The dialog control displays HTML template content on the header and footer.
         The user can set any HTML element as header and footer with the usage of content and footer template properties.
     </p>
     <p>
     More information on the Dialog instantiation can be found in the <a target="_blank" 
-        href="http://ej2.syncfusion.com/15.4.23/documentation/dialog/template.html?lang=typescript">
+        href="https://ej2.syncfusion.com/javascript/documentation/dialog/template/">
         documentation section</a>.
     </p>
 
 </div>
 <style>
-   .material button#sendButton {
+    .material button#sendButton,
+    button#sendButton {
         top: 4px;
         position: relative;
     }
@@ -36,7 +37,8 @@
     .bootstrap button#sendbtn {
         margin-right: 1%;
     }
-    .material .e-dialog .e-dlg-header-content {
+    .material .e-dialog .e-dlg-header-content,
+    .e-dialog .e-dlg-header-content {
         background-color: #3f51b5;
     }
     .fabric .e-dialog .e-dlg-header-content {
@@ -51,18 +53,25 @@
     .material.e-bigger .e-dialog .e-footer-content {
         padding-left: 23px;
     }
-
-    .e-dlg-header-content .e-btn.e-dlg-closeicon-btn,  .e-bigger .e-dialog .e-btn.e-dlg-closeicon-btn {
-        top: 16px;
+    #template button#sendButton.e-rtl {
+        margin-left: 20px;
+    }
+    #template.e-rtl .e-dlg-closeicon-btn {
+        left: 0;
+    }
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+        top: 5px;
+        left: -11px;
+    }
+    .e-bigger .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+        top: 3px;
         left: -11px;
     }
     .e-dialog .e-dlg-header {
         position: relative;
-        top: 10px;
-        left: 7px;
     }
     .e-dialog .e-footer-content, .highcontrast.e-bigger .e-dialog .e-footer-content {
-        padding: 20px;
+        padding: 15px;
     }
     .e-dialog .e-dlg-content {
         padding: 0;
@@ -95,12 +104,13 @@
     .e-open-icon::before {
         content: '\e782';
     }
-    .e-dialog .e-dlg-header >img.img2 {
+    #dlg-template {
+        display: inline-block;
+        padding: 0px 10px;
+        vertical-align: middle;
         height: 40px;
-        width: 40px;
-        border-radius: 50%;
+        line-height: 40px;
     }
-
     input.e-input {
         width: 75%;
         float: left;
@@ -111,7 +121,7 @@
     .e-icon-settings.e-icons {
 		float: left;
 		position: relative;
-		left: 16%;
+		left: 14%;
 		top: -33px;
     }
 
@@ -139,7 +149,8 @@
         background-color: #f5f5f5;
     }
 
-    .material .e-dialog .e-footer-content, .fabric .e-dialog .e-footer-content {
+    .material .e-dialog .e-footer-content, .fabric .e-dialog .e-footer-content,
+    .e-dialog .e-footer-content {
         border-top: 0.5px solid rgba(0, 0, 0, 0.42);
     }
     .highcontrast .e-dialog .e-footer-content, .fabric .e-dialog .e-footer-content {
@@ -157,7 +168,6 @@
         font-size: 15px;
         word-wrap: break-word;
         text-align: center;
-        color: #DCDCDC;
         font-style: italic;
         border-radius: 6px;
         padding: 3%;
@@ -178,5 +188,29 @@
     }
     .e-dialog .e-dlg-header-content .e-icon-dlg-close {
       color: #fff;
+    }
+    .fabric .e-dialog .e-btn.e-dlg-closeicon-btn:hover span{
+      color: #8ECBFF;
+    }
+    .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus,
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus {
+        background-color: rgba(255,255,255, 0.10);
+    }
+    .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:active .e-icon-dlg-close ,
+    .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus .e-icon-dlg-close,
+    .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover .e-icon-dlg-close,
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:active .e-icon-dlg-close ,
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus .e-icon-dlg-close,
+    .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover .e-icon-dlg-close {
+        color: #fff;
+    }
+    .e-dialog .e-dlg-header-content .e-dlg-header .e-avatar.template-image {
+        background-image: url(src/dialog/images/1.png);
+        vertical-align: middle;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
     }
 </style>

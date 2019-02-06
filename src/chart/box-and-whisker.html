@@ -1,0 +1,57 @@
+<div>
+    <div class="col-lg-9 control-section">
+        <div id="box-container"></div>
+    </div>
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div>Mode:
+                    </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="mode">				 
+                            <option value='Normal'>Normal</option>        
+                            <option value='Exclusive'>Exclusive</option>
+                            <option value='Inclusive'>Inclusive</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div>Mean: </div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <input type="checkbox" id="mean" checked>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the employee’s age group in various departments of a country with box and whisker type series in the chart. Mode of box and whisker series can be changed by <code>Mode</code> in property panel. To display the <code>mean</code> value in a series, enable the Mean in the property panel.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure the box and whisker type charts. Similar to line type series, but
+        the area get closed and filled with series color. You can use <code>border</code>, <code>fill</code> properties
+        to customize the area. <code>marker</code> and <code>dataLabel</code> are used to represent individual data and its
+        value. Legend is enabled in this example with series type shape.
+    </p>
+    <br>
+    <p>
+        More information on the area series can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/chart/api-series.html#type-chartseriestype">documentation section</a>.
+    </p>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>

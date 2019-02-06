@@ -44,7 +44,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
         legendSettings: { visible: true, toggleVisibility: false },
         annotations: [{
@@ -68,6 +69,9 @@ this.default = function () {
                 pie.refresh();
             }
         },
+        resized: function (args) {
+            location.reload();
+        },
         loaded: function (args) {
             if (isRender) {
                 pie.destroy();
@@ -84,9 +88,6 @@ this.default = function () {
                         args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
                     },
                     legendSettings: { visible: false },
-                    resized: function (args) {
-                        location.reload();
-                    }
                 });
                 pie.appendTo('#chart_annotation');
             }
@@ -94,6 +95,7 @@ this.default = function () {
         animationComplete: function (args) {
             isRender = true;
             var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
             pie = new ej.charts.AccumulationChart({
                 background: 'transparent',
                 series: [{

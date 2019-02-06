@@ -2,15 +2,15 @@
    "name": "Card", 
    "directory": "card", 
    "category":"Layout",
-   "dataSourcePath": "src/card/datasource.js", 
-   "type":"preview",
+   "ftName" :"card",
+   "dataSourcePath": "src/card/data-source.js", 
    "samples" : [
-    {"url":"basic", "name": "Basic Card", "category":"Card" },
-    {"url":"vertical", "name": "Vertical Card", "category":"Card" },
-    {"url":"horizontal", "name": "Horizontal Card", "category":"Card" },
-    {"url":"swipeable", "name": "Swipeable Card", "category":"Card" },
-    {"url":"flip", "name": "Flip Card", "category":"Card" },
-    {"url":"reveal", "name": "Reveal Card", "category":"Card" },
-    {"url":"tile", "name": "Tile View", "category":"Card" }
+    {"url":"basic", "name": "Basic Card", "category":"Card", "description": "The sample demonstrates how to design basic card and weather layout card in JavaScript platform. The component is pure CSS component and more flexible." },
+    {"url":"vertical", "name": "Vertical Card", "category":"Card", "description": "The sample demonstrates how to design a business card and profile card using a vertical layout of card component in JavaScript platform." },
+    {"url":"horizontal", "name": "Horizontal Card", "category":"Card", "description": "The sample demonstrates how to design product card with icon and its specification using horizontal layout in card component in JavaScript platform." },
+    {"url":"swipeable", "name": "Swipeable Card", "category":"Card", "description": "The sample demonstrates how to design a stacked card with swipeable action and corresponding images using card component in JavaScript platform." },
+    {"url":"flip", "name": "Flip Card", "category":"Card", "description": "The sample demonstrates how to achieve flip behavior to the card to show hidden information which is on a back side on the card in JavaScript platform." },
+    {"url":"reveal", "name": "Reveal Card", "category":"Card", "description": "The sample demonstrates how to render a card with reveal layouts, hidden information can be revealed while action on “Know more” in JavaScript platform." },
+    {"url":"tile", "name": "Tile View", "category":"Card", "description": "The sample demonstrates how to design tile-view with filtering and searching using a template engine, data manager, and card component in JavaScript platform." }
    ]
 }

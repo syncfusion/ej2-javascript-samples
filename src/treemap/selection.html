@@ -1,0 +1,114 @@
+<style>
+        .check{
+            opacity: 1 !important;
+            position: relative !important;
+            width: 15px !important;
+            height: 15px !important;
+        }
+        label{
+            height: 32px !important;
+        }
+    </style>
+    <div class="col-lg-9 control-section">
+        <div class="content-wrapper">
+            <div id="import-container"></div>
+        </div>
+        <div style="float: right; margin-right: 10px;">Source:
+            <a href="https://www.indexmundi.com/united_states/imports_commodities.html" target="_blank">www.indexmundi.com</a>
+        </div>
+    </div>
+    <div class="col-lg-3 property-section">
+            <table id="property" title="Properties" style="width: 100%">
+                <tbody>
+                        <tr style="height: 50px">
+                                <td style="width: 60%">
+                                    <div class="property-text"><b>Highlight</b></div>
+                                </td>
+                                
+                        </tr>
+                        <tr >
+                                <td style="width: 60%">
+                                    <div class="property-text"> Enable</div>
+                                </td>
+                                <td style="width: 40%;">
+                                    <div>
+                                        <input type="checkbox" id="highlightEnable" checked/>
+                                    </div>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td style="width: 60%">
+                                    <div class="property-text">Mode</div>
+                                </td>
+                                <td style="width: 40%;">
+                                    <div>
+                                        <select name="selectIndex" autocomplete="off" id="highlightMode" style="width:60%;">
+                                            <option value="Item" selected>Item</option>
+                                            <option value="Child">Child</option>
+                                            <option value="Parent">Parent</option>
+                                            <option value="All">All</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height: 50px">
+                                    <td style="width: 80%">
+                                        <div class="property-text"><b>Selection</b></div>
+                                    </td>
+                                    
+                            </tr>
+                            <tr >
+                                    <td style="width: 60%">
+                                        <div class="property-text">Enable</div>
+                                    </td>
+                                    <td style="width: 40%;">
+                                        <div>
+                                            <input type="checkbox" id="SelectionEnable" checked/>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr>
+                                    <td style="width: 60%">
+                                        <div class="property-text"> Mode</div>
+                                    </td>
+                                    <td style="width: 40%;">
+                                        <div>
+                                            <select name="selectIndex" autocomplete="off" id="selectionMode" style="width:60%;">
+                                                <option value="Item" selected>Item</option>
+                                                <option value="Child">Child</option>
+                                                <option value="Parent">Parent</option>
+                                                <option value="All">All</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                            </tr>
+                           
+            </tbody></table>
+        </div>
+        
+    
+    
+    <div id="action-description">
+        <p>
+            This sample depicts the details of goods imported by Japan. Selection and highlight options have been enabled in this sample.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this example, you can see the modes available for performing highlight and selection in TreeMap. It can be either enabled or disabled.
+        </p>
+        <br/>
+        <p style="font-weight: 500">Injecting Module</p>
+        <p>
+           
+            TreeMap component features are segregated into individual feature-wise modules. To use highlight and selection, inject the <code>Selection</code> module using the <code>TreeMap.Inject(TreeMapSelection)</code>inject the <code>Highlight</code> module using the <code>TreeMap.Inject(TreeMapHighlight)</code> method.
+        </p>
+    
+    </div>
+    <style>
+        .property-text {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+        }
+    </style>

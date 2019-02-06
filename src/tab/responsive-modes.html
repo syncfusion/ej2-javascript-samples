@@ -1,3 +1,4 @@
+<div class="e-tab-section">
 <div class="col-lg-8 control-section">
     <div class="e-sample-resize-container">
         <div id="tab_adaptive">
@@ -7,20 +8,38 @@
 
 <div class="col-lg-4 property-section">
     <table id="property" title="Properties" style="width: 100%;">
-        <tbody><tr>
-            <td style="width: 50%;">
-                <div>Mode</div>
-            </td>
-            <td style="width: 50%; padding-right: 10px;">
-                <div>
-                    <select id="adaptive" class="form-control">
-                        <option value="scrollable">Scrollable</option>
-                        <option value="popup">Popup</option>
-                    </select>
-                </div>
-            </td>
-        </tr>
-    </tbody></table>
+        <tbody>
+            <tr>
+                <td style="width: 50%;">
+                    <div>Mode</div>
+                </td>
+                <td style="width: 50%; padding-right: 10px;">
+                    <div>
+                        <select id="adaptive" class="form-control">
+                            <option value="scrollable">Scrollable</option>
+                            <option value="popup">Popup</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;">
+                    <div>Header Placement</div>
+                </td>
+                <td style="width: 50%;">
+                    <div>
+                        <select id="orientation" class="form-control">
+                            <option value="Top">Top</option>
+                            <option value="Bottom">Bottom</option>
+                            <option value="Left">Left</option>
+                            <option value="Right">Right</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </div>
 <div id="action-description">
     <p>
@@ -32,12 +51,15 @@
         The <code>Tab</code> is adaptable to the available space when the tab items exceed the view space.
     </p>
     <p>
+        The <code>Tab</code> allows to place the header section inside the Tab component either at <code>top / bottom / left / right</code> position by using <code>headerPlacement</code> property.
+    </p>
+    <p>
         You can assign overflowMode property value as <code>Scrollable / Popup</code>. By default scrollable mode of tab is enabled when 
         tab item exceeds the view range.
         In this sample, users can change the <code>overflowMode</code> by selecting the dropdown options.
     </p>
     <p>
-        More information about Tab can be found in this <a target="_blank" href="http://ej2.syncfusion.com/documentation/tab/getting-started.html">
+        More information about Tab can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/tab/es5-getting-started/">
         documentation</a> section.
     </p>
 </div>
@@ -61,6 +83,30 @@
 
         .e-bigger .e-sample-resize-container {
             width: 75%;
+        }
+    }
+    #tab_adaptive .e-tab-text {
+        display: inherit;
+    }
+    @media screen and (max-width: 481px) {
+        .control-section.e-tab-section,
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        #tab_adaptive {
+            overflow: hidden;
+        }
+
+         #tab_adaptive .e-content {
+            height: inherit !important;
+        }
+
+        #tab_adaptive .e-item.e-active {
+            overflow: scroll;
         }
     }
 </style>

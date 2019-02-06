@@ -1,0 +1,37 @@
+{
+    "name": "Toast",
+    "directory": "toast",
+    "category": "Notifications",
+    "ftName" :"toast",
+    "samples": [{
+        "url": "default",
+        "name": "Default Functionalites",
+        "category": "Toast",
+        "description": "The sample demonstrates about default functionalities of a Toast control and helps to design reminder like an alert in JavaScript platform.",
+        "api":{"Toast":["title","content"] }
+    }, {
+        "url": "types",
+        "name": "Types",
+        "category": "Toast",
+        "description": "The sample demonstrates how to design success, warning, information, and error messages using Toast control based on CSS classes in JavaScript platform.",
+        "api":{"Toast":["cssClass"] }
+    }, {
+        "url": "template",
+        "name": "Templates",
+        "category": "Toast",
+        "description": "The sample demonstrates how to design a reminder application by customizing the content of Toast control using an HTML template in JavaScript platform.",
+        "api":{"Toast":["template","target"] }
+    }, {
+        "url": "positions",
+        "name": "Positions",
+        "category": "Toast",
+        "description": "The sample demonstrates how to display the toast notification with various built-in or custom position based on target or page in JavaScript platform.",
+        "api":{"Toast":["position","target"],"ToastPosition":["X","Y"] }
+    }, {
+        "url": "api",
+        "name": "API",
+        "category": "Toast",
+        "description": "The sample exposes the available properties, methods, and events of Toast control which helps to create flexible toast notification in JavaScript platform.",
+        "api":{"Toast":["title","content","newestOnTop", "showProgressBar", "showCloseButton","animation"]}
+    }]
+}

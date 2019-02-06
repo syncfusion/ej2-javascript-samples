@@ -2,10 +2,10 @@ this.default = function () {
     var data = new ej.base.extend([], window.employeeEventData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '500px',
-        startHour: '06:00',
-        endHour: '18:00',
-        views: ['Day', 'Week', 'WorkWeek', 'Month'],
+        height: '650px',
+        startHour: '08:00',
+        endHour: '20:00',
+        views: ['Day', 'Week', 'WorkWeek', 'Month', 'TimelineDay', 'TimelineWeek'],
         workHours: { highlight: false },
         selectedDate: new Date(2018, 1, 15),
         eventSettings: { dataSource: data },
@@ -16,13 +16,13 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
     var start = new ej.calendars.TimePicker({
         width: 90,
-        value: new Date(2000, 0, 1, 6),
+        value: new Date(2000, 0, 1, 8),
         format: 'HH:mm'
     });
     start.appendTo('#startTime');
     var end = new ej.calendars.TimePicker({
         width: 90,
-        value: new Date(2000, 0, 1, 18),
+        value: new Date(2000, 0, 1, 20),
         format: 'HH:mm'
     });
     end.appendTo('#endTime');

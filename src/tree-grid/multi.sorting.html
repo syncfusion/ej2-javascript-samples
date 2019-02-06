@@ -1,0 +1,94 @@
+<div class="col-lg-9 control-section">
+        <div class="content-wrapper">
+            <div id="TreeGrid" class="sortingenabled"></div>
+        </div>
+    </div>
+    
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tr>
+                <td style="width: 70%">
+                    <div>
+                        Order Name
+                    </div>
+                </td>
+                <td style="width: 30%;padding:10px 10px 10px 0px">
+                    <div class="col-md-6">
+                        <input id="OrderName" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%">
+                    <div>
+                        Category
+                    </div>
+                </td>
+                <td style="width: 30%;padding:10px 10px 10px 0px">
+                    <div class="col-md-6">
+                        <input id="Category" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%">
+                    <div>
+                        Order Date
+                    </div>
+                </td>
+                <td style="width: 30%; padding:10px 10px 10px 0px">
+                    <div class="col-md-6">
+                        <input id="OrderDate" type="checkbox" checked />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%">
+                    <div>
+                        Units
+                    </div>
+                </td>
+                <td style="width: 30%; padding:10px 10px 10px 0px">
+                    <div class="col-md-6">
+                        <input id="Units" type="checkbox" checked />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+<div id="action-description">
+    <p>This sample demonstrates the TreeGrid multi sorting feature. To sort two or more columns, hold the CTRL key and click the column header.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        Sorting feature enables us to order the data in a particular direction. It can be enabled by setting the <code>allowSorting</code> as true.
+    </p>
+    <p>To sort a TreeGrid column by simply click the column header. The icons (ascending) and (descending) specifies the sort direction of a column.
+    </p>
+    
+    <p>By default, multi-sorting is enabled in TreeGrid, to sort multiple column hold <strong>CTRL</strong> key and click the column
+        header. To clear sort for a column, hold <strong>SHIFT</strong> key and click the column header.</p>
+    <p>
+        While using TreeGrid in a touch device, you have an option for multi sorting in single tap on the treegrid header. By tapping on the treegrid header, it will show the toggle button in small popup with sort icon. 
+        Now tap the button to enable the multi-sorting in single tap.
+    </p>
+    <p>In this demo, </p>
+    <ul>
+        <li>Simply click the column header to sort a column.</li>
+        <li>Check the checkboxes in the properties panel to sort a column and uncheck to remove sort from a column.
+        </li>
+    </ul>
+    <p>
+        More information on the Sorting can be found in 
+        documentation section.
+    </p>
+</div>
+<style>
+        @media screen and (max-width: 590px) {
+            .sortingenabled {
+                margin-top: 30px;
+            }
+        }
+    </style>

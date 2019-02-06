@@ -1,13 +1,14 @@
 {
-    "name": "Slider",
+    "name": "Range Slider",
     "directory": "slider",
-    "category": "Editors",
-    "type": "preview",
+    "category": "Inputs",
+    "ftName" : "slider",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showing the default rendering of default, minimum range, and range sliders. Drag the thumb to interact with the slider.",
             "api": {
                 "Slider": [
                     "value",
@@ -19,7 +20,8 @@
         {
             "url": "ticks",
             "name": "Ticks",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of the visual representation of slider values using ticks, which can be placed before, after, or on both sides of the thumbs.",
             "api": {
                 "Slider": [
                     "value",
@@ -41,7 +43,8 @@
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of the visual representation of slider values using tooltips, which can be displayed before or after slider thumbs.",
             "api": {
                 "Slider": [
                     "value",
@@ -49,7 +52,8 @@
                     "min",
                     "max",
                     "showButtons",
-                    "appendTo"
+                    "appendTo",
+                    "dragInterval"
                 ],
                 "TooltipData": [
                     "isVisible",
@@ -61,20 +65,23 @@
         {
             "url": "orientation",
             "name": "Vertical Orientation",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showing the vertical and horizontal orientation properties along with ticks and tooltips.",
             "api": {
                 "Slider": [
                     "value",
                     "type",
                     "orientation",
-                    "appendTo"
+                    "appendTo",
+                    "dragInterval"
                 ]
             }
         },
         {
             "url": "format",
             "name": "Formatting",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Demo of Essential JS 2 slider control value formatting with time, currency, and distance values that are also displayed in ticks and tooltips.",
             "api": {
                 "Slider": [
                     "value",
@@ -101,9 +108,42 @@
             }
         },
         {
+            "url": "limits",
+            "name": "Limits",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of limiting the minimum, maximum, start, and end values. Also supports restricting handle movements.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "step",
+                    "limits"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "LimitData": [
+                    "enabled",
+                    "minStart",
+                    "minEnd",
+                    "maxStart",
+                    "maxEnd",
+                    "startHandleFixed",
+                    "endHandleFixed"
+                ]
+            }
+        },
+        {
             "url": "api",
             "name": "API",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showcasing the most frequently used API combinations, like orientation, minimum, maximum, value, step, and more.",
             "api": {
                 "Slider": [
                     "value",
@@ -131,7 +171,8 @@
         {
             "url": "events",
             "name": "Events",
-            "category": "Slider",
+            "category": "Range Slider",
+            "description": "Demo of the Essential JS 2 slider control's created, changing, and changed events. The events are traced in real time in a property panel.",
             "api": {
                 "Slider": [
                     "value",
@@ -158,6 +199,7 @@
             "url": "thumb-customization",
             "name": "Thumb",
             "category": "Customization",
+            "description": "Demo of the Essential JS 2 slider control slider thumb customization with circle, oval, and custom image shapes.",
             "api": {
                 "Slider": [
                     "value",
@@ -171,6 +213,7 @@
             "url": "selection-bar-customization",
             "name": "Bar",
             "category": "Customization",
+            "description": "Demo of Essential JS 2 slider control slider bar customization with colors and height.",
             "api": {
                 "Slider": [
                     "value",
@@ -187,6 +230,7 @@
             "url": "ticks-customization",
             "name": "Ticks",
             "category": "Customization",
+            "description": "Demo of Essential JS 2 slider control's highly customizable slider values using ticks and a legend.",
             "api": {
                 "Slider": [
                     "value",
@@ -210,6 +254,7 @@
             "url": "tooltip-customization",
             "name": "Tooltip",
             "category": "Customization",
+            "description": "Demo of Essential JS 2 slider control customization of slider tooltip text and background color with formatted text values.",
             "api": {
                 "Slider": [
                     "value",
@@ -238,6 +283,7 @@
             "url": "azure-pricing",
             "name": "Cloud Pricing",
             "category": "Use Case",
+            "description": "Essential JS 2 slider control demo of real-world scenario using sample Azure cloud pricing.",
             "api": {
                 "Slider": [
                     "value",

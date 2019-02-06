@@ -1,0 +1,31 @@
+<div class="control-section">
+    <div id="diagram" class="diagramclass">
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates binding remote data with the diagram using the Data Manager support.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example shows how to generate a diagram from remote data such as REST APIs. The
+        <code>dataSourceSettings</code> property can be used to map an external data source with the diagram control. The
+        <code>id</code> property of
+        <code>dataSourceSettings</code> can be used to define a unique field of an external data. The
+        <code>parentId</code> property can be used to define the relationship between objects. The
+        <code>dataManager</code> property can be used to fetch data from web services.
+    </p>
+
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        The diagram component’s features are segregated into individual feature-wise modules. To generate diagrams from an external
+        data source, inject
+        <code>DataBinding</code> module using
+        <code>Diagram.Inject(DataBinding)</code> method. To automatically arrange the objects in a hierarchical structure, inject
+        <code>DataBinding</code> module using
+        <code>Diagram.Inject(DataBinding)</code> method.
+    </p>
+    <br>
+</div>

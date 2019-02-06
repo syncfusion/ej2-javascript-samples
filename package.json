@@ -1,11 +1,12 @@
 {
     "name": "@syncfusion/ej2-javascript-samples",
-    "version": "16.1.24",
+    "version": "16.4.52",
     "description": "Pure Javascript Samples for Syncfusion Essential JS 2",
     "author": "Syncfusion Inc.",
     "license": "SEE LICENSE IN license",
     "dependencies": {
-        "@syncfusion/ej2": "16.1.25",
+        "@syncfusion/ej2": "*",
+        "@syncfusion/ej2-inplace-editor": "*",
         "browser-sync": "^2.18.13",
         "cheerio": "^1.0.0-rc.1",
         "crossroads": "^0.12.2",

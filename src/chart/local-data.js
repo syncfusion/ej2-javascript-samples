@@ -81,7 +81,8 @@ this.default = function () {
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];
-            args.chart.theme = selectTheme && (selectTheme.charAt(0).toUpperCase() + selectTheme.slice(1));
+            args.chart.theme = selectTheme && (selectTheme.charAt(0).toUpperCase() + 
+                selectTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#local-container');

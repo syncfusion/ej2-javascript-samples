@@ -23,6 +23,7 @@ this.default = function () {
         }
     });
     placementObj.appendTo('#placement');
+
     var showonObj = new ej.dropdowns.DropDownList({
         index: 1,
         popupHeight: '200px',

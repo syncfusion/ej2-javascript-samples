@@ -224,7 +224,7 @@
             },
             layers: [
                 {
-                    shapeData: window.world_continent,
+                    shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                     shapeSettings: {
                         fill: '#E5E5E5',
                         colorMapping: [

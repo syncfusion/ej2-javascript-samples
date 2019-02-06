@@ -1,11 +1,13 @@
 {
-    "name": "MaskedTextBox",
+    "name": "Input Mask",
     "directory": "maskedtextbox",
-    "category": "Editors",
+    "category": "Inputs",
+    "ftName": "maskedtextbox", 
     "samples": [{
         "url": "default",
         "name": "Default Functionalities",
-        "category": "MaskedTextBox",
+        "category": "Input Mask",
+        "description": "The Masked Textbox allows the user to enter only the valid input based on the provided mask format. The mask format can be any Phone number, Country ISO code, Date, Time, Social security number, product key and so on.",
         "api": {
                 "MaskedTextBox": [
                     "mask"
@@ -13,9 +15,10 @@
             }
     },   
     {
-        "url": "custommask",
+        "url": "custom-mask",
         "name": "Custom Mask",
-        "category": "MaskedTextBox",
+        "category": "Input Mask",
+        "description": "The custom mask can be done by using custom characters as mask elements and using regular expressions. In this demo the time format and IP address fields are achieved by using the custom mask literals and regex.",
         "api": {
                 "MaskedTextBox": [
                     "mask",
@@ -27,7 +30,8 @@
     {
         "url": "formats",
         "name": "Formats",
-        "category": "MaskedTextBox",
+        "category": "Input Mask",
+        "description": "This sample demonstrates the usage of different mask formats through the properties panel. You can also get the value and raw value of the masked textbox.",
         "api": {
                 "MaskedTextBox": [
                     "mask",

@@ -14,8 +14,9 @@ this.default = function () {
     // Initialize schedule component
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
-        height: '550px',
+        height: '650px',
         timezone: 'UTC',
+        workHours: { start: '11:00' },
         selectedDate: new Date(2018, 5, 20),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {

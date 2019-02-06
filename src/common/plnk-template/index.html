@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{:title}}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> {{:meta}}
+    <meta name="author" content="Syncfusion" />
+    <link rel="shortcut icon" href="https://ej2.syncfusion.com/home/favicon.ico" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-233131-15', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+        var themeName = location.hash || 'material';
+        themeName = themeName.replace('#', '');
+        window.ripple = (themeName === "material")
+        document.write('<link href="{{:CDN_LINK}}' + themeName + '.css" rel="stylesheet">');
+    </script>
+    <script type="text/javascript">
+        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+            document.write("<script src=\'https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js\'>");
+        }</script>
+    <script src="{{:PKG_LINK}}dist/ej2.min.js" type="text/javascript"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet">
+    <style>
+        #loader {
+            color: #008cff;
+            height: 40px;
+            left: 45%;
+            position: absolute;
+            top: 45%;
+            width: 30%;
+        }
+
+        body {
+            touch-action: none;
+        }
+    </style>
+</head>
+
+<body class='e-view ej2-new' aria-busy="true">
+    <div class="sample-browser">
+        <div id='sample-header' class="sb-header" role="banner">
+            <div class='sb-header-left sb-left sb-table'>
+                <div class='sb-header-item sb-table-cell'>
+                    <div class="header-logo">
+                        <a href="https://ej2.syncfusion.com/home/javascript.html" target="" rel="noopener noreferrer">
+                            <div class="footer-logo"> </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="sb-header-splitter sb-download-splitter"></div>
+                <div class='sb-header-item sb-table-cell'>
+                    <div id='sb-header-text' class='e-sb-header-text'>
+
+                        <span class='sb-header-text-left'>Essential JS 2 for JavaScript (ES5)</span>
+                    </div>
+                </div>
+            </div>
+            <div class='sb-header-right sb-right sb-table'>
+                <div class='sb-header-item sb-table-cell'>
+                    <div class='product-style'>
+                        <div>
+                            <a href="https://www.syncfusion.com/javascript-ui-controls/{{:header2}}">PRODUCT DETAILS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='sb-header-item sb-table-cell'>
+                    <div class="sb-header-item sb-table-cell sb-download-wrapper">
+                        <a href="https://www.syncfusion.com/downloads/essential-js2" target="_blank">
+                            <button id="download-now" class="sb-download-btn">
+                                <span class="sb-download-text">DOWNLOAD</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class='content e-view'>
+            <div class='sample-content'>
+                <div id="sample-bread-crumb" class="sb-bread-crumb">
+                    <div class="sb-custom-item sb-sample-navigation sb-right sb-header-right sb-table-cell">
+                        <div id="prev-sample" class="sb-navigation-prev e-control e-tooltip " aria-label="previous sample" title="Previous Sample">
+                            <a {{:anchor-prev}} class='{{:disabled-prev}}'><span class="sb-icons sb-icon-Previous"></span></a>
+                           
+                        </div>
+                        <div id="next-sample" class="sb-navigation-next e-control e-tooltip" aria-label="next sample" title="Next Sample">
+                            <a {{:anchor-next}} class='{{:disabled-next}}'><span class="sb-icons sb-icon-Next"></span></a>
+                            
+                        </div>
+                    </div>
+                    <div class="sb-bread-crumb-text">
+                        <div class="category-allcontrols">
+                            <a href="https://ej2.syncfusion.com/javascript/demos/">
+                                <span>All Controls</span>
+                            </a>
+                        </div>
+                        <div class="category-seperator sb-icons"> / </div>
+                        <div class="category-text bread-ctext">
+                            <a href="https://ej2.syncfusion.com/javascript/demos/#/material/{{:header2}}/default.html">
+                                <span>{{:header}}</span>
+                            </a>
+                        </div>
+                        <div class="category-seperator sb-icons"> / </div>
+                        <div class="crumb-sample">{{:header1}}</div>
+                    </div>
+                </div>
+                <div class="control-content">
+                    <div id="action-description">
+                        <p>
+                            <p>
+                                <div class="layout" id="actionDes">{{:action-description}}</div>
+                                    <a id="details" class="layout" onclick="desDetails()"> More Details...</a>
+                                    <script>
+                                        function desDetails() {
+                                            var element = document.getElementById('description-section');
+                                            if (element) {
+                                                element.scrollIntoView();
+                                            }
+                                        }
+                                    </script>
+                            </p>
+                        </p>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="control-section">
+                            {{:body}}
+                        </div>
+                    </div>
+                    <div id="description-section">Description</div>
+                    <div id="description">
+                        <p>
+                            {{:description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{:eoc}}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-233131-15', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+    // To get cookie value
+        function getCookieValue(cookieName) {
+            var name = cookieName + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieValues = decodedCookie.split(';');
+            for (var i = 0; i < cookieValues.length; i++) {
+                var cookie = cookieValues[i];
+                while (cookie.charAt(0) == ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(name) == 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
+
+        // Referral url and current url should not be same to avoid multiple entries
+        if (document.referrer && document.referrer.split('/')[2] != window.location.host) {
+            var existingCookieValue = getCookieValue("SampleSiteReferrer");
+            var currentUrl = "";
+            if (existingCookieValue.indexOf(window.location.host) === -1) {
+                currentUrl = "," + window.location.href;
+            }
+            if (existingCookieValue != "undefined" && existingCookieValue != undefined && existingCookieValue != "") {
+                existingCookieValue = existingCookieValue + currentUrl;
+                document.cookie = "SampleSiteReferrer" + "=" + existingCookieValue + ";path=/;domain=syncfusion.com";
+            }
+            else {
+                document.cookie = "SampleSiteReferrer" + "=" + document.referrer + currentUrl + ";path=/;domain=syncfusion.com";
+            }
+        }
+    </script>
+</body>
+
+</html>

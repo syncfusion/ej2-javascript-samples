@@ -1,0 +1,17 @@
+{
+    "name": "Dropdown List",
+    "directory": "drop-down-list",
+    "category": "Dropdowns",
+    "ftName": "dropdown-list",
+    "samples": [
+        { "url": "default", "name": "Default Functionalities", "description": "This demo for Syncfusion JavaScript drop-down list control shows the default rendering of the drop-down list control with minimum configuration.", "category": "Dropdown List", "api": { "DropDownList": ["popupHeight", "placeholder", "index", "change"] } },
+        { "url": "grouping-icon", "name": "Grouping and Icons", "description": "This demo explains the grouping based on different categories with individual header and icon support in the Syncfusion JavaScript drop-down list control.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "popupHeight", "placeholder"] } },
+        { "url": "data-binding", "name": "Data Binding", "description": "This demo for Syncfusion JavaScript drop-down list control shows how to bind with  local data source and how to fetch data from remote data service.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "query", "sortOrder", "autofill", "popupHeight", "placeholder"] } },
+        { "url": "template", "name": "Template", "description": "This demo shows how to customize the appearance of each item in the pop-up list using template option in Syncfusion JavaScript drop-down list control.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "headerTemplate", "itemTemplate", "valueTemplate", "popupHeight", "placeholder"] } },
+        { "url": "filtering", "name": "Filtering", "description": "This demo explains the filtering functionalities of the Syncfusion JavaScript drop-down list control.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "allowFiltering", "filtering", "filterBarPlaceholder", "popupHeight", "placeholder"] } },
+        { "url": "cascading", "name": "Cascading", "description": "This demo for Syncfusion JavaScript drop-down list control shows the cascading support.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "change", "placeholder", "popupHeight", "value", "enabled"] } },
+        { "url": "inline", "name": "Inline", "description": "This demo for Syncfusion JavaScript drop-down list control demonstrates to render the drop-down list control in line with other content.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "fields", "value"] } },
+        { "url": "diacritics-filtering", "name": "Diacritics Filtering", "description": "This demo explains the diacritics filter functionality of the Syncfusion JavaScript drop-down list control.", "category": "Dropdown List", "api": { "DropDownList": ["dataSource", "ignoreAccent", "placeholder", "allowFiltering"] } }
+    ],
+    "dataSourcePath": "src/drop-down-list/data-source.js"
+}

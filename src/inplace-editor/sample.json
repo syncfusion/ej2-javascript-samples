@@ -1,0 +1,33 @@
+{
+    "name": "In-place Editor",
+    "directory": "inplace-editor",
+    "category": "Forms",
+    "ftName" :"inplace-editor",
+    "type": "preview", 
+    "samples": [
+        {
+            "url": "default",
+            "name": "Overview",
+            "category": "In-place Editor",
+            "api": { "InPlaceEditor": ["mode", "type", "value", "showButtons", "disabled"] }
+        },
+        {
+            "url": "dropdowns",
+            "name": "DropDown Controls",
+            "category": "In-place Editor",
+            "api": { "InPlaceEditor": ["mode", "type", "value", "enableEditMode", "model"] }
+        },
+        {
+            "url": "pickers",
+            "name": "Date Controls",
+            "category": "In-place Editor",
+            "api": { "InPlaceEditor": ["mode", "type", "value", "enableEditMode", "model"] }
+        },
+        {
+            "url": "edit-post",
+            "name": "Edit Post",
+            "category": "Use Case",
+            "api": { "InPlaceEditor": ["mode", "type", "value"] }
+        }
+    ]
+}

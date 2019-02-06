@@ -13,8 +13,6 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0,
-            maximum: 20,
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             interval: 5,
@@ -76,7 +74,8 @@ this.default = function () {
         load: function (args) {
             var stepTheme = location.hash.split('/')[1];
             stepTheme = stepTheme ? stepTheme : 'Material';
-            args.chart.theme = (stepTheme.charAt(0).toUpperCase() + stepTheme.slice(1));
+            args.chart.theme = (stepTheme.charAt(0).toUpperCase() + 
+                stepTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#sLine-container');

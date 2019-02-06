@@ -1,0 +1,27 @@
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize Uploader -->
+        <input type='file' id='validation' name='UploadFiles'/>
+    </div>
+</div>
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+    }
+    .e-upload {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+    }
+</style>
+
+<div id="action-description">
+    <p>This example demonstrates how to validate the files before uploading it to server. Only document files <code>(DOC, DOCX, XLS, XLSX),</code> and the files should contain <code>minimum 10 KB</code> and <code>maximum 28 MB</code> sizes to upload it into server. This sample limits maximum files count as 5 to upload.</p>
+    <p>It will validate the file size an throw the error message in file list</p>
+</div>
+
+<div id="description">
+    <p>The <code>Uploader</code> control allows to validate the file’s type, and limit the file size using <code>allowedExtensions</code>, <code>minFileSize</code>, and <code>maxFileSize</code> properties. You can also achieve limit the files count before uploading it using select event.</p>
+    <p>For more information, you can refer to the Validation section from this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/uploader/validation/"> documentation section </a>.</p>
+</div>

@@ -5,9 +5,9 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var bubbletheme = location.hash.split('/')[1];
+            bubbletheme = bubbletheme ? bubbletheme : 'Material';
+            args.maps.theme = (bubbletheme.charAt(0).toUpperCase() + bubbletheme.slice(1));
         },
         bubbleRendering: function (args) {
             args.radius = args.data.value;
@@ -30,7 +30,7 @@ this.default = function () {
             {
                 shapeDataPath: 'name',
                 shapePropertyPath: 'name',
-                shapeData: window.WorldMap,
+                shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
                 shapeSettings: {
                     fill: '#E5E5E5'
                 },

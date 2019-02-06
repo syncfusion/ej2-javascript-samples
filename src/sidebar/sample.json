@@ -2,11 +2,10 @@
     "name": "Sidebar",
     "directory": "sidebar",
     "category": "Navigation",
-    "type": "preview",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Sidebar", "api": { "Sidebar": ["type", "position", "showBackdrop", "closeOnDocumentClick", "change", "mediaQuery"] } },
-        { "url": "dock", "name": "Dock", "category": "Sidebar", "api": { "Sidebar": ["enableDock", "dockSize", "contextTo"]} },
-        { "url": "api", "name": "API", "category": "Sidebar", "api": { "Sidebar": ["showBackdrop", "position", "types", "closeOnDocumentClick"] }},
-        { "url": "sidebar-menu", "name": "Sidebar With ListView", "category": "Sidebar", "api": { "Sidebar": ["open", "close"] } }
+        { "url": "default", "name": "Default Functionalities", "category": "Sidebar", "api": { "Sidebar": ["type", "position", "showBackdrop", "closeOnDocumentClick", "change", "mediaQuery"] }, "description": "This example demonstrates a simple, mobile-friendly and responsive JavaScript Sidebar (Navigation drawer, Side navigation menu) to navigate between various parts of an application with ease" },
+        { "url": "docking-sidebar", "name": "Dock", "category": "Sidebar", "api": { "Sidebar": ["enableDock", "dockSize", "contextTo"]}, "description": "This example demonstrates how the JavaScript Sidebar is docked to the main content when it is in closed state" },
+        { "url": "api", "name": "API", "category": "Sidebar", "api": { "Sidebar": ["showBackdrop", "position", "types", "closeOnDocumentClick"] }, "description": "This example demonstrates how to change the behavior and appearance of the JavaScript sidebar based on application through user friendly API’s like types, position, auto close and backdrop"},
+        { "url": "sidebar-list", "name": "Sidebar With ListView", "category": "Sidebar", "api": { "Sidebar": ["open", "close"] }, "description": "This example demonstrates how the JavaScript Sidebar is integrated with a ListView to display a list of menu items" }
     ]
 }

@@ -13,9 +13,6 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             title: 'Revenue in Millions',
-            minimum: 0,
-            maximum: 4,
-            interval: 1,
             labelFormat: '{value}M'
         },
         //Initializing Chart Series
@@ -56,7 +53,8 @@ this.default = function () {
         load: function (args) {
             var polarAreaTheme = location.hash.split('/')[1];
             polarAreaTheme = polarAreaTheme ? polarAreaTheme : 'Material';
-            args.chart.theme = (polarAreaTheme.charAt(0).toUpperCase() + polarAreaTheme.slice(1));
+            args.chart.theme = (polarAreaTheme.charAt(0).toUpperCase() + 
+                polarAreaTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#polar-area-container');

@@ -34,12 +34,6 @@ this.default = function () {
             labelFormat: '{value}°',
             coefficient: ej.base.Browser.isDevice ? 80 : 100
         },
-        //Initializing Primary Y Axis
-        primaryYAxis: {
-            minimum: -20,
-            interval: 5,
-            maximum: 0
-        },
         //Initializing Chart Series
         series: [
             {
@@ -68,7 +62,8 @@ this.default = function () {
             var polarSplineTheme = location.hash.split('/')[1];
             polarSplineTheme = polarSplineTheme ? polarSplineTheme : 'Material';
             args.chart.theme = (polarSplineTheme.indexOf('fabric') > -1) ? 'Fabric' : 'Material';
-            args.chart.theme = (polarSplineTheme.charAt(0).toUpperCase() + polarSplineTheme.slice(1));
+            args.chart.theme = (polarSplineTheme.charAt(0).toUpperCase() + 
+                polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     chart.appendTo('#polar-spline-container');

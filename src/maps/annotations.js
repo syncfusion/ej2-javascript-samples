@@ -1,8 +1,5 @@
 this.default = function () {
         var maps = new ej2_maps.Maps({
-            zoomSettings: {
-                enable: false
-            },
             annotations: [
                 {
                     content: '#maps-annotation',
@@ -12,14 +9,14 @@ this.default = function () {
                     x: '80%', y: '5%'
                 }
             ],
+            zoomSettings: {
+                enable: false
+            },
             layers: [
                 {
                     shapeDataPath: 'name',
                     shapePropertyPath: 'name',
-                    shapeData: window.africa_continent,
-                    shapeSettings: {
-                        fill: 'url(#grad1)'
-                    },
+                    shapeData: new ej.maps.MapAjax(location.origin + location.pathname + 'src/maps/map-data/africa-continent.json'),                    
                     markerSettings: [
                         {
                             visible: true,
@@ -29,7 +26,10 @@ this.default = function () {
                                     name: 'Africa', latitude: 13.97274101999902, longitude: 20.390625
                                 }]
                         }
-                    ]
+                    ],
+                    shapeSettings: {
+                        fill: 'url(#grad1)'
+                    }
                 }
             ]
         });

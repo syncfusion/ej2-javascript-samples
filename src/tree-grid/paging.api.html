@@ -1,0 +1,97 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid"></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 50%">
+                <div>Allow Paging</div>
+            </td>
+            <td style="width: 50%;padding-right: 10px">
+                <div>
+                    <input type="checkbox" id="allowCheck" class="checkbox" checked="checked" />
+                </div>
+            </td>
+        </tr>
+        <tr class='con-prop1'>
+            <td style="width: 50%">
+                <div style="padding-top: 7px;">
+                    Page Size Mode
+                </div>
+            </td>
+            <td style="width: 50%;  padding:10px 10px 10px 0px">
+                <div id='dropdown'>
+                    <input type="text" tabindex="1" id='sizemode' />
+                </div>
+            </td>
+        </tr>
+        <tr class='con-prop2'>
+            <td style="width: 50%">
+                <div style="padding-top: 7px;">
+                    Page Size
+                </div>
+            </td>
+            <td style="width: 50%;  padding:10px 10px 10px 0px">
+                <div id='numericbox'>
+                    <input type="text" id="pagesize" class="form-control" />
+                </div>
+            </td>
+        </tr>
+        <tr class='con-prop2'>
+            <td style="width: 50%">
+                <div style="padding-top: 7px">
+                    Page Count
+                </div>
+            </td>
+            <td style="width: 50%; padding:10px 10px 10px 0px">
+                <div>
+                    <input type="text" id="pagecount" class="form-control"/>
+                </div>
+            </td>
+        </tr>
+        <tr class='con-prop2'>
+            <td style="width: 50%">
+                <div style="padding-top: 7px">
+                    Current Page
+                </div>
+            </td>
+            <td style="width: 50%; padding:10px 10px 10px 0px">
+                <div>
+                    <input type="text" id="currentpage" class="form-control" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the usage of paging API in TreeGrid. In this sample, use the properties panel to change the page size mode, page size, page count and current page of the TreeGrid.</p>
+</div>
+
+<div id="description">
+    <p>Paging allows you to display the contents of the TreeGrid in page segments. The number of items on a page is determined by
+        the <code>pageSettings->pageSize</code> property. If no value is specified for the <code>pageSettings->pageSize</code> property, the TreeGrid will display 12 items on a page. By default, paging is disabled. To enable paging,
+        set <code>allowPaging</code> property to true.</p>
+    <p>In this demo,</p>
+    <ul>
+        <li>Click the <strong>Allow Paging</strong> check box to enable/disable paging feature.</li>
+        <li>Change the value of <strong>Page Size Mode</strong> Dropdown to change <code>pageSettings->pageSizeMode.</code></li>
+        <li>Change the value of <strong>Page Size</strong> textbox to change <code>pageSettings->pageSize.</code></li>
+        <li>Change the value of <strong>Page Count</strong> textbox to change <code>pageSettings->pageCount.</code></li>
+        <li>Change the value of <strong>Current Page</strong> textbox to change
+        <code> pageSettings->currentPage.</code></li>
+    </ul>
+    <p>
+        More information on the Paging can be found in
+        documentation section.
+    </p>
+</div>
+<style>
+    @media screen and (max-width: 590px) {
+        #property tr:nth-child(3) {
+            display: none;
+        }
+    }
+</style>

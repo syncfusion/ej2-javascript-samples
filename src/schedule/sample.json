@@ -1,14 +1,16 @@
 {
-    "name": "Schedule",
+    "name": "Scheduler",
     "directory": "schedule",
-    "category": "Calendar",
-    "type": "preview",
+    "category": "Calendars",
+    "type": "update",
     "dataSourcePath": "src/schedule/datasource.js",
+    "ftName": "scheduler",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "Schedule",
+            "category": "Scheduler",
+            "description": "This demo for Essential JS2 Scheduler control shows how the flat Scheduler looks like with its default set of minimal configurations.",
             "api": {
                 "Schedule": [
                     "height",
@@ -18,9 +20,48 @@
             }
         },
         {
-            "url": "default-events",
-            "name": "Normal",
+            "url": "local-data",
+            "name": "Local Data",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of binding an array of JavaScript objects (local JSON datasource).",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "remote-data",
+            "name": "Remote Data",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of binding remote services by using the DataManager.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "calendar-integration",
+            "name": "Sync Google Calendar",
+            "category": "Data Binding",
+            "type": "new",
+            "description": "This example shows how to integrate Google Calendar events into HTML5 JavaScript Scheduler.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "dataBinding",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "recurrence-events",
+            "name": "Recurring Events",
             "category": "Appointments",
+            "description": "This demo for Essential JS2 Scheduler control shows the scheduler with recurring meetings handled on a regular pattern.",
             "api": {
                 "Schedule": [
                     "width",
@@ -32,9 +73,11 @@
             }
         },
         {
-            "url": "recurrence-events",
-            "name": "Recurrence",
+            "url": "block-events",
+            "name": "Blocking Dates and Time",
             "category": "Appointments",
+            "type": "new",
+            "description": "This example shows how to block specific days or time intervals on HTML5 JavaScript Scheduler.",
             "api": {
                 "Schedule": [
                     "width",
@@ -49,6 +92,7 @@
             "url": "timezone",
             "name": "Timezone",
             "category": "Appointments",
+            "description": "This demo for Essential JS2 Scheduler control shows how the events are displayed in different timings as per the selected timezone.",
             "api": {
                 "Schedule": [
                     "timezone",
@@ -59,9 +103,47 @@
             }
         },
         {
+            "url": "external-drag-drop",
+            "name": "External Drag and Drop",
+            "category": "Appointments",
+            "type": "new",
+            "description": "This example shows how to drag and drop the events from an external source into HTML5 JavaScript scheduler.",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "eventSettings",
+                    "resourceHeaderTemplate",
+                    "cssClass",
+                    "workHours",
+                    "views",
+                    "group",
+                    "resources",
+                    "actionBegin",
+                    "drag"
+                ]
+            }
+        },
+        {
+            "url": "virtual-scrolling",
+            "name": "Virtual Scrolling ",
+            "category": "Scrolling",
+            "type": "new",
+            "hideOnDevice": true,
+            "description": "This example illustrates how to enable the virtual loading of resources and its events in JavaScript Scheduler.",
+            "api": {
+                "Schedule": [
+                    "views",
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
             "url": "views",
-            "name": "Basic",
+            "name": "Basic Views",
             "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows the usage of basic views such as Day, Week, Work Week and Month.",
             "api": {
                 "Schedule": [
                     "currentView",
@@ -72,9 +154,23 @@
             }
         },
         {
-            "url": "agenda",
-            "name": "Agenda",
+            "url": "timeline",
+            "name": "Timeline Views",
             "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows how the timeline scheduler looks like with its default set of configurations.",
+            "api": {
+                "Schedule": [
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
+            "url": "agenda",
+            "name": "Agenda View",
+            "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows the agenda view and the configurations available in it.",
             "api": {
                 "Schedule": [
                     "agendaDaysCount",
@@ -88,8 +184,9 @@
         },
         {
             "url": "month-agenda",
-            "name": "Month Agenda",
+            "name": "Month Agenda View",
             "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows the layout of Month Agenda view and how it works.",
             "api": {
                 "Schedule": [
                     "currentView",
@@ -100,9 +197,10 @@
             }
         },
         {
-            "url": "views-config",
-            "name": "View-based Settings",
+            "url": "views-configuration",
+            "name": "Individual View Settings",
             "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize each of the view with specific configurations.",
             "api": {
                 "Schedule": [
                     "currentView",
@@ -113,31 +211,152 @@
             }
         },
         {
-            "url": "local-data",
-            "name": "Local Data",
-            "category": "Data Binding",
+            "url": "extended-views",
+            "name": "View Intervals",
+            "category": "Views",
+            "description": "This demo for Essential JS2 Scheduler control shows how to display n number of days, weeks and months on a single view.",
             "api": {
                 "Schedule": [
-                    "eventSettings",
-                    "selectedDate"
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
                 ]
             }
         },
         {
-            "url": "remote-data",
-            "name": "Remote Data",
-            "category": "Data Binding",
+            "url": "timeline-resources",
+            "name": "Room Scheduler",
+            "category": "Multiple Resources",
+            "type": "update",
+            "description": "This demo for Essential JS2 Scheduler control shows how to design the room scheduling calendar and manage the events booked on a particular time interval.",
             "api": {
                 "Schedule": [
-                    "eventSettings",
-                    "selectedDate"
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "resourceHeaderTemplate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "resources",
+            "name": "Fare Calendar",
+            "category": "Multiple Resources",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize the scheduler to showcase it as an Airfare calendar.",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "group-editing",
+            "name": "Shared Events",
+            "category": "Multiple Resources",
+            "description": "This demo for Essential JS2 Scheduler control shows the usage of single event that are shared by multiple resources.",
+            "api": {
+                "Schedule": [
+                    "resourceHeaderTemplate",
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "group-custom-work-days",
+            "name": "Different Work Days",
+            "category": "Multiple Resources",
+            "description": "This demo for Essential JS2 Scheduler control shows how to set different working days for each of the resources.",
+            "api": {
+                "Schedule": [
+                    "resourceHeaderTemplate",
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "add-remove-resources",
+            "name": "Show/Hide Resources",
+            "category": "Multiple Resources",
+            "description": "This demo for Essential JS2 Scheduler control shows how to dynamically add or remove the resources to and from the scheduler layout.",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "resource-grouping",
+            "name": "Horizontal Grouping",
+            "category": "Resource Grouping",
+            "description": "This demo for Essential JS2 Scheduler control shows how the calendars of multiple resources are grouped in default view layouts.",
+            "api": {
+                "Schedule": [
+                    "resourceHeaderTemplate",
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "timeline-resource-grouping",
+            "name": "Timeline Grouping",
+            "category": "Resource Grouping",
+            "type": "update",
+            "description": "This demo for Essential JS2 Scheduler control shows how the calendars of multiple resources are grouped in timeline view layouts.",
+            "api": {
+                "Schedule": [
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "group-by-date",
+            "name": "Date-wise Grouping",
+            "category": "Resource Grouping",
+            "description": "This demo for Essential JS2 Scheduler control shows how the resources are grouped under each date.",
+            "api": {
+                "Schedule": [
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "group-by-child",
+            "name": "Hierarchical Grouping",
+            "category": "Resource Grouping",
+            "description": "This demo for Essential JS2 Scheduler control shows how to group the child level resources against each of the parent level resources.",
+            "api": {
+                "Schedule": [
+                    "startHour",
+                    "endHour",
+                    "group",
+                    "resources",
+                    "eventSettings"
                 ]
             }
         },
         {
             "url": "cell-template",
-            "name": "Cells",
-            "category": "Template",
+            "name": "Cell",
+            "category": "Templates",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize the background of the specific cells using cell template option.",
             "api": {
                 "Schedule": [
                     "width",
@@ -152,22 +371,23 @@
         {
             "url": "date-header-template",
             "name": "Date Header",
-            "category": "Template",
+            "category": "Templates",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize the date header cells using the template option.",
             "api": {
                 "Schedule": [
-                    "width",
-                    "height",
+                    "cssClass",
                     "dateHeaderTemplate",
-                    "views",
                     "eventSettings",
-                    "selectedDate"
+                    "eventRendered",
+                    "renderCell"
                 ]
             }
         },
         {
             "url": "event-template",
             "name": "Events",
-            "category": "Template",
+            "category": "Templates",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize the appearance of events using event template option.",
             "api": {
                 "Schedule": [
                     "width",
@@ -182,7 +402,8 @@
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "category": "Template",
+            "category": "Templates",
+            "description": "This demo for Essential JS2 Scheduler control shows how to display tooltip over events as well as the way to customize it using template option.",
             "api": {
                 "Schedule": [
                     "width",
@@ -195,7 +416,8 @@
         {
             "url": "editor-validation",
             "name": "Field Validation",
-            "category": "Editor",
+            "category": "Editor Window",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of adding default and custom validation rules to the editor fields of scheduler.",
             "api": {
                 "Schedule": [
                     "width",
@@ -208,7 +430,8 @@
         {
             "url": "editor-custom-field",
             "name": "Additional Fields",
-            "category": "Editor",
+            "category": "Editor Window",
+            "description": "This demo for Essential JS2 Scheduler control shows how to add additional fields to the default editor window.",
             "api": {
                 "Schedule": [
                     "selectedDate",
@@ -220,13 +443,56 @@
         {
             "url": "editor-template",
             "name": "Editor Template",
-            "category": "Editor",
+            "category": "Editor Window",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of customizing the default editor window with custom template design.",
+            "api": {
+                "Schedule": [
+                    "editorTemplate",
+                    "showQuickInfo",
+                    "eventRendered",
+                    "popupOpen",
+                    "actionBegin"
+                ]
+            }
+        },
+        {
+            "url": "header-rows",
+            "name": "Header Rows",
+            "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control shows how to display the additional header rows on timeline view.",
+            "api": {
+                "Schedule": [
+                    "height",
+                    "eventSettings",
+                    "selectedDate",
+                    "headerRows"
+                ]
+            }
+        },
+        {
+            "url": "time-scale",
+            "name": "Timescale",
+            "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control shows how to customize the grid lines of scheduler with different duration and count",
+            "api": {
+                "Schedule": [
+                    "height",
+                    "width",
+                    "views",
+                    "timeScale"
+                ]
+            }
+        },
+        {
+            "url": "context-menu",
+            "name": "Context Menu",
+            "category": "Customization",
+            "type": "new",
+            "description": "This example shows how to enable the context menu on HTML5 JavaScript Scheduler and perform the related actions using menu options.",
             "api": {
                 "Schedule": [
                     "width",
                     "height",
-                    "cellTemplate",
-                    "views",
                     "eventSettings",
                     "selectedDate"
                 ]
@@ -236,6 +502,7 @@
             "url": "header-bar",
             "name": "Header Bar",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of adding custom items onto the scheduler header bar.",
             "api": {
                 "Schedule": [
                     "width",
@@ -251,12 +518,14 @@
             "url": "scroll-to",
             "name": "Scroll Time",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control shows the way of manually scrolling to specific time on scheduler.",
             "api": {
                 "Schedule": [
                     "width",
                     "height",
                     "eventSettings",
-                    "selectedDate"
+                    "eventRendered",
+                    "scrollTo"
                 ]
             }
         },
@@ -264,6 +533,7 @@
             "url": "work-days",
             "name": "Work Days",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control showcases how to set customized working days as well as first day of a week on scheduler.",
             "api": {
                 "Schedule": [
                     "workDays",
@@ -275,8 +545,9 @@
         },
         {
             "url": "hide-weekend",
-            "name": "Hide Weekend",
+            "name": "Hide Non-Working Days",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control depicts the way to show or hide the weekend days of a week.",
             "api": {
                 "Schedule": [
                     "showWeekend"
@@ -284,9 +555,10 @@
             }
         },
         {
-            "url": "workhour",
+            "url": "work-hour",
             "name": "Work Hours",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control showcases how to set the work hour range on scheduler.",
             "api": {
                 "Schedule": [
                     "workHours",
@@ -300,12 +572,13 @@
             "url": "start-end-hour",
             "name": "Day Hour Limit",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control depicts how to restrict the start and end hours on scheduler.",
             "api": {
                 "Schedule": [
                     "startHour",
                     "endHour",
-                    "eventSettings",
-                    "selectedDate"
+                    "workHours",
+                    "eventRendered"
                 ]
             }
         },
@@ -313,40 +586,51 @@
             "url": "cell-dimension",
             "name": "Cell Dimension",
             "category": "Customization",
+            "description": "This demo for Essential JS2 Scheduler control shows how to set the width and height of the cells by overriding the default CSS classes.",
             "api": {
                 "Schedule": [
-                    "selectedDate",
+                    "cssClass",
                     "showTimeIndicator",
-                    "eventSettings"
+                    "eventRendered",
+                    "created",
+                    "actionComplete"
                 ]
             }
         },
         {
-            "url": "readonly-events",
-            "name": "Readonly Events",
+            "url": "read-only-events",
+            "name": "Read-only Events",
             "category": "Customization",
+            "type": "update",
+            "description": "This demo for Essential JS2 Scheduler control shows how to make specific events on the scheduler to be displayed in a read-only mode.",
             "api": {
                 "Schedule": [
                     "eventSettings",
+                    "eventRendered",
+                    "eventClick",
+                    "popupOpen",
                     "eventRendered"
                 ]
             }
         },
         {
-            "url": "rec-editor-generate-rule",
+            "url": "recurrence-editor-generate-rule",
             "name": "Rule Generator",
-            "category": "Recurrence Editor"
+            "category": "Recurrence Editor",
+            "description": "This demo for Essential JS2 Scheduler control showcases the recurrence rule generation based on the options selected from the recurrence editor."
         },
         {
-            "url": "rec-editor-populate-rule",
+            "url": "recurrence-editor-populate-rule",
             "name": "Populate Rule",
-            "category": "Recurrence Editor"
+            "category": "Recurrence Editor",
+            "description": "This demo for Essential JS2 Scheduler control shows how to fill the recurrence editor fields with values based on the provided recurrence rule string."
         },
         {
-            "url": "keyboard",
+            "url": "keyboard-interaction",
             "name": "Keyboard Interaction",
             "category": "Miscellaneous",
             "hideOnDevice": true,
+            "description": "This demo for Essential JS2 Scheduler control showcases the keyboard shortcuts available on scheduler.",
             "api": {
                 "Schedule": [
                     "width",
@@ -361,12 +645,23 @@
             "url": "events",
             "name": "Events",
             "category": "Miscellaneous",
+            "description": "This demo for Essential JS2 Scheduler control shows the client-side events that triggers on respective scheduler actions.",
             "api": {
                 "Schedule": [
                     "width",
                     "height",
                     "eventSettings",
-                    "selectedDate"
+                    "eventRendered",
+                    "created",
+                    "actionBegin",
+                    "actionComplete",
+                    "actionFailure",
+                    "cellClick",
+                    "cellDoubleClick",
+                    "destroyed",
+                    "navigating",
+                    "eventClick",
+                    "popupOpen"
                 ]
             }
         }

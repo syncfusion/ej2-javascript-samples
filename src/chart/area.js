@@ -51,10 +51,11 @@ this.default = function () {
         title: 'Average Sales Comparison',
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         load: function (args) {
-            var areaTheme = location.hash.split('/')[1];
-            areaTheme = areaTheme ? areaTheme : 'Material';
-            args.chart.theme = (areaTheme.charAt(0).toUpperCase() + areaTheme.slice(1));
-        }
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+        },
     });
     chart.appendTo('#area-container');
 };

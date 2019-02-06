@@ -41,8 +41,7 @@ this.default = function () {
         ],
         //Initializing Legend
         legendSettings: {
-            visible: true,
-            toggleVisibility: false,
+            visible: true, toggleVisibility: false,
             position: 'Right',
             height: '28%',
             width: '44%'
@@ -66,16 +65,13 @@ this.default = function () {
             args.series.dataLabel.font.size = getFontSize(pie.initialClipRect.width);
             pie.animateSeries = true;
         },
-        //Initializing Tooltip
-        tooltip: {
-            enable: true, header: '<b>${point.x}</b>', format: 'Composition: <b>${point.y}%</b>'
-        },
         //Initializing Title
         title: 'Education Institutional Revenue',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             args.accumulation.legendSettings.position = ej.base.Browser.isDevice ? 'Bottom' : 'Right';
         }
     });

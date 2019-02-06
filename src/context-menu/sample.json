@@ -1,13 +1,15 @@
 {
-    "name": "ContextMenu",
+    "name": "Context Menu",
     "directory": "context-menu",
     "category": "Navigation",
+    "ftName": "context-menu",
     "samples": [
         {
-            "url": "context-menu",
+            "url": "default",
             "name": "Default Functionalities",
-            "category": "ContextMenu",
-            "api":{"ContextMenu":["target", "items", "beforeItemRender", "animationSettings"], "MenuItem":["text", "iconCss", "items", "separator"] }
+            "category": "Context Menu",
+            "api": { "ContextMenu": ["target", "items", "beforeItemRender", "animationSettings"], "MenuItem":["text", "iconCss", "items", "separator"] },
+            "description": "This example demonstrates the Syncfusion Javascript ES5 ContextMenu items with icons, text and separator."
         }
     ]
 }

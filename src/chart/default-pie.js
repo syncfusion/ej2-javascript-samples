@@ -21,22 +21,25 @@ this.default = function () {
                 },
                 radius: '70%', xName: 'x',
                 yName: 'y', startAngle: 0,
-                endAngle: 360, innerRadius: '0%',
-                explode: true, explodeOffset: '10%', explodeIndex: 0,  name: 'Browser'
+                endAngle: 0, innerRadius: '0%',
+                explode: true, explodeOffset: '10%', explodeIndex: 0, name: 'Browser'
             }
         ],
+        center: {x: '50%', y: '50%'},
         enableSmartLabels: true,
+        enableAnimation: false,
         legendSettings: {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true,  header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
+        tooltip: { enable: false, header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
         //Initializing Title
         title: 'Mobile Browser Statistics',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
     });
     pie.appendTo('#pie-container');
@@ -84,5 +87,27 @@ this.default = function () {
     document.getElementById('pieexplodeindex').onpointermove = document.getElementById('pieexplodeindex').ontouchmove =
         document.getElementById('pieexplodeindex').onchange = function (e) {
             explodeIndex(+document.getElementById('pieexplodeindex').value);
+        };
+    function piecenterx(value) {
+        pie.center.x = value + '%';
+        document.getElementById('xvalue').innerHTML = value + '%';
+        pie.removeSvg();
+        pie.refreshSeries();
+        pie.refreshChart();
+    }
+    document.getElementById('x').onpointermove = document.getElementById('x').ontouchmove =
+        document.getElementById('x').onchange = function (e) {
+            piecenterx(+document.getElementById('x').value);
+        };
+    function piecentery(value) {
+        pie.center.y = value + '%';
+        document.getElementById('yvalue').innerHTML = value + '%';
+        pie.removeSvg();
+        pie.refreshSeries();
+        pie.refreshChart();
+    }
+    document.getElementById('y').onpointermove = document.getElementById('y').ontouchmove =
+        document.getElementById('y').onchange = function (e) {
+            piecentery(+document.getElementById('y').value);
         };
 };

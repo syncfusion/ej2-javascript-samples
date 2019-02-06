@@ -79,7 +79,7 @@
         <table id="property" title="Properties" style="width: 100%">
             <tbody>
                 <tr style="height: 50px">
-                    <td style="width: 80%">
+                    <td style="width: 50%">
                         <div>Zooming</div>
                     </td>
                     <td>
@@ -87,7 +87,7 @@
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 80%">
+                    <td style="width: 50%">
                         <div>Mouse wheel zoom</div>
                     </td>
                     <td>
@@ -95,7 +95,7 @@
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                        <td style="width: 80%">
+                        <td style="width: 50%">
                             <div>Pinch zoom</div>
                         </td>
                         <td>
@@ -103,7 +103,7 @@
                         </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 80%">
+                    <td style="width: 50%">
                         <div>Single click zoom</div>
                     </td>
                     <td>
@@ -111,11 +111,19 @@
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 80%">
+                    <td style="width: 50%">
                         <div>Double click zoom</div>
                     </td>
                     <td>
                         <input type="checkbox" id="doubletap" style="margin-top: 15px" />
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td style="width: 50%">
+                        <div>Animation duration <br><span id="dur">500 ms</span></div>
+                    </td>
+                    <td>
+                        <div id="range"></div>
                     </td>
                 </tr>
         </tbody></table>
@@ -129,15 +137,12 @@
             <p>
               In this example, you can see how to zoom and pan the map. The support has been provided for zooming with toolbar, rectangle zoom, pinch zoom, mouse wheel zoom, single-click and double-click zoom.
             </p>
-        <br/>
-            <p style="font-weight: 500">Injecting Module</p>
-            <p>
-              Maps component features are segregated into individual feature-wise modules. To use the zooming feature, inject the <code>Zoom</code> module using the <code>Maps.Inject(Zoom)</code> method.
-            </p>
-            
         </div>
     <style>
         #control-container {
+            padding: 0px !important;
+        }
+        #range > * {
             padding: 0px !important;
         }
     </style>
