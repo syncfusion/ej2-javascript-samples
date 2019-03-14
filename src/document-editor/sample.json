@@ -2,14 +2,13 @@
     "name": "DocumentEditor",
     "directory": "document-editor",
     "category": "Editors",
+    "hideOnDevice": true,
     "ftName":"document-editor",
-    "type": "update",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
             "category": "DocumentEditor",
-            "type": "update",            
             "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
             "api": {
                 "DocumentEditor": [

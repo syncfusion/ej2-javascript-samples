@@ -38,6 +38,7 @@ var importRules = {
     created: createdControl
   });
  qryBldrObj.appendTo('#querybuilder');
+
  function createdControl() {
     if (ej.base.Browser.isDevice) {
         qryBldrObj.summaryView = true;

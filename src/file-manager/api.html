@@ -1,0 +1,59 @@
+<div class="col-lg-8 control-section">
+    <div class="control_wrapper">
+        <!-- Initialize FileManager -->
+        <div id="filemanager"></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <table id="property" title="Properties">
+            <tbody>
+                <tr>
+                    <td style="width: 50%">
+                        <div>Toolbar</div>
+                    </td>
+                    <td style="width: 50%;padding-right: 10px;text-align: center;">
+                        <div>
+                            <input id="toolbar" type="checkbox" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
+    .control_wrapper {
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+
+    .property-panel-table div {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    #property tr {
+        height: 50px;
+    }
+
+    #navPane,
+    #tool {
+        padding-top: 5px;
+    }
+
+    #navPane_toggle,
+    #tool_toggle {
+        width: 100px;
+    }
+</style>
+<div id="action-description">
+    <p>This sample demonstrates the properties of FileManager component from the property pane. Select any properties
+        from the property pane to customize the FileManager.</p>
+</div>
+
+<div id="description">
+    The File Manager component is used to explore a file system through a web application, similar to the windows
+    explorer for windows. It supports the basic file operations such as create, rename, delete.
+</div>

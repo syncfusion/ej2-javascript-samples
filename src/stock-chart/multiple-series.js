@@ -21,12 +21,14 @@ renderMultipleStockChart = function (goog) {
             ],
             title: 'Multiple Series',
             titleStyle: { fontWeight: '500', color: '#424242' },
+            // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             }
+            // custom code end
         });
         stockChart.appendTo('#container');
     };

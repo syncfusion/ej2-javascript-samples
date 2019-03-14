@@ -2,11 +2,13 @@
     this.default = function () {
         var chart, chart1, chart2, chart3, chart4, chart5;
         var maps = new ej.maps.Maps({
+            // custom code start
             load: function (args) {
-                var theme = location.hash.split('/')[1];
-                theme = theme ? theme : 'Material';
-                args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+                var pieTheme = location.hash.split('/')[1];
+                pieTheme = pieTheme ? pieTheme : 'Material';
+                args.maps.pieTheme = (pieTheme.charAt(0).toUpperCase() + pieTheme.slice(1));
             },
+            // custom code end
             resize: function (args){
                 chart.destroy();
                 chart1.destroy();

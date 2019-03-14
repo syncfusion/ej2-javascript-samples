@@ -1,4 +1,3 @@
-
 this.default = function () {
     // initialize AutoComplete component
     var atcObj1 = new ej.dropdowns.AutoComplete({

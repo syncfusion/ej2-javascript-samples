@@ -39,6 +39,7 @@ this.default = function () {
     var check3 = new ej.buttons.CheckBox({ cssClass: 'birthday', value: '3', label: 'Birthday', checked: false, change: onChange }, '#birthdays');
     var check4 = new ej.buttons.CheckBox({ cssClass: 'holiday', value: '4', label: 'Holiday', checked: false, change: onChange }, '#holidays');
 
+    //custom code start
     function generateCalendarData() {
         var collections = [];
         var dataCollections = [personalData, companyData, birthdayData, holidayData];
@@ -47,4 +48,5 @@ this.default = function () {
         }
         return collections;
     }
+    //custom code end
 };

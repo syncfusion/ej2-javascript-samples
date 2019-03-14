@@ -24,13 +24,16 @@ this.default = function () {
                 cap: { radius: 7, color: '#757575' }, needleTail: { length: '18%', color: '#757575' }
             }]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
     });
     circulargauge.appendTo('#range-container');
+    // Code for Property Panel
     var colortObj;
     var listObj = new ej.dropdowns.DropDownList({
         index: 0, width: 120,

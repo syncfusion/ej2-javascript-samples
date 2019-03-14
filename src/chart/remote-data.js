@@ -89,6 +89,7 @@ this.default = function () {
         axisLabelRender: labelRender,
         loaded: loadedChart,
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+           // custom code start
         load: function (args) {
             var div = document.getElementById('waitingpopup');
             div.style.display = 'block';
@@ -102,6 +103,7 @@ this.default = function () {
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+           // custom code end
         title: 'Sprint Task Analysis', legendSettings: { visible: false },
         tooltip: {
             enable: true

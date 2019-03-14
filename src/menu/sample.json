@@ -3,7 +3,6 @@
     "directory": "menu",
     "category": "Navigation",
     "ftName": "menu-bar",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -23,7 +22,6 @@
             "url": "scrollable",
             "name": "Scrollable",
             "category": "Menu Bar",
-    		"type": "new",
             "api":{ "Menu": ["items", "enableScrolling", "cssClass", "beforeOpen"] },
             "description": "This example demonstrates how to load menu and sub menus with large number of menu items in horizontal / vertical scrollable Syncfusion JavaScript ES5 menu."
         },

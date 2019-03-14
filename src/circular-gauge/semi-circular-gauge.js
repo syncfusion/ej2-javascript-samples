@@ -3,11 +3,13 @@
 */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
+        // custom code start
         load: function (args) {
             var semitheme = location.hash.split('/')[1];
             semitheme = semitheme ? semitheme : 'Material';
             args.gauge.theme = (semitheme.charAt(0).toUpperCase() + semitheme.slice(1));
         },
+        // custom code end
         moveToCenter: false,
         axes: [{
             startAngle: 270, endAngle: 90,
@@ -33,6 +35,7 @@ this.default = function () {
         }]
     });
     circulargauge.appendTo('#gauge');
+    // code for Property Panel
     var opacity;
     var highlightCheckBox = new ej.buttons.CheckBox({
         change: opacity, checked: false,

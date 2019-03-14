@@ -112,6 +112,7 @@ this.default = function () {
     //Click Event for orientation of the PropertyPanel.
     document.getElementById('orientation').onclick = function (args) {
         var target = args.target;
+        // custom code start
         var selectedElement = document.getElementsByClassName('e-selected-orientation-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-orientation-style');
@@ -119,6 +120,7 @@ this.default = function () {
         if (!target.classList.contains('e-selected-orientation-style')) {
             target.classList.add('e-selected-orientation-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style e-selected-orientation-style') {
             var id = target.id;
             var orientation1 = id.substring(0, 1).toUpperCase() + id.substring(1, id.length);
@@ -130,6 +132,7 @@ this.default = function () {
 
     document.getElementById('pattern').onclick = function (args) {
         var target = args.target;
+        // custom code start
         var selectedpatternElement = document.getElementsByClassName('e-selected-pattern-style');
         if (selectedpatternElement.length) {
             selectedpatternElement[0].classList.remove('e-selected-pattern-style');
@@ -137,6 +140,7 @@ this.default = function () {
         if (!target.classList.contains('e-selected-pattern-style')) {
             target.classList.add('e-selected-pattern-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style e-selected-pattern-style') {
             var subTreeOrientation;
             var subTreeAlignment;

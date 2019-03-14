@@ -1,0 +1,69 @@
+<div class="col-lg-9 control-section">
+    <div id="Schedule"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Export as iCalendar</div>
+                </td>
+                <td style="width: 50%;">
+                    <input id="ics-export" type="button" value="Export" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div>Import iCalendar file</div>
+                </td>
+                <td style="width: 50%;">
+                    <input id="ics-import" type="file" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- custom code start -->
+<style>
+    .calendar-import.e-upload {
+        border: 0;
+        padding-left: 0 !important;
+    }
+
+    .calendar-import.e-upload .e-file-select-wrap {
+        padding: 0
+    }
+
+    .calendar-import.e-upload .e-file-select-wrap .e-file-drop {
+        display: none;
+    }
+</style>
+<!-- custom code end -->
+
+<div id="action-description">
+    <p>
+        This example showcases how to export the Scheduler events to a calendar (.ics) file, as well as how to import
+        events from an .ics file (downloaded from any of the calendars like Google or Outlook) into our Scheduler.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, the Scheduler events can be exported to a calendar (.ics) file by making use of the
+        <code>exportToICalendar</code> public method. By default,
+        the calendar is exported with a file name <code>Calendar.ics</code>.
+        To change this file name on export, pass the custom string value as <code>fileName</code> to get the file
+        downloaded with this provided name.
+        The events from external calendars can also be imported into Scheduler by making use of the
+        <code>importICalendar</code> method. This method accepts the blob object of an .ics file to be imported as a
+        mandatory argument.
+    </p>
+    <p>
+        <strong>Module Injection</strong>
+    </p>
+    <p>
+        To start using the export and import ICS functionality in Scheduler, you need to import the
+        <code>ICalendarExport</code> and <code>ICalendarImport</code> modules from <code>@syncfusion/ej2-schedule</code>
+        package and then inject them using the <code>Schedule.Inject(ICalendarExport, ICalendarImport)</code> method.
+    </p>
+</div>

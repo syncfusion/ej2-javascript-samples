@@ -5,4 +5,13 @@ this.default = function () {
         showCheckBox: true,
     });
     treeObj.appendTo('#tree');
+
+    var checkBoxObj = new ej.buttons.CheckBox({
+        checked: true,
+        label: 'Auto Check',
+        change: function(args) {
+            treeObj.autoCheck = args.checked;
+        },
+    });
+    checkBoxObj.appendTo('#check');
 };

@@ -16,7 +16,6 @@
             "url": "calendar-heatmap",
             "name": "Calendar Heatmap",
             "category": "Heatmap Chart",
-            "type":"update",
             "description": "This demo for Essential JS2 Heatmap control for displays the time series data and displays the axis labels at specific time interval.",
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "height", "paletteSettings", "legendSettings", "tooltipRender", "cellSettings" ] }
         },
@@ -31,7 +30,7 @@
             "url": "color-and-size-attributes",
             "name": "Color and Size Attributes",
             "category": "Bubble Heatmap",
-            "description": "This demo for Essential JS2 Heatmap control shows how to bind the multiple data to bubble heat map.",
+            "description": "This demo for Essential JS2 Heatmap control shows how to bind the multiple data to bubble type heat map.",
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "legendSettings", "tooltipRender", "cellSettings" ] }
         },
         {
@@ -73,7 +72,7 @@
             "url": "inversed",
             "name": "Inversed Axis",
             "category": "Features",
-            "description": "This demo for Essential JS2 Heatmap control shows how to inverse the axis in heat map",
+            "description": "This demo for Essential JS2 Heatmap control shows how to inverse the both x-axis and y-axis in heat map",
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "paletteSettings", "legendSettings"] }
         },
         {
@@ -87,8 +86,7 @@
             "url": "multi-level-labels",
             "name": "Multi Level Labels",
             "category": "Features",
-            "type":"new",
-            "description": "This demo for Essential JS2 Heatmap control shows how to group the axis labels",
+            "description": "This demo for Essential JS2 Heatmap control shows how to group the axis labels with multiple levels.",
             "api": {
                 "HeatMap": [
                     "titleSettings",
@@ -104,8 +102,8 @@
             "url": "cell-selection",
             "name": "Selection",
             "category": "Features",
-            "type":"new",
-            "description": "This demo for Essential JS2 Heatmap control shows how to select the cell.",
+            "type": "update",
+            "description": "This demo for Essential JS2 Heatmap control shows how to select and deselect the heat map cell using mouse and touch action.",
             "api": {
                 "HeatMap": [
                     "titleSettings",
@@ -121,7 +119,6 @@
             "url": "legend",
             "name": "Legend Placement",
             "category": "Features",
-            "type": "update",
             "description": "This demo for Essential JS2 Heatmap control shows how to place the heatmap legend in different positions.",
             "api": {"HeatMap": ["titleSettings", "xAxis", "yAxis", "dataSource","paletteSettings", "cellSettings", "legendSettings","renderingMode", "tooltipRender"] }
         },
@@ -136,7 +133,6 @@
             "url": "palette",
             "name": "Palette Mode",
             "category": "Features",
-            "type": "update",
             "description": "This demo for Essential JS2 Heatmap control demonstrates applying gradient colors or solid colors for the heatmap cells.",
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "cellSettings", "legendSettings" ] }
         },
@@ -151,8 +147,7 @@
             "url": "tooltip-template",
             "name": "Tooltip Template",
             "category": "Features",
-            "type": "update",
-            "description": "This demo for Essential JS2 Heatmap control shows the usage of tooltip template in heat map.",
+            "description": "This demo for Essential JS2 Heatmap control shows how to customize the tool tip text using template support in heat map.",
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "legendSettings", "paletteSettings", "tooltipRender" ] }
         }
     ]

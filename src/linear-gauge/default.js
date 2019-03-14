@@ -32,11 +32,13 @@ this.default = function () {
             x: 10,
             y: -70, zIndex: '1'
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     gauge.appendTo('#defaultContainer');
 };

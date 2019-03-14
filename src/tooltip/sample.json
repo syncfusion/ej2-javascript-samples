@@ -72,19 +72,19 @@
             "url": "menu",
             "name": "Tooltip Menu",
             "category": "Tooltip",
-            "description": "Demo of Essential JS 2 Tooltip control customization to look like a menu."            
+            "description": "Demo of Essential JS 2 Tooltip control customization to look like a menu using toolbar and listview controls."
         },
         {
             "url": "html-template",
             "name": "HTML Template",
             "category": "Tooltip",
-            "description": "Demo of Essential JS 2 Tooltip control customization as an HTML page using HTML tags and CSS."            
+            "description": "Demo of Essential JS 2 Tooltip control customization as an HTML page using HTML tags to display a template content."
         },
         {
             "url": "api",
             "name": "API",
             "category": "Tooltip",
-            "description": "Essential JS 2 Tooltip control demo showcasing the most frequently used API combinations, like content, height, width, open, sticky mode, and more."            
+            "description": "Essential JS 2 Tooltip control demo showcasing the most frequently used API combinations, like content, height, width, open, sticky mode, and more."
         }
     ]
 }

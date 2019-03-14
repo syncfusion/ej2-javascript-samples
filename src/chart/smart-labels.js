@@ -45,12 +45,14 @@ this.default = function () {
         tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
         //Initializing Title
         title: 'RIO Olympics Gold',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     pie.appendTo('#container2');
 };

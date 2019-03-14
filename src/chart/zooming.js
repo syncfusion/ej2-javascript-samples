@@ -16,6 +16,11 @@ this.default = function () {
 /**
  * Sample for Zooming in Chart
  */
+var selectedTheme = location.hash.split('/')[1];
+selectedTheme = selectedTheme ? selectedTheme : 'Material';
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
+var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4'];
     var chart = new ej.charts.Chart({
         chartArea: { border: { width: 0 } },
         //Initializing Primary X Axis
@@ -41,8 +46,8 @@ this.default = function () {
                 name: 'Product X',
                 xName: 'x',
                 yName: 'y',
-                fill: 'url(#gradient-chart)',
-                border: { width: 0.5, color: '#00bdae' },
+                fill: 'url(#' + theme.toLowerCase() + '-gradient-chart)',
+                border: { width: 0.5, color: borderColor[themes.indexOf(theme)] },
                 animation: { enable: false }
             },
         ],
@@ -58,11 +63,7 @@ this.default = function () {
         title: 'Sales History of Product X',
         legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
-        load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
-        }
+        theme: theme,
     });
     chart.appendTo('#zoom-container');
 };

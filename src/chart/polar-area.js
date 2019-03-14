@@ -50,12 +50,14 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Average Sales Comparison',
+           // custom code start
         load: function (args) {
             var polarAreaTheme = location.hash.split('/')[1];
             polarAreaTheme = polarAreaTheme ? polarAreaTheme : 'Material';
             args.chart.theme = (polarAreaTheme.charAt(0).toUpperCase() + 
                 polarAreaTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-area-container');
     var polarType = new ej.dropdowns.DropDownList({

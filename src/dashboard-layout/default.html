@@ -1,0 +1,113 @@
+<div class="control-section">
+    <div style="padding:5px;text-align: end;">
+        <button id="add" class="e-btn e-info">Add Panel</button>
+    </div>
+    <div id="defaultLayout">
+        <div id="one" class="e-panel" data-row="0" data-col="0" data-sizeX="1" data-sizeY="1">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">0</div>
+            </div>
+        </div>
+        <div id="two" class="e-panel" data-row="1" data-col="0" data-sizeX="1" data-sizeY="2">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">1</div>
+            </div>
+        </div>
+        <div id="three" class="e-panel" data-row="0" data-col="1" data-sizeX="2" data-sizeY="2">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">2</div>
+            </div>
+        </div>
+        <div id="four" class="e-panel" data-row="2" data-col="1" data-sizeX="1" data-sizeY="1">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">3</div>
+            </div>
+        </div>
+        <div id="five" class="e-panel" data-row="2" data-col="2" data-sizeX="2" data-sizeY="1">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">4</div>
+            </div>
+        </div>
+        <div id="six" class="e-panel" data-row="0" data-col="3" data-sizeX="1" data-sizeY="1">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">5</div>
+            </div>
+        </div>
+        <div id="seven" class="e-panel" data-row="1" data-col="3" data-sizeX="1" data-sizeY="1">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">6</div>
+            </div>
+        </div>
+        <div id="eight" class="e-panel" data-row="0" data-col="4" data-sizeX="1" data-sizeY="3">
+            <span id="close" class="e-template-icon e-clear-icon"></span>
+            <div class="e-panel-container">
+                <div class="text-align">7</div>
+            </div>
+        </div>
+    </div>
+    <div id="headerTemplate">
+        <span id="close" class="e-template-icon e-clear-icon"></span>
+    </div>
+    <div id="content"></div>
+</div>
+<div id="action-description">
+    <p>
+        The following sample demonstrates the default functionalities of the DashboardLayout component. Click the <code>Add Panel</code> button to add panels dynamically to the dashboardlayout.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        The DashboardLayout component provides the capability to arrange, resize and reorder the panels within the dashboardlayout.
+    </p>
+
+</div>
+<style>
+    #defaultLayout {
+        padding: 10px;
+    }
+    
+    .e-dashboardlayout.e-control .e-panel:hover span {
+        display: block;
+    }
+    
+    #defaultLayout .e-panel .e-panel-container .text-align {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .e-template-icon {
+        padding: 10px;
+        float: right;
+        display: none;
+    }
+    
+    .e-clear-icon::before {
+        content: '\e932';
+        font-size: 12px;
+        font-family: 'e-icons';
+    }
+    
+    .text-align {
+        line-height: 160px;
+    }
+    
+    .e-clear-icon {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    
+    .sb-demo-section .container-fluid {
+        background: #E5E5E5;
+    }
+</style>

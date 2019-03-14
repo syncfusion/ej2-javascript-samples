@@ -1,11 +1,11 @@
 this.default = function () {
     var touchmove = false;
     var maps = new ej.maps.Maps({
-        
+        // custom code start
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var Theme = location.hash.split('/')[1];
+            Theme = Theme ? Theme : 'Material';
+            args.maps.theme = (Theme.charAt(0).toUpperCase() + Theme.slice(1));
         },
         loaded: function (args) {
             var mapsSVG = document.getElementById('mapdrilldown_svg');
@@ -13,6 +13,7 @@ this.default = function () {
             mapsSVG.addEventListener('touchmove', function(e) { touchmove = true; }, false);
             }
         },
+        // custom code end
         shapeSelected: function (args) {
             var shape = args.shapeData.continent;
             if(maps.baseLayerIndex === 0){
@@ -234,6 +235,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#mapdrilldown');
+    // Code for Property Panel
     document.getElementById('category').onclick = function () {
         maps.baseLayerIndex = 0;
         maps.refresh();

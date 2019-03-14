@@ -229,14 +229,7 @@ this.default = function () {
         columns: filter,
         width: '100%',
         rule: importRules,
-        conditionChanged: updateRule,
-        fieldChanged: updateRule,
-        valueChanged: updateRule,
-        operatorChanged: updateRule,
-        ruleDelete: updateRule,
-        groupDelete: updateRule,
-        ruleInsert: updateRule,
-        groupInsert: updateRule
+        change: updateRule
     });
     qryBldrObj.appendTo('#querybuilder');
     var radioButton = new ej.buttons.RadioButton({

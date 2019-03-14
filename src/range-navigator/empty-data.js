@@ -2,7 +2,6 @@
  * Sample for empty points
  */
 var _this = this;
-var stockData = [];
 var startDate = new Date(2012, 4, 2);
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -11,7 +10,7 @@ var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
 var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4'];
 var regionColor = ['rgba(0, 189, 174, 0.3)', 'rgba(68, 114, 196, 0.3)',
     'rgba(161, 110, 229, 0.3)', 'rgba(121, 236, 228, 0.3)'];
-this.renderChart = function (dataSrc) {
+this.renderEmptyPointChart = function (stockData) {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
             valueType: 'DateTime', crosshairTooltip: { enable: true },
@@ -62,6 +61,7 @@ this.renderChart = function (dataSrc) {
 };
 this.default = function () {
     var dataSrc;
+    var stockData = [];
     var ajax = new ej.base.Ajax('./src/range-navigator/data-source/empty-data.json', 'GET', true);
     ajax.send().then();
     ajax.onSuccess = function (data) {
@@ -87,6 +87,6 @@ this.default = function () {
                 stockData[i].open = null;
             }
         }
-        _this.renderChart(dataSrc);
+        _this.renderEmptyPointChart(stockData);
     };
 };

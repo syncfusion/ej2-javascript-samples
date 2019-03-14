@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2019, 0, 10),
         eventSettings: {
             dataSource: data
         },
@@ -109,7 +109,8 @@ this.default = function () {
                 break;
             case 'Add':
             case 'AddRecurrence':
-                var activeCellsData = scheduleObj.getCellDetails(selectedTarget);
+                var selectedCells = scheduleObj.getSelectedElements();
+                var activeCellsData = scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
                 if (selectedMenuItem === 'Add') {
                     scheduleObj.openEditor(activeCellsData, 'Add');
                 } else {

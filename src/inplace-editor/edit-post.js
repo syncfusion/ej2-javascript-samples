@@ -20,7 +20,6 @@ this.default = function () {
         actionSuccess: function (e) {
             e.value = chipCreation(e.value.split(','));
         }, name: 'Tag',
-        popupSettings: { model: { width: 'auto' } },
         validationRules: {
             Tag: { required: [true, 'Enter valid tags'] },
         },
@@ -34,11 +33,11 @@ this.default = function () {
         mode: 'Inline',
         editableOn: 'EditIconClick',
         submitOnEnter: false, type: 'RTE',
-        popupSettings: {
+        popupSettings : {
             model: {
                 width: (document.querySelector('#inplace-editor-control.form-layout ')).offsetWidth
             }
-        },
+         },
         value: 'The extensive adoption of JavaScript for application development, and the ability to use HTML and JavaScript to create Windows Store apps, has made JavaScript a vital part of the Windows development ecosystem. Microsoft has done extensive work to make JavaScript easier to use.',
         name: 'rte',
         validationRules: {
@@ -73,27 +72,25 @@ this.default = function () {
     });
     editorMode.appendTo('#editorMode_form');
     function changeEditorMode(e) {
-        var mode = e.itemData.value;
-        titleObj.mode = mode;
+        if (e.itemData.value === 'popup') {
+            titleObj.mode = 'Popup';
+            tagObj.mode = 'Popup';
+            rteObj.mode = 'Popup';
+        }
+        else {
+            titleObj.mode = 'Inline';
+            tagObj.mode = 'Inline';
+            rteObj.mode = 'Inline';
+        }
         titleObj.dataBind();
-        tagObj.mode = mode;
         tagObj.dataBind();
-        rteObj.mode = mode;
         rteObj.dataBind();
     }
-    var editpane = document.getElementById('right-pane');
-    if (editpane) {
-        editpane.onscroll = function () {
-            if (editorMode.value === 'Inline') { return; }
-            if (titleObj && (titleObj.element.querySelectorAll('.e-editable-open').length > 0)) {
-                titleObj.enableEditMode = false;
-            }
-            if (tagObj && (tagObj.element.querySelectorAll('.e-editable-open').length > 0)) {
-                tagObj.enableEditMode = false;
-            }
-            if (rteObj && (rteObj.element.querySelectorAll('.e-editable-open').length > 0)) {
-                rteObj.enableEditMode = false;
-            }
-        };
-    }
+    document.getElementById('right-pane').onscroll = function () {
+        if(titleObj.mode === 'Popup' || tagObj.mode === 'Popup' || rteObj.mode === 'Popup') {            
+            titleObj.enableEditMode = false;           
+            tagObj.enableEditMode = false;            
+            rteObj.enableEditMode = false;
+        }
+    };
 };

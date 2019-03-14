@@ -9,11 +9,13 @@ this.default = function () {
         axisLabelRender: function (args) {
             args.text = value[args.value];
         },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [{
             radius: '70%',
             lineStyle: { width: 10, color: '#E0E0E0' },
@@ -64,6 +66,7 @@ this.default = function () {
         }]
     });
     circulargauge.appendTo('#direction-container');
+    // Code for Property
     pointerColor = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',

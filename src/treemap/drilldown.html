@@ -1,17 +1,89 @@
-<div class="control-section">
+<div class="col-lg-9 control-section">
     <div id="container" align="center"></div>
+    <div style="float: right; margin-right: 10px;">Source:
+        <a href="https://en.wikipedia.org/wiki/List_of_continents_by_population" target="_blank">en.wikipedia.org</a>
+    </div>
 </div>
-<div style="float: right; margin-right: 10px;">Source:
-    <a href="https://en.wikipedia.org/wiki/List_of_continents_by_population" target="_blank">en.wikipedia.org</a>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr>
+                <td style="width: 70%">
+                    <div class="property-text">Drilldown View</div>
+                </td>
+                <td style="width: 70%;">
+                    <div>
+                        <input type="checkbox" id="drillView" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%">
+                    <div class="property-text">Enable Breadcrumb</div>
+                </td>
+                <td style="width: 70%;">
+                    <div>
+                        <input type="checkbox" id="breadCrumb" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%">
+                    <div class="property-text">Breadcrumb Connector</div>
+                </td>
+                <td style="width: 70%;">
+                    <div>
+                        <input type="text" id="connectorText" value=' - ' disabled=true style="width:70px;margin-left:10px" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:40%;">
+                    <div class="property-text">Header Alignment</div>
+                </td>
+                <td style="width: 60%;">
+                    <div style="margin-left:10px">
+                        <select name="selectIndex" id="header">
+                            <option value="Near" selected>Near</option>
+                            <option value="Far">Far</option>
+                            <option value="Center">Center</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:40%;">
+                    <div class="property-text">Label Alignment</div>
+                </td>
+                <td style="width: 60%;">
+                    <div style="margin-left:10px">
+                        <select name="selectIndex" id="label">
+                            <option value="Near" selected>Near</option>
+                            <option value="Far">Far</option>
+                            <option value="Center">Center</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <div id="action-description">
     <p>
-        This sample demonstrates drill-down with the continents at the top level followed by regions and countries. By clicking a continent, you can view all the countries available in that continent clearly.
+        This sample demonstrates drill-down with the continents at the top level followed by regions and countries. By
+        clicking a continent, you can view all the countries available in that continent clearly.
+        Customizations can be done in the treemap, by using the options in the properties panel
     </p>
 </div>
 <div id="description">
     <p>
-        In this example you can see how to render a TreeMap with multiple items and drill it further. Tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item in touch enabled devices.
+        In this example, you can see how to render a TreeMap with multiple items and drill it further.
+        Change the drill down view and enable the breadcrumb using the options available in the properties panel.
+    </p>
+    <p>
+        The tooltip is enabled in this example.
+        To see the tooltip in action, hover the mouse over an item or tap an item in touch-enabled devices.
     </p>
 </div>

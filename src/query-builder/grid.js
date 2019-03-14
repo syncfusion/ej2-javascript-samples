@@ -27,14 +27,7 @@
             dataSource: window.hardwareData,
             columns: columnData,
             rule: importRules,
-            conditionChanged: updateRule,
-            fieldChanged: updateRule,
-            valueChanged: updateRule,
-            operatorChanged: updateRule,
-            ruleDelete: updateRule,
-            groupDelete: updateRule,
-            ruleInsert: updateRule,
-            groupInsert: updateRule
+            change: updateRule
         });
         qryBldrObj.appendTo('#querybuilder');
         var grid;

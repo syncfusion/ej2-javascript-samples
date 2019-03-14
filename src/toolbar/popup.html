@@ -49,6 +49,7 @@
         </tr>
     </table>
 </div>
+<!-- custom code start-->
 <style>
     @font-face {
         font-family: 'Material_toolbar';
@@ -214,7 +215,7 @@
     }
 
     .e-icon-week:before {
-      content: "\e319";
+      content: "\e315";
     }
 
     .e-print:before {
@@ -230,7 +231,7 @@
     }
 
     .e-reccurence-icon:before {
-      content: "\e309";
+      content: "\e308";
 	  font-weight: 700;
     }
 
@@ -241,7 +242,63 @@
     .e-sample-resize-container {
             max-width: 700px;
     }
-    
+
+    .fabric .e-icon-month:before {
+      content: '\e93a';
+    }
+
+    .fabric .e-icon-week:before {
+      content: '\e31f';
+    }
+
+    .fabric .e-reccurence-icon:before,
+    .highcontrast .e-reccurence-icon:before {
+      content: '\e309';
+      font-weight: 700;
+    }
+
+    .fabric .e-print:before,
+    .highcontrast .e-print:before,
+    .bootstrap .e-print:before {
+      content: '\e7df';
+    }
+
+    .highcontrast .e-icon-day:before,
+    .fabric .e-icon-year:before,
+    .highcontrast .e-icon-year:before,
+    .fabric .e-icon-day:before {
+      content: '\e317';
+    }
+
+    .highcontrast .e-icon-month:before {
+      content: '\e93a';
+    }
+
+    .highcontrast .e-icon-week:before {
+      content: "\e31f";
+    }
+
+    .bootstrap .e-icon-day:before {
+      content: '\e318';
+    }
+
+    .bootstrap .e-icon-week:before {
+      content: '\e320';
+    }
+
+    .bootstrap .e-icon-month:before {
+      content: '\e960';
+    }
+
+    .bootstrap .e-reccurence-icon:before {
+      content: '\e308';
+      font-weight: 700;
+    }
+
+    .material .e-icon-year:before {
+      content: "\e31b";
+    }
+
     @media only screen and (min-width: 1224px) {
         .e-sample-resize-container {
             width: 700px;
@@ -261,3 +318,4 @@
         font-size: 16px;
     }
 </style>
+<!-- custom code end-->

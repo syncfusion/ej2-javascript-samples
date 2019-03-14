@@ -1,0 +1,88 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div class="col-md-12">
+            <div id="schedule"></div>
+            <div id="grid"></div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section property-customization">
+    <div class="property-panel-section">
+        <p class="property-panel-header header-customization" style="width: 100%">Search by all event fields</p>
+        <div class="property-panel-content">
+            <input type="text" class='e-input' id="events-search" />
+        </div>
+        <form class="event-search" id="form-search">
+            <p class="property-panel-header  header-customization" style="width: 100%">Search by specific event fields</p>
+            <table id="property-specific" style="width: 100%">
+                <tbody>
+                    <tr class="row">
+                        <td class="property-panel-content" colspan="2">
+                            <input type="text" class="search-field" id="searchEventName" name="Subject" />
+                        </td>
+                    </tr>
+                    <tr class="row" style="height: 45px">
+                        <td class="property-panel-content" colspan="2">
+                            <input type="text" class="search-field" id="searchEventLocation" name="Location" />
+                        </td>
+                    </tr>
+                    <tr class="row" style="height: 45px">
+                        <td class="property-panel-content" colspan="2">
+                            <input type="text" class="search-field e-start-time" id="startScheduleDate" name="StartTime" />
+                        </td>
+                    </tr>
+                    <tr class="row" style="height: 45px">
+                        <td class="property-panel-content" colspan="2">
+                            <input type="text" class="search-field e-end-time" id="endScheduleDate" name="EndTime" />
+                        </td>
+                    </tr>
+                    <tr class="row" style="height: 45px">
+                        <td class="e-field button-customization" style="width: 50%; padding: 15px">
+                            <input id="seperateSearch" type="button" value="Search" />
+                        </td>
+                        <td class="e-field button-customization" style="width: 50%; padding: 15px">
+                            <input id="clear" type="button" value="Clear" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This example showcases the search results of Scheduler appointments in a grid. When the user provides the
+        search string on appropriate fields, the resulting event collection based on the search criteria will be
+        displayed in a Grid.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, the search text value is compared with the event field values of Scheduler DataSource and then
+        the filtered resultant event data collection is assigned to the DataSource of Grid.
+    </p>
+</div>
+
+<!-- custom code start -->
+<style>
+    .header-customization {
+        padding-bottom: 10px;
+    }
+
+    .property-customization {
+        padding-right: 5px;
+    }
+
+    .button-customization {
+        padding: 15px;
+    }
+
+    @media (max-width: 441px){
+        .button-customization {
+            padding: 30px;
+        }
+    }
+</style>
+<!-- custom code end -->

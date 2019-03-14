@@ -96,7 +96,7 @@
 }
 
 .sb-icon-Demo:before {
-    content: '\e92e';
+    content: '\e959';
     font-size: 20px;
     display: table-cell;
 }
@@ -116,6 +116,17 @@
 .sb-icon-Home:before {
     content: '\e915';
     font-size: 30px;
+}
+
+.sb-icons.sb-icon-Back {
+    vertical-align: middle;
+    display: table-cell;
+    width: 17px;
+}
+
+.sb-icon-Back:before {
+    content: '\e962';
+    font-size: 17px;
 }
 
 .sb-icon-Next:before {
@@ -1319,6 +1330,15 @@ propertye pane
         display: none;
     }
     .sb-desktop-setting {
+        display: inline-flex;
+    }
+    .sb-desktop-setting.sb-hide {
+        display: block;
+    }
+    .sb-toolbar-splitter {
+        display: none;
+    }
+    .sb-plnr-section {
         display: none;
     }
     .copy-tooltip {
@@ -1519,6 +1539,15 @@ propertye pane
     }
     /*source tab header*/
     .sb-desktop-setting {
+        display: inline-flex;
+    }
+    .sb-desktop-setting.sb-hide {
+        display: block;
+    }
+    .sb-toolbar-splitter {
+        display: none;
+    }
+    .sb-plnr-section {
         display: none;
     }
     .sb-right-pane {
@@ -1565,6 +1594,9 @@ propertye pane
     }
     .sb-mobile-setting {
         display: block;
+        padding-top: 5px;
+    }
+    .sb-open-new-wrapper {    
         padding-top: 3px;
     }
     .sb-icon-Demo,

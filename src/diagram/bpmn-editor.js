@@ -576,7 +576,7 @@ function paletteIconClick() {
         }
     }
 }
-
+// custom code start
 function showPaletteToolbar() {
     var element = document.getElementById('palette-space');
     isMobile = window.matchMedia('(max-width:550px)').matches;
@@ -589,7 +589,7 @@ function showPaletteToolbar() {
         }
     }
 }
-
+// custom code end
 this.default = function () {
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '469px', nodes: nodes, connectors: connectors,

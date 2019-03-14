@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function(args) {
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';
             args.treemap.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'US Gold medal categories in Summer Olympics - 2016',
             textStyle: { size: '15px' }

@@ -1,5 +1,5 @@
 /**
- * Sample for Pointers
+ * Code for first gauge
  */
 function pointeGauge1() {
     var pointeGauge1 = new ej.circulargauge.CircularGauge({
@@ -37,14 +37,20 @@ function pointeGauge1() {
                 }
             ]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return pointeGauge1;
 }
+
+/**
+ * Code for second gauge
+*/ 
 function pointeGauge2() {
     var pointeGauge2 = new ej.circulargauge.CircularGauge({
         axes: [{
@@ -82,14 +88,19 @@ function pointeGauge2() {
                 }
             ]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return pointeGauge2;
 }
+/**
+ * Code for Third Gauge
+ */
 function pointeGauge3() {
     var pointeGauge3 = new ej.circulargauge.CircularGauge({
         axes: [{
@@ -132,22 +143,29 @@ function pointeGauge3() {
                 }
             ]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return pointeGauge3;
 }
+/**
+ * Code for Fourth gauge
+ */
 function pointeGauge4() {
     var pointeGauge4 = new ej.circulargauge.CircularGauge({
         centerY: '40%',
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -186,6 +204,9 @@ function pointeGauge4() {
     });
     return pointeGauge4;
 }
+/**
+ * Code for Fifth gauge
+ */
 function pointeGauge5() {
     var pointeGauge5 = new ej.circulargauge.CircularGauge({
         centerY: '40%',
@@ -231,11 +252,13 @@ function pointeGauge5() {
                 }
             ]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return pointeGauge5;
 }
@@ -249,11 +272,13 @@ this.default = function () {
     var thirdgauge = new ej.circulargauge.CircularGauge(pointeGauge3());
     thirdgauge.appendTo('#container3');
     var fourthgauge = new ej.circulargauge.CircularGauge({
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         centerY: '40%',
         axes: [{
             startAngle: 270,

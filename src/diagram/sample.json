@@ -3,9 +3,10 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
+    "dataSourcePath":"src/diagram/diagram-data.js", 
     "type": "update",
-    "dataSourcePath":"src/diagram/diagram-data.js",
-    "samples": [{
+    "samples": [
+        {
             "url": "default-functionalities",
             "name": "Default Functionalities",
             "description": "This sample visualizes the processing of an order placed using credit card with built-in flow shapes.",
@@ -14,98 +15,114 @@
         {
             "url": "shape-gallery",
             "name": "Shapes",
-            "description": "This sample illustrates basic built-in shapes, such as basic shapes, flow shapes, and BPMN shapes.",
+            "description": "This sample illustrates list of built-in shapes available in our JavaScript Diagram Library which includes basic shapes, flow shapes, and BPMN shapes.",
             "category": "Getting Started"
         },
         {
             "url": "getting-started-node",
             "name": "Nodes",
-            "description": "This sample visualizes the different stages of a software development life cycle using a circular flow diagram. Customizing the appearance of the nodes is illustrated in this example.",
+            "description": "This sample visualizes the different stages of a software development life cycle using a circular flow diagram.",
             "category": "Getting Started"
         },
         {
             "url": "connector",
             "name": "Connectors",
-            "description": "This sample visualizes the data flow in a marketing process using predefined shapes and connectors. Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
+            "description": "This sample visualizes the data flow in a marketing process using predefined diagram shapes and connectors.",
             "category": "Getting Started"
         },
         {
             "url": "getting-started-annotation",
             "name": "Annotations",
-            "description": "This sample illustrates the competitive environment of a business through five forces chart. The elements of the five force chart is described using nodes and annotations. Customizing the position and appearance of the annotation is illustrated in this example.",
-            "category": "Getting Started",
-            "type": "update"
+            "description": "This sample illustrates the competitive environment of a business through five forces chart and its described using nodes and annotations.",
+            "category": "Getting Started"
         },
         {
             "url": "port",
             "name": "Ports",
-            "description": "This sample visualizes the process flow of publishing a book using connection points. Connection points are static points over the shapes that allow creating connections to the shapes. Customizing the size and appearance of the connection points is illustrated in this example.",
+            "description": "This sample visualizes process flow of publishing a book using connection points which are static points over shapes that allow creating connections onto it.",
             "category": "Getting Started"
+        },
+        {
+            "url": "swimlane",
+            "name": "Swimlane",
+            "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
+            "category": "Getting Started",
+            "type": "new"
+        },
+        {
+            "url": "custom-shapes",
+            "name": "Complex Shapes",
+            "description": "This sample demonstrates how to host a HTML elements inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
+            "category": "Getting Started"
+        },
+        {
+            "url": "diagram-events",
+            "name": "Events",
+            "description": "This sample visualizes what are the client side events are available in our JavaScript Diagram Library.",
+            "category": "Getting Started",
+            "type": "new"
+        },
+        {
+            "url": "tooltip-Sample",
+            "name": "Tooltip",
+            "description": "This sample demonstrates how to add the extra information to the nodes and connectors and how to show the information through diagram's tooltip feature.",
+            "category": "Getting Started",
+            "type": "new"
+        },
+        {
+            "url": "history-manager",
+            "name": "History Manager",
+            "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
+            "category": "Getting Started",
+            "type": "new"
+        },
+        {
+            "url": "flow-execution",
+            "name": "Flow Execution",
+            "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
+            "category": "Getting Started",
+            "type": "new"
         },
         {
             "url": "bpmn-editor",
             "name": "BPMN Editor",
             "description": "This sample visualizes the hotel booking reservation system and its built with ready made BPMN shapes.",
-            "category": "Getting Started"
+            "category": "Use Case Diagram"
         },
         {
-            "url": "custom-shapes",
-            "name": "Complex Shapes",
-            "description": "This sample demonstrates how to host a HTML element inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
-            "category": "Getting Started"
+            "url": "logic-circuit",
+            "name": "Logic Circuit Diagram",
+            "description": "This sample visualizes implementation of three input Boolean functions using universal logic gates and shape for logic gates designed with diagram's path node.",
+            "category": "Use Case Diagram"
         },
         {
-            "url": "drawing-tool",
-            "name": "Drawing Tools",
-            "description": "This sample visualizes how to build a diagram interactively using drawing tools. Continuous draw option, snapping, and undo/redo support are enabled to easily draw diagrams. Rulers, gridlines, and snapping options are enabled to easily align objects.",
-            "category": "User Interaction"
+            "url": "uml-activity",
+            "name": "UML Activity Diagram",
+            "description": "This sample visually represents the hotel booking reservation system. It is built with readymade BPMN shapes.",
+            "category": "Use Case Diagram"
         },
         {
-            "url": "key-board-functions",
-            "name": "Keyboard Interaction",
-            "description": "This sample illustrates interaction with diagram control using shortcut keys. Command Manager support is used to manage keyboard interactions.",
-            "category": "User Interaction"
+            "url": "network-diagram",
+            "name": "Network Diagram",
+            "description": "This sample visualizes graphical layout of a network diagram using diagram's Native(SVG) nodes feature.",
+            "category": "Use Case Diagram"
         },
         {
-            "url": "quick-commands",
-            "name": "User Handles",
-            "description": "This sample visualizes a simple flow diagram along with options to execute the frequently used commands using user handles.",
-            "category": "User Interaction"
-        },
-        {
-            "url": "symbol-palette",
-            "name": "Symbol Palette",
-            "description": "This example illustrates predefining shapes in a palette that can be easily dragged and dropped into the drawing area. Customizable options of the symbol palette are also illustrated in this example.",
-            "category": "User Interaction"
-        },
-        {
-            "url": "overview",
-            "name": "Overview Panel",
-            "description": "This sample visualizes an organizational structure along with an overview for easily navigating the large organizational structure using Overview Panel.",
-            "category": "User Interaction"
-        },
-        {
-            "url": "serialization",
-            "name": "Save and Load",
-            "description": "This sample visualizes building diagrams interactively and editing the saved diagrams. Symbol Palette is used to easily build diagrams.",
-            "category": "Print and Export"
-        },
-        {
-            "url": "print-export",
-            "name": "Print and Export",
-            "description": "This sample demonstrates printing and exporting the diagram as images.",
-            "category": "Print and Export"
+            "url": "uml-class-diagram",
+            "name": "UML Class Diagram",
+            "description": "This sample represents the hospital management system using diagram's built-in UML class diagram shapes.",
+            "category": "Use Case Diagram"
         },
         {
             "url": "hierarchical-model",
             "name": "Hierarchical Tree",
-            "description": "This sample illustrates a simple hierarchical tree that is built from an external data source. Hierarchical tree layout algorithm is used to build hierarchical trees. Customizing the spacing between objects and orientation of the trees is illustrated in this example.",
+            "description": "This sample illustrates a generating hierarchical tree from right to left orientation with external data source.",
             "category": "Automatic Layouts"
         },
         {
             "url": "organization-model",
             "name": "Organizational Chart",
-            "description": "This sample illustrates a simple business management structure that is built from an external data source. Hierarchical tree layout algorithm is used to build organizational charts. Customizing the orientation and structure of the organizational chart is illustrated in this example.",
+            "description": "This sample illustrates a simple business management structure that is built from an external data source.",
             "category": "Automatic Layouts"
         },
         {
@@ -123,7 +140,7 @@
         {
             "url": "symmetric-layout",
             "name": "Symmetric Layout",
-            "description": "This sample visualizes a simple network template using symmetrical layout algorithm.",
+            "description": "This sample visualizes a simple network template using symmetrical layout algorithm. It uses attractive and repulsive forces.",
             "category": "Automatic Layouts"
         },
         {
@@ -141,8 +158,50 @@
         {
             "url": "pert-chart",
             "name": "PERT chart",
-            "description": "This sample visualizes a project development process using Program Evaluation Review Technique (PERT). Complex hierarchical tree layout algorithm is used to automatically arrange the nodes.",
+            "description": "This sample visualizes a project development process using Program Evaluation Review Technique (PERT).",
             "category": "Automatic Layouts"
+        },
+        {
+            "url": "drawing-tool",
+            "name": "Drawing Tools",
+            "description": "This sample visualizes how to build a diagram interactively using drawing tools. Continuous draw option, snapping are enabled to easily draw diagrams.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "key-board-functions",
+            "name": "Keyboard Interaction",
+            "description": "This sample illustrates interaction with diagram control using shortcut keys. Command Manager support is used to manage keyboard interactions.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "quick-commands",
+            "name": "User Handles",
+            "description": "This sample visualizes a simple flow diagram along with options to execute the frequently used commands using user handles.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "symbol-palette",
+            "name": "Symbol Palette",
+            "description": "This example illustrates predefining shapes in a palette that can be easily dragged and dropped into the drawing area.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "overview",
+            "name": "Overview Panel",
+            "description": "This sample visualizes an organizational structure along with an overview for easily navigating the large organizational structure using Overview Panel.",
+            "category": "User Interaction"
+        },
+        {
+            "url": "serialization",
+            "name": "Save and Load",
+            "description": "This sample visualizes building diagrams interactively and editing the saved diagrams. Symbol Palette is used to easily build diagrams.",
+            "category": "Print and Export"
+        },
+        {
+            "url": "print-export",
+            "name": "Print and Export",
+            "description": "This example shows how to print the diagram and how to export the diagram as image (*.jpg, *.png, and *bmp) and SVG format.",
+            "category": "Print and Export"
         },
         {
             "url": "local-data",
@@ -153,43 +212,14 @@
         {
             "url": "remote-data",
             "name": "Remote Data",
-            "description": "This sample demonstrates binding remote data with the diagram using the Data Manager support.",
+            "description": "This sample demonstrates how to bind an remote data with the diagram using the Data Manager support.",
             "category": "Data Binding"
         },
         {
             "url": "crud",
             "name": "CRUD",
-            "type": "new",
-            "description": "This sample demonstrates how to perform crud operation in diagram.",
+            "description": "This sample demonstrates generating a diagram by reading data from the database, and updating it with new inserted/updated/deleted objects through web services.",
             "category": "Data Binding"
-        },
-        {
-            "url": "logic-circuit",
-            "name": "Logic Circuit Diagram",
-            "type": "new",
-            "description": "This sample visualizes implementation of three input Boolean functions using universal logic gates, and it is designed with diagram `custom` nodes.",
-            "category": "Use Case Diagram"
-        },
-        {
-            "url": "uml-activity",
-            "name": "UML Activity Diagram",
-            "type": "new",
-            "description": "This sample visualizes graphical representation of message flow from one activity to another in customer service with built-in `UML activity` shapes",
-            "category": "Use Case Diagram"
-        },
-        {
-            "url": "network-diagram",
-            "name": "Network Diagram",
-            "type": "new",
-            "description": "This sample visualizes graphical layout of a network diagram using diagram `Native (SVG)` shapes.",
-            "category": "Use Case Diagram"
-        },
-        {
-            "url": "uml-class-diagram",
-            "name": "UML Class Diagram",
-            "type": "new",
-            "description": "This sample visualizes the class shapes in diagram.",
-            "category": "Use Case Diagram"
         },
         {
             "url": "venn-diagram",
@@ -200,7 +230,7 @@
         {
             "url": "fishbone-diagram",
             "name": "Fishbone Diagram",
-            "description": "This sample visually represents a simple fishbone diagram (Ishikawa). Diagram nodes and annotations are used to define fishbone diagrams. Read-only mode is enabled here.",
+            "description": "This sample visually represents a simple fishbone diagram (Ishikawa). Diagram nodes and annotations are used to define fishbone diagrams.",
             "category": "Static Diagram"
         }
     ]

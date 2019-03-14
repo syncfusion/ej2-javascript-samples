@@ -72,12 +72,14 @@ this.default = function () {
                 marker: { dataLabel: { name: 'text' } }
             },
         ],
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+         // custom code end
         pointRender: labelRender,
         //Initializing Chart Series
         title: 'World Countries Details',

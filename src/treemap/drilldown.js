@@ -13,11 +13,13 @@ this.default = function () {
                 args.cancel = true;
             }
         },
+        // custom code start
         load: function (args) {
             var drilltheme = location.hash.split('/')[1];
             drilltheme = drilltheme ? drilltheme : 'Material';
             args.treemap.theme = (drilltheme.charAt(0).toUpperCase() + drilltheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'List of countries by population',
             textStyle: { size: '15px' }
@@ -45,4 +47,54 @@ this.default = function () {
         ]
     });
     treemap.appendTo('#container');
+    var breadCrumbChange;
+    var breadCrumbCheckBox = new ej.buttons.CheckBox({
+        change: breadCrumbChange, checked: false
+    }, '#breadCrumb');
+    breadCrumbCheckBox.change = breadCrumbChange = function (e) {
+        treemap.enableBreadcrumb = e.checked;
+        var breadCrumbText = document.getElementById('connectorText');
+        if (e.checked) {
+            breadCrumbText.disabled = false;
+        }
+        else {
+            breadCrumbText.disabled = true;
+        }
+        treemap.refresh();
+    };
+    var drillChange;
+    var drillViewCheckBox = new ej.buttons.CheckBox({
+        change: drillChange, checked: false
+    }, '#drillView');
+    drillViewCheckBox.change = drillChange = function (e) {
+        treemap.drillDownView = e.checked;
+        treemap.refresh();
+    };
+    document.getElementById('connectorText').onchange = function () {
+        var value = document.getElementById('connectorText').value;
+        treemap.breadcrumbConnector = value;
+        treemap.refresh();
+    };
+    var header = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Selection selection type',
+        width: 80,
+        change: function () {
+            for (var i = 0; i < treemap.levels.length - 1; i++) {
+                treemap.levels[i].headerAlignment = header.value;
+            }
+            treemap.refresh();
+        }
+    });
+    header.appendTo('#header');
+    var label = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Selection selection type',
+        width: 80,
+        change: function () {
+            treemap.levels[2].headerAlignment = label.value;
+            treemap.refresh();
+        }
+    });
+    label.appendTo('#label');
 };

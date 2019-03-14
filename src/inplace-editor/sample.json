@@ -1,32 +1,35 @@
 {
     "name": "In-place Editor",
     "directory": "inplace-editor",
-    "category": "Forms",
+    "category": "Editors",
     "ftName" :"inplace-editor",
-    "type": "preview", 
     "samples": [
         {
             "url": "default",
             "name": "Overview",
             "category": "In-place Editor",
+            "description":"This sample demonstrates the default behavior of the In-place Editor control, which works by editing the values in inline and popup in JavaScript platform.",
             "api": { "InPlaceEditor": ["mode", "type", "value", "showButtons", "disabled"] }
         },
         {
             "url": "dropdowns",
-            "name": "DropDown Controls",
+            "name": "DropDown Conrtols",
             "category": "In-place Editor",
+            "description":"This sample demonstrates the usage of dropdown controls such as Autocomplete, ComboBox, DropDownList, and MultiSelect in JavaScript platform.",
             "api": { "InPlaceEditor": ["mode", "type", "value", "enableEditMode", "model"] }
         },
         {
             "url": "pickers",
             "name": "Date Controls",
             "category": "In-place Editor",
+            "description":"This sample demonstrates the usage of picker controls such as Date, Time, DateTime, and DateRange in JavaScript platform.",
             "api": { "InPlaceEditor": ["mode", "type", "value", "enableEditMode", "model"] }
         },
         {
             "url": "edit-post",
             "name": "Edit Post",
             "category": "Use Case",
+            "description":"This sample demonstrates the usage of In-place Editor control with a form element in JavaScript platform. Edit the values in place to update to the post.",
             "api": { "InPlaceEditor": ["mode", "type", "value"] }
         }
     ]

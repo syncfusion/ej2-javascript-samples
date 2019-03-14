@@ -26,11 +26,13 @@ this.default = function () {
                 color: '#8BC34A', radius: '60%', pointerWidth: 10,
             }]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     circulargauge.appendTo('#labels-container');
     var ticks;
@@ -70,6 +72,8 @@ this.default = function () {
         }
     });
     tickPosition.appendTo('#tickposition');
+
+    // Code for property panel
     labelPosition = new ej.dropdowns.DropDownList({
         index: 0, width: 120,
         change: function () {

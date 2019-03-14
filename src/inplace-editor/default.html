@@ -29,7 +29,6 @@
             </tr>
         </table>
     </div>
-
 </div>
 <div class="col-lg-4 property-section">
     <table id="property" title="Properties">
@@ -40,8 +39,8 @@
             <td>
                 <div>
                     <select id="editorMode_default" class="form-control">
-                        <option value="Inline">Inline</option>
-                        <option value="Popup">Popup</option>
+                        <option value="inline">Inline</option>
+                        <option value="popup">Popup</option>
                     </select>
                 </div>
             </td>
@@ -100,11 +99,11 @@
     <p>
         <ul>
             <li>
-                <a target="_blank" href="https://ej2.syncfusion.com/development/documentation/api/inplace-editor#mode">
+                <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/inplace-editor/#mode">
                     Inline</a>
             </li>
             <li>
-                <a target="_blank" href="https://ej2.syncfusion.com/development/documentation/api/inplace-editor#mode">
+                <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/inplace-editor/#mode">
                     Pop-up</a>
             </li>
         </ul>
@@ -128,7 +127,7 @@
         You can cancel the edit request by pressing the Esc key.
     </p>
     <p>
-        More information on the <code>In-place Editor</code> instantiation can be found in the <a target="_blank" href="https://ej2.syncfusion.com/documentation/inplaceeditor/getting-started.html">
+        More information on the <code>In-place Editor</code> instantiation can be found in the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/inplace-editor/es5-getting-started/">
             documentation section</a>.
     </p>
 </div>
@@ -140,27 +139,12 @@
         visibility: hidden;
     }
 
-    .inplace-control-section .control_wrapper {
-        width: 100%;
-    }
-
-    .inplace-control-section .control-wrapper {
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-    }
-
     .inplace-control-section .control_wrapper .control-center {
         text-align: center;
     }
 
     .inplace-control-section .e-inplaceeditor {
         height: auto;
-    }
-
-    .inplace-control-section .control_wrapper table td {
-        width: 200px;
-        height: 100px;
     }
 
     .inplace-control-section.input-layout .control_wrapper table td .control-label {
@@ -184,3 +168,21 @@
         }
     }
 </style>
+
+<!-- custom code start -->
+<style> 
+    .inplace-control-section .control_wrapper {
+        width: 100%;
+    }
+
+    .inplace-control-section .control-wrapper {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    .inplace-control-section .control_wrapper table td {
+        width: 200px;
+        height: 100px;
+    }
+</style>
+<!-- custom code end -->

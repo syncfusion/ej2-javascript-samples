@@ -61,12 +61,14 @@ this.default = function () {
         height: 359
     });
     treegridObj.appendTo('#TreeGrid');
-};
+};	
+// custom code start
 function sparkload (args) {
     var theme = location.hash.split('/')[1];
     theme = theme ? theme : 'Material';
     args.sparkline.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
-}
+}	
+// custom code end
 function getSparkData (type, count) {
     if (type === 'line') {
         return window.lineData[count];
