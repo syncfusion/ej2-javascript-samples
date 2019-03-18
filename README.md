@@ -1,105 +1,331 @@
-# JavaScript Sample Browser
+# Syncfusion JavaScript (ES5) UI Controls samples
 
-## Adding New Sample
+This repository contains the demos of [Syncfusion JavaScript (ES5) UI Controls](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github&utm_campaign=ej2-javascript-es5-samples). This is the best place to check our controls to get more insight about the usage of APIs.
 
-Create your new folder in 'src' location and name the folder as control name. Example: “button” or "list-view".
+This section guides you to use the Syncfusion JavaScript (ES5) UI Controls samples in your applications.
 
-Add your sample order in the `src/common/sampleOrder.json` with corresponding category.
+* [Requirements to run the demo](#requirements-to-run-the-demo)
+* [Documentation](#documentation)
+* [License](#license)
+* [Using the samples](#using-the-samples)
+* [Controls Catalog](#controls-catalog)
+* [Support and Feedback](#support-and-feedback)
 
-**Note:** Do not use whitespace at any cause in the folder’s name. Use “-” instead of space.
+## Requirements to run the demo
 
+The samples requires the below requirements to run.
 
-### Configure the folder and sample
+* [Node.js](https://nodejs.org/en/)
 
-Create the “sample.json” file inside of your control folder.  Create your sample html and js file in same folder also the html and js files should have the same names.
+## Documentation
 
-**Note:** Do not use whitespace at any cause in the file’s name. Use “-” instead of space.
+All controls documentation for the Syncfusion JavaScript (ES5) UI controls can be found on [Syncfusion Help](https://ej2.syncfusion.com/javascript/documentation/?utm_source=github&utm_medium=listing&utm_campaign=ej2-javascript-es5-samples). All API documentation can be found at the [API Reference](https://ej2.syncfusion.com/javascript/documentation/api?utm_source=github&utm_medium=listing&utm_campaign=ej2-javascript-es5-samples).
 
+## License
 
-### Configure Sample JSON
+Syncfusion JavaScript (ES5) UI (Essential JS 2) controls library is available under the Syncfusion Essential Studio program,  and can be licensed either under the Syncfusion Community License Program or the Syncfusion commercial license.
 
-Configure your sample json file as like below code snippet.
+To be qualified for the Syncfusion Community License Program you must have a gross revenue of less than one (1) million U.S. dollars ($1,000,000.00 USD) per year and have less than five (5) developers in your organization, and agree to be bound by Syncfusion’s terms and conditions.
 
-```
-{
-    "name": "Grid",
-    "directory": "grid",
-    "category": "Grid",
-    "samples": [
-        { "url": "localdata", "name": "Local Data", "category": "Data Binding" },
-        { "url": "remotedata", "name": "Remote Data", "category": "Data Binding" },
-        { "url": "autowrap", "name": "AutoWrap Column Cells", "category": "Columns" },
-        { "url": "showhide", "name": "Show or Hide Column", "category": "Columns" }
-    ],
-    "dataSourcePath": "src/grid/datasource.js"
-}
-```
-**Note:** To exculde a sample in the device you need to set `hideOnDevice` as true for the sample json file.
+Customers who do not qualify for the community license can contact sales@syncfusion.com for commercial licensing options.
 
-**Fields Description:**
+Under no circumstances can you use this product without (1) either a Community License or a commercial license and (2) without agreeing and abiding by Syncfusion’s license containing all terms and conditions.
 
-* _name :_ It can be any string that you want to show a component name.
+The Syncfusion license that contains the terms and conditions can be found at
+[https://www.syncfusion.com/content/downloads/syncfusion_license.pdf](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf)
 
-* _directory :_ Specifies that your sample's directory name.
+## Using the samples
 
-* _category :_ Specify that your sample comes under which category.
+### Installing
 
-* _dataSourcePath :_ Specify that your data source file Path (Optional).
+To install all dependent packages, use the below command
 
-* _samples :_ Specify array of samples in your control.
-
-* _samples.url :_ specifies the file name without extension.
-
-* _samples.name :_ It can be any string that you want to show a sample name.
-
-* _samples.category :_ Specify that your sample comes under which category.
-
-
-## Adding datasource components
-
-To add datasource file for the component, you need to include the `dataSourcePath` option which need to map the datasource file path in the component's sample.json. 
-
-refer the below link for config
-
-https://gitlab.syncfusion.com/essential-studio/ej2-javascript-samples/blob/7a32bea49aca215fdef1fe432e4135fa07ff3c83/src/grid/sample.json#L9 
-
-The sample datasource file need to store the json in window variable.
-
-Each component's datasource window variable name must be unique.
-
-For example datasource for grid must be stored as `window.gridData`.
-
-Refer the below below datasource file for further reference
-
-https://gitlab.syncfusion.com/essential-studio/ej2-javascript-samples/blob/19761f5590b4af5b2ea1cb90bed33d8dfa496de9/src/grid/datasource.js
-
-**Note:** Each component should include one datasource file only.
-
-## Run the sample browser
-
-We can run the sample browser with two commands
-
-1. **gulp _serve_** – run the sample browser alone.
-2. **gulp _watch_** – run the sample browser and monitor typescript as well. This will help at development time. If any changes detect means it will automatically compile and browser will reloaded.
-
-```
-gulp serve
+```bash
+npm install
 ```
 
+### Building
 
-**Access URLs:**
+To compile the source files, use the below command
 
-Local URL is works only in your machine.
-
-```
-http://localhost:3000
-```
-
-External URL is works in all locally connected LAN. (You can use to see sample browser in mobile).
-
-```
-http://your-ip-address:3000
+```bash
+npm run build
 ```
 
-**Note:** Here, The mentioned IP is your local machine IP Address.
+### Running
 
+To run the samples, use the below command
+
+```bash
+npm run serve
+```
+
+## Controls Catalog
+
+<table>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>GRIDS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/grid">DataGrid</a>
+        </td>
+        <td>
+            <a href="src/pivot-view">Pivot Table (Preview)</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>DATA VISUALIZATION<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/chart">Charts</a>
+        </td>
+        <td>
+            <a href="src/circular-gauge">Circular Gauge</a>
+        </td>
+        <td>
+            <a href="src/linear-gauge">Linear Gauge</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/diagram">Diagram (Preview)</a>
+        </td>
+        <td>
+            <a href="src/heatmap">Heatmap chart</a>
+        </td>
+        <td>
+            <a href="src/maps">Maps</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/range-navigator">Range Selector</a>
+        </td>
+        <td>
+            <a href="src/smith-chart">Smith Chart</a>
+        </td>
+        <td>
+            <a href="src/sparkline">Sparkline Charts</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/treemap">TreeMap</a>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>EDITORS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/rte">Rich Text Editor (Preview)</a>
+        </td>
+        <td>
+            <a href="src/document-editor">Word Processor (Preview)</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>CALENDARS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/schedule">Scheduler</a>
+        </td>
+        <td>
+            <a href="src/calendar">Calendar</a>
+        </td>
+        <td>
+            <a href="src/datepicker">DatePicker</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/daterangepicker">Date Range Picker</a>
+        </td>
+        <td>
+            <a href="src/datetimepicker">DateTime Picker</a>
+        </td>
+        <td>
+            <a href="src/timepicker">Time Picker</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>BUTTONS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/button">Button</a>
+        </td>
+        <td>
+            <a href="src/button/button-group.vue">Button Group</a>
+        </td>
+        <td>
+            <a href="src/button/dropdown-button.vue">Dropdown Menu</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/button/progress-button.vue">Progress Button (Preview)</a>
+        </td>
+        <td>
+            <a href="src/button/split-button.vue">Split Button</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>DROPDOWNS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/auto-complete">AutoComplete</a>
+        </td>
+        <td>
+            <a href="src/combo-box">ComboBox</a>
+        </td>
+        <td>
+            <a href="src/drop-down-list">Dropdown List</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/multi-select">MultiSelect Dropdown</a>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>NAVIGATION<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/accordion">Accordion</a>
+        </td>
+        <td>
+            <a href="src/context-menu">Context Menu</a>
+        </td>
+        <td>
+            <a href="src/menu">Menu Bar (Preview)</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/sidebar">Sidebar</a>
+        </td>
+        <td>
+            <a href="src/tab">Tabs</a>
+        </td>
+        <td>
+            <a href="src/toolbar">Toolbar</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/treeview">TreeView</a>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>INPUTS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/textboxes">TextBox</a>
+        </td>
+        <td>
+            <a href="src/maskedtextbox">Input Mask</a>
+        </td>
+         <td>
+            <a href="src/numerictextbox">Numeric Textbox</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/button/radio-button.vue">Radio Button</a>
+        </td>
+        <td>
+            <a href="src/button/check-box.vue">Checkbox</a>
+        </td>
+        <td>
+            <a href="src/color-picker">Color Picker</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/uploader">File Upload</a>
+        </td>
+        <td>
+            <a href="src/slider">Range Slider</a>
+        </td>
+        <td>
+            <a href="src/button/switch.vue">Toggle Switch Button</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>LAYOUT<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/avatar">Avatar</a>
+        </td>
+        <td>
+            <a href="src/card">Card</a>
+        </td>
+        <td>
+            <a href="src/dialog">Dialog</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/listview">ListView</a>
+        </td>
+        <td>
+            <a href="src/tooltip">Tooltip</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>NOTIFICATIONS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/badge">Badge</a>
+        </td>
+        <td>
+            <a href="src/toast">Toast</a>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+## Support and Feedback
+
+* For any other queries, reach our [Syncfusion support team](https://www.syncfusion.com/support/directtrac/incidents/newincident?utm_source=github&utm_medium=listing&utm_campaign=ej2-javascript-es5-samples) or post the queries through the [community forums](https://www.syncfusion.com/forums?utm_source=github&utm_medium=listing&utm_campaign=ej2-javascript-es5-samples).
+
+* To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing&utm_campaign=ej2-javascript-es5-samples) or contact our sales team at <salessupport@syncfusion.com>.
