@@ -1,0 +1,60 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="schedule"></div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Resources" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="margaret" type="checkbox" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="robert" type="checkbox" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%">
+                    <input id="laura" type="checkbox" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>
+        This example demonstrates how to dynamically show or hide the appointments of resources on Scheduler based on
+        the resource selection.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, the resource appointments are dynamically shown or hidden on the Scheduler, by passing the
+        filtered event data of selected resources to the <code>Query</code> option of the <code>Eventsettings</code>.
+    </p>
+</div>
+
+<!-- custom code start -->
+<style>
+    .property-panel-content .e-checkbox-wrapper.margaret .e-frame {
+        background-color: #ea7a57;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.robert .e-frame {
+        background-color: #df5286;
+        border-color: transparent;
+    }
+
+    .property-panel-content .e-checkbox-wrapper.laura .e-frame {
+        background-color: #865fcf;
+        border-color: transparent;
+    }
+</style>
+<!-- custom code end -->

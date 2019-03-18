@@ -9,7 +9,7 @@ var removeSecondaryElement;
 var datasrc;
 var data1 = [];
 var value;
-this.renderChart = function (data1) {
+this.renderPeriodSelectorChart = function (data1) {
     var chart = new ej.charts.Chart({
         series: [{
             dataSource: data1, width: 2, type: 'Candle', animation: { enable: true }, xName: 'date', low: 'Low',
@@ -132,6 +132,6 @@ this.default = function () {
             });
             j++;
         }
-        _this.renderChart(data1);
+        _this.renderPeriodSelectorChart(data1);
     };
 };

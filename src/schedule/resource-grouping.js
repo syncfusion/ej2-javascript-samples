@@ -47,6 +47,7 @@ this.default = function () {
         return (airlineName === 'Airways 1') ? 50 : (airlineName === 'Airways 2') ? 75 : 100;
     };
 
+    //custom code start
     function generateEvents() {
         var subjectCollection = ['Barcelona to Los Angeles', 'Los Angeles to Barcelona'];
         var collections = [];
@@ -71,4 +72,5 @@ this.default = function () {
         }
         return collections;
     }
+    //custom code end
 };

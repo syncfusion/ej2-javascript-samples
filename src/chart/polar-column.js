@@ -53,12 +53,14 @@ this.default = function () {
             enable: true,
             format: '${point.text} : <b>${point.y}%</b>'
         },
+           // custom code start
         load: function (args) {
             var polarColumnTheme = location.hash.split('/')[1];
             polarColumnTheme = polarColumnTheme ? polarColumnTheme : 'Material';
             args.chart.theme = (polarColumnTheme.charAt(0).toUpperCase() + 
                 polarColumnTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-column-container');
     var polarType = new ej.dropdowns.DropDownList({

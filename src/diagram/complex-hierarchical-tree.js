@@ -3,6 +3,11 @@
  */
 // tslint:disable-next-line:max-func-body-length
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.ComplexHierarchicalTree);
+var horizontalSpacingObj;
+var verticalSpacingObj;
+var marginTopObj;
+var marginLeftObj;
+var diagram;
 //Apply the Alignment for the layout.
 function update(value) {
     if (value === 'left') {
@@ -21,7 +26,7 @@ function update(value) {
 
 this.default = function () {
     //Initializes diagram control
-    var diagram = new ej.diagrams.Diagram({
+    diagram = new ej.diagrams.Diagram({
         width: '100%', height: 580,
         //Configrues hierarchical tree layout
         layout: {
@@ -59,7 +64,7 @@ this.default = function () {
     diagram.appendTo('#diagram');
 
     //used NumericTextBox for left margin of the layout.
-    var marginLeftObj = new ej.inputs.NumericTextBox({
+    marginLeftObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.margin.left,
         step: 1,
         format: '##.##',
@@ -67,9 +72,9 @@ this.default = function () {
             update('left');
         }
     });
-    //used NumericTextBox for top margin of the layout.
     marginLeftObj.appendTo('#marginLeft');
-    var marginTopObj = new ej.inputs.NumericTextBox({
+    //used NumericTextBox for top margin of the layout.
+    marginTopObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.margin.top,
         step: 1,
         format: '##.##',
@@ -79,7 +84,7 @@ this.default = function () {
     });
     marginTopObj.appendTo('#marginTop');
     //used NumericTextBox for horizontalspacing of the layout.
-    var horizontalSpacingObj = new ej.inputs.NumericTextBox({
+    horizontalSpacingObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.horizontalSpacing,
         step: 1,
         format: '##.##',
@@ -89,7 +94,7 @@ this.default = function () {
     });
     horizontalSpacingObj.appendTo('#horiontal');
     //used NumericTextBox for verticalspacing of the layout.
-    var verticalSpacingObj = new ej.inputs.NumericTextBox({
+    verticalSpacingObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.verticalSpacing,
         step: 1,
         format: '##.##',
@@ -101,17 +106,21 @@ this.default = function () {
     //Click Event for Appearance of the layout.
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
+        // custom code start
         var selecteditem = document.getElementsByClassName('e-selected-style');
         if (selecteditem.length) {
             selecteditem[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style') {
             var id = target.id;
             var orientation1 = id.substring(0, 1).toUpperCase() + id.substring(1, id.length);
             diagram.layout.orientation = orientation1;
             diagram.dataBind();
             diagram.doLayout();
+            // custom code start
             target.classList.add('e-selected-style');
+            // custom code end
         }
     };
 };

@@ -7,10 +7,12 @@ var checkBoxObj;
 
 function documentClick(args) {
     var target = args.target;
+    // custom code start
     var selectedElement = document.getElementsByClassName('e-selected-style');
     if (selectedElement.length && target.id !== '' && target.id !== 'checked') {
         selectedElement[0].classList.remove('e-selected-style');
     }
+    // custom code end
     var drawingObject = null;
     if (target.className === 'image-pattern-style') {
         switch (target.id) {
@@ -61,7 +63,9 @@ function documentClick(args) {
             diagram.drawingObject = drawingObject;
             diagram.tool = checkBoxObj.checked ? ej.diagrams.DiagramTools.ContinuousDraw : ej.diagrams.DiagramTools.DrawOnce;
             diagram.dataBind();
+            // custom code start
             target.classList.add('e-selected-style');
+            // custom code end
         }
     }
 }
@@ -69,7 +73,7 @@ function documentClick(args) {
 function onChange(args) {
     diagram.tool = args.checked ? ej.diagrams.DiagramTools.ContinuousDraw : ej.diagrams.DiagramTools.DrawOnce;
 }
-
+// custom code start
 function getPath() {
     var str = '<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="350.000000pt" ' +
         'height="229.000000pt" viewBox="0 0 350.000000 229.000000" ' +
@@ -93,7 +97,7 @@ function getPath() {
         '</g> </svg>';
     return str;
 }
-
+// custom code end
 
 
 this.default = function () {

@@ -16,11 +16,13 @@ this.default = function () {
             pointerValue = Math.round(args.currentValue);
             setPointersValue(circulargauge, pointerValue);
         },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [{
             annotations: [{
                 content: content + '70 MPH</span></div>',
@@ -86,6 +88,7 @@ this.default = function () {
         content = '<div style="font-size: 14px;color:' + color + ';font-weight: lighter;font-style: oblique;"><span>';
         circulargauge.setAnnotationValue(0, 0, content + pointerValue + ' MPH</span></div>');
     }
+    //Code for Property Panel 
     document.getElementById('value').ontouchmove = document.getElementById('value').onpointermove =
         document.getElementById('value').onchange = function () {
             var pointerValue = parseInt(document.getElementById('value').value, 10);

@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        //custom code start
         load: function(args) {
             var layouttheme = location.hash.split('/')[1];
             layouttheme = layouttheme ? layouttheme : 'Material';
             args.treemap.theme = (layouttheme.charAt(0).toUpperCase() + layouttheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Top 10 countries by GDP Nominal - 2015',
             textStyle: { size: '15px' }
@@ -38,6 +40,7 @@ this.default = function () {
         },
     });
     treemap.appendTo('#layout-container');
+    // code for property panel
     var layoutMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select layoutMode type',
@@ -48,4 +51,14 @@ this.default = function () {
         }
     });
     layoutMode.appendTo('#layoutMode');
+    var highlightMode = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select Rendering Direction',
+        width: 115,
+        change: function () {
+            treemap.renderDirection = highlightMode.value;
+            treemap.refresh();
+        }
+    });
+    highlightMode.appendTo('#highlightMode');
 };

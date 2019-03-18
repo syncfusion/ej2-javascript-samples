@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var layertheme = location.hash.split('/')[1];
             layertheme = layertheme ? layertheme : 'Material';
             args.maps.theme = (layertheme.charAt(0).toUpperCase() + layertheme.slice(1));
         },
+        // custom code end
         zoomSettings: {
             enable: true,
             pinchZooming: true

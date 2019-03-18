@@ -7,7 +7,7 @@
     var getLabelText = function (value) {
         return (((value) / 1000000000)).toFixed(1) + 'bn';
     };
-    this.renderChart = function (chartData) {
+    this.renderChart2 = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', crosshairTooltip: { enable: true }, majorGridLines: { width: 0 },
@@ -55,12 +55,14 @@
                     args.text = '$' + args.text;
                 }
             },
+             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             },
+             // custom code end
             width: ej.base.Browser.isDevice ? '100%' : '80%', chartArea: { border: { width: 0 } },
             crosshair: { enable: true, lineType: 'Vertical' }
         });
@@ -75,6 +77,6 @@
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            _this.renderChart(chartData);
+            _this.renderChart2(chartData);
         };
     };

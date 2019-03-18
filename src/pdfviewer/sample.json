@@ -3,10 +3,10 @@
     "directory": "pdfviewer",
     "category": "Viewer",
     "ftName": "pdfviewer",
-    "type": "preview",
+    "type": "update",
     "samples": [
         {            
-            "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "api": {
+            "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "type": "update", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -22,7 +22,15 @@
                         "serviceUrl"
                     ]
             }
-            
+        },
+        {
+            "url":"right-to-left", "name": "Right to Left", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with Right to Left Configuration.", "category": "PDF Viewer", "type": "new", "api": {
+                "PdfViewer": [
+                    "documentPath",
+                    "enableRtl",
+                    "serviceUrl"
+                ]
+            }
         }
     ]
 }

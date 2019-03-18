@@ -11,7 +11,7 @@ var backgroundColor = theme === 'Highcontrast' ? 'black' : 'white';
 var datasrc;
 var sl;
 var aus = [];
-this.renderChart = function (chartData) {
+this.renderNumericChart = function (chartData) {
     var chart = new ej.charts.Chart({
         primaryXAxis: { title: 'Overs', edgeLabelPlacement: 'Shift', majorGridLines: { width: 0 }, labelFormat: 'n1' },
         primaryYAxis: { title: 'Runs', minimum: 0, majorTickLines: { width: 0 }, lineStyle: { width: 0 } },
@@ -79,7 +79,7 @@ this.default = function () {
         aus = datasrc.aus;
         getAnnotaiton(aus, ej.charts.getSeriesColor(theme)[0]);
         getAnnotaiton(sl, ej.charts.getSeriesColor(theme)[1]);
-        _this.renderChart(datasrc);
+        _this.renderNumericChart(datasrc);
     };
 };
 function getAnnotaiton(args, color) {

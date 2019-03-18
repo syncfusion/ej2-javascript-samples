@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var heatmaptheme = location.hash.split('/')[1];
             heatmaptheme = heatmaptheme ? heatmaptheme : 'Material';
             args.maps.theme = (heatmaptheme.charAt(0).toUpperCase() + heatmaptheme.slice(1));
         },
+        // custom code end
         format: 'n',
         useGroupingSeparator: true,
         titleSettings: {

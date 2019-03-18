@@ -35,17 +35,20 @@ this.default = function () {
         tooltip: { enable: false, header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
         //Initializing Title
         title: 'Mobile Browser Statistics',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     pie.appendTo('#pie-container');
     function anglechange(value) {
         pie.series[0].startAngle = +value;
         pie.series[0].endAngle = +value;
+		pie.series[0].animation.enable = false;
         document.getElementById('anglevalue').innerHTML = value.toString();
         pie.removeSvg();
         pie.refreshSeries();
@@ -57,6 +60,7 @@ this.default = function () {
         };
     function radiuschange(value) {
         pie.series[0].radius = value + '%';
+		pie.series[0].animation.enable = false;
         document.getElementById('radius').innerHTML = (value / 100).toFixed(2);
         pie.removeSvg();
         pie.refreshSeries();
@@ -79,6 +83,7 @@ this.default = function () {
         };
     function explodeIndex(value) {
         pie.visibleSeries[0].explodeIndex = +value;
+		pie.series[0].animation.enable = false;
         document.getElementById('explodeindex').innerHTML = value.toString();
         pie.removeSvg();
         pie.refreshSeries();
@@ -90,6 +95,7 @@ this.default = function () {
         };
     function piecenterx(value) {
         pie.center.x = value + '%';
+		pie.series[0].animation.enable = false;
         document.getElementById('xvalue').innerHTML = value + '%';
         pie.removeSvg();
         pie.refreshSeries();
@@ -101,6 +107,7 @@ this.default = function () {
         };
     function piecentery(value) {
         pie.center.y = value + '%';
+		pie.series[0].animation.enable = false;
         document.getElementById('yvalue').innerHTML = value + '%';
         pie.removeSvg();
         pie.refreshSeries();

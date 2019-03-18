@@ -15,12 +15,14 @@ this.default = function () {
     grid.appendTo('#Grid');
     var sparkline = {
         height: '50px',
-        width: '150px', 
+        width: '150px',
+        // custom code start
         load: function (args) {             
             var rangetheme = location.hash.split('/')[1];             
             rangetheme = rangetheme ? rangetheme : 'Material';             
             args.sparkline.theme = (rangetheme.charAt(0).toUpperCase() + rangetheme.slice(1));         
         },
+        // custom code end
         lineWidth: 2,
         fill: '#0d3c9b',
         dataSource: window.lineData[0],

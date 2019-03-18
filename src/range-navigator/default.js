@@ -9,7 +9,7 @@ var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
 var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4'];
 var regionColor = ['rgba(0, 189, 174, 0.3)', 'rgba(68, 114, 196, 0.3)',
     'rgba(161, 110, 229, 0.3)', 'rgba(121, 236, 228, 0.3)'];
-this.renderChart = function (datasrc) {
+this.renderDefaultChart = function (datasrc) {
     var range = new ej.charts.RangeNavigator({
         valueType: 'DateTime',
         tooltip: { enable: true, displayMode: 'Always' },
@@ -41,6 +41,6 @@ this.default = function () {
         datasrc.map(function (data) {
             data.x = new Date(data.x);
         });
-        _this.renderChart(datasrc);
+        _this.renderDefaultChart(datasrc);
     };
 };

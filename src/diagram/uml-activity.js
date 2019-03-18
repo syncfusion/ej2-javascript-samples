@@ -83,7 +83,7 @@ function addEvents() {
         }
     }
 }
-
+// custom code start
 function openPalette() {
     var paletteSpace = document.getElementById('palette-space');
     isMobile = window.matchMedia('(max-width:550px)').matches;
@@ -96,7 +96,7 @@ function openPalette() {
         }
     }
 }
-
+// custom code end
 this.default = function () {
     var bounds = document.getElementById('diagram-space').getBoundingClientRect();
     var centerX = bounds.width / 2;

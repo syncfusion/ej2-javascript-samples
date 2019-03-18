@@ -13,7 +13,7 @@ var targetDropdown;
 var sourceID;
 var targetID;
 var nodeData = [];
-
+// custom code start
 function dlgButtonClick(args) {
   var dialogHeader = dialog.header;
   var description = document.getElementById("Description").value;
@@ -91,7 +91,7 @@ function targetDropdownCreate(args) {
   targetDropdown.dataSource = getDataSource();
   targetDropdown.dataBind();
 }
-
+// custom code end
 //Disable or Enable the toolbar items based on element selection.
 function selectionChange(args) {
   if (args.state === "Changing") {
@@ -108,14 +108,14 @@ function selectionChange(args) {
     }
   }
 }
-
+// custom code start
 //Enable or disable the toolbar items.
 function enableToolbarItems(isEnableItem) {
   toolbarObj.enableItems( document.getElementById(items[0].id).parentElement, isEnableItem );
   toolbarObj.enableItems( document.getElementById(items[2].id).parentElement, isEnableItem );
   toolbarObj.enableItems( document.getElementById(items[4].id).parentElement, isEnableItem );
 }
-
+// custom code end
 function connectionChange(args) {
   if (args.state === "Completed") {
     if (!args.connector.targetID || !args.connector.sourceID) {
@@ -134,7 +134,7 @@ function setNodeTemplate(obj) {
     obj.constraints = ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Delete;
   }
 }
-
+// custom code start
 //Opens a dialog with textbox and dropdown control based on toolbar clicked items.
 function toolbarClick(args) {
   var selectedItem;
@@ -200,7 +200,7 @@ function openDialog(title, description, color, isNode) {
   //Open a dialog.
   dialog.show();
 }
-
+// custom code end
 //Returns an node text collection in diagram.
 function getDataSource() {
   var i;

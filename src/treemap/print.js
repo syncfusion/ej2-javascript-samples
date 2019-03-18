@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function (args) {
             var printtheme = location.hash.split('/')[1];
             printtheme = printtheme ? printtheme : 'Material';
             args.treemap.theme = (printtheme.charAt(0).toUpperCase() + printtheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Top 10 best selling smartphone brands - 2017',
             textStyle: { size: '15px' }
@@ -36,6 +38,7 @@ this.default = function () {
         },
     });
     treemap.appendTo('#container');
+    // code for property panel
     var togglebtn = new ej.buttons.Button({
         cssClass: 'e-info', isPrimary: true
     });

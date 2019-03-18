@@ -4,7 +4,7 @@
  var selectedTheme = location.hash.split('/')[1];
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
     var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
-    this.renderChart = function (datasrc) {
+    this.renderFilterChart = function (datasrc) {
         var grid = new ej.grids.Grid({
             height: '350',
             width: ej.base.Browser.isDevice ? '100%' : '80%',
@@ -49,6 +49,6 @@
             datasrc.map(function (data) {
                 data.HireDate = new Date(data.HireDate);
             });
-            _this.renderChart(datasrc);
+            _this.renderFilterChart(datasrc);
         };
     };

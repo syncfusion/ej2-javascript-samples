@@ -14,11 +14,13 @@ this.default = function () {
 function firstGauge() {
     var gauge1 = new ej.lineargauge.LinearGauge({
         orientation: 'Horizontal',
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [{
             line: {
                 color: '#9E9E9E'
@@ -51,11 +53,13 @@ function secondGauge() {
             },
             offset: -20
         },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [{
             line: {
                 offset: 30
@@ -117,11 +121,13 @@ function thirdGauge() {
                 color: '#9E9E9E'
             },
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return gauge3;
 }
@@ -159,11 +165,13 @@ function fourthGauge() {
             ],
         }],
         orientation: 'Horizontal',
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         container: {
             width: 30,
             offset: 0,

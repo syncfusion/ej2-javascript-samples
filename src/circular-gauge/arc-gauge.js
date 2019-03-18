@@ -4,11 +4,13 @@
 var sliderValue = 60;
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
+        // custom code start
         load: function (args) {
             var arctheme = location.hash.split('/')[1];
             arctheme = arctheme ? arctheme : 'Material';
             args.gauge.theme = (arctheme.charAt(0).toUpperCase() + arctheme.slice(1));
         },
+        //custom code end
         loaded: function (args) {
             var annotation = document.getElementById(args.gauge.element.id + '_Annotations_0');
             if (annotation) {

@@ -1,15 +1,20 @@
 this.default = function () {
+    // custom code start
     var seriesload = function(args) {
         var seriestheme = location.hash.split('/')[1];
         seriestheme = seriestheme ? seriestheme : 'Material';
         args.sparkline.theme = (seriestheme.charAt(0).toUpperCase() + seriestheme.slice(1));
     };
+    // custom code end
     var line = new ej.charts.Sparkline({
         lineWidth: 1,
         type: 'Line',
         fill: '#3C78EF',
         height: '80px',
-        width: '90%', load: seriesload, 
+        width: '90%',
+        // custom code start
+        load: seriesload, 
+        // custom code end
         tooltipSettings: {
             trackLineSettings: {
                 visible: true
@@ -61,7 +66,10 @@ this.default = function () {
             }
         },
         height: '80px',
-        width: '90%', load: seriesload,
+        width: '90%',
+        // custom code start
+        load: seriesload,
+        // custom code start
         lineWidth: 1,
         type: 'Area',
         opacity: 1,
@@ -113,7 +121,10 @@ this.default = function () {
            
         ],
         height: '80px',
-        width: '90%', load: seriesload,
+        width: '90%', 
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1,
         tooltipSettings: {
             visible: true,
@@ -123,7 +134,10 @@ this.default = function () {
     column.appendTo('#column');
     var winloss = new ej.charts.Sparkline({
         height: '80px',
-        width: '90%', load: seriesload,
+        width: '90%',
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1,
         type: 'WinLoss',
         fill: '#3C78EF',
@@ -137,7 +151,10 @@ this.default = function () {
     winloss.appendTo('#winloss');
     var pie1 = new ej.charts.Sparkline({
         height: '40px',
-        width: '100%', load: seriesload,
+        width: '100%',
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1,
         type: 'Pie',
         valueType: 'Category',
@@ -155,7 +172,10 @@ this.default = function () {
         valueType: 'Category',
         xName: 'x', yName: 'y',
         height: '40px',
-        width: '100%', load: seriesload,
+        width: '100%',
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1,
         dataSource: [{ x: 'Gold', y: 27 }, { x: 'Silver', y: 23 }, { x: 'Bronze', y: 17 }],
         tooltipSettings: {
@@ -171,7 +191,10 @@ this.default = function () {
             format: '${x} : ${y}',
         },
         height: '40px',
-        width: '100%', load: seriesload,
+        width: '100%',
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1,
         type: 'Pie',
         valueType: 'Category',
@@ -189,7 +212,10 @@ this.default = function () {
         valueType: 'Category',
         xName: 'x', yName: 'y',
         height: '40px',
-        width: '100%', load: seriesload,
+        width: '100%',
+        // custom code start
+        load: seriesload,
+        // custom code end
         lineWidth: 1
     });
     pie4.appendTo('#pie4');

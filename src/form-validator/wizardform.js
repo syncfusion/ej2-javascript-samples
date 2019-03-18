@@ -54,6 +54,10 @@ this.default = function () {
 
     function displayTab(n) {
         var x = document.getElementsByClassName("tab");
+        if (n === 3) {
+            n = 0;
+            currentTab = 0;
+        }
         x[n].style.display = "block";
         if (n === 0) {
             document.getElementById("prevBtn").style.display = "none";

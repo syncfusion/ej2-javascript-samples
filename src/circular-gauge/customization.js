@@ -4,11 +4,13 @@
 function customGauge1() {
     var customGauge1 = new ej.circulargauge.CircularGauge({
         centerY: '70%',
+        // custom code start
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var selecTheme = location.hash.split('/')[1];
+            selecTheme = selecTheme ? selecTheme : 'Material';
+            args.gauge.theme = (selecTheme.charAt(0).toUpperCase() + selecTheme.slice(1));
         },
+        // custom code end
         axes: [{
             annotations: [{
                 content: '<div style="color:#666666;font-size:35px;">1800</div>',
@@ -80,11 +82,13 @@ function customGauge2() {
                 pointerWidth: 30
             }]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return customGauge2;
 }
@@ -130,6 +134,7 @@ this.default = function () {
         }
     });
     pointerColor.appendTo('#pointerColor');
+    // Code for Property panel
     document.getElementById('usage').onclick = function () {
         random.destroy();
         usage.appendTo('#cutomization-container');

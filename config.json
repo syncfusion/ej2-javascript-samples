@@ -93,6 +93,7 @@
 		"smithchart",
 		"pareto",
 		"checkbox",
-		"uml"
+		"uml",
+		null
 	]
 }

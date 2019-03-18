@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var projecttheme = location.hash.split('/')[1];
             projecttheme = projecttheme ? projecttheme : 'Material';
             args.maps.theme = (projecttheme.charAt(0).toUpperCase() + projecttheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Members of the UN Security Council',
             textStyle: {
@@ -54,6 +56,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#container');
+    // Code for Property Panel
     var projection = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select projection type',

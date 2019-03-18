@@ -9,28 +9,28 @@
             "name": "Default Functionalities",
             "category": "Color Picker",
             "api": { "ColorPicker": ["value"] },
-            "description": "This demo for Essential JS2 ColorPicker shows the default functionalities of color picker. It supports RGB, HSV, and Hex codes (three, six and eight digit)."
+            "description": "This example demonstrates the default functionalities of the Syncfusion Javascript ES5 ColorPicker with RGB, HSV and Hex codes(three, six and eight digit)."
         },
         {
             "url": "inline",
             "name": "Inline Mode",
             "category": "Color Picker",
             "api": {"ColorPicker":["inline", "value", "mode", "modeSwitcher", "showButtons"] },
-            "description": "This demo for Syncfusion Essential JS2 ColorPicker control shows the inline / flat mode rendering of color picker. It supports hue and opacity colors option."
+            "description": "This example demonstrates the inline / flat mode rendering of the Syncfusion Javascript ES5 ColorPicker with hue and opacity color options."
         },
         {
             "url": "custom",
             "name": "Custom Palettes",
             "category": "Color Picker",
             "api": {"ColorPicker": ["cssClass", "inline", "value", "columns", "mode", "modeSwitcher", "showButtons", "presetColors"] },
-            "description": "This demo for Syncfusion Essential JS2 ColorPicker control shows the custom UI of color palette with different palette structures and its state."
+            "description": "This example demonstrates the Syncfusion Javascript ES5 ColorPicker, custom UI of the color palette with different structures and its state."
         },
         {
             "url": "api",
             "name": "API",
             "category": "Color Picker",
             "api": { "ColorPicker": ["cssClass", "inline", "value", "columns", "showButtons", "presetColors"] },
-            "description": "This demo for Syncfusion Essential JS2 ColorPicker control shows the color picker supported properties and its functionality."
+            "description": "This example demonstrates the supported API's and its functionalities of the Syncfusion Javascript ES5 ColorPicker."
         }
     ]
 }

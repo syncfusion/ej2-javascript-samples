@@ -1,11 +1,15 @@
 this.default = function () {
+    // custom code start
     var sparkload = function(args) {
         var customtheme = location.hash.split('/')[1];
         customtheme = customtheme ? customtheme : 'Material';
         args.sparkline.theme = (customtheme.charAt(0).toUpperCase() + customtheme.slice(1));
     };
+    // custom code end
     var percentage = new ej.charts.Sparkline({
-        load: sparkload,       
+        // custom code start
+        load: sparkload,    
+        // custom code end   
         lineWidth: 1,
         type: 'Column',
         valueType: 'Category',
@@ -106,6 +110,7 @@ this.default = function () {
         }
     });
     sales.appendTo('#sales');
+    // Code for Property Panel
     var sampleChange;
     var sampleValue = new ej.dropdowns.DropDownList({
         index: 0,
@@ -243,7 +248,7 @@ this.default = function () {
             tooltipCheckBox.checked = false;
         }
         if ((drop.value === 'salespercentage' && percentage.enableRtl === true) ||
-            (drop.value === 'salescount' && sales.enableRtl === true)) {
+        (drop.value === 'salescount' && sales.enableRtl === true)) {
             enableRTLCheckBox.checked = true;
         }
         else {
@@ -406,7 +411,7 @@ this.default = function () {
 		var spark = sampleValue.value === 'salespercentage' ? percentage : sales;
 		if(boolean == true) {
 			spark.enableRtl = true;
-		}
+		} 
 		else {
 			spark.enableRtl = false;
 		}

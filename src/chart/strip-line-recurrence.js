@@ -42,12 +42,14 @@ this.default = function () {
         ],
         //Initializing Chart title
         title: 'World Pollution Report', tooltip: { enable: true, format: ' Year: ${point.x}<br> Tons Per Day: ${point.y}' },
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#container');
     chart.animateSeries = false;

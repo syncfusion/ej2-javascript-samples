@@ -31,6 +31,7 @@ this.default = function () {
     });
     scheduleObj.appendTo('#Schedule');
 
+    //custom code start
     function generateStaticEvents(start, resCount, overlapCount) {
         var data = [];
         var id = 1;
@@ -81,4 +82,5 @@ this.default = function () {
         }
         return data;
     }
+    //custom code end
 };

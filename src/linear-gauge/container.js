@@ -4,11 +4,13 @@
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
         title: 'Temperature Measure',
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         container: {
             width: 13,
             roundedCornerRadius: 5,
@@ -56,6 +58,7 @@ this.default = function () {
         }]
     });
     gauge.appendTo('#boxContainer');
+    // Code for property panel
     var containerMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',

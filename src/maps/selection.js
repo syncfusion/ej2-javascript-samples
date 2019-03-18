@@ -4,11 +4,13 @@
 this.default = function () {
     
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var selectiontheme = location.hash.split('/')[1];
             selectiontheme = selectiontheme ? selectiontheme : 'Material';
             args.maps.theme = (selectiontheme.charAt(0).toUpperCase() + selectiontheme.slice(1));
         },
+        // custom code end
         itemSelection: function (args) {
             if (args.shapeData !== ej.base.isNullOrUndefined) {
                 var matched = navigator.userAgent;

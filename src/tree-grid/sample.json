@@ -1,12 +1,16 @@
 {
-    "name": "Tree Grid",
+    "name": "TreeGrid",
     "directory": "tree-grid",
     "category": "Grids",
     "type": "preview",
     "ftName" :"treegrid",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
-        { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion Essential JS2 TreeGrid looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
+      {  
+         "url": "treegrid.overview", "name": "Overview", "type":"new", "category": "Tree Grid","api":{"TreeGrid":["dataSource","childMapping","height","columns","allowReordering","allowFiltering","allowSorting","filterSettings","queryCellInfo"] },
+         "description": "This sample demonstrates the overview of basic treegrid features such as sorting, filtering, conditional formatting, column template and scrolling."
+      },
+        { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion Essential JS2 TreeGrid control looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
          {  
             "url":"localdata", "name": "Local Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","childMapping","treeColumnIndex","allowPaging","columns"] },
             "description": "This example shows the binding of an array of list objects in the Syncfusion Essential JS2 TreeGrid TreeGrid control."
@@ -24,7 +28,7 @@
          },
          {
             "url":"columntemplate", "name": "Column Template", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","width","height","columns","rowHeight"] },
-            "description": "This demo explains how to define template columns in Syncfusion Essential JS2 TreeGrid."
+            "description": "This demo explains how to define template columns in Syncfusion Essential JS2 TreeGrid TreeGrid control."
          },
          {
             "url":"reorder", "name": "Reorder", "category": "Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowReordering","actionComplete","columns","allowPaging"] },
@@ -58,17 +62,21 @@
             "url":"stacked-header", "name": "Stacked Header", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowPaging","pageSettings","columns"] },
             "description": "This demo explains how to provide a common header for the group of columns in Essential JS2 TreeGrid control."
          },   
+         {
+            "url":"checkbox-column", "name": "Checkbox Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","enableHierarchySelection"] },
+            "description": "This demo explains how the hierarchy selection between the records using column checkboxes in Essential JS2 TreeGrid control.", "type": "new"
+         },
          {  
             "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
             "description": "This demo explains how the treegrid row color is changed while move the mouse over a row in Syncfusion Essential JS2 TreeGrid content."
          },
          {  
             "url":"rowheight", "name": "Row Height", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","height","rowHeight","allowPaging","toolbarClick","columns","toolbar"] },
-            "description": "This demo explains the way of customizing the row height of Syncfusion Essential JS2 TreeGrid."
+            "description": "This demo explains the way of customizing the row height of Syncfusion Essential JS2 TreeGrid control."
          },
          {  
             "url":"inline.editing", "name": "Inline Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","height","toolbar"] },
-            "description": "This example shows how to add and edit row or cell inline on the Syncfusion Essential JS2 TreeGrid."
+            "description": "This example shows how to add and edit row or cell inline on the Syncfusion Essential JS2 TreeGrid control."
          },
          {  
             "url":"dialog.editing", "name": "Dialog Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","height","columns","treeColumnIndex","editSettings","toolbar"] },
@@ -125,6 +133,10 @@
          {
             "url":"selection-api", "name": "Selection API", "category":"Selection","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowSelection","selectionSettings","treeColumnIndex"] },
             "description": "This demo explains how to select and clear multiple rows using methods of Syncfusion Essential JS2 TreeGrid."
+         },
+         { 
+            "url":"checkbox-selection", "name": "Checkbox Selection", "category":"Selection","api":{"Grid":["dataSource","allowPaging","pageSettings","columns","allowSelection","selectionSettings","enableHover"] },
+            "description":"This demo for Syncfusion Essential JS2 TreeGrid control shows how the checkbox selection feature can be used to select treegrid rows.", "type": "new"
          },
          {  
             "url":"aggregate.default", "name": "Default Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","height","aggregates"] },

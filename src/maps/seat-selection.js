@@ -2,11 +2,13 @@ this.default = function () {
     var seatInfo = document.getElementById('selectedseats');
     ej.maps.Maps.Inject(ej.maps.Selection);
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var seattheme = location.hash.split('/')[1];
             seattheme = seattheme ? seattheme : 'Material';
             args.maps.theme = (seattheme.charAt(0).toUpperCase() + seattheme.slice(1));
         },
+        // custom code end
         projectionType: 'Equirectangular',
         itemSelection: function (args) {
             if (args.shapeData.fill === 'Orange') {
@@ -58,7 +60,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#maps');
-	// to clear the selected seats
+    // to clear the selected seats
     document.getElementById('clear-btn').onclick = function () {
         seatInfo.innerHTML = '';
         var selected = document.getElementsByClassName('ShapeselectionMapStyle');

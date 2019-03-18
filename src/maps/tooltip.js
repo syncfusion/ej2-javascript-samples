@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var tooltiptheme = location.hash.split('/')[1];
             tooltiptheme = tooltiptheme ? tooltiptheme : 'Material';
             args.maps.theme = (tooltiptheme.charAt(0).toUpperCase() + tooltiptheme.slice(1));
         },
+        // custom code end
         tooltipRender: function (args) {
             if (!args.options.data) {
                 args.cancel = true;

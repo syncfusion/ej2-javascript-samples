@@ -37,12 +37,14 @@ this.default = function () {
         },
         //Initializing Chart Title
         title: 'Maximum and Minimum Temperature',
+           // custom code start
         load: function (args) {
             var polarRangeTheme = location.hash.split('/')[1];
             polarRangeTheme = polarRangeTheme ? polarRangeTheme : 'Material';
             args.chart.theme = (polarRangeTheme.charAt(0).toUpperCase() + 
                 polarRangeTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-range-container');
     var polarType = new ej.dropdowns.DropDownList({

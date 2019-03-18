@@ -31,6 +31,7 @@ this.default = function () {
         },
         enableAnimation: true,
         tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -38,6 +39,7 @@ this.default = function () {
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             args.accumulation.legendSettings.position = ej.base.Browser.isDevice ? 'Bottom' : 'Right';
         }
+           // custom code end
     });
     pie.appendTo('#pieradius-container');
 };

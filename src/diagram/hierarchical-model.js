@@ -80,17 +80,19 @@ this.default = function () {
     vSpacing.appendTo('#vSpacing');
     document.getElementById('appearance').onclick = function (args) {
         var targetelement = args.target;
+        // custom code start
         var selectedElement1 = document.getElementsByClassName('e-selected-style');
         if (selectedElement1.length) {
             selectedElement1[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (targetelement.className === 'image-pattern-style') {
             var id = args.target.id;
             var orientation1 = id.substring(0, 1).toUpperCase() + id.substring(1, id.length);
             diagram.layout.orientation = orientation1;
             diagram.dataBind();
             diagram.doLayout();
-            target.classList.add('e-selected-style');
+            args.target.classList.add('e-selected-style');
         }
     };
 };

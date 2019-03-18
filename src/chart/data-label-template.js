@@ -91,6 +91,7 @@ this.default = function () {
             args.template = '#' + args.series.name + '-' + theme;
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -98,6 +99,7 @@ this.default = function () {
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             args.chart.theme = theme;
         },
+         // custom code end
         legendSettings: {
             visible: true,
         }

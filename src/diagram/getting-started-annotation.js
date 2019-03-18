@@ -5,6 +5,15 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 // tslint:disable-next-line:max-func-body-length
 
 var diagram;
+var fontSize;
+var fontColor;
+var fontFamily;
+var bold;
+var italic;
+var underLine;
+var template;
+var labelConstraints;
+var underline;
 
 
 //Apply the appearence of the Annotation 
@@ -223,31 +232,31 @@ this.default = function () {
     diagram.appendTo('#diagram');
     diagram.select([diagram.nodes[0]]);
     //Button used to apply for Bold of the Annotation
-    var bold = new ej.buttons.Button({
+    bold = new ej.buttons.Button({
         cssClass: 'e-small',
         iconCss: 'e-ddb-icons e-bold',
     });
     bold.appendTo('#bold');
     bold.element.onclick = function () { updateAnnotation('bold'); };
     //Button used to apply for Italic of the Annotation
-    var italic = new ej.buttons.Button({
+    italic = new ej.buttons.Button({
         cssClass: 'e-small',
         iconCss: 'e-ddb-icons e-italic'
     });
     italic.appendTo('#italic');
     italic.element.onclick = function () { updateAnnotation('italic'); };
     //NumericTextBox used to apply for Fontsize of the Annotation
-    var fontSize = new ej.inputs.NumericTextBox({
+    fontSize = new ej.inputs.NumericTextBox({
         value: 0, min: 1,
         max: 8, width: '100%',
         format: '##.##',
         step: 2,
-        change: function () { updateAnnotation('fontsize'); }
+        change: function () { updateAnnotation('fontsize', fontSize); }
     });
     fontSize.appendTo('#fontSize');
     fontSize.dataBind();
     //Colorpicker used to apply for Color of the Annotation
-    var fontColor = new ej.inputs.ColorPicker({
+    fontColor = new ej.inputs.ColorPicker({
         value: '#000', change: function (arg) {
             for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
                 var node = diagram.selectedItems.nodes[i];
@@ -260,7 +269,7 @@ this.default = function () {
     });
     fontColor.appendTo('#fontcolor');
     //Button used to apply for Underline of the Annotation
-    var underLine = new ej.buttons.Button({
+    underLine = new ej.buttons.Button({
         cssClass: 'e-small',
         iconCss: 'e-ddb-icons e-underline'
     });
@@ -277,17 +286,17 @@ this.default = function () {
         { type: 'Verdana', text: 'Verdana' }
     ];
     //DropDownList used to apply for fontFamily of the Annotation
-    var fontFamily = new ej.dropdowns.DropDownList({
+    fontFamily = new ej.dropdowns.DropDownList({
         dataSource: fontType,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
         width: '100%', placeholder: 'select a font type',
         index: 0, change: function () {
-            updateAnnotation('fontfamily');
+            updateAnnotation('fontfamily', null, fontFamily);
         }
     });
     fontFamily.appendTo('#fontfamily');
 
-    var templateList = [
+    templateList = [
         { value: 'none', text: 'None' },
         { value: 'industry', text: 'Industry Competitors' },
         { value: 'suppliers', text: 'Suppliers' },
@@ -306,7 +315,7 @@ this.default = function () {
     });
     template.appendTo('#template');
 
-    var labelConstraints = new ej.buttons.CheckBox({
+    labelConstraints = new ej.buttons.CheckBox({
         checked: false,
         label: 'Label interaction',
         change: function () {

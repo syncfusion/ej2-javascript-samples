@@ -4,11 +4,13 @@
 
 function gauge6() {
     var gauge6 = new ej.circulargauge.CircularGauge({
+        // custom code start
         load: function (args) {
             var speedTheme = location.hash.split('/')[1];
             speedTheme = speedTheme ? speedTheme : 'Material';
             args.gauge.theme = (speedTheme.charAt(0).toUpperCase() + speedTheme.slice(1));
         },
+        // custom code end
         title: 'Speedometer',
         titleStyle: { size: '18px' },
         centerY: '75%',
@@ -112,6 +114,7 @@ this.default = function () {
             clearInterval(this.gauge5Interval1);
         }
     }, 1000);
+    // Code for Property Panel
     var showText;
     var interval = new ej.buttons.CheckBox({
         change: showText, checked: false

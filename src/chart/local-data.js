@@ -79,11 +79,13 @@ this.default = function () {
             lineType: 'Vertical'
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
+         // custom code start
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];
             args.chart.theme = selectTheme && (selectTheme.charAt(0).toUpperCase() + 
                 selectTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#local-container');
 };

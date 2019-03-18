@@ -61,6 +61,7 @@ this.default = function () {
                 content: '<div style="color:#FF0000;font-family: bold; font-weight: 800">New Year Offer<br> Jan 2018</div>',
             }
         ],
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -71,6 +72,7 @@ args.chart.annotations[0].content = '<div style="color:#ffffff;font-family: bold
 args.chart.annotations[1].content = '<div style="color:#ffffff;font-family: bold; font-weight: 600">Christmas Offer<br> Dec 2017</div>';
             }
         }
+         // custom code end
     });
     chart.appendTo('#container');
 };

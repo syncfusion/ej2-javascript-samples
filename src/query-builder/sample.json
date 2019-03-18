@@ -3,7 +3,6 @@
     "directory": "query-builder",
     "category": "Forms",
     "ftName": "query-builder",
-    "type": "preview",
     "dataSourcePath": "src/query-builder/data-source.js",
     "samples": [
         {
@@ -16,7 +15,8 @@
                     "width",
                     "dataSource",
                     "columns",
-                    "rule"
+                    "rule",
+					"created"
                 ]
             },
             "description": "This sample demonstrates the default functionalities of the Query Builder component. Click the plus button to add group or conditions."
@@ -30,14 +30,7 @@
                     "width",
                     "columns",
                     "rule",
-                    "conditionChanged",
-                    "fieldChanged",
-                    "valueChanged",
-                    "operatorChanged",
-                    "ruleDelete",
-                    "groupDelete",
-                    "ruleInsert",
-                    "groupInsert"
+                    "change"
                 ]
             },
             "description": "This sample demonstrates the integration of DropdownList, Slider controls as Templates in the Query Builder component."
@@ -53,14 +46,7 @@
                     "dataSource",
                     "columns",
                     "rule",
-                    "conditionChanged",
-                    "fieldChanged",
-                    "valueChanged",
-                    "operatorChanged",
-                    "ruleDelete",
-                    "groupDelete",
-                    "ruleInsert",
-                    "groupInsert"
+                    "change"
                 ]
             },
             "description": "This sample demonstrates the integration of Grid component to showcase the data population based on the created filters using Query Builder component."

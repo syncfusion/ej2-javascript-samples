@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var legendtheme = location.hash.split('/')[1];
             legendtheme = legendtheme ? legendtheme : 'Material';
             args.maps.theme = (legendtheme.charAt(0).toUpperCase() + legendtheme.slice(1));
         },
+        // custom code end
         tooltipRender: function (args) {
             if (!args.options.data) {
                 args.cancel = true;
@@ -65,6 +67,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#container');
+    // Code for Property Panel
     var legendPosition = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Legend Position',

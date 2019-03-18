@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var selectedtheme = location.hash.split('/')[1];
+            selectedtheme = selectedtheme ? selectedtheme : 'Material';
+            args.maps.theme = (selectedtheme.charAt(0).toUpperCase() + selectedtheme.slice(1));
         },
+        // custom code end
         zoomSettings: {
             enable: false
         },

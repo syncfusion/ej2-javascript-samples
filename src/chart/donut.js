@@ -33,12 +33,14 @@ this.default = function () {
         tooltip: { enable: false },
         //Initializing Title
         title: 'Project Cost Breakdown',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     pie.appendTo('#container');
 };

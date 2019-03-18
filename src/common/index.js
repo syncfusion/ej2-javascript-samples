@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['material', 'fabric', 'bootstrap', 'highcontrast'];
+var themeCollection = ['material', 'fabric', 'bootstrap', 'bootstrap4', 'highcontrast'];
 var themeDropDown;
 var contentTab;
 var sourceTab;
@@ -28,6 +28,8 @@ var sbHeader = ej.base.select('#sample-header');
 var resetSearch = ej.base.select('.sb-reset-icon');
 var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|production)*/;
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
+// Regex for removing hidden codes
+var reg = /.*custom code start([\S\s]*?)custom code end.*/g;
 var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue'];
 var sbObj = {
     'angular': 'angular',
@@ -153,6 +155,7 @@ function preventTabSwipe(e) {
 function dynamicTab(e) {
     var blockEle = this.element.querySelector('#e-content_' + e.selectedIndex).children[0];
     blockEle.innerHTML = this.items[e.selectedIndex].data;
+    blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
     blockEle.classList.add('sb-src-code');
     if (blockEle) {
         hljs.highlightBlock(blockEle);
@@ -308,6 +311,7 @@ function dynamicTabCreation(obj) {
     }
     var blockEle = tabObj.element.querySelector('#e-content_' + tabObj.selectedItem).children[0];
     blockEle.innerHTML = tabObj.items[tabObj.selectedItem].data;
+    blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
     blockEle.classList.add('sb-src-code');
     if (blockEle) {
         hljs.highlightBlock(blockEle);
@@ -445,8 +449,17 @@ function onsearchInputChange(e) {
         expand: true,
         boolean: 'AND'
     });
-    if (val.length) {
-        var data = new ej.data.DataManager(val);
+    var value = [];
+    if (ej.base.Browser.isDevice) {
+        for (var j = 0; j < val.length; j++) {
+            if (val[j].doc.hideOnDevice !== true) {
+                value = value.concat(val);
+            }
+        }
+    }
+    var searchVal = ej.base.Browser.isDevice ? value : val;
+    if (searchVal.length) {
+        var data = new ej.data.DataManager(searchVal);
         var controls = data.executeLocal(new ej.data.Query().take(10).select('doc'));
         var controlsAccess = [];
         for (var x = 0; x < controls.length; x++) {
@@ -888,12 +901,17 @@ function viewMobilePropPane() {
 function getSampleList() {
     if (ej.base.Browser.isDevice) {
         var tempList = ej.base.extend([], window.samplesList);
+        var sampleList = [];
         for (var i = 0; i < tempList.length; i++) {
             var temp = tempList[i];
+            if (temp.hideOnDevice == true) {
+                continue;
+            }
             var data = new ej.data.DataManager(temp.samples);
             temp.samples = data.executeLocal(new ej.data.Query().where('hideOnDevice', 'notEqual', true));
+            sampleList = sampleList.concat(temp);
         }
-        return tempList;
+        return sampleList;
     }
     return window.samplesList;
 }
@@ -1211,6 +1229,21 @@ function addRoutes(samplesList) {
         var node = samplesList[i];
         loop1(node);
     }
+    if (ej.base.Browser.isDevice) {
+        if (location.hash && samplesAr.indexOf(location.hash) == -1) {
+            var toastObj = new ej.notifications.Toast({
+                position: {
+                    X: 'Right'
+                }
+            });
+            toastObj.appendTo('#sb-home');
+            setTimeout(function () {
+                toastObj.show({
+                    content: location.hash.split('/')[2] + 'component not supported in mobile device'
+                });
+            }, 200);
+        }
+    }
 }
 
 function onDataSourceLoad(node, subNode, control, sample, sampleName) {
@@ -1248,8 +1281,8 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     for (var file = 0; file < ajaxFile.length; file++) {
 
         ajaxFile[file].send().then(function (value) {  // jshint ignore:line
-
-            if (value.indexOf('.html') > 0) {
+            var fileName = nameFile[subfile];
+            if (fileName && fileName.indexOf('.html') > 0) {
                 content = getStringWithOutDescription(value.toString(), /(\'|\")description/g);
                 content = getStringWithOutDescription(content.toString(), /(\'|\")action-description/g);
             }

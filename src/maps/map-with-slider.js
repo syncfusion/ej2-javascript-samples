@@ -11,11 +11,13 @@ this.default = function () {
                 size: '16px'
             }
         },
+        // custom code start
         loaded: function (args) {
             if (!ej.base.isNullOrUndefined(document.getElementById('mapslider_Annotation_0'))) {
                 annotationRender(sliderVal);
             }
         },
+        // custom code end
         zoomSettings: {
             enable: false
         },
@@ -65,11 +67,13 @@ this.default = function () {
                 }
             }
         ],
+        // custom code start
         load: function (args) {
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';
             args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
         }
+        // custom code end
     });
     maps.appendTo('#mapslider');
     function annotationRender(val) {

@@ -56,13 +56,17 @@ function getTool(action) {
 function setuserhandleposition(offset, side, target) {
     diagram.selectedItems.userHandles[0].offset = offset;
     diagram.selectedItems.userHandles[0].side = side;
+    // custom code start
     target.classList.add('e-selected-style');
+    // custom code end
 }
 //set the style of the userhandle.
 function applyuserhandlestyle(bgcolor, target) {
     diagram.selectedItems.userHandles[0].backgroundColor = bgcolor;
     diagram.selectedItems.userHandles[0].pathColor = 'White';
+    // custom code start
     target.classList.add('e-selected-style');
+    // custom code end
 }
 
 //Defines the user handle collection for nodes in diagram
@@ -134,10 +138,12 @@ this.default = function () {
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
         var appearanceBlock = document.getElementById('appearance');
+        // custom code start
         var selectedElement = appearanceBlock.getElementsByClassName('e-selected-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style') {
             switch (target.id) {
                 case 'left':
@@ -157,10 +163,12 @@ this.default = function () {
     document.getElementById('pattern').onclick = function (args) {
         var target = args.target;
         var patternBlock = document.getElementById('pattern');
+        // custom code start
         var selectedElement = patternBlock.getElementsByClassName('e-selected-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style') {
             switch (target.id) {
                 case 'pattern1':

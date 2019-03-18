@@ -12,7 +12,6 @@ var runSequence = require('run-sequence');
 var sampleOrder = JSON.parse(fs.readFileSync(__dirname + '/src/common/sampleOrder.json'));
 var config =require(fs.realpathSync('./config.json'));
 var curDirectory = '';
-require('./src/common/api-table-generator.js');
 var sampleList;
 
 if (fs.existsSync('./controlWiseSample.json')) {
@@ -188,7 +187,7 @@ gulp.task('build', ['ship-deps'], function (done) {
     if (!fs.existsSync('./styles')) {
         fs.mkdirSync('./styles');
     }
-    runSequence('process-api', 'combine-samplelist', 'bundle', 'plnkr-json', done);
+    runSequence('combine-samplelist', 'bundle', 'plnkr-json', done);
 });
 
 
@@ -363,3 +362,5 @@ gulp.task('js-hint', function () {
         .pipe(jshint.reporter('default'))
         .pipe(jshint.reporter('fail'));
 });
+
+

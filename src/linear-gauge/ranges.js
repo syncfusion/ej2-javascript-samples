@@ -56,11 +56,13 @@ function linear() {
             axisValue: 35,
             y: -50, zIndex: '1'
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         }
+        // custom code end
     });
     return gauge;
 }
@@ -100,6 +102,9 @@ this.default = function () {
         }
     });
     rangeIndex.appendTo('#rangeIndex');
+
+    // Code for Property Panel
+    
     document.getElementById('color').onchange = function () {
         var ele = document.getElementById('color');
         gauge.axes[0].ranges[+rangeIndex.value].color = ele.value;

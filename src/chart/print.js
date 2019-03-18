@@ -63,12 +63,14 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Sales Comparision',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#print-container');
     var togglebtn = new ej.buttons.Button({

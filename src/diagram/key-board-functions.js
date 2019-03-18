@@ -4,6 +4,7 @@
 // tslint:disable-next-line:max-func-body-length
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.DiagramContextMenu, ej.diagrams.HierarchicalTree, ej.diagrams.DataBinding);
  //Custom command for Diagraming elements.
+ var diagram;
  function getCommandManagerSettings() {
     var commandManager = {
         commands: [{
@@ -124,7 +125,7 @@ this.default = function () {
     //Initialize shape
     var shape = { type: 'Basic', shape: 'Ellipse', cornerRadius: 10 };
     //initialize the diagram control
-    var diagram = new ej.diagrams.Diagram({
+     diagram = new ej.diagrams.Diagram({
         width: '100%', height: 645,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         contextMenuSettings: { show: true },

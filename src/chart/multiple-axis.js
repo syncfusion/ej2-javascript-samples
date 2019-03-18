@@ -75,12 +75,14 @@ this.default = function () {
         width: ej.base.Browser.isDevice ? '100%' : '60%',
         //Initializing Chart Title
         title: 'Weather Condition JPN vs DEU',
+         // custom code start
         load: function (args) {
             var axisTheme = location.hash.split('/')[1];
             axisTheme = axisTheme ? axisTheme : 'Material';
             args.chart.theme = (axisTheme.charAt(0).toUpperCase() + 
                 axisTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#axes-container');
 };

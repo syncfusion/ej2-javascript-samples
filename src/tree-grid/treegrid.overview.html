@@ -1,0 +1,165 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid">
+        </div>
+        <div style="padding-top: 20px; text-align: right">Referecene links:
+            <a href="https://countryeconomy.com/ratings" style="padding-right: 12px">https://countryeconomy.com</a>
+            <a href="https://en.wikipedia.org/wiki/" style="padding-right: 12px">https://en.wikipedia.org/wiki/</a>
+            <a href="http://worldpopulationreview.com">http://worldpopulationreview.com</a>
+        </div>
+
+        <script id="flagtemplate" type="text/x-template">
+            ${if(name != 'Select All')}
+            <div class="image" style="display:inline-block">
+               ${if(parentItem)}
+                <img src="src/tree-grid/images/${parentItem.name}.png" class="e-image" alt="${name}" />
+                ${else} 
+                <img src="src/tree-grid/images/${name}.png" class="e-image" alt="${name}" />
+                ${/if} 
+            </div> <div style="display:inline-block; padding-left:4px">${name}</div>
+            ${else} 
+                ${name}
+            ${/if}  
+           </script>
+           <script id="areatemplate" type="text/x-template">
+             <span>
+                 ${area} km<sup>2</sup>
+             </span>
+            </script>
+            <script id="locationtemplate" type="text/x-template">
+             <div class="image">
+                 <img src="src/tree-grid/images/Map.png" class="e-image" alt="${coordinates}" /> &nbsp
+                 <a target="_blank" href="https://www.google.com/maps/place/${coordinates}">${coordinates}</a>
+             </div>
+           </script>
+           <script type="text/x-template" id="gdptemplate">
+             <div class="statustemp">
+                 <span class="statustxt">${gdp} %</span>
+             </div>
+           </script>
+           <script type="text/x-template" id="timezonetemplate">
+            ${utcZone(data)}
+            <span style="padding-left:7px;">${timezone}</span>
+          </script>
+           <script type="text/x-template" id="ratingtemplate">
+               ${if(rating)}
+             <div class="rating">
+                 <span class="star"></span>
+                 <span class="star"></span>
+                 <span class="star"></span>
+                 <span class="star"></span>
+                 <span class="star"></span>
+             </div>
+             ${/if} 
+           </script>
+           
+           <script type="text/x-template" id="unemploymentTemplate">
+            <div id="myProgress" class="pbar">
+                <div id="myBar" class="bar">
+                    <div id="label" class="barlabel"></div>
+                </div>
+            </div>
+           </script>
+    </div>
+</div>
+<!-- custom code start -->
+<style>
+    .e-image {
+        height: 13px;
+        width: 14px;
+        vertical-align: middle;
+    }
+
+    .statustemp {
+        position: relative;
+        height: 19px;
+        border-radius: 15px;
+        text-align: center;
+        background-color: #cff0dc;
+        color: #00752F;
+        width: 47px;
+    }
+
+    .statustemp.e-lowgdp {
+        background-color: #FFDBDB;
+        color: #BD0000;
+
+    }
+
+    td.e-rowcell .statustxt {
+        color: #00cc00;
+        position: relative;
+    }
+
+    td.e-rowcell .statustxt.e-lowgdp {
+        color: #e60000;
+        position: relative;
+    }
+
+    .rating .star {
+        font-size: 132%;
+        color: lightgrey;
+    }
+
+    .rating .star.checked {
+        color: #ffa600;
+    }
+
+    .rating .star:before {
+        content: '★';
+    }
+    .negativeTimeZone {
+        transform: rotate(180deg);
+    }
+    #myBar {
+        position: absolute;
+        width: 10%;
+        height: 100%;
+        background-color: #00b300;
+    }
+
+    #myBar.progressdisable {
+        background-color: #df2222;
+    }
+
+    #label {
+        position: relative;
+        left: 10px;
+        line-height: 18px;
+        font-size: 10px;
+        color: white;
+    }
+    .highcontrast .e-grid #myProgress {
+        background-color: black;
+    }
+    #myProgress {
+        position: relative;
+        height: 18px;
+        width: 10em;
+        text-align: left;
+        background-color: white;
+    }
+    #myBar.progressdisable {
+        background-color: #df2222;
+    }
+</style>
+<div id="action-description">
+    <p>This sample demonstrates the overview of basic treegrid features such as sorting, filtering, conditional formatting, column template and scrolling.</p>
+</div>
+
+<div id="description">
+    <p>
+        The TreeGrid is used to represent the hierarchical data in a tabular format, combining the visual representation of Grid and TreeView controls. 
+        It represents the data from datasource such as an array of JSON objects, OData web services, or DataManager binding data fields to columns or self-referential datasource.
+    </p>
+    <p>
+        In this demo, TreeGrid features such as <code>sorting, filtering, conditional formatting, column template and scrolling</code> are used.
+    </p>
+    <p>
+        More information on the TreeGrid instantiation can be found in this
+        <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript/documentation/treegrid/getting-started/">
+        documentation section</a>.
+    </p>
+</div>
+<!-- custom code end -->

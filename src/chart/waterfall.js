@@ -51,11 +51,13 @@ this.default = function () {
             value = Math.round((value * 100)) / 100;
             args.text = value.toString();
         },
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             args.chart.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#waterFall-container');
 };

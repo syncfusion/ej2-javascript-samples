@@ -1,0 +1,132 @@
+<div class="control-section" align="center">
+    <div id="gauge" class="row">
+        <div class="cols-sample-area" align="center">
+            <div class="col-lg-9 col-md-9" id="column1" style="margin-left: -5%">
+                <div id="gauge1"></div>
+            </div>
+            <div class="col-lg-3 col-md-3" style="margin-left: -9%">
+                <div class="panel" id="panel1" align="center">
+                    <div class="subgauge" id="gauge2" style="float: left;margin-top: 3%"></div>
+                    <div class="content">
+                        <span class="firstcontent" style="font-size: 17px;">MOVE</span>
+                        <span class="firstcontent" style="font-size: 17px;color: #E7092E">65%</span><br />
+                        <span class="secondcontent" style="color: #E7092E; font-size: 19px">338/520 CAL</span>
+                    </div>
+                </div>
+                <div class="panel" id="panel2" align="center">
+                    <div class="subgauge" id="gauge3" style="float: left;margin-top: 3%"></div>
+                    <div class="content">
+                        <span class="firstcontent" style="font-size: 17px;">EXERCISE</span>
+                        <span class="firstcontent" style="font-size: 17px;color: #52E908">43%</span><br />
+                        <span class="secondcontent" style="color: #52E908; font-size: 19px">13/30 MIN</span>
+                    </div>
+                </div>
+                <div class="panel" id="panel3" align="center">
+                    <div class="subgauge" id="gauge4" style="float: left;margin-top: 3%"></div>
+                    <div class="content">
+                        <span class="firstcontent" style="font-size: 17px;">STAND</span>
+                        <span class="firstcontent" style="font-size: 17px;color: #04CBF3">58%</span><br />
+                        <span class="secondcontent" style="color: #04CBF3; font-size: 19px">7/12 HR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample resembles the appearance of Apple watch rings. This functions similar to an activity tracker that
+        denotes the move, exercise, and stand details.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to make the circular gauge look like the Apple watch rings. Ranges are rendered
+        with rounded corners and annotations are placed to denote the move, exercise, and stand values.
+    </p>
+    <p>
+        For more information on ranges, refer to this
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/circular-gauge/gauge-ranges">documentation
+            section</a>.
+    </p>
+</div>
+
+
+<style>
+    .panel {
+        width: 105% !important;
+        height: 80px !important;
+        margin-left: 5% !important;
+        margin-top: 15% !important;
+        border-color: lightgray;
+        float: left;
+        background-color: transparent;
+    }
+
+    .content {
+        float: left !important;
+        margin-left: 62px !important;
+        margin-top: 6% !important;
+        text-align: left !important;
+        position: absolute;
+    }
+
+    @media screen and (max-width: 1160px) {
+        .panel {
+            width: 115% !important;
+        }
+
+        .firstcontent {
+            font-size: 13px !important;
+        }
+
+        .secondcontent {
+            font-size: 15px !important;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        .panel {
+            width: 50% !important;
+            height: 80px !important;
+            margin-left: 27% !important;
+            margin-top: 0% !important;
+        }
+
+        .subgauge {
+            margin-left: 8% !important;
+            margin-top: 1% !important;
+        }
+
+        .content {
+            margin-left: 18% !important;
+            margin-top: 2% !important;
+        }
+
+        .firstcontent {
+            font-size: 16px !important;
+        }
+
+        .secondcontent {
+            font-size: 18px !important;
+        }
+    }
+
+    @media screen and (max-width: 410px) {
+        #column1 {
+            margin-left: -9% !important;
+        }
+
+        .subgauge {
+            margin-left: 3% !important;
+        }
+
+        .panel {
+            width: 52% !important;
+        }
+
+        .content {
+            margin-top: 3% !important;
+        }
+    }
+</style>

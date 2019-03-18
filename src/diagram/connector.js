@@ -76,7 +76,9 @@ function applyConnectorStyle(dashedLine, sourceDec, isRounded, type, target, str
         };
         diagram.dataBind();
     }
+    // custom code start
     target.classList.add('e-selected-style');
+    // custom code end
 }
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
@@ -199,10 +201,12 @@ this.default = function () {
     //Click Event for Appearance of the layout.
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
+        // custom code start
         var selectedElement = document.getElementsByClassName('e-selected-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style') {
             switch (target.id) {
                 case 'straightConnector':

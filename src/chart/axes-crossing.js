@@ -53,12 +53,14 @@ this.default = function () {
                 yName: 'y', marker: { visible: false, width: 12, height: 12 }
             }
         ],
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+         // custom code end
         tooltip: { enable: true },
         title: 'Spline Interpolation',
     });

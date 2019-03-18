@@ -4,11 +4,13 @@
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
         title: 'Short Put Distance',
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         titleStyle: {
             size: '18px'
         },

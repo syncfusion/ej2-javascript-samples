@@ -19,11 +19,13 @@ function firstGauge() {
             },
             offset: 30
         },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         orientation: 'Horizontal',       
         axes: [{
             line: {
@@ -104,11 +106,13 @@ function secondGauge() {
                 }
             ]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         orientation: 'Horizontal',
         container: {
             width: 30,
@@ -137,11 +141,13 @@ function secondGauge() {
 }
 function thirdGauge() {
     var gauge3 = new ej.lineargauge.LinearGauge({
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         annotations: [{
             content: '<div id="walk" style="width:100px;"><img style="height:25px;width:25px;float:left" src="src/' +
             'linear-gauge/images/Walking.svg" /></span><p style="float:left;margin-left:10px;">Walking</p></div>',

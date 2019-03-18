@@ -73,6 +73,7 @@ this.default = function () {
         ],
         axisLabelRender: labelRender,
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -82,7 +83,7 @@ this.default = function () {
                args.chart.series[0].fill = '#57BCFF';
                args.chart.series[1].fill = '#E58184';
             }
-        },
+        }, // custom code end
         //Initializing Chart Title
         title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>' }
     });

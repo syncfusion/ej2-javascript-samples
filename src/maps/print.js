@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var printtheme = location.hash.split('/')[1];
             printtheme = printtheme ? printtheme : 'Material';
             args.maps.theme = (printtheme.charAt(0).toUpperCase() + printtheme.slice(1));
         },
+        // custom code end
         tooltipRender: function (args) {
             if (args.options.toString().indexOf('population') > -1) {
                 args.cancel = true;
@@ -75,6 +77,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#print-container');
+    // Code for Property Panel
     var togglebtn = new ej.buttons.Button({
         cssClass: 'e-info', isPrimary: true
     });

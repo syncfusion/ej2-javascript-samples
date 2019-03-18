@@ -60,11 +60,13 @@ this.default = function () {
         ],
     });
     grid.appendTo('#Grid');
+    // custom code start
     function load(args) {
         var gridtheme = location.hash.split('/')[1];
         gridtheme = gridtheme ? gridtheme : 'Material';                          
         args.sparkline.theme = (gridtheme.charAt(0).toUpperCase() + gridtheme.slice(1));                  
     }
+    // custom code end
     setTimeout(function () {
         for (var i = 1; i < 21; i++) {
             var line = new ej.charts.Sparkline({

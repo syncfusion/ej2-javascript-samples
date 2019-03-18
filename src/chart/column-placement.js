@@ -45,12 +45,14 @@ this.default = function () {
         //Initializing Chart Title
         title: 'Fruit Consumption', tooltip: { enable: true, shared: true },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+         // custom code end
     });
     chart.appendTo('#container');
 };

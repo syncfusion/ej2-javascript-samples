@@ -53,12 +53,14 @@ this.default = function () {
         crosshair: { enable: true, lineType: 'Vertical' },
         //Initializing Title
         title: 'Real GDP Growth',
+         // custom code start
         load: function (args) {
             var indexedTheme = location.hash.split('/')[1];
             indexedTheme = indexedTheme ? indexedTheme : 'Material';
             args.chart.theme = (indexedTheme.charAt(0).toUpperCase() +
                 indexedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#index-container');
     document.getElementById('isIndexed').onchange = function () {

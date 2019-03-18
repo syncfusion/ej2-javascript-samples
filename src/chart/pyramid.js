@@ -26,6 +26,7 @@ this.default = function () {
         textRender: function (args) {
             args.text = args.text;
         },
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             args.accumulation.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + 
@@ -35,6 +36,7 @@ this.default = function () {
                 args.accumulation.series[0].height = '60%';
             }
         },
+           // custom code end
         resized: function (args) {
             var bounds = document.getElementById('pyramid-container').getBoundingClientRect();
             if (bounds.width < bounds.height) {

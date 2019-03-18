@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function(args) {
             var selecttheme = location.hash.split('/')[1];
             selecttheme = selecttheme ? selecttheme : 'Material';
             args.treemap.theme = (selecttheme.charAt(0).toUpperCase() + selecttheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Import and Export details of US'
         },

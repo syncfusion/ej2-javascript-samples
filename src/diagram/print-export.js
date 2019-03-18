@@ -2,8 +2,12 @@
  * Print and Export
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.PrintAndExport);
-  //click event to perform printing the diagraming objects.
-  function onItemClick(args) {
+var checkBoxObj;
+var toolbarObj;
+var btnObj;
+var diagram;
+//click event to perform printing the diagraming objects.
+function onItemClick(args) {
     if (args.item.text === 'Print') {
         var printOptions = {};
         printOptions.mode = 'Data';
@@ -25,8 +29,7 @@ function onselect(args) {
     diagram.exportDiagram(exportOptions);
 }
 
-this.default = function () {
-    var diagram;
+this.default = function () {   
     var nodes = [
         {
             id: 'sourceNode1', width: 100, height: 50, offsetX: 120, offsetY: 100,
@@ -134,15 +137,15 @@ this.default = function () {
     });
     var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }];
     //DropDownButton used to perform exporting.
-    var btnObj = new ej.splitbuttons.DropDownButton({
+    btnObj = new ej.splitbuttons.DropDownButton({
         items: items, iconCss: 'e-ddb-icons e-export', content: 'Export', select: onselect,
     });
     //enable or disable the multiple page printing and exporting.
-    var checkBoxObj = new ej.buttons.CheckBox({
+    checkBoxObj = new ej.buttons.CheckBox({
         checked: false, label: 'Multiple Page',
     });
     // create and add printing and exporting option in ToolBar.
-    var toolbarObj = new ej.navigations.Toolbar({
+    toolbarObj = new ej.navigations.Toolbar({
         clicked: onItemClick,
         items: [
             {

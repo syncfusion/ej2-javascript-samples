@@ -13,10 +13,6 @@ this.default = function () {
         },
         tooltip: {
             enable: true,
-            fill: '#fffff',
-            textStyle: {
-                color: '#fffff'
-            }
         },
         orientation: 'Horizontal',
         axes: [

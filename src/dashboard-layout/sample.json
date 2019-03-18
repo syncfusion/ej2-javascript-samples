@@ -1,0 +1,18 @@
+{ 
+    "name": "Dashboard Layout", 
+    "directory": "dashboard-layout", 
+    "category":"Layout",
+    "ftName" :"dashboardlayout",
+    "type": "preview",
+    "samples" : [ 
+     {"url":"default", "name": "Default Functionalities", "category":"Dashboard Layout","api":{"DashboardLayout": [ "cellSpacing" ]}, "description": "This example explains the default functionalities of the JavaScript Dashboard Layout with draggable and resizable panels." },   
+     {"url":"predefined-layouts", "name": "Predefined Layouts",
+         "category":"Dashboard Layout","api":{"DashboardLayout": [ "panels","allowDragging","allowResizing","allowFloating" ]},
+       "description": "This sample demonstrates how to change the initially defined panels structure with a set of predefined panel templates dynamically." },
+     {"url":"properties", "name": "API", "category":"Dashboard Layout","api":{"DashboardLayout": [ "panels","allowDragging","allowResizing","allowFloating" ]},"description": "This sample demonstrates the most frequently used API combinations and dynamic addition and removal of panels within the layout." },
+     {"url":"dynamic-widget", "name": "Editable Dashboard", "category":"Dashboard Layout","api":{"DashboardLayout": [ "panels","allowDragging","allowResizing","allowFloating" ]},"description": "This sample demonstrates how to add the data visualization components such as pie, column and spline chart in panels dynamically within the layout." },
+     {"url":"analytics-dashboard", "name": "SEO Analytics Dashboard", "category":"Use Case","api":{"DashboardLayout": [ "panels","allowDragging","allowResizing","allowFloating" ]},"description": "This sample explains about constructing a real time dashboard for SEO analysis using data visualizing components like maps, charts, cards etc." }
+    ]
+    ,
+    "dataSourcePath": "src/dashboard-layout/datasource.js"
+ }

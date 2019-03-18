@@ -23,4 +23,16 @@ this.default = function () {
             formObj.reset();
         }
     });
+    document.getElementById('minlen').addEventListener('change', function (e) {
+        var floatElementInput = e.currentTarget;
+        var floatElement = floatElementInput.parentElement.getElementsByClassName('e-float-text')[0];
+        if (floatElementInput.value.length > 0) {
+            floatElement.classList.remove('e-label-bottom');
+            floatElement.classList.add('e-label-top');
+        } else {
+            floatElement.classList.remove('e-label-top');
+            floatElement.classList.add('e-label-bottom');
+        }
+    });
+
 };

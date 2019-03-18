@@ -66,12 +66,14 @@ this.default = function () {
             format: 'Weight: <b>${point.x} lbs</b> <br/> Height: <b>${point.y}"</b>'
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
+           // custom code start
         load: function (args) {
             var scatterTheme = location.hash.split('/')[1];
             scatterTheme = scatterTheme ? scatterTheme : 'Material';
             args.chart.theme = (scatterTheme.charAt(0).toUpperCase() + 
                 scatterTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#scatter-container');
 };

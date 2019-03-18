@@ -62,12 +62,14 @@ this.default = function () {
             enable: true,
             format: '${point.text} : <b>${point.y}%</b>'
         },
+           // custom code start
         load: function (args) {
             var polarScatterTheme = location.hash.split('/')[1];
             polarScatterTheme = polarScatterTheme ? polarScatterTheme : 'Material';
             args.chart.theme = (polarScatterTheme.charAt(0).toUpperCase() + 
                 polarScatterTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-scatter-container');
     var polarType = new ej.dropdowns.DropDownList({

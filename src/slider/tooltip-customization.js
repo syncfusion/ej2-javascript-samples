@@ -16,10 +16,6 @@ this.default = function () {
         // Bind ticks event for custom formatting
         renderingTicks: renderingTicksHandler,
         // Initialize ticks with placement, largestep, smallstep
-        created: function (args) {
-            timeObj.keyUp({ keyCode: 9, target: timeObj.secondHandle });
-            timeObj.secondHandle.focus();
-        },
         ticks: {
             placement: 'After',
             // 3 * 3600000 milliseconds = 3 Hour
@@ -47,6 +43,10 @@ this.default = function () {
         },
         // Bind ticks event for custom formatting
         renderingTicks: renderingTicksHandler,
+        created: function (args) {
+            outObj.keyUp({ keyCode: 9, target: outObj.firstHandle });
+            outObj.firstHandle.focus();
+        },
         // Initialize ticks with placement, largestep, smallstep
         ticks: {
             placement: 'After',
@@ -98,7 +98,7 @@ this.default = function () {
     }
     // Handler used to reposition the tooltip on page scroll
     function onScroll() {
-        timeObj.refreshTooltip();
-        outObj.refreshTooltip();
+        timeObj.refreshTooltip(timeObj.tooltipTarget);
+        outObj.refreshTooltip(outObj.tooltipTarget);
     }
 };

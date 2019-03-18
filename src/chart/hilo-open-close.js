@@ -2,7 +2,7 @@
  * Sample for Hilo Open Close Series
  */
 var _this = this;
-this.renderChart = function (chartData) {
+this.renderChartOhlc = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -34,14 +34,16 @@ this.renderChart = function (chartData) {
                     args.text = '$' + args.text;
                 }
             },
+             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             }
+             // custom code end
         });
-        chart.appendTo('#container');
+        chart.appendTo('#container2');
     };
     this.default = function () {
         var chartData;
@@ -52,6 +54,6 @@ this.renderChart = function (chartData) {
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            _this.renderChart(chartData);
+            _this.renderChartOhlc(chartData);
         };
     };

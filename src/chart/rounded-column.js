@@ -18,6 +18,7 @@ var labelRender = function (args) {
  * Sample for Column series with rounded corners
  */
 this.default = function () {
+    var count = 0;
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
@@ -36,11 +37,11 @@ this.default = function () {
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y',
                 dataSource: [
-                    { x: 'BGD', y: 106, text: 'Bangaladesh' },
-                    { x: 'BTN', y: 103, text: 'Bhutn' },
-                    { x: 'NPL', y: 198, text: 'Nepal' },
-                    { x: 'THA', y: 189, text: 'Thiland' },
-                    { x: 'MYS', y: 250, text: 'Malaysia' }
+                    { x: 'Egg', y: 106, text: 'Bangaladesh' },
+                    { x: 'Fish', y: 103, text: 'Bhutn' },
+                    { x: 'Misc', y: 198, text: 'Nepal' },
+                    { x: 'Tea', y: 189, text: 'Thiland' },
+                    { x: 'Fruits', y: 250, text: 'Malaysia' }
                 ], name: 'Tiger',
                 cornerRadius: {
                     bottomLeft: 10, bottomRight: 10, topLeft: 10, topRight: 10
@@ -49,34 +50,59 @@ this.default = function () {
             }
         ],
         legendSettings: { visible: false },
-        title: 'Tiger Population - 2016', tooltip: { enable: true },
+        title: 'Trade in Food Groups', tooltip: { enable: false },
         pointRender: labelRender,
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
-        tooltipRender: function (args) {
-            var tooltip = args.text;
-            if (tooltip.indexOf('BGD') > -1) {
-                tooltip = tooltip.replace('BGD', 'Bangladesh');
-            }
-            else if (tooltip.indexOf('BTN') > -1) {
-                tooltip = tooltip.replace('BTN', 'Bhutan');
-            }
-            else if (tooltip.indexOf('NPL') > -1) {
-                tooltip = tooltip.replace('NPL', 'Nepal');
-            }
-            else if (tooltip.indexOf('THA') > -1) {
-                tooltip = tooltip.replace('THA', 'Thailand');
-            }
-            else {
-                tooltip = tooltip.replace('MYS', 'Malaysia');
-            }
-            args.text = tooltip;
-        }
+        loaded: function (args) {
+            args.chart.loaded = null;
+            var columninterval = setInterval(function () {
+                if (document.getElementById('column-container')) {
+                    if (count === 0) {
+                        chart.series[0].dataSource = [
+                            { x: 'Egg', y: 206, text: 'Bangaladesh' },
+                            { x: 'Fish', y: 123, text: 'Bhutn' },
+                            { x: 'Misc', y: 48, text: 'Nepal' },
+                            { x: 'Tea', y: 240, text: 'Thiland' },
+                            { x: 'Fruits', y: 170, text: 'Malaysia' }
+                        ];
+                        args.chart.animate();
+                        count++;
+                    }
+                    else if (count === 1) {
+                        chart.series[0].dataSource = [
+                            { x: 'Egg', y: 86, text: 'Bangaladesh' },
+                            { x: 'Fish', y: 173, text: 'Bhutn' },
+                            { x: 'Misc', y: 188, text: 'Nepal' },
+                            { x: 'Tea', y: 109, text: 'Thiland' },
+                            { x: 'Fruits', y: 100, text: 'Malaysia' }
+                        ];
+                        args.chart.animate();
+                        count++;
+                    }
+                    else if (count === 2) {
+                        chart.series[0].dataSource = [
+                            { x: 'Egg', y: 156, text: 'Bangaladesh' },
+                            { x: 'Fish', y: 33, text: 'Bhutn' },
+                            { x: 'Misc', y: 260, text: 'Nepal' },
+                            { x: 'Tea', y: 200, text: 'Thiland' },
+                            { x: 'Fruits', y: 30, text: 'Malaysia' }
+                        ];
+                        args.chart.animate();
+                        count = 0;
+                    }
+                } else {
+                    clearInterval(columninterval);
+                }
+            }, 2000);
+        },
+           // custom code end
     });
-    chart.appendTo('#container');
+    chart.appendTo('#column-container');
 };
