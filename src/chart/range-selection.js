@@ -63,12 +63,14 @@ this.default = function () {
         //Initializing Chart Title
         title: 'Profit Comparision of A and B', legendSettings: { visible: true, toggleVisibility: false },
         selectionMode: 'DragXY',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#container');
     var mode = new ej.dropdowns.DropDownList({

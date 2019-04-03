@@ -65,12 +65,14 @@ this.default = function () {
         //Initializing Chart Titel
         title: 'Exchange Rate (INR per USD)',
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+         // custom code start
         load: function (args) {
             var inversedTheme = location.hash.split('/')[1];
             inversedTheme = inversedTheme ? inversedTheme : 'Material';
             args.chart.theme = (inversedTheme.charAt(0).toUpperCase() +
                 inversedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#inverse-container');
 };

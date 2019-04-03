@@ -66,12 +66,14 @@ this.default = function () {
             enable: true
         },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+         // custom code start
         load: function (args) {
             var lineTheme = location.hash.split('/')[1];
             lineTheme = lineTheme ? lineTheme: 'Material';
             args.chart.theme = (lineTheme.charAt(0).toUpperCase() + 
                 lineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#line-container');
 };

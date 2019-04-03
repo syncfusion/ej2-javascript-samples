@@ -2,6 +2,7 @@
  *  Sample for outlook style using splitter
  */
 this.default = function () {
+    var rteObj;
     var splitObj1 = new ej.layouts.Splitter({
         height: '493px',
         paneSettings: [
@@ -9,6 +10,7 @@ this.default = function () {
             { size: '33%', min: '23%' },
             { size: '37%', min: '30%' }
         ],
+        resizeStop: onSplitterResize,
         width: '100%'
     });
     splitObj1.appendTo('#splitter1');
@@ -73,6 +75,14 @@ this.default = function () {
     button1.appendTo('#rteSubmit');
     var button2 = new ej.buttons.Button();
     button2.appendTo('#rteCancel');
-    var defaultRTE = new ej.richtexteditor.RichTextEditor({ height: '262px' });
+    var defaultRTE = new ej.richtexteditor.RichTextEditor({ height: '262px', created: onRteCreated });
     defaultRTE.appendTo('#defaultRTE');
+
+    function onRteCreated() {
+        rteObj = this;
+    }
+
+    function onSplitterResize() {
+        rteObj.refresh();
+    }
 };

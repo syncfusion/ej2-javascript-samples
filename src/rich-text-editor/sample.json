@@ -1,8 +1,8 @@
 {
     "name": "Rich Text Editor",
+    "type": "update",
     "directory": "rich-text-editor",
     "category": "Editors",
-    "type": "update",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
             "url": "tools",
@@ -31,6 +31,14 @@
             "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates on how to activate the editor on demand while editing the content.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "inlineMode", "toolbarSettings", "format", "fontFamily", "appendTo", "dataBind"], "InlineMode": ["enable", "onSelection"], "ToolbarSettings": ["items"], "Format": ["width"], "FontFamily": ["width"] }
+        },
+        {
+            "url": "paste-cleanup",
+            "name": "Paste Cleanup",
+            "type": "new",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates paste cleanup when pasting the content.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "pasteCleanupSettings"], "pasteCleanupSettings": ["prompt", "plainText", "keepFormat", "deniedTags" ,"deniedAttrs" ,"allowedStyleProps"] }
         },
         {
             "url": "iframe",
@@ -98,7 +106,6 @@
         {
             "url": "markdown-editor",
             "name": "Overview",
-            "type": "update",
             "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the markdown editing in the rich text editor with complete features.",
             "category": "Markdown",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }

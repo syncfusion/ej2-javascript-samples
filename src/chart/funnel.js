@@ -22,6 +22,7 @@ this.default = function () {
         tooltip: { enable: true, format: '${point.x} : <b>${point.y} %</b>' },
         legendSettings: { toggleVisibility: false },
         enableAnimation: false,
+         // custom code start
         load: function (args) {
             var funnelTheme = location.hash.split('/')[1];
             funnelTheme = funnelTheme ? funnelTheme : 'Material';
@@ -32,6 +33,7 @@ this.default = function () {
                 args.accumulation.series[0].width = '80%';
             }
         },
+         // custom code end
         resized: function (args) {
             var bounds = document.getElementById('funnel-container').getBoundingClientRect();
             if (bounds.width < bounds.height) {

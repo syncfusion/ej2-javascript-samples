@@ -1,6 +1,7 @@
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 var diagram;
+var element;
 
 /**
  * Getting started -  nodes
@@ -93,7 +94,7 @@ this.default = function () {
     diagram.appendTo('#diagram');
 
     //Enable or disable the AspectRatio for Node.
-    var element = new ej.buttons.CheckBox({
+     element = new ej.buttons.CheckBox({
         checked: false, label: 'Aspect ratio',
         change: updateAnnotation
     });
@@ -108,10 +109,12 @@ this.default = function () {
     //Click event for Appearance of the Property Panel
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
+        // custom code start
         var selectedElement = document.getElementsByClassName('e-selected-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-style');
         }
+        // custom code end
         if (target.className === 'image-pattern-style') {
             for (var i = 0; i < diagram.nodes.length; i++) {
                 var node = diagram.nodes[i];
@@ -132,7 +135,9 @@ this.default = function () {
                         applyStyle(node, 2, '5 5', ej.diagrams.NodeConstraints.Shadow, undefined);
                         break;
                 }
+                // custom code start
                 target.classList.add('e-selected-style');
+                // custom code end
             }
         }
     };

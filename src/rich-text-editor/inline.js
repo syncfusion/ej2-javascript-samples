@@ -22,7 +22,7 @@ this.default = function () {
     });
     defaultRTE.appendTo("#defaultRTE");
     var select = new ej.buttons.CheckBox({
-        // set false for enable the checked state at initial rendering
+        // set true for enable the checked state at initial rendering
         checked: true,
         label: 'Show on Selection',
         // bind change event

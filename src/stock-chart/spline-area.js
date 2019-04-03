@@ -4,7 +4,8 @@ renderSplineAreaStockChart = function (googl) {
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', width: 0 }
+                majorTickLines: { color: 'transparent', width: 0 },
+                crosshairTooltip: { enable: true }
             },
             chartArea: { border: { width: 0 } },
             series: [
@@ -15,13 +16,18 @@ renderSplineAreaStockChart = function (googl) {
             seriesType : [],
             indicatorType : [],
             title: 'Google Stock Price',
+            crosshair: {
+                enable: true
+            },
             titleStyle: { fontWeight: '500', color: '#424242' },
+            // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             }
+            // custom code end
         });
         stockChart.appendTo('#container');
     };

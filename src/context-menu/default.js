@@ -48,7 +48,8 @@ this.default = function() {
             }
         }
     };
-
+    
+    // custom code start 
     var menuObj = new ej.navigations.ContextMenu(menuOptions, '#contextmenu');
     if (ej.base.Browser.isDevice) {
         ej.base.select('#contextmenutarget').textContent = 'Touch hold to open the ContextMenu';
@@ -58,4 +59,5 @@ this.default = function() {
         ej.base.select('#contextmenutarget').textContent = 'Right click/Touch hold to open the ContextMenu';
         menuObj.animationSettings.effect = 'SlideDown';
     }
+    // custom code end 
 };

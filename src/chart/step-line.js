@@ -71,12 +71,14 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: { enable: true },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+           // custom code start
         load: function (args) {
             var stepTheme = location.hash.split('/')[1];
             stepTheme = stepTheme ? stepTheme : 'Material';
             args.chart.theme = (stepTheme.charAt(0).toUpperCase() + 
                 stepTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#sLine-container');
 };

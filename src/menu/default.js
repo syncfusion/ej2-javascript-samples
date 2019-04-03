@@ -10,7 +10,7 @@ this.default = function() {
             iconCss: 'em-icons e-file',
             items: [
                 { text: 'Open', iconCss: 'em-icons e-open' },
-                { text: 'Save', iconCss: 'e-icons e-save' },
+                { text: 'Save', iconCss: 'em-icons e-save' },
                 { separator: true },
                 { text: 'Exit' }
             ]

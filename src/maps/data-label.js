@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var labeltheme = location.hash.split('/')[1];
             labeltheme = labeltheme ? labeltheme : 'Material';
             args.maps.theme = (labeltheme.charAt(0).toUpperCase() + labeltheme.slice(1));
         },
+        // custom code end
         zoomSettings: {
             enable: false
         },
@@ -30,6 +32,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#datalabel');
+    // Code for Property Panel
     var intersectaction = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select intersect action',

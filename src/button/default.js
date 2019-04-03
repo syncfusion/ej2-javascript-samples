@@ -35,7 +35,7 @@ this.default = function() {
     button = new ej.buttons.Button({ cssClass: 'e-small'});
     button.appendTo('#smallbtn');
 
-    //Toggle button click event handler
+    // Toggle button click event handler
     toggleBtn.element.onclick = function () {
         if (toggleBtn.element.classList.contains('e-active')) {
             toggleBtn.content = 'Pause';

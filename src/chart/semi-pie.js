@@ -37,12 +37,14 @@ this.default = function () {
         },
         //Initializing Title
         title: 'Agricultural Land Percentage',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     pie.appendTo('#semi-container');
     document.getElementById('inner-radius').onpointermove = document.getElementById('inner-radius').ontouchmove =

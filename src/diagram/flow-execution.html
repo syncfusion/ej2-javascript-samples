@@ -1,0 +1,89 @@
+<div class="col-lg-8 control-section">
+    <style>
+        #flowExecitionPropertySection .row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        #flowExecitionPropertySection .col-xs-7 {
+            width: 300px;
+        }
+
+        #flowExecitionPropertySection .col-xs-7 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        #flowExecitionControlSection.content-wrapper {
+            border: 1px solid #D7D7D7;
+        }
+    </style>
+
+    <div id="flowExecitionControlSection" class="content-wrapper" style="width: 100%;">
+        <div id="diagram"></div>
+    </div>
+</div>
+<div id="flowExecitionPropertySection" class="col-lg-4 property-section">
+    <div class="property-panel-header">
+        Show flow execution
+    </div>
+    <div class="row property-panel-content" id="appearance">
+        <div class="row property-panel-content" style="width:260px;">
+            <div class="row">
+                <div class="col-xs-7">
+                    <input type="radio" id="UnhighlightAll">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="LinksInto">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="LinksOutOf">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="LinksConnected">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="NodesInto">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="NodesOutOf">
+
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="NodesConnected">
+
+                </div>
+            </div>
+            <div class="row" style="padding-top: 8px">
+                <div class="col-xs-7">
+                    <input type="radio" id="NodesReachable">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates how we can process and get the consecutive nodes and connectors respectively.
+    </p>
+</div>
+<div id="description">
+    <p>
+        We can get the inward connections and outward connections of the node using <code>inEdges</code> and <code>outEdges</code>        properties of the node. By using this connector’s name collection, we can find the node using <code>getObject</code>.
+        And also, we can get the nodes connected on the connector using <code>sourceNode</code> and <code>targetNode</code>        properties of the connector. method can be used to print the diagrams.
+    </p>
+    <br>
+</div>

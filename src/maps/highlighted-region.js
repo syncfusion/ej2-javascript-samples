@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var highlighttheme = location.hash.split('/')[1];
             highlighttheme = highlighttheme ? highlighttheme : 'Material';
             args.maps.theme = (highlighttheme.charAt(0).toUpperCase() + highlighttheme.slice(1));
         },
+        // custom code end
         centerPosition: {
             latitude: 35.65, longitude: -97.3
         },

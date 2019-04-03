@@ -89,12 +89,14 @@ this.default = function () {
         //Initializing Chart Title
         title: 'Trend in Sales of Ethical Produce',
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+           // custom code start
         load: function (args) {
             var stackedTheme = location.hash.split('/')[1];
             stackedTheme = stackedTheme ? stackedTheme : 'Material';
             args.chart.theme = (stackedTheme.charAt(0).toUpperCase() + 
                 stackedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#stacked-container');
 };

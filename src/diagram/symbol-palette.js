@@ -3,6 +3,12 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 //enable or disable the header icon for Symbol palette.
+var palette;
+var animation;
+var expand;
+var size;
+var headericon;
+var itemtext;
 function onHeaderIconChange(args) {
     for (var i = 0; i < palette.palettes.length; i++) {
         if (args.checked) {
@@ -85,7 +91,7 @@ this.default = function () {
         },
     ];
     //Initializes the symbol palette
-    var palette = new ej.diagrams.SymbolPalette({
+    palette = new ej.diagrams.SymbolPalette({
         expandMode: 'Multiple', allowDrag: false,
         palettes: [
             { id: 'flow', expanded: true, symbols: flowshapes, iconCss: 'e-ddb-icons e-basic', title: 'Flow Shapes' },
@@ -113,14 +119,14 @@ this.default = function () {
     });
     palette.appendTo('#symbolpalette');
     //enable or disable the animation of the symbol palette.
-    var animation = new ej.buttons.CheckBox({
+    animation = new ej.buttons.CheckBox({
         checked: true,
         change: onAnimationChange
     });
     palette.dataBind();
     animation.appendTo('#animation');
     //DropDownList is used to change the expandMode of the Symbolpallete.
-    var expand = new ej.dropdowns.DropDownList({
+    expand = new ej.dropdowns.DropDownList({
         index: 1,
         change: function () {
             palette.expandMode = expand.value;
@@ -129,7 +135,7 @@ this.default = function () {
     });
     expand.appendTo('#expand');
     //NumericTextBox is used to apply the size of the Symbol.
-    var size = new ej.inputs.NumericTextBox({
+    size = new ej.inputs.NumericTextBox({
         value: 80, min: 40,
         max: 100, width: 120,
         step: 5,
@@ -142,11 +148,11 @@ this.default = function () {
     palette.dataBind();
     size.appendTo('#size');
     //Add or Remove the Text for Symbol palette item.
-    var itemtext = new ej.buttons.CheckBox({
+    itemtext = new ej.buttons.CheckBox({
         change: onItemTextChange
     });
     itemtext.appendTo('#itemtext');
-    var headericon = new ej.buttons.CheckBox({
+    headericon = new ej.buttons.CheckBox({
         checked: true,
         change: onHeaderIconChange
     });

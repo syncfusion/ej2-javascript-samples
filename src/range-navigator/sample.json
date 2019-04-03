@@ -61,7 +61,7 @@
         {
             "url": "logarithmic",
             "name": "Logarithmic Axis",
-            "description": "This demo for Essential JS2 Range Navigator control shows how to visualize the logarithmic scale when data has values with both lower (e.g.: 10^-6) and higher (e.g.: 10^6) orders of magnitude.",
+            "description": "This demo for Essential JS2 Range Navigator control shows how to visualize and configure the logarithmic scale.",
             "category": "Axis",
             "api": {
                 "RangeNavigator": [
@@ -75,7 +75,7 @@
         {
             "url": "multilevel",
             "name": "Multilevel Labels",
-            "description": "This demo for Essential JS2 Range Navigator control shows how to display the second level labels.",
+            "description": "This demo for Essential JS2 Range Navigator control shows how to display the second level labels for a given range.",
             "category": "Axis",
             "api": {
                 "RangeNavigator": [
@@ -142,7 +142,7 @@
         {
             "url": "export",
             "name": "Print and Export",
-            "description": "This demo for Essential JS2 Range Navigator control shows how to print the charts and export the chart contents to SVG, PDF, JPEG, PNG, and Excel formats at client-side.",
+            "description": "This demo for Essential JS2 Range Navigator control shows how to print the charts and export the chart contents to various formats.",
             "category": "Export",
             "api": {
                 "RangeNavigator": [

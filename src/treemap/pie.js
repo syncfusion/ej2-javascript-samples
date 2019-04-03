@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function (args) {
             var pietheme = location.hash.split('/')[1];
             pietheme = pietheme ? pietheme : 'Material';
             args.treemap.theme = (pietheme.charAt(0).toUpperCase() + pietheme.slice(1));
         },
+        // custom code end
         loaded: function (args) {
             var template = document.getElementById(args.treemap.element.id + '_Label_Template_Group');
             if (template) {
@@ -53,6 +55,7 @@ this.default = function () {
     });
     treemap.appendTo('#container');
 };
+// code for pie chart
 var chartCollection = [];
 var count = 0;
 function AccumulationChartRender(id) {

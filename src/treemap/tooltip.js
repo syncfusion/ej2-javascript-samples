@@ -1,10 +1,12 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function (args) {
             var tooltheme = location.hash.split('/')[1];
             tooltheme = tooltheme ? tooltheme : 'Material';
             args.treemap.theme = (tooltheme.charAt(0).toUpperCase() + tooltheme.slice(1));
         },
+        // custom code end 
         tooltipSettings: {
             visible: true,
             template: '#Tooltip'

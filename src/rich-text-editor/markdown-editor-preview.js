@@ -17,7 +17,7 @@ this.default = function () {
         },
         created: function () {
             textArea = defaultRTE.contentModule.getEditPanel();
-            textArea.addEventListener('keyup', function (e) { markDownConversion(); });
+            textArea.addEventListener('keyup', function (e) { MarkDownConversion(); });
             var rteObj = defaultRTE;
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function (e) {
@@ -60,12 +60,12 @@ this.default = function () {
                     mdSplit.classList.remove('e-active');
                     mdsource.classList.remove('e-active');
                 }
-                markDownConversion();
+                MarkDownConversion();
             }
             setTimeout(function () { defaultRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
         }
     });
-    function markDownConversion() {
+    function MarkDownConversion() {
         if (mdSplit.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = document.body.querySelector('#defaultRTEhtml-preview');

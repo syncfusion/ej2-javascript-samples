@@ -52,12 +52,14 @@ this.default = function () {
         legendSettings: { visible: false },
         //Initializing Chart Title
         title: 'Sales Distribution of Car by Region',
+         // custom code start
         load: function (args) {
             var errorBarTheme = location.hash.split('/')[1];
             errorBarTheme = errorBarTheme ? errorBarTheme : 'Material';
             args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() +
                 errorBarTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+         // custom code end
     });
     chart.appendTo('#error-container');
     var typemode = new ej.dropdowns.DropDownList({

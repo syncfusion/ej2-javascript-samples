@@ -20,7 +20,7 @@ this.default = function() {
     });
     maxLength.appendTo('#maxlength');
     var readonly = new ej.buttons.CheckBox({
-        // set false for enable the checked state at initial rendering
+        // set false for disable the checked state at initial rendering
         checked: false,
         // bind change event
         change: function (args) {
@@ -29,7 +29,7 @@ this.default = function() {
     });
     readonly.appendTo('#readonly');
     var enable = new ej.buttons.CheckBox({
-        // set false for enable the checked state at initial rendering
+        // set true for enable the checked state at initial rendering
         checked: true,
         // bind change event
         change: function (args) {
@@ -38,7 +38,7 @@ this.default = function() {
     });
     enable.appendTo('#enable');
     var enablehtml = new ej.buttons.CheckBox({
-        // set false for enable the checked state at initial rendering
+        // set false for disable the checked state at initial rendering
         checked: false,
         // bind change event
         change: function (args) {

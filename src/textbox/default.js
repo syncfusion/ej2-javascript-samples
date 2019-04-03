@@ -13,6 +13,7 @@ this.default = function () {
         enableRtl: true
     });
     inputobj2.appendTo('#lastname');
+    //custom code start
     var inputObject = {};
     var input = document.querySelectorAll('.e-input-group .e-input,.e-float-input.e-input-group input');
     var inputIcon = document.querySelectorAll('.e-input-group-icon');
@@ -48,4 +49,5 @@ this.default = function () {
         }
         return parentNode;
     }
+    //custom code end
 };

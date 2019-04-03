@@ -1,13 +1,17 @@
 this.default = function () {
+    // custom code start
     var liveload = function(args) {
         var livetheme = location.hash.split('/')[1];
         livetheme = livetheme ? livetheme : 'Material';
         args.sparkline.theme = (livetheme.charAt(0).toUpperCase() + livetheme.slice(1));
     };
+    // custom code end
     var spark = new ej.charts.Sparkline({
             height: '130px',
-            width: '90%', 
+            width: '90%',
+            // custom code start
             load: liveload,
+            // custom code end
             axisSettings: {
                 minY: 0, maxY: 150
             },
@@ -66,8 +70,10 @@ this.default = function () {
     var time = setInterval(update, 1000);
     var spark1 = new ej.charts.Sparkline({
         height: '130px',
-            width: '90%', 
+            width: '90%',
+            // custom code start
             load: liveload,
+            // custom code end
             lineWidth: 1,           
             containerArea: {
                 background: 'white',
@@ -134,7 +140,10 @@ this.default = function () {
     var time1 = setInterval(update1, 1000);
     var spark2 = new ej.charts.Sparkline({
         height: '130px',
-            width: '90%', load: liveload,
+            width: '90%',
+            // cudtom code start
+            load: liveload,
+            // custom code end
             xName: 'x', yName: 'yval',            
             lineWidth: 1,
             axisSettings: {
@@ -194,8 +203,10 @@ this.default = function () {
     var time2 = setInterval(update2, 1000);
     var spark3 = new ej.charts.Sparkline({
         height: '130px',
-            width: '90%', 
+            width: '90%',
+            // custom code start 
             load: liveload,
+            // custom code end
             lineWidth: 1,
             axisSettings: {
                 minY: 0, maxY: 120

@@ -58,6 +58,7 @@ this.default = function () {
         tooltip: {
             enable: true
         },
+           // custom code start
         load: function (args) {
             var polarSplineTheme = location.hash.split('/')[1];
             polarSplineTheme = polarSplineTheme ? polarSplineTheme : 'Material';
@@ -65,6 +66,7 @@ this.default = function () {
             args.chart.theme = (polarSplineTheme.charAt(0).toUpperCase() + 
                 polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-spline-container');
     var polarType = new ej.dropdowns.DropDownList({

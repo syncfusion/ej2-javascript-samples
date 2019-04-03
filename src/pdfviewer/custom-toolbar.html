@@ -52,11 +52,11 @@
     </ul>
     <p>
         More information on the PDF Viewer instantiation can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation/pdfviewer/getting-started.html#create-a-simple-pdfviewer">
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started">
             documentation section</a>.
     </p>
 </div>
-
+<!-- custom code start -->
 <style>
     #magnificationToolbar {
         background: transparent;
@@ -118,6 +118,32 @@
         border: 0px;
     }
 
+    .bootstrap4 .search-button {
+        background-color: transparent;
+        color: #495057;
+    }
+
+    .bootstrap4 .search-button:disabled {
+        color: rgba(73, 80, 87, 0.4);
+        background: transparent;
+    }
+
+    .bootstrap4 .search-button:hover:not(:disabled) {
+        background-color: #545b62;
+        color: #fff;
+    }
+
+    .bootstrap4 .search-button:active {
+        background-color: #545b62;
+        color: #fff;
+    }
+
+    .bootstrap4 .search-button:focus {
+        background-color: #6c757d;
+        color: #fff;
+        box-shadow: 0 0 0 3px rgba(130, 138, 145, 0.5);
+    }
+
     #popup .e-dlg-content {
         padding-left: 0;
         padding-bottom: 0;
@@ -155,11 +181,13 @@
         font-size: 12px;
     }
 
-    .e-pv-download-document-icon::before {
+    #topToolbar .e-pv-download-document-icon::before {
+        padding-left: 4px;
         content: '\e914';
     }
 
-    .e-pv-print-document-icon::before {
+    #topToolbar .e-pv-print-document-icon::before {
+        padding-left: 1px;
         content: '\e917';
     }
 
@@ -181,7 +209,9 @@
     .e-pv-fit-page-icon::before {
         content: '\e91b';
     }
-    .e-pv-bookmark-icon::before {
+
+    #topToolbar .e-pv-bookmark-icon::before {
+        padding-left: 2.6px;
         content: '\e915';
     }
 
@@ -209,7 +239,7 @@
         font-family: 'e-icons';
     }
 
-    .e-pv-search-close {
+    .e-pv-search-close::before {
         content: '\e91a';
         font-family: 'e-icons';
     }
@@ -222,3 +252,4 @@
     }
     
 </style>
+<!-- custom code end-->

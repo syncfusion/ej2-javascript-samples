@@ -2,7 +2,7 @@
     "name": "Stock Chart",
     "directory": "stock-chart",
     "category": "Data Visualization",
-    "type": "preview",
+    "type": "update",
     "ftName": "stock-chart",
     "samples": [
         {
@@ -173,7 +173,21 @@
                     "intervalType"
                 ]
             }
-        }   
+        } ,
+        {
+            "url": "stock-events",
+            "name": "Stock Events",
+            "description":"This demo for Essential JS2 Stock Chart control shows how to render and configure the stock events in stock chart.",
+            "category": "Stock Chart",
+            "type": "new",
+            "api": {
+                "RangeNavigator": [
+                    "valueType",
+                    "series",
+                    "intervalType"
+                ]
+            }
+        }  
     ],
     "dataSourcePath": "src/stock-chart/stock-data.js"
     

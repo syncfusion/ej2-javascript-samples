@@ -18,7 +18,6 @@ this.default = function () {
         },
         value: ['Canada', 'Bermuda'],
         model: {
-            width: 150,
             dataSource: autocompleteData,
             placeholder: 'Choose the countries',
             mode: 'Box'

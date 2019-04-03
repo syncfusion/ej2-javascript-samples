@@ -53,12 +53,14 @@ this.default = function () {
         tooltip: {
             enable: true
         },
+           // custom code start
         load: function (args) {
             var polarStackedTheme = location.hash.split('/')[1];
             polarStackedTheme = polarStackedTheme ? polarStackedTheme : 'Material';
             args.chart.theme = (polarStackedTheme.charAt(0).toUpperCase() + 
                 polarStackedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polarStack-container');
     var polarType = new ej.dropdowns.DropDownList({

@@ -1,0 +1,51 @@
+<script type="text/x-jsrender" id="tooltip">
+    <table>
+        <tbody>
+            <tr><td colspan="3">${TaskName}</td></tr>
+            <tr>
+                <td > Start Time </td> <td>:</td>
+                <td>${this.getFormatedDate(StartDate)}</td>
+            </tr>
+            <tr>
+                <td> End Time</td> <td>:</td>
+                <td >${this.getFormatedDate(EndDate)}</td>
+            </tr>
+            <tr>
+                <td> Planned start time</td> <td>:</td>
+                <td>${this.getFormatedDate(BaselineStartDate)}</td>
+            </tr>
+            <tr>
+                <td> Planned end time</td> <td>:</td>
+                <td>${this.getFormatedDate(BaselineEndDate)}</td>
+                </tr>
+        </tbody>
+    </table>
+ 
+    </script>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Baseline">
+        </div>
+        <div style="float: right; margin: 10px;">Source:
+            <a href="https://en.wikipedia.org/wiki/Service_(motor_vehicle)"
+                target='_blank'>https://en.wikipedia.org/</a>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample visualizes the complete service schedule for a car.
+        Baselines are enabled to view the deviation between the planned dates and actual dates</p>
+</div>
+
+<div id="description">
+    <p>
+        The baseline feature enables the user to view the deviation between the planned dates and the actual dates of
+        the tasks in a project. Baselines can be enabled in Gantt chart by enabling the <code>renderBaseline</code>
+        property along
+        with mapping the data source values for <code>baselineStartDate</code> and <code>baselineEndDate</code>
+        properties.
+        The baseline will appear for all type of tasks in the project such as child tasks, parent tasks and also for
+        milestones. You can change the color for the baselines using <code>baselineColor</code> property.
+    </p>
+</div>

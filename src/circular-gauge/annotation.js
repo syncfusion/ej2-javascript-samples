@@ -4,11 +4,13 @@ function gauge1() {
         resized: function (args) {
             location.reload();
         },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         titleStyle: { color: 'black', size: '16px' },
         axes: [
             {
@@ -17,10 +19,10 @@ function gauge1() {
                 ranges: [
                     {
                         start: 0, end: 3,
-                        color: 'rgba(29,29,29,0.6)'
+                        color: 'rgb(128,128,128)'
                     }, {
                         start: 3, end: 12,
-                        color: 'rgba(226, 226, 226, 0.6)'
+                        color: 'rgb(192,192,192)'
                     }
                 ],
                 annotations: [{
@@ -32,36 +34,33 @@ function gauge1() {
                 }, {
                     angle: 90, zIndex: '1',
                     radius: '40%',
-                    content: '<div id="hr" style="background-color:rgba(29,29,29,0.6); color:white;font-size:12px;">11:11 AM</div>'
+                    content: '<div id="hr" style="background-color:rgb(128,128,128); color:white;font-size:12px;">11:11 AM</div>'
                 }, {
                     angle: 360, radius: '50%', zIndex: '1',
                     content: '<div id="tm" style="font-size:10px;">21-06-17</div>'
                 }],
                 labelStyle: {
-                    hiddenLabel: 'First', font: { color: 'rgb(29,29,29)' }, autoAngle: false
+                    hiddenLabel: 'First', autoAngle: false
                 }, majorTicks: {
-                    width: 2, height: 14, interval: 1, color: 'rgb(29,29,29)'
+                    width: 2, height: 14, interval: 1
                 }, minorTicks: {
-                    height: 4, width: 1, interval: 0.2, color: 'rgb(29,29,29)'
+                    height: 4, width: 1, interval: 0.2
                 },
                 minimum: 0, maximum: 12,
                 pointers: [{
-                    pointerWidth: 5, radius: '40%', color: 'rgba(29,29,29,0.8)',
-                    border: { width: 0, color: '#679EEF' },
-                    cap: { radius: 0, border: { width: 0, color: 'red' } },
+                    pointerWidth: 5, radius: '40%',
+                    border: { width: 0 },
+                    cap: { radius: 0, border: { width: 0 } },
                     needleTail: { length: '0%' }, animation: { enable: false }
                 }, {
-                    radius: '60%', pointerWidth: 5, color: 'rgba(29,29,29,0.8)',
+                    radius: '60%', pointerWidth: 5,
                     border: {
-                        width: 0,
-                        color: 'rgba(29,29,29,0.8)'
+                        width: 0
                     },
                     cap: {
-                        color: 'rgba(29,29,29,0.8)',
                         radius: 0,
                         border: {
-                            width: 0,
-                            color: 'red'
+                            width: 0
                         }
                     },
                     needleTail: {
@@ -72,25 +71,19 @@ function gauge1() {
                 }, {
                     radius: '70%',
                     pointerWidth: 1,
-                    color: 'rgba(29,29,29,0.8)',
                     cap: {
-                        color: 'white',
                         radius: 4,
                         border: {
-                            width: 2,
-                            color: 'rgba(29,29,29,0.8)'
+                            width: 2
                         }
                     },
                     border: {
-                        width: 2,
-                        color: 'rgba(29,29,29,0.8)'
+                        width: 2
                     },
                     needleTail: {
-                        color: 'rgba(29,29,29,0.8)',
                         length: '20%',
                         border: {
-                            width: 2,
-                            color: 'rgba(29,29,29,0.8)'
+                            width: 2
                         },
                     }, animation: {
                         enable: false,
@@ -104,12 +97,15 @@ function gauge1() {
 }
 function gauge2() {
     var gauge2 = new ej.circulargauge.CircularGauge({
+        background: 'transparent',
         titleStyle: { color: 'black' },
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
         axes: [
             {
                 startAngle: 0, endAngle: 0,
@@ -117,9 +113,9 @@ function gauge2() {
                     {
                         startWidth: 4, endWidth: 4,
                         start: 0, end: 3,
-                        color: 'rgba(29,29,29,0.4)'
+                        color: 'rgb(128,128,128)'
                     }, {
-                        color: 'rgba(168,145,102,0.1)',
+                        color: 'rgb(192,192,192)',
                         start: 3, end: 12,
                         startWidth: 4, endWidth: 4
                     }
@@ -149,7 +145,6 @@ function gauge2() {
                 labelStyle: {
                     hiddenLabel: 'First',
                     font: {
-                        color: '#8c8c8c',
                         size: '0px'
                     },
                     autoAngle: false
@@ -163,17 +158,13 @@ function gauge2() {
                 pointers: [{
                     radius: '70%',
                     pointerWidth: 2,
-                    color: 'rgba(29,29,29,1)',
                     cap: {
-                        color: 'rgba(29,29,29,1)',
                         radius: 2,
                         border: {
-                            width: 0.2,
-                            color: 'rgba(168,145,102,1)'
+                            width: 0.2
                         }
                     },
                     needleTail: {
-                        color: 'rgba(168,145,102,1)',
                         length: '10%'
                     }, animation: {
                         enable: false,
@@ -210,25 +201,28 @@ this.default = function () {
     function updateSubGauge2() {
         var _this = this;
         subGauge2 = new ej.circulargauge.CircularGauge({
+            background: 'transparent',
+            // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
             },
+            // custom code end
             axes: [{
-                ranges: [{ start: 0, end: 3, startWidth: 4, endWidth: 4, color: 'rgba(29,29,29,0.4)' },
-                { start: 3, end: 12, startWidth: 4, endWidth: 4, color: 'rgba(168,145,102,0.1)' }],
+                ranges: [{ start: 0, end: 3, startWidth: 4, endWidth: 4, color: 'rgb(128,128,128)' },
+                { start: 3, end: 12, startWidth: 4, endWidth: 4, color: 'rgb(192,192,192)' }],
                 annotations: [{ angle: 270, radius: '40%', content: null },
                 { angle: 180, radius: '40%', content: null },
                 { angle: 90, radius: '50%', content: null },
                 { angle: 360, radius: '35%', zIndex: '1', content: '<div id="tm" style="font-size:10px;">21-06-17</div>' }],
                 majorTicks: { width: 1, height: 5, interval: 1 },
-                labelStyle: { hiddenLabel: 'First', font: { color: '#8c8c8c', size: '0px' }, autoAngle: false },
+                labelStyle: { hiddenLabel: 'First', font: { size: '0px' }, autoAngle: false },
                 pointers: [{
                     cap: {
-                        color: 'rgba(29,29,29,1)', radius: 2, border: { width: 0.2, color: 'rgba(168,145,102,1)' }
-                    }, needleTail: { color: 'rgba(168,145,102,1)', length: '10%' }, animation: { enable: false, duration: 500 },
-                    radius: '70%', pointerWidth: 2, color: 'rgba(29,29,29,1)'
+                        radius: 2, border: { width: 0.2 }
+                    }, needleTail: { length: '10%' }, animation: { enable: false, duration: 500 },
+                    radius: '70%', pointerWidth: 2,
                 }], startAngle: 0, endAngle: 0, lineStyle: { width: 0 },
                 minorTicks: { height: 3, width: 0.5, interval: 0.2 }, minimum: 0, maximum: 12,
             }],

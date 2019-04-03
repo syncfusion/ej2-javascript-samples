@@ -27,21 +27,14 @@
             dataSource: window.hardwareData,
             columns: columnData,
             rule: importRules,
-            conditionChanged: updateRule,
-            fieldChanged: updateRule,
-            valueChanged: updateRule,
-            operatorChanged: updateRule,
-            ruleDelete: updateRule,
-            groupDelete: updateRule,
-            ruleInsert: updateRule,
-            groupInsert: updateRule
+            ruleChange: updateRule
         });
         qryBldrObj.appendTo('#querybuilder');
         var grid;
         createGrid(new ej.data.Query().select(['TaskID', 'Name', 'Category', 'SerialNo', 'InvoiceNo', 'Status']));
-		updateRule();
-        function updateRule() {
-            var predicate = qryBldrObj.getPredicate({condition: qryBldrObj.rule.condition, rules: qryBldrObj.rule.rules});
+		updateRule({rule: qryBldrObj.getValidRules(qryBldrObj.rule) });
+        function updateRule(args) {
+            var predicate = qryBldrObj.getPredicate(args.rule);
             var query;
             if (predicate) {
                 query = new ej.data.Query().select(['TaskID', 'Name', 'Category', 'SerialNo', 'InvoiceNo', 'Status'])

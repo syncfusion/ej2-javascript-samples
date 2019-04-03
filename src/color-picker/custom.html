@@ -47,66 +47,7 @@
     </p>
 </div>
 <style>
-    /* Common sample level styles */
-     #colorpicker-control {
-        margin: auto 0;
-        text-align: center;
-    }
-    #colorpicker-control .col-lg-6 {
-        margin-bottom: 20px;
-    }
-    #colorpicker-control .col-lg-6.e-circle-wrap {
-        width: 26%;
-    }
-    #colorpicker-control .col-lg-6.e-square-wrap {
-        margin-top: 37px;
-        width: 22%;
-    }
-    #colorpicker-control .col-lg-6.e-rounded-wrap {
-        margin-top: 35px;
-        width: 20%;
-    }
-    #colorpicker-control .col-lg-6.e-scroll-wrap {
-        width: 32%;
-    }
-
-    /* Preview area styles */
-    #colorpicker-control #e-shirt-preview {
-        background: transparent url('./src/color-picker/images/shirt.png') no-repeat;
-        height: 320px;
-        margin: 20px auto;
-        display: inline-block;
-        width: 400px;
-        background-color: rgb(244, 67, 54);
-    }
-    #colorpicker-control.e-mobile-control #e-shirt-preview {
-        margin-left: -21%;
-        width: 320px;
-    }
-    .highcontrast #colorpicker-control #e-shirt-preview {
-        background: transparent url('./src/color-picker/images/shirt_highcontrast.png') no-repeat;
-        background-color: rgb(244, 67, 54);
-    }
-
-    /* Common sample level styles for mobile */
-    #colorpicker-control.e-mobile-control .col-lg-6 {
-        width: 55%;
-    }
-    @media only screen and (min-width: 768px) {
-        #colorpicker-control.e-mobile-control .col-sm-12 {
-            width: 25%;
-        }
-    }
-    #colorpicker-control.e-mobile-control #colorpicker-content {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-    #colorpicker-control.e-mobile-control #colorpicker-content .col-xs-12 {
-        flex: 0 0 auto;
-    }
-
-    /* Circle palette customization */
+     /* Circle palette customization */
     .e-container .e-palette .e-circle-palette {
         border: 0;
         height: 32px;
@@ -202,3 +143,68 @@
         outline: none;
     }
 </style>
+
+<!-- custom code start -->
+
+<style>
+    /* Common sample level styles */
+    #colorpicker-control {
+        margin: auto 0;
+        text-align: center;
+    }
+    #colorpicker-control .col-lg-6 {
+        margin-bottom: 20px;
+    }
+    #colorpicker-control .col-lg-6.e-circle-wrap {
+        width: 26%;
+    }
+    #colorpicker-control .col-lg-6.e-square-wrap {
+        margin-top: 37px;
+        width: 22%;
+    }
+    #colorpicker-control .col-lg-6.e-rounded-wrap {
+        margin-top: 35px;
+        width: 20%;
+    }
+    #colorpicker-control .col-lg-6.e-scroll-wrap {
+        width: 32%;
+    }
+
+    /* Preview area styles */
+    #colorpicker-control #e-shirt-preview {
+        background: transparent url('./src/color-picker/images/shirt.png') no-repeat;
+        height: 320px;
+        margin: 20px auto;
+        display: inline-block;
+        width: 400px;
+        background-color: rgb(244, 67, 54);
+    }
+    #colorpicker-control.e-mobile-control #e-shirt-preview {
+        margin-left: -21%;
+        width: 320px;
+    }
+    .highcontrast #colorpicker-control #e-shirt-preview {
+        background: transparent url('./src/color-picker/images/shirt_highcontrast.png') no-repeat;
+        background-color: rgb(244, 67, 54);
+    }
+
+    /* Common sample level styles for mobile */
+    #colorpicker-control.e-mobile-control .col-lg-6 {
+        width: 55%;
+    }
+    @media only screen and (min-width: 768px) {
+        #colorpicker-control.e-mobile-control .col-sm-12 {
+            width: 25%;
+        }
+    }
+    #colorpicker-control.e-mobile-control #colorpicker-content {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    #colorpicker-control.e-mobile-control #colorpicker-content .col-xs-12 {
+        flex: 0 0 auto;
+    }
+</style>
+
+<!-- custom code end -->
