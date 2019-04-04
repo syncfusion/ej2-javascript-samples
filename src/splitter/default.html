@@ -3,13 +3,13 @@
     <div class="pane1">
             <div id="pane-heading">Horizontal Splitter</div>
         <div id="horizontal">
-            <div class="content">
+            <div class="default-splitter-content">
                 <div>Left pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></div>
             </div>
-            <div class="content">
+            <div class="default-splitter-content">
                 <span>Middle pane<div id='panetext'>size: 50%</div><div id='panetext'>min: 60px</div></span>
             </div>
-            <div class="content">
+            <div class="default-splitter-content">
                 <span>Right pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></span>
             </div>
         </div>
@@ -17,13 +17,13 @@
     <div class="pane2">
             <div id="pane-heading">Vertical Splitter</div>
         <div id="vertical">
-            <div class="content">
+            <div class="default-splitter-content">
                 <span>Top pane<div id='panetext'>size: 30%</div><div id='panetext'>min: 60px</div></span>
             </div>
-            <div class="content">
+            <div class="default-splitter-content">
                 <span>Middle pane<div id='panetext'>size: 40%</div><div id='panetext'>min: 60px</div></span>
             </div>
-            <div class="content">
+            <div class="default-splitter-content">
                 <span>Bottom pane<div id='panetext'>size: 30%</div><div id='panetext'>min: 60px</div></span>
             </div>
         </div>
@@ -53,20 +53,12 @@
         font-size: 14px;
         margin-bottom: 4px;
     }
-   .pane1 {
-        margin: 20px auto;
-        max-width: 440px;
-   }
-   .pane2 {
-        margin: 20px auto;
-        max-width: 440px;
-   }
     .control-section{            
         min-height: 370px;
         margin-bottom: 15px;
         margin-top: 10px;    
     }
-    .content {
+    .default-splitter-content {
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -74,3 +66,16 @@
         height: 100%;
     }
 </style>
+
+<!-- custom code start -->
+<style> 
+    .pane1 {
+        margin: 20px auto;
+        max-width: 440px;
+   }
+   .pane2 {
+        margin: 20px auto;
+        max-width: 440px;
+   }
+</style>
+<!-- custom code end -->

@@ -80,12 +80,14 @@ this.default = function () {
             enable: true
         },
         legendSettings: { visible: true },
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#strip-container');
     var mode = new ej.dropdowns.DropDownList({

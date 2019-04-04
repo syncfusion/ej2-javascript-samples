@@ -75,6 +75,7 @@ this.default = function () {
             enable: true, shared: true, enableAnimation : false
         },
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -86,6 +87,7 @@ this.default = function () {
                args.chart.series[0].segments[2].color = '#3F9BFF';
             }
         }
+         // custom code end
     });
     chart.appendTo('#container');
 };

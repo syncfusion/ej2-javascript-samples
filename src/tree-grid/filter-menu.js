@@ -3,7 +3,6 @@ this.default = function () {
         { id: 'Menu', type: 'Menu' },
         { id: 'Excel', type: 'Excel' },
     ];
-
     var mode = [
         { id: 'Parent', mode: 'Parent' },
         { id: 'Child', mode: 'Child' },

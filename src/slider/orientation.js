@@ -51,7 +51,7 @@ this.default = function () {
         var slider = [defaultObj, minRangeObj, rangeObj];
         slider.forEach(function (slider) {
             // Refreshing each slider tooltip object position
-            slider.refreshTooltip();
+            slider.refreshTooltip(slider.tooltipTarget);
         });
     }
 };

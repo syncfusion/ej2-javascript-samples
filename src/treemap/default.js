@@ -5,11 +5,13 @@ this.default = function () {
             'Country: ${Continent}<br>Company: ${Company}<br>Sales: ${Sales}';
     };
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function(args) {
             var defaultheme = location.hash.split('/')[1];
             defaultheme = defaultheme ? defaultheme : 'Material';
             args.treemap.theme = (defaultheme.charAt(0).toUpperCase() + defaultheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Car Sales by Country - 2017',
             textStyle: { size: '15px' }

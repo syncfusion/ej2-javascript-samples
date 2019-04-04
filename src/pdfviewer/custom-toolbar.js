@@ -1,7 +1,9 @@
+/*jshint esversion: 6 */
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var ele = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
 var isBookmarkClick = false;
+var isBookmarkView = false;
 var isTextSearchBoxOpen = false;
 var bookmarkPopup;
 var textSearchPopup;
@@ -14,6 +16,7 @@ var openDocument;
 var matchCase = false;
 var fileInputElement;
 var filename;
+var treeObj;
 this.default = function () {
     toolbarObj = new ej.navigations.Toolbar({
         items: [
@@ -45,6 +48,7 @@ this.default = function () {
     });
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation);
     viewer.appendTo('#pdfViewer');
+    isBookmarkView = false;
     document.getElementById('fileUpload').addEventListener('change', readFile, false);
     currentPageBox = document.getElementById('currentPage');
     currentPageBox.value = '1';
@@ -111,17 +115,22 @@ function bookmarkClicked() {
     if (!isBookmarkOpen) {
         var bookmarkDetails = viewer.bookmark.getBookmarks();
         if (bookmarkDetails.bookmarks) {
-            var bookmarks = bookmarkDetails.bookmarks.bookMark;
-            var treeObj = new ej.navigations.TreeView({
-                fields: {
-                    dataSource: bookmarks,
-                    id: 'Id',
-                    parentID: 'Pid',
-                    text: 'Title',
-                    hasChildren: 'HasChild',
-                }, nodeSelected: nodeClick
-            });
-            treeObj.appendTo('#bookmarkview');
+            if (!isBookmarkView) {
+                var bookmarks = bookmarkDetails.bookmarks.bookMark;
+                treeObj = new ej.navigations.TreeView({
+                    fields: {
+                        dataSource: bookmarks,
+                        id: 'Id',
+                        child: 'Child',
+                        text: 'Title',
+                        hasChildren: 'HasChild',
+                    }, nodeSelected: nodeClick
+                });
+                isBookmarkView = true;
+                treeObj.appendTo('#bookmarkview');
+                ['mouseover', 'keydown'].forEach( (evt) => document.getElementById("bookmarkview").addEventListener(evt, (event) => {
+                    setHeight(event.target); }));
+            }
             bookmarkPopup.show();
             isBookmarkOpen = true;
             isBookmarkClick = true;
@@ -196,6 +205,7 @@ function readFile(args) {
                 viewer.load(uploadedFileUrl, null);
                 currentPageBox.value = '1';
                 document.getElementById("bookmarkview").innerHTML = "";
+                isBookmarkView = false;
                 isBookmarkOpen = false;
                 viewer.fileName = filename;
             };
@@ -261,12 +271,30 @@ function updateZoomButtons() {
 }
 function nodeClick(args) {
     var bookmarksDetails = viewer.bookmark.getBookmarks();
+    setHeight(args.node);
     var bookmarksDestination = bookmarksDetails.bookmarksDestination;
     var bookid = Number(args.nodeData.id);
     var pageIndex = bookmarksDestination.bookMarkDestination[bookid].PageIndex;
     var Y = bookmarksDestination.bookMarkDestination[bookid].Y;
     viewer.bookmark.goToBookmark(pageIndex, Y);
     return false;
+}
+// tslint:disable-next-line
+function setHeight(element) {
+    if (treeObj.fullRowSelect) {
+        if (element.classList.contains('e-treeview')) {
+            element = element.querySelector('.e-node-focus').querySelector('.e-fullrow');
+        }
+        else if (element.classList.contains('e-list-parent')) {
+            element = element.querySelector('.e-fullrow');
+        }
+        else if (element.classList.value !== ('e-fullrow') && element.closest('.e-list-item')) {
+            element = element.closest('.e-list-item').querySelector('.e-fullrow');
+        }
+        if (element.nextElementSibling) {
+            element.style.height = element.nextElementSibling.offsetHeight + 'px';
+        }
+    }
 }
 function searchInputKeypressed(event) {
     enablePrevButton(true);
@@ -280,11 +308,15 @@ function searchClickHandler() {
     if (searchButton.classList.contains('e-pv-search-icon')) {
         viewer.textSearch.cancelTextSearch();
         initiateTextSearch();
+        searchButton.classList.remove('e-pv-search-icon');
+        searchButton.classList.add('e-pv-search-close');
     }
     else if (searchButton.classList.contains('e-pv-search-close')) {
         searchInput.value = '';
         searchInput.focus();
         viewer.textSearch.cancelTextSearch();
+        searchButton.classList.remove('e-pv-search-close');
+        searchButton.classList.add('e-pv-search-icon');
     }
 }
 function initiateTextSearch() {

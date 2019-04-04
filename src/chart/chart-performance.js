@@ -20,12 +20,14 @@ this.default = function () {
             }
         ],
         legendSettings: { visible: false },
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+         // custom code end
     });
     chart.appendTo('#performance-container');
     var button = new ej.buttons.Button({ cssClass: 'e-info', isPrimary: true });

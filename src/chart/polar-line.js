@@ -62,12 +62,14 @@ this.default = function () {
         tooltip: {
             enable: true
         },
+           // custom code start
         load: function (args) {
             var polarLineTheme = location.hash.split('/')[1];
             polarLineTheme = polarLineTheme ? polarLineTheme : 'Material';
             args.chart.theme = (polarLineTheme.charAt(0).toUpperCase() + 
                 polarLineTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#polar-line-container');
     document.getElementById('isClosed').onchange = function () {

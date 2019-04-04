@@ -10,7 +10,7 @@ this.default = function () {
             majorTicks: {
                 width: 0
             },
-            lineStyle: { width: 8, color: '#E0E0E0' },
+            lineStyle: { width: 8 },
             minorTicks: {
                 width: 0
             },
@@ -25,24 +25,23 @@ this.default = function () {
             pointers: [{
                 value: 60,
                 radius: '60%',
-                color: '#757575',
                 pointerWidth: 7,
                 cap: {
                     radius: 8,
-                    color: '#757575',
                     border: { width: 0 }
                 },
                 needleTail: {
-                    length: '25%',
-                    color: '#757575'
+                    length: '25%'
                 }
             }]
         }],
+        // custom code start
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var selectTheme = location.hash.split('/')[1];
+            selectTheme = selectTheme ? selectTheme : 'Material';
+            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() + selectTheme.slice(1));
         }
+        // custom code end
     });
     circulargauge.appendTo('#gauge');
 };

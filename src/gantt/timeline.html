@@ -1,0 +1,139 @@
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper">
+        <div id="Timeline">
+        </div>
+    </div>
+
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%;">
+        <colgroup>
+            <col style="width:30%" />
+            <col style="width:70%" />
+        </colgroup>
+        <tr>
+            <td style="width:30%">
+                <div>Unit width</div>
+            </td>
+            <td style="width:70%">
+                <div style="padding-top: 0px">
+                    <input id="unitWidth" type="text" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div><b>Top tier</b></div>
+            </td>
+            <td style="width:70%">
+                <div style="padding-top: 0px">
+                    <input type="checkbox" id="topTierCheck" class="checkbox" checked="checked" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>Count</div>
+            </td>
+            <td style="width:70%">
+                <div id='numericbox'>
+                    <input type="text" id="count" class="form-control" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>
+                    Unit
+                </div>
+            </td>
+            <td style="width:70%">
+                <div>
+                    <input type="text" tabindex="1" id='unit' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>
+                    Format
+                </div>
+            </td>
+            <td style="width:70%">
+                <div>
+                    <input type="text" tabindex="1" id='format' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div><b>Bottom tier</b></div>
+            </td>
+            <td style="width:70%">
+                <div style="padding-top: 0px">
+                    <input type="checkbox" id="bottomTierCheck" class="checkbox" checked="checked" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>Count</div>
+            </td>
+            <td style="width:70%">
+                <div id='numericbox'>
+                    <input type="text" id="btCount" class="form-control" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>
+                    Unit
+                </div>
+            </td>
+            <td style="width:70%">
+                <div>
+                    <input type="text" tabindex="1" id='btUnit' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30%">
+                <div>
+                    Format
+                </div>
+            </td>
+            <td style="width:70%">
+                <div>
+                    <input type="text" tabindex="1" id='btFormat' />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This sample illustrates the different phases from planning to delivery, involved in a software development
+        lifecycle. It demonstrates the different timeline modes available in the Gantt chart. Options are available to
+        change the unit, format, and count of the header texts for both top and bottom timeline headers.</p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, you can see how to change the timeline settings in Gantt chart. The top and bottom timeline
+        header texts can be customized by using the <code>timelineSettings.topTier</code> and
+        <code>timelineSettings.bottomTier</code> properties.
+        Using these properties, you can change the format, count, and units of the timeline header texts.
+    </p>
+    <p></p>
+    Gantt chart has built-in support for many timeline modes such as minutes, hour, day, week, month and year.
+    </p>
+    <p> The
+        default timeline headers can also be replaced with custom header texts by using the <code>formatter</code>
+        method.
+    </p>
+    <p>
+        Tooltip is enabled by default for the timeline headers, to see the tooltip in action, hover a point or tap on a
+        point in touch enabled devices.
+    </p>
+</div>

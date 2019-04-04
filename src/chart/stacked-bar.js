@@ -54,12 +54,14 @@ this.default = function () {
         //Initializing Chart Title
         title: 'Sales Comparison',
         width: ej.base.Browser.isDevice ? '100%' : '60%',
+           // custom code start
         load: function (args) {
             var stackedBarTheme = location.hash.split('/')[1];
             stackedBarTheme = stackedBarTheme ? stackedBarTheme : 'Material';
             args.chart.theme = (stackedBarTheme.charAt(0).toUpperCase() + 
                 stackedBarTheme.slice(1)).replace(/-dark/i, 'Dark');
         }
+           // custom code end
     });
     chart.appendTo('#sBar-container');
 };

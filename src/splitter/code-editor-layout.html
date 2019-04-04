@@ -3,7 +3,7 @@
         <div id="splitter2"> 
             <div id="splitter1">
                     <div>
-                        <div class="content">
+                        <div class="code-editor-content">
                             <h3 class="h3">HTML</h3>
                             <div class="code-preview">                        
                                 &lt;<span>!DOCTYPE html></span>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 <div>
-                    <div class="content">
+                    <div class="code-editor-content">
                         <h3 class="h3">CSS</h3>
                         <div class="code-preview">
                             <span>img {</span>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="content">
+                    <div class="code-editor-content">
                         <h3 class="h3">JavaScript</h3>
                         <div class="code-preview">
                             <span>var</span> image = document.getElementById("custom-image");
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
+            <div class="code-editor-content">
                 <h3 class="h3">Preview of sample</h3>
                 <div class="splitter-image">
                     <img class="img1" src="https://ej2.syncfusion.com/demos/src/listview/images/albert.png" style="width: 20%;margin: 0 auto;">
@@ -67,13 +67,9 @@
         #code-text {
             margin-left: 5px;
         }
-        .code-preview {
+        .code-editor-content .code-preview {
             margin-top: 15px;
             font-size: 12px;
-        }
-        #target {
-            margin: 20px auto;
-            max-width: 600px;
         }
         .control-section{            
             min-height: 370px;
@@ -81,12 +77,12 @@
             margin-top: 10px;    
         }
     
-        .h3 {
+        .code-editor-content .h3 {
             font-size: 14px;
             margin: 4px;
         }
 
-        .content {
+        .code-editor-content {
             padding: 12px;
         }
         .splitter-image {
@@ -96,4 +92,13 @@
             margin-top: 10px;
         }
     </style>
+
+    <!-- custom code start -->
+    <style> 
+        #target {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+    <!-- custom code end -->
         

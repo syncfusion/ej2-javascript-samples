@@ -41,6 +41,7 @@ this.default = function () {
         legendSettings: { visible: false }, enableSmartLabels: true,
         //Initializing Tooltip
         tooltip: { enable: false, format: '${point.x} <br> ${point.y} %' },
+         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
@@ -50,6 +51,7 @@ this.default = function () {
                 args.accumulation.annotations[0].content = '#white' ;
             }
         }
+         // custom code end
     };
     var pointClick = function (args) {
         var index = ej.charts.indexFinder(args.target);

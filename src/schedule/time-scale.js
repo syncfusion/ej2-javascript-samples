@@ -10,7 +10,7 @@ this.default = function () {
     var data = new ej.base.extend([], window.scheduleData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2019, 0, 10),
         currentView: 'TimelineWeek',
         views: ['Day', 'Week', 'WorkWeek', 'TimelineDay', 'TimelineWeek'],
         timeScale: {

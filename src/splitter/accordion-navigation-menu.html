@@ -5,7 +5,7 @@
                 <div id='Accordion_default'></div>
             </div>
             <div>
-                <div id="content"></div>
+                <div id="accordion-splitter-content"></div>
             </div>
         </div>
     </div>
@@ -23,18 +23,8 @@
         </p>
     </div>
     <style>
-        #content {
+        #accordion-splitter-content {
             padding: 18px;
-        }
-        #target {
-            margin: 20px auto;
-            max-width: 600px;
-        }
-        .control-section{            
-            min-height: 370px;   
-        }
-        .content {
-            padding: 9px;
         }
         #splitter .e-accordion .e-acrdn-item .e-acrdn-panel .e-acrdn-content {
             padding: 0px;
@@ -46,5 +36,25 @@
             display: block;
             text-decoration: none;
       }
+	  .bootstrap #splitter .e-list-parent.e-ul li:nth-child(3),
+      .bootstrap4 #splitter .e-list-parent.e-ul li:nth-child(3) {
+			border-bottom: none;
+	  }
+	  
+	  .bootstrap4 #splitter .e-listview {
+		border: none;
+	  }
     </style>
+
+    <!-- custom code start -->
+    <style> 
+        #target {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .control-section{            
+            min-height: 370px;   
+        }
+    </style>
+    <!-- custom code end -->
     

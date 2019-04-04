@@ -29,7 +29,7 @@ this.default = function () {
     });
     dropdownInstance.appendTo('#types');
     var float = new ej.buttons.CheckBox({
-        // set false for enable the checked state at initial rendering
+        // set true for enable the checked state at initial rendering
         checked: true,
         label: 'Enable Floating',
         // bind change event

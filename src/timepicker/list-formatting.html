@@ -27,6 +27,7 @@
             documentation section</a>.</p>
 </div>
 <style>
+    /* custom code start*/
     .control_wrapper {
         display: block;
         margin: 0 auto;
@@ -41,9 +42,22 @@
     .e-bigger .control-section {
         margin-top: 60px;
     }
-
+    /* custom code end*/
     .e-custom-style.e-timepicker.e-popup li.e-disabled span {
         color: #b7b1b1;
+    }
+
+    body.bootstrap4 .e-custom-style.e-timepicker.e-popup li span {
+        color: #6c757d;
+    }
+
+    body.bootstrap4 .e-custom-style.e-timepicker.e-popup li.e-disabled span {
+        color: #adb5bd;
+    }
+
+    body.bootstrap4 .e-custom-style.e-timepicker.e-popup li.e-hover span:hover,
+    body.bootstrap4 .e-custom-style.e-timepicker.e-popup li.e-active.e-hover span {
+        color: #6c757d;
     }
 
     .e-custom-style.e-timepicker.e-popup li span {
@@ -55,6 +69,11 @@
         width: 25px;
         font-size: 15px;
     }
+
+    body.bootstrap4 .e-custom-style.e-timepicker.e-popup li.e-active span {
+        color: #fff;
+    }
+
 
     body.highcontrast .e-custom-style.e-timepicker.e-popup li.e-hover span:hover,
     body.highcontrast .e-custom-style.e-timepicker.e-popup li.e-active.e-hover span {

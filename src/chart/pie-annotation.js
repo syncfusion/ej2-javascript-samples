@@ -41,12 +41,14 @@ this.default = function () {
         chartArea: { border: { width: 0 } }, title: 'Mobile Game Market by Country',
         selectionMode: 'Cluster', selectedDataIndexes: [{ series: 0, point: 0 }],
         width: ej.base.Browser.isDevice ? '100%' : '80%',
+           // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
         },
+           // custom code end
         legendSettings: { visible: true, toggleVisibility: false },
         annotations: [{
             content: '<div id="chart_annotation" style="width: 200px; height: 200px"></div>',
@@ -79,7 +81,7 @@ this.default = function () {
                     background: 'transparent',
                     series: [{
                         radius: '65%', animation: { enable: false },
-                        dataSource: pieDataSource,
+                        dataSource: pieDataSource, border: { color: 'transparent'},
                         xName: 'x', yName: 'y', dataLabel: { visible: true, position: 'Inside', font: { color: 'white' }, name: 'text' },
                     }],
                     load: function (args) {
@@ -100,7 +102,7 @@ this.default = function () {
                 background: 'transparent',
                 series: [{
                     radius: '65%', animation: { enable: false },
-                    dataSource: pieDataSource,
+                    dataSource: pieDataSource, border: { color: 'transparent'},
                     xName: 'x', yName: 'y', dataLabel: { visible: true, position: 'Inside', name: 'text' },
                 }],
                 theme: (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)),

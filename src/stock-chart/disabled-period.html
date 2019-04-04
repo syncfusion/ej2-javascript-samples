@@ -1,13 +1,21 @@
 <style>
-    #gradient-chart stop {
+    #material-gradient-chart stop {
         stop-color: #BDEDE9;
     }
-
-    #gradient-chart stop[offset="0"] {
+    #fabric-gradient-chart stop {
+        stop-color: #4472c4;
+    }
+    #bootstrap-gradient-chart stop {
+        stop-color: #a16ee5;
+    }
+    #highcontrast-gradient-chart stop {
+        stop-color: #79ECE4;
+    }
+    .chart-gradient stop[offset="0"] {
         stop-opacity: 1;
     }
 
-    #gradient-chart stop[offset="1"] {
+    .chart-gradient stop[offset="1"] {
         stop-opacity: 0.4;
     }
 
@@ -20,9 +28,21 @@
 </div>
 <svg style="height: 0">
     <defs>
-        <linearGradient id="gradient-chart" style="opacity: 1" class='chart-material' x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" />
-            <stop offset="1" />
+        <linearGradient id="material-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="fabric-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="bootstrap-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="highcontrast-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
         </linearGradient>
     </defs>
 </svg>

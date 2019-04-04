@@ -1,5 +1,5 @@
 /**
- * RichTextEditor default sample
+ * RichTextEditor form-validation sample
  */
  
 

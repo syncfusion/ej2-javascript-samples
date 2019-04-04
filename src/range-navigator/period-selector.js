@@ -9,7 +9,7 @@ var removeSecondaryElement;
 var datasrc;
 var data1 = [];
 var value;
-this.renderChart = function (data1) {
+this.renderPeriodSelectorChart = function (data1) {
     var chart = new ej.charts.Chart({
         series: [{
             dataSource: data1, width: 2, type: 'Candle', animation: { enable: true }, xName: 'date', low: 'Low',
@@ -51,6 +51,7 @@ this.renderChart = function (data1) {
                 '${point.x}<br/>High : <b>${point.high}</b><br/>Low : <b>${point.low}</b><br/>' +
                 'Open : <b>${point.open}</b><br/>Close : <b>${point.close}</b>' :
                 '${point.x}<br/>Close : <b>${point.close}</b>';
+                document.getElementById('switch').style.display = "block";
         }, axisRangeCalculated: function (args) { chart.setAnnotationValue(0, '<div></div>'); },
     });
     chart.appendTo('#chart');
@@ -132,6 +133,6 @@ this.default = function () {
             });
             j++;
         }
-        _this.renderChart(data1);
+        _this.renderPeriodSelectorChart(data1);
     };
 };

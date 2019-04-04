@@ -6,11 +6,13 @@ this.default = function () {
     var axis;
     var direction;
     var circulargauge = new ej.circulargauge.CircularGauge({
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        //custom code end
         title: 'Gauge with Multiple Axes',
         titleStyle: { color: 'gray', size: '16px' },
         axes: [{
@@ -53,6 +55,7 @@ this.default = function () {
         }]
     });
     circulargauge.appendTo('#axis-container');
+    // code for Property Panel
     axis = new ej.dropdowns.DropDownList({
         index: 0, width: 120,
         change: function () {

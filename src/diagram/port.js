@@ -24,9 +24,11 @@ function selectionChange(args) {
         var appearance = document.getElementById('propertypanel');
         var selectedElement = document.getElementsByClassName('e-remove-selection');
         if (args.newValue) {
+            // custom code start
             if (!appearance.classList.contains('e-remove-selection')) {
                 appearance.classList.add('e-remove-selection');
             }
+            // custom code end
             if (args.newValue[0] instanceof ej.diagrams.Node && selectedElement.length) {
                 selectedElement[0].classList.remove('e-remove-selection');
                 var port = getPort()[0];

@@ -3,8 +3,8 @@
     "directory": "maps",
     "category": "Data Visualization",
     "ftName": "maps",
+    "dataSourcePath":"src/maps/map-data.js",
     "type": "update",
-	"dataSourcePath":"src/maps/map-data.js",
     "samples": [
         {
             "url": "default",
@@ -111,7 +111,6 @@
             "name": "Legend",
             "description": "This demo for Essential JS2 Maps control visualizes grouping of countries in the legend based on its population density.",
             "category": "Features",
-            "type": "update",
             "sourceFiles":[
                 { "displayName": "legend.html", "path":"src/maps/legend.html" },
                 { "displayName": "legend.js", "path":"src/maps/legend.js" },
@@ -122,9 +121,8 @@
         {
             "url": "color-mapping",
             "name": "Color Mapping",
-            "description": "This sample shows the average amount of rainfall and snowfall in spring season of all the states in US. Also color mapping is applied to the shapes to differentiate it from other shapes.",
+            "description": "This sample shows the average amount of rainfall and snowfall in spring season of all the states in US. Color mapping is applied to the shapes",
             "category": "Features",
-            "type": "new",
             "api": {},
             "sourceFiles":[ 
                 { "displayName": "color-mapping.html", "path":"src/maps/color-mapping.html" },
@@ -148,7 +146,6 @@
             "url": "osm",
             "name": "OpenStreetMap",
             "category": "Map Providers",
-            "type": "new",
             "sourceFiles":[
                 { "displayName": "osm.html", "path":"src/maps/osm.html" },
                 { "displayName": "osm.js", "path":"src/maps/osm.js" }
@@ -158,7 +155,6 @@
             "url": "osm-with-navigation-lines",
             "name": "OSM with Navigation Lines",
             "category": "Map Providers",
-            "type": "new",
             "sourceFiles":[
                 { "displayName": "osm-with-navigation-lines.html", "path":"src/maps/osm-with-navigation-lines.html" },
                 { "displayName": "osm-with-navigation-lines.js", "path":"src/maps/osm-with-navigation-lines.js" }
@@ -168,7 +164,6 @@
             "url": "osm-with-sublayers",
             "name": "OSM with Sublayer",
             "category": "Map Providers",
-            "type": "new",
             "sourceFiles":[
                 { "displayName": "osm-with-sublayers.html", "path":"src/maps/osm-with-sublayers.html" },
                 { "displayName": "osm-with-sublayers.js", "path":"src/maps/osm-with-sublayers.js" },
@@ -299,6 +294,18 @@
             ]
         },
         {
+            "url": "cyber-attack-map",
+            "name": "Cyber Attack Map",
+            "description": "This demo for Essential JS2 Maps control visualizes the cyber attack map, which displays the cyber attacks and threats from various countries to USA.",
+            "category": "Use Cases",
+            "sourceFiles":[
+                { "displayName": "cyber-attack-map.html", "path":"src/maps/cyber-attack-map.html" },
+                { "displayName": "cyber-attack-map.js", "path":"src/maps/cyber-attack-map.js" },
+                { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
+            ],
+            "type": "new"
+        },
+        {
             "url": "pie",
             "name": "Map with Pie chart",
             "description": "This demo for Essential JS2 Maps control visualizes the placing of pie charts on the maps using marker templates.",
@@ -314,7 +321,6 @@
             "name": "Map with Slider",
             "description": "This demo for Essential JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
             "category": "Use Cases",
-            "type": "new",
             "api": {},
             "sourceFiles":[
                 { "displayName": "map-with-slider.html", "path":"src/maps/map-with-slider.html" },

@@ -64,7 +64,10 @@ this.default = function() {
         function onInsert() {
             var activeEle = dialog.element.querySelector('.char_block.e-active');
             if (activeEle) {
-                ranges.insertNode(document.createTextNode(activeEle.textContent));
+                if (defaultRTE.formatter.getUndoRedoStack().length === 0) {
+                    defaultRTE.formatter.saveData();
+                }
+                defaultRTE.executeCommand('insertText', activeEle.textContent);
                 defaultRTE.formatter.saveData();
                 defaultRTE.formatter.enableUndo(defaultRTE);
             }

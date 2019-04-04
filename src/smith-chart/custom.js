@@ -1,10 +1,12 @@
 this.default = function () {
     var smithchart = new ej.charts.Smithchart({
+        // custom code start
         load: function (args) {
             var customtheme = location.hash.split('/')[1];
             customtheme = customtheme ? customtheme : 'Material';
             args.smithchart.theme = (customtheme.charAt(0).toUpperCase() + customtheme.slice(1));
         },
+        // custom code end
         horizontalAxis: {
             minorGridLines: {
                 visible: true
@@ -77,6 +79,7 @@ this.default = function () {
         }
     });
     smithchart.appendTo('#container');
+    // Code for Property Panel
     var sliderChange;
     var slider = new ej.inputs.Slider({
         value: 0, type: 'MinRange',

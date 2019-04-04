@@ -1,0 +1,130 @@
+<style>
+    .e-custom-parent {
+        background-color: #6d619b;
+        border: 1px solid #3f51b5;
+    }
+
+    .e-custom-moments {
+        background-color: #7ab748;
+        border: 1px solid #3f51b5;
+    }
+
+    .e-custom-performance {
+        background-color: #ad7a66;
+        border: 1px solid #3f51b5;
+    }
+
+    .oscar{
+        content:url("src/gantt/images/oscar.svg");
+    }
+
+    .face-mask{
+        content:url("src/gantt/images/face-mask.svg");
+    }
+
+    .moments{
+        content:url("src/gantt/images/moments.svg");
+    }
+
+    .moments, .face-mask, .oscar{
+        position:relative;
+        top:14px;
+        left:5px;
+        padding-right:4px;  
+    }
+
+    #milestoneTemplate .e-milestone-top {
+        border-bottom-color: #7ab748 !important;
+        border-bottom:  1px solid #3f51b5;
+    }
+
+    #milestoneTemplate .e-milestone-bottom{
+        border-top-color: #7ab748 !important;
+        border-top:  1px solid #3f51b5;
+    }
+</style>
+<script type="text/x-jsrender" id="milestone">
+    <div style="margin-top=-7px;">
+        <div id = "milestoneTemplate" class="e-gantt-milestone" style="position:absolute;">
+            <img class="moments" height="24" width="48" />
+            <div class="e-milestone-top" style="border-right-width:26px; margin-top: -24px;border-left-width:26px;border-bottom-width:26px;"></div>
+            <div class="e-milestone-bottom" style="top:26px;border-right-width:26px; border-left-width:26px; border-top-width:26px;"></div>
+        </div>
+    </div>
+</script>
+<script type="text/x-jsrender" id="childtask">
+    ${if(TaskName == 'Oscar moments')}
+        <div class="e-gantt-child-taskbar e-custom-moments" style="height:100%;border-radius:5px;">
+            ${if(ganttProperties.duration < 4)}
+                <img class="moments"  height="32" width="32"/>
+            ${else}
+                <img class="moments"  height="32" width="32"/>
+                <span class="e-task-label" style="position:absolute;top:15px;font-size:12px;text-overflow:ellipsis;height:90%;overflow:hidden;">${Performance}</span></div>
+            ${/if}
+        </div> 
+    ${else if(TaskName == 'Oscar performance')}
+        <div class="e-gantt-child-taskbar e-custom-performance" style="height:100%;border-radius:5px;">
+            ${if(ganttProperties.duration <= 5)}
+                <img class="face-mask"  height="32" width="32" />
+            ${else}
+                <img class="face-mask"  height="32" width="32" />
+                <span class="e-task-label" style="position:absolute;top:5px;font-size:12px;text-overflow:ellipsis;height:90%;overflow:hidden;">${Performance}</span>
+            ${/if} 
+        </div>   
+    ${else} 
+        <div class="e-gantt-parent-taskbar e-custom-parent" style="height:100%;border-radius:5px;text-overflow:ellipsis;">
+            ${if(ganttProperties.duration < 4)}
+                <img class="oscar"  height="32" width="32"  />
+            ${else}
+                ${if(taskData.Winner && taskData.Movie)}
+                    <img class="oscar"  height="32" width="32"  />
+                    <span class="e-task-label" style="position:absolute; top:13px;font-size:14px;">${taskData.Winner}</span>
+                    <span class="e-task-label" style="position:absolute;top:33px;font-size:10px;text-overflow:ellipsis;">${taskData.Movie}</span>
+                ${else if(taskData.Movie)}
+                    <img class="oscar"  height="32" width="32"  />
+                    <span class="e-task-label" style="position:absolute; top:0px;font-size:12px;text-overflow:ellipsis;"></br> ${taskData.Movie} </span> 
+                ${else} 
+                    <span class="e-task-label"></span> 
+                ${/if}  
+            ${/if}  
+    ${/if} 
+</script>
+<script type="text/x-jsrender" id="tooltip">
+    <div>
+        ${if (Winner && Movie)}
+            ${Winner} wins oscar award for ${Movie}
+        ${else if(Movie)}
+            Oscar award for ${Movie}
+        ${else}
+            ${Performance}
+        ${/if}  
+    </div>
+</script>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TaskbarTemplate">
+        </div>
+        <div style="float: right; margin: 10px;">Source:
+            <a href="https://en.wikipedia.org/wiki/90th_Academy_Awards" target='_blank'>https://en.wikipedia.org/</a>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample visualizes the complete event schedule of the 90th Academy awards.
+        Taskbars are customized using template support and timeline header is customized for a better view of the data.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        The Gantt chart provides support for customizing taskbar UI using taskbar template feature. The
+        <code>taskbarTemplate</code>
+        property accepts either string or HTML element`s ID value, which will be used as the template for the taskbars.
+        The summary tasks and the milestone items can also customized using the <code>parentTaskbarTemplate</code> and
+        <code>milestoneTemplate</code> properties.
+        In this demo, we have customized the taskbar UI to display the data from custom columns and the taskbarTemplate
+        is assigned with the ID of a SCRIPT element whose content is used as the template.
+        The template expression should be provided inside <code>${...}</code> interpolation syntax
+    </p>
+</div>

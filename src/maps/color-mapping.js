@@ -1,10 +1,12 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
-            var templatetheme = location.hash.split('/')[1];
-            templatetheme = templatetheme ? templatetheme : 'Material';
-            args.maps.theme = (templatetheme.charAt(0).toUpperCase() + templatetheme.slice(1));
+            var mapTheme = location.hash.split('/')[1];
+            mapTheme = mapTheme ? mapTheme : 'Material';
+            args.maps.theme = (mapTheme.charAt(0).toUpperCase() + mapTheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Spring Precipitation Averages of US States',
             textStyle: {
@@ -21,11 +23,7 @@ this.default = function () {
             width: '80%',
             mode: 'Interactive',
             titleStyle: {
-                size: '18px',
-                fontStyle: 'Medium',
-                fontFamily: 'Roboto, Noto, Sans-serif',
-                fontWeight: 'Medium',
-                opacity: 0.5
+                size: '18px'
             },
             title: {
                 text: 'Inches'
@@ -74,9 +72,10 @@ this.default = function () {
         ]
     });
     maps.appendTo('#default-container');
+    // Code for Property Panel
     var opacity;
     var highlightCheckBox = new ej.buttons.CheckBox({
-        change: opacity, checked: false, disabled: true
+        change: opacity, checked: false
     }, '#opacity');
     document.getElementById('minopacity').onpointermove = document.getElementById('minopacity').ontouchmove =
         document.getElementById('minopacity').onchange = function () {
@@ -102,6 +101,10 @@ this.default = function () {
         var minOpacity = document.getElementById('minopacity');
         var maxOpacity = document.getElementById('maxopacity');
         if (e.checked) {
+            document.getElementById('text3').style.display = 'block';
+            document.getElementById('input3').style.display = 'block';
+            document.getElementById('text2').style.display = 'block';
+            document.getElementById('input2').style.display = 'block';
             maps.layers[0].shapeSettings.colorMapping[0].minOpacity = parseFloat(minOpacity.value);
             maps.layers[0].shapeSettings.colorMapping[0].maxOpacity = parseFloat(maxOpacity.value);
             maps.layers[0].shapeSettings.colorMapping[1].minOpacity = parseFloat(minOpacity.value);
@@ -110,6 +113,10 @@ this.default = function () {
             maxOpacity.disabled = false;
         }
         else {
+            document.getElementById('text2').style.display = 'none';
+            document.getElementById('input2').style.display = 'none';
+            document.getElementById('text3').style.display = 'none';
+            document.getElementById('input3').style.display = 'none';
             maps.layers[0].shapeSettings.colorMapping[0].minOpacity = null;
             maps.layers[0].shapeSettings.colorMapping[0].maxOpacity = null;
             maps.layers[0].shapeSettings.colorMapping[1].minOpacity = null;
@@ -126,7 +133,12 @@ this.default = function () {
         change: function () {
             var element = sampleValue.value.toString();
             if (element === 'RangeColorMapping') {
-                highlightCheckBox.disabled = true;
+                document.getElementById('text3').style.display = 'none';
+                document.getElementById('input3').style.display = 'none';
+                document.getElementById('text1').style.display = 'none';
+                document.getElementById('input1').style.display = 'none';
+                document.getElementById('text2').style.display = 'none';
+                document.getElementById('input2').style.display = 'none';
                 maps.layers[0].shapeSettings.colorValuePath = 'inches';
                 maps.layers[0].shapeSettings.colorMapping[0].from = 0.1;
                 maps.layers[0].shapeSettings.colorMapping[0].to = 1;
@@ -162,7 +174,12 @@ this.default = function () {
                 maps.refresh();
             }
             else if (element === 'EqualColorMapping') {
-                highlightCheckBox.disabled = true;
+                document.getElementById('text1').style.display = 'none';
+                document.getElementById('input1').style.display = 'none';
+                document.getElementById('text2').style.display = 'none';
+                document.getElementById('input2').style.display = 'none';
+                document.getElementById('text3').style.display = 'none';
+                document.getElementById('input3').style.display = 'none';
                 maps.layers[0].shapeSettings.colorValuePath = 'value';
                 maps.layers[0].shapeSettings.colorMapping[0].from = null;
                 maps.layers[0].shapeSettings.colorMapping[0].to = null;
@@ -198,9 +215,15 @@ this.default = function () {
                 maps.refresh();
             }
             if (element === 'DesaturationColorMapping') {
+                document.getElementById('text1').style.display = 'block';
+                document.getElementById('input1').style.display = 'block';
                 var minOpacity = document.getElementById('minopacity');
                 var maxOpacity = document.getElementById('maxopacity');
                 if (highlightCheckBox.checked) {
+                    document.getElementById('text2').style.display = 'block';
+                    document.getElementById('input2').style.display = 'block';
+                    document.getElementById('text3').style.display = 'block';
+                    document.getElementById('input3').style.display = 'block';
                     maps.layers[0].shapeSettings.colorMapping[0].minOpacity = parseFloat(minOpacity.value);
                     maps.layers[0].shapeSettings.colorMapping[0].maxOpacity = parseFloat(maxOpacity.value);
                 }
@@ -241,7 +264,6 @@ this.default = function () {
                 maps.layers[0].shapeSettings.colorMapping[5].value = null;
                 maps.legendSettings.title.text = 'Inches';
                 maps.refresh();
-                highlightCheckBox.disabled = false;
             }
         }
     });

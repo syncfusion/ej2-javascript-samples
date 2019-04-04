@@ -41,12 +41,14 @@ window.default = function () {
             title: 'AAPL Historical',
             titleStyle: { fontWeight: '500', color: '#424242' },
             tooltip: { enable: true },
+            // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
             }
+            // custom code end
         });
         stockChart.appendTo('#container');
     };

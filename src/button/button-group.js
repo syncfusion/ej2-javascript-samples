@@ -13,8 +13,7 @@ this.default = function() {
     buttonElement.appendTo('#download');
 
     // To enable ripple in checkbox/radio type ButtonGroup.
-    var buttons = document.querySelectorAll('label.e-btn');
-    var button;
+    var buttons = document.querySelectorAll('label.e-btn'), button;
     for (var i = 0; i < buttons.length; i++) {
         button = buttons.item(i);
         ej.base.rippleEffect(button, { selector: '.e-btn' });

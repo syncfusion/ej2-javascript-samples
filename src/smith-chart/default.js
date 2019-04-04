@@ -2,11 +2,13 @@
 
 this.default = function () {
     var smithchart = new ej.charts.Smithchart({
+        // custom code start
         load: function (args) {
             var defaulttheme = location.hash.split('/')[1];
             defaulttheme = defaulttheme ? defaulttheme : 'Material';
             args.smithchart.theme = (defaulttheme.charAt(0).toUpperCase() + defaulttheme.slice(1));
         },
+        // custom code end
         title: {
             visible: true,
             text: 'Transmission details'

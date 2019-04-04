@@ -8,7 +8,7 @@ this.default = function () {
             labelStyle: {
                 position: 'Inside', useRangeColor: false,
                 font: { size: '12px', fontFamily: 'Roboto', fontStyle: 'Regular' }
-            }, majorTicks: { height: 10, width: 0.5, offset: 10, color: 'black' }, minorTicks: { height: 0, width: 0.5 },
+            }, majorTicks: { height: 10, width: 0.5, offset: 10 }, minorTicks: { height: 0, width: 0.5 },
             annotations: [{
                 content: '<div><span style="font-size:14px; color:#9E9E9E; font-family:Regular">Speedometer</span></div>',
                 radius: '30%', angle: 0, zIndex: 1
@@ -20,17 +20,20 @@ this.default = function () {
             ranges: [{ start: 0, end: 40, color: '#30B32D' }, { start: 40, end: 80, color: '#FFDD00' },
             { start: 80, end: 120, color: '#F03E3E' }],
             pointers: [{
-                value: 65, radius: '60%', color: '#757575', pointerWidth: 8,
-                cap: { radius: 7, color: '#757575' }, needleTail: { length: '18%', color: '#757575' }
+                value: 65, radius: '60%', pointerWidth: 8,
+                cap: { radius: 7 }, needleTail: { length: '18%' }
             }]
         }],
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
+        // custom code end
     });
     circulargauge.appendTo('#range-container');
+    // Code for Property Panel
     var colortObj;
     var listObj = new ej.dropdowns.DropDownList({
         index: 0, width: 120,

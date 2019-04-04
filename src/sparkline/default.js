@@ -13,7 +13,6 @@ this.default = function () {
             visible: true,
             trackLineSettings: {
                 visible: true,
-                color: '#fc5070',
                 width: 2
             }
         },

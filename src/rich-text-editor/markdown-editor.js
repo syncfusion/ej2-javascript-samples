@@ -20,7 +20,7 @@ this.default = function () {
         created: function () {
             textArea = defaultRTE.contentModule.getEditPanel();
             textArea.addEventListener('keyup', function (e) {
-                markDownConversion();
+                MarkDownConversion();
             });
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function (e) {
@@ -36,7 +36,7 @@ this.default = function () {
             });
         }
     });
-    function markDownConversion() {
+    function MarkDownConversion() {
         if (mdsource.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = document.body.querySelector('#defaultRTEhtml-preview');

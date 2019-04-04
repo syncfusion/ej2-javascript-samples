@@ -122,7 +122,7 @@
                     removeSecondaryElement();
                 }
             }, margin: { top: 0 }, chartArea: { border: { width: 1, color: 'whitesmoke' } },
-            zoomSettings: { enableMouseWheelZooming: true, mode: 'X', toolbarItems: [] }, crosshair: { enable: true, lineType: 'Both' },
+            zoomSettings: { enableMouseWheelZooming: true, enablePinchZooming: true, mode: 'XY', toolbarItems: [] }, crosshair: { enable: true, lineType: 'Both' },
             width: ej.base.Browser.isDevice ? '100%' : '80%', theme: theme, legendSettings: { visible: false }
         });
         chart.appendTo('#chart');

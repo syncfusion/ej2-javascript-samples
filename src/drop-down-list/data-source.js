@@ -180,3 +180,38 @@ window.diacritics = [
     'Gülhatmi',
     'Gülünç'
 ];
+    window.groupa=[
+        { Name: "Australia", Code: "AU" },
+        { Name: "Bermuda", Code: "BM" },
+        { Name: "Canada", Code: "CA" },
+        { Name: "Cameroon", Code: "CM" },
+        { Name: "Denmark", Code: "DK" },
+        { Name: "France", Code: "FR" },
+        { Name: "Finland", Code: "FI" },
+        { Name: "Germany", Code: "DE" },
+        { Name: "Hong Kong", Code: "HK" }
+    ];
+    window.groupb= [
+        { Name: "India", Code: "IN" },
+        { Name: "Italy", Code: "IT" },
+        { Name: "Japan", Code: "JP" },
+        { Name: "Mexico", Code: "MX" },
+        { Name: "Norway", Code: "NO" },
+        { Name: "Poland", Code: "PL" },
+        { Name: "Switzerland", Code: "CH" },
+        { Name: "United Kingdom", Code: "GB" },
+        { Name: "United States", Code: "US" }
+    ];
+   
+    window.info= [
+        { text: "Hennessey Venom", id: "list-01" },
+        { text: "Bugatti Chiron", id: "list-02" },
+        { text: "Bugatti Veyron Super Sport", id: "list-03" },
+        { text: "SSC Ultimate Aero", id: "list-04" },
+        { text: "Koenigsegg CCR", id: "list-05" },
+        { text: "McLaren F1", id: "list-06" },
+        { text: "Aston Martin One- 77", id: "list-07" },
+        { text: "Jaguar XJ220", id: "list-08" },
+        { text: "McLaren P1", id: "list-09" },
+        { text: "Ferrari LaFerrari", id: "list-10" }
+    ];

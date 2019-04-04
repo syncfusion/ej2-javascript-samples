@@ -3,11 +3,13 @@
  */
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
             var exporttheme = location.hash.split('/')[1];
             exporttheme = exporttheme ? exporttheme : 'Material';
             args.maps.theme = (exporttheme.charAt(0).toUpperCase() + exporttheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Location of the Wonders in the World',
             textStyle: {
@@ -45,6 +47,7 @@ this.default = function () {
         ]
     });
     maps.appendTo('#export-container');
+    // Code for Property Panel
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         width: 100

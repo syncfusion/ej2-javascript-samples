@@ -1,10 +1,12 @@
 this.default = function() {
     var treemap = new ej.treemap.TreeMap({
+        // custom code start
         load: function(args) {
             var colormappingtheme = location.hash.split('/')[1];
             colormappingtheme = colormappingtheme ? colormappingtheme : 'Material';
             args.treemap.theme = (colormappingtheme.charAt(0).toUpperCase() + colormappingtheme.slice(1));
         },
+        // custom code end
         titleSettings: {
             text: 'Top 10 largest islands in the World',
             textStyle: { size: '15px' }
@@ -42,14 +44,19 @@ this.default = function() {
         },
     });
     treemap.appendTo('#default-container');
+    // code for property panel
     var opacity;
     var highlightCheckBox = new ej.buttons.CheckBox({
-        change: opacity, checked: false, disabled: true
+        change: opacity, checked: false
     }, '#opacity');
     highlightCheckBox.change = opacity = function (e) {
         var minOpacity = document.getElementById('minopacity');
         var maxOpacity = document.getElementById('maxopacity');
         if (e.checked) {
+            document.getElementById('text3').style.display = 'block';
+            document.getElementById('input3').style.display = 'block';
+            document.getElementById('text2').style.display = 'block';
+            document.getElementById('input2').style.display = 'block';
             treemap.leafItemSettings.colorMapping[0].minOpacity = parseFloat(minOpacity.value);
             treemap.leafItemSettings.colorMapping[0].maxOpacity = parseFloat(maxOpacity.value);
             treemap.leafItemSettings.colorMapping[1].minOpacity = parseFloat(minOpacity.value);
@@ -58,6 +65,10 @@ this.default = function() {
             maxOpacity.disabled = false;
         }
         else {
+            document.getElementById('text2').style.display = 'none';
+            document.getElementById('input2').style.display = 'none';
+            document.getElementById('text3').style.display = 'none';
+            document.getElementById('input3').style.display = 'none';
             treemap.leafItemSettings.colorMapping[0].minOpacity = null;
             treemap.leafItemSettings.colorMapping[0].maxOpacity = null;
             treemap.leafItemSettings.colorMapping[1].minOpacity = null;
@@ -94,7 +105,12 @@ this.default = function() {
         change: function () {
             var element = sampleValue.value.toString();
             if (element === 'RangeColorMapping') {
-                highlightCheckBox.disabled = true;
+                document.getElementById('text3').style.display = 'none';
+                document.getElementById('input3').style.display = 'none';
+                document.getElementById('text1').style.display = 'none';
+                document.getElementById('input1').style.display = 'none';
+                document.getElementById('text2').style.display = 'none';
+                document.getElementById('input2').style.display = 'none';
                 treemap.rangeColorValuePath = 'Area';
                 treemap.leafItemSettings.colorMapping[2].minOpacity = null;
                 treemap.leafItemSettings.colorMapping[2].maxOpacity = null;
@@ -143,7 +159,12 @@ this.default = function() {
                 treemap.refresh();
             }
             else if (element === 'EqualColorMapping') {
-                highlightCheckBox.disabled = true;
+                document.getElementById('text1').style.display = 'none';
+                document.getElementById('input1').style.display = 'none';
+                document.getElementById('text2').style.display = 'none';
+                document.getElementById('input2').style.display = 'none';
+                document.getElementById('text3').style.display = 'none';
+                document.getElementById('input3').style.display = 'none';
                 treemap.rangeColorValuePath = null;
                 treemap.leafItemSettings.colorMapping[0].from = null;
                 treemap.leafItemSettings.colorMapping[0].to = null;
@@ -185,7 +206,8 @@ this.default = function() {
                 treemap.refresh();
             }
             else if (element === 'DesaturationColorMapping') {
-                highlightCheckBox.disabled = false;
+                document.getElementById('text1').style.display = 'block';
+                document.getElementById('input1').style.display = 'block';
                 treemap.rangeColorValuePath = 'Area';
                 treemap.equalColorValuePath = null;
                 var minOpacity = document.getElementById('minopacity');
@@ -209,6 +231,10 @@ this.default = function() {
                 treemap.leafItemSettings.colorMapping[3].color = null;
                 treemap.leafItemSettings.colorMapping[0].color = ['#F0D6AD', '#19547B'];
                 if (highlightCheckBox.checked) {
+                    document.getElementById('text2').style.display = 'block';
+                    document.getElementById('input2').style.display = 'block';
+                    document.getElementById('text3').style.display = 'block';
+                    document.getElementById('input3').style.display = 'block';
                     treemap.leafItemSettings.colorMapping[0].minOpacity = parseFloat(minOpacity.value);
                     treemap.leafItemSettings.colorMapping[0].maxOpacity = parseFloat(maxOpacity.value);
                 }

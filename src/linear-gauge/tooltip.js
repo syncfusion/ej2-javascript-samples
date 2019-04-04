@@ -13,10 +13,6 @@ this.default = function () {
         },
         tooltip: {
             enable: true,
-            fill: '#fffff',
-            textStyle: {
-                color: '#fffff'
-            }
         },
         orientation: 'Horizontal',
         axes: [
@@ -32,11 +28,6 @@ this.default = function () {
                 minorTicks: {
                     interval: 0.2
                 },
-                labelStyle: {
-                    font: {
-                        color: '#000000'
-                    }
-                },
                 pointers: [{
                     type: 'Bar',
                     value: 5.4,
@@ -50,11 +41,6 @@ this.default = function () {
                 maximum: 25,
                 line: {
                     offset: -140,
-                },
-                labelStyle: {
-                    font: {
-                        color: '#000000'
-                    }
                 },
                 majorTicks: {
                     interval: 1
@@ -72,7 +58,7 @@ this.default = function () {
         ],
         annotations: [
             {
-                content: '<div id="first"><h1 style="font-size:15px">Inches</h1></div>',
+                content: '<div id="first"><h1 style="font-size:15px;color: #686868">Inches</h1></div>',
                 axisIndex: 0,
                 axisValue: 5.4,
                 x: 35,
@@ -80,7 +66,7 @@ this.default = function () {
                 zIndex: '1'
             },
             {
-                content: '<div id="second"><h1 style="font-size:15px">Centimeters</h1></div>',
+                content: '<div id="second"><h1 style="font-size:15px;color: #686868">Centimeters</h1></div>',
                 axisIndex: 1,
                 axisValue: 16.5,
                 x: 50,
@@ -134,6 +120,10 @@ function gaugeLoad(args) {
     var selectedTheme = location.hash.split('/')[1];
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
     args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+    if (args.gauge.theme.toLowerCase().indexOf('dark') > 1 || args.gauge.theme.toLowerCase() === 'highcontrast') {
+        args.gauge.annotations[0].content = '<div id="second"><h1 style="font-size:15px; color: #DADADA">Inches</h1></div>';
+        args.gauge.annotations[1].content = '<div id="second"><h1 style="font-size:15px; color: #DADADA">Centimeters</h1></div>';
+    }
     var width = parseInt(((this.width, this.element.offsetWidth) || this.element.offsetWidth || 600), 10);
     if (width < 500) {
         gaugeMobileSize();

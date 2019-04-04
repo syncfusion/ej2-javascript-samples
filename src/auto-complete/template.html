@@ -7,12 +7,14 @@
 </div>
 
 <div id="action-description">
-    <p>This sample demonstrates the template functionalities of the AutoComplete. Type a character in the AutoComplete element
+    <p>This sample demonstrates the template functionalities of the AutoComplete. Type a character in the AutoComplete
+        element
         and choose an item from the customized list</p>
 </div>
 
 <div id="description">
-    <p>The AutoComplete has been provided with several options to customize each list items, group title, header and footer
+    <p>The AutoComplete has been provided with several options to customize each list items, group title, header and
+        footer
         elements.
     </p>
 
@@ -22,7 +24,8 @@
         <li><code>HeaderTemplate</code> - To customize the header element.</li>
     </ul>
     <p> More information on the template feature configuration can be found in the
-        <a href="http://ej2.syncfusion.com/documentation/auto-complete/templates.html" target="_blank"> documentation section</a>.
+        <a href="http://ej2.syncfusion.com/documentation/auto-complete/templates.html" target="_blank"> documentation
+            section</a>.
     </p>
 </div>
 
@@ -42,11 +45,17 @@
         font-family: "Segoe UI", "GeezaPro", "DejaVu Serif";
     }
 
+    /* custom code start*/
+
     .fabric .header {
         background-color: #fff;
         border-bottom: 1px solid #ccc;
         color: #0078d7;
         font-weight: 400;
+    }
+
+    .bootstrap4 .header {
+        color: #6c757d;
     }
 
     .bootstrap .header {
@@ -106,7 +115,18 @@
     .e-bigger.bootstrap .empImage {
         margin: 0px 10px 0 20px;
     }
+   .bootstrap4 #employees_popup.e-popup .empImage {
+        margin: 0px 16px;
+    }
 
+    .bootstrap4 #employees_popup.e-popup .job {
+        margin-top: 0;
+    }
+
+    .e-bigger.bootstrap4 #employees_popup.e-popup .job {
+        margin-top: -15px;
+    }
+    /* custom code end*/
     .info {
         margin-left: 17px;
     }

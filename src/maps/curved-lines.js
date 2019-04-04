@@ -1,10 +1,12 @@
 this.default = function () {
     var maps = new ej.maps.Maps({
+        // custom code start
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            var selecttheme = location.hash.split('/')[1];
+            selecttheme = selecttheme ? selecttheme : 'Material';
+            args.maps.theme = (selecttheme.charAt(0).toUpperCase() + selecttheme.slice(1));
         },
+        // custom code end
         centerPosition: {
             latitude: 30.41078179084589,
             longitude: 90.52734374999999
