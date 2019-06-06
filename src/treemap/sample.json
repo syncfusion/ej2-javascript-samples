@@ -2,7 +2,6 @@
     "name": "TreeMap",
     "directory": "treemap",
     "category": "Data Visualization",
-	"type": "update",
     "ftName": "treemap",
     "dataSourcePath":"src/treemap/map-data.js",
     "samples": [
@@ -23,7 +22,6 @@
             "name": "Layout",
             "description": "This demo for Essential JS2 TreeMap control illustrates the GDP nominal of top 10 countries in the year 2015. The layout of the TreeMap can also be changed.",
             "category": "TreeMap",
-			"type": "update",
             "api": {},
             "sourceFiles":[
                 { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
@@ -36,7 +34,6 @@
             "name": "Drilldown",
             "description": "This demo for Essential JS2 TreeMap control demonstrates drill-down with the continents at the top level followed by regions and countries.",
             "category": "TreeMap",
-			"type": "update",
             "api": {},
             "sourceFiles":[
                 { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
@@ -85,7 +82,6 @@
             "name": "Legend",
             "description": "This demo for Essential JS2 TreeMap control visualizes the 2016 U.S.A. presidential election results. Default and interactive are the two types of legend.",
             "category": "TreeMap",
-			"type": "update",
             "api": {},
             "sourceFiles":[
                 { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },
@@ -146,7 +142,6 @@
             "name": "RTL",
             "description": "This demo for Essential JS2 TreeMap control visualizes the unemployment rate of various continents based on the countries.",
             "category": "TreeMap",
-			"type": "new",
             "api": {},
             "sourceFiles": [
                 {

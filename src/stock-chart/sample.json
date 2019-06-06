@@ -34,7 +34,7 @@
         {
             "url": "multi-pane",
             "name": "Candlestick and volume",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with candle series.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with candlestick and volume.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [
@@ -151,7 +151,7 @@
         {
             "url": "disabled-navigator",
             "name": "Hide Range Selector",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with period customization.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with hide range selector.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [
@@ -164,7 +164,7 @@
         {
             "url": "disabled-period",
             "name": "Hide Period Selector",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with period customization.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with hide period selector.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [

@@ -20,5 +20,4 @@ this.default = function () {
     function onToolbarChange(args) {
         fileObject.toolbarSettings.visible = args.checked;
     }
-
 };

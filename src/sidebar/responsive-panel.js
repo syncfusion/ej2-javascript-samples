@@ -14,7 +14,8 @@ this.default = function () {
         sidebarMenu.toggle();
     });
     // open new tab
-    document.getElementById('newTab').setAttribute('href', location.href.split('#')[0] + 'sidebar/responsive-panel/index.html');
+    var URL = location.href.replace(location.search,'');
+    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/responsive-panel/index.html');
     var data = [
         {
             nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',

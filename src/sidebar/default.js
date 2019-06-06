@@ -4,7 +4,8 @@ this.default = function () {
     defaultSidebar.appendTo('#default-sidebar');
 
     //open new tab
-    document.getElementById('newTab').setAttribute('href', location.href.split('#')[0] + 'sidebar/default/index.html');
+    var URL = location.href.replace(location.search,'');
+    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/default/index.html');
 
     //initialize the radio button
     var leftbutton = new ej.buttons.RadioButton({ label: 'Left', name: 'state', checked: true, change: positionChange });

@@ -15,7 +15,8 @@ this.default = function () {
         sidebarMenu.toggle();
     });
     // open new tab
-    document.getElementById('newTab').setAttribute('href', location.href.split('#')[0] + 'sidebar/sidebar-menu/index.html');
+    var URL = location.href.replace(location.search,'');
+    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/sidebar-menu/index.html');
     var mainMenuItems = [
         {
             text: 'Overview',

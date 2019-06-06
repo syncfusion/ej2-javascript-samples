@@ -41,9 +41,9 @@ this.default = function () {
             border: { color: 'black', width: 0.5 }
         },
         levels: [
-            { groupPath: 'Continent', fill: '#336699', border: { color: 'black', width: 0.5 } },
-            { groupPath: 'States', fill: '#336699', border: { color: 'black', width: 0.5 } },
-            { groupPath: 'Region', fill: '#336699', showHeader: false, border: { color: 'black', width: 0.5 } },
+            { groupPath: 'Continent', border: { color: 'black', width: 0.5 } },
+            { groupPath: 'States', border: { color: 'black', width: 0.5 } },
+            { groupPath: 'Region', showHeader: false, border: { color: 'black', width: 0.5 } },
         ]
     });
     treemap.appendTo('#container');

@@ -6,7 +6,15 @@ this.default = function () {
         selectedDate: new Date(2018, 1, 15),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
-            window.applyCategoryColor(args, scheduleObj.currentView);
+            var categoryColor = args.data.CategoryColor;
+            if (!args.element || !categoryColor) {
+                return;
+            }
+            if (scheduleObj.currentView === 'Agenda') {
+                (args.element.firstChild).style.borderLeftColor = categoryColor;
+            } else {
+                args.element.style.backgroundColor = categoryColor;
+            }
         }
     });
     scheduleObj.appendTo('#Schedule');

@@ -6,7 +6,6 @@
     "license": "SEE LICENSE IN license",
     "dependencies": {
         "@syncfusion/ej2": "*",
-        "@syncfusion/ej2-inplace-editor": "*",
         "browser-sync": "^2.18.13",
         "cheerio": "^1.0.0-rc.1",
         "crossroads": "^0.12.2",
