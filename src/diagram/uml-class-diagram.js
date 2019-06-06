@@ -32,7 +32,7 @@ function createNode(Id, offsetX, offsetY, className) {
   node.offsetY = offsetY;
   node.shape = {
     type: "UmlClassifier",
-    class: {
+    classShape: {
       name: className
     },
     classifier: "Class"
@@ -52,7 +52,7 @@ this.default = function() {
       id: "Patient",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Patient",
           attributes: [
             createProperty("accepted", "Date"),
@@ -71,7 +71,7 @@ this.default = function() {
       id: "Doctor",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Doctor",
           attributes: [
             createProperty("specialist", "String[*]"),
@@ -87,7 +87,7 @@ this.default = function() {
       id: "Person",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Person",
           attributes: [
             createProperty("name", "Name"),
@@ -104,7 +104,7 @@ this.default = function() {
       id: "Hospital",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Hospital",
           attributes: [
             createProperty("name", "Name"),
@@ -122,7 +122,7 @@ this.default = function() {
       id: "Department",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Department",
           methods: [createMethods("getStaffCount", "Int")]
         },
@@ -135,7 +135,7 @@ this.default = function() {
       id: "Staff",
       shape: {
         type: "UmlClassifier",
-        class: {
+        classShape: {
           name: "Staff",
           attributes: [
             createProperty("joined", "Date"),

@@ -42,6 +42,7 @@ this.default = function () {
     magnificationToolbar.appendTo('#magnificationToolbar');
     viewer = new ej.pdfviewer.PdfViewer({
         enableToolbar: false,
+        enableNavigationToolbar: false,
         enableThumbnail: false,
         documentPath: 'Hive_Succinctly.pdf',
         serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer'

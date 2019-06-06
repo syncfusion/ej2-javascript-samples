@@ -14,7 +14,8 @@ this.default = function () {
     rightbutton.appendTo('#right');
 
     //open new tab
-    document.getElementById('newTab').setAttribute('href', location.href.split('#')[0] + 'sidebar/docking-sidebar/index.html');
+    var URL = location.href.replace(location.search,'');
+    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/docking-sidebar/index.html');
 
     function positionChange(args) {
         //radio button change event handler

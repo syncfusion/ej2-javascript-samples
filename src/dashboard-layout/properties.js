@@ -50,24 +50,15 @@ this.default = function () {
     }
     function onChange(args) {
         if (args.event.currentTarget.id === "floating") {
-            if (args.checked) {
-                dashboard.allowFloating = true;
-            } else {
-                dashboard.allowFloating = false;
-            }
+            dashboard.allowFloating = args.checked;
         }
         if (args.event.currentTarget.id === "resizing") {
-            if (args.checked) {
-                dashboard.allowResizing = true;
-            } else {
-
-                dashboard.allowResizing = false;
-            }
+            dashboard.allowResizing = args.checked;
         }
     }
 
     document.getElementById('remove').onclick = function (e) {
-		if (dashboardObject.panels.length != 0) {
+		if (dashboardObject.panels.length > 0) {
 			for (var i = dashboardObject.panels.length - 1; i < dashboardObject.panels.length; i++) {
 				dashboardObject.removePanel(dashboardObject.panels[dashboardObject.panels.length - 1 - i].id);
 			}

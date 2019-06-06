@@ -23,7 +23,7 @@
             "url": "local-data",
             "name": "Local Data",
             "category": "Data Binding",
-            "description": "This example for Essential JS2 Scheduler control shows the way of binding an array of JavaScript objects (local JSON datasource).",
+            "description": "This example for Essential JS2 Scheduler control shows the way of binding an array of JavaScript objects (local JSON datasource) in Javascript platform.",
             "api": {
                 "Schedule": [
                     "eventSettings",
@@ -35,7 +35,7 @@
             "url": "remote-data",
             "name": "Remote Data",
             "category": "Data Binding",
-            "description": "This example for Essential JS2 Scheduler control shows the way of binding remote services by using the DataManager.",
+            "description": "This example for Essential JS2 Scheduler control shows the way of binding remote services by using the DataManager in Javascript platform.",
             "api": {
                 "Schedule": [
                     "eventSettings",
@@ -697,7 +697,7 @@
             "name": "Keyboard Interaction",
             "category": "Miscellaneous",
             "hideOnDevice": true,
-            "description": "This example for Essential JS2 Scheduler control showcases the keyboard shortcuts available on scheduler.",
+            "description": "This example for Essential JS2 Scheduler control showcases the keyboard shortcuts available on scheduler in Javascript platform.",
             "api": {
                 "Schedule": [
                     "width",
@@ -712,7 +712,7 @@
             "url": "events",
             "name": "Events",
             "category": "Miscellaneous",
-            "description": "This example for Essential JS2 Scheduler control shows the client-side events that triggers on respective scheduler actions.",
+            "description": "This example for Essential JS2 Scheduler control shows the client-side events that triggers on respective scheduler actions in Javascript platform.",
             "api": {
                 "Schedule": [
                     "width",

@@ -3,7 +3,6 @@
     "directory": "sparkline",
     "category": "Data Visualization",
     "ftName": "sparkline",
-	"type": "update",
     "dataSourcePath":"src/sparkline/data-source.js",
     "samples": [
         {
@@ -39,7 +38,6 @@
             "name": "Customization",
             "description": "This demo for Essential JS2 Sparkline control depicts the properties required to customize the sparkline.",
             "category": "Sparkline Charts",
-			"type": "update",
             "api": {}
         },
         {
