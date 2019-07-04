@@ -2,7 +2,6 @@
     "name": "Stock Chart",
     "directory": "stock-chart",
     "category": "Data Visualization",
-    "type": "update",
     "ftName": "stock-chart",
     "samples": [
         {
@@ -34,7 +33,7 @@
         {
             "url": "multi-pane",
             "name": "Candlestick and volume",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with candlestick and volume.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with candle series.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [
@@ -151,7 +150,7 @@
         {
             "url": "disabled-navigator",
             "name": "Hide Range Selector",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with hide range selector.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with period customization.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [
@@ -164,7 +163,7 @@
         {
             "url": "disabled-period",
             "name": "Hide Period Selector",
-            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with hide period selector.",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with period customization.",
             "category": "Stock Chart",
             "api": {
                 "RangeNavigator": [
@@ -179,7 +178,6 @@
             "name": "Stock Events",
             "description":"This demo for Essential JS2 Stock Chart control shows how to render and configure the stock events in stock chart.",
             "category": "Stock Chart",
-            "type": "new",
             "api": {
                 "RangeNavigator": [
                     "valueType",

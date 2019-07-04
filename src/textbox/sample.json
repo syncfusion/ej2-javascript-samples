@@ -3,7 +3,6 @@
     "directory": "textbox",
     "category": "Inputs",
     "ftName": "textbox",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -16,7 +15,6 @@
             "url": "multiline-textbox",
             "name": "Multiline TextBox",
             "category": "TextBox",
-            "type": "new",
             "description":"The example exposes a JavaScript(ES5) Multiline TextBox (textarea). It helps to render address, feedback, and more in HTML5 form with customizable.",
             "api": { "TextBox": ["multiline", "value", "placeholder", "floatLabelType", "enableRtl","enabled", "readonly"]}
         }

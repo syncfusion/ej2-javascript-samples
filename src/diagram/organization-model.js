@@ -39,7 +39,7 @@ this.default = function () {
         //configures data source settings
         dataSourceSettings: {
             id: 'Id', parentId: 'Manager',
-            dataManager: new ej.data.DataManager(window.localBindData),
+            dataSource: new ej.data.DataManager(window.localBindData),
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.shape = {
                     type: 'Text', content: data.Role,

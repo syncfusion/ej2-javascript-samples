@@ -14,7 +14,7 @@ this.default = function () {
         sidebarMenu.toggle();
     });
     // open new tab
-    var URL = location.href.replace(location.search,'');
+    var URL = location.href.replace(location.search, '');
     document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/responsive-panel/index.html');
     var data = [
         {

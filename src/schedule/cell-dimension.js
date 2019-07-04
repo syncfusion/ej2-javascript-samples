@@ -6,7 +6,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        views: ['Day', 'Week', 'WorkWeek', 'Month'],
+        views: ['Day', 'Week', 'WorkWeek', 'Month', 'TimelineWeek', 'TimelineMonth'],
         selectedDate: new Date(2018, 1, 15),
         cssClass: 'schedule-cell-dimension',
         showTimeIndicator: false,

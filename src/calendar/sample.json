@@ -1,9 +1,9 @@
-{ "name": "Calendar", "directory": "calendar", "category":"Calendars","type": "update", "samples" : [
+{ "name": "Calendar", "directory": "calendar", "category":"Calendars", "samples" : [
      {"url":"default", "name": "Default Functionalities", "category":"Calendar", "api":{"Calendar": [ "change" ]}, "description": "A simple calendar control for JavaScript(ES5) to select dates easily by switching between month, year, and decade views with a rich user interface" },
     {"url":"disabled", "name": "Disabled Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}, "description": "Calendar widget for Javascript(ES5) with disabled dates to restrict the user from selecting a defined set of dates by disabling its UI interaction" },
     {"url":"date-range", "name": "Date Range", "category":"Calendar", "api":{"Calendar": [ "min", "max", "change" ]}, "description": "Calendar for JavaScript(ES5) with min and max dates that restrict users from selecting dates outside a defined range, like weekends, range of dates etc"},
     {"url":"special-dates", "name": "Special Dates", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "change" ]}, "description": "Calendar for JavaScript(ES5) that highlights multiple dates like weekends, or a range of days with options to add custom styles and descriptions"},
     {"url":"multi-selection", "name": "Multiple Selection", "category":"Calendar", "api":{"Calendar": [ "isMultiSelection", "values" ]}, "description": "A simple and lightweight calendar control for JavaScript(ES5) that features multiple date selection to allow users to select more than one date"},
-    {"url":"month-picker", "name": "Month Picker", "category": "Calendar","type": "new", "api":{"Calendar": [ "start", "depth" ]}, "description": "The JavaScript(ES5) Calendar control can act as a month and year picker. It helps you to select a month or year quickly with all month related properties."},
+    {"url":"month-picker", "name": "Month Picker", "category": "Calendar", "api":{"Calendar": [ "start", "depth" ]}, "description": "The JavaScript(ES5) Calendar control can act as a month and year picker. It helps you to select a month or year quickly with all month related properties."},
     {"url":"islamic-calendar", "name": "Islamic Calendar", "category":"Calendar", "api":{"Calendar": [ "renderDayCell", "values" ]}}
 ]}

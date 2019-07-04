@@ -2,6 +2,7 @@
     "name": "MultiSelect Dropdown",
     "directory": "multi-select",
     "category": "Dropdowns",
+    "type": "update",
     "ftName": "multiselect-dropdown",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "description": "This example demonstrates the default functionalities of the JavaScript(ES5) multiselect control with minimum configuration.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["mode", "placeholder"] } },
@@ -12,6 +13,7 @@
         { "url": "custom-value", "name": "Custom Value", "description": "This example demonstrates the addition of a new value that is not present in the predefined list of the JavaScript(ES5) multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "allowCustomValue"] } },
         { "url": "chip-customization", "name": "Chip Customization", "description": "This example demonstrates how to customize the appearance of the selected chip element in the JavaScript(ES5) multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "tagging"] } },
         { "url": "checkbox", "name": "CheckBox", "description": "This example demonstrates how to select the multiple values through checkbox in the JavaScript(ES5) multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder"] } },
+        { "url": "grouping-with-checkbox", "name": "Grouping with CheckBox", "description": "This example demonstrates how to select the grouped list item values through checkbox in the JavaScript(ES5) MultiSelect control.", "category": "MultiSelect Dropdown", "type": "new", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "enableGroupCheckBox"] } },
         { "url": "selection-limit", "name": "Selection Limit", "description": "This example demonstrates the maximum selection limit functionalities with checkbox of the JavaScript(ES5) multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "fields", "placeholder", "mode", "maximumSelectionLimit"] } },
         { "url": "diacritics-filtering", "name": "Diacritics Filtering", "description": "This example demonstrates how to achieve the diacritics filter functionalities in the JavaScript(ES5) multiselect control.", "category": "MultiSelect Dropdown", "api": { "MultiSelect": ["dataSource", "placeholder", "allowFiltering", "ignoreAccent"] } }
     ],

@@ -51,7 +51,7 @@ this.default = function () {
         //Configures data source
         dataSourceSettings: {
             id: 'Name', parentId: 'ReportingPerson',
-            dataManager: new ej.data.DataManager(window.multiParentData),
+            dataSource: new ej.data.DataManager(window.multiParentData),
             //binds the external data with node
             doBinding: function (nodeModel, data) {
                 nodeModel.style = { fill: data.fillColor, strokeWidth: 1, strokeColor: data.border };

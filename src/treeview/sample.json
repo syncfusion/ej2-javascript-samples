@@ -2,7 +2,6 @@
     "name": "TreeView",
     "directory": "treeview",
     "category":"Navigation",
-    "type": "update",
     "ftName" :"treeview",
     "samples" : [
         {"url":"default", "name": "Default Functionalities", "category": "TreeView", "description": "This demo demonstrates the basic tree view component that display the data in a hierarchical structure with the configuration options.",
@@ -38,7 +37,7 @@
                     "fields",
                     "showCheckBox"
                 ]
-            }, "type": "update"
+            }
         },
         {"url":"node-editing", "name": "Node Editing", "category": "TreeView",  "description": "This demo showcases the node editing functionality of tree view, you can edit any node text by double click on it or pressing F2.", "api": {
                 "TreeView": [

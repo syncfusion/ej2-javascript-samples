@@ -64,13 +64,13 @@ this.default = function () {
 			}
 		}
     };
-    var count = 4;
-    document.getElementById('add').onclick = function (e) {      
+    var count = 5;
+    document.getElementById('add').onclick = function (e) {
+        count = count + 1;      
         var panel = [{
             'id': count.toString() + '_layout', 'sizeX': 2, 'sizeY': 2, 'row': 0, 'col': 0,
             header: '<div>Panel' + count.toString() + '</div>', content: '<div></div>'
         }];
-        count = count + 1;
         dashboardObject.addPanel(panel[0]);
     };
 };

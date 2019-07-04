@@ -1,11 +1,12 @@
 /**
- * Markdown editor sample
+ * Markdown editor overview sample
  */
 var textArea;
 var mdsource;
 this.default = function () {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '250px',
+        formatter: new ej.richtexteditor.MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.'} }),
         toolbarSettings: {
             items: ['Bold', 'Italic', 'StrikeThrough', '|',
                 'Formats', 'OrderedList', 'UnorderedList', '|',
@@ -20,7 +21,7 @@ this.default = function () {
         created: function () {
             textArea = defaultRTE.contentModule.getEditPanel();
             textArea.addEventListener('keyup', function (e) {
-                MarkDownConversion();
+                markdownConversion();
             });
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function (e) {
@@ -36,7 +37,7 @@ this.default = function () {
             });
         }
     });
-    function MarkDownConversion() {
+    function markdownConversion() {
         if (mdsource.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = document.body.querySelector('#defaultRTEhtml-preview');

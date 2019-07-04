@@ -6,10 +6,7 @@ this.default = function() {
         pasteCleanupSettings: {
             prompt: true,
             plainText: false,
-            keepFormat: false,
-            deniedTags: [],
-            deniedAttrs: [],
-            allowedStyleProps: []
+            keepFormat: false
         }
     });
     defaultRTE.appendTo('#defaultRTE');

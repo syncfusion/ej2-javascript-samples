@@ -1,0 +1,59 @@
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper">
+        <div id="PivotView" style="width: 100%;height:100%;">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%;height:100%;">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 40%;min-width: 80px;">
+                    <div>Export Type:
+                    </div>
+                </td>
+                <td style="width: 60%;">
+                    <div>
+                        <select id="mode" name="ddl-view-mode">
+                            <option value="excel">Excel</option>
+                            <option value="csv">CSV</option>
+                            <option value="pdf">PDF</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td></td>
+                <td>
+                    <div style="float: right;">
+                        <button id="export-btn">Export</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This sample demonstrates client-side exporting of the pivot table to Excel, CSV and PDF formats.</p>
+</div>
+<div id="description">
+    <p>The pivot table supports client-side exporting and exports its data to the Excel, CSV and PDF formats data using
+        the
+        <code>excelExport</code>,
+        <code>csvExport</code> and
+        <code>pdfExport</code> methods.
+    </p>
+    <p>
+        Choose the export document type in the dropdown list available inside the property panel and click the export button to export
+        the widget to the selected document format.
+    </p>
+</div>
+
+<style>
+    .e-pivottable .e-static {
+        width: 80% !important;
+    }
+</style>
+<!-- custom code end -->

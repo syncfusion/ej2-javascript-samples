@@ -4,7 +4,6 @@
     "category": "Data Visualization",
     "ftName": "diagram",
     "dataSourcePath":"src/diagram/diagram-data.js", 
-    "type": "update",
     "samples": [
         {
             "url": "default-functionalities",
@@ -46,8 +45,7 @@
             "url": "swimlane",
             "name": "Swimlane",
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
-            "category": "Getting Started",
-            "type": "new"
+            "category": "Getting Started"
         },
         {
             "url": "custom-shapes",
@@ -59,29 +57,25 @@
             "url": "diagram-events",
             "name": "Events",
             "description": "This sample visualizes what are the client side events are available in our JavaScript Diagram Library.",
-            "category": "Getting Started",
-            "type": "new"
+            "category": "Getting Started"
         },
         {
             "url": "tooltip-Sample",
             "name": "Tooltip",
             "description": "This sample demonstrates how to add the extra information to the nodes and connectors and how to show the information through diagram's tooltip feature.",
-            "category": "Getting Started",
-            "type": "new"
+            "category": "Getting Started"
         },
         {
             "url": "history-manager",
             "name": "History Manager",
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
-            "category": "Getting Started",
-            "type": "new"
+            "category": "Getting Started"
         },
         {
             "url": "flow-execution",
             "name": "Flow Execution",
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
-            "category": "Getting Started",
-            "type": "new"
+            "category": "Getting Started"
         },
         {
             "url": "bpmn-editor",

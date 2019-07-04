@@ -2,25 +2,35 @@
  * Sample for Funnel Chart
  */
 this.default = function () {
-    var data = [{ x: 'Renewed', y: 18.20, text: '18.20%' },
-        { x: 'Subscribed', y: 27.3, text: '27.3%' },
-        { x: 'Support', y: 55.9, text: '55.9%' },
-        { x: 'Downloaded', y: 76.8, text: '76.8%' },
-        { x: 'Visited', y: 100, text: '100%' }];
+    var data = [{ 'x': 'China', y: 1409517397, text: 'China' },
+    { 'x': 'India', y: 1339180127, text: 'India' },
+    { 'x': 'United States', y: 324459463, text: 'United States' },
+    { 'x': 'Indonesia', y: 263991379, text: 'Indonesia' },
+    { 'x': 'Brazil', y: 209288278, text: 'Brazil' },
+    { 'x': 'Pakistan', y: 197015955, text: 'Pakistan' },
+    { 'x': 'Nigeria', y: 190886311, text: 'Nigeria' },
+    { 'x': 'Bangladesh', y: 164669751, text: 'Bangladesh' },
+    { 'x': 'Russia', y: 143989754, text: 'Russia' },
+    { 'x': 'Mexico', y: 129163276, text: 'Mexico' },
+    { 'x': 'Japan', y: 127484450, text: ' Japan' },
+    { 'x': 'Ethiopia', y: 104957438, text: 'Ethiopia' },
+    { 'x': 'Philippines', y: 104918090, text: 'Philippines' },
+    { 'x': 'Egypt', y: 97553151, text: 'Egypt' },
+    { 'x': 'Vietnam', y: 95540800, text: 'Vietnam' },
+    { 'x': 'Germany', y: 82114224, text: 'Germany' }];
     var chart = new ej.charts.AccumulationChart({
         //Initializing Series
         series: [{
-                type: 'Funnel', dataSource: data, xName: 'x', yName: 'y', width: '60%', height: '80%',
-                neckWidth: '15%', gapRatio: 0.03, neckHeight: '18%',
+            type: 'Funnel', dataSource: data, xName: 'x', yName: 'y',
+            neckWidth: '10%', neckHeight: '18%',
                 dataLabel: {
-                    name: 'text', visible: true, position: 'Inside', font: {
-                        fontWeight: '600'
-                    }
-                }, explode: true,
+                    visible: true, position: 'Outside',
+                    connectorStyle: { length: '6%' }, name: 'text'
+                }, explode: false,
             }],
+            legendSettings: { visible: false },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} : <b>${point.y} %</b>' },
-        legendSettings: { toggleVisibility: false },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
         enableAnimation: false,
          // custom code start
         load: function (args) {
@@ -46,7 +56,7 @@ this.default = function () {
             }
         },
         //Initializing Title
-        title: 'Website Visitors',
+        title: 'Top populated countries in 2017',
     });
     chart.appendTo('#funnel-container');
     function neckWidth(value) {

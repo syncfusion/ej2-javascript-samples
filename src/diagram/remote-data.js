@@ -42,7 +42,7 @@ this.default = function () {
         //Configures data source
         dataSourceSettings: {
             id: 'EmployeeID', parentId: 'ReportsTo',
-            dataManager: new ej.data.DataManager(
+            dataSource: new ej.data.DataManager(
                 { url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/', crossDomain: true },
                 new ej.data.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName').take(9)
             ),

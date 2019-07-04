@@ -22,7 +22,7 @@ this.default = function () {
     listviewInstance.appendTo('#menulist');
 
     // open new tab
-    var URL = location.href.replace(location.search,'');
+    var URL = location.href.replace(location.search, '');
     document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/sidebar-list/index.html');
 
     // Expand the Sidebar

@@ -1286,7 +1286,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
                 content = getStringWithOutDescription(value.toString(), /(\'|\")description/g);
                 content = getStringWithOutDescription(content.toString(), /(\'|\")action-description/g);
             }
-            content = fileName.indexOf('.html') > 0 ? content.replace(/@section (ActionDescription|Description){[^}]*}/g, '').replace(/&/g, '&amp;')
+            content = value.indexOf('.html') > 0 ? content.replace(/@section (ActionDescription|Description){[^}]*}/g, '').replace(/&/g, '&amp;')
                 .replace(/"/g, '&quot;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
             tabObj.push({

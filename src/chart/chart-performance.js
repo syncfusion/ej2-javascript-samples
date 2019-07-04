@@ -7,6 +7,7 @@ var dt2;
  */
 this.default = function () {
     chart = new ej.charts.Chart({
+        enableCanvas: true,
         //Initializing Primary X Axis
         primaryXAxis: {
             majorGridLines: { color: 'transparent' }

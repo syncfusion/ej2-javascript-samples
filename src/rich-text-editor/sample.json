@@ -34,8 +34,8 @@
         },
         {
             "url": "paste-cleanup",
-            "name": "Paste Cleanup",
-            "type": "new",
+            "name": "Paste from MS Word",
+            "type": "update",
             "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control demonstrates paste cleanup when pasting the content.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "pasteCleanupSettings"], "pasteCleanupSettings": ["prompt", "plainText", "keepFormat", "deniedTags" ,"deniedAttrs" ,"allowedStyleProps"] }
@@ -97,15 +97,24 @@
             "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
         },
         {
-            "url": "custom-toolbar",
-            "name": "Custom Tool",
-            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to add their commands to the toolbar along with the built-in commands.",
-            "category": "Toolbar",
+            "url": "insert-emoticons",
+            "name": "Insert Emoticons",
+            "type": "new",
+            "description": "This demo for Syncfusion JavaScript rich text editor control shows the default rendering with minimum configuration.",
+            "category": "Custom Tool",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "created", "appendTo"], "ToolbarSettings": ["items"] }
         },
         {
+            "url": "insert-special-characters",
+            "name": "Insert Special Characters",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows how to add their commands to the toolbar along with the built-in commands.",
+            "category": "Custom Tool",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "created", "appendTo"], "ToolbarSettings": ["items"] }
+        }, 
+        {
             "url": "markdown-editor",
             "name": "Overview",
+            "type": "update",
             "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the markdown editing in the rich text editor with complete features.",
             "category": "Markdown",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }

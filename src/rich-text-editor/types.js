@@ -56,6 +56,8 @@ this.default = function () {
         defaultRTE.dataBind();
     }
     function handleFullScreen(e) {
+        var sbCntEle = document.querySelector('.sb-content.e-view');
+        var sbHdrEle = document.querySelector('.sb-header.e-view');
         var leftBar;
         var transformElement;
         if (ej.base.Browser.isDevice) {
@@ -67,6 +69,9 @@ this.default = function () {
             transformElement = document.querySelector('#right-pane');
         }
         if (e.targetItem === 'Maximize') {
+            if (ej.base.Browser.isDevice && ej.base.Browser.isIos) {
+                ej.base.addClass([sbCntEle, sbHdrEle], ['hide-header']);
+            }
             ej.base.addClass([leftBar], ['e-close']);
             ej.base.removeClass([leftBar], ['e-open']);
             if (!ej.base.Browser.isDevice) {
@@ -75,6 +80,9 @@ this.default = function () {
             transformElement.style.transform = 'inherit';
         }
         else if (e.targetItem === 'Minimize') {
+            if (ej.base.Browser.isDevice && ej.base.Browser.isIos) {
+                ej.base.removeClass([sbCntEle, sbHdrEle], ['hide-header']);
+            }
             ej.base.removeClass([leftBar], ['e-close']);
             if (!ej.base.Browser.isDevice) {
                 ej.base.addClass([leftBar], ['e-open']);

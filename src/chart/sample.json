@@ -108,7 +108,6 @@
             "name": "Stacked Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacked line series.",
             "category": "Line Charts",
-            "type":"new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -123,7 +122,6 @@
             "name": "100% Stacked Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100% stacked line series.",
             "category": "Line Charts",
-            "type":"new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -260,7 +258,6 @@
             "name": "Rounded Column",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the rounded column series.",
             "category": "Bar Charts",
-            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -730,6 +727,7 @@
             "name": "Chart Performance",
             "description": "This demo for Essential JavaScript2 Chart control shows the performance when plotting large volumes of data and handling high frequency real-time data.",
             "category": "Benchmark",
+            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -795,6 +793,7 @@
             "name": "Funnel",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the funnel charts.",
             "category": "Accumulation Charts",
+            "type": "update",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -808,7 +807,6 @@
             "name": "Pie with Legend",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
             "category": "Accumulation Charts",
-            "type": "update",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -1068,7 +1066,6 @@
             "name": "Category Axis",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the category axis in charts.",
             "category": "Chart Axes",
-            "type":"update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -1392,6 +1389,20 @@
                     "primaryYAxis",
                     "series",
                     "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "data-editing",
+            "name": "Data Editing",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the data editing behavior in chart.",
+            "category": "User Interaction",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
                 ]
             }
         }

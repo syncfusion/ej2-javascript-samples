@@ -3,7 +3,6 @@
     "directory": "menu",
     "category": "Navigation",
     "ftName": "menu-bar",
-    "type":"update",
     "samples": [
         {
             "url": "default",
@@ -37,7 +36,6 @@
             "url": "hamburger-mode",
             "name": "Hamburger Mode",
             "category": "Menu Bar",
-            "type":"new",
             "api":{ "Menu": ["hamburgerMode", "title"] },
             "description": "This example demonstrates the hamburger mode of the Syncfusion Javascript ES5 Menu that enables the adaptive view."
         },

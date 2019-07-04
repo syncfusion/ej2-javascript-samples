@@ -309,15 +309,11 @@ function searchClickHandler() {
     if (searchButton.classList.contains('e-pv-search-icon')) {
         viewer.textSearch.cancelTextSearch();
         initiateTextSearch();
-        searchButton.classList.remove('e-pv-search-icon');
-        searchButton.classList.add('e-pv-search-close');
     }
     else if (searchButton.classList.contains('e-pv-search-close')) {
         searchInput.value = '';
         searchInput.focus();
         viewer.textSearch.cancelTextSearch();
-        searchButton.classList.remove('e-pv-search-close');
-        searchButton.classList.add('e-pv-search-icon');
     }
 }
 function initiateTextSearch() {

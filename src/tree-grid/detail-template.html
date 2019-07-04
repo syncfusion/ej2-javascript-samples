@@ -1,0 +1,42 @@
+<script id="detailtemplate" type="text/x-template">
+    <div style="position: relative; display: inline-block; float: left; font-weight: bold; width: 10%;padding:5px 4px 2px 27px;;">
+        <img src="src/tree-grid/images/${FullName}.png" alt="${FullName}"/>
+    </div>
+    <div style="padding-left: 10px; display: inline-block; width: 66%; text-wrap: normal;font-size:13px;font-family:'Segoe UI';">
+        <div class="e-description" style="word-wrap: break-word;">
+            <b>${Name}</b> was born on ${format(data.DOB)}. Now lives at ${Address}, ${Country}. ${Name} holds a position of <b>${Designation}</b> in our WA department, (Seattle USA).
+        </div>
+        <div class="e-description" style="word-wrap: break-word;margin-top:5px;">
+            <b style="margin-right:10px;">Contact:</b>${Contact}
+        </div>
+    </div>
+</script>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid">
+        </div>
+    </div>
+</div>
+<!-- custom code start -->      
+<div id="action-description">
+    <p>This sample demonstrates the TreeGrid component with the detail template feature.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The detail row template provides an additional information about a data row. The
+        <code><a target="_blank" class="code"
+            href="https://ej2.syncfusion.com/javascript/documentation/treegrid/row/#detail-template">detailTemplate
+            </a></code>
+        property accepts either string or HTML element`s ID value, which will be used as the template for the detail
+        row.
+    </p>
+    <p>In this demo, we have presented Employee Information with image in the detail row.</p>
+    <p>The template expression should be provided inside <code>${...}</code> interpolation syntax.</p>
+<p>Injecting Module:
+
+    TreeGrid features are segregated into individual feature-wise modules. To use detail template feature, we need to
+    inject <code>DetailRow</code> using the <code>TreeGrid.Inject(DetailRow)</code> section.
+</p>
+</div>
+<!-- custom code end -->

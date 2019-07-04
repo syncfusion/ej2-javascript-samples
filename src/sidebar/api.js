@@ -12,7 +12,7 @@ this.default = function () {
     };
 
     // open new tab
-    var URL = location.href.replace(location.search,'');
+    var URL = location.href.replace(location.search, '');
     document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/api/index.html');
 
     // Toggle button for closeOnDocumentClick property

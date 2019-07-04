@@ -1,0 +1,65 @@
+<div class="col-lg-9 control-section" id="pivot-table-section">
+    <div class="content-wrapper">
+        <div id="PivotView" style="width: 100%;height:100%;">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%;height:100%;">
+        <tbody>
+            <tr style="height: 50px">
+                <td>
+                    <div>
+                        <input id="filter" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td>
+                    <div>
+                        <input id="sort" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td>
+                    <div>
+                        <input id="summary" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td>
+                    <div>
+                        <input id="remove" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This sample demonstrates the grouping feature of the pivot table. The pivot fields are automatically populated from
+         the bound data source, and they can be dragged and dropped to alter the report at runtime. The pivot fields can be sorted, filtered, and removed dynamically as well.</p>
+</div>
+<div id="description">
+    <p>The pivot table grouping bar option automatically populates fields from the bound data source and allows end users
+        to drag fields between different axes such as columns, rows, values, and filters, and create pivot table at runtime.
+        To enable grouping bar, set the
+        <code>showGroupingBar</code> property as true.</p>
+    <p>
+        Filter and sort icons allow displaying selective records and ordering them in ascending or descending order. The remove icon
+        allows the user to remove the field from the report.
+    </p>
+</div>
+
+<style>
+    @media only screen and (max-width: 400px) {
+        #pivot-table-section {
+            overflow: auto;
+        }
+    }
+</style>
+<!-- custom code end -->

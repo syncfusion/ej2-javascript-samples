@@ -68,8 +68,7 @@ this.default = function () {
                 var target = (args.type === 'RecurrenceAlert' ||
                     args.type === 'DeleteAlert') ? data.element[0] : args.target;
                 if (!ej.base.isNullOrUndefined(target) && target.classList.contains('e-work-cells')) {
-                    if ((target.classList.contains('e-read-only-cells')) ||
-                        (!scheduleObj.isSlotAvailable(data.endTime, data.endTime, data.groupIndex))) {
+                    if ((target.classList.contains('e-read-only-cells')) || (!scheduleObj.isSlotAvailable(data))) {
                         args.cancel = true;
                     }
                 }
@@ -107,8 +106,7 @@ this.default = function () {
                 else if (args.requestType === 'eventChange') {
                     data = args.data;
                 }
-                var groupIndex = scheduleObj.eventBase.getGroupIndexFromEvent(data);
-                if (!scheduleObj.isSlotAvailable(data.StartTime, data.EndTime, groupIndex)) {
+                if (!scheduleObj.isSlotAvailable(data)) {
                     args.cancel = true;
                 }
             }

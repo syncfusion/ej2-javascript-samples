@@ -12,7 +12,7 @@ this.default = function () {
         width: '100%', height: '550px',
         layout: { type: 'SymmetricalLayout', springLength: 80, springFactor: 0.8, maxIteration: 500, margin: { left: 20, top: 20 } },
         //Set the parent and child relationship of DataSource.
-        dataSourceSettings: { id: 'Id', parentId: 'Source', dataManager: new ej.data.DataManager(window.symmetricData) },
+        dataSourceSettings: { id: 'Id', parentId: 'Source', dataSource: new ej.data.DataManager(window.symmetricData) },
         //Set the constraints of the SnapSettings
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         //Set the default values of Node

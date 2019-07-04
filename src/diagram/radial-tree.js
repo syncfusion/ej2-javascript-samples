@@ -27,7 +27,7 @@ this.default = function () {
         //configures data source settings
         dataSourceSettings: {
             id: 'Id', parentId: 'ReportingPerson',
-            dataManager: new ej.data.DataManager(window.radialTree),
+            dataSource: new ej.data.DataManager(window.radialTree),
             //binds the data with the nodes
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.annotations = [{
