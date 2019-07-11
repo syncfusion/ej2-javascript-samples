@@ -8,7 +8,7 @@ this.default = function () {
         width: '100%', height: 490,
         //Configures data source
         dataSourceSettings: {
-            id: 'Name', parentId: 'Category', dataManager: new ej.data.DataManager(window.species),
+            id: 'Name', parentId: 'Category', dataSource: new ej.data.DataManager(window.species),
             //binds the external data with node
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.annotations = [{

@@ -2,7 +2,6 @@
     "name": "Circular Gauge",
     "directory": "circular-gauge",
     "category": "Data Visualization",
-    "type": "update",
     "ftName": "circulargauge",
     "samples": [
         {
@@ -21,8 +20,7 @@
             "url": "labels",
             "name": "Tick and Labels",
             "description": "This demo for Essential JS2 Circular Gauge control shows various properties available to customize the ticks and labels of an axis.",
-            "category": "Circular Gauge",
-            "type": "update"
+            "category": "Circular Gauge"
         },
         {
             "url": "annotation",
@@ -92,7 +90,6 @@
             "url": "apple-watch-rings",
             "name": "Apple Watch Rings",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates how to highlight specific regions in an axis by using ranges.",
-            "type": "new",
             "category": "Use Cases"
         },
         {

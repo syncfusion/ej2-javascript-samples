@@ -24,7 +24,7 @@
             }
         },
         {
-            "url":"right-to-left", "name": "Right to Left", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with Right to Left Configuration.", "category": "PDF Viewer", "type": "new", "api": {
+            "url":"right-to-left", "name": "Right to Left", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with Right to Left Configuration.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                     "documentPath",
                     "enableRtl",

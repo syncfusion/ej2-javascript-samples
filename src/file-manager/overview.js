@@ -1,6 +1,8 @@
-//Sample for basic filemanager.
+/**
+ * File Manager full functionalities sample
+ */
  this.default = function() {
-    var hostUrl = 'https://ng2jq.syncfusion.com/ej2services/';
+    var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
     var fileObject = new ej.filemanager.FileManager({
             ajaxSettings: {
                 url: hostUrl + 'api/FileManager/FileOperations',

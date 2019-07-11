@@ -42,7 +42,7 @@ function renderComponents() {
     /* Initialize Tab with disabled headers for the wizard */
     tabObj = new ej.navigations.Tab({
         heightAdjustMode: 'None', height: 390, showCloseButton: false,
-        selecting: tabSelected,
+        selecting: tabSelecting,
         items: [
             { header: { 'text': 'New Booking' }, content: '#booking' },
             { header: { 'text': 'Train List' }, content: '#selectTrain', disabled: true },
@@ -138,7 +138,7 @@ function renderComponents() {
     document.getElementById('goBackToBook').onclick = function (e) { tabNavigations(e); };
     document.getElementById('goBackDetails').onclick = function (e) { tabNavigations(e); };
 }
-function tabSelected(e) {
+function tabSelecting(e) {
     if (e.isSwiped) {
         e.cancel = true;
     }
@@ -166,10 +166,9 @@ function tabNavigations(args) {
                     document.getElementById('err1').innerText = '* Arrival point can\'t be same as Departure';
                 }
                 else {
-                    tabObj.enableTab(0, false);
                     tabObj.enableTab(1, true);
+                    tabObj.enableTab(0, false);
                     filterTrains(args);
-                    tabObj.select(1);
                     document.getElementById('err1').innerText = '';
                     document.getElementById('err2').innerText = '';
                 }
@@ -185,7 +184,6 @@ function tabNavigations(args) {
             }
             else {
                 tabObj.enableTab(2, true);
-                tabObj.select(2);
                 tabObj.enableTab(1, false);
                 document.getElementById('err2').innerText = '';
             }
@@ -200,7 +198,6 @@ function tabNavigations(args) {
             }
             else {
                 tabObj.enableTab(3, true);
-                tabObj.select(3);
                 tabObj.enableTab(2, false);
                 document.getElementById('err3').innerText = '';
                 finalizeDetails(args);

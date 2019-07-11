@@ -3,41 +3,60 @@
     "directory": "file-manager",
     "category": "Navigation",
     "ftName": "file-manager",
-    "type": "preview",
+    "type": "update",
     "samples": [
         {
             "url": "overview",
             "name": "Overview",
             "category": "File Manager",
-            "api": {
-                "FileManager": [
-                    "ajaxSettings",
-                    "view"
-                ]
-            },
-            "description": "The FileManager component is used to explore a file system through a web application, similar to the windows explorer for windows."
+            "api": { "FileManager": [ "ajaxSettings", "view" ] },
+            "description": "FileManager for JavaScript(ES5) with full view of the File Manager like a windows explorer User Interface."
         },
         {
             "url": "custom-thumbnail",
             "name": "Custom Thumbnails",
             "category": "File Manager",
-            "api": {
-                "FileManager": [
-                    "ajaxSettings"
-                ]
-            },
-            "description": "The FileManager component is used to explore a file system through a web application, similar to the windows explorer for windows."
+            "api": { "FileManager": [ "ajaxSettings" ] },
+            "description": "This example of FileManager for JavaScript(ES5) with how to use the custom thumbnails for the files and folders."
         },
         {
             "url": "api",
             "name": "API",
             "category": "File Manager",
-            "api": {
-                "FileManager": [
-                    "ajaxSettings"
-                ]
-            },
-            "description": "The FileManager component is used to explore a file system through a web application, similar to the windows explorer for windows."
+            "api": { "FileManager": [ "ajaxSettings" ] },
+            "description": "FileManager for JavaScript(ES5) render the File Manager without the navigation pane and enable or disable toolbar dynamically."
+        },
+        {
+            "url": "drag-drop",
+            "name": "Drag and Drop",
+            "category": "File Manager",
+            "api": { "FileManager": [ "ajaxSettings" ] },
+            "type": "new",
+            "description": "This example of FileManager for JavaScript(ES5) with drag and drop feature to drag and drop the file."
+        },
+        {
+            "url": "usecase",
+            "name": "File Upload",
+            "category": "Use Case",
+            "api": { "FileManager": [ "ajaxSettings" ] },
+            "type": "new",
+            "description": "FileManager for JavaScript(ES5) with how to render the File Manager component inside the Dialog component."
+        },
+        {
+            "url": "azure-service",
+            "name": "Azure Blob Provider",
+            "category": "Cloud Service Providers",
+            "api": { "FileManager": [ "ajaxSettings" ] },
+            "type": "new",
+            "description": "This example of FileManager for JavaScript(ES5) with how to configure and use the azure cloud service."
+        },
+        {
+            "url": "sql-server-provider",
+            "name": "SQL Database Provider",
+            "category": "Cloud Service Providers",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates how to configure and use the sql server database service in a JavaScript (TypeScript) File Manager."
         }
     ]
 }

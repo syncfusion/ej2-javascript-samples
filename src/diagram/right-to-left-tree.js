@@ -30,7 +30,7 @@ this.default = function () {
         //Configure the data source
         dataSourceSettings: {
             id: 'Name', parentId: 'Category',
-            dataManager: new ej.data.DataManager(window.artificialIntelligence),
+            dataSource: new ej.data.DataManager(window.artificialIntelligence),
             doBinding: function (nodeModel, data, diagram) {
                 var nameKey = 'Name';
                 nodeModel.annotations = [{ content: data[nameKey] }];

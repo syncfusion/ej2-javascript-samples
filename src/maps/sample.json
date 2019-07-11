@@ -72,6 +72,19 @@
             
         },
         {
+            "url": "marker-cluster",
+            "name": "Marker cluster",
+            "description": "This demo for Essential JS2 Maps control indicates the create the marker cluster in more than one marker intersect.",
+            "category": "Features",
+            "sourceFiles":[
+                { "displayName": "marker-cluster.html", "path":"src/maps/marker-cluster.html" },
+                { "displayName": "marker-cluster.js", "path":"src/maps/marker-cluster.js" },
+                { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
+            ],
+            "type": "new"
+            
+        },
+        {
             "url": "data-label",
             "name": "Labels",
             "description": "This demo for Essential JS2 Maps control shows the names of all the states in USA in data label. Intersect action and smart labels mode can be changed.",
@@ -301,6 +314,17 @@
             "sourceFiles":[
                 { "displayName": "cyber-attack-map.html", "path":"src/maps/cyber-attack-map.html" },
                 { "displayName": "cyber-attack-map.js", "path":"src/maps/cyber-attack-map.js" },
+                { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
+            ]
+        },
+        {
+            "url": "dynamic-marker",
+            "name": "Dynamic Marker",
+            "description": "This demo for Essential JS2 Maps control visualizes the dynamically added the marker and navigation line.",
+            "category": "Use Cases",
+            "sourceFiles":[
+                { "displayName": "cyber-attack-map.html", "path":"src/maps/dynamic-marker.html" },
+                { "displayName": "cyber-attack-map.js", "path":"src/maps/dynamic-marker.js" },
                 { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
             ],
             "type": "new"

@@ -141,7 +141,7 @@ this.default = function () {
             type: 'HierarchicalTree'
         },
         dataSourceSettings: {
-            id: 'id', parentId: 'ancestor', dataManager: new ej.data.DataManager(window.keyBoardData),
+            id: 'id', parentId: 'ancestor', dataSource: new ej.data.DataManager(window.keyBoardData),
             doBinding: function (nodeModel, data) {
                 nodeModel.annotations = [{
                     content: data.id,

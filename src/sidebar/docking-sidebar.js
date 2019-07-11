@@ -14,7 +14,7 @@ this.default = function () {
     rightbutton.appendTo('#right');
 
     //open new tab
-    var URL = location.href.replace(location.search,'');
+    var URL = location.href.replace(location.search, '');
     document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/docking-sidebar/index.html');
 
     function positionChange(args) {

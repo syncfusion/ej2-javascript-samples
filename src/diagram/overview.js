@@ -66,7 +66,7 @@ this.default = function () {
         },
         //Sets the parent and child relationship of DataSource.
         dataSourceSettings: {
-            id: 'Id', parentId: 'ReportingPerson', dataManager: new ej.data.DataManager(window.overviewData)
+            id: 'Id', parentId: 'ReportingPerson', dataSource: new ej.data.DataManager(window.overviewData)
         },
         //Sets the default values of Nodes.
         getNodeDefaults: function (obj, diagram) {

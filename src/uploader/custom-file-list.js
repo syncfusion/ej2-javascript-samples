@@ -29,6 +29,16 @@ this.default = function () {
             parentElement.appendChild(ej.base.createElement('ul', {className: 'ul-element' }));
             document.getElementById('dropArea').appendChild(parentElement);
         }
+        for ( var k = 0; k < args.filesData.length; k++) {
+            var fileName = args.filesData[k].name;
+            for (var j = 0; j < this.filesData.length; j++) {
+                if (this.filesData[j].name === fileName) {
+                    args.filesData.splice(k, 1);
+                    --k;
+                    j = this.filesData.length;
+                }
+            }
+        }
         for (var i = 0; i < args.filesData.length; i++) {
             formSelectedData(args.filesData[i], this);    // create the LI element for each file Data
         }

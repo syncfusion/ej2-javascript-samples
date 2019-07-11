@@ -11,4 +11,9 @@ this.default = function () {
         }
     });
     scheduleObj.appendTo('#Schedule');
+    function onChange(args) {
+        scheduleObj.eventSettings.editFollowingEvents = args.checked;
+    }
+    
+    new ej.buttons.CheckBox({label: 'Enable Following Events', checked: false, change: onChange }, '#editFollowingEvents');
 };

@@ -4,7 +4,7 @@ this.default = function () {
     defaultSidebar.appendTo('#default-sidebar');
 
     //open new tab
-    var URL = location.href.replace(location.search,'');
+    var URL = location.href.replace(location.search, '');
     document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/default/index.html');
 
     //initialize the radio button

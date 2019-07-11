@@ -52,7 +52,7 @@ this.default = function () {
         width: '100%', height: '499px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         dataSourceSettings: {
             id: 'id', parentId: 'Category',
-            dataManager: new ej.data.DataManager(window.pertChartData),
+            dataSource: new ej.data.DataManager(window.pertChartData),
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.shape = { type: 'Text' };
             }

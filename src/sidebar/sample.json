@@ -3,7 +3,6 @@
     "directory": "sidebar",
     "category": "Navigation",
     "ftName": "sidebar",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -51,7 +50,6 @@
         {
             "url": "sidebar-menu",
             "name": "Sidebar  Menu",
-            "type": "new",
             "category": "Sidebar",
             "api": {
                 "Sidebar": [
@@ -67,7 +65,6 @@
         {
             "url": "responsive-panel",
             "name": "Responsive Panel",
-            "type": "new",
             "category": "Sidebar",
             "api": {
                 "Sidebar": [

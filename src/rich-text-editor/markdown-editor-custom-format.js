@@ -29,7 +29,7 @@ this.default = function () {
             mdPreview = document.getElementById('MD_Preview');
             textArea = defaultRTE.contentModule.getEditPanel();
             textArea.addEventListener('keyup', function (e) {
-                MarkDownConversion();
+                markdownConversion();
             });
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function (e) {
@@ -45,7 +45,7 @@ this.default = function () {
       script.src = 'https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.js';
       document.getElementsByTagName('head')[0].appendChild(script);
     }
-    function MarkDownConversion() {
+    function markdownConversion() {
         if (mdPreview && mdPreview.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = defaultRTE.element.querySelector('#' + id);

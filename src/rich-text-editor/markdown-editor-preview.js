@@ -17,7 +17,7 @@ this.default = function () {
         },
         created: function () {
             textArea = defaultRTE.contentModule.getEditPanel();
-            textArea.addEventListener('keyup', function (e) { MarkDownConversion(); });
+            textArea.addEventListener('keyup', function (e) { markdownConversion(); });
             var rteObj = defaultRTE;
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function (e) {
@@ -60,12 +60,12 @@ this.default = function () {
                     mdSplit.classList.remove('e-active');
                     mdsource.classList.remove('e-active');
                 }
-                MarkDownConversion();
+                markdownConversion();
             }
             setTimeout(function () { defaultRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
         }
     });
-    function MarkDownConversion() {
+    function markdownConversion() {
         if (mdSplit.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = document.body.querySelector('#defaultRTEhtml-preview');
@@ -106,6 +106,8 @@ this.default = function () {
     }
     defaultRTE.appendTo('#defaultRTE');
     function handleFullScreen(e) {
+        var sbCntEle = document.querySelector('.sb-content.e-view');
+        var sbHdrEle = document.querySelector('.sb-header.e-view');
         var leftBar;
         var transformElement;
         if (ej.base.Browser.isDevice) {
@@ -117,6 +119,9 @@ this.default = function () {
             transformElement = document.querySelector('#right-pane');
         }
         if (e.targetItem === 'Maximize') {
+            if (ej.base.Browser.isDevice &&  ej.base.Browser.isIos) {
+                ej.base.addClass([sbCntEle, sbHdrEle], ['hide-header']);
+            }
             ej.base.addClass([leftBar], ['e-close']);
             ej.base.removeClass([leftBar], ['e-open']);
             if (!ej.base.Browser.isDevice) {
@@ -125,6 +130,9 @@ this.default = function () {
             transformElement.style.transform = 'inherit';
         }
         else if (e.targetItem === 'Minimize') {
+            if (ej.base.Browser.isDevice &&  ej.base.Browser.isIos) {
+                ej.base.removeClass([sbCntEle, sbHdrEle], ['hide-header']);
+            }
             ej.base.removeClass([leftBar], ['e-close']);
             if (!ej.base.Browser.isDevice) {
                 ej.base.addClass([leftBar], ['e-open']);

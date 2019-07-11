@@ -6,7 +6,9 @@ this.default = function () {
         height: 380,
         contextMenuItems: [
             { text: 'Collapse the Row', target: '.e-content', id: 'collapserow' },
-            { text: 'Expand the Row', target: '.e-content', id: 'expandrow' }
+            { text: 'Expand the Row', target: '.e-content', id: 'expandrow' },
+            { text: 'Collapse All', target: '.e-headercontent', id: 'collapseall' },
+            { text: 'Expand All', target: '.e-headercontent', id: 'expandall' }
         ],
         columns: [
             { field: 'taskID', headerText: 'Task ID', width: 80, textAlign: 'Right', editType: 'numericedit' },
@@ -20,25 +22,41 @@ this.default = function () {
         ],
         contextMenuOpen: function (arg) {
             var elem = arg.event.target;
-            var uid = elem.closest('.e-row').getAttribute('data-uid');
-            if (ej.base.isNullOrUndefined(ej.base.getValue('hasChildRecords', treeGridObj.grid.getRowObjectFromUID(uid).data))) {
-                arg.cancel = true;
+            var row = elem.closest('.e-row');
+            var uid = row && row.getAttribute('data-uid');
+            var items = [].slice.call(document.querySelectorAll('.e-menu-item'));
+            for (var i = 0; i < items.length; i++) {
+              items[i].setAttribute('style','display: none;');
             }
-            else {
+            if (elem.closest('.e-row')) {
+              if (ej.base.isNullOrUndefined(uid) || 
+              ej.base.isNullOrUndefined(ej.base.getValue('hasChildRecords', treeGridObj.grid.getRowObjectFromUID(uid).data))) {
+                arg.cancel = true;
+              } else {
                 var flag = ej.base.getValue('expanded', treeGridObj.grid.getRowObjectFromUID(uid).data);
                 var val = flag ? 'none' : 'block';
                 document.querySelectorAll('li#expandrow')[0].setAttribute('style', 'display: ' + val + ';');
                 val = !flag ? 'none' : 'block';
                 document.querySelectorAll('li#collapserow')[0].setAttribute('style', 'display: ' + val + ';');
+              }
+            } else {
+              var len = treeGridObj.element.querySelectorAll('.e-treegridexpand').length;
+              if (len !== 0) {
+                 document.querySelectorAll('li#collapseall')[0].setAttribute('style', 'display: block;');
+              } else {
+                document.querySelectorAll('li#expandall')[0].setAttribute('style', 'display: block;');
+              }
             }
         },
         contextMenuClick: function (args) {
-            treeGridObj.getColumnByField('taskID');
             if (args.item.id === 'collapserow') {
-                treeGridObj.collapseRow((treeGridObj.getSelectedRows()[0]), treeGridObj.getSelectedRecords()[0]);
-            }
-            else {
-                treeGridObj.expandRow((treeGridObj.getSelectedRows()[0]), treeGridObj.getSelectedRecords()[0]);
+                treeGridObj.collapseRow(treeGridObj.getSelectedRows()[0], treeGridObj.getSelectedRecords()[0]);
+            } else if (args.item.id === 'expandrow') {
+                treeGridObj.expandRow(treeGridObj.getSelectedRows()[0], treeGridObj.getSelectedRecords()[0]);
+            } else if (args.item.id === 'collapseall') {
+                treeGridObj.collapseAll();
+            } else if (args.item.id === 'expandall') {
+                treeGridObj.expandAll();
             }
         }
     });

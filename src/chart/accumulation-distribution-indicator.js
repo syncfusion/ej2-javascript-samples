@@ -90,4 +90,5 @@
             });
             _this.renderChart(chartData);
         };
+        
     };

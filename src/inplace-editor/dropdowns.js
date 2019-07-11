@@ -6,7 +6,7 @@ this.default = function () {
         value: 'Australia',
         model: {
             dataSource: autocompleteData,
-            placeholder: ' Type to search countries'
+            placeholder: ' Type to search country'
         },
     });
     editObj.appendTo('#autoCompleteEle');
@@ -30,7 +30,7 @@ this.default = function () {
         value: 'Finland',
         model: {
             dataSource: autocompleteData,
-            placeholder: 'Find a countries'
+            placeholder: 'Find a country'
         }
     });
     comboObbj.appendTo('#comboBoxEle');
@@ -40,7 +40,7 @@ this.default = function () {
         value: 'Canada',
         model: {
             dataSource: autocompleteData,
-            placeholder: 'Find a countries'
+            placeholder: 'Find a country'
         }
     });
     dropObj.appendTo('#dropdownEle');

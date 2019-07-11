@@ -1,0 +1,45 @@
+<div class="control-section">
+    <div id='container' class="fileupload">
+        <input type="file" id="fileupload" name="UploadFiles"/>
+        <button id="openBtn" class="dlgbtn" type="button">File Browser</button>
+    </div>
+    <div id='target' class="control-section">
+        <div id='dialog'>
+            <div id="filemanager" ></div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the real-time use case of File Manager in a web application. Dialog and Uploader components are integrated with the File Manager. Click the browse button in the Uploader element to open the File Manager inside the Dialog control. </p>
+</div>
+
+<div id="description">
+    <p>The File Manager component is used to explore a file system through a web application, similar to the windows explorer for windows. It supports all the basic file operations such as create, rename, delete and so on.</p>
+
+    <p><b>Note: </b>File Manager’s upload functionality is restricted in the online demo. If you need to test upload functionality, please install 
+        <a target="_blank" href="https://www.syncfusion.com/downloads">Syncfusion Essential Studio </a>on your machine and run the demo.</p>
+</div>
+
+<style>
+    .fileupload {
+        max-width: 500px;
+        margin: auto;
+    }
+    #openBtn {
+        position: absolute;
+        top: 34px;
+        left: 43%;
+    }
+    #target {
+        height: 550px;
+    }
+    #dialog {
+        top: 20px !important;
+        max-height: 500px !important;
+    }
+    .fileupload .e-file-drop, .fileupload .e-css.e-btn {
+        display: none;
+    }
+
+</style>

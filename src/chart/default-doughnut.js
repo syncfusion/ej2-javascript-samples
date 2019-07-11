@@ -31,7 +31,6 @@ this.default = function () {
                 innerRadius: '40%',
                 dataLabel: {
                     visible: true, position: 'Inside',
-                    name: '${point.y}',
                     font: {
                         color: 'white',
                         fontWeight: '600',
@@ -67,8 +66,6 @@ this.default = function () {
             args.series.dataLabel.font.size = getFontSize(pie.initialClipRect.width);
             args.text = args.text + '%';
         },
-        //Initializing Title
-        title: 'Education Institutional Revenue',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -82,50 +79,51 @@ this.default = function () {
             pieinterval = setInterval( function () {
                     if (document.getElementById('doughnut-container')) {
                         if (count === 0) {
-                            pie.series[0].dataSource = [{ 'x': 'Net-tution and Fees', y: 10 }, { 'x': 'Self-supporting Operations', y: 10 },
-                            { 'x': 'Private Gifts', y: 13 }, { 'x': 'All Other', y: 14 },
-                            { 'x': 'Local Revenue', y: 9 }, { 'x': 'State Revenue', y: 13 },
-                            { 'x': 'Federal Revenue', y: 8 }
+                            pie.series[0].dataSource = [{ 'x': 'Net-tution and Fees', y: 13, text: '13%' },
+                                { 'x': 'Self-supporting Operations', y: 13, text: '13%' },
+                                { 'x': 'Private Gifts', y: 17, text: '17%' }, { 'x': 'All Other', y: 18, text: '18%' },
+                                { 'x': 'Local Revenue', y: 12, text: '12%' }, { 'x': 'State Revenue', y: 17, text: '17%' },
+                                { 'x': 'Federal Revenue', y: 10, text: '10%' }
                             ];
                             pie.animate();
                             count++;
                         }
                         else if (count === 1) {
                             pie.series[0].dataSource = [
-                                { 'x': 'Net-tution and Fees', y: 120 }, { 'x': 'Self-supporting Operations', y: 31 },
-                                { 'x': 'Private Gifts', y: 6 }, { 'x': 'All Other', y: 12 },
-                                { 'x': 'Local Revenue', y: 25 }, { 'x': 'State Revenue', y: 11 },
-                                { 'x': 'Federal Revenue', y: 12 }
+                                { 'x': 'Net-tution and Fees', y: 55, text: '55%' }, { 'x': 'Self-supporting Operations', y: 14, text: '14%' },
+                                { 'x': 'Private Gifts', y: 4, text: '4%' }, { 'x': 'All Other', y: 6, text: '6%' },
+                                { 'x': 'Local Revenue', y: 11, text: '11%' }, { 'x': 'State Revenue', y: 5, text: '5%' },
+                                { 'x': 'Federal Revenue', y: 6, text: '6%' }
                             ];
                             pie.animate();
                             count++;
                         }
                         else if (count === 2) {
                             pie.series[0].dataSource = [
-                                { 'x': 'Net-tution and Fees', y: 6 }, { 'x': 'Self-supporting Operations', y: 22 },
-                                { 'x': 'Private Gifts', y: 11 }, { 'x': 'All Other', y: 15 },
-                                { 'x': 'Local Revenue', y: 13 }, { 'x': 'State Revenue', y: 10 },
-                                { 'x': 'Federal Revenue', y: 8 }
+                                { 'x': 'Net-tution and Fees', y: 8, text: '8%' }, { 'x': 'Self-supporting Operations', y: 26, text: '26%' },
+                                { 'x': 'Private Gifts', y: 12, text: '12%' }, { 'x': 'All Other', y: 18, text: '18%' },
+                                { 'x': 'Local Revenue', y: 15, text: '15%' }, { 'x': 'State Revenue', y: 11, text: '11%' },
+                                { 'x': 'Federal Revenue', y: 9, text: '9%' }
                             ];
                             pie.animate();
                             count++;
                         }
                         else if (count === 3) {
                             pie.series[0].dataSource = [
-                                { 'x': 'Net-tution and Fees', y: 15 }, { 'x': 'Self-supporting Operations', y: 10 },
-                                { 'x': 'Private Gifts', y: 18 }, { 'x': 'All Other', y: 20 },
-                                { 'x': 'Local Revenue', y: 30 }, { 'x': 'State Revenue', y: 20 },
-                                { 'x': 'Federal Revenue', y: 25 }
+                                { 'x': 'Net-tution and Fees', y: 10, text: '10%' }, { 'x': 'Self-supporting Operations', y: 7, text: '7%' },
+                                { 'x': 'Private Gifts', y: 17, text: '17%' }, { 'x': 'All Other', y: 14, text: '14%' },
+                                { 'x': 'Local Revenue', y: 21, text: '21%' }, { 'x': 'State Revenue', y: 14, text: '14%' },
+                                { 'x': 'Federal Revenue', y: 17, text: '17%' }
                             ];
                             pie.animate();
                             count++;
                         }
                         else if (count === 4) {
                             pie.series[0].dataSource = [
-                                { 'x': 'Net-tution and Fees', y: 21 }, { 'x': 'Self-supporting Operations', y: 10 },
-                                { 'x': 'Private Gifts', y: 15 }, { 'x': 'All Other', y: 15 },
-                                { 'x': 'Local Revenue', y: 11 }, { 'x': 'State Revenue', y: 20 },
-                                { 'x': 'Federal Revenue', y: 60 }
+                                { 'x': 'Net-tution and Fees', y: 13, text: '13%' }, { 'x': 'Self-supporting Operations', y: 6, text: '6%' },
+                                { 'x': 'Private Gifts', y: 9, text: '9%' }, { 'x': 'All Other', y: 9, text: '9%' },
+                                { 'x': 'Local Revenue', y: 7, text: '7%' }, { 'x': 'State Revenue', y: 13, text: '13%' },
+                                { 'x': 'Federal Revenue', y: 39, text: '39%' }
                             ];
                             pie.animate();
                             count = 0;

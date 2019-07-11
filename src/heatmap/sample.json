@@ -3,7 +3,6 @@
     "directory": "heatmap",
     "category": "Data Visualization",
     "dataSourcePath": "src/heatmap/data.js",
-    "type": "update",
     "ftName": "heatmap-chart",
     "samples": [
         {
@@ -102,7 +101,6 @@
             "url": "cell-selection",
             "name": "Selection",
             "category": "Features",
-            "type": "update",
             "description": "This demo for Essential JS2 Heatmap control shows how to select and deselect the heat map cell using mouse and touch action.",
             "api": {
                 "HeatMap": [

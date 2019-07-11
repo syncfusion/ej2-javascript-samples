@@ -41,7 +41,7 @@ this.default = function () {
         //configures data source settings
         dataSourceSettings: {
             id: 'Name', parentId: 'Category',
-            dataManager: new ej.data.DataManager(window.hierarchicalTree),
+            dataSource: new ej.data.DataManager(window.hierarchicalTree),
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.shape = { type: 'Text', content: data.Name };
             }
