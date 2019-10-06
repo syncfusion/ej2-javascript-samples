@@ -14,7 +14,7 @@ this.default = function () {
             text: 'Olympic Medal Achievements of most Successful Countries',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }
@@ -28,12 +28,13 @@ this.default = function () {
             title : {text: 'Olympic Year'},
             labels: ['2000', '2004', '2008', '2012', '2016'],
         },
-        dataSource: {
-            data: jsonTableData,
+        dataSource: jsonTableData,
+        dataSourceSettings: {
             isJsonData: true,
             adaptorType: 'Table',
             xDataMapping: 'Region',
-        }, paletteSettings: {
+        },
+        paletteSettings: {
             palette: [{ color: '#F0C27B' },
             { color: '#4B1248' }
             ],

@@ -52,7 +52,7 @@
 <script type="text/x-jsrender" id="childtask">
     ${if(TaskName == 'Oscar moments')}
         <div class="e-gantt-child-taskbar e-custom-moments" style="height:100%;border-radius:5px;">
-            ${if(taskDuration < 4)}
+            ${if(ganttProperties.duration < 4)}
                 <img class="moments" src="src/gantt/images/moments.svg"  height="32" width="32"/>
             ${else}
                 <img class="moments" src="src/gantt/images/moments.svg"  height="32" width="32"/>
@@ -61,7 +61,7 @@
         </div> 
     ${else if(TaskName == 'Oscar performance')}
         <div class="e-gantt-child-taskbar e-custom-performance" style="height:100%;border-radius:5px;">
-            ${if(taskDuration <= 5)}
+            ${if(ganttProperties.duration <= 5)}
                 <img class="face-mask" src="src/gantt/images/face-mask.svg" height="32" width="32" />
             ${else}
                 <img class="face-mask" src="src/gantt/images/face-mask.svg"  height="32" width="32" />
@@ -70,16 +70,16 @@
         </div>   
     ${else} 
         <div class="e-gantt-parent-taskbar e-custom-parent" style="height:100%;border-radius:5px;text-overflow:ellipsis;">
-            ${if(taskDuration < 4)}
+            ${if(ganttProperties.duration < 4)}
                 <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32"  />
             ${else}
-                ${if(Winner && Movie)}
+                ${if(taskData.Winner && taskData.Movie)}
                     <img class="oscar" src="src/gantt/images/oscar.svg"  height="32" width="32"  />
-                    <span class="e-task-label" style="position:absolute; top:13px;font-size:14px;">${Winner}</span>
-                    <span class="e-task-label" style="position:absolute;top:33px;font-size:10px;text-overflow:ellipsis;">${Movie}</span>
-                ${else if(Movie)}
+                    <span class="e-task-label" style="position:absolute; top:13px;font-size:14px;">${taskData.Winner}</span>
+                    <span class="e-task-label" style="position:absolute;top:33px;font-size:10px;text-overflow:ellipsis;">${taskData.Movie}</span>
+                ${else if(taskData.Movie)}
                     <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32"  />
-                    <span class="e-task-label" style="position:absolute; top:0px;font-size:12px;text-overflow:ellipsis;"></br> ${Movie} </span> 
+                    <span class="e-task-label" style="position:absolute; top:0px;font-size:12px;text-overflow:ellipsis;"></br> ${taskData.Movie} </span> 
                 ${else} 
                     <span class="e-task-label"></span> 
                 ${/if}  

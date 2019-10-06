@@ -97,6 +97,7 @@ this.default = function () {
     var random = new ej.circulargauge.CircularGauge(customGauge1());
     random.appendTo('#cutomization-container');
     var usage = new ej.circulargauge.CircularGauge(customGauge2());
+    usage.appendTo('#cutomization-container1');
     var gauge = random;
     var isUsage = false;
     var barColor;
@@ -136,8 +137,8 @@ this.default = function () {
     pointerColor.appendTo('#pointerColor');
     // Code for Property panel
     document.getElementById('usage').onclick = function () {
-        random.destroy();
-        usage.appendTo('#cutomization-container');
+         document.getElementById('cutomization-container').style.display = 'none';
+         document.getElementById('cutomization-container1').style.display = 'block';
         gauge = usage;
         isUsage = true;
         var element = document.getElementById('currentValue');
@@ -160,8 +161,8 @@ this.default = function () {
     };
     document.getElementById('random').onclick = function () {
         if (usage.element) {
-            usage.destroy();
-            random.appendTo('#cutomization-container');
+             document.getElementById('cutomization-container1').style.display = 'none';
+             document.getElementById('cutomization-container').style.display = 'block';
             gauge = random;
             isUsage = false;
             var currentElement = document.getElementById('random');

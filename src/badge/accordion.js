@@ -6,7 +6,7 @@ this.default = function () {
     // Assigning badge data
     var badgeContent = ['7 New', '27 New', '2 New', '14 New'];
 
-    var template = '<div style="display:none"><li class="msg"><span class="e-acrdn-icons e-content-icon people">' +
+    var template = '<div><li class="msg"><span class="e-acrdn-icons e-content-icon people">' +
         '</span>Message Thread</li><li class="msg"><span class="e-acrdn-icons e-content-icon people"></span>Message Thread</li></div>';
     //Initialize Accordion component
     var acrdnObj = new ej.navigations.Accordion({

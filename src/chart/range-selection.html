@@ -8,17 +8,24 @@
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                <td style="width: 60%">
-                  <div>Selection Mode:</div>
+                  Selection Mode:
                </td>
                <td style="width: 40%;">
-                  <div>
-                     <select name="selectIndex" autocomplete="off" id="selmode" style="margin-left: -5px">
+                    <select name="selectIndex" autocomplete="off" id="selmode" style="margin-left: -25px">
                         <option value="DragXY">DragXY</option>
                         <option value="DragX">DragX</option>
                         <option value="DragY">DragY</option>
-                     </select>
-                  </div>
+                        <option value="Lasso">Lasso</option>
+                    </select>
                </td>
+            </tr>
+            <tr id='' style="height: 50px">
+                <td style="width: 80%">
+                    Enable Multi Selection:
+                </td>
+                <td>
+                    <input type="checkbox" id="select" style="margin-top: 5px">
+                </td>
             </tr>
         </table>
     </div>
@@ -37,7 +44,7 @@
     <p>
          Tap to select a point or series, double tap and drag to enable rectangular selection in touch enabled devices.
     </p>
-    <p>Chart supports five mode of selection which can be set using <code>SelectionMode</code> property.
+    <p>Chart supports seven mode of selection which can be set using <code>SelectionMode</code> property.
     </p>
     <ul>
           <li><code>Series</code> - Select the series in chart.</li>
@@ -46,6 +53,7 @@
           <li><code>DragXY</code> - Rectangular selection with respect to both axis.</li>
           <li><code>DragX</code> - Rectangular selection with respect to horizontal axis.</li>
           <li><code>DragY</code> - Rectangular selection with respect to vertical axis.</li>
+          <li><code>Lasso</code> - Select free form of selection area points.</li>
     </ul> 
     <br>
 </div>

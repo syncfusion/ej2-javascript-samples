@@ -11,7 +11,7 @@ this.default = function () {
         columns: [
             {
                 field: 'name', headerText: 'Province', template: '#flagtemplate',
-                filter: { type: 'Excel', itemTemplate: '#flagtemplate' }, width: 170
+                filter: { type: 'Excel', itemTemplate: '#flagtemplate' }, width: 190
             },
             { field: 'population', headerText: 'Population (Million)', valueAccessor: populationValue, textAlign: 'Right', width: 188 },
             { field: 'gdp', headerText: 'GDP Rate %', template: '#gdptemplate', allowFiltering: false, width: 120 },

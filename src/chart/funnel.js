@@ -22,7 +22,7 @@ this.default = function () {
         //Initializing Series
         series: [{
             type: 'Funnel', dataSource: data, xName: 'x', yName: 'y',
-            neckWidth: '10%', neckHeight: '18%',
+            neckWidth: '15%', neckHeight: '18%',
                 dataLabel: {
                     visible: true, position: 'Outside',
                     connectorStyle: { length: '6%' }, name: 'text'
@@ -37,7 +37,7 @@ this.default = function () {
             var funnelTheme = location.hash.split('/')[1];
             funnelTheme = funnelTheme ? funnelTheme : 'Material';
             args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() +
-                funnelTheme.slice(1)).replace(/-dark/i, 'Dark');
+                funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
                 args.accumulation.series[0].height = '70%';
                 args.accumulation.series[0].width = '80%';
@@ -56,7 +56,7 @@ this.default = function () {
             }
         },
         //Initializing Title
-        title: 'Top populated countries in 2017',
+        title: 'Top population countries in the world 2017',
     });
     chart.appendTo('#funnel-container');
     function neckWidth(value) {

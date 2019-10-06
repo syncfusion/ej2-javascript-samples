@@ -1,0 +1,53 @@
+{
+    "name": "Spreadsheet",
+    "directory": "spreadsheet",
+    "category": "Grids",
+    "type": "preview",
+    "dataSourcePath": "src/spreadsheet/data-source.js",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Spreadsheet",
+            "api":{"Spreadsheet":["height", "width", "sheets"], "sheets": ["columns", "rows", "name"], "rangeSettings": ["dataSource"]},
+            "description": "This example demonstrates the default functionalities of the Syncfusion JS 2 Spreadsheet that includes editing, importing & exporting."
+        },
+        {
+            "url": "formula",
+            "name": "Formula",
+            "category": "Spreadsheet",
+            "api":{"Spreadsheet":["height", "width", "sheets"],"sheets": ["columns", "rows", "selectedRange", "name"], "cells": ["value", "index"], "rangeSettings":["dataSource", "startCell"]},
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the way of using basic formulas with minimum configuration."
+        },
+        {
+            "url": "cell-data-binding",
+            "name": "Cell Data Binding",
+            "category": "Data Binding",
+            "api":{"sheets": ["rows", "columns", "selectedRange", "name"],"rows": ["cells", "index"],"cells": ["value", "style"]},
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the cell data binding with minimum configuration."
+        },
+        {
+            "url": "remote-data-binding",
+            "name": "Remote Data Binding",
+            "category": "Data Binding",
+            "api":{"Spreadsheet":["sheets"],"sheets": ["columns", "rows", "name"],
+                "rangeSettings":["dataSource", "query", "startCell"]},
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the way of data binding with remote service using DataManager."
+        },
+        {
+            "url": "cell-formatting",
+            "name": "Cell Formatting",
+            "category": "Formatting",
+            "api":{"sheets": ["columns", "rows", "name"], "rows": ["cells", "index"],"cells": ["value", "style"]},
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the way of cell formatting with minimum configuration."
+        },
+        {
+            "url": "number-formatting",
+            "name": "Number Formatting",
+            "category": "Formatting",
+            "api":{"sheets": ["columns", "rows", "name", "selectedRange"], "rows": ["cells"],"cells": ["value", "format"],
+                "rangeSettings":["dataSource","startCell"]},
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the way of number formatting with minimum configuration."
+        }
+    ]
+}

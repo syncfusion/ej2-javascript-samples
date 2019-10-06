@@ -65,7 +65,7 @@ this.default = function () {
             var stackedTheme = location.hash.split('/')[1];
             stackedTheme = stackedTheme ? stackedTheme : 'Material';
             args.chart.theme = (stackedTheme.charAt(0).toUpperCase() + 
-            stackedTheme.slice(1)).replace(/-dark/i, 'Dark');
+            stackedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
     });
     chart.appendTo('#stacked-container');

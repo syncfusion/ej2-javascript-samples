@@ -104,7 +104,7 @@ renderLineStockChart = function (aapl) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             tooltipRender: function (args) {
                 if  (args.text.split('<br/>')[4]) {

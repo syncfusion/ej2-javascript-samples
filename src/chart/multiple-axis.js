@@ -80,7 +80,7 @@ this.default = function () {
             var axisTheme = location.hash.split('/')[1];
             axisTheme = axisTheme ? axisTheme : 'Material';
             args.chart.theme = (axisTheme.charAt(0).toUpperCase() + 
-                axisTheme.slice(1)).replace(/-dark/i, 'Dark');
+                axisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

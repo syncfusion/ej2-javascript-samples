@@ -30,12 +30,13 @@ var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|pr
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
 // Regex for removing hidden codes
 var reg = /.*custom code start([\S\s]*?)custom code end.*/g;
-var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue'];
+var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue', 'blazor'];
 var sbObj = {
     'angular': 'angular',
     'typescript': '',
     'react': 'react',
-    'vue': 'vue'
+    'vue': 'vue',
+    'blazor': 'blazor'
 };
 var searchEle = ej.base.select('#search-popup');
 var inputele = ej.base.select('#search-input');
@@ -135,16 +136,24 @@ if (ej.base.Browser.isDevice || isMobile) {
     if (sidebar) {
         sidebar.destroy();
     }
-    sidebar = new ej.navigations.Sidebar({ width: '280px', showBackdrop: true, closeOnDocumentClick: true, enableGestures: false });
+    sidebar = new ej.navigations.Sidebar({ width: '280px', showBackdrop: true, closeOnDocumentClick: true, enableGestures: false,change:resizeFunction });
     sidebar.appendTo('#left-sidebar');
 } else {
     sidebar = new ej.navigations.Sidebar({
         width: '282px', target: document.querySelector('.sb-content '),
         showBackdrop: false,
         closeOnDocumentClick: false,
-        enableGestures: false
+        enableGestures: false,
+        change:resizeFunction
     });
     sidebar.appendTo('#left-sidebar');
+}
+
+function resizeFunction() {
+    if (!isMobile && !isTablet) {
+        resizeManualTrigger = true;
+        setTimeout(cusResize(), 400);
+    }
 }
 
 function preventTabSwipe(e) {
@@ -851,16 +860,8 @@ function toggleLeftPane() {
         reverse = sidebar.isOpen;
         if (reverse) {
             sidebar.hide();
-            if (!isMobile && !isTablet) {
-                resizeManualTrigger = true;
-                setTimeout(cusResize(), 400);
-            }
         } else {
             sidebar.show();
-            if (!isMobile && !isTablet) {
-                resizeManualTrigger = true;
-                setTimeout(cusResize(), 400);
-            }
         }
     }
 

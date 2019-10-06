@@ -74,24 +74,24 @@ this.default = function () {
         contextMenuClick: function (args) {
             var record = args.rowData;
             if (args.item.id === 'collapserow') {
-                ganttChart.collapseByID(record.ganttProperties.taskId);
+                ganttChart.collapseByID(Number(record.ganttProperties.taskId));
             }
             if (args.item.id === 'expandrow') {
-                ganttChart.expandByID(record.ganttProperties.taskId);
+                ganttChart.expandByID(Number(record.ganttProperties.taskId));
             }
         },
         contextMenuOpen: function (args) {
             var record = args.rowData;
             if (args.type !== 'Header') {
                 if (!record.hasChildRecords) {
-                    document.querySelectorAll('li#expandrow')[0].setAttribute('style', 'display: none;');
-                    document.querySelectorAll('li#collapserow')[0].setAttribute('style', 'display: none;');
+                    args.hideItems.push('Collapse the Row');
+                    args.hideItems.push('Expand the Row');
                 } else {
-                    var flag = record.expanded;
-                    var val = flag ? 'none' : 'block';
-                    document.querySelectorAll('li#expandrow')[0].setAttribute('style', 'display: ' + val + ';');
-                    val = !flag ? 'none' : 'block';
-                    document.querySelectorAll('li#collapserow')[0].setAttribute('style', 'display: ' + val + ';');
+                    if(record.expanded) {
+                        args.hideItems.push('Expand the Row');
+                    } else {
+                        args.hideItems.push('Collapse the Row');
+                    }
                 }
             }
         },

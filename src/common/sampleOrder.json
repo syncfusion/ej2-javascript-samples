@@ -1,5 +1,5 @@
 {
-    "Grids": ["Data Grid", "Pivot Table", "Tree Grid"],
+    "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
     "Data Visualization": ["Chart", "Stock Chart", "Circular Gauge", "Linear Gauge", "Diagram", "Heatmap Chart", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap"],
     "Editors": ["Rich Text Editor", "DocumentEditor", "Chips", "Button", "In-place Editor"],
     "Calendars": ["Scheduler", "Gantt", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],

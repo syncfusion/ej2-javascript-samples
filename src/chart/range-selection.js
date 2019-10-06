@@ -62,13 +62,14 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Profit Comparision of A and B', legendSettings: { visible: true, toggleVisibility: false },
+        allowMultiSelection: false,
         selectionMode: 'DragXY',
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });
@@ -79,8 +80,17 @@ this.default = function () {
         width: 120,
         change: function () {
             chart.selectionMode = mode.value;
-            chart.dataBind();
+            chart.series[0].animation.enable = false;
+            chart.series[1].animation.enable = false;
+            chart.refresh();
         }
     });
     mode.appendTo('#selmode');
+    document.getElementById('select').onchange = function () {
+        var element = (document.getElementById('select'));
+        chart.allowMultiSelection = element.checked;
+        chart.series[0].animation.enable = false;
+        chart.series[1].animation.enable = false;
+        chart.refresh();
+    };
 };

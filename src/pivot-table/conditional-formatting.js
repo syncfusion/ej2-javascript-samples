@@ -1,5 +1,5 @@
 /**
- * Pivot Table Sample with Calculated Fields.
+ * Pivot Table Sample with Calculated Fields. 
  */
 this.default = function () {
     ej.base.enableRipple(false);

@@ -47,12 +47,8 @@ this.default = function () {
     };
 
     function onPanelResize(args) {
-        if (args.element && args.element.querySelector('.e-panel-container .e-panel-content div') &&
-            dashboardObject.element.querySelector('.e-holder')) {
+        if (args.element && args.element.querySelector('.e-panel-container .e-panel-content div')) {
             var chartObj = (args.element.querySelector('.e-panel-container .e-panel-content div')).ej2_instances[0];
-            var holderElementHeight = parseInt((dashboardObject.element.querySelector('.e-holder')).style.height, 10);
-            var panelContanierElement = args.element.querySelector('.e-panel-content');
-            panelContanierElement.style.height = holderElementHeight - 35 + 'px';
             chartObj.height = '95%';
             chartObj.width = '100%';
             chartObj.refresh();

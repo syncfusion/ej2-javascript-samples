@@ -1,5 +1,5 @@
 /**
- * File Manager sample with azure service
+ * File Manager sample with Azure service
  */
 this.default = function() {
     var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';

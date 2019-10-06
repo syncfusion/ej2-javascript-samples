@@ -67,7 +67,7 @@ this.default = function () {
             var polarScatterTheme = location.hash.split('/')[1];
             polarScatterTheme = polarScatterTheme ? polarScatterTheme : 'Material';
             args.chart.theme = (polarScatterTheme.charAt(0).toUpperCase() + 
-                polarScatterTheme.slice(1)).replace(/-dark/i, 'Dark');
+                polarScatterTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

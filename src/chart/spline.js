@@ -90,7 +90,7 @@ this.default = function () {
             var splineTheme = location.hash.split('/')[1];
             splineTheme = splineTheme ? splineTheme : 'Material';
             args.chart.theme = (splineTheme.charAt(0).toUpperCase() + 
-                splineTheme.slice(1)).replace(/-dark/i, 'Dark');
+                splineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

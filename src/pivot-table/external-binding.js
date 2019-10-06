@@ -106,8 +106,8 @@ this.default = function () {
                     title: { text: pivotObj.dataSourceSettings.values.map(function (args) { return args.caption || args.name; }).join(' ~ ') },
                     labels: yLabels
                 },
-                dataSource: {
-                    data: jsonDataSource,
+                dataSource: jsonDataSource,
+                dataSourceSettings: {
                     isJsonData: true,
                     adaptorType: 'Table',
                     xDataMapping: 'xMember'
@@ -119,7 +119,7 @@ this.default = function () {
                 },
             }, '#heatmap');
         } else {
-            heatmap.dataSource.data = jsonDataSource;
+            heatmap.dataSource = jsonDataSource;
             heatmap.xAxis = {
                 title: { text: pivotObj.dataSourceSettings.rows.map(function (args) { return args.caption || args.name; }).join(' ~ ') },
                 labels: xLabels,

@@ -19,7 +19,8 @@ this.default = function() {
                 }, '|', 'Undo', 'Redo'
             ]
         },
-        created: onCreate
+        created: onCreate,
+        actionComplete: actionCompleteHandler
     });
     defaultRTE.appendTo('#defaultRTE');
 
@@ -70,9 +71,7 @@ this.default = function() {
             if (defaultRTE.formatter.getUndoRedoStack().length === 0) {
                 defaultRTE.formatter.saveData();
             }
-            if (ej.base.Browser.isDevice && ej.base.Browser.isIos) {
-                saveSelection.restore();
-            }
+            saveSelection.restore();
             defaultRTE.executeCommand('insertText', activeEle.textContent);
             defaultRTE.formatter.saveData();
             defaultRTE.formatter.enableUndo(defaultRTE);
@@ -85,6 +84,13 @@ this.default = function() {
             activeEle.classList.remove('e-active');
         }
         dialog.hide();
+    }
+    function actionCompleteHandler(e) {
+        if (e.requestType === 'SourceCode') {
+          defaultRTE.getToolbar().querySelector('#custom_tbar').parentElement.classList.add('e-overlay');
+        } else if (e.requestType === 'Preview') {
+          defaultRTE.getToolbar().querySelector('#custom_tbar').parentElement.classList.remove('e-overlay');
+        }
     }
 };
     

@@ -5,7 +5,6 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageSize: 10 },
         allowFiltering: true,
-        allowResizing: true,
         filterSettings: { type: 'Menu' },
         allowSorting: true,
         showColumnMenu: true,

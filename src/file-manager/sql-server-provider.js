@@ -1,5 +1,5 @@
 /**
- * File Manager sample with azure service
+ * File Manager sample with sql service
  */
 this.default = function() {
     var hostUrl = 'https://ng2jq.syncfusion.com/ej2-sql-service/';

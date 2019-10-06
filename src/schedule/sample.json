@@ -2,11 +2,10 @@
     "name": "Scheduler",
     "directory": "schedule",
     "category": "Calendars",
-    "type": "update",
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
-    "samples": [
-        {
+    "type": "update",
+    "samples": [{
             "url": "default",
             "name": "Default Functionalities",
             "category": "Scheduler",
@@ -60,7 +59,6 @@
             "url": "recurrence-events",
             "name": "Recurring Events",
             "category": "Appointments",
-            "type": "update",
             "description": "This example for Essential JS2 Scheduler control shows the scheduler with recurring meetings handled on a regular pattern.",
             "api": {
                 "Schedule": [
@@ -204,6 +202,19 @@
                     "currentView",
                     "views",
                     "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "year",
+            "name": "Year View",
+            "category": "Views",
+            "type": "new",
+            "description": "This example for Essential JS2 Scheduler control shows the layout of Horizontal and Vertical Year views and how it works.",
+            "api": {
+                "Schedule": [
+                    "views",
                     "eventSettings"
                 ]
             }
@@ -624,7 +635,6 @@
             "url": "cell-dimension",
             "name": "Cell Dimension",
             "category": "Customization",
-            "type": "update",
             "description": "This example for Essential JS2 Scheduler control shows how to set the width and height of the cells by overriding the default CSS classes.",
             "api": {
                 "Schedule": [
@@ -681,7 +691,6 @@
             "url": "print",
             "name": "Print",
             "category": "Exporting",
-            "type": "new",
             "hideOnDevice": false,
             "description": "This example demonstrates how to print the Essential JS2 Scheduler element at client-side with themes enabled.",
             "api": {
