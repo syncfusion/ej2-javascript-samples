@@ -18,9 +18,9 @@ this.default = function () {
  */
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
-var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
-var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4'];
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Bootstrap4', 'Highcontrast'];
+var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#a16ee5', '#79ECE4'];
     var chart = new ej.charts.Chart({
         chartArea: { border: { width: 0 } },
         //Initializing Primary X Axis

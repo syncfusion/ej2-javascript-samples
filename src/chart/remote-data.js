@@ -1,5 +1,5 @@
 var dataManager = new ej.data.DataManager({
-    url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/'
+    url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders'
 });
 var query = new ej.data.Query().take(5).where('Estimate', 'lessThan', 3, false);
 var labelRender = function (args) {
@@ -70,7 +70,7 @@ this.default = function () {
             {
                 type: 'Column',
                 dataSource: dataManager,
-                xName: 'Assignee', yName: 'Estimate', query: query,
+                xName: 'CustomerID', yName: 'Freight', query: query,
                 name: 'Story Point',
                 animation: { enable: false },
                 marker: {
@@ -101,7 +101,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
            // custom code end
         title: 'Sprint Task Analysis', legendSettings: { visible: false },

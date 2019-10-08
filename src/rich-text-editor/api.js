@@ -10,7 +10,7 @@ this.default = function() {
     defaultAPI.appendTo("#defaultRTE");
 
     var maxLength = new ej.inputs.NumericTextBox({
-        value: 560,
+        value: 1000,
         min: 555,
         max: 2000,
         format: 'n0',

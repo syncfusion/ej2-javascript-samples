@@ -19,7 +19,7 @@ this.default = function () {
             enable: false
         },
         titleSettings: {
-            text: 'Population density (per square kilometers) - 2015',
+            text: 'Population density (per square kilometer) - 2015',
             textStyle: {
                 size: '16px'
             }
@@ -37,7 +37,7 @@ this.default = function () {
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'name',
-                    format: '${name} : ${density} per square kms'
+                    format: '${name} : ${density}'
                 },
                 shapeSettings: {
                     colorValuePath: 'density',
@@ -133,6 +133,14 @@ this.default = function () {
             maps.layers[0].shapeSettings.colorMapping[5].color = null;
             maps.layers[0].shapeSettings.colorMapping[5].label = null;
         }
+        maps.refresh();
+    };
+    var toggleLegend;
+    var legendCheckBox = new ej.buttons.CheckBox({
+        change: toggleLegend, checked: false
+    }, '#toggleLegend');
+    legendCheckBox.change = toggleLegend = function (e) {
+        maps.legendSettings.toggleLegendSettings.enable = e.checked;
         maps.refresh();
     };
 };

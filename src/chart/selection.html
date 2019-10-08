@@ -8,9 +8,9 @@
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                 <td style="width: 60%">
-                    <div>Selection Mode:</div>
+                    Selection Mode:
                 </td>
-                <td style="width: 40%;">
+                <td style="width: 40%">
                     <select name="selectIndex" autocomplete="off" id="selmode" style="margin-left: -25px">
                         <option value="Point">Point</option>
                         <option value="Series">Series</option>
@@ -20,10 +20,10 @@
             </tr>
             <tr id='' style="height: 50px">
                 <td style="width: 80%">
-                    <div> Enable Multi Selection:</div>
+                    Enable Multi Selection:
                 </td>
                 <td>
-                    <input type="checkbox" id="select" style="margin-top: 15px">
+                    <input type="checkbox" id="select" style="margin-top: 5px">
                 </td>
             </tr>
         </table>
@@ -44,7 +44,7 @@
     <p>
         Tap to select a point or series, double tap and drag to enable rectangular selection in touch enabled devices.
     </p>
-    <p>Chart supports five mode of selection which can be set using
+    <p>Chart supports seven mode of selection which can be set using
         <code>SelectionMode</code> property.
     </p>
     <ul>
@@ -60,6 +60,8 @@
             <code>DragX</code> - Rectangular selection with respect to horizontal axis.</li>
         <li>
             <code>DragY</code> - Rectangular selection with respect to vertical axis.</li>
+        <li>
+            <code>Lasso</code> - Select free form of selection area points.</li>
     </ul>
     <br>
 </div>

@@ -32,7 +32,7 @@ this.default = function () {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: false, header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
+        tooltip: { enable: true, header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
         //Initializing Title
         title: 'Mobile Browser Statistics',
          // custom code start
@@ -40,7 +40,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

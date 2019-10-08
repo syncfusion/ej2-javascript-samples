@@ -2,6 +2,7 @@
     "name": "Tree Grid",
     "directory": "tree-grid",
     "category": "Grids",
+    "type": "update",
     "ftName" :"treegrid",
     "type": "update",
     "dataSourcePath": "src/tree-grid/data-source.js",
@@ -65,6 +66,10 @@
          {
             "url":"checkbox-column", "name": "Checkbox Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","enableHierarchySelection"] },
             "description": "This demo explains how the hierarchy selection between the records using column checkboxes in Essential JS2 TreeGrid control."
+         },
+         {
+            "url":"frozencolumn", "name": "Frozen Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
+            "description": "This demo for Essential JS 2 treegrid control shows frozen columns feature of treegrid. Scroll the movable content to view the frozen columns.", "type": "new"
          },   
          {  
             "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
@@ -76,11 +81,15 @@
          },
          {  
             "url": "row-template", "name": "Row Template", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
-            "description": "This demo for Essential JS 2 TreeGrid control shows the usage of the row template feature. We have rendered each TreeGrid row using template.", "type": "new"
+            "description": "This demo for Essential JS 2 TreeGrid control shows the usage of the row template feature. We have rendered each TreeGrid row using template."
+         },
+         {  
+            "url": "drag-drop", "name": "Drag And Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] }, "type": "new",
+            "description": "This demo for Essential JS 2 TreeGrid control how the rows can be dragged within the treegrid using the row drag-and-drop feature."
          },
          {  
             "url": "detail-template", "name": "Detail Template", "category": "Rows","api":{"TreeGrid":["dataSource","detailTemplate","height","width","columns","childMapping","treeColumnIndex"] },
-            "description": "This demo shows TreeGrid with detail template feature and also each row contains detailed information about a row.", "type": "new"
+            "description": "This demo shows TreeGrid with detail template feature and also each row contains detailed information about a row."
          },
          {  
             "url":"inline.editing", "name": "Inline Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","height","toolbar"] },
@@ -134,8 +143,8 @@
             "url":"paging.api", "name": "Paging API", "category":"Paging","api":{"TreeGrid":["dataSource","allowPaging","pageSettings","columns","childMapping", "treeColumnIndex"] },
             "description": "This demo explains how to customize a pager using the APIs that are relevant to paging of Syncfusion Essential JS2 TreeGrid control"
          }, 
-         { "url":"default-scrolling", "name": "Default Scrolling", "description":"This demo for Essential JS 2 TreeGrid control shows the usage of the horizontal and vertical scrollbars to view TreeGrid content that exceeds the TreeGrid area.", "category":"Scrolling","api":{"TreeGrid":["dataSource","height","width","columns"] }, "type": "new" },
-         { "url":"virtual-scrolling", "name": "Virtual Scrolling", "description":"This demo demonstrates how to use Essential JS 2 TreeGrid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] }, "type": "new" }, 
+         { "url":"default-scrolling", "name": "Default Scrolling", "description":"This demo for Essential JS 2 TreeGrid control shows the usage of the horizontal and vertical scrollbars to view TreeGrid content that exceeds the TreeGrid area.", "category":"Scrolling","api":{"TreeGrid":["dataSource","height","width","columns"] } },
+         { "url":"virtual-scrolling", "name": "Virtual Scrolling", "description":"This demo demonstrates how to use Essential JS 2 TreeGrid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] } }, 
          {
             "url":"selection", "name": "Default Selection", "category":"Selection","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowSelection","selectionSettings","treeColumnIndex"] },
             "description": "This demo explains the customization of selection mode and toggle selection of Syncfusion Essential JS2 TreeGrid."

@@ -15,7 +15,7 @@ this.default = function () {
     initializeTitleBar(true); 
     updateDocumentTitle();
     wireEventsInTitleBar();
-    container.documentEditor.documentChange = function () {
+    container.documentChange = function () {
         updateDocumentTitle();
     };
      var documentTitle;

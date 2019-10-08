@@ -11,16 +11,18 @@ this.default = function() {
         toolbarSettings: {
             items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-                'LowerCase', 'UpperCase', '|',
+                'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
                 'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
                 'Outdent', 'Indent', '|',
-                'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-                'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+                'CreateTable', 'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+                'SourceCode', 'FullScreen', '|', 'Undo', 'Redo'
+            ]
         },
         actionBegin: handleFullScreen,
         actionComplete: actionCompleteHandler
     });
     iframeRTE.appendTo('#iframeRTE');
+
     function handleFullScreen(e) {
         var sbCntEle = document.querySelector('.sb-content.e-view');
         var sbHdrEle = document.querySelector('.sb-header.e-view');
@@ -29,13 +31,12 @@ this.default = function() {
         if (ej.base.Browser.isDevice) {
             leftBar = document.querySelector('#right-sidebar');
             transformElement = document.querySelector('.sample-browser.e-view.e-content-animation');
-        }
-        else {
+        } else {
             leftBar = document.querySelector('#left-sidebar');
             transformElement = document.querySelector('#right-pane');
         }
         if (e.targetItem === 'Maximize') {
-            if (ej.base.Browser.isDevice &&  ej.base.Browser.isIos) {
+            if (ej.base.Browser.isDevice && ej.base.Browser.isIos) {
                 ej.base.addClass([sbCntEle, sbHdrEle], ['hide-header']);
             }
             ej.base.addClass([leftBar], ['e-close']);
@@ -44,9 +45,8 @@ this.default = function() {
                 transformElement.style.marginLeft = '0px';
             }
             transformElement.style.transform = 'inherit';
-        }
-        else if (e.targetItem === 'Minimize') {
-            if (ej.base.Browser.isDevice &&  ej.base.Browser.isIos) {
+        } else if (e.targetItem === 'Minimize') {
+            if (ej.base.Browser.isDevice && ej.base.Browser.isIos) {
                 ej.base.removeClass([sbCntEle, sbHdrEle], ['hide-header']);
             }
             ej.base.removeClass([leftBar], ['e-close']);
@@ -57,8 +57,8 @@ this.default = function() {
             transformElement.style.transform = 'translateX(0px)';
         }
     }
+
     function actionCompleteHandler() {
-        setTimeout(function () { iframeRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
+        setTimeout(function() { iframeRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
     }
 };
-    

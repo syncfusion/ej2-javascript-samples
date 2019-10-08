@@ -80,9 +80,7 @@
                 { "displayName": "marker-cluster.html", "path":"src/maps/marker-cluster.html" },
                 { "displayName": "marker-cluster.js", "path":"src/maps/marker-cluster.js" },
                 { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
-            ],
-            "type": "new"
-            
+            ]           
         },
         {
             "url": "data-label",
@@ -124,6 +122,7 @@
             "name": "Legend",
             "description": "This demo for Essential JS2 Maps control visualizes grouping of countries in the legend based on its population density.",
             "category": "Features",
+            "type": "update",
             "sourceFiles":[
                 { "displayName": "legend.html", "path":"src/maps/legend.html" },
                 { "displayName": "legend.js", "path":"src/maps/legend.js" },
@@ -326,8 +325,7 @@
                 { "displayName": "cyber-attack-map.html", "path":"src/maps/dynamic-marker.html" },
                 { "displayName": "cyber-attack-map.js", "path":"src/maps/dynamic-marker.js" },
                 { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
-            ],
-            "type": "new"
+            ]
         },
         {
             "url": "pie",

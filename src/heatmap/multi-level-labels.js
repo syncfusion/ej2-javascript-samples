@@ -7,7 +7,7 @@ this.default = function () {
             text: 'Product wise Monthly sales revenue for a e-commerce website',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

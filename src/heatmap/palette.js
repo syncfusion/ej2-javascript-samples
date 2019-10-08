@@ -4,7 +4,7 @@ this.default = function () {
             text: 'U.S. Government Energy Consumption by Agency (Trillion Btu)',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

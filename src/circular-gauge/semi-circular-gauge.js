@@ -12,13 +12,14 @@ this.default = function () {
         // custom code end
         moveToCenter: false,
         axes: [{
+            hideIntersectingLabel: true,
             startAngle: 270, endAngle: 90,
             lineStyle: { width: 0, color: '#0450C2' },
             labelStyle: {
                 position: 'Outside', autoAngle: true,
                 font: { fontWeight: 'normal' }
             }, majorTicks: {
-                position: 'Inside', width: 2, height: 12, interval: 20
+                position: 'Inside', width: 2, height: 12, interval: 4
             }, minorTicks: {
                 position: 'Inside', height: 5, width: 1, interval: 2
             },
@@ -97,5 +98,13 @@ this.default = function () {
                 circulargauge.centerY = '' + max + '%';
                 circulargauge.refresh();
             }
+        };
+        var intersectionChanage;
+        var labelIntersectionCheckBox = new ej.buttons.CheckBox({
+            change: intersectionChanage, checked: true,
+        }, '#hidelabel');
+        labelIntersectionCheckBox.change = opacity = function (e) {
+            circulargauge.axes[0].hideIntersectingLabel = e.checked;
+            circulargauge.refresh();
         };
 };

@@ -21,6 +21,26 @@ this.default = function () {
         toolbarClick: onToolbarClick,
     });
     defaultRTE.appendTo('#defaultRTE');
+    var select = new ej.buttons.CheckBox({
+        change: function(args) {
+            defaultRTE.enableAutoUrl = args.checked;
+            defaultRTE.dataBind();
+        }
+    });
+    select.appendTo('#select');
+    var listObj = new ej.dropdowns.DropDownList({
+        change: function(args) {
+            if (listObj.value === 'base') {
+                defaultRTE.insertImageSettings.saveFormat = 'Base64';
+            } else {
+                defaultRTE.insertImageSettings.saveFormat = 'Blob';
+            }
+
+            defaultRTE.dataBind();
+        }
+    });
+    listObj.appendTo('#saveOption');
+
     function onToolbarClick(e) {
         var nodeObj = new ej.richtexteditor.NodeSelection();
         var range = nodeObj.getRange(defaultRTE.contentModule.getDocument());

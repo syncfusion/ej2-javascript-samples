@@ -76,7 +76,7 @@ this.default = function () {
             var stepTheme = location.hash.split('/')[1];
             stepTheme = stepTheme ? stepTheme : 'Material';
             args.chart.theme = (stepTheme.charAt(0).toUpperCase() + 
-                stepTheme.slice(1)).replace(/-dark/i, 'Dark');
+                stepTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

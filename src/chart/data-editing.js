@@ -45,7 +45,7 @@ this.default = function () {
                     width: 10,
                     height: 10
                 },
-                yName: 'y', name: 'Product A', fill: '#00BDAE',
+                yName: 'y', name: 'Product A', fill: 'orange',
             },
             {
                 type: 'Line',
@@ -61,12 +61,12 @@ this.default = function () {
                     width: 10,
                     height: 10
                 },
-                yName: 'y', name: 'Product B', fill: '#357CD2',
+                yName: 'y', name: 'Product B', fill: 'darkblue',
             },
 
         ],
         //Initializing Chart Title
-        title: 'Sales prediction of products',
+        title: 'Sales Prediction of Products',
         //Initializing Tooltip
         tooltip: {
             enable: true
@@ -77,7 +77,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
          // custom code end
     });

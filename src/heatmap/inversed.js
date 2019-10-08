@@ -7,7 +7,7 @@ this.default = function () {
             text: 'Population Growth Rate of the most Populous Countries',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

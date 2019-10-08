@@ -15,8 +15,8 @@
         "hasher": "^1.2.0",
         "markdown-it": "^8.4.0",
         "run-sequence": "^2.2.0",
-        "webpack": "2.5.1",
-        "webpack-stream": "^4.0.0"
+        "webpack": "*",
+        "webpack-stream": "*"
     },
     "devDependencies": {
         "elasticlunr": "0.9.5",

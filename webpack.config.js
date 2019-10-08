@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
+    mode : 'production',
     entry: "./src/common/index.js",
     entry: { 'src/common/index.min': './src/common/index' },
     output: {
@@ -8,16 +9,5 @@ module.exports = {
         filename: '[name].js',
         libraryTarget: 'this'
     },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            beautify: false,
-            output: {
-                comments: false
-            },
-            compress: {
-                warnings: false,
-                unused: true
-            }
-        })
-    ]
+   
 }

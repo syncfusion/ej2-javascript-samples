@@ -29,15 +29,15 @@ var longitude = [];
                 addMarker(args);
             }
             if (lineCheck && !connectLineCheck) {
-                addLine(args, widthCheck['value']);
+                addLine(args, widthCheck.value);
             }
             if (connectLineCheck) {
-                addLine(args, widthCheck['value'], true);
+                addLine(args, widthCheck.value, true);
             }
             if (markerCheck || lineCheck || connectLineCheck) {
                 maps.refresh();
-                if (togglebtn.disabled && (maps.layers[0].markerSettings['length'] ||
-                maps.layers[0].navigationLineSettings['length'])) {
+                if (togglebtn.disabled && (maps.layers[0].markerSettings.length ||
+                maps.layers[0].navigationLineSettings.length)) {
                     togglebtn.disabled = false;
                 }
             }
@@ -60,13 +60,13 @@ var longitude = [];
                 if (e.checked) {
                     connectlineCheckBox.disabled = false;
                     connectlineCheckBox.checked = false;
-                    widthCheck['disabled'] = false;
+                    widthCheck.disabled = false;
                 } else {
                     connectLineCheck = e.checked;
                     emptySavedLinePositions();
                     connectlineCheckBox.disabled = true;
                     connectlineCheckBox.checked = false;
-                    widthCheck['disabled'] = true;
+                    widthCheck.disabled = true;
                 }
             }
         },
@@ -101,7 +101,7 @@ var longitude = [];
     });
     togglebtn.appendTo('#togglebtn');
 
-    document.getElementById('togglebtn').onclick = () => {
+    document.getElementById('togglebtn').onclick = function () {
         maps.layers[0].markerSettings = [];
         maps.layers[0].navigationLineSettings = [];
         navigationLines = [];
@@ -109,12 +109,12 @@ var longitude = [];
         maps.refresh();
         togglebtn.disabled = true;
     };
-    var emptySavedLinePositions = () => {
+    var emptySavedLinePositions = function () {
         latitude = [];
         longitude = [];
     };
     var addMarker = function (args) {
-        if (args['latitude'] !== null && args['longitude'] !== null) {
+        if (args.latitude !== null && args.longitude !== null) {
             var layerIndex = (args.target.indexOf('_LayerIndex_') !== -1) ?
                 parseFloat(args.target.split('_LayerIndex_')[1].split('_')[0]) : 0;
             var marker;

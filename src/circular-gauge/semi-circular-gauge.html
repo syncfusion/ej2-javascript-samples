@@ -41,7 +41,7 @@
             <tr >
                 <td style="width: 40%">
                     <div class="property-text"> Radius based on angle</div>
-                </td>
+                </td>       
                 <td style="width: 40%;">
                     <div>
                         <input type="checkbox" id="angle" checked/>
@@ -68,7 +68,16 @@
                     </div>
                 </td>
             </tr>
-    
+            <tr>
+                <td>
+                    <div id="enablehide"> Hide intersecting labels</span> </div>
+                </td>
+                <td>
+                    <div style="padding-top: 0px">
+                        <input type="checkbox" id="hidelabel" checked>
+                    </div>
+                </td>
+            </tr>
         </table>
     </div>
     </div>
@@ -79,7 +88,7 @@
     </div>
     <div id="description">
         <p>
-            In this example, you can see how to render the circular gauge with modified start and end angles to form semi or quarter circular gauges. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles.
+            In this example, you can see how to render the circular gauge with modified start and end angles to form semi or quarter circular gauges. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles. You can also hide the intersect labels using 'hideIntersectingLabel' property.
         </p>
         <p>
             For more information on ranges, refer to this

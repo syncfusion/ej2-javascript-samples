@@ -2,6 +2,18 @@
  *   Sample for CSS input boxes.
  */
 this.default = function () {
+    var outlineTextbox = new ej.inputs.TextBox({
+        placeholder: 'Outlined',
+        cssClass: 'e-outline',
+        floatLabelType: 'Auto'
+    });
+    outlineTextbox.appendTo('#outlined');
+    var filledTextbox = new ej.inputs.TextBox({
+        placeholder: 'Filled',
+        cssClass: 'e-filled',
+        floatLabelType: 'Auto',
+    });
+    filledTextbox.appendTo('#filled');
     var inputobj1 = new ej.inputs.TextBox({
         placeholder: 'First Name',
         floatLabelType: 'Auto'

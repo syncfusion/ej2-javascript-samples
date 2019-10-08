@@ -21,7 +21,7 @@ this.default = function () {
             text: 'GDP Growth Rate for Major Economies (in Percentage)',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

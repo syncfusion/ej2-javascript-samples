@@ -3,40 +3,44 @@
  */
 var textArea;
 var mdsource;
-this.default = function () {
+this.default = function() {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '250px',
-        formatter: new ej.richtexteditor.MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.'} }),
+        formatter: new ej.richtexteditor.MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.' } }),
         toolbarSettings: {
             items: ['Bold', 'Italic', 'StrikeThrough', '|',
-                'Formats', 'OrderedList', 'UnorderedList', '|',
+                'Formats', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
                 'CreateLink', 'Image', 'CreateTable', '|',
                 {
                     tooltipText: 'Preview',
                     template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
                         '<span class="e-btn-icon e-md-preview e-icons"></span></button>'
-                }, '|', 'Undo', 'Redo']
+                }, '|', 'Undo', 'Redo'
+            ]
+
         },
         editorMode: 'Markdown',
-        created: function () {
+        created: function() {
             textArea = defaultRTE.contentModule.getEditPanel();
-            textArea.addEventListener('keyup', function (e) {
+            textArea.addEventListener('keyup', function(e) {
                 markdownConversion();
             });
             mdsource = document.getElementById('preview-code');
-            mdsource.addEventListener('click', function (e) {
+            mdsource.addEventListener('click', function(e) {
                 fullPreview();
                 if (e.currentTarget.classList.contains('e-active')) {
                     defaultRTE.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                        'UnorderedList', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo']);
-                }
-                else {
+                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo'
+                    ]);
+                } else {
                     defaultRTE.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                        'UnorderedList', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo']);
+                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo'
+                    ]);
                 }
             });
         }
     });
+
     function markdownConversion() {
         if (mdsource.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';

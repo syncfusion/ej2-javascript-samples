@@ -13,7 +13,8 @@ this.default = function () {
         ]
     });
     grid.appendTo('#Grid');
-};
+
 window.format = function (value) {
     return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
+};
 };

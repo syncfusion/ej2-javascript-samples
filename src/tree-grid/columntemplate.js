@@ -41,7 +41,7 @@ this.default = function () {
         },
         rowHeight: 83,
         columns: [
-            { field: 'EmpID', headerText: 'Employee ID', width: 95 },
+            { field: 'EmpID', headerText: 'Employee ID', width: 100 },
             { field: 'Name', headerText: 'Name', width: 110 },
             { field: 'DOB', headerText: 'DOB', width: 90, textAlign: 'Right', format: 'yMd' },
             {

@@ -21,6 +21,7 @@ this.default = function() {
             ]
         },
         created: onCreate,
+        actionComplete: actionCompleteHandler
     });
     defaultRTE.appendTo('#defaultRTE');
 
@@ -105,5 +106,12 @@ this.default = function() {
             activeEle.classList.remove('e-active');
         }
         dialog.hide();
+    }
+    function actionCompleteHandler(e) {
+        if (e.requestType === 'SourceCode') {
+          defaultRTE.getToolbar().querySelector('#emot_tbar').parentElement.classList.add('e-overlay');
+        } else if (e.requestType === 'Preview') {
+          defaultRTE.getToolbar().querySelector('#emot_tbar').parentElement.classList.remove('e-overlay');
+        }
     }
 };      

@@ -57,7 +57,7 @@ this.default = function () {
             var errorBarTheme = location.hash.split('/')[1];
             errorBarTheme = errorBarTheme ? errorBarTheme : 'Material';
             args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() +
-                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark');
+                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

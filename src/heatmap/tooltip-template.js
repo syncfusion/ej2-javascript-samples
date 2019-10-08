@@ -4,7 +4,7 @@ this.default = function () {
             text: 'Crude Oil Production of Non-OPEC Countries (in Million barrels per day)',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

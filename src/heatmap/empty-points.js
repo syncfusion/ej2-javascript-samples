@@ -4,7 +4,7 @@ this.default = function () {
             text: 'Deffective Count per 1000 Products from a Manufacturing Unit',
             textStyle: {
                 size: '15px',
-                fontWeight: 500,
+                fontWeight: '500',
                 fontStyle: 'Normal',
                 fontFamily: 'Segoe UI'
             }

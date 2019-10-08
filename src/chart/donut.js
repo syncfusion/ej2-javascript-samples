@@ -30,7 +30,7 @@ this.default = function () {
             visible: true, position: 'Top'
         },
         //Initializing Tooltip
-        tooltip: { enable: false },
+        tooltip: { enable: true },
         //Initializing Title
         title: 'Project Cost Breakdown',
          // custom code start
@@ -38,7 +38,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

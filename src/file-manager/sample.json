@@ -31,7 +31,6 @@
             "name": "Drag and Drop",
             "category": "File Manager",
             "api": { "FileManager": [ "ajaxSettings" ] },
-            "type": "new",
             "description": "This example of FileManager for JavaScript(ES5) with drag and drop feature to drag and drop the file."
         },
         {
@@ -39,7 +38,6 @@
             "name": "File Upload",
             "category": "Use Case",
             "api": { "FileManager": [ "ajaxSettings" ] },
-            "type": "new",
             "description": "FileManager for JavaScript(ES5) with how to render the File Manager component inside the Dialog component."
         },
         {
@@ -47,7 +45,6 @@
             "name": "Azure Blob Provider",
             "category": "Cloud Service Providers",
             "api": { "FileManager": [ "ajaxSettings" ] },
-            "type": "new",
             "description": "This example of FileManager for JavaScript(ES5) with how to configure and use the azure cloud service."
         },
         {
@@ -56,7 +53,31 @@
             "category": "Cloud Service Providers",
             "type": "new",
             "api": { "FileManager": ["ajaxSettings", "view"] },
-            "description": "This example demonstrates how to configure and use the sql server database service in a JavaScript (TypeScript) File Manager."
+            "description": "This example demonstrates how to configure and use the sql server database service in a JavaScript(ES5) File Manager."
+        },
+        {
+            "url": "nodejs-file-provider",
+            "name": "NodeJS File Provider",
+            "category": "Cloud Service Providers",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates how to configure and use the nodejs server database service in a JavaScript(ES5)  File Manager."
+        },
+        {
+            "url": "amazon-s3-provider",
+            "name": "Amazon S3 File Provider",
+            "category": "Cloud Service Providers",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates how to configure and use the Amazon S3 service in a JavaScript(ES5)  File Manager."
+        },
+        {
+            "url": "firebase-service",
+            "name": "Firebase Realtime File Provider",
+            "category": "Cloud Service Providers",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates how to configure and use the firebase realtime database service in a JavaScript(ES5)  File Manager."
         }
     ]
 }

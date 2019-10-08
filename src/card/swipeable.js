@@ -31,7 +31,7 @@
         }
         function touchSwipeHandler(e) {
             var ele = ej.base.closest(e.originalEvent.target, '.e-card');
-            if (!ele.classList.contains('e-card')) {
+            if (ej.base.isNullOrUndefined(ele)) {
                 return;
             }
             if (ele.parentElement.querySelector('.card-out')) {

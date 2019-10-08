@@ -56,8 +56,8 @@ this.default = function () {
         yAxis: {
             labels:  ['Jan-Feb', 'Mar-Apr', 'May-Jun', 'Jul-Aug', 'Sep-Oct', 'Nov-Dec'],
         },
-        dataSource: {
-            data: jsonCellBubbleData,
+        dataSource: jsonCellBubbleData,
+        dataSourceSettings: {
             isJsonData: true,
             adaptorType: 'Cell',
             xDataMapping: 'Year',
