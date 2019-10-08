@@ -16,7 +16,7 @@ var bucketName = 'ej2.syncfusion.com';
 var match = ['Property', 'Method', 'Event'];
 var link = '//' + bucketName + '/';
 
-var apiLink = 'http://npmci.syncfusion.com.s3-website.ap-south-1.amazonaws.com/production/';
+var apiLink = '';
 
 link += 'javascript/documentation/';
 
@@ -846,10 +846,11 @@ function getSamplePathArray(samplesAr) {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /////////////////////////////////////////////////////////////////////// Build & Serve ///////////////////////////////////////////////////////////////////////
 var runSequence = require('run-sequence');
 gulp.task('build', function (done) {
-    runSequence('process-api', 'create-locale', 'combine-samplelist', 'bundle', 'stacblitz-json', 'next-prev', done);
+    runSequence('create-locale', 'combine-samplelist', 'bundle', 'stacblitz-json', 'next-prev', done);
  });
 
 
