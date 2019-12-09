@@ -3,7 +3,6 @@
     "directory": "circular-gauge",
     "category": "Data Visualization",
     "ftName": "circulargauge",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -38,8 +37,7 @@
         {
             "url": "semi-circular-gauge",
             "name": "Semi-circular Gauge",
-            "category": "Circular Gauge",
-			"type": "update"
+            "category": "Circular Gauge"
         },
         {
             "url": "arc-gauge",
@@ -49,8 +47,7 @@
         {
             "url": "legend",
             "name": "Legend",
-            "category": "Circular Gauge",
-            "type": "new"
+            "category": "Circular Gauge"
         },
         {
             "url": "compass",
@@ -86,8 +83,7 @@
             "url": "tooltip",
             "name": "Tooltip",
             "description": "This demo for Essential JS2 Circular Gauge control visualizes the tooltip template for circular gauge pointer.",
-            "category": "User Interaction",
-			"type": "update"
+            "category": "User Interaction"
         },
         {
             "url": "data-sample",

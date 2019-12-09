@@ -1,0 +1,64 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="HeaderTemplate">
+        </div>
+        <div style="float: right; margin: 10px;">Source:
+            <a href="https://en.wikipedia.org/wiki/Construction" target='_blank'>https://en.wikipedia.org/</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-template" id="resource">
+    <div>
+        <div>
+            <img src="src/gantt/images/Resources.png" width="20" height="20" class="e-image" />Resources
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="projectName">
+    <div>
+        <div>
+            <img src="src/gantt/images/Task name.png" width="20" height="20" class="e-image" />  Task Name
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="dateTemplate">
+    <div>
+        <div>
+            <img src="src/gantt/images/Start date.png" width="20" height="20" class="e-image" />  Start Date
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="durationTemplate">
+    <div>
+        <div>
+            <img src="src/gantt/images/Duration.png" width="20" height="20" class="e-image" />  Duration
+        </div>
+    </div>
+</script>
+<script type="text/x-template" id="progressTemplate">
+    <div>
+        <div>
+            <img src="src/gantt/images/Progress.png" width="20" height="20" class="e-image" />  Progress
+        </div>
+    </div>
+</script>
+
+<div id="action-description">
+    <p>This sample demonstrates the Gantt header template feature. In this sample, custom icons have been shown in the column headers.</p>
+</div>
+
+<div id="description">
+    <p>
+        The Gantt provides a way to define a custom element in header element. The <code>columns -> headerTemplate</code> property accepts either string or HTML element`s ID value,
+        which will be used as the template for the header cell.
+    </p>
+    <p>In this demo, we have rendered the customized template for all column headers.</p> 
+    <p>More information about the header template can be found in documentation section.</p>
+</div>
+
+<style>
+    .e-image {
+        margin-right: 8px;
+    }
+</style>

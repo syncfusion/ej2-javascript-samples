@@ -17,7 +17,6 @@
                 { "displayName": "default-datasource.json", "path":"src/maps/map-data/default-datasource.json" },
                 { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
             ]
-           
         },
         {
             "url": "projection",
@@ -49,6 +48,7 @@
         {
             "url": "marker",
             "name": "Marker",
+            "type": "update",
             "description": "This demo for Essential JS2 Maps control shows the top 25 populated cities in the world by displaying the markers in their locations.",
             "category": "Features",
             "sourceFiles":[
@@ -57,7 +57,6 @@
                 { "displayName": "map-data.js", "path":"src/maps/map-data.js" },
                 { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
             ]
-          
         },
         {
             "url": "marker-template",
@@ -122,7 +121,6 @@
             "name": "Legend",
             "description": "This demo for Essential JS2 Maps control visualizes grouping of countries in the legend based on its population density.",
             "category": "Features",
-            "type": "update",
             "sourceFiles":[
                 { "displayName": "legend.html", "path":"src/maps/legend.html" },
                 { "displayName": "legend.js", "path":"src/maps/legend.js" },
@@ -219,6 +217,19 @@
             ]
         },
         {
+            "url": "zoom-marker",
+            "name": "Zoom to fit all markers",
+            "type": "new",
+            "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
+            "category": "User Interaction",
+            "sourceFiles":[
+                { "displayName": "zoom-marker.html", "path":"src/maps/zoom-marker.html" },
+                { "displayName": "zoom-marker.js", "path":"src/maps/zoom-marker.js" },
+                { "displayName": "southamerica-country-capitals.json", "path":"src/maps/map-data/southamerica-country-capitals.json" },
+                { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
+            ]
+        },
+        {
             "url": "drilldown",
             "name": "Drill Down",
             "description": "This demo for Essential JS2 Maps control demonstrates drill down with all the continents in the initial view and countries on drill.",
@@ -305,6 +316,7 @@
                 { "displayName": "oklahoma.json", "path":"src/maps/map-data/oklahoma.json" }
             ]
         },
+     
         {
             "url": "cyber-attack-map",
             "name": "Cyber Attack Map",
@@ -352,6 +364,19 @@
             ]
         },
         {
+            "url": "sales-map",
+            "name": "Sales map",
+            "type": "new",
+            "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
+            "category": "Use Cases",
+            "sourceFiles":[
+                { "displayName": "sales-map.html", "path":"src/maps/sales-map.html" },
+                { "displayName": "sales-map.js", "path":"src/maps/sales-map.js" },
+                { "displayName": "sales-map.json", "path":"src/maps/map-data/sales-map.json" },
+                { "displayName": "world-map.json", "path":"src/maps/map-data/world-map.json" }
+            ]
+        },
+        {
             "url": "seat-selection",
             "name": "Bus seat booking",
             "description": "This demo for Essential JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
@@ -362,8 +387,5 @@
                 { "displayName": "seat.json", "path":"src/maps/map-data/seat.json" }
             ]
         }
-       
-      
     ]
-	
 }

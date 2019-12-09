@@ -1,0 +1,196 @@
+<div class="control-section">
+    <div class="content-wrapper">
+<div id="target" class="col-lg-12 control-section" style="height:100%; width:100%;">
+<div style="position:relative; top:10px; left:10px;">
+    <!-- Button to open the default Dialog -->
+    <button id="dialogBtn" type="button">Open</button>
+</div>
+<!-- Initialize default Dialog -->
+<div id="defaultDialog">
+    <div id="tab_default">
+    </div>
+
+</div>
+<div id="Grid" style="display:none;">
+</div>
+<div id="chartComponent" style="display:none;">
+    <div id="chart" align='center'></div>
+</div>
+<div id="scheduleComponent" style="display:none;">
+    <div id="Schedule">
+    </div>
+</div>
+<div id="rteComponent" style="display:none;">
+    <div id="defaultRTE">
+        <p>The rich text editor component is WYSIWYG ("what you see is what you get") editor that provides the best
+            user experience to create and update the content.
+            Users can format their content using standard toolbar commands.</p>
+
+        <p><b>Key features:</b></p>
+
+        <ul>
+            <li>
+                <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
+            </li>
+            <li>
+                <p>Capable of handling markdown editing.</p>
+            </li>
+            <li>
+                <p>Contains a modular library to load the necessary functionality on demand.</p>
+            </li>
+            <li>
+                <p>Provides a fully customizable toolbar.</p>
+            </li>
+            <li>
+                <p>Provides HTML view to edit the source directly for developers.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="formComponent" style="display:none;">
+    <div class="content-wrapper" style="margin-bottom: 25px;">
+        <div class="form-title"><span>Add Customer Details</span></div>
+        <form id="formId" class="form-horizontal" novalidate>
+            <div class="form-group">
+                <div class="e-float-input">
+                    <input type="text" id="user" name="User" required data-msg-containerid="userError">
+                    <span class="e-float-line"></span>
+                    <label class="e-float-text" for="user">User Name</label>
+                </div>
+                <div id="userError"></div>
+            </div>
+            <div class="form-group">
+                <div class="e-float-input">
+                    <input id="dob" name="DOB" required data-msg-containerid="dateError">
+                    <span class="e-float-line"></span>
+                </div>
+                <div id="dateError"></div>
+            </div>
+            <div class="form-group">
+                <div class="e-float-input">
+                    <textarea rows="2" id="Address" name="Address"></textarea>
+                    <span class="e-float-line"></span>
+                    <label class="e-float-text" for="address">Address</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="e-float-input">
+                    <input type="text" id="city" name="City" required data-msg-containerid="cityError">
+                    <span class="e-float-line"></span>
+                    <label class="e-float-text" for="city">City</label>
+                </div>
+                <div id="cityError"></div>
+            </div>
+            <div class="form-group">
+                <div class="e-float-input">
+                    <input type="text" id="state" name="State" required data-msg-containerid="stateError">
+                    <span class="e-float-line"></span>
+                    <label class="e-float-text" for="state">State</label>
+                </div>
+                <div id="stateError"></div>
+            </div>
+            <div class="e-row">
+                <div style="width: 320px;margin:0px auto;height: 100px;padding-top: 25px;">
+                    <div style="display: inline-block;">
+                        <button id="validateSubmit" class="samplebtn e-control e-btn e-primary" type="submit"
+                            style="height:40px;width: 150px;" data-ripple="true">Add Customer</button>
+                    </div>
+                    <div style="float: right;">
+                        <button id="resetbtn" class="samplebtn e-control e-btn" type="reset"
+                            style="height:40px;width: 150px;" data-ripple="true">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div id="action-description">
+<p>
+    This example demonstrates how to integrate other JavaScript(ES5) UI components within the dialog control. In the below example, The dialog component renders with the Grid, Schedule, Chart, Rich Text Editor, Tabs and Form components.
+</p>
+</div>
+<div id="description">
+    <p>
+        Since the dialog is container component, you can integrate other JavaScript(ES5) UI components within the dialog. The dialog can be renders with simple plain-text, HTML string, or JavaScript(ES5) UI components. In the above sample, used major components such as Grid, Schedule, Chart, and Rich Text Editor inside dialog.
+    </p>
+</div>
+
+<style>
+#defaultDialog {
+left:23%;
+top:0%! important;
+}
+.dlgbtn {
+    margin-right: 10px;
+}
+#target {
+    height: 100%;
+    min-height: 500px;
+}
+@media screen and (min-width: 150px) and (max-width: 480px) {
+    .control-section {
+        margin-bottom: 30px;
+    }
+    .control-wrapper {
+        margin-bottom: 0px;
+    }
+}
+.e-btn-hide {
+    display: none;
+}
+
+.form-title {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.e-error,
+.e-float-text {
+    font-weight: 500;
+}
+
+.e-custom-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+#formId {
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 5px;
+    background: #f9f9f9;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.highcontrast form,
+.highcontrast .header {
+    color: #fff;
+    background: #000000;
+}
+
+.header {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+table,
+td,
+th {
+    padding: 3px;
+}
+
+.form-horizontal .form-group {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+</style>

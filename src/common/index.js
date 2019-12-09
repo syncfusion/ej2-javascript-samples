@@ -239,7 +239,6 @@ function renderSbPopups() {
         created: dynamicTabCreation,
         selected: dynamicTab,
     }, '#sb-source-tab');
-    sourceTab.selectedItem = 1;
     apiGrid = new ej.grids.Grid({
         width: '100%',
         dataSource: [],
@@ -766,6 +765,8 @@ function setSbLink() {
         if (sb === 'aspnetcore' || sb === 'aspnetmvc') {
             ele.href = sb === 'aspnetcore' ? 'https://ej2.syncfusion.com/aspnetcore/' : 'https://ej2.syncfusion.com/aspnetmvc/';
 
+        } else if (sb === 'blazor') {
+            ele.href = 'https://blazor.syncfusion.com/demos/';
         } else {
             ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) :
                 ('https://ej2.syncfusion.com/')) + (sbObj[sb] ? (sb + '/') : '') +
@@ -1305,7 +1306,6 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     var p2 = loadScriptfile('src/' + control + '/' + sample + '.js');
     var ajaxJs = new ej.base.Ajax('src/' + control + '/' + sample + '.js', 'GET', true);
     sampleNameElement.innerHTML = node.name;
-    sourceTab.selectedItem = 0;
     contentTab.selectedItem = 0;
     breadCrumbComponent.innerHTML = node.name;
     if (node.name !== subNode.category) {

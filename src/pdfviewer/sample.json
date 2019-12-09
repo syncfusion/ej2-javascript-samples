@@ -33,7 +33,7 @@
             }
         },
         {
-            "url":"form-filling", "name": "Form Filling", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with form filling configuration.", "category": "PDF Viewer", "type": "new", "api": {
+            "url":"form-filling", "name": "Form Filling", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with form filling configuration.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

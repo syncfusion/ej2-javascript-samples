@@ -38,17 +38,17 @@ this.default = function () {
         series: [
             {
                 type: 'Polar', drawType: 'Spline', dataSource: cardData,
-                animation: { enable: true }, width: 2,
+                animation: { enable: true }, width: 2, isClosed: false,
                 xName: 'x', yName: 'y', name: 'Cardioid (unidirectional)', dashArray: '5 5 2'
             },
             {
                 type: 'Polar', drawType: 'Spline', dataSource: omniDirData,
                 animation: { enable: true }, dashArray: '2', width: 2,
-                xName: 'x', yName: 'y', name: 'Omnidirectional'
+                xName: 'x', yName: 'y', name: 'Omnidirectional', isClosed: false
             },
             {
                 type: 'Polar', drawType: 'Spline', dataSource: biDirData,
-                animation: { enable: true }, width: 2,
+                animation: { enable: true }, width: 2, isClosed: false,
                 xName: 'x', yName: 'y', name: 'Bidirectional'
             },
         ],

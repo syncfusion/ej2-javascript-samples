@@ -8,7 +8,7 @@ this.default = function () {
             startDate: 'StartDate',
             endDate: 'EndDate',
             dependency: 'Predecessor',
-         },
+        },
         columns: [
             { field: 'TaskId', headerText: 'Event Id' },
             { field: 'TaskName', headerText: 'Event Name', width: '250', clipMode: 'EllipsisWithTooltip' },
