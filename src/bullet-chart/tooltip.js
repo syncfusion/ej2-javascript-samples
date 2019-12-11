@@ -1,6 +1,6 @@
-/**
- * Sample for tooltip template in Bullet chart.
- */
+
+/* tslint:disable */
+
 this.default = function () {
     var bullet = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '70%',
