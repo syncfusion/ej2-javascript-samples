@@ -1,6 +1,6 @@
-/**
- * Sample for default bullet chart.
- */
+
+ /* tslint:disable */
+
 this.default = function () {
     var bullet1 = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '80%',
