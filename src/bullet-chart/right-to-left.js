@@ -1,6 +1,6 @@
-/**
- * Sample for Bullet chart in RTL mode.
- */
+
+/* tslint:disable */
+
 this.default = function () {
     var bullet = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '80%',
