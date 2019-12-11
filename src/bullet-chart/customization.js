@@ -1,6 +1,6 @@
-/**
- * Sample for customization of bullet chart.
- */
+
+/* tslint:disable */
+
 this.default = function () {
     var chart = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '100%',
