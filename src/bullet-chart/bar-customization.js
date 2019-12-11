@@ -1,6 +1,6 @@
-/**
- * Sample for bar customization.
- */
+
+/* tslint:disable */
+
 this.default = function () {
     var chart = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '80%',
