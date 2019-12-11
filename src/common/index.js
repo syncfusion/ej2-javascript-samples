@@ -162,7 +162,7 @@ function preventTabSwipe(e) {
     }
 }
 function dynamicTab(e) {
-    var blockEle = this.element.querySelector('#e-content_' + e.selectedIndex).children[0];
+    var blockEle = this.element.querySelector('#e-content' + this.tabId + '_' + e.selectedIndex).children[0];
     blockEle.innerHTML = this.items[e.selectedIndex].data;
     blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
     blockEle.classList.add('sb-src-code');
@@ -313,11 +313,11 @@ function dynamicTabCreation(obj) {
     if (obj) {
         tabObj = obj;
     } else { tabObj = this; }
-    var contentEle = tabObj.element.querySelector('#e-content_' + tabObj.selectedItem);
+    var contentEle = tabObj.element.querySelector('#e-content' + tabObj.tabId + '_' + tabObj.selectedItem);
     if (!contentEle) {
         return;
     }
-    var blockEle = tabObj.element.querySelector('#e-content_' + tabObj.selectedItem).children[0];
+    var blockEle = tabObj.element.querySelector('#e-content' + tabObj.tabId + '_' + tabObj.selectedItem).children[0];
     blockEle.innerHTML = tabObj.items[tabObj.selectedItem].data;
     blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
     blockEle.classList.add('sb-src-code');

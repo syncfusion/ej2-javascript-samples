@@ -10,7 +10,7 @@ this.default = function () {
             { size: '33%', min: '23%' },
             { size: '37%', min: '30%' }
         ],
-        resizeStop: onSplitterResize,
+        resizing: onSplitterResize,
         width: '100%'
     });
     splitObj1.appendTo('#splitter1');
@@ -83,6 +83,6 @@ this.default = function () {
     }
 
     function onSplitterResize() {
-        rteObj.refresh();
+        rteObj.refreshUI();
     }
 };

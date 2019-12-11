@@ -1,9 +1,8 @@
 
-/* tslint:disable */
+ /* tslint:disable */
 
 this.default = function () {
     var chart = new ej.charts.BulletChart({
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
         tooltip: { enable: true },
         dataSource: [{ value: 270, target: 250 }],
         valueField: 'value',

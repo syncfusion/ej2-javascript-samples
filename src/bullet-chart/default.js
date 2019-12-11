@@ -9,15 +9,15 @@ this.default = function () {
         valueField: 'value',
         targetField: 'target',
         animation: { enable: false },
-        margin: { left: ej.base.Browser.isDevice ? 10 : 8 },
+        margin: { left: ej.base.Browser.isDevice ? 10 : 35 },
         ranges: [{ end: 150 },
         { end: 250 },
         { end: 300 }
         ],
         minimum: 0, maximum: 300, interval: 50,
         title: 'Revenue',
-        labelFormat: '{value}$',
-        subtitle: '(U.S $ in thousands)',
+        labelFormat: '${value}',
+        subtitle: 'U.S. $ (1,000s)',
         titlePosition: ej.base.Browser.isDevice ? 'Top' : 'Left',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -35,14 +35,14 @@ this.default = function () {
         valueField: 'value',
         targetField: 'target',
         animation: { enable: false },
-        margin: { left: ej.base.Browser.isDevice ? 10 : 17 },
+        margin: { left: ej.base.Browser.isDevice ? 10 : 80 },
         ranges: [{ end: 20 },
         { end: 25 },
         { end: 30 }
         ],
         minimum: 0, maximum: 30, interval: 5,
         labelFormat: '{value}%',
-        title: 'Profit in Percent',
+        title: 'Profit',
         subtitle: '%',
         titlePosition: ej.base.Browser.isDevice ? 'Top' : 'Left',
         load: function (args) {
@@ -68,8 +68,8 @@ this.default = function () {
         ],
         minimum: 0, maximum: 600, interval: 100,
         title: 'Avg Order Size',
-        subtitle: 'U.S $',
-        labelFormat: '{value}$',
+        subtitle: 'U.S. $',
+        labelFormat: '${value}',
         titlePosition: ej.base.Browser.isDevice ? 'Top' : 'Left',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

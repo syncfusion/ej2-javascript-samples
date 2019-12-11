@@ -1,5 +1,5 @@
 
-/* tslint:disable */
+ /* tslint:disable */
 
 this.default = function () {
     var bullet = new ej.charts.BulletChart({
@@ -15,7 +15,6 @@ this.default = function () {
         ],
         minimum: 0, maximum: 300, interval: 50,
         title: 'Revenue YTD',
-        subtitle: 'US $ in Thousands',
         labelFormat: '${value}K',
         enableRtl: true,
         titleStyle: { textAlignment: 'Center', },

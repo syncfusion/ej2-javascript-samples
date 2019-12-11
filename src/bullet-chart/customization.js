@@ -1,5 +1,5 @@
 
-/* tslint:disable */
+ /* tslint:disable */
 
 this.default = function () {
     var chart = new ej.charts.BulletChart({

@@ -65,6 +65,7 @@ this.default = function () {
         minimum: 5, maximum: 45, interval: 5,
         minorTickLines: { width: 0},
         title: 'Sprint Planning',
+        subtitle: 'Estimated in story points',
         titlePosition: 'Top',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

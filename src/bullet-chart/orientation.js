@@ -1,25 +1,25 @@
 
-/* tslint:disable */
+ /* tslint:disable */
 
 this.default = function () {
     var chart = new ej.charts.BulletChart({
-        width: '25%',
+        width: '19%',
         tooltip: { enable: true },
-        dataSource: [{ value: 23, target: 27, name: 'Product' }],
+        dataSource: [{ value: 23, target: 27, name: 'Product A' }],
         valueField: 'value',
         targetField: 'target',
         categoryField: 'name',
         animation: { enable: false },
-        margin: { left: ej.base.Browser.isDevice ? 10 : 18 },
+        margin: { left: ej.base.Browser.isDevice ? 10 : 10 },
         ranges: [{ end: 20 },
         { end: 25 },
         { end: 30 }
         ],
+        height: '400',
         minimum: 0, maximum: 30, interval: 5,
         labelFormat: '{value}%',
         title: 'Profit in Percent',
-        subtitle: '%',
-        titlePosition: 'Left',
+        titlePosition: 'Top',
         orientation: 'Vertical',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -36,12 +36,10 @@ this.default = function () {
         change : function(args) {
             if (args.value === 'Horizontal') {
                 chart.width = '80%';
-                chart.height = '120px';
-                chart.titlePosition = 'Top';
+                chart.height = '100px';
               } else {
-                chart.width = '25%';
+                chart.width = '19%';
                 chart.height = '400px';
-                chart.titlePosition = 'Left';
             }
             chart.orientation = args.value;
             chart.refresh();
