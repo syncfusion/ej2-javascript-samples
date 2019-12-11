@@ -668,7 +668,7 @@ function generateStackblitzFiles() {
             $('#action-description').remove();
             var metaDescription = "";
             if (mdescription) {
-                if ((mdescription.length >= 80) && (mdescription.length <= 160)) {
+                if ((mdescription.length >= 60) && (mdescription.length <= 160)) {
                     metaDescription = metaTagTemplate.replace(/{{metaData}}/, mdescription);
                 } else {
                     error = error + canonical + ' description length should be between 100-160 characters\n';
