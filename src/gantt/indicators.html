@@ -1,0 +1,40 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Indicators">
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample visualizes how to mention special moment in any mentioned day for a particular task with different icon and label.</p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, <code>indicators</code> are displayed with some custom text in specified day of task, which are defined in dataSource. You can define the indicators with the following properties for tasks:
+       <li><code>date</code>: Defines the date value to where we want to display the indicators.</li>
+       <li><code>iconClass </code>: Defines the icon to highlight the indicator.</li>
+       <li><code>name</code>: Defines text to be displayed in the mentioned date.</li>
+       <li><code>tooltip</code>: The text to be displayed when hover the mouse over the indicator.</li>
+    </p>
+</div>
+<style>
+    #Indicators .okIcon::before {
+    content: '\ea84';
+    }
+    #Indicators .description::before {
+    content: '\e30d';
+    }   
+    .bootstrap4 #Indicators .okIcon::before {
+    content: '\e7d9';
+    }
+    .bootstrap4 #Indicators .description::before {
+    content: '\e7cb';
+    }
+    .fabric #Indicators .description::before {
+    content: '\e310';
+    }
+    .highcontrast #Indicators .description::before {
+    content: '\e310';
+    }
+</style>

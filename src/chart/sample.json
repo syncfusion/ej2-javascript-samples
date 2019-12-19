@@ -499,7 +499,16 @@
             "url": "trend-lines",
             "name": "Trendlines",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the trend lines in charts.",
-            "category": "Other Types"
+            "category": "Other Types",
+            "type": "update",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
         },
         {
             "url": "hilo",
@@ -740,7 +749,6 @@
             "name": "Pie",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie charts.",
             "category": "Accumulation Charts",
-			"type": "update",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -767,7 +775,6 @@
             "name": "Donut",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the doughnut charts.",
             "category": "Accumulation Charts",
-            "type": "update",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -975,6 +982,7 @@
             "name": "Range Column",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render range column in polar and radar charts.",
             "category": "Polar Radar",
+            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -1259,6 +1267,22 @@
             }
         },
         {
+            "url": "tooltip-template",
+            "name": "Tooltip Template",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the tooltip-template.",
+            "category": "Chart Customization",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "backgroundImage"
+                ]
+            }
+        },
+        {
             "url": "vertical",
             "name": "Vertical Charts",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the vertical type charts.",
@@ -1341,7 +1365,6 @@
             "name": "Range Selection",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the range selection in chart .",
             "category": "User Interaction",
-            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",

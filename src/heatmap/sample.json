@@ -1,6 +1,7 @@
 {
     "name": "Heatmap Chart",
     "directory": "heatmap",
+    "type":"update",
     "category": "Data Visualization",
     "dataSourcePath": "src/heatmap/data.js",
     "ftName": "heatmap-chart",
@@ -116,6 +117,7 @@
         {
             "url": "legend",
             "name": "Legend Placement",
+            "type":"update",
             "category": "Features",
             "description": "This demo for Essential JS2 Heatmap control shows how to place the heatmap legend in different positions.",
             "api": {"HeatMap": ["titleSettings", "xAxis", "yAxis", "dataSource","paletteSettings", "cellSettings", "legendSettings","renderingMode", "tooltipRender"] }

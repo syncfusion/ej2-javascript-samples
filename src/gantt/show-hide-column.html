@@ -1,0 +1,72 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="ShowHideColumn">
+        </div>
+        <div style="float: right; margin: 10px;">Source:
+            <a href="https://en.wikipedia.org/wiki/Construction" target='_blank'>https://en.wikipedia.org/</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 30%">
+                <div>Column</div>
+            </td>
+            <td style="width: 70%;padding-right: 10px">
+                <div id='columnddl'>
+                    <input type="text" tabindex="1" id='ddlelement' />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div>
+                    <button class="btn btn-default" type="button" id="hide" value="Hide">Hide</button>
+                </div>
+            </td>
+            <td style="width: 70%">
+                <div>
+                    <button class="btn btn-default" type="button" id="show" value="Show" disabled>Show</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <div style="padding-top: 10px">
+                    Hidden Columns
+                </div>
+            </td>
+            <td style="width: 70%; padding:10px 10px 10px 0px">
+                <div>
+                    <textarea id="hiddencolumns" style="resize: none;height:65px;background-color: #fff; padding: 6px" 
+                    class="form-control" readonly="readonly"></textarea>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<style>
+    #columnddl {
+        min-width: 120px;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates dynamic show/hide columns feature of Gantt. Select column name from the properties panel, 
+        and then click hide/show to toggle visibility.
+     </p>
+</div>
+
+<div id="description">
+    <p>The Gantt column can be shown or hidden dynamically using the <code>showColumn</code> and <code>hideColumn</code> methods of the Gantt.</p>
+    <p>In this demo, the columns can be shown and hidden by selecting the column name in dropdown. Click the Show or Hide button to toggle the visibility. 
+       The visibility of column is toggled based on the 
+       <code>columns -> headerText</code> value.
+    </p>
+<br/>
+<p>The <code>columns -> visible</code> property specifies the visibility of a column. 
+    To hide a column at the initial rendering, set the <code>columns -> visible</code> property to false.
+</p>
+</div>

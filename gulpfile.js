@@ -632,7 +632,10 @@ function generateStackblitzFiles() {
         let sampleName = sampleData.name;
         let mdescription = sampleData.description;
         let ftPath = sampleJson.ftName || '';
-        let title = sampleJson.name + ' · ' + sampleName + ` · Essential JS 2 for Javascript (ES5) · Syncfusion`;
+        let platformName = 'Javascript (ES5)';
+        let title = platformName + ' ' + sampleJson.name + ' ' + sampleName + ` Example - Syncfusion Demos`;
+        let metaTagTemplate = `<meta name="description" content="This example demonstrates the ${sampleName} in ${platformName} ${sampleJson.name} Control. Explore here for more details." />`;
+        let headerDesc = `Example for ${sampleName} in ${platformName} ${sampleJson.name} Control`;
         let plnkr = {};
         let stack = {};
         var compname = filePath.replace('./src/', '');
@@ -665,10 +668,10 @@ function generateStackblitzFiles() {
             $('#action-description').remove();
             var metaDescription = "";
             if (mdescription) {
-                if ((mdescription.length >= 100) && (mdescription.length <= 160)) {
+                if ((mdescription.length >= 60) && (mdescription.length <= 160)) {
                     metaDescription = metaTagTemplate.replace(/{{metaData}}/, mdescription);
                 } else {
-                    error = error + canonical + ' description length should be between 100-160 characters\n';
+                    error = error + canonical + ' description length should be between 60-160 characters\n';
                 }
             }
             var repoScript = '';
@@ -679,7 +682,8 @@ function generateStackblitzFiles() {
             hfile = hfile.replace(/{{:header1}}/g, sampleName);
             hfile = hfile.replace(/{{:header}}/g, sampleJson.name);
             hfile = hfile.replace(/{{:header2}}/g, ftPath);
-            hfile = hfile.replace(/{{:meta}}/, metaDescription);
+            hfile = hfile.replace(/{{:meta}}/, metaTagTemplate);
+            hfile = hfile.replace(/{{:Newheader}}/, headerDesc);
             hfile = hfile.replace(/{{:title}}/g, title);
             hfile = hfile.replace(/{{:repoName}}/g, repoScript);
             var stackHtmlFile = stackBlitzHDep.replace(/{{datasource}}/, ((dataSource !== 'nil') ? ('<script src="' + sbLink +
