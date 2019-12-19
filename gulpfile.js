@@ -671,7 +671,7 @@ function generateStackblitzFiles() {
                 if ((mdescription.length >= 60) && (mdescription.length <= 160)) {
                     metaDescription = metaTagTemplate.replace(/{{metaData}}/, mdescription);
                 } else {
-                    error = error + canonical + ' description length should be between 100-160 characters\n';
+                    error = error + canonical + ' description length should be between 60-160 characters\n';
                 }
             }
             var repoScript = '';
