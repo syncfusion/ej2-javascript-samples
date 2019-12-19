@@ -2,6 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: zoomingData,
         height: '450px',
+        highlightWeekends: true,
+        treeColumnIndex: 1,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -12,12 +14,24 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks'
         },
-        toolbar: ['ZoomIn','ZoomOut','ZoomToFit'],
+        columns: [
+            { field: 'TaskID', width: 60 },
+            { field: 'TaskName', width: 250 },
+            { field: 'StartDate' },
+            { field: 'EndDate' },
+            { field: 'Duration' },
+            { field: 'Predecessor' },
+            { field: 'Progress' },
+        ],
+        toolbar: ['ZoomIn', 'ZoomOut', 'ZoomToFit'],
         labelSettings: {
             leftLabel: 'TaskName'
         },
+        splitterSettings: {
+            columnIndex: 2
+        },
         projectStartDate: new Date('03/24/2019'),
         projectEndDate: new Date('04/28/2019')
-     });
+    });
     ganttChart.appendTo('#Zooming');
 };

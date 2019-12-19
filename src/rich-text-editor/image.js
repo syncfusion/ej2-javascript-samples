@@ -50,11 +50,14 @@ this.default = function () {
             transform = (imgEle.style.transform === '') ? 0 :
                 parseInt(imgEle.style.transform.split('(')[1].split(')')[0], 10);
             imgEle.style.transform = 'rotate(' + (transform + 90) + 'deg)';
-        }
-        else if (e.item.tooltipText === 'Rotate Left') {
+            defaultRTE.formatter.saveData();
+            defaultRTE.formatter.enableUndo(defaultRTE);
+        } else if (e.item.tooltipText === 'Rotate Left') {
             transform = (imgEle.style.transform === '') ? 0 :
                 Math.abs(parseInt(imgEle.style.transform.split('(')[1].split(')')[0], 10));
             imgEle.style.transform = 'rotate(-' + (transform + 90) + 'deg)';
+            defaultRTE.formatter.saveData();
+            defaultRTE.formatter.enableUndo(defaultRTE);
         }
     }
 };

@@ -25,7 +25,7 @@ this.default = function() {
     });
     dialogObj.appendTo('#dialog');
 
-    var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
+    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
     var contextmenuItems = ['Open', '|', 'Cut', 'Copy', 'Delete', 'Rename', '|', 'Details'];
 
     // Initialize the FileManager component

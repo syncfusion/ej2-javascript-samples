@@ -80,7 +80,7 @@ this.default = function () {
         width: 120,
         change: function () {
             var rangeColor = labelColor.value.toString();
-            circulargauge.axes[0].ranges[0].color = rangeColor;
+            circulargauge.axes[0].labelStyle.font.color = rangeColor;
             circulargauge.refresh();
         }
     });

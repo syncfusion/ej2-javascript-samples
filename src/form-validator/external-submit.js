@@ -43,7 +43,7 @@ this.default = function () {
         var formStatus = formObj.validate();
         if (formStatus) {
             formObj.element.reset();
-            resume.remove();
+            resume.clearAll(); 
             confirm.show();
         }
     }

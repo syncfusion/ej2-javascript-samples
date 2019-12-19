@@ -14,26 +14,11 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks'
         },
-        eventMarkers: [
-            {
-                day: new Date('04/09/2019'),
-                label: 'Research phase'
-            }, {
-                day: new Date('04/30/2019'),
-                label: 'Design phase'
-            }, {
-                day: new Date('05/23/2019'),
-                label: 'Production phase'
-            }, {
-                day: new Date('06/20/2019'),
-                label: 'Sales and marketing phase'
-            }
-        ],
         labelSettings: {
             leftLabel: 'TaskName'
         },
         projectStartDate: new Date('03/24/2019'),
         projectEndDate: new Date('07/06/2019')
-     });
+    });
     ganttChart.appendTo('#Default');
 };
