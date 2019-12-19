@@ -2,9 +2,7 @@
     "name": "Tree Grid",
     "directory": "tree-grid",
     "category": "Grids",
-    "type": "update",
     "ftName" :"treegrid",
-    "type": "update",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
       {  
@@ -69,7 +67,7 @@
          },
          {
             "url":"frozencolumn", "name": "Frozen Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
-            "description": "This demo for Essential JS 2 treegrid control shows frozen columns feature of treegrid. Scroll the movable content to view the frozen columns.", "type": "new"
+            "description": "This demo for Essential JS 2 treegrid control shows frozen columns feature of treegrid. Scroll the movable content to view the frozen columns."
          },   
          {  
             "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
@@ -84,7 +82,7 @@
             "description": "This demo for Essential JS 2 TreeGrid control shows the usage of the row template feature. We have rendered each TreeGrid row using template."
          },
          {  
-            "url": "drag-drop", "name": "Drag And Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] }, "type": "new",
+            "url": "drag-drop", "name": "Drag And Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
             "description": "This demo for Essential JS 2 TreeGrid control how the rows can be dragged within the treegrid using the row drag-and-drop feature."
          },
          {  

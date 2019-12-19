@@ -13,6 +13,16 @@ this.default = function () {
             child: 'subtasks',
             resourceInfo: 'resources'
         },
+        columns: [
+            { field: 'TaskID', width: 60 },
+            { field: 'TaskName', width: 250 },
+            { field: 'StartDate' },
+            { field: 'EndDate' },
+            { field: 'Duration' },
+            { field: 'Predecessor' },
+            { field: 'Progress' },
+            { field: 'resources' },
+        ],
         allowExcelExport: true,
         toolbar: ['ExcelExport', 'CsvExport'],
         toolbarClick: function (args) {
@@ -43,6 +53,9 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName',
             rightLabel: 'resources'
+        },
+        splitterSettings: {
+            columnIndex: 2
         },
         projectStartDate: new Date('03/25/2019'),
         projectEndDate: new Date('07/28/2019'),

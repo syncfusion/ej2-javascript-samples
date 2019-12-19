@@ -1,0 +1,42 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="ToolbarTemplate">
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample explains the way of rendering built-in and custom toolbar items at the same time.</p>
+</div>
+
+<div id="description">
+    <p>Custom toolbar items can be added by defining the toolbar as a collection of ItemModels.
+        Actions for this customized toolbar items are defined in the <code>toolbarClick</code> event.
+    </p>
+    <p>In this sample, the custom toolbar element <code>Quick Filter</code> and <code>Clear Filter</code> is rendered
+        along with predefined toolbar
+        items ExpandAll and CollapseAll.
+        While clicking the <code>Quick Filter</code> toolbar item, the filtering occurs for
+        <code>Task Name</code>column.Filtered column can be cleared using <code>Clear Filter</code>
+        toolbar item.
+    </p>
+</div>
+
+<style type="text/css">
+    #ToolbarTemplate .e-quickfilter::before {
+        content: '\e7ee';
+    }
+    .fabric #ToolbarTemplate .e-quickfilter::before,
+    .highcontrast #ToolbarTemplate .e-quickfilter::before {
+        content: '\e21c';
+        font-family: 'e-icons';
+    }
+    .bootstrap #ToolbarTemplate .e-quickfilter::before {
+        content: '\e946';
+        font-family: 'e-icons';
+    }
+    .bootstrap4 #ToolbarTemplate .e-quickfilter::before {
+        content: '\e714';
+        font-family: 'e-icons';
+    }
+</style>

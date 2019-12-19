@@ -30,9 +30,9 @@ this.default = function() {
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-undo-icon tb-icons', tooltipText: 'Undo', text: 'Undo' },
+                prefixIcon: 'e-tbar-undo-icon tb-icons', tooltipText: 'Undo', text: 'Undo' },
             {
-                prefixIcon: 'e-redo-icon tb-icons', tooltipText: 'Redo', text: 'Redo' },
+                prefixIcon: 'e-tbar-redo-icon tb-icons', tooltipText: 'Redo', text: 'Redo' },
             {
                 type: 'Separator' },
             {

@@ -2,8 +2,7 @@
     "name": "Barcode",
     "directory": "barcode",
     "category": "Data Visualization",
-    "ftName": "barcode",
-    "type": "new",
+    "ftName": "barcode", 
     "samples": [
         {
             "url": "ean8",

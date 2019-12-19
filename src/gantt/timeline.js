@@ -66,12 +66,6 @@ this.default = function () {
         labelSettings: {
             rightLabel: 'taskName',
         },
-        eventMarkers: [
-            {
-                day: '02/08/2019',
-                label: 'Project kick-off'
-            }
-        ],
     });
     gantt.appendTo('#Timeline');
 
@@ -165,7 +159,7 @@ this.default = function () {
             }
             bottomTierformat.refresh();
             updateUnitWidth(unit, 'bottom');
-            gantt.timelineSettings.bottomTier.unit = unit ;
+            gantt.timelineSettings.bottomTier.unit = unit;
         }
     });
     bottomTierUnit.appendTo('#btUnit');
@@ -176,7 +170,7 @@ this.default = function () {
     var bottomTier = new ej.buttons.CheckBox({ checked: true });
     bottomTier.appendTo('#bottomTierCheck');
 
-    document.getElementById('topTierCheck').onclick = function() {
+    document.getElementById('topTierCheck').onclick = function () {
         if (topTier.checked) {
             gantt.timelineSettings.topTier.unit = 'Week';
             topTierCount.enabled = true;
@@ -190,7 +184,7 @@ this.default = function () {
         }
     };
 
-    document.getElementById('bottomTierCheck').onclick = function() {
+    document.getElementById('bottomTierCheck').onclick = function () {
         if (bottomTier.checked) {
             gantt.timelineSettings.bottomTier.unit = 'Day';
             bottomTierCount.enabled = true;
@@ -216,33 +210,33 @@ this.default = function () {
     unitWidthNumObj.appendTo('#unitWidth');
 
     function updateUnitWidth(unit, tier) {
-           var topUnit = tier === 'top' ? unit : gantt.timelineSettings.topTier.unit;
-           var bottomUnit = tier === 'bottom' ? unit : gantt.timelineSettings.bottomTier.unit;
-           var units = ['None', 'Hour', 'Day', 'Week', 'Month', 'Year'];
-           var bootomCellUnit;
-           var unitWidth;
-           if (units.indexOf(topUnit) === 0 && units.indexOf(bottomUnit) === 0) {
-               bootomCellUnit = 'Day';
-           } else if (units.indexOf(topUnit) === 0 && units.indexOf(bottomUnit) > 0) {
-               bootomCellUnit = bottomUnit;
-           } else if (units.indexOf(topUnit) > 0 && units.indexOf(bottomUnit) === 0) {
-               bootomCellUnit = topUnit;
-           } else if (units.indexOf(topUnit) <= units.indexOf(bottomUnit)) {
-               bootomCellUnit = topUnit;
-           } else {
-               bootomCellUnit = bottomUnit;
-           }
-           if (bootomCellUnit === 'Year') {
-                unitWidth = 2000;
-           } else if (bootomCellUnit === 'Month') {
-               unitWidth = 300;
-           } else if (bootomCellUnit === 'Week') {
-               unitWidth = 150;
-           } else if (bootomCellUnit === 'Day') {
-               unitWidth = 33;
-           } else if (bootomCellUnit === 'Hour') {
-               unitWidth = 25;
-           }
-           unitWidthNumObj.value = unitWidth;
-       }  
+        var topUnit = tier === 'top' ? unit : gantt.timelineSettings.topTier.unit;
+        var bottomUnit = tier === 'bottom' ? unit : gantt.timelineSettings.bottomTier.unit;
+        var units = ['None', 'Hour', 'Day', 'Week', 'Month', 'Year'];
+        var bootomCellUnit;
+        var unitWidth;
+        if (units.indexOf(topUnit) === 0 && units.indexOf(bottomUnit) === 0) {
+            bootomCellUnit = 'Day';
+        } else if (units.indexOf(topUnit) === 0 && units.indexOf(bottomUnit) > 0) {
+            bootomCellUnit = bottomUnit;
+        } else if (units.indexOf(topUnit) > 0 && units.indexOf(bottomUnit) === 0) {
+            bootomCellUnit = topUnit;
+        } else if (units.indexOf(topUnit) <= units.indexOf(bottomUnit)) {
+            bootomCellUnit = topUnit;
+        } else {
+            bootomCellUnit = bottomUnit;
+        }
+        if (bootomCellUnit === 'Year') {
+            unitWidth = 2000;
+        } else if (bootomCellUnit === 'Month') {
+            unitWidth = 300;
+        } else if (bootomCellUnit === 'Week') {
+            unitWidth = 150;
+        } else if (bootomCellUnit === 'Day') {
+            unitWidth = 33;
+        } else if (bootomCellUnit === 'Hour') {
+            unitWidth = 25;
+        }
+        unitWidthNumObj.value = unitWidth;
+    }
 };

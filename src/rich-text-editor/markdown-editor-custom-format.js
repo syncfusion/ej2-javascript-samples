@@ -23,7 +23,7 @@ this.default = function () {
             formatTags: {
                 'Blockquote': '> '
             },
-            selectionTags: { 'Bold': ' __ ', 'Italic': '_' }
+            selectionTags: { 'Bold': '__', 'Italic': '_' }
         }),
         created: function () {
             mdPreview = document.getElementById('MD_Preview');

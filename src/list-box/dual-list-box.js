@@ -2,7 +2,7 @@
  * ListBox dual list box sample.
  */
 
-this.default = function(){
+this.default = function() {
 
     // Initialize ListBox component.
     var listObj1= new ej.dropdowns.ListBox({ 
@@ -35,4 +35,5 @@ this.default = function(){
     });
 
     listObj2.appendTo('#listbox2');
+
 };

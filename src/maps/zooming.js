@@ -59,7 +59,6 @@ this.default = function () {
     document.getElementById('doubletap').onchange = function () {
         var element = (document.getElementById('doubletap'));
         maps.zoomSettings.doubleClickZoom = element.checked;
-		maps.zoomSettings.zoomOnClick = (!element.checked);
         var ele1 = document.getElementById('singletap');
         if (element.checked) {
             ele1.disabled = true;
@@ -73,7 +72,6 @@ this.default = function () {
         var element = (document.getElementById('singletap'));
         var ele1 = document.getElementById('doubletap');
         maps.zoomSettings.zoomOnClick = element.checked;
-		maps.zoomSettings.doubleClickZoom = (!element.checked);
         if (element.checked) {
             ele1.disabled = true;
         }

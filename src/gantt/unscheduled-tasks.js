@@ -13,12 +13,12 @@ this.default = function () {
             allowEditing: true
         },
         columns: [
-            {field: 'TaskId', width: 75 },
-            {field: 'TaskName', width: 80 },
-            {field: 'StartDate', width: 120},          
-            {field: 'EndDate', width: 120 },        
-            {field: 'Duration', width: 90 },         
-            {field: 'TaskType', visible: false}
+            { field: 'TaskId', width: 75 },
+            { field: 'TaskName', width: 80 },
+            { field: 'StartDate', width: 120 },
+            { field: 'EndDate', width: 120 },
+            { field: 'Duration', width: 90 },
+            { field: 'TaskType', visible: false }
         ],
         splitterSettings: {
             columnIndex: 4

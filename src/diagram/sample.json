@@ -3,7 +3,6 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
-    "type": "update",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
         {
@@ -81,7 +80,6 @@
         {
             "url": "line-routing",
             "name": "Line Routing",
-            "type": "new",
             "description": "This sample visualizes the connectors that are automatically re-routing or moving away if any shape found on the connectors path.",
             "category": "Getting Started"
         },

@@ -23,7 +23,8 @@ this.default = function () {
         var comment = answerElement.innerHTML;
         var empList = ['emp1', 'emp2', 'emp3'];
         var nameListList = ['Anne Dodsworth', 'Janet Leverling', 'Laura Callahan'];
-        if (comment !== null && comment.trim() !== '' && answerElement.innerText.trim() !== '') {
+        if (comment !== null && comment.trim() !== '' && (answerElement.innerText.trim() !== '' ||
+        !ej.base.isNullOrUndefined(answerElement.querySelector('img')) || !ej.base.isNullOrUndefined(answerElement.querySelector('table')))) {
             var answer = document.querySelector('.answer');
             var cloneAnswer = answer.cloneNode(true);
             var authorName = cloneAnswer.querySelector('.authorname');

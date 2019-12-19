@@ -35,7 +35,7 @@ this.default = function () {
                         animationDuration: 0,
                         shape: 'Circle',
                         fill: 'white',
-                        width: 3,
+                        width: 10,
                         border: { width: 2, color: '#285255' },
                         tooltipSettings: {
                             template: '#template',
@@ -48,4 +48,29 @@ this.default = function () {
         ]
     });
     maps.appendTo('#container');
+    var MarkerShape;
+    var MarkerShapeCheckBox = new ej.buttons.CheckBox({
+        change: MarkerShape, checked: false
+    }, '#shape');
+    MarkerShapeCheckBox.change = MarkerShape = function (e) {
+        if (e.checked) {
+            maps.layers[0].markerSettings[0].shapeValuePath = 'shape';
+            maps.refresh();
+        }
+        else {
+            maps.layers[0].markerSettings[0].shapeValuePath = null;
+        }
+    };
+    var markerColor;
+    var markerColorCheckBox = new ej.buttons.CheckBox({
+        change: markerColor, checked: false
+    }, '#color');
+    markerColorCheckBox.change = markerColor = function (e) {
+        if (e.checked) {
+            maps.layers[0].markerSettings[0].colorValuePath = 'color';
+        }
+        else {
+            maps.layers[0].markerSettings[0].colorValuePath = null;
+        }
+    };
 };

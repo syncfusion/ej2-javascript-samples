@@ -1,0 +1,38 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TasklabelTemplate">
+        </div>
+    </div>
+</div>
+
+<script type="text/x-template" id="leftLabel">
+    <div style="margin-top=-7px;">
+        <div id = "leftLabel">
+            <span>${TaskName} [ ${Progress}% ]</span>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="rightLabel">
+    <div style="margin-top=-7px;">
+    ${if(ganttProperties.resourceInfo)}
+    <div id = "rightLabel">
+        ${getResourceElements(ganttProperties.resourceInfo)}
+    </div>
+    ${/if}
+</div>
+</script>
+
+<div id="action-description">
+    <p>This sample explains the way of rendering label template for left, right, and task labels by mapping template
+        elements to the leftLabel, rightLabel and taskLabel properties in
+        labelSettings.</p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, the label template is rendered using the <code>leftLabel</code>, <code>rightLabel</code> and
+        <code>taskLabel</code> properties in
+        <code>labelSettings</code>.
+    </p>
+</div>

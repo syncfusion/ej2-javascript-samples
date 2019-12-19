@@ -31,12 +31,12 @@ this.default = function () {
             dataSource: series1, xName: 'x', yName: 'y',
             name: 'Rupees', type: 'Spline',
             marker: { visible: true },
-            trendlines: [{ type: 'Linear', width: 3, marker: { visible: false }, name: 'Linear' , fill: '#C64A75' }]
+            trendlines: [{ type: 'Linear', width: 3, marker: { visible: false }, name: 'TrendLine' , fill: '#C64A75' }]
         }],
         tooltip: { enable: true },
         title: 'Historical Indian Rupee Rate (INR/USD)',
         chartArea: { border: { width: 0 } },
-        legendSettings: { visible: false },
+        legendSettings: { visible: true },
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

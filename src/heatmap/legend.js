@@ -1,7 +1,7 @@
 this.default = function () {
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings: {
-            text: 'Hourly Weather Forecast (in Celsius)',
+            text: 'Hourly Weather Forecast',
             textStyle: {
                 size: '15px',
                 fontWeight: '500',
@@ -37,14 +37,17 @@ this.default = function () {
             args.heatmap.theme = (legendTheme.charAt(0).toUpperCase() + legendTheme.slice(1));
         },
         legendSettings: {
-            position: 'Left',
+            position: 'Bottom',
             labelFormat: '{value}\xB0 C',
+            title: {
+              text :'Celsius'
+            }
         },
     });
     heatmap.appendTo('#container');
 
     var legentListObj = new ej.dropdowns.DropDownList({
-        index: 0,
+        index: 3,
         popupHeight: '200px',
         change: function () { valueXChange(); }
     });

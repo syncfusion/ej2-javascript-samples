@@ -1,0 +1,35 @@
+<div class="control-section">
+    <div id="tooltip" align="center"></div>
+</div>
+<div id="action-description">
+<p>
+   This sample illustrates bullet chart with diferent mode of rendering such as right to left and left to right.
+</p>
+</div>
+<div id="description">
+<p>
+   Tooltip is enabled in this example, to see the tooltip in action, hover a feature bar or comparative bar on the bullet chart.
+</p>
+</div>
+<script id='Tooltip' type="text/x-template">
+   <div id="wrap">
+        <table style="width:100%; background-color: #ffffff; border-spacing: 0px; border-collapse:separate; border: 1px solid grey; border-radius:10px; padding-top: 5px; padding-bottom:5px">
+            <tr>
+                <td style="font-weight:bold; color:black; padding-left: 5px;padding-top: 2px;padding-bottom: 2px;">Sales</td>
+                </tr>
+                <tr>
+                <td style="padding-left: 5px; color:black; padding-right: 5px; padding-bottom: 2px;">Target   : ${target}K </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 5px; color:black; padding-right: 5px">Current : ${value}K </td>
+                </tr>
+                
+        </table>
+   </div>
+</script>
+
+<style>
+#control-container {
+   padding: 0px !important;
+}
+</style>

@@ -57,6 +57,9 @@ this.default = function () {
                 leftLabel: 'TaskName',
                 rightLabel: 'resources'
             },
+            splitterSettings : {
+                columnIndex: 2
+            },
             editDialogFields: [
                 { type: 'General', headerText: 'General'},
                 { type: 'Dependency' },

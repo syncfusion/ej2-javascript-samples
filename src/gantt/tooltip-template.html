@@ -1,0 +1,68 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TooltipTemplate">
+        </div>
+    </div>
+</div>
+
+<script type="text/x-template" id="taskbarTooltip">
+    <table>
+        ${if(ganttProperties.resourceNames)}
+        <tr>
+            <td rowspan="3" style="padding:3px"><img src="src/gantt/images/${ganttProperties.resourceNames}.png" height="40px" /></td>
+            <td style="padding:3px">Task done By:</td>
+            <td style="padding:3px">${ganttProperties.resourceNames}</td>
+        </tr>
+        ${/if}
+        <tr>
+            <td style="padding:3px">Starts On:</td>
+            <td style="padding:3px">${this.getFormatedDate(StartDate)}</td>
+        </tr>
+        <tr>
+            <td style="padding:3px">Ends On:</td>
+            <td style="padding:3px">${this.getFormatedDate(EndDate)}</td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/x-template" id="baselineTooltip">
+    <table>
+        <tbody>
+            <tr>
+                <td >Planned Start Date: </td>
+                <td>${this.getFormatedDate(BaselineStartDate)}</td>
+            </tr>
+            <tr>
+                <td>Planned End Date: </td>
+                <td>${this.getFormatedDate(BaselineEndDate)}</td>    
+            </tr>
+            <tr>
+                <td>Current Start Date: </td>
+                <td>${this.getFormatedDate(StartDate)}</td>
+            </tr>
+            <tr>
+                <td>Current End Date: </td>
+                <td >${this.getFormatedDate(EndDate)}</td>
+            </tr>
+        </tbody>
+    </table>
+</script>
+
+<div id="action-description">
+    <p>This sample explains the way of rendering tooltip template for taskbar and baseline by mapping template
+        elements to the property of taskbar and baseline in <code>tooltipSettings</code>.</p>
+</div>
+
+<div id="description">
+    <p>Tooltip can be enabled or disabled using <code>tooltipSettings.showTooltip</code> property.In this demo, the
+        tooltip template is rendered for <code>taskbar</code> and <code>baseline</code> using the
+        <code>tooltipSettings.taskbar</code> and <code>tooltipSettings.baseline</code> properties.
+    </p>
+    <p>
+        The baseline feature enables the user to view the deviation between the planned dates and the actual dates of
+        the tasks in a project. Baselines can be enabled in Gantt chart by enabling the <code>renderBaseline</code>
+        property along
+        with mapping the data source values for <code>baselineStartDate</code> and <code>baselineEndDate</code>
+        properties.
+    </p>
+</div>

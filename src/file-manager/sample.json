@@ -51,7 +51,6 @@
             "url": "sql-server-provider",
             "name": "SQL Database Provider",
             "category": "Cloud Service Providers",
-            "type": "new",
             "api": { "FileManager": ["ajaxSettings", "view"] },
             "description": "This example demonstrates how to configure and use the sql server database service in a JavaScript(ES5) File Manager."
         },
@@ -59,7 +58,6 @@
             "url": "nodejs-file-provider",
             "name": "NodeJS File Provider",
             "category": "Cloud Service Providers",
-            "type": "new",
             "api": { "FileManager": ["ajaxSettings", "view"] },
             "description": "This example demonstrates how to configure and use the nodejs server database service in a JavaScript(ES5)  File Manager."
         },
@@ -67,7 +65,6 @@
             "url": "amazon-s3-provider",
             "name": "Amazon S3 File Provider",
             "category": "Cloud Service Providers",
-            "type": "new",
             "api": { "FileManager": ["ajaxSettings", "view"] },
             "description": "This example demonstrates how to configure and use the Amazon S3 service in a JavaScript(ES5)  File Manager."
         },
@@ -75,9 +72,16 @@
             "url": "firebase-service",
             "name": "Firebase Realtime File Provider",
             "category": "Cloud Service Providers",
-            "type": "new",
             "api": { "FileManager": ["ajaxSettings", "view"] },
             "description": "This example demonstrates how to configure and use the firebase realtime database service in a JavaScript(ES5)  File Manager."
+        },
+        {
+            "url": "ftp-file-provider",
+            "name": "FTP File Provider",
+            "category": "Cloud Service Providers",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates how to configure and use the File Transfer Protocol in a JavaScript(ES5)  File Manager."
         }
     ]
 }

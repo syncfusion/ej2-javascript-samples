@@ -2,7 +2,7 @@
  * File Manager Drag and Drop feature sample
  */
 this.default = function() {
-    var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
+    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
     // Initialize the FileManager component
     var fileObject = new ej.filemanager.FileManager({
             ajaxSettings: {
