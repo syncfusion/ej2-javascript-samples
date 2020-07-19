@@ -75,7 +75,7 @@ npm run serve
         <td>
             <a href="src/pivot-view">Pivot Table (Preview)</a>
         </td>
-        <td></td>
+        <td><a href="src/tree-grid">Tree Grid</a></td>
     </tr>
     <tr>
         <td colspan="3" rowspan="1">
