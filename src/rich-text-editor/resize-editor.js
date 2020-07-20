@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor Resizable sample
+ * Rich Text Editor Resizable sample
  */
 this.default = function() {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({

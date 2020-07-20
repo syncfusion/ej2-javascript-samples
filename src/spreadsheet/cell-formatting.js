@@ -1,5 +1,5 @@
 /**
- * Default Spreadsheet sample.
+ * Default cell formatting sample.
  */
 this.default = function () {
 
@@ -17,7 +17,7 @@ this.default = function () {
 
     var sheet = [{
         name: 'Order Details',
-        rangeSettings: [{ dataSource: orderDetails }],
+        ranges: [{ dataSource: orderDetails }],
         columns: columns,
         rows: rows,
         showGridLines: false
@@ -27,28 +27,27 @@ this.default = function () {
         sheets: sheet,
         showFormulaBar: false,
         showRibbon: false,
-        dataBound: dataBound,
+        created: createdHandler,
         beforeCellRender: beforeCellRender
     });
 
     //Render initialized Spreadsheet component.
     spreadsheet.appendTo('#spreadsheet');
-    function dataBound() {
-        if (!spreadsheet.isOpen && spreadsheet.activeSheetTab === 1) {
-            // Skip setting cell formatting for other sheets
-            if (spreadsheet.sheets[spreadsheet.activeSheetTab - 1].name !== 'Order Details') { return; }
-            // Applying cell formatting dynamically using cellFormat method
-            spreadsheet.cellFormat({ fontWeight: 'bold', backgroundColor: '#4b5366', color: '#ffffff', fontSize: '12pt' }, 'A1:I1');
-            spreadsheet.cellFormat({ fontWeight: 'bold', textIndent: '2pt' }, 'B2:B16');
-            spreadsheet.cellFormat({ fontStyle: 'italic', textIndent: '2pt' }, 'D2:D16');
-            spreadsheet.cellFormat({ textIndent: '2pt' }, 'E1:E16');
-            spreadsheet.cellFormat({ textIndent: '2pt' }, 'G1:G16');
-            spreadsheet.cellFormat({ textAlign: 'center', fontWeight: 'bold' }, 'H2:H16');
-            spreadsheet.cellFormat({ fontFamily: 'Helvetica New', verticalAlign: 'middle' }, 'A1:I16');
-        }
+    function createdHandler() {
+        // Applying cell formatting dynamically using cellFormat method
+        spreadsheet.cellFormat({ fontWeight: 'bold', backgroundColor: '#4b5366', color: '#ffffff', fontSize: '12pt' }, 'A1:I1');
+        spreadsheet.cellFormat({ fontWeight: 'bold', textIndent: '2pt' }, 'B2:B16');
+        spreadsheet.cellFormat({ fontStyle: 'italic', textIndent: '2pt' }, 'D2:D16');
+        spreadsheet.cellFormat({ textIndent: '2pt' }, 'E1:E16');
+        spreadsheet.cellFormat({ textIndent: '2pt' }, 'G1:G16');
+        spreadsheet.cellFormat({ textAlign: 'center', fontWeight: 'bold' }, 'H2:H16');
+        spreadsheet.cellFormat({ fontFamily: 'Helvetica New', verticalAlign: 'middle' }, 'A1:I16');
+        //Applying border to a range
+        spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A1:I16', 'Outer');
+        spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A2:I15', 'Horizontal');    
     }
     function beforeCellRender(args) {
-        if (!spreadsheet.isOpen && spreadsheet.activeSheetTab === 1) {
+        if (!spreadsheet.isOpen && spreadsheet.activeSheetIndex === 0) {
             if (args.cell && args.cell.value) {
                 // Applying cell formatting before rendering the particular cell
                 switch (args.cell.value) {

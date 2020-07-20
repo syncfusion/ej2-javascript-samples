@@ -36,7 +36,7 @@ this.default = function () {
         var startRow = start.value;
         var toRow = to.value;
         var rows = [];
-        for (var i = startRow; i <= toRow; i++) {
+        for (var i = startRow > toRow ? toRow : startRow; i <= (startRow > toRow ? startRow : toRow); i++) {
             rows.push(i);
         }
         treegrid.selectRows(rows);

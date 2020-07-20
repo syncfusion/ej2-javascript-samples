@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<div class="col-lg-9 control-section">
+    <div class="control_wrapper">
+        <div id='Kanban'></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <div class="property-panel-section">
+        <p class="property-panel-header">Filtering</p>
+        <div class="property-panel-content">
+            <table class="e-filter-table">
+                <tr>
+                    <td class="e-filter-label">
+                        <div>Priority</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="priority_filter" type="text" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="e-filter-label">
+                        <div>Status</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="status_filter" type="text" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p class="property-panel-header">Searching</p>
+        <div class="property-panel-content">
+            <table class="e-filter-table">
+                <tr>
+                    <td>
+                        <div>
+                            <input id="search_text" class="e-input" placeholder="Enter search text" required />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class='e-reset'>
+                <button class="e-btn" id="reset_filter">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .property-panel-content .e-filter-table {
+        width: 100%;
+    }
+
+    .property-panel-content .e-filter-label {
+        width: 30%
+    }
+
+    .property-panel-content .e-reset {
+        padding-top: 13px;
+        text-align: center;
+    }
+
+    .property-panel-content td {
+        padding-top: 10px;
+    }
+
+    .property-panel-header {
+        padding-bottom: 0px;
+    }
+</style>
+<div id="action-description">
+    <p>
+        This sample demonstrates the filtering and searching actions of Kanban. In this sample, select the key value
+        from drop down list to display the filtered data in Kanban board. Type in search box to be searched in
+        header/content and display the search result
+        in a board.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The Kanban provides an option to filter or search the cards and displayed on Kanban board using
+        <code>query</code> property.
+    </p>
+    <ul>
+        <li>In query, <code>where</code> used for filtering the Kanban cards.</li>
+        <li>In query, <code>search</code> is used for searching the cards.</li>
+    </ul>
+</div>

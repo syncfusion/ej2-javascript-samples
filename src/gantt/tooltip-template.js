@@ -30,8 +30,10 @@ this.default = function () {
             { field: 'BaselineEndDate' },
             { field: 'resources' },
         ],
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
+        resourceFields: {
+            id: 'resourceId',
+            name: 'resourceName'
+        },
         resources: editingResources,
         tooltipSettings: {
             showTooltip: true,

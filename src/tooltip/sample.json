@@ -39,6 +39,9 @@
             "name": "Ajax Content",
             "category": "Tooltip",
             "description": "Demo of the Essential JS 2 Tooltip control loading dynamic content in tooltips through Ajax from JSON files.",
+            "sourceFiles": [{"displayName": "ajax-content.js", "path": "./src/tooltip/ajax-content.js"},
+                {"displayName": "ajax-content.html", "path": "./src/tooltip/ajax-content.html"},
+                {"displayName": "tooltipdata.json", "path": "./src/tooltip/tooltipdata.json"}],
             "api": {
                 "Tooltip": [
                     "content",

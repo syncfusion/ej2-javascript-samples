@@ -19,7 +19,10 @@
             "url": "listview",
             "name": "ListView",
             "category": "Integration",
-            "description": "Demo integrating the Essential JS 2 Avatar and ListView components to display profile images or letters in a mobile contact application."
+            "description": "Demo integrating the Essential JS 2 Avatar and ListView components to display profile images or letters in a mobile contact application.",
+            "sourceFiles": [{"displayName": "listview.js", "path": "./src/avatar/listview.js"},
+                {"displayName": "listview.html", "path": "./src/avatar/listview.html"},
+                {"displayName": "datasource.js", "path": "./src/avatar/datasource.js"}]
         }, {
             "url": "badge",
             "name": "Badge",

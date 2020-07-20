@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor auto-save sample
+ * Rich Text Editor auto-save sample
  */
 this.default = function() {
     var switchObj;

@@ -1,16 +1,16 @@
 <div>
     <div class="col-md-8 control-section">
         <div class="content-wrapper">
-            <div id="container1" style="width:92%"></div>
+            <div id="container" style="width:92%"></div>
         </div>
     </div>
     <div class="col-md-4 property-section">
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                 <td style="width: 60%">
-                    Selection Mode:
+                    <div>Selection Mode:</div>
                 </td>
-                <td style="width: 40%">
+                <td style="width: 40%;">
                     <select name="selectIndex" autocomplete="off" id="selmode" style="margin-left: -25px">
                         <option value="Point">Point</option>
                         <option value="Series">Series</option>
@@ -20,10 +20,48 @@
             </tr>
             <tr id='' style="height: 50px">
                 <td style="width: 80%">
-                    Enable Multi Selection:
+                    <div> Enable Multi-selection:</div>
                 </td>
                 <td>
-                    <input type="checkbox" id="select" style="margin-top: 5px">
+                    <input type="checkbox" id="select" style="margin-top: 15px">
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 60%">
+                    <div>Selection Patterns:</div>
+                </td>
+                <td style="width: 40%;">
+                    <select name="selectIndex" autocomplete="off" id="selpattern" style="margin-left: -25px; display: none;">
+                        <option value="None" selected>None</option>
+                        <option value="DiagonalForward">DiagonalForward</option>
+                        <option value="Chessboard">Chessboard</option>
+                        <option value="Triangle">Triangle</option>
+                        <option value="Box">Box</option>
+                        <option value="HorizontalDash">HorizontalDash</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div> Enable Highlight:</div>
+                </td>
+                <td>
+                    <input type="checkbox" id="highlight" style="margin-top: 15px">
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 60%">
+                    <div>Highlight Patterns:</div>
+                </td>
+                <td style="width: 40%;">
+                    <select name="selectIndexpat" autocomplete="off" id="highpattern" style="margin-left: -25px; display: none;">
+                        <option value="None" selected>None</option>
+                        <option value="Dots">Dots</option>
+                        <option value="Chessboard">Chessboard</option>
+                        <option value="Triangle">Triangle</option>
+                        <option value="Tile">Tile</option>
+                        <option value="Grid">Grid</option>
+                    </select>
                 </td>
             </tr>
         </table>
@@ -31,9 +69,10 @@
 </div>
 <div id="action-description">
     <p>
-        This sample illustrates the selection feature in chart. To select a specific point, click  the point. The selection mode can be changed by changing Selection Mode in panel. <code>Multiple selection</code> also can be enabled by <code>Enable MultipleSelection.</code>
+        This sample illustrates the selection feature in chart. To select a specific point, click  the point. The selection mode can be changed by changing Selection Mode in panel. <code>Multiple Selection</code> also can be enabled by <code>Enable Multiple Selection.</code>
     </p>
 </div>
+
 <div id="description">
     <p>
         This sample demonstrates the selection behavior in a chart. Any point or a series can be selected in a chart by clicking
@@ -64,6 +103,12 @@
             <code>Lasso</code> - Select free form of selection area points.</li>
     </ul>
     <br>
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        Chart component features are segregated into individual feature-wise modules. To use selection feature, we need to inject
+        <code>Selection</code> module using
+        <code>Chart.Inject(Selection)</code> method.
+    </p>
 </div>
 <style>
     #control-container {

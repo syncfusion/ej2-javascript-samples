@@ -9,13 +9,14 @@ this.default = function () {
             exporttheme = exporttheme ? exporttheme : 'Material';
             args.maps.theme = (exporttheme.charAt(0).toUpperCase() + exporttheme.slice(1));
         },
-        // custom code end
         titleSettings: {
             text: 'Location of the Wonders in the World',
             textStyle: {
                 size: '16px'
             },
         },
+        allowPdfExport : true,
+        allowImageExport: true,
         layers: [
             {
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),
@@ -48,13 +49,36 @@ this.default = function () {
     });
     maps.appendTo('#export-container');
     // Code for Property Panel
+    var modeData = ['JPEG', 'PNG', 'PDF', 'SVG'];
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
+        dataSource: modeData,
         width: 100
     });
     mode.appendTo('#mode');
+
+    var layertype = new ej.dropdowns.DropDownList({
+        index: 0,
+        placeholder: 'Select layer type',
+        width: '100px',
+        change: function () {
+            if (layertype.value === 'OSM') {
+                if (mode.value === 'SVG')
+                {
+                    mode.value = mode.dataSource[0];
+                }
+                mode.dataSource = modeData.slice(0, 3);
+            } else {
+                mode.dataSource = modeData;
+            }
+            maps.layers[maps.layersCollection.length - 1].layerType =layertype.value;
+            maps.refresh();
+        }
+    });
+    layertype.appendTo('#layertype');
+
     var togglebtn = new ej.buttons.Button({
-        cssClass: 'e-info', isPrimary: true
+        cssClass: 'e-flat', isPrimary: true, iconCss: 'e-icons e-play-icon',
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {

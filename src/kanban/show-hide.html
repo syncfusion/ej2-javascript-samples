@@ -1,0 +1,50 @@
+<div class="col-lg-9 control-section">
+    <div id="Kanban"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Show/Hide Columns">
+        <tbody>
+            <tr>
+                <td>
+                    <input id="Open" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="InProgress" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="Review" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="Close" type="checkbox" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<style>
+    #property tr {
+        height: 50px;
+    }
+</style>
+<div id="action-description">
+    <p>
+        This sample demonstrates how to control the visibility of Kanban columns dynamically. Check or uncheck the
+        checkboxes
+        from the property panel to show or hide the corresponding column.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The Kanban provides an option to show or hide its columns dynamically using the following public methods.
+    </p>
+    <ul>
+        <li><code>showColumn:</code> Makes the corresponding column visible based on the specified ID.</li>
+        <li><code>hideColumn:</code> Hides the corresponding column based on the specified column ID.</li>
+    </ul>
+</div>

@@ -16,7 +16,7 @@ this.default = function () {
             expandAll: false
         },
         width: '100%',
-        height: 300,
+        height: 290,
         gridSettings: { columnWidth: 140 },
         showTooltip: false,
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' }

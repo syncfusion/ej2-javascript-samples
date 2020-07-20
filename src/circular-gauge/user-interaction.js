@@ -5,16 +5,22 @@ this.default = function () {
     var content = '<div style="font-size: 14px;color:#E5C31C;font-weight: lighter;font-style: oblique;"><span>';
     var pointerValue;
     var circulargauge = new ej.circulargauge.CircularGauge({
-        enablePointerDrag: true,
+        enablePointerDrag: true, 
+        enableRangeDrag: false,
         dragMove: function (args) {
-            pointerValue = Math.round(args.currentValue);
-            document.getElementById('pointerValue').innerHTML = 'Pointer Value <span> &nbsp;&nbsp;&nbsp;' + pointerValue;
-            document.getElementById('value').value = pointerValue.toString();
-            circulargauge.setAnnotationValue(0, 0, content + pointerValue + ' MPH</span></div>');
+            if (isNaN(args.rangeIndex)) {
+                pointerValue = Math.round(args.currentValue);
+                document.getElementById('pointerValue').innerHTML = 'Pointer Value <span> &nbsp;&nbsp;&nbsp;' + pointerValue;
+                document.getElementById('value').value = pointerValue.toString();
+                circulargauge.setAnnotationValue(0, 0, content + pointerValue + ' MPH</span></div>');
+              }
+
         },
         dragEnd: function (args) {
             pointerValue = Math.round(args.currentValue);
-            setPointersValue(circulargauge, pointerValue);
+            if (isNaN(args.rangeIndex)) {
+                setPointersValue(circulargauge, pointerValue);
+            }
         },
         // custom code start
         load: function (args) {
@@ -77,8 +83,8 @@ this.default = function () {
         var color = ej.circulargauge.getRangeColor(pointerValue, (circulargauge.axes[0].ranges), circulargauge.axes[0].pointers[0].color);
         circulargauge.axes[0].pointers[0].color = color;
         circulargauge.axes[0].pointers[1].color = color;
-        circulargauge.axes[0].pointers[0].animation.enable = true;
-        circulargauge.axes[0].pointers[1].animation.enable = true;
+        circulargauge.axes[0].pointers[0].animation.enable = false;
+        circulargauge.axes[0].pointers[1].animation.enable = false;
         circulargauge.axes[0].pointers[0].needleTail.color = color;
         circulargauge.axes[0].pointers[1].needleTail.color = color;
         circulargauge.axes[0].pointers[0].cap.border.color = color;
@@ -99,4 +105,10 @@ this.default = function () {
         var value = document.getElementById('enable').checked;
         circulargauge.enablePointerDrag = value;
     };
+    document.getElementById('enable1').onchange =function () {
+        var value = (document.getElementById('enable1')).checked;
+        circulargauge.enableRangeDrag = value;
+        
+    };
+
 };

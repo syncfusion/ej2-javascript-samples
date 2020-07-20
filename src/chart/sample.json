@@ -118,7 +118,7 @@
             }
         },
         {
-            "url": "stacked-line -100",
+            "url": "stacked-line-100",
             "name": "100% Stacked Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100% stacked line series.",
             "category": "Line Charts",
@@ -500,7 +500,6 @@
             "name": "Trendlines",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the trend lines in charts.",
             "category": "Other Types",
-            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -838,6 +837,7 @@
         {
             "url": "smart-labels",
             "name": "Smart Labels",
+            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
             "category": "Accumulation Charts",
             "api": {
@@ -982,7 +982,6 @@
             "name": "Range Column",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render range column in polar and radar charts.",
             "category": "Polar Radar",
-            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -1271,7 +1270,6 @@
             "name": "Tooltip Template",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the tooltip-template.",
             "category": "Chart Customization",
-            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -1356,7 +1354,8 @@
                     "primaryXAxis",
                     "primaryYAxis",
                     "series",
-                    "selectionMode"
+                    "selectionMode",
+                    "highlightMode"
                 ]
             }
         },

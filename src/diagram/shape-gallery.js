@@ -307,13 +307,14 @@ this.default = function () {
     var objects = getNodes();
     //Initialize diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '499px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
+        width: '100%', height: '800px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         nodes: objects,
         //Defines the default node and connector properties
         getNodeDefaults: function (obj, diagram) {
             return obj;
         },
+        created: function () { diagram.fitToPage({ mode: 'Height' }); }
     });
     diagram.appendTo('#diagram');
-    diagram.fitToPage({ mode: 'Width' });
+    
 };

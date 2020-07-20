@@ -11,7 +11,7 @@ this.default = function () {
             filters: [{ name: 'Product_Categories', caption: 'Product Categories' }],
             enableSorting: true,
             allowLabelFilter: true,
-            values: [{ name: 'In_Stock', caption: 'In Stock' }, { name: 'Sold', caption: 'Units Sold' },
+            values: [{ name: 'Sold', caption: 'Units Sold' },
                 { name: 'Amount', caption: 'Sold Amount' }],
             allowValueFilter: true,
             formatSettings: [{ name: 'Amount', format: 'C0' }],
@@ -19,10 +19,12 @@ this.default = function () {
         },
         allowExcelExport: true,
         allowConditionalFormatting: true,
+        allowNumberFormatting: true,
         allowPdfExport: true,
         showToolbar: true,
         displayOption:{view:'Both'},
         chartSettings: {
+            title:"Sales Analysis",
             load: function(args) {
               var selectedTheme = location.hash.split("/")[1];
               selectedTheme = selectedTheme ? selectedTheme : "Material";
@@ -34,7 +36,7 @@ this.default = function () {
         showFieldList: true,
         width: '100%',
         toolbar: ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
-		'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'FieldList'],
+		'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList'],
         saveReport: function (args) {
             var reports = [];
             var isSaved = false;
@@ -98,6 +100,13 @@ this.default = function () {
             if (localStorage.pivotviewReports && localStorage.pivotviewReports !== "") {
                 reportCollection = JSON.parse(localStorage.pivotviewReports);
             }
+            if (args.isReportExists) {
+                for (var i = 0; i < reportCollection.length; i++) {
+                    if (reportCollection[i].reportName === args.rename) {
+                        reportCollection.splice(i, 1);
+                    }
+                }
+            }
             reportCollection.map(function (item) {
                 if (args.reportName === item.reportName) {
                     item.reportName = args.rename;
@@ -125,7 +134,7 @@ this.default = function () {
 				type: 'Separator' 
 			});
 		},
-        height: 300,
+        height: 450,
         gridSettings: {
             columnWidth: 140
         }

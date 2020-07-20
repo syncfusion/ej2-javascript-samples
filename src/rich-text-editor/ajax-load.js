@@ -1,5 +1,5 @@
 /**
- * RichTextEditor Ajax content sample
+ * Rich Text Editor Ajax content sample
  */
 var defaultRTE;
 this.default = function() {

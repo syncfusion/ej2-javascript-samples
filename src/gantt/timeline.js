@@ -15,8 +15,8 @@ this.default = function () {
         { id: 'EEE MMM dd', format: 'Mon Jan 01' },
     ];
     var dayformat = [
-        { id: 'EEE, dd', format: 'Mon, 01' },
-        { id: 'E', format: 'Mon' },
+        { id: '', format: 'M' },
+        { id: 'EEE', format: 'Mon' },
         { id: 'dd', format: '01' },
     ];
     var hourformat = [
@@ -47,9 +47,6 @@ this.default = function () {
         highlightWeekends: true,
         projectStartDate: new Date('02/03/2019'),
         projectEndDate: new Date('03/23/2019'),
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
-        resources: projectResources,
         timelineSettings: {
             topTier: {
                 format: 'MMM dd, yyyy',
@@ -131,6 +128,7 @@ this.default = function () {
 
     var bottomTierformat = new ej.dropdowns.DropDownList({
         dataSource: dayformat,
+        value: '',
         fields: { text: 'format', value: 'id' },
         change: function (e) {
             var format = e.value;

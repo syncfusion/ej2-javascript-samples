@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor toolbar types sample
+ * Rich Text Editor toolbar types sample
  */
 this.default = function () {
     var options = {

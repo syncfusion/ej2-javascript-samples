@@ -21,13 +21,15 @@ this.default = function () {
                 allowTaskbarEditing: true,
                 showDeleteConfirmDialog: true
             },
-            toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
+            toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Indent', 'Outdent'],
             allowSelection: true,
             gridLines: 'Both',
             height: '450px',
             treeColumnIndex: 1,
-            resourceNameMapping: 'resourceName',
-            resourceIDMapping: 'resourceId',
+            resourceFields: {
+                id: 'resourceId',
+                name: 'resourceName'
+            },
             resources: editingResources,
             highlightWeekends: true,
             timelineSettings: {

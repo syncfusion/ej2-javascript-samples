@@ -1,8 +1,8 @@
 this.default = function () {
     var uploadObj = new ej.inputs.Uploader({
         asyncSettings: {
-            saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
-            removeUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove'
+            saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+            removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
         },
         dropArea: document.getElementById('dropTarget'),
         template: '#uploaderTemplate',

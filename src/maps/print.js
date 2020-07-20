@@ -15,6 +15,7 @@ this.default = function () {
                 args.cancel = true;
             }
         },
+        allowPrint : true,
         format: 'n',
         useGroupingSeparator: true,
         titleSettings: {
@@ -79,7 +80,8 @@ this.default = function () {
     maps.appendTo('#print-container');
     // Code for Property Panel
     var togglebtn = new ej.buttons.Button({
-        cssClass: 'e-info', isPrimary: true
+        cssClass: 'e-flat', isPrimary: true,
+        iconCss: 'e-icons e-play-icon'
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {

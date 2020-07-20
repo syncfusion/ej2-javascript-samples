@@ -20,15 +20,15 @@ this.default = function() {
              '<div id="bird" style="float:right"><img src="./src/tooltip/images/bird.png" ' +
 			 'alt="" width="125" height="125"/></div></div>' +
 			 '<div>The <a href="https://en.wikipedia.org/wiki/Eastern_bluebird" target="_blank"> Eastern Bluebird</a>' +
-             'is easily found in open fields and sparse woodland areas, including along woodland edges. These' +
-             'are <i>cavity-nesting birds</i> and a pair of eastern bluebirds will raise 2-3 broods annually, with 2-8 light blue' +
-			 'or whitish eggs per brood.</div>' +
+             ' is easily found in open fields and sparse woodland areas, including along woodland edges. These' +
+             ' are <i>cavity-nesting birds</i> and a pair of eastern bluebirds will raise 2-3 broods annually, with 2-8 light blue' +
+			 ' or whitish eggs per brood.</div>' +
 			 '<div>' +
 			 '<hr style="margin: 9px 0px"/>' +
              '<p>Eastern bluebirds can be very vocal in flocks.' +
-             'Their calls include a rapid, mid-tone chatter and several long dropping pitch calls.</p>' +
-			'<p>Source:&nbsp;' +
-			'a href="https://en.wikipedia.org/wiki/Eastern_bluebird" target="_blank">https://en.wikipedia.org/wiki/Eastern_bluebird</a>' +
+             ' Their calls include a rapid, mid-tone chatter and several long dropping pitch calls.</p>' +
+			'<p>Source: ' +
+			'<a href="https://en.wikipedia.org/wiki/Eastern_bluebird" target="_blank">https://en.wikipedia.org/wiki/Eastern_bluebird</a>' +
 			'</p>' +
 			'</div>' +
 		    '</div>',

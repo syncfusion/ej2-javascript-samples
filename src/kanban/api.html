@@ -1,0 +1,71 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="Kanban"></div>
+        <div id="Dialog"></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section property-customization">
+    <div class="property-panel-section">
+        <p class="property-panel-header">Add Column</p>
+        <div class="property-panel-content">
+            <form id="addForm">
+                <table>
+                    <tr>
+                        <td><input id="text" class="e-input" type="text" placeholder="Text Field" required /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="key"/>
+                    </tr>
+                    <tr>
+                        <td><input id="index" type="text" placeholder="Index" required /></td>
+                    </tr>
+                    <tr>
+                        <td class='e-check'><button class="e-btn" id="add">Add</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <p class="property-panel-header">Delete Column</p>
+        <div class="property-panel-content">
+            <form id="deleteForm">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input id="deteteIndex" type="text" placeholder="Index" required /></td>
+                        </tr>
+                        <tr>
+                            <td class='e-check'>
+                                <button id="delete" class="e-btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    .property-panel-content td {
+        padding-top: 10px;
+    }
+
+    .property-panel-header {
+        padding-bottom: 0px;
+    }
+</style>
+<div id="action-description">
+    <p>
+        This sample demonstrates the important APIs required to manipulate the Kanban control. Provides necessary
+        details in the
+        property panel to add and remove the columns dynamically.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The demo explains how to add or remove columns programmatically.
+    </p>
+    <ul>
+        <li><code>addColumn:</code> The public method used to add a column to the Kanban board dynamically.</li>
+        <li><code>deleteColumn:</code> The public method used to remove the existing column from the Kanban board based
+            on an index.</li>
+    </ul>
+</div>

@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor insert emoticons sample
+ * Rich Text Editor insert emoticons sample
  */
 this.default = function() {
     var tabObj;

@@ -1,0 +1,47 @@
+<div class="control-section">
+    <div class="control_wrapper">
+        <div id='Kanban'></div>
+    </div>
+</div>
+<script id="swimlaneTemplate" type="text/x-jsrender">
+    <div class='swimlane-template e-swimlane-template-table'>
+        <div class="e-swimlane-row-text"><img src="./src/kanban/images/${keyField}.png" alt=""/><span>${textField}</span></div>
+    </div>
+</script>
+<style>
+    .swimlane-template {
+        font-size: 15px;
+        font-weight: 500;
+        padding-left: 4px;
+    }
+
+    .swimlane-template img {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+    }
+
+    .swimlane-template span {
+        padding-left: 10px;
+    }
+</style>
+<div id="action-description">
+    <p>
+        This sample demonstrates how to customize the swimlane header of Kanban. In this sample, the swimlane header is
+        customized with icons and corresponding to the mapped key field’s text.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The Kanban provides an option to customize its swimlane header using the <code>swimlaneSettings</code> ->
+        <code>template</code> property, which
+        accepts the string or HTML element`s ID value, which is used as the template for the swimlane header.
+    </p>
+    <p>
+        In this demo, all the swimlane headers are customized with templating as text and icons.
+    </p>
+</div>
+<div id="action-description">
+</div>
+<div id="description">
+</div>

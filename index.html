@@ -31,6 +31,9 @@
             document.write('<script src="src/common/lib/scripts/moment-timezone-with-data.min.js"><\/script>');
             document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/shim.min.js"><\/script>');
         }
+        if (window.NodeList && !NodeList.prototype.forEach) {
+            NodeList.prototype.forEach = Array.prototype.forEach;
+        }
     </script>
     <script src="dist/ej2.min.js"></script>
     <script src="dist/locale-string.js"></script>
@@ -378,7 +381,7 @@
                                 <div class="sb-footer-link">Knowledge Base</div>
                             </a>
                         </div>
-                        <div class="sb-footer-copyright">Copyright © 2001-2019 Syncfusion Inc.</div>
+                        <div class="sb-footer-copyright"></div>
                     </div>
                     <div class="sb-footer-logo">
                         <a href="https://www.syncfusion.com/" target="_blank">

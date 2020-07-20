@@ -80,6 +80,10 @@ var currentControl;
 var currencyDropDown;
 var cultureDropDown;
 var demoSection = ej.base.select('.sb-demo-section');
+var newYear= new Date().getFullYear();
+var copyRight= document.querySelector('.sb-footer-copyright');
+copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion Inc.";
+
 var matchedCurrency = {
     'en': 'USD',
     'de': 'EUR',
@@ -738,7 +742,7 @@ function bindEvents() {
 }
 
 function copyCode() {
-    var copyElem = ej.base.select('#' + cBlock[sourceTab.selectedItem]);
+    var copyElem = ej.base.select('.' + cBlock[sourceTab.selectedItem]);
     var textArea = ej.base.createElement('textArea');
     textArea.textContent = copyElem.textContent.trim();
     document.body.appendChild(textArea);

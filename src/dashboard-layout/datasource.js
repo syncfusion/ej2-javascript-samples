@@ -4,38 +4,38 @@
 window.panelData = [
     {
         'panel1': { 'sizeX': 4, 'sizeY': 3, 'row': 0, 'col': 0 },
+        'panel3': { 'sizeX': 6, 'sizeY': 1, 'row': 3, 'col': 0 },
         'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 0, 'col': 4 },
-        'panel3': { 'sizeX': 6, 'sizeY': 1, 'row': 3, 'col': 0 }
     },
     {
         'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
-        'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 0 },
         'panel3': { 'sizeX': 4, 'sizeY': 3, 'row': 1, 'col': 2 },
-        'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
-    },
-    {
-        'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
-        'panel2': { 'sizeX': 3, 'sizeY': 3, 'row': 1, 'col': 0 },
-        'panel3': { 'sizeX': 3, 'sizeY': 3, 'row': 1, 'col': 3 },
-        'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
-    },
-    {
-        'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
         'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 0 },
-        'panel3': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 2 },
-        'panel4': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 4 },
-        'panel5': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
+        'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
     },
     {
         'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
-        'panel2': { 'sizeX': 4, 'sizeY': 3, 'row': 1, 'col': 0 },
+        'panel3': { 'sizeX': 3, 'sizeY': 3, 'row': 1, 'col': 3 },
+        'panel2': { 'sizeX': 3, 'sizeY': 3, 'row': 1, 'col': 0 },
+        'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
+    },
+    {
+        'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
+        'panel3': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 2 },
+        'panel5': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 },
+        'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 0 },
+        'panel4': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 4 }
+    },
+    {
+        'panel1': { 'sizeX': 6, 'sizeY': 1, 'row': 0, 'col': 0 },
         'panel3': { 'sizeX': 2, 'sizeY': 3, 'row': 1, 'col': 4 },
+        'panel2': { 'sizeX': 4, 'sizeY': 3, 'row': 1, 'col': 0 },
         'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 4, 'col': 0 }
     },
     {
         'panel1': { 'sizeX': 2, 'sizeY': 3, 'row': 0, 'col': 0 },
-        'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 0, 'col': 2 },
         'panel3': { 'sizeX': 2, 'sizeY': 3, 'row': 0, 'col': 4 },
+        'panel2': { 'sizeX': 2, 'sizeY': 3, 'row': 0, 'col': 2 },
         'panel4': { 'sizeX': 6, 'sizeY': 1, 'row': 3, 'col': 0 }
     }
 ];
@@ -51,8 +51,8 @@ window.expenseData = [
         'PaymentMode': 'Cash',
         'TransactionType': 'Expense',
         'Description': 'Confederate cush',
-        'Amount': '900',
         'MonthShort': 'Mar',
+        'Amount': '900',
         'MonthFull': 'March, 2017',
         'FormattedDate': '03/01/2017 08:53 PM',
         'Device': 'Tablet'
@@ -63,8 +63,8 @@ window.expenseData = [
         'PaymentMode': 'Credit Card',
         'TransactionType': 'Expense',
         'Description': 'Public and other transportation',
-        'Amount': '1200',
         'MonthShort': 'Apr',
+        'Amount': '1200',
         'MonthFull': 'April, 2017',
         'FormattedDate': '04/01/2017 10:44 AM',
         'Device': 'Desktop'
@@ -75,8 +75,8 @@ window.expenseData = [
         'PaymentMode': 'Cash',
         'TransactionType': 'Expense',
         'Description': 'Public and other transportation',
-        'Amount': '600',
         'MonthShort': 'May',
+        'Amount': '600',
         'MonthFull': 'May, 2017',
         'FormattedDate': '05/01/2017 03:25 PM',
         'Device': 'Mobile'

@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor overview sample
+ * Rich Text Editor overview sample
  */
 var defaultRTE;
 var divPreview;

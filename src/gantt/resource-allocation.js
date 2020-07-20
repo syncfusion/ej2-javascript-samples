@@ -1,6 +1,6 @@
 this.default = function () {   
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: editingData,
+        dataSource: resourceData,
         height: '450px',
         allowSelection: true,
         highlightWeekends: true,
@@ -13,26 +13,44 @@ this.default = function () {
             progress: 'Progress',
             dependency: 'Predecessor',
             child: 'subtasks',
+            work:'work',
             resourceInfo: 'resources'
         },       
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
-        resources: editingResources,
+        resources: resourceResources,
+        resourceFields: {
+            id: 'resourceId',
+            name: 'resourceName',
+            unit: 'unit'
+        },
+        taskType:"FixedDuration",
+        workUnit:"Hour",
+        editSettings: {
+            allowAdding: true,
+            allowEditing: true,
+            allowDeleting: true,
+            allowTaskbarEditing: true,
+            showDeleteConfirmDialog: true
+        },
+        treeColumnIndex: 1,
         columns: [
-            { field: 'TaskID', width: 100 },
-            { field: 'TaskName', width: 150, headerText: 'Job Name', clipMode: 'EllipsisWithTooltip' },
-            { field: 'resources', width: 200 },
-            { field: 'StartDate' },
-            { field: 'Duration' },
-            { field: 'Progress' },
-            { field: 'Predecessor' },
+            { field: 'TaskID', visible: false},
+            { field: 'TaskName', headerText: 'Task Name', width: '180'},
+            { field: 'resources', headerText: 'Resources', width: '160' },
+            { field: 'work', width:'110'},
+            { field: 'Duration', width: '100' },
+            { field: 'taskType', headerText: 'Task Type', width: '110'}
         ],
-        splitterSettings: { columnIndex: 3 },
+        editDialogFields: [
+            { type: 'General', headerText: 'General' },
+            { type: 'Dependency' },
+            { type: 'Resources' }
+        ],
+        toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
+        splitterSettings: { columnIndex: 5.1 },
         labelSettings: {
-            leftLabel: 'TaskName',
             rightLabel: 'resources'
         },
-        projectStartDate: new Date('03/24/2019'),
+        projectStartDate: new Date('03/28/2019'),
         projectEndDate: new Date('07/28/2019')
      });
     ganttChart.appendTo('#resource');

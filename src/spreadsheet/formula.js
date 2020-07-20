@@ -1,8 +1,8 @@
 /**
- * Default Spreadsheet sample.
+ * Spreadsheet formula sample
  */
 this.default = function () {
-    var sheet = [{
+    var sheets = [{
         name: 'Stock Details',
         rows: [{
             height: 40,
@@ -12,7 +12,7 @@ this.default = function () {
             index: 11,
             cells: [
                 { index: 3, value: 'Average profit:' },
-                { index: 5, formula: '=AVERAGE(F2:F11)', format: '0.00' },
+                { index: 5, formula: '=AVERAGE(Profit)', format: '0.00' },
             ],
             height: 25
         },
@@ -20,7 +20,7 @@ this.default = function () {
             index: 12,
             cells: [
                 { index: 3, value: 'Maximum stock value:' },
-                { index: 5, formula: '=MAX(D2:D11)', format: '0.00' }
+                { index: 5, formula: '=MAX(High)', format: '0.00' }
             ],
             height: 25
         },
@@ -41,26 +41,30 @@ this.default = function () {
         }],
         columns: [{ width: 100 }, { width: 130 }, { width: 140 }, { width: 140 }, { width: 130 }, { width: 130 }],
         selectedRange: 'F15',
-        rangeSettings: [{
+        ranges: [{
             dataSource: formulaData,
             startCell: 'A1',
         }]
     }];
     //Initialize Spreadsheet component.
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
-        sheets: sheet,
+        sheets: sheets,
         showRibbon: false,
-        dataBound: function () {
-            if (!spreadsheet.isOpen && spreadsheet.activeSheetTab === 1) {
-                spreadsheet.cellFormat
-                    ({ fontWeight: 'bold', backgroundColor: '#4ECDC4', textAlign: 'center', fontSize: '14px' }, 'A1:F1');
-                spreadsheet.cellFormat({ backgroundColor: '#F2F2F2' }, 'A2:F11');
-                spreadsheet.cellFormat({ fontWeight: 'bold', backgroundColor: '#C6EFCE' }, 'A12:F15');
-                spreadsheet.numberFormat('0.00', 'F2:F11');
-            }
+        //Initializing defined names and its range
+        definedNames: [{
+            name: 'Profit', refersTo: '=F2:F11'
         },
+        {
+            name: 'High', refersTo: '=D2:D11'
+        }],
+        created: function () {
+            spreadsheet.cellFormat
+                    ({ fontWeight: 'bold', backgroundColor: '#279377', color: '#fff', textAlign: 'center', verticalAlign:'middle', fontSize: '14px' }, 'A1:F1');
+            spreadsheet.cellFormat({ fontWeight: 'bold', backgroundColor: '#EEEEEE' }, 'A12:F15');
+            spreadsheet.numberFormat('0.00', 'F2:F11');
+        }
     });
-    //Render initialized Spreadsheet component.
+    //Render initialized Spreadsheet component
     spreadsheet.appendTo('#spreadsheet');
 
 };

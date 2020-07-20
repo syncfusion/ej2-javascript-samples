@@ -3,7 +3,6 @@
     "directory": "bullet-chart",
     "category": "Data Visualization",
     "ftName": "bullet-chart",
-    "type": "preview",
     "samples": [
         {
             "url": "default",
@@ -96,6 +95,19 @@
                     "tooltip",
                     "titleStyle",
                     "orientation"
+                ] 
+            }
+        },
+        {
+            "url": "bullet-legend",
+            "name": "Legend",
+            "description":"This demo for Essential JS2 Bullet Chart control shows the legend sample.Bullet chart legend display the information of the data.",
+            "category": "Bullet Chart",
+            "api": {
+                "BulletChart": [
+                    "tooltip",
+                    "titleStyle",
+                    "legendSettings"
                 ] 
             }
         }

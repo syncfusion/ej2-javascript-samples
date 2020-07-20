@@ -1,0 +1,125 @@
+{
+    "name": "Progress Bar",
+    "directory": "progress-bar",
+    "category": "Notifications",
+    "ftName": "progress-bar",
+    "type": "update",
+    "samples": [
+        {
+            "url": "linear",
+            "name": "Linear",
+            "description":"This demo for Essential JS2 Progress Bar control shows the linear rendering of progress bar",
+            "category": "Progress Bar",
+            "type": "update",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "animation",
+                    "isIndeterminate",
+                    "segmentCount"
+                ]
+            }
+        },
+        {
+            "url": "circular",
+            "name": "Circular",
+            "description":"This demo for Essential JS2 Progress Bar control shows the circular rendering of progress bar",
+            "category": "Progress Bar",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "animation",
+                    "isIndeterminate",
+                    "segmentCount",
+                    "cornerRadius"
+                ]
+            }
+        },
+        {
+            "url": "angle",
+            "name": "Angle",
+            "description":"This demo for Essential JS2 Progress Bar control shows the semi circular rendering of progress bar",
+            "category": "Progress Bar",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "startAngle",
+                    "endAngle",
+                    "cornerRadius"
+                ]
+            }
+        },
+        {
+            "url": "custom-content",
+            "name": "Custom Contents",
+            "description":"This demo for Essential JS2 Progress Bar control shows the progress bar rendering with custom content",
+            "category": "Progress Bar",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "annotations",
+                    "type"
+                ]
+            }
+        },       
+        {
+            "url": "labels",
+            "name": "Labels",
+            "description":"This demo for Essential JS2 Progress Bar control shows the label of progress bar",
+            "category": "Progress Bar",
+            "type": "update",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "showProgressValue",
+                    "labelStyle",
+                    "trackColor",
+                    "progressColor"
+                ]
+            }
+        },
+        {
+            "url": "radius",
+            "name": "Radius",
+            "description":"This demo for Essential JS2 Progress Bar control shows the different radius of progress bar",
+            "category": "Progress Bar",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "radius",
+                    "innerRadius"
+                ]
+            }
+        },
+        {
+            "url": "stripes",
+            "name": "Stripes",
+            "description":"This demo for Essential JS2 Progress Bar control shows the striped progress bar",
+            "category": "Progress Bar",
+            "type": "new",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "isStriped",
+                    "role"
+                 ]
+            }
+        },
+        {
+            "url": "progress_segment",
+            "name": "Progress Segment",
+            "description":"This demo for Essential JS2 Progress Bar control shows active state of progress bar",
+            "category": "Progress Bar",
+            "type": "new",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "segmentCount",
+                    "gapWidth",
+                    "trackSegmentDisable",
+                    "isIndeterminate"
+                ]
+            }
+        }         
+    ]
+}

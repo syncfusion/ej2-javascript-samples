@@ -8,7 +8,10 @@
             "url": "default",
             "name": "Default Functionalities",
             "category": "Chips",
-            "description": "This sample demonstrates functionalities of Chips with different types. Click and interact the chip, to select single or multiple chips from collection."
+            "description": "This sample demonstrates functionalities of Chips with different types. Click and interact the chip, to select single or multiple chips from collection.",
+            "sourceFiles": [{"displayName": "default.js", "path": "./src/chips/default.js"},
+                {"displayName": "default.html", "path": "./src/chips/default.html"},
+                {"displayName": "data.js", "path": "./src/chips/data.js"}]
         },
         {
             "url": "api",

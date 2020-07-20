@@ -1,5 +1,5 @@
 /**
- * RichTextEditor form-validation sample
+ * Rich Text Editor form-validation sample
  */
  
 

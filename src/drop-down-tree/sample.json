@@ -1,0 +1,122 @@
+{
+    "name": "Dropdown Tree",
+    "directory": "drop-down-tree",
+    "category": "Dropdowns",
+    "ftName": "dropdown-tree",
+    "type": "update",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "description": "This example demonstrates the default functionalities of the JavaScript(ES5) drop-down tree control with minimum configuration.",
+            "category": "Dropdown Tree",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "change",
+                    "fields"
+                ]
+            }
+        },
+        {
+            "url": "icons",
+            "name": "Icons and Images",
+            "description": "The JavaScript(ES5) dropdown tree items can be rendered with any custom icons. This sample demonstrated like a file system with custom icons and images.",
+            "category": "Dropdown Tree",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields"
+                ]
+            }
+        },
+        {
+            "url": "checkbox",
+            "name": "Checkbox",
+            "description": "This demo demonstrates the JavaScript(ES5) drop-down tree control with checkbox functionality",
+            "category": "Dropdown Tree",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields"
+                ]
+            }
+        },
+        {
+            "url": "multiple-selection",
+            "name": "Multiple Selection",
+            "description": "The JavaScript(ES5) drop-down tree control allows to select multiple items by pressing CTRL key, also can select the range of items by pressing SHIFT key.",
+            "category": "Dropdown Tree",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields"
+                ]
+            }
+        },
+        {
+            "url": "template",
+            "name": "Template",
+            "description": "This example demonstrates how to customize the appearance of each item in the JavaScript(ES5) drop-down tree control pop-up list using the template.",
+            "category": "Dropdown Tree",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields",
+                    "headerTemplate",
+                    "itemTemplate",
+                    "footerTemplate"
+                ]
+            }
+        },
+        {
+            "url": "filtering",
+            "name": "Filtering",
+            "description": "This example demonstrates how the filtering functionalities works based on the typed characters in the JavaScript(ES5) drop-down tree control.",
+            "category": "Dropdown Tree",
+            "type": "new",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields",
+                    "allowFiltering",
+                    "filterBarPlaceholder"
+                ]
+            }
+        },
+        {
+            "url": "local-data",
+            "name": "Local Data",
+            "description": "This example demonstrates the binding of local data to the JavaScript(ES5) drop-down tree. The local data structure can be hierarchical data or list data.",
+            "category": "Data Binding",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields"
+                ]
+            }
+        },
+        {
+            "url": "remote-data",
+            "name": "Remote Data",
+            "description": "This example demonstrates the binding of remote data to the JavaScript(ES5) drop-down tree",
+            "category": "Data Binding",
+            "api": {
+                "DropDownTree": [
+                    "popupHeight",
+                    "placeholder",
+                    "fields"
+                ]
+            }
+        }
+        
+    ],
+    "dataSourcePath": "src/drop-down-tree/dataSource.js"
+}

@@ -1,6 +1,6 @@
-
- /* tslint:disable */
-
+/**
+ * Sample for bullet chart with Orientation.
+ */
 this.default = function () {
     var chart = new ej.charts.BulletChart({
         width: '19%',

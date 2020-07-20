@@ -1,0 +1,299 @@
+{
+    "name": "Range Slider",
+    "directory": "range-slider",
+    "category": "Inputs",
+    "ftName" : "range-slider",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showing the default rendering of default, minimum range, and range sliders. Drag the thumb to interact with the slider.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "ticks",
+            "name": "Ticks",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of the visual representation of slider values using ticks, which can be placed before, after, or on both sides of the thumbs.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "enabled",
+                    "appendTo"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ]
+            }
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of the visual representation of slider values using tooltips, which can be displayed before or after slider thumbs.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "showButtons",
+                    "appendTo",
+                    "dragInterval"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "orientation",
+            "name": "Vertical Orientation",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showing the vertical and horizontal orientation properties along with ticks and tooltips.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "orientation",
+                    "appendTo",
+                    "dragInterval"
+                ]
+            }
+        },
+        {
+            "url": "format",
+            "name": "Formatting",
+            "category": "Range Slider",
+            "description": "Demo of Essential JS 2 slider control value formatting with time, currency, and distance values that are also displayed in ticks and tooltips.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "step",
+                    "tooltipChange",
+                    "renderingTicks"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks",
+                    "format"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "format"
+                ]
+            }
+        },
+        {
+            "url": "limits",
+            "name": "Limits",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo of limiting the minimum, maximum, start, and end values. Also supports restricting handle movements.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "step",
+                    "limits"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "LimitData": [
+                    "enabled",
+                    "minStart",
+                    "minEnd",
+                    "maxStart",
+                    "maxEnd",
+                    "startHandleFixed",
+                    "endHandleFixed"
+                ]
+            }
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Range Slider",
+            "description": "Essential JS 2 slider control demo showcasing the most frequently used API combinations, like orientation, minimum, maximum, value, step, and more.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "showButtons",
+                    "orientation",
+                    "readOnly",
+                    "enabled",
+                    "appendTo"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "events",
+            "name": "Events",
+            "category": "Range Slider",
+            "description": "Demo of the Essential JS 2 slider control's created, changing, and changed events. The events are traced in real time in a property panel.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo",
+                    "change",
+                    "created",
+                    "changed"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement",
+                    "showOn"
+                ]
+            }
+        },
+        {
+            "url": "thumb-customization",
+            "name": "Thumb",
+            "category": "Customization",
+            "description": "Demo of the Essential JS 2 slider control slider thumb customization with circle, oval, and custom image shapes.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "min",
+                    "max",
+                    "appendTo"
+                ]
+            }
+        },
+        {
+            "url": "selection-bar-customization",
+            "name": "Bar",
+            "category": "Customization",
+            "description": "This example demonstrates how to highly customize Syncfusion React slider bar with colors and height.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "appendTo",
+                    "change",
+                    "created"
+                ]
+            }
+        },
+        {
+            "url": "ticks-customization",
+            "name": "Ticks",
+            "category": "Customization",
+            "description": "Essential JS 2 slider control demo showing the highly customizable slider values using ticks and a legend.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "min",
+                    "max",
+                    "step",
+                    "appendTo",
+                    "renderedTicks",
+                    "renderingTicks"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ]
+            }
+        },
+        {
+            "url": "tooltip-customization",
+            "name": "Tooltip",
+            "category": "Customization",
+            "description": "Demo of Essential JS 2 slider control customization of slider tooltip text and background color with formatted text values.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "type",
+                    "appendTo",
+                    "min",
+                    "max",
+                    "step",
+                    "tooltipChange",
+                    "renderingTicks",
+                    "created"
+                ],
+                "TicksData": [
+                    "placement",
+                    "largeStep",
+                    "smallStep",
+                    "showSmallTicks"
+                ],
+                "TooltipData": [
+                    "isVisible",
+                    "placement"
+                ]
+            }
+        },
+        {
+            "url": "azure-pricing",
+            "name": "Cloud Pricing",
+            "category": "Use Case",
+            "description": "This example demonstrates the usage of Syncfusion React slider control in real world use case sample azure cloud pricing.",
+            "api": {
+                "Slider": [
+                    "value",
+                    "appendTo",
+                    "min",
+                    "max",
+                    "change",
+                    "created"
+                ]
+            }
+        }
+    ]
+}

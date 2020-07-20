@@ -36,6 +36,8 @@ this.default = function () {
                     fieldCnt--;
                 }
                 values = fieldCollections[fields[0]];
+                valuesddl.dataSource = values;
+                valuesddl.dataBind();
                 isInitial = false;
             }
             for (var i = 0, Cnt = pivotObj.dataSourceSettings.filterSettings; i < Cnt.length; i++) {

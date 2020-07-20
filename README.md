@@ -73,8 +73,17 @@ npm run serve
             <a href="src/grid">DataGrid</a>
         </td>
         <td>
-            <a href="src/pivot-view">Pivot Table (Preview)</a>
+            <a href="src/pivot-view">Pivot Table</a>
         </td>
+        <td>
+            <a href="src/tree-grid">Tree Grid</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/spreadsheet">Spredsheet</a>
+        </td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -87,39 +96,52 @@ npm run serve
             <a href="src/chart">Charts</a>
         </td>
         <td>
-            <a href="src/circular-gauge">Circular Gauge</a>
+            <a href="src/stock-chart">Stock Chart</a>
         </td>
         <td>
+            <a href="src/circular-gauge">Circular Gauge</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/diagram">Diagram</a>
+        </td>
+        <td>
+            <a href="src/heatmap-chart">HeatMap Chart</a>
+        </td>
+         <td>
             <a href="src/linear-gauge">Linear Gauge</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="src/diagram">Diagram (Preview)</a>
-        </td>
-        <td>
-            <a href="src/heatmap">Heatmap chart</a>
-        </td>
-        <td>
             <a href="src/maps">Maps</a>
         </td>
-    </tr>
-    <tr>
-        <td>
+       <td>
             <a href="src/range-navigator">Range Selector</a>
         </td>
         <td>
             <a href="src/smith-chart">Smith Chart</a>
         </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/barcode">Barcode Generator</a>
+        </td>
         <td>
             <a href="src/sparkline">Sparkline Charts</a>
+        </td>
+        <td>
+            <a href="src/treemap">TreeMap</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="src/treemap">TreeMap</a>
+            <a href="src/bullet-chart">Bullet Chart</a>
         </td>
-        <td></td>
+        <td>
+            <a href="src/kanban">Kanban (preview)</a>
+        </td>
         <td></td>
     </tr>
     <tr>
@@ -129,12 +151,14 @@ npm run serve
     </tr>
     <tr>
         <td>
-            <a href="src/rte">Rich Text Editor (Preview)</a>
+            <a href="src/rte">Rich Text Editor</a>
         </td>
         <td>
-            <a href="src/document-editor">Word Processor (Preview)</a>
+            <a href="src/document-editor">Word Processor</a>
         </td>
-        <td></td>
+        <td>
+            <a href="src/inplace-editor">In-place Editor</a>
+        </td>
     </tr>
     <tr>
         <td colspan="3" rowspan="1">
@@ -164,6 +188,13 @@ npm run serve
         </td>
     </tr>
     <tr>
+        <td>
+            <a href="src/gantt">Gantt Chart</a>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td colspan="3" rowspan="1">
             <b>BUTTONS<b>
         </td>
@@ -173,20 +204,22 @@ npm run serve
             <a href="src/button">Button</a>
         </td>
         <td>
-            <a href="src/button/button-group.vue">Button Group</a>
+            <a href="src/button/button-group.js">Button Group</a>
         </td>
         <td>
-            <a href="src/button/dropdown-button.vue">Dropdown Menu</a>
+            <a href="src/button/dropdown-button.js">Dropdown Menu</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="src/button/progress-button.vue">Progress Button (Preview)</a>
+            <a href="src/button/progress-button.js">Progress Button</a>
         </td>
         <td>
-            <a href="src/button/split-button.vue">Split Button</a>
+            <a href="src/button/split-button.js">Split Button</a>
         </td>
-        <td></td>
+        <td>
+             <a href="src/button/chips">Chips</a>
+        </td>
     </tr>
     <tr>
         <td colspan="3" rowspan="1">
@@ -206,10 +239,14 @@ npm run serve
     </tr>
     <tr>
         <td>
+            <a href="src/drop-down-tree">Dropdown Tree</a>
+        </td>
+        <td>
             <a href="src/multi-select">MultiSelect Dropdown</a>
         </td>
-        <td></td>
-        <td></td>
+        <td>
+            <a href="src/list-box">List Box</a>
+        </td>
     </tr>
     <tr>
         <td colspan="3" rowspan="1">
@@ -224,7 +261,7 @@ npm run serve
             <a href="src/context-menu">Context Menu</a>
         </td>
         <td>
-            <a href="src/menu">Menu Bar (Preview)</a>
+            <a href="src/menu">Menu Bar</a>
         </td>
     </tr>
     <tr>
@@ -242,7 +279,9 @@ npm run serve
         <td>
             <a href="src/treeview">TreeView</a>
         </td>
-        <td></td>
+        <td>
+            <a href="src/file-manager">File Manager</a>
+        </td>
         <td></td>
     </tr>
     <tr>
@@ -263,10 +302,10 @@ npm run serve
     </tr>
     <tr>
         <td>
-            <a href="src/button/radio-button.vue">Radio Button</a>
+            <a href="src/button/radio-button.js">Radio Button</a>
         </td>
         <td>
-            <a href="src/button/check-box.vue">Checkbox</a>
+            <a href="src/button/check-box.js">Checkbox</a>
         </td>
         <td>
             <a href="src/color-picker">Color Picker</a>
@@ -280,7 +319,7 @@ npm run serve
             <a href="src/slider">Range Slider</a>
         </td>
         <td>
-            <a href="src/button/switch.vue">Toggle Switch Button</a>
+            <a href="src/button/switch.js">Toggle Switch Button</a>
         </td>
     </tr>
     <tr>
@@ -306,6 +345,15 @@ npm run serve
         <td>
             <a href="src/tooltip">Tooltip</a>
         </td>
+        <td>
+            <a href="src/splitter">Splitter</a>           
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/dashboard-layout">Dashboard Layout</a>
+        </td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -319,6 +367,34 @@ npm run serve
         </td>
         <td>
             <a href="src/toast">Toast</a>
+        </td>
+        <td>
+            <a href="src/progress-bar">Progress Bar</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>VIEWER<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/pdfviewer">PDF Viewer</a>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">
+            <b>FORMS<b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="src/form-validator">Form Validation</a>
+        </td>
+        <td>
+            <a href="src/query-builder">Query Builder</a>
         </td>
         <td></td>
     </tr>

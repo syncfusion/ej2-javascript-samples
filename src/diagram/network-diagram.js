@@ -518,7 +518,7 @@ this.default = function () {
 
     function getNativeContent(content) {
         var attr = { id: 'svgdiv' };
-        var div = createHtmlElement('div', attr);
+        var div =  document.createElementNS('http://www.w3.org/2000/svg', 'div');
         document.body.appendChild(div);
         div.innerHTML = content;
         var svgContent = div.getElementsByTagName('svg')[0].outerHTML;

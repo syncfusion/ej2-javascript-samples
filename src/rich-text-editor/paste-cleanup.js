@@ -1,5 +1,5 @@
 /**
- * RichTextEditor Paste Cleanup sample
+ * Rich Text Editor Paste Cleanup sample
  */
 this.default = function() {
     var defaultRTE =  new ej.richtexteditor.RichTextEditor({

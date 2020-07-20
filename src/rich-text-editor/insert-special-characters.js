@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor insert special characters sample
+ * Rich Text Editor insert special characters sample
  */
 this.default = function() {
     var selection = new ej.richtexteditor.NodeSelection();

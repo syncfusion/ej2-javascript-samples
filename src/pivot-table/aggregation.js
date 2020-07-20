@@ -23,7 +23,7 @@ this.default = function () {
             filters: []
         }, showFieldList: true,
         width: '100%',
-        height: 300,
+        height: 290,
         gridSettings: { columnWidth: 140 }
     });
     pivotObj.appendTo('#PivotView');    

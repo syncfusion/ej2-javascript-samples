@@ -2,6 +2,7 @@
     "name": "Linear Gauge",
     "directory": "linear-gauge",
     "category": "Data Visualization",
+    "type": "update",
     "ftName": "lineargauge", 
     "samples": [
         {
@@ -40,6 +41,19 @@
             "description": "This demo for Essential JS2 Linear Gauge control illustrates the CPU Utilization of a resource by using annotation feature.",
             "category": "Linear Gauge"
         },
+		{
+            "url": "gradient-color",
+            "name": "Gradient Color",
+            "type": "new",
+            "description": "This demo for Essential JS2 Linear Gauge control visualizes the available options for customization.",
+            "category": "Linear Gauge"
+        },
+        {
+            "url": "style",
+            "name": "Styles",
+            "description": "This demo for Essential JS2 Linear Gauge control visualizes the available options for customization.",
+            "category": "Linear Gauge"
+        },
         {
             "url": "tooltip",
             "name": "Tooltip",
@@ -47,9 +61,10 @@
             "category": "Linear Gauge"
         },
         {
-            "url": "style",
-            "name": "Styles",
-            "description": "This demo for Essential JS2 Linear Gauge control visualizes the available options for customization.",
+            "url": "export",
+            "name": "Print & Export",
+            "type": "update",
+            "description": "This demo for Essential JS2 Linear Gauge control will print and export linear gauge into different format.",
             "category": "Linear Gauge"
         }
     ]

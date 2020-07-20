@@ -1,0 +1,75 @@
+<div class="col-lg-8 control-section">
+    <div class="content-wrapper">
+        <div id='Kanban'></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tr>
+            <td>
+                <div>Sort Direction</div>
+            </td>
+            <td>
+                <div>
+                    <select id="sort" class="form-control">
+                        <option value="Ascending">Ascending</option>
+                        <option value="Descending">Descending</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Enable Swimlane Drag And Drop</div>
+            </td>
+            <td>
+                <input id="acrossDragAndDrop" type="checkbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Show Empty Swimlane Row</div>
+            </td>
+            <td>
+                <input id="emptyRow" type="checkbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Show Swimlane Item Count</div>
+            </td>
+            <td>
+                <input id="itemCount" type="checkbox" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+</div>
+<style>
+    #property tr {
+        height: 50px
+    }
+</style>
+<div id="action-description">
+    <p>
+        This example demonstrates the swimlane functionalities of Kanban control. Provided options in the property panel
+        to sort
+        the cards, enable drag-and-drop across swimlanes, show or hide the empty row and the items count. Also, you can
+        expand/collapse the swimlane row in the Kanban board.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This sample renders the assignee field as a swimlane header using the <code>swimlaneSettings</code> property.
+        The property provides the following options to change its related settings:
+    </p>
+    <ul>
+        <li>Sorting the swimlane cards using the <code>swimlaneSettings.sortDirection</code> property</li>
+        <li>Control the drag-and-drop of the cards across swimlane using the
+            <code>swimlaneSettings.allowDragAndDrop</code> property.</li>
+        <li>Show or hide the empty swimlane row using the <code>swimlaneSettings.showEmptyRow</code> property.</li>
+        <li>Show or hide the items count in the swimlane header using the <code>swimlaneSettings.showItemCount</code>
+            property.</li>
+    </ul>
+</div>

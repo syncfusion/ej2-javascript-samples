@@ -22,17 +22,31 @@
     .material .treeCount.e-badge {
         vertical-align: middle;
     }
+    .nodetext {
+        float: left;
+    }
+    .e-rtl .nodetext {
+        float: right;
+    }
+    .nodebadge {
+        float: right;
+        margin-right: 5px
+    }
+    .e-rtl .nodebadge {
+        float: left;
+        margin-left: 5px
+    }
 </style>
 <!-- custom code end -->
 <!-- Template to render tree node -->
 <script id="treeTemplate" type="text/x-template">
  <div>
     <div class="treeviewdiv">
-        <div style="float:left">
+        <div class="nodetext">
             <span class="treeName">${name}</span>
         </div>
         ${if(count)}
-            <div style="margin-right: 5px; float:right">
+            <div class="nodebadge">
                 <span class="treeCount e-badge e-badge-primary" >${count}</span>
             </div>
         ${/if}

@@ -2,6 +2,7 @@
     "name": "Circular Gauge",
     "directory": "circular-gauge",
     "category": "Data Visualization",
+    "type": "update",
     "ftName": "circulargauge",
     "samples": [
         {
@@ -50,6 +51,13 @@
             "category": "Circular Gauge"
         },
         {
+            "url": "gradient-color",
+            "name": "Gradient Color",
+            "description": "This demo for Essential JS2 Circular Gauge control visualizes the gradient support for pointers and ranges.",
+            "type": "new",
+            "category": "Circular Gauge"
+        },
+        {
             "url": "compass",
             "name": "Direction Compass",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge.",
@@ -75,7 +83,7 @@
         },
         {
             "url": "user-interaction",
-            "name": "Pointer Drag",
+            "name": "Pointer and Ranges drag",
             "description": "This demo for Essential JS2 Circular Gauge control visualizes the pointer drag support and its options.",
             "category": "User Interaction"
         },
@@ -84,6 +92,13 @@
             "name": "Tooltip",
             "description": "This demo for Essential JS2 Circular Gauge control visualizes the tooltip template for circular gauge pointer.",
             "category": "User Interaction"
+        },
+        {
+            "url": "export",
+            "name": "Print & Export",
+            "type": "update",
+            "category": "Export",
+            "description": "This demo for Essential JS2 Circular Gauge control demonstrates the export and print methode of circular gauge."
         },
         {
             "url": "data-sample",

@@ -19,14 +19,15 @@
     </div>
 </div>
 <div id="action-description">
-    <p>This sample demonstrates the call history application using listview. Click on the checklist to filter the data in contacts list.
+    <p>This sample demonstrates the call history application using ListView. Click the checklist to filter the data in contacts list.
     </p>
 </div>
 
 <div id="description">
-    <p>This sample filters out the data from listview based on the data selected from the checklist. Here, listview utilizes the
-        <code>template</code>
-        <code>showIcon</code> properties to repesent the call history application. The Tab component is used in this sample for navigation purposes.
+    <p>This sample filters out the data from ListView based on the data selected from the checklist. Here, ListView utilizes the
+        <code><a target='_blank' class='code' href='https://ej2.syncfusion.com/javascript/documentation/api/list-view#template'>template</a></code> and 
+        <code><a target='_blank' class='code' href='https://ej2.syncfusion.com/javascript/documentation/api/list-view#showicon'>showIcon</a></code> properties 
+        to repesent the call history application. The Tab component is used in this sample for navigation purposes. 
     </p>
 </div>
 <style>
@@ -106,24 +107,23 @@
         font-style: normal;
     }
 
-    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-multi-line,
-    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-multi-line,
-    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-multi-line {
-        padding: 5px;
-    }
-
-    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-avatar,
-    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-avatar,
-    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-avatar {
-        padding-left: 50px;
-        padding-right: 5px;
-    }
-
     .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar,
     .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar,
     .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar {
         top: 5px;
         left: 5px;
+    }
+
+    .layout #list-container #all.e-listview.e-rtl.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge),
+    .layout #list-container #received.e-listview.e-rtl.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge),
+    .layout #list-container #missed.e-listview.e-rtl.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge) {
+        padding: 5px 60px 5px 5px;
+    }
+
+    .layout #list-container #all.e-listview.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge),
+    .layout #list-container #received.e-listview.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge),
+    .layout #list-container #missed.e-listview.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge) {
+        padding: 5px 5px 5px 50px;
     }
 
     .layout #list-container #all,
@@ -175,6 +175,10 @@
     }
 
     /* ListView theme customization */
+
+    .highcontrast .layout #list-container .e-icon {
+        color: white;
+    }
 
     .highcontrast .layoutWrapper .layout,
     .highcontrast .layoutWrapper .camera,
