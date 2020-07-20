@@ -1,7 +1,5 @@
 this.default = function () {
     var alertDialogObj = new ej.popups.Dialog({
-        header: 'Copy with Header',
-        content: 'Atleast one row should be selected to copy with header',
         showCloseIcon: false,
         target: '.control-section',
         buttons: [{
@@ -38,6 +36,8 @@ this.default = function () {
                 }
                 grid.copy(withHeader);
             } else {
+                alertDialogObj.content = args.item.id === 'copyHeader' ? 'Atleast one row should be selected to copy with header' : 'Atleast one row should be selected to copy';
+                alertDialogObj.header = args.item.id === 'copyHeader' ? 'Copy with Header' : 'Copy';
                 alertDialogObj.show();
             }
         }

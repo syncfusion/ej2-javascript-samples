@@ -41,7 +41,6 @@ this.default = function () {
     var share = document.getElementsByClassName('share');
     var comments = document.getElementsByClassName('comments');
     var bookmark = document.getElementsByClassName('bookmark');
-    var description = document.getElementsByClassName('e-list-content');
     var timeStamp = document.getElementsByClassName('timeStamp');
     var i;
     for (i = 0; i < comments.length; i++) {
@@ -61,12 +60,6 @@ this.default = function () {
     for (i = 0; i < share.length; i++) {
         share[i].setAttribute('title', 'We can customize this element to perform our own action');
         share[i].addEventListener('click',function (event) {
-            event.stopPropagation();
-        });
-    }
-
-    for (i = 0; i < description.length; i++) {
-        description[i].addEventListener('click', function (event) {
             event.stopPropagation();
         });
     }

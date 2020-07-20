@@ -13,33 +13,44 @@
         <table id="property" title="Properties" style="width: 100%">
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div>Export Type:
+                    <div>Map Type
                     </div>
                 </td>
                 <td style="width: 60%;">
-                    <div style="margin-left: -30px">
-                        <select id="mode">
-                            <option value='JPEG'>JPEG</option>
-                            <option value='PNG'>PNG</option>
-                            <option value='SVG'>SVG</option>
-                            <option value='PDF'>PDF</option>
+                    <div style="margin-left: 0px">
+                        <select id="layertype">
+                            <option value='Geometry'>Geometry</option>
+                            <option value='OSM'>OSM</option>
                         </select>
                     </div>
                 </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div>File Name:</div>
+                    <div>Export Type
+                    </div>
                 </td>
-                <td style="width: 40%;">
-                    <div class="e-float-input" style='margin-top: 0px;margin-left: -20px'>
-                        <input type="text" value="Maps" id="fileName" style="margin-left: -10px">
+                <td style="width: 60%;">
+                    <div style="margin-left: 0px">
+                        <input id="mode">
                     </div>
                 </td>
             </tr>
-            <tr id="button-control" style="height: 50px" align='center'>
+            <tr style="height: 50px">
+                <td style="width: 40%">
+                    <div>File Name</div>
+                </td>
+                <td style="width: 40%;">
+                    <div class="e-float-input" style='margin-top: 0px;margin-left: 0px'>
+                        <input type="text" value="Maps" id="fileName" style="margin-left: 0px">
+                    </div>
+                </td>
+            </tr>
+            <tr id="button-control"  class=".e-play-icon" style="height: 50px" align='center'>
                 <td>
-                    <button id="togglebtn" style="text-transform:none !important">Export</button>
+                <div style="margin-left: 60%;">
+                <button id="togglebtn" style="text-transform:none !important;width: 80px;">Export</button>
+                </div>
                 </td>
             </tr>
         </table>
@@ -47,23 +58,21 @@
 </div>
 <div id="action-description">
     <p>
-        This sample illustrates the exporting feature in Maps. By clicking the Export button, you can export the map in PNG, JPEG, SVG or in PDF formats. 
+        This sample illustrates the exporting feature in Maps. You can modify the map type to geometric or OSM using the Map type dropdown list in this sample. By clicking the Export button, you can export the map in PNG, JPEG, SVG or in PDF formats.
     </p>
 </div>
 <div id="description">
     <p>
-        In this example, you can see how to render and configure the export. The rendered map can be exported as either JPEG, PNG, SVG and PDF formats. It can be achieved using Blob and it is supported only in modern browsers. Also this sample visualizes the locations of the wonders in the world using markers.
+        In this example, you can see how to render and configure the export functionality. The rendered map
+        can be exported as either JPEG, PNG, SVG and PDF formats. Also this sample visualizes the locations of
+        the wonders in the world using markers. Export functionality is done by <code>export</code> method
+        when <code>allowImageExport</code> and <code>allowPdfExport</code> is set as true.
     </p>
     <p>
-            Tooltip is enabled in this example. To see the tooltip in action, hover the mouse over a marker or tap a marker in touch enabled devices.
-        </p>
-        <br/>
-        <p style="font-weight: 500">Injecting Module</p>
-        <p>
-        Maps component features are segregated into individual feature-wise modules. To use a marker, inject the <code>Marker</code> module using the <code>Maps.Inject(Marker)</code> method.
-        </p>
-
-</div>
+        More information about export can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/maps/print/#export">documentation section</a>.
+    </p>
+    </div>
 <!-- custom code start -->
 <style>
     #button-control {

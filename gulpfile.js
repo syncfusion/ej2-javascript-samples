@@ -666,14 +666,14 @@ function generateStackblitzFiles() {
             }
             $('#description').remove();
             $('#action-description').remove();
-            var metaDescription = "";
-            if (mdescription) {
-                if ((mdescription.length >= 60) && (mdescription.length <= 160)) {
-                    metaDescription = metaTagTemplate.replace(/{{metaData}}/, mdescription);
-                } else {
-                    error = error + canonical + ' description length should be between 60-160 characters\n';
-                }
-            }
+            //var metaDescription = "";
+            // if (mdescription) {
+            //     if ((mdescription.length >= 60) && (mdescription.length <= 160)) {
+            //         metaDescription = metaTagTemplate.replace(/{{metaData}}/, mdescription);
+            //     } else {
+            //         error = error + canonical + ' description length should be between 60-160 characters\n';
+            //     }
+            // }
             var repoScript = '';
             var hfile = hDep.replace(/{{:action-description}}/, adescription).
                 replace(/{{:description}}/, description).
@@ -770,11 +770,11 @@ function generateStackblitzFiles() {
         }
     }
 
-    if (error) {
-        console.log("=========== *** Build error due to invalid description length *** ==========\n\n");
-        console.log(error);
-        process.exit(1);
-    }
+    // if (error) {
+    //     console.log("=========== *** Build error due to invalid description length *** ==========\n\n");
+    //     console.log(error);
+    //     process.exit(1);
+    // }
 
 }
 

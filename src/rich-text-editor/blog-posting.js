@@ -1,5 +1,5 @@
 /**
- * RichTextEditor Blog-post sample
+ * Rich Text Editor Blog-post sample
  */
 this.default = function () {
     var button1 = new ej.buttons.Button({ isPrimary: true });

@@ -1,7 +1,7 @@
 {
     "name": "@syncfusion/ej2-javascript-samples",
-    "version": "16.4.52",
-    "description": "Pure Javascript Samples for Syncfusion Essential JS 2",
+    "version": "1.0.0",
+    "description": "Examples of JavaScript (ES5) UI Controls",
     "author": "Syncfusion Inc.",
     "license": "SEE LICENSE IN license",
     "dependencies": {
@@ -15,13 +15,14 @@
         "hasher": "^1.2.0",
         "markdown-it": "^8.4.0",
         "run-sequence": "^2.2.0",
+        "fuse.js": "^3.2.0",
+        "tributejs": "^3.7.3",
         "webpack": "*",
         "webpack-stream": "*"
     },
     "devDependencies": {
         "elasticlunr": "0.9.5",
         "gulp-jshint": "^2.0.1",
-        "fuse.js": "^3.2.0",
         "jshint": "^2.9.2"
     },
     "scripts": {

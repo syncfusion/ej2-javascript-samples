@@ -23,7 +23,10 @@
         "url": "listview",
         "name": "ListView",
         "category": "Integration",
-        "description": "Demo integrating the Essential JS 2 Badge and ListView components to display a notification count in a list item to achieve a Gmail-like user interface."
+        "description": "Demo integrating the Essential JS 2 Badge and ListView components to display a notification count in a list item to achieve a Gmail-like user interface.",
+        "sourceFiles": [{"displayName": "listview.js", "path": "./src/badge/listview.js"},
+            {"displayName": "listview.html", "path": "./src/badge/listview.html"},
+            {"displayName": "datasource.js", "path": "./src/badge/datasource.js"}]
     }, {
         "url": "accordion",
         "name": "Accordion",

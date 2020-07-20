@@ -183,12 +183,14 @@ this.default = function() {
   ];
   diagram = new ej.diagrams.Diagram({
     width: "100%",
-    height: 700,
+    height: 800,
     nodes: nodes,
     connectors: connectors,
     getNodeDefaults: getNodeDefaults,
     getConnectorDefaults: getConnectorDefaults,
-    setNodeTemplate: setNodeTemplate
+    setNodeTemplate: setNodeTemplate,
+    created: function () { diagram.fitToPage(); }
+
   });
   diagram.appendTo("#diagram");
 };

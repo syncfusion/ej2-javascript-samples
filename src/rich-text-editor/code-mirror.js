@@ -1,5 +1,5 @@
 /**
- * RichTextEditor code-mirror sample
+ * Rich Text Editor code-mirror sample
  */
 var defaultRTE;
 var divPreview;

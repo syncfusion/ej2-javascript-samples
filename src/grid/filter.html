@@ -1,8 +1,24 @@
-<div class="control-section">
+<div class="col-lg-9 control-section">
     <div class="content-wrapper">
         <div id="Grid">
         </div>
     </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 60%">
+                <div style="padding-left: 0px">Enable Filterbar Operator</div>
+            </td>
+            <td style="width: 30%;padding-bottom: 10px">
+                <div>
+                    <input type="checkbox" tabindex="1" id='filterBarOperator' />
+                </div>
+            </td>
+        </tr>
+ 
+    </table>
 </div>
 
 <div id="action-description">
@@ -15,7 +31,7 @@
 <div id="description">
     <p>The filtering feature enables the user to view the reduced amount of records based on filter criteria. 
         It can be enabled by setting <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowfitering-boolean">allowFiltering
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowfiltering">allowFiltering
         </a></code> property as true. 
         A filter bar row will be rendered next to header which allows
         the end-users to filter data by entering text within its cells.</p>
@@ -26,16 +42,26 @@
         <li><code>Immediate</code> - Filter will start after user ends typing. 
         This uses a time delay of <i>1500ms</i> to initiate filter after use stops typing. 
         It can be overridden using the <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-filterSettingsModel.html#immediatemodedelay-number">
+        href="http://ej2.syncfusion.com/documentation/grid/api-filterSettingsModel.html#immediatemodedelay">
         filterSettings->immediateModeDelay
         </a></code> property.</li>
     </ul>
     <p>In this demo, you can type the text in the filter bar cells to filter the Grid. </p>
+    <p>Additionally, the grid records can also be filtered based on the selected filterbar operator. It can be enabled by setting
+        <br/>
+        <code>filterSettings->showFilterBarOperator</code> property as true.
+        <p>In this demo, </p>
+        <ul>
+           <li>To enable or disable filterbar operator feature, check or uncheck the checkbox in the properties panel.</li>
+           <li>Now select the required filtering operator in the dropdown list on the filter bar cell and 
+               type the text in the filter bar cell to filter the Grid</li>
+        </ul>
+   </p>
     <br/>
     <p>
         More information on the filter configuration can be found in this
         <a target="_blank" 
-        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#filtersettings-filtersettingsmodel">
+        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#filtersettings">
         documentation section</a>.
     </p>
 </div>

@@ -1,5 +1,5 @@
 /**
- * Remote Data Binding sample.
+ * Remote data binding sample.
  */
 this.default = function () {
 
@@ -16,22 +16,20 @@ this.default = function () {
 
     //Initialize Spreadsheet component.
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
-        sheets: [
-            {
-                name: 'Shipment Details',
-                rows: [{
-                    cells: [{ value: 'Order ID' }, { value: 'Customer Name' }, { value: 'Freight' }, { value: 'Ship Name' },
-                    { value: 'Ship City' }, { value: 'Ship Country' }]
-                }],
-                rangeSettings: [{ dataSource: data, query: query, showFieldAsHeader: false, startCell: 'A2' }],
-                columns: [{ width: 100 }, { width: 130 }, { width: 100 }, { width: 220 }, { width: 150 }, { width: 180 }]
+        sheets: [{
+            name: 'Shipment Details',
+            rows: [{
+                cells: [{ value: 'Order ID' }, { value: 'Customer Name' }, { value: 'Freight' }, { value: 'Ship Name' },
+                { value: 'Ship City' }, { value: 'Ship Country' }]
             }],
+            ranges: [{ dataSource: data, query: query, showFieldAsHeader: false, startCell: 'A2' }],
+            columns: [{ width: 100 }, { width: 130 }, { width: 100 }, { width: 220 }, { width: 150 }, { width: 180 }]
+        }],
         openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
         saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
-        dataBound: function () {
-            if (!spreadsheet.isOpen && spreadsheet.activeSheetTab === 1) {
-                spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:G1');
-            }
+        created: function () {
+            //Apply style to a range
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:G1');
         }
     });
 

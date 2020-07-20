@@ -1,21 +1,19 @@
 {
     "name": "Rich Text Editor",
-    "type": "update",
     "directory": "rich-text-editor",
     "category": "Editors",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
             "url": "tools",
             "name": "Overview",
-            "type": "update",
-            "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) rich text editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
+            "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
         },
         {
             "url": "rich-text-editor",
             "name": "Default Functionalities",
-            "description": "This demo shows how to render JavaScript (ECMAScript 5) rich text editor (WYSIWYG HTML editor) control with a minimum configuration setting.",
+            "description": "This demo shows how to render JavaScript (ECMAScript 5) Rich Text Editor (WYSIWYG HTML editor) control with a minimum configuration setting.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "appendTo"] }
         },
@@ -43,14 +41,14 @@
         {
             "url": "iframe",
             "name": "IFrame",
-            "description": "This demo shows how to render a  JS (ECMAScript 5) rich text editor (iframe) that was designed by using the iframe element covering all tool functionalities.",
+            "description": "This demo shows how to render a  JS (ECMAScript 5) Rich Text Editor (iframe) that was designed by using the iframe element covering all tool functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "height", "iframeSettings", "toolbarSettings", "actionBegin", "actionComplete", "appendTo"], "IFrameSettings": ["enable"], "ToolbarSettings": ["items"] }
         },
         {
             "url": "print",
             "name": "Print",
-            "description": "This demo sample shows how to print the content of the JS(ECMAScript 5) rich text editor (HTML editor) with styles and formatting using the print module.",
+            "description": "This demo sample shows how to print the content of the JS(ECMAScript 5) Rich Text Editor (HTML editor) with styles and formatting using the print module.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "print", "appendTo"], "ToolbarSettings": ["items"] }
         },
@@ -78,7 +76,7 @@
         {
             "url": "api",
             "name": "API",
-            "description": "This demo covers important APIs of the JS(ECMAScript 5) rich text editor such as HTML encoding, read-only, retrieve the selected content, and more.",
+            "description": "This demo covers important APIs of the JS(ECMAScript 5) Rich Text Editor such as HTML encoding, read-only, retrieve the selected content, and more.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "appendTo", "readonly", "enabled", "enableHtmlEncode", "value", "getSelection", "selectAll"] }
         },
@@ -92,7 +90,7 @@
         {
             "url": "blog-posting",
             "name": "Use Case",
-            "description": "The Rich Text Editor is used in most real-time applications. The Javascript (ECMAScript 5) rich text editor example shows how to design a forum application.",
+            "description": "The Rich Text Editor is used in most real-time applications. The Javascript (ECMAScript 5) Rich Text Editor example shows how to design a forum application.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "placeholder", "value", "dataBind", "refresh", "appendTo"] }
         },
@@ -127,7 +125,7 @@
         {
             "url": "markdown-editor",
             "name": "Overview",
-            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) rich text editor control shows the markdown editing in the rich text editor with complete features.",
+            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) Rich Text Editor control shows the markdown editing in the Rich Text Editor with complete features.",
             "category": "Markdown",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
         },

@@ -41,11 +41,12 @@ var pivotObj = new ej.pivotview.PivotView({
     width: '100%',
     toolbar: ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
     'Grid', 'Chart','MDX', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'FieldList'],
-    height: 600,
+    height: 500,
     gridSettings: {
         columnWidth: 160
     },
     chartSettings: {
+        title:"Sales Analysis",
         load: function(args) {
           var selectedTheme = location.hash.split("/")[1];
           selectedTheme = selectedTheme ? selectedTheme : "Material";
@@ -106,6 +107,13 @@ var pivotObj = new ej.pivotview.PivotView({
         var reportsCollection = [];
         if (localStorage.pivotviewReports && localStorage.pivotviewReports !== "") {
             reportsCollection = JSON.parse(localStorage.pivotviewReports);
+        }
+        if (args.isReportExists) {
+            for (var i = 0; i < reportsCollection.length; i++) {
+                if (reportsCollection[i].reportName === args.rename) {
+                    reportsCollection.splice(i, 1);
+                }
+            }
         }
         reportsCollection.map(function (item) {
             if (args.reportName === item.reportName) {

@@ -1,6 +1,6 @@
-
- /* tslint:disable */
-
+/**
+ * Sample for default bullet chart.
+ */
 this.default = function () {
     var bullet1 = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '80%',
@@ -9,15 +9,15 @@ this.default = function () {
         valueField: 'value',
         targetField: 'target',
         animation: { enable: false },
-        margin: { left: ej.base.Browser.isDevice ? 10 : 35 },
+        margin: { left: ej.base.Browser.isDevice ? 10 : 60 },
         ranges: [{ end: 150 },
         { end: 250 },
         { end: 300 }
         ],
         minimum: 0, maximum: 300, interval: 50,
         title: 'Revenue',
-        labelFormat: '${value}',
-        subtitle: 'U.S. $ (1,000s)',
+        labelFormat: '${value}K',
+        subtitle: 'U.S. $',
         titlePosition: ej.base.Browser.isDevice ? 'Top' : 'Left',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

@@ -48,7 +48,6 @@
         {
             "url": "marker",
             "name": "Marker",
-            "type": "update",
             "description": "This demo for Essential JS2 Maps control shows the top 25 populated cities in the world by displaying the markers in their locations.",
             "category": "Features",
             "sourceFiles":[
@@ -219,7 +218,6 @@
         {
             "url": "zoom-marker",
             "name": "Zoom to fit all markers",
-            "type": "new",
             "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
             "category": "User Interaction",
             "sourceFiles":[
@@ -252,6 +250,7 @@
             "name": "Print",
 			"description": "This demo for Essential JS2 Maps control illustrates the printing functionality in the maps control.",
             "category": "Print and Export",
+            "type": "update",
             "sourceFiles":[
                 { "displayName": "print.html", "path":"src/maps/print.html" },
                 { "displayName": "print.js", "path":"src/maps/print.js" },
@@ -264,6 +263,7 @@
             "name": "Export",
 			"description": "This demo for Essential JS2 Maps control illustrates the exporting functionality in the maps control.",
             "category": "Print and Export",
+            "type": "update",
             "sourceFiles":[
                 { "displayName": "export.html", "path":"src/maps/export.html" },
                 { "displayName": "export.js", "path":"src/maps/export.js" },
@@ -366,7 +366,6 @@
         {
             "url": "sales-map",
             "name": "Sales map",
-            "type": "new",
             "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
             "category": "Use Cases",
             "sourceFiles":[

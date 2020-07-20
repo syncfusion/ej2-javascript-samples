@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor Quick toolbar sample
+ * Rich Text Editor Quick toolbar sample
  */
 this.default = function() {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({

@@ -592,7 +592,7 @@ function showPaletteToolbar() {
 // custom code end
 this.default = function () {
     diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '469px', nodes: nodes, connectors: connectors,
+        width: '100%', height: '445px', nodes: nodes, connectors: connectors,
         contextMenuSettings: contextMenu,
         contextMenuOpen: contextMenuOpen,
         contextMenuClick: contextMenuClick,

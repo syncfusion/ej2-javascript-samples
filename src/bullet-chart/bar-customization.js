@@ -1,6 +1,6 @@
-
- /* tslint:disable */
-
+/**
+ * Sample for bar customization.
+ */
 this.default = function () {
     var chart = new ej.charts.BulletChart({
         tooltip: { enable: true },

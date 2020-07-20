@@ -27,8 +27,10 @@ this.default = function () {
         gridLines: 'Both',
         height: '450px',
         treeColumnIndex: 1,
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
+        resourceFields: {
+            id: 'resourceId',
+            name: 'resourceName'
+        },
         resources: editingResources,
         highlightWeekends: true,
         timelineSettings: {
@@ -70,7 +72,7 @@ this.default = function () {
         ],
         enableContextMenu: true,
         contextMenuItems: ['AutoFitAll', 'AutoFit', 'TaskInformation', 'DeleteTask', 'Save', 'Cancel',
-            'SortAscending', 'SortDescending', 'Add', 'DeleteDependency', 'Convert',
+            'SortAscending', 'SortDescending', 'Add', 'DeleteDependency', 'Convert', 'Indent', 'Outdent',
             { text: 'Collapse the Row', target: '.e-content', id: 'collapserow' },
             { text: 'Expand the Row', target: '.e-content', id: 'expandrow' },
         ],

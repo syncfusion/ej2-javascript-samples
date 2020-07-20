@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor IFrame sample
+ * Rich Text Editor IFrame sample
  */
 this.default = function() {
     var iframeRTE = new ej.richtexteditor.RichTextEditor({

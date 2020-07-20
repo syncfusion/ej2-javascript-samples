@@ -2,9 +2,21 @@
  * Getting started -  Html Node
  */
 
-//Add Gauge control to Diagram.
-function getHtmlContent() {
-    var div = document.getElementById('gauge');
+// tslint:disable-next-line:max-func-body-length
+this.default = function () {
+
+    var shape = { type: 'HTML' };
+    var node1 = {
+        id: 'node', offsetX: 450, offsetY: 200, width: 300, height: 300, shape: shape
+    };
+    //initialize the diagram control
+    var diagram = new ej.diagrams.Diagram({
+        width: '100%', height: '640px', nodes: [node1], snapSettings: { constraints: 0 },
+        nodeTemplate: '#nodetemplate',
+        created: function () { diagram.fitToPage(); }
+    });
+    diagram.appendTo('#diagram');
+    // initializa template
     var circularGauge = new ej.circulargauge.CircularGauge({
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -34,20 +46,5 @@ function getHtmlContent() {
         }]
     });
     circularGauge.appendTo('#gauge');
-    return div;
-}
-// tslint:disable-next-line:max-func-body-length
-this.default = function () {
-    var htmlcontent = '<div id="gauge" style="height:100%; width:100%; overflow:hidden;"> </div>';
-    var shape = { type: 'HTML', content: htmlcontent };
-    var node1 = {
-        id: 'node', offsetX: 450, offsetY: 200, width: 300, height: 300, shape: shape
-    };
-    //initialize the diagram control
-    var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '640px', nodes: [node1], snapSettings: { constraints: 0 },
-        created: function() { diagram.fitToPage(); }
-    });
-    diagram.appendTo('#diagram');
-    getHtmlContent();
+
 };

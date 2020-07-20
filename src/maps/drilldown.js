@@ -70,9 +70,6 @@ this.default = function () {
                 markerSettings: [
                     {
                         visible: true,
-                        tooltipSettings: {
-                            visible: true
-                        },
                         template: '<div id="marker1" class="markerTemplate">Asia' +
                             '</div>',
                         dataSource: [

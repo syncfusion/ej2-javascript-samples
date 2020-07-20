@@ -29,12 +29,11 @@ this.default = function () {
                 ],
                 xName: 'x',
                 yName: 'y',
-                startAngle: 0,
-                endAngle: 360,
+                startAngle: 60,              
                 innerRadius: '0%', name: 'RIO',
                 dataLabel: {
                     visible: true, position: 'Outside',
-                    connectorStyle: { length: '10%' }, name: 'text',
+                    connectorStyle: { length: '20px', type: 'Curve' }, name: 'text',
                 },
             }
         ],
@@ -44,7 +43,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
         //Initializing Title
-        title: 'RIO Olympics Gold',
+        title: 'Rio Olympics Gold',
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

@@ -68,7 +68,11 @@ this.default = function () {
                         dataSource: [
                             { latitude: 30.380747605060766, longitude: -85.81283569335938 }
                         ],
-                        animationDuration: 0
+                        animationDuration: 0,
+						offset : {
+							x: 0,
+							y : -15
+						}
                     },
                     {
                         visible: true,

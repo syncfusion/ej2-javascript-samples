@@ -56,6 +56,11 @@ this.default = function () {
         maps.zoomSettings.enable = element.checked;
         maps.refresh();
     };
+    document.getElementById('pan').onchange = function () {
+        var element = (document.getElementById('pan'));
+        maps.zoomSettings.enablePanning = element.checked;
+        maps.refresh();
+    };
     document.getElementById('doubletap').onchange = function () {
         var element = (document.getElementById('doubletap'));
         maps.zoomSettings.doubleClickZoom = element.checked;

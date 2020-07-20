@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor API sample
+ * Rich Text Editor API sample
  */
 this.default = function() {
     var defaultAPI = new ej.richtexteditor.RichTextEditor({

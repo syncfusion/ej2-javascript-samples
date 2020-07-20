@@ -4,7 +4,7 @@ this.default = function () {
         return instance.formatDate(value.date, { skeleton: 'yMMMM' });
     };
     window.getWeekDetails = function (value) {
-        return 'Week ' + ej.schedule.getWeekNumber(value.date);
+        return 'Week ' + ej.schedule.getWeekNumber(ej.schedule.getWeekLastDate(value.date, 0));
     };
     var data = new ej.base.extend([], window.headerRowData, null, true);
     var scheduleObj = new ej.schedule.Schedule({

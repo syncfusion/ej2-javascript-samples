@@ -89,10 +89,11 @@ this.default = function () {
             connector.targetDecorator.style = { fill: '#024249', strokeColor: '#024249' };
             return { style: { strokeColor: '#024249', strokeWidth: 2 } };
         },
-        snapSettings: { constraints: ej.diagrams.SnapConstraints.None }
+        snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
+        created: function () { diagram.fitToPage({ mode: 'Width' }); }
+
     });
     diagram.appendTo('#diagram');
-
     //Enable or disable the AspectRatio for Node.
      element = new ej.buttons.CheckBox({
         checked: false, label: 'Aspect ratio',

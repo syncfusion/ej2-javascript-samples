@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 /**
- * RichTextEditor Inline sample
+ * Rich Text Editor Inline sample
  */
 this.default = function () {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({

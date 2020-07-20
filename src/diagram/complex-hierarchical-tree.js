@@ -59,7 +59,8 @@ this.default = function () {
         },
         //Disables all interactions except zoom/pan
         tool: ej.diagrams.DiagramTools.ZoomPan,
-        snapSettings: { constraints: 0 }
+        snapSettings: { constraints: 0 },
+        created: function () { diagram.fitToPage({ mode: 'Width' }); }
     });
     diagram.appendTo('#diagram');
 

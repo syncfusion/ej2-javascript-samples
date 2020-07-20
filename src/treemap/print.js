@@ -6,6 +6,9 @@ this.default = function () {
             printtheme = printtheme ? printtheme : 'Material';
             args.treemap.theme = (printtheme.charAt(0).toUpperCase() + printtheme.slice(1));
         },
+        allowPdfExport : true,
+        allowImageExport: true,
+        allowPrint : true,
         // custom code end
         titleSettings: {
             text: 'Top 10 best selling smartphone brands - 2017',

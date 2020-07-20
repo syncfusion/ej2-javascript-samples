@@ -17,6 +17,6 @@ this.default = function () {
         var step = parseFloat(document.getElementById('step').value);
         numeric.min = min;
         numeric.max = max;
-        numeric.step = step;
+        numeric.step = isNaN(step) ? 1 : step;
     };
 };

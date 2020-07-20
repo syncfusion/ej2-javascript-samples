@@ -30,8 +30,10 @@ this.default = function () {
             columnIndex: 3
         },
         rowHeight:60,
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
+        resourceFields: {
+            id: 'resourceId',
+            name: 'resourceName'
+        },
         resources: editingResources,
         projectStartDate: new Date('03/24/2019'),
         projectEndDate: new Date('07/06/2019')

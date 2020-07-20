@@ -1,0 +1,49 @@
+<div>
+    <div class="col-md-8 control-section">
+        <div class="content-wrapper">
+            <div id="container" style="width:92%"></div>
+        </div>
+    </div>
+    <div class="col-md-4 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tbody>
+                <tr style="height: 50px">
+                    <td style="width: 60%">
+                        <div>Palette Type:</div>
+                    </td>
+                    <td style="width: 40%;">
+                        <div class="row">
+                            <input id="fixed" type="radio">
+                        </div>
+                        <div class="row">
+                            <input id="gradient" type="radio">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the energy consumption in trillion British thermal units (btu) by the various public sectors in US
+        government over the years. The data label is disabled in this sample, the tooltip displays the data point values.
+        In property panel, the options are available to change palette type in Heatmap by means of radio button.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example explains how to provide a specific color for specific range in heatmap. The <code> startValue </code> and <code> endValue </code> properties are used to define the range start and end values. The <code> minColor </code> and <code> maxColor </code> properties represent the colors of given range.
+    </p>
+    <p>
+        Tooltip is enabled in this example, to see the tooltip in action, hover a point or tap on a point in touch enabled devices.
+    </p>
+    <br>
+</div>
+<!-- custom code start -->
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>
+<!-- custom code end -->

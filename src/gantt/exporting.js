@@ -20,25 +20,30 @@ this.default = function () {
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor' },
-            { field: 'Progress' },
             { field: 'resources' },
+            { field: 'Progress' }
         ],
         allowExcelExport: true,
-        toolbar: ['ExcelExport', 'CsvExport'],
+        allowPdfExport: true,
+        toolbar: ['ExcelExport', 'CsvExport', 'PdfExport'],
         toolbarClick: function (args) {
             if (args.item.id === 'GanttExport_excelexport') {
                 ganttChart.excelExport();
             }
             else if (args.item.id === 'GanttExport_csvexport') {
                 ganttChart.csvExport();
+            } else if (args.item.id === 'GanttExport_pdfexport') {
+                ganttChart.pdfExport();
             }
         },
         allowSelection: true,
         gridLines: 'Both',
         height: '450px',
         treeColumnIndex: 1,
-        resourceNameMapping: 'resourceName',
-        resourceIDMapping: 'resourceId',
+        resourceFields: {
+            id: 'resourceId',
+            name: 'resourceName'
+        },
         resources: editingResources,
         highlightWeekends: true,
         timelineSettings: {
@@ -60,5 +65,6 @@ this.default = function () {
         projectStartDate: new Date('03/25/2019'),
         projectEndDate: new Date('07/28/2019'),
     });
+    
     ganttChart.appendTo('#GanttExport');
 };

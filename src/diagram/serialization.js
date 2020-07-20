@@ -3,17 +3,6 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
-function onUploadSuccess(args) {
-    var file1 = args.file;
-    var file = file1.rawFile;
-    var reader = new FileReader();
-    reader.readAsText(file);
-    reader.onloadend = loadDiagram;
-}
-//Load the diagraming object.
-function loadDiagram(event) {
-    diagram.loadDiagram(event.target.result);
-}
 
 //save the diagram object in json data.
 function download(data) {
@@ -267,8 +256,20 @@ this.default = function () {
             saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
             removeUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove'
         },
-        success: onUploadSuccess
+        success: onUploadSuccess,
+        showFileList:false
     });
     uploadObj.appendTo('#fileupload');
+    function onUploadSuccess(args) {
+        var file1 = args.file;
+        var file = file1.rawFile;
+        var reader = new FileReader();
+        reader.readAsText(file);
+        reader.onloadend = loadDiagram;
+    }
+    //Load the diagraming object.
+    function loadDiagram(event) {
+        diagram.loadDiagram(event.target.result);
+    }
 
 };

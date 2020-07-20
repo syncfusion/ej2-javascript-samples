@@ -84,7 +84,7 @@ function pointeGauge2() {
                 {
                     angle: 180,
                     radius: '20%', zIndex:1,
-                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px;">Inverted Triangle</div>'
+                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px;">Marker</div>'
                 }
             ]
         }],
@@ -121,25 +121,27 @@ function pointeGauge3() {
             radius: '90%',
             minimum: 0,
             maximum: 100,
-            pointers: [{
-                type: 'Marker',
-                markerShape: 'Triangle',
-                radius: '100%',
-                animation: { enable: true, duration: 1000 },
+            pointers: [{ 
+                animation: { enable: true , duration: 1000},
                 value: 70,
-                markerWidth: 15,
-                markerHeight: 15,
-                color: '#1E7145',
-                border: {
-                    width: 1,
-                    color: ' #1E7145'
+                radius: '80%',
+                color: 'green',
+                pointerWidth: 2,
+                needleStartWidth:4,
+                needleEndWidth:4,
+                cap: {
+                    radius: 8,
+                    color: 'green'
+                },
+                needleTail: {
+                    length: '0%'
                 }
             }],
             annotations: [
                 {
                     angle: 180,
                     radius: '20%', zIndex:1,
-                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px;">Triangle</div>'
+                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px; padding-top: 3px">Customized needle</div>'
                 }
             ]
         }],
@@ -270,7 +272,7 @@ this.default = function () {
     var secondgauge = new ej.circulargauge.CircularGauge(pointeGauge2());
     secondgauge.appendTo('#container1');
     var thirdgauge = new ej.circulargauge.CircularGauge(pointeGauge3());
-    thirdgauge.appendTo('#container3');
+    thirdgauge.appendTo('#container4');
     var fourthgauge = new ej.circulargauge.CircularGauge({
         // custom code start
         load: function (args) {
@@ -334,14 +336,14 @@ this.default = function () {
                 {
                     angle: 180,
                     radius: '25%', zIndex:1,
-                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px;">Multiple Needle</div>'
+                    content: '<div style="color:#757575; font-family:Roboto; font-size:14px;">Multiple Needles</div>'
                 }
             ]
         }],
     });
     fourthgauge.appendTo('#container5');
     var fifthGauge = new ej.circulargauge.CircularGauge(pointeGauge4());
-    fifthGauge.appendTo('#container4');
+    fifthGauge.appendTo('#container3');
     var sixthGauge = new ej.circulargauge.CircularGauge(pointeGauge5());
     sixthGauge.appendTo('#container6');
     this.pointeGauge5Interval1 = setInterval(function () {

@@ -1,0 +1,101 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id='Kanban'></div>
+        <div id='Dialog'></div>
+    </div>
+</div>
+<div class="col-lg-3 property-section property-customization">
+    <div class="property-panel-section">
+        <p class="property-panel-header">Constraint</p>
+        <div class="property-panel-content">
+            <table class="e-constraint-table">
+                <tr>
+                    <td class="e-constraint-label">
+                        <div>Type</div>
+                    </td>
+                    <td>
+                        <div>
+                            <select id="type" class="form-control">
+                                <option value="Column">Column</option>
+                                <option value="Swimlane">Swimlane</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p class="property-panel-header">Validate Constraints</p>
+        <div class="property-panel-content">
+            <form id="column">
+                <table class="e-constraint-table">
+                    <tr>
+                        <td class="e-constraint-label">
+                            <div>Columns</div>
+                        </td>
+                        <td><input type="text" id="key" /></td>
+                    </tr>
+                    <tr>
+                        <td class="e-constraint-label">
+                            <div>MinCount</div>
+                        </td>
+                        <td><input id="minIndex" type="text" placeholder="Minimum Count" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="e-constraint-label">
+                            <div>MaxCount</div>
+                        </td>
+                        <td><input id="maxIndex" type="text" placeholder="Maximum Count" required /></td>
+                    </tr>
+                </table>
+                <div class="e-validate">
+                    <button class="e-btn" id="validate">Validate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    .property-panel-content .e-constraint-table {
+        width: 100%
+    }
+
+    .property-panel-content .e-constraint-label {
+        width: 40%
+    }
+
+    .property-panel-content .e-validate {
+        padding-top: 13px;
+        text-align: center;
+    }
+
+    .property-panel-content td {
+        padding-top: 10px;
+    }
+
+    .property-panel-header {
+        padding-bottom: 0px;
+    }
+</style>
+<div id="action-description">
+    <p>This sample demonstrates how to limit the minimum and maximum number of cards to each column of the Kanban
+        control.
+        Configured the options in the property panel to change the constraint type and related attributes.</p>
+</div>
+<div id="description">
+    <p>This sample validates the number of cards in the particular column or swimlane using the
+        <code>constraintType</code> property.
+        This property contains two types:</p>
+    <ul>
+        <li>Column: Validates the number of cards based on the particular column.
+            By default, column validation is applied to Kanban board.</li>
+        <li>Swimlane: Validation applies based on number of cards in a particular column cell and swimlane.</li>
+    </ul>
+    <p>This sample contains the following properties: </p>
+    <ul>
+        <li>Columns: You can choose a column and set maximum and minimum limit to the selected column.</li>
+        <li>minCount: Minimum limit of cards required for each column.
+            If the cards count do not reach the minimum limit, it will indicate the validation failed state.</li>
+        <li>maxCount: Maximum limit of cards per column. If the cards count exceeds the maximum limit, it will indicate
+            the validation failed state.</li>
+    </ul>
+</div>
