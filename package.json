@@ -27,6 +27,10 @@
     "scripts": {
         "test": "gulp js-hint ",
         "serve": "gulp serve",
-        "build": "gulp build"
-    }
+        "build": "gulp build",
+        "preinstall": "npx npm-force-resolutions"
+    },
+    "resolutions": {
+        "graceful-fs": "^4.2.4"
+      }
 }
