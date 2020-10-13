@@ -4,7 +4,7 @@ var ddtreeObj = new ej.dropdowns.DropDownTree({
   headerTemplate: '#headerTemplate',
   itemTemplate: '#itemTemplate',
   footerTemplate: '#footerTemplate',
-  width: '350px',
+  width: '100%',
   cssClass:"ddt-template",
   placeholder: 'Select an employee',
   popupHeight: '250px'

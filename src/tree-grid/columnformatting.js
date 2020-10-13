@@ -20,6 +20,7 @@ this.default = function () {
     var treeGridObj = new ej.treegrid.TreeGrid({
         dataSource: window.formatData,
         allowPaging: true,
+        height: 350,
         childMapping: 'subtasks',
         treeColumnIndex: 1,
         pageSettings: { pageCount: 5 },

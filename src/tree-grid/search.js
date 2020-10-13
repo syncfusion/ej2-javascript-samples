@@ -8,6 +8,7 @@ this.default = function () {
     var grid = new ej.treegrid.TreeGrid({
         dataSource: window.sampleData,
         allowPaging: true,
+        height: 350,
         childMapping: 'subtasks',
         treeColumnIndex: 1,
         toolbar: ['Search'],

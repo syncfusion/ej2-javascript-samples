@@ -1,7 +1,6 @@
 {
     "name": "HeatMap Chart",
     "directory": "heatmap-chart",
-    "type":"update",
     "category": "Data Visualization",
     "ftName": "heatmap-chart",
     "samples": [
@@ -172,7 +171,6 @@
             "url": "color-range",
             "name": "Color Range",
             "category": "Features",
-            "type":"new",
             "description": "This demo for Essential JS2 Heatmap control demonstrates applying colorRange for the heatmap cells.",
             "sourceFiles": [{"displayName": "color-range.js", "path": "./src/heatmap-chart/color-range.js"},
                 {"displayName": "color-range.html", "path": "./src/heatmap-chart/color-range.html"},

@@ -5,7 +5,23 @@
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
     "type": "update",
-    "samples": [{
+    "samples": [
+        {
+            "url": "overview",
+            "name": "Overview",
+            "category": "Scheduler",
+            "description": "This demo shows for Javascript (ES5) Scheduler features such as Multiple views, Templates, Resources, Grouping, Timezone, Timescale, etc...",
+            "type": "new",
+            "hideOnDevice": true,
+            "api": {
+                "Schedule": [
+                    "height",
+                    "eventSettings",
+                    "selectedDate"
+                ]
+            }
+        },
+        {
             "url": "default",
             "name": "Default Functionalities",
             "category": "Scheduler",
@@ -138,7 +154,6 @@
             "url": "inline-editing",
             "name": "Inline Editing",
             "category": "Appointments",
-            "type": "new",
             "description": "The example showcases the inline mode of the JS Scheduler that is used to create an appointment or edit an existing appointment's subject easily and quickly.",
             "api": {
                 "Schedule": [
@@ -224,7 +239,6 @@
             "url": "year",
             "name": "Year View",
             "category": "Views",
-            "type": "update",
             "description": "The example showcases the year view and Timeline year view of the JavaScript Scheduler. The views are helpful to view the events in an annual calendar view.",
             "api": {
                 "Schedule": [
@@ -480,7 +494,6 @@
         {
             "url": "quick-info-template",
             "name": "Quick Info Template",
-            "type": "new",
             "category": "Templates",
             "description": "The example showcases the customized quick info popups for cells and events using the templates that help to override the built-in style in the JavaScript Scheduler.",
             "api": {

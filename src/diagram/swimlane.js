@@ -5,10 +5,10 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 //Create and add ports for node.
 var port = [
-    { id: 'Port1', offset: { x: 0, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Draw },
-    { id: 'Port2', offset: { x: 0.5, y: 0 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Draw },
-    { id: 'Port3', offset: { x: 1, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Draw },
-    { id: 'Port4', offset: { x: 0.5, y: 1 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Draw }
+    { id: 'Port1', offset: { x: 0, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+    { id: 'Port2', offset: { x: 0.5, y: 0 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+    { id: 'Port3', offset: { x: 1, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+    { id: 'Port4', offset: { x: 0.5, y: 1 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw }
 ];
 
 function addEvents() {
@@ -49,10 +49,10 @@ this.default = function () {
             id: 'swimlane',
             shape: {
                 type: 'SwimLane',
+                orientation: 'Horizontal',
                 header: {
                     annotation: { content: 'SALES PROCESS FLOW CHART', style: { fill: 'transparent' } },
                     height: 50, style: { fontSize: 11 },
-                    orientation: 'Horizontal',
                 },
                 lanes: [
                     {
@@ -168,7 +168,7 @@ this.default = function () {
                 phases: [
                     {
                         id: 'phase1', offset: 170,
-                        header: { content: { content: 'Phase' } }
+                        header: { annotation: { content: 'Phase' } }
                     }
                 ],
                 phaseSize: 20,

@@ -51,7 +51,7 @@ this.default = function () {
         span.style.marginLeft = "5px";
         span.style.marginRight = "5px";
         for (var index = 0; index < value.length; index++) {
-            img.src = 'src/gantt/images/' + value[index].resourceName + '.png';
+            img.src = 'https://ej2.syncfusion.com/demos/src/gantt/images/' + value[index].resourceName + '.png';
             span.innerHTML = value[index].resourceName;
             out = out + img.outerHTML + span.outerHTML;
         }

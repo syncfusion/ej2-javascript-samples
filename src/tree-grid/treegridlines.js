@@ -11,6 +11,7 @@ this.default = function () {
         gridLines: 'Vertical',
         pageSettings: { pageSize: 10 },
         childMapping: 'subtasks',
+        height: 350,
         treeColumnIndex: 1,
         columns: [
             { field: 'taskID', headerText: 'Task ID', textAlign: 'Right', width: 80 },

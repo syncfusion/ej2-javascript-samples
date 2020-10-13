@@ -18,9 +18,6 @@ this.default = function () {
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-                if(selectedTheme === 'highcontrast') {
-                    args.progressBar.trackColor = '#969696';
-                }
         }
     });
     linearProgress.appendTo('#linearSegment');
@@ -62,7 +59,6 @@ this.default = function () {
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#007bff"><span></span></div>';
                     break;
                 default:
-                    args.progressBar.trackColor = '#969696';
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#FFD939"><span></span></div>';
                     break;
             }

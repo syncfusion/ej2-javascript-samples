@@ -6,22 +6,22 @@ this.default = function () {
       selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
       switch (selectedTheme) {
         case 'material':
-          args.progressBar.trackColor = '#e91e63';
-          break;
+            args.progressBar.trackColor = '#e91e63';
+            break;
         case 'fabric':
-          args.progressBar.trackColor = '#0078D6';
-          break;
+            args.progressBar.trackColor = '#0078D6';
+            break;
         case 'bootstrap':
-          args.progressBar.trackColor = '#317ab9';
-          break;
+            args.progressBar.trackColor = '#317ab9';
+            break;
         case 'highcontrast':
-          args.progressBar.trackColor = '#FFD939';
-          args.progressBar.progressColor = '#000000';
-          args.progressBar.annotations[0].content = '<div id="point1" style="font-size:20px;font-weight:bold;color:#000000;fill:#000000"><span>60%</span></div>';
-          break;
-        default:
-          args.progressBar.trackColor = '#007bff';
-          break;
+            args.progressBar.trackColor = '#FFD939';
+            args.progressBar.progressColor = '#000000';
+            args.progressBar.annotations[0].content = '<div id="point1" style="font-size:20px;font-weight:bold;color:#000000;fill:#ffffff"><span>60%</span></div>';
+            break;
+        default :
+            args.progressBar.trackColor = '#007bff';
+            break;
     }
   };
   var progressLoad = function (args) {
@@ -38,7 +38,7 @@ this.default = function () {
         enableRtl: false,
         radius: '100%',
         innerRadius: '190%',
-        progressColor:"white",
+        progressColor: 'white',
         trackThickness: 80,
         cornerRadius: 'Round',
         progressThickness: 10,

@@ -3,14 +3,12 @@
     "directory": "progress-bar",
     "category": "Notifications",
     "ftName": "progress-bar",
-    "type": "update",
     "samples": [
         {
             "url": "linear",
             "name": "Linear",
             "description":"This demo for Essential JS2 Progress Bar control shows the linear rendering of progress bar",
             "category": "Progress Bar",
-            "type": "update",
             "api": {
                 "ProgressBar": [
                     "value",
@@ -67,7 +65,6 @@
             "name": "Labels",
             "description":"This demo for Essential JS2 Progress Bar control shows the label of progress bar",
             "category": "Progress Bar",
-            "type": "update",
             "api": {
                 "ProgressBar": [
                     "value",
@@ -96,7 +93,6 @@
             "name": "Stripes",
             "description":"This demo for Essential JS2 Progress Bar control shows the striped progress bar",
             "category": "Progress Bar",
-            "type": "new",
             "api": {
                 "ProgressBar": [
                     "value",
@@ -110,7 +106,6 @@
             "name": "Progress Segment",
             "description":"This demo for Essential JS2 Progress Bar control shows active state of progress bar",
             "category": "Progress Bar",
-            "type": "new",
             "api": {
                 "ProgressBar": [
                     "value",

@@ -17,8 +17,9 @@ this.default = function () {
     var treegrid = new ej.treegrid.TreeGrid({
         dataSource: window.sampleData,
         allowReordering: true,
+        height: 350,
         allowPaging: true,
-        pageSettings: { pageSize: 8 },
+        pageSettings: { pageSize: 10 },
         childMapping: 'subtasks',
         treeColumnIndex: 1,
         columns: [

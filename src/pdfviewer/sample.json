@@ -3,10 +3,9 @@
     "directory": "pdfviewer",
     "category": "Viewer",
     "ftName": "pdfviewer",
-    "type": "update",
     "samples": [
         {            
-            "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "type": "update", "api": {
+            "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

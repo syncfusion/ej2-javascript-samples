@@ -14,7 +14,8 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks',
             work:'work',
-            resourceInfo: 'resources'
+            resourceInfo: 'resources',
+            type:'taskType'
         },       
         resources: resourceResources,
         resourceFields: {

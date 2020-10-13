@@ -1120,6 +1120,7 @@ window.conditionalFormatting = [
         "Quantity": "144",
         "Purchase Price": "$169.50",
         "Selling Price": "$172.00",
+        "Profit": "=E3-D3",
         "Last Updated": "5/25/19",
         "Rating": "4.5"
     },
@@ -1129,6 +1130,7 @@ window.conditionalFormatting = [
         "Quantity": "116",
         "Purchase Price": "$21.80",
         "Selling Price": "$23.00",
+        "Profit": "=E4-D4",
         "Last Updated": "7/28/19",
         "Rating": "4.0"
     },
@@ -1138,6 +1140,7 @@ window.conditionalFormatting = [
         "Quantity": "438",
         "Purchase Price": "$26.80",
         "Selling Price": "$29.00",
+        "Profit": "=E5-D5",
         "Last Updated": "3/30/20",
         "Rating": "4.25"
     },
@@ -1147,6 +1150,7 @@ window.conditionalFormatting = [
         "Quantity": "486",
         "Purchase Price": "$23.50",
         "Selling Price": "$25.00",
+        "Profit": "=E6-D6",
         "Last Updated": "8/20/19",
         "Rating": "3.5"
     },
@@ -1156,6 +1160,7 @@ window.conditionalFormatting = [
         "Quantity": "176",
         "Purchase Price": "$56.50",
         "Selling Price": "$59.00",
+        "Profit": "=E7-D7",
         "Last Updated": "2/2/20",
         "Rating": "4.5"
     },
@@ -1165,6 +1170,7 @@ window.conditionalFormatting = [
         "Quantity": "0",
         "Purchase Price": "$22.50",
         "Selling Price": "$25.00",
+        "Profit": "=E8-D8",
         "Last Updated": "11/11/19",
         "Rating": "5.0"
     },
@@ -1174,6 +1180,7 @@ window.conditionalFormatting = [
         "Quantity": "116",
         "Purchase Price": "$175.00",
         "Selling Price": "$177.00",
+        "Profit": "=E9-D9",
         "Last Updated": "4/13/19",
         "Rating": "4.75"
     },
@@ -1183,6 +1190,7 @@ window.conditionalFormatting = [
         "Quantity": "58",
         "Purchase Price": "$32.00",
         "Selling Price": "$35.00",
+        "Profit": "=E10-D10",
         "Last Updated": "2/14/20",
         "Rating": "4.4"
     },
@@ -1192,6 +1200,7 @@ window.conditionalFormatting = [
         "Quantity": "232",
         "Purchase Price": "$18.90",
         "Selling Price": "$19.00",
+        "Profit": "=E11-D11",
         "Last Updated": "6/10/19",
         "Rating": "3.9"
     },
@@ -1201,6 +1210,7 @@ window.conditionalFormatting = [
         "Quantity": "405",
         "Purchase Price": "$33.90",
         "Selling Price": "$35.00",
+        "Profit": "=E12-D12",
         "Last Updated": "5/28/19",
         "Rating": "3.75"
     },
@@ -1210,6 +1220,7 @@ window.conditionalFormatting = [
         "Quantity": "47",
         "Purchase Price": "$153.50",
         "Selling Price": "$155.00",
+        "Profit": "=E13-D13",
         "Last Updated": "12/18/19",
         "Rating": "3.9"
     },
@@ -1219,6 +1230,7 @@ window.conditionalFormatting = [
         "Quantity": "232",
         "Purchase Price": "$201.25",
         "Selling Price": "$204.00",
+        "Profit": "=E14-D14",
         "Last Updated": "3/13/20",
         "Rating": "4.35"
     },
@@ -1228,6 +1240,7 @@ window.conditionalFormatting = [
         "Quantity": "210",
         "Purchase Price": "$182.25",
         "Selling Price": "$185.00",
+        "Profit": "=E15-D15",
         "Last Updated": "8/26/19",
         "Rating": "4.0"
     },
@@ -1237,6 +1250,7 @@ window.conditionalFormatting = [
         "Quantity": "225",
         "Purchase Price": "$34.80",
         "Selling Price": "$38.00",
+        "Profit": "=E16-D16",
         "Last Updated": "1/12/20",
         "Rating": "4.2"
     },
@@ -1246,6 +1260,7 @@ window.conditionalFormatting = [
         "Quantity": "373",
         "Purchase Price": "$104.800",
         "Selling Price": "$108.00",
+        "Profit": "=E17-D17",
         "Last Updated": "4/12/19",
         "Rating": "3.25"
     },
@@ -1255,6 +1270,7 @@ window.conditionalFormatting = [
         "Quantity": "216",
         "Purchase Price": "$19.00",
         "Selling Price": "$21.00",
+        "Profit": "=E18-D18",
         "Last Updated": "11/22/19",
         "Rating": "3.85"
     }

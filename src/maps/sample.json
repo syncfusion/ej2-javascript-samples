@@ -4,7 +4,6 @@
     "category": "Data Visualization",
     "ftName": "maps",
     "dataSourcePath":"src/maps/map-data.js",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -250,7 +249,6 @@
             "name": "Print",
 			"description": "This demo for Essential JS2 Maps control illustrates the printing functionality in the maps control.",
             "category": "Print and Export",
-            "type": "update",
             "sourceFiles":[
                 { "displayName": "print.html", "path":"src/maps/print.html" },
                 { "displayName": "print.js", "path":"src/maps/print.js" },
@@ -263,7 +261,6 @@
             "name": "Export",
 			"description": "This demo for Essential JS2 Maps control illustrates the exporting functionality in the maps control.",
             "category": "Print and Export",
-            "type": "update",
             "sourceFiles":[
                 { "displayName": "export.html", "path":"src/maps/export.html" },
                 { "displayName": "export.js", "path":"src/maps/export.js" },

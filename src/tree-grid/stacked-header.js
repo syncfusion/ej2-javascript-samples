@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.stackedData,
         allowPaging: true,
         childMapping: 'subtasks',
+        height: 350,
         treeColumnIndex: 1,
         pageSettings: { pageCount: 5 },
         columns: [
