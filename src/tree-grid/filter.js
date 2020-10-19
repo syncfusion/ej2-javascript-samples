@@ -10,6 +10,7 @@ this.default = function () {
         dataSource: window.sampleData,
         allowPaging: true,
         pageSettings: { pageSize: 10 },
+        height: 350,
         allowFiltering: true,
         filterSettings: { type: 'FilterBar', hierarchyMode: 'Parent', mode: 'Immediate' },
         childMapping: 'subtasks',

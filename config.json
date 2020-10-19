@@ -93,6 +93,15 @@
 		"smithchart",
 		"pareto",
 		"checkbox",
-		"uml"
+		"uml",
+		"kanban",
+		"swimlane",
+		"template",
+		"wip",
+		"validation",
+		"editing",
+		"timeline",
+		"progressbar",
+		null
 	]
 }

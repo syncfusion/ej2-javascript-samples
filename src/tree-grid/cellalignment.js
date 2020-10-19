@@ -14,6 +14,7 @@ this.default = function () {
     ];
     var treeGridObj = new ej.treegrid.TreeGrid({
         dataSource: window.sampleData,
+        height: 350,
         allowPaging: true,
         pageSettings: { pageSize: 10 },
         childMapping: 'subtasks',

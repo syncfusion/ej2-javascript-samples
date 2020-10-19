@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    mode : 'production',
+    mode : (/hotfix\/|release\/|master/).test(process.env.BRANCH_NAME) ? 'production' : 'development',
     entry: "./src/common/index.js",
     entry: { 'src/common/index.min': './src/common/index' },
     output: {

@@ -118,7 +118,7 @@
             }
         },
         {
-            "url": "stacked-line-100",
+            "url": "stacked-line -100",
             "name": "100% Stacked Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100% stacked line series.",
             "category": "Line Charts",
@@ -190,6 +190,20 @@
             "name": "Stacked Area",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking area series.",
             "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "stacked-step-area",
+            "name": "Stacked Step Area",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking step area series.",
+            "category": "Area Charts",
+            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -837,7 +851,6 @@
         {
             "url": "smart-labels",
             "name": "Smart Labels",
-            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
             "category": "Accumulation Charts",
             "api": {

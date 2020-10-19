@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.projectData,
         idMapping: 'TaskID',
         parentIdMapping: 'parentID',
+        height: 350,
         allowPaging: true,
         treeColumnIndex: 1,
         columns: [

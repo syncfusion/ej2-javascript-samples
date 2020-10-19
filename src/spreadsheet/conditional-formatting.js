@@ -20,7 +20,7 @@ this.default = function () {
             name: 'Inventory List',
             conditionalFormats: [
                 { type: 'GYRColorScale', range: 'C3:C18' },
-                { type: 'LessThan', cFColor: 'RedFT', value: '8/30/2019', range: 'F3:F18' }
+                { type: 'LessThan', cFColor: 'RedFT', value: '8/30/2019', range: 'G3:G18' }
             ],
             columns: [{
                 width: 100
@@ -38,6 +38,9 @@ this.default = function () {
                 width: 113
             },
             {
+                width: 77
+            },
+            {
                 width: 97
             },
             {
@@ -47,12 +50,17 @@ this.default = function () {
         openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
         saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
         created: function() {
-            spreadsheet.merge('A1:G1');
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:G2');
-            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle', fontSize: '13pt' }, 'A1:G1');
+            spreadsheet.merge('A1:H1');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:H2');
+            spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle', fontSize: '13pt' }, 'A1:H1');
+            spreadsheet.numberFormat('$#,##0.00', 'F3:F18');
             spreadsheet.conditionalFormat({ type: 'BlueDataBar', range: 'D3:D18' });
-            spreadsheet.conditionalFormat({ type: 'OrangeDataBar', range: 'E3:E18' });
-            spreadsheet.conditionalFormat({ type: 'ThreeStars', range: 'G3:G18' });
+            spreadsheet.conditionalFormat({ type: 'GreenDataBar', range: 'E3:E18' });
+            spreadsheet.conditionalFormat({ type: 'ThreeStars', range: 'H3:H18' });
+            spreadsheet.conditionalFormat({ type: "Top10Items", value:'1', format:{ style:{ color: '#ffffff',
+             backgroundColor: '#009999', fontWeight: 'bold'}}, range: 'F3:F18' });
+            spreadsheet.conditionalFormat({ type: "Bottom10Items", value:'1', format:{ style:{ color: '#ffffff',
+             backgroundColor: '#c68d53', fontWeight: 'bold'}}, range: 'F3:F18' });
         }
     }
 );

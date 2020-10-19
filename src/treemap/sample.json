@@ -3,7 +3,6 @@
     "directory": "treemap",
     "category": "Data Visualization",
     "ftName": "treemap",
-    "type": "update",
     "dataSourcePath":"src/treemap/map-data.js",
     "samples": [
         {
@@ -119,7 +118,6 @@
             "name": "Print & Export",
             "description": "This demo for Essential JS2 TreeMap control depicts the top 10 best-selling smartphone brands. Print and export options have been enabled.",
             "category": "TreeMap",
-            "type":"update",
             "api": {},
             "sourceFiles":[
                 { "displayName": "treemap-data.js", "path":"src/treemap/map-data.js" },

@@ -12,7 +12,7 @@ this.default = function () {
         // Assign template
         template: '<div class="listWrapper" style="width: inherit;height: inherit;"><span class="${icons} list_svg">&nbsp;</span>' +
             '<span class="list_text">${text} </span>' +
-            '<span class="${badge}" style="float: right;margin-top: 16px;font-size: 12px;">${messages}</span></div>',
+            '<span class="${badge}">${messages}</span></div>',
 
         // Map fields
         fields: { groupBy: 'type' },

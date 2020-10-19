@@ -18,6 +18,7 @@ this.default = function () {
         allowSelection: true,
         selectionSettings: { type: 'Multiple' },
         childMapping: 'subtasks',
+        height: 350,
         treeColumnIndex: 1,
         columns: [
             { field: 'taskID', headerText: 'Task ID', textAlign: 'Right', width: 80 },

@@ -4,12 +4,9 @@ this.default = function () {
         selectedTheme = selectedTheme ? selectedTheme : 'Material';
         args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
             selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            if(args.progressBar.theme === 'Material') {
-                args.progressBar.trackColor = '#eee';
-            }
-            if(selectedTheme === 'highcontrast') {
-                args.progressBar.trackColor = '#969696';
-            }
+        if (args.progressBar.theme === 'Material') {
+            args.progressBar.trackColor = '#EAEAEA';
+        }
     };
 
     var button = new ej.buttons.Button();
@@ -20,10 +17,9 @@ this.default = function () {
         type: 'Linear',
         height: '30',
         width: '100%',
+        trackColor: '#F5F5F5',
+        progressColor: '#d9534f',
         value: 20,
-        trackThickness: 20,
-        progressThickness: 20,
-        role: 'Success',
         isStriped: true,
         animation: {
             enable: true,
@@ -37,10 +33,9 @@ this.default = function () {
         type: 'Linear',
         height: '30',
         width: '100%',
+        trackColor: '#F5F5F5',
+        progressColor: '#f0ad4e',
         value: 40,
-        trackThickness: 20,
-        progressThickness: 20,
-        role: 'Info',
         isStriped: true,
         animation: {
             enable: true,
@@ -54,10 +49,9 @@ this.default = function () {
         type: 'Linear',
         height: '30',
         width: '100%',
+        trackColor: '#F5F5F5',
+        progressColor: '#5bc0de',
         value: 70,
-        role: 'Warning',
-        trackThickness: 20,
-        progressThickness: 20,
         isStriped: true,
         animation: {
             enable: true,
@@ -71,10 +65,9 @@ this.default = function () {
         type: 'Linear',
         height: '30',
         width: '100%',
+        trackColor: '#F5F5F5',
+        progressColor: '#5CB85C',
         value: 100,
-        trackThickness: 20,
-        progressThickness: 20,
-        role: 'Danger',
         isStriped: true,
         animation: {
             enable: true,

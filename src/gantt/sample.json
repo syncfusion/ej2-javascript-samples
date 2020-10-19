@@ -1,7 +1,6 @@
 {
    "name": "Gantt",
    "directory": "gantt",
-   "type": "update",
    "category": "Calendars",
    "ftName": "gantt",
    "dataSourcePath": "src/gantt/data-source.js",
@@ -120,7 +119,6 @@
          "url": "resource-view",
          "name": "Resource View",
          "category": "Resources",
-         "type":"update",
          "api": {
             "Gantt": [
                "dataSource",
@@ -150,7 +148,6 @@
          "url": "resource-multi-taskbar",
          "name": "Resource Multi Taskbar",
          "category": "Resources",
-         "type": "new",
          "api": {
             "Gantt": [
                "dataSource",
@@ -388,7 +385,6 @@
          "url": "editing",
          "name": "Editing",
          "category": "Gantt",
-         "type": "update",
          "api": {
             "Gantt": [
                "dataSource",
@@ -441,7 +437,6 @@
          "url": "contextMenu",
          "name": "Context Menu",
          "category": "Gantt",
-         "type": "update",
          "api": {
             "Gantt": [
               "dataSource",

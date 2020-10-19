@@ -4,13 +4,9 @@ this.default = function () {
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
     args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
         selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        if(args.progressBar.theme === 'Material') {
-            args.progressBar.trackColor = '#eee';
-        }
-        if(selectedTheme === 'highcontrast') {
-           args.progressBar.labelStyle.color = '#000000';
-           args.progressBar.trackColor = '#969696';
-       }
+    if (args.progressBar.theme === 'Material') {
+        args.progressBar.trackColor = '#EAEAEA';
+    }
 };
 
 var button = new ej.buttons.Button();
@@ -19,12 +15,12 @@ button.appendTo('#reLoad');
 
 var nearProgress = new ej.progressbar.ProgressBar({
     type: 'Linear',
-    height: '40',
+    height: '30',
     width: '100%',
     showProgressValue: true,
     value: 40,
-    trackThickness: 24,
-    progressThickness: 24,
+    trackThickness: 20,
+    progressThickness: 20,
     labelStyle: {
         textAlignment: 'Center',
         text: '40% Complete (Success)',
@@ -41,12 +37,12 @@ var nearProgress = new ej.progressbar.ProgressBar({
 nearProgress.appendTo('#percentage');
 var centerProgress = new ej.progressbar.ProgressBar({
     type: 'Linear',
-    height: '40',
+    height: '30',
     width: '100%',
     showProgressValue: true,
     value: 50,
-    trackThickness: 24,
-    progressThickness: 24,
+    trackThickness: 20,
+    progressThickness: 20,
     role: 'Info',
     load: progressLoad,
     labelStyle: {
@@ -63,14 +59,14 @@ var centerProgress = new ej.progressbar.ProgressBar({
 centerProgress.appendTo('#ratio');
 var farProgress = new ej.progressbar.ProgressBar({
     type: 'Linear',
-    height: '40',
+    height: '30',
     width: '100%',
     showProgressValue: true,
     role: 'Warning',
     load: progressLoad,
     value: 60,
-    trackThickness: 24,
-    progressThickness: 24,
+    trackThickness: 20,
+    progressThickness: 20,
     labelStyle: {
         textAlignment: 'Center',
         text: '60% Complete (Warning)',
@@ -85,7 +81,7 @@ var farProgress = new ej.progressbar.ProgressBar({
 farProgress.appendTo('#acutal');
 var customProgress = new ej.progressbar.ProgressBar({
     type: 'Linear',
-    height: '40',
+    height: '30',
     width: '100%',
     showProgressValue: true,
     value: 70,

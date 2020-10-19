@@ -3,7 +3,6 @@
     "directory": "drop-down-tree",
     "category": "Dropdowns",
     "ftName": "dropdown-tree",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -79,7 +78,6 @@
             "name": "Filtering",
             "description": "This example demonstrates how the filtering functionalities works based on the typed characters in the JavaScript(ES5) drop-down tree control.",
             "category": "Dropdown Tree",
-            "type": "new",
             "api": {
                 "DropDownTree": [
                     "popupHeight",

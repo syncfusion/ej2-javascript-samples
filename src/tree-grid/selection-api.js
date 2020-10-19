@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.sampleData,
         allowPaging: true,
         pageSettings: { pageSize: 10 },
+        height: 350,
         allowSelection: true,
         selectionSettings: { type: 'Multiple' },
         childMapping: 'subtasks',

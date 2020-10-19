@@ -5,6 +5,7 @@ this.default = function () {
         treeColumnIndex: 1,
         allowPaging: true,
         allowTextWrap: true,
+	height: 350,
         pageSettings: { pageSize : 8},
         columns: [
             { field: 'taskID', headerText: 'Task ID', width: 90, textAlign: 'Right' },
