@@ -122,7 +122,6 @@
             "url": "conditional-formatting",
             "name": "Conditional Formatting",
             "category": "Formatting",
-            "type": "update",
             "api": {
                 "Spreadsheet": [
                     "sheets",
@@ -147,9 +146,23 @@
             "description": "This demo for Essential JS 2 Spreadsheet control shows the sorting and filtering feature."
         },
         {
+            "url": "chart",
+            "name": "Chart",
+            "type": "new",
+            "category": "Data Visualization",
+            "api": {
+                "Spreadsheet": [
+                    "sheets",
+                    "openUrl",
+                    "saveUrl",
+                    "created"
+                ]
+            },
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the chart feature."
+        }, 
+        {
             "url": "image",
             "name": "Image",
-            "type": "new",
             "category": "Illustrations",
             "api": {
                 "sheets": [
@@ -168,7 +181,7 @@
                 ]
             },
             "description": "This demo for Essential JS 2 Spreadsheet control shows image feature."
-        }, 
+        },
         {
             "url": "cell-template",
             "name": "Cell Template",

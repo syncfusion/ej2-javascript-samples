@@ -235,27 +235,27 @@ this.default = function () {
     var connections = [
         {
             id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 },cornerRadius: 5,
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#757575' }
         },
         {
             id: 'Link11', type: 'Orthogonal', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 },cornerRadius: 5,
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#757575' }
         },
         {
             id: 'Link21', type: 'Straight', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#757575' }
         },
         {
             id: 'Link22', type: 'Straight', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#757575' }
         },
         {
             id: 'Link3', type: 'Orthogonal', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 }, cornerRadius: 5,
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeColor: '#757575' }
         },
         {
             id: 'Link31', type: 'Orthogonal', sourcePoint: { x: 20, y: 20 }, targetPoint: { x: 60, y: 60 }, cornerRadius: 5,
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#444' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 1, strokeDashArray: '5,5', strokeColor: '#757575' }
         },
     ];
 
@@ -276,7 +276,7 @@ this.default = function () {
             symbol.height = 40;
             symbol.offsetX = 20;
             symbol.offsetY = 20;
-            symbol.style = { fill: 'white', strokeWidth: 1, strokeColor: '#444' };
+            symbol.style = { fill: 'white', strokeWidth: 1, strokeColor: '#757575' };
         },
         symbolPreview: { height: 50, width: 50 },
         getSymbolInfo: function () {

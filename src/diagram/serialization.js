@@ -178,24 +178,24 @@ this.default = function () {
     //Initializes connector symbols for the symbol palette
     var connectorSymbols = [
         {
-            id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 2 }
+            id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },  style: { strokeWidth: 2, strokeColor: '#757575' },
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
         },
         {
             id: 'link2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2 }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 2, strokeColor: '#757575' }
         },
         {
-            id: 'Link3', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 2 }
+            id: 'Link3', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 }, style: { strokeWidth: 2, strokeColor: '#757575' },
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
         },
         {
             id: 'link4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2 }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }, style: { strokeWidth: 2, strokeColor: '#757575' }
         },
         {
             id: 'link5', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2 }, targetDecorator: { shape: 'None' }
+            style: { strokeWidth: 2, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
         },
     ];
     //Initializes ToolBar control to invoke save and load the diagram
@@ -243,6 +243,7 @@ this.default = function () {
             }
 
             symbol.style.strokeWidth = 2;
+            symbol.style.strokeColor = '#757575';
         },
         symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 },
         getSymbolInfo: function (symbol) {

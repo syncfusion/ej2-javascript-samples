@@ -26,7 +26,7 @@ function getNodePorts(obj) {
 
 // Initializes connector symbols to the connector palette in the symbol palette
 function getConnectors() {
-    var targetDecorator = { shape: 'Arrow', style: { fill: '#444', strokeColor: '#444' } };
+    var targetDecorator = { shape: 'Arrow', style: { fill: '#757575', strokeColor: '#757575' } };
     var sourcePoint = { x: 0, y: 0 };
     var targetPoint = { x: 40, y: 40 };
     var connectorSymbols = [
@@ -50,9 +50,9 @@ function getConnectors() {
 function getConnectorStyle(dashArrayed) {
     var style = {};
     if (dashArrayed) {
-        style = { strokeWidth: 2, strokeColor: '#444', strokeDashArray: '4 4', };
+        style = { strokeWidth: 2, strokeColor: '#757575', strokeDashArray: '4 4', };
     } else {
-        style = { strokeWidth: 2, strokeColor: '#444' };
+        style = { strokeWidth: 2, strokeColor: '#757575' };
     }
     return style;
 }
@@ -69,9 +69,9 @@ function setPaletteNodeDefaults(symbol) {
         symbol.width = 50; symbol.height = 50;
     }
     if (symbol.id === 'InitialNode' || symbol.id === 'FinalNode' || symbol.id === 'JoinNode' || symbol.id === 'ForkNode') {
-        symbol.style.fill = '#444';
+        symbol.style.fill = '#757575';
     }
-    symbol.style.strokeColor = '#444';
+    symbol.style.strokeColor = '#757575';
 }
 
 function addEvents() {

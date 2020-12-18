@@ -92,7 +92,7 @@ this.default = function() {
         }],
         openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
         saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
-        //Application level customization.
+        //Application level customization
         created: function() {
             spreadsheet.merge('B2:F2');
             spreadsheet.merge('B4:F4');

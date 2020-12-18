@@ -27,7 +27,7 @@ this.default = function () {
     }
 
     function onPopupOpen(args) {
-        if ((!args.target.classList.contains('e-appointment') && (args.type === 'QuickInfo')) || (args.type === 'Editor')) {
+        if ((args.target && !args.target.classList.contains('e-appointment') && (args.type === 'QuickInfo')) || (args.type === 'Editor')) {
             args.cancel = onEventCheck(args);
         }
     }

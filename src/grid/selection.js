@@ -13,6 +13,8 @@ this.default = function () {
         allowSelection: true,
         selectionSettings: { type: 'Multiple' },
         enableHover: false,
+        rowSelecting: selectingEvent,
+        cellSelecting : selectingEvent,
         columns: [
             { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 135 },
             { field: 'FirstName', headerText: 'Name', width: 125 },
@@ -24,6 +26,12 @@ this.default = function () {
         ]
     });
     grid.appendTo('#Grid');
+
+    function selectingEvent(e) {
+        if (grid.selectionSettings.allowColumnSelection) {
+            e.cancel = true;
+        }
+    }
 
     //Render DropDownList component for selection type.
      var dropDownType = new ej.dropdowns.DropDownList({
@@ -45,7 +53,22 @@ this.default = function () {
         change: function (e) {
             var mode = e.value;
             grid.selectionSettings.mode = mode;
-        }
+        },
     });
     dropDownMode.appendTo('#mode');
+
+    // enable/disable Column Selection
+    var columnSelection = new ej.buttons.CheckBox({
+        change: function (e) {
+            grid.clearSelection();
+            if (e.checked) {
+                grid.selectionSettings.allowColumnSelection = true;
+                dropDownMode.enabled = false;
+            } else {
+                grid.selectionSettings.allowColumnSelection = false;
+                dropDownMode.enabled = true;
+            }
+        }
+    }); 
+    columnSelection.appendTo('#columnSelection');
 };

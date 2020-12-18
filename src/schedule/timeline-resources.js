@@ -66,7 +66,7 @@ this.default = function () {
             var data = args.data;
             if (args.type === 'QuickInfo' || args.type === 'Editor' || args.type === 'RecurrenceAlert' || args.type === 'DeleteAlert') {
                 var target = (args.type === 'RecurrenceAlert' ||
-                    args.type === 'DeleteAlert') ? data.element[0] : args.target;
+                    args.type === 'DeleteAlert') ? args.element[0] : args.target;
                 if (!ej.base.isNullOrUndefined(target) && target.classList.contains('e-work-cells')) {
                     if ((target.classList.contains('e-read-only-cells')) || (!scheduleObj.isSlotAvailable(data))) {
                         args.cancel = true;

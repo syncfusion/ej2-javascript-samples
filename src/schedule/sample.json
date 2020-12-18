@@ -4,14 +4,12 @@
     "category": "Calendars",
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
-    "type": "update",
     "samples": [
         {
             "url": "overview",
             "name": "Overview",
             "category": "Scheduler",
             "description": "This demo shows for Javascript (ES5) Scheduler features such as Multiple views, Templates, Resources, Grouping, Timezone, Timescale, etc...",
-            "type": "new",
             "hideOnDevice": true,
             "api": {
                 "Schedule": [

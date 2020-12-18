@@ -3,6 +3,8 @@
  * Rich Text Editor IFrame sample
  */
 this.default = function() {
+    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+
     var iframeRTE = new ej.richtexteditor.RichTextEditor({
         height: 500,
         iframeSettings: {
@@ -14,9 +16,19 @@ this.default = function() {
                 'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
                 'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
                 'Outdent', 'Indent', '|',
-                'CreateTable', 'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+                'CreateTable', 'CreateLink', 'Image', 'FileManager', '|', 'ClearFormat', 'Print',
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo'
             ]
+        },
+        fileManagerSettings: {
+            enable: true,
+            path: '/Pictures/Food',
+            ajaxSettings: {
+                url: hostUrl + 'api/FileManager/FileOperations',
+                getImageUrl: hostUrl + 'api/FileManager/GetImage',
+                uploadUrl: hostUrl + 'api/FileManager/Upload',
+                downloadUrl: hostUrl + 'api/FileManager/Download'
+            }
         },
         actionBegin: handleFullScreen,
         actionComplete: actionCompleteHandler

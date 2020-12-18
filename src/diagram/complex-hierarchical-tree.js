@@ -2,7 +2,11 @@
  * Multiple Parent sample
  */
 // tslint:disable-next-line:max-func-body-length
-ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.ComplexHierarchicalTree);
+ej.diagrams.Diagram.Inject(
+    ej.diagrams.DataBinding,
+    ej.diagrams.ComplexHierarchicalTree,
+    ej.diagrams.LineDistribution
+  );
 var horizontalSpacingObj;
 var verticalSpacingObj;
 var marginTopObj;
@@ -31,6 +35,7 @@ this.default = function () {
         //Configrues hierarchical tree layout
         layout: {
             type: 'ComplexHierarchicalTree',
+            connectionPointOrigin: ej.diagrams.ConnectionPointOrigin.DifferentPoint,
             horizontalSpacing: 40, verticalSpacing: 40, orientation: 'TopToBottom',
             margin: { left: 10, right: 0, top: 50, bottom: 0 }
         },
@@ -63,6 +68,19 @@ this.default = function () {
         created: function () { diagram.fitToPage({ mode: 'Width' }); }
     });
     diagram.appendTo('#diagram');
+
+     var checkBoxObj = new ej.buttons.CheckBox({
+         checked: true, label: 'Prevent Connector Overlapping',
+          change: function (args) {
+           if (args.checked) {
+                 diagram.layout.connectionPointOrigin = ej.diagrams.ConnectionPointOrigin.DifferentPoint;
+              }
+              else {
+                  diagram.layout.connectionPointOrigin = ej.diagrams.ConnectionPointOrigin.SamePoint;
+              }
+          }
+      });
+     checkBoxObj.appendTo('#checked');
 
     //used NumericTextBox for left margin of the layout.
     marginLeftObj = new ej.inputs.NumericTextBox({

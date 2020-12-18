@@ -669,7 +669,32 @@ this.default = function () {
     workHourEnd.appendTo('#workHourEnd');
     var slotDuration = new ej.dropdowns.DropDownList({
         width: 170,
-        dataSource: [60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360],
+        dataSource: [
+            { Name: "1 hour", Value: 60 },
+            { Name: "1.5 hours", Value: 90 },
+            { Name: "2 hours", Value: 120 },
+            { Name: "2.5 hours", Value: 150 },
+            { Name: "3 hours", Value: 180 },
+            { Name: "3.5 hours", Value: 210 },
+            { Name: "4 hours", Value: 240 },
+            { Name: "4.5 hours", Value: 270 },
+            { Name: "5 hours", Value: 300 },
+            { Name: "5.5 hours", Value: 330 },
+            { Name: "6 hours", Value: 360 },
+            { Name: "6.5 hours", Value: 390 },
+            { Name: "7 hours", Value: 420 },
+            { Name: "7.5 hours", Value: 450 },
+            { Name: "8 hours", Value: 480 },
+            { Name: "8.5 hours", Value: 510 },
+            { Name: "9 hours", Value: 540 },
+            { Name: "9.5 hours", Value: 570 },
+            { Name: "10 hours", Value: 600 },
+            { Name: "10.5 hours", Value: 630 },
+            { Name: "11 hours", Value: 660 },
+            { Name: "11.5 hours", Value: 690 },
+            { Name: "12 hours", Value: 720 }
+        ],
+        fields: { text: 'Name', value: 'Value' },
         popupHeight: 150,
         value: 60,
         change: function (args) { scheduleObj.timeScale.interval = args.value; }
