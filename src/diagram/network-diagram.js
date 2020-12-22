@@ -109,7 +109,7 @@ function getSymbolDefaults(symbol) {
     if (symbol.id === 'arrow1') {
         symbol.width = 75; symbol.height = 60;
         symbol.offsetX = 160; symbol.offsetY = 135;
-        symbol.style.strokeColor = '#5C90DF';
+        symbol.style.strokeColor = '#757575';
         symbol.style.fill = 'white';
     } else {
         if (symbol.id === 'remoteController') {
@@ -452,8 +452,8 @@ this.default = function () {
     ];
     var sourcePoint = { x: 0, y: 0 };
     var targetPoint = { x: 40, y: 40 };
-    var targetDecorator = { shape: 'Arrow' };
-    var style = { strokeWidth: 2 };
+    var targetDecorator = { shape: 'Arrow', style: {strokeColor: '#757575', fill: '#757575'} };
+    var style = { strokeWidth: 2, strokeColor: '#757575' };
     var connectorSymbols = [
         {
             id: 'link11', type: 'Straight', sourcePoint: sourcePoint, targetPoint: targetPoint,

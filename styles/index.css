@@ -2022,7 +2022,7 @@ body.highcontrast,
 }
 
 .ad-img {
-    background: url(/styles/images/bg.jpg);
+    background: url(images/bg.jpg);
     background-size: cover;
     border-radius: 6px;
     color: #fff;

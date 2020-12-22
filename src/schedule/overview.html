@@ -136,8 +136,8 @@
 </div>
 <div id="description">
     <p>The Javascript Scheduler is a fully-features calendar component that is used to manage appointments with multiple
-        resources. The data can be pulled from the <code>DataManager</code> component or <code>IEnumerable</code> of
-        objects or Restful web services and bind the data fields using <code>ScheduleEventSettings.ScheduleField</code>.
+        resources. The data can be pulled from the <code>dataManager</code> component or valid local JSON data or
+        Restful web services and bind the data fields using <code>eventSettings.fields</code>.
     </p>
     <p>In this demo, Javascript Scheduler features such as Multiple views, Templates (Date Header, Quick Info),
         Resources, Grouping, Timezone, Timescale, etc... are used along with multiple resources.</p>
@@ -279,7 +279,7 @@
 
     .fabric .e-schedule-excel-export::before,
     .highcontrast .e-schedule-excel-export::before {
-        content: "\242";
+        content: "\e242";
     }
 
     .bootstrap .e-schedule-excel-export::before {
@@ -441,6 +441,7 @@
     .material .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .material .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #fafafa;
+        text-transform: capitalize;
     }
 
     .fabric .schedule-overview .overview-toolbar .overview-toolbar-settings,
@@ -494,6 +495,8 @@
         box-shadow: none;
         color: #ffffff;
         font-size: 12px;
+        font-weight: normal;
+        text-transform: capitalize;
     }
 
     .schedule-overview .overview-header .overview-titlebar .title-bar-btn,
@@ -643,7 +646,7 @@
         width: 120px;
     }
 
-    .schedule-resource.e-multi-select-list-wrapper.e-checkbox .e-list-parent li:first-child {
+    .schedule-resource.e-multi-select-list-wrapper.e-checkbox .e-list-parent:first-child li:first-child {
         background-image: none;
         opacity: .5;
         pointer-events: none;
@@ -676,8 +679,9 @@
     }
 
     .schedule-overview .content-area {
+        margin: 0;
         padding: 10px;
-        width: auto;
+        width: 100%;
     }
 
     .schedule-overview .event-content {
@@ -884,6 +888,26 @@
     .fabric .schedule-context-menu .e-menu-item .recurrence::before {
         content: '\e309';
         font-weight: bold;
+    }
+
+    .bootstrap4 .schedule-context-menu .e-menu-item .today::before {
+        content: '\e7be';
+    }
+
+    .bootstrap4 .schedule-context-menu .e-menu-item .edit::before {
+        content: '\e78f';
+    }
+
+    .bootstrap4 .schedule-context-menu .e-menu-item .delete::before {
+        content: '\e773';
+    }
+
+    .bootstrap4 .schedule-context-menu .e-menu-item .new::before {
+        content: '\e759';
+    }
+
+    .bootstrap4 .schedule-context-menu .e-menu-item .recurrence::before {
+        content: '\e7c8';
     }
 
     .schedule-overview.e-schedule .e-vertical-view .e-header-cells,

@@ -32,18 +32,9 @@ this.default = function() {
 			'</p>' +
 			'</div>' +
 		    '</div>',
-    //Raise beforeRender event
-    beforeOpen: onBeforeRender
   });
   //Render initialized Tooltip component
   tooltip.appendTo('#content');
-
-  //beforRender event handler for Tooltip
-  function onBeforeRender() {
-    var htmlcontent = document.getElementById('democontent');
-    htmlcontent.style.display = 'block';
-    tooltip.content = htmlcontent;
-  }
 
   //Attached scroll and click event listners in right pane
   if (document.getElementById('right-pane')) {

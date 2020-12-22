@@ -348,22 +348,22 @@ this.default = function () {
         {
             id: 'flow', expanded: true, title: 'Flow Shapes', symbols: [
                 {
-                    id: 'Terminator', width: 50, height: 60, addInfo: { tooltip: 'Terminator' }, shape: { type: 'Flow', shape: 'Terminator' }, style: { strokeWidth: 1 }, ports: port
+                    id: 'Terminator', width: 50, height: 60, addInfo: { tooltip: 'Terminator' }, shape: { type: 'Flow', shape: 'Terminator' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
                 },
                 {
-                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' }, style: { strokeWidth: 1 }, ports: port
+                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
                 },
                 {
-                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' }, style: { strokeWidth: 1 }, ports: port
+                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
                 },
                 {
-                    id: 'Document',  addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, style: { strokeWidth: 1 }, ports: port
+                    id: 'Document',  addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
                 },
                 {
-                    id: 'PreDefinedProcess',  addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port, style: { strokeWidth: 1 }
+                    id: 'PreDefinedProcess',  addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port, style: { strokeWidth: 1, strokeColor: '#757575' }
                 },
                 {
-                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port, style: { strokeWidth: 1 }
+                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port, style: { strokeWidth: 1, strokeColor: '#757575' }
                 },
             ]
         },
@@ -377,8 +377,8 @@ this.default = function () {
                         type: 'SwimLane', lanes: [
                             {
                                 id: 'lane1',
-                                style: { strokeColor: 'black' }, height: 60, width: 150,
-                                header: { width: 50, height: 50, style: { strokeColor: 'black', fontSize: 11 } },
+                                style: { strokeColor: '#757575' }, height: 60, width: 150,
+                                header: { width: 50, height: 50, style: { strokeColor: '#757575', fontSize: 11 } },
                             }
                         ],
                         orientation: 'Horizontal', isLane: true
@@ -394,8 +394,8 @@ this.default = function () {
                         lanes: [
                             {
                                 id: 'lane1',
-                                style: { strokeColor: 'black' }, height: 150, width: 60,
-                                header: { width: 50, height: 50, style: { strokeColor: 'black', fontSize: 11 } },
+                                style: { strokeColor: '#757575' }, height: 150, width: 60,
+                                header: { width: 50, height: 50, style: { strokeColor: '#757575', fontSize: 11 } },
                             }
                         ],
                         orientation: 'Vertical', isLane: true
@@ -408,22 +408,24 @@ this.default = function () {
                     id: 'verticalPhase', addInfo: { tooltip: 'Vertical phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#A9A9A9' }, }],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#757575' }, }],
                         annotations: [{ text: '' }],
                         orientation: 'Vertical', isPhase: true
                     },
                     height: 60,
-                    width: 140
+                    width: 140,
+                    style: { strokeColor: '#757575' },
                 }, {
                     id: 'horizontalPhase', addInfo: { tooltip: 'Horizontal phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#A9A9A9' }, }],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#757575' }, }],
                         annotations: [{ text: '' }],
                         orientation: 'Horizontal', isPhase: true
                     },
                     height: 60,
-                    width: 140
+                    width: 140,
+                    style: { strokeColor: '#757575' },
                 }
             ]
         },
@@ -431,19 +433,19 @@ this.default = function () {
             id: 'connectors', expanded: true, symbols: [
                 {
                     id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-                    targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1 }
+                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
                 },
                 {
                     id: 'Link2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-                    targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1, strokeDashArray: '4 4' }
+                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeDashArray: '4 4', strokeColor: '#757575' }
                 },
                 {
                     id: 'Link21', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-                    targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1 }
+                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
                 },
                 {
                     id: 'Link22', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-                    targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1, strokeDashArray: '4 4' }
+                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeDashArray: '4 4', strokeColor: '#757575' }
                 }
             ], title: 'Connectors'
         }

@@ -38,7 +38,7 @@ this.default = function () {
                 width: (document.querySelector('#inplace-editor-control.form-layout ')).offsetWidth
             }
          },
-        value: '<p>The extensive adoption of JavaScript for application development, and the ability to use HTML and JavaScript to create Windows Store apps, has made JavaScript a vital part of the Windows development ecosystem. Microsoft has done extensive work to make JavaScript easier to use.</p>',
+        value: 'The extensive adoption of JavaScript for application development, and the ability to use HTML and JavaScript to create Windows Store apps, has made JavaScript a vital part of the Windows development ecosystem. Microsoft has done extensive work to make JavaScript easier to use.',
         name: 'rte',
         validationRules: {
             rte: { required: [true, 'Enter valid comments'] }

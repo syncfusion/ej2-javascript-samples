@@ -4,6 +4,7 @@ function getSymbolDefaults(symbol) {
     symbol.width = 50;
     symbol.height = 50;
     symbol.constraints = ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.AllowDrop;
+    symbol.style.strokeColor = '#757575';
 }
 
 function getSymbolInfo(symbol) {
@@ -215,23 +216,23 @@ this.default = function () {
     var connectorSymbols = [
         {
             id: 'connector1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1 }
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
         },
         {
             id: 'connector2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1 }, targetDecorator: { shape: 'None' }
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
         },
         {
             id: 'connector3', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow' }, style: { strokeWidth: 1 }
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
         },
         {
             id: 'connector4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1 }, targetDecorator: { shape: 'None' }
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
         },
         {
             id: 'connector5', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1 }, targetDecorator: { shape: 'None' }
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
         },
     ];
 

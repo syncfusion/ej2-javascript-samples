@@ -3,6 +3,7 @@
    "directory": "gantt",
    "category": "Calendars",
    "ftName": "gantt",
+   "type": "update",
    "dataSourcePath": "src/gantt/data-source.js",
    "samples": [
       {
@@ -16,7 +17,7 @@
                "height",
                "highlightWeekends",
                "eventMarkers",
-			      "labelSettings",
+			   "labelSettings",
                "projectStartDate",
                "projectEndDate"
              ]
@@ -497,6 +498,33 @@
          "description": "This demo explains how to export Gantt content to Excel and CSV documents using the Syncfusion TypeScript Gantt control."
       },
       {
+         "url": "split-tasks",
+         "name": "Split Tasks",
+         "category": "Gantt",
+		   "type": "new",
+         "api": {
+            "Gantt": [
+               "dataSource",
+               "taskFields",
+               "treeColumnIndex",
+               "height",
+               "projectStartDate",
+               "projectEndDate",
+               "resourceFields",
+               "resources",
+               "resourceInfo",
+               "editSettings",
+               "toolbar",
+               "splitterSettings",
+               "allowSelection",
+               "highlightWeekends",
+			      "workUnit",
+               "enableContextMenu"
+            ]
+         },
+         "description": "This demo explains how to interrupt the already scheduled tasks using the Syncfusion TypeScript Gantt control."
+      },
+      {
          "url": "column-menu",
          "name": "Column Menu",
          "category": "Columns",
@@ -880,6 +908,38 @@
             ]
          },
          "description": "This demo for Essential JS 2 Gantt control how the rows can be dragged within the gantt using the row drag-and-drop feature."
-      }     
+      },
+      {
+          "url": "virtual-scroll",
+          "name": "Virtual Scrolling",
+          "category": "Gantt",
+          "type": "new",
+          "api": {
+             "Gantt": [
+                "dataSource",
+                "taskFields",
+                "columns",
+                "treeColumnIndex",
+                "height",
+                "highlightWeekends",
+                "allowRowDragAndDrop",
+                "splitterSettings",
+                "labelSettings",
+                "projectStartDate",
+                "projectEndDate",
+                "selectionSettings",
+                "allowSorting",
+                "allowFiltering",
+                "allowRowDragAndDrop",
+                "enableContextMenu",
+                "enableVirtualization",
+                "editSettings",
+                "toolbar",
+                "allowSelection",
+                "timelineSettings"
+             ]
+          },
+          "description": "This example illustrates binding large data and smooth scrolling with large data using the Virtual Scroll feature in the Syncfusion Gantt chart."
+       }
    ]
 }

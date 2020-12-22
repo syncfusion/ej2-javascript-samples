@@ -1,6 +1,16 @@
+ej.base.L10n.load({
+    'en-US': {
+        'pager': {
+            'currentPageInfo': '',
+            'totalItemsInfo': '{1} to {2} of {0}',
+        }
+    }
+});
+
 this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.productData,
+        locale: 'en-US',
         allowPaging: true,
         pageSettings: { pageCount: 2 },
         columns: [

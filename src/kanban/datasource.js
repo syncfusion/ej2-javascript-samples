@@ -736,7 +736,7 @@ window.kanbanPizzaData = [{
     "Type": "Vegetarian",
     "Size": "Large",
     "Category": "Ready to Serve",
-    "Description": "It's made using toppings of tomato, mozzarella cheese and fresh basil, which represent the red, white and green of the Italian flag.",
+    "Description": "It's made using toppings of tomato, mozzarella cheese and fresh basil.",
     "Tags": "Onions, Pepper, Cheese",
     "ImageURL": "Peppy_Paneer.jpg",
     "Price": "$14.99"
@@ -761,7 +761,7 @@ window.kanbanPizzaData = [{
     "Size": "Medium",
     "Category": "Delivered",
     "Description": "Tandoori Paneer with capsicum, red paprika and mint.",
-    "Tags": "Paneer, Capsicum, Paprika, Mint",
+    "Tags": "Paneer, Capsicum",
     "ImageURL": "IndianTandooriPaneer.jpg",
     "Price": "$11.99"
 },
@@ -797,7 +797,7 @@ window.kanbanPizzaData = [{
     "Size": "Large",
     "Category": "Order",
     "Description": "Barbeque chicken with a topping of golden corn loaded with extra cheese.",
-    "Tags": "Onions, BBQ, Pepper, Prawn",
+    "Tags": "Onions, BBQ, Prawn",
     "ImageURL": "Chicken_Golden_Delight.jpg",
     "Price": "$14.99"
 },
@@ -809,7 +809,7 @@ window.kanbanPizzaData = [{
     "Size": "Medium",
     "Category": "Menu",
     "Description": "Pepper Barbecue chicken with Onion.",
-    "Tags": "Onions, Pepper, Chicken",
+    "Tags": "Pepper, Chicken",
     "ImageURL": "Pepper_Barbeque_Onion.jpg",
     "Price": "$11.99"
 },
@@ -821,7 +821,7 @@ window.kanbanPizzaData = [{
     "Size": "Small",
     "Category": "Delivered",
     "Description": "Grilled Chicken Rashers with Peri-Peri chicken, Onion and Capsicum.",
-    "Tags": "Chicken, Onion, Capsicum",
+    "Tags": "Chicken, Capsicum",
     "ImageURL": "chunky-chicken.png",
     "Price": "$4.79"
 },
@@ -833,7 +833,7 @@ window.kanbanPizzaData = [{
     "Size": "Medium",
     "Category": "Delivered",
     "Description": "Margherita with chili sauce and double Cheese.",
-    "Tags": "Onions, Pepper, Cheese",
+    "Tags": "Onions, Pepper",
     "ImageURL": "Double_Cheese_Margherita.jpg",
     "Price": "$11.99"
 },
@@ -845,7 +845,7 @@ window.kanbanPizzaData = [{
     "Size": "Large",
     "Category": "Menu",
     "Description": "Veggie Delight with Goldern Corn, Black Olives, Capsicum and red Paprika.",
-    "Tags": "Goldern Corn, Capsicum, Pepper",
+    "Tags": "Corn, Capsicum",
     "ImageURL": "Veggie_Paradise.jpg",
     "Price": "$14.99"
 },
@@ -869,7 +869,7 @@ window.kanbanPizzaData = [{
     "Size": "Medium",
     "Category": "Ready to Serve",
     "Description": "Tandoori masala with Chicken Tikka, Onion, red paprika and mint.",
-    "Tags": "Chicken, Tikka, Onion, Paprika, Mint",
+    "Tags": "Chicken, Tikka, Paprika",
     "ImageURL": "IndianChickenTikka.jpg",
     "Price": "$11.99"
 },
@@ -893,7 +893,7 @@ window.kanbanPizzaData = [{
     "Size": "Medium",
     "Category": "Delivered",
     "Description": "Onions and Capsicum those delectable mushrooms with paneer and golden corn to top it all.",
-    "Tags": "Onions, Capsicum, Mushrooms, Paneer, Corn",
+    "Tags": "Mushrooms, Corn",
     "ImageURL": "Deluxe_Veggie.jpg",
     "Price": "$11.99"
 },
@@ -905,7 +905,7 @@ window.kanbanPizzaData = [{
     "Size": "Large",
     "Category": "Menu",
     "Description": "Crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes.",
-    "Tags": "Capsicum, Mushrooms, Tomatoes",
+    "Tags": "Capsicum, Mushrooms",
     "ImageURL": "Farmhouse.jpg",
     "Price": "$14.99"
 },
@@ -916,9 +916,57 @@ window.kanbanPizzaData = [{
     "Type": "Vegetarian",
     "Size": "Large",
     "Category": "Served",
-    "Description": "Pizza with golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno with extra cheese to go all around.",
-    "Tags": "Corn, Olives, Onions, Capsicum, Mushrooms, Tomatoes, Cheese",
+    "Description": "Pizza with corn, olives, onions, capsicum, tomatoes and jalapeno with cheese to go all around.",
+    "Tags": "Corn, Mushrooms",
     "ImageURL": "Veg_Extravaganz.jpg",
     "Price": "$14.99"
+},
+{
+    "Id": 19,
+    "OrderID": "Order ID - #16383",
+    "Title": "Margherita",
+    "Type": "Vegetarian",
+    "Size": "Small",
+    "Category": "Ready to Deliver",
+    "Description": "Lebanese Pizza topped with tomato sauce.",
+    "Tags": "Onions, Pepper, Cheese",
+    "ImageURL": "Margherit.jpg",
+    "Price": "$4.79"
+},
+{
+    "Id": 20,
+    "OrderID": "Order ID - #16384",
+    "Title": "Pepper Barbecue and Onion",
+    "Type": "Non-Vegetarian",
+    "Size": "Medium",
+    "Category": "Ready to Deliver",
+    "Description": "Pepper Barbecue chicken with Onion.",
+    "Tags": "Onions, Pepper, Chicken",
+    "ImageURL": "Pepper_Barbeque_Onion.jpg",
+    "Price": "$11.99"
+},
+{
+    "Id": 21,
+    "OrderID": "Order ID - #16385",
+    "Title": "Veggie Paradise",
+    "Type": "Vegetarian",
+    "Size": "Large",
+    "Category": "Ready to Deliver",
+    "Description": "Veggie Delight with Goldern Corn, Black Olives, Capsicum and red Paprika.",
+    "Tags": "Corn, Capsicum, Pepper",
+    "ImageURL": "Veggie_Paradise.jpg",
+    "Price": "$14.99"
+},
+{
+    "Id": 22,
+    "OrderID": "Order ID - #16386",
+    "Title": "Chicken Dominator",
+    "Type": "Non-Vegetarian",
+    "Size": "Small",
+    "Category": "Ready to Deliver",
+    "Description": "Double Pepper Barbecue Chicken with Peri-Peri Chicken, Chicken Tikka, Grilled and Rashers.",
+    "Tags": "Pepper, Chicken",
+    "ImageURL": "Dominator.jpg",
+    "Price": "$4.79"
 }
 ];

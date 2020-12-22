@@ -99,9 +99,8 @@ this.default = function () {
 
   //click event handler to close Tooltip while navigating to other tabs in right pane
   function onClick(args) {
-    if (
-      !args.target.parentNode.parentNode.classList.contains('e-toolbar-item')
-    ) {
+    var targetEle = ej.base.closest(args.target, '.e-toolbar-item');
+    if (!targetEle) {
       if (document.getElementsByClassName('e-tooltip-wrap').length > 0) {
         tip.close();
       }

@@ -3,7 +3,6 @@
     "directory": "chart",
     "category": "Data Visualization",
     "ftName": "chart",
-    "type": "update",
     "samples": [
         {
             "url": "line",
@@ -203,7 +202,6 @@
             "name": "Stacked Step Area",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking step area series.",
             "category": "Area Charts",
-            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",

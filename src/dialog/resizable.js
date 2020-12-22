@@ -6,6 +6,7 @@ this.default = function () {
         content: '<span>This is a dialog with resizable support.</span>',
         showCloseIcon: true, closeOnEscape: false, width: '300px',
         enableResize: true,
+        resizeHandles: ['All'],
         allowDragging: true,
         target: document.getElementById('target'),
         animationSettings: { effect: 'None' },

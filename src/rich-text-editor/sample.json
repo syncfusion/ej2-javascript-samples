@@ -2,6 +2,7 @@
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
     "category": "Editors",
+    "type": "update",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
             "url": "tools",
@@ -100,6 +101,14 @@
             "description": "This demo shows how to autosave the content of the editor with customized time intervals and retrieve the saved content in JS (ECMAScript 5) Rich Text Editor.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "placeholder", "saveInterval", "enablePersistence", "toolbarSettings", "appendTo"] }
+        },
+        {
+            "url": "file-browser",
+            "name": "File Browser",
+            "type": "new",
+            "description": "This demo shows how to insert the image into the Rich Text Editor content using FileManager.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["fileManagerSettings", "toolbarSettings", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["enable", "path", "ajaxSettings"] }
         },
         {
             "url": "types",

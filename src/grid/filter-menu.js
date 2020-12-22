@@ -11,6 +11,7 @@ this.default = function () {
         dataSource: window.orderDataSource,
         allowPaging: true,
         allowFiltering: true,
+        allowSorting: true,
         filterSettings: { type: 'Menu' },
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
