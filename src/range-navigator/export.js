@@ -6,8 +6,8 @@ var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
 var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
-var borderColor = ['#FF4081', '#007897', '#428BCA', '#FFD939'];
-var regionColor = ['rgba(255, 64, 129, 0.3)', ' rgba(0, 120, 151, 0.3)',
+var borderColor1 = ['#FF4081', '#007897', '#428BCA', '#FFD939'];
+var regionColor1 = ['rgba(255, 64, 129, 0.3)', ' rgba(0, 120, 151, 0.3)',
     'rgba(66, 139, 202, 0.3)', 'rgba(255, 217, 57, 0.3)'];
 this.renderChart = function (datasrc) {
     var chart = new ej.charts.Chart({
@@ -18,8 +18,8 @@ this.renderChart = function (datasrc) {
         series: [{
             dataSource: datasrc, xName: 'xDate', yName: 'Close', width: 2,
             name: 'Close',
-            fill: regionColor[themes.indexOf(theme)], type: 'SplineArea',
-            border: { width: 2, color: borderColor[themes.indexOf(theme)] }
+            fill: regionColor1[themes.indexOf(theme)], type: 'SplineArea',
+            border: { width: 2, color: borderColor1[themes.indexOf(theme)] }
         }],
         chartArea: { border: { width: 0 } },
         primaryYAxis: {

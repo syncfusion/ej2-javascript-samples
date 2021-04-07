@@ -86,7 +86,8 @@ this.default = function () {
         nodeDragStop: onTreeDragStop,
         nodeDragging: onItemDrag,
         nodeTemplate: '#treeTemplate',
-        cssClass: 'treeview-external-drag'
+        cssClass: 'treeview-external-drag',
+        dragArea: ".content-wrapper"
     });
     treeObj.appendTo('#Tree');
 

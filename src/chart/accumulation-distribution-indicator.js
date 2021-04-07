@@ -1,8 +1,7 @@
 /**
  * Sample for ADI Indicator
  */
- var _this = this;
- this.renderChart = function (chartData) {
+ this.renderChartADI = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -88,7 +87,7 @@
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            _this.renderChart(chartData);
+            renderChartADI(chartData);
         };
         
     };

@@ -65,6 +65,12 @@ this.default = function () {
         change: onShowEase
     });
     dropDownListShowEase.appendTo('#ShowEasing');
+    var dropDownListProgressDirection = new ej.dropdowns.DropDownList({
+        placeholder: 'ProgressDirection',
+        floatLabelType: 'Auto',
+        change: onProgressDirectionChange
+    });
+    dropDownListProgressDirection.appendTo('#progressDirection');
     var dropDownListHideEase = new ej.dropdowns.DropDownList({
         placeholder: 'Select an Easing',
         change: onHideEase
@@ -82,7 +88,9 @@ this.default = function () {
     function hideChange(e) {
         toastObj.animation.hide.effect = dropDownListHide.value;
     }
-
+    function onProgressDirectionChange() {
+        toastObj.progressDirection = dropDownListProgressDirection.value.toString();
+    }
     function onclose(e) {
         if (e.toastContainer.childElementCount === 0) {
             btnEleHide.style.display = 'none';

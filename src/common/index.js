@@ -69,7 +69,7 @@ var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="open-p
     '</div>' + sampleNavigation + '<div class="sb-icons sb-mobile-setting"></div>';
 var tabContentToolbar = ej.base.createElement('div', { className: 'sb-content-toolbar', innerHTML: contentToolbarTemplate });
 var apiGrid;
-window.navigateSample = (window.navigateSample !== undefined) ? window.navigateSample : function () { return; };
+window.navigateSample = (window.navigateSample !== undefined) ? window.navigateSample : function() { return; };
 var isInitRedirected;
 var samplePath = [];
 var defaultSamples = [];
@@ -80,8 +80,8 @@ var currentControl;
 var currencyDropDown;
 var cultureDropDown;
 var demoSection = ej.base.select('.sb-demo-section');
-var newYear= new Date().getFullYear();
-var copyRight= document.querySelector('.sb-footer-copyright');
+var newYear = new Date().getFullYear();
+var copyRight = document.querySelector('.sb-footer-copyright');
 copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion Inc.";
 
 var matchedCurrency = {
@@ -92,14 +92,19 @@ var matchedCurrency = {
     'fr-CH': 'CHF'
 };
 settingsidebar = new ej.navigations.Sidebar({
-    position: 'Right', width: '282', zIndex: '1003', showBackdrop: true, type: 'Over', enableGestures: false,
+    position: 'Right',
+    width: '282',
+    zIndex: '1003',
+    showBackdrop: true,
+    type: 'Over',
+    enableGestures: false,
     closeOnDocumentClick: true
 });
+
 function changeCulture(cul) {
     if (cul === 'ar') {
         changeRtl(true);
-    }
-    else {
+    } else {
         changeRtl(false);
     }
     if (currencyDropDown) {
@@ -109,6 +114,7 @@ function changeCulture(cul) {
     }
     ej.base.setCulture(cul);
 }
+
 function changeRtl(bool) {
     var elementlist = ej.base.selectAll('.e-control', document.getElementById('control-content'));
     for (var i = 0; i < elementlist.length; i++) {
@@ -121,12 +127,13 @@ function changeRtl(bool) {
         }
     }
 }
+
 function loadCulture(cul) {
     var ajax = new ej.base.Ajax('./src/common/cldr-data/main/' + cul + '/all.json', 'GET', true);
     if (ej.base.getValue('main.' + cul, ej.base.cldrData)) {
         changeCulture(cul);
     } else {
-        ajax.send().then(function (result) {
+        ajax.send().then(function(result) {
             ej.base.loadCldr(JSON.parse(result));
             changeCulture(cul);
         });
@@ -140,15 +147,16 @@ if (ej.base.Browser.isDevice || isMobile) {
     if (sidebar) {
         sidebar.destroy();
     }
-    sidebar = new ej.navigations.Sidebar({ width: '280px', showBackdrop: true, closeOnDocumentClick: true, enableGestures: false,change:resizeFunction });
+    sidebar = new ej.navigations.Sidebar({ width: '280px', showBackdrop: true, closeOnDocumentClick: true, enableGestures: false, change: resizeFunction });
     sidebar.appendTo('#left-sidebar');
 } else {
     sidebar = new ej.navigations.Sidebar({
-        width: '282px', target: document.querySelector('.sb-content '),
+        width: '282px',
+        target: document.querySelector('.sb-content '),
         showBackdrop: false,
         closeOnDocumentClick: false,
         enableGestures: false,
-        change:resizeFunction
+        change: resizeFunction
     });
     sidebar.appendTo('#left-sidebar');
 }
@@ -165,10 +173,11 @@ function preventTabSwipe(e) {
         e.cancel = true;
     }
 }
+
 function dynamicTab(e) {
     var blockEle = this.element.querySelector('#e-content' + this.tabId + '_' + e.selectedIndex).children[0];
     blockEle.innerHTML = this.items[e.selectedIndex].data;
-    blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
+    blockEle.innerHTML = blockEle.innerHTML.replace(reg, '');
     blockEle.classList.add('sb-src-code');
     if (blockEle) {
         hljs.highlightBlock(blockEle);
@@ -214,12 +223,12 @@ function renderSbPopups() {
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
         index: 0,
-        change: function (e) { switchTheme(e.value); }
+        change: function(e) { switchTheme(e.value); }
     });
     themeDropDown.appendTo('#sb-setting-theme');
     cultureDropDown = new ej.dropdowns.DropDownList({
         index: 0,
-        change: function (e) {
+        change: function(e) {
             var value = e.value;
             loadCulture(value);
         }
@@ -227,7 +236,7 @@ function renderSbPopups() {
     });
     currencyDropDown = new ej.dropdowns.DropDownList({
         index: 0,
-        change: function (e) { ej.base.setCurrencyCode(e.value); }
+        change: function(e) { ej.base.setCurrencyCode(e.value); }
     });
     cultureDropDown.appendTo('#sb-setting-culture');
     currencyDropDown.appendTo('#sb-setting-currency');
@@ -274,7 +283,7 @@ function renderSbPopups() {
         content: 'Next Sample'
     });
 
-    ej.base.select('#right-pane').addEventListener('scroll', function (event) {
+    ej.base.select('#right-pane').addEventListener('scroll', function(event) {
         next.close();
         openNew.close();
         previous.close();
@@ -323,7 +332,7 @@ function dynamicTabCreation(obj) {
     }
     var blockEle = tabObj.element.querySelector('#e-content' + tabObj.tabId + '_' + tabObj.selectedItem).children[0];
     blockEle.innerHTML = tabObj.items[tabObj.selectedItem].data;
-    blockEle.innerHTML = blockEle.innerHTML.replace(reg,'');
+    blockEle.innerHTML = blockEle.innerHTML.replace(reg, '');
     blockEle.classList.add('sb-src-code');
     if (blockEle) {
         hljs.highlightBlock(blockEle);
@@ -366,14 +375,17 @@ function taghideless(target) {
     target.querySelector('#showtag').classList.remove('e-display');
     target.classList.add('e-custDesription');
 }
+
 function setPressedAttribute(ele) {
     var status = ele.classList.contains('active');
     ele.setAttribute('aria-pressed', status ? 'true' : 'false');
 }
 searchOverlay.addEventListener('click', searchOverlayClick);
+
 function searchOverlayClick() {
     toggleSearchOverlay();
 }
+
 function sbHeaderClick(action, preventSearch) {
     if (openedPopup) {
         openedPopup.hide(new ej.base.Animation({ name: 'FadeOut', duration: 300, delay: 0 }));
@@ -503,7 +515,7 @@ function onsearchInputChange(e) {
                     '${name}</span></div>',
                 groupTemplate: '${if(items[0]["component"])}<div class="e-text-content"><span class="e-search-group">${items[0].component}</span>' +
                     '</div>${/if}',
-                actionComplete: function () {
+                actionComplete: function() {
                     var searchValue = ej.base.select('#search-input').value;
                     highlight(searchValue, this.element);
                 }
@@ -526,7 +538,7 @@ function highlight(searchString, listElement) {
         if (spanText) {
             contentElements[i].innerHTML = contentElements[i].text;
         }
-        contentElements[i].innerHTML = contentElements[i].innerHTML.replace(regex, function (matched) {
+        contentElements[i].innerHTML = contentElements[i].innerHTML.replace(regex, function(matched) {
             return '<span class="sb-highlight">' + matched + '</span>';
         });
     }
@@ -654,39 +666,40 @@ function resetInput(arg) {
     document.getElementById('search-input-wrapper').setAttribute('data-value', '');
     searchPopup.hide();
 }
+
 function bindEvents() {
-    document.getElementById('sb-switcher').addEventListener('click', function (e) {
+    document.getElementById('sb-switcher').addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         sbHeaderClick('changeSampleBrowser');
     });
-    ej.base.select('.sb-header-text-right').addEventListener('click', function (e) {
+    ej.base.select('.sb-header-text-right').addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         sbHeaderClick('changeSampleBrowser');
     });
-    headerThemeSwitch.addEventListener('click', function (e) {
+    headerThemeSwitch.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         sbHeaderClick('changeTheme');
     });
     themeList.addEventListener('click', changeTheme);
     document.addEventListener('click', sbHeaderClick.bind(this, 'closePopup'));
-    settingElement.addEventListener('click', function (e) {
+    settingElement.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         sbHeaderClick('toggleSettings');
     });
-    searchButton.addEventListener('click', function (e) {
+    searchButton.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         toggleSearchOverlay();
     });
-    document.getElementById('settings-popup').addEventListener('click', function (e) {
+    document.getElementById('settings-popup').addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
     });
-    inputele.addEventListener('click', function (e) {
+    inputele.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
     });
@@ -698,13 +711,13 @@ function bindEvents() {
     ej.base.select('.sb-header-settings').addEventListener('click', viewMobilePrefPane);
     ej.base.select('.sb-mobile-setting').addEventListener('click', viewMobilePropPane);
     resetSearch.addEventListener('click', resetInput);
-    document.getElementById('open-plnkr').addEventListener('click', function () {
+    document.getElementById('open-plnkr').addEventListener('click', function() {
         var plnkrForm = ej.base.select('#stack-form');
         if (plnkrForm) {
             plnkrForm.submit();
         }
     });
-    document.getElementById('switch-sb').addEventListener('click', function (e) {
+    document.getElementById('switch-sb').addEventListener('click', function(e) {
         var target = ej.base.closest(e.target, 'li');
         if (target) {
             var anchor = target.querySelector('a');
@@ -718,13 +731,13 @@ function bindEvents() {
     ej.base.select('#prev-sample').addEventListener('click', onPrevButtonClick);
     ej.base.select('#mobile-prev-sample').addEventListener('click', onPrevButtonClick);
     window.addEventListener('resize', processResize);
-    ej.base.select('.sb-right-pane').addEventListener('click', function () {
+    ej.base.select('.sb-right-pane').addEventListener('click', function() {
         if (isTablet && isLeftPaneOpen()) {
             toggleLeftPane();
         }
     });
     // ej.base.select('.copycode').addEventListener('click', copyCode);
-    searchEle.addEventListener('click', function (e) {
+    searchEle.addEventListener('click', function(e) {
         var curEle = ej.base.closest(e.target, 'li');
         if (curEle && curEle.classList.contains('e-list-item')) {
             var tcontent = curEle.querySelector('.e-text-content');
@@ -735,6 +748,7 @@ function bindEvents() {
             if (location.hash !== hashval) {
                 sampleOverlay();
                 location.hash = hashval;
+                window.hashString = location.hash;
                 setSelectList();
             }
         }
@@ -751,6 +765,7 @@ function copyCode() {
     ej.base.detach(textArea);
     ej.base.select('.copy-tooltip').ej2_instances[0].close();
 }
+
 function rendercopycode() {
     var ele = ej.base.createElement('div', { className: 'copy-tooltip', innerHTML: '<div class="e-icons copycode"></div>' });
     document.getElementById('sb-source-tab').appendChild(ele);
@@ -773,7 +788,7 @@ function setSbLink() {
             ele.href = 'https://blazor.syncfusion.com/demos/';
         } else {
             ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) :
-                ('https://ej2.syncfusion.com/')) + (sbObj[sb] ? (sb + '/') : '') +
+                    ('https://ej2.syncfusion.com/')) + (sbObj[sb] ? (sb + '/') : '') +
                 'demos/#/' + (sample ? (sample[1] + (sb !== 'typescript' ? '' : '.html')) : '');
         }
 
@@ -804,10 +819,10 @@ function loadTheme(theme) {
     body.classList.add(theme);
     themeList.querySelector('.active').classList.remove('active');
     themeList.querySelector('#' + theme).classList.add('active');
+    var doc = document.getElementById('themelink');
+    doc.setAttribute('href','./dist/' + theme + '.css');
     var ajax = new ej.base.Ajax('./dist/' + theme + '.css', 'GET', true);
-    ajax.send().then(function (result) {
-        var doc = document.getElementById('themelink');
-        doc.innerHTML = result;
+    ajax.send().then(function(result) {
         selectedTheme = theme;
         renderLeftPaneComponents();
         renderSbPopups();
@@ -874,7 +889,7 @@ function toggleLeftPane() {
 
 function cusResize() {
     var event;
-    if (typeof (Event) === 'function') {
+    if (typeof(Event) === 'function') {
         event = new Event('resize');
     } else {
         event = document.createEvent('Event');
@@ -999,11 +1014,11 @@ function controlSelect(arg) {
             sampleOverlay();
             var theme = location.hash.split('/')[1] || 'material';
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
-                ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
+                    ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
             }
             window.hashString = '#/' + theme + path;
-            setTimeout(function () { location.hash = '#/' + theme + path; }, 600);
+            setTimeout(function() { location.hash = '#/' + theme + path; }, 600);
         }
     }
 }
@@ -1040,7 +1055,7 @@ function viewSwitch(from, to, reverse) {
     to.style.display = '';
     anim.animate(from, {
         name: reverse ? 'SlideRightOut' : 'SlideLeftOut',
-        end: function () {
+        end: function() {
             controlTree.style.overflowY = 'auto';
             from.style.display = 'none';
             controlList.classList.add('e-view');
@@ -1069,6 +1084,8 @@ function setSelectList() {
                 showHideControlTree();
             }
             list.selectItem(selectSample);
+            selectSample.scrollIntoView({ block: "nearest" });
+
         }
     } else {
         showHideControlTree();
@@ -1103,11 +1120,11 @@ function setPropertySectionHeight() {
 }
 
 function routeDefault() {
-    crossroads.addRoute('', function () {
+    crossroads.addRoute('', function() {
         window.location.href = '#/' + selectedTheme + '/grid/gridoverview.html';
         isInitRedirected = true;
     });
-    crossroads.bypassed.add(function (request) {
+    crossroads.bypassed.add(function(request) {
         var hash = request.split('.html')[0].split('/');
         if (samplePath.indexOf(hash.slice(1).join('/')) === -1) {
             location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/gridoverview.html');
@@ -1133,7 +1150,7 @@ function destroyControls() {
 function loadScriptfile(path) {
     var scriptEle = document.querySelector('script[src="' + path + '"]');
     var doFun;
-    var p2 = new Promise(function (resolve, reject) {
+    var p2 = new Promise(function(resolve, reject) {
         doFun = resolve;
     });
     if (!scriptEle) {
@@ -1187,6 +1204,7 @@ function plunker(results) {
     createStackInput('project[description]', 'Essential JS 2 Sample', form);
     createStackInput('project[settings]', '{"compile":{"clearConsole":true}}', form);
 }
+
 function createStackInput(name, value, form) {
     var input = ej.base.createElement('input');
     input.setAttribute('type', 'hidden');
@@ -1197,11 +1215,11 @@ function createStackInput(name, value, form) {
 }
 
 function addRoutes(samplesList) {
-    var loop1 = function (node) {
+    var loop1 = function(node) {
         defaultSamples[node.directory] = node.directory + '/' + node.samples[0].url + '.html';
         var dataManager = new ej.data.DataManager(node.samples);
         var samples = dataManager.executeLocal(new ej.data.Query().sortBy('order', 'ascending'));
-        var loop2 = function (subNode) {
+        var loop2 = function(subNode) {
             var control = node.directory;
             var sample = subNode.url;
             samplePath = samplePath.concat(control + '/' + sample);
@@ -1210,11 +1228,11 @@ function addRoutes(samplesList) {
             var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'material';
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
-            crossroads.addRoute(urlString, function () {
+            crossroads.addRoute(urlString, function() {
                 var dataSourceLoad = document.getElementById(node.dataSourcePath);
                 if (node.dataSourcePath && !dataSourceLoad) {
                     var dataAjax = new ej.base.Ajax(node.dataSourcePath, 'GET', true);
-                    dataAjax.send().then(function (result) {
+                    dataAjax.send().then(function(result) {
                         var ele = ej.base.createElement('script', { id: node.dataSourcePath, innerHTML: result });
                         document.getElementsByTagName('head')[0].appendChild(ele);
                         onDataSourceLoad(node, subNode, control, sample, sampleName);
@@ -1243,7 +1261,7 @@ function addRoutes(samplesList) {
                 }
             });
             toastObj.appendTo('#sb-home');
-            setTimeout(function () {
+            setTimeout(function() {
                 toastObj.show({
                     content: location.hash.split('/')[2] + 'component not supported in mobile device'
                 });
@@ -1258,7 +1276,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     document.getElementById('open-plnkr').disabled = true;
     var openNew = ej.base.select('#openNew');
     if (openNew) {
-        openNew.href = location.href.split('#')[0] +  node.directory + '/' + subNode.url + '/';
+        openNew.href = location.href.split('#')[0] + node.directory + '/' + subNode.url + '/';
     }
     setSbLink();
     var ajaxFile = [];
@@ -1286,7 +1304,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     var content;
     for (var file = 0; file < ajaxFile.length; file++) {
 
-        ajaxFile[file].send().then(function (value) {  // jshint ignore:line
+        ajaxFile[file].send().then(function(value) { // jshint ignore:line
             var fileName = nameFile[subfile];
             if (fileName && fileName.indexOf('.html') > 0) {
                 content = getStringWithOutDescription(value.toString(), /(\'|\")description/g);
@@ -1335,14 +1353,14 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     // });
     var plunk = new ej.base.Ajax('src/' + control + '/' + sample + '-stack.json', 'GET', true);
     var p3 = plunk.send();
-    p3.then(function (result) {
+    p3.then(function(result) {
         document.getElementById('open-plnkr').disabled = false;
         plunker(result);
     });
     Promise.all([
         p1,
         p2
-    ]).then(function (results) {
+    ]).then(function(results) {
         var htmlString = results[0].toString();
         destroyControls();
         currentControlID = controlID;
@@ -1401,7 +1419,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
                 ej.base.select('.sb-mobile-setting').classList.add('sb-hide');
             }
         }
-    }).catch(function (reason) {
+    }).catch(function(reason) {
         errorHandler(reason.message);
     });
 }
@@ -1539,9 +1557,10 @@ function renderActionDescription() {
         aDescElem.style.display = 'none';
     }
     var loadEle = document.getElementById('sb-content');
-     if (loadEle.ej2_instances[0])
+    if (loadEle.ej2_instances[0])
         loadEle.ej2_instances[0].tbObj.refreshOverflow();
 }
+
 function getStringWithOutDescription(code, descRegex) {
     var lines = code.split('\n');
     var desStartLine = null;

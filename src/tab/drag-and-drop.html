@@ -1,0 +1,108 @@
+<div id="TabContainer">
+    <div class="col-lg-4" style="margin-top: 10px;">
+        <div class='property-panel-header'>List of Components</div>
+        <div id="ListView"></div>
+    </div>
+    <div class="col-lg-8 content-wrapper control-section">
+        <div id="draggableTab">
+        </div>
+        <div class="content">
+            <div id="Grid" style="display: none"></div>
+            <div style="display: none">
+                <div id="Chart"></div>
+            </div>
+            <div id="Schedule" style="display: none"></div>
+        </div>
+        <div id="external" style="display: none">
+            <div id="rte">
+                <div>
+                    <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create
+                        and edit content. Also, return the valid <a href="https://ej2.syncfusion.com/home/"
+                            target="_blank">HTML
+                            markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the
+                        content
+                    </p>
+                    <p><b>Key features:</b></p>
+                    <ul>
+                        <li>
+                            <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
+                        </li>
+                        <li>
+                            <p>Capable of handling markdown editing.</p>
+                        </li>
+                        <li>
+                            <p>Contains a modular library to load the necessary functionality on demand.</p>
+                        </li>
+                        <li>
+                            <p>Provides a fully customizable toolbar.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="action-description">
+    <p>
+        This example illustrates how to reorder tabs and add tabs from an external source(list of components) by drag
+        and drop. Here, you can drag and drop the items from TreeView into Tab.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, the allowDragAndDrop property is used to enable drag and drop and the dragArea property is used
+        to define the draggable area.
+    </p>
+    <p>
+        In this example, the list of components is rendered using the <code>treeview</code> component. We can drag the
+        item from the treeview component to the tab component by using the <code>nodeDragStop</code> event of the
+        treeview component and add the same item with the help of the <code>addTab</code> public method of Tab and
+        remove this item from the treeview by using the <code>removeNodes</code> method.
+    </p>
+    <p>
+        In the same way, we can drag the tab item within the tab component and also add the tab item to the treeview
+        component. Here, we can drop the tab item in the treeview component by using the <code>dragged</code> event of
+        the tab component. In this case, we can remove the dropped item from tab with the help of the
+        <code>removeTab</code> public method and add the item to the treeview in its <code>addNodes</code> public
+        method.
+    </p>
+</div>
+<style>
+    #draggableTab .e-content .e-item {
+        font-size: 12px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    #draggableTab .e-upload {
+        width: 300px;
+    }
+
+    .property-panel-header {
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .treeview-external-drag-tab .e-list-item,
+    .e-bigger .treeview-external-drag-tab .e-list-item {
+        border: 0.5px solid #E1E7EC;
+        line-height: 15px;
+        padding: 0 5px;
+    }
+
+    .treeview-external-drag-tab .e-list-item.e-hover>.e-fullrow,
+    .treeview-external-drag-tab .e-list-item.e-active>.e-fullrow,
+    .treeview-external-drag-tab .e-list-item.e-active.e-hover>.e-fullrow,
+    .e-bigger .treeview-external-drag-tab .e-list-item.e-hover>.e-fullrow,
+    .e-bigger .treeview-external-drag-tab .e-list-item.e-active>.e-fullrow,
+    .e-bigger .treeview-external-drag-tab .e-list-item.e-active.e-hover>.e-fullrow {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none !important;
+    }
+
+    .sb-property-border {
+        border-right: none;
+    }
+</style>

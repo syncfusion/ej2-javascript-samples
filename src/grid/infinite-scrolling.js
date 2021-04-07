@@ -1,5 +1,6 @@
-this.default = function () {     
+this.default = function () {
     var genarateData = new ej.buttons.Button({}, '#genarate');
+    var data = [];
     var columns = [
         { field: 'FIELD1', headerText: 'Player Name', width: 140 },
         { field: 'FIELD2', headerText: 'Year', width: 120, textAlign: 'right' },
@@ -10,11 +11,11 @@ this.default = function () {
         { field: 'FIELD7', headerText: 'GS', width: 120, textAlign: 'right' },
         
     ];
-    genarateData.element.onclick = function () {        
-        if (!window.virtualData.length) {
+    genarateData.element.onclick = function () {   
+        if (!data.length) {
             show();
             window.dataSource();            
-            grid.dataSource = window.virtualData;
+            grid.dataSource = data = window.virtualData;
         }
         else {
             show();            
@@ -34,7 +35,7 @@ this.default = function () {
     function show() {
         document.getElementById('popup').style.display = 'inline-block';
     }
-    function hide() {        
+    function hide() {       
         document.getElementById('popup').style.display = 'none';
     }
 };

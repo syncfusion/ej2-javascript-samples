@@ -1,7 +1,7 @@
 /**
  * Sample for Bollinger Band Indicator
  */
-this.renderChart = function (chartData) {
+this.renderChartBollinger = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -65,6 +65,6 @@ this.renderChart = function (chartData) {
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            renderChart(chartData);
+            renderChartBollinger(chartData);
         };
     };

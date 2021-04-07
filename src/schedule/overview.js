@@ -214,8 +214,8 @@ this.default = function () {
     exportObj.appendTo('#exporting');
     var timelineTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
         '<button id="timeline_views"></button></div><div class="text-child" style="font-size: 14px;">Timeline Views</div></div>';
-    var weekNumberTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="week_number"></button></div><div class="text-child" style="font-size: 14px;">Week Number</div></div>';
+    var multiDragTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
+        '<button id="multi_Drag"></button></div><div class="text-child" style="font-size: 14px;">Allow Multi Drag</div></div>';
     var groupTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
         '<button id="grouping"></button></div><div class="text-child" style="font-size: 14px;">Grouping</div></div>';
     var gridlineTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
@@ -240,11 +240,11 @@ this.default = function () {
             { prefixIcon: 'e-icons e-schedule-agenda-view', tooltipText: 'Agenda', text: 'Agenda' },
             { tooltipText: 'Timeline Views', text: 'Timeline Views', template: timelineTemplate },
             { type: 'Separator' },
-            { tooltipText: 'Week Number', text: 'Week Number', template: weekNumberTemplate },
             { tooltipText: 'Grouping', text: 'Grouping', template: groupTemplate },
             { tooltipText: 'Gridlines', text: 'Gridlines', template: gridlineTemplate },
             { tooltipText: 'Row Auto Height', text: 'Row Auto Height', template: autoHeightTemplate },
-            { tooltipText: 'Tooltip', text: 'Tooltip', template: tooltipTemplate }
+            { tooltipText: 'Tooltip', text: 'Tooltip', template: tooltipTemplate },
+            { tooltipText: 'Allow Multi Drag', text: 'Allow Multi Drag', template: multiDragTemplate }
         ],
         created: function () {
             setInterval(function () { updateLiveTime(); }, 1000);
@@ -280,11 +280,11 @@ this.default = function () {
                 }
             });
             timelineView.appendTo('#timeline_views');
-            var weekNumber = new ej.buttons.Switch({
+            var multiDrag = new ej.buttons.Switch({
                 checked: false,
-                change: function (args) { scheduleObj.showWeekNumber = args.checked; }
+                change: function (args) { scheduleObj.allowMultiDrag = args.checked; }
             });
-            weekNumber.appendTo('#week_number');
+            multiDrag.appendTo('#multi_Drag');
             var grouping = new ej.buttons.Switch({
                 checked: true,
                 change: function (args) { scheduleObj.group.resources = args.checked ? ['Calendars'] : []; }
@@ -440,6 +440,7 @@ this.default = function () {
     });
     scheduleObj.appendTo('#scheduler');
     var selectedTarget;
+    var targetElement;
     var contextMenuObj = new ej.navigations.ContextMenu({
         target: '.e-schedule',
         items: [
@@ -469,7 +470,7 @@ this.default = function () {
                 ej.base.remove(eventElement);
                 ej.base.removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
             }
-            var targetElement = args.event.target;
+            targetElement = args.event.target;
             if (ej.base.closest(targetElement, '.e-contextmenu')) {
                 return;
             }
@@ -508,7 +509,8 @@ this.default = function () {
                 case 'Add':
                 case 'AddRecurrence':
                     var selectedCells = scheduleObj.getSelectedElements();
-                    var activeCellsData = scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
+                    var activeCellsData = scheduleObj.getCellDetails(targetElement) ||
+                    scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
                     if (selectedItem === 'Add') {
                         scheduleObj.openEditor(activeCellsData, 'Add');
                     }
@@ -670,29 +672,29 @@ this.default = function () {
     var slotDuration = new ej.dropdowns.DropDownList({
         width: 170,
         dataSource: [
-            { Name: "1 hour", Value: 60 },
-            { Name: "1.5 hours", Value: 90 },
-            { Name: "2 hours", Value: 120 },
-            { Name: "2.5 hours", Value: 150 },
-            { Name: "3 hours", Value: 180 },
-            { Name: "3.5 hours", Value: 210 },
-            { Name: "4 hours", Value: 240 },
-            { Name: "4.5 hours", Value: 270 },
-            { Name: "5 hours", Value: 300 },
-            { Name: "5.5 hours", Value: 330 },
-            { Name: "6 hours", Value: 360 },
-            { Name: "6.5 hours", Value: 390 },
-            { Name: "7 hours", Value: 420 },
-            { Name: "7.5 hours", Value: 450 },
-            { Name: "8 hours", Value: 480 },
-            { Name: "8.5 hours", Value: 510 },
-            { Name: "9 hours", Value: 540 },
-            { Name: "9.5 hours", Value: 570 },
-            { Name: "10 hours", Value: 600 },
-            { Name: "10.5 hours", Value: 630 },
-            { Name: "11 hours", Value: 660 },
-            { Name: "11.5 hours", Value: 690 },
-            { Name: "12 hours", Value: 720 }
+            { Name: '1 hour', Value: 60 },
+            { Name: '1.5 hours', Value: 90 },
+            { Name: '2 hours', Value: 120 },
+            { Name: '2.5 hours', Value: 150 },
+            { Name: '3 hours', Value: 180 },
+            { Name: '3.5 hours', Value: 210 },
+            { Name: '4 hours', Value: 240 },
+            { Name: '4.5 hours', Value: 270 },
+            { Name: '5 hours', Value: 300 },
+            { Name: '5.5 hours', Value: 330 },
+            { Name: '6 hours', Value: 360 },
+            { Name: '6.5 hours', Value: 390 },
+            { Name: '7 hours', Value: 420 },
+            { Name: '7.5 hours', Value: 450 },
+            { Name: '8 hours', Value: 480 },
+            { Name: '8.5 hours', Value: 510 },
+            { Name: '9 hours', Value: 540 },
+            { Name: '9.5 hours', Value: 570 },
+            { Name: '10 hours', Value: 600 },
+            { Name: '10.5 hours', Value: 630 },
+            { Name: '11 hours', Value: 660 },
+            { Name: '11.5 hours', Value: 690 },
+            { Name: '12 hours', Value: 720 }
         ],
         fields: { text: 'Name', value: 'Value' },
         popupHeight: 150,
@@ -708,4 +710,37 @@ this.default = function () {
         change: function (args) { scheduleObj.timeScale.slotCount = args.value; }
     });
     slotInterval.appendTo('#slotInterval');
+    var timeFormat = new ej.dropdowns.DropDownList({
+        width: 170,
+        dataSource: [
+            { Name: '12 hours', Value: 'hh:mm a' },
+            { Name: '24 hours', Value: 'HH:mm' }
+        ],
+        fields: { text: 'Name', value: 'Value' },
+        popupHeight: 150,
+        value: 'hh:mm a',
+        change: function (args) { scheduleObj.timeFormat = args.value; }
+    });
+    timeFormat.appendTo('#timeFormat');
+    var weekNumber = new ej.dropdowns.DropDownList({
+        width: 170,
+        dataSource: [
+            { Name: 'Off', Value: 'Off' },
+            { Name: 'First Day of Year', Value: 'FirstDay' },
+            { Name: 'First Full Week', Value: 'FirstFullWeek' },
+            { Name: 'First Four-Day Week', Value: 'FirstFourDayWeek' }
+        ],
+        fields: { text: 'Name', value: 'Value' },
+        popupHeight: 150,
+        value: 'Off',
+        change: function (args) {
+            if (args.value === 'Off') {
+                scheduleObj.showWeekNumber = false;
+            } else {
+                scheduleObj.showWeekNumber = true;
+                scheduleObj.weekRule = args.value;
+            }
+        }
+    });
+    weekNumber.appendTo('#week_number');
 };

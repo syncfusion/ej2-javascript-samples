@@ -1,7 +1,7 @@
 /**
  * Sample for ATR Indicator
  */
-this.renderChart = function (chartData) {
+this.renderChartATR = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -82,6 +82,6 @@ this.renderChart = function (chartData) {
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            renderChart(chartData);
+            renderChartATR(chartData);
         };
     };

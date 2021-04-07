@@ -4,6 +4,7 @@ this.default = function () {
         height: '900',
         childMapping: 'subtasks',
         treeColumnIndex: 1,
+        selectionSettings: { type: 'Multiple' },
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row' },
         columns: [
             { field: 'taskID', headerText: 'Task ID', isPrimaryKey: true, width: 90, textAlign: 'Right' },

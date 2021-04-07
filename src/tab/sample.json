@@ -3,10 +3,12 @@
     "directory": "tab",
     "category": "Navigation",
     "ftName" :"tabs",
+    "type": "update",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "category": "Tabs", "description": "The sample demonstrates about default functionalities of the Tab control (also known as Tabbed UI) which is navigation component in JavaScript platform.", "api": { "Header": ["text", "iconCss"], "TabItem": ["content"], "Tab": ["items"] } },
         { "url": "orientation", "name": "Orientation", "category": "Tabs", "description": "The sample demonstrates how to customize the orientation of Tab control along with feasibility to customize the Tab header styles in JavaScript platform.", "api": { "Tab": ["headerPlacement", "showCloseButton"] } },
         { "url": "responsive-modes", "name": "Responsive Modes", "category": "Tabs", "description": "The sample illustrates that responsive mode of Tab control that aligns tab items in a scrollable or popup mode in JavaScript platform.", "api": { "Tab": ["overflowMode"] } },
-        { "url": "wizard", "name": "Wizard", "category": "Tabs", "description": "This sample demonstrates how to design a wizard-like application with the sequential action using the Tab control in JavaScript platform.", "api": { "TabItem": ["disabled"] } }
+        { "url": "wizard", "name": "Wizard", "category": "Tabs", "description": "This sample demonstrates how to design a wizard-like application with the sequential action using the Tab control in JavaScript platform.", "api": { "TabItem": ["disabled"] } },
+        { "url": "drag-and-drop", "name": "Drag and Drop", "type": "new", "category": "Tabs", "description": "This example demonstrates how to reorder the loaded tabs and how to add a new tab from the external source.", "api":{"Tab":["allowDragAndDrop", "onDragStart", "dragged"] } }
     ]
 }

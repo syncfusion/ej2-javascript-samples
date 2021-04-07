@@ -2102,9 +2102,9 @@ window.splitTasksData = [
                         TaskID: 3, TaskName: 'Plan timeline', StartDate: new Date('02/04/2019'), EndDate: new Date('02/10/2019'),
                         Duration: 10, Progress: '60',
                         Segments: [
-                            { StartDate: new Date("02/04/2019"), Duration: 2 },
-                            { StartDate: new Date("02/05/2019"), Duration: 5 },
-                            { StartDate: new Date("02/08/2019"), Duration: 3 }
+                            { StartDate: new Date('02/04/2019'), Duration: 2 },
+                            { StartDate: new Date('02/05/2019'), Duration: 5 },
+                            { StartDate: new Date('02/08/2019'), Duration: 3 }
                           ]
                     },
                     {
@@ -2115,8 +2115,8 @@ window.splitTasksData = [
                         TaskID: 5, TaskName: 'Allocate resources', StartDate: new Date('02/04/2019'), EndDate: new Date('02/10/2019'),
                         Duration: 10, Progress: '75',
                         Segments: [
-                            { StartDate: new Date("02/04/2019"), Duration: 4 },
-                            { StartDate: new Date("02/08/2019"), Duration: 2 }
+                            { StartDate: new Date('02/04/2019'), Duration: 4 },
+                            { StartDate: new Date('02/08/2019'), Duration: 2 }
                           ]
                     },
                     {
@@ -2138,8 +2138,8 @@ window.splitTasksData = [
                         TaskID: 9, TaskName: 'Develop prototype', StartDate: new Date('02/25/2019'), EndDate: new Date('03/02/2019'),
                         Duration: 5, Progress: '100', Predecessor: '6FS',
                         Segments: [
-                            { StartDate: new Date("02/25/2019"), Duration: 2 },
-                            { StartDate: new Date("02/28/2019"), Duration: 3 }
+                            { StartDate: new Date('02/25/2019'), Duration: 2 },
+                            { StartDate: new Date('02/28/2019'), Duration: 3 }
                           ]
                     },
                     {

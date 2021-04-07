@@ -1,8 +1,7 @@
 /**
  * Sample for TMA Indicator
  */
- var _this = this;
-this.renderChart = function (chartData) {
+this.renderChartTMA = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -63,6 +62,6 @@ this.renderChart = function (chartData) {
             chartData.map(function (data) {
                 data.x = new Date(data.x);
             });
-            _this.renderChart(chartData);
+            renderChartTMA(chartData);
         };
     };

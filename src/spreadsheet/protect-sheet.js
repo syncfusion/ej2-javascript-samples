@@ -6,6 +6,8 @@ this.default = function() {
     var numberFormat = ej.spreadsheet.getFormatFromType('Currency');
     var percentageFormat = ej.spreadsheet.getFormatFromType('Percentage');
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
+         // To protect the workbook
+         password: "spreadsheet",
         sheets: [{
             isProtected: true,
             name: 'EMI Calculator',
@@ -106,6 +108,8 @@ this.default = function() {
                 width: 90
             }]
         }],
+        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
+        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
         created: function() {
             //Applied style and number formatting to a range
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'EMI Schedule!A1:F1');

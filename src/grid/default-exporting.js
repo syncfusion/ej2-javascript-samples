@@ -1,39 +1,26 @@
 this.default = function () {
-    var refresh;
+    var isInitial = true;
     var grid = new ej.grids.Grid({
-        dataSource: window.orderDatas,
+        dataSource: window.employeeDetails,
         allowExcelExport: true,
         allowPdfExport: true,
-        allowPaging: true,
-        allowGrouping: true,
         toolbar: ['ExcelExport', 'PdfExport', 'CsvExport'],
-        groupSettings: { showDropArea: false, columns: ['ShipCountry'] },
-        pageSettings: { pageCount: 5 },
+        allowGrouping: true,
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-            { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
-            { field: 'ShipCountry', visible: false, headerText: 'Ship Country', width: 150 },
-            { field: 'ShipCity', visible: false, headerText: 'Ship City', width: 150 }
+            { headerText: "Employee Image", template: "#template1", width: 150, textAlign: 'Center'},
+            { field: "FirstName", headerText: "Name", width: 130 },
+            { field: "Title", headerText: "Designation", width: 180 },
+            { headerText: "Email ID", template: "#template2", width: 180 },
+            { field: "HireDate", headerText: "Hire Date", textAlign: "Right", width: 135, format: 'yMd'},
+            { field: "Address", allowGrouping: false, width: 180 }
         ],
-        aggregates: [{
-            columns: [{
-                type: 'Sum',
-                field: 'Freight',
-                format: 'C2',
-                groupFooterTemplate: 'Total freight: ${Sum}'
-            }]
-        }],
-        load: function() {
-            refresh = grid.refreshing;
-        },
         dataBound: function() {
-            if (refresh) {
-                grid.groupColumn('ShipCountry');
-                refresh = false;
+            if (isInitial) {
+                grid.toolbarModule.toolbar.hideItem(2, true);
+                isInitial = false;
             }
         },
+        height: 350
     });
     grid.appendTo('#Grid');
     grid.toolbarClick = function (args) {
@@ -45,6 +32,38 @@ this.default = function () {
         }
         if (args.item.id === 'Grid_csvexport') {
             grid.csvExport();
+        }
+    };
+    function exportQueryCellInfo (args) {
+        if (args.column.headerText === 'Employee Image') {
+            if (args.name === "excelQueryCellInfo") {
+                args.image = { height: 75, base64: args.data.EmployeeImage, width: 75 };
+            } else {
+                args.image = { base64: args.data.EmployeeImage };
+            }
+        }
+        if (args.column.headerText === 'Email ID') {
+            args.hyperLink = {
+                target: 'mailto:' + args.data.EmailID,
+                displayText: args.data.EmailID
+            };
+        }
+    }
+    
+    grid.excelQueryCellInfo = grid.pdfQueryCellInfo = exportQueryCellInfo;
+
+    //Render checkbox component for export template column.
+    var templateExport = new ej.buttons.CheckBox({ checked: true });
+    templateExport.appendTo('#templateExport');
+
+    var fields = ["Employee Image", "Email ID"];
+    document.getElementById('templateExport').onclick = function () {
+        if (templateExport.checked) {
+            grid.showColumns(fields, "headerText");
+            grid.toolbarModule.toolbar.hideItem(2, true);
+        } else {
+            grid.hideColumns(fields, "headerText");
+            grid.toolbarModule.toolbar.hideItem(2, false);
         }
     };
 };

@@ -28,6 +28,9 @@ this.default = function() {
                 downloadUrl: hostUrl + 'api/FileManager/Download'
             }
         },
+        quickToolbarSettings: {
+            table: ['TableHeader', 'TableRows', 'TableColumns', 'TableCell', '-', 'BackgroundColor', 'TableRemove', 'TableCellVerticalAlign', 'Styles']
+        },
         showCharCount: true,
         actionBegin: handleFullScreen,
         actionComplete: actionCompleteHandler,

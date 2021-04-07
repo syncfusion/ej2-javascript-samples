@@ -69,7 +69,7 @@ this.default = function () {
         width: '90%',
         // custom code start
         load: seriesload,
-        // custom code start
+        // custom code end
         lineWidth: 1,
         type: 'Area',
         opacity: 1,

@@ -35,8 +35,9 @@
         },
         {
             "url": "protect-sheet",
-            "name": "Protect Sheet",
+            "name": "Protection",
             "category": "Spreadsheet",
+            "type": "update",
             "api": {
                 "Spreadsheet": [
                     "sheets",
@@ -45,6 +46,19 @@
                 ]
             },
             "description": "This demo for Essential JS 2 Spreadsheet control shows the way of using protecting the sheet configuration."
+        },
+        {
+            "url": "freeze-pane",
+            "name": "Freeze Panes",
+            "category": "Spreadsheet",
+            "type": "new",
+            "api": {
+                    "sheets": [
+                        "frozenRows",
+                        "frozenColumns"
+                    ]
+            },
+            "description": "This demo for Essential JS 2 Spreadsheet control shows freeze rows and columns feature."
         },
         {
             "url": "cell-data-binding",
@@ -148,7 +162,6 @@
         {
             "url": "chart",
             "name": "Chart",
-            "type": "new",
             "category": "Data Visualization",
             "api": {
                 "Spreadsheet": [

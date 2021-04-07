@@ -3,6 +3,7 @@ this.default = function () {
     var date1;
     var date2;
     var flag = true;
+    var data = [];
     var genarateData = new ej.buttons.Button({}, '#genarate');
     var columns = [
         { field: 'FIELD1', headerText: 'Player Name', width: 140 },
@@ -37,11 +38,11 @@ this.default = function () {
         { field: 'FIELD30', headerText: 'Post REB', width: 130, textAlign: 'right' }
     ];
     genarateData.element.onclick = function () {
-        if (!window.virtualData.length) {
+        if (!data.length) {
             show();
             window.dataSource();
             date1 = new Date().getTime();
-            grid.dataSource = window.virtualData;
+            grid.dataSource = data = window.virtualData;
         }
         else {
             flag = true;

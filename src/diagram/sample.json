@@ -3,7 +3,6 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
-    "type": "update",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
         {
@@ -51,7 +50,6 @@
         {
             "url": "custom-shapes",
             "name": "HTML Shapes",
-            "type": "update",
             "description": "This sample demonstrates how to host a HTML elements inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
             "category": "Getting Started"
         },
@@ -148,7 +146,6 @@
         {
             "url": "complex-hierarchical-tree",
             "name": "Complex Hierarchical Tree",
-            "type": "update",
             "description": "This sample demonstrates a complex hierarchical template that is built from an external data source using complex hierarchical tree algorithm.",
             "category": "Automatic Layouts"
         },
@@ -239,7 +236,6 @@
         {
             "url": "virtualization",
             "name": "Virtualization",
-            "type": "new", 
             "description": "This sample demonstrates the default UI virtualization functionality. Scroll the diagram for UI virtualization.",
             "category": "Getting Started"
         }

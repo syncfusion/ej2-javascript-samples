@@ -1,4 +1,5 @@
 this.default = function () {
+    var collapsedStatePersist = true;
     var treeGridObj = new ej.treegrid.TreeGrid({
         dataSource: window.sampleData,
         childMapping: 'subtasks',
@@ -20,13 +21,29 @@ this.default = function () {
    treeGridObj.appendTo('#TreeGrid');
    treeGridObj.toolbarClick = function (args) {
    if (args.item.id === 'TreeGrid_gridcontrol_pdfexport') {
-        treeGridObj.pdfExport();
+        var pdfExportProperties = {
+            isCollapsedStatePersist: collapsedStatePersist
+        };
+        treeGridObj.pdfExport(pdfExportProperties);
    }
     if (args.item.id === 'TreeGrid_gridcontrol_excelexport') {
-        treeGridObj.excelExport();
+        var excelExportProperties = {
+            isCollapsedStatePersist: collapsedStatePersist
+        };
+        treeGridObj.excelExport(excelExportProperties);
     }
     if (args.item.id === 'TreeGrid_gridcontrol_csvexport') {
         treeGridObj.csvExport();
     }
 };
+    var checkBoxObj = new ej.buttons.CheckBox({ checked: true, label: 'Persist collapsed state', labelPosition: 'Before', change: onChange });
+    checkBoxObj.appendTo('#checked');
+    function onChange(args) {
+        if (args.checked) {
+            collapsedStatePersist = true;
+        }
+        else {
+            collapsedStatePersist = false;
+        }
+    }
 };

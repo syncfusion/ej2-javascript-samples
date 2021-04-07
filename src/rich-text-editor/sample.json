@@ -7,6 +7,7 @@
     "samples": [{
             "url": "tools",
             "name": "Overview",
+            "type": "update",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
@@ -105,7 +106,6 @@
         {
             "url": "file-browser",
             "name": "File Browser",
-            "type": "new",
             "description": "This demo shows how to insert the image into the Rich Text Editor content using FileManager.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["fileManagerSettings", "toolbarSettings", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["enable", "path", "ajaxSettings"] }

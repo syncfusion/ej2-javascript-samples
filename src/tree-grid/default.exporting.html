@@ -1,12 +1,29 @@
-<div class="control-section">
+<div class="col-lg-9 control-section">
     <div class="content-wrapper">
         <div id="TreeGrid">
         </div>
     </div>
 </div>
+<div class="col-lg-2 property-section">
+    <table id="property" title="Export Customization" style="width: 200px">
+      <tr>
+          <td style="width: 20px;">
+              <input type="checkbox" id="checked" />                 
+          </td>
+      </tr>    
+    </table>
+        
+</div>
+<style>
+#property td div.e-checkbox-wrapper {
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+}
+</style>
 <!-- custom code start -->
 <div id="action-description">
     <p>This sample demonstrates the client-side exporting of the Tree Grid, which allows you to export its data to the Excel, Pdf and CSV formats. Use the toolbar buttons to export Tree Grid data to desired format.</p>
+    <p>By using the Persist collapsed state checkbox we can persist the Expand/Collpase state of Tree Grid in exported document </p>
 </div>
 
 <div id="description">

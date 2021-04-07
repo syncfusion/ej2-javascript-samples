@@ -350,7 +350,7 @@ gulp.task('combine-samplelists', function (done) {
 function combineSampleList(done) {
     var filename = 'samplelist.js';
     sampleOrder = JSON.parse(fs.readFileSync(`./src/common/sampleOrder.json`));
-    var apiData = JSON.parse(fs.readFileSync('./src/common/api-table', 'utf8'));
+    //var apiData = JSON.parse(fs.readFileSync('./src/common/api-table', 'utf8'));
     var sampleListPath = `./src/common/`;
     var apiReference = {};
     if (sampleList && sampleList.length) {
@@ -382,27 +382,27 @@ function combineSampleList(done) {
                         /**
                          * api-table processing
                          */
-                        var apiconfig = dt[i].api || {};
-                        var data = [];
-                        var canUpdate = false;
-                        var ObjectKeys = Object.keys(apiconfig);
-                        for (var key of ObjectKeys) {
-                            var classProperties = apiData[key];
-                            if (!classProperties) {
-                                continue;
-                            }
-                            var propertyCollection = apiconfig[key];
-                            for (var prop of propertyCollection) {
-                                var propData = classProperties[prop];
-                                if (propData) {
-                                    canUpdate = true;
-                                    data.push(propData);
-                                }
-                            }
-                        }
-                        if (canUpdate) {
-                            apiReference[curDirectory + '/' + dt[i].url] = data;
-                        }
+                        // var apiconfig = dt[i].api || {};
+                        // var data = [];
+                        // var canUpdate = false;
+                        // var ObjectKeys = Object.keys(apiconfig);
+                        // for (var key of ObjectKeys) {
+                        //     var classProperties = apiData[key];
+                        //     if (!classProperties) {
+                        //         continue;
+                        //     }
+                        //     var propertyCollection = apiconfig[key];
+                        //     for (var prop of propertyCollection) {
+                        //         var propData = classProperties[prop];
+                        //         if (propData) {
+                        //             canUpdate = true;
+                        //             data.push(propData);
+                        //         }
+                        //     }
+                        // }
+                        // if (canUpdate) {
+                        //     apiReference[curDirectory + '/' + dt[i].url] = data;
+                        // }
                     }
                 }
             };

@@ -32,8 +32,8 @@ this.default = function () {
     toggleBtn.appendTo('#togglebtn');
     toggleBtn.element.onclick = function () {
         if (toggleBtn.element.classList.contains('e-active')) {
-            dashboardObject.allowResizing = true;
             dashboardObject.allowDragging = true;
+            dashboardObject.allowResizing = true;         
             toggleBtn.content = "SAVE";
             toggleBtn.iconCss = "save";
             document.getElementById('dialogBtn').style.display = 'block';

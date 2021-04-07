@@ -1,7 +1,7 @@
 /**
  * Sample for Stochastic Indicator
  */
-renderChart =function (chartData) {
+this.renderChartSto =function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -79,6 +79,6 @@ renderChart =function (chartData) {
             chartData.map(function (data) {
                 data = new Date(data);
             });
-            renderChart(chartData);
+            renderChartSto(chartData);
         };
     };

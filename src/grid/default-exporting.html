@@ -1,8 +1,41 @@
-<div class="control-section">
+<!-- custom code start -->
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+<!-- custom code end -->
+<script id="template1" type="text/x-template">
+    <div class="image">
+        <img src="src/grid/images/${EmployeeID}.png" alt="${EmployeeID}" />
+    </div>
+</script>
+<script id="template2" type="text/x-template">
+<div class="link">
+    <a href="mailto:${EmailID}">${EmailID}</a></div>
+</script>
+
+<div class="col-lg-9 control-section">
     <div class="content-wrapper">
         <div id="Grid">
         </div>
     </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 100%">
+                <div style="padding-top: 7px">Export template column</div>
+            </td>
+            <td style="width: 50%;padding-right: 10px">
+                    <input type="checkbox" tabindex="0" id='templateExport' checked="checked" />
+            </td>
+        </tr>
+    </table>
 </div>
 
 <div id="action-description">
@@ -13,10 +46,13 @@
 
 <div id="description">
     <p>Grid supports client-side exporting which allows you to export its data to the Excel, Pdf and CSV formats.</p>
-    <p>In this demo, Grouping is applied for <strong><i>ShipCountry</i></strong> with <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-aggregateColumn.html#groupcaptiontemplate">
-        groupCaptionTemplate</a></code> property is used to display the group caption aggregation for the <strong><i>Freight</i></strong> column and excelexport, pdfexport and csvexport items are defined in the toolbar. For these toolbar items, we have defined
-        actions in toolbarClick event to export the Grid data using the 
+    <p>In this demo, while exporting, we have included images and hyperlinks from the template columns i.e
+         <strong><i>Image</i></strong> and <strong><i>URL</i></strong> using <code><a target="_blank" class="code"
+           href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#excelquerycellinfo">
+           excelQueryCellInfo</a></code> and <code><a target="_blank" class="code"
+               href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#pdfquerycellinfo">
+               pdfQueryCellInfo</a></code> events.
+               The ExcelExport, PdfExport, and CsvExport items are defined in the toolbar, for which we have defined actions in toolbarClick event to export the Grid data using the 
         <code><a target="_blank" class="code"
             
             href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#excelexport">excelExport</a></code>, 
@@ -24,5 +60,15 @@
                 href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#pdfexport">pdfExport</a></code>
                 and <code><a target="_blank" class="code"
                     href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#csvexport">csvExport</a></code>  methods.</p>
+
+                    <p>
+                        Note: Since CSV format is supported only plain text, images and hyperlinks will not be exported on this.</p>
+
+                        <p>
+                            More information on the exporting can be found in these
+                            <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/excel-exporting/">Excel Export</a> &
+                            <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/pdf-export/">PDF Export</a>
+                            documentation section.
+                        </p>
         <br/>
 </div>

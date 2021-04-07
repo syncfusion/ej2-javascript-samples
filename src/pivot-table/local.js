@@ -53,7 +53,12 @@ this.default = function () {
         dataSourceSettings: jsonReport,
         height: 290,
         width: '100%',
-        gridSettings: { columnWidth: 120 }
+        gridSettings: { columnWidth: 120 },
+        load: function (args) {
+            if (args.dataSourceSettings.type === 'CSV') {
+                args.dataSourceSettings.dataSource = getCSVData();
+            }
+        }
     });
     pivotObj.appendTo('#PivotView');
 

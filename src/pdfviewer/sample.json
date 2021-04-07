@@ -40,7 +40,7 @@
             }
         },
         {
-            "url":"hand-written", "name": "Handwritten Signature", "description":"The sample demonstrates the Handwritten Signature support of  PDF Viewer. The Handwritten signature reduces the paperwork of reviewing the contents and it's verified it's digitally.", "category": "PDF Viewer", "type": "new", "api": {
+            "url":"hand-written", "name": "Handwritten Signature", "description":"The sample demonstrates the Handwritten Signature support of  PDF Viewer. The Handwritten signature reduces the paperwork of reviewing the contents and it's verified it's digitally.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
