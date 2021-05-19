@@ -84,8 +84,8 @@ function renderComponents() {
         var dropElement = args.target.closest('#draggableTab .e-toolbar-item');
         if (dropElement != null) {
             var tabElement = document.querySelector('#draggableTab');
-            var itemPosition = (args.event.clientX < dropElement.getBoundingClientRect().left +
-                dropElement.offsetWidth / 2) ? 0 : 1;
+            var itemPosition = (((args.event.type.indexOf('touch') > -1) ? args.event.changedTouches[0].clientX
+                : args.event.clientX) < dropElement.getBoundingClientRect().left + dropElement.offsetWidth / 2) ? 0 : 1;
             var dropItemIndex = [].slice.call(tabElement.querySelectorAll('.e-toolbar-item')).indexOf(dropElement) + itemPosition;
             var content = '';
             switch (args.draggedNodeData.text) {
@@ -152,14 +152,8 @@ function renderComponents() {
             var newTabItem = [{ header: { 'text': args.draggedNodeData.text.toString() }, content: document.querySelector('.' + content) }];
             tabObj.addTab(newTabItem, dropItemIndex);
             treeViewObj.removeNodes([args.draggedNode]);
-            args.cancel = true;
         }
-        else {
-            var dropNode = args.target.closest('#ListView .e-list-item ');
-            if (!ej.base.isNullOrUndefined(dropNode) && args.dropIndicator === 'e-drop-in') {
-                args.cancel = true;
-            }
-        }
+        args.cancel = true;
     }
     function onNodeDrag(args) {
         if (!ej.base.isNullOrUndefined(args.target.closest('.tab-content'))) {

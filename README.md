@@ -8,13 +8,11 @@ Add your sample order in the `src/common/sampleOrder.json` with corresponding ca
 
 **Note:** Do not use whitespace at any cause in the folder’s name. Use “-” instead of space.
 
-
 ### Configure the folder and sample
 
 Create the “sample.json” file inside of your control folder.  Create your sample html and js file in same folder also the html and js files should have the same names.
 
 **Note:** Do not use whitespace at any cause in the file’s name. Use “-” instead of space.
-
 
 ### Configure Sample JSON
 
@@ -75,17 +73,90 @@ https://gitlab.syncfusion.com/essential-studio/ej2-javascript-samples/blob/19761
 
 **Note:** Each component should include one datasource file only.
 
-## Run the sample browser
+# Using the samples
+
+## Installing
+
+Before installation check `@syncfusion:registry=http://nexus.syncfusion.com/repository/ej2-production/` is available in npmrc file. Then use the below command to install all dependent packages.
+
+```
+npm install
+```
+## Testing
+
+Use `npm run test` command to compile the source files. It calls the following tasks synchronously,
+
+1. Build
+2. Styles ship
+3. Site-map generate.
+
+### Build
+
+Use the below command to generate scripts, styles, locale and sample lists.
+
+```
+gulp build
+```
+It runs the following tasks synchronously,
+
+1. Scripts
+2. Styles
+
+#### **Scripts**
+
+ It compiles the Typescript files and use the below command to run this task.
+
+```
+gulp scripts
+```
+
+#### **Styles**
+
+The command `gulp styles` is used to compile default themes. It calls the following two tasks synchronously.
+
+1. Default theme
+2. Compile styles
+
+#### Default theme
+
+Use the below command to generate default theme files.
+
+```
+gulp default-theme
+```
+
+#### Compile Styles
+It compiles the scss file to css file. To run this task use the below command,
+
+```
+gulp compile-styles
+```
+
+### Styles Shipping
+
+It copies css files for themes from node_modules. Use the below command to run it individual.
+
+```
+gulp styles-shipping
+```
+
+### Site map generation
+The below command combines sample of all components and store it in sitemap-demos.xml file to index our components, samples, documents in search engine.
+
+```
+gulp sitemap-generate
+```
+
+## Run your sample browser
 
 We can run the sample browser with two commands
 
 1. **gulp _serve_** – run the sample browser alone.
-2. **gulp _watch_** – run the sample browser and monitor typescript as well. This will help at development time. If any changes detect means it will automatically compile and browser will reloaded.
+2. **gulp _watch_** – run the sample browser and monitor javascript as well. This will help at development time. If any changes detect means it will automatically compile and browser will reloaded.
 
 ```
 gulp serve
 ```
-
 
 **Access URLs:**
 

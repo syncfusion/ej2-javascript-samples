@@ -820,7 +820,7 @@ function loadTheme(theme) {
     themeList.querySelector('.active').classList.remove('active');
     themeList.querySelector('#' + theme).classList.add('active');
     var doc = document.getElementById('themelink');
-    doc.setAttribute('href','./dist/' + theme + '.css');
+    doc.setAttribute('href','./dist/' + theme + '.css')
     var ajax = new ej.base.Ajax('./dist/' + theme + '.css', 'GET', true);
     ajax.send().then(function(result) {
         selectedTheme = theme;
