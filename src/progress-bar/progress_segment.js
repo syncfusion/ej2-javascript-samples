@@ -14,10 +14,10 @@ this.default = function () {
             duration: 2000
         },
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var circularSegment = location.hash.split('/')[1];
+            circularSegment = circularSegment ? circularSegment : 'Material';
+            args.progressBar.theme = (circularSegment.charAt(0).toUpperCase() +
+                circularSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
     });
     linearProgress.appendTo('#linearSegment');
@@ -41,11 +41,11 @@ this.default = function () {
             }],
         cornerRadius: 'Square',
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            switch (selectedTheme) {
+            var linearSegment = location.hash.split('/')[1];
+            linearSegment = linearSegment ? linearSegment : 'Material';
+            args.progressBar.theme = (linearSegment.charAt(0).toUpperCase() +
+                linearSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            switch (linearSegment) {
                 case 'material':
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#e91e63"><span></span></div>';
                     break;
@@ -57,6 +57,9 @@ this.default = function () {
                     break;
                 case 'bootstrap4':
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#007bff"><span></span></div>';
+                    break;
+                case 'tailwind':
+                    args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#4F46E5"><span></span></div>';
                     break;
                 default:
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#FFD939"><span></span></div>';
@@ -75,4 +78,4 @@ this.default = function () {
             linearProgress.value += 20;
         }
     }
-}
+};

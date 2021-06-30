@@ -32,7 +32,7 @@ this.default = function () {
         { id: 'Hour', unit: 'Hour' },
     ];
     var gantt = new ej.gantt.Gantt({
-        dataSource: projectData,
+        dataSource: window.projectData,
         taskFields: {
             id: 'taskID',
             name: 'taskName',

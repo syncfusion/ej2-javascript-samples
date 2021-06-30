@@ -52,7 +52,11 @@ this.default = function () {
     window.getHeaderStyles = function (data) {
         if (data.elementType === 'event') {
             var resourceData = window.getResourceData(data);
-            return 'background:' + resourceData.CalendarColor + '; color: #FFFFFF;';
+            var calendarColor = '#3f51b5';
+            if (resourceData) {
+                calendarColor = (resourceData.CalendarColor).toString();
+            }
+            return 'background:' + calendarColor + '; color: #FFFFFF;';
         }
         else {
             return 'align-items: center; color: #919191;';
@@ -60,7 +64,11 @@ this.default = function () {
     };
     window.getEventType = function (data) {
         var resourceData = window.getResourceData(data);
-        return resourceData.CalendarName;
+        var calendarText = '';
+        if (resourceData) {
+            calendarText = resourceData.CalendarName.toString();
+        }
+        return calendarText;
     };
     var updateLiveTime = function () {
         var scheduleTimezone = scheduleObj ? scheduleObj.timezone : 'Etc/GMT';
@@ -135,12 +143,18 @@ this.default = function () {
         var popupElement = scheduleObj.element.querySelector('.e-quick-popup-wrapper');
         var getSlotData = function () {
             var cellDetails = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
+            if (ej.base.isNullOrUndefined(cellDetails)) {
+                cellDetails = scheduleObj.getCellDetails(scheduleObj.activeCellsData.element);
+            }
+            var subject = popupElement.querySelector('#title').ej2_instances[0].value;
+            var notes = popupElement.querySelector('#notes').ej2_instances[0].value;
             var eventObj = {};
             eventObj.Id = scheduleObj.getEventMaxID();
-            eventObj.Subject = popupElement.querySelector('#title').ej2_instances[0].value;
+            eventObj.Subject = ej.base.isNullOrUndefined(subject) ? 'Add title' : subject;
             eventObj.StartTime = new Date(+cellDetails.startTime);
             eventObj.EndTime = new Date(+cellDetails.endTime);
-            eventObj.Description = popupElement.querySelector('#notes').ej2_instances[0].value;
+            eventObj.IsAllDay = cellDetails.isAllDay;
+            eventObj.Description = ej.base.isNullOrUndefined(notes) ? 'Add notes' : notes;
             eventObj.CalendarId = popupElement.querySelector('#eventType').ej2_instances[0].value;
             return eventObj;
         };
@@ -440,7 +454,6 @@ this.default = function () {
     });
     scheduleObj.appendTo('#scheduler');
     var selectedTarget;
-    var targetElement;
     var contextMenuObj = new ej.navigations.ContextMenu({
         target: '.e-schedule',
         items: [
@@ -470,7 +483,7 @@ this.default = function () {
                 ej.base.remove(eventElement);
                 ej.base.removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
             }
-            targetElement = args.event.target;
+            var targetElement = args.event.target;
             if (ej.base.closest(targetElement, '.e-contextmenu')) {
                 return;
             }
@@ -509,8 +522,7 @@ this.default = function () {
                 case 'Add':
                 case 'AddRecurrence':
                     var selectedCells = scheduleObj.getSelectedElements();
-                    var activeCellsData = scheduleObj.getCellDetails(targetElement) ||
-                    scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
+                    var activeCellsData = scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
                     if (selectedItem === 'Add') {
                         scheduleObj.openEditor(activeCellsData, 'Add');
                     }

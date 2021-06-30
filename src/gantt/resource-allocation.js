@@ -1,6 +1,6 @@
 this.default = function () {   
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: resourceData,
+        dataSource: window.resourceData,
         height: '450px',
         allowSelection: true,
         highlightWeekends: true,

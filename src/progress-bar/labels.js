@@ -1,9 +1,10 @@
 this.default = function () {
   var progressLoad = function (args) {
-    var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'Material';
-    args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+    var labelTheme = location.hash.split('/')[1];
+    labelTheme = labelTheme ? labelTheme : 'Material';
+    args.progressBar.theme = (labelTheme.charAt(0).toUpperCase() +
+        labelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+
     if (args.progressBar.theme === 'Material') {
         args.progressBar.trackColor = '#EAEAEA';
     }

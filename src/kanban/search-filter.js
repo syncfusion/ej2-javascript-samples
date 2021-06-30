@@ -23,21 +23,21 @@ this.default = function () {
         dataSource: ['None', 'High', 'Normal', 'Low'],
         index: 0,
         placeholder: 'Select a priority',
-        change: change,
+        select: prioritySelect,
     });
     priorityObj.appendTo('#priority_filter');
     var statusObj = new ej.dropdowns.DropDownList({
         dataSource: [
-            { id: 'None', status: 'None' },
-            { id: 'To Do', status: 'Open' },
-            { id: 'In Progress', status: 'InProgress' },
-            { id: 'Testing', status: 'Testing' },
-            { id: 'Done', status: 'Close' }
+            { id: 'None', value: 'None' },
+            { id: 'To Do', value: 'Open' },
+            { id: 'In Progress', value: 'InProgress' },
+            { id: 'Testing', value: 'Testing' },
+            { id: 'Done', value: 'Close' }
         ],
-        fields: { text: 'id', value: 'status' },
+        fields: { text: 'id', value: 'value' },
         index: 0,
         placeholder: 'Select a status',
-        change: change
+        select: statusSelect
     });
     statusObj.appendTo('#status_filter');
     var textObj = new ej.inputs.TextBox({
@@ -70,25 +70,25 @@ this.default = function () {
         }
         kanbanObj.query = searchQuery;
     };
-    function change(args) {
+    function prioritySelect(args) {
         var filterQuery = new ej.data.Query();
-        if (args.value !== 'None') {
-            if (args.element.id === 'priority_filter') {
-                filterQuery = new ej.data.Query().where('Priority', 'equal', args.value);
-            } else {
-                filterQuery = new ej.data.Query().where('Status', 'equal', args.value);
-            }
+        if (args.itemData.value !== 'None') {
+            filterQuery = new ej.data.Query().where('Priority', 'equal', args.itemData.value);
         }
-        if (args.element.id === 'priority_filter') {
-            statusObj.setProperties({ value: 'None' }, false);
-        } else {
-            priorityObj.setProperties({ value: 'None' }, false);
+        statusObj.value = 'None';
+        kanbanObj.query = filterQuery;
+    }
+    function statusSelect(args) {
+        var filterQuery = new ej.data.Query();
+        if (args.itemData.value !== 'None') {
+            filterQuery = new ej.data.Query().where('Status', 'equal', args.itemData.value);
         }
+        priorityObj.value = 'None';
         kanbanObj.query = filterQuery;
     }
     function reset() {
-        priorityObj.setProperties({ value: 'None' }, false);
-        statusObj.setProperties({ value: 'None' }, false);
+        priorityObj.value = 'None';
+        statusObj.value = 'None';
         kanbanObj.query = new ej.data.Query();
     }
 };

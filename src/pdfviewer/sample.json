@@ -3,6 +3,7 @@
     "directory": "pdfviewer",
     "category": "Viewer",
     "ftName": "pdfviewer",
+    "type": "update",
     "samples": [
         {            
             "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "api": {
@@ -40,7 +41,23 @@
             }
         },
         {
-            "url":"hand-written", "name": "Handwritten Signature", "description":"The sample demonstrates the Handwritten Signature support of  PDF Viewer. The Handwritten signature reduces the paperwork of reviewing the contents and it's verified it's digitally.", "category": "PDF Viewer", "api": {
+            "url":"form-designer", "name": "Form Designer", "description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer",  "type": "new", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+        {
+            "url":"annotations", "name": "Annotations", "description":"This sample demonstrates the creation of different types of annotations such as Text Markup, Shapes, Measurements, Free text, Stamps, Handwritten signature, ink, and sticky notes in the PDF Viewer. And also we can customize the added annotations or we can include new annotations through user interaction from the PDF Viewer.", "category": "PDF Viewer",  "type": "new", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+        {
+            "url":"hand-written", "name": "Handwritten Signature", "description":"This sample demonstrates the Handwritten signature and initial support of the PDF Viewer. The signature or initial support reduces the paperwork of reviewing the contents and it is verified digitally.", "category": "PDF Viewer",  "type": "update", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

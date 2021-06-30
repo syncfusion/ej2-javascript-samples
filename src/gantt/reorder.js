@@ -19,7 +19,7 @@ this.default = function () {
         { id: '6', name: '7' }
     ];
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: projectNewData,
+        dataSource: window.projectNewData,
         height: '450px',
         highlightWeekends: true,
         allowReordering: true,

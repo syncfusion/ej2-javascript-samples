@@ -2,6 +2,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
+        cssClass: 'horizontal-grouping',
         selectedDate: new Date(2018, 3, 1),
         views: ['Week', 'Month', 'Agenda'],
         resourceHeaderTemplate: '#restemplate',

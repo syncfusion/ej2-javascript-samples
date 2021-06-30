@@ -6,10 +6,11 @@ this.default = function () {
     var data = [];
     var genarateData = new ej.buttons.Button({}, '#genarate');
     var columns = [
-        { field: 'FIELD1', headerText: 'Player Name', width: 140 },
+        { field: 'SNo', headerText: 'S.No', width: 140, isPrimaryKey: true, validationRules: { required: true } },
+        { field: 'FIELD1', headerText: 'Player Name', width: 140, validationRules: { required: true } },
         { field: 'FIELD2', headerText: 'Year', width: 120, textAlign: 'right' },
-        { field: 'FIELD3', headerText: 'Stint', width: 120, textAlign: 'right' },
-        { field: 'FIELD4', headerText: 'TMID', width: 120, textAlign: 'right' },
+        { field: 'FIELD3', headerText: 'Sports', width: 160, textAlign: 'right', editType: 'dropdownedit', validationRules: { required: true } },
+        { field: 'FIELD4', headerText: 'Country', width: 160, textAlign: 'right', editType: 'dropdownedit' },
         { field: 'FIELD5', headerText: 'LGID', width: 120, textAlign: 'right' },
         { field: 'FIELD6', headerText: 'GP', width: 120, textAlign: 'right' },
         { field: 'FIELD7', headerText: 'GS', width: 120, textAlign: 'right' },
@@ -35,7 +36,7 @@ this.default = function () {
         { field: 'FIELD27', headerText: 'Post Points', width: 130, textAlign: 'right' },
         { field: 'FIELD28', headerText: 'Post OREB', width: 130, textAlign: 'right' },
         { field: 'FIELD29', headerText: 'Post DREB', width: 130, textAlign: 'right' },
-        { field: 'FIELD30', headerText: 'Post REB', width: 130, textAlign: 'right' }
+        { field: 'FIELD30', headerText: 'Post REB', width: 130, textAlign: 'right', editType: 'numericedit', validationRules: { required: true } }
     ];
     genarateData.element.onclick = function () {
         if (!data.length) {
@@ -55,7 +56,9 @@ this.default = function () {
         dataSource: [],
         enableVirtualization: true,
         enableColumnVirtualization: true,
-        height: 600,
+        editSettings: { allowEditing: true, allowDeleting: true, mode: 'Normal', newRowPosition:'Top' },
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+        height: 400,
         pageSettings: {pageSize: 50},
         columns: columns,
         dataBound: hide
@@ -69,6 +72,7 @@ this.default = function () {
         if (flag && date1) {
             date2 = new Date().getTime();
             document.getElementById('performanceTime').innerHTML = 'Time Taken: ' + (date2 - date1) + 'ms';
+            grid.editSettings.allowAdding = true;
             flag = false;
         }
         document.getElementById('popup').style.display = 'none';

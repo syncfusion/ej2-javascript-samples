@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: baselineData,
+        dataSource: window.baselineData,
         renderBaseline: true,
         taskFields: {
             id: 'TaskId',

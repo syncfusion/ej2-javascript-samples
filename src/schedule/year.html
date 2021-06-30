@@ -1,15 +1,51 @@
-﻿<div class="col-lg-12 control-section">
-    <div id="Schedule"></div>
+﻿<div class="col-lg-10 control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
 </div>
 
+<!-- custom code start -->
+<div class="col-lg-2 property-section">
+    <table id="property" title="Properties">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" id="firstMonthElement" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="numberOfMonthsElement" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<style>
+    .year-view.e-schedule .e-timeline-year-view .e-resource-column-table,
+    .year-view.e-schedule .e-timeline-year-view .e-resource-left-td {
+        width: 120px;
+    }
+
+    .col-lg-2.property-section .property-panel-table td {
+        padding-bottom: 1rem;
+    }
+</style>
+<!-- custom code end -->
+
 <div id="action-description">
-    <p>This demo shows the experience of showing the annual year events in a single view with different orientations.</p>
+    <p>
+        This example showcases the year and timeline year views of the Scheduler with the firstMonthOfYear and monthCount properties customizations.
+        Once the property value has been changed in the properties, it will be reflected in the Scheduler.
+    </p>
 </div>
 
 <div id="description">
     <p>In this demo, we have showcased the <code>Year</code> and <code>TimelineYear</code> views that help to view the
         appointment in an annual calendar view. The view options are enabled by using the views property. In the
         <code>TimelineYear</code>, <code>Horizontal</code> and <code>Vertical</code> orientations are available to view
-        the events with a different layout.</p>
+        the events with a different layout. Also this demo explains the customization of the different starting month of
+        the year using <code>firstMonthOfYear</code> property and the number of months using the <code>monthsCount</code> property.
+    </p>
     <p>Note:- Inject Year and TimelineYear modules for loading these year views.</p>
 </div>

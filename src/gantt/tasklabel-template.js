@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: labelData,
+        dataSource: window.labelData,
         rowHeight: 46,
         highlightWeekends: true,
         treeColumnIndex: 1,

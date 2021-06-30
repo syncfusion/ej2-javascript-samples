@@ -1,14 +1,17 @@
 this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
+        cssClass: 'year-view',
         width: '100%', height: '555px',
         views: [
-            { option: 'Year' },
-            { option: 'TimelineYear', displayName: 'Horizontal Timeline Year', isSelected: true },
+            { option: 'Year', isSelected: true },
+            { option: 'TimelineYear', displayName: 'Horizontal Timeline Year' },
             {
                 option: 'TimelineYear', displayName: 'Vertical Timeline Year',
                 orientation: 'Vertical', group: { resources: ['Categories'] }
             }
         ],
+        firstMonthOfYear: 0,
+        monthsCount: 12,
         resources: [{
             field: 'TaskId', title: 'Category', name: 'Categories', allowMultiple: true,
             dataSource: [
@@ -16,7 +19,7 @@ this.default = function () {
                 { text: 'Steven', id: 2, color: '#7fa900' },
                 { text: 'Robert', id: 3, color: '#ea7a57' },
                 { text: 'Smith', id: 4, color: '#5978ee' },
-                { text: 'Micheal', id: 5, color: '#df5286' }
+                { text: 'Michael', id: 5, color: '#df5286' }
             ],
             textField: 'text', idField: 'id', colorField: 'color'
         }],
@@ -67,6 +70,50 @@ this.default = function () {
             id++;
         }
         return dateCollections;
+    }
+
+    var months = [
+        { text: 'January', value: 0 },
+        { text: 'February', value: 1 },
+        { text: 'March', value: 2 },
+        { text: 'April', value: 3 },
+        { text: 'May', value: 4 },
+        { text: 'June', value: 5 },
+        { text: 'July', value: 6 },
+        { text: 'August', value: 7 },
+        { text: 'September', value: 8 },
+        { text: 'October', value: 9 },
+        { text: 'November', value: 10 },
+        { text: 'December', value: 11 }
+    ];
+    var firstMonthObj = new ej.dropdowns.DropDownList({
+        placeholder: "First month of year",
+        floatLabelType: "Always",
+        dataSource: months,
+        popupHeight: '200px',
+        fields: { text: 'text', value: 'value' },
+        value: 0,
+        change: firstMonthOfYear
+    });
+    firstMonthObj.appendTo('#firstMonthElement');
+
+    var numberOfMonthsObj = new ej.inputs.NumericTextBox({
+        placeholder: "Number of months",
+        floatLabelType: "Always",
+        min: 1,
+        value: 12,
+        max: 24,
+        format: '###.##',
+        change: numberOfMonths
+    });
+    numberOfMonthsObj.appendTo('#numberOfMonthsElement');
+
+    function firstMonthOfYear(args) {
+        scheduleObj.firstMonthOfYear = args.value;
+    }
+
+    function numberOfMonths(args) {
+        scheduleObj.monthsCount = args.value;
     }
     // custom code end
 };

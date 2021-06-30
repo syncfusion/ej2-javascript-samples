@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: workTimeRange,
+        dataSource: window.workTimeRange,
         height: '450px',
         taskFields: {
             id: 'TaskID',

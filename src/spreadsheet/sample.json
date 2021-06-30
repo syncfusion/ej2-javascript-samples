@@ -37,7 +37,6 @@
             "url": "protect-sheet",
             "name": "Protection",
             "category": "Spreadsheet",
-            "type": "update",
             "api": {
                 "Spreadsheet": [
                     "sheets",
@@ -51,7 +50,6 @@
             "url": "freeze-pane",
             "name": "Freeze Panes",
             "category": "Spreadsheet",
-            "type": "new",
             "api": {
                     "sheets": [
                         "frozenRows",
@@ -59,6 +57,50 @@
                     ]
             },
             "description": "This demo for Essential JS 2 Spreadsheet control shows freeze rows and columns feature."
+        },
+        {
+            "url": "data-validation",
+            "name": "Data Validation",
+            "type": "new",
+            "category": "Spreadsheet",
+            "api": {
+                "sheets": [
+                    "columns",
+                    "rows",
+                    "name"
+                ],
+                "rows": [
+                    "cells",
+                    "index"
+                ],
+                "cells": [
+                    "value",
+                    "style"
+                ]
+            },
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the data validation feature."
+        },
+        {
+            "url": "hyperlink",
+            "name": "Hyperlink",
+            "type": "new",
+            "category": "Spreadsheet",
+            "api": {
+                "sheets": [
+                    "columns",
+                    "rows",
+                    "name"
+                ],
+                "rows": [
+                    "cells",
+                    "index"
+                ],
+                "cells": [
+                    "value",
+                    "style"
+                ]
+            },
+            "description": "This demo for Essential JS 2 Spreadsheet control shows the hyperlink feature."
         },
         {
             "url": "cell-data-binding",

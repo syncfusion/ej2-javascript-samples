@@ -3,11 +3,11 @@ this.default = function () {
   var div = document.getElementsByClassName('progressbar-label');
 
   var progressLoad = function (args) {
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-          selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme === 'highcontrast') {
+      var linearTheme = location.hash.split('/')[1];
+      linearTheme = linearTheme ? linearTheme : 'Material';
+      args.progressBar.theme = (linearTheme.charAt(0).toUpperCase() +
+          linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+      if (linearTheme === 'highcontrast') {
           for (var i = 0; i < div.length; i++) {
               div[i].setAttribute('style', 'color:white');
           }

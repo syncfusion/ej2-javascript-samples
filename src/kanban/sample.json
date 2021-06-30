@@ -4,6 +4,7 @@
     "category": "Data Visualization",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
+    "type": "update",
     "samples": [
         {
             "url": "overview",
@@ -22,6 +23,7 @@
         {
             "url": "swimlane",
             "name": "Swimlane",
+            "type": "update",
             "category": "Kanban",
             "description": "The example explains how to configure swimlane and its related settings (sorting order, drag-and-drop, and more) in JavaScript Kanban board.",
             "api": { "Kanban": ["dataSource", "keyField", "columns", "cardSettings", "swimlaneSettings"] }

@@ -27,8 +27,8 @@ this.default = function () {
             ],
             pointers: [{
                 animation: { enable: true },
-                value: 70, radius: '60%', color: '#757575', pointerWidth: 8,
-                cap: { radius: 7, color: '#757575' }, needleTail: { length: '18%' }
+                value: 70, radius: '60%', pointerWidth: 8,
+                cap: { radius: 7 }, needleTail: { length: '18%' }
             }]
         }],
         // custom code start

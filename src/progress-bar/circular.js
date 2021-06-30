@@ -1,22 +1,20 @@
 this.default = function () {
-
   var div = document.getElementsByClassName('progress-text-align');
-  
   var progressLoad = function (args) {
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-          selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme === 'highcontrast') {
-          for (var i = 0; i < div.length; i++) {
-              div[i].setAttribute('style', 'color:white');
+      var circularTheme = location.hash.split('/')[1];
+      circularTheme = circularTheme ? circularTheme : 'Material';
+      args.progressBar.circularTheme = (circularTheme.charAt(0).toUpperCase() +
+          circularTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+      if (circularTheme === 'highcontrast') {
+          for (var j = 0; j < div.length; j++) {
+              div[j].setAttribute('style', 'color:white');
           }
       }
   };
 
-  var button = new ej.buttons.Button();
-  button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
-  button.appendTo('#reLoad');
+  var reloadButton = new ej.buttons.Button();
+  reloadButton = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
+  reloadButton.appendTo('#reLoad');
 
   var circluar = new ej.progressbar.ProgressBar({
     type: 'Circular',

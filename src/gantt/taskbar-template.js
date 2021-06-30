@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: customizedData,
+        dataSource: window.customizedData,
         dateFormat: 'hh:mm a',
         taskFields: {
             id: 'TaskId',

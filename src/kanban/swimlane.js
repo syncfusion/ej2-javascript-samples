@@ -15,12 +15,14 @@ this.default = function () {
             { headerText: 'In Progress', keyField: 'InProgress' },
             { headerText: 'Done', keyField: 'Close' }
         ],
+        height: '500px'
     });
     kanbanObj.appendTo('#Kanban');
 
     new ej.buttons.CheckBox({ checked: false, change: onChange }, '#acrossDragAndDrop');
     new ej.buttons.CheckBox({ checked: false, change: onChange }, '#emptyRow');
     new ej.buttons.CheckBox({ checked: true, change: onChange }, '#itemCount');
+    new ej.buttons.CheckBox({ change: onChange }, '#frozenRows');
     //Initialize DropDownList control
     var sortOrder = new ej.dropdowns.DropDownList({
         width: '100%',
@@ -39,6 +41,9 @@ this.default = function () {
                 break;
             case 'itemCount':
                 kanbanObj.swimlaneSettings.showItemCount = args.checked;
+                break;
+            case 'frozenRows':
+                kanbanObj.swimlaneSettings.enableFrozenRows = args.checked;
                 break;
             default:
                 break;

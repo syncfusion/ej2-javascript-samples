@@ -16,7 +16,7 @@ this.default = function () {
     });
     //Render initialized Kanban control
     kanbanObj.appendTo('#Kanban');
-    var sortBy = new ej.dropdowns.DropDownList({ change: onChange });
+    var sortBy = new ej.dropdowns.DropDownList({ change: onChange, index: 1 });
     sortBy.appendTo('#sortBy');
     var field = new ej.dropdowns.DropDownList({ enabled: false });
     field.appendTo('#field');
@@ -26,7 +26,7 @@ this.default = function () {
         setKanbanProperties();
     };
     document.getElementById('clear').onclick = function () {
-        sortBy.value = 'DataSourceOrder';
+        sortBy.value = 'Index';
         direction.value = 'Ascending';
         setFieldValue('None');
         setKanbanProperties();

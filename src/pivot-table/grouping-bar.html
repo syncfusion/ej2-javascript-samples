@@ -42,16 +42,23 @@
 <!-- custom code start -->
 <div id="action-description">
     <p>This sample demonstrates the grouping feature of the pivot table. The pivot fields are automatically populated from
-         the bound data source, and they can be dragged and dropped to alter the report at runtime. The pivot fields can be sorted, filtered, and removed dynamically as well.</p>
+        the bound data source, and they can be dragged and dropped to alter the report at runtime. The pivot fields can be sorted, filtered, and removed dynamically as well.</p>
 </div>
 <div id="description">
-    <p>The pivot table grouping bar option automatically populates fields from the bound data source and allows end users
-        to drag fields between different axes such as columns, rows, values, and filters, and create pivot table at runtime.
-        To enable grouping bar, set the
-        <code>showGroupingBar</code> property as true.</p>
+   <p>The pivot table grouping bar option automatically populates fields from the bound data source and allows end users
+       to drag fields between different axes such as columns, rows, values, and filters, and create pivot table at runtime.
+       To enable grouping bar, set the
+       <code>showGroupingBar</code> property as true.</p>
+   <p>
+       Filter and sort icons allow displaying selective records and ordering them in ascending or descending order. The remove icon
+       allows the user to remove the field from the report.
+   </p>
     <p>
-        Filter and sort icons allow displaying selective records and ordering them in ascending or descending order. The remove icon
-        allows the user to remove the field from the report.
+        The fields panel, which is located above the grouping bar, displays the fields that are available in the data
+        source but are not bound in the report. The fields can be dragged and dropped into the appropriate axis. In
+        addition, any field removed from any axes will be automatically added to the fields panel. The fields panel can
+        be displayed by setting the <code>showFieldsPanel</code> property in the <code>groupingBarSettings</code> to
+        **true**.
     </p>
 </div>
 

@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: unscheduledData,
+        dataSource: window.unscheduledData,
         taskFields: {
             id: 'TaskId',
             name: 'TaskName',

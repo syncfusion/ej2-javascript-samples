@@ -5,10 +5,10 @@ var _this = this;
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
-var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4'];
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Tailwind'];
+var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4', '#4F46E5'];
 var regionColor = ['rgba(0, 189, 174, 0.3)', 'rgba(68, 114, 196, 0.3)',
-    'rgba(161, 110, 229, 0.3)', 'rgba(121, 236, 228, 0.3)'];
+    'rgba(161, 110, 229, 0.3)', 'rgba(121, 236, 228, 0.3)', 'rgba(79, 70, 229, 0.3)'];
 this.renderDateTimeChart = function (dataSource) {
     var chart = new ej.charts.Chart({
         primaryXAxis: {

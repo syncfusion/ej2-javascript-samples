@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: multiTaskbarData,
+        dataSource: window.multiTaskbarData,
         resources: resources,
         viewType: 'ResourceView',
         enableMultiTaskbar: true,

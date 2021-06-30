@@ -1,6 +1,6 @@
 this.default = function () {   
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: resourcesData,
+        dataSource: window.resourcesData,
         resources: resourceCollection,
         viewType: 'ResourceView',
         showOverAllocation: 'true',

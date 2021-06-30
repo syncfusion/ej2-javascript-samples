@@ -3,7 +3,7 @@
  */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
-        title: 'Short Put Distance',
+        title: 'Shot Put Distance',
         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

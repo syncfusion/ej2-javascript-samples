@@ -17,13 +17,12 @@ this.default = function () {
         }
         return ('<div id="point1" style="font-size:24px;font-weight:bold;color: ' + color + ' "><span>' + content + '</span></div>');
     }
-    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#FFD939'];
     var progressLoad = function (args) {
-        var selectedTheme = location.hash.split('/')[1];
-        selectedTheme = selectedTheme ? selectedTheme : 'Material';
-        args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        switch (selectedTheme) {
+        var angleTheme = location.hash.split('/')[1];
+        angleTheme = angleTheme ? angleTheme : 'Material';
+        args.progressBar.angleTheme = (angleTheme.charAt(0).toUpperCase() +
+            angleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        switch (angleTheme) {
             case 'material':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[0], args.progressBar.element.id);
                 break;
@@ -36,11 +35,15 @@ this.default = function () {
             case 'bootstrap4':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[3], args.progressBar.element.id);
                 break;
-            default:
+            case 'tailwind':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[4], args.progressBar.element.id);
+                break;
+            default:
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[5], args.progressBar.element.id);
                 break;
         }
     };
+    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939'];
     var button = new ej.buttons.Button();
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#reLoad');

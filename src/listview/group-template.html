@@ -33,7 +33,14 @@
 
     /* ListView header alignment */
 
-    #groupedList.e-listview .e-headertext:after {
+    .e-listview.e-rtl .e-text .e-headertext:after {
+        font-family: 'e-icons';
+        position: absolute;
+        content: "\e712";
+        right: 315px;
+    }
+
+    .e-listview .e-text .e-headertext:after {
         font-family: 'e-icons';
         position: absolute;
         content: "\e712";
@@ -190,9 +197,18 @@
     .highcontrast #groupedList.e-list-template .e-active .e-list-content {
         color: #000;
     }
-    
-    .bootstrap4 #groupedList.e-listview .e-active .icon {
+
+	.bootstrap4 #groupedList.e-listview .e-active .icon {
         color: #fff;
+    }
+
+    .tailwind #groupedList.e-listview .icon {
+        color: #4f46e5;
+    }
+
+    .tailwind #groupedList.e-list-template .e-active .e-list-item-header,
+    .tailwind #groupedList.e-list-template .e-active .e-list-content {
+        color: #4f46e5;
     }
 
 </style>

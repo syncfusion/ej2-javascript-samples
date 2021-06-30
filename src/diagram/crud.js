@@ -172,6 +172,14 @@ function toolbarClick(args) {
         targetDropdown.dataBind();
     }
   }
+    switch (args.item.tooltipText) {
+      case 'Reset':
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "https://js.syncfusion.com/demos/ejServices/api/Diagram/ResetData", true);
+        xhttp.send();
+        diagram.refreshDiagram();
+        diagram.refresh();
+  }
 }
 
 //Show or Hide the Textbox and Dropdown in dialog control.
@@ -239,6 +247,15 @@ var items = [
     tooltipText: "Delete",
     prefixIcon: "e-ddb-icons e-delete",
     id: "Delete"
+  },
+    {
+      type: 'Separator'
+  },
+  {
+      text: 'Reset',
+      tooltipText: 'Reset',
+      prefixIcon: 'e-ddc-icons e-reset',
+      id: 'Reset'
   }
 ];
 

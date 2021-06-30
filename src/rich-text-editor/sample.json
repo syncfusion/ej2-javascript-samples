@@ -2,8 +2,8 @@
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
     "category": "Editors",
-    "type": "update",
     "ftName": "wysiwyg-rich-text-editor",
+    "type": "update",
     "samples": [{
             "url": "tools",
             "name": "Overview",

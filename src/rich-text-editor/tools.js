@@ -12,7 +12,7 @@ this.default = function() {
             items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
                 'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
-                'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+                'Formats', 'Alignments', 'NumberFormatList', 'BulletFormatList',
                 'Outdent', 'Indent', '|',
                 'CreateTable', 'CreateLink', 'Image', 'FileManager', '|', 'ClearFormat', 'Print',
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo'

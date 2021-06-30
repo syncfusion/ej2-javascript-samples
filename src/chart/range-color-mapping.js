@@ -74,4 +74,4 @@ this.default = function () {
         },
     });
     chart.appendTo('#column-container');
-}
+};

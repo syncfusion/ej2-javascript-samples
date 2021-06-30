@@ -9,16 +9,16 @@ this.default = function () {
             columns: [{ name: 'Year' }, { name: 'Order_Source', caption: 'Order Source' }],
             rows: [{ name: 'Country' }, { name: 'Products' }],
             formatSettings: [{ name: 'Amount', format: 'C0' }],
-            values: [{ name: 'In_Stock', caption: 'In Stock' }, { name: 'Sold', caption: 'Units Sold' },
+            values: [{ name: 'Sold', caption: 'Units Sold' },
                 { name: 'Amount', caption: 'Sold Amount' }],
             dataSource: window.Pivot_Data,
             expandAll: false,
-            filters: [{ name: 'Product_Categories', caption: 'Product Categories' }]
+            filters: []
         },
         width: '100%',
         height: 450,
         showGroupingBar: true,
-        showFieldList: true,
+        groupingBarSettings: { showFieldsPanel: true },
         gridSettings: { columnWidth: 140 }
     });
     pivotObj.appendTo('#PivotView');

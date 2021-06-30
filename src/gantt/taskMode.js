@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: taskModeData,
+        dataSource: window.taskModeData,
         allowSorting: true,
         enableContextMenu: true,
         height: '450px',

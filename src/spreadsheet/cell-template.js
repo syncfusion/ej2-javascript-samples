@@ -8,6 +8,10 @@ this.default = function () {
         showFormulaBar: false,
         allowOpen: false,
         allowSave: false,
+        allowEditing: false,
+        selectionSettings: {
+        mode: 'None'
+        },
         scrollSettings: {
             isFinite: true
         },
@@ -33,7 +37,7 @@ this.default = function () {
                 height: 45,
                 cells: [{
                     index: 1,
-                    value: 'Name:'
+                    value: 'Name'
                 }],
             }, {
                 height: 45,
@@ -150,12 +154,7 @@ this.default = function () {
         created: function() {
             //Applies format to specified range
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'B2:B9');
-        },
-        beforeSelect: function(args) {
-            //Prevents selection
-            args.cancel = true;
         }
-
     });
     // Render initialized Spreadsheet component.
     spreadsheet.appendTo('#spreadsheet');

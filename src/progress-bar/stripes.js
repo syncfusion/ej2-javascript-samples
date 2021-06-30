@@ -1,11 +1,11 @@
 this.default = function () {
-    var progressLoad = function (args) {
-        var selectedTheme = location.hash.split('/')[1];
-        selectedTheme = selectedTheme ? selectedTheme : 'Material';
-        args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        if (args.progressBar.theme === 'Material') {
-            args.progressBar.trackColor = '#EAEAEA';
+    var progressLoad = function (args1) {
+        var stripsTheme = location.hash.split('/')[1];
+        stripsTheme = stripsTheme ? stripsTheme : 'Material';
+        args1.progressBar.theme = (stripsTheme.charAt(0).toUpperCase() +
+            stripsTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        if (args1.progressBar.theme === 'Material') {
+            args1.progressBar.trackColor = '#EAEAEA';
         }
     };
 

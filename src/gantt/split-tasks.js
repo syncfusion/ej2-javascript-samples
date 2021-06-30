@@ -1,6 +1,6 @@
 this.default = function () {   
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: splitTasksData,
+        dataSource: window.splitTasksData,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',

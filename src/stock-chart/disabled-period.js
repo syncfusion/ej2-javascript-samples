@@ -1,6 +1,8 @@
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+var fill = 'url(#' + selectedTheme + '-gradient-chart)';
+
 renderStockChart = function (aapl) {
         var stockChart = new ej.charts.StockChart({
             chartArea: { border: { width: 0 } },
@@ -11,7 +13,7 @@ renderStockChart = function (aapl) {
             },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'open', type: 'Area', fill: 'url(#' + theme.toLowerCase() + '-gradient-chart)'
+                    dataSource: aapl, xName: 'x', yName: 'open', type: 'Area', fill: fill
                 }
             ],
             enablePeriodSelector: false,

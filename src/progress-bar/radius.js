@@ -1,10 +1,10 @@
 this.default = function () {
   var progressLoad1 = function (args) {
-    var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'Material';
-    args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-      selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      switch (selectedTheme) {
+    var theme1 = location.hash.split('/')[1];
+    theme1 = theme1 ? theme1 : 'Material';
+    args.progressBar.theme = (theme1.charAt(0).toUpperCase() +
+      theme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+      switch (theme1) {
         case 'material':
             args.progressBar.trackColor = '#e91e63';
             break;
@@ -25,10 +25,10 @@ this.default = function () {
     }
   };
   var progressLoad = function (args) {
-    var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'Material';
-    args.progressBar.theme = (selectedTheme.charAt(0).toUpperCase() +
-      selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+    var theme2 = location.hash.split('/')[1];
+    theme2 = theme2 ? theme2 : 'Material';
+    args.progressBar.theme = (theme2.charAt(0).toUpperCase() +
+    theme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
   };
   var fullBackground = new ej.progressbar.ProgressBar({
     type: 'Circular',

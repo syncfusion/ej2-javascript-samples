@@ -22,7 +22,6 @@ this.default = function () {
                     value: 35,
                     height: 15,
                     width: 15,
-                    color: '#757575',
                     placement: 'Near',
                     markerType: 'Triangle',
                     offset: -50

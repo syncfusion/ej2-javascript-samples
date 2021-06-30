@@ -21,7 +21,7 @@ window.default = function () {
                 },
                 {
                     dataSource: window.chartData, 
-                    type: 'Column', yName: 'volume'
+                    type: 'Column', yName: 'volume', enableTooltip: false
                 }
             ],
             tooltipRender: function (args) {

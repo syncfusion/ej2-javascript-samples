@@ -9,7 +9,7 @@ this.default = function () {
         { id: 'Saturday', day: 'Saturday' },
     ];
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: projectNewData,
+        dataSource: window.projectNewData,
         height: '450px',
         allowSelection: true,
         highlightWeekends: true,
