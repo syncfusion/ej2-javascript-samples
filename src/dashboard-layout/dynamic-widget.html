@@ -4,7 +4,7 @@
             <button id="togglebtn" style="float:right;width: 75px;">Edit</button>
         </div>
 
-        <div style="padding:5px;text-align: end;">
+        <div style="padding:5px;margin-top:5px;text-align: end;">
             <div class="add-widget-button e-control e-btn e-lib" id="dialogBtn">
                 Add New Widget
             </div>
@@ -103,11 +103,29 @@
         padding: 10px;
         border-bottom: 2px solid #e6e9ed !important;
         height: 35px;
-        margin: 0 15px 0 15px;
+        padding: 0 15px 0 15px;
+        line-height: 36px;
     }
 
-    .sb-demo-section .container-fluid {
+    .material .sb-demo-section .container-fluid,
+    .fabric .sb-demo-section .container-fluid,
+    .bootstrap4 .sb-demo-section .container-fluid,
+    .bootstrap .sb-demo-section .container-fluid {
         background: #E5E5E5;
+    }
+
+    .bootstrap5-dark .dialog-text,
+    .highcontrast .dialog-text,
+    .tailwind-dark .dialog-text,
+    .fabric-dark .dialog-text,
+    .bootstrap-dark .dialog-text {
+        border: 1px solid #FFFFFF;
+    }
+
+    .fabric #togglebtn,
+    .fabric-dark #togglebtn,
+    .highcontrast #togglebtn {
+        padding:0 13px;
     }
 
     .tailwind .sb-demo-section .container-fluid {
@@ -115,7 +133,7 @@
     }
 
     .e-panel-content {
-        height: calc(100% - 35px) !important;
+        height: calc(100% - 37px) !important;
         overflow: hidden;
         width: 100%;
     }

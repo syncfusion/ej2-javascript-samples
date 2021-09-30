@@ -1,0 +1,74 @@
+<div>
+    <div class="col-md-8 control-section">
+        <div class="content-wrapper">
+            <div id="container" style="width:92%"></div>
+        </div>
+    </div>
+    <div class="col-md-4 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tbody>
+                <tr style="height: 50px">
+                    <td style="width: 60%">
+                        <div>Palette Type:</div>
+                    </td>
+                    <td style="width: 40%;">
+                        <div class="row">
+                            <input id="fixed" type="radio">
+                        </div>
+                        <div class="row">
+                            <input id="gradient" type="radio">
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td style="width: 60%">
+                        <div style="margin-top: 22px">Enable Smart Legend:</div>
+                    </td>
+                    <td style="width: 40%;">
+                        <div>
+                            <div class="row" style="margin-left: -22px">
+                                <input id="smartLegend" type="checkbox">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the energy consumption in trillion British thermal units (btu) by the various public sectors in US
+        government over the years. The data label is disabled in this sample, the tooltip displays the data point values.
+        In property panel, the options are available to change palette type in Heatmap by means of radio button.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to change the palette type between
+        <code>Fixed </code> and
+        <code>Gradient </code> types in Heatmap. The palette type can be defined using the
+        <code>type </code> property in
+        <code>paletteSettings </code>. Legend is enabled in this example, changing the palette mode the legend type will be automatically switched between
+        gradient legend and list type legend.
+    </p>
+    <p>
+        Tooltip is enabled in this example, to see the tooltip in action, hover a point or tap on a point in touch enabled devices.
+    </p>
+    <br>
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        Heatmap component features are segregated into individual feature-wise modules. To use a tooltip, inject the
+        <code>Tooltip </code> module using the
+        <code>Heatmap.Inject(Tooltip) </code> method, and use a legend by injecting the
+        <code>Legend </code> module using the
+        <code>Heatmap.Inject(Legend) </code> method.
+    </p>
+</div>
+<!-- custom code start -->
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>
+<!-- custom code end -->

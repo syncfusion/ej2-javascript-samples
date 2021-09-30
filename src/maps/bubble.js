@@ -8,7 +8,8 @@ this.default = function () {
         load: function (args) {
             var bubbletheme = location.hash.split('/')[1];
             bubbletheme = bubbletheme ? bubbletheme : 'Material';
-            args.maps.theme = (bubbletheme.charAt(0).toUpperCase() + bubbletheme.slice(1));
+            args.maps.theme = (bubbletheme.charAt(0).toUpperCase() +
+            bubbletheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         bubbleRendering: function (args) {

@@ -62,9 +62,10 @@ this.default = function () {
             args.content = [(args.value === 0 ? 'No' : args.value) + ' ' + 'contributions' + '<br>' + value];
         },
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.heatmap.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var calendarHeatmapTheme = location.hash.split('/')[1];
+            calendarHeatmapTheme = calendarHeatmapTheme ? calendarHeatmapTheme : 'Material';
+            args.heatmap.theme = (calendarHeatmapTheme.charAt(0).toUpperCase() +
+            calendarHeatmapTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         dataSource: window.calendarDataSource
     });

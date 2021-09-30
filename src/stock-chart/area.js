@@ -10,13 +10,12 @@ renderAreaStockChart = function (aapl) {
             },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area', fill: '#BDEDE9'
+                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area', opacity: 0.5
                 }
             ],
             seriesType : [],
             indicatorType : [],
             title: 'AAPL Stock Price',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             crosshair: { enable: true },
             // custom code start
             load: function (args) {

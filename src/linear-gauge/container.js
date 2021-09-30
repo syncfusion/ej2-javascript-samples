@@ -8,7 +8,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         container: {
@@ -62,7 +63,7 @@ this.default = function () {
     var containerMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: 140,
         change: function () {
             gauge.container.type = containerMode.value;
             gauge.refresh();
@@ -72,7 +73,7 @@ this.default = function () {
     var orientationMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: 140,
         change: function () {
             gauge.orientation = orientationMode.value;
             gauge.refresh();

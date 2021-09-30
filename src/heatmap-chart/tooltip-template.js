@@ -63,7 +63,8 @@ this.default = function () {
         load: function (args) {
             var templateTheme = location.hash.split('/')[1];
             templateTheme = templateTheme ? templateTheme : 'Material';
-            args.heatmap.theme = (templateTheme.charAt(0).toUpperCase() + templateTheme.slice(1));
+            args.heatmap.theme = (templateTheme.charAt(0).toUpperCase() +
+            templateTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
     });
     heatmap.appendTo('#container');

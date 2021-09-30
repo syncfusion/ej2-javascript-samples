@@ -10,7 +10,7 @@ renderSplineAreaStockChart = function (googl) {
             chartArea: { border: { width: 0 } },
             series: [
                 {
-                    dataSource: googl, xName: 'x', yName: 'high', type: 'SplineArea', fill: '#BDEDE9'
+                    dataSource: googl, xName: 'x', yName: 'high', type: 'SplineArea', opacity: 0.5
                 }
             ],
             seriesType : [],
@@ -19,7 +19,6 @@ renderSplineAreaStockChart = function (googl) {
             crosshair: {
                 enable: true
             },
-            titleStyle: { fontWeight: '500', color: '#424242' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

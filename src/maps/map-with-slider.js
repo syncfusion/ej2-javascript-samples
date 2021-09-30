@@ -71,7 +71,8 @@ this.default = function () {
         load: function (args) {
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() + theme.slice(1));
+            args.maps.theme = (theme.charAt(0).toUpperCase() +
+            theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
         // custom code end
     });

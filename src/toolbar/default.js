@@ -6,63 +6,63 @@ this.default = function() {
      var toolbarObj = new ej.navigations.Toolbar({
            items: [
             {
-                prefixIcon: 'e-cut-icon tb-icons', tooltipText: 'Cut' },
+                prefixIcon: 'e-icons e-cut', tooltipText: 'Cut' },
             {
-                prefixIcon: 'e-copy-icon tb-icons', tooltipText: 'Copy' },
+                prefixIcon: 'e-icons e-copy', tooltipText: 'Copy' },
             {
-                prefixIcon: 'e-paste-icon tb-icons', tooltipText: 'Paste' },
-            {
-                type: 'Separator' },
-            {
-                prefixIcon: 'e-bold-icon tb-icons', tooltipText: 'Bold' },
-            {
-                prefixIcon: 'e-underline-icon tb-icons', tooltipText: 'Underline' },
-            {
-                prefixIcon: 'e-italic-icon tb-icons', tooltipText: 'Italic' },
-            {
-                prefixIcon: 'e-color-icon tb-icons', tooltipText: 'Color-Picker' },
+                prefixIcon: 'e-icons e-paste', tooltipText: 'Paste' },
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-alignleft-icon tb-icons', tooltipText: 'Align-Left' },
+                prefixIcon: 'e-icons e-bold', tooltipText: 'Bold' },
             {
-                prefixIcon: 'e-alignright-icon tb-icons', tooltipText: 'Align-Right' },
+                prefixIcon: 'e-icons e-underline', tooltipText: 'Underline' },
             {
-                prefixIcon: 'e-aligncenter-icon tb-icons', tooltipText: 'Align-Center' },
+                prefixIcon: 'e-icons e-italic', tooltipText: 'Italic' },
             {
-                prefixIcon: 'e-alignjustify-icon tb-icons', tooltipText: 'Align-Justify'},
-            {
-                type: 'Separator' },
-            {
-                prefixIcon: 'e-bullets-icon tb-icons', tooltipText: 'Bullets'},
-            {
-                prefixIcon: 'e-numbering-icon tb-icons', tooltipText: 'Numbering' },
+                prefixIcon: 'e-icons e-paint-bucket', tooltipText: 'Color-Picker' },
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-ascending-icon tb-icons', tooltipText: 'Sort A - Z' },
+                prefixIcon: 'e-icons e-align-left', tooltipText: 'Align-Left' },
             {
-                prefixIcon: 'e-descending-icon tb-icons', tooltipText: 'Sort Z - A' },
+                prefixIcon: 'e-icons e-align-right', tooltipText: 'Align-Right' },
             {
-                type: 'Separator' },
+                prefixIcon: 'e-icons e-align-center', tooltipText: 'Align-Center' },
             {
-                prefixIcon: 'e-upload-icon tb-icons', tooltipText: 'Upload' },
-            {
-                prefixIcon: 'e-download-icon tb-icons', tooltipText: 'Download' },
+                prefixIcon: 'e-icons e-justify', tooltipText: 'Align-Justify'},
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-indent-icon tb-icons', tooltipText: 'Text Indent' },
+                prefixIcon: 'e-icons e-list-unordered', tooltipText: 'Bullets'},
             {
-                prefixIcon: 'e-outdent-icon tb-icons', tooltipText: 'Text Outdent' },
+                prefixIcon: 'e-icons e-list-ordered', tooltipText: 'Numbering' },
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-clear-icon tb-icons', tooltipText: 'Clear' },
+                prefixIcon: 'e-icons e-undo', tooltipText: 'Undo' },
             {
-                prefixIcon: 'e-reload-icon tb-icons', tooltipText: 'Reload' },
+                prefixIcon: 'e-icons e-redo', tooltipText: 'Redo' },
             {
-                prefixIcon: 'e-export-icon tb-icons', tooltipText: 'Export'
+                type: 'Separator' },
+            {
+                prefixIcon: 'e-icons e-upload-1', tooltipText: 'Upload' },
+            {
+                prefixIcon: 'e-icons e-download', tooltipText: 'Download' },
+            {
+                type: 'Separator' },
+            {
+                prefixIcon: 'e-icons e-increase-indent', tooltipText: 'Text Indent' },
+            {
+                prefixIcon: 'e-icons e-decrease-indent', tooltipText: 'Text Outdent' },
+            {
+                type: 'Separator' },
+            {
+                prefixIcon: 'e-icons e-erase', tooltipText: 'Clear' },
+            {
+                prefixIcon: 'e-icons e-refresh', tooltipText: 'Reload' },
+            {
+                prefixIcon: 'e-icons e-export', tooltipText: 'Export'
             }]
     });
     //Render initialized Toolbar component

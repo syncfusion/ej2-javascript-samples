@@ -53,6 +53,7 @@ this.default = function () {
         dataSource: mode,
         fields: { text: 'mode', value: 'id' },
         value: 'Parent',
+        width: '100px',
         change: function (e) {
             var mode = e.value;
             treeGridObj.filterSettings.hierarchyMode = mode;

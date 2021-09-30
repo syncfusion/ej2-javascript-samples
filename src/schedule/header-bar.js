@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         views: ['Month'],
         currentView: 'Month',
         eventSettings: { dataSource: data },
@@ -50,9 +50,9 @@ this.default = function () {
 
     var userIconEle = scheduleObj.element.querySelector('.e-schedule-user-icon');
     var getDOMString = new ej.base.compile('<div class="profile-container"><div class="profile-image">' +
-    '</div><div class="content-wrap"><div class="name">Nancy</div>' +
-    '<div class="destination">Product Manager</div><div class="status">' +
-    '<div class="status-icon"></div>Online</div></div></div>');
+        '</div><div class="content-wrap"><div class="name">Nancy</div>' +
+        '<div class="destination">Product Manager</div><div class="status">' +
+        '<div class="status-icon"></div>Online</div></div></div>');
     var output = getDOMString({});
     var profilePopup = new ej.popups.Popup(userContentEle, {
         content: output[0],

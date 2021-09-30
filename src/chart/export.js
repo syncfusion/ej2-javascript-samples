@@ -78,7 +78,7 @@ this.default = function () {
     });
     mode.appendTo('#mode');
     var togglebtn = new ej.buttons.Button({
-        iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isPrimary: true,
+        iconCss: 'e-icons e-export-icon', cssClass: 'e-flat', isPrimary: true,
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {

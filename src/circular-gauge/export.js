@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];
             selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() + selectTheme.slice(1));
+            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+            selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         allowPdfExport : true,
         allowImageExport: true,
@@ -59,6 +60,7 @@ this.default = function () {
                     size: '12px',
                     fontWeight: 'Regular'
                 },
+                hiddenLabel: 'Last',
                 offset: 2,
                 position: 'Outside',
                 useRangeColor: true
@@ -70,7 +72,7 @@ this.default = function () {
     circulargauge.appendTo('#gauge');
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
-        width: '100px'
+        width: '90px'
     });
     mode.appendTo('#type');
     var exportGauge = new ej.buttons.Button({

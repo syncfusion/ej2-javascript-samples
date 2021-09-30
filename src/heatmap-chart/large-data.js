@@ -47,9 +47,10 @@ this.default = function () {
             args.content = [value + " " + args.yLabel + " : " + args.value + " flight arrivals"];
         },
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.heatmap.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var largeDataTheme = location.hash.split('/')[1];
+            largeDataTheme = largeDataTheme ? largeDataTheme : 'Material';
+            args.heatmap.theme = (largeDataTheme.charAt(0).toUpperCase() +
+            largeDataTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
     });
     heatmap.appendTo('#container');

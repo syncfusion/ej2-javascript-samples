@@ -3,7 +3,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         cssClass: 'horizontal-grouping',
-        selectedDate: new Date(2018, 3, 1),
+        selectedDate: new Date(2021, 3, 6),
         views: ['Week', 'Month', 'Agenda'],
         resourceHeaderTemplate: '#restemplate',
         group: {
@@ -33,18 +33,18 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
 
     window.getAirlineImage = function (value) {
-        var airlineName =  window.getAirlineName(value);
+        var airlineName = window.getAirlineName(value);
         return airlineName.replace(' ', '-').toLowerCase();
     };
     window.getAirlineName = function (value) {
         return (value.resourceData) ? value.resourceData[value.resource.textField] : value.resourceName;
     };
     window.getAirlineModel = function (value) {
-        var airlineName =  window.getAirlineName(value);
+        var airlineName = window.getAirlineName(value);
         return (airlineName === 'Airways 1') ? 'CRJ 700' : (airlineName === 'Airways 2') ? 'Airbus A330' : 'ATR 72-600';
     };
     window.getAirlineSeats = function (value) {
-        var airlineName =  window.getAirlineName(value);
+        var airlineName = window.getAirlineName(value);
         return (airlineName === 'Airways 1') ? 50 : (airlineName === 'Airways 2') ? 75 : 100;
     };
 
@@ -55,7 +55,7 @@ this.default = function () {
         var dataCollections = [1, 2, 3];
         var id = 1;
         for (var i = 0; i < dataCollections.length; i++) {
-            var startDate = new Date(2018, 3, 1);
+            var startDate = new Date(2021, 3, 1);
             startDate.setMilliseconds(1000 * 60 * 60 * 0.5 * (dataCollections[i] - 1));
             var lastDate = new Date((+startDate) + (1000 * 60 * 60 * 24 * 30));
             for (var date = startDate; date.getTime() < lastDate.getTime(); date = new Date(date.getTime() + (1000 * 60 * 60 * 5))) {

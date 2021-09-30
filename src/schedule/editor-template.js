@@ -5,7 +5,7 @@ this.default = function () {
         height: '650px',
         views: ['Day', 'Week', 'WorkWeek', 'Month'],
         showQuickInfo: false,
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         eventSettings: { dataSource: data },
         editorTemplate: '#EventEditorTemplate',
         popupOpen: function (args) {

@@ -4,7 +4,8 @@ this.default = function () {
         load: function (args) {
             var tooltheme = location.hash.split('/')[1];
             tooltheme = tooltheme ? tooltheme : 'Material';
-            args.treemap.theme = (tooltheme.charAt(0).toUpperCase() + tooltheme.slice(1));
+            args.treemap.theme = (tooltheme.charAt(0).toUpperCase() +
+            tooltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end 
         tooltipSettings: {

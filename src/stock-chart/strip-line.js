@@ -16,7 +16,6 @@ renderLineStockChart = function (amzn) {
             title: 'AAPL Historical',
             seriesType : [],
             indicatorType : [],
-            titleStyle: { fontWeight: '500', color: '#424242' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

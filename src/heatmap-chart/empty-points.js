@@ -1,7 +1,7 @@
 this.default = function () {
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings: {
-            text: 'Deffective Count per 1000 Products from a Manufacturing Unit',
+            text: 'Defective Count per 1000 Products from a Manufacturing Unit',
             textStyle: {
                 size: '15px',
                 fontWeight: '500',
@@ -41,9 +41,10 @@ this.default = function () {
             args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' deffective units'];
         },
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.heatmap.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var emptyPointTheme = location.hash.split('/')[1];
+            emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'Material';
+            args.heatmap.theme =  (emptyPointTheme.charAt(0).toUpperCase() +
+            emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         dataSource: window.emptyPointDataSource
     });

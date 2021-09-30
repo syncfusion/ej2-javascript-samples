@@ -1,0 +1,46 @@
+<div>
+    <div class="col-md-9 control-section">
+    <div id="container" style="height:300px" align="center"> </div>
+    <div id="container1" style="height:300px" align="center"> </div>
+</div>
+<div class="col-md-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 40%;">
+                    <div>
+                         <button id="clearSelection">Clear Selection</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<div id="action-description">
+    <p>
+        This sample visualizes the revenue from the top exported products between the year 2014 and 2018, valued in USD million
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to selected the cell in heat map and render the column chart based on selected data.
+    </p>
+    <p>
+        Tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item in touch enabled devices.
+    </p>
+    <br>
+    <p style="font-weight: 500">Injecting Module</p>
+    <p>
+        Heatmap component features are segregated into individual feature-wise modules. To use a tooltip, inject the <code>Tooltip</code> module
+        using the <code>Heatmap.Inject(Tooltip)</code> method, and use a legend by injecting the <code>Legend</code> module using the 
+        <code>Heatmap.Inject(Legend)</code> method.
+       </p>
+</div>
+<!-- custom code start -->
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>
+<!-- custom code end -->

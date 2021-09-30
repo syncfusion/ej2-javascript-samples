@@ -4,7 +4,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 3, 1),
+        selectedDate: new Date(2021, 3, 1),
         views: ['Month'],
         readonly: true,
         resources: [{
@@ -130,22 +130,22 @@ this.default = function () {
         var dataCollections = [
             {
                 Id: 100,
-                StartTime: new Date(2018, 3, 1, 8, 30),
-                EndTime: new Date(2018, 3, 1, 10, 0),
+                StartTime: new Date(2021, 3, 1, 8, 30),
+                EndTime: new Date(2021, 3, 1, 10, 0),
                 AirlineId: 1
             }, {
                 Id: 102,
-                StartTime: new Date(2018, 3, 1, 11, 0),
-                EndTime: new Date(2018, 3, 1, 12, 0),
+                StartTime: new Date(2021, 3, 1, 11, 0),
+                EndTime: new Date(2021, 3, 1, 12, 0),
                 AirlineId: 2
             }, {
                 Id: 103,
-                StartTime: new Date(2018, 3, 1, 14, 0),
-                EndTime: new Date(2018, 3, 1, 15, 0),
+                StartTime: new Date(2021, 3, 1, 14, 0),
+                EndTime: new Date(2021, 3, 1, 15, 0),
                 AirlineId: 3
             }
         ];
-        var start = new Date(2018, 3, 1);
+        var start = new Date(2021, 3, 1);
         var dateCollections = Array.apply(null, { length: 30 })
             .map(function (value, index) { return new Date(start.getTime() + (1000 * 60 * 60 * 24 * index)); });
         var id = 1;

@@ -1,40 +1,35 @@
 ﻿<div class="col-lg-12 control-section">
     <div class="content-wrapper">
-        <div class='schedule-demo-heading'>
-            Flight timings between Barcelona and Los Angeles
-        </div>
+        <div class='schedule-demo-heading'>Flight timings between Barcelona and Los Angeles</div>
         <div id="Schedule"></div>
     </div>
 </div>
 
 <div id="action-description">
     <p>
-        This demo illustrates the timings of different flight services on a specific route say between Barcelona and Los Angeles,
-        on a daily basis. Here, the Scheduler is grouped based on the 3 Airline services.
+        This demo illustrates the timings of different flight services on a specific route say between Barcelona and Los
+        Angeles, on a daily basis. Here, the Scheduler is grouped based on the 3 Airline services.
     </p>
 </div>
 
 <div id="description">
     <p>
         In this demo, the scheduler has been grouped with multiple resources by making use of the property
-        <code>group</code>. The resources to be grouped depends on the values of
-        <code>resources</code> option within the
-        <code>group</code> property, which accepts the array of resource names. The resource header has been customized by making use of the
-        <code>resourceHeaderTemplate</code> property.
+        <code>group</code>. The resources to be grouped depends on the values of <code>resources</code> option within
+        the <code>group</code> property, which accepts the array of resource names. The resource header has been
+        customized by making use of the <code>resourceHeaderTemplate</code> property.
     </p>
     <p>
-        In mobile mode, when the grouping is enabled, the resources will be listed out in a treeview as a side-panel which opens
-        or closes, on clicking the hamburger icon at the resource header. Only a single resource will be viewable at a time,
-        due to the space constraints on mobile. If in case, the users want to view the grouped layout on mobile with scrolling
-        content, then it is necessary to set
-        <code>false</code> to the
-        <code>enableCompactView</code> option within the
-        <code>group</code> property which is set to
-        <code>true</code> by default. This option is not applicable on desktop mode. </p>
+        In mobile mode, when the grouping is enabled, the resources will be listed out in a treeview as a side-panel
+        which opens or closes, on clicking the hamburger icon at the resource header. Only a single resource will be
+        viewable at a time, due to the space constraints on mobile. If in case, the users want to view the grouped
+        layout on mobile with scrolling content, then it is necessary to set <code>false</code> to the
+        <code>enableCompactView</code> option within the <code>group</code> property which is set to <code>true</code>
+        by default. This option is not applicable on desktop mode.
+    </p>
     <p>
-        Note: If the
-        <code>group</code> property is not defined, then the default scheduler will be rendered with no grouping on layout, but the appointments
-        of all the resources will be displayed on a single scheduler.
+        Note: If the <code>group</code> property is not defined, then the default scheduler will be rendered with no
+        grouping on layout, but the appointments of all the resources will be displayed on a single scheduler.
     </p>
 </div>
 
@@ -54,6 +49,7 @@
         display: flex;
         text-align: left;
     }
+
     /* custom code start*/
     .schedule-demo-heading {
         font-size: 16px;
@@ -61,6 +57,7 @@
         text-align: center;
         font-weight: 500
     }
+
     /* custom code end*/
 
     .e-schedule .e-agenda-view .template-wrap {
@@ -96,6 +93,11 @@
 
     .e-bigger .e-schedule .e-vertical-view .e-resource-cells {
         height: 80px;
+    }
+
+    .tailwind .e-schedule .e-vertical-view .e-resource-cells,
+    .tailwind-dark .e-schedule .e-vertical-view .e-resource-cells {
+        height: 83px;
     }
 
     .e-schedule .template-wrap .airline-details {
@@ -141,12 +143,13 @@
     .tailwind .horizontal-grouping.e-schedule .e-left-indent .e-header-cells {
         height: 67px;
     }
-    
+
     /* custom code start*/
     @media (max-width: 550px) {
         .schedule-demo-heading {
             font-size: 14px;
         }
     }
+
     /* custom code end*/
 </style>

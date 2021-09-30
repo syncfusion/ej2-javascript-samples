@@ -61,7 +61,7 @@
         {
             "url": "data-validation",
             "name": "Data Validation",
-            "type": "new",
+            "type": "update",
             "category": "Spreadsheet",
             "api": {
                 "sheets": [
@@ -83,7 +83,6 @@
         {
             "url": "hyperlink",
             "name": "Hyperlink",
-            "type": "new",
             "category": "Spreadsheet",
             "api": {
                 "sheets": [
@@ -153,6 +152,7 @@
             "url": "number-formatting",
             "name": "Number Formatting",
             "category": "Formatting",
+            "type": "update",
             "api": {
                 "sheets": [
                     "columns",

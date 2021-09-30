@@ -60,7 +60,8 @@ function linear() {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
         // custom code end
     });
@@ -81,7 +82,7 @@ this.default = function () {
     var rangeIndex = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: 140,
         change: function () {
             var value = +rangeIndex.value;
             var start = document.getElementById('start');
@@ -127,7 +128,7 @@ this.default = function () {
     var useRangeColor = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: 140,
         change: function () {
             gauge.axes[0].labelStyle.useRangeColor = (useRangeColor.value === 'range') ? true : false;
             gauge.refresh();

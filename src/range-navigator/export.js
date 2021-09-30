@@ -5,10 +5,11 @@ var _this = this;
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
-var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast'];
-var borderColor1 = ['#FF4081', '#007897', '#428BCA', '#FFD939'];
-var regionColor1 = ['rgba(255, 64, 129, 0.3)', ' rgba(0, 120, 151, 0.3)',
-    'rgba(66, 139, 202, 0.3)', 'rgba(255, 217, 57, 0.3)'];
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind', 'MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Bootstrap4'];
+var borderColor1 = ['#FF4081', '#007897', '#428BCA', '#FFD939', '#4F46E5', '#4F46E5', '#FF4081', '#007897', '#428BCA', '#22D3EE', '#ADB5BD', '#FFD939'];
+var regionColor1 = ['rgba(255, 64, 129, 0.3)', ' rgba(0, 120, 151, 0.3)', 'rgba(66, 139, 202, 0.3)', 'rgba(255, 217, 57, 0.3)', 'rgba(79, 70, 229, 0.3)',
+    'rgba(79, 70, 229, 0.3)', 'rgba(255, 64, 129, 0.3)', 'rgba(0, 120, 151, 0.3)', 'rgba(66, 139, 202, 0.3)', 'rgba(34, 211, 238, 0.3)',
+    'rgba(173,181,189,0.3)', 'rgba(255, 217, 57, 0.3)'];
 this.renderChart = function (datasrc) {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
@@ -63,7 +64,7 @@ this.renderChart = function (datasrc) {
         chart.exportModule.export(mode.value, fileName, null, [dateTimeControl, chart]);
     };
     var printBtn = new ej.buttons.Button({
-        iconCss: 'e-icons e-print-icon', cssClass: 'e-flat', isPrimary: true,
+        cssClass: 'e-flat', isPrimary: true, iconCss: 'e-icons e-print-icon'
     });
     printBtn.appendTo('#printBtn');
     document.getElementById('printBtn').onclick = function () {

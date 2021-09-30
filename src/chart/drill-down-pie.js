@@ -50,6 +50,9 @@ this.default = function () {
             if (selectedTheme === 'highcontrast') {
                 args.accumulation.annotations[0].content = '#white' ;
             }
+            if (args.accumulation.theme.indexOf('Dark') > -1){
+                args.accumulation.annotations[0].content = '#white' ;
+            }
         }
          // custom code end
     };
@@ -110,7 +113,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/contrast/i, 'Contrast');
+            args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
     };
     var pie = new ej.charts.AccumulationChart(instance);

@@ -1,0 +1,60 @@
+<div class="col-lg-12 control-section">
+    <div id="querybuilder"></div>
+</div>
+<script id="ruleTemplate" type="text/x-template">
+    <div class="e-rule e-rule-template">
+        <div class="e-rule-filter">
+            <input id = ${ruleID}_filterkey>
+        </div>
+        <div class="e-rule-operator e-operator">
+            <input id = ${ruleID}_operatorkey0>
+            <input id = ${ruleID}_operatorkey1>
+        </div>
+        <div class="e-rule-value e-value e-custom-value">
+            <input id = ${ruleID}_valuekey>
+        </div>
+        <div class="e-rule-value-delete">
+            <button class="e-removerule e-custom-delete e-rule-delete e-css e-btn e-small e-round">
+                <span class="e-btn-icon e-icons e-delete-icon"/>
+            </button>
+        </div>
+    </div>
+</script>
+<div id="action-description">
+    <p>This sample demonstrates the Rule Template functionality in QueryBuilder component using RadioButton components.  In the Country column, user can change the Operator as equal/not equal using RadioButton component and select the Value from DropDownList component.</p>
+</div>
+<div id="description">
+    <p>This sample illustrates how to integrate ruleTemplate to the columns in the QueryBuilder. This is used for creating custom user interface for the columns with custom components and update the rule collection by using the component events.</p>
+    <p>
+        More information about Query Builder can be found in this 
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/query-builder/es5-getting-started/">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+    .e-query-builder {
+      margin: 0 auto;
+    }
+
+    .e-radio-wrapper:nth-child(1) {
+       margin-right: 5px !important;
+    } 
+
+    .e-radio-wrapper:nth-child(2) {
+       margin-right: 0px !important;
+    } 
+
+    @media only screen and (max-width: 700px) {
+        .e-radio-wrapper:nth-child(1) {
+            padding-bottom: 10px !important;
+        }
+
+        .e-rule-value.e-custom-value {
+            width: auto !important;
+        }
+
+        .e-rule-value-delete .e-custom-delete {
+            padding-right: 0px !important;
+        }
+    }
+</style>

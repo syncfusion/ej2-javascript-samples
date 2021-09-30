@@ -4,7 +4,8 @@ this.default = function () {
         load: function (args) {
             var mapTheme = location.hash.split('/')[1];
             mapTheme = mapTheme ? mapTheme : 'Material';
-            args.maps.theme = (mapTheme.charAt(0).toUpperCase() + mapTheme.slice(1));
+            args.maps.theme = (mapTheme.charAt(0).toUpperCase() +
+            mapTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         titleSettings: {
@@ -129,7 +130,7 @@ this.default = function () {
     var sampleValue = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Range ColorMaping',
-        width: '110%',
+        width: '100px',
         change: function () {
             var element = sampleValue.value.toString();
             if (element === 'RangeColorMapping') {

@@ -6,7 +6,8 @@ this.default = function () {
         load: function (args) {
             var seattheme = location.hash.split('/')[1];
             seattheme = seattheme ? seattheme : 'Material';
-            args.maps.theme = (seattheme.charAt(0).toUpperCase() + seattheme.slice(1));
+            args.maps.theme = (seattheme.charAt(0).toUpperCase() +
+            seattheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         projectionType: 'Equirectangular',

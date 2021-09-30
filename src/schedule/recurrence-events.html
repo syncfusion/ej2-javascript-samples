@@ -1,7 +1,6 @@
 <div class="col-lg-9 control-section">
     <div class="content-wrapper">
-        <div id="Schedule">
-        </div>
+        <div id="Schedule"></div>
     </div>
 </div>
 <div class="col-lg-3 property-section">
@@ -9,7 +8,7 @@
         <tbody>
             <tr style="height: 50px">
                 <td style="width: 100%">
-                    <input id="editFollowingEvents"type="checkbox" />
+                    <input id="editFollowingEvents" type="checkbox" />
                 </td>
             </tr>
         </tbody>
@@ -24,18 +23,19 @@
     <p>
         In this demo, the recurrence events are defined with different repeat patterns. It can be defined through
         <code>recurrenceRule</code> field which should accept the valid rule string following the
-        <a target="_blank" href="https://tools.ietf.org/html/rfc5545#section-3.3.10">
-            iCalendar</a> specifications. The recurring events are differentiated from other events by a repeat marker added
+        <a target="_blank" href="https://tools.ietf.org/html/rfc5545#section-3.3.10"> iCalendar</a>
+        specifications. The recurring events are differentiated from other events by a repeat marker added
         to the right-bottom of it. These events can repeat on daily, weekly, monthly or yearly basis.
     </p>
     <p>
-        Here, the daily patterned events are depicted in blue color, weekly events are differentiated with green color, monthly events
-        are depicted in orange color and the yearly event is depicted in the all-day section with another green shade for
-        reference.
+        Here, the daily patterned events are depicted in blue color, weekly events are differentiated with green color,
+        monthly events are depicted in orange color and the yearly event is depicted in the all-day section with
+        another green shade for reference.
     </p>
     <p>
-        Scheduler requires only the <code>startTime</code> and <code>endTime</code> fields as mandatory to be mapped from the dataSource. The
-        Scheduler events can be categorized into 3 types based on its time range and all-day type.
+        Scheduler requires only the <code>startTime</code> and <code>endTime</code> fields as mandatory to be mapped
+        from the dataSource. The Scheduler events can be categorized into 3 types based on its time range and
+        all-day type.
     </p>
     <table style="width:100%">
         <tr>
@@ -53,14 +53,15 @@
         <tr>
             <td style="padding:4px 0;">Spanned events</td>
             <td>
-                The events on which its start and end time spans over multiple days and usually displays together with all-day events.
+                The events on which its start and end time spans over multiple days and usually displays together with
+                all-day events.
             </td>
         </tr>
         <tr>
             <td style="padding:4px 0;">All-day events</td>
             <td>
-                The events that are defined as all-day in its event object by setting
-                <code>isAllDay</code> to true. It usually renders at the date header section of the Scheduler where no time-cells are present.
+                The events that are defined as all-day in its event object by setting <code>isAllDay</code> to true.
+                It usually renders at the date header section of the Scheduler where no time-cells are present.
             </td>
         </tr>
     </table>

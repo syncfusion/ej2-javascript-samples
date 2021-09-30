@@ -8,12 +8,12 @@ this.default = function () {
             labelStyle: {
                 position: 'Inside', useRangeColor: false,
                 font: { size: '12px', fontFamily: 'Roboto', fontStyle: 'Regular' }
-            }, majorTicks: { height: 10, width: 0.5, offset: 10 }, minorTicks: { height: 0, width: 0.5 },
+            }, majorTicks: { height: 10, offset: 5 }, minorTicks: { height: 0 },
             annotations: [{
-                content: '<div><span style="font-size:14px; color:#9E9E9E; font-family:Regular">Speedometer</span></div>',
+                content: '<div><span style="font-size:14px; font-family:Regular">Speedometer</span></div>',
                 radius: '30%', angle: 0, zIndex: 1
             }, {
-                content: '<div><span style="font-size:20px; color:#424242; font-family:Regular">65 MPH</span></div>',
+                content: '<div><span style="font-size:20px; font-family:Regular">65 MPH</span></div>',
                 radius: '40%', angle: 180, zIndex: 1
             }],
             startAngle: 210, endAngle: 150, minimum: 0, maximum: 120, radius: '80%',
@@ -28,7 +28,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
     });

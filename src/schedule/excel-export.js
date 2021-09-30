@@ -5,12 +5,12 @@ this.default = function () {
         height: '550px',
         views: ['Week'],
         currentView: 'Week',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         eventSettings: { dataSource: data },
         actionBegin: function (args) {
             if (args.requestType === 'toolbarItemRendering') {
                 var exportItem = {
-                    align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-excel-export',
+                    align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icons e-export-excel',
                     text: 'Excel Export', cssClass: 'e-excel-export', click: onExportClick
                 };
                 args.items.push(exportItem);

@@ -38,6 +38,21 @@
         height: 300px;
         overflow: auto;
     }
+
+    #list {
+        border: 0;
+    }
+
+    .material-dark .custom-delete::before, .fabric-dark .custom-delete::before, .bootstrap-dark .custom-delete::before, .tailwind-dark .custom-delete::before,
+    .bootstrap5-dark .custom-delete::before {
+        color: rgba(255, 255, 255, 0.54);
+    }
+
+    .bootstrap5 .custom-delete,
+    .bootstrap5-dark .custom-delete {
+        margin-top: 3px;
+    }
+
     #imageContent {
         position: absolute;
         top: 50%;
@@ -69,6 +84,7 @@
         margin-bottom: 25px;
     }
     .fabric.e-bigger #list.e-listview .e-list-item,
+    .fabric-dark.e-bigger #list.e-listview .e-list-item,
     .highcontrast.e-bigger #list.e-listview .e-list-item {
         line-height: 43px;
     }
@@ -123,7 +139,7 @@
 </style>
 <!-- custom code end -->
 <div id="action-description">
-    <p>This sample demonstrates the drag and drop functionality of TreeView. A drag and drop image is present at the top of the sample which hides on clicking the sample. To drag and drop node, select and drag the desired node and drop it on the target node or external container.</p>
+    <p>This <a href="https://www.syncfusion.com/javascript-ui-controls/js-treeview" target="_blank">JavaScript (ES5) TreeView example</a> demonstrates the drag and drop functionality of TreeView. A drag and drop image is present at the top of the sample which hides on clicking the sample. To drag and drop node, select and drag the desired node and drop it on the target node or external container.</p>
 </div>
 
 <div id="description">

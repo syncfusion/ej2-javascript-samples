@@ -17,7 +17,6 @@
             seriesType : [],
             indicatorType : [],
             title: 'Plot line on Y axis',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

@@ -3,7 +3,6 @@
     "directory": "chart",
     "category": "Data Visualization",
     "ftName": "chart",
-    "type": "update",
     "samples": [
         {
             "url": "line",
@@ -188,7 +187,6 @@
         {
             "url": "spline-range-area",
             "name": "Spline Range Area",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline range area series.",
             "category": "Area Charts",
             "api": {

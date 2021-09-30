@@ -9,7 +9,7 @@ this.default = function () {
     });
     calendar.appendTo('#calendar');
     function changeValue() {     
-        var element = document.getElementById('multiSelect');
+        var element = document.getElementById('multiselect');
         element.innerHTML = '';
         for (var index = 0; index < this.values.length; index++) {
             element.insertBefore(document.createTextNode(this.values[index]), element.childNodes[0]);

@@ -38,10 +38,10 @@ var cities = [
     { name: 'Florida', fare: 150 }
 ];
 
-function renderComponents() {
+function renderWizardComponents() {
     /* Initialize Tab with disabled headers for the wizard */
     tabObj = new ej.navigations.Tab({
-        heightAdjustMode: 'None', height: 390, showCloseButton: false,
+        heightAdjustMode: 'None', height: 440, showCloseButton: false,
         selecting: tabSelecting,
         items: [
             { header: { 'text': 'New Booking' }, content: '#booking' },
@@ -148,6 +148,16 @@ function dlgCreated() {
         buttonModel: { content: 'Ok', isPrimary: true },
         click: function () {
             alertDlg.hide();
+            for (var i = 1; i <= 3; i++) {
+                var name = document.getElementById('pass_name' + i);
+                var berthSelected = document.getElementById('pass_berth' + i);
+                var age = document.getElementById('pass_age' + i);
+                var gender = document.getElementById('pass_gender' + i);
+                name.value = '';
+                age.value = 18;
+                gender.value = 'Male';
+                berthSelected.value = '';
+            }
             tabObj.enableTab(0, true);
             tabObj.enableTab(1, false);
             tabObj.enableTab(2, false);
@@ -289,6 +299,6 @@ function trainSelected(args) {
 }
 
 this.default = function() {
-    renderComponents();
+    renderWizardComponents();
 };
 // tslint:enable:max-line-length

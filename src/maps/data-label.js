@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var labeltheme = location.hash.split('/')[1];
             labeltheme = labeltheme ? labeltheme : 'Material';
-            args.maps.theme = (labeltheme.charAt(0).toUpperCase() + labeltheme.slice(1));
+            args.maps.theme = (labeltheme.charAt(0).toUpperCase() +
+            labeltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         zoomSettings: {
@@ -36,7 +37,7 @@ this.default = function () {
     var intersectaction = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select intersect action',
-        width: 120,
+        width: 90,
         change: function () {
             maps.layers[0].dataLabelSettings.intersectionAction = intersectaction.value;
             maps.refresh();
@@ -46,7 +47,7 @@ this.default = function () {
     var smartlabelmode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select smartlabel mode',
-        width: 120,
+        width: 90,
         change: function () {
             maps.layers[0].dataLabelSettings.smartLabelMode = smartlabelmode.value;
             maps.refresh();

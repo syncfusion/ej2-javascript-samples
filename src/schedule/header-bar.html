@@ -1,7 +1,6 @@
 <div class="col-lg-9 control-section">
     <div class="content-wrapper">
-        <div id="Schedule">
-        </div>
+        <div id="Schedule"></div>
     </div>
 </div>
 <div class="col-lg-3 property-section">
@@ -92,33 +91,69 @@
 
     .e-profile-wrapper .status {
         font-size: 11px;
+        line-height: normal;
     }
 
     .highcontrast .e-profile-wrapper {
         border: 1px solid #969696
     }
+
     .highcontrast .e-profile-wrapper .profile-container {
         background-color: #000;
     }
+
+    .tailwind-dark .e-profile-wrapper {
+        background-color: #374151;
+        border: 0.5px solid #4b5563;
+    }
+
+    .bootstrap5-dark .e-profile-wrapper {
+        background-color: rgb(40, 45, 49);
+        border: 0.5px solid #4b5563;
+    }
+
+    .tailwind .e-profile-wrapper .destination,
+    .tailwind-dark .e-profile-wrapper .destination {
+        font-size: 11px;
+    }
+
+    .bootstrap-dark .e-profile-wrapper {
+        background-color: #1a1a1a;
+    }
+
+    .fabric-dark .e-profile-wrapper {
+        background-color: #333232;
+    }
+
+    .material-dark .property-panel-header {
+        color: #fff;
+    }
+
+    .material-dark .e-profile-wrapper {
+        color: #fff;
+        border: 0.5px solid #616161;
+        background-color: #212121;
+    }
 </style>
 <div id="action-description">
-    <p>This demo shows the way of adding custom items into the Scheduler header bar. Here, an employee image is added to the
-        header bar, clicking on which will open the popup showing that person's short profile information.
+    <p>
+        This demo shows the way of adding custom items into the Scheduler header bar. Here, an employee image is added
+        to the header bar, clicking on which will open the popup showing that person's short profile information.
     </p>
 </div>
 
 <div id="description">
     <p>
-        In this demo, a popup has been designed separately with a person’s profile info and kept in a hidden state initially. A custom
-        item has been added to the Scheduler header bar within the
-        <code>actionBegin</code> event by checking for the request type as
-        <code>toolbarItemRendering</code> which triggers at the time of header bar items rendering on the Scheduler.
+        In this demo, a popup has been designed separately with a person’s profile info and kept in a hidden state
+        initially. A custom item has been added to the Scheduler header bar within the <code>actionBegin</code>
+        event by checking for the request type as <code>toolbarItemRendering</code> which triggers at the time
+        of header bar items rendering on the Scheduler.
     </p>
     <p>
-        Once the items are added, the click action is being bound to it in the
-        <code>actionComplete</code> event by checking for the request type as
-        <code>toolbarItemRendered</code> which triggers after the items are rendered on the Scheduler. The appropriate action of showing or hiding the popup
-        on clicking the custom item has been done within it.
+        Once the items are added, the click action is being bound to it in the <code>actionComplete</code> event by
+        checking for the request type as <code>toolbarItemRendered</code> which triggers after the items are rendered
+        on the Scheduler. The appropriate action of showing or hiding the popup on clicking the custom item has been
+        done within it.
     </p>
     <p>
         In case, if the header bar of Scheduler needs to be hidden, it can be done by setting false to

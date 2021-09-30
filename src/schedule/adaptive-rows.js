@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 7, 1),
+        selectedDate: new Date(2021, 7, 2),
         currentView: 'TimelineWeek',
         rowAutoHeight: true,
         views: [
@@ -44,7 +44,7 @@ this.default = function () {
         }
     });
     scheduleObj.appendTo('#Schedule');
-    
+
     function onChange(args) {
         scheduleObj.rowAutoHeight = args.checked;
     }

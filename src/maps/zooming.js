@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var zoomtheme = location.hash.split('/')[1];
             zoomtheme = zoomtheme ? zoomtheme : 'Material';
-            args.maps.theme = (zoomtheme.charAt(0).toUpperCase() + zoomtheme.slice(1));
+            args.maps.theme = (zoomtheme.charAt(0).toUpperCase() +
+            zoomtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         zoomSettings: {

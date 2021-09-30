@@ -3,12 +3,12 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '550px',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         eventSettings: { dataSource: data },
     });
     scheduleObj.appendTo('#Schedule');
 
-    var checkBoxObj = new ej.buttons.CheckBox({ 
+    var checkBoxObj = new ej.buttons.CheckBox({
         labelPosition: "Before",
         label: "Print with options",
         change: onChange
@@ -41,12 +41,12 @@ this.default = function () {
         width: "auto",
         placeholder: "Selected date",
         floatLabelType: "Always",
-        value: new Date(2019, 0, 10)
+        value: new Date(2021, 0, 10)
     });
     selectedDateObj.appendTo('#selectedDateElement');
 
     var printButton = new ej.buttons.Button({
-        iconCss: 'e-icons e-icon-schedule-print',
+        iconCss: 'e-icons e-print',
         cssClass: 'e-print-btn'
     });
     printButton.appendTo('#print-btn');
@@ -63,7 +63,7 @@ this.default = function () {
         }
     }
 
-    document.getElementById('print-btn').onclick = function() {
+    document.getElementById('print-btn').onclick = function () {
         if (checkBoxObj.checked) {
             var printOptions = {
                 height: heightObj.value,

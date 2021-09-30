@@ -56,6 +56,7 @@ this.default = function () {
     ];
     var dropDownMode = new ej.dropdowns.DropDownList({
         dataSource: mode,
+        width:'110px',
         fields: { text: 'mode', value: 'id' },
         value: 'Parent',
         change: function (e) {

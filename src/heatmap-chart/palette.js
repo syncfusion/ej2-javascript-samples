@@ -35,7 +35,8 @@ this.default = function () {
         load: function (args) {
             var paletteTheme = location.hash.split('/')[1];
             paletteTheme = paletteTheme ? paletteTheme : 'Material';
-            args.heatmap.theme = (paletteTheme.charAt(0).toUpperCase() + paletteTheme.slice(1));
+            args.heatmap.theme = (paletteTheme.charAt(0).toUpperCase() +
+            paletteTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         cellSettings: {
             border: { width: 0 },

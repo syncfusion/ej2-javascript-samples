@@ -24,7 +24,6 @@ window.default = function () {
                 }
             },
             title: 'AAPL Stock Price',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             tooltip: { enable: true },
             crosshair: {
                 enable: true,  

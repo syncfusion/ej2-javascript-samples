@@ -5,8 +5,15 @@ this.default = function() {
     element.onload = function() {
         defaultRTE = new ej.richtexteditor.RichTextEditor({
             placeholder: 'Type @ to get the employee list with their email IDs.',
+            actionBegin: actionBeginEvent
         });
         defaultRTE.appendTo('#AtRTE');
+
+        function actionBeginEvent(args) {
+            if (args.requestType === 'EnterAction') {
+                args.cancel = true;
+            }
+        }
 
         var tribute = new Tribute({
             values: [

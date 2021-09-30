@@ -85,6 +85,13 @@
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the toolbar support of the pivot table widget"
         },
         {
+            "url": "keyboard-navigation",
+            "name": "Keyboard Navigation",
+            "category": "Keyboard Navigation",
+            "type": "new",
+            "description": "This sample demonstrates how to use keyboard shortcuts to interact with Pivot Table features such as the pivot table, grouping bar, field list, toolbar, calculated field, drill through, and filter dialog"
+        },
+        {
             "url": "calculated-field",
             "name": "Calculated Field",
             "category": "Formula",

@@ -8,7 +8,8 @@ this.default = function () {
         load: function (args) {
             var selectiontheme = location.hash.split('/')[1];
             selectiontheme = selectiontheme ? selectiontheme : 'Material';
-            args.maps.theme = (selectiontheme.charAt(0).toUpperCase() + selectiontheme.slice(1));
+            args.maps.theme = (selectiontheme.charAt(0).toUpperCase() +
+            selectiontheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         itemSelection: function (args) {

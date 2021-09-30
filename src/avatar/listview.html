@@ -121,12 +121,35 @@
         background-image: url('./src/avatar/images/pic04.png');
     }
 
-    .bootstrap4 #letterAvatarList .e-list-item {
+    .bootstrap4 #letterAvatarList .e-list-item,
+    .bootstrap5 #letterAvatarList .e-list-item,
+    .bootstrap5-dark #letterAvatarList .e-list-item {
         line-height: 30px;
         padding: 8px 16px 8px 16px;
     }
 
-    .bootstrap4 #letterAvatarList .e-list-item .e-avatar {
+    .bootstrap5 #letterAvatarList .e-list-item .e-avatar,
+    .bootstrap5-dark #letterAvatarList .e-list-item .e-avatar,
+    .tailwind-dark #letterAvatarList .e-list-item .e-avatar {
         top: calc(100% - 48px);
     }
+
+    body.bootstrap4 #letterAvatarList .e-list-item .e-avatar{
+        top: calc(100% - 45px);
+    }
+
+    body.bootstrap #letterAvatarList .e-list-item,
+    body.bootstrap-dark #letterAvatarList .e-list-item {
+        line-height: 45px;
+    }
+
+    body.tailwind-dark #letterAvatarList .e-list-item {
+        line-height: 35px;
+    }
+
+    body.material #letterAvatarList .e-list-item,
+    body.material-dark #letterAvatarList .e-list-item {
+        line-height: 50px;
+    }
+    
 </style>

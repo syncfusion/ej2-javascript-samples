@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var markertheme = location.hash.split('/')[1];
             markertheme = markertheme ? markertheme : 'Material';
-            args.maps.theme = (markertheme.charAt(0).toUpperCase() + markertheme.slice(1));
+            args.maps.theme = (markertheme.charAt(0).toUpperCase() +
+            markertheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         useGroupingSeparator: true,

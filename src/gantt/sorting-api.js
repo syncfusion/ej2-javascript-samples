@@ -43,7 +43,7 @@ this.default = function () {
             { id: 'Duration', type: 'Duration' },
             { id: 'Progress', type: 'Progress' }
         ],
-        popupWidth: '100px',
+        popupWidth: '150px',
         value: 'TaskID',
         fields: { text: 'type', value: 'id' },
     });
@@ -54,7 +54,7 @@ this.default = function () {
             { id: 'Ascending', type: 'Ascending' },
             { id: 'Descending', type: 'Descending' },
         ],
-        popupWidth: '100px',
+        popupWidth: '150px',
         value: 'Ascending',
         fields: { text: 'type', value: 'id' },
     });

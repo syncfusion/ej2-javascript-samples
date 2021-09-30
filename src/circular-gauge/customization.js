@@ -8,7 +8,8 @@ function customGauge1() {
         load: function (args) {
             var selecTheme = location.hash.split('/')[1];
             selecTheme = selecTheme ? selecTheme : 'Material';
-            args.gauge.theme = (selecTheme.charAt(0).toUpperCase() + selecTheme.slice(1));
+            args.gauge.theme = (selecTheme.charAt(0).toUpperCase() +
+            selecTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         axes: [{
@@ -86,7 +87,8 @@ function customGauge2() {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
         // custom code end
     });

@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['material', 'fabric', 'bootstrap', 'bootstrap4', 'tailwind', 'highcontrast'];
+var themeCollection = ['bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
 var themeDropDown;
 var contentTab;
 var sourceTab;
@@ -46,7 +46,7 @@ var setResponsiveElement = ej.base.select('.setting-responsive');
 var isMobile = window.matchMedia('(max-width:550px)').matches;
 var isTablet = window.matchMedia('(min-width:600px) and (max-width: 850px)').matches;
 var isPc = window.matchMedia('(min-width:850px)').matches;
-var selectedTheme = location.hash.split('/')[1] || 'material';
+var selectedTheme = location.hash.split('/')[1] || 'bootstrap5';
 var toggleAnim = new ej.base.Animation({ duration: 500, timingFunction: 'ease' });
 var controlSampleData = {};
 var samplesList = getSampleList();
@@ -998,7 +998,7 @@ function controlSelect(arg) {
         controlListRefresh(arg.node || arg.item);
         if (path !== curHashCollection) {
             sampleOverlay();
-            var theme = location.hash.split('/')[1] || 'material';
+            var theme = location.hash.split('/')[1] || 'bootstrap5';
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
                 ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
@@ -1070,6 +1070,7 @@ function setSelectList() {
                 showHideControlTree();
             }
             list.selectItem(selectSample);
+            selectSample.scrollIntoView({ block: "nearest" });
         }
     } else {
         showHideControlTree();
@@ -1193,7 +1194,7 @@ function createStackInput(name, value, form) {
     input.setAttribute('type', 'hidden');
     input.setAttribute('name', name);
     input.setAttribute('value', value.replace(/{{theme}}/g, selectedTheme).replace(/{{ripple}}/,
-        (selectedTheme === 'material') ? 'ej.base.enableRipple(true);\n' : ''));
+        (selectedTheme.indexOf('material') !== -1 ) ? 'ej.base.enableRipple(true);\n' : ''));
     form.appendChild(input);
 }
 
@@ -1208,7 +1209,7 @@ function addRoutes(samplesList) {
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
                 (subNode.category + ' / ') : '') + subNode.name;
-            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'material';
+            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'bootstrap5';
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {
@@ -1596,7 +1597,7 @@ function loadJSON() {
     overlay();
     changeMouseOrTouch(switchText);
     localStorage.removeItem('ej2-switch');
-    ej.base.enableRipple(selectedTheme === 'material' || !selectedTheme);
+    ej.base.enableRipple(selectedTheme.indexOf('material') !== -1 || !selectedTheme);
     loadTheme(selectedTheme);
 }
 loadJSON();

@@ -115,7 +115,7 @@ this.default = function() {
             mirrorConversion(e);
         }
         else {
-            setTimeout(function () { defaultRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
+            setTimeout(function () { defaultRTE.toolbarModule.refreshToolbarOverflow(); }, 1000);
         }
     }
 };

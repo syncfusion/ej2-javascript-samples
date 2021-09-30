@@ -69,7 +69,7 @@ this.default = function () {
         count = count + 1;      
         var panel = [{
             'id': count.toString() + '_layout', 'sizeX': 2, 'sizeY': 2, 'row': 0, 'col': 0,
-            header: '<div>Panel' + count.toString() + '</div>', content: '<div></div>'
+            header: '<div>Panel ' + count.toString() + '</div>', content: '<div></div>'
         }];
         dashboardObject.addPanel(panel[0]);
     };

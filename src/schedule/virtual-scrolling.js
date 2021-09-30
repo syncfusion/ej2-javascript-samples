@@ -1,6 +1,6 @@
 this.default = function () {
     var ownerData = generateResourceData(1, 300, 'Resource');
-    var eventData = generateStaticEvents(new Date(2018, 4, 1), 300, 12);
+    var eventData = generateStaticEvents(new Date(2021, 4, 1), 300, 12);
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
         width: '100%',
@@ -24,14 +24,13 @@ this.default = function () {
             idField: 'Id',
             colorField: 'Color'
         }],
-        selectedDate: new Date(2018, 4, 1),
+        selectedDate: new Date(2021, 4, 1),
         eventSettings: {
             dataSource: eventData
         }
     });
     scheduleObj.appendTo('#Schedule');
 
-    //custom code start
     function generateStaticEvents(start, resCount, overlapCount) {
         var data = [];
         var id = 1;
@@ -82,5 +81,4 @@ this.default = function () {
         }
         return data;
     }
-    //custom code end
 };

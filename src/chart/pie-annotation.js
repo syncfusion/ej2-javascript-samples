@@ -71,9 +71,6 @@ this.default = function () {
                 pie.refresh();
             }
         },
-        resized: function (args) {
-            location.reload();
-        },
         loaded: function (args) {
             if (isRender) {
                 pie.destroy();
@@ -87,7 +84,7 @@ this.default = function () {
                     load: function (args) {
                         var selectedTheme = location.hash.split('/')[1];
                         selectedTheme = selectedTheme ? selectedTheme : 'Material';
-                        args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+                        args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
                     },
                     legendSettings: { visible: false },
                 });
@@ -105,8 +102,11 @@ this.default = function () {
                     dataSource: pieDataSource, border: { color: 'transparent'},
                     xName: 'x', yName: 'y', dataLabel: { visible: true, position: 'Inside', name: 'text' },
                 }],
-                theme: (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)),
-                legendSettings: { visible: false }
+                theme: (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast'),
+                legendSettings: { visible: false },
+                resized: function (args) {
+                    location.reload();
+                },
             });
             pie.appendTo('#chart_annotation');
         }

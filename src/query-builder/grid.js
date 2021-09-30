@@ -23,7 +23,6 @@
             }]
         };
         var qryBldrObj = new ej.querybuilder.QueryBuilder({
-            width: '100%',
             dataSource: window.hardwareData,
             columns: columnData,
             rule: importRules,

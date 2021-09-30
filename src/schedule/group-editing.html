@@ -12,16 +12,14 @@
 
 <div id="description">
     <p>
-        In this demo,
-        <code>allowGroupEdit</code> option is set to true within the
-        <code>group</code> property to enable the same event to be shared with multiple resources. With this property enabled, a single appointment
-        object will be maintained within the appointment collection, even if it is shared by more than one resource – whereas
-        the resource fields of such appointment object will hold the IDs of the multiple resources separated by commas. Any
-        actions such as create, edit or delete held on any one of the event, will be reflected on all other related instances
-        visible on the UI. The
-        <code>allowMultiple</code> option when set as true within the
-        <code>resource</code> property, will allow the user to select multiple resources from the resource field of editor window, while trying
-        to create appointments.
+        In this demo, <code>allowGroupEdit</code> option is set to true within the <code>group</code> property to
+        enable the same event to be shared with multiple resources. With this property enabled, a single appointment
+        object will be maintained within the appointment collection, even if it is shared by more than one resource –
+        whereas the resource fields of such appointment object will hold the IDs of the multiple resources separated
+        by commas. Any actions such as create, edit or delete held on any one of the event, will be reflected on all
+        other related instances visible on the UI. The <code>allowMultiple</code> option when set as true within the
+        <code>resource</code> property, will allow the user to select multiple resources from the resource field of
+        editor window, while trying to create appointments.
     </p>
 </div>
 
@@ -65,6 +63,10 @@
         font-size: 16px;
         font-weight: 500;
         padding-right: 10px;
+    }
+
+    .e-schedule .template-wrap .resource-details .resource-designation {
+        font-size: 12px;
     }
 
     .e-schedule.e-device .template-wrap .resource-details .resource-name {

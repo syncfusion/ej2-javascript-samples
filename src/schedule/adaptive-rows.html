@@ -23,11 +23,10 @@
 <div id="description">
     <p>
         In this example, <code>rowAutoHeight</code> property is set as <code>true</code> to auto-adjust the height
-        of work cells based
-        on the number of appointments present in the same time ranges. Also, this functionality is applicable only on
-        all the timeline views as well as on the calendar month view. When this option is disabled, the height of the
-        work cells remains static and at the time of exceeding appointments count, the <code>+n more</code> text
-        indicator will be shown at the bottom of the cells.
+        of work cells based on the number of appointments present in the same time ranges. Also, this
+        functionality is applicable only on all the timeline views as well as on the calendar month view. When
+        this option is disabled, the height of the work cells remains static and at the time of exceeding
+        appointments count, the <code>+n more</code> text indicator will be shown at the bottom of the cells.
     </p>
 
 </div>
@@ -39,5 +38,11 @@
 
     .e-schedule .e-timeline-view .e-resource-text {
         padding-left: 20px;
+    }
+
+    .e-schedule .e-timeline-view .e-block-appointment {
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 </style>

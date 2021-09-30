@@ -26,9 +26,10 @@ this.default = function () {
         },
         showTooltip: true,
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.heatmap.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            var cellSelectionTheme = location.hash.split('/')[1];
+            cellSelectionTheme = cellSelectionTheme ? cellSelectionTheme : 'Material';
+            args.heatmap.theme = (cellSelectionTheme.charAt(0).toUpperCase() +
+            cellSelectionTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
          cellSelected: function(args) {
             var obj = document.getElementById('container1').ej2_instances[0];
@@ -91,7 +92,7 @@ this.default = function () {
     load: function(args) {
         var selectedTheme = location.hash.split('/')[1];
         selectedTheme = selectedTheme ? selectedTheme : 'Material';
-        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
     }
     });
     chart.appendTo('#container1');

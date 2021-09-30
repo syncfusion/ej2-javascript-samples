@@ -38,7 +38,6 @@
             exportType: [],
             trendlineType : [],
             title: 'AAPL stock price by minutes',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             periods: [
                 { intervalType: 'Minutes', interval: 1, text: '1m' },
                 { intervalType: 'Minutes', interval: 30, text: '30m' },

@@ -61,7 +61,8 @@ function gaugeLoad(args) {
     // custom code start
     var selectedTheme = location.hash.split('/')[1];
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
-    args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+    args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
     // custom code end
     if (this.count === undefined) {
         gauge.annotations = [

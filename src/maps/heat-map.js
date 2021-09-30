@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var heatmaptheme = location.hash.split('/')[1];
             heatmaptheme = heatmaptheme ? heatmaptheme : 'Material';
-            args.maps.theme = (heatmaptheme.charAt(0).toUpperCase() + heatmaptheme.slice(1));
+            args.maps.theme = (heatmaptheme.charAt(0).toUpperCase() +
+            heatmaptheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         format: 'n',

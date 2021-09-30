@@ -1,47 +1,44 @@
 <div class="control-section">
     <div class="content-wrapper">
-        <div id="Schedule">
-        </div>
+        <div id="Schedule"></div>
     </div>
 </div>
 
 <div id="action-description">
-    <p>This demo illustrates the way of customizing the default editor window with custom template option and the customized
-        design is automatically replaced onto the usual event editor. Here, a doctor's daily appointment with his patients
-        is listed out and shaded with specific color based on its status.
+    <p>This demo illustrates the way of customizing the default editor window with custom template option and the
+        customized design is automatically replaced onto the usual event editor. Here, a doctor's daily
+        appointment with his patients is listed out and shaded with specific color based on its status.
     </p>
 </div>
 
 <div id="description">
     <p>
-        In this demo, the event window is customized based on the doctor's required appointment related fields which can be achieved
-        by making use of the
-        <code>editorTemplate</code> API. Here, the custom design is built with the required fields through the script template and its type should be
-        <code>text/x-template</code>.
+        In this demo, the event window is customized based on the doctor's required appointment related fields which can
+        be achieved by making use of the <code>editorTemplate</code> API. Here, the custom design is built with the
+        required fields through the script template and its type should be <code>text/x-template</code>.
     </p>
     <p>
-        Each field defined through it should contain the
-        <code>e-field</code> class, so as to allow the processing of those fields in the default event object from internal source. The ID of
-        this customized script template section is assigned to the
-        <code>editorTemplate</code> option, so that this customized fields will be replaced onto the default editor window.
+        Each field defined through it should contain the <code>e-field</code> class, so as to allow the processing of
+        those fields in the default event object from internal source. The ID of this customized script template
+        section is assigned to the <code>editorTemplate</code> option, so that this customized fields will be
+        replaced onto the default editor window.
     </p>
     <p>
-        As we are using our Syncfusion sub-components within this editor in this demo, therefore the custom defined form elements
-        needs to be configured as required Syncfusion components such as DropDownList and DateTimePicker which needs to be
-        done within the
-        <code>popupOpen</code> event. This particular step can be skipped, if the user needs to simply use the normal form design with applicable
-        fields.
+        As we are using our Syncfusion sub-components within this editor in this demo, therefore the custom defined form
+        elements needs to be configured as required Syncfusion components such as DropDownList and DateTimePicker
+        which needs to be done within the <code>popupOpen</code> event. This particular step can be skipped, if the
+        user needs to simply use the normal form design with applicable fields.
     </p>
     <p>
-        Within the
-        <code>eventRendered</code> event that triggers before every appointment getting rendered on the Scheduler user interface, the colors for the
-        appointments are set based on its status which is retrieved from the appointment data.
+        Within the <code>eventRendered</code> event that triggers before every appointment getting rendered on
+        the Scheduler user interface, the colors for the appointments are set based on its status which is retrieved
+        from the appointment data.
     </p>
     <p>
-        The additional restriction has been added to the Scheduler cells such that if a cell already contains an appointment – then
-        it should be prevented to book with multiple appointments on the same time for which the
-        <code>isSlotAvailable</code> method is used. This method returns true, if the underlying cell is available for adding new events by checking
-        whether it already has any events in it.
+        The additional restriction has been added to the Scheduler cells such that if a cell already contains an
+        appointment – then it should be prevented to book with multiple appointments on the same time for which the
+        <code>isSlotAvailable</code> method is used. This method returns true, if the underlying cell is available for
+        adding new events by checking whether it already has any events in it.
     </p>
 </div>
 

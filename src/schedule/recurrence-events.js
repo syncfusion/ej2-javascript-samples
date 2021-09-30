@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 1, 20),
+        selectedDate: new Date(2021, 1, 20),
         views: ['Day', 'Week', 'Month'],
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
@@ -14,6 +14,6 @@ this.default = function () {
     function onChange(args) {
         scheduleObj.eventSettings.editFollowingEvents = args.checked;
     }
-    
-    new ej.buttons.CheckBox({label: 'Enable Following Events', checked: false, change: onChange }, '#editFollowingEvents');
+
+    new ej.buttons.CheckBox({ label: 'Enable Following Events', checked: false, change: onChange }, '#editFollowingEvents');
 };

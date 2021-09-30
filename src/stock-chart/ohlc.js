@@ -33,7 +33,6 @@ renderOhlcStockChart = function () {
                 }
             },
             title: 'AAPL Stock Price' ,
-            titleStyle: { fontWeight: '500', color: '#424242' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

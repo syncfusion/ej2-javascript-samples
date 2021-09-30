@@ -25,7 +25,7 @@ this.default = function () {
         cellTemplate: '${if(type === "monthCells")}<div class="templatewrap">${getCellContent(data.date)}</div>${/if}',
         views: ['Month'],
         currentView: 'Month',
-        selectedDate: new Date(2017, 11, 15)
+        selectedDate: new Date(2021, 11, 15)
     });
     scheduleObj.appendTo('#Schedule');
 };

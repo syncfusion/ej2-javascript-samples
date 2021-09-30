@@ -110,7 +110,8 @@ this.default = function () {
         load: function (args) {
             var jsonCellTheme = location.hash.split('/')[1];
             jsonCellTheme = jsonCellTheme ? jsonCellTheme : 'Material';
-            args.heatmap.theme = (jsonCellTheme.charAt(0).toUpperCase() + jsonCellTheme.slice(1));
+            args.heatmap.theme = (jsonCellTheme.charAt(0).toUpperCase() +
+            jsonCellTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         paletteSettings: {
             palette: [{ color: '#DCD57E' },

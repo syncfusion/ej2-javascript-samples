@@ -39,7 +39,6 @@ window.default = function () {
             },
             crosshair: { enable: true },
             title: 'AAPL Historical',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             tooltip: { enable: true },
             // custom code start
             load: function (args) {

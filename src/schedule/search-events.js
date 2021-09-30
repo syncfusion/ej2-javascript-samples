@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '550px',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         eventSettings: { dataSource: data }
     });
     scheduleObj.appendTo('#schedule');
@@ -37,39 +37,39 @@ this.default = function () {
         var endDate;
         var formElements = [].slice.call(document.querySelectorAll('.event-search .search-field'));
         formElements.forEach(function (node) {
-                var fieldOperator;
-                var predicateCondition;
-                var fieldValue;
-                var fieldInstance;
-                if (node.value && node.value !== '' && !node.classList.contains('e-datepicker')) {
-                    fieldOperator = 'contains';
-                    predicateCondition = 'or';
-                    fieldValue = node.value;
-                    searchObj.push({
-                        field: node.name, operator: fieldOperator, value: fieldValue, predicate: predicateCondition,
-                        matchcase: true
-                    });
+            var fieldOperator;
+            var predicateCondition;
+            var fieldValue;
+            var fieldInstance;
+            if (node.value && node.value !== '' && !node.classList.contains('e-datepicker')) {
+                fieldOperator = 'contains';
+                predicateCondition = 'or';
+                fieldValue = node.value;
+                searchObj.push({
+                    field: node.name, operator: fieldOperator, value: fieldValue, predicate: predicateCondition,
+                    matchcase: true
+                });
+            }
+            if (node.classList.contains('e-datepicker') && ((node)).ej2_instances[0].value) {
+                fieldInstance = ((node)).ej2_instances[0];
+                fieldValue = fieldInstance.value;
+                if (node.classList.contains('e-start-time')) {
+                    fieldOperator = 'greaterthanorequal';
+                    predicateCondition = 'and';
+                    startDate = new Date(+fieldValue);
+                } else {
+                    fieldOperator = 'lessthanorequal';
+                    predicateCondition = 'and';
+                    var date = new Date(+fieldInstance.value);
+                    fieldValue = new Date(date.setDate(date.getDate() + 1));
+                    endDate = fieldValue;
                 }
-                if (node.classList.contains('e-datepicker') && ((node)).ej2_instances[0].value) {
-                    fieldInstance = ((node)).ej2_instances[0];
-                    fieldValue = fieldInstance.value;
-                    if (node.classList.contains('e-start-time')) {
-                        fieldOperator = 'greaterthanorequal';
-                        predicateCondition = 'and';
-                        startDate = new Date(+fieldValue);
-                    } else {
-                        fieldOperator = 'lessthanorequal';
-                        predicateCondition = 'and';
-                        var date = new Date(+fieldInstance.value);
-                        fieldValue = new Date(date.setDate(date.getDate() + 1));
-                        endDate = fieldValue;
-                    }
-                    searchObj.push({
-                        field: node.name, operator: fieldOperator, value: fieldValue, predicate: predicateCondition,
-                        matchcase: false
-                    });
-                }
-            });
+                searchObj.push({
+                    field: node.name, operator: fieldOperator, value: fieldValue, predicate: predicateCondition,
+                    matchcase: false
+                });
+            }
+        });
         if (searchObj.length > 0) {
             var filterCondition = searchObj[0];
             var predicate = new ej.data.Predicate(

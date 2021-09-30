@@ -32,6 +32,7 @@ this.default = function () {
     var dropDownType = new ej.dropdowns.DropDownList({
         dataSource: type,
         fields: { text: 'type', value: 'id' },
+        width: '100px',
         value: 'Multiple',
         change: function (e) {
             var type = e.value;
@@ -49,6 +50,7 @@ this.default = function () {
     var dropDownMode = new ej.dropdowns.DropDownList({
         dataSource: mode,
         fields: { text: 'mode', value: 'id' },
+        width: '100px',
         value: 'Row',
         change: function (e) {
             var mode = e.value;
@@ -65,6 +67,7 @@ this.default = function () {
     dropDownMode.appendTo('#mode');
     var dropDownCellMode = new ej.dropdowns.DropDownList({
         dataSource: cellmode,
+        width: '100px',
         fields: { text: 'mode', value: 'id' },
         value: 'Flow',
         change: function (e) {

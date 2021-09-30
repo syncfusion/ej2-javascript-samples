@@ -9,7 +9,7 @@
         <table id="property" title="Properties" style="width: 100%;">
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div> Export Type </div>
+                    <div style="margin-left: -10px"> Export Type </div>
                 </td>
                 <td style="width: 60%;">
                     <div style="margin-left: -10px">
@@ -25,23 +25,23 @@
             </tr>&nbsp;
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div> File Name </div>
+                    <div style="margin-left: -10px"> File Name </div>
                 </td>
                 <td style="width: 60%;">
                     <div class="e-float-input" style='margin-top: 0px;'>
-                        <input type="text" value="Gauge" id="fileName" style="margin-left: -10px;width: 100px;">
+                        <input type="text" value="Gauge" id="fileName" style="margin-left: -10px;width: 90px;">
                     </div>
                 </td>
             </tr>&nbsp;
-            <tr id="button-control" style="height: 50px" align='center'>
+            <tr id="button-control" style="height: 50px">
                 <td>
-                    <div style="margin-left: 0%;">
-                        <button id="export" style="text-transform:none !important;width: 80px;">Export</button>
+                    <div style="margin-left: -10px; width: 100px">
+                        <button id="export" style="text-transform:none !important;width: 90px;">Export</button>
                     </div>
                 </td>
                 <td>
-                    <div style="margin-left: 0%;">
-                        <button id="print" style="text-transform:none !important;width: 80px;">Print</button>
+                    <div style="margin-left: 0%; width: 100px">
+                        <button id="print" style="text-transform:none !important;width: 90px;">Print</button>
                     </div>
                 </td>
             </tr>&nbsp;
@@ -86,6 +86,50 @@
     }
     .e-play-icon1::before {
         content: '\e728';
+    }
+
+    .e-view.fabric .e-play-icon::before, .e-view.fabric-dark .e-play-icon::before {
+        content: '\e7df';
+    }
+
+    .e-view.fabric .e-play-icon1::before, .e-view.fabric-dark .e-play-icon1::before {
+        content: '\e710';
+    }
+
+    .e-view.bootstrap .e-play-icon::before {
+        content: '\ebd2';
+    }
+
+    .e-view.bootstrap4 .e-play-icon1::before {
+        content: '\e780';
+    }
+
+    .e-view.bootstrap4 .e-play-icon::before {
+        content: '\e743';
+    }
+
+    .e-view.tailwind .e-play-icon::before, .e-view.tailwind-dark .e-play-icon::before {
+        content: '\e76c';
+    }
+
+    .e-view.tailwind .e-play-icon1::before, .e-view.tailwind-dark .e-play-icon1::before {
+        content: '\e7bf';
+    }
+
+    .e-view.highcontrast .e-play-icon::before {
+        content: '\ebf9';
+    }
+
+    .e-view.highcontrast .e-play-icon1::before {
+        content: '\e710';
+    }
+
+    .e-view.bootstrap5 .e-play-icon::before, .e-view.bootstrap5-dark .e-play-icon::before {
+        content: '\e75d';
+    }
+
+    .e-view.bootstrap5 .e-play-icon1::before, .e-view.bootstrap5-dark .e-play-icon1::before {
+        content: '\e72e';
     }
 </style>
 <!-- custom code end -->

@@ -6,11 +6,11 @@
 </div>
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
-        <tr style="height: 50px">
-            <td style="width: 50%">
-                <div>Hierarchy Mode</div>
+        <tr>
+            <td style="width: 30%">
+                <div style="padding-top: 7px">Hierarchy Mode</div>
             </td>
-            <td style="width: 50%;padding-right: 10px">
+            <td style="width: 100%;padding-right: 10px">
                 <div>
                     <input type="text" tabindex="1" id='mode' />
                 </div>
@@ -19,6 +19,11 @@
     </table>
 </div>
 
+<style>
+    .property-panel-header {
+        padding-left: 7px;
+    }
+</style>
 <div id="action-description">
     <p>This sample demonstrates copy to clipboard functionality of the Tree Grid component. Select rows and click Copy
         button from toolbar to copy content. To copy with header click Copy with header button from toolbar.</p>
@@ -27,7 +32,7 @@
 <div id="description">
     <p>Selected rows or cells data in the Tree Grid can be copied into the clipboard using the Keyboard shortcuts and
         <code><a target="_blank" class="code"
-        href="https://ej2.syncfusion.com/javascript/documentation/api/treegrid#copy">copy
+        href="https://ej2.syncfusion.com/documentation/api/treegrid/#copy">copy
         </a></code> method.
     </p>
     <p>In this demo, selected rows data can be copied into the clipboard using the below Keyboard shortcuts or toolbar
@@ -43,7 +48,7 @@
         Clipboard value have the selected records with its parent records, if the selected records not have any parent record then the selected record will be in clipboard.</li>
         <li><code>Child</code> - Clipboard value have the selected records with its child record, if the selected records do not have any child record then the selected records will be in clipboard.</li>
         <li><code>Both</code> - Clipboard value have the selected records with its both parent and child record.
-        If the selected records do not have any parent and child record then the selected records alone in clipboard.</li>
+        If the selected records do not have any parent and child record then the selected records will be in clipboard.</li>
         <li><code>None</code> - Only the Selected records will be in clipboard.</li>
     </ul>
     <p>While using the Tree Grid in a touch device environment, there is an option for multi-selection 
@@ -51,7 +56,7 @@
         Tap the icon to enable multi-selection in a single tap and click for the toolbar to copy the selected records into clipboard.
     </p>
     <p>More information on the Clipboard feature can be found in this
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/clipboard/">
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/treegrid/clipboard/">
             documentation section</a>.
     </p>
 </div>

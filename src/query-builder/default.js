@@ -31,7 +31,6 @@ var importRules = {
     ]
 };
   var qryBldrObj = new ej.querybuilder.QueryBuilder({
-    width: '70%',
     dataSource: window.employeeData,
     columns: columnData,
     rule: importRules,

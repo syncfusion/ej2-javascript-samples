@@ -4,7 +4,7 @@
     "Editors": ["Rich Text Editor", "DocumentEditor", "Chips", "Button", "In-place Editor"],
     "Calendars": ["Scheduler", "Gantt", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box"],
-    "Navigation": ["Accordion", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
+    "Navigation": ["Accordion", "Breadcrumb", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Toast", "Progress Bar"],   
     "Inputs": ["Form Validation", "TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider"],
     "Layout": ["Avatar", "Card", "Dialog", "ListView",  "Tooltip", "Splitter","Dashboard Layout"],

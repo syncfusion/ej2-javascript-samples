@@ -4,8 +4,7 @@
             <div class="title-container">
                 <h1 class="title-text">Doctor's Appointments</h1>
             </div>
-            <div id="Schedule">
-            </div>
+            <div id="Schedule"></div>
         </div>
         <div class="treeview-container">
             <div class="title-container">
@@ -18,16 +17,18 @@
 
 <div id="action-description">
     <p>
-        This example illustrates how to drag and drop the events from an external source into scheduler. Here, you can drag and drop the items from TreeView control into scheduler.
+        This example illustrates how to drag and drop the events from an external source into scheduler. Here, you can
+        drag and drop the items from TreeView control into scheduler.
     </p>
 </div>
 
 <div id="description">
     <p>
-        In this example, <code>resourceHeaderTemplate</code> is used to change the default appearance of the resource header
-        column. Within the <code>actionBegin</code> event of scheduler, the dragged item from the TreeView control is removed,
-        when it is being dragged and dropped onto the scheduler. When the item is being dropped onto the scheduler, the event editor is
-        explicitly made to open with the target details by invoking the <code>openEditor</code> method of scheduler within the <code>nodeDragStop</code> event of TreeView.
+        In this example, <code>resourceHeaderTemplate</code> is used to change the default appearance of the resource
+        header column. Within the <code>actionBegin</code> event of scheduler, the dragged item from the TreeView
+        control is removed, when it is being dragged and dropped onto the scheduler. When the item is being dropped
+        onto the scheduler, the event editor is explicitly made to open with the target details by invoking the
+        <code>openEditor</code> method of scheduler within the <code>nodeDragStop</code> event of TreeView.
     </p>
 </div>
 
@@ -55,8 +56,8 @@
 <style>
     /* custom code start*/
     .content-wrapper {
-       display: -ms-flexbox;
-       display: flex;
+        display: -ms-flexbox;
+        display: flex;
     }
 
     .schedule-container {
@@ -82,19 +83,6 @@
         padding: 0;
     }
 
-    .treeview-external-drag #waitid {
-        float: left;
-        width: 13%;
-        text-align: center;
-        line-height: 30px;
-        font-size: 13px;
-        font-family: "Segoe UI";
-        color: #f9920b;
-        overflow: hidden;
-        margin: 9px 0;
-        padding: 0 2px 0 0;
-    }
-
     .treeview-external-drag #waitdetails {
         width: 95%;
         float: left;
@@ -108,7 +96,6 @@
         font-weight: bold;
         font-family: "Segoe UI";
         font-size: 12px;
-        color: #545554;
         padding: 5px 0 0 10px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -118,7 +105,6 @@
         height: 50%;
         font-family: "Segoe UI";
         font-size: 10px;
-        color: #545554;
         opacity: 0.6;
         padding-left: 10px;
         padding-top: 5px;
@@ -128,7 +114,6 @@
 
     .treeview-external-drag .e-list-text,
     .e-bigger .treeview-external-drag .e-list-text {
-        background: white;
         border: 0.5px solid #E1E7EC;
         height: 50px;
         line-height: 15px;
@@ -192,17 +177,28 @@
         padding: 5px
     }
 
+    .tailwind .e-schedule.schedule-drag-drop .e-resource-cells.e-child-node .specialist-category,
+    .tailwind .e-schedule.schedule-drag-drop .e-resource-cells.e-child-node .specialist-name,
+    .tailwind-dark .e-schedule.schedule-drag-drop .e-resource-cells.e-child-node .specialist-category,
+    .tailwind-dark .e-schedule.schedule-drag-drop .e-resource-cells.e-child-node .specialist-name {
+        padding: unset !important;
+    }
+
     .e-schedule.schedule-drag-drop .e-resource-cells.e-parent-node .specialist-name {
         padding: 0 10px
+    }
+
+    .e-schedule.schedule-drag-drop .e-resource-cells.e-parent-node .template-wrap {
+        padding: 3px 0px;
     }
 
     .e-schedule.schedule-drag-drop .specialist-name {
         font-size: 13px;
     }
+
     .e-schedule.schedule-drag-drop .specialist-designation {
         font-size: 10px;
     }
-
 
     .e-schedule.schedule-drag-drop .specialist-img {
         width: 45px;
@@ -231,11 +227,11 @@
     }
 
     .e-device-hover {
-        background-color: #e0e0e0!important;
+        background-color: #e0e0e0 !important;
     }
 
-
     @media (max-width: 550px) {
+
         /* custom code start*/
         .content-wrapper {
             display: block;

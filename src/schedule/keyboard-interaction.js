@@ -1,7 +1,7 @@
 this.default = function () {
     var data = new ej.base.extend([], window.zooEventsData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         width: '100%',
         height: '650px',
         eventSettings: { dataSource: data },

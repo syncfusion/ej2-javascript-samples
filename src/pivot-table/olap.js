@@ -46,13 +46,12 @@ var pivotObj = new ej.pivotview.PivotView({
         columnWidth: 160
     },
     chartSettings: {
-        title:"Sales Analysis",
         load: function(args) {
-          var selectedTheme = location.hash.split("/")[1];
-          selectedTheme = selectedTheme ? selectedTheme : "Material";
-          args.chart.theme =
-            selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
-        }
+          var selectingTheme = location.hash.split("/")[1];
+          selectingTheme = selectingTheme ? selectingTheme : "Material";
+          args.chart.theme = (selectingTheme.charAt(0).toUpperCase() + selectingTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        },
+        title:"Sales Analysis",
     },
     loadReport: function (args) {
         var reportsCollection = [];

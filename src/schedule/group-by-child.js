@@ -4,7 +4,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         currentView: 'WorkWeek',
-        selectedDate: new Date(2018, 5, 5),
+        selectedDate: new Date(2021, 5, 5),
         startHour: '09:00',
         endHour: '19:00',
         group: {

@@ -1,7 +1,6 @@
 <div class="control-section">
     <div class="content-wrapper">
-        <div id="Schedule">
-        </div>
+        <div id="Schedule"></div>
     </div>
 </div>
 <style>
@@ -38,22 +37,23 @@
         height: 20px;
     }
 
-    .schedule-date-header-template.e-schedule .e-left-indent .e-header-cells {
+    .tailwind .schedule-date-header-template.e-schedule .e-left-indent .e-header-cells,
+    .tailwind-dark .schedule-date-header-template.e-schedule .e-left-indent .e-header-cells {
         height: 66px;
     }
 </style>
 <div id="action-description">
-    <p>This demo depicts the way to add images and custom text to the date header bar by making use of the date header template
-        option.
+    <p>
+        This demo depicts the way to add images and custom text to the date header bar by making use of the date header
+        template option.
     </p>
 </div>
 
 <div id="description">
     <p>
-        In this demo, the
-        <code>dateHeaderTemplate</code> option is used to customize the date header cells of day, week and workweek views. In month view, the date header
-        is not applicable and therefore the same customizations can be added beside the date text in the month cells by making
-        use of the
+        In this demo, the <code>dateHeaderTemplate</code> option is used to customize the date header cells
+        of day, week and workweek views. In month view, the date header is not applicable and therefore the
+        same customizations can be added beside the date text in the month cells by making use of the
         <code>renderCell</code> event.
     </p>
 </div>

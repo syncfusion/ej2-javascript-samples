@@ -4,7 +4,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         views: ['Day', 'Week', 'WorkWeek', 'Month'],
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
             window.applyCategoryColor(args, scheduleObj.currentView);
@@ -14,6 +14,8 @@ this.default = function () {
 
     // Initialize DropDownList component for views
     var dropDownListObject = new ej.dropdowns.DropDownList({
+        placeholder: 'Current View',
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.currentView = args.value;
             scheduleObj.dataBind();

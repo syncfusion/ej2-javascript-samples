@@ -31,7 +31,7 @@ this.default = function () {
         height: '650px',
         dateHeaderTemplate: '<div class="date-text">${getDateHeaderText(data.date)}</div>${getWeather(data.date)}',
         views: ['Day', 'Week', 'WorkWeek', 'Month', 'TimelineMonth'],
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         eventSettings: { dataSource: data },
         cssClass: 'schedule-date-header-template',
         renderCell: function (args) {

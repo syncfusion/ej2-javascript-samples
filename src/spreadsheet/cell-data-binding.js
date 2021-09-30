@@ -23,88 +23,88 @@ this.default = function() {
                     {
                         cells: [
                             { value: 'Food' },
-                            { value: '$7000' },
-                            { value: '$8120' },
+                            { value: '7000', format: '$#,##0.00' },
+                            { value: '8120', format: '$#,##0.00' },
                             { formula: '=B2-C2', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Loan' },
-                            { value: '$1500' },
-                            { value: '$1500' },
+                            { value: '1500', format: '$#,##0.00' },
+                            { value: '1500', format: '$#,##0.00' },
                             { formula: '=B3-C3', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Medical' },
-                            { value: '$300' },
-                            { value: '$0' },
+                            { value: '300', format: '$#,##0.00' },
+                            { value: '0', format: '$#,##0.00' },
                             { formula: '=B4-C4', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Clothing' },
-                            { value: '$400' },
-                            { value: '$140' },
+                            { value: '400', format: '$#,##0.00' },
+                            { value: '140', format: '$#,##0.00' },
                             { formula: '=B5-C5', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Education' },
-                            { value: '$900' },
-                            { value: '$750' },
+                            { value: '900', format: '$#,##0.00' },
+                            { value: '750', format: '$#,##0.00' },
                             { formula: '=B6-C6', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Insurance' },
-                            { value: '$30' },
-                            { value: '$30' },
+                            { value: '30', format: '$#,##0.00' },
+                            { value: '30', format: '$#,##0.00' },
                             { formula: '=B7-C7', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Utilities' },
-                            { value: '$130' },
-                            { value: '$160' },
+                            { value: '130', format: '$#,##0.00' },
+                            { value: '160', format: '$#,##0.00' },
                             { formula: '=B8-C8', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Enterainment' },
-                            { value: '$500' },
-                            { value: '$730' },
+                            { value: '500', format: '$#,##0.00' },
+                            { value: '730', format: '$#,##0.00' },
                             { formula: '=B9-C9', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Maintainance' },
-                            { value: '$50' },
-                            { value: '$70' },
+                            { value: '50', format: '$#,##0.00' },
+                            { value: '70', format: '$#,##0.00' },
                             { formula: '=B10-C10', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Transportation' },
-                            { value: '$250' },
-                            { value: '$400' },
+                            { value: '250', format: '$#,##0.00' },
+                            { value: '400', format: '$#,##0.00' },
                             { formula: '=B11-C11', format: numberFormat }
                         ]
                     },
                     {
                         cells: [
                             { value: 'Gifts/Donations' },
-                            { value: '$0' },
-                            { value: '$100' },
+                            { value: '0', format: '$#,##0.00' },
+                            { value: '100', format: '$#,##0.00' },
                             { formula: '=B12-C12', format: numberFormat }
                         ]
                     },

@@ -32,9 +32,10 @@ this.default = function () {
             showLabel: false,
         },
         load: function (args) {
-            var paletteTheme = location.hash.split('/')[1];
-            paletteTheme = paletteTheme ? paletteTheme : 'Material';
-            args.heatmap.theme = (paletteTheme.charAt(0).toUpperCase() + paletteTheme.slice(1));
+            var colorRangeTheme = location.hash.split('/')[1];
+            colorRangeTheme = colorRangeTheme ? colorRangeTheme : 'Material';
+            args.heatmap.theme = (colorRangeTheme.charAt(0).toUpperCase() +
+            colorRangeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
     });
     heatmap.appendTo('#container');

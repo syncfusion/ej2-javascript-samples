@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var tooltiptheme = location.hash.split('/')[1];
             tooltiptheme = tooltiptheme ? tooltiptheme : 'Material';
-            args.maps.theme = (tooltiptheme.charAt(0).toUpperCase() + tooltiptheme.slice(1));
+            args.maps.theme = (tooltiptheme.charAt(0).toUpperCase() +
+            tooltiptheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         tooltipRender: function (args) {

@@ -1,0 +1,56 @@
+<div class="control-section">
+    <div class="grid-freezeprop">
+        <div class="grid-freezecol">
+            <div class="grid-freezecol">
+                <span>
+                    Column
+                </span>
+            </div>
+            <div class="grid-freezecol">
+                <input type="text" id='column' />
+            </div>
+        </div>
+        <div class="grid-freezecol">
+            <div class="grid-freezecol">
+                <span>
+                    Freeze Direction
+                </span>
+            </div>
+            <div class="grid-freezecol">
+                <input type="text" id='FreezeDirection' />
+            </div>
+        </div>
+    </div>
+
+    <div id="TreeGrid">
+        <div id="alertDialog"></div>
+    </div>
+</div>
+
+<!-- custom code start -->
+<style>
+    .grid-freezeprop {
+        padding-bottom: 5px;
+    }
+
+    .grid-freezecol {
+        display: inline-block;
+        padding-right: 10px;
+    }
+</style>
+<!-- custom code end -->
+
+<div id="action-description">
+    <p>This sample demonstrates the freeze direction feature of the Tree Grid. Scroll the movable content
+        horizontally to view the frozen left and right columns with the content.</p>
+</div>
+<div id="description">
+    <p>
+        The freeze direction feature enables the user to freeze columns at both sides to scroll remaining movable
+        content. This can be achieved by setting <code>freeze</code> property in column settings.
+    </p>
+    <p>
+        In this demo sample, the <b>Task ID</b> and <b>Task Name</b> column freezed at left side and <b>Approved</b> column freezed at
+        right side using <code>freeze</code> property in column settings.
+    </p>
+</div>

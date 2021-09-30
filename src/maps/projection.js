@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var projecttheme = location.hash.split('/')[1];
             projecttheme = projecttheme ? projecttheme : 'Material';
-            args.maps.theme = (projecttheme.charAt(0).toUpperCase() + projecttheme.slice(1));
+            args.maps.theme = (projecttheme.charAt(0).toUpperCase() +
+            projecttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         titleSettings: {
@@ -60,7 +61,7 @@ this.default = function () {
     var projection = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select projection type',
-        width: 120,
+        width: 105,
         change: function () {
             maps.projectionType = projection.value;
             maps.refresh();

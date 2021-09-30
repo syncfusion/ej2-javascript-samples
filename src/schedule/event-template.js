@@ -22,7 +22,7 @@ this.default = function () {
             start: '08:00'
         },
         views: viewsCollection,
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         readonly: true,
         eventSettings: {
             dataSource: data

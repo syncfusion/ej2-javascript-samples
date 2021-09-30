@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var salesmap = location.hash.split('/')[1];
             salesmap = salesmap ? salesmap : 'Material';
-            args.maps.theme = (salesmap.charAt(0).toUpperCase() + salesmap.slice(1));
+            args.maps.theme = (salesmap.charAt(0).toUpperCase() +
+            salesmap.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         zoomSettings: {

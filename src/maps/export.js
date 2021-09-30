@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var exporttheme = location.hash.split('/')[1];
             exporttheme = exporttheme ? exporttheme : 'Material';
-            args.maps.theme = (exporttheme.charAt(0).toUpperCase() + exporttheme.slice(1));
+            args.maps.theme = (exporttheme.charAt(0).toUpperCase() +
+            exporttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         titleSettings: {
             text: 'Location of the Wonders in the World',
@@ -53,14 +54,14 @@ this.default = function () {
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         dataSource: modeData,
-        width: 100
+        width: 110
     });
     mode.appendTo('#mode');
 
     var layertype = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select layer type',
-        width: '100px',
+        width: '110px',
         change: function () {
             if (layertype.value === 'OSM') {
                 if (mode.value === 'SVG')

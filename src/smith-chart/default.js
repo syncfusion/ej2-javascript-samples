@@ -6,7 +6,8 @@ this.default = function () {
         load: function (args) {
             var defaulttheme = location.hash.split('/')[1];
             defaulttheme = defaulttheme ? defaulttheme : 'Material';
-            args.smithchart.theme = (defaulttheme.charAt(0).toUpperCase() + defaulttheme.slice(1));
+            args.smithchart.theme = (defaulttheme.charAt(0).toUpperCase() +
+                defaulttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         title: {

@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var semitheme = location.hash.split('/')[1];
             semitheme = semitheme ? semitheme : 'Material';
-            args.gauge.theme = (semitheme.charAt(0).toUpperCase() + semitheme.slice(1));
+            args.gauge.theme = (semitheme.charAt(0).toUpperCase() +
+            semitheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         moveToCenter: false,

@@ -4,7 +4,8 @@ this.default = function () {
         load: function(args) {
             var labeltheme = location.hash.split('/')[1];
             labeltheme = labeltheme ? labeltheme : 'Material';
-            args.treemap.theme = (labeltheme.charAt(0).toUpperCase() + labeltheme.slice(1));
+            args.treemap.theme =  (labeltheme.charAt(0).toUpperCase() +
+            labeltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         titleSettings: {

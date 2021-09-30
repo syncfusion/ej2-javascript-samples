@@ -4,7 +4,8 @@ this.default = function () {
         load: function (args) {
             var pietheme = location.hash.split('/')[1];
             pietheme = pietheme ? pietheme : 'Material';
-            args.treemap.theme = (pietheme.charAt(0).toUpperCase() + pietheme.slice(1));
+            args.treemap.theme = (pietheme.charAt(0).toUpperCase() +
+            pietheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         loaded: function (args) {

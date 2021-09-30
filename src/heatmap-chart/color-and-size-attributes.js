@@ -87,10 +87,10 @@ this.default = function () {
             visible: true
         },
         load: function (args) {
-            var inversedAxisTheme = location.hash.split('/')[1];
-            inversedAxisTheme = inversedAxisTheme ? inversedAxisTheme : 'Material';
-            args.heatmap.theme = (inversedAxisTheme.charAt(0).toUpperCase() +
-                inversedAxisTheme.slice(1));
+            var colorSizeTheme = location.hash.split('/')[1];
+            colorSizeTheme = colorSizeTheme ? colorSizeTheme : 'Material';
+            args.heatmap.theme = (colorSizeTheme.charAt(0).toUpperCase() +
+            colorSizeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         }
     });
     heatmap.appendTo('#container');

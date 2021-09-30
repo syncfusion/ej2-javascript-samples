@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var printtheme = location.hash.split('/')[1];
             printtheme = printtheme ? printtheme : 'Material';
-            args.maps.theme = (printtheme.charAt(0).toUpperCase() + printtheme.slice(1));
+            args.maps.theme = (printtheme.charAt(0).toUpperCase() +
+            printtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         tooltipRender: function (args) {

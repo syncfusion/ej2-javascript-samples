@@ -1,0 +1,108 @@
+<div class="col-lg-12 control-section">
+    <div id="listbox-control">
+        <input id="listbox" />
+    </div>
+</div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the Item Template functionality in ListBox component. Here, SVG icons were used for visual representation of every list items.</p>
+</div>
+<div id="description">
+    <p>The <code>ListBox</code>is a graphical user interface component used to display a list of items. This sample illustrates how to integrate the item template to customize the
+         list item's content and this can be specified by using <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/list-box/#itemtemplate"><code>itemTemplate
+        </code></a> property.</p>
+    <p>In this sample, data is bound to the ListBox using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/list-box/#datasource"><code>dataSource
+    </code></a> property.</p>
+    <p> More information about the ListBox can be found in the
+        <a href="https://ej2.syncfusion.com/javascript/documentation/list-box/getting-started" target="_blank"> documentation</a> section.
+    </p>
+</div>
+
+
+<!-- custom code start -->
+<style>
+    #listbox-control {
+        width: 350px;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 590px) {
+        #listbox-control {
+            width: 100%;
+        }
+    }
+    
+    .list-wrapper {
+        height: inherit;
+        position: relative;
+        padding: 14px 12px 14px 78px;
+    }
+    
+    .list-wrapper .text,
+    .list-wrapper .description {
+        display: block;
+        margin: 0;
+        padding-bottom: 3px;
+        white-space: normal;
+    }
+    
+    .list-wrapper .description {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    #listbox-control .e-listbox-wrapper .list-wrapper .text {
+        font-weight: bold;
+        font-size: 13px;
+    }
+    
+    .list-wrapper .e-avatar {
+        position: absolute;
+        left: 5px;
+        background-color: transparent;
+        font-size: 22px;
+        top: calc(50% - 26px);
+    }
+    
+    #listbox-control .javascript {
+        background-image: url('./src/list-box/images/javascript.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+    
+    #listbox-control .typescript {
+        background-image: url('./src/list-box/images/typescript.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+    
+    #listbox-control .angular {
+        background-image: url('./src/list-box/images/angular.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+    
+    #listbox-control .vue {
+        background-image: url('./src/list-box/images/vue.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+    
+    #listbox-control .react {
+        background-image: url('./src/list-box/images/react.svg');
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+</style>
+<!-- custom code end -->

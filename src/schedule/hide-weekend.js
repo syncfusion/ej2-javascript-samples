@@ -9,7 +9,7 @@ this.default = function () {
             start: '08:00'
         },
         views: ['Day', 'Week', 'Month', 'TimelineWeek', 'TimelineMonth'],
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
             window.applyCategoryColor(args, scheduleObj.currentView);
@@ -34,6 +34,8 @@ this.default = function () {
         showDropDownIcon: true,
         showClearButton: false,
         popupWidth: 180,
+        placeholder: "Working days",
+        floatLabelType: "Always",
         change: function (args) {
             var value = args.value.slice(0).map(Number).sort();
             scheduleObj.workDays = value.length === 0 ? [0] : value;

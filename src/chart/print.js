@@ -46,11 +46,6 @@ this.default = function () {
             maximum: 20000,
             majorGridLines: { width: 0 }
         },
-        chartMouseClick: function (args) {
-            if (args.target.indexOf('print') > -1) {
-                chart.print();
-            }
-        },
         //Initializing Chart Series
         series: [
             {
@@ -74,7 +69,7 @@ this.default = function () {
     });
     chart.appendTo('#print-container');
     var togglebtn = new ej.buttons.Button({
-        iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isPrimary: true,
+        cssClass: 'e-flat', isPrimary: true, iconCss: 'e-icons e-print-icon'
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {

@@ -2,20 +2,20 @@
 this.default = function () {
     var clearTimeout1;
     var clearTimeout2;
-    var annotationColors = { material: '#e91e63', fabric: '#0078D6', bootstrap: '#317ab9', bootstrap4: '#007bff', highcontrast: '#FFD939', tailwind: '#4F46E5' };
+    var annotationColors = { material: '#e91e63', fabric: '#0078D6', bootstrap: '#317ab9', bootstrap4: '#007bff', highcontrast: '#FFD939', tailwind: '#4F46E5', bootstrap5: '#0D6EFD', bootstrap5dark: '#0D6EFD', bootstrapdark: '#9A9A9A', fabricdark: '#9A9A9A', materialdark: '#9A9A9A', tailwinddark: '#22D3EE' };
     var progressLoad = function (args) {
         var customTheme = location.hash.split('/')[1];
         customTheme = customTheme ? customTheme : 'Material';
-        args.progressBar.customTheme = (customTheme.charAt(0).toUpperCase() +
+        args.progressBar.theme = (customTheme.charAt(0).toUpperCase() +
             customTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         if (args.progressBar.element.id === 'label-container') {
-            args.progressBar.annotations[0].content = '<div id="point1" class="plabeltxt" style="color: ' + annotationColors[customTheme] + ' "><span>80%</span></div>';
+            args.progressBar.annotations[0].content = '<div id="point1" class="plabeltxt" style="color: ' + annotationColors[customTheme.replace(/-/i, '')] + ' "><span>80%</span></div>';
         }
         else if (args.progressBar.element.id === 'download-container') {
-            args.progressBar.annotations[0].content = '<img src="src/progress-bar/images/' + customTheme + '-Download.svg"></img>';
+            args.progressBar.annotations[0].content = '<img src="src/progress-bar/images/' + customTheme.replace(/-/i, '') + '-Download.svg"></img>';
         }
         else {
-            args.progressBar.annotations[0].content = '<img src="src/progress-bar/images/' + customTheme + '-pause.svg"></img>';
+            args.progressBar.annotations[0].content = '<img src="src/progress-bar/images/' + customTheme.replace(/-/i, '') + '-pause.svg"></img>';
         }
     };
     var pausePlay = new ej.progressbar.ProgressBar({

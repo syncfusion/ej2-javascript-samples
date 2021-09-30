@@ -21,5 +21,4 @@ this.default = function () {
         fields: { text: 'rule', value: 'rule' }
     });
     dropDownListObj.appendTo('#RecurrenceList');
-
 };

@@ -8,7 +8,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 5, 5),
+        selectedDate: new Date(2021, 5, 6),
         resources: [{
             field: 'OwnerId', title: 'Owners',
             name: 'Owners', allowMultiple: true,

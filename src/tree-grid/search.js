@@ -24,7 +24,7 @@ this.default = function () {
     grid.appendTo('#Grid');
     var dropDownMode = new ej.dropdowns.DropDownList({
         dataSource: mode,
-        popupWidth: '100px',
+        width: '100px',
         fields: { text: 'mode', value: 'id' },
         value: 'Parent',
         change: function (e) {

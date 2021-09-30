@@ -64,6 +64,7 @@ this.default = function () {
             spreadsheet.cellFormat({ backgroundColor: '#B3E5FC' }, 'A15:E17');
             spreadsheet.numberFormat('$#,##0.00', 'D4:E14');
             spreadsheet.numberFormat('$#,##0.00', 'E15:E17');
+            spreadsheet.numberFormat('[Red][<=350]$#,##0.00;[Blue][>350]$#,##0.00', 'E4:E14');
         }
     });
 

@@ -10,27 +10,28 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         //custom code end
         title: 'Gauge with Multiple Axes',
         titleStyle: { color: 'gray', size: '16px' },
         axes: [{
-            lineStyle: { width: 1.5, color: ' #9E9E9E' },
+            lineStyle: { width: 1.5},
             radius: '95%',
             labelStyle: {
                 position: 'Inside', autoAngle: true,
                 hiddenLabel: 'None'
             }, majorTicks: {
                 position: 'Inside',
-                width: 2, height: 10, color: '#757575'
+                width: 2, height: 10
             }, minorTicks: {
                 position: 'Inside', width: 2,
-                height: 5, color: '#757575'
+                height: 5
             },
             minimum: 0, maximum: 160, startAngle: 220, endAngle: 140,
             pointers: [{
-                value: 80, radius: '100%', color: '#333333',
+                value: 80, radius: '100%',
                 markerHeight: 15, markerWidth: 15, type: 'Marker',
                 markerShape: 'Triangle',
             }]

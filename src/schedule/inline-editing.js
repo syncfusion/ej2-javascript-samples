@@ -2,10 +2,11 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 3, 4),
+        selectedDate: new Date(2021, 3, 4),
         views: ['TimelineWeek', 'TimelineMonth'],
         currentView: 'TimelineWeek',
         allowInline: true,
+        workDays: [0, 1, 2, 3, 4, 5],
         eventSettings: {
             dataSource: ej.base.extend([], window.resourceData.concat(window.timelineResourceData), null, true)
         },

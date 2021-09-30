@@ -7,7 +7,7 @@ this.default = function () {
       linearTheme = linearTheme ? linearTheme : 'Material';
       args.progressBar.theme = (linearTheme.charAt(0).toUpperCase() +
           linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (linearTheme === 'highcontrast') {
+      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark') {
           for (var i = 0; i < div.length; i++) {
               div[i].setAttribute('style', 'color:white');
           }

@@ -4,7 +4,8 @@ this.default = function () {
         load: function (args) {
             var templatetheme = location.hash.split('/')[1];
             templatetheme = templatetheme ? templatetheme : 'Material';
-            args.maps.theme = (templatetheme.charAt(0).toUpperCase() + templatetheme.slice(1));
+            args.maps.theme = (templatetheme.charAt(0).toUpperCase() +
+            templatetheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         titleSettings: {

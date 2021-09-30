@@ -86,11 +86,12 @@ this.default = function () {
             },
         },
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme  = selectedTheme  ? selectedTheme  : 'Material';
-            args.heatmap.theme = (selectedTheme .charAt(0).toUpperCase() + selectedTheme .slice(1));
-            selectedTheme = selectedTheme.toLowerCase();
-            if(selectedTheme === 'highcontrast')
+            var multiLevelTheme = location.hash.split('/')[1];
+            multiLevelTheme  = multiLevelTheme  ? multiLevelTheme  : 'Material';
+            args.heatmap.theme =  (multiLevelTheme.charAt(0).toUpperCase() +
+            multiLevelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            multiLevelTheme = multiLevelTheme.toLowerCase();
+            if(multiLevelTheme === 'highcontrast' || multiLevelTheme === 'bootstrap5-dark' || multiLevelTheme === 'material-dark' || multiLevelTheme === 'fabric-dark' || multiLevelTheme === 'bootstrap-dark' || multiLevelTheme === 'tailwind-dark')
             {
                 args.heatmap.xAxis.textStyle.color = 'White';
                 args.heatmap.yAxis.textStyle.color = 'White';

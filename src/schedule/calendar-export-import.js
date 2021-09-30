@@ -5,7 +5,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         views: ['Day', 'Week', 'WorkWeek', 'Month', 'Agenda'],
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         eventSettings: { dataSource: data }
     });
     scheduleObj.appendTo('#Schedule');

@@ -30,6 +30,7 @@ this.default = function () {
         dataSource: filtertype,
         fields: { text: 'type', value: 'id' },
         value: 'Menu',
+        width: '100px',
         change: function (e) {
             var dropSelectedValue = e.value;
             treeGridObj.filterSettings.type = dropSelectedValue;
@@ -41,6 +42,7 @@ this.default = function () {
         dataSource: mode,
         fields: { text: 'mode', value: 'id' },
         value: 'Parent',
+        width: '100px',
         change: function (e) {
             var mode = e.value;
             treeGridObj.filterSettings.hierarchyMode = mode;

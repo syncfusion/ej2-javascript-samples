@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         views: ['Day', 'Week', 'WorkWeek', 'TimelineDay', 'TimelineWeek'],
         eventSettings: {
             dataSource: data
@@ -14,7 +14,8 @@ this.default = function () {
     });
     scheduleObj.appendTo('#Schedule');
     var scrollToHour = new ej.calendars.TimePicker({
-        width: 100,
+        placeholder: 'Scroll To',
+        floatLabelType: "Always",
         value: new Date(2000, 0, 1, 9),
         format: 'HH:mm',
         change: function (args) {

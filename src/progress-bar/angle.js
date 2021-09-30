@@ -20,7 +20,7 @@ this.default = function () {
     var progressLoad = function (args) {
         var angleTheme = location.hash.split('/')[1];
         angleTheme = angleTheme ? angleTheme : 'Material';
-        args.progressBar.angleTheme = (angleTheme.charAt(0).toUpperCase() +
+        args.progressBar.theme = (angleTheme.charAt(0).toUpperCase() +
             angleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         switch (angleTheme) {
             case 'material':
@@ -38,12 +38,24 @@ this.default = function () {
             case 'tailwind':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[4], args.progressBar.element.id);
                 break;
+            case 'bootstrap-dark':
+            case 'fabric-dark':
+            case 'material-dark':
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[6], args.progressBar.element.id);
+                break;
+            case 'bootstrap5':
+            case 'bootstrap5-dark':
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[8], args.progressBar.element.id);
+                break;
+            case 'tailwind-dark':
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[7], args.progressBar.element.id);
+                break;    
             default:
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[5], args.progressBar.element.id);
                 break;
         }
     };
-    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939'];
+    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD'];
     var button = new ej.buttons.Button();
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#reLoad');

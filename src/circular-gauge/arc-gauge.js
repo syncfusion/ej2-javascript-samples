@@ -8,7 +8,8 @@ this.default = function () {
         load: function (args) {
             var arctheme = location.hash.split('/')[1];
             arctheme = arctheme ? arctheme : 'Material';
-            args.gauge.theme = (arctheme.charAt(0).toUpperCase() + arctheme.slice(1));
+            args.gauge.theme = (arctheme.charAt(0).toUpperCase() +
+            arctheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         //custom code end
         loaded: function (args) {

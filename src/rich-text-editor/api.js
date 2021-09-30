@@ -5,7 +5,7 @@
 this.default = function() {
     var defaultAPI = new ej.richtexteditor.RichTextEditor({
         showCharCount: true,
-        maxLength: 1000,
+        maxLength: 1000
     });
     defaultAPI.appendTo("#defaultRTE");
 

@@ -17,7 +17,7 @@ this.default = function () {
         height: '650px',
         timezone: 'UTC',
         workHours: { start: '11:00' },
-        selectedDate: new Date(2018, 5, 20),
+        selectedDate: new Date(2021, 5, 20),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
             window.applyCategoryColor(args, scheduleObj.currentView);
@@ -28,6 +28,8 @@ this.default = function () {
     // Initialize DropDownList component for timezone list
     var dropDownListObject = new ej.dropdowns.DropDownList({
         popupWidth: 250,
+        width: 250,
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.timezone = args.value;
             scheduleObj.dataBind();

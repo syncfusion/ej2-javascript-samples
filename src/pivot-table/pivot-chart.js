@@ -22,14 +22,14 @@ this.default = function() {
     showFieldList: true,
     displayOption: { view: "Chart" },
     chartSettings: {
-      title: "Sales Analysis",
       chartSeries: { type: "Column" },
-      load: function(args) {
-        var selectedTheme = location.hash.split("/")[1];
-        selectedTheme = selectedTheme ? selectedTheme : "Material";
-        args.chart.theme =
-          selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
-      }
+      title: "Sales Analysis",
+      load: function (args) {
+        var selectTheme = location.hash.split("/")[1];
+        selectTheme = selectTheme ? selectTheme : "Material";
+        args.chart.theme = (selectTheme.charAt(0).toUpperCase() +
+          selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+      },
     }
   });
   pivotObj.appendTo("#PivotView");

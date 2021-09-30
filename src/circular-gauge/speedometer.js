@@ -8,7 +8,8 @@ function gauge6() {
         load: function (args) {
             var speedTheme = location.hash.split('/')[1];
             speedTheme = speedTheme ? speedTheme : 'Material';
-            args.gauge.theme = (speedTheme.charAt(0).toUpperCase() + speedTheme.slice(1));
+            args.gauge.theme = (speedTheme.charAt(0).toUpperCase() +
+            speedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         title: 'Speedometer',

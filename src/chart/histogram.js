@@ -40,9 +40,6 @@ this.default = function () {
                 showNormalDistribution: true, columnWidth: 0.99
             }
         ],
-        resized: function (args) {
-            location.reload();
-        },
         //Initializing Chart Title
         title: 'Examination Result', tooltip: { enable: true },
         width: ej.base.Browser.isDevice ? '100%' : '60%',

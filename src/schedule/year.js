@@ -35,13 +35,13 @@ this.default = function () {
     });
     scheduleObj.appendTo('#Schedule');
 
-    //custom code start
+
     function generateEvents() {
         var count = 250;
         var date = new Date();
         var names = [
             'Bering Sea Gold', 'Technology', 'Maintenance', 'Meeting', 'Travelling', 'Annual Conference', 'Birthday Celebration',
-            'Farewell Celebration', 'Wedding Aniversary', 'Alaska: The Last Frontier', 'Deadest Catch', 'Sports Day',
+            'Farewell Celebration', 'Wedding Anniversary', 'Alaska: The Last Frontier', 'Deadest Catch', 'Sports Day',
             'MoonShiners', 'Close Encounters', 'HighWay Thru Hell', 'Daily Planet', 'Cash Cab', 'Basketball Practice',
             'Rugby Match', 'Guitar Class', 'Music Lessons', 'Doctor checkup', 'Brazil - Mexico', 'Opening ceremony', 'Final presentation'
         ];
@@ -115,5 +115,5 @@ this.default = function () {
     function numberOfMonths(args) {
         scheduleObj.monthsCount = args.value;
     }
-    // custom code end
+   
 };

@@ -18,27 +18,30 @@ var londonEmployees = [
 ];
 
 //Initialize ListView component
- var listObj1 = new ej.lists.ListView({
-      dataSource: romeEmployees,
-      template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
+var listObj1 = new ej.lists.ListView({
+    cssClass: 'employee-list',
+    dataSource: romeEmployees,
+    template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
         'alt="${id}" /></div><div class="left info"><div class="name">${name}</div> <div class="role">${role}</div></div></div>'
- });
+});
 
- //Initialize ListView component
- var listObj2 = new ej.lists.ListView({
-      dataSource: parisEmployees,
-      template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
+//Initialize ListView component
+var listObj2 = new ej.lists.ListView({
+    cssClass: 'employee-list',
+    dataSource: parisEmployees,
+    template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
         'alt="${id}" /></div><div class="left info"><div class="name">${name}</div> <div class="role">${role}</div></div></div>'
- });
+});
 
- //Initialize ListView component
- var listObj3 = new ej.lists.ListView({
-      dataSource: londonEmployees,
-      template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
+//Initialize ListView component
+var listObj3 = new ej.lists.ListView({
+    cssClass: 'employee-list',
+    dataSource: londonEmployees,
+    template: '<div class="template-container"><div class="left"><img class="empImg" src="src/tab/images/${id}.png" ' +
         'alt="${id}" /></div><div class="left info"><div class="name">${name}</div> <div class="role">${role}</div></div></div>'
- });
+});
 
-this.default = function() {
+this.default = function () {
     //Initialize Tab component
     var tabObj = new ej.navigations.Tab({
         heightAdjustMode: 'None',
@@ -80,7 +83,7 @@ this.default = function() {
     }
 
     // Change event function for DropDownList component
-    function changeHeaderStyle(args){
+    function changeHeaderStyle(args) {
         removeStyleClass();
         var name = args.itemData.value;
         if (name === 'fill') {

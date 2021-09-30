@@ -10,7 +10,7 @@ this.default = function () {
     var data = new ej.base.extend([], window.scheduleData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         currentView: 'TimelineWeek',
         views: ['Day', 'Week', 'WorkWeek', 'TimelineDay', 'TimelineWeek'],
         timeScale: {
@@ -18,10 +18,13 @@ this.default = function () {
             interval: 60,
             slotCount: 6
         },
+        workDays: [0, 1, 2, 3, 4, 5],
         eventSettings: { dataSource: data }
     });
     scheduleObj.appendTo('#Schedule');
     var minorSlot = new ej.dropdowns.DropDownList({
+        placeholder: "Slot Count",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.timeScale.slotCount = parseInt(args.value, 10);
             scheduleObj.dataBind();
@@ -30,6 +33,8 @@ this.default = function () {
     minorSlot.appendTo('#slotCount');
 
     var majorSlotCount = new ej.dropdowns.DropDownList({
+        placeholder: "Interval (in Minutes)",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.timeScale.interval = parseInt(args.value, 10);
             scheduleObj.dataBind();
@@ -38,6 +43,8 @@ this.default = function () {
     majorSlotCount.appendTo('#interval');
 
     var timeScale = new ej.dropdowns.DropDownList({
+        placeholder: "Grid lines",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.timeScale.enable = (args.value === 'enable') ? true : false;
             scheduleObj.dataBind();
@@ -46,6 +53,8 @@ this.default = function () {
     timeScale.appendTo('#timescale');
 
     var timescaleTemplate = new ej.dropdowns.DropDownList({
+        placeholder: "Apply Template",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.timeScale.majorSlotTemplate = (args.value === 'yes') ? '#majorSlotTemplate' : null;
             scheduleObj.timeScale.minorSlotTemplate = (args.value === 'yes') ? '#minorSlotTemplate' : null;

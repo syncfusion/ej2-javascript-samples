@@ -10,7 +10,7 @@ this.default = function () {
         // set the placeholder to DropDownList input element
         placeholder: 'Select an employee',
         // set the width to component
-        width: '60px',
+        width: '65px',
         popupWidth: '140px',
         popupHeight: '200px',
         cssClass:'inlinecss'

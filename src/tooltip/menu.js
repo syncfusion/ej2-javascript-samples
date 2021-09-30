@@ -24,8 +24,7 @@ this.default = function () {
         overflow: 'Hide',
         tooltipText: 'Personal'
       }
-    ],
-    width: 390
+    ]
   });
   //Render initialized Toolbar component
   toolbarObj.appendTo('#toolbar-menu');

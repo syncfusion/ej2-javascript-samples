@@ -3,9 +3,10 @@ this.default = function () {
     var scheduleOptions = {
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 3, 4),
+        selectedDate: new Date(2021, 3, 4),
         views: ['TimelineDay', 'TimelineWeek', 'TimelineWorkWeek', 'TimelineMonth', 'Agenda'],
         currentView: 'TimelineWeek',
+        workDays: [0, 1, 2, 3, 4, 5],
         group: {
             resources: ['Projects', 'Categories']
         },

@@ -1,6 +1,6 @@
 this.default = function () {
     var isReadOnly = function (endDate) {
-        return (endDate < new Date(2018, 6, 31, 0, 0));
+        return (endDate < new Date(2021, 6, 31, 0, 0));
     };
     window.getRoomName = function (value) {
         return value.resourceData[value.resource.textField];
@@ -13,9 +13,10 @@ this.default = function () {
     };
     var data = new ej.base.extend([], window.roomData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
+        cssClass: 'room-schedule',
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 7, 1),
+        selectedDate: new Date(2021, 7, 2),
         currentView: 'TimelineWeek',
         workHours: {
             start: '08:00',
@@ -79,8 +80,8 @@ this.default = function () {
             }
         },
         renderCell: function (args) {
-            if (args.element.classList.contains('e-work-cells')) { 
-                if (args.date < new Date(2018, 6, 31, 0, 0)) {
+            if (args.element.classList.contains('e-work-cells')) {
+                if (args.date < new Date(2021, 6, 31, 0, 0)) {
                     args.element.setAttribute('aria-readonly', 'true');
                     args.element.classList.add('e-read-only-cells');
                 }

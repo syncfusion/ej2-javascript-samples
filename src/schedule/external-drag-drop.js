@@ -25,7 +25,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 7, 1),
+        selectedDate: new Date(2021, 7, 2),
         currentView: 'TimelineDay',
         resourceHeaderTemplate: '#resource-template',
         cssClass: 'schedule-drag-drop',

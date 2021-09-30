@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2018, 3, 1),
+        selectedDate: new Date(2021, 3, 6),
         group: {
             byDate: true,
             resources: ['Owners']

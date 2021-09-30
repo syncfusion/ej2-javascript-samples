@@ -9,14 +9,13 @@ renderInversedStockChart = function (aapl) {
             chartArea: { border: { width: 0 } },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area', fill: '#BDEDE9'
+                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area', opacity: 0.5
                 }
             ],
             seriesType : [],
             indicatorType : [],
             crosshair: { enable: true },
             title: 'AAPL Stock Price',
-            titleStyle: { fontWeight: '500', color: '#424242' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

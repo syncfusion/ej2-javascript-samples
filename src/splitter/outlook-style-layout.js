@@ -60,9 +60,7 @@ this.default = function () {
         dataSource: dataSource,
         cssClass: 'e-list-template',
         //Map the appropriate columns to fields property
-        fields: { text: 'Name', groupBy: 'order' },
-        //Set customized group-header template
-        groupTemplate: '<div class="e-list-wrapper"><span class="e-list-item-content"></span></div>',
+        fields: { text: 'Name' },
         //Set customized list template
         template: '<div class="settings e-list-wrapper e-list-multi-line e-list-avatar">' +
             '<span class="e-list-item-header">${Name}</span>' +

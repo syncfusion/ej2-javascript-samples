@@ -11,8 +11,7 @@ this.default = function () {
         axes: [{
             lineStyle: { width: 2 },
             labelStyle: {
-                position: 'Inside', useRangeColor: false,
-                font: { size: '12px', color: '#424242', fontFamily: 'Roboto', fontStyle: 'Regular' }
+                position: 'Inside', useRangeColor: false
             }, majorTicks: { height: 16, color: '#9E9E9E', interval: 20 }, minorTicks: { height: 8, interval: 10 },
             startAngle: 210, endAngle: 150, minimum: 0, maximum: 120, radius: '80%',
             ranges: [
@@ -35,7 +34,8 @@ this.default = function () {
         load: function (args) {
             var selectedLegendTheme = location.hash.split('/')[1];
             selectedLegendTheme = selectedLegendTheme ? selectedLegendTheme : 'Material';
-            args.gauge.theme = (selectedLegendTheme.charAt(0).toUpperCase() + selectedLegendTheme.slice(1));
+            args.gauge.theme = (selectedLegendTheme.charAt(0).toUpperCase() +
+            selectedLegendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
         // custom code end
     });

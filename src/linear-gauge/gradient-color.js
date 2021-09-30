@@ -36,7 +36,8 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         orientation: 'Horizontal',
         container: {
@@ -55,9 +56,6 @@ this.default = function () {
                 height: 0
             },
             labelStyle: {
-                font: {
-                    color: '#424242',
-                },
                 offset: 55
             },
             pointers: [

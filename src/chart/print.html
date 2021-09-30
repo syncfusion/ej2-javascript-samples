@@ -36,10 +36,34 @@
         width: 100%;
         text-align: center;
     }
+    .e-print-icon::before {
+        content: '\e34b';
+    }
+
+    .e-view.fabric .e-print-icon::before, .e-view.fabric-dark .e-print-icon::before {
+        content: '\e7df';
+    }
+
+    .e-view.bootstrap .e-print-icon::before {
+        content: '\ebd2';
+    }
+
+    .e-view.bootstrap4 .e-print-icon::before {
+        content: '\e743';
+    }
+
+    .e-view.tailwind .e-print-icon::before, .e-view.tailwind-dark .e-print-icon::before {
+        content: '\e76c';
+    }
+
+    .e-view.highcontrast .e-print-icon::before {
+        content: '\ebf9';
+    }
+
+    .e-view.bootstrap5 .e-print-icon::before, .e-view.bootstrap5-dark .e-print-icon::before {
+        content: '\e75d';
+    }
     #control-container {
         padding: 0px !important;
-    }
-    .e-play-icon::before {
-        content: '\e34b';
     }
 </style>

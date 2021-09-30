@@ -1,7 +1,7 @@
-{ "name": "TimePicker","type": "update", "directory": "timepicker", "category":"Calendars", "samples" : [
+{ "name": "TimePicker", "directory": "timepicker", "category":"Calendars", "samples" : [
     {"url":"default", "name": "Default Functionalities", "category":"TimePicker", "api":{"TimePicker": [ "placeholder" ]}, "description": "A simple and lightweight TimePicker component for JavaScript(ES5) for selecting times that is customizable to fit large-scale applications" },
     {"url":"time-range", "name": "Time Range", "category":"TimePicker", "api":{"TimePicker": [ "placeholder", "value", "readonly", "enabled", "min", "change" ]}, "description": "This example demonstrates how to disable the specific range of times(min and max) in a JavaScript(ES5) TimePicker" },
     {"url":"time-format", "name": "Format", "category":"TimePicker", "api":{"TimePicker": [ "value", "step", "format" ]}, "description": "Customizable TimePicker widget for JavaScript(ES5) with options to change the time display format based on the preferred culture for improved readability" },
     {"url":"list-formatting", "name": "Time Duration", "category":"TimePicker", "api":{"TimePicker": [ "value", "itemRender" ]}, "description": "A simple TimePicker widget for JavaScript(ES5) for highlighting a set of time intervals in a pop-up by adding custom styles based on you needs" },
-    { "url": "input-mask","type": "new", "name": "Mask Support", "category": "TimePicker", "api":{"TimePicker": [ "enableMask", "format" ]}, "description": "This example demonstrates how to render the date time format in the input field using enableMask in a JavaScript(ES5) TimePicker" }
+    { "url": "input-mask", "name": "Mask Support", "category": "TimePicker", "api":{"TimePicker": [ "enableMask", "format" ]}, "description": "This example demonstrates how to render the date time format in the input field using enableMask in a JavaScript(ES5) TimePicker" }
 ]}

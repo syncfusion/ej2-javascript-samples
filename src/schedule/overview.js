@@ -70,11 +70,15 @@ this.default = function () {
         }
         return calendarText;
     };
+    var importTemplateFn = function (data) {
+        var template = '<div class="e-template-btn"><span class="e-btn-icon e-icons e-upload-1 e-icon-left"></span>${text}</div>';
+        return ej.base.compile(template.trim())(data);
+    };
     var updateLiveTime = function () {
         var scheduleTimezone = scheduleObj ? scheduleObj.timezone : 'Etc/GMT';
         var timeBtn = document.querySelector('.schedule-overview #timeBtn');
         if (timeBtn) {
-            timeBtn.innerHTML = '<span class="e-btn-icon e-icons e-schedule-clock e-icon-left"></span>' +
+            timeBtn.innerHTML = '<span class="e-btn-icon e-icons e-clock e-icon-left"></span>' +
                 new Date().toLocaleTimeString('en-US', { timeZone: scheduleTimezone });
         }
     };
@@ -82,7 +86,7 @@ this.default = function () {
         var eventData = [];
         var eventSubjects = [
             'Bering Sea Gold', 'Technology', 'Maintenance', 'Meeting', 'Travelling', 'Annual Conference', 'Birthday Celebration',
-            'Farewell Celebration', 'Wedding Aniversary', 'Alaska: The Last Frontier', 'Deadest Catch', 'Sports Day', 'MoonShiners',
+            'Farewell Celebration', 'Wedding Anniversary', 'Alaska: The Last Frontier', 'Deadest Catch', 'Sports Day', 'MoonShiners',
             'Close Encounters', 'HighWay Thru Hell', 'Daily Planet', 'Cash Cab', 'Basketball Practice', 'Rugby Match', 'Guitar Class',
             'Music Lessons', 'Doctor checkup', 'Brazil - Mexico', 'Opening ceremony', 'Final presentation'
         ];
@@ -140,7 +144,7 @@ this.default = function () {
         return overviewEvents;
     };
     var buttonClickActions = function (e) {
-        var popupElement = scheduleObj.element.querySelector('.e-quick-popup-wrapper');
+        var popupElement = ej.base.closest(e.target, '.e-quick-popup-wrapper');
         var getSlotData = function () {
             var cellDetails = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
             if (ej.base.isNullOrUndefined(cellDetails)) {
@@ -181,17 +185,17 @@ this.default = function () {
         scheduleObj.closeQuickInfoPopup();
     };
     var isTimelineView = false;
-    var timezoneBtn = new ej.buttons.Button({ iconCss: 'e-icons e-schedule-timezone', cssClass: 'title-bar-btn', disabled: true });
+    var timezoneBtn = new ej.buttons.Button({ iconCss: 'e-icons e-time-zone', cssClass: 'title-bar-btn', disabled: true });
     timezoneBtn.appendTo('#timezoneBtn');
-    var timeBtn = new ej.buttons.Button({ iconCss: 'e-icons e-schedule-clock', cssClass: 'title-bar-btn', disabled: true });
+    var timeBtn = new ej.buttons.Button({ iconCss: 'e-icons e-clock', cssClass: 'title-bar-btn', disabled: true });
     timeBtn.appendTo('#timeBtn');
-    var printBtn = new ej.buttons.Button({ iconCss: 'e-icons e-schedule-print', cssClass: 'title-bar-btn' });
+    var printBtn = new ej.buttons.Button({ iconCss: 'e-icons e-print', cssClass: 'title-bar-btn' });
     printBtn.appendTo('#printBtn');
     printBtn.element.onclick = function () { scheduleObj.print(); };
     var importObj = new ej.inputs.Uploader({
         allowedExtensions: '.ics',
         cssClass: 'calendar-import',
-        buttons: { browse: 'Import' },
+        buttons: { browse: importTemplateFn({ text: 'Import' })[0] },
         multiple: false,
         showFileList: false,
         selected: function (args) { return scheduleObj.importICalendar(args.event.target.files[0]); }
@@ -199,8 +203,8 @@ this.default = function () {
     importObj.appendTo('#icalendar');
     var exportObj = new ej.splitbuttons.DropDownButton({
         items: [
-            { text: 'iCalendar', iconCss: 'e-icons e-schedule-ical-export' },
-            { text: 'Excel', iconCss: 'e-icons e-schedule-excel-export' }
+            { text: 'iCalendar', iconCss: 'e-icons e-export' },
+            { text: 'Excel', iconCss: 'e-icons e-export-excel' }
         ],
         select: function (args) {
             if (args.item.text === 'Excel') {
@@ -243,15 +247,15 @@ this.default = function () {
         overflowMode: 'Scrollable',
         scrollStep: 100,
         items: [
-            { prefixIcon: 'e-icons e-schedule-add-event', tooltipText: 'New Event', text: 'New Event' },
-            { prefixIcon: 'e-icons e-schedule-add-recurrence-event', tooltipText: 'New Recurring Event', text: 'New Recurring Event' },
+            { prefixIcon: 'e-icons e-plus', tooltipText: 'New Event', text: 'New Event' },
+            { prefixIcon: 'e-icons e-repeat', tooltipText: 'New Recurring Event', text: 'New Recurring Event' },
             { type: 'Separator' },
-            { prefixIcon: 'e-icons e-schedule-day-view', tooltipText: 'Day', text: 'Day' },
-            { prefixIcon: 'e-icons e-schedule-week-view', tooltipText: 'Week', text: 'Week' },
-            { prefixIcon: 'e-icons e-schedule-workweek-view', tooltipText: 'WorkWeek', text: 'WorkWeek' },
-            { prefixIcon: 'e-icons e-schedule-month-view', tooltipText: 'Month', text: 'Month' },
-            { prefixIcon: 'e-icons e-schedule-year-view', tooltipText: 'Year', text: 'Year' },
-            { prefixIcon: 'e-icons e-schedule-agenda-view', tooltipText: 'Agenda', text: 'Agenda' },
+            { prefixIcon: 'e-icons e-day', tooltipText: 'Day', text: 'Day' },
+            { prefixIcon: 'e-icons e-week', tooltipText: 'Week', text: 'Week' },
+            { prefixIcon: 'e-icons e-week', tooltipText: 'WorkWeek', text: 'WorkWeek' },
+            { prefixIcon: 'e-icons e-month', tooltipText: 'Month', text: 'Month' },
+            { prefixIcon: 'e-icons e-month', tooltipText: 'Year', text: 'Year' },
+            { prefixIcon: 'e-icons e-agenda-date-range', tooltipText: 'Agenda', text: 'Agenda' },
             { tooltipText: 'Timeline Views', text: 'Timeline Views', template: timelineTemplate },
             { type: 'Separator' },
             { tooltipText: 'Grouping', text: 'Grouping', template: groupTemplate },
@@ -264,6 +268,7 @@ this.default = function () {
             setInterval(function () { updateLiveTime(); }, 1000);
             var timelineView = new ej.buttons.Switch({
                 checked: false,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) {
                     isTimelineView = args.checked;
                     switch (scheduleObj.currentView) {
@@ -296,26 +301,31 @@ this.default = function () {
             timelineView.appendTo('#timeline_views');
             var multiDrag = new ej.buttons.Switch({
                 checked: false,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) { scheduleObj.allowMultiDrag = args.checked; }
             });
             multiDrag.appendTo('#multi_Drag');
             var grouping = new ej.buttons.Switch({
                 checked: true,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) { scheduleObj.group.resources = args.checked ? ['Calendars'] : []; }
             });
             grouping.appendTo('#grouping');
             var gridlines = new ej.buttons.Switch({
                 checked: true,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) { scheduleObj.timeScale.enable = args.checked; }
             });
             gridlines.appendTo('#gridlines');
             var rowAutoHeight = new ej.buttons.Switch({
                 checked: false,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) { scheduleObj.rowAutoHeight = args.checked; }
             });
             rowAutoHeight.appendTo('#row_auto_height');
             var tooltip = new ej.buttons.Switch({
                 checked: false,
+                created: function () { this.element.setAttribute('tabindex', '-1'); },
                 change: function (args) { scheduleObj.eventSettings.enableTooltip = args.checked; }
             });
             tooltip.appendTo('#tooltip');
@@ -323,6 +333,8 @@ this.default = function () {
                 var settingsPanel = document.querySelector('.overview-content .right-panel');
                 if (settingsPanel.classList.contains('hide')) {
                     ej.base.removeClass([settingsPanel], 'hide');
+                    workweek.refresh();
+                    resources.refresh();
                 }
                 else {
                     ej.base.addClass([settingsPanel], 'hide');
@@ -383,7 +395,7 @@ this.default = function () {
     });
     toolbarObj.appendTo('#toolbar_options');
     var settingsBtn = new ej.buttons.Button({
-        iconCss: 'e-icons e-schedule-toolbar-settings',
+        iconCss: 'e-icons e-settings',
         cssClass: 'overview-toolbar-settings', iconPosition: 'Top'
     });
     settingsBtn.appendTo('#settingsBtn');
@@ -416,7 +428,7 @@ this.default = function () {
         },
         eventSettings: { dataSource: generateEvents() },
         popupOpen: function (args) {
-            if (args.type === 'QuickInfo') {
+            if (args.type === 'QuickInfo' || args.type === 'ViewEventInfo') {
                 var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
                 titleObj.appendTo(args.element.querySelector('#title'));
                 var eventTypeObj = new ej.dropdowns.DropDownList({
@@ -450,6 +462,9 @@ this.default = function () {
                     deleteBtn.onclick = function (e) { buttonClickActions(e); };
                 }
             }
+        },
+        destroyed: function () {
+            contextMenuObj.destroy();
         }
     });
     scheduleObj.appendTo('#scheduler');
@@ -457,20 +472,20 @@ this.default = function () {
     var contextMenuObj = new ej.navigations.ContextMenu({
         target: '.e-schedule',
         items: [
-            { text: 'New Event', iconCss: 'e-icons new', id: 'Add' },
-            { text: 'New Recurring Event', iconCss: 'e-icons recurrence', id: 'AddRecurrence' },
-            { text: 'Today', iconCss: 'e-icons today', id: 'Today' },
-            { text: 'Edit Event', iconCss: 'e-icons edit', id: 'Save' },
-            { text: 'Delete Event', iconCss: 'e-icons delete', id: 'Delete' },
+            { text: 'New Event', iconCss: 'e-icons e-plus', id: 'Add' },
+            { text: 'New Recurring Event', iconCss: 'e-icons e-repeat', id: 'AddRecurrence' },
+            { text: 'Today', iconCss: 'e-icons e-timeline-today', id: 'Today' },
+            { text: 'Edit Event', iconCss: 'e-icons e-edit', id: 'Save' },
+            { text: 'Delete Event', iconCss: 'e-icons e-trash', id: 'Delete' },
             {
-                text: 'Delete Event', id: 'DeleteRecurrenceEvent', iconCss: 'e-icons delete',
+                text: 'Delete Event', id: 'DeleteRecurrenceEvent', iconCss: 'e-icons e-trash',
                 items: [
                     { text: 'Delete Occurrence', id: 'DeleteOccurrence' },
                     { text: 'Delete Series', id: 'DeleteSeries' }
                 ]
             },
             {
-                text: 'Edit Event', id: 'EditRecurrenceEvent', iconCss: 'e-icons edit',
+                text: 'Edit Event', id: 'EditRecurrenceEvent', iconCss: 'e-icons e-edit',
                 items: [
                     { text: 'Edit Occurrence', id: 'EditOccurrence' },
                     { text: 'Edit Series', id: 'EditSeries' }
@@ -550,7 +565,7 @@ this.default = function () {
         },
         cssClass: 'schedule-context-menu'
     });
-    contextMenuObj.appendTo('#ContextMenu');
+    contextMenuObj.appendTo('#OverViewContextMenu');
     var weekDays = [
         { text: 'Sunday', value: 0 },
         { text: 'Monday', value: 1 },
@@ -561,7 +576,6 @@ this.default = function () {
         { text: 'Saturday', value: 6 }
     ];
     var weekFirstDay = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: weekDays,
         fields: { text: 'text', value: 'value' },
         popupHeight: 150,
@@ -571,7 +585,6 @@ this.default = function () {
     weekFirstDay.appendTo('#weekFirstDay');
     var workweek = new ej.dropdowns.MultiSelect({
         cssClass: 'schedule-workweek',
-        width: 170,
         dataSource: weekDays,
         fields: { text: 'text', value: 'value' },
         mode: 'CheckBox',
@@ -585,7 +598,6 @@ this.default = function () {
     workweek.appendTo('#workWeekDays');
     var resources = new ej.dropdowns.MultiSelect({
         cssClass: 'schedule-resource',
-        width: 170,
         dataSource: resourceData,
         fields: { text: 'CalendarName', value: 'CalendarId' },
         mode: 'CheckBox',
@@ -611,7 +623,6 @@ this.default = function () {
     });
     resources.appendTo('#resources');
     var timezone = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: [
             { text: 'UTC -12:00', value: 'Etc/GMT+12' },
             { text: 'UTC -11:00', value: 'Etc/GMT+11' },
@@ -649,40 +660,39 @@ this.default = function () {
             scheduleObj.timezone = args.value;
             updateLiveTime();
             document.querySelector('.schedule-overview #timezoneBtn').innerHTML =
-                '<span class="e-btn-icon e-icons e-schedule-timezone e-icon-left"></span>' + args.itemData.text;
+                '<span class="e-btn-icon e-icons e-time-zone e-icon-left"></span>' + args.itemData.text;
         }
     });
     timezone.appendTo('#timezone');
     var dayStartHour = new ej.calendars.TimePicker({
-        width: 170, value: new Date(new Date().setHours(0, 0, 0)), showClearButton: false,
+        value: new Date(new Date().setHours(0, 0, 0)), showClearButton: false,
         change: function (args) {
             scheduleObj.startHour = new ej.base.Internationalization().formatDate(args.value, { skeleton: 'Hm' });
         }
     });
     dayStartHour.appendTo('#dayStartHour');
     var dayEndHour = new ej.calendars.TimePicker({
-        width: 170, value: new Date(new Date().setHours(23, 59, 59)), showClearButton: false,
+        value: new Date(new Date().setHours(23, 59, 59)), showClearButton: false,
         change: function (args) {
             scheduleObj.endHour = new ej.base.Internationalization().formatDate(args.value, { skeleton: 'Hm' });
         }
     });
     dayEndHour.appendTo('#dayEndHour');
     var workHourStart = new ej.calendars.TimePicker({
-        width: 170, value: new Date(new Date().setHours(9, 0, 0)), showClearButton: false,
+        value: new Date(new Date().setHours(9, 0, 0)), showClearButton: false,
         change: function (args) {
             scheduleObj.workHours.start = new ej.base.Internationalization().formatDate(args.value, { skeleton: 'Hm' });
         }
     });
     workHourStart.appendTo('#workHourStart');
     var workHourEnd = new ej.calendars.TimePicker({
-        width: 170, value: new Date(new Date().setHours(18, 0, 0)), showClearButton: false,
+        value: new Date(new Date().setHours(18, 0, 0)), showClearButton: false,
         change: function (args) {
             scheduleObj.workHours.end = new ej.base.Internationalization().formatDate(args.value, { skeleton: 'Hm' });
         }
     });
     workHourEnd.appendTo('#workHourEnd');
     var slotDuration = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: [
             { Name: '1 hour', Value: 60 },
             { Name: '1.5 hours', Value: 90 },
@@ -715,7 +725,6 @@ this.default = function () {
     });
     slotDuration.appendTo('#slotDuration');
     var slotInterval = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         popupHeight: 150,
         value: 2,
@@ -723,7 +732,6 @@ this.default = function () {
     });
     slotInterval.appendTo('#slotInterval');
     var timeFormat = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: [
             { Name: '12 hours', Value: 'hh:mm a' },
             { Name: '24 hours', Value: 'HH:mm' }
@@ -735,7 +743,6 @@ this.default = function () {
     });
     timeFormat.appendTo('#timeFormat');
     var weekNumber = new ej.dropdowns.DropDownList({
-        width: 170,
         dataSource: [
             { Name: 'Off', Value: 'Off' },
             { Name: 'First Day of Year', Value: 'FirstDay' },

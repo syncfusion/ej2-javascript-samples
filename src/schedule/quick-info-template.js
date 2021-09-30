@@ -27,7 +27,7 @@ this.default = function () {
     };
 
     var buttonClickActions = function (e) {
-        var quickPopup = scheduleObj.element.querySelector('.e-quick-popup-wrapper');
+        var quickPopup = ej.base.closest(e.target, '.e-quick-popup-wrapper');
         var getSlotData = function () {
             var cellDetails = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
             if (ej.base.isNullOrUndefined(cellDetails)) {
@@ -84,7 +84,7 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2020, 0, 9),
+        selectedDate: new Date(2021, 0, 9),
         eventSettings: {
             dataSource: ej.base.extend([], window.quickInfoTemplateData, null, true)
         },
@@ -109,7 +109,7 @@ this.default = function () {
             }
         },
         popupOpen: function (args) {
-            if (args.type === 'QuickInfo') {
+            if (args.type === 'QuickInfo' || args.type === 'ViewEventInfo') {
                 var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
                 titleObj.appendTo(args.element.querySelector('#title'));
                 var typeObj = new ej.dropdowns.DropDownList({

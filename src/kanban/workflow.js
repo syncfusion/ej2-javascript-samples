@@ -21,6 +21,7 @@ this.default = function () {
         ],
         cardSettings: {
             headerField: 'Id',
+            contentField: 'Description',
             template: '#cardTemplate'
         }
     });

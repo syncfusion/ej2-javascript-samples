@@ -4,7 +4,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         views: [{ option: 'Agenda', allowVirtualScrolling: false }],
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         currentView: 'Agenda',
         eventSettings: { dataSource: window.generateObject() },
     });
@@ -16,6 +16,8 @@ this.default = function () {
         min: 1,
         max: 15,
         format: 'n0',
+        placeholder: "Days Count",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.agendaDaysCount = args.value !== null ? args.value : 7;
             scheduleObj.dataBind();
@@ -25,6 +27,8 @@ this.default = function () {
 
     // Initialize DropDownList component for allow virtual scroll
     var virtualScrollDropDown = new ej.dropdowns.DropDownList({
+        placeholder: "Allow Virtual Scrolling",
+        floatLabelType: "Always",
         change: function (args) {
             var allowVS = (args.value === 'true') ? true : false;
             scheduleObj.views = [{ option: 'Agenda', allowVirtualScrolling: allowVS }];
@@ -35,6 +39,8 @@ this.default = function () {
 
     // Initialize DropDownList component for hide empty agenda days
     var hideEmptyDaysDropDown = new ej.dropdowns.DropDownList({
+        placeholder: "Hide Empty Days",
+        floatLabelType: "Always",
         change: function (args) {
             scheduleObj.hideEmptyAgendaDays = (args.value === 'true') ? true : false;
             scheduleObj.dataBind();

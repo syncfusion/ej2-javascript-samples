@@ -26,7 +26,8 @@ this.default = function () {
             load: function (args) {
                 var gauge1Theme = location.hash.split('/')[1];
                 gauge1Theme = gauge1Theme ? gauge1Theme : 'Material';
-                args.gauge.theme = (gauge1Theme.charAt(0).toUpperCase() + gauge1Theme.slice(1));
+                args.gauge.theme = (gauge1Theme.charAt(0).toUpperCase() +
+                gauge1Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             // custom code end
             axes: [{
@@ -78,7 +79,8 @@ this.default = function () {
             load: function (args) {
                 var gauge2Theme = location.hash.split('/')[1];
                 gauge2Theme = gauge2Theme ? gauge2Theme : 'Material';
-                args.gauge.theme = (gauge2Theme.charAt(0).toUpperCase() + gauge2Theme.slice(1));
+                args.gauge.theme = (gauge2Theme.charAt(0).toUpperCase() +
+                gauge2Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             // custom code end
             axes: [{
@@ -130,7 +132,8 @@ this.default = function () {
             load: function (args) {
                 var gauge3Theme = location.hash.split('/')[1];
                 gauge3Theme = gauge3Theme ? gauge3Theme : 'Material';
-                args.gauge.theme = (gauge3Theme.charAt(0).toUpperCase() + gauge3Theme.slice(1));
+                args.gauge.theme = (gauge3Theme.charAt(0).toUpperCase() +
+                gauge3Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             // custom code end
             axes: [{

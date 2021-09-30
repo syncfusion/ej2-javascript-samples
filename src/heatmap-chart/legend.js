@@ -34,7 +34,8 @@ this.default = function () {
         load: function (args) {
             var legendTheme = location.hash.split('/')[1];
             legendTheme = legendTheme ? legendTheme : 'Material';
-            args.heatmap.theme = (legendTheme.charAt(0).toUpperCase() + legendTheme.slice(1));
+            args.heatmap.theme = (legendTheme.charAt(0).toUpperCase() +
+            legendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         legendSettings: {
             position: 'Bottom',

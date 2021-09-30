@@ -12,7 +12,8 @@ this.default = function () {
             load: function (args) {
                 var selectedTheme1 = location.hash.split('/')[1];
                 selectedTheme1 = selectedTheme1 ? selectedTheme1 : 'Material';
-                args.gauge.theme = (selectedTheme1.charAt(0).toUpperCase() + selectedTheme1.slice(1));
+                args.gauge.theme = (selectedTheme1.charAt(0).toUpperCase() +
+                selectedTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             // custom code end
             width: '400px',
@@ -99,7 +100,8 @@ this.default = function () {
             load: function (args) {
                 var selectedTheme2 = location.hash.split('/')[1];
                 selectedTheme2 = selectedTheme2 ? selectedTheme2 : 'Material';
-                args.gauge.theme = (selectedTheme2.charAt(0).toUpperCase() + selectedTheme2.slice(1));
+                args.gauge.theme = (selectedTheme2.charAt(0).toUpperCase() +
+                selectedTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
                 if (selectedTheme2 === 'highcontrast') {
                     args.gauge.axes[0].annotations[0].content =
                         '<div id="annotation4"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image4.svg" /></div>';
@@ -146,7 +148,8 @@ this.default = function () {
             load: function (args) {
                 var selectedTheme3 = location.hash.split('/')[1];
                 selectedTheme3 = selectedTheme3 ? selectedTheme3 : 'Material';
-                args.gauge.theme = (selectedTheme3.charAt(0).toUpperCase() + selectedTheme3.slice(1));
+                args.gauge.theme = (selectedTheme3.charAt(0).toUpperCase() +
+                selectedTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
                 if (selectedTheme3 === 'highcontrast') {
                     args.gauge.axes[0].annotations[0].content =
                         '<div id="annotation5"><img style="width:15px;height:15px;" src="src/circular-gauge/images/image5.svg" /></div>';
@@ -193,7 +196,8 @@ this.default = function () {
             load: function (args) {
                 var selectedTheme4 = location.hash.split('/')[1];
                 selectedTheme4 = selectedTheme4 ? selectedTheme4 : 'Material';
-                args.gauge.theme = (selectedTheme4.charAt(0).toUpperCase() + selectedTheme4.slice(1));
+                args.gauge.theme = (selectedTheme4.charAt(0).toUpperCase() +
+                selectedTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
                 if (selectedTheme4 === 'highcontrast') {
                     args.gauge.axes[0].annotations[0].content =
                         '<div id="annotation6"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image6.svg" /></div>';

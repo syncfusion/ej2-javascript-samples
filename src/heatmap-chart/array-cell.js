@@ -57,7 +57,8 @@ this.default = function () {
         load: function (args) {
             var arrayCellTheme = location.hash.split('/')[1];
             arrayCellTheme = arrayCellTheme ? arrayCellTheme : 'Material';
-            args.heatmap.theme = (arrayCellTheme.charAt(0).toUpperCase() + arrayCellTheme.slice(1));
+            args.heatmap.theme = (arrayCellTheme.charAt(0).toUpperCase() +
+            arrayCellTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
         tooltipRender: function (args)  {
             args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];

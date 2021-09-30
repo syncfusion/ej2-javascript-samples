@@ -1,13 +1,12 @@
 {
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
+    "type": "update",
     "category": "Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "type": "update",
     "samples": [{
             "url": "tools",
             "name": "Overview",
-            "type": "update",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
@@ -81,6 +80,14 @@
             "description": "This demo covers important APIs of the JS(ECMAScript 5) Rich Text Editor such as HTML encoding, read-only, retrieve the selected content, and more.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "appendTo", "readonly", "enabled", "enableHtmlEncode", "value", "getSelection", "selectAll"] }
+        },
+        {
+            "url": "enter-key-configuration",
+            "name": "Enter Key Configuration",
+            "type": "new",
+            "description": "This demo explains the API usage to customize the enter and shift + enter key actions in the Rich Text Editor content.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "appendTo", "saveInterval", "enterKey", "shiftEnterKey"] }
         },
         {
             "url": "client-side-events",

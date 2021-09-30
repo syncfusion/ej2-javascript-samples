@@ -33,6 +33,7 @@ this.default = function () {
     window.utcZone = function (data) {
         var img = document.createElement('img');
         img.src = 'src/tree-grid/images/__Normal.png';
+        img.style.filter = "brightness(150%)";
         if (data.timezone.indexOf("-") != -1) {
             img.className = 'negativeTimeZone';
         }

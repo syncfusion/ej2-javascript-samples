@@ -71,6 +71,19 @@
             }
         },
         {
+            "url": "realtime-binding",
+            "name": "Real-Time Binding",
+            "category": "Data Binding",
+            "type": "new",
+            "description": "This demo showcases the way of binding signalR services to Scheduler component. Here, the SignalR is used to bind the data with Scheduler.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "dataBinding"
+                ]
+            }
+        },
+        {
             "url": "recurrence-events",
             "name": "Recurring Events",
             "category": "Appointments",
@@ -151,7 +164,7 @@
         },
         {
             "url": "multi-drag",
-            "name": "Multiple Drag",
+            "name": "Multiple Events Drag",
             "category": "Appointments",
             "description": "This demo explains you about the ability to select multiple appointments and drag them simultaneously.",
             "api": {
@@ -253,7 +266,6 @@
             "url": "year",
             "name": "Year View",
             "category": "Views",
-            "type": "update",
             "description": "The example showcases the year view and Timeline year view of the JavaScript Scheduler. The views are helpful to view the events in an annual calendar view.",
             "api": {
                 "Schedule": [
@@ -449,7 +461,6 @@
             "url": "adaptive-grouping",
             "name": "Adaptive Grouping",
             "category": "Resource Grouping",
-            "type": "new",
             "description": "This demo shows how to change the mode of the Schedule to Adaptive mode in the JavaScript Scheduler control.",
             "api": {
                 "Schedule": [
@@ -734,6 +745,19 @@
             }
         },
         {
+            "url": "reminder",
+            "name": "Reminder",
+            "category": "Customization",
+            "type": "new",
+            "description": "This demo showcases an event reminder notification that will be displayed after 5 seconds of sample getting loaded.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "created"
+                ]
+            }
+        },
+        {
             "url": "excel-export",
             "name": "Excel Exporting",
             "category": "Exporting",
@@ -763,7 +787,6 @@
             "url": "print",
             "name": "Print",
             "category": "Exporting",
-            "type": "update",
             "hideOnDevice": false,
             "description": "This sample demonstrates how to print all the appointments (events) in the JavaScript (ES5) Scheduler on the client side using the Print Library.",
             "api": {

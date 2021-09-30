@@ -120,7 +120,16 @@
     padding: 10px;
     border-bottom: 2px solid #e6e9ed !important;
     height: 35px;
-    margin: 0 15px 0 15px;
+    padding: 0 15px 0 15px;
+    line-height:35px;
+  }
+
+  .bootstrap5-dark .card-content.text,
+  .tailwind-dark .card-content.text,
+  .material-dark .card-content.text,
+  .bootstrap-dark .card-content.text,
+  .highcontrast .card-content.text {
+    color: #ffffff;
   }
 
   #sidebar-section {
@@ -450,5 +459,20 @@
 
   body.highcontrast #dockSidebar li.sidebar-item.filterHover, body.highcontrast #dockSidebar {
     background: #000;
+  }
+
+  .bootstrap-dark li.sidebar-item.filterHover,
+  .material-dark li.sidebar-item.filterHover,
+  .tailwind-dark li.sidebar-item.filterHover,
+  .bootstrap5-dark li.sidebar-item.filterHover,
+  .fabric-dark li.sidebar-item.filterHover {
+    background: inherit;
+  }
+  .fabric-dark .card-content.text{
+    color: #dadada
+  }
+
+  .tailwind #dockSidebar , .bootstrap5 #dockSidebar{
+    background: #fff;
   }
 </style>

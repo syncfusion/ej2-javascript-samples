@@ -1,0 +1,152 @@
+{
+    "name": "Heatmap Chart",
+    "directory": "heatmap",
+    "category": "Data Visualization",
+    "dataSourcePath": "src/heatmap/data.js",
+    "ftName": "heatmap-chart",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Heatmap Chart",
+            "description": "This demo for Essential JS2 Heatmap control shows the heatmap control displayed with minimum configuration."
+        },
+        {
+            "url": "calendar-heatmap",
+            "name": "Calendar Heatmap",
+            "category": "Heatmap Chart",
+            "description": "This demo for Essential JS2 Heatmap control for displays the time series data and displays the axis labels at specific time interval.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "height", "paletteSettings", "legendSettings", "tooltipRender", "cellSettings" ] }
+        },
+        {
+            "url": "bubble-types",
+            "name": "Bubble Types",
+            "category": "Bubble Heatmap",
+            "description": "This demo for Essential JS2 Heatmap control shows  Size, Color and SizeAndColor bubble heatmap type.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "legendSettings", "tooltipRender", "cellSettings" ] }
+		},
+        {
+            "url": "color-and-size-attributes",
+            "name": "Color and Size Attributes",
+            "category": "Bubble Heatmap",
+            "description": "This demo for Essential JS2 Heatmap control shows how to bind the multiple data to bubble type heatmap.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "legendSettings", "tooltipRender", "cellSettings" ] }
+        },
+        {
+            "url": "array-row",
+            "name": "Row",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Heatmap control demonstrates how to bind the data to heatmap with series of array for each columns.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "paletteSettings", "legendSettings", "tooltipRender", "dataSource" ] }
+        },
+        {
+            "url": "array-cell",
+            "name": "Cell",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Heatmap control demonstrates how to bind the array data with values for each cell to heatmap.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "paletteSettings", "legendSettings", "tooltipRender" ] }
+        },
+        {
+            "url": "row-json-binding",
+            "name": " JSON Row",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Heatmap control demonstrates how to bind the JSON object with data for each columns to heatmap.",
+            "api": {"HeatMap": ["titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "cellSettings", "tooltipRender" ] }
+        },
+        {
+            "url": "cell-json-binding",
+            "name": "JSON Cell",
+            "category": "Data Binding",
+            "description": "This demo for Essential JS2 Heatmap control demonstrates how to bind the JSON object with data for each cell to heatmap.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "paletteSettings"] }
+        },
+        {
+            "url": "empty-points",
+            "name": "Empty Points",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows the usage of empty points or null points in heatmap.",
+            "api": {"HeatMap": ["titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "tooltipRender", "paletteSettings", "legendSettings"] }
+        },
+        {
+            "url": "inversed",
+            "name": "Inversed Axis",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to inverse the both x-axis and y-axis in heatmap",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "paletteSettings", "legendSettings"] }
+        },
+        {
+            "url": "opposed",
+            "name": "Opposed Axis",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to place the axis opposite to the default position in heatmap.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "legendSettings", "cellSettings"] }
+        },
+        {
+            "url": "multi-level-labels",
+            "name": "Multi Level Labels",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to group the axis labels with multiple levels.",
+            "api": {
+                "HeatMap": [
+                    "titleSettings",
+                    "xAxis",
+                    "yAxis",
+                    "dataSource",
+                    "cellSettings",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "cell-selection",
+            "name": "Selection",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to select and deselect the heatmap cell using mouse and touch action.",
+            "api": {
+                "HeatMap": [
+                    "titleSettings",
+                    "xAxis",
+                    "yAxis",
+                    "dataSource",
+                    "cellSettings",
+                    "allowSelection"
+                ]
+            }
+        },
+        {
+            "url": "legend",
+            "name": "Legend Placement",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to place the heatmap legend in different positions.",
+            "api": {"HeatMap": ["titleSettings", "xAxis", "yAxis", "dataSource","paletteSettings", "cellSettings", "legendSettings","renderingMode", "tooltipRender"] }
+        },
+        {
+            "url": "large-data",
+            "name": "Large Data",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to bind the large data in heatmap using canvas rendering mode.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "tooltipRender", "paletteSettings", "legendSettings" ] }
+        },
+        {
+            "url": "palette",
+            "name": "Palette Mode",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control demonstrates applying gradient colors or solid colors for the heatmap cells.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "cellSettings", "legendSettings" ] }
+        },
+        {
+            "url": "render-mode",
+            "name": "Rendering mode",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap shows switching the rendering mode of the heatmap cells between SVG and canvas rendering logics.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "paletteSettings", "renderingMode", "cellSettings", "legendSettings" ] }
+        },
+        {
+            "url": "tooltip-template",
+            "name": "Tooltip Template",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to customize the tool tip text using template support in heatmap.",
+            "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "cellSettings", "legendSettings", "paletteSettings", "tooltipRender" ] }
+        }
+    ]
+}

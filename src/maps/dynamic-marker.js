@@ -21,7 +21,8 @@ var longitude = [];
         load: function (args) {
             var Theme = location.hash.split('/')[1];
             Theme = Theme ? Theme : 'Material';
-            args.maps.theme = (Theme.charAt(0).toUpperCase() + Theme.slice(1));
+            args.maps.theme = (Theme.charAt(0).toUpperCase() +
+            Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         click: function (args) {

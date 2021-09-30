@@ -92,14 +92,15 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
         // custom code end
     });
     gauge.appendTo('#gauge');
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
-        width: '100px'
+        width: '90px'
     });
     mode.appendTo('#type');
     var exportGauge = new ej.buttons.Button({

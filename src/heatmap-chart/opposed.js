@@ -35,7 +35,8 @@ this.default = function () {
         load: function (args) {
             var opposedAxisTheme = location.hash.split('/')[1];
             opposedAxisTheme = opposedAxisTheme ? opposedAxisTheme : 'Material';
-            args.heatmap.theme = (opposedAxisTheme.charAt(0).toUpperCase() + opposedAxisTheme.slice(1));
+            args.heatmap.theme = (opposedAxisTheme.charAt(0).toUpperCase() +
+            opposedAxisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
         },
     });
     heatmap.appendTo('#container');

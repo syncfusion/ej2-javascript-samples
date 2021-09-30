@@ -7,7 +7,8 @@ this.default = function () {
         load: function (args) {
             var markerzooming = location.hash.split('/')[1];
             markerzooming = markerzooming ? markerzooming : 'Material';
-            args.maps.theme = (markerzooming.charAt(0).toUpperCase() + markerzooming.slice(1));
+            args.maps.theme = (markerzooming.charAt(0).toUpperCase() +
+            markerzooming.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
         useGroupingSeparator: true,

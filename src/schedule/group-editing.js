@@ -5,7 +5,7 @@ this.default = function () {
         width: '100%',
         height: '650px',
         currentView: 'WorkWeek',
-        selectedDate: new Date(2018, 5, 5),
+        selectedDate: new Date(2021, 5, 5),
         resourceHeaderTemplate: '#resourceTemplate',
         views: [
             { option: 'Day' }, { option: 'WorkWeek' },

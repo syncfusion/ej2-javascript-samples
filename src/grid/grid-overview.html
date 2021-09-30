@@ -2,7 +2,7 @@
 
 <div class="control-section">
     <div class="content-wrapper">
-        <div>
+        <div style="padding-bottom: 10px;">
             <select id="ddl">
                      <option value="1000">1,000 Rows and 11 Columns</option>
                      <option value="10000">10,000 Rows and 11 Columns</option>
@@ -40,7 +40,8 @@
         background-color:#0078d6; 
     }
     
-    .bootstrap4 .empimg{
+    .bootstrap4 .empimg,
+    .bootstrap5 .empimg {
         background-color:#0078d6; 
     }
 
@@ -124,6 +125,26 @@
         color: #e60000;
         position: relative;
         top: 9px;
+    }
+
+    .bootstrap5 td.e-rowcell .statustxt.e-inactivecolor,
+    .bootstrap5 td.e-rowcell .statustxt.e-activecolor {
+        top: 8px;
+    }
+
+    .bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+    .bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+        position: relative;
+        top: 1.5px;
+    }
+
+    .e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-activecolor,
+    .e-bigger.bootstrap5 .e-checkboxfiltertext .statustemp .statustxt.e-inactivecolor {
+        top: -0.5px;
+    }
+
+    .bootstrap5 .e-checkboxfiltertext #Trusttext {
+        margin-left: -4px;
     }
 
     .statustemp.e-inactivecolor {

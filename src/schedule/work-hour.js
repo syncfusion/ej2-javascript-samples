@@ -9,7 +9,7 @@ this.default = function () {
             end: '20:00'
         },
         views: ['Day', 'Week', 'WorkWeek', 'Month', 'TimelineWeek', 'TimelineMonth'],
-        selectedDate: new Date(2018, 1, 15),
+        selectedDate: new Date(2021, 1, 15),
         eventSettings: { dataSource: data },
         eventRendered: function (args) {
             window.applyCategoryColor(args, scheduleObj.currentView);
@@ -18,14 +18,16 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
 
     var end = new ej.calendars.TimePicker({
-        width: 90,
+        placeholder: 'Work End',
+        floatLabelType: "Always",
         value: new Date(2000, 0, 1, 20),
         format: 'HH:mm'
     });
     end.appendTo('#endTime');
 
     var start = new ej.calendars.TimePicker({
-        width: 90,
+        placeholder: 'Work Start',
+        floatLabelType: "Always",
         value: new Date(2000, 0, 1, 8),
         format: 'HH:mm'
     });

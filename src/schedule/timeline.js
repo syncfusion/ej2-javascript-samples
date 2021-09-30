@@ -1,8 +1,9 @@
 this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
-        selectedDate: new Date(2019, 0, 10),
+        selectedDate: new Date(2021, 0, 10),
         currentView: 'TimelineWeek',
+        workDays: [0, 1, 2, 3, 4, 5],
         views: [
             { option: 'TimelineDay' },
             { option: 'TimelineWeek' },
@@ -15,7 +16,9 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
 
     var selectedDate = new ej.calendars.DatePicker({
-        value: new Date(2019, 0, 10),
+        placeholder: 'Current Date',
+        floatLabelType: "Always",
+        value: new Date(2021, 0, 10),
         showClearButton: false,
         change: function (args) {
             scheduleObj.selectedDate = args.value;

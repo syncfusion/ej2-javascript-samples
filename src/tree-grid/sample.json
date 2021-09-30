@@ -3,11 +3,12 @@
     "directory": "tree-grid",
     "category": "Grids",
     "ftName" :"treegrid",
+    "type": "update",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
       {  
          "url": "treegrid.overview", "name": "Overview", "category": "Tree Grid","api":{"TreeGrid":["dataSource","childMapping","height","columns","allowReordering","allowFiltering","allowSorting","filterSettings","queryCellInfo"] },
-         "description": "This sample demonstrates the overview of basic Tree Grid features such as sorting, filtering, conditional formatting, column template and scrolling."
+         "description": "This JavaScript Tree Grid example demonstrates the overview in JavaScript Tree Grid Component. Explore here for more details."
       },
         { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion Essential JS2 Tree Grid control looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
         { "url":"clipboard", "name": "Clipboard", "category":"Tree Grid","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging","allowSelection","copyHierarchyMode"] },
@@ -73,8 +74,12 @@
             "description": "This demo explains how the hierarchy selection between the records using column checkboxes in Essential JS2 Tree Grid control."
          },
          {
-            "url":"frozencolumn", "name": "Frozen Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
+            "url":"frozencolumn", "name": "Frozen Column", "category":"Frozen","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
             "description": "This demo for Essential JS 2 Tree Grid control shows frozen columns feature of Tree Grid. Scroll the movable content to view the frozen columns."
+         },
+         {
+            "url":"freezedirection", "name": "Freeze Direction", "category":"Frozen","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
+            "description": "This demo for Essential JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content.", "type": "new"
          },   
          {  
             "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
@@ -89,7 +94,7 @@
             "description": "This demo for Essential JS 2 Tree Grid control shows the usage of the row template feature. We have rendered each Tree Grid row using template."
          },
          {  
-            "url": "drag-drop", "name": "Drag And Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
+            "url": "drag-drop", "name": "Drag and Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
             "description": "This demo for Essential JS 2 Tree Grid control how the rows can be dragged within the Tree Grid using the row drag-and-drop feature."
          },
          {  
