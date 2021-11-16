@@ -70,6 +70,7 @@ this.default = function () {
         format: '###.##',
         value: 0.8,
         step: 0.1,
+        max: 3.5,
     });
     springfactor.appendTo('#springfactor');
     var maxiteration = new ej.inputs.NumericTextBox({

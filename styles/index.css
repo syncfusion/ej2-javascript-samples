@@ -1122,13 +1122,12 @@ a.code:visited {
     border: none;
     background: none;
 }
-.bootstrap5-dark .sb-plnr-section, .bootstrap5 .sb-plnr-section, .bootstrap4 .sb-plnr-section {
+.bootstrap5-dark .sb-plnr-section, .bootstrap5 .sb-plnr-section {
     height: 33px;
     line-height: 30px;
 }
 .bootstrap5 .sample-navigation,.bootstrap5 .sb-open-new-wrapper,
-.bootstrap5-dark .sample-navigation,.bootstrap5-dark .sb-open-new-wrapper,
-.bootstrap4 .sample-navigation,.bootstrap5 .sb-open-new-wrapper {
+.bootstrap5-dark .sample-navigation,.bootstrap5-dark .sb-open-new-wrapper {
     line-height:33px;
 }
 .sb-desktop-setting {

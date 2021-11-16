@@ -462,9 +462,6 @@ this.default = function () {
                     deleteBtn.onclick = function (e) { buttonClickActions(e); };
                 }
             }
-        },
-        destroyed: function () {
-            contextMenuObj.destroy();
         }
     });
     scheduleObj.appendTo('#scheduler');

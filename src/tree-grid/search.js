@@ -30,7 +30,7 @@ this.default = function () {
         change: function (e) {
             var mode = e.value;
             grid.search('');
-            grid.searchSettings.searchHierarchyMode = mode;
+            grid.searchSettings.hierarchyMode = mode;
         }
     });
     dropDownMode.appendTo('#mode');
