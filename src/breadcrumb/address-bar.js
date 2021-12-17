@@ -20,6 +20,8 @@ this.default = function() {
         }
     ];
 
+    var initialBreadcrumbItems = [].slice.call(breadcrumbItems);
+
     var items = [
         {
             text: 'OneDrive', type: 'onedrive',
@@ -103,12 +105,54 @@ this.default = function() {
     var breadcrumbObj = new ej.navigations.Breadcrumb({
         cssClass: 'e-custom-breadcrumb',
         itemTemplate: '#itemTemplate',
+        separatorTemplate: '#separatorTemplate',
         items: breadcrumbItems,
         beforeItemRender: beforeItemRenderHanlder
      }, '#address-bar');
 
      function beforeItemRenderHanlder(args) {
-        if (!args.element.classList.contains('e-breadcrumb-separator')) {
+        if (args.element.classList.contains('e-breadcrumb-separator')) {
+            var previousItemText = args.item.previousItem.text;
+            if (previousItemText !== 'LastItem' && getItems(previousItemText)[0].items) {
+                new ej.navigations.Menu({
+                    items: getItems(previousItemText),
+                    showItemOnClick: true,
+                    select: function (args) {
+                        if (!args.element.parentElement.classList.contains('e-menu') && this.items[0] && this.items[0].items) {
+                            var idx;
+                            for (var i = 0; i < this.items[0].items.length; i++) {
+                                for (var j = 0; j < breadcrumbItems.length; j++) {
+                                    if (this.items[0].items[i].text === breadcrumbItems[j].text) {
+                                        idx = j;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (idx) {
+                                breadcrumbItems = breadcrumbItems.slice(0, idx);
+                            }
+                            breadcrumbItems[0].iconCss = 'e-bicons e-' + args.item.type;
+                            if (breadcrumbItems[breadcrumbItems.length - 1].text === 'LastItem') {
+                                breadcrumbItems.pop();
+                            }
+                            breadcrumbItems.push({ text: args.item.text });
+                            breadcrumbItems.push({ text: 'LastItem' });
+                            breadcrumbObj.items = breadcrumbItems;
+                        }
+                    },
+                    beforeOpen: function () {
+                        this.element.classList.add('e-open');
+                    },
+                    onClose: function () {
+                        this.element.classList.remove('e-open');
+                    }
+                }, args.element.querySelector('ul'));
+            }
+        } else {
+            if (args.item.text === 'LastItem') {
+                args.element.style.display = 'none';
+                return;
+            }
             new ej.navigations.Menu({
                 items: [{
                     text: args.item.text, iconCss: args.item.iconCss
@@ -122,42 +166,12 @@ this.default = function() {
                             break;
                         }
                     }
+                    breadcrumbObj.items.push({ text: 'LastItem' });
+                    breadcrumbObj.activeItem = 'LastItem';
                 }
             }, args.element.querySelector('ul'));
-            if (args.item) {
-                if (getItems(args.item.text)[0].items) {
-                    new ej.navigations.Menu({
-                        items: getItems(args.item.text),
-                        showItemOnClick: true,
-                        select: function (args) {
-                            if (!args.element.parentElement.classList.contains('e-menu') && this.items[0] && this.items[0].items) {
-                                var idx;
-                                for (var i = 0; i < this.items[0].items.length; i++) {
-                                    for (var j = 0; j < breadcrumbItems.length; j++) {
-                                        if (this.items[0].items[i].text === breadcrumbItems[j].text) {
-                                            idx = j;
-                                        }
-                                    }
-                                }
-                                if (idx) {
-                                    breadcrumbItems = breadcrumbItems.slice(0, idx);
-                                }
-                                breadcrumbItems[0].iconCss = 'e-bicons e-' + args.item.type;
-                                breadcrumbItems.push({ text: args.item.text });
-                                breadcrumbObj.items = breadcrumbItems;
-                            }
-                        },
-                        beforeOpen: function () {
-                            this.element.classList.add('e-open');
-                        },
-                        onClose: function () {
-                            this.element.classList.remove('e-open');
-                        }
-                    }, args.element.querySelectorAll('ul')[1]);
-                }
-            }
         }
-     }
+    }
 
      function getItems(text, needParent) {
         var mItems = [].slice.call(items);
@@ -201,4 +215,11 @@ this.default = function() {
         }
         return subItems;
     }
+
+    // To refresh Breadcrumb control state when reset button clicked
+    new ej.buttons.Button({ cssClass: 'e-small' }, '#reset').element.onclick = function() {
+        var breadcrumb = document.getElementById('address-bar');
+        var breadcrumbInst = ej.base.getComponent(breadcrumb, 'breadcrumb');
+        breadcrumbInst.items = initialBreadcrumbItems;
+    };
 };

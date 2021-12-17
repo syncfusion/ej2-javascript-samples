@@ -13,7 +13,7 @@ this.default = function () {
     var tooltip = new ej.popups.Tooltip({
 
         //Set tooltip content
-        content: 'Lets go green & Save Earth !!!'
+        content: "Let's go green to save the planet!!"
 
     });
 

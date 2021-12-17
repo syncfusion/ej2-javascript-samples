@@ -5,7 +5,7 @@ this.default = function () {
     var maps = new ej.maps.Maps({
         titleSettings: {
             text: 'Cyber Attack Map of United States',
-            textStyle: { size: '16px' }
+            textStyle: { size: '16px', fontFamily: 'Segeo UI' }
         },
         layers: [
             {

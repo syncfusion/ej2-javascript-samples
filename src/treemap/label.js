@@ -10,19 +10,25 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'Countries ordered based on Population - 2017',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segeo UI' }
         },
         dataSource: window.Country_Population,
         tooltipSettings: {
             visible: true,
-            format: '${Country} : ${Population}'
+            format: '${Country} : ${Population}',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         legendSettings: {
             visible: true,
             mode: 'Interactive',
             width: '300px',
             height: '10',
-            position: 'Top'
+            position: 'Top',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         format: 'n',
         useGroupingSeparator: true,
@@ -32,6 +38,9 @@ this.default = function () {
             showLabels: true,
             labelPath: 'Country',
             fill: 'red',
+            labelStyle: {
+                fontFamily: 'Segeo UI'
+            },
             colorMapping: [
                 {
                     to: 10000000000,
@@ -48,7 +57,7 @@ this.default = function () {
     var labelMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Label Action',
-        width: 100,
+        width: '100%',
         change: function () {
             treemap.leafItemSettings.interSectAction = labelMode.value;
             treemap.refresh();

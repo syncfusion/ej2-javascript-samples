@@ -1,5 +1,15 @@
 this.default = function () {
+    // custom code start
+    var sparkload = function(args) {
+        var selectedtheme = location.hash.split('/')[1];
+        selectedtheme = selectedtheme ? selectedtheme : 'Material';
+        args.sparkline.theme = (selectedtheme.charAt(0).toUpperCase() + selectedtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+    };
+    // custom code end
     var sparkmodel1 = {
+        // custom code start
+        load: sparkload,
+        // custom code end
         height: '50px',
         width: '90%', 
         lineWidth: 2,
@@ -19,7 +29,10 @@ this.default = function () {
         },
         xName: 'xval'
     };
-    var sparkmodel2 = {       
+    var sparkmodel2 = {     
+        // custom code start
+        load: sparkload,
+        // custom code end  
         valueType: 'Category',
         fill: '#3C78EF',
         opacity: 1,
@@ -38,6 +51,9 @@ this.default = function () {
         xName: 'xval'
     };
     var sparkmodel3 = {
+        // custom code start
+        load: sparkload,
+        // custom code end
         negativePointColor: '#fc5070',
         tooltipSettings: {
             visible: true,
@@ -51,6 +67,9 @@ this.default = function () {
         xName: 'xval'
     };
     var sparkmodel4 = {
+        // custom code start
+        load: sparkload,
+        // custom code end
         valueType: 'Category',
         fill: '#3C78EF',
         negativePointColor: '#fc5070',  

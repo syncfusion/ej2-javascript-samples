@@ -1,7 +1,6 @@
 {
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
-    "type": "update",
     "category": "Editors",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
@@ -84,7 +83,6 @@
         {
             "url": "enter-key-configuration",
             "name": "Enter Key Configuration",
-            "type": "new",
             "description": "This demo explains the API usage to customize the enter and shift + enter key actions in the Rich Text Editor content.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "appendTo", "saveInterval", "enterKey", "shiftEnterKey"] }

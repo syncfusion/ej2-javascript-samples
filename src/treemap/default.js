@@ -15,7 +15,7 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'Car Sales by Country - 2017',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segeo UI' }
         },
         itemMove: tooltipRender,
         itemClick: tooltipRender,
@@ -27,19 +27,28 @@ this.default = function () {
             visible: true,
             position: 'Top',
             shape: 'Rectangle',
+            textStyle: {
+                fontFamily : 'Segeo UI'
+            }
         },
         palette: ['#C33764', '#AB3566', '#993367', '#853169', '#742F6A', '#632D6C', '#532C6D', '#412A6F', '#312870', '#1D2671'],
         tooltipSettings: {
-            visible: true
+            visible: true,
+            textStyle: {
+                fontFamily : 'Segeo UI'
+            }
         },
         weightValuePath: 'Sales',
         leafItemSettings: {
             labelPath: 'Company',
-            border: { color: 'white', width: 0.5 }
+            border: { color: 'white', width: 0.5 },
+            labelStyle:{
+                fontFamily : 'Segeo UI'
+            }
         },
         levels: [
             {
-                groupPath: 'Continent', border: { color: 'white', width: 0.5 },
+                groupPath: 'Continent', border: { color: 'white', width: 0.5 }, headerStyle: { fontFamily: 'Segoe UI' }
             }
         ]
     });

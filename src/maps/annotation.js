@@ -17,7 +17,7 @@ this.default = function () {
         annotations: [
             {
                 content: '#maps-annotation',
-                x: '0%', y: '70%'
+                x: '0%', y: '55%'
             }, {
                 content: '#compass-maps',
                 x: '85%', y: '5%'
@@ -34,7 +34,7 @@ this.default = function () {
                 markerSettings: [
                     {
                         visible: true,
-                        template: '<h3 style="color:white">{{:name}}</h3>',
+                        template: '<h3 style="color:white; font-family: Segeo UI">{{:name}}</h3>',
                         animationDuration: 1,
                         dataSource: [{
                                 name: 'Africa', latitude: 13.97274101999902, longitude: 20.390625

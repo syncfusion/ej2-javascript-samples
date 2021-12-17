@@ -89,7 +89,7 @@ var longitude = [];
     var markerShape = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select marker shape',
-        width: 87
+        width: '100%'
     });
     markerShape.appendTo('#type');
 

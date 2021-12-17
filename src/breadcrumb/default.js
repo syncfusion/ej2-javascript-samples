@@ -21,7 +21,7 @@ this.default = function () {
     var overflowItems = [
         {
             text: "Home",
-            url: "../"
+            url: "./"
         },
         {
             text: "Breadcrumb",
@@ -77,4 +77,14 @@ this.default = function () {
         enableNavigation: false,
         enableActiveItemNavigation: true
     }, '#active-item');
+
+    // To refresh all Breadcrumb control state when reset button clicked
+    new ej.buttons.Button({ cssClass: 'e-small' }, '#reset').element.onclick = function() {
+        var breadcrumb, breadcrumbObj, breadcrumbs = document.querySelector('.content-wrapper').getElementsByClassName("e-breadcrumb");
+        for (var i = 0; i < breadcrumbs.length; i++) {
+            breadcrumb = breadcrumbs[i];
+            breadcrumbObj = ej.base.getComponent(breadcrumb, 'breadcrumb');
+            breadcrumbObj.activeItem = breadcrumbObj.items[breadcrumbObj.items.length - 1].text;
+        }
+    };
 };

@@ -22,12 +22,14 @@ this.default = function () {
         titleSettings: {
             text: 'Population density (per square kilometer) - 2015',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         legendSettings: {
             visible: true,
             position: 'Top',
+            textStyle: { fontFamily: 'Segeo UI' }
         },
         layers: [
             {
@@ -38,7 +40,8 @@ this.default = function () {
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'name',
-                    format: '${name} : ${density}'
+                    format: '${name} : ${density}',
+                    textStyle: { fontFamily: 'Segeo UI' }
                 },
                 shapeSettings: {
                     colorValuePath: 'density',
@@ -72,7 +75,7 @@ this.default = function () {
     var legendPosition = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Legend Position',
-        width: 100,
+        width: '100%',
         change: function () {
             maps.legendSettings.position = legendPosition.value;
             if (legendPosition.value === 'Left' || legendPosition.value === 'Right') {
@@ -100,7 +103,7 @@ this.default = function () {
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select layoutMode type',
-        width: 100,
+        width: '100%',
         change: function () {
             maps.legendSettings.mode = mode.value;
             if (mode.value === 'Interactive') {

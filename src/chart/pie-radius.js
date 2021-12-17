@@ -27,10 +27,12 @@ this.default = function () {
         ],
         //Initializing Legend
         legendSettings: {
-            visible: true
+            visible: true,
+            reverse: true
         },
         enableAnimation: true,
-        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
+        useGroupingSeparator: true,
+        tooltip: { enable: true },
         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

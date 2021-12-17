@@ -10,7 +10,7 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'List of Countries by Unemployment Rate',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segoe UI' }
         },
         format: 'n',
         useGroupingSeparator: true,
@@ -22,15 +22,17 @@ this.default = function () {
         weightValuePath: 'Size',
         tooltipSettings: {
             visible: true,
-            format: '${Size} : ${Name}'
+            format: '${Size} : ${Name}',
+            textStyle: { fontFamily: 'Segoe UI' }
         },
         leafItemSettings: {
             labelPath: 'Name',
-            showLabels: true,            
+            showLabels: true,
+            labelStyle: { fontFamily: 'Segoe UI' }           
         },
         levels: [
-            { groupPath: 'Continent', border: { color: 'black', width: 0.5 }, headerAlignment: 'Far' },
-            { groupPath: 'Country', border: { color: 'black', width: 0.5 }, headerAlignment: 'Far' }
+            { groupPath: 'Continent', border: { color: 'black', width: 0.5 }, headerAlignment: 'Far', headerStyle: { fontFamily: 'Segoe UI' } },
+            { groupPath: 'Country', border: { color: 'black', width: 0.5 }, headerAlignment: 'Far', headerStyle: { fontFamily: 'Segoe UI' } }
         ]
     });
     treemap.appendTo('#container');    

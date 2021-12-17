@@ -29,8 +29,8 @@ this.renderChartSto =function (chartData) {
                     majorGridLines: { width: 0 }, lineStyle: { width: 0 }, minimum: 0, maximum: 120, interval: 60,
                     majorTickLines: { width: 0 }, title: 'Stochastic', stripLines: [
                         {
-                            start: 0, end: 120, text: '', color: 'black', visible: true,
-                            opacity: 0.03, zIndex: 'Behind'
+                            start: 0, end: 120, text: '', color: '#6063ff', visible: true,
+                            opacity: 0.1, zIndex: 'Behind'
                         }
                     ]
                 }],

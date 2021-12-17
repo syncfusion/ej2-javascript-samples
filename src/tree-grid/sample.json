@@ -79,7 +79,7 @@
          },
          {
             "url":"freezedirection", "name": "Freeze Direction", "category":"Frozen","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
-            "description": "This demo for Essential JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content.", "type": "new"
+            "description": "This demo for Essential JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content."
          },   
          {  
             "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
@@ -210,6 +210,7 @@
          },
          {"url":"treegridlines", "name": "Grid Lines", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
             "description": "This demo explains how to customize the grid lines in Tree Grid using Syncfusion Essential JS2 Tree Grid."
-         }
+         },
+         { "url": "adaptive","name": "Adaptive", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"]}, "type": "new"}
     ]
 }

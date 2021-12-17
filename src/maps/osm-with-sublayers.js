@@ -11,7 +11,8 @@ window.default = function () {
         titleSettings: {
             text: 'Location of Africa continent in the World map',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         zoomSettings: {

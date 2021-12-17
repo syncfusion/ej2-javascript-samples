@@ -13,7 +13,7 @@ this.default = function () {
             lineStyle: { width: 2, color: '#9E9E9E' },
             labelStyle: {
                 position: 'Outside', autoAngle: true,
-                font: { size: '10px' }
+                font: { size: '10px', fontFamily:'Segoe UI' }
             }, majorTicks: {
                 position: 'Inside', color: '#757575', width: 2, height: 10, interval: 20
             }, minorTicks: {
@@ -40,7 +40,7 @@ this.default = function () {
     var tickPosition;
     var labelPosition;
     ticks = new ej.dropdowns.DropDownList({
-        index: 0, width: 120,
+        index: 0, width: '100%',
         change: function () {
             var value = ticks.value.toString();
             var tick;
@@ -54,13 +54,13 @@ this.default = function () {
             tickPosition.value = tick.position;
             document.getElementById('tickOffset').value = tick.offset.toString();
             document.getElementById('tickHeight').value = tick.height.toString();
-            document.getElementById('offset').innerHTML = 'Tick Offset <span>&nbsp;&nbsp;&nbsp;' + tick.offset;
-            document.getElementById('height').innerHTML = 'Tick Height <span>&nbsp;&nbsp;&nbsp;' + tick.height;
+            document.getElementById('offset').innerHTML = tick.offset.toString();
+            document.getElementById('height').innerHTML = tick.height.toString();
         }
     });
     ticks.appendTo('#Ticks');
     tickPosition = new ej.dropdowns.DropDownList({
-        index: 0, width: 120,
+        index: 0, width: '100%',
         change: function () {
             var value = tickPosition.value.toString();
             if (isMajorTicks) {
@@ -76,7 +76,7 @@ this.default = function () {
 
     // Code for property panel
     labelPosition = new ej.dropdowns.DropDownList({
-        index: 0, width: 120,
+        index: 0, width: '100%',
         change: function () {
             circulargauge.axes[0].labelStyle.position = labelPosition.value.toString();
             circulargauge.refresh();
@@ -92,7 +92,7 @@ this.default = function () {
             else {
                 circulargauge.axes[0].minorTicks.offset = value;
             }
-            document.getElementById('offset').innerHTML = 'Tick Offset <span>&nbsp;&nbsp;&nbsp;' + value;
+            document.getElementById('offset').innerHTML = value.toString();
             circulargauge.refresh();
         };
     document.getElementById('tickHeight').onpointermove = document.getElementById('tickHeight').ontouchmove =
@@ -104,14 +104,14 @@ this.default = function () {
             else {
                 circulargauge.axes[0].minorTicks.height = value;
             }
-            document.getElementById('height').innerHTML = 'Tick Height <span>&nbsp;&nbsp;&nbsp;' + value;
+            document.getElementById('height').innerHTML = value.toString();
             circulargauge.refresh();
         };
     document.getElementById('labelOffset').onpointermove = document.getElementById('labelOffset').ontouchmove =
         document.getElementById('labelOffset').onchange = function () {
             var value = parseInt(document.getElementById('labelOffset').value, 10);
             circulargauge.axes[0].labelStyle.offset = value;
-            document.getElementById('labelOffsetValue').innerHTML = 'Label Offset <span>&nbsp;&nbsp;&nbsp;' + value;
+            document.getElementById('labelOffsetValue').innerHTML = value.toString();
             circulargauge.refresh();
         };
     var enableRTLChange;

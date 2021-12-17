@@ -51,7 +51,6 @@
             "url": "grouping-bar",
             "name": "Grouping Bar",
             "category": "User Interaction",
-            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the grouping bar feature of the pivot table"
         },
         {
@@ -70,6 +69,7 @@
             "url": "summary-customization",
             "name": "Show/Hide Totals",
             "category": "User Interaction",
+            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the summary customization feature of the pivot table"
         },
         {
@@ -88,7 +88,6 @@
             "url": "keyboard-navigation",
             "name": "Keyboard Navigation",
             "category": "Keyboard Navigation",
-            "type": "new",
             "description": "This sample demonstrates how to use keyboard shortcuts to interact with Pivot Table features such as the pivot table, grouping bar, field list, toolbar, calculated field, drill through, and filter dialog"
         },
         {

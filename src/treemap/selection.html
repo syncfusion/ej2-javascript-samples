@@ -9,26 +9,26 @@
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
-            <tr style="height: 50px">
-                <td style="width: 60%">
-                    <div class="property-text"><b>Highlight</b></div>
+            <tr>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;"><b>Highlight</b></div>
                 </td>
             </tr>
             <tr >
-                <td style="width: 60%">
-                    <div class="property-text"> Enable</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;"> Enable</div>
                 </td>
-                <td style="width: 40%;">
-                    <div>
+                <td>
+                    <div style="padding-left: 0px;">
                         <input type="checkbox" id="highlightEnable" checked/>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 60%">
-                    <div class="property-text">Mode</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Mode</div>
                 </td>
-                <td style="width: 40%;">
+                <td>
                     <div>
                         <select name="selectIndex" autocomplete="off" id="highlightMode" style="width:60%;">
                             <option value="Item" selected>Item</option>
@@ -39,26 +39,26 @@
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
-                <td style="width: 80%">
-                    <div class="property-text"><b>Selection</b></div>
+            <tr>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;"><b>Selection</b></div>
                 </td>
             </tr>
             <tr >
-                <td style="width: 60%">
-                    <div class="property-text">Enable</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Enable</div>
                 </td>
-                <td style="width: 40%;">
-                    <div>
+                <td>
+                    <div style="padding-left: 0px;">
                         <input type="checkbox" id="SelectionEnable" checked/>
                     </div>
                 </td>
                 </tr>
                 <tr>
-                    <td style="width: 60%">
-                        <div class="property-text"> Mode</div>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;"> Mode</div>
                     </td>
-                    <td style="width: 40%;">
+                    <td>
                         <div>
                             <select name="selectIndex" autocomplete="off" id="selectionMode" style="width:60%;">
                                 <option value="Item" selected>Item</option>
@@ -101,6 +101,12 @@
             font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
             font-size: 13px !important;
             font-weight: 400 !important;
+        }
+        tr {
+            height:48px;
+        }
+        td {
+            width:50%
         }
     </style>
     <!-- custom code start -->

@@ -11,7 +11,8 @@ this.default = function () {
         titleSettings: {
             text: 'Headquarters of the United Nations',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         centerPosition: {

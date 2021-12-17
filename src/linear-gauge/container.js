@@ -12,6 +12,10 @@ this.default = function () {
             selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         // custom code end
+        titleStyle: {
+            size: '18px',
+            fontFamily: 'Segoe UI'
+        },
         container: {
             width: 13,
             roundedCornerRadius: 5,
@@ -29,6 +33,11 @@ this.default = function () {
             },
             minorTicks: {
                 color: '#9e9e9e'
+            },
+            labelStyle: {
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [
                 {
@@ -51,6 +60,11 @@ this.default = function () {
                 interval: 20
             },
             opposedPosition: true,
+            labelStyle: {
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
+            },
             pointers: [
                 {
                     width: 0
@@ -63,7 +77,7 @@ this.default = function () {
     var containerMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 140,
+        width: '100%',
         change: function () {
             gauge.container.type = containerMode.value;
             gauge.refresh();
@@ -73,7 +87,7 @@ this.default = function () {
     var orientationMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 140,
+        width: '100%',
         change: function () {
             gauge.orientation = orientationMode.value;
             gauge.refresh();

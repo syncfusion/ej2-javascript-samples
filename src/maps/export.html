@@ -1,5 +1,5 @@
 <div>
-    <div class="col-lg-9 control-section">
+    <div class="col-lg-8 control-section">
         <div class="content-wrapper">
             <div id="export-container"></div>
             <!-- Source Lonk -->
@@ -9,15 +9,16 @@
         </div>
     </div>
     <!-- Property Panel -->
-    <div class="col-lg-3 property-section">
-        <table id="property" title="Properties" style="width: 100%; margin-left: -10px;">
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div style="width:60%">Map Type
+    <div class="col-lg-4 property-section">
+        <table id="property" title="Properties" style="width: 100%;">
+            <tr>
+                <td class="property-text" style="padding: 0px;">
+                    <div style="padding-left: 0px;">
+                        Map Type
                     </div>
                 </td>
-                <td style="width: 60%;">
-                    <div style="margin-left: -30px">
+                <td style="width:70%">
+                    <div>
                         <select id="layertype">
                             <option value='Geometry'>Geometry</option>
                             <option value='OSM'>OSM</option>
@@ -25,32 +26,33 @@
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div style="width:60%">Export Type
+            <tr>
+                <td class="property-text" style="padding: 0px;">
+                    <div style="padding-left: 0px;">
+                        Export Type
                     </div>
                 </td>
-                <td style="width: 60%;">
-                    <div style="margin-left: -30px">
+                <td style="width:70%">
+                    <div>
                         <input id="mode">
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div style="width:60%">File Name</div>
+            <tr>
+                <td style="padding: 0px;padding-top: 5px;">
+                    File Name
                 </td>
-                <td style="width: 40%;">
-                    <div class="e-float-input" style='margin-top: 0px;margin-left: 0px'>
-                        <input type="text" value="Maps" id="fileName" style="margin-left: -30px; width: 110px;">
+                <td style="width:70%">
+                    <div class="e-float-input" style='margin-top: 0px;'>
+                        <input type="text" value="Maps" id="fileName" style="width: 100%;">
                     </div>
                 </td>
             </tr>
-            <tr id="button-control"  class=".e-play-icon" style="height: 50px" align='center'>
+            <tr id="button-control"  class=".e-play-icon" align='center'>
                 <td>
-                <div style="margin-left: 60%;">
-                <button id="togglebtn" style="text-transform:none !important;width: 90px;">Export</button>
-                </div>
+                    <div style="margin-left: 60%;">
+                        <button id="togglebtn" style="text-transform:none !important;width: 90px;">Export</button>
+                    </div>
                 </td>
             </tr>
         </table>
@@ -75,6 +77,9 @@
     </div>
 <!-- custom code start -->
 <style>
+    tr {
+        height:50px;
+    }
     #button-control {
         width: 100%;
         text-align: center;
@@ -106,6 +111,6 @@
 
     .e-view.bootstrap5 .e-play-icon::before, .e-view.bootstrap5-dark .e-play-icon::before {
         content: '\e72e';
-    }
+    }    
 </style>
 <!-- custom code end -->

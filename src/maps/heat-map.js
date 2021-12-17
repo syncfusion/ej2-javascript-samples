@@ -16,7 +16,8 @@ this.default = function () {
         titleSettings: {
             text: "State wise India's population - 2011",
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         legendSettings: {
@@ -26,7 +27,8 @@ this.default = function () {
             height: '10',
 			width: '350',
             alignment: 'Center',
-            labelDisplayMode: 'Trim'
+            labelDisplayMode: 'Trim',
+            textStyle: { fontFamily: 'Segeo UI' }
         },
         zoomSettings: {
             enable: false
@@ -40,7 +42,8 @@ this.default = function () {
                 tooltipSettings: {
                         visible: true,
                         valuePath: 'population',
-                        format: 'State: ${Name} <br> Population: ${population}'
+                        format: 'State: ${Name} <br> Population: ${population}',
+                        textStyle: { fontFamily: 'Segeo UI' }
                     },
                 shapeSettings: {
                     border: {

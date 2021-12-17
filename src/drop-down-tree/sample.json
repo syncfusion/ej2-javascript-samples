@@ -2,7 +2,6 @@
     "name": "Dropdown Tree",
     "directory": "drop-down-tree",
     "category": "Dropdowns",
-    "type": "update",
     "ftName": "dropdown-tree",
     "samples": [
         {
@@ -79,7 +78,6 @@
             "name": "Custom Template",
             "description": "This example demonstrates how to customize the display text of the selected items in the JavaScript(ES5) drop-down tree control using the customTemplate.",
             "category": "Dropdown Tree",
-            "type": "new",
             "api": {
                 "DropDownTree": [
                     "popupHeight",

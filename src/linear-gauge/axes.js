@@ -43,7 +43,7 @@ this.default = function () {
             var max = document.getElementById('max');
             gauge.axes[0].minimum = parseInt(min.value, 10);
             gauge.axes[0].maximum = parseInt(max.value, 10);
-            document.getElementById('minValue').innerHTML = 'Axis Minimum <span>&nbsp;&nbsp;&nbsp;' + min.value;
+            document.getElementById('minValue').innerHTML = min.value;
             gauge.refresh();
             gauge.annotations[0].axisValue = gauge.axes[0].pointers[0].currentValue;
             gauge.refresh();
@@ -54,7 +54,7 @@ this.default = function () {
             var max = document.getElementById('max');
             gauge.axes[0].maximum = parseInt(max.value, 10);
             gauge.axes[0].minimum = parseInt(min.value, 10);
-            document.getElementById('maxValue').innerHTML = 'Axis Maximum <span>&nbsp;&nbsp;&nbsp;' + max.value;
+            document.getElementById('maxValue').innerHTML = max.value;
             gauge.refresh();
             gauge.annotations[0].axisValue = gauge.axes[0].pointers[0].currentValue;
             gauge.refresh();
@@ -67,7 +67,7 @@ this.default = function () {
     var pointerPlace = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: '100%',
         change: function () {
             gauge.axes[0].pointers[0].placement = pointerPlace.value;
             gauge.refresh();
@@ -77,7 +77,7 @@ this.default = function () {
     var pointerType = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: '100%',
         change: function () {
             gauge.axes[0].pointers[0].type = pointerType.value;
             pointerPlace.enabled = (pointerType.value === 'Marker');
@@ -103,6 +103,7 @@ function linearAxes() {
         },
         // custom code end
         orientation: 'Horizontal',
+        allowMargin: false,
         axes: [{
             maximum: 115,
             line: {
@@ -124,7 +125,10 @@ function linearAxes() {
                 interval: 2
             },
             labelStyle: {
-                offset: 48
+                offset: 48,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             }
         }],
         annotations: [{

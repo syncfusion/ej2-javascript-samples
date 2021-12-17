@@ -27,10 +27,7 @@ this.default = function () {
             { option: 'Week', startHour: '09:00', endHour: '19:00', showWeekend: false, timeScale: { interval: 60, slotCount: 4 } },
             { option: 'Month', group: { resources: ['Owners'] }, eventTemplate: monthEventTemplate },
             { option: 'Agenda', eventTemplate: agendaTemplate }
-        ],
-        eventRendered: function (args) {
-            window.applyCategoryColor(args, scheduleObj.currentView);
-        },
+        ]
     });
     scheduleObj.appendTo('#Schedule');
 };

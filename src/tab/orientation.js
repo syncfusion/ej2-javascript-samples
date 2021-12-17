@@ -92,6 +92,7 @@ this.default = function () {
             tabObj.element.classList.add('e-background');
             tabObj.element.classList.add('e-accent');
         }
+        tabObj.refreshActiveBorder();
     }
     function removeStyleClass() {
         tabObj.element.classList.remove('e-fill');

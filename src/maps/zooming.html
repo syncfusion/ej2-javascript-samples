@@ -1,68 +1,86 @@
-<div class="col-lg-9 control-section">
+<div class="col-lg-8 control-section">
         <div id="mapszooming"></div>
     <div id="height_slider"></div>
         
     </div>
     <!-- Property Panel -->
-    <div class="col-lg-3 property-section">
+    <div class="col-lg-4 property-section">
         <table id="property" title="Properties" style="width: 100%">
             <tbody>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
+                    <td>
                         <div>Zooming</div>
                     </td>
                     <td>
-                        <input type="checkbox" checked id="zoom" style="margin-top: 15px; margin-left:45px" />
+                        <div>
+                            <input type="checkbox" checked id="zoom"  />
+                        </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
+                    <td>
                         <div>Panning</div>
                     </td>
                     <td>
-                        <input type="checkbox" checked id="pan" style="margin-top: 15px; margin-left:45px" />
+                        <div >
+                            <input type="checkbox" checked id="pan"  />
+                        </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
+                    <td>
                         <div>Mouse wheel zoom</div>
                     </td>
                     <td>
-                        <input type="checkbox" checked id="mousewheel" style="margin-top: 15px; margin-left:45px" />
+                        <div>
+                            <input type="checkbox" checked id="mousewheel"  />
+                        </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                        <td style="width: 50%">
+                        <td>
                             <div>Pinch zoom</div>
                         </td>
                         <td>
-                            <input type="checkbox" checked id="pinch" style="margin-top: 15px; margin-left:45px" />
+                            <div>
+                                <input type="checkbox" checked id="pinch"  />
+                            </div>
                         </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
+                    <td>
                         <div>Single click zoom</div>
                     </td>
                     <td>
-                        <input type="checkbox" id="singletap" style="margin-top: 15px; margin-left:45px" />
+                        <div>
+                            <input type="checkbox" id="singletap" class="form-control" />
+                        </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
+                    <td style="width: 20%">
                         <div>Double click zoom</div>
                     </td>
-                    <td>
-                        <input type="checkbox" id="doubletap" style="margin-top: 15px; margin-left:45px" />
+                    <td style="width: 40%;">
+                        <div>
+                            <input type="checkbox" id="doubletap"  class="form-control"/>
+                        </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 50%">
-                        <div>Animation duration <br><span id="dur">500 ms</span></div>
+                    <td>
+                        <div>Animation duration</div>
                     </td>
                     <td>
-                        <div id="range" style="width: 80px"></div>
+                        <div style="padding-top: 5px;padding-left:10px;">
+                            <input type="range" id="range" value="500" min="0" max="1000" style="width: 60%" />
+                        </div>
+                    </td>
+                    <td align="center" style="width: 10%;padding-top: 0px;text-align: center;">
+                        <span id='dur' style="margin-left: -35px;">500</span>
                     </td>
                 </tr>
+                
         </tbody></table>
     </div>
     <div id="action-description">
@@ -154,7 +172,15 @@
                 height: 8px;
                 top: calc(50% - 4px);
                 border-radius: 5px;
+            }            
+            .property-panel-header {
+                padding-left: 10px;
             }
-        
+            td {
+                width: 50%;
+            }
+            .property-panel-table div {
+                padding-top: 0px;
+            }
         </style>
         <!-- custom code end -->

@@ -28,7 +28,8 @@
             titleSettings: {
                 text: 'Top 6 largest countries age group details',
                 textStyle: {
-                    size: '16px'
+                    size: '16px',
+                    fontFamily: 'Segeo UI'
                 }
             },
             zoomSettings: {
@@ -36,7 +37,8 @@
             },
             legendSettings: {
                 visible: true,
-                position: 'Bottom'
+                position: 'Bottom',
+                textStyle: { fontFamily: 'Segeo UI' }
             },
             layers: [
                 {

@@ -110,6 +110,11 @@ this.default = function () {
         textRender: function (args) { args.text = args.point.x + ' ' + args.point.y + ' %'; },
         tooltip: { enable: false, format: '${point.x} <br> ${point.y} %' },
         title: 'Automobile Sales by Category',
+        chartMouseMove: function (args) {
+            if (args.target.indexOf("drill-container_Series_0_") > -1) {
+                document.getElementById(args.target).style.cursor = 'pointer';
+            }
+        },
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';

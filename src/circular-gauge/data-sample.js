@@ -36,7 +36,7 @@ this.default = function () {
                 majorTicks: { width: 0 },
                 lineStyle: { width: 0 },
                 minorTicks: { width: 0 },
-                labelStyle: { font: { size: '0' } },
+                labelStyle: { font: { size: '0', fontFamily:'Segoe UI' } },
                 annotations: [{
                     content: '#germany',
                     angle: 180, zIndex: 1,

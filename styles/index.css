@@ -701,7 +701,7 @@
 
 .sb-content {
     top: 48px;
-    background: #F8F8F8;
+    background: #FFFFFF;
 }
 
 .copycode::before {
@@ -793,8 +793,10 @@
 }
      
 .e-samplestatus.update {
-    background-color: #fbaa33;
-}
+    background-color: #fff;
+    height: 23px !important;
+    border: 1px solid #29bc4f !important;
+    color: #29bc4f !important;}
      
 .e-samplestatus.preview {
     background-color: #0275d8;
@@ -822,6 +824,7 @@
 .e-samplestatus.preview {
     margin-top: 6.5px;
     margin-right: -3px;
+
 }
      
 .e-bigger .e-samplestatus.new,
@@ -993,7 +996,7 @@
 
 #left-sidebar {
     border: none;
-    background-color: #f8f8f8;
+    background-color: #FFFFFF;
 }
 
 /*right -pane*/
@@ -1773,7 +1776,7 @@ propertye pane
     }
     .sb-left-pane {
         z-index: 10010;
-        background: #f8f8f8;
+        background: #FFFFFF;
     }
     .highcontrast .sb-left-pane {
         background: #000000;
@@ -2070,7 +2073,7 @@ body.highcontrast,
     border: none;
 }
 .highcontrast #controlList li.e-list-item {
-    line-height: 45px;
+    line-height: 34px;
     }
 
 .highcontrast .sb-content-section,
@@ -2662,20 +2665,20 @@ body.highcontrast,
 .tailwind .e-samplestatus.new, .tailwind .e-samplestatus.update, .tailwind .e-samplestatus.preview {
     margin: 12px 0;
     height: 22px;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 .bootstrap5 .e-samplestatus.new.tree, .bootstrap5 .e-samplestatus.update.tree, .bootstrap5 .e-samplestatus.preview.tree {
     margin: 12px 0;
     height: 20px;
-    margin-top: 7px;
+    margin-top: 5px;
     margin-bottom: 2px
 }
  
 .bootstrap5 .e-samplestatus.new, .bootstrap5 .e-samplestatus.update, .bootstrap5 .e-samplestatus.preview {
     margin: 12px 0;
     height: 20px;
-    margin-top: 2px;
+    margin-top: 1px;
     margin-bottom: 2px
 }
 
@@ -2704,7 +2707,7 @@ body.material-dark,
 .material-dark .sample-navigation,
 .material-dark .sb-icon-Popout,
 .material-dark .sb-switch-popup a {
-    color: #f8f8f8;
+    color: #FFFFFF;
 }
 .material-dark .sb-header,
 .material-dark .sb-search-result .e-list-item,
@@ -2956,7 +2959,7 @@ body.fabric-dark,
 .fabric-dark .sample-navigation,
 .fabric-dark .sb-icon-Popout,
 .fabric-dark .sb-switch-popup a {
-    color: #f8f8f8;
+    color: #FFFFFF;
 }
 .fabric-dark .sb-header,
 .fabric-dark .sb-search-result .e-list-item,
@@ -3114,7 +3117,7 @@ body.bootstrap-dark,
 .bootstrap-dark .sample-navigation,
 .bootstrap-dark .sb-icon-Popout,
 .bootstrap-dark .sb-switch-popup a {
-    color: #f8f8f8;
+    color: #FFFFFF;
 }
 .bootstrap-dark .sb-header,
 .bootstrap-dark .sb-search-result .e-list-item,
@@ -3270,7 +3273,7 @@ body.bootstrap5-dark,
 .bootstrap5-dark .sample-navigation,
 .bootstrap5-dark .sb-icon-Popout,
 .bootstrap5-dark .sb-switch-popup a {
-    color: #f8f8f8;
+    color: #FFFFFF;
 }
 .bootstrap5-dark .sb-header,
 .bootstrap5-dark .sb-search-result .e-list-item,
@@ -3424,7 +3427,7 @@ body.tailwind-dark,
 .tailwind-dark .sample-navigation,
 .tailwind-dark .sb-icon-Popout,
 .tailwind-dark .sb-switch-popup a {
-    color: #f8f8f8;
+    color: #FFFFFF;
 }
 .tailwind-dark .sb-header,
 .tailwind-dark .sb-search-result .e-list-item {
@@ -3572,7 +3575,25 @@ color:white;
  .tailwind-dark .e-samplestatus.new,.tailwind-dark .e-samplestatus.update,.tailwind-dark .e-samplestatus.preview{
     margin: 2px 0;
     height: 22px;
-    margin-top: 1px;
+    margin-top: 0px;
+}
+
+.material .e-samplestatus.new,.material .e-samplestatus.update,.material .e-samplestatus.preview{
+    margin: 2px 0;
+    height: 22px;
+    margin-top: 7px;
+}
+
+.fabric .e-samplestatus.new,.fabric .e-samplestatus.update,.fabric .e-samplestatus.preview{
+    margin: 2px 0;
+    height: 22px;
+    margin-top: 7px;
+}
+
+.bootstrap .e-samplestatus.new,.bootstrap .e-samplestatus.update,.bootstrap .e-samplestatus.preview{
+    margin: 2px 0;
+    height: 22px;
+    margin-top: 9px;
 }
 
 .bootstrap4 .e-samplestatus.new.tree, .bootstrap4 .e-samplestatus.update.tree,.bootstrap4 .e-samplestatus.preview.tree {
@@ -3655,7 +3676,7 @@ color:white;
 .bootstrap5-dark .sb-theme-popup li:hover.active .sb-theme-select,
 .tailwind-dark .sb-theme-popup li:hover.active .sb-theme-select,
 .material-dark .sb-theme-popup li:hover.active .sb-theme-select,
-.highcontrast .sb-theme-popup li:hover.active .sb-theme-select{
+.highcontrast .sb-theme-popup li:hover.active .sb-theme-select {
     color:white;
 }
 .tailwind-dark .sb-theme-select {
@@ -3679,12 +3700,12 @@ color:white;
 .bootstrap5-dark .e-samplestatus.new,.bootstrap5-dark .e-samplestatus.update,.bootstrap5-dark .e-samplestatus.preview {
     margin: 5px 0;
     height: 22px;
-    margin-top: 0px;
+    margin-top: 0.5px;
 }
 .bootstrap5-dark .e-samplestatus.new.tree,.bootstrap5-dark .e-samplestatus.update.tree, .e-samplestatus.preview.tree {
     margin: 6px 0;
     height: 22px;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 .bootstrap-dark .e-samplestatus.new.tree,.bootstrap-dark .e-samplestatus.update.tree,.bootstrap-dark .e-samplestatus.preview.tree {
     margin: 6px 0;

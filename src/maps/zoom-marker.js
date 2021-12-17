@@ -21,7 +21,8 @@ this.default = function () {
         titleSettings: {
             text: 'Capitals of South American countries',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         layers: [
@@ -48,6 +49,9 @@ this.default = function () {
                             format:  '<b>Capital</b> : ${name}<br><b>Country</b> : ${Country}',
                             visible: true,
                             valuePath: 'name',
+                            textStyle: {
+                                fontFamily: 'Segeo UI'
+                            }
                         }
                     },
                 ]

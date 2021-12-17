@@ -6,15 +6,18 @@
     </div>
     <!-- Property Panel -->
     <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%; margin-left: -10px">
+        <table id="property" title="Properties" style="width: 100%;">
             <tr style="height: 50px">
                 <td style="width: 30%">
-                    <div id='pointerValue'>Pointer Value <span> &nbsp;&nbsp;&nbsp;70</span> </div>
+                    <div>Pointer Value</div>
                 </td>
                 <td style="width: 40%;">
                     <div style="margin-left: 20px">
-                        <input type="range" id="value" value="70" min="0" max="120" style="width:110px" />
+                        <input type="range" id="value" value="70" min="0" max="120" style="width:90%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='pointerValue' style="margin-left: -10px;">70</span>
                 </td>
             </tr>
             <tr style="height: 50px">
@@ -22,7 +25,7 @@
                    <div id='enablePointer'>Allow Pointer Drag</div>
                 </td>
                 <td style="width: 40%;">
-                    <div style="margin-left: 70px">
+                    <div style="margin-left: 20px">
                         <input type="checkbox" id="enable" checked="true" />
                     </div>
                 </td>
@@ -32,7 +35,7 @@
                     <div id='enableRange'>Allow Ranges Drag</div>
                 </td>
                 <td style="width: 40%;">
-                    <div style="margin-left: 70px">
+                    <div style="margin-left: 20px">
                         <input type="checkbox" id="enable1" />
                     </div>
                 </td>
@@ -59,3 +62,11 @@
         <a target="_blank" href="http://ej2.syncfusion.com/documentation">documentation section</a>.
     </p>
 </div>
+<style>
+    .property-panel-table div {
+        padding-left: 0px;
+    }
+    .property-panel-section {
+        padding-left: 20px;
+    }
+</style>

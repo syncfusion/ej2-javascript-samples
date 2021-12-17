@@ -3,7 +3,7 @@ this.default = function () {
     var pivotObj = new ej.pivotview.PivotView({
         dataSourceSettings: {
             enableSorting: true,
-            formatSettings: [{ name: 'ProCost', format: 'C' }],
+            formatSettings: [{ name: 'PowUnits', format: 'N' }, { name: 'ProCost', format: 'C' }],
             drilledMembers: [{ name: 'EnerType', items: ['Biomass', 'Free Energy'] }],
             columns: [
                 { name: 'EnerType', caption: 'Energy Type' },
@@ -26,7 +26,7 @@ this.default = function () {
         height: 290,
         gridSettings: { columnWidth: 140 }
     });
-    pivotObj.appendTo('#PivotView');    
+    pivotObj.appendTo('#PivotView');
     var balanceDropDown = new ej.dropdowns.DropDownList({
         placeholder: 'Cost',
         floatLabelType: 'Auto',
@@ -47,6 +47,11 @@ this.default = function () {
         var isAvail = false;
         for (var vCnt = 0; vCnt < pivotObj.dataSourceSettings.values.length; vCnt++) {
             if (pivotObj.dataSourceSettings.values[vCnt].name === fieldName) {
+                if (pivotObj.dataSourceSettings.values[vCnt].name === 'PowUnits' && summaryType === 'Avg') {
+                    pivotObj.setProperties({ dataSourceSettings: { formatSettings: [{ name: 'PowUnits', format: 'N2' }, { name: 'ProCost', format: 'C' }] } }, true);
+                } else {
+                    pivotObj.setProperties({ dataSourceSettings: { formatSettings: [{ name: 'PowUnits', format: 'N' }, { name: 'ProCost', format: 'C' }] } }, true);
+                }
                 pivotObj.dataSourceSettings.values[vCnt].type = summaryType;
                 isAvail = true;
             }

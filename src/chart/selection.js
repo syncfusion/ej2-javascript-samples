@@ -24,6 +24,7 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2,
                 yName: 'y', name: 'Age 0-14',
+                animation: { enable: false },
             },
             {
                 type: 'Column',
@@ -34,6 +35,7 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2,
                 yName: 'y', name: 'Age 15-64',
+                animation: { enable: false },
             },
             {
                 type: 'Column',
@@ -44,6 +46,7 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2,
                 yName: 'y', name: 'Age 65 & Above',
+                animation: { enable: false },
             }
         ],
         title: 'Age Distribution by Country', legendSettings: { visible: true, toggleVisibility: false },
@@ -103,6 +106,15 @@ this.default = function () {
         }
     });
     highLight.appendTo('#highpattern');
+    var colorPicker = new ej.inputs.ColorPicker({
+        value: 'null',
+        mode: 'Palette',
+        change: (args) => {
+            chart.highlightColor = args.currentValue.hex;
+            chart.dataBind();
+        }
+    });
+    colorPicker.appendTo('#color-picker');
     document.getElementById('highlight').onchange = function () {
         var element = (document.getElementById('highlight'));
         if (element.checked) {
@@ -115,4 +127,4 @@ this.default = function () {
         }
         chart.dataBind();
     };
-    };
+};

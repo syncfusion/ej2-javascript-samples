@@ -38,7 +38,7 @@ this.default = function () {
             lineStyle: { width: 0 },
             labelStyle: {
                 position: 'Inside', useRangeColor: true,
-                font: { size: '0px', color: 'white', fontFamily: 'Roboto', fontStyle: 'Regular' }
+                font: { size: '0px', color: 'white', fontFamily: 'Segoe UI', fontStyle: 'Regular' }
             }, majorTicks: { height: 0, }, minorTicks: { height: 0 },
             startAngle: 200, endAngle: 160, minimum: 0, maximum: 100, radius: '80%',
             ranges: [

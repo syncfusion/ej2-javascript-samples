@@ -9,7 +9,7 @@ function pointeGauge1() {
             lineStyle: { width: 3, color: '#ff5985' },
             labelStyle: {
                 position: 'Outside',
-                font: { size: '0px', color: '#ff5985' }
+                font: { size: '0px', color: '#ff5985', fontFamily: 'Segoe UI' }
             }, majorTicks: {
                 width: 1,
                 height: 0,

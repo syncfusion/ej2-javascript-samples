@@ -20,7 +20,14 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
 
     function onExportClick() {
-        var exportValues = { fields: ['Id', 'Subject', 'StartTime', 'EndTime', 'Location'] };
+        var exportFields = [
+            { name: 'Id', text: 'Id' },
+            { name: 'Subject', text: 'Summary' },
+            { name: 'StartTime', text: 'Start Date' },
+            { name: 'EndTime', text: 'End Date' },
+            { name: 'Location', text: 'Place' }
+        ];
+        var exportValues = { fieldsInfo: exportFields };
         scheduleObj.exportToExcel(exportValues);
     }
 };

@@ -23,7 +23,7 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'List of countries by population',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segeo UI' }
         },
         format: 'n',
         useGroupingSeparator: true,
@@ -33,18 +33,21 @@ this.default = function () {
         weightValuePath: 'Population',
         tooltipSettings: {
             visible: true,
-            format: '${Name} : ${Population}'
+            format: '${Name} : ${Population}',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         leafItemSettings: {
             labelPath: 'Name',
             showLabels: false,
-            labelStyle: { size: '0px' },
+            labelStyle: { size: '0px', fontFamily: 'Segeo UI' },
             border: { color: 'black', width: 0.5 }
         },
         levels: [
-            { groupPath: 'Continent', fill: '#336699', border: { color: 'black', width: 0.5 } },
-            { groupPath: 'States', fill: '#336699', border: { color: 'black', width: 0.5 } },
-            { groupPath: 'Region', fill: '#336699', showHeader: false, border: { color: 'black', width: 0.5 } },
+            { groupPath: 'Continent', fill: '#336699', border: { color: 'black', width: 0.5 }, headerStyle: { fontFamily: 'Segoe UI' } },
+            { groupPath: 'States', fill: '#336699', border: { color: 'black', width: 0.5 }, headerStyle: { fontFamily: 'Segoe UI' } },
+            { groupPath: 'Region', fill: '#336699', showHeader: false, border: { color: 'black', width: 0.5 }, headerStyle: { fontFamily: 'Segoe UI' } },
         ]
     });
     treemap.appendTo('#container');
@@ -79,7 +82,7 @@ this.default = function () {
     var header = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Selection selection type',
-        width: 80,
+        width: '100%',
         change: function () {
             for (var i = 0; i < treemap.levels.length - 1; i++) {
                 treemap.levels[i].headerAlignment = header.value;
@@ -91,7 +94,7 @@ this.default = function () {
     var label = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Selection selection type',
-        width: 80,
+        width: '100%',
         change: function () {
             treemap.levels[2].headerAlignment = label.value;
             treemap.refresh();

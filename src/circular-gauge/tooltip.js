@@ -4,7 +4,7 @@
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
         title: 'Tooltip Customization',
-        titleStyle: { size: '15px', color: 'grey' },
+        titleStyle: { size: '15px', color: 'grey', fontFamily: 'Segoe UI' },
         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -22,7 +22,7 @@ this.default = function () {
             lineStyle: { width: 0 },
             majorTicks: { color: 'white', offset: -5, height: 12 },
             minorTicks: { width: 0 },
-            labelStyle: { useRangeColor: true, font: { color: '#424242', size: '13px', fontFamily: 'Roboto' } },
+            labelStyle: { useRangeColor: true, font: { color: '#424242', size: '13px', fontFamily: 'Segoe UI' } },
             pointers: [{
                 value: 70,
                 radius: '60%',
@@ -47,7 +47,11 @@ this.default = function () {
         tooltip: {
             type: ['Pointer', 'Range'],
             enable: true,
-            enableAnimation: false
+            enableAnimation: false,
+            textStyle: {
+                fontFamily: 'Segoe UI'
+            }
+
         },
         tooltipRender: function (args) {
             var imageName, borderColor, textColor;

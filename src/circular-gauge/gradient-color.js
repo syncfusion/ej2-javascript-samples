@@ -42,7 +42,7 @@ this.default = function () {
         axes: [{
             lineStyle: { width: 0, color: 'transparent' },
             startAngle: 210, endAngle: 150, minimum: 0, maximum: 100, radius: '80%',
-            labelStyle: { font: { fontFamily: 'Roboto',
+            labelStyle: { font: { fontFamily: 'Segoe UI',
             size: '12px',
             fontWeight: 'Regular' }, offset: 10 },
             majorTicks: { width: 0, interval: 10 },
@@ -98,7 +98,7 @@ this.default = function () {
      var gradientType = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 145,
+        width: '100%',
         change: function () {
             changeGradient();
         }
@@ -108,7 +108,7 @@ this.default = function () {
     var element = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 145,
+        width: '100%',
         change: function () {
             changeGradient();
         }

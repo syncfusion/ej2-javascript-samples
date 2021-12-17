@@ -26,6 +26,11 @@ function firstGauge() {
             line: {
                 color: '#9E9E9E'
             },
+            labelStyle: {
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
+            },
             pointers: [{
                 value: 80,
                 offset: 10,
@@ -70,7 +75,10 @@ function secondGauge() {
                 interval: 10,
             },
             labelStyle: {
-                offset: 50
+                offset: 50,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [{
                 value: 10,
@@ -100,6 +108,11 @@ function thirdGauge() {
             line: {
                 offset: -20,
                 color: '#9E9E9E'
+            },
+            labelStyle: {
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [
                 {
@@ -148,7 +161,10 @@ function fourthGauge() {
                 height: 0
             },
             labelStyle: {
-                offset: 55
+                offset: 55,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [
                 {

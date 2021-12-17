@@ -15,7 +15,8 @@ this.default = function () {
         titleSettings: {
             text: 'Country wise International Airport count in South America',
             textStyle: {
-                size: '15px'
+                size: '15px',
+                fontFamily: 'Segeo UI'
             }
         },
         dataSource: window.Airport_Count,
@@ -24,14 +25,18 @@ this.default = function () {
         legendSettings: {
             visible: true,
             position: 'Top',
-            shape: 'Rectangle'
+            shape: 'Rectangle',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         leafItemSettings: {
             showLabels: true,
             labelPath: 'State',
             labelPosition: 'Center',
             labelStyle: {
-                size: '13px'
+                size: '13px',
+                fontFamily: 'Segeo UI'
             },
             fill: '#6699cc',
             border: { width: 1, color: 'white' },

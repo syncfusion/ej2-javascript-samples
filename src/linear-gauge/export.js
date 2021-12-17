@@ -4,6 +4,10 @@
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
         title: 'Speedometer',
+        titleStyle: {
+            size: '18px',
+            fontFamily: 'Segoe UI'
+        },
         orientation: 'Horizontal',
         allowPdfExport : true,
         allowImageExport: true,
@@ -28,7 +32,7 @@ this.default = function () {
             labelStyle: {
             position: "Outside",
             font: {
-            color: 'black'
+            fontFamily: 'Segoe UI'
             },
             offset: 4
             },
@@ -79,7 +83,7 @@ this.default = function () {
             value: 80,
             height: 23,
             width: 35,
-            offset: -55,
+            offset: -52,
             markerType: 'Triangle',
             border:
             {
@@ -100,7 +104,7 @@ this.default = function () {
     gauge.appendTo('#gauge');
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
-        width: '90px'
+        width: '100%'
     });
     mode.appendTo('#type');
     var exportGauge = new ej.buttons.Button({

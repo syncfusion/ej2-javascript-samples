@@ -18,7 +18,8 @@ this.default = function () {
         titleSettings: {
             text: 'Samsung Semiconductor office locations in USA',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segoe UI'
             }
         },
         layers: [
@@ -63,7 +64,10 @@ this.default = function () {
                         tooltipSettings: {
                             visible: true,
                             valuePath: 'name',
-                            format: '<b>${name}</b><br>Manufacturing Center,<br>Research and Development Center'
+                            format: '<b>${name}</b><br>Manufacturing Center,<br>Research and Development Center',
+                            textStyle: {
+                                fontFamily: 'Segoe UI'
+                            }
                         }
                     },
                     {
@@ -103,7 +107,10 @@ this.default = function () {
                         tooltipSettings: {
                             visible: true,
                             valuePath: 'name',
-                            format: '<b>${name}</b><br>Regional Office,<br>Research and Development Center'
+                            format: '<b>${name}</b><br>Regional Office,<br>Research and Development Center',
+                            textStyle: {
+                                fontFamily: 'Segoe UI'
+                            }
                         },
                         template: '#markercircle'
                     },

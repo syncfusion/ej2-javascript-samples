@@ -13,7 +13,8 @@ this.default = function () {
         },
         // custom code end
         titleStyle: {
-            size: '18px'
+            size: '18px',
+            fontFamily: 'Segoe UI'
         },
         centerY: '57%',
         axes: [{
@@ -36,7 +37,8 @@ this.default = function () {
             radius: '90%',
             labelStyle: {
                 font: {
-                    size: '0px'
+                    size: '0px',
+                    fontFamily: 'Segoe UI'
                 }
             }, majorTicks: {
                 interval: 20, width: 0,

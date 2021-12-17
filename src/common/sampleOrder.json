@@ -6,7 +6,7 @@
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box"],
     "Navigation": ["Accordion", "Breadcrumb", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Toast", "Progress Bar"],   
-    "Inputs": ["Form Validation", "TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider"],
+    "Inputs": ["Form Validation", "TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature"],
     "Layout": ["Avatar", "Card", "Dialog", "ListView",  "Tooltip", "Splitter","Dashboard Layout"],
     "Forms": ["Query Builder"],
     "Viewer": ["PDF Viewer"]

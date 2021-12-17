@@ -10,7 +10,7 @@ this.default = function () {
             columns: [
                 { field: "EmpID", headerText: "Employee ID", width: "180" },
                 { field: "Name", headerText: "Employee Name" },
-                { field: "Address", headerText: "Employee Details", width: "350" },
+                { field: "Address", headerText: "Employee Details", width: "360" },
                 { field: "DOB", headerText: "DOB" }
             ]
         });

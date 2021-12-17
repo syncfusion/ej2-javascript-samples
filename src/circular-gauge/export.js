@@ -56,7 +56,7 @@ this.default = function () {
             labelStyle: {
                 font: {
                     color: '#424242',
-                    fontFamily: 'Roboto',
+                    fontFamily: 'Segoe UI',
                     size: '12px',
                     fontWeight: 'Regular'
                 },
@@ -72,7 +72,7 @@ this.default = function () {
     circulargauge.appendTo('#gauge');
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
-        width: '90px'
+        width: '100%'
     });
     mode.appendTo('#type');
     var exportGauge = new ej.buttons.Button({

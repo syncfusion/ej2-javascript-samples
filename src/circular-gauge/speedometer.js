@@ -23,7 +23,7 @@ function gauge6() {
             majorTicks: { width: 0, },
             minorTicks: { width: 0 },
             labelStyle: { useRangeColor: false, position: 'Outside', autoAngle: true,
-            font: { size: '13px', fontFamily: 'Roboto' } },
+            font: { size: '13px', fontFamily: 'Segoe UI' } },
             startAngle: 270, endAngle: 90,
             pointers: [{
                     animation: { enable: true, duration: 900 },

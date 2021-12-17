@@ -31,6 +31,11 @@ this.default = function () {
     var button = new ej.buttons.Button({ isPrimary: true });
     button.appendTo('#calculated-field-btn');
     button.element.onclick = function () {
-        pivotObj.calculatedFieldModule.createCalculatedFieldDialog();
+        if (ej.base.Browser.isDevice) {
+            pivotObj.pivotFieldListModule.dialogRenderer.onShowFieldList();
+        }
+        else {
+            pivotObj.calculatedFieldModule.createCalculatedFieldDialog();
+        }
     };
 };

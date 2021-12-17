@@ -3,8 +3,9 @@
  * Sample for Radial tree
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.RadialTree);
- //based on the option, Click event to perform ZoomIn,ZoomOut and Reset.
- function onItemClick(args) {
+//based on the option, Click event to perform ZoomIn,ZoomOut and Reset.
+function onItemClick(args) {
+    var diagram = document.getElementById('diagram').ej2_instances[0];
     switch (args.item.text) {
         case 'Zoom In':
             var zoomin = { type: 'ZoomIn', zoomFactor: 0.2 };

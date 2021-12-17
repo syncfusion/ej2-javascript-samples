@@ -6,36 +6,45 @@
     </div>
     <!-- Property Panel -->
     <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%; margin-left: -10px">
-            <tr style="height: 50px">
+        <table id="property" title="Properties" style="width: 100%;">
+            <tr>
                 <td>
-                    <div id='rangeStart'>Start Angle <span> &nbsp;&nbsp;&nbsp;270°</span> </div>
+                    <div>Start Angle</div>
                 </td>
                 <td>
-                    <div style="margin-left: 20px">
-                        <input type="range" id="start" value="270" min="0" max="360" style="width:100px" />
+                    <div style="padding-left: 10px;">
+                        <input type="range" id="start" value="270" min="0" max="360" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='rangeStart' style="margin-left: -25px;">270°</span>
                 </td>
             </tr>
     
-            <tr style="height: 50px">
+            <tr>
                 <td>
-                    <div id='rangeEnd'>End Angle<span> &nbsp;&nbsp;&nbsp;90°</span> </div>
+                    <div>End Angle</div>
                 </td>
                 <td>
-                    <div style="margin-left: 20px">
-                        <input type="range" id="end" value="90" min="0" max="360" style="width:100px" />
+                    <div style="padding-left: 10px;">
+                        <input type="range" id="end" value="90" min="0" max="360" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='rangeEnd' style="margin-left: -25px;">90°</span>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
-                    <div id='radius1'>Radius <span> &nbsp;&nbsp;&nbsp;80</span> </div>
+                    <div>Radius</div>
                 </td>
                 <td>
-                    <div style="margin-left: 20px">
-                        <input type="range" id="radius" value="80" min="0" max="100" style="width:100px" />
+                    <div style="padding-left: 10px;">
+                        <input type="range" id="radius" value="80" min="0" max="100" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='radius1' style="margin-left: -25px;">80%</span>
                 </td>
             </tr>
             <tr >
@@ -43,29 +52,35 @@
                     <div class="property-text"> Radius based on angle</div>
                 </td>       
                 <td style="width: 40%;">
-                    <div style="margin-left: 50px">
+                    <div style="padding-top: 0px; margin-left: 10px">
                         <input type="checkbox" id="angle" checked/>
                     </div>
                 </td>
-        </tr>
-            <tr style="height: 50px">
+            </tr>
+            <tr>
                 <td>
-                    <div id='center1'>Center X <span> &nbsp;&nbsp;&nbsp;50%</span> </div>
+                    <div>Center X</div>
                 </td>
                 <td>
-                    <div style="margin-left: 20px">
-                        <input type="range" id="centerX" value="50" min="0" max="100" style="width:100px" />
+                    <div style="padding-left: 10px;">
+                        <input type="range" id="centerX" value="50" min="0" max="100" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='center1' style="margin-left: -25px;">50%</span>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
-                    <div id='center2'>Center Y <span> &nbsp;&nbsp;&nbsp;50%</span> </div>
+                    <div>Center Y</div>
                 </td>
                 <td>
-                    <div style="margin-left: 20px">
-                        <input type="range" id="centerY" value="50" min="0" max="100" style="width:100px" />
+                    <div style="padding-left: 10px;">
+                        <input type="range" id="centerY" value="50" min="0" max="100" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='center2' style="margin-left: -25px;">50%</span>
                 </td>
             </tr>
             <tr>
@@ -73,7 +88,7 @@
                     <div id="enablehide"> Hide intersecting labels</span> </div>
                 </td>
                 <td>
-                    <div style="padding-top: 0px; margin-left: 50px">
+                    <div style="padding-top: 0px; margin-left: 10px">
                         <input type="checkbox" id="hidelabel" checked>
                     </div>
                 </td>
@@ -88,7 +103,7 @@
     </div>
     <div id="description">
         <p>
-            In this example, you can see how to render the circular gauge with modified start and end angles to form semi or quarter circular gauges. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles. You can also hide the intersect labels using 'hideIntersectingLabel' property.
+            In this example, you can see how to render the circular gauge with modified start and end angles to form semi or quarter circular gauges. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles. You can also hide the intersect labels using <code>hideIntersectingLabel</code> property.
         </p>
         <p>
             For more information on ranges, refer to this
@@ -99,6 +114,12 @@
     <style>
         #control-container {
             padding: 0px !important;
+        }
+        .property-panel-table div {
+            padding-left: 0px;
+        }
+        tr {
+            height: 50px;
         }
     </style>
     <!-- custom code end -->

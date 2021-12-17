@@ -13,6 +13,9 @@ this.default = function () {
         },
         tooltip: {
             enable: true,
+            textStyle: {
+                fontFamily: 'Segoe UI'
+            }
         },
         orientation: 'Horizontal',
         axes: [
@@ -27,6 +30,11 @@ this.default = function () {
                 },
                 minorTicks: {
                     interval: 0.2
+                },
+                labelStyle: {
+                    font: {
+                        fontFamily: 'Segoe UI'
+                    }
                 },
                 pointers: [{
                     type: 'Bar',
@@ -47,6 +55,11 @@ this.default = function () {
                 },
                 minorTicks: {
                     interval: 0.2
+                },
+                labelStyle: {
+                    font: {
+                        fontFamily: 'Segoe UI'
+                    }
                 },
                 pointers: [{
                     type: 'Bar',

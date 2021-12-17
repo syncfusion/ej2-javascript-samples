@@ -39,7 +39,7 @@ this.default = function () {
         ]
     };
     var qryBldrObj = new ej.querybuilder.QueryBuilder({
-        dataSource: window.basicData,
+        dataSource: window.employeeData,
         columns: filter,
         rule: importRules,
         actionBegin: actionBegin

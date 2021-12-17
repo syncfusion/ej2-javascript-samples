@@ -1,19 +1,19 @@
 <div>
     <div class="col-md-8 control-section">
         <div class="content-wrapper">
-            <div id="gauge" style="width:92%;margin-bottom: 30px;margin-left:10px;"></div>
+            <div id="gauge" style="width:92%;margin-bottom: 30px;"></div>
         </div>
     </div>
     <!-- property panel-->
-    <div class="col-md-3 property-section">
-        <table id="property" title="Properties" style="width: 100%; margin-left:5px">
+    <div class="col-md-4 property-section">
+        <table id="property" title="Properties" style="width: 100%;">
             <tr>
                 <td>
-                    <div style="margin-top:30px;margin-left: -15px;width: 120px;"> Gradient Type </div>
+                    <div style="margin-top: 10px;"> Gradient Type </div>
                 </td>
                 <td>
-                    <div style="margin-top:30px;margin-left: -15px;"> 
-                        <select autocomplete="off" id="gradientType" style="width:90%">
+                    <div style="margin-top:10px;"> 
+                        <select autocomplete="off" id="gradientType">
                             <option value="0">Linear Gradient</option>
                             <option value="1">Radial Gradient</option>
                         </select>
@@ -23,11 +23,11 @@
 
             <tr>
                 <td>
-                    <div style="margin-top:30px;margin-left: -15px;width: 120px;"> Elements </div>
+                    <div style="margin-top: 10px;width: 120px;"> Elements </div>
                 </td>
                 <td>
-                    <div style="margin-top:30px;margin-left: -15px;">
-                        <select autocomplete="off" id="element" style="width:90%">
+                    <div style="margin-top:10px;">
+                        <select autocomplete="off" id="element">
                             <option value="0">Range</option>
                             <option value="1">Pointer</option>
                         </select>
@@ -48,3 +48,8 @@
         The linear gauge supports gradient coloring in a linear or radial manner. The gradient type can be changed using the <b>Gradient Type</b> dropdown list in the properties panel. In the same way, the element for which the gradient color should be applied is decided by the <b>Elements</b> dropdown list.
     </p>
 </div>
+<style>
+    .property-panel-table div {
+        padding-left: 0px;
+    }
+</style>

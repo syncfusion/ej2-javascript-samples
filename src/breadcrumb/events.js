@@ -47,8 +47,18 @@ this.default = function () {
   
    function logEvent(eventName) {
     var span = document.createElement('span');
-    span.innerHTML = 'Breadcrumb <b>' + eventName  + '</b> event called<hr>';
+    span.innerHTML = 'Breadcrumb <b>' + eventName  + '</b> event is triggered<hr>';
     var log = document.getElementById('EventLog');
     log.insertBefore(span, log.firstChild);
     }
+
+    // To refresh Breadcrumb control state when reset button clicked
+    new ej.buttons.Button({ cssClass: 'e-small' }, '#reset').element.onclick = function() {
+    var breadcrumb, breadcrumbInst, breadcrumbs = document.querySelector('.content-wrapper').getElementsByClassName("e-breadcrumb");
+    for (var a = 0; a < breadcrumbs.length; a++) {
+        breadcrumb = breadcrumbs[a];
+        breadcrumbInst = ej.base.getComponent(breadcrumb, 'breadcrumb');
+        breadcrumbInst.activeItem = breadcrumbInst.items[breadcrumbInst.items.length - 1].text;
+    }
+  };
 };

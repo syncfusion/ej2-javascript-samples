@@ -101,7 +101,6 @@
 		"validation",
 		"editing",
 		"timeline",
-		"progressbar",
-		null
+		"progressbar"
 	]
 }

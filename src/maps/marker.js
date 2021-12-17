@@ -19,7 +19,8 @@ this.default = function () {
         titleSettings: {
             text: 'Top 25 populated cities in the world',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         layers: [
@@ -42,6 +43,7 @@ this.default = function () {
                             template: '#template',
                             visible: true,
                             valuePath: 'population',
+                            textStyle: { fontFamily: 'Segeo UI' }
                         }
                     },
                 ]

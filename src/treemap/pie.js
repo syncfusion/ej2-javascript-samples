@@ -29,11 +29,12 @@ this.default = function () {
         },
         tooltipSettings: {
             visible: true,
-            format: ' ${Gender} : ${Population}'
+            format: ' ${Gender} : ${Population}',
+            textStyle: { fontFamily: 'Segoe UI' }
         },
         titleSettings: {
             text: 'Population of the continents based on gender and age group - 2011',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segoe UI' }
         },
         format: 'n', useGroupingSeparator: true,
         dataSource: window.Continent_Data,
@@ -43,6 +44,7 @@ this.default = function () {
             fill: '#A1317D',
             showLabels: false,
             border: { color: 'black', width: 0.5 },
+            textStyle: { fontFamily: 'Segoe UI' },
             labelFormat: '${Gender} : ${Population}',
             templatePosition: 'Center',
             labelTemplate: '<div style="height:{{:PieHeight}};width:{{:PieWidth}};" id ={{:Id}}></div>',
@@ -50,7 +52,7 @@ this.default = function () {
         levels: [
             {
                 groupPath: 'Continent', fill: '#7E2361', border: { color: 'black', width: 1, },
-                headerAlignment: 'Center', groupGap: 0, headerStyle: { size: '14px' }
+                headerAlignment: 'Center', groupGap: 0, headerStyle: { size: '14px', fontFamily: 'Segoe UI' }
             }
         ]
     });

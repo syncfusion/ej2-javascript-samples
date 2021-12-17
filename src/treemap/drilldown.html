@@ -9,41 +9,41 @@
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
             <tr>
-                <td style="width: 70%">
-                    <div class="property-text">Drilldown View</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Drilldown View</div>
                 </td>
-                <td style="width: 70%;">
-                    <div>
+                <td>
+                    <div style="margin-top: -10px;padding-left: 0px;">
                         <input type="checkbox" id="drillView" />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 70%">
-                    <div class="property-text">Enable Breadcrumb</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Enable Breadcrumb</div>
                 </td>
-                <td style="width: 70%;">
-                    <div>
+                <td>
+                    <div style="margin-top: -10px;padding-left: 0px;">
                         <input type="checkbox" id="breadCrumb" />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 70%">
-                    <div class="property-text">Breadcrumb Connector</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Breadcrumb Connector</div>
                 </td>
-                <td style="width: 70%;">
+                <td>
                     <div>
-                        <input type="text" id="connectorText" value=' - ' disabled=true style="width:70px;margin-left:10px" />
+                        <input type="text" id="connectorText" value=' - ' disabled=true style="width:100%;" />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width:40%;">
-                    <div class="property-text">Header Alignment</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Header Alignment</div>
                 </td>
-                <td style="width: 60%;">
-                    <div style="margin-left:10px">
+                <td>
+                    <div>
                         <select name="selectIndex" id="header">
                             <option value="Near" selected>Near</option>
                             <option value="Far">Far</option>
@@ -53,11 +53,11 @@
                 </td>
             </tr>
             <tr>
-                <td style="width:40%;">
-                    <div class="property-text">Label Alignment</div>
+                <td>
+                    <div class="property-text" style="padding-left: 0px;">Label Alignment</div>
                 </td>
-                <td style="width: 60%;">
-                    <div style="margin-left:10px">
+                <td>
+                    <div>
                         <select name="selectIndex" id="label">
                             <option value="Near" selected>Near</option>
                             <option value="Far">Far</option>
@@ -87,3 +87,11 @@
         To see the tooltip in action, hover the mouse over an item or tap an item in touch-enabled devices.
     </p>
 </div>
+<style>
+    .property-panel-section {
+        padding-left: 20px;
+    }
+    tr {
+        height: 60px;
+    }
+</style>

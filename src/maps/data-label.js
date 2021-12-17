@@ -27,7 +27,8 @@ this.default = function () {
                 },
 				 tooltipSettings: {
                       visible: true,
-                      valuePath: 'name'
+                      valuePath: 'name',
+                      textStyle: { fontFamily: 'Segeo UI' }
                     },
             }
         ]
@@ -37,7 +38,7 @@ this.default = function () {
     var intersectaction = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select intersect action',
-        width: 90,
+        width: '100%',
         change: function () {
             maps.layers[0].dataLabelSettings.intersectionAction = intersectaction.value;
             maps.refresh();
@@ -47,7 +48,7 @@ this.default = function () {
     var smartlabelmode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select smartlabel mode',
-        width: 90,
+        width: '100%',
         change: function () {
             maps.layers[0].dataLabelSettings.smartLabelMode = smartlabelmode.value;
             maps.refresh();

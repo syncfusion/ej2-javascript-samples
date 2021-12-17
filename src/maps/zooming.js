@@ -40,50 +40,68 @@ this.default = function () {
         slider.change = sliderChange = function (e) {
             maps.layers[0].animationDuration = e.value;
             maps.refresh();
-            document.getElementById('dur').innerHTML = e.value.toString() + ' ms';
-        };
-    document.getElementById('mousewheel').onchange = function () {
-        var element = (document.getElementById('mousewheel'));
-        maps.zoomSettings.mouseWheelZoom = element.checked;
+            document.getElementById('dur').innerHTML = e.value.toString();
+        };    
+    var enableMouseWheelChange;
+    var enableMouseWheelCheckbox = new ej.buttons.CheckBox({
+        change: enableMouseWheelChange, checked: true,
+    }, '#mousewheel');
+    enableMouseWheelCheckbox.change = enableMouseWheelChange =  function (e) {        
+        maps.zoomSettings.mouseWheelZoom = e.checked;
         maps.refresh();
     };
-    document.getElementById('pinch').onchange = function () {
-        var element = (document.getElementById('pinch'));
-        maps.zoomSettings.pinchZooming = element.checked;
+    var enablePinchChange;
+    var enablePinchCheckbox = new ej.buttons.CheckBox({
+        change: enablePinchChange, checked: true,
+    }, '#pinch');
+    enablePinchCheckbox.change = enablePinchChange =  function (e) {
+        maps.zoomSettings.pinchZooming = e.checked;
         maps.refresh();
     };
-    document.getElementById('zoom').onchange = function () {
-        var element = (document.getElementById('zoom'));
-        maps.zoomSettings.enable = element.checked;
+    var enableZoomChange;
+    var enableZoomCheckbox = new ej.buttons.CheckBox({
+        change: enableZoomChange, checked: true,
+    }, '#zoom');
+    enableZoomCheckbox.change = enableZoomChange =  function (e) {
+        maps.zoomSettings.enable = e.checked;
         maps.refresh();
     };
-    document.getElementById('pan').onchange = function () {
-        var element = (document.getElementById('pan'));
-        maps.zoomSettings.enablePanning = element.checked;
+    var enablePanChange;
+    var enablePanCheckbox = new ej.buttons.CheckBox({
+        change: enablePanChange, checked: true,
+    }, '#pan');
+    enablePanCheckbox.change = enablePanChange =  function (e) {
+        maps.zoomSettings.enablePanning = e.checked;
         maps.refresh();
     };
-    document.getElementById('doubletap').onchange = function () {
-        var element = (document.getElementById('doubletap'));
-        maps.zoomSettings.doubleClickZoom = element.checked;
-        var ele1 = document.getElementById('singletap');
-        if (element.checked) {
-            ele1.disabled = true;
-        }
-        else {
-            ele1.disabled = false;
-        }
-		maps.refresh();
-    };
-    document.getElementById('singletap').onchange = function () {
-        var element = (document.getElementById('singletap'));
+    var enableDoubleChange;
+    var enableDoubleCheckbox = new ej.buttons.CheckBox({
+        change: enableDoubleChange, checked: false,
+    }, '#doubletap');
+    var enableSingleChange;
+    var enableSingleCheckbox = new ej.buttons.CheckBox({
+        change: enableSingleChange, checked: false,
+    }, '#singletap');
+    enableSingleCheckbox.change = enableDoubleChange =  function (e) {
+        maps.zoomSettings.zoomOnClick = e.checked;
         var ele1 = document.getElementById('doubletap');
-        maps.zoomSettings.zoomOnClick = element.checked;
-        if (element.checked) {
+        if (e.checked) {            
             ele1.disabled = true;
         }
         else {
             ele1.disabled = false;
         }
-		maps.refresh();
+        maps.refresh();
+    };
+    enableDoubleCheckbox.change = enableDoubleChange =  function (e) {
+        maps.zoomSettings.doubleClickZoom = e.checked;
+        var ele1 = document.getElementById('singletap');
+        if (e.checked) {            
+            ele1.disabled = true;
+        }
+        else {
+            ele1.disabled = false;
+        }
+        maps.refresh();
     };
 };

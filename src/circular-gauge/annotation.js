@@ -41,7 +41,7 @@ function gauge1() {
                     content: '<div id="tm" style="font-size:10px;">21-06-17</div>'
                 }],
                 labelStyle: {
-                    hiddenLabel: 'First', autoAngle: false
+                    hiddenLabel: 'First', autoAngle: false, fontFamily:'Segoe UI'
                 }, majorTicks: {
                     width: 2, height: 14, interval: 1
                 }, minorTicks: {

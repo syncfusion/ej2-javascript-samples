@@ -128,7 +128,8 @@ this.default = function () {
                         ],
                         tooltipSettings: {
                             visible: true,
-                            valuePath: 'text'
+                            valuePath: 'text',
+                            textStyle: { fontFamily: 'Segeo UI' }
                         },
                         border: {
                             color: 'transparent'
@@ -136,7 +137,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div style="color: black;">{{:name}}</div>',
+                        template: '<div style="color: black;font-family: Segeo UI">{{:name}}</div>',
                         dataSource: [
                             {
                                 longitude: -101.9450281, latitude: 35.2018863, name: 'Amarillo'

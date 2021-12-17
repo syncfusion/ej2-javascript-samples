@@ -10,13 +10,13 @@
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
-            <tr style="height: 50px">
-                <td style="width: 60%">
-                    <div class="property-text" style="padding-top: 0px !important">Layout Type</div>
+            <tr>
+                <td>
+                    <div style="padding-left: 0px;">Layout Type</div>
                 </td>
                 <td style="width: 60%;">
-                    <div style="margin-left:10px">
-                        <select name="selectIndex" autocomplete="off" id="layoutMode" style="width:60%;">
+                    <div>
+                        <select name="selectIndex" autocomplete="off" id="layoutMode">
                             <option value="Squarified" selected>Squarified</option>
                             <option value="SliceAndDiceHorizontal">Horizontal</option>
                             <option value="SliceAndDiceVertical">Vertical</option>
@@ -25,13 +25,13 @@
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
-                <td style="width: 60%">
-                    <div class="property-text" style="padding-top: 0px !important">Render Direction</div>
+            <tr>
+                <td>
+                    <div style="padding-left: 0px;">Render Direction</div>
                 </td>
-                <td style="width: 60%">
-                    <div style="margin-left:10px">
-                        <select name="selectIndex" id="highlightMode" style="width:60%;">
+                <td>
+                    <div>
+                        <select name="selectIndex" id="highlightMode">
                             <option value="TopLeftBottomRight" selected>TopLeftBottomRight</option>
                             <option value="TopRightBottomLeft">TopRightBottomLeft</option>
                             <option value="BottomLeftTopRight">BottomLeftTopRight</option>
@@ -73,6 +73,13 @@
         font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
         font-size: 13px !important;
         font-weight: 400 !important;
+    }
+    tr {
+        height: 48px;
+    }
+    td {
+        width: 50%;
+        margin-left: 10px;
     }
 </style>
 <!-- custom code end -->

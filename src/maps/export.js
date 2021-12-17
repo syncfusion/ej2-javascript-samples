@@ -13,7 +13,8 @@ this.default = function () {
         titleSettings: {
             text: 'Location of the Wonders in the World',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             },
         },
         allowPdfExport : true,
@@ -41,7 +42,8 @@ this.default = function () {
                         width: 15,
                         tooltipSettings: {
                             visible: true,
-                            valuePath: 'name'
+                            valuePath: 'name',
+                            textStyle: { fontFamily: 'Segeo UI' }
                         },
                     }
                 ],  
@@ -54,14 +56,14 @@ this.default = function () {
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         dataSource: modeData,
-        width: 110
+        width: '100%'
     });
     mode.appendTo('#mode');
 
     var layertype = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select layer type',
-        width: '110px',
+        width: '100%',
         change: function () {
             if (layertype.value === 'OSM') {
                 if (mode.value === 'SVG')

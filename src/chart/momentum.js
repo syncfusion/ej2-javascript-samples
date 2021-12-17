@@ -29,8 +29,8 @@
                     majorGridLines: { width: 0 }, lineStyle: { width: 0 }, minimum: 80, maximum: 120, interval: 20,
                     majorTickLines: { width: 0 }, title: 'Momentum', stripLines: [
                         {
-                            start: 80, end: 120, text: '', color: 'black', visible: true,
-                            opacity: 0.03, zIndex: 'Behind'
+                            start: 80, end: 120, text: '', color: '#6063ff', visible: true,
+                            opacity: 0.1, zIndex: 'Behind'
                         }
                     ]
                 }],

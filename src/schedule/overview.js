@@ -3,40 +3,18 @@ this.default = function () {
     window.getDateHeaderText = function (value) {
         return intlObj.formatDate(value, { skeleton: 'Ed' });
     };
-    window.getWeather = function (date) {
-        var imgPath;
-        var celsius;
-        switch (date.getDay()) {
-            case 0:
-                imgPath = 'src/schedule/images/weather-clear.svg';
-                celsius = '25°C';
-                break;
-            case 1:
-                imgPath = 'src/schedule/images/weather-clouds.svg';
-                celsius = '18°C';
-                break;
-            case 2:
-                imgPath = 'src/schedule/images/weather-rain.svg';
-                celsius = '10°C';
-                break;
-            case 3:
-                imgPath = 'src/schedule/images/weather-clouds.svg';
-                celsius = '16°C';
-                break;
-            case 4:
-                imgPath = 'src/schedule/images/weather-rain.svg';
-                celsius = '8°C';
-                break;
-            case 5:
-                imgPath = 'src/schedule/images/weather-clear.svg';
-                celsius = '27°C';
-                break;
-            case 6:
-                imgPath = 'src/schedule/images/weather-clouds.svg';
-                celsius = '17°C';
-                break;
-        }
-        return '<img class="weather-image" src="' + imgPath + '"/><div class="weather-text">' + celsius + '</div>';
+    window.getWeather = function (value) {
+        var weatherList = [
+            '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/><div class="weather-text">25°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">18°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/><div class="weather-text">10°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">16°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/><div class="weather-text">8°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/><div class="weather-text">27°C</div>',
+            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">17°C</div>'
+        ];
+        var index = value.getDay();
+        return weatherList[index] ? weatherList[index] : null;
     };
     window.getResourceData = function (data) {
         var resources = scheduleObj.getResourceCollections().slice(-1)[0];
@@ -86,7 +64,7 @@ this.default = function () {
         var eventData = [];
         var eventSubjects = [
             'Bering Sea Gold', 'Technology', 'Maintenance', 'Meeting', 'Travelling', 'Annual Conference', 'Birthday Celebration',
-            'Farewell Celebration', 'Wedding Anniversary', 'Alaska: The Last Frontier', 'Deadest Catch', 'Sports Day', 'MoonShiners',
+            'Farewell Celebration', 'Wedding Anniversary', 'Alaska: The Last Frontier', 'Deadliest Catch', 'Sports Day', 'MoonShiners',
             'Close Encounters', 'HighWay Thru Hell', 'Daily Planet', 'Cash Cab', 'Basketball Practice', 'Rugby Match', 'Guitar Class',
             'Music Lessons', 'Doctor checkup', 'Brazil - Mexico', 'Opening ceremony', 'Final presentation'
         ];
@@ -420,7 +398,7 @@ this.default = function () {
             textField: 'CalendarName', idField: 'CalendarId', colorField: 'CalendarColor',
             dataSource: resourceData, query: new ej.data.Query().where('CalendarId', 'equal', 1)
         }],
-        dateHeaderTemplate: '#date-header-template',
+        dateHeaderTemplate: '<div class="date-text">${getDateHeaderText(data.date)}</div>${getWeather(data.date)}',
         quickInfoTemplates: {
             header: '#header-template',
             content: '#content-template',
@@ -462,6 +440,9 @@ this.default = function () {
                     deleteBtn.onclick = function (e) { buttonClickActions(e); };
                 }
             }
+        },
+        destroyed: function () {
+            contextMenuObj.destroy();
         }
     });
     scheduleObj.appendTo('#scheduler');

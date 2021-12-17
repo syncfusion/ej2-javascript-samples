@@ -11,7 +11,8 @@ this.default = function () {
         titleSettings: {
             text: 'Flight route from Los Angeles to Mexico city',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         zoomSettings: {
@@ -36,7 +37,10 @@ this.default = function () {
                             }],
                         tooltipSettings: {
                             visible: true,
-                            valuePath: 'name'
+                            valuePath: 'name',
+                            textStyle: {
+                                fontFamily: 'Segeo UI'
+                            }
                         }
                     },
                     {
@@ -49,12 +53,15 @@ this.default = function () {
                             }],
                         tooltipSettings: {
                             visible: true,
-                            valuePath: 'name'
+                            valuePath: 'name',
+                            textStyle: {
+                                fontFamily: 'Segeo UI'
+                            }
                         }
                     },
                     {
                         visible: true,
-                        template: '<div style= "font-weight:500; font-size: 13px; text-align: left">Mexico</div>',
+                        template: '<div style= "font-weight:500; font-size: 13px; text-align: left; font-family: Segeo UI">Mexico</div>',
                         dataSource: [{
                                 name: 'Mexico City',
                                 latitude: 24.0005,
@@ -71,12 +78,15 @@ this.default = function () {
                             }],
                         tooltipSettings: {
                             visible: true,
-                            valuePath: 'name'
+                            valuePath: 'name',
+                            textStyle: {
+                                fontFamily: 'Segeo UI'
+                            }
                         }
                     },
                     {
                         visible: true,
-                        template: '<div><div style="text-align: right; font-weight:500; font-size: 13px;">Los Angeles</br>' +
+                        template: '<div><div style="text-align: right; font-weight:500; font-size: 13px;font-family: Segeo UI">Los Angeles</br>' +
                             'International Airport</div></div>',
                         dataSource: [{
                                 name: 'Los Angeles City',

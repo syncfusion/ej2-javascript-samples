@@ -19,7 +19,7 @@
                         </select>
                     </div>
                 </td>
-            </tr>&nbsp;
+            </tr>
             <tr>
                 <td>
                     <div> Direction </div>
@@ -32,25 +32,31 @@
                         </select>
                     </div>
                 </td>
-            </tr>&nbsp;
+            </tr>
             <tr>
                 <td>
-                    <div id='start' style="margin-top: 10px">Start Angle <span> &nbsp;&nbsp;&nbsp;220</span> </div>
+                    <div style="margin-top: 10px">Start Angle</div>
                 </td>
                 <td>
                     <div style="margin-top: 10px">
-                        <input type="range" id="startAngle" value="220" min="0" max="360" style="width:120px" />
+                        <input type="range" id="startAngle" value="220" min="0" max="360" style="width: 70%" />
                     </div>
                 </td>
-            </tr>&nbsp;
+                <td style="width: 10%;padding-top: 20px;text-align: center;">
+                    <span id='start' style="margin-left: -25px;">220</span>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <div id='end' style="margin-top: 20px">End Angle <span> &nbsp;&nbsp;&nbsp;140</span> </div>
+                    <div style="margin-top: 20px">End Angle</div>
                 </td>
                 <td>
                     <div style="margin-top: 20px">
-                        <input type="range" id="endAngle" value="140" min="0" max="360" style="width:120px" />
+                        <input type="range" id="endAngle" value="140" min="0" max="360" style="width: 70%" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 30px;text-align: center;">
+                    <span id='end' style="margin-left: -25px;">140</span>
                 </td>
             </tr>
         </table>
@@ -72,3 +78,12 @@
         <a target="_blank" href="http://ej2.syncfusion.com/documentation">documentation section</a>.
     </p>
 </div>
+
+<style>
+    .property-panel-header {
+        margin-left: 10px
+    }
+    tr {
+        height: 50px;
+    }
+</style>

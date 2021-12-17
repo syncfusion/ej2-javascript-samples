@@ -1723,7 +1723,7 @@ this.default = function() {
             }
         ]
     },
-    "compatibilityMode": 3
+    "compatibilityMode": "Word2013"
 };
   var waitingPopUp = document.getElementById("waiting-popup");
   container.documentEditor.open(JSON.stringify(defaultDocument));

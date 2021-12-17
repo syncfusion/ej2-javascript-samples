@@ -14,17 +14,22 @@ this.default = function () {
         titleSettings: {
             text: 'Members of the UN Security Council',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             },
             subtitleSettings: {
                 text: '- In 2017',
                 alignment: 'Far',
-                textStyle: { 
+                textStyle: {
+                    fontFamily: 'Segeo UI'
                  } 
                 }
         },
         legendSettings: {
-            visible: true
+            visible: true,
+            textStyle: {
+                fontFamily: 'Segeo UI'
+             }
         },
         zoomSettings: {
             enable: false
@@ -38,6 +43,9 @@ this.default = function () {
                 tooltipSettings: {
                     visible: true,
                     valuePath: 'Country',
+                    textStyle: {
+                        fontFamily: 'Segeo UI'
+                     }
                 },
                 shapeSettings: {
                     fill: '#E5E5E5',
@@ -61,7 +69,7 @@ this.default = function () {
     var projection = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select projection type',
-        width: 105,
+        width: '100%',
         change: function () {
             maps.projectionType = projection.value;
             maps.refresh();

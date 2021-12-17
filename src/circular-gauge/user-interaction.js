@@ -10,7 +10,7 @@ this.default = function () {
         dragMove: function (args) {
             if (isNaN(args.rangeIndex)) {
                 pointerValue = Math.round(args.currentValue);
-                document.getElementById('pointerValue').innerHTML = 'Pointer Value <span> &nbsp;&nbsp;&nbsp;' + pointerValue;
+                document.getElementById('pointerValue').innerHTML = pointerValue;
                 document.getElementById('value').value = pointerValue.toString();
                 circulargauge.setAnnotationValue(0, 0, content + pointerValue + ' MPH</span></div>');
               }
@@ -43,7 +43,7 @@ this.default = function () {
             maximum: 120,
             majorTicks: { useRangeColor: true },
             minorTicks: { useRangeColor: true },
-            labelStyle: { useRangeColor: true },
+            labelStyle: { useRangeColor: true, fontFamily: 'Segoe UI' },
             ranges: [{
                 start: 0,
                 end: 40,
@@ -100,7 +100,7 @@ this.default = function () {
         document.getElementById('value').onchange = function () {
             var pointerValue = parseInt(document.getElementById('value').value, 10);
             setPointersValue(circulargauge, pointerValue);
-            document.getElementById('pointerValue').innerHTML = 'Pointer Value <span> &nbsp;&nbsp;&nbsp;' + pointerValue;
+            document.getElementById('pointerValue').innerHTML = pointerValue.toString();
         };
     document.getElementById('enable').onchange = function () {
         var value = document.getElementById('enable').checked;

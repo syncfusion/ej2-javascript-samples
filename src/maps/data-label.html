@@ -5,19 +5,19 @@
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
-            <tr style="height: 50px">
-                <td style="width: 80%">
-                    <div style="margin-left:-10px; width:60%;">Show Labels</div>
+            <tr>
+                <td>
+                    <div style="padding-left: 0px;">Show Labels</div>
                 </td>
                 <td>
-                    <input type="checkbox" checked id="select" style="margin-top: 15px; margin-left: 35px">
+                    <input type="checkbox" checked id="select" style="margin-top: 15px;">
                 </td>
             </tr>            
-        <tr style="height: 50px">
-            <td style="width: 60%">
-                <div style="margin-left:-10px; width:60%;">Smart label mode</div>
+        <tr>
+            <td>
+                <div style="padding-left: 0px;">Smart label mode</div>
             </td>
-            <td style="width: 40%">
+            <td>
                 <select id="smartlabelmode" style="margin-left: -25px">
                     <option value="Trim">Trim</option>
                     <option value="None">None</option>                    
@@ -25,11 +25,11 @@
                 </select>
             </td>
         </tr>
-        <tr style="height: 50px">
-            <td style="width: 60%">
-                <div style="margin-left:-10px; width:60%;">Intersect action</div>
+        <tr>
+            <td>
+                <div style="padding-left: 0px;">Intersect action</div>
             </td>
-            <td style="width: 40%;">
+            <td>
                 <select id="intersectaction" style="margin-left: -25px">
                     <option value="None">None</option>
                     <option value="Trim">Trim</option>
@@ -69,6 +69,12 @@
 <style>
     #control-container {
         padding: 0px !important;
+    }
+    .property-panel-section {
+        padding-left: 20px;
+    }
+    tr {
+        height: 48px;
     }
 </style>
 <!-- custom code end -->

@@ -19,7 +19,8 @@ this.default = function () {
         titleSettings: {
             text: 'Top 50 largest cities in the World',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         layers: [

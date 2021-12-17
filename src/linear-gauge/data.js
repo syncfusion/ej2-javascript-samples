@@ -17,7 +17,7 @@ function firstGauge() {
             border: {
                 width: 0
             },
-            offset: 30
+            offset: 20
         },
         // custom code start
         load: function (args1) {
@@ -28,7 +28,7 @@ function firstGauge() {
             if (args1.gauge.theme.toLowerCase().indexOf('dark') > 1 || args1.gauge.theme.toLowerCase() === 'highcontrast') {
                 args1.gauge.annotations[1].content = '<div id="running" style="width:100px;"><img style="height:25px;width:25px;' +
                     'float:left" src="src/linear-gauge/images/running1.svg" /></span><p style="float:left;' +
-                    'margin-left:10px;">Running</p></div>';
+                    'margin-left:10px;margin-top: 5px;">Running</p></div>';
             }
         },
         // custom code end
@@ -38,7 +38,10 @@ function firstGauge() {
                 offset: 30
             },
             labelStyle: {
-                offset: 50
+                offset: 50,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [{
                 value: 10,
@@ -57,7 +60,7 @@ function firstGauge() {
             }]
         }],
         annotations: [{
-                content: '<div id="title" style="width:300px;"> <img style="float:left" src' + '="src/linear-gauge/images/exercise-tracking.svg"/><p style="font-size:18px;color:#4285F4;float:left;margin-left:12px;' + 'margin-top:4px">Exercise Tracking </p></div>',
+                content: '<div id="title" style="width:300px;"> <img class="imagePosition" style="float:left;" src' + '="src/linear-gauge/images/exercise-tracking.svg"/><p style="font-size:18px;color:#4285F4;float:left;margin-left:12px;' + 'margin-top:6px">Exercise Tracking </p></div>',
                 axisIndex: 0,
                 axisValue: 0,
                 x: 150,
@@ -66,7 +69,7 @@ function firstGauge() {
             },
             {
                 content: '<div id="running" style="width:100px;"><img style="height:25px;width:25px;float:left" src="src/linear-gauge' +
-                    '/images/Running.svg" /></span><p style="float:left;margin-left:10px;">Running</p></div>',
+                    '/images/Running.svg" /></span><p style="float:left;margin-left:10px;margin-top: 5px;">Running</p></div>',
                 axisIndex: 0,
                 axisValue: 0,
                 x: 50,
@@ -92,7 +95,10 @@ function secondGauge() {
                 offset: 30
             },
             labelStyle: {
-                offset: 50
+                offset: 50,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [{
                 value: 28,
@@ -119,7 +125,7 @@ function secondGauge() {
             if (args2.gauge.theme.toLowerCase().indexOf('dark') > 1 || args2.gauge.theme.toLowerCase() === 'highcontrast') {
                 args2.gauge.annotations[0].content = '<div id="cycle" style="width:100px;"><img style="height:25px;width:25px;' +
                     'float:left" src="src/linear-gauge/images/cycling1.svg" /></span><p style="float:left;' +
-                    'margin-left:10px;">Cycling</p></div>';
+                    'margin-left:10px;margin-top: 5px;">Cycling</p></div>';
             }
         },
         // custom code end
@@ -129,10 +135,10 @@ function secondGauge() {
             border: {
                 width: 0
             },
-            offset: -50
+            offset: 0
         },
         annotations: [{
-                content: '<div id="cycle" style="width:100px;"><img style="height:25px;width:25px;float:left" src="src/linear-gauge' + '/images/Cycling.svg" /></span><p style="float:left;margin-left:10px;">Cycling</p></div>',
+                content: '<div id="cycle" style="width:100px;"><img style="height:25px;width:25px;float:left" src="src/linear-gauge' + '/images/Cycling.svg" /></span><p style="float:left;margin-left:10px;margin-top: 5px;">Cycling</p></div>',
                 axisIndex: 0,
                 axisValue: 0,
                 x: 50,
@@ -162,13 +168,13 @@ function thirdGauge() {
             if (args3.gauge.theme.toLowerCase().indexOf('dark') > 1 || args3.gauge.theme.toLowerCase() === 'highcontrast') {
                 args3.gauge.annotations[0].content = '<div id="walk" style="width:100px;"><img style="height:25px;width:25px;' +
                     'float:left" src="src/linear-gauge/images/walking1.svg" /></span><p style="float:left;' +
-                    'margin-left:10px;">Walking</p></div>';
+                    'margin-left:3px;margin-top:3px;">Walking</p></div>';
             }
         },
         // custom code end
         annotations: [{
                 content: '<div id="walk" style="width:100px;"><img style="height:25px;width:25px;float:left" src="src/' +
-                    'linear-gauge/images/Walking.svg" /></span><p style="float:left;margin-left:10px;">Walking</p></div>',
+                    'linear-gauge/images/Walking.svg" /></span><p style="float:left;margin-left:3px;margin-top:3px;">Walking</p></div>',
                 axisIndex: 0,
                 axisValue: 0,
                 x: 50,
@@ -189,7 +195,7 @@ function thirdGauge() {
             border: {
                 width: 0
             },
-            offset: -90
+            //offset: -90
         },
         axes: [{
             maximum: 10,

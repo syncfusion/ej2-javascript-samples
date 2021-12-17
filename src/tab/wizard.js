@@ -41,7 +41,7 @@ var cities = [
 function renderWizardComponents() {
     /* Initialize Tab with disabled headers for the wizard */
     tabObj = new ej.navigations.Tab({
-        heightAdjustMode: 'None', height: 440, showCloseButton: false,
+        heightAdjustMode: 'None', height: 'auto', showCloseButton: false,
         selecting: tabSelecting,
         items: [
             { header: { 'text': 'New Booking' }, content: '#booking' },
@@ -74,7 +74,7 @@ function renderWizardComponents() {
     ticketType.appendTo('#ticket_type');
     alertDlg = new ej.popups.Dialog({
         header: 'Success', width: 250, isModal: true, visible: false, showCloseIcon: true,
-        content: 'Your payment successfully processed', target: document.getElementById('dialog_target'), created: dlgCreated
+        content: 'Your payment was successfully processed', target: document.getElementById('dialog_target'), created: dlgCreated
     });
     alertDlg.appendTo('#alertDialog');
     alertDlg.hide();

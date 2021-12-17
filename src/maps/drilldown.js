@@ -71,7 +71,7 @@ this.default = function () {
                 markerSettings: [
                     {
                         visible: true,
-                        template: '<div id="marker1" class="markerTemplate">Asia' +
+                        template: '<div id="marker1" class="markerTemplate" style="font-family: Segeo UI">Asia' +
                             '</div>',
                         dataSource: [
                             { latitude: 50.32087157990324, longitude: 90.015625 }
@@ -80,7 +80,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker2" class="markerTemplate">Australia' +
+                        template: '<div id="marker2" class="markerTemplate" style="font-family: Segeo UI">Australia' +
                             '</div>',
                         dataSource: [
                             { latitude: -28.88583769986199, longitude: 130.296875 }
@@ -89,7 +89,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker3" class="markerTemplate">Africa' +
+                        template: '<div id="marker3" class="markerTemplate" style="font-family: Segeo UI">Africa' +
                             '</div>',
                         dataSource: [
                             { latitude: 10.97274101999902, longitude: 16.390625 }
@@ -98,7 +98,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker4" class="markerTemplate">Europe' +
+                        template: '<div id="marker4" class="markerTemplate" style="font-family: Segeo UI">Europe' +
                             '</div>',
                         dataSource: [
                             { latitude: 47.95121990866204, longitude: 18.468749999999998 }
@@ -107,7 +107,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker5" class="markerTemplate" style="width:50px">North America' +
+                        template: '<div id="marker5" class="markerTemplate" style="width:50px; font-family: Segeo UI">North America' +
                             '</div>',
                         dataSource: [
                             { latitude: 59.88893689676585, longitude: -109.3359375 }
@@ -116,7 +116,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker6" class="markerTemplate" style="width:50px">South America' +
+                        template: '<div id="marker6" class="markerTemplate" style="width:50px;font-family: Segeo UI">South America' +
                             '</div>',
                         dataSource: [
                             { latitude: -6.64607562172573, longitude: -55.54687499999999 }

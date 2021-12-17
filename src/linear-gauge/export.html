@@ -1,18 +1,18 @@
 <div>
-    <div class="col-md-9 control-section">
+    <div class="col-md-8 control-section">
         <div class="content-wrapper">
             <div id="gauge"></div>
         </div>
     </div>
     <!-- property panel-->
-    <div class="col-md-3 property-section">
+    <div class="col-md-4 property-section">
         <table id="property" title="Properties" style="width: 100%;">
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div style="margin-left: -10px"> Export Type </div>
+                    <div> Export Type </div>
                 </td>
                 <td style="width: 60%;">
-                    <div style="margin-left: -10px">
+                    <div>
                         <select id="type">
                             <option value='JPEG' selected>JPEG</option>
                             <option value='PNG'>PNG</option>
@@ -25,23 +25,23 @@
             </tr>&nbsp;
             <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div style="margin-left: -10px"> File Name </div>
+                    <div> File Name </div>
                 </td>
                 <td style="width: 60%;">
                     <div class="e-float-input" style='margin-top: 0px;'>
-                        <input type="text" value="Gauge" id="fileName" style="margin-left: -10px;width: 90px;">
+                        <input type="text" value="Gauge" id="fileName" style="width: 100%;">
                     </div>
                 </td>
             </tr>&nbsp;
             <tr id="button-control" style="height: 50px">
                 <td>
-                    <div style="margin-left: -10px; width: 100px">
-                        <button id="export" style="text-transform:none !important;width: 90px;">Export</button>
+                    <div>
+                        <button id="export" style="text-transform:none !important;">Export</button>
                     </div>
                 </td>
                 <td>
-                    <div style="margin-left: 0%; width: 100px">
-                        <button id="print" style="text-transform:none !important;width: 90px;">Print</button>
+                    <div>
+                        <button id="print" style="text-transform:none !important;">Print</button>
                     </div>
                 </td>
             </tr>&nbsp;
@@ -130,6 +130,9 @@
 
     .e-view.bootstrap5 .e-play-icon1::before, .e-view.bootstrap5-dark .e-play-icon1::before {
         content: '\e72e';
+    }
+    .property-panel-table div {
+        padding-left: 0px;
     }
 </style>
 <!-- custom code end -->

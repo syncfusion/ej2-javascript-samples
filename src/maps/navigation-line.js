@@ -14,7 +14,8 @@ this.default = function () {
         titleSettings: {
             text: 'Shipping sea route between various cities',
             textStyle: {
-                size: '18px'
+                size: '18px',
+                fontFamily: 'Segeo UI'
             }
         },
         zoomSettings: {
@@ -46,7 +47,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:white">ALTAMIRA' +
+                        template: '<div id="marker1" style="font-size: 12px;color:white; font-family: Segeo UI">ALTAMIRA' +
                             '</div>',
                         dataSource: [
                             { latitude: 22.403410892712124, longitude: -99.5 }
@@ -55,7 +56,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker2" style="font-size: 12px;color:white">HOUSTON' +
+                        template: '<div id="marker2" style="font-size: 12px;color:white; font-family: Segeo UI">HOUSTON' +
                             '</div>',
                         dataSource: [
                             { latitude: 30.332197482973, longitude: -95.36270141601562 }
@@ -64,7 +65,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker3" style="font-size: 12px;color:white">PANAMA CITY' +
+                        template: '<div id="marker3" style="font-size: 12px;color:white; font-family: Segeo UI">PANAMA CITY' +
                             '</div>',
                         dataSource: [
                             { latitude: 30.380747605060766, longitude: -85.81283569335938 }
@@ -77,7 +78,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker4" style="font-size: 12px;color:white">TAMPA' +
+                        template: '<div id="marker4" style="font-size: 12px;color:white; font-family: Segeo UI">TAMPA' +
                             '</div>',
                         dataSource: [
                             { latitude: 27.9337540167772, longitude: -81.29908447265625 }
@@ -86,7 +87,7 @@ this.default = function () {
                     },
                     {
                         visible: true,
-                        template: '<div id="marker5" style="font-size: 12px;color:white">PROGRESO' +
+                        template: '<div id="marker5" style="font-size: 12px;color:white; font-family: Segeo UI">PROGRESO' +
                             '</div>',
                         dataSource: [
                             { latitude: 20.62336521195344, longitude: -89.6649169921875 }

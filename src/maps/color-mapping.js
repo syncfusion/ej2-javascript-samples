@@ -11,7 +11,8 @@ this.default = function () {
         titleSettings: {
             text: 'Spring Precipitation Averages of US States',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         zoomSettings: {
@@ -24,8 +25,10 @@ this.default = function () {
             width: '80%',
             mode: 'Interactive',
             titleStyle: {
-                size: '18px'
+                size: '18px',
+                fontFamily: 'Segeo UI'
             },
+            textStyle: { fontFamily: 'Segeo UI' },
             title: {
                 text: 'Inches'
             },
@@ -130,7 +133,7 @@ this.default = function () {
     var sampleValue = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Range ColorMaping',
-        width: '100px',
+        width: '100%',
         change: function () {
             var element = sampleValue.value.toString();
             if (element === 'RangeColorMapping') {

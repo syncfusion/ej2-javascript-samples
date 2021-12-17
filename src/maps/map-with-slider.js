@@ -8,7 +8,8 @@ this.default = function () {
         titleSettings: {
             text: 'Average annual population growth in North American countries',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         // custom code start
@@ -63,7 +64,8 @@ this.default = function () {
                 },
                 tooltipSettings: {
                     visible: true,
-                    format: '${name} : ${population}%'
+                    format: '${name} : ${population}%',
+                    textStyle: { fontFamily: 'Segeo UI' }
                 }
             }
         ],

@@ -18,7 +18,7 @@ this.default = function () {
             lineStyle: { width: 0, color: '#0450C2' },
             labelStyle: {
                 position: 'Outside', autoAngle: true,
-                font: { fontWeight: 'normal' }
+                font: { fontWeight: 'normal', fontFamily: 'Segoe UI' }
             }, majorTicks: {
                 position: 'Inside', width: 2, height: 12, interval: 4
             }, minorTicks: {
@@ -64,21 +64,21 @@ this.default = function () {
     document.getElementById('start').onpointermove = document.getElementById('start').ontouchmove =
         document.getElementById('start').onchange = function () {
             var min = parseInt(document.getElementById('start').value, 10);
-            document.getElementById('rangeStart').innerHTML = 'Start Angle <span> &nbsp;&nbsp;&nbsp;' + min + '°';
+            document.getElementById('rangeStart').innerHTML = min + '°';
             circulargauge.axes[0].startAngle = min;
             circulargauge.refresh();
         };
     document.getElementById('end').onpointermove = document.getElementById('end').ontouchmove =
         document.getElementById('end').onchange = function () {
             var max = parseInt(document.getElementById('end').value, 10);
-            document.getElementById('rangeEnd').innerHTML = 'End Angle <span> &nbsp;&nbsp;&nbsp;' + max + '°';
+            document.getElementById('rangeEnd').innerHTML = max + '°';
             circulargauge.axes[0].endAngle = max;
             circulargauge.refresh();
         };
     document.getElementById('radius').onpointermove = document.getElementById('radius').ontouchmove =
         document.getElementById('radius').onchange = function () {
             var max = parseInt(document.getElementById('radius').value, 10);
-            document.getElementById('radius1').innerHTML = 'Radius <span> &nbsp;&nbsp;&nbsp;' + max + '%';
+            document.getElementById('radius1').innerHTML = max + '%';
             circulargauge.axes[0].radius = '' + max + '%';
             circulargauge.refresh();
         };
@@ -86,7 +86,7 @@ this.default = function () {
         document.getElementById('centerX').onchange = function () {
             if (!highlightCheckBox.checked) {
                 var max = parseInt(document.getElementById('centerX').value, 10);
-                document.getElementById('center1').innerHTML = 'Center X <span> &nbsp;&nbsp;&nbsp;' + max + '%';
+                document.getElementById('center1').innerHTML = max + '%';
                 circulargauge.centerX = '' + max + '%';
                 circulargauge.refresh();
             }
@@ -95,7 +95,7 @@ this.default = function () {
         document.getElementById('centerY').onchange = function () {
             if (!highlightCheckBox.checked) {
                 var max = parseInt(document.getElementById('centerY').value, 10);
-                document.getElementById('center2').innerHTML = 'Center Y <span> &nbsp;&nbsp;&nbsp;' + max + '%';
+                document.getElementById('center2').innerHTML = max + '%';
                 circulargauge.centerY = '' + max + '%';
                 circulargauge.refresh();
             }

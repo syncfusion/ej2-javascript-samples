@@ -13,7 +13,7 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'Top 10 best selling smartphone brands - 2017',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segoe UI' }
         },
         dataSource: window.ProductSale,
         layoutType: 'SliceAndDiceVertical',
@@ -21,13 +21,15 @@ this.default = function () {
         rangeColorValuePath: 'Percentage',
         tooltipSettings: {
             visible: true,
-            format: '${Product} (+${Percentage}) %'
+            format: '${Product} (+${Percentage}) %',
+            textStyle: { fontFamily: 'Segoe UI' }
         },
         leafItemSettings: {
             labelPath: 'Product',
             fill: '#6699cc',
             border: { color: 'black', width: 0.5 },
             labelPosition: 'Center',
+            labelStyle: { fontFamily: 'Segoe UI' },
             interSectAction: 'Hide',
             labelFormat: '${Product} (+${Percentage}) %',
             colorMapping: [
@@ -52,7 +54,7 @@ this.default = function () {
     };
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 70
+        width: '100%'
     });
     mode.appendTo('#mode');
     var togglebtn1 = new ej.buttons.Button({

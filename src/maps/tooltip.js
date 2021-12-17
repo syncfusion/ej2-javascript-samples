@@ -19,20 +19,24 @@ this.default = function () {
         titleSettings: {
             text: 'Finalist in Cricket World Cup',
             titleStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         zoomSettings: {
             enable: false
         },
         legendSettings: {
-                visible: true,
-                mode: 'Interactive',
-                position: 'Left',
-                orientation: 'Vertical',
-                height: '70%',
-                width: '10'
-            },
+            visible: true,
+            mode: 'Interactive',
+            position: 'Left',
+            orientation: 'Vertical',
+            height: '70%',
+            width: '10',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
+        },
         layers: [
             {
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/world-map.json'),

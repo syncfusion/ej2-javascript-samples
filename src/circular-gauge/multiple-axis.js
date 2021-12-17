@@ -15,13 +15,13 @@ this.default = function () {
         },
         //custom code end
         title: 'Gauge with Multiple Axes',
-        titleStyle: { color: 'gray', size: '16px' },
+        titleStyle: { color: 'gray', size: '16px', fontFamily: 'Segoe UI' },
         axes: [{
             lineStyle: { width: 1.5},
             radius: '95%',
             labelStyle: {
                 position: 'Inside', autoAngle: true,
-                hiddenLabel: 'None'
+                hiddenLabel: 'None', font: { fontFamily: 'Segoe UI'}
             }, majorTicks: {
                 position: 'Inside',
                 width: 2, height: 10
@@ -39,7 +39,7 @@ this.default = function () {
             lineStyle: { width: 1.5, color: '#E84011' }, radius: '95%',
             labelStyle: {
                 position: 'Outside', autoAngle: true,
-                hiddenLabel: 'None', font: { color: '#E84011' }
+                hiddenLabel: 'None', font: { color: '#E84011', fontFamily: 'Segoe UI' }
             }, majorTicks: {
                 position: 'Outside', width: 2, height: 10,
                 color: '#E84011'
@@ -58,7 +58,7 @@ this.default = function () {
     circulargauge.appendTo('#axis-container');
     // code for Property Panel
     axis = new ej.dropdowns.DropDownList({
-        index: 0, width: 120,
+        index: 0, width: '100%',
         change: function () {
             axisIndex = +axis.value;
             direction.value = circulargauge.axes[axisIndex].direction;
@@ -72,7 +72,7 @@ this.default = function () {
     });
     axis.appendTo('#axisIndex');
     direction = new ej.dropdowns.DropDownList({
-        index: 0, width: 120,
+        index: 0, width: '100%',
         change: function () {
             circulargauge.axes[axisIndex].direction = direction.value.toString();
             circulargauge.axes[0].pointers[0].animation.enable = false;
@@ -87,7 +87,7 @@ this.default = function () {
             circulargauge.axes[0].pointers[0].animation.enable = false;
             circulargauge.axes[1].pointers[0].animation.enable = false;
             circulargauge.axes[axisIndex].startAngle = value;
-            document.getElementById('start').innerHTML = 'Start Angle <span> &nbsp;&nbsp;&nbsp;' + value;
+            document.getElementById('start').innerHTML = value.toString();
             circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
                 ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
                     'First' : 'None';
@@ -99,7 +99,7 @@ this.default = function () {
             circulargauge.axes[0].pointers[0].animation.enable = false;
             circulargauge.axes[1].pointers[0].animation.enable = false;
             circulargauge.axes[axisIndex].endAngle = value;
-            document.getElementById('end').innerHTML = 'End Angle <span> &nbsp;&nbsp;&nbsp;' + value;
+            document.getElementById('end').innerHTML = value.toString();
             circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
                 ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
                     'First' : 'None';

@@ -3,7 +3,7 @@ this.default = function () {
     var seriesload = function(args) {
         var seriestheme = location.hash.split('/')[1];
         seriestheme = seriestheme ? seriestheme : 'Material';
-        args.sparkline.theme = (seriestheme.charAt(0).toUpperCase() + seriestheme.slice(1));
+        args.sparkline.theme = (seriestheme.charAt(0).toUpperCase() + seriestheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
     };
     // custom code end
     var line = new ej.charts.Sparkline({

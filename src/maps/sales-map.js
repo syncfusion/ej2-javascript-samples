@@ -21,7 +21,8 @@ this.default = function () {
         titleSettings: {
             text: 'Sales details of products in various countries',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
 		tooltipDisplayMode: 'Click',
@@ -54,6 +55,7 @@ this.default = function () {
                             format: '<b>Name</b> : ${name}<br><b>Product</b> : ${product}<br><b>Total value</b> : ${worth}',
                             visible: true,
                             valuePath: 'name',
+                            textStyle: { fontFamily: 'Segeo UI' }
                         }
                     },
                 ]

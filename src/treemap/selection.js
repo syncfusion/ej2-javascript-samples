@@ -9,7 +9,8 @@ this.default = function () {
         },
         // custom code end
         titleSettings: {
-            text: 'Import and Export details of US'
+            text: 'Import and Export details of US',
+            textStyle: { fontFamily: 'Segoe UI' }
         },
         dataSource: window.importData,
         weightValuePath: 'sales',
@@ -21,7 +22,8 @@ this.default = function () {
             labelPath: 'type',
             fill: '#8ebfe2',
             labelPosition: 'Center',
-            gap: 10
+            gap: 10,
+            labelStyle: { fontFamily: 'Segoe UI' }
         },
         selectionSettings: {
             enable: true,
@@ -56,7 +58,7 @@ this.default = function () {
     var highlightMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select highlight type',
-        width: 80,
+        width: '100%',
         change: function () {
             treemap.highlightSettings.mode = highlightMode.value;
             treemap.refresh();
@@ -66,7 +68,7 @@ this.default = function () {
     var selectionMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Selection selection type',
-        width: 80,
+        width: '100%',
         change: function () {
             treemap.selectionSettings.mode = selectionMode.value;
             treemap.refresh();

@@ -7,45 +7,47 @@
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
-            <tr style="height: 50px">
-                <td style="width: 10%">
+            <tr>
+                <td style="width: 40%">
                     <div class="property-text">Color Mapping Type</div>
                 </td>
                 <td style="width: 30%;">
-                    <select autocomplete="off" id="colorMapping">
-                        <option value="RangeColorMapping" selected>Range</option>
-                        <option value="EqualColorMapping">Equal</option>
-                        <option value="DesaturationColorMapping">Desaturation</option>
-                    </select>
+                    <div>
+                        <select autocomplete="off" id="colorMapping">
+                            <option value="RangeColorMapping" selected>Range</option>
+                            <option value="EqualColorMapping">Equal</option>
+                            <option value="DesaturationColorMapping">Desaturation</option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr >
                 <td style="width: 40%">
-                    <div class="property-text" id="text1" style="display: none"> Change Opacity</div>
+                    <div class="property-text" id="text1" style="display: none;"> Change Opacity</div>
                 </td>
                 <td style="width: 40%;">
-                    <div id="input1" style="display: none">
+                    <div id="input1" style="display: none;margin-left: -10px;margin-top: -6px;">
                         <input type="checkbox" id="opacity"/>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 50%">
-                    <div class="property-text" id="text2" style="margin-top:12%; display: none">Min Opacity</div>
+                <td>
+                    <div class="property-text" id="text2" style="display: none">Min Opacity</div>
                 </td>
-                <td style="width: 50%;">
-                    <div id="input2" style="display: none">
-                        <input type="range" id="minopacity" step="0.1" value="0.5" min="0" max="1" style="width:100%;margin-top: 20%" />
+                <td>
+                    <div id="input2" style="display: none;">
+                        <input type="range" id="minopacity" step="0.1" value="0.5" min="0" max="1" style="width:100%;" />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 50%">
-                    <div class="property-text" id="text3" style="margin-top:12%; display: none">Max Opacity</div>
+                <td>
+                    <div class="property-text" id="text3" style="display: none">Max Opacity</div>
                 </td>
-                <td style="width: 50%;">
-                    <div id="input3" style="display: none">
-                        <input type="range" id="maxopacity" step="0.1" value="1" min="0" max="1" style="width:100%;margin-top: 20%" />
+                <td>
+                    <div id="input3" style="display: none;">
+                        <input type="range" id="maxopacity" step="0.1" value="1" min="0" max="1" style="width:100%;" />
                     </div>
                 </td>
             </tr>
@@ -65,3 +67,11 @@
         The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item in touch enabled devices.
     </p>
 </div>
+<style>
+    tr {
+        height: 50px;
+    }
+    .property-panel-header {
+        padding-left: 10px;
+    }
+</style>

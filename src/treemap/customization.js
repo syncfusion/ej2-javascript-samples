@@ -10,18 +10,24 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'US Gold medal categories in Summer Olympics - 2016',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segeo UI' }
         },
         dataSource: window.Metals,
         weightValuePath: 'Gold',
         tooltipSettings: {
             visible: true,
-            format: '${Sport} : ${Gold}'
+            format: '${Sport} : ${Gold}',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         leafItemSettings: {
             showLabels: !ej.base.Browser.isDevice,
             labelPath: 'Sport',
             fill: '#993399',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            },
             templatePosition: 'Center',
             border: { color: 'black', width: 0.5 },
             labelFormat: ' ${Sport} - ${Gold}',

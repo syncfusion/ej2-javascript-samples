@@ -83,8 +83,18 @@ this.default = function () {
         items: iconItems,
         beforeItemRender: function(args) {
             if(args.item.text !== 'Program Files') {
-                args.element.classList.add('e-disabled');
+                args.item.disabled = true;
             }
         }
     }, '#disabled');
+
+    // To refresh all Breadcrumb control state when reset button clicked
+    new ej.buttons.Button({ cssClass: 'e-small' }, '#reset').element.onclick = function() {
+        var breadcrumb, breadcrumbInst, breadcrumbs = document.querySelector('.content-wrapper').getElementsByClassName("e-breadcrumb");
+        for (var k = 0; k < breadcrumbs.length; k++) {
+            breadcrumb = breadcrumbs[k];
+            breadcrumbInst = ej.base.getComponent(breadcrumb, 'breadcrumb');
+            breadcrumbInst.activeItem = breadcrumbInst.items[breadcrumbInst.items.length - 1].text;
+        }
+    };
 };

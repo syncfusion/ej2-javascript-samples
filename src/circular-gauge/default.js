@@ -16,7 +16,7 @@ this.default = function () {
             },
             labelStyle: {
                 font: {
-                    fontFamily: 'Roboto',
+                    fontFamily: 'Segoe UI',
                     size: '12px',
                     fontWeight: 'Regular'
                 },

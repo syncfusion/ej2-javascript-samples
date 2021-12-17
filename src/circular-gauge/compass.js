@@ -22,7 +22,7 @@ this.default = function () {
             lineStyle: { width: 10 },
             labelStyle: {
                 font: {
-                    size: '12px', fontFamily: 'Roboto'
+                    size: '12px', fontFamily: 'Segoe UI'
                 },
                 autoAngle: true,
                 hiddenLabel: 'Last'
@@ -63,7 +63,7 @@ this.default = function () {
     pointerColor = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: '100%',
         change: function () {
             var rangeColor = pointerColor.value.toString();
             circulargauge.axes[0].pointers[0].color = rangeColor;
@@ -74,7 +74,7 @@ this.default = function () {
     labelColor = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: 120,
+        width: '100%',
         change: function () {
             var rangeColor = labelColor.value.toString();
             circulargauge.axes[0].labelStyle.font.color = rangeColor;

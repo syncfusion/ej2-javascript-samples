@@ -4,7 +4,7 @@
     </div>
     <!-- Property Panel -->
     <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%; margin-left: -10px">
+        <table id="property" title="Properties" style="width: 100%;">
             <tr>
                 <td>
                     <div> Select Range</div>
@@ -25,8 +25,8 @@
                 </td>
                 <td>
                     <div>
-                        <div class="e-float-input" style='margin-top: 0px; margin-left: 10px'>
-                            <input type="text" value="#F03E3E" id='color' style="margin-left: -10px; width:140px;">
+                        <div class="e-float-input" style="margin-top: -5px;padding-left: 10px;">
+                            <input type="text" value="#F03E3E" id='color' style="width:100%;">
                         </div>
 
                     </div>
@@ -47,51 +47,55 @@
             </tr>
             <tr>
                 <td>
-                    <div id='startRangeValue' style="margin-top: 10px">Range Start
-                        <span>&nbsp;&nbsp;&nbsp;0</span>
-                    </div>
+                    <div>Range Start</div>
                 </td>
                 <td>
-                    <div style="margin-top: 10px; margin-left: 10px" >
-                        <input type="range" id="start" value="0" min="0" max="100" style="width:140px;" />
+                    <div style="margin-left: 10px" >
+                        <input type="range" id="start" value="0" min="0" max="100" style="width: 75%;" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='startRangeValue' style="margin-left: -20px;">0</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div id='endRangeValue' style="margin-top: 20px">Range End
-                        <span>&nbsp;&nbsp;&nbsp;32</span>
-                    </div>
+                    <div>Range End</div>
                 </td>
                 <td>
-                    <div style="margin-top: 20px; margin-left: 10px">
-                        <input type="range" id="end" value="32" min="0" max="100" style="width:140px;" />
+                    <div style="margin-left: 10px">
+                        <input type="range" id="end" value="32" min="0" max="100" style="width: 75%;" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='endRangeValue' style="margin-left: -20px;">32</span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <div id='startWidthValue' style="margin-top: 20px;"> Range Start Width
-                        <span>&nbsp;&nbsp;&nbsp;15</span>
-                    </div>
+                    <div> Range Start Width</div>
                 </td>
                 <td>
-                    <div style="margin-top: 20px;margin-left: 10px">
-                        <input type="range" id="startWidth" value="15" min="0" max="30" style="width:140px;" />
+                    <div style="margin-left: 10px">
+                        <input type="range" id="startWidth" value="15" min="0" max="30" style="width: 75%;" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='startWidthValue' style="margin-left: -20px;">15</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div id='endWidthValue' style="margin-top: 20px">Range End Width
-                        <span>&nbsp;&nbsp;&nbsp;15</span>
-                    </div>
+                    <div>Range End Width</div>
                 </td>
                 <td>
-                    <div style="margin-top: 20px; margin-left: 10px">
-                        <input type="range" id="endWidth" value="15" min="0" max="30" style="width:140px;" />
+                    <div style="margin-left: 10px">
+                        <input type="range" id="endWidth" value="15" min="0" max="30" style="width: 75%;" />
                     </div>
+                </td>
+                <td style="width: 10%;padding-top: 10px;text-align: center;">
+                    <span id='endWidthValue' style="margin-left: -20px;">15</span>
                 </td>
             </tr>
         </table>
@@ -122,6 +126,16 @@
 <style>
     #control-container {
         padding: 0px !important;
+    }
+    tr {
+        height: 48px;
+    }
+    td {
+        width: 50%;
+        margin-left: 10px;
+    }
+    .property-panel-table div {
+        padding-left: 0px;
     }
 </style>
 <!-- custom code end -->

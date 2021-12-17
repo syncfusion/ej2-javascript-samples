@@ -10,20 +10,24 @@ this.default = function () {
         // custom code end
         titleSettings: {
             text: 'Top 10 countries by GDP Nominal - 2015',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segeo UI' }
         },
         dataSource: window.econmics,
         weightValuePath: 'GDP',
         tooltipSettings: {
             visible: true,
-            format: '${State}<br>Rank : ${Rank}'
+            format: '${State}<br>Rank : ${Rank}',
+            textStyle: {
+                fontFamily: 'Segeo UI'
+            }
         },
         rangeColorValuePath: 'GDP',
         leafItemSettings: {
             labelPath: 'State',
             labelFormat: '${State}<br>$${GDP} Trillion<br>(${percentage} %)',
             labelStyle: {
-                color: '#000000'
+                color: '#000000',
+                fontFamily: 'Segeo UI'
             },
             border: {
                 color: '#000000',
@@ -45,7 +49,7 @@ this.default = function () {
     var layoutMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select layoutMode type',
-        width: 90,
+        width: '100%',
         change: function () {
             treemap.layoutType = layoutMode.value;
             treemap.refresh();
@@ -55,7 +59,7 @@ this.default = function () {
     var highlightMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Rendering Direction',
-        width: 115,
+        width: '100%',
         change: function () {
             treemap.renderDirection = highlightMode.value;
             treemap.refresh();

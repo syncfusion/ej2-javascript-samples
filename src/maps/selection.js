@@ -54,7 +54,8 @@ this.default = function () {
         titleSettings: {
             text: 'USA Election Results - 2016',
             textStyle: {
-                size: '16px'
+                size: '16px',
+                fontFamily: 'Segeo UI'
             }
         },
         legendSettings: {
@@ -62,10 +63,11 @@ this.default = function () {
             mode: 'Interactive',
             position: 'Top',
             width: '80%',
-                textStyle: {
-                    fontWeight: '400',
-                    size: '14px'
-                }
+            textStyle: {
+                fontWeight: '400',
+                size: '14px',
+                fontFamily: 'Segeo UI'
+            }
         },
         zoomSettings: {
             enable: false
@@ -79,7 +81,8 @@ this.default = function () {
                 dataSource: new ej.maps.MapAjax('./src/maps/map-data/selection-datasource.json'),
                 tooltipSettings: {
                     visible: true,
-                    valuePath: 'State'
+                    valuePath: 'State',
+                    textStyle: { fontFamily: 'Segeo UI' }
                 },
                 highlightSettings: {
                     enable: true,

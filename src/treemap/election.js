@@ -34,19 +34,25 @@ this.default = function () {
         },
         titleSettings: {
             text: 'US Presidential election result - 2016',
-            textStyle: { size: '15px' }
+            textStyle: { size: '15px', fontFamily: 'Segoe UI' }
         },
         dataSource: window.electionData,
         weightValuePath: 'Population',
         tooltipSettings: {
             visible: true,
-            format: ' <b>${Winner}</b><br>State : ${State}<br>Trump : ${Trump} %<br>Clinton : ${Clinton} %'
+            format: ' <b>${Winner}</b><br>State : ${State}<br>Trump : ${Trump} %<br>Clinton : ${Clinton} %',
+            textStyle: {
+                fontFamily: 'Segoe UI'
+            }
         },
         legendSettings: {
             visible: true,
             position: 'Top',
             shape: 'Rectangle',
-            height: '10'
+            height: '10',
+            textStyle: {
+                fontFamily: 'Segoe UI'
+            }
         },
         format: 'n',
         useGroupingSeparator: true,
@@ -54,6 +60,9 @@ this.default = function () {
         equalColorValuePath: 'Winner',
         leafItemSettings: {
             labelPath: 'State',
+            labelStyle: {
+                fontFamily: 'Segoe UI'
+            },
             fill: '#6699cc',
             border: { color: 'white', width: 0.5 },
             colorMapping: [
@@ -71,7 +80,7 @@ this.default = function () {
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select legend type',
-        width: 100,
+        width: '100%',
         change: function () {
             treemap.legendSettings.mode = mode.value;
             if (mode.value === 'Interactive') {

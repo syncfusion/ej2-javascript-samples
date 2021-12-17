@@ -9,6 +9,9 @@ this.default = function () {
         },
         allowDragAndDrop: false,
         allowResizing: false,
+        destroyed: function () {
+            menuObj.destroy();
+        }
     });
     scheduleObj.appendTo('#Schedule');
 

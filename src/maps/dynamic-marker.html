@@ -29,43 +29,42 @@
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tbody>
-            <tr style="height: 35px">
-                <td style="width: 70%">
-                    <div class="property-text" style="padding: 0px;display:inline-block; margin-top:10px;">Marker</div>
+            <tr>
+                <td style="width:20%">
+                    <div style="padding: 0px;display:inline-block; margin-top:10px;">Marker</div>
                 </td>
-                <td style="width: 50%;">
-                    <div style="margin-left: 10px">
+                <td style="width:70%">
+                    <div style="margin-left: -20px;padding-top: 0px;">
                         <input type="checkbox" id="marker" />
                     </div>
                 </td>
             </tr>
-            <tr style="height: 35px">
-                <td style="width: 70%">
-                    <div class="property-text" style="padding: 0px; margin-top:10px;">Line</div>
+            <tr>
+                <td style="width:20%">
+                    <div style="padding: 0px; margin-top:10px;">Line</div>
                 </td>
-                <td style="width: 50%">
-                    <div style="margin-left: 10px">
+                <td style="width:70%">
+                    <div style="margin-left: -20px;padding-top: 0px;">
                         <input type="checkbox" name="high" id="line" />
                     </div>
                 </td>
             </tr>
-            <tr style="height: 35px">
-                <td style="width: 70%">
-                    <div class="property-text" style="padding: 0px; margin-top:10px;">Connecting line</div>
+            <tr>
+                <td style="width:20%">
+                    <div style="margin-left: -10px;">Connecting line</div>
                 </td>
-                <td style="width: 50%">
-                    <div style="margin-left: 10px">
+                <td style="width:70%">
+                    <div style="margin-left: -20px;padding-top: 0px;">
                         <input type="checkbox" id="connect" />
                     </div>
                 </td>
             </tr>
-            <tr style="height: 10px"></tr>
-            <tr style="height: 35px">
-                <td style="width: 70%" class="property-text" style="padding: 0px;">
+            <tr>
+                <td style="padding: 0px;">
                     Marker type
                 </td>
-                <td style="width: 10%; margin-left:20px">
-                    <select id="type" style="width: 50px; height: 20px">
+                <td style="width:70%">
+                    <select id="type">
                         <option value="Image">Image</option>
                         <option value="Circle">Circle</option>
                         <option value="Diamond">Diamond</option>
@@ -74,20 +73,19 @@
                     </select>
                 </td>
             </tr>
-            <tr style="height: 10px"></tr>
-            <tr style="height: 35px">
-                <td style="width: 70%">
-                    <div class="property-text" style="padding: 0px;">Width</div>
+            <tr>
+                <td style="width:20%">
+                    <div style="padding: 0px;width: 30%">Width</div>
                 </td>
-                <td style="width: 10%">
-                    <input type="text" class="e-input" value="1" style="width:87px" id="width" disabled />
+                <td style="width:70%">
+                    <input type="text" class="e-input" value="1" style="width:100%" id="width" disabled />
                 </td>
             </tr>
             <tr>
-                <td align="center">
-                    <div style="margin-left: 60%;">
+                <td>
+                    <div style="margin-left: 70%;">
                         <button id="togglebtn"
-                            style="text-transform:none !important;width: 80px;margin-left: -55%;margin-top: -2px">Clear</button>
+                            style="text-transform:none !important;margin-top: -2px">Clear</button>
                     </div>
                 </td>
             </tr>
@@ -104,5 +102,8 @@
     #width.e-input[disabled] {
         border-bottom-color: inherit;
         background-image: none;
+    }
+    tr {
+        height:48px;
     }
 </style>

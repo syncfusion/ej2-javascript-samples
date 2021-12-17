@@ -14,7 +14,7 @@ function customGauge1() {
         // custom code end
         axes: [{
             annotations: [{
-                content: '<div style="color:#666666;font-size:35px;">1800</div>',
+                content: '<div style="color:#666666;font-size:35px;">180 Mbps</div>',
                 angle: 0,
                 radius: '110%', zIndex: 1
             }],
@@ -24,20 +24,20 @@ function customGauge1() {
             labelStyle: { font: { size: '0px' } },
             majorTicks: { width: 0 },
             minorTicks: { height: 0 },
-            minimum: 999, maximum: 2000,
+            minimum: 1, maximum: 200,
             ranges: [{
-                start: 1000, end: 2000,
+                start: 0, end: 200,
                 radius: '90%',
                 startWidth: 30, endWidth: 30,
                 color: '#E0E0E0'
             }],
             pointers: [{
                 type: 'RangeBar',
-                value: 1800, radius: '90%',
+                value: 180, radius: '90%',
                 color: '#FFDD00', animation: { duration: 0 },
                 pointerWidth: 30
             }, {
-                radius: '90%', value: 1800,
+                radius: '90%', value: 180,
                 color: '#424242',
                 animation: { duration: 0 },
                 pointerWidth: 9,
@@ -67,7 +67,7 @@ function customGauge2() {
             lineStyle: { width: 0 },
             startAngle: 180, endAngle: 180,
             radius: '80%',
-            labelStyle: { font: { size: '0px' } },
+            labelStyle: { font: { size: '0px', fontFamily:'Segoe UI' } },
             majorTicks: { width: 0 },
             minorTicks: { height: 0 },
             minimum: 0, maximum: 100,
@@ -107,7 +107,7 @@ this.default = function () {
     var pointerColor;
     barColor = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 120,
+        width: '100%',
         change: function () {
             gauge.axes[0].pointers[0].color = barColor.value.toString();
             gauge.refresh();
@@ -116,7 +116,7 @@ this.default = function () {
     barColor.appendTo('#barColor');
     rangeColor = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 120,
+        width: '100%',
         change: function () {
             gauge.axes[0].ranges[0].color = rangeColor.value.toString();
             gauge.refresh();
@@ -125,7 +125,7 @@ this.default = function () {
     rangeColor.appendTo('#rangeColor');
     pointerColor = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 120,
+        width: '100%',
         change: function () {
             var color = pointerColor.value.toString();
             if (!isUsage) {
@@ -147,8 +147,7 @@ this.default = function () {
         element.min = '0.5';
         element.max = '100';
         element.value = usage.axes[0].pointers[0].value.toString();
-        document.getElementById('currentPointerValue').innerHTML =
-            'Current Value <span> &nbsp;&nbsp;&nbsp;' + usage.axes[0].pointers[0].value + '</span>';
+        document.getElementById('currentPointerValue').innerHTML = usage.axes[0].pointers[0].value.toString() ;
         barColor.value = usage.axes[0].pointers[0].color;
         rangeColor.value = usage.axes[0].ranges[0].color;
         pointerColor.enabled = false;
@@ -177,11 +176,10 @@ this.default = function () {
             var pointElement = document.getElementById('pointColor');
             pointElement.className = 'e-enabled';
             pointerColor.enabled = true;
-            element.min = '1000';
-            element.max = '2000';
+            element.min = '0';
+            element.max = '200';
             element.value = random.axes[0].pointers[0].value.toString();
-            document.getElementById('currentPointerValue').innerHTML = 'Current Value <span> &nbsp;&nbsp;&nbsp;' +
-            random.axes[0].pointers[0].value + '</span>';
+            document.getElementById('currentPointerValue').innerHTML = random.axes[0].pointers[0].value.toString(); 
             barColor.value = random.axes[0].pointers[0].color;
             rangeColor.value = random.axes[0].ranges[0].color;
             pointerColor.value = random.axes[0].pointers[1].color;
@@ -198,8 +196,8 @@ this.default = function () {
                 gauge.setPointerValue(0, 0, value);
                 gauge.setPointerValue(0, 1, value);
             }
-            gauge.setAnnotationValue(0, 0, '<div style="color:#666666;font-size:35px;">' + value + (isUsage ? 'GB' : '') + '</div>');
-            document.getElementById('currentPointerValue').innerHTML = 'Current Value <span> &nbsp;&nbsp;&nbsp;' + value + '</span>';
+            gauge.setAnnotationValue(0, 0, '<div style="color:#666666;font-size:35px;">' + value + (isUsage ? 'GB' : ' ' + 'Mbps') + '</div>');
+            document.getElementById('currentPointerValue').innerHTML = value.toString();
         };
 
     var selectedTheme = location.hash.split('/')[1];

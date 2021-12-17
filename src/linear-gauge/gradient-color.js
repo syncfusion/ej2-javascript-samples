@@ -40,6 +40,7 @@ this.default = function () {
             selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         orientation: 'Horizontal',
+        allowMargin: false,
         container: {
             width: 30,
             offset: 30
@@ -56,7 +57,10 @@ this.default = function () {
                 height: 0
             },
             labelStyle: {
-                offset: 55
+                offset: 55,
+                font: {
+                    fontFamily: 'Segoe UI'
+                }
             },
             pointers: [
                 {
@@ -115,7 +119,7 @@ this.default = function () {
     }
      var gradientType = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 145,
+        width: '100%',
         change: function () {
             changeGradient();
         }
@@ -124,7 +128,7 @@ this.default = function () {
 
     var element = new ej.dropdowns.DropDownList({
         index: 0,
-        width: 145,
+        width: '100%',
         change: function () {
             changeGradient();
         }

@@ -3,7 +3,6 @@
     "directory": "spreadsheet",
     "category": "Grids",
     "dataSourcePath": "src/spreadsheet/data-source.js",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -61,7 +60,6 @@
         {
             "url": "data-validation",
             "name": "Data Validation",
-            "type": "update",
             "category": "Spreadsheet",
             "api": {
                 "sheets": [
@@ -152,7 +150,6 @@
             "url": "number-formatting",
             "name": "Number Formatting",
             "category": "Formatting",
-            "type": "update",
             "api": {
                 "sheets": [
                     "columns",
