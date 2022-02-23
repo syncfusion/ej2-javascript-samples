@@ -9,7 +9,8 @@
     "crossroads": "^0.12.2",
     "hasher": "^1.2.0",
     "fuse.js": "3.2.0",
-    "tributejs": "^3.7.3"
+    "tributejs": "^3.7.3",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "elasticlunr": "0.9.5",
