@@ -84,8 +84,7 @@ this.default = function () {
     maps.appendTo('#print-container');
     // Code for Property Panel
     var togglebtn = new ej.buttons.Button({
-        cssClass: 'e-flat', isPrimary: true,
-        iconCss: 'e-icons e-play-icon'
+        isPrimary: true
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {

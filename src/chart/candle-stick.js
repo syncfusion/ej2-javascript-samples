@@ -34,9 +34,9 @@
                     xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close', name: 'Apple Inc',
                 }
             ], tooltip: { enable: true, shared: true },
-            tooltipRender: function (args) {
-                if (!args.series.index) {
-                    args.text = 'Volume : <b>' + getLabelText(args.text.split('<b>')[1].split('</b>')[0]) + '</b>';
+            sharedTooltipRender: function (args) {
+               if (!args.series[0].index) {
+                    args.text[0] = 'Volume : <b>' + getLabelText(args.text[0].split('<b>')[1].split('</b>')[0]) + '</b>';
                 }
             },
             pointRender: function (args) {

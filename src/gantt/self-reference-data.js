@@ -16,7 +16,7 @@ this.default = function () {
             parentID: 'parentID'
         },
         columns: [
-            { field: 'taskID', width: 60 },
+            { field: 'taskID', width: 80 },
             { field: 'taskName', width: 250 },
             { field: 'startDate' },
             { field: 'endDate' },

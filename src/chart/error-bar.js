@@ -6,7 +6,12 @@ var fillRender = function (args) {
         args.fill = window.materialColors[args.point.index % 10];
     } else if (errorTheme === 'highcontrast') {
         args.fill = window.highcontrastColors[args.point.index % 10];
-    } else {
+    } else if (errorTheme === 'fluent') {
+        args.fill = window.fluentColors[args.point.index % 10];
+    } else if (errorTheme === 'fluent-dark') {
+        args.fill = window.fluentDarkColors[args.point.index % 10];
+    }
+     else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }
 };

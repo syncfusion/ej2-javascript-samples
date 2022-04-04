@@ -27,39 +27,38 @@ this.default = function () {
     var filter = new ej.buttons.CheckBox({
         label: 'Show Filter Icon',
         checked: true,
-        change: onChange
+        change: onFilter
     });
     filter.appendTo('#filter');
     var sort = new ej.buttons.CheckBox({
         label: 'Show Sort Icon',
         checked: true,
-        change: onChange
+        change: onSort
     });
     sort.appendTo('#sort');
     var remove = new ej.buttons.CheckBox({
         label: 'Show Remove Icon',
         checked: true,
-        change: onChange
+        change: onRemove
     });
     remove.appendTo('#remove');
     var summary = new ej.buttons.CheckBox({
         label: 'Show Value Type Icon',
         checked: true,
-        change: onChange
+        change: onValueType
     });
     summary.appendTo('#summary');
     
-    function onChange(args) {
-        if (args.event.target.id === 'filter') {
-            pivotObj.groupingBarSettings.showFilterIcon = args.checked;
-        }
-        else if (args.event.target.id === 'sort') {
-            pivotObj.groupingBarSettings.showSortIcon = args.checked;
-        }
-        else if (args.event.target.id === 'remove') {
-            pivotObj.groupingBarSettings.showRemoveIcon = args.checked;
-        } else {
-            pivotObj.groupingBarSettings.showValueTypeIcon = args.checked;
-        }
+    function onFilter(args) {
+        pivotObj.groupingBarSettings.showFilterIcon = args.checked;
+    }
+    function onSort(args) {
+        pivotObj.groupingBarSettings.showSortIcon = args.checked;
+    }
+    function onValueType(args) {
+        pivotObj.groupingBarSettings.showValueTypeIcon = args.checked;
+    }
+    function onRemove(args) {
+        pivotObj.groupingBarSettings.showRemoveIcon = args.checked;
     }
 };

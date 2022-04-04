@@ -4,7 +4,6 @@
     "category": "Calendars",
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
-    "type": "update",
     "samples": [
         {
             "url": "overview",
@@ -277,7 +276,6 @@
             "url": "custom-month-view",
             "name": "Custom Month View",
             "category": "Views",
-            "type": "new",
             "description": "This example showcases how to customize the starting week of the month and also customize the number of weeks to be rendered in month view with JavaScript (ES5) Scheduler.",
             "api": {
                 "Schedule": [
@@ -773,7 +771,6 @@
             "name": "Excel Exporting",
             "category": "Exporting",
             "hideOnDevice": false,
-            "type": "update",
             "description": "This example demonstrates how to export JavaScript (ES5) Scheduler events (appointments) to the Microsoft Excel file format on the client side.",
             "api": {
                 "Schedule": [

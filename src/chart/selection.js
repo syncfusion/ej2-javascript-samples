@@ -109,7 +109,7 @@ this.default = function () {
     var colorPicker = new ej.inputs.ColorPicker({
         value: 'null',
         mode: 'Palette',
-        change: (args) => {
+        change : function(args) {
             chart.highlightColor = args.currentValue.hex;
             chart.dataBind();
         }
@@ -127,4 +127,4 @@ this.default = function () {
         }
         chart.dataBind();
     };
-};
+    };

@@ -64,8 +64,8 @@ this.default = function () {
             direction.value = circulargauge.axes[axisIndex].direction;
             var startAngle = circulargauge.axes[axisIndex].startAngle;
             var endAngle = circulargauge.axes[axisIndex].endAngle;
-            document.getElementById('start').innerHTML = 'Start Angle <span> &nbsp;&nbsp;&nbsp;' + startAngle;
-            document.getElementById('end').innerHTML = 'End Angle <span> &nbsp;&nbsp;&nbsp;' + endAngle;
+            document.getElementById('start').innerHTML = startAngle;
+            document.getElementById('end').innerHTML = endAngle;
             document.getElementById('startAngle').value = startAngle.toString();
             document.getElementById('endAngle').value = endAngle.toString();
         }

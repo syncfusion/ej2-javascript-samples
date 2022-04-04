@@ -15,7 +15,7 @@ this.default = function () {
             child: 'subtasks'
         },
         columns: [
-            { field: 'TaskID', headerText: 'ID', width: 60, minWidth: 8 },
+            { field: 'TaskID', headerText: 'ID', width: 80, minWidth: 8 },
             { field: 'TaskName', headerText: 'Job Name', width: 250, minWidth: 120, maxWidth: 300 },
             { field: 'StartDate', width: 135, minWidth: 8 },
             { field: 'EndDate', width: 135, minWidth: 8 },

@@ -1,0 +1,92 @@
+{
+    "name": "Carousel",
+    "directory": "carousel",
+    "category": "Navigation",
+    "ftName": "carousel",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Carousel",
+            "api": {
+                "Carousel": [
+                    "items"
+                ],
+                "CarouselItem": [
+                    "template"
+                ]
+            },
+            "description": "This example demonstrates the simple slide show of images using Syncfusion JavaScript(ES5) Carousel component."
+        },
+        {
+            "url": "datasource-binding",
+            "name": "Data Binding",
+            "category": "Carousel",
+            "api": {
+                "Carousel": [
+                    "dataSource",
+                    "itemTemplate",
+                    "showArrows"
+                ]
+            },
+            "description": "This example demonstrates how to bind data and customize them by using dataSource and templates to the Syncfusion JavaScript(ES5) Carousel component."
+        },
+        {
+            "url": "templates",
+            "name": "Templates",
+            "category": "Carousel",
+            "api": {
+                "Carousel": [
+                    "arrowsTemplate",
+                    "indicatorsTemplate",
+                    "items",
+                    "showArrows"
+                ],
+                "CarouselItem": [
+                    "template"
+                ],
+                "animation": [
+                    "effect"
+                ]
+            },
+            "description": "This example demonstrates the template options available in JavaScript(ES5) Carousel component."
+        },
+        {
+            "url": "keyboard-navigation",
+            "name": "Keyboard Navigation",
+            "category": "Carousel",
+            "api": {
+                "Carousel": [
+                    "autoPlay",
+                    "items",
+                    "showPlayButton"
+                ],
+                "CarouselItem": [
+                    "template"
+                ]
+            },
+            "description": "This example explains the key combinations used to perform various actions in Syncfusion JavaScript(ES5) Carousel component."
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Carousel",
+            "api": {
+                "Carousel": [
+                    "showIndicators",
+                    "interval",
+                    "items",
+                    "autoPlay",
+                    "showPlayButton",
+                    "showArrows",
+                    "infinite"
+                ],
+                "CarouselItem": [
+                    "template"
+                ]
+            },
+            "description": "This example showcase the available APIs and its functionalities in Syncfusion JavaScript(ES5) Carousel component."
+        }
+    ]
+}

@@ -4,9 +4,9 @@ this.default = function () {
         return instance.formatDate(value, { skeleton: 'Hm' });
     };
     var data = new ej.base.extend([], window.fifaEventsData, null, true);
-    var agendaTemplate = '<div class="subject">${Subject}</div> ${if(Description !== null && Description !== undefined)}' +
+    var agendaTemplate = '<div><div class="subject">${Subject}</div> ${if(Description !== null && Description !== undefined)}' +
         '<div class="group" > ${ Description } </div>${/if}<div class="location">${getTimeString(data.StartTime)} ${if(City !== null &&' +
-        'City !== undefined)}, ${ City } ${/if}</div > ';
+        'City !== undefined)}, ${ City } ${/if}</div ></div> ';
     var monthEventTemplate = '<div class="e-subject">${Subject}</div>';
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',

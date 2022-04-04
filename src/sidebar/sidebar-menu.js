@@ -1,26 +1,29 @@
 this.default = function () {
-
-    // Sidebar Initialization
+    //Toolbar component template element specification
+    var folderEle = '<div class= "e-folder"><div class= "e-folder-name">Navigation Pane</div></div>';
+    //Toolbar component initialization
+    var toolbarObj = new ej.navigations.Toolbar({
+        clicked: ToolbarCliked,
+        items: [
+            { prefixIcon: "icon-menu", tooltipText: "Menu" },
+            { template: folderEle }
+        ]
+    });
+    toolbarObj.appendTo("#menuToolbar");
     var sidebarMenu = new ej.navigations.Sidebar({
-        width: '220px',
-        mediaQuery: '(min-width: 600px)',
-        target: '.main-content',
-        dockSize: '50px',
-        enableDock: true
+        target: ".main-content",
+        width: "220px",
+        dockSize: "50px",
+        enableDock: true,
+        isOpen: true,
+        type: 'Auto'
     });
-    sidebarMenu.appendTo('#sidebar-menu');
-    //end of Sidebar initialization
-    // Toggle the Sidebar
-    document.getElementById('hamburger').addEventListener('click', function () {
-        sidebarMenu.toggle();
-    });
-    // open new tab
-    var URL = location.href.replace(location.search, '');
-    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/sidebar-menu/index.html');
+    sidebarMenu.appendTo('#menuSidebar');
+    // MainMenuItems definition
     var mainMenuItems = [
         {
             text: 'Overview',
-            iconCss: 'icon-globe icon',
+            iconCss: 'icon-user icon',
             items: [
                 { text: 'All Data' },
                 { text: 'Category2' },
@@ -30,6 +33,15 @@ this.default = function () {
         {
             text: 'Notification',
             iconCss: 'icon-bell-alt icon',
+            items: [
+                { text: 'Change Profile' },
+                { text: 'Add Name' },
+                { text: 'Add Details' }
+            ]
+        },
+        {
+            text: 'Info',
+            iconCss: 'icon-tag icon',
             items: [
                 { text: 'Message' },
                 { text: 'Facebook' },
@@ -59,17 +71,16 @@ this.default = function () {
             iconCss: 'icon-picture icon',
             items: [
                 { text: 'Add Name' },
-                { text: 'Add Mobil Number' },
-                { text: 'Add Imaage' },
+                { text: 'Add Mobile Number' }
             ]
         },
         {
             text: 'Users ',
             iconCss: 'icon-user icon',
             items: [
-                { text: 'Mobile1' },
-                { text: 'Mobile2' },
-                { text: 'Telephone' }
+                { text: 'Mobile User' },
+                { text: 'Laptop User' },
+                { text: 'Desktop User' }
             ]
         },
         {
@@ -80,29 +91,17 @@ this.default = function () {
                 { text: 'Add Name' },
                 { text: 'Add Details' }
             ]
-        },
-        {
-            text: 'Info',
-            iconCss: 'icon-tag icon',
-            items: [
-                { text: 'Facebook' },
-                { text: 'Mobile' },
-            ]
-        },
+        }
     ];
-    var mainMenuObj =
-        new ej.navigations.Menu({ items: mainMenuItems, orientation: 'Vertical', cssClass: 'dock-menu' }, '#main-menubar');
-      var accountMenuItem = [
-        {
-            text: 'Account',
-            items: [
-                { text: 'Profile' },
-                { text: 'Sign out' },
-            ]
-        },
-    ];
-    // horizontal-menubar initialization
-    var horizontalMenuobj =
-       new ej.navigations.Menu({ items: accountMenuItem, orientation: 'Horizontal', cssClass: 'dock-menu' }, '#horizontal-menubar');
-
+    // main-menubar initialization
+    var mainMenuObj = new ej.navigations.Menu({ 
+        items: mainMenuItems,
+        orientation: 'Vertical',
+        cssClass: 'dock-menu',
+    }, "#dockMenu");
+    function ToolbarCliked(args) {
+        if(args.item.tooltipText == "Menu") {
+            sidebarMenu.toggle();
+        }
+    }
 };

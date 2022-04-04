@@ -14,6 +14,16 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks'
         },
+        treeColumnIndex: 1,
+        columns: [
+            { field: 'TaskID', width: 80 },
+            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'StartDate' },
+            { field: 'EndDate' },
+            { field: 'Duration' },
+            { field: 'Predecessor' },
+            { field: 'Progress' },
+        ],
         eventMarkers: [
             {
                 day: new Date('04/02/2019'),               

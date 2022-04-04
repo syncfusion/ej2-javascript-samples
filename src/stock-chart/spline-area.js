@@ -10,7 +10,7 @@ renderSplineAreaStockChart = function (googl) {
             chartArea: { border: { width: 0 } },
             series: [
                 {
-                    dataSource: googl, xName: 'x', yName: 'high', type: 'SplineArea', opacity: 0.5
+                    dataSource: googl, xName: 'x', yName: 'high', type: 'SplineArea'
                 }
             ],
             seriesType : [],

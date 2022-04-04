@@ -53,39 +53,8 @@
         display: block;
     }
 
-    .bootstrap5 .e-panel .e-header-text,
-    .bootstrap5-dark .e-panel .e-header-text,
-    .tailwind .e-panel .e-header-text,
-    .tailwind-dark .e-panel .e-header-text,
-    .material .e-panel .e-header-text,
-    .bootstrap4 .e-panel .e-header-text,
-    .bootstrap .e-panel .e-header-text,
-    .bootstrap-dark .e-panel .e-header-text,
-    .fabric .e-panel .e-header-text,
-    .fabric-dark .e-panel .e-header-text,
-    .highcontrast .e-panel .e-header-text{
-        padding: 10px 0 0;
-    }
-
-    .e-bigger.bootstrap5 .e-panel .e-header-text,
-    .e-bigger.bootstrap5-dark .e-panel .e-header-text,
-    .e-bigger.tailwind .e-panel .e-header-text,
-    .e-bigger.tailwind-dark .e-panel .e-header-text {
-        padding: 2px 0 0;
-    }
-
-    .e-bigger.material .e-panel .e-header-text,
-    .e-bigger.bootstrap4 .e-panel .e-header-text,
-    .e-bigger.bootstrap .e-panel .e-header-text,
-    .e-bigger.bootstrap-dark .e-panel .e-header-text
-    {
-        padding: 8px 0 0;
-    }
-
-    .e-bigger.fabric .e-panel .e-header-text,
-    .e-bigger.fabric-dark .e-panel .e-header-text,
-    .e-bigger.highcontrast .e-panel .e-header-text {
-        padding: 6px 0 0;
+    .e-panel .e-header-text {
+        padding: 12px 0 12px 0;
     }
 
     #dashboard .e-panel-container .e-panel-header {
@@ -96,23 +65,26 @@
         border: 0px;
     }
 
-    .e-dashboardlayout.e-control .e-panel .e-panel-header {
-        font-size: 14px;
-        font-weight: 500;
-        height: 37px;
-        padding: 0 12px;
+    .e-dashboardlayout.e-control .e-panel .e-panel-header,
+	.bootstrap5.e-bigger .e-dashboardlayout.e-control .e-panel .e-panel-header,
+	.bootstrap5-dark.e-bigger .e-dashboardlayout.e-control .e-panel .e-panel-header	{
+        font-size: 18px;
+        font-weight: 600; 
+        height: 68px;
+        padding: 20px 0 20px 20px;
         vertical-align: middle;
         text-align: left;
         border-bottom: 0.5px solid #e3e3e3;
     }
-
+	
     body.material-dark .e-panel .panel-content,
     body.material-dark .property-section,
     body.fabric-dark .e-panel .panel-content,
     body.highcontrast .e-panel .panel-content,
     body.bootstrap-dark .e-panel .panel-content,
     body.bootstrap5-dark .e-panel .panel-content,
-    body.tailwind-dark .e-panel .panel-content {
+    body.tailwind-dark .e-panel .panel-content,
+	body.fluent-dark .e-panel .panel-content{
         color: #ffffff;
     }
 

@@ -45,7 +45,7 @@ this.default = function () {
                     width: 10,
                     height: 10
                 },
-                yName: 'y', name: 'Product A'
+                yName: 'y', name: 'Product A', fill: '#00BDAE',
             },
             {
                 type: 'Line',
@@ -61,7 +61,7 @@ this.default = function () {
                     width: 10,
                     height: 10
                 },
-                yName: 'y', name: 'Product B'
+                yName: 'y', name: 'Product B', fill: '#357CD2',
             },
 
         ],

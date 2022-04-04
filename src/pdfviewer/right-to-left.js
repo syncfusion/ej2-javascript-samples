@@ -4,9 +4,10 @@
         documentPath: "RTLText.pdf",
         locale: 'ar-AE',
         enableRtl: true,
-        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer'
+        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer',
+        annotationSettings:{author :'مقبول'}
     });
-    viewer.annotationSettings.author = 'مقبول';
+
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
     ej.base.L10n.load({
         'ar-AE': {
@@ -235,7 +236,9 @@
                 'Up': 'فوق',
                 'Down': 'تحت',
                 'Multiline': 'متعدد الأسطر',
-                'Initial': 'أولي'
+                'Initial': 'أولي',
+                'Export XFDF': 'تصدير التعليق التوضيحي إلى ملف XFDF',
+                'Import XFDF': 'استيراد التعليقات التوضيحية من ملف XFDF'
             }
         }
     });

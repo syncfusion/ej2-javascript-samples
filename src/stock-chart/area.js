@@ -10,7 +10,7 @@ renderAreaStockChart = function (aapl) {
             },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area', opacity: 0.5
+                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Area'
                 }
             ],
             seriesType : [],

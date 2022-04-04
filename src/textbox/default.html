@@ -305,7 +305,9 @@
     .bootstrap5-dark .row.material2,
     .tailwind-dark .row.material2,
     .fabric-dark .row.material2,
-    .bootstrap-dark .row.material2 {
+    .bootstrap-dark .row.material2,
+    .fluent .row.material2,
+    .fluent-dark .row.material2 {
         display: none;
     }
 
@@ -333,6 +335,17 @@
     .bootstrap5-dark .e-upload-picture::before {
         content: '\e712';
         font-family: e-icons;
+    }
+
+    .fluent .e-upload-picture::before,
+    .fluent-dark .e-upload-picture::before {
+        content: '\e712';
+        font-family: e-icons;
+    }
+
+    .fluent .e-float-input.e-control-wrapper.e-filled,
+    .fluent-dark .e-float-input.e-control-wrapper.e-filled {
+        margin-top: 0px;
     }
     /* custom code end*/
 </style>

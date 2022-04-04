@@ -1,21 +1,27 @@
 this.default = function () {
-
-    // Sidebar Initialization
+    //Toolbar component template element specification
+    var folderEle = '<div class= "e-folder"><div class= "e-folder-name">Navigation Pane</div></div>';
+    //Toolbar component rendering code blocks
+    var toolbarObj = new ej.navigations.Toolbar({
+        clicked: ToolbarCliked,
+        items: [
+            { prefixIcon: "e-tbar-menu-icon tb-icons", tooltipText: "Menu" },
+            { template: folderEle }
+        ]
+    });
+    toolbarObj.appendTo("#resToolbar");
     var sidebarMenu = new ej.navigations.Sidebar({
         width: '290px',
         target: '.main-content',
         mediaQuery: '(min-width: 600px)',
+        isOpen: true
     });
-    sidebarMenu.appendTo('#sidebar-treeview');
-    //end of Sidebar initialization
-   
-    // Toggle the Sidebar
-    document.getElementById('hamburger').addEventListener('click', function () {
-        sidebarMenu.toggle();
+    sidebarMenu.appendTo('#sideTree');
+    var inputObj = new ej.inputs.TextBox({
+        placeholder: "Search..."
     });
-    // open new tab
-    var URL = location.href.replace(location.search, '');
-    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/responsive-panel/index.html');
+    inputObj.appendTo("#resSearch");
+    // Render the TreeView with image icons
     var data = [
         {
             nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',
@@ -66,9 +72,14 @@ this.default = function () {
     ];
 
     // TreeView  initialization
-    var mainTreeView= new ej.navigations.TreeView({
-        fields: { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' }, expandOn: 'Click'
+    var mainTreeView = new ej.navigations.TreeView({
+        cssClass: "main-treeview",
+        fields: { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild', iconCss: "iconCss" },
+        expandOn: 'Click'
     });
-
-    mainTreeView.appendTo('#main-treeview');
+    mainTreeView.appendTo('#mainTree');
+    
+    function ToolbarCliked() {
+        sidebarMenu.toggle();
+    }
 };

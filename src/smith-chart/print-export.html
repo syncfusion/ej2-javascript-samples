@@ -34,7 +34,7 @@
             <tr id="button-control1">
                 <td>
                     <div style="height: 45px; margin-left: 40%;">
-                        <button id="togglebtn1" style="text-transform:none !important;width:80px;">Export</button>
+                        <button id="togglebtn1" style="text-transform:none !important;width:90px;">Export</button>
                     </div>
                 </td>
             </tr>
@@ -70,6 +70,12 @@
         font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
         font-size: 13px !important;
         font-weight: 400 !important;
+    }
+    .e-export-icon::before {
+        content: '\e728';
+    }
+    .e-view.fluent .e-print-icon::before, .e-view.fluent-dark .e-print-icon::before {
+        content: '\e75d';
     }
 </style>
 <!-- custom code end -->

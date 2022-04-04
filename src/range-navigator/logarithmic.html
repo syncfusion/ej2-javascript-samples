@@ -21,19 +21,18 @@
     #control-container {
         padding: 0px !important;
     }
-
+    
     #material-gradient-chart stop {
         stop-color: #00bdae;
     }
-
+    
     #fabric-gradient-chart stop {
         stop-color: #4472c4;
     }
-
+    
     #bootstrap-gradient-chart stop {
         stop-color: #a16ee5;
     }
-
     #bootstrap4-gradient-chart stop {
         stop-color: #a16ee5;
     }
@@ -41,9 +40,17 @@
     #highcontrast-gradient-chart stop {
         stop-color: #79ECE4;
     }
+    
+	#tailwind-gradient-chart stop {
+        stop-color: #4f46e5;
+    }
 
-    #tailwind-gradient-chart stop {
-        stop-color: #5A61F6;
+    #fluent-gradient-chart stop {
+        stop-color: #614570;
+    }
+        
+    #fluent-dark-gradient-chart stop {
+        stop-color: #8AB113;
     }
 
     #bootstrap5-gradient-chart stop {
@@ -51,7 +58,7 @@
     }
 
     #material-dark-gradient-chart stop {
-        stop-color: #9ECB08;
+        stop-color: #00bdae;
     }
 
     #fabric-dark-gradient-chart stop {
@@ -65,11 +72,9 @@
     #tailwind-dark-gradient-chart stop {
         stop-color: #8B5CF6;
     }
-
     #bootstrap5-dark-gradient-chart stop {
         stop-color: #5ECB9B;
     }
-    
     .chart-gradient stop[offset="0"] {
         stop-opacity: 0.9;
     }
@@ -128,5 +133,13 @@
 			<stop offset="0"></stop>
 			<stop offset="1"></stop>
 		</linearGradient>
+        <linearGradient id="fluent-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+        <linearGradient id="fluent-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
     </defs>
 </svg>

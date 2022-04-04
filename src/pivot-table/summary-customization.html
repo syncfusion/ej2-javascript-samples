@@ -8,66 +8,74 @@
 <div class="col-lg-3 property-section pivot-table-property-section">
     <table id="property" title="Properties" style="width: 100%;height:100%;">
         <tbody>
-            <tr style="height: 50px">
+            <tr>
                 <td>
                     <div style="font-weight: 600; font-size: 13px; white-space: nowrap">
                         Grand totals position
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio5" type="radio">
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio6" type="radio">
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
-                    <div style="font-weight: 600; font-size: 13px; white-space: nowrap">
-                        Hide grand totals
+                    <div>
+                        <div style="font-weight: 600; font-size: 13px; white-space: nowrap">
+                            Hide grand totals
+                        </div>
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio1" type="radio">
                     </div>
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio2" type="radio">
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio3" type="radio">
                     </div>
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <div>
                         <input id="summary-radio4" type="radio">
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td>
-                    <div style="font-weight: 600; font-size: 13px; white-space: nowrap">
-                        Hide sub-totals
+                    <div>
+                        <div style="font-weight: 600; font-size: 13px; white-space: nowrap">
+                            Hide sub-totals
+                        </div>
                     </div>
                 </td>
             </tr>
-            <tr style="height: 50px">
+            <tr>
                 <td colspan="2">
                     <div>
                         <input type="text" tabindex="1" id='summary-values' />
@@ -97,8 +105,20 @@
         overflow: auto;
     }
 
+    .pivot-table-property-section .property-panel-header {
+        padding-bottom: 10px;
+    }
+
     .pivot-table-property-section .e-multiselect {
         padding: 0;
+    }
+    
+    .pivot-table-property-section  .property-panel-table td {
+        width: auto;
+    }
+
+    .pivot-table-property-section  .property-panel-table div {
+        padding-left: unset;
     }
 </style>
 <!-- custom code end -->

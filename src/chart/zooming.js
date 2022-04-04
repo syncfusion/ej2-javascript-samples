@@ -19,8 +19,8 @@ this.default = function () {
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-var themes = ['bootstrap5', 'bootstrap5dark', 'tailwind', 'tailwinddark', 'material', 'materialdark', 'bootstrap4', 'bootstrap', 'bootstrapdark', 'fabric', 'fabricdark', 'highcontrast'];
-var borderColor = ['#262E0B', '#5ECB9B', '#5A61F6', '#8B5CF6', '#00bdae', '#9ECB08', '#a16ee5', '#a16ee5', '#a16ee5', '#4472c4', '#4472c4', '#79ECE4'];
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind','MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Fluent', 'FluentDark'];
+var borderColor = ['#FF4081', '#007897', '#428BCA', '#FFD939', '#4F46E5', '#4F46E5','#FF4081', '#007897', '#428BCA', '#22D3EE', '#ADB5BD', '#614570', '#8AB113'];
 var fill = 'url(#' + selectedTheme + '-gradient-chart)';
     var chart = new ej.charts.Chart({
         chartArea: { border: { width: 0 } },
@@ -48,7 +48,7 @@ var fill = 'url(#' + selectedTheme + '-gradient-chart)';
                 xName: 'x',
                 yName: 'y',
                 fill: fill,
-                border: { width: 0.5, color: borderColor[themes.indexOf(theme.toLowerCase())] },
+                border: { width: 0.5, color: borderColor[themes.indexOf(theme)] },
                 animation: { enable: false }
             },
         ],

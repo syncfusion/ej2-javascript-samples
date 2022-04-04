@@ -1,7 +1,7 @@
 {
     "de": {
         "pivotview": {
-            "png":"PNG",
+            "png": "PNG",
             "jpeg": "JPEG",
             "svg": "SVG",
             "pie": "Kuchen",
@@ -266,13 +266,16 @@
             "no": "Nein",
             "numberFormatMenu": "Zahlenformatierung ...",
             "conditionalFormatingMenu": "Bedingte Formatierung...",
-			"removeCalculatedField":"Möchten Sie dieses berechnete Feld wirklich löschen?",
+            "removeCalculatedField": "Möchten Sie dieses berechnete Feld wirklich löschen?",
             "replaceConfirmBefore": "Ein Bericht mit dem Namen ",
             "replaceConfirmAfter": " ist bereits vorhanden. Möchten Sie es ersetzen?",
             "Median": "Median",
             "stacked": "Gestapelt",
             "single": "Single",
-            "multipleAxisMode": "Mehrachsenmodus"
+            "multipleAxisMode": "Mehrachsenmodus",
+            "grandTotalPosition": "Gesamtposition",
+            "top": "oben",
+            "bottom": "Unterseite"
         },
         "pivotfieldlist": {
             "all": "alles",
@@ -444,7 +447,7 @@
     },
     "ar": {
         "pivotview": {
-            "png":"بي إن جي",
+            "png": "بي إن جي",
             "jpeg": "JPEG",
             "svg": "SVG",
             "pie": "فطيرة",
@@ -709,13 +712,16 @@
             "no": "لا",
             "numberFormatMenu": "تنسيق الأرقام ...",
             "conditionalFormatingMenu": "تنسيق مشروط...",
-			"removeCalculatedField":"هل أنت متأكد أنك تريد حذف هذا الحقل المحسوب؟",
+            "removeCalculatedField": "هل أنت متأكد أنك تريد حذف هذا الحقل المحسوب؟",
             "replaceConfirmBefore": "تقرير مسمى ",
             "replaceConfirmAfter": "موجود مسبقا. هل تريد استبدالها؟ ",
             "Median": "الوسيط",
             "stacked": "مرصوصة",
             "single": "أعزب",
-            "multipleAxisMode": "وضع المحاور المتعددة"
+            "multipleAxisMode": "وضع المحاور المتعددة",
+            "grandTotalPosition": "الموضع الإجمالي الكبير",
+            "top": "أعلى",
+            "bottom": "الأسفل"
         },
         "pivotfieldlist": {
             "all": "الكل",
@@ -886,7 +892,7 @@
     },
     "en": {
         "pivotview": {
-            "png":"PNG",
+            "png": "PNG",
             "jpeg": "JPEG",
             "svg": "SVG",
             "pie": "Pie",
@@ -1151,13 +1157,16 @@
             "no": "No",
             "numberFormatMenu": "Number Formatting...",
             "conditionalFormatingMenu": "Conditional Formatting...",
-			"removeCalculatedField":"Are you sure you want to delete this calculated field?",
+            "removeCalculatedField": "Are you sure you want to delete this calculated field?",
             "replaceConfirmBefore": "A report named ",
             "replaceConfirmAfter": " already exists. Do you want to replace it?",
             "Median": "Median",
             "stacked": "Stacked",
             "single": "Single",
-            "multipleAxisMode": "Multiple Axis Mode"
+            "multipleAxisMode": "Multiple Axis Mode",
+            "grandTotalPosition": "Grand totals position",
+            "top": "Top",
+            "bottom": "Bottom"
         },
         "pivotfieldlist": {
             "all": "All",
@@ -1328,7 +1337,7 @@
     },
     "zh": {
         "pivotview": {
-            "png":"PNG",
+            "png": "PNG",
             "jpeg": "JPEG格式",
             "svg": "SVG",
             "pie": "馅饼",
@@ -1593,13 +1602,16 @@
             "no": "沒有",
             "numberFormatMenu": "數字格式...",
             "conditionalFormatingMenu": "條件格式...",
-			"removeCalculatedField":"您确定要删除此计算字段吗？",
+            "removeCalculatedField": "您确定要删除此计算字段吗？",
             "replaceConfirmBefore": "一份名为 ",
             "replaceConfirmAfter": " 已经存在。您要更换吗？",
             "Median": "中位数",
             "stacked": "堆叠式",
             "single": "单身的",
-            "multipleAxisMode": "多轴模式"
+            "multipleAxisMode": "多轴模式",
+            "grandTotalPosition": "总头寸",
+            "top": "最佳",
+            "bottom": "底部"
         },
         "pivotfieldlist": {
             "all": "所有",
@@ -1770,7 +1782,7 @@
     },
     "fr-CH": {
         "pivotview": {
-            "png":"PNG",
+            "png": "PNG",
             "jpeg": "JPEG",
             "svg": "SVG",
             "pie": "Tarte",
@@ -2035,13 +2047,16 @@
             "no": "Non",
             "numberFormatMenu": "Formatage des nombres ...",
             "conditionalFormatingMenu": "Mise en forme conditionnelle...",
-			"removeCalculatedField":"Voulez-vous vraiment supprimer ce champ calculé?",
+            "removeCalculatedField": "Voulez-vous vraiment supprimer ce champ calculé?",
             "replaceConfirmBefore": "Un rapport nommé ",
             "replaceConfirmAfter": " existe déjà. Voulez-vous le remplacer?",
             "Median": "Médian",
             "stacked": "Empilé",
             "single": "Seul",
-            "multipleAxisMode": "Mode à axes multiples"
+            "multipleAxisMode": "Mode à axes multiples",
+            "grandTotalPosition": "position du total général",
+            "top": "Haut",
+            "bottom": "bas"
         },
         "pivotfieldlist": {
             "all": "tout",

@@ -24,6 +24,10 @@ var bootstrapColors = ['#a16ee5', '#f7ce69', '#55a5c2', '#7ddf1e', '#ff6ea6',
     '#7953ac', '#b99b4f', '#407c92', '#5ea716', '#b91c52'];
 var highcontrastColors = ['#79ECE4', '#E98272', '#DFE6B6', '#C6E773', '#BA98FF',
     '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
+var fluentColors = ["#614570", "#4C6FB1", "#CC6952", "#3F579A", "#4EA09B", "#6E7A89", "#D4515C", "#E6AF5D", "#639751",
+    "#9D4D69"];
+var fluentDarkColors = ["#8AB113", "#2A72D5", "#43B786", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#EBA844", "#26BC7A", 
+    "#BC4870"];
 var pointRender = function (args) {
     var dataTheme = location.hash.split('/')[1];
     if (dataTheme && dataTheme.indexOf('fabric') > -1) {
@@ -34,6 +38,12 @@ var pointRender = function (args) {
     }
     else if (dataTheme === 'highcontrast') {
         args.fill = highcontrastColors[args.point.index % 10];
+    }
+    else if (dataTheme === 'fluent') {
+        args.fill = fluentColors[args.point.index % 10];
+    } 
+    else if (dataTheme === 'fluent-dark') {
+        args.fill = fluentDarkColors[args.point.index % 10];
     }
     else {
         args.fill = bootstrapColors[args.point.index % 10];

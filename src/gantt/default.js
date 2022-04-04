@@ -4,6 +4,7 @@ this.default = function () {
         height: '450px',
         allowSelection: true,
         highlightWeekends: true,
+        treeColumnIndex: 1,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -14,6 +15,15 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks'
         },
+        columns: [
+            { field: 'TaskID', width: 80 },
+            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'StartDate' },
+            { field: 'EndDate' },
+            { field: 'Duration' },
+            { field: 'Predecessor' },
+            { field: 'Progress' },
+        ],
         labelSettings: {
             leftLabel: 'TaskName'
         },

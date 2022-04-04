@@ -24,7 +24,7 @@ this.default = function () {
     });
     scheduleObj.appendTo('#Schedule');
     function onChange(args) {
-        var value = parseInt((args.event.target).getAttribute('value'), 10);
+        var value = parseInt(args.event.currentTarget.querySelector('input').getAttribute('value'), 10);
         var resourceData = calendarCollections.filter(function (calendar) { return calendar.CalendarId === value; });
         if (args.checked) {
             scheduleObj.addResource(resourceData[0], 'Calendars', value - 1);

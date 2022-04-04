@@ -29,7 +29,7 @@ this.default = function () {
     });
     exportType.appendTo('#mode');
     var exportBtn = new ej.buttons.Button({
-        cssClass: 'e-flat', isPrimary: true,
+        isPrimary: true
     });
     exportBtn.appendTo('#export-btn');
     document.getElementById('export-btn').onclick = function () {

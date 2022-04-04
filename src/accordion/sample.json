@@ -25,6 +25,13 @@
             "category": "Accordion",
             "description":"The sample demonstrates how to represent pane headers with an icon in Accordion control which populates from items collection in JavaScript platform.",
             "api": {"AccordionItem": ["iconCss"] }
+        },
+        {
+            "url": "keyboard-interaction",
+            "name": "Keyboard Interaction",
+            "category": "Accordion",
+            "description":"The sample showcases the keyboard shortcuts applicable on Accordion component in JavaScript platform.",
+            "api": {"AccordionItem": ["header", "content", "expanded"], "Accordion":["items"] }
         }
     ]
 }

@@ -22,6 +22,16 @@ this.default = function () {
             dependency: 'predecessor',
             parentID: 'parentID'
         },
+        treeColumnIndex: 1,
+        columns: [
+            { field: 'taskID', width: 80 },
+            { field: 'taskName',headerText: 'Name', width: 250 },
+            { field: 'startDate' },
+            { field: 'endDate' },
+            { field: 'duration' },
+            { field: 'predecessor' },
+            { field: 'progress' },
+        ],
         timelineSettings: {
             timelineUnitSize: 65,
             topTier: {

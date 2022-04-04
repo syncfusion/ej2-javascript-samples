@@ -76,7 +76,7 @@ this.default = function () {
     });
     mode.appendTo('#type');
     var exportGauge = new ej.buttons.Button({
-        iconCss: 'e-icons e-play-icon1', cssClass: 'e-flat', isPrimary: true,
+        isPrimary: true
     });
     exportGauge.appendTo('#export');
     document.getElementById('export').onclick = function () {
@@ -84,7 +84,7 @@ this.default = function () {
         circulargauge.export(mode.value, fileName);
     };
     var printGauge = new ej.buttons.Button({
-        iconCss: 'e-icons e-play-icon', cssClass: 'e-flat', isPrimary: true,
+        isPrimary: true
     });
     printGauge.appendTo('#print');
     document.getElementById('print').onclick = function () {

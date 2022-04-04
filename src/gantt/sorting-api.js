@@ -16,7 +16,7 @@ this.default = function () {
             child: 'subtasks'
         },
         columns: [
-            { field: 'TaskID', headerText: 'ID', width: 70 },
+            { field: 'TaskID', headerText: 'ID', width: 80 },
             { field: 'TaskName', headerText: 'TaskName', width: 250 },
             { field: 'StartDate', headerText: 'StartDate' },
             { field: 'EndDate', headerText: 'EndDate' },

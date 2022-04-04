@@ -29,10 +29,10 @@ this.default = function () {
         },
         xName: 'xval'
     };
-    var sparkmodel2 = {     
+    var sparkmodel2 = {
         // custom code start
         load: sparkload,
-        // custom code end  
+        // custom code end 
         valueType: 'Category',
         fill: '#3C78EF',
         opacity: 1,

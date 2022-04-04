@@ -3,7 +3,6 @@
     "directory": "tree-grid",
     "category": "Grids",
     "ftName" :"treegrid",
-    "type": "update",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
       {  
@@ -211,6 +210,7 @@
          {"url":"treegridlines", "name": "Grid Lines", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
             "description": "This demo explains how to customize the grid lines in Tree Grid using Syncfusion Essential JS2 Tree Grid."
          },
-         { "url": "adaptive","name": "Adaptive", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"]}, "type": "new"}
+         { "url": "adaptive","name": "Adaptive", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"] }
+         }
     ]
 }

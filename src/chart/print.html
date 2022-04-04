@@ -9,7 +9,7 @@
             <tr id="button-control" style="height: 50px">
                 <td align='center'>
                     <div> 
-                        <button id="togglebtn">Print</button>
+                        <button id="togglebtn" iconCss="e-icons e-print-icon" >Print</button>
                     </div>
                 </td>
             </tr>
@@ -36,6 +36,10 @@
         width: 100%;
         text-align: center;
     }
+    #control-container {
+        padding: 0px !important;
+    }
+
     .e-print-icon::before {
         content: '\e34b';
     }
@@ -48,7 +52,7 @@
         content: '\ebd2';
     }
 
-    .e-view.bootstrap4 .e-print-icon::before {
+   .e-view.bootstrap4 .e-print-icon::before {
         content: '\e743';
     }
 
@@ -63,7 +67,8 @@
     .e-view.bootstrap5 .e-print-icon::before, .e-view.bootstrap5-dark .e-print-icon::before {
         content: '\e75d';
     }
-    #control-container {
-        padding: 0px !important;
+
+    .e-view.fluent .e-print-icon::before, .e-view.fluent-dark .e-print-icon::before {
+        content: '\e75d';
     }
 </style>

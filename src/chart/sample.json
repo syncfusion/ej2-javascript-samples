@@ -1,8 +1,8 @@
 {
     "name": "Chart",
     "directory": "chart",
-    "type":"update",
     "category": "Data Visualization",
+    "type":"update",
     "ftName": "chart",
     "samples": [
         {
@@ -283,7 +283,6 @@
         {
             "url": "grouped-column",
             "name": "Grouped Column",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the grouping in column series.",
             "category": "Bar Charts",
             "api": {
@@ -802,7 +801,6 @@
         {
             "url": "pie-radius",
             "name": "Pie with Various Radius",
-            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the various radius pie chart.",
             "category": "Accumulation Charts",
             "api": {
@@ -853,8 +851,9 @@
             }
         },
         {
-            "url": "default-doughnut",
+            "url": "pie-legend",
             "name": "Pie with Legend",
+            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
             "category": "Accumulation Charts",
             "api": {
@@ -1280,9 +1279,8 @@
             }
         },
         {
-            "url": "RTL",
+            "url": "rtl",
             "name": "RTL",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the RTL feature in chart.",
             "category": "Chart Customization",
             "api": {
@@ -1421,7 +1419,6 @@
         {
             "url": "selection",
             "name": "Selection",
-            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the selection behavior in chart.",
             "category": "User Interaction",
             "api": {

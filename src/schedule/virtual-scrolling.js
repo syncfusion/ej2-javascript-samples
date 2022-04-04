@@ -4,7 +4,6 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
         width: '100%',
-        currentView: 'TimelineMonth',
         views: [{
             option: 'TimelineMonth',
             eventTemplate: '#timeline-event-template',

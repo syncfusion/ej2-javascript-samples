@@ -70,7 +70,10 @@ this.default = function () {
 				button.disabled = true;
 				document.getElementById('popup').style.display = 'none';
 			}
-        },
+            if (ej.base.Browser.isDevice && pivotObj && pivotObj.enableRtl) {
+                document.querySelector('.control-section').classList.add('e-rtl');
+            }
+        }
     });
     pivotObj.appendTo('#PivotView');
 

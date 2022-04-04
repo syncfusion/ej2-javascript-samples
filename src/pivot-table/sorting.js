@@ -69,7 +69,7 @@ this.default = function () {
     });
     orderddl.appendTo('#sorting-order');
     var applyBtn = new ej.buttons.Button({
-        cssClass: 'e-flat', isPrimary: true,
+        isPrimary: true
     });
     applyBtn.appendTo('#sorting-apply');
     document.getElementById('sorting-apply').onclick = function () {

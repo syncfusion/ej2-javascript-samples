@@ -18,7 +18,7 @@ this.default = function () {
     var printHeightAndWidthData = ['auto', '100%', '500px'];
 
     var heightObj = new ej.dropdowns.DropDownList({
-        width: "auto",
+        width: "100%",
         placeholder: "Height",
         floatLabelType: "Always",
         dataSource: printHeightAndWidthData,
@@ -28,7 +28,7 @@ this.default = function () {
     heightObj.appendTo('#heightElement');
 
     var widthObj = new ej.dropdowns.DropDownList({
-        width: "auto",
+        width: "100%",
         placeholder: "Width",
         floatLabelType: "Always",
         dataSource: printHeightAndWidthData,
@@ -38,7 +38,7 @@ this.default = function () {
     widthObj.appendTo('#widthElement');
 
     var selectedDateObj = new ej.calendars.DatePicker({
-        width: "auto",
+        width: "100%",
         placeholder: "Selected date",
         floatLabelType: "Always",
         value: new Date(2021, 0, 10)

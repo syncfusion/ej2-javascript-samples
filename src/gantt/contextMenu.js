@@ -44,7 +44,7 @@ this.default = function () {
         },
         allowResizing: true,
         columns: [
-            { field: 'TaskID', width: 50 },
+            { field: 'TaskID', width: 80 },
             { field: 'TaskName', headerText: 'Job Name', width: '250', clipMode: 'EllipsisWithTooltip' },
             { field: 'StartDate' },
             { field: 'Duration' },

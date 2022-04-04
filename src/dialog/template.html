@@ -26,8 +26,7 @@
 
 </div>
 <style>
-    .material button#sendButton,
-    button#sendButton {
+    .material button#sendButton {
         top: 4px;
         position: relative;
     }
@@ -65,6 +64,10 @@
     .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
         top: 5px;
         left: -11px;
+    }
+    .fluent .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+        top: 3px;
+        left: 0px;
     }
     .e-bigger .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
         top: 3px;
@@ -161,7 +164,8 @@
     .fabric-dark .dialogContent .dialogText,
     .bootstrap-dark .dialogContent .dialogText,
     .bootstrap5-dark .dialogContent .dialogText,
-    .tailwind-dark .dialogContent .dialogText {
+    .tailwind-dark .dialogContent .dialogText,
+    .fluent-dark .dialogContent .dialogText {
         color: #424242;
     }
 
@@ -178,6 +182,12 @@
     }
     .bootstrap4 .e-dialog .e-footer-content {
         border-top: 1px solid #e9ecef;
+    }
+    .bootstrap5 .e-dialog .e-footer-content {
+        border-top: 1px solid #dee2e6;
+    }
+    .bootstrap5-dark .e-dialog .e-footer-content {
+        border-top: 1px solid #444c54;
     }
 	.highcontrast .dialogContent .dialogText { 
 	    background-color: #bfbfbf;
@@ -219,6 +229,17 @@
     }
     .bootstrap4 .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
     .bootstrap4 .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus {
+        background-color : transparent;
+    }
+
+    .tailwind .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .tailwind .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus,
+    .tailwind-dark .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .tailwind-dark .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus,
+    .bootstrap5 .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .bootstrap5 .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus,
+    .bootstrap5-dark .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:hover,
+    .bootstrap5-dark .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:focus {
         background-color : transparent;
     }
     .material .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn:active .e-icon-dlg-close ,

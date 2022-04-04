@@ -16,13 +16,13 @@ this.default = function () {
         series: [
             {
                 dataSource: [
-                    { 'x': 'Net-tution and Fees', y: 21, text: '21%' },
-                    { 'x': 'Self-supporting Operations', y: 21, text: '21%' },
+                    { 'x': 'Net-tution', y: 21, text: '21%' },
                     { 'x': 'Private Gifts', y: 8, text: '8%' },
-                    { 'x': 'All Other', y: 8, text: '8%' },
+                    { 'x': 'All Other', y: 9, text: '9%' },
                     { 'x': 'Local Revenue', y: 4, text: '4%' },
                     { 'x': 'State Revenue', y: 21, text: '21%' },
-                    { 'x': 'Federal Revenue', y: 16, text: '16%' }
+                    { 'x': 'Federal Revenue', y: 16, text: '16%' },
+                    { 'x': 'Self-supporting Operations', y: 21, text: '21%' },
                 ],
                 xName: 'x',
                 yName: 'y',
@@ -45,7 +45,9 @@ this.default = function () {
             visible: true, toggleVisibility: false,
             position: 'Right',
             height: '28%',
-            width: '44%'
+            width: '44%',
+            textWrap:'Wrap',
+            maximumLabelWidth:100,
         },
         animationComplete: function (args) {
             centerTitle.style.fontSize = getFontSize(args.accumulation.initialClipRect.width);

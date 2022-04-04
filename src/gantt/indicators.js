@@ -15,6 +15,16 @@ this.default = function () {
             child: 'subtasks',
             indicators: 'Indicators'
         },
+        treeColumnIndex: 1,
+        columns: [
+            { field: 'TaskID', width: 80 },
+            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'StartDate' },
+            { field: 'EndDate' },
+            { field: 'Duration' },
+            { field: 'Predecessor' },
+            { field: 'Progress' },
+        ],
         labelSettings: {
             leftLabel: 'TaskName'
         },

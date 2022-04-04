@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['bootstrap5', 'bootstrap5-dark','tailwind', 'tailwind-dark', 'material', 'material-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
+var themeCollection = ['fluent', 'fluent-dark', 'bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
 var themeDropDown;
 var contentTab;
 var sourceTab;
@@ -83,6 +83,7 @@ var demoSection = ej.base.select('.sb-demo-section');
 var newYear= new Date().getFullYear();
 var copyRight= document.querySelector('.sb-footer-copyright');
 copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion Inc.";
+ej.base.registerLicense('{SyncfusionJSLicensekey}');
 
 var matchedCurrency = {
     'en': 'USD',
@@ -1294,7 +1295,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
                 content = getStringWithOutDescription(value.toString(), /(\'|\")description/g);
                 content = getStringWithOutDescription(content.toString(), /(\'|\")action-description/g);
             }
-            content = value.indexOf('.html') > 0 ? content.replace(/@section (ActionDescription|Description){[^}]*}/g, '').replace(/&/g, '&amp;')
+            content = fileName.indexOf('.html') > 0 ? content.replace(/@section (ActionDescription|Description){[^}]*}/g, '').replace(/&/g, '&amp;')
                 .replace(/"/g, '&quot;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
             tabObj.push({

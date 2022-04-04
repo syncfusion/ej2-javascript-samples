@@ -407,17 +407,19 @@ this.default = function () {
         eventSettings: { dataSource: generateEvents() },
         popupOpen: function (args) {
             if (args.type === 'QuickInfo' || args.type === 'ViewEventInfo') {
-                var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
-                titleObj.appendTo(args.element.querySelector('#title'));
-                var eventTypeObj = new ej.dropdowns.DropDownList({
-                    dataSource: resourceData,
-                    placeholder: 'Choose Type',
-                    fields: { text: 'CalendarName', value: 'CalendarId' },
-                    index: 0
-                });
-                eventTypeObj.appendTo(args.element.querySelector('#eventType'));
-                var eventNotesObj = new ej.inputs.TextBox({ placeholder: 'Notes' });
-                eventNotesObj.appendTo(args.element.querySelector('#notes'));
+                if (!args.target.classList.contains('e-appointment')) {
+                    var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
+                    titleObj.appendTo(args.element.querySelector('#title'));
+                    var eventTypeObj = new ej.dropdowns.DropDownList({
+                        dataSource: resourceData,
+                        placeholder: 'Choose Type',
+                        fields: { text: 'CalendarName', value: 'CalendarId' },
+                        index: args.data.CalendarId - 1 
+                    });
+                    eventTypeObj.appendTo(args.element.querySelector('#eventType'));
+                    var eventNotesObj = new ej.inputs.TextBox({ placeholder: 'Notes' });
+                    eventNotesObj.appendTo(args.element.querySelector('#notes'));   
+                }
                 var detailsBtn = args.element.querySelector('#more-details');
                 if (detailsBtn) {
                     var moreObj = new ej.buttons.Button({

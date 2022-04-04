@@ -1,7 +1,7 @@
 <div id="target" class="control-section">
     <button class="e-control e-btn" id="dialogBtn" role="button" e-ripple="true" style="position: absolute;" >Open Dialog</button>
     <div id='dialog'>
-      <table style="width:405px;" id ="poschange" >
+      <table id ="poschange" >
       <tr> 
         <td ><input id="radio1" type="radio" name="xy" ></td> 
         <td><input id="radio2" type="radio" name="xy" ></td> 
@@ -45,6 +45,24 @@
         min-height: 370px;
         margin-bottom: 15px;
         margin-top: 10px;    
+    }
+    
+    #target .e-dialog {
+      width: 452px;
+    }
+
+    .fluent.e-bigger #target .e-dialog,
+    .fluent-dark.e-bigger #target .e-dialog {
+      width: 502px;
+    }
+
+    #poschange {
+      width: 405px;
+    }
+
+    .fluent.e-bigger #poschange,
+    .fluent-dark.e-bigger #poschange {
+      width: 455px;
     }
 
     #dialog table,

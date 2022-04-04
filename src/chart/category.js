@@ -10,6 +10,10 @@ var labelRender = function (args) {
         '#7953ac', '#b99b4f', '#407c92', '#5ea716', '#b91c52'];
     var highContrastColors = ['#79ECE4', '#E98272', '#DFE6B6', '#C6E773', '#BA98FF',
     '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
+    var fluentColors = ["#614570", "#4C6FB1", "#CC6952", "#3F579A", "#4EA09B", "#6E7A89", "#D4515C", "#E6AF5D", "#639751",
+    "#9D4D69"];
+    var fluentDarkColors = ["#8AB113", "#2A72D5", "#43B786", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#EBA844", "#26BC7A", 
+    "#BC4870"];
     if (selectedTheme && selectedTheme.indexOf('fabric') > -1) {
         args.fill = fabricColors[args.point.index % 10];
     }
@@ -18,6 +22,12 @@ var labelRender = function (args) {
     }
     else if (selectedTheme === 'highcontrast') {
         args.fill = highContrastColors[args.point.index % 10];
+    }
+    else if (selectedTheme === 'fluent') {
+        args.fill = fluentColors[args.point.index % 10];
+    } 
+    else if (selectedTheme === 'fluent-dark') {
+        args.fill = fluentDarkColors[args.point.index % 10];
     }
     else {
         args.fill = bootstrapColors[args.point.index % 10];

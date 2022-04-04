@@ -9,7 +9,7 @@ this.default = function () {
             maximum: 220,
             majorGridLines: { width: 0 },
             edgeLabelPlacement: 'Shift',
-            title: 'Height in Inches'
+            title: 'Height (cm)'
 
         },
         chartArea: {
@@ -28,7 +28,7 @@ this.default = function () {
             },
             minimum: 50,
             maximum: 80,
-            title: 'Weight in Pounds',
+            title: 'Weight (kg)',
             rangePadding: 'None'
         },
 
@@ -63,7 +63,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true,
-            format: 'Weight: <b>${point.x} lbs</b> <br/> Height: <b>${point.y}"</b>'
+            format: 'Weight: <b>${point.x} kg</b> <br/> Height: <b>${point.y} cm</b>'
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
            // custom code start

@@ -6,6 +6,7 @@
     "samples": [
         { "url": "default", "name": "Default Functionalities", "category": "Toolbar", "description": "The sample demonstrates the default functionalities of the Toolbar control which place commands with the scrollable mode in JavaScript platform.", "api":{"Item":["text","prefixIcon","type","tooltipText"],"Toolbar":["items"] } },
         { "url": "popup", "name": "Popup", "category": "Toolbar", "description": "The sample exposes popup mode of Toolbar control which configures overflowing toolbar commands inside a popup based on priority in JavaScript platform.", "api":{"Item":["showAlwaysInPopup", "showTextOn", "overflow"],"Toolbar":["overflowMode"] } },
-        { "url": "alignment", "name": "Alignment", "category": "Toolbar", "description": "This sample demonstrates how to align commands in left, right and center position in Toolbar control in JavaScript platform.", "api":{"Item":["align", "template"] } }
+        { "url": "alignment", "name": "Alignment", "category": "Toolbar", "description": "This sample demonstrates how to align commands in left, right and center position in Toolbar control in JavaScript platform.", "api":{"Item":["align", "template"] } },
+        { "url": "keyboard-interaction", "name": "Keyboard Interaction", "category": "Toolbar", "description": "This sample showcases the keyboard shortcuts applicable on Toolbar in JavaScript platform.", "api":{"Item":["showAlwaysInPopup", "showTextOn", "overflow"],"Toolbar":["overflowMode"] } }
     ]
 }

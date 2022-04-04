@@ -1,0 +1,127 @@
+<div class="control-section api-carousel-section">
+    <div class="col-lg-9 content-wrapper">
+        <div class="carousel-sample">
+            <div id="carousel"></div>
+        </div>
+    </div>
+    <div class="col-lg-3 property-section">
+        <div id="property" class='property-panel-table' title="Properties">
+            <table id="property" title="Properties" style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>Enable Autoplay</td>
+                        <td>
+                            <input id="autoPlay" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Infinite Looping</td>
+                        <td>
+                            <input id="infinite" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Show Indicators</td>
+                        <td>
+                            <input id="showIndicators" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Show Play Button</td>
+                        <td>
+                            <input id="showPlayButton" type="checkbox" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Buttons Visibility</td>
+                        <td>
+                            <select id="buttonsVisibility" class="form-control">
+                                <option value="Hidden">Hidden</option>
+                                <option value="Visible" selected>Visible</option>
+                                <option value="VisibleOnHover">On Hover</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Slide Interval</td>
+                        <td>
+                            <select id="interval" class="form-control">
+                                <option value="3000" selected>3 seconds</option>
+                                <option value="5000">5 seconds</option>
+                                <option value="7000">7 seconds</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .api-carousel-section .carousel-sample {
+        margin: 0 auto 2em;
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .api-carousel-section .property-panel-table td {
+        margin: 0;
+        padding-bottom: 1em;
+    }
+
+    .api-carousel .e-carousel-items .e-carousel-item .img-container {
+        height: 100%;
+    }
+
+    .api-carousel .e-carousel-items .e-carousel-item .img-container .img-caption {
+        color: rgba(255, 255, 255);
+        font-style: oblique;
+        font-size: 1.5rem;
+        margin: 0;
+        left: 1.5rem;
+        position: absolute;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        top: 1.5rem;
+    }
+</style>
+<script type="text/x-template" id="itemTemplate1">
+    <figure class="img-container">
+        <img src="src/carousel/images/bridge.jpg" alt="bridge" style="height:100%;width:100%;" />
+        <figcaption class="img-caption">Showing 1 of 5</figcaption>
+    </figure>
+</script>
+<script type="text/x-template" id="itemTemplate2">
+    <figure class="img-container">
+        <img src="src/carousel/images/trees.jpg" alt="spring_trees" style="height:100%;width:100%;" />
+        <figcaption class="img-caption">Showing 2 of 5</figcaption>
+    </figure>
+</script>
+<script type="text/x-template" id="itemTemplate3">
+    <figure class="img-container">
+        <img src="src/carousel/images/waterfall.jpg" alt="waterfall" style="height:100%;width:100%;" />
+        <figcaption class="img-caption">Showing 3 of 5</figcaption>
+    </figure>
+</script>
+<script type="text/x-template" id="itemTemplate4">
+    <figure class="img-container">
+        <img src="src/carousel/images/sea.jpg" alt="sea" style="height:100%;width:100%;" />
+        <figcaption class="img-caption">Showing 4 of 5</figcaption>
+    </figure>
+</script>
+<script type="text/x-template" id="itemTemplate5">
+    <figure class="img-container">
+        <img src="src/carousel/images/rocks.jpeg" alt="rocks" style="height:100%;width:100%;" />
+        <figcaption class="img-caption">Showing 5 of 5</figcaption>
+    </figure>
+</script>
+<div id="action-description">
+    <p>This sample demonstrates the properties available in the <b>JavaScript(ES5) Carousel</b> component.</p>
+</div>
+<div id="description">
+    <p>In this demo, you can manually change the properties of the <code>JavaScript(ES5) Carousel</code> component like
+        <code>autoPlay</code>, <code>buttonsVisibility</code>, <code>showIndicators</code>,
+        <code>interval</code>, <code>showPlayButton</code>, <code>loop</code> using the property panel.
+    </p>
+    <p>More information about the properties available in the Carousel component can be found in this <a target='_blank'
+            href="https://ej2.syncfusion.com/javascript/documentation/api/carousel/">documentation section</a>.</p>
+</div>

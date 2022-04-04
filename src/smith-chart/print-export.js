@@ -68,7 +68,7 @@ this.default = function () {
     });
     mode.appendTo('#mode');
     var togglebtn1 = new ej.buttons.Button({
-        cssClass: 'e-info', isPrimary: true
+        iconCss: 'e-icons e-export-icon', cssClass: 'e-flat', isPrimary: true
     });
     togglebtn1.appendTo('#togglebtn1');
     document.getElementById('togglebtn1').onclick = function () {
@@ -76,7 +76,7 @@ this.default = function () {
         smithchart.export(mode.value, fileName);
     };
     var togglebtn2 = new ej.buttons.Button({
-        cssClass: 'e-info', isPrimary: true
+        cssClass: 'e-flat', iconCss: 'e-icons e-print-icon', isPrimary: true
     });
     togglebtn2.appendTo('#togglebtn2');
     document.getElementById('togglebtn2').onclick = function () {

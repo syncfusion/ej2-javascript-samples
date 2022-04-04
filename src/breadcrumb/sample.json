@@ -3,7 +3,6 @@
     "directory": "breadcrumb",
     "category": "Navigation",
     "ftName": "breadcrumb",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -15,7 +14,6 @@
         {
             "url": "bind-to-location",
             "name": "Bind to Location",
-            "type": "update",
             "category": "Breadcrumb",
             "api":{"Breadcrumb":["url"]},
             "description": "This example demonstrates the binding of current url location to the items and items based on static url of Syncfusion JavaScript ES5 Breadcrumb component."
@@ -31,7 +29,6 @@
             "url": "overflow-modes",
             "name": "Overflow Modes",
             "category": "Breadcrumb",
-            "type": "new",
             "api":{ "Breadcrumb":["items", "width", "overflowMode"], "BreadcrumbItem": ["text", "url"] },
             "description": "This example demonstrates different types of overflow mode such as Menu, Wrap, Collapsed, Scroll, and None in the Syncfusion JavaScript Breadcrumb component."
         },

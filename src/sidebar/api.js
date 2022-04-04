@@ -1,92 +1,113 @@
 this.default = function () {
-    //Sidebar initialization
-    var sidebar = new ej.navigations.Sidebar();
-    sidebar.appendTo('#default-sidebar');
-
     // Toggle button for Sidebar open/close.
-    var togglesidebar = new ej.buttons.Button({ cssClass: 'e-info', isToggle: true });
+    var togglesidebar = new ej.buttons.Button({ 
+        cssClass: 'e-primary inline-element right',
+        isToggle: true
+    });
     togglesidebar.appendTo('#togglesidebar');
 
-    togglesidebar.element.onclick = function () {
-        sidebar.toggle();
-    };
-
-    // open new tab
-    var URL = location.href.replace(location.search, '');
-    document.getElementById('newTab').setAttribute('href', URL.split('#')[0] + 'sidebar/api/index.html');
-
-    // Toggle button for closeOnDocumentClick property
-    var positionButton = new ej.buttons.Button({ cssClass: 'e-info', isToggle: true });
-    positionButton.appendTo('#positionbutton');
-
-    // Toggle button for closeOnDocumentClick property
-    var documentclick = new ej.buttons.Button({ cssClass: 'e-info', isToggle: true });
-    documentclick.appendTo('#documentclick');
-
-    // Toggle button for backdrop property
-    var backdrop = new ej.buttons.Button({ cssClass: 'e-info', isToggle: true });
-    backdrop.appendTo('#backdrop');
-
-    //Toggle button click event handler
-    positionButton.element.onclick = function () {
-        if (positionButton.element.classList.contains('e-active')) {
-            positionButton.content = 'Left';
-            sidebar.position = "Right";
-            document.getElementById("hamburger").className += " e-rtl";
-        } else {
-            positionButton.content = 'Right';
-            sidebar.position = "Left";
-            document.getElementById("hamburger").classList.remove("e-rtl");
-        }
-    };
-
-    documentclick.element.onclick = function () {
-        if (documentclick.element.classList.contains('e-active')) {
-            documentclick.content = 'False';
-            //enable the closeOnDocumentClick property
-            sidebar.closeOnDocumentClick = true;
-        } else {
-            documentclick.content = 'True';
-            //disable the closeOnDocumentClick property
-            sidebar.closeOnDocumentClick = false;
-        }
-    };
-
-    backdrop.element.onclick = function () {
-        if (backdrop.element.classList.contains('e-active')) {
-            backdrop.content = 'False';
-            //enable the backdrop property
-            sidebar.showBackdrop = true;
-        } else {
-            backdrop.content = 'True';
-            //disable the backdrop property
-            sidebar.showBackdrop = false;
-        }
-    };
-
-    var dropDownInstance = new ej.dropdowns.DropDownList({
-        index: 3,
-        placeholder: 'Select a type',
-        popupHeight: '200px',
-        cssClass: 'right',
-        // bind the change event
-        change: onChange
+    //Position Toggle button for Sidebar open/close.
+    var positionBtn = new ej.buttons.Button({ 
+        cssClass: 'e-primary inline-element right',
+        isToggle: true,
+        content: "Left"
     });
-    dropDownInstance.appendTo('#types');
+    positionBtn.appendTo('#positionBtn');
 
-    function onChange() {
-        //dropdown change event handler
-        sidebar.type = dropDownInstance.value;
+    // Document Toggle button for Sidebar open/close.
+    var docBtn = new ej.buttons.Button({ 
+        cssClass: 'e-primary inline-element right',
+        isToggle: true,
+        content: "False",
+    });
+    docBtn.appendTo('#documentElement');
+
+    // Document Toggle button for Sidebar open/close.
+    var backDropElement = new ej.buttons.Button({ 
+        cssClass: 'e-primary inline-element right',
+        isToggle: true,
+        content: "False",
+    });
+    backDropElement.appendTo('#backDropElement');
+
+    var dropdownObj = new ej.dropdowns.DropDownList({
+        //set the value by specifying the index
+        index: 3,
+        popupHeight: "200px",
+        cssClass: "e-textbox right",
+        // bind the change event
+        change: OnChange
+    });
+    dropdownObj.appendTo('#types');
+
+    //Sidebar component initialization
+    var sidebarObj = new ej.navigations.Sidebar({
+        width: "220px",
+        target: ".maincontent",
+        closeOnDocumentClick: false,
+        showBackdrop: false
+    });
+    sidebarObj.appendTo("#apiSidebar");
+    //click event for hamburger
+    document.getElementById('hamburger').onclick = function() {
+        ToggleBtnClick();
+    };
+    //click event for position
+    document.getElementById('positionBtn').onclick = function() {
+        PositionBtnClick();
+    };
+    //click event for document click option
+    document.getElementById('documentElement').onclick = function() {
+        DocBtnClick();
+    };
+    //click event for document click option
+    document.getElementById('backDropElement').onclick = function() {
+        BackBtnClick();
+    };
+    //click event for sidebar close
+    document.getElementById('close').onclick = function() {
+        sidebarObj.hide();
+    };
+    //click event for sidebar close
+    document.getElementById('togglesidebar').onclick = function() {
+        sidebarObj.toggle();
+    };
+    function BackBtnClick() {
+        if (backDropElement.content == "True") {
+            backDropElement.content = "False";
+            sidebarObj.showBackdrop = false;
+        } else {
+            backDropElement.content = "True";
+            sidebarObj.showBackdrop = true;
+        }
     }
-    // Close the Sidebar
-    document.getElementById('close').onclick = function () {
-        sidebar.hide();
-    };
-   //open the sidebar
-    document.getElementById('hamburger').onclick = function () {
-        sidebar.show();
-    };
-
+    function ToggleBtnClick() {
+        sidebarObj.toggle();
+    }
+    function PositionBtnClick() {
+        if (positionBtn.content == "Right") {
+            positionBtn.content = "Left";
+            sidebarObj.position = "Left";
+        } else {
+            positionBtn.content = "Right";
+            sidebarObj.position = "Right";
+        }
+        sidebarObj.dataBind();
+    }
+    function DocBtnClick() {
+        if (docBtn.content == "False") {
+            docBtn.content = "True";
+            sidebarObj.closeOnDocumentClick = true;
+        } else {
+            docBtn.content = "False";
+            sidebarObj.closeOnDocumentClick = false;
+        }
+        sidebarObj.dataBind();
+    }
+    function OnChange(args) {
+        sidebarObj.type = args.value;
+        sidebarObj.dataBind();
+    }
 };
 
 

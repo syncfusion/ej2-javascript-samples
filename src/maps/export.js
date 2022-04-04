@@ -81,7 +81,7 @@ this.default = function () {
     layertype.appendTo('#layertype');
 
     var togglebtn = new ej.buttons.Button({
-        cssClass: 'e-flat', isPrimary: true, iconCss: 'e-icons e-play-icon',
+        isPrimary: true
     });
     togglebtn.appendTo('#togglebtn');
     document.getElementById('togglebtn').onclick = function () {
