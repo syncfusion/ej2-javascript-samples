@@ -61,7 +61,7 @@ To add datasource file for the component, you need to include the `dataSourcePat
 
 refer the below link for config
 
-https://gitlab.syncfusion.com/essential-studio/ej2-javascript-samples/blob/7a32bea49aca215fdef1fe432e4135fa07ff3c83/src/grid/sample.json#L9 
+https://github.com/syncfusion/ej2-javascript-samples/blob/master/src/grid/sample.json#L9
 
 The sample datasource file need to store the json in window variable.
 
@@ -69,9 +69,9 @@ Each component's datasource window variable name must be unique.
 
 For example datasource for grid must be stored as `window.gridData`.
 
-Refer the below below datasource file for further reference
+Refer the below datasource file for further reference
 
-https://gitlab.syncfusion.com/essential-studio/ej2-javascript-samples/blob/19761f5590b4af5b2ea1cb90bed33d8dfa496de9/src/grid/datasource.js
+https://github.com/syncfusion/ej2-javascript-samples/blob/master/src/grid/data-source.js
 
 **Note:** Each component should include one datasource file only.
 
