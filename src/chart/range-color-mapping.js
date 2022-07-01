@@ -3,13 +3,12 @@
  */
 this.default = function () {
     var chart = new ej.charts.Chart({
-        primaryXAxis: { valueType: 'Category', majorGridLines: { width: 0 }, title: 'Months' },
+        primaryXAxis: { valueType: 'Category', majorGridLines: { width: 0 }},
         primaryYAxis: {
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },
             labelFormat: '{value}°C',
-            title: 'Temperature'
         },
         chartArea: {
             border: {
@@ -37,6 +36,12 @@ this.default = function () {
                 cornerRadius: {
                     topLeft: 10, topRight: 10
                 },
+                marker: {
+                    dataLabel: {
+                        visible: true,
+                        position: 'Outer', 
+                    }
+                }
             }
         ],
         rangeColorSettings: [
@@ -44,27 +49,32 @@ this.default = function () {
                 label: "1°C to 10°C",
                 start: 1,
                 end: 10,
-                colors: ["#FFFF99"]
+                colors: ["#F9D422"]
             },
             {
                 label: "11°C to 20°C",
                 start: 11,
                 end: 20,
-                colors: ["#FFA500"]
+                colors: ["#F28F3F"]
             },
             {
                 label: "21°C to 30°C",
                 start: 21,
                 end: 30,
-                colors: ["#FF4040"]
+                colors: ["#E94F53"]
             }
         ],
         legendSettings: {
-            mode: 'Range'
+            mode: 'Range',
+            visible: true,
+            toggleVisibility: false,
         },
         tooltip: {
-            enable: true
+            enable: false
         },
+        highlightMode: 'Point',
+        highlightPattern: 'DiagonalForward',
+        width: ej.base.Browser.isDevice ? '100%' : '80%',
         title: "USA CLIMATE - WEATHER BY MONTH",
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

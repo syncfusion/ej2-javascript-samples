@@ -2,7 +2,6 @@
     "name": "Kanban",
     "directory": "kanban",
     "category": "Data Visualization",
-    "type":"update",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
     "samples": [
@@ -94,7 +93,6 @@
             "url": "card-template",
             "name": "Card Template",
             "category": "Templates",
-            "type":"update",
             "description": "The example demonstrates how to customize the JavaScript Kanban cards using templates, which is used to design beautiful cards with text, images, and more.",
             "api": { "Kanban": [ "dataSource", "keyField", "columns", "cardSettings", "dialogSettings" ] }
         },

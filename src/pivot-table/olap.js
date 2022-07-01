@@ -33,6 +33,7 @@ var pivotObj = new ej.pivotview.PivotView({
     allowExcelExport: true,
     allowConditionalFormatting: true,
     allowPdfExport: true,
+    enableFieldSearching: true,
     showToolbar: true,
     displayOption:{view:'Both'},
     allowCalculatedField: true,

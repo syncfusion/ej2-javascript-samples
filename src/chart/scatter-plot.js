@@ -63,7 +63,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true,
-            format: 'Weight: <b>${point.x} kg</b> <br/> Height: <b>${point.y} cm</b>'
+            format: 'Weight: <b>${point.y} kg</b> <br/> Height: <b>${point.x} cm</b>'
         },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
            // custom code start

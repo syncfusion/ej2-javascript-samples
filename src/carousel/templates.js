@@ -4,9 +4,7 @@ this.default = function () {
         return 'src/carousel/images/' + birds[index] + '.png';
     };
     var carouselObj = new ej.navigations.Carousel({
-        animation: {
-            effect: 'Fade'
-        },
+        animationEffect: 'Fade',
         cssClass: 'templateCarousel',
         items: [
             { template: '#itemTemplate1' },

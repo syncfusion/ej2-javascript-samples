@@ -3,6 +3,7 @@
     "directory": "tree-grid",
     "category": "Grids",
     "ftName" :"treegrid",
+    "type":"update",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
       {  
@@ -101,7 +102,7 @@
             "description": "This demo shows Tree Grid with detail template feature and also each row contains detailed information about a row."
          },
          {  
-            "url":"inline.editing", "name": "Inline Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","height","toolbar"] },
+            "url":"inline.editing", "type": "update", "name": "Inline Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","height","toolbar"] },
             "description": "This example shows how to add and edit row or cell inline on the Syncfusion Essential JS2 Tree Grid control."
          },
          {  
@@ -180,7 +181,7 @@
             "description": "This demo explains how to display the custom aggregate for the columns in Syncfusion Essential JS2 Tree Grid control."
          },
          {  
-            "url":"default.contextmenu", "name": "Default ContextMenu", "category":"Context Menu","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","editSettings","allowSorting","allowPdfExport","allowExcelExport","contextMenuItems"] },
+            "url":"default.contextmenu", "name": "Default ContextMenu", "type": "update", "category":"Context Menu","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","editSettings","allowSorting","allowPdfExport","allowExcelExport","contextMenuItems"] },
             "description": "This demo explains the usage of context menu and the default context menu items in Syncfusion Essential JS2 Tree Grid."
          },
          {  

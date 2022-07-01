@@ -117,7 +117,9 @@ this.default = function () {
                     tooltip: { isVisible: true, placement: 'Before', showOn: 'Hover' },
                     type: 'MinRange',
                     change: function (e) {
-                        qryBldrObj.notifyChange(e.value, args.elements);
+                        if (e.isInteracted) {
+                            qryBldrObj.notifyChange(e.value, args.elements);
+                        }
                     }
                 });
                 ticksSlider.appendTo('#' + args.elements.id);

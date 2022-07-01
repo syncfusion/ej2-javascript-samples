@@ -29,6 +29,7 @@ this.default = function () {
             enableSorting: true
         },
         allowCalculatedField: true,
+        enableFieldSearching: true,
         renderMode: 'Fixed',
         load: function () {
             if (ej.base.Browser.isDevice) {

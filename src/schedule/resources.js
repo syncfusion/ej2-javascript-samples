@@ -80,7 +80,8 @@ this.default = function () {
         var selectedResource = [];
         var resourceCollection = [].slice.call(document.querySelectorAll('.e-resource'));
         resourceCollection.forEach(function (element, index) {
-            if (element.getAttribute('aria-checked') === 'true') {
+            var resElement = element.querySelector('.e-icons');
+            if (resElement && resElement.classList.contains('e-check')) {
                 selectedResource.push(index);
             }
         });

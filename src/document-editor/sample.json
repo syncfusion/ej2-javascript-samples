@@ -585,7 +585,6 @@
             "url": "links-and-bookmarks",
             "name": "Hyperlinks and Bookmarks",
             "category": "Editing Features",
-            "type": "update",
             "description": "The Document Editor supports hyperlinks and bookmarks. The link can be a file, mail, webpage, or bookmark.",
             "api": {
                 "DocumentEditor": [
@@ -1293,6 +1292,7 @@
             "url": "right-to-left",
             "name": "Right To Left",
             "category": "RTL",
+			"type": "update",
             "description": "The Document Editor supports right to left for users who use right-to-left languages (Arabic, Hebrew, Urdu, etc.).",
             "api": {
                 "DocumentEditor": [
@@ -1368,7 +1368,6 @@
             "url": "comments",
             "name": "Comments",
             "category": "Review",
-            "type": "update",
             "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
             "api": {
                 "Editor": [
@@ -1387,6 +1386,7 @@
             "url": "track-changes",
             "name": "Track Changes",
             "category": "Review",
+			"type": "update",
             "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
             "api": {
                 "DocumentEditor": [

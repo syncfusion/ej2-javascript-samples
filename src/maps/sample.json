@@ -3,6 +3,7 @@
     "directory": "maps",
     "category": "Data Visualization",
     "ftName": "maps",
+    "type" : "update",
     "dataSourcePath":"src/maps/map-data.js",
     "samples": [
         {
@@ -176,6 +177,17 @@
                 { "displayName": "osm-with-sublayers.html", "path":"src/maps/osm-with-sublayers.html" },
                 { "displayName": "osm-with-sublayers.js", "path":"src/maps/osm-with-sublayers.js" },
                 { "displayName": "africa.json", "path":"src/maps/map-data/africa.json" }
+            ]
+        },
+        {
+            "url": "osm-with-legend",
+            "name": "OSM with Legend",
+            "category": "Map Providers",
+            "type" : "new",
+            "description": "This demo for Essential JS2 Maps control depicts the OpenStreetMap with legend for markers.",
+            "sourceFiles":[
+                { "displayName": "osm-with-sublayers.html", "path":"src/maps/osm-with-legend.html" },
+                { "displayName": "osm-with-sublayers.js", "path":"src/maps/osm-with-legend.js" }
             ]
         },
         {

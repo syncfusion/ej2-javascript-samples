@@ -61,7 +61,7 @@ this.default = function () {
     }
 
     function updateHtmlValue() {
-      defaultRTE.value = myCodeMirror.getValue();
+      textArea.innerHTML = myCodeMirror.getValue();
     }
 
     function updateValue() {

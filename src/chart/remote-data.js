@@ -12,9 +12,9 @@ var loadedChart = function (args) {
     var div = document.getElementById('waitingpopup');
     div.style.display = 'none';
     if (loaded) {
+        loaded = 0;
         args.chart.refresh();
     }
-    loaded = 0;
 };
 var fabricColors = ['#4472c4', '#ed7d31', '#ffc000', '#70ad47', '#5b9bd5',
 '#c1c1c1', '#6f6fe2', '#e269ae', '#9e480e', '#997300', '#4472c4', '#70ad47', '#ffc000', '#ed7d31'];

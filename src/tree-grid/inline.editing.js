@@ -3,9 +3,10 @@ this.default = function () {
         dataSource: window.sampleData,
         childMapping: 'subtasks',
         treeColumnIndex: 1,
+        selectedRowIndex: 2,
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Cell', newRowPosition: 'Below' },
         height: 400,
-        toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
+        toolbar: ['Add', 'Delete', 'Update', 'Cancel', 'Indent', 'Outdent'],
         columns: [
             {
                 field: 'taskID', headerText: 'Task ID', isPrimaryKey: true, textAlign: 'Right',
@@ -29,11 +30,11 @@ this.default = function () {
         change: function (e) {
             if (e.value === 'CellEditing') {
                 treeGridObj.editSettings.mode = 'Cell';
-                treeGridObj.toolbar = ['Add', 'Delete', 'Update', 'Cancel'];
+                treeGridObj.toolbar = ['Add', 'Delete', 'Update', 'Cancel', 'Indent', 'Outdent'];
             }
             else {
                 treeGridObj.editSettings.mode = 'Row';
-                treeGridObj.toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+                treeGridObj.toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Indent', 'Outdent'];
             }
         }
     });

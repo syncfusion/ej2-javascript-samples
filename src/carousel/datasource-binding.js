@@ -28,10 +28,11 @@ this.default = function () {
     ];
 
     var carouselObj = new ej.navigations.Carousel({
+        animationEffect: 'Fade',
         cssClass: 'db-carousel',
         dataSource: productDetails,
         itemTemplate: '#productTemplate',
-        showArrows: 'Never'
+        buttonsVisibility: 'Hidden'
     });
     carouselObj.appendTo('#carousel');
 

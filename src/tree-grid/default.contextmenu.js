@@ -12,7 +12,7 @@ this.default = function () {
         pageSettings: { pageSize: 10 },
         contextMenuItems: ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending',
              'Edit', 'Delete', 'Save', 'Cancel', 'PdfExport', 'ExcelExport',
-            'CsvExport', 'FirstPage', 'PrevPage', 'LastPage', 'NextPage'],
+            'CsvExport', 'FirstPage', 'PrevPage', 'LastPage', 'NextPage','Indent', 'Outdent'],
             columns: [
                 { field: 'taskID', headerText: 'Task ID', width: 80, isPrimaryKey: true, textAlign: 'Right', editType: 'numericedit' },
                 { field: 'taskName', headerText: 'Task Name', width: 180 },

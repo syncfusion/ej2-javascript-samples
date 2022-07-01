@@ -33,8 +33,7 @@ this.default = function() {
         },
         showCharCount: true,
         actionBegin: handleFullScreen,
-        actionComplete: actionCompleteHandler,
-        maxLength: 2000
+        actionComplete: actionCompleteHandler
     });
     defaultRTE.appendTo("#defaultRTE");
     divPreview = document.getElementById('DIV_Preview');

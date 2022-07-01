@@ -221,5 +221,6 @@ this.default = function() {
         var breadcrumb = document.getElementById('address-bar');
         var breadcrumbInst = ej.base.getComponent(breadcrumb, 'breadcrumb');
         breadcrumbInst.items = initialBreadcrumbItems;
+        breadcrumbItems = initialBreadcrumbItems;
     };
 };

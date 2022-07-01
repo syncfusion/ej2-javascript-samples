@@ -1,7 +1,6 @@
 {
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
-    "type": "update",
     "category": "Editors",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
@@ -119,7 +118,6 @@
         {
             "url": "online-html-editor",
             "name": "Online Html Editor",
-            "type":"new",
             "description": "The online HTML editor is a demo that provides LIVE experience for both content and HTML editing with Rich Text Editor features in a real-world scenario.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["actionComplete", "saveInterval", "change", "toolbarSettings", "appendTo"] }

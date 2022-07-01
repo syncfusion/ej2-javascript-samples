@@ -853,7 +853,6 @@
         {
             "url": "pie-legend",
             "name": "Pie with Legend",
-            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
             "category": "Accumulation Charts",
             "api": {
@@ -1279,7 +1278,7 @@
             }
         },
         {
-            "url": "rtl",
+            "url": "right-to-left",
             "name": "RTL",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the RTL feature in chart.",
             "category": "Chart Customization",
@@ -1372,6 +1371,7 @@
         {
             "url": "range-color-mapping",
             "name": "Range Color Mapping",
+            "type":"update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure range color mapping feature",
             "category": "Chart Customization",
             "api": {
@@ -1435,6 +1435,21 @@
             "url": "range-selection",
             "name": "Range Selection",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the range selection in chart .",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "selectionMode"
+                ]
+            }
+        },
+        {
+            "url": "keyboard",
+            "name": "Keyboard Navigation",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the Keyboard Navigation in chart .",
             "category": "User Interaction",
             "api": {
                 "Chart": [
