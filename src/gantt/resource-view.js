@@ -38,7 +38,7 @@ this.default = function () {
             { field: 'StartDate' },
             { field: 'Duration' },
         ],
-		toolbarClick: function (args) {
+         toolbarClick: function (args) {
             if (args.item.id === 'showhidebar') {
                 ganttChart.showOverAllocation = ganttChart.showOverAllocation ? false : true;
             }

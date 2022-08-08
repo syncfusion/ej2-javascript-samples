@@ -4,8 +4,7 @@ this.default = function () {
         resources: resources,
         viewType: 'ResourceView',
         enableMultiTaskbar: true,
-		showOverAllocation: true,
-        collapseAllParentTasks: true,
+        showOverAllocation: true,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
