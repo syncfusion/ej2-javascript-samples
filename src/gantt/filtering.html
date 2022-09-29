@@ -1,4 +1,4 @@
-<div class="control-section">
+<div class="col-lg-9 control-section">
     <div class="content-wrapper">
         <div id="Filtering">
         </div>
@@ -7,6 +7,31 @@
                 target='_blank'>https://en.wikipedia.org/</a>
         </div>
     </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+            <tr style="height: 50px">
+                    <td style="width: 50%">
+                        <div>Filter Type</div>
+                    </td>
+                    <td style="width: 100%;padding-right: 10px">
+                        <div>
+                            <input type="text" tabindex="1" id='filterType' />
+                        </div>
+                    </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 50%">
+                    <div>Hierarchy Mode</div>
+                </td>
+                <td style="width: 100%;padding-right: 10px">
+                    <div>
+                        <input type="text" tabindex="1" id='mode' />
+                    </div>
+                </td>
+        </tr>
+    </table>
 </div>
 
 <div id="action-description">
@@ -21,6 +46,11 @@
         The filtering feature enables the user to view reduced amount of records based on filter criteria. The column
         menu filtering can be enabled by setting <code>allowFiltering</code> property as <code>true</code> and toolbar
         search box can be enabled by including the search item in the <code>toolbar</code> property.
+        <p>Gantt supports the following filter types. They are </p>
+        <ul>
+            <li><code>Menu</code></li>
+            <li><code>Excel</code></li>
+        </ul>
         Gantt chart also provides support for a set of filtering modes with <code>hierarchyMode</code> property. The
         below are the type of filter mode available in Gantt chart.
         <li><code>Parent</code> - This is the default filter hierarchy mode in Gantt chart. The filtered records are

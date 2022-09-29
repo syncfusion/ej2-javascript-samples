@@ -1,0 +1,59 @@
+<div class="col-lg-12 control-section msg-template-section">
+    <div class="content-section">
+        <button id="btn"></button>
+        <div id="msg_template">
+            <h1>Merged pull request</h1>
+            <p>Pull request #41 merged after a successful build</p>
+            <button id='commitBtn'></button>
+            <button id='closeBtn'></button>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the template functionality of the JavaScript Message control. Click the <b>dismiss</b> button to hide the message. Click the <b>Show pull request</b> button to restore the hidden message.</p>
+</div>
+<div id="description">
+    <p>The Message control has an option to customize the content with a custom structure. The content can be a string, paragraph, or any other HTML element.</p>
+    <p>In this sample, the Message control content is customized with HTML elements and JavaScript Button controls.</p>
+</div>
+
+<style>
+    .msg-template-section .content-section {
+        margin: 0 auto;
+        max-width: 450px;
+        padding-top: 20px;
+    }
+
+    .msg-template-section .e-btn.msg-hidden {
+        display: none;
+    }
+
+    .msg-template-section .e-message h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    .msg-template-section .e-message .e-msg-icon {
+        padding: 0 4px;
+        margin-top: 3px;
+    }
+
+    .msg-template-section .e-message p {
+        margin: 8px 0 4px;
+    }
+
+    .msg-template-section .e-message .e-btn {
+        padding: 0;
+    }
+
+    .e-bigger .msg-template-section .e-message h1 {
+        font-size: 20px;
+    }
+
+    .e-bigger .msg-template-section .e-message .e-msg-icon {
+        padding: 4px;
+        font-size: 20px;
+    }
+</style>

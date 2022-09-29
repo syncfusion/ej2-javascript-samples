@@ -252,6 +252,19 @@
             }
         },
         {
+            "url": "area-negative-point",
+            "name": "Area - Negative Points","type":"new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the area series chart with negative points.",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
             "url": "area-segments",
             "name": "Area Zone",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render the points in a particular range using MultiColoredArea series.",
@@ -1371,7 +1384,6 @@
         {
             "url": "range-color-mapping",
             "name": "Range Color Mapping",
-            "type":"update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure range color mapping feature",
             "category": "Chart Customization",
             "api": {
@@ -1448,7 +1460,6 @@
         {
             "url": "keyboard",
             "name": "Keyboard Navigation",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the Keyboard Navigation in chart .",
             "category": "User Interaction",
             "api": {

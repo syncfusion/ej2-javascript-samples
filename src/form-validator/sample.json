@@ -1,7 +1,7 @@
 {
     "name": "Form Validation",
     "directory": "form-validator",
-    "category": "Inputs",
+    "category": "Forms",
     "samples": [
         
         { "url": "default", "name": "Default Functionalities ", "category": "Form Validation", "api": { "FormValidator": ["customPlacement", "validate", "validClass"] } },

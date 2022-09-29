@@ -1,0 +1,34 @@
+{
+    "name": "Image Editor",
+    "directory": "image-editor",
+    "category": "File Viewers & Editors",
+    "ftName": "image-editor",
+	"type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Image Editor",
+            "ftName": "image-editor",
+            "api": {
+                "ImageEditor": [
+                    "width",             
+					"height"
+                ]
+            },
+            "description": "ImageEditor component provides built-in support to edit the image like crop, rotate, flip, insert the shapes and text into the image."
+        },
+		{
+		  "url": "profile-picture",
+		  "name": "Profile Picture",
+		  "category": "Image Editor",
+		  "ftName": "image-editor",
+		  "api": {
+			"ImageEditor": [
+			  
+			]
+		  },
+		  "description": "ImageEditor component provides built in support to rotate the image using rotate method and crop the image using the select and crop method."
+		}
+    ]
+}

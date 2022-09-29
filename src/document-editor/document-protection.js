@@ -3,16 +3,15 @@ this.default = function () {
     //Documenteditor control rendering starts
     var userList = ['engineer@mycompany.com','manager@mycompany.com'];
     var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
-    var container = new ej.documenteditor.DocumentEditorContainer();
+    var container = new ej.documenteditor.DocumentEditorContainer({ height:'590px' });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
     container.serviceUrl = hostUrl + 'api/documenteditor/';
     container.appendTo('#container');
-    container.height = '590px';
     container.showPropertiesPane = false;
     container.documentEditor.currentUser = 'engineer@mycompany.com';
     var dropDownListObject = new ej.dropdowns.DropDownList({
         dataSource: userList,
-        change: (e) => {
+        change: function (e) {
             container.documentEditor.currentUser = e.value;
         }
     });
@@ -21,7 +20,7 @@ this.default = function () {
 
     var colorPicker = new ej.inputs.ColorPicker({
         value: container.documentEditor.userColor,
-        change: (e) => {
+        change: function (e) {
             container.documentEditor.userColor = e.currentValue.hex;
         }
     });

@@ -1,7 +1,7 @@
 {
     "name": "DocumentEditor",
     "directory": "document-editor",
-    "category": "Editors",
+    "category": "File Viewers & Editors",
     "type": "update",
     "hideOnDevice": true,
     "ftName":"document-editor",
@@ -1292,7 +1292,6 @@
             "url": "right-to-left",
             "name": "Right To Left",
             "category": "RTL",
-			"type": "update",
             "description": "The Document Editor supports right to left for users who use right-to-left languages (Arabic, Hebrew, Urdu, etc.).",
             "api": {
                 "DocumentEditor": [
@@ -1386,7 +1385,6 @@
             "url": "track-changes",
             "name": "Track Changes",
             "category": "Review",
-			"type": "update",
             "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
             "api": {
                 "DocumentEditor": [

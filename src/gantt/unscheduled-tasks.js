@@ -10,7 +10,8 @@ this.default = function () {
         },
         editSettings: {
             allowAdding: true,
-            allowEditing: true
+            allowEditing: true,
+            allowDeleting: true
         },
         columns: [
             { field: 'TaskId', width: 90 },

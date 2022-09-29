@@ -6,7 +6,7 @@
 		var message = 'Greetings Nancy! When will you share me the source files of the project';
         
         var dialogObj = new ej.popups.Dialog({
-            footerTemplate: ' <input id="inVal" class="e-input" type="text" placeholder="Enter your message here!"/>' + iconTemp,
+            footerTemplate: '<input id="inVal" aria-label="Message" class="e-input" type="text" placeholder="Enter your message here!"/>' + iconTemp,
             header: headerImg + '<div id="dlg-template" title="Nancy" class="e-icon-settings"> Nancy </div>',
            	content: '<div class="dialogContent"><span class="dialogText">' + message + '</span></div>',
             showCloseIcon: true,

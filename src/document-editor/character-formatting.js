@@ -1,11 +1,10 @@
 this.default = function() {
   //Documenteditor control rendering starts
   var hostUrl = "https://ej2services.syncfusion.com/production/web-services/";
-  var container = new ej.documenteditor.DocumentEditorContainer();
+  var container = new ej.documenteditor.DocumentEditorContainer({ height:'590px' });
   ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
   container.serviceUrl = hostUrl + "api/documenteditor/";
   container.appendTo("#container");
-  container.height = "590px";
   var defaultDocument = {
     sections: [
       {
@@ -654,9 +653,7 @@ this.default = function() {
   }
   function save(format) {
     container.documentEditor.save(
-      container.documentEditor.documentName === ""
-        ? "sample"
-        : container.documentEditor.documentName,
+      container.documentEditor.documentName === "" ? "sample" : container.documentEditor.documentName,
       format
     );
   }

@@ -68,8 +68,8 @@ this.default = function () {
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             if (selectedTheme === 'highcontrast') {
-args.chart.annotations[0].content = '<div style="color:#ffffff;font-family: bold; font-weight: 600">Christmas Offer<br> Dec 2017</div>';
-args.chart.annotations[1].content = '<div style="color:#ffffff;font-family: bold; font-weight: 600">Christmas Offer<br> Dec 2017</div>';
+                args.chart.annotations[0].content = '<div style="color:#ffffff;font-family: bold; font-weight: 600">Christmas Offer<br> Dec 2017</div>';
+                args.chart.annotations[1].content = '<div style="color:#ffffff;font-family: bold; font-weight: 600">New Year Offer<br> Jan 2018</div>';
             }
         }
          // custom code end

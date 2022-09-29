@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="col-lg-4 property-section">
-    <div id="property" title="Properties">
+    <div id="property" title="Properties" class="property-panel-table">
         <table id="property" title="Properties">
             <tbody>
                 <tr>
@@ -19,7 +19,7 @@
                         <div>Enable AutoUrl</div>
                     </td>
                     <td>
-                        <div>
+                        <div class="checkbox-container">
                             <input type="checkbox" id="select" checked="false">
                         </div>
                     </td>
@@ -104,5 +104,13 @@
     .fluent .e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-right::before,
     .fluent-dark .e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-right::before {
         content: "\e755";
+    }
+
+    .property-panel-table div {
+        padding : 10px;
+    }
+
+    .checkbox-container {
+        padding-left: 0px !important;
     }
 </style>

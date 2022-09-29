@@ -32,11 +32,13 @@ this.default = function () {
             logo.classList.remove('logos');
             if (empCount < 3) {
                 logo.classList.add(empList[empCount]);
+                logo.classList.add('blog-avatar');
                 authorName.innerHTML = nameListList[empCount];
                 empCount++;
             }
             else {
                 logo.classList.add('logo');
+                logo.classList.add('blog-avatar');
                 authorName.innerHTML = 'User';
             }
             var timeZone = cloneAnswer.querySelector('.detailsAnswer');

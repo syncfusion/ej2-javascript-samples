@@ -67,6 +67,7 @@ this.default = function () {
         var element = (document.getElementById('isIndexed'));
         chart.primaryXAxis.isIndexed = element.checked;
         if (chart.primaryXAxis.isIndexed) {
+            chart.tooltip.shared = true;
             chart.series[0].type = 'Column';
             chart.series[1].type = 'Column';
             chart.series[0].marker.visible = false;
@@ -81,6 +82,8 @@ this.default = function () {
             chart.series[1].marker.visible = true;
             chart.primaryXAxis.labelRotation = 90;
             chart.crosshair.line.width = 0;
+            chart.tooltip.enable = true;
+            chart.tooltip.shared = false;
         }
         chart.refresh();
     };

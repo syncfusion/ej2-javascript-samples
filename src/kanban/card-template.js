@@ -61,7 +61,7 @@ this.default = function () {
     function onEditDialogClose(args) {
         if(args.element.querySelector('#Date'))
         {
-            args.data.Date = args.element.querySelector('#Date').ej2_instances[0].value.toLocaleString('es-PR').split(" ")[0];
+            args.data.Date = args.element.querySelector('#Date').ej2_instances[0].value.toLocaleString('es-PR').split(",")[0];
         }
       
     }

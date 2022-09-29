@@ -1,7 +1,7 @@
 /**
  * Sample for Area Series
  */
-this.default = function () {
+ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
@@ -33,7 +33,7 @@ this.default = function () {
                 dataSource: [{ x: new Date(2000, 0, 1), y: 4 }, { x: new Date(2001, 0, 1), y: 3.0 },
                     { x: new Date(2002, 0, 1), y: 3.8 }, { x: new Date(2003, 0, 1), y: 3.4 },
                     { x: new Date(2004, 0, 1), y: 3.2 }, { x: new Date(2005, 0, 1), y: 3.9 }],
-                xName: 'x', width: 2,
+                xName: 'x', width: 2, border: { width: 1.5 },
                 yName: 'y', name: 'Product A',
                 opacity: 0.5, marker: { visible : false }
             },
@@ -42,7 +42,7 @@ this.default = function () {
                 dataSource: [{ x: new Date(2000, 0, 1), y: 2.6 }, { x: new Date(2001, 0, 1), y: 2.8 },
                     { x: new Date(2002, 0, 1), y: 2.6 }, { x: new Date(2003, 0, 1), y: 3 },
                     { x: new Date(2004, 0, 1), y: 3.6 }, { x: new Date(2005, 0, 1), y: 3 }],
-                xName: 'x', width: 2,
+                xName: 'x', width: 2,border: { width: 1.5 },
                 yName: 'y', name: 'Product B',
                 opacity: 0.5, marker: { visible : false }
             }

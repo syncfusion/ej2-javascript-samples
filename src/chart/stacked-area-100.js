@@ -44,16 +44,16 @@ this.default = function () {
         series: [
             {
                 dataSource: chartData, xName: 'x', yName: 'y',
-                type: 'StackingArea100',
+                type: 'StackingArea100',border: { width: 1 , color: '#ffffff ' }, opacity: 1,
                 name: 'Organic', marker: { visible : false }
             }, {
-                dataSource: chartData, xName: 'x', yName: 'y1',
+                dataSource: chartData, xName: 'x', yName: 'y1',border: { width: 1 , color: '#ffffff ' }, opacity: 1,
                 type: 'StackingArea100', name: 'Fair-trade', marker: { visible : false }
             }, {
-                dataSource: chartData, xName: 'x', yName: 'y2',
+                dataSource: chartData, xName: 'x', yName: 'y2',border: { width: 1 , color: '#ffffff ' }, opacity: 1,
                 type: 'StackingArea100', name: 'Veg Alternatives', marker: { visible : false }
             }, {
-                dataSource: chartData, xName: 'x', yName: 'y3',
+                dataSource: chartData, xName: 'x', yName: 'y3',border: { width: 1 , color: '#ffffff ' }, opacity: 1,
                 type: 'StackingArea100', name: 'Others', marker: { visible : false }
             }
         ],

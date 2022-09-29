@@ -1,13 +1,13 @@
 {
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
-    "Data Visualization": ["Chart", "Stock Chart", "Circular Gauge", "Linear Gauge", "Diagram", "HeatMap Chart", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
-    "Editors": ["Rich Text Editor", "DocumentEditor", "Chips", "Button", "In-place Editor"],
-    "Calendars": ["Scheduler", "Gantt", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],
-    "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box"],
-    "Navigation": ["Accordion", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
-    "Notifications": ["Badge", "Toast", "Progress Bar"],   
-    "Inputs": ["Form Validation", "TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature"],
-    "Layout": ["Avatar", "Card", "Dialog", "ListView",  "Tooltip", "Splitter","Dashboard Layout"],
-    "Forms": ["Query Builder"],
-    "Viewer": ["PDF Viewer"]
+    "Data Visualization": ["Chart", "Stock Chart", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
+    "Forms": ["Form Validation", "Query Builder"],
+    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "DocumentEditor", "Image Editor"],
+    "Calendars": ["Scheduler", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker", "Gantt"],
+    "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],
+    "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box","Mention"],
+    "Navigation": ["Accordion", "AppBar", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
+    "Notifications": ["Badge", "Message", "Toast", "Progress Bar", "Skeleton"],
+    "Inputs": ["TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor"],
+    "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout"]
 }

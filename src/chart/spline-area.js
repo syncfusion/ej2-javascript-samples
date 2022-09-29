@@ -1,7 +1,7 @@
 /**
  * Sample for Area Series
  */
-this.default = function () {
+ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
@@ -35,8 +35,8 @@ this.default = function () {
                     { x: new Date(2010, 0, 1), y: 1.4 }, { x: new Date(2011, 0, 1), y: 3.1 }
                 ],
                 name: 'US', xName: 'x', yName: 'y', type: 'SplineArea',
-                border: { color: 'transparent' },
-                opacity: 0.5
+                border: { width: 2  },
+                opacity: 0.5, 
             },
             {
                 dataSource: [
@@ -47,7 +47,7 @@ this.default = function () {
                     { x: new Date(2010, 0, 1), y: 1.5 }, { x: new Date(2011, 0, 1), y: 2.3 }
                 ],
                 name: 'France', xName: 'x', yName: 'y', type: 'SplineArea',
-                border: { color: 'transparent' },
+                border: { width: 2  },
                 opacity: 0.5
             },
             {
@@ -59,7 +59,7 @@ this.default = function () {
                     { x: new Date(2010, 0, 1), y: 1.1 }, { x: new Date(2011, 0, 1), y: 2.3 }
                 ],
                 name: 'Germany', xName: 'x', yName: 'y', type: 'SplineArea',
-                border: { color: 'transparent' },
+                border: { width: 2  },
                 opacity: 0.5
             }
         ],

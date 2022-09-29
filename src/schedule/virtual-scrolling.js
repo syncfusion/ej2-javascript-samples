@@ -4,11 +4,19 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
         width: '100%',
+        currentView: 'TimelineMonth',
+        cssClass:'virtual-scroll',
         views: [{
             option: 'TimelineMonth',
             eventTemplate: '#timeline-event-template',
             allowVirtualScrolling: true
-        }],
+        },
+        { 
+            option: 'Month',
+            eventTemplate: '#timeline-event-template',
+            allowVirtualScrolling: true 
+        }
+        ],
         group: {
             byGroupID: false,
             resources: ['Resources']

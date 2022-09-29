@@ -6,7 +6,8 @@
             "Zoom": "Zoomen",
             "Pan": "Pfanne",
             "Reset": "Zurücksetzen",
-            "ResetZoom": "Zoom Zurücksetzen"
+            "ResetZoom": "Zoom Zurücksetzen",
+            "ImageNotFound": "Bild nicht gefunden"
         }
     },
     "ar": {
@@ -16,7 +17,8 @@
             "Zoom": "زوم",
             "Pan": "بان",
             "Reset": "رست",
-            "ResetZoom": "رست زوم"
+            "ResetZoom": "رست زوم",
+            "ImageNotFound": "الصورة غير موجودة"
         }
     },
     "en": {
@@ -26,7 +28,8 @@
             "Zoom": "Zoom",
             "Pan": "Pan",
             "Reset": "Reset",
-            "ResetZoom": "Reset Zoom"
+            "ResetZoom": "Reset Zoom",
+            "ImageNotFound": "Image Not Found"
         }
     },
     "zh": {
@@ -36,7 +39,8 @@
             "Zoom": "放大",
             "Pan": "泛",
             "Reset": "重启",
-            "ResetZoom": "重置缩放"
+            "ResetZoom": "重置缩放",
+            "ImageNotFound": "图片未找到"
         }
     },
     "fr-CH": {
@@ -46,7 +50,8 @@
             "Zoom": "Zoom",
             "Pan": "La poêle",
             "Reset": "Réinitialiser",
-            "ResetZoom": "Réinitialiser Zoom"
+            "ResetZoom": "Réinitialiser Zoom",
+            "ImageNotFound": "Image non trouvée"
         }
     }
 }

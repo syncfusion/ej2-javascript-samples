@@ -288,7 +288,7 @@ function renderSbPopups() {
 function checkApiTableDataSource() {
     var hash = location.hash.split('/');
     var data = window.apiList[hash[2] + '/' + hash[3].replace('.html', '')] || [];
-    if (!data.length) {
+    if (!data.length || (isMobile || isTablet)) {
         contentTab.hideTab(2);
     } else {
         contentTab.hideTab(2, false);
@@ -433,6 +433,11 @@ function changeTheme(e) {
     target = ej.base.closest(target, 'li');
     var themeName = target.id;
     switchTheme(themeName);
+    var imageEditorElem = document.querySelector(".e-image-editor");
+    if (imageEditorElem != null) {
+        var imageEditor = ej.base.getComponent(document.getElementById(imageEditorElem.id), 'image-editor');
+        imageEditor.theme = themeName;
+    }
 }
 
 function switchTheme(str) {
@@ -590,9 +595,9 @@ function processResize(e) {
     var footer = ej.base.select('.sb-footer-left');
     var pref = ej.base.select('#settings-popup');
     if (isTablet || isMobile) {
-        contentTab.hideTab(1);
+        contentTab.hideTab(2);
     } else {
-        contentTab.hideTab(1, false);
+        contentTab.hideTab(2, false);
     }
     if (toggle && !isPc) {
         toggleLeftPane();
@@ -815,7 +820,7 @@ function loadTheme(theme) {
         renderSbPopups();
         bindEvents();
         if (isTablet || isMobile) {
-            contentTab.hideTab(1);
+            contentTab.hideTab(2);
         }
         processDeviceDependables();
         addRoutes(samplesList);

@@ -48,7 +48,7 @@ this.default = function () {
             dataSource: window.lockRowDropDownData,
             mode: 'CheckBox',
             value: [2, 6],
-            width: '150px',
+            width: '140px',
             showDropDownIcon: true,
             popupHeight: '350px',
             select: function (e) {

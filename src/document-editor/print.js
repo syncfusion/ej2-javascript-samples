@@ -32,13 +32,13 @@ this.default = function () {
         format: 'n',
         decimals: 1,
         step: 0.5,
-        change: (args) => {
+        change: function (args) {
             documentEditor.documentEditorSettings.printDevicePixelRatio = args.value;
         }
     });
     numeric.appendTo('#numeric');
 
-    let tooltip = new ej.popups.Tooltip({
+    var tooltip = new ej.popups.Tooltip({
         content: 'Specifies the device pixel ratio for the image generated while printing the document.',
     });
     tooltip.appendTo('#numeric');

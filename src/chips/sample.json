@@ -1,7 +1,7 @@
 {
     "name": "Chips",
     "directory": "chips",
-    "category": "Editors",
+    "category": "Buttons",
     "dataSourcePath": "src/chips/data.js",
     "samples": [
         {

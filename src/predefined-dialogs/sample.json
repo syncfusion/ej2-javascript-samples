@@ -1,0 +1,73 @@
+{ 
+   "name": "Predefined Dialogs", 
+   "directory": "predefined-dialogs",
+   "type": "new", 
+   "category":"Layout",
+   "ftName": "predefined-dialogs",
+   "samples" : [
+		{
+            "url":"default",
+            "name": "Default Functionalities",
+            "description":"The example demonstrates the default rendering of the JavaScript(ES5) dialog, which supports modal and non-modal (modeless), built-in buttons, and more.", 
+            "category":"Predefined Dialogs", 
+            "api":{
+                "Dialog": [
+                    "title",
+                    "content",
+                    "okButton",
+                    "showCloseIcon",
+                    "closeOnEscape",
+                    "animationSettings",
+                    "position",
+                    "isDraggable",
+                    "width",
+                    "height"
+                ]
+                }
+        },
+        {
+            "url":"customization",
+            "name": "Customization",
+            "description":"The example demonstrates the default rendering of the JavaScript(ES5) dialog, which supports modal and non-modal (modeless), built-in buttons, and more.", 
+            "category":"Predefined Dialogs", 
+            "api":{
+                "Dialog": [
+                    "title",
+                    "content",
+                    "okButton",
+                    "cancelButton",
+                    "showCloseIcon",
+                    "closeOnEscape",
+                    "animationSettings",
+                    "position",
+                    "isDraggable",
+                    "width",
+                    "height"
+                ]
+                }
+        },
+        {
+            "url":"animation",
+            "name": "Animation",
+            "description":"The example demonstrates the default rendering of the JavaScript(ES5) dialog, which supports modal and non-modal (modeless), built-in buttons, and more.", 
+            "category":"Predefined Dialogs", 
+            "api":{
+                "Dialog": [
+                    "title",
+                    "content",
+                    "okButton",
+                    "cancelButton",
+                    "showCloseIcon",
+                    "closeOnEscape",
+                    "animationSettings",
+                    "position",
+                    "isDraggable",
+                    "width",
+                    "height"
+                ]
+                }
+        }
+        
+          
+    ]
+}

@@ -1,7 +1,7 @@
 /**
  * Sample for Area Series with empty points
  */
-this.default = function () {
+ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
@@ -29,16 +29,16 @@ this.default = function () {
                     { x: '2006', y: 2.3 }, { x: '2007', y: 1.7 }, { x: '2008', y: 1.5 }, { x: '2009', y: 1.8 },
                     { x: '2010', y: 2 }, { x: 2011, y: 3.1 }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'France',
-                opacity: 0.8, marker: { visible : false }
+                yName: 'y', name: 'France', border: { width: 2 },
+                opacity: 0.5, marker: { visible : false }
             }, {
                 type: 'Area',
                 dataSource: [{ x: '2002', y: 2.2 }, { x: '2003', y: 3.4 }, { x: '2004', y: 2.8 }, { x: '2005', y: null },
                     { x: '2006', y: null }, { x: '2007', y: 2.5 }, { x: '2008', y: 2.9 }, { x: '2009', y: 3.8 },
                     { x: '2010', y: 1.4 }, { x: 2011, y: 3.1 }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'US',
-                opacity: 0.8, marker: { visible : false }
+                yName: 'y', name: 'US',border: { width: 2 },
+                opacity: 0.5, marker: { visible : false }
             },
         ],
         //Initializing Chart Title

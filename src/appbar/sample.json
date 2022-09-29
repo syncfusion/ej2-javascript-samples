@@ -1,0 +1,32 @@
+{
+    "name": "AppBar",
+    "directory": "appbar",
+    "category": "Navigation",
+    "type":"preview",
+    "ftName": "appbar",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "AppBar",
+            "api": {
+                "AppBar": [
+                    "mode",
+                    "colorMode"
+                ]
+            },
+            "description": "This sample demonstrates the default functionalities of the Syncfusion JavaScript(ES5) AppBar component."
+        },
+        {
+            "url": "color",
+            "name": "Color",
+            "category": "AppBar",
+            "api": {
+                "AppBar": [
+                    "colorMode"
+                ]
+            },
+            "description": "This sample demonstrates the available bar color modes in the Syncfusion JavaScript(ES5) AppBar component."
+        }
+    ]
+}

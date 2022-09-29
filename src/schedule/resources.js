@@ -80,8 +80,8 @@ this.default = function () {
         var selectedResource = [];
         var resourceCollection = [].slice.call(document.querySelectorAll('.e-resource'));
         resourceCollection.forEach(function (element, index) {
-            var resElement = element.querySelector('.e-icons');
-            if (resElement && resElement.classList.contains('e-check')) {
+            var resEle = element.querySelector('.e-icons');
+            if (resEle && resEle.classList.contains('e-check')) {
                 selectedResource.push(index);
             }
         });

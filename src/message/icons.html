@@ -1,0 +1,58 @@
+<div class="col-lg-8 control-section msg-icon-section">
+    <div class="content-section">
+        <button id="btn1"></button>
+        <div id="msg_default_icon"></div>
+        <button id="btn2"></button>
+        <div id="msg_info_icon"></div>
+        <button id="btn3"></button>
+        <div id="msg_success_icon"></div>
+        <button id="btn4"></button>
+        <div id="msg_warning_icon"></div>
+        <button id="btn5"></button>
+        <div id="msg_error_icon"></div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="showIcon" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="showCloseIcon" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates the visibility customization of severity and close icons of the JavaScript Message control. Click the close icon to hide the message. Click the button to restore the hidden message. Check or uncheck the check box to show or hide the visibility of the severity icon. Check or uncheck the check box to show or hide the visibility of the close icon.</p>
+</div>
+<div id="description">
+    <p>The Message control can be rendered with and without the severity and close icons. The close icon is used to hide the message.</p>
+    <p>In this sample, the Message control is rendered with a severity icon and a close icon. The visibility of the severity icon is handled by the <code>showIcon</code> property. The visibility of the close icon is handled by the <code>showCloseIcon</code> property.</p>
+</div>
+
+<style>
+    .msg-icon-section .content-section {
+        margin: 0 auto;
+        max-width: 520px;
+        padding-top: 10px;
+    }
+
+    .msg-icon-section .e-message {
+        margin: 10px 0;
+    }
+
+    .msg-icon-section .e-btn {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .msg-icon-section .e-btn.msg-hidden {
+        display: none;
+    }
+</style>

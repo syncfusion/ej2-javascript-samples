@@ -1,6 +1,3 @@
-/**
- * Sample for Keyboard Navigation.
- */
 window.default = function () {
     var materialColors = ["#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883", "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb",
         "#ea7a57", "#404041", "#00bdae"];
@@ -106,7 +103,7 @@ window.default = function () {
                     isSegmented: true, start: 65, end: 67.5, visible: true, segmentStart: 7, segmentEnd: 12,
                 },
                 {
-                    isSegmented: true, start: 70, end: 70.2, visible: true, text: "Apr - May", segmentStart: 7, segmentEnd: 12, color: "transparent"
+                    isSegmented: true, start: 70, end: 70.2, visible: true, text: "Apr - Jun", segmentStart: 7, segmentEnd: 12, color: "transparent"
                 },
                 {
                     isSegmented: true, start: 65, end: 67.5, visible: true, segmentStart: 14, segmentEnd: 19,

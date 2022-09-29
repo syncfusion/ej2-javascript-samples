@@ -1,7 +1,7 @@
 {
     "name": "In-place Editor",
     "directory": "inplace-editor",
-    "category": "Editors",
+    "category": "Inputs",
     "ftName" :"inplace-editor",
     "samples": [
         {

@@ -1,0 +1,174 @@
+<div class="col-lg-12 control-section color-appbar-section">
+    <div class="color-appbar-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Light</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <header id="lightAppBar">
+                    <button id="lightButtonMenu"></button>
+                    <button id="lightButtonHome"></button>
+                    <button id="lightProductDropDownButton">Products</button>
+                    <button id="lightCompanyDropDownButton">Company</button>
+                    <div class="e-appbar-spacer"></div>
+                    <div style="width: 200px; margin-right:10px">
+                        <span class="e-input-group e-control-wrapper e-inherit">
+                            <input type="text" class="e-searchinput e-input" placeholder="Search">
+                            <span class="e-icons e-search e-input-group-icon"></span>
+                        </span>
+                    </div>
+                    <div class="e-appbar-separator"></div>
+                    <button id="lightButtonLogin"></button>
+                    <ul id="lightVerticalMenu"></ul>
+                </header>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Dark</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <header id="darkAppBar">
+                    <button id="darkButtonMenu"></button>
+                    <button id="darkButtonHome"></button>
+                    <button id="darkProductDropDownButton">Products</button>
+                    <button id="darkCompanyDropDownButton">Company</button>
+                    <div class="e-appbar-spacer"></div>
+                    <div style="width: 200px; margin-right:10px">
+                        <span class="e-input-group e-control-wrapper e-inherit">
+                            <input type="text" class="e-searchinput e-input" placeholder="Search">
+                            <span class="e-icons e-search e-input-group-icon"></span>
+                        </span>
+                    </div>
+                    <div class="e-appbar-separator"></div>
+                    <button id="darkButtonLogin"></button>
+                    <ul id="darkVerticalMenu"></ul>
+                </header>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Primary</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <header id="primaryAppBar">
+                    <button id="primaryButtonMenu"></button>
+                    <button id="primaryButtonHome"></button>
+                    <button id="primaryProductDropDownButton">Products</button>
+                    <button id="primaryCompanyDropDownButton">Company</button>
+                    <div class="e-appbar-spacer"></div>
+                    <div style="width: 200px; margin-right:10px">
+                        <span class="e-input-group e-control-wrapper e-inherit">
+                            <input type="text" class="e-searchinput e-input" placeholder="Search">
+                            <span class="e-icons e-search e-input-group-icon"></span>
+                        </span>
+                    </div>
+                    <div class="e-appbar-separator"></div>
+                    <button id="primaryButtonLogin"></button>
+                    <ul id="primaryVerticalMenu"></ul>
+                </header>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Inherit</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <header id="inheritAppBar">
+                    <button id="inheritButtonMenu"></button>
+                    <button id="inheritButtonHome"></button>
+                    <button id="inheritProductDropDownButton">Products</button>
+                    <button id="inheritCompanyDropDownButton">Company</button>
+                    <div class="e-appbar-spacer"></div>
+                    <div style="width: 200px; margin-right:10px">
+                        <span class="e-input-group e-control-wrapper e-inherit">
+                            <input type="text" class="e-searchinput e-input" placeholder="Search">
+                            <span class="e-icons e-search e-input-group-icon"></span>
+                        </span>
+                    </div>
+                    <div class="e-appbar-separator"></div>
+                    <button id="inheritButtonLogin"></button>
+                    <ul id="inheritVerticalMenu"></ul>
+                </header>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+<style>
+    .color-appbar-section .e-dropdown-btn.e-inherit,
+    .color-appbar-section .e-btn.e-inherit.home {
+        margin: 0 5px;
+    }
+
+    .color-appbar-section .e-appbar .e-appbar-separator {
+        margin: 0 10px;
+    }
+
+    .color-appbar-section .e-appbar-icon-menu {
+        display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .color-appbar-section .e-appbar-icon-menu {
+            display: block;
+        }
+
+        .color-appbar-section .login,
+        .color-appbar-section .e-appbar-separator,
+        .color-appbar-section .e-dropdown-btn.e-inherit.e-appbar-menu,
+        .color-appbar-section .e-menu-wrapper.e-inherit.e-appbar-menu,
+        .color-appbar-section .e-menu-wrapper.e-inherit.e-appbar-icon-menu .e-menu .e-menu-item .e-caret,
+        .color-appbar-section .e-btn.e-inherit.e-appbar-menu {
+            display: none;
+        }
+
+        .color-appbar-section .e-menu-wrapper.e-inherit.e-appbar-icon-menu ul .e-menu-item.e-menu-caret-icon {
+            padding: 0 8px;
+        }
+
+        .color-appbar-section .e-menu-wrapper.e-inherit ul .e-menu-item .e-menu-icon {
+            margin-right: 0;
+        }
+
+        .color-appbar-section .e-menu-wrapper.e-inherit {
+            margin: 0 10px;
+        }
+
+        .fabric .color-appbar-section .e-menu-wrapper.e-inherit ul.e-menu:not(.e-vertical),
+        .fabric-dark .color-appbar-section .e-menu-wrapper.e-inherit ul.e-menu:not(.e-vertical) {
+            padding: 0;
+        }
+
+        .color-appbar-section .e-input-group.e-control-wrapper.e-inherit {
+            margin-left: 10px;
+        }
+
+        .color-appbar-section .menu {
+            margin-bottom: 3px;
+        }
+    }
+</style>
+<div id="action-description">
+    <p>This sample demonstrates the available types of color in the <strong>JavaScript(ES5) AppBar</strong>. </p>
+</div>
+<div id="description">
+    <p>In this demo, the available types of background color for <strong>JavaScript(ES5) AppBar</strong> are showcased. The background and font colors can be set using the <strong>ColorMode</strong> property. The different types are <code>light</code>, <code>dark</code>, <code>primary</code>, and <code>inherit</code>.</p>
+    <p><code>Light</code> - The AppBar can be displayed with a light background.</p>
+    <p><code>Dark</code> - The AppBar can be displayed with a dark background.</p>
+    <p><code>Primary</code> - The AppBar can be displayed with primary colors.</p>
+    <p><code>Inherit</code> - The AppBar inherits the color from its parent element.</p> <br />
+    <p> On <code>mobile devices</code>, media query is used to display the AppBar in adaptive views. You can click the menu to see the hidden AppBar content.</p>
+</div>

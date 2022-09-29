@@ -1,0 +1,129 @@
+<div class="col-lg-12 control-section e-img-editor-sample">
+    <div class="e-profile">
+        <div class="e-custom-wrapper">
+            <canvas id="img-canvas" style="max-width: 200px; max-height: 200px;"></canvas>
+            <img alt="img" id="custom-img" crossorigin="anonymous" src="src/image-editor/images/profile.png"
+            style="display: none;"/>
+            <input type="file" id="img-upload" style="display:none"/>
+        </div>
+        <span id="custom-edit" class="e-custom-edit" contenteditable="false">
+            <span class="e-custom-icon sb-icons" contenteditable="false"></span>
+        </span>
+    </div>
+</div>
+<div id="profile-dialog">
+    <div id="image-editor"></div>
+</div>
+
+<div id="action-description">
+    <p>The Image Editor component provides built-in support to rotate an image using the rotate method and support to crop an image using the select and crop methods.</p>
+</div>
+<div id="description">
+    <p> In this demo, Image Editor is rendered within a dialog and opens an image by passing its URL path to the open method of the Image Editor control.</p>
+    <p> The following operations are supported in the Image Editor. :  </p>
+    <ul>
+        <li><b>Selection</b> : Multiple selection options are available. The selection region can be a square or circle, customized to various aspect ratios, and customized by dragging and resizing.</li>
+        <li><b>Crop</b> : The image can be cropped based on the selection.</li>
+        <li><b>Rotate</b> : The image can be rotated both clockwise and anticlockwise by 90 degrees.</li>
+    </ul>
+    <p>
+        More information about Image Editor can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/image-editor/getting-started/">
+            documentation section</a>.
+    </p>
+
+</div>
+
+<style>
+    .e-img-editor-sample,
+	.e-img-editor-sample .control-wrapper {
+		position: relative;
+	}
+
+    .e-profile {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%, 30%);
+        transform: translate(-50%, 30%);
+        border-radius: 50%;
+    }
+
+    .e-custom-wrapper {
+        position: relative;
+    }
+
+    .e-custom-edit {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: blue;
+        top: calc(100% - 54px);
+        left: calc(100% - 47px);
+    }
+
+    .e-custom-icon::before {
+        content: '\e911';
+        font-size: 28px;
+        color: white;
+        left: 5px;
+        top: -2px;
+        position: absolute;
+    }
+
+    #custom-edit:hover {
+	    cursor: pointer;
+    }
+
+    canvas#img-canvas {
+        border-radius: 50%;
+        border: 4px solid darkgrey;
+    }
+
+    .e-img-custom-open {
+        float: left;
+        margin-left: 0 !important;
+    }
+
+    .e-img-custom-reset {
+        float: left;
+    }
+
+    .tailwind .e-custom-icon::before,
+    .tailwind-dark .e-custom-icon::before {
+        top: 6px;
+    }
+
+    .e-bigger #profile-dialog .e-dlg-header {
+        font-size: 18px !important;
+    }
+
+    .highcontrast .e-custom-img-btn,
+    .fabric .e-custom-img-btn,
+    .fabric-dark .e-custom-img-btn {
+        padding: 2px 10px !important;
+    }
+
+    .e-bigger .e-custom-img-btn {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+    }
+
+    .e-bigger.highcontrast .e-custom-img-btn,
+    .e-bigger.fabric .e-custom-img-btn,
+    .e-bigger.fabric-dark .e-custom-img-btn,
+    .e-bigger.material .e-custom-img-btn,
+    .e-bigger.material-dark .e-custom-img-btn {
+        padding: 3px 10px !important;
+    }
+    .e-bigger.bootstrap .e-custom-img-btn,
+    .e-bigger.bootstrap-dark .e-custom-img-btn {
+        padding: 1px 10px !important;
+    }
+	
+	.e-img-editor-sample {
+        min-height: 450px;
+    }
+</style>

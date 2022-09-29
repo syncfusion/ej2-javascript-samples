@@ -49,7 +49,6 @@ this.default = function () {
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
     container.serviceUrl = hostUrl + 'api/documenteditor/';
     container.appendTo('#container');
-    container.height = '590px';
 
     function onWrapText(text) {
         var content = '';
@@ -191,10 +190,10 @@ this.default = function () {
     var insertFieldDialogObj = new ej.popups.Dialog({
         header: 'Merge Field',
         content:
-            '<div class="dialogContent">'
+            '<div class="dialogContent">' + 
             // tslint:disable-next-line:max-line-length
-            + '<label class="e-insert-field-label">Name:</label></br><input type="text" id="field_text" class="e-input" placeholder="Type a field to insert eg. FirstName">'
-            + '</div>',
+            '<label class="e-insert-field-label">Name:</label></br><input type="text" id="field_text" class="e-input" placeholder="Type a field to insert eg. FirstName">' +
+            '</div>',
         showCloseIcon: true,
         isModal: true,
         width: 'auto',
@@ -232,10 +231,10 @@ this.default = function () {
 
 
     function mergeDocument() {
-        container.documentEditor.saveAsBlob('Docx').then((blob) => {
+        container.documentEditor.saveAsBlob('Docx').then((blob) = function() {
             var exportedDocumment = blob;
             var fileReader = new FileReader();
-            fileReader.onload = () => {
+            fileReader.onload = function () {
                 var base64String = fileReader.result;
                 var responseData = {
                     fileName: container.documentEditor.documentName + '.docx',
@@ -248,7 +247,7 @@ this.default = function () {
                 var httpRequest = new XMLHttpRequest();
                 httpRequest.open('POST', baseUrl, true);
                 httpRequest.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                httpRequest.onreadystatechange = () => {
+                httpRequest.onreadystatechange = function () {
                     if (httpRequest.readyState === 4) {
                         if (httpRequest.status === 200 || httpRequest.status === 304) {
                             container.documentEditor.open(httpRequest.responseText);

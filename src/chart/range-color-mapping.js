@@ -39,7 +39,7 @@ this.default = function () {
                 marker: {
                     dataLabel: {
                         visible: true,
-                        position: 'Outer', 
+                        position: 'Outer',
                     }
                 }
             }

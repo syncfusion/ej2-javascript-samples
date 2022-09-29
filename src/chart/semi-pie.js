@@ -31,7 +31,7 @@ this.default = function () {
         ],
         enableAnimation: false,
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} : <b>${point.y}%</b>' },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
         legendSettings: {
             visible: false,
         },

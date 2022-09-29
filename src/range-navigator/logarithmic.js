@@ -22,7 +22,7 @@ this.default = function () {
         primaryXAxis: {
             valueType: 'Logarithmic', crosshairTooltip: { enable: false }, interval: 1,
             edgeLabelPlacement: 'Shift', majorGridLines: { width: 0 },
-            title: 'Numers of Goods Consumers'
+            title: 'Numbers of Goods Consumers'
         },
         primaryYAxis: { title: 'Inflation', minimum: 0, maximum: 100, labelFormat: '{value}%', majorTickLines: { width: 0 }, lineStyle: { width: 0 } },
         chartArea: { border: { width: 0 } },

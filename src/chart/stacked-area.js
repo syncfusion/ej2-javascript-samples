@@ -1,7 +1,7 @@
 /**
  * Sample for StackingArea Series
  */
-this.default = function () {
+ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
@@ -41,7 +41,7 @@ this.default = function () {
                     { x: new Date(2013, 0, 1), y: 1.66 }, { x: new Date(2014, 0, 1), y: 1.67 }
                 ],
                 xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Organic',
+                yName: 'y', name: 'Organic',border: { width: 0.5 , color:'#666666'}, opacity: 1,
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -55,7 +55,7 @@ this.default = function () {
                     { x: new Date(2013, 0, 1), y: 1.55 }, { x: new Date(2014, 0, 1), y: 1.65 }
                 ],
                 xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Fair-trade',
+                yName: 'y', name: 'Fair-trade',border: { width: 0.5 , color:'#666666' }, opacity: 1,
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -69,7 +69,7 @@ this.default = function () {
                     { x: new Date(2013, 0, 1), y: 0.67 }, { x: new Date(2014, 0, 1), y: 0.67 }
                 ],
                 xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Veg Alternatives',
+                yName: 'y', name: 'Veg Alternatives',border: { width: 0.5 , color:'#666666' }, opacity: 1,
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -83,7 +83,7 @@ this.default = function () {
                     { x: new Date(2013, 0, 1), y: 2.51 }, { x: new Date(2014, 0, 1), y: 2.61 }
                 ],
                 xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Others',
+                yName: 'y', name: 'Others',border: {width: 0.5 , color:'#666666' }, opacity: 1,
             }
         ],
         //Initializing Chart Title

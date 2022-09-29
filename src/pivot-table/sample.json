@@ -26,7 +26,6 @@
         {
             "url": "olap",
             "name": "OLAP",
-            "type": "update",
             "category": "Data Binding",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with olap datasource"
         },
@@ -45,7 +44,6 @@
         {
             "url": "field-list",
             "name": "Field List",
-            "type": "update",
             "category": "User Interaction",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the field list feature of the pivot table"
         },
@@ -77,7 +75,6 @@
             "url": "Drill-Down",
             "name": "Drill Down",
             "category": "User Interaction",
-            "type": "new",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the expandAll feature of the pivot table"
         },
         {
@@ -119,7 +116,6 @@
         {
             "url": "custom-sorting",
             "name": "Custom Sorting",
-            "type": "new",
             "category": "Sorting",
             "description": "This demo for Essential JS2 Pivot Table control shows ordering(sorting) of custom field members either in ascending or descending order"
         },
@@ -152,6 +148,13 @@
             "name": "Virtual Scrolling",
             "category": "Scrolling",
             "description": "This demo for Essential JS2 Pivot Table control shows virtual scrolling option available vertically and horizontally to load large records with ease"
+        },
+        {
+            "url": "paging",
+            "name": "Paging",
+            "category": "Paging",
+            "description": "This demo for Essential JS2 Pivot Table control shows paging option available for rows and columns to load large records page by page",
+            "type": "new"
         },
         {
             "url": "cell-template",

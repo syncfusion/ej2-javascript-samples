@@ -6,7 +6,7 @@ this.default = function () {
 					   'Features that will affect most Windows 10 users and developers.';
     // Rendering Dialog on AJAX success
         var dialogObj = new ej.popups.Dialog({
-            header: '<img class="img1" src="src/dialog/images/2.png">What’s Coming from Microsoft this Fall',
+            header: '<img class="img1" src="src/dialog/images/2.png" alt="Microsoft roadmap">What’s Coming from Microsoft this Fall',
             showCloseIcon: true,
             width: '500px',
             target: document.getElementById('target'),
