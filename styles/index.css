@@ -1835,7 +1835,7 @@ propertye pane
         padding-top: 3px;
     }
     .sb-open-new-wrapper {    
-        padding-top: 2px;
+        padding-top: 0px;
     }
     .sb-icon-Demo,
     .sb-icon-API {
@@ -3437,6 +3437,18 @@ body.fluent-dark,
     background: #212529;
 }
 
+.fluent-dark.e-bigger .sb-mobile-setting {
+    line-height: 22px;
+}
+
+.fluent-dark.e-bigger .sb-open-new-wrapper {
+    line-height: 26px;
+} 
+
+.fluent.e-bigger .sb-mobile-setting {
+    line-height: 22px;
+}
+
 .fluent .e-samplestatus.new.tree, .e-samplestatus.update.tree, .e-samplestatus.preview.tree {
     margin: 8px 0;
     height: 22px;
@@ -3613,6 +3625,11 @@ body.fluent-dark,
     border: 1px solid transparent;
     display: table-cell;
     cursor: pointer;
+}
+
+.bootstrap5-dark.e-bigger .sb-mobile-setting,
+.bootstrap5.e-bigger .sb-mobile-setting {
+    padding: 0;
 }
 
 .bootstrap5-dark .setting-responsive .sb-responsive-items.active {
