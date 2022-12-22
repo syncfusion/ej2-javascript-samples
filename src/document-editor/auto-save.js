@@ -7,6 +7,7 @@ this.default = function () {
   ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
   container.serviceUrl = hostUrl + 'api/documenteditor/';
   container.appendTo('#container');
+  
 
   container.contentChange = function () {
     contentChanged = true;

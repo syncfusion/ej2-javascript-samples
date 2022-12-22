@@ -1,0 +1,39 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <div id="loading-animation">
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+            <tr style="height: 50px">
+                    <td style="width: 50%; padding-left: 0;">
+                        <div style="padding-left: 0;">Indicator Type</div>
+                    </td>
+                    <td style="width: 100%;padding-right: 10px">
+                        <div>
+                            <input type="text" tabindex="1" id='indicatorType' />
+                        </div>
+                    </td>
+            </tr>
+    </table>
+</div>
+
+<div id="action-description">
+    <p>This sample shows the loading indicator while initial rendering, refreshing and all gantt action. In this sample, you can change the loading indicators from the properties panel.</p>
+</div>
+
+<div id="description">
+    <p>
+        The Gantt has an option to show a loading indicator in-between the time of fetching the data and binding it to the gantt during initial rendering, refreshing or 
+        while performing action like sorting, filtering and more.
+        <p>The Gantt support the following loading indicator types</p>
+        <ul>
+            <li><code>Shimmer</code></li>
+            <li><code>Spinner</code></li>
+        </ul>
+        Use the loading indicator by setting the <code>loadingIndicator.indicatorType</code> property as Spinner or Shimmer. The default value of the indicatorType is Spinner.
+    </p>
+    <p>By default <code>enableVirtualMaskRow</code> is set to true which renders Shimmer during virtual scrolling.</p>
+</div>

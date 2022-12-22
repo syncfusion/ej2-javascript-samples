@@ -73,7 +73,7 @@ this.default = function () {
 
     //Initialize DropDownList component
     var overflowModes = new ej.dropdowns.DropDownList({
-        width: '100%',
+        width: '90%',
         change: changeOverFlowMode
     });
     //Render initialized DropDownList component

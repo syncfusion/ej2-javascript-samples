@@ -9,17 +9,16 @@
             intervalType: 'Years',
             majorGridLines: { width: 0 },
             labelFormat: 'y',
-            edgeLabelPlacement: 'Shift'
+            edgeLabelPlacement: 'Shift',
+            lineStyle: { width: 0},
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Spends',
-            minimum: 0,
-            maximum: 7,
-            interval: 1,
+            title: 'Amount of sales in €',
+            minimum: 0, maximum: 7, interval: 1,
+            labelFormat: '{value}k',
             lineStyle: { width: 0},
-            majorTickLines: { width: 0},
-            labelFormat: '{value}B'
+            majorTickLines: { width: 0}
         },
         chartArea: {
             border: {
@@ -40,8 +39,8 @@
                     { x: new Date(2011, 0, 1), y: 1.38 }, { x: new Date(2012, 0, 1), y: 1.66 },
                     { x: new Date(2013, 0, 1), y: 1.66 }, { x: new Date(2014, 0, 1), y: 1.67 }
                 ],
-                xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Organic',border: { width: 0.5 , color:'#666666'}, opacity: 1,
+                xName: 'x', border: { width: 2 , color:'#666666' }, opacity: 1,
+                yName: 'y', name: 'Bank-Transfer'
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -54,8 +53,8 @@
                     { x: new Date(2011, 0, 1), y: 1.25 }, { x: new Date(2012, 0, 1), y: 1.55 },
                     { x: new Date(2013, 0, 1), y: 1.55 }, { x: new Date(2014, 0, 1), y: 1.65 }
                 ],
-                xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Fair-trade',border: { width: 0.5 , color:'#666666' }, opacity: 1,
+                xName: 'x', border: { width: 2 , color:'#666666' }, opacity: 1,
+                yName: 'y', name: 'Credit Card'
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -68,8 +67,8 @@
                     { x: new Date(2011, 0, 1), y: 0.57 }, { x: new Date(2012, 0, 1), y: 0.61 },
                     { x: new Date(2013, 0, 1), y: 0.67 }, { x: new Date(2014, 0, 1), y: 0.67 }
                 ],
-                xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Veg Alternatives',border: { width: 0.5 , color:'#666666' }, opacity: 1,
+                xName: 'x', border: { width: 2 , color:'#666666' }, opacity: 1,
+                yName: 'y', name: 'Debit Card'
             }, {
                 type: 'StackingArea',
                 dataSource: [
@@ -82,13 +81,14 @@
                     { x: new Date(2011, 0, 1), y: 1.82 }, { x: new Date(2012, 0, 1), y: 2.16 },
                     { x: new Date(2013, 0, 1), y: 2.51 }, { x: new Date(2014, 0, 1), y: 2.61 }
                 ],
-                xName: 'x', marker: { visible : false },
-                yName: 'y', name: 'Others',border: {width: 0.5 , color:'#666666' }, opacity: 1,
+                xName: 'x', border: { width: 2 , color:'#666666' }, opacity: 1,
+                yName: 'y', name: 'Cash'
             }
         ],
         //Initializing Chart Title
-        title: 'Trend in Sales of Ethical Produce',
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        title: 'Amount of Sales by Payment Mode',tooltip:{enable:true},
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings: {enableHighlight:true},
            // custom code start
         load: function (args) {
             var stackedTheme = location.hash.split('/')[1];

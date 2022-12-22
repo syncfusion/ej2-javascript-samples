@@ -1,0 +1,57 @@
+<div class="control-section">
+    <div id="label-rating-control">
+        <div class="rating-content" >
+            <label>Default(Right)</label><br/>
+            <input id='rating1'>
+        </div>
+        <div class="rating-content" >
+            <label>Left</label><br/>
+            <input id='rating2'>
+        </div>
+        <div class="rating-content">
+            <label>Label Template</label><br/>
+            <input id='rating3'>
+        </div>
+        <div class="rating-content">
+            <label>Top</label><br/>
+            <input id='rating4'>
+        </div>
+        <div class="rating-content">
+            <label>Bottom</label><br/>
+            <input id='rating5'>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates label support, including label positioning and templates, in the JavaScript(ES5) Rating component. 
+    </p>
+</div>
+<div id="description">
+    <p>
+        You can show or hide labels by setting the <code>showLabel</code> property. The <code>labelPosition</code> property provides several built-in positions and the appearance of labels can be customized using the <code>labelTemplate</code> property.
+    </p>
+</div>
+<style>
+    #label-rating-control .rating-content {
+        width: 240px;
+        margin: 15px 0;
+        min-height: 75px;
+        padding:0;
+        text-align: center;
+    }
+    .e-bigger #label-rating-control .rating-content {
+        width: 290px;
+        margin: 15px 0;
+        min-height: 75px;
+        padding:0;
+        text-align: center;
+    }
+    #label-rating-control {
+        margin: 6% auto;
+        max-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>

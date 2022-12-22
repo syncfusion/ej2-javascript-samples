@@ -3,7 +3,8 @@
  */
 this.default = function () {
     var chart = new ej.charts.Chart({
-        primaryXAxis: { valueType: 'Category', majorGridLines: { width: 0 }},
+        primaryXAxis: { valueType: 'Category', majorGridLines: { width: 0 },majorTickLines: {width : 0},
+        minorTickLines: {width: 0} },
         primaryYAxis: {
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
@@ -18,7 +19,7 @@ this.default = function () {
         series: [
             {
                 dataSource: [
-                    { x: "Jan", y: 6.96 },
+                    { x: "Jan", y: 6 },
                     { x: "Feb", y: 8.9 },
                     { x: "Mar", y: 12 },
                     { x: "Apr", y: 17.5 },
@@ -74,7 +75,7 @@ this.default = function () {
         },
         highlightMode: 'Point',
         highlightPattern: 'DiagonalForward',
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         title: "USA CLIMATE - WEATHER BY MONTH",
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

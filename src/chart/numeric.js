@@ -72,7 +72,7 @@ this.default = function () {
             }
         ],
         axisLabelRender: labelRender,
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

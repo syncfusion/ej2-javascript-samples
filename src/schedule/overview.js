@@ -410,6 +410,7 @@ this.default = function () {
                 if (!args.target.classList.contains('e-appointment')) {
                     var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
                     titleObj.appendTo(args.element.querySelector('#title'));
+                    titleObj.focusIn();
                     var eventTypeObj = new ej.dropdowns.DropDownList({
                         dataSource: resourceData,
                         placeholder: 'Choose Type',
@@ -478,6 +479,7 @@ this.default = function () {
                 ej.base.remove(eventElement);
                 ej.base.removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
             }
+            scheduleObj.closeQuickInfoPopup();
             var targetElement = args.event.target;
             if (ej.base.closest(targetElement, '.e-contextmenu')) {
                 return;

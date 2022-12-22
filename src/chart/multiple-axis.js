@@ -8,7 +8,9 @@ this.default = function () {
             valueType: 'Category',
             interval: 1,
             labelIntersectAction: 'Rotate90',
-            majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         //Initializing Primary X Axis
         primaryYAxis: {
@@ -72,7 +74,7 @@ this.default = function () {
         },
         //Initializing tooltip
         tooltip: { enable: true },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Weather Condition JPN vs DEU',
          // custom code start

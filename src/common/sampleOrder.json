@@ -1,6 +1,6 @@
 {
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
-    "Data Visualization": ["Chart", "Stock Chart", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
+    "Data Visualization": ["Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
     "Forms": ["Form Validation", "Query Builder"],
     "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "DocumentEditor", "Image Editor"],
     "Calendars": ["Scheduler", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker", "Gantt"],
@@ -8,6 +8,6 @@
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box","Mention"],
     "Navigation": ["Accordion", "AppBar", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Message", "Toast", "Progress Bar", "Skeleton"],
-    "Inputs": ["TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor"],
+    "Inputs": ["TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating"],
     "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout"]
 }

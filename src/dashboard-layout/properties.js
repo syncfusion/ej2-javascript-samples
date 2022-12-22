@@ -49,11 +49,11 @@ this.default = function () {
         dashboard.cellSpacing = [parseInt(args.value, 10), parseInt(args.value, 10)];
     }
     function onChange(args) {
-        if (args.event.currentTarget.id === "floating") {
-            dashboard.allowFloating = args.checked;
-        }
-        if (args.event.currentTarget.id === "resizing") {
-            dashboard.allowResizing = args.checked;
+        if (args.event.target.previousElementSibling.id === 'floating') {
+                  dashboardObject.allowFloating = args.checked;
+	}
+	if (args.event.target.previousElementSibling.id === 'resizing') {
+		   dashboardObject.allowResizing = args.checked;
         }
     }
 

@@ -11,9 +11,12 @@ this.default = function() {
                 uploadUrl: hostUrl + 'api/FileManager/Upload',
                 downloadUrl: hostUrl + 'api/FileManager/Download'    
             },
+            success : onSuccess
     });
     fileObject.appendTo('#file');
 
+function onSuccess() {
+    if (!document.getElementById('file_tb_upload').classList.contains('e-dropdown-btn')) {
     var items = [{ text: 'Folder' }, { text: 'Files' }];
     var drpDownBtn = new ej.splitbuttons.DropDownButton({
         items: items,
@@ -28,9 +31,12 @@ this.default = function() {
                 uploadBtn.click();
             }, 100);
         }
-    },'#file_tb_upload');
-
+    });
+    drpDownBtn.appendTo('#file_tb_upload');
     document.getElementById('file_tb_upload').onclick = function (args) {
         args.stopPropagation();
-    };
+    };   
+    }
+}
+
 };

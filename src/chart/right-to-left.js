@@ -11,7 +11,8 @@ var labelRender = function (args) {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Double', majorGridLines: { width: 0 },
-            minimum: 2015, maximum: 2020, interval: 1
+            minimum: 2015, maximum: 2020, interval: 1,majorTickLines: {width : 0},
+            minorTickLines: {width: 0}
         },
         chartArea: { border: { width: 0 } },
         //Initializing Primary X Axis
@@ -37,7 +38,7 @@ var labelRender = function (args) {
         //Initializing Chart Title
         title: 'Company Performance', tooltip: { enable: true },
         enableRtl: true,
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         axisLabelRender: labelRender,
          // custom code start
         load: function (args) {

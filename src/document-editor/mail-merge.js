@@ -45,11 +45,11 @@ this.default = function () {
                id: 'MergeDocument'
            },
        ]
-   });
+    });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
     container.serviceUrl = hostUrl + 'api/documenteditor/';
     container.appendTo('#container');
-
+    
     function onWrapText(text) {
         var content = '';
         var index = text.lastIndexOf(' ');
@@ -68,7 +68,7 @@ this.default = function () {
                 break;
         }
     };
-
+    
     var listData = [
         {
             text: 'ProductName',
@@ -148,19 +148,19 @@ this.default = function () {
         container.documentEditor.editor.insertField(fieldCode, '«' + fieldName + '»');
         container.documentEditor.focusIn();
     }
-
+    
     // Prevent default drag over for document editor element
     document.getElementById('container').addEventListener('dragover', function(event) {
         event.preventDefault();
     });
-
+    
     // Drop Event for document editor element
     document.getElementById('container').addEventListener('drop', function(e) {
         var text = e.dataTransfer.getData('Text');
         container.documentEditor.selection.select({ x: e.offsetX, y: e.offsetY, extend: false });
         insertField(text);
     });
-
+    
     document.addEventListener('dragend', function(event){
         if (event.target.classList.contains('de-drag-target')) {
             event.target.classList.remove('de-drag-target');
@@ -228,10 +228,10 @@ this.default = function () {
             },
         ],
     });
-
-
+    
+    
     function mergeDocument() {
-        container.documentEditor.saveAsBlob('Docx').then((blob) = function() {
+        container.documentEditor.saveAsBlob('Docx').then(function(blob) {
             var exportedDocumment = blob;
             var fileReader = new FileReader();
             fileReader.onload = function () {
@@ -268,12 +268,12 @@ this.default = function () {
             fileReader.readAsDataURL(blob);
         });
     }
-
+    
     function showHideWaitingIndicator(show) {
         inActiveDiv.style.display = show ? 'block' : 'none';
         waitingPopUp.style.display = show ? 'block' : 'none';
     }
-   
+    
     var defaultDocument = {
         "sections": [
             {
@@ -4395,4 +4395,5 @@ this.default = function () {
              return ejButton;
          }
      } 
-};
+    
+    };

@@ -75,6 +75,7 @@ this.default = function () {
             ej.base.remove(newEventElement);
             ej.base.removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
         }
+        scheduleObj.closeQuickInfoPopup();
         var targetElement = args.event.target;
         if (ej.base.closest(targetElement, '.e-contextmenu')) {
             return;

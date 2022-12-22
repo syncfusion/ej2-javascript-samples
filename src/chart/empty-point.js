@@ -5,12 +5,14 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Product', valueType: 'Category', interval: 1
+            valueType: 'Category', interval: 1, labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45', labelRotation : ej.base.Browser.isDevice ? -45 : 0, majorTickLines: {width : 0},
+            minorTickLines: {width: 0}
         },
         //Initializing Primary X Axis
         primaryYAxis: {
-            title: 'Profit', minimum: 0, maximum: 100, interval: 20,
-            labelFormat: '{value}%'
+            minimum: 0, maximum: 100, interval: 20,
+            labelFormat: '{value}%',
+            
         },
         //Initializing Chart Series
         series: [

@@ -92,30 +92,41 @@
             filter: brightness(180%);
     }
     .statustemp {
-        position: relative;
-        border-radius: 15px;
         text-align: center;
-        background-color: #C3F1D0;
-        color: #00752F;
-        width: 47px;
+        width: fit-content;
+        height: fit-content;
     }
-
-    .statustemp.e-lowgdp {
-        background-color: #FFDBDB;
-        color: #BD0000;
-
-    }
-
     td.e-rowcell .statustxt {
-        color: #398120;
+        color: #00cc00;
         position: relative;
+        background: #C3F1D0;
+        border-radius: 18px;
+        padding: 1px 5px 3px 7px;
     }
 
     td.e-rowcell .statustxt.e-lowgdp {
         color: #e60000;
-        position: relative;
+        position: relative; 
+        background: #ffd7cc;
+        border-radius: 18px;
+        padding: 1px 5px 3px 7px;
     }
-
+    .tailwind span.statustxt, .tailwind-dark span.statustxt, .material span.statustxt, .material-dark span.statustxt, 
+    .bootstrap4 span.statustxt, .bootstrap span.statustxt, .bootstrap-dark span.statustxt {
+        color: #00cc00;
+        position: relative;
+        background: #C3F1D0;
+        border-radius: 18px;
+        padding: 2px 5px 2px 7px;
+    }
+    .tailwind span.statustxt.e-lowgdp, .tailwind-dark span.statustxt.e-lowgdp, .material span.statustxt.e-lowgdp, .material-dark span.statustxt.e-lowgdp, 
+    .bootstrap4 span.statustxt.e-lowgdp, .bootstrap span.statustxt.e-lowgdp, .bootstrap-dark span.statustxt.e-lowgdp {
+        color: #e60000;
+        position: relative;
+        background: #ffd7cc;
+        border-radius: 18px;
+        padding: 2px 5px 2px 7px;
+     }
     .rating .star {
         font-size: 132%;
         color: lightgrey;

@@ -5,9 +5,10 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X and Y Axis
         primaryXAxis: {
-            valueType: 'DateTime', interval: 5, intervalType: 'Years', majorGridLines: { width: 0 },
+            valueType: 'DateTime',intervalType: 'Years', majorGridLines: { width: 0 },
             edgeLabelPlacement: 'Shift',
-            minimum: new Date(1965, 1, 1), maximum: new Date(2010, 1, 1),
+            minimum: new Date(1965, 1, 1), maximum: new Date(2010, 1, 1),majorTickLines: {width : 0},
+            minorTickLines: {width: 0},
             stripLines: [{
                 startFromAxis: true, size: 5, sizeType: 'Years', isRepeat: true, repeatEvery: 10, visible: true,
                 color: 'rgba(167,169,171, 0.1)'

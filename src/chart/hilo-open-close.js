@@ -28,7 +28,7 @@ this.renderChartOhlc = function (chartData) {
             crosshair: {
                 enable: true, lineType: 'Vertical', line: { width: 0 }
             },
-            legendSettings: { visible: false }, width: ej.base.Browser.isDevice ? '100%' : '80%',
+            legendSettings: { visible: false }, width: ej.base.Browser.isDevice ? '100%' : '75%',
             axisLabelRender: function (args) {
                 if (args.axis.title === 'Price') {
                     args.text = '$' + args.text;

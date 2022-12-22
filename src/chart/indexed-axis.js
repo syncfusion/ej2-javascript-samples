@@ -7,12 +7,14 @@ this.default = function () {
         primaryXAxis: {
             valueType: 'Category',
             interval: 1,
-            crosshairTooltip: { enable: true },
-            isIndexed: true
+            isIndexed: true,
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0,
+            labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45',
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'GDP Growth Rate',
             labelFormat: '{value}%'
         },
         chartArea: {
@@ -25,32 +27,30 @@ this.default = function () {
             {
                 type: 'Column',
                 dataSource: [
-                    { x: 'Myanmar', y: 7.3 },
-                    { x: 'India', y: 7.9 },
+                    { x: 'India', y: 7.3 },
+                    { x: 'Myanmar', y: 7.9 },
                     { x: 'Bangladesh', y: 6.8 },
                     { x: 'Cambodia', y: 7.0 },
                     { x: 'China', y: 6.9 }
                 ],
-                xName: 'x', width: 2, marker: { visible: false, height: 10, width: 10 },
-                yName: 'y', name: '2015',
+                xName: 'x', width: 2, marker: { visible: false, height: 10, width: 10, dataLabel: { visible: true,  position: 'Top', font: { size : ej.base.Browser.isDevice ? '8px' : '11px'}}},
+                yName: 'y', name: '2015'
             },
             {
                 type: 'Column',
                 dataSource: [
-                    { x: 'Poland', y: 2.7 },
-                    { x: 'Australia', y: 2.5 },
+                    { x: 'Australia', y: 2.7 },
+                    { x: 'Poland', y: 2.5 },
                     { x: 'Singapore', y: 2.0 },
                     { x: 'Canada', y: 1.4 },
                     { x: 'Germany', y: 1.8 }
                 ],
-                xName: 'x', width: 2, marker: { visible: false, height: 10, width: 10 },
-                yName: 'y', name: '2016',
+                xName: 'x', width: 2,marker: { visible: false, height: 10, width: 10, dataLabel: { visible: true,  position: 'Top',  font: { size : ej.base.Browser.isDevice ? '8px' : '11px'}}},
+                yName: 'y', name: '2016'
             },
+           
         ],
-        //Initializing Tooltip
-        tooltip: { enable: true, shared: true },
-        //Initializing Crosshair
-        crosshair: { enable: true, lineType: 'Vertical' },
+    
         //Initializing Title
         title: 'Real GDP Growth',
          // custom code start
@@ -67,23 +67,23 @@ this.default = function () {
         var element = (document.getElementById('isIndexed'));
         chart.primaryXAxis.isIndexed = element.checked;
         if (chart.primaryXAxis.isIndexed) {
-            chart.tooltip.shared = true;
             chart.series[0].type = 'Column';
             chart.series[1].type = 'Column';
             chart.series[0].marker.visible = false;
             chart.series[1].marker.visible = false;
             chart.primaryXAxis.labelRotation = 0;
-            chart.crosshair.line.width = 1;
         }
         else {
             chart.series[0].type = 'Line';
             chart.series[1].type = 'Line';
             chart.series[0].marker.visible = true;
             chart.series[1].marker.visible = true;
+            chart.series[0].marker.dataLabel.visible = true;
+            chart.series[0].marker.dataLabel.position = 'Top';
+            chart.series[1].marker.dataLabel.visible = true;
+            chart.series[1].marker.dataLabel.position = 'Top';
             chart.primaryXAxis.labelRotation = 90;
             chart.crosshair.line.width = 0;
-            chart.tooltip.enable = true;
-            chart.tooltip.shared = false;
         }
         chart.refresh();
     };

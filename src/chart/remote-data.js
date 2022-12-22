@@ -60,6 +60,8 @@ this.default = function () {
             title: 'Assignee',
             rangePadding: 'Additional',
             majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
+            minorTickLines: {width: 0}
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
@@ -98,7 +100,7 @@ this.default = function () {
         pointRender: pointRender,
         axisLabelRender: labelRender,
         loaded: loadedChart,
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {
             var div = document.getElementById('waitingpopup');

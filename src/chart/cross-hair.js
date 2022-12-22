@@ -57,7 +57,7 @@ this.default = function () {
         //Initializing Crosshair
         crosshair: { enable: true },
         legendSettings: { visible: false },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Conns,Inc Stock Details',
          // custom code start

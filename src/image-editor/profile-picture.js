@@ -34,7 +34,10 @@
               },
               created: function () {
                 var imageEditor = ej.base.getComponent(document.getElementById('image-editor'), 'image-editor');
-                imageEditor.theme = window.location.href.split('#')[1].split('/')[1];
+                if (imageEditor.theme && window.location.href.split('#')[1]) {
+                    imageEditor.theme = window.location.href.split('#')[1].split('/')[1];
+                }
+                
             },
               toolbar: []
           }, '#image-editor');
@@ -96,9 +99,13 @@
     imageEditor.open(url.toString());
     document.getElementById('img-upload').value = null;
   };
-  document.getElementsByClassName('sb-desktop-wrapper')[0].onclick = function (args) {
+  var imageHide = document.getElementsByClassName('sb-desktop-wrapper')[0];
+  if (imageHide) {
+    document.getElementsByClassName('sb-desktop-wrapper')[0].onclick = function (args) {
     if (args.target.className.indexOf('col-lg-12 control-section e-img-editor-sample') > -1 || args.target.className.indexOf('sb-content') > -1) {
         dialogObj.hide();
     }
   };
+  }
+ 
 };

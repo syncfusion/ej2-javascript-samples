@@ -39,4 +39,12 @@ this.default = function () {
         projectEndDate: new Date('07/06/2019')
      });
     ganttChart.appendTo('#ColumnTemplate');
+    window.isRtl = function (value) {
+        var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        if (gantt.enableRtl) {
+            return 'right:30px;';
+          } else {
+            return 'left:30px;';
+          }
+    };
 };

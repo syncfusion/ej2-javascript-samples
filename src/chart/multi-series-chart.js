@@ -84,7 +84,7 @@ this.default = function () {
                 },
             }
         ],
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Annual Growth GDP in France',
         //Initializing Tooltip

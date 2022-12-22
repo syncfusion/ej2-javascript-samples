@@ -9,13 +9,14 @@ this.default = function () {
             valueType: 'DateTimeCategory',
             intervalType: 'Days',
             skeleton: 'Ed',
-            edgeLabelPlacement: 'Shift',
             majorGridLines: { width: 0 },
             stripLines: [
                 { visible: true, start: new Date(2017, 11, 20), end: new Date(2017, 11, 27), color: 'skyblue', opacity: 0.5, },
                 { visible: true, start: new Date(2018, 0, 2), end: new Date(2018, 0, 8), color: 'pink', opacity: 0.5 },
             ],
-            title: 'Business Days'
+            title: 'Business Days',
+            labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45',
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0
         },
         primaryYAxis: {
             labelFormat: '{value}M',
@@ -45,7 +46,7 @@ this.default = function () {
                 xName: 'x', yName: 'y', name: 'Product',
             },
         ],
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendSettings: { visible: false },
         title: 'Sales Comparison of a Product',
         tooltip: {

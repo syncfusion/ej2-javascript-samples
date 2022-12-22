@@ -233,33 +233,15 @@
 </style>
 
 <script type="text/x-jsrender" id="progessTemplate">
-    <div id="myProgress" class="pbar">
-            <div id="myBar" class="bar">
-              <div id="pbarlabel" class="barlabel"></div>
-            </div>
-          </div>
+    ${progessDetail(data)}
 </script>
 
 <script type="text/x-jsrender" id="ratingTemplate">
-
-    <div class="rating">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-    </div>
-
+    ${ratingDetail(data)}
 </script>
 
 <script type="text/x-jsrender" id="empTemplate">
-    <div>
-      <div class="empimg">
-        <span class="e-userimg">
-        </span>
-      </div> 
-      <span id="Emptext">${Employees}</span>
-    </div>
+    ${empDetails(data)}
 </script>
 
 <script type="text/x-jsrender" id="trustTemplate">
@@ -268,12 +250,6 @@
 </script>
 
 <script type="text/x-jsrender" id="statusTemplate">
-    <div id="status" class="statustemp">
-        <span class="statustxt">${Status}</span>
-    </div>
-</script>
-
-<script type="text/x-jsrender" id="StatusItemTemp">
     ${statusDetail(data)}
 </script>
 
@@ -302,8 +278,12 @@
         In this demo, Grid features such as <code>Virtual Scrolling, Filtering, Sorting, Column Template, filter template </code> etc... are used along with large data source.
     </p>
     <p>
+        You can follow the guidelines in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/virtual-scroll/#browser-height-limitation-in-virtual-scrolling-and-solution">
+        documentation</a> to get around the browser height restriction when loading and viewing millions of records.
+    </p>
+    <p>
         More information on the Grid instantiation can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation/grid/getting-started.html#getting-started">
+        <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/grid/getting-started.html#getting-started">
             documentation section</a>.
     </p>
 </div>

@@ -43,7 +43,8 @@ this.default = function () {
         primaryXAxis: {
             valueType: 'Category', majorGridLines: { width: 0 },
             //Initializing StripLines
-            stripLines: xAxisStripLine
+            stripLines: xAxisStripLine, majorTickLines: {width : 0},
+            minorTickLines: {width: 0},
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
@@ -79,7 +80,7 @@ this.default = function () {
         tooltip: {
             enable: true
         },
-        legendSettings: { visible: true },
+        legendSettings: { visible: false },
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

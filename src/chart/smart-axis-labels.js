@@ -29,7 +29,9 @@ this.default = function () {
             valueType: 'Category',
             interval: 1,
             majorGridLines: { width: 0 },
-            labelIntersectAction: 'Hide'
+            labelIntersectAction: 'Hide',
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         chartArea: {
             border: {
@@ -54,7 +56,7 @@ this.default = function () {
                 { x: 'Russia', y: 41 }, { x: 'Mexico', y: 31 },
                 { x: 'Brazil', y: 76 }, { x: 'China', y: 51 }],
                 xName: 'x', width: 2, name: 'Users',
-                yName: 'y', marker: { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color:'#ffffff' } } }
+                yName: 'y', marker: { dataLabel: { visible: true, position: ej.base.Browser.isDevice ? 'Outer' : 'Top', font: { fontWeight: '600', color: ej.base.Browser.isDevice ? '#404041' : '#ffffff' } } }
             },
         ],
         //Initializing Chart Title

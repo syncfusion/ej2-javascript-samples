@@ -6,7 +6,8 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
         },
         chartArea: {
             border: {
@@ -28,7 +29,8 @@ this.default = function () {
                     { x: 'May', y: 20 }, { x: 'Jun', y: 24 }],
                 name: 'Apple',
                 xName: 'x', width: 2,
-                yName: 'y'
+                yName: 'y',
+                border: { width: 1, color: "white" }, columnWidth: 0.6 
             },
             {
                 type: 'StackingBar',
@@ -36,7 +38,8 @@ this.default = function () {
                     { x: 'May', y: 21 }, { x: 'Jun', y: 25 }],
                 name: 'Orange',
                 xName: 'x', width: 2,
-                yName: 'y'
+                yName: 'y',
+                border:{ width: 1, color: "white" } ,columnWidth:0.6 
             },
             {
                 type: 'StackingBar',
@@ -44,7 +47,9 @@ this.default = function () {
                     { x: 'May', y: -3 }, { x: 'Jun', y: -3.5 }],
                 name: 'Wastage', width: 2,
                 xName: 'x',
-                yName: 'y'
+                yName: 'y',
+                border:{ width: 1, color: "white" } ,columnWidth:0.6 
+
             }
         ],
         //Initializing Tooltip
@@ -53,7 +58,10 @@ this.default = function () {
         },
         //Initializing Chart Title
         title: 'Sales Comparison',
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings: {
+            enableHighlight :true
+        },
            // custom code start
         load: function (args) {
             var stackedBarTheme = location.hash.split('/')[1];

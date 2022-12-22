@@ -23,8 +23,10 @@ this.default = function () {
 
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category', labelRotation: 90,
+            valueType: 'Category', labelRotation: 90, labelIntersectAction : ej.base.Browser.isDevice ? 'Rotate90' : 'Trim',
             border: { width: 1, type: 'Rectangle' },
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 },
             isIndexed: true, interval: 1, majorGridLines: { width: 0 },
             multiLevelLabels : (ej.base.Browser.isDevice ? ([
                 {
@@ -103,7 +105,7 @@ this.default = function () {
         title: 'Fruits and Vegetables - Season',
         pointRender: labelRender,
         legendSettings: { visible: false },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

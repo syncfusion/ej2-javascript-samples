@@ -21,7 +21,7 @@ this.default = function () {
     });
     var chart = new ej.charts.Chart({
          primaryXAxis: {
-            majorGridLines: { width: 0 }, title: 'Score of Final Examination',
+            majorGridLines: { width: 0 }, title: 'Score of Final Examination', edgeLabelPlacement: 'Shift',
             minimum: 0, maximum: 100
         },
         chartArea: { border: { width: 0 } },
@@ -29,7 +29,7 @@ this.default = function () {
         primaryYAxis: {
             title: 'Number of Students',
             minimum: 0, maximum: 50, interval: 10,
-            majorTickLines: { width: 0 }, lineStyle: { width: 0 }
+            majorTickLines: { width: 0 }, lineStyle: { width: 0 },
         },
         //Initializing Chart Series
         series: [
@@ -42,7 +42,7 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Examination Result', tooltip: { enable: true },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

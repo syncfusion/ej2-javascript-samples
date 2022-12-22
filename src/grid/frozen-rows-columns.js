@@ -31,6 +31,9 @@ this.default = function () {
     var rows = new ej.inputs.NumericTextBox({
         min: 0,
         max: 5,
+        validateDecimalOnType: true,
+        decimals: 0,
+        format: 'n',
         value: 2
     });
     rows.appendTo('#rows');
@@ -38,6 +41,9 @@ this.default = function () {
     var columns = new ej.inputs.NumericTextBox({
         min: 1,
         max: 2,
+        validateDecimalOnType: true,
+        decimals: 0,
+        format: 'n',
         value: 1
     });
     columns.appendTo('#columns');

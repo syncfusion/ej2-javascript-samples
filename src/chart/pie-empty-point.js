@@ -6,16 +6,15 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                xName: 'x', yName: 'y', name: 'Profit',
+                xName: 'x', yName: 'y',
                 type: 'Pie',
                 dataSource: [{ x: 'Rice', y: 80 }, { x: 'Wheat', y: null }, { x: 'Oil', y: 70 },
                     { x: 'Corn', y: 60 }, { x: 'Gram', y: null },
                     { x: 'Milk', y: 70 }, { x: 'Peas', y: 80 },
                     { x: 'Fruit', y: 60 }, { x: 'Butter', y: null }],
                 dataLabel: {
-                    visible: true, position: 'Inside', font: {
-                        fontWeight: '600',
-                        color: '#ffffff'
+                    visible: true, position: 'Inside', enableRotation: true, font: {
+                        fontWeight: '600',          
                     }
                 },
                 emptyPointSettings: {
@@ -27,13 +26,17 @@ this.default = function () {
         title: 'Annual Product-Wise Profit Analysis',
         legendSettings: { visible: false },
         //Initializing Tooltip
-        tooltip: { enable: true, header: 'Profit', format: '${point.x} : <b>${point.y}</b>' },
+        tooltip: {enable: true,header:"", format: '<b>${point.x}</b><br> Profit: <b>$${point.y}K</b>'  },
+        enableBorderOnMouseMove:false,
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        },
+        textRender: function (args) {
+            args.text = args.point.x + ": $" + args.point.y + "K";
         }
            // custom code end
     });

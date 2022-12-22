@@ -4,16 +4,17 @@
  this.default = function () {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
-            valueType: 'Double',
+            valueType: 'Double',    
             majorGridLines: { width: 0 },
-            edgeLabelPlacement: 'Shift',
+            edgeLabelPlacement: 'Shift'
         },
         primaryYAxis: {
             title: 'Production (Billion as kWh)',
             valueType: 'Double',
             labelFormat: '{value}B',
             lineStyle: { width: 0 },
-            majorTickLines: { width: 0 }
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 },
         },
         chartArea: {
             border: {
@@ -29,8 +30,8 @@
                 name: 'Renewable',
                 xName: 'x',
                 yName: 'y',
-                fill: '#56CCF2',
-                opacity: 0.5, border:{ width : 1.5 }
+                fill: '#56CCF2',border:{ width : 2.5 },
+                opacity: 0.5
             },
             {
                 type: 'StackingStepArea',
@@ -40,12 +41,13 @@
                 name: 'Non-Renewable',
                 xName: 'x',
                 yName: 'y',
-                fill: '#2F80ED',
-                opacity: 0.5 , border:{ width : 1.5 }
+                fill: '#2F80ED',border:{ width : 2.5 },
+                opacity: 0.5
             },
         ],
         title: 'Electricity- Production',
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings:{enableHighlight: true},
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';

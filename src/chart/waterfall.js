@@ -13,13 +13,15 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            majorGridLines: { width: 0 },
-            plotOffset: 20
+            majorGridLines: { width: 0 },labelRotation: ej.base.Browser.isDevice ? -45 : 0,
+                        labelIntersectAction : ej.base.Browser.isDevice ? 'None' : 'Rotate45', majorTickLines: {width : 0},
+                        minorTickLines: {width: 0}
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
             minimum: 0, maximum: 5000, interval: 1000,
-            majorGridLines: { width: 0 },
+            majorGridLines: { width: 1 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 },
             title: 'Expenditure'
         },
         //Initializing Chart Series
@@ -29,8 +31,8 @@ this.default = function () {
                 columnWidth: 0.9,
                 type: 'Waterfall', animation: { enable: true },
                 marker: {
-                    dataLabel: { visible: true, font: { color: '#ffffff' } }
-                }, connector: { color: '#5F6A6A', width: 2 }
+                    dataLabel: { visible: true }
+                }, border:{width:1, color:'black'}, connector: { color: '#5F6A6A', width: 2 }
             }],
         chartArea: { border: { width: 0 } },
         //Initializing Tooltip
@@ -45,11 +47,11 @@ this.default = function () {
                 args.text = '$' + Number(args.text) / 1000 + 'B';
             }
         },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         textRender: function (args) {
             var value = Number(args.text) / 1000;
             value = Math.round((value * 100)) / 100;
-            args.text = value.toString();
+            args.text = value.toString() + 'B';
         },
            // custom code start
         load: function (args) {

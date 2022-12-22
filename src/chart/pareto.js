@@ -5,16 +5,15 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Defects',
             interval: 1,
-            valueType: 'Category',
+            valueType: 'Category',labelIntersectAction: 'Rotate45',
             majorGridLines: { width: 0 }, minorGridLines: { width: 0 },
             majorTickLines: { width: 0 }, minorTickLines: { width: 0 },
             lineStyle: { width: 0 },
         },
         //Initializing Primary X Axis
         primaryYAxis: {
-            title: 'Frequency',
+            title: 'Frequency of Occurence',
             minimum: 0,
             maximum: 150,
             interval: 30,
@@ -32,16 +31,16 @@ this.default = function () {
             {
                 type: 'Pareto',
                 dataSource: [
-                    { x: 'Traffic', y: 56 }, { x: 'Child Care', y: 44.8 },
-                    { x: 'Transport', y: 27.2 }, { x: 'Weather', y: 19.6 },
-                    { x: 'Emergency', y: 6.6 }
+                    { x: 'Button Defect', y: 56 }, { x: 'Pocket Defect', y: 44.8 },
+                    { x: 'Coller Defect', y: 27.2 }, { x: 'Cuff Defect', y: 19.6 },
+                    { x: 'Sleeve Defect', y: 6.6 }
                 ], marker: { visible: true, width: 10, height: 10 },
                 xName: 'x', yName: 'y', name: 'Defect', width: 2
             }
         ],
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
-        title: 'Defect vs Frequency',
+        title: 'Pareto chart - Defects in Shirts',
         legendSettings: { visible: false },
         //Initializing Tooltip
         tooltip: {

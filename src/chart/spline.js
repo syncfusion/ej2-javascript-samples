@@ -6,9 +6,9 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            interval: 1,
-            majorGridLines: { width: 0 },
-            labelIntersectAction: 'Rotate90'
+            interval: 1, majorGridLines: { width: 0 },
+            labelIntersectAction: 'Rotate90',majorTickLines: {width : 0},
+            minorTickLines: {width: 0}
         },
         chartArea: {
             border: {
@@ -43,8 +43,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7
                 },
                 yName: 'y', name: 'Max Temp',
             },
@@ -59,8 +59,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7
                 },
                 yName: 'y', name: 'Avg Temp',
             },
@@ -75,8 +75,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7
                 },
                 yName: 'y', name: 'Min Temp',
             }
@@ -84,7 +84,8 @@ this.default = function () {
         //Initializing Chart Title
         title: 'NC Weather Report - 2016',
         tooltip: { enable: true },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings: {enableHighlight:true},
            // custom code start
         load: function (args) {
             var splineTheme = location.hash.split('/')[1];

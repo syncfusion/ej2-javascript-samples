@@ -4,7 +4,13 @@
     "category": "Grids",
     "ftName": "pivot-table",
     "type": "update",
-    "samples": [
+    "samples": [{
+            "url": "overview",
+            "name": "Overview",
+            "category": "Pivot Table",
+            "description": "This sample shows an overview of Essential JS2 Pivot Table that allows to organize and summarize the pivot data in a detailed or abstract view and displays it as a grid and chart.",
+            "type": "new"
+        },
         {
             "url": "default",
             "name": "Default Functionalities",
@@ -27,6 +33,7 @@
             "url": "olap",
             "name": "OLAP",
             "category": "Data Binding",
+            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with olap datasource"
         },
         {
@@ -38,7 +45,7 @@
         {
             "url": "external-binding",
             "name": "External Binding",
-            "category": "Integration",            
+            "category": "Integration",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the rendering of chart widget with cell selection option."
         },
         {
@@ -62,13 +69,14 @@
         {
             "url": "selection",
             "name": "Selection",
-            "category": "User Interaction",            
+            "category": "User Interaction",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the cell selection feature of the pivot table"
         },
         {
             "url": "summary-customization",
             "name": "Show/Hide Totals",
             "category": "User Interaction",
+            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the summary customization feature of the pivot table"
         },
         {
@@ -80,13 +88,14 @@
         {
             "url": "grouping",
             "name": "Grouping",
-            "category": "User Interaction",            
+            "category": "User Interaction",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the grouping feature for date and number fields"
         },
         {
             "url": "toolbar",
             "name": "Toolbar",
             "category": "User Interaction",
+            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the toolbar support of the pivot table widget"
         },
         {
@@ -153,13 +162,12 @@
             "url": "paging",
             "name": "Paging",
             "category": "Paging",
-            "description": "This demo for Essential JS2 Pivot Table control shows paging option available for rows and columns to load large records page by page",
-            "type": "new"
+            "description": "This demo for Essential JS2 Pivot Table control shows paging option available for rows and columns to load large records page by page"
         },
         {
             "url": "cell-template",
             "name": "Cell Template",
-            "category": "Customization",            
+            "category": "Customization",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate cell template option on cells of the pivot table"
         },
         {

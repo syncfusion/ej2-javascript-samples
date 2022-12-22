@@ -56,11 +56,11 @@ this.default = function () {
                 yName: 'y', name: 'Coldest',
                 marker: {
                     visible: true, height: 10, width: 10, shape: 'Diamond',
-                    dataLabel: { visible: true, position: 'Bottom' }
+                    dataLabel: { visible: true, position: 'Top' }
                 }
             }
         ],
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Alaska Weather Statistics - 2016',
          // custom code start

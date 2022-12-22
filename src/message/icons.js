@@ -72,7 +72,7 @@ this.default = function () {
   msgWarningIcon.appendTo('#msg_warning_icon');
 
   var msgErrorIcon = new ej.notifications.Message({
-    content: "A problem has been occurred while submitting your data",
+    content: "A problem occurred while submitting your data",
     severity: "Error",
     showCloseIcon: true,
     closed: function () {

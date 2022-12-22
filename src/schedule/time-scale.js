@@ -12,6 +12,7 @@ this.default = function () {
         height: '650px',
         selectedDate: new Date(2021, 0, 10),
         currentView: 'TimelineWeek',
+        cssClass: 'time-scale',
         views: ['Day', 'Week', 'WorkWeek', 'TimelineDay', 'TimelineWeek'],
         timeScale: {
             enable: true,

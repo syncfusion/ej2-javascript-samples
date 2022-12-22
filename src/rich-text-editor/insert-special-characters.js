@@ -35,6 +35,7 @@ this.default = function() {
             isModal: true,
             width: '43%',
             height: 'auto',
+            visible: false,
             overlayClick: dialogOverlay,
             buttons: [
                 { buttonModel: { content: "Insert", isPrimary: true }, click: onInsert },

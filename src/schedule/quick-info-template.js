@@ -29,18 +29,14 @@ this.default = function () {
     var buttonClickActions = function (e) {
         var quickPopup = ej.base.closest(e.target, '.e-quick-popup-wrapper');
         var getSlotData = function () {
-            var cellDetails = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
-            if (ej.base.isNullOrUndefined(cellDetails)) {
-                cellDetails = scheduleObj.getCellDetails(scheduleObj.activeCellsData.element);
-            }
             var subject = quickPopup.querySelector('#title').ej2_instances[0].value;
             var notes = quickPopup.querySelector('#notes').ej2_instances[0].value;
             var addObj = {};
             addObj.Id = scheduleObj.getEventMaxID();
             addObj.Subject = ej.base.isNullOrUndefined(subject) ? 'Add title' : subject;
-            addObj.StartTime = new Date(+cellDetails.startTime);
-            addObj.EndTime = new Date(+cellDetails.endTime);
-            addObj.IsAllDay = cellDetails.isAllDay;
+            addObj.StartTime = new Date(scheduleObj.activeCellsData.startTime);
+            addObj.EndTime = new Date(scheduleObj.activeCellsData.endTime);
+            addObj.IsAllDay = scheduleObj.activeCellsData.isAllDay;
             addObj.Description = ej.base.isNullOrUndefined(notes) ? 'Add notes' : notes;
             addObj.RoomId = quickPopup.querySelector('#eventType').ej2_instances[0].value;
             return addObj;
@@ -110,17 +106,20 @@ this.default = function () {
         },
         popupOpen: function (args) {
             if (args.type === 'QuickInfo' || args.type === 'ViewEventInfo') {
-                var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
-                titleObj.appendTo(args.element.querySelector('#title'));
-                var typeObj = new ej.dropdowns.DropDownList({
-                    dataSource: ej.base.extend([], roomData, null, true),
-                    placeholder: 'Choose Type',
-                    fields: { text: 'Name', value: 'Id' },
-                    index: 0
-                });
-                typeObj.appendTo(args.element.querySelector('#eventType'));
-                var notesObj = new ej.inputs.TextBox({ placeholder: 'Notes' });
-                notesObj.appendTo(args.element.querySelector('#notes'));
+                if (!args.target.classList.contains('e-appointment')) {
+                    var title = new ej.inputs.TextBox({ placeholder: 'Title' });
+                    title.appendTo(args.element.querySelector('#title'));
+                    title.focusIn();
+                    var typeObj = new ej.dropdowns.DropDownList({
+                        dataSource: ej.base.extend([], roomData, null, true),
+                        placeholder: 'Choose Type',
+                        fields: { text: 'Name', value: 'Id' },
+                        index: 0
+                    });
+                    typeObj.appendTo(args.element.querySelector('#eventType'));
+                    var notesObj = new ej.inputs.TextBox({ placeholder: 'Notes' });
+                    notesObj.appendTo(args.element.querySelector('#notes'));
+                }
 
                 var moreDetailsBtn = args.element.querySelector('#more-details');
                 if (moreDetailsBtn) {

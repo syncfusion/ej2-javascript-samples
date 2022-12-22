@@ -9,8 +9,7 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             child: 'subtasks',
-            segments: 'Segments',
-            dependency: 'Predecessor'
+            segments: 'Segments'
         },
         editSettings: {
             allowAdding: true,

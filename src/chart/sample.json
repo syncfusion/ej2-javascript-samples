@@ -6,6 +6,20 @@
     "ftName": "chart",
     "samples": [
         {
+            "url": "overview",
+            "name": "Overview",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the charts",
+            "category": "Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
             "url": "line",
             "name": "Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the line series.",
@@ -253,7 +267,7 @@
         },
         {
             "url": "area-negative-point",
-            "name": "Area - Negative Points","type":"new",
+            "name": "Area - Negative Points",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the area series chart with negative points.",
             "category": "Area Charts",
             "api": {
@@ -878,7 +892,7 @@
         },
         {
             "url": "semi-pie",
-            "name": "Semi Pie",
+            "name": "Semi Pie","type":"update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render semi-pie and doughnut charts.",
             "category": "Accumulation Charts",
             "api": {

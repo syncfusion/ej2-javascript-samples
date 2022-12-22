@@ -5,13 +5,14 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category', interval: 1, majorGridLines: { width: 0 }
+            valueType: 'Category', interval: 1, majorGridLines: { width: 0 },majorTickLines: {width : 0},
+            minorTickLines: {width: 0},
         },
         chartArea: { border: { width: 0 } },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            majorGridLines: { width: 0 },
-            majorTickLines: { width: 0 }, lineStyle: { width: 0 }, labelStyle: { color: 'transparent' }
+            title: 'Fruits Count',
+            majorTickLines: { width: 0 }, lineStyle: { width: 0 }
         },
         //Initializing Side by Side Placement
         enableSideBySidePlacement: false,
@@ -20,31 +21,32 @@ this.default = function () {
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Total',
                 dataSource: [{ x: 'Jamesh', y: 10, text: 'Total 10' },
-                    { x: 'Michael', y: 9, text: 'Total 9' }, { x: 'John', y: 11, text: 'Total 11' }],
+                { x: 'Michael', y: 9, text: 'Total 9' }, { x: 'John', y: 11, text: 'Total 11' }, { x: 'Jack', y: 8, text: 'Total 8' }, { x: 'Lucas', y: 10, text: 'Total 10' }],
                 columnWidth: 0.5,
-                marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } }
+                marker: { offSet: {x:-10 ,y:-10} , dataLabel: {  visible: true, name: 'text', position:  ej.base.Browser.isDevice ? 'Outer' : 'Top', font:  { fontWeight: '600', color:  ej.base.Browser.isDevice ? '' : '#ffffff'  } } }
             },
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Apple',
-                dataSource: [{ x: 'Jamesh', y: 5 }, { x: 'Michael', y: 4 }, { x: 'John', y: 5 }],
+                dataSource: [{ x: 'Jamesh', y: 5 }, { x: 'Michael', y: 4 }, { x: 'John', y: 5 }, { x: 'Jack', y: 5 }, { x: 'Lucas', y: 6 }],
                 columnWidth: 0.4,
-                marker: { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } }
+                marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: (ej.base.Browser.isDevice) ? {size: '8px', fontWeight: '600'} : { fontWeight: '600', color: '#ffffff' } } }
             }, {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Orange',
-                dataSource: [{ x: 'Jamesh', y: 4 }, { x: 'Michael', y: 3 }, { x: 'John', y: 4 }],
+                dataSource: [{ x: 'Jamesh', y: 4 }, { x: 'Michael', y: 3 }, { x: 'John', y: 4 }, { x: 'Jack', y: 2 }, { x: 'Lucas', y: 3 }],
                 columnWidth: 0.3,
-                marker: { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } }
+                marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: (ej.base.Browser.isDevice) ? {size: '8px', fontWeight: '600'} : { fontWeight: '600', color: '#ffffff' } } }
             },
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Grapes',
-                dataSource: [{ x: 'Jamesh', y: 1 }, { x: 'Michael', y: 2 }, { x: 'John', y: 2 }],
+                dataSource: [{ x: 'Jamesh', y: 1 }, { x: 'Michael', y: 2 }, { x: 'John', y: 2 }, { x: 'Jack', y: 1 }, { x: 'Lucas', y: 1 }],
                 columnWidth: 0.2,
-                marker: { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } }
+                marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: (ej.base.Browser.isDevice) ? {size: '8px', fontWeight: '600'} : { fontWeight: '600', color: '#ffffff' } } }
             }
         ],
         //Initializing Chart Title
         title: 'Fruit Consumption', tooltip: { enable: true, shared: true },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        legendSettings:{visible:true},
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

@@ -6,20 +6,15 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            title: 'Food',
-            interval: 1,
             majorGridLines: { width: 0 }
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelFormat: '{value}B',
+            labelFormat: '{value}%',
+            title: 'GDP (In Percentage)',
             edgeLabelPlacement: 'Shift',
-            majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
             lineStyle: { width: 0 },
-            labelStyle: {
-                color: 'transparent'
-            }
         },
         chartArea: {
             border: {
@@ -31,45 +26,30 @@ this.default = function () {
             {
                 type: 'Bar',
                 dataSource: [
-                    { x: 'Egg', y: 2.2 }, { x: 'Fish', y: 2.4 },
-                    { x: 'Misc', y: 3 }, { x: 'Tea', y: 3.1 }
+                    { x: 'Japan', y: 1.71 }, { x: 'France', y: 1.82 },
+                    { x: 'India', y: 6.68 }, { x: 'Germany', y: 2.22 }, { x: 'Italy', y: 1.50 }, { x: 'Canada', y: 3.05 }
                 ],
-                xName: 'x', width: 2,
-                yName: 'y', name: 'Imports', marker: {
-                    dataLabel: {
-                        visible: true,
-                        position: 'Top',
-                        font: {
-                            fontWeight: '600', color:'#ffffff'
-                        }
-                    }
-                }
+                xName: 'x', width: 2, name:'GDP' ,
+                yName: 'y', columnSpacing: 0.1
             },
             {
                 type: 'Bar',
                 dataSource: [
-                    { x: 'Egg', y: 1.2 }, { x: 'Fish', y: 1.3 },
-                    { x: 'Misc', y: 1.5 }, { x: 'Tea', y: 2.2 }
+                    { x: 'Japan', y: 6.02 }, { x: 'France', y: 3.19 },
+                    { x: 'India', y: 3.28 }, { x: 'Germany', y: 4.56 }, { x: 'Italy', y: 2.40 }, { x: 'Canada', y: 2.04 }
                 ],
-                xName: 'x', width: 2,
-                yName: 'y', name: 'Exports', marker: {
-                    dataLabel: {
-                        visible: true,
-                        position: 'Top',
-                        font: {
-                            fontWeight: '600', color:'#ffffff'
-                        }
-                    }
-                }
+                xName: 'x', width: 2,name: "Share in World's GDP",
+                yName: 'y',columnSpacing: 0.1
             }
         ],
         //Initializing Tooltip
         tooltip: {
             enable: true
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings: { enableHighlight :true },
         //Initializing Chart Title
-        title: 'UK Trade in Food Groups - 2015',
+        title: 'GDP by Country in 2017',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

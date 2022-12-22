@@ -2,6 +2,7 @@ this.default = function () {
     var isInitial = true;
     var grid = new ej.grids.Grid({
         dataSource: window.employeeDetails,
+        allowSorting: true,
         allowExcelExport: true,
         allowPdfExport: true,
         toolbar: ['ExcelExport', 'PdfExport', 'CsvExport'],

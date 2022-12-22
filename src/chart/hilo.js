@@ -41,7 +41,7 @@ this.renderChart = function (chartData) {
                     width: 0,
                 }
             },
-            width: ej.base.Browser.isDevice ? '100%' : '80%',
+            width: ej.base.Browser.isDevice ? '100%' : '75%',
              // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

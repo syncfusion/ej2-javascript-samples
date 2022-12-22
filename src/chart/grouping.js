@@ -6,32 +6,32 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                dataSource: [{ 'x': 'China', text: 'China: 26', y: 26 },
-                { 'x': 'Russia', text: 'Russia: 19', y: 19 },
-                { 'x': 'Germany', text: 'Germany: 17', y: 17 },
-                { 'x': 'Japan', text: 'Japan: 12', y: 12 },
-                { 'x': 'France', text: 'France: 10', y: 10 },
-                { 'x': 'South Korea', text: 'South Korea: 9', y: 9 },
-                { 'x': 'Great Britain', text: 'Great Britain: 27', y: 27 },
+                dataSource: [ { 'x': 'Australia', y: 26, text: 'Australia: 26' },
+                { 'x': 'Russia', y: 19, text: 'Russia: 19' },
+                { 'x': 'Germany', y: 17, text: 'Germany: 17' },
+                { 'x': 'Japan', y: 12, text: 'Japan: 12' },
+                { 'x': 'China', y: 10, text: 'China: 10' },
+                { 'x': 'South Korea', y: 9, text: 'South Korea: 9' },
+                { 'x': 'Great Britain', y: 27, text: 'Great Britain: 27' },
                 { 'x': 'Italy', y: 8, text: 'Italy: 8' },
-                { 'x': 'Australia', text: 'Australia: 8', y: 8 },
-                { 'x': 'Netherlands', text: 'Netherlands: 8', y: 8 },
-                { 'x': 'Hungary', text: 'Hungary: 8', y: 8 },
-                { 'x': 'Brazil', text: 'Brazil: 7', y: 7 },
-                { 'x': 'Spain', text: 'Spain: 7', y: 7 },
-                { 'x': 'Kenya', text: 'Kenya: 6', y: 6 },
+                { 'x': 'France', y: 8, text: 'France: 8' },
+                { 'x': 'Spain', y: 7, text: 'Spain: 7' },
+                { 'x': 'Hungary', y: 8, text: 'Hungary: 8' },
+                { 'x': 'Brazil', y: 7, text: 'Brazil: 7' },
+                { 'x': 'Netherlands', y: 8, text: 'Netherlands: 8' },
+                { 'x': 'Kenya', y: 6, text: 'Kenya: 6' },
                 ],
                 animation: { enable: true },
                 explode: true,
                 dataLabel: {
                     visible: true,
                     position: 'Outside',
-                    connectorStyle: { type: 'Line', length: '5%' },
+                    connectorStyle: { type: 'Curve', length: '20px' },
                     font: {
-                        size: '14px'
+                        fontWeight : '600'
                     }
                 },
-                radius: '70%', name: 'RIO',
+                radius: ej.base.Browser.isDevice ? '40%' : '70%', 
                 xName: 'x',
                 yName: 'y',
                 groupTo: '9',
@@ -54,9 +54,10 @@ this.default = function () {
             args.text = args.point.x + ' ' + args.point.y;
         },
         //Initializing Tooltip
-        tooltip: { enable: false },
+        tooltip: { enable: true ,format:"<b>${point.x}</b><br> Gold Medals: <b>${point.y}</b>" },
+        enableBorderOnMouseMove:false,
         //Initializing Title
-        title: 'RIO Olympics Gold',
+        title: 'Rio Olympic Gold Medals',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

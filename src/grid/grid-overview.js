@@ -37,7 +37,6 @@ this.default = function () {
             { field: 'CurrentSalary', headerText: 'Current Salary', format: "C2", textAlign: 'Right', width: '160' },
             { field: 'Address', headerText: 'Address', width: '240', clipMode: 'EllipsisWithTooltip' },
         ],
-        queryCellInfo: queryCellInfo,
         dataBound: startTimer,
         actionComplete: complete
     });
@@ -76,20 +75,29 @@ this.default = function () {
             }
         }
     }
-    window.trustTemp = function (e) {
-        if (e.Trustworthiness === "Select All") {
-            return '';
+    window.empDetails = function (e) {
+        var div = document.createElement('div');
+        var empImg = document.createElement('div');
+        empImg.className = 'empimg';
+        var span = document.createElement('span');
+        span.className = 'e-userimg';
+        if (e.EmployeeImg === 'usermale') {
+            span.classList.add('sf-icon-Male');
+        } else {
+            span.classList.add('sf-icon-FeMale');
         }
-        return '<img style="width: 31px; height: 24px" src="src/grid/images/' + e.Trustworthiness + '.png" /> <span id="Trusttext">' + e.Trustworthiness + '</span>';
+        empImg.appendChild(span);
+        var Emptext = document.createElement('span');
+        Emptext.id = 'Emptext';
+        Emptext.textContent = e.Employees;
+        div.appendChild(empImg);
+        div.appendChild(Emptext);
+        return div.outerHTML;
     };
     window.ratingDetail = function (e) {
-        var grid = document.querySelector(".e-grid").ej2_instances[0];
         var div = document.createElement('div');
         div.className = 'rating';
         var span;
-        if (e.Rating === "Select All") {
-            return '';
-        }
         for (var i = 0; i < 5; i++) {
             if (i < e.Rating) {
                 span = document.createElement('span');
@@ -103,64 +111,43 @@ this.default = function () {
         }
         return div.outerHTML;
     };
-    window.statusDetail = function (e) {
-        var grid = document.querySelector(".e-grid").ej2_instances[0];
+    window.statusDetail = function(e) {
         var div = document.createElement('div');
-        var span;
-        if (e.Status === "Select All") {
-            return 'Select All';
-        }
-        span = document.createElement('span');
-        if (e.Status === "Active") {
+        var span = document.createElement('span');
+        if (e.Status === 'Active') {
             span.className = 'statustxt e-activecolor';
-            span.textContent = "Active";
+            span.textContent = 'Active';
             div.className = 'statustemp e-activecolor';
-        }
-        if (e.Status === "Inactive") {
-            span = document.createElement('span');
+        } else {
             span.className = 'statustxt e-inactivecolor';
-            span.textContent = "Inactive";
+            span.textContent = 'Inactive';
             div.className = 'statustemp e-inactivecolor';
         }
         div.appendChild(span);
         return div.outerHTML;
     };
-    function queryCellInfo(args) {
-        if (args.column.field === 'Employees') {
-            if (args.data.EmployeeImg === 'usermale') {
-                args.cell.querySelector('.e-userimg').classList.add("sf-icon-Male");
-            } else {
-                args.cell.querySelector('.e-userimg').classList.add("sf-icon-FeMale");
-            }
+    window.progessDetail = function (e) {
+        var myProgress = document.createElement('div');
+        myProgress.id = 'myProgress';
+        myProgress.className = 'pbar';
+        var myBar = document.createElement('div');
+        myBar.id = 'myBar';
+        myBar.className = 'bar';
+        if (e.Status === 'Inactive') {
+            myBar.classList.add('progressdisable');
         }
-        if (args.column.field === 'Status') {
-            if (args.cell.textContent === "Active") {
-                args.cell.querySelector(".statustxt").classList.add("e-activecolor");
-                args.cell.querySelector(".statustemp").classList.add("e-activecolor");
-            }
-            if (args.cell.textContent === "Inactive") {
-                args.cell.querySelector(".statustxt").classList.add("e-inactivecolor");
-                args.cell.querySelector(".statustemp").classList.add("e-inactivecolor");
-            }
+        if (e.Software <= 20) {
+            e.Software = e.Software + 30;
         }
-        if (args.column.field === 'Rating') {
-            if (args.column.field === 'Rating') {
-                for (var i = 0; i < args.data.Rating; i++) {
-                    args.cell.querySelectorAll("span")[i].classList.add("checked");
-                }
-            }
-        }
-        if (args.column.field === "Software") {
-            if (args.data.Software <= 20) {
-                args.data.Software = args.data.Software + 30;
-            }
-            args.cell.querySelector(".bar").style.width = args.data.Software + "%";
-            args.cell.querySelector(".barlabel").textContent = args.data.Software + "%";           
-            if (args.data.Status === "Inactive") {
-                args.cell.querySelector(".bar").classList.add("progressdisable");
-            }
-        }
-    }
+        myBar.style.width = e[e.column.field] + '%';
+        var pbarlabel = document.createElement('div');
+        pbarlabel.id = 'pbarlabel';
+        pbarlabel.className = 'barlabel';
+        pbarlabel.textContent = e.Software + '%';
+        myBar.appendChild(pbarlabel);
+        myProgress.appendChild(myBar);
+        return myProgress.outerHTML;
+    };
     function startTimer(args) {
         clearTimeout(clrIntervalFun);
         clearInterval(intervalFun);

@@ -3,7 +3,6 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "type" : "update",
     "samples": [{
             "url": "tools",
             "name": "Overview",
@@ -26,7 +25,6 @@
             "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarClick", "appendTo", "getRange"], "QuickToolbarSettings": ["image"] }
         },
         {
-            "type" : "new",
             "url": "insert-media",
             "name": "Insert Media",
             "description": "This demo shows how to insert audio and video, Embed video, upload audio and video, and more in Insert Media.",
@@ -52,7 +50,6 @@
             "name": "Mention Integration",
             "description": "This demo explains the mention integration using the Rich Text Editor component with minimum configuration.",
             "category": "Rich Text Editor",
-            "type": "new",
             "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
         },
         {

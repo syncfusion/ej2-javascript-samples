@@ -7,36 +7,40 @@ this.default = function () {
         series: [
             {
                 dataSource: [
-                    { x: 'Australia', y: 53, text: 'AUS: 14%' },
-                    { x: 'China', y: 56, text: 'CHN: 15%' },
-                    { x: 'India', y: 61, text: 'IND: 16%' },
-                    { x: 'Japan', y: 13, text: 'JPN: 3%' },
-                    { x: 'South Africa', y: 79, text: 'ZAF: 21%' },
-                    { x: 'United Kingdom', y: 71, text: 'UK: 19%' },
-                    { x: 'United States', y: 45, text: 'USA: 12%' }
+                    { x: 'Chrome', y: 100, text: 'Chrome (100M)<br>40%', tooltipMappingName: '40%' },
+                    { x: 'UC Browser', y: 40, text: 'UC Browser (40M)<br>16%', tooltipMappingName: '16%' },
+                    { x: 'Opera', y: 30, text: 'Opera (30M)<br>12%', tooltipMappingName: '12%' },
+                    { x: 'Safari', y: 30, text: 'Safari (30M)<br>12%', tooltipMappingName: '12%' },
+                    { x: 'Firefox', y: 25, text: 'Firefox (25M)<br>10%', tooltipMappingName: '10%' },
+                    { x: 'Others', y: 25, text: 'Others (25M)<br>10%', tooltipMappingName: '10%' }
                 ],
-                xName: 'x',
+                xName: 'x',tooltipMappingName: 'tooltipMappingName',
                 yName: 'y',
                 startAngle: 270,
                 endAngle: 90,
-                radius: '90%', explode: true,
-                innerRadius: '40%', 
-                name: 'Agricultural',                
+                explode: true,
+                innerRadius: '40%',
+                radius: ej.base.Browser.isDevice ? '85%' : '100%',
                 dataLabel: {
-                    visible: true, position: 'Outside',
-                    connectorStyle: { length: '10%' }, name: 'text',
-                    font: { size: '14px' }
+                    visible: true, position: 'Inside',
+                    connectorStyle: { length: '10%' }, name: 'text', enableRotation:true,
+                    font: { fontWeight: '600', size: ej.base.Browser.isDevice ? '8px' : '11px' , color:'#ffffff'}
                 },
             }
         ],
         enableAnimation: false,
+        annotations: [{
+            content: ej.base.Browser.isDevice ? "<div style='font-Weight:700; font-size:11px;'>Browser<br>Market<br>Shares</div>" :"<div style='font-Weight:600; font-size:14px;'>Browser<br>Market<br>Shares</div>" ,
+            region:"Series",
+            x: ej.base.Browser.isDevice ? "52%" :"50%",
+            y:ej.base.Browser.isDevice ? "82%" :"85%"
+        }],
         //Initializing Tooltip
-        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.tooltip}</b>',header:"" },
         legendSettings: {
             visible: false,
         },
-        //Initializing Title
-        title: 'Agricultural Land Percentage',
+        enableBorderOnMouseMove:false,
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -47,34 +51,5 @@ this.default = function () {
            // custom code end
     });
     pie.appendTo('#semi-container');
-    document.getElementById('inner-radius').onpointermove = document.getElementById('inner-radius').ontouchmove =
-        document.getElementById('inner-radius').onchange = function (e) {
-            var innerradius = +document.getElementById('inner-radius').value;
-            pie.series[0].innerRadius = innerradius + '%';
-            document.getElementById('innerradius').innerHTML = (innerradius / 100).toFixed(2);
-            pie.series[0].animation.enable = false;
-            pie.removeSvg();
-            pie.refreshSeries();
-            pie.refreshChart();
-        };
-    document.getElementById('range-min').onpointermove = document.getElementById('range-min').ontouchmove =
-        document.getElementById('range-min').onchange = function (e) {
-            var rangeMin = (document.getElementById('range-min'));
-            pie.series[0].startAngle = parseFloat(rangeMin.value);
-            document.getElementById('startangle').innerHTML = rangeMin.value;
-            pie.series[0].animation.enable = false;
-            pie.removeSvg();
-            pie.refreshSeries();
-            pie.refreshChart();
-        };
-    document.getElementById('range-max').onpointermove = document.getElementById('range-max').ontouchmove =
-        document.getElementById('range-max').onchange = function (e) {
-            var rangeMax = (document.getElementById('range-max'));
-            pie.series[0].endAngle = parseFloat(rangeMax.value);
-            document.getElementById('endangle').innerHTML = rangeMax.value;
-            pie.series[0].animation.enable = false;
-            pie.removeSvg();
-            pie.refreshSeries();
-            pie.refreshChart();
-        };
+  
 };

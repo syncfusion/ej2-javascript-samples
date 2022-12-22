@@ -7,11 +7,12 @@ this.default = function () {
         primaryXAxis: {
             title: 'Countries', valueType: 'Category',
             interval: 1, labelIntersectAction: 'Rotate45',
-            majorGridLines: { width: 0 },
+            majorGridLines: { width: 0 }, majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Penetration', rangePadding: 'None',
+            rangePadding: 'None',title: 'Penetration',
             labelFormat: '{value}%', minimum: 0,
             lineStyle: { width: 0 },
             maximum: 75, interval: 15
@@ -79,7 +80,7 @@ this.default = function () {
             enable: true
         },
         legendSettings: { visible: false },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

@@ -78,6 +78,7 @@ this.default = function () {
         crosshair: { enable: true, lineType: 'Vertical' },
         //Initializing Chart Title
         title: 'Average Sales per Person',
+        width: ej.base.Browser ? '100' : '75%',
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

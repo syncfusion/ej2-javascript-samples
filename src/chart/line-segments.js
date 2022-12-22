@@ -17,24 +17,14 @@ this.default = function () {
 
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'DateTime',
-            labelFormat: 'y',
-            intervalType: 'Years',
-            edgeLabelPlacement: 'Shift',
-            majorGridLines: { width: 0 }
+             valueType: 'DateTime', minimum : new Date(1910, 0, 1), maximum : new Date(2010, 0, 1), majorGridLines: {width : 0},
+            edgeLabelPlacement: 'Shift', 
         },
 
         //Initializing Primary Y Axis
         primaryYAxis:
             {
-                labelFormat: '{value}mm',
-                rangePadding: 'None',
-                minimum: 200,
-                maximum: 800,
-                interval: 100,
-                lineStyle: { width: 0 },
-                majorTickLines: { width: 0 },
-                minorTickLines: { width: 0 }
+                labelFormat: '{value}mm', rangePadding: 'None', minimum: 200, maximum: 800, interval: 100, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minorTickLines: { width: 0 }
             },
         chartArea: {
             border: {
@@ -43,10 +33,22 @@ this.default = function () {
         },
         annotations: [
             {
-                content: '#templateWrap',
+                content: "<div style='color:green; font-weight:bold; font-size:14px'>Medium</div>",
                 region: 'Series',
-                x: '90%',
-                y: '12%'
+                x: ej.base.Browser.isDevice ? '21%' : '19%',
+                y: ej.base.Browser.isDevice ? '43%' : '47%'
+            },
+            {
+                content:  "<div style='color:blue; font-weight:bold;font-size:14px'>High</div>",
+                region: 'Series',
+                x: '69%',
+                y: '10%'
+            },
+            {
+                content: "<div style='color:red; font-weight:bold; font-size:14px'>Low</div>",
+                region: 'Series',
+                x: '95%',
+                y: '84%'
             }
         ],
         legendSettings: { visible: false },
@@ -69,12 +71,12 @@ this.default = function () {
         ],
 
         //Initializing Chart title
-        title: 'Annual Mean Rainfall for Australia',
+        title: 'Annual Mean Rainfall in Australia',
         //Initializing User Interaction Tooltip
         tooltip: {
-            enable: true, shared: true, enableAnimation : false
+            enable: true, shared: true, enableAnimation: false, header:'<b>Rainfall</b>', format: '${point.x} : <b>${point.y}'
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

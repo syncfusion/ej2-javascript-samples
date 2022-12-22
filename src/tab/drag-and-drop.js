@@ -133,14 +133,14 @@ function renderComponents() {
                     document.querySelector('#external').appendChild(tabContent);
                     content = tabContent.id;
                     renderGrid();
-                    document.querySelector('#external #Grid').classList.add('Grid');
+                    document.querySelector('#Grid').classList.add('Grid');
                     break;
                 case 'Chart':
                     tabContent = ej.base.createElement('div', { id: 'Chart' });
                     document.querySelector('#external').appendChild(tabContent);
                     content = tabContent.id;
                     renderChart();
-                    document.querySelector('#external #Chart').classList.add('Chart');
+                    document.querySelector('#Chart').classList.add('Chart');
                     break;
                 case 'Schedule':
                     tabContent = ej.base.createElement('div', { id: 'Schedule' });

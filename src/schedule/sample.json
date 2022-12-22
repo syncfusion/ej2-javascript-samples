@@ -14,9 +14,18 @@
             "hideOnDevice": true,
             "api": {
                 "Schedule": [
-                    "height",
                     "eventSettings",
-                    "selectedDate"
+                    "selectedDate",
+                    "cssClass",
+                    "Views",
+                    "timezone",
+                    "group",
+                    "resources",
+                    "dateHeaderTemplate",
+                    "timeScale",
+                    "firstDayOfWeek",
+                    "rowAutoHeight",
+                    "enableTooltip"
                 ]
             }
         },
@@ -194,7 +203,6 @@
             "name": "Virtual Scrolling ",
             "category": "Scrolling",
             "hideOnDevice": true,
-            "type": "update",
             "description": "This example illustrates how to achieve high performance in the JavaScript (ES5) Scheduler using virtual scrolling to load resources and events on demand.",
             "api": {
                 "Schedule": [
@@ -446,6 +454,7 @@
             "name": "Date-wise Grouping",
             "category": "Resource Grouping",
             "description": "This demo shows how to group multiple resources by date in the JS (ES5) Scheduler. The resource row is rendered under each date in the header.",
+            "type": "update",
             "api": {
                 "Schedule": [
                     "group",

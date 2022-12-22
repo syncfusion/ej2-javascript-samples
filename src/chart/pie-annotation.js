@@ -24,8 +24,8 @@ this.default = function () {
     ];
     var chart = new ej.charts.Chart({
         primaryXAxis: {
-            title: 'Years', valueType: 'Category', majorGridLines: { width: 0 }, minorGridLines: { width: 1 },
-            minorTickLines: { width: 1 }, interval: 1, labelIntersectAction: 'Rotate45',
+           valueType: 'Category', majorGridLines: { width: 0 }, minorGridLines: { width: 1 },
+            minorTickLines: { width: 0 }, interval: 1, labelIntersectAction: 'Rotate45',majorTickLines: {width : 0}
         },
         primaryYAxis: {
             title: 'Sales', lineStyle: { width: 0 }, minimum: 0, maximum: 700, interval: 100,
@@ -40,7 +40,7 @@ this.default = function () {
         ],
         chartArea: { border: { width: 0 } }, title: 'Mobile Game Market by Country',
         selectionMode: 'Cluster', selectedDataIndexes: [{ series: 0, point: 0 }],
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

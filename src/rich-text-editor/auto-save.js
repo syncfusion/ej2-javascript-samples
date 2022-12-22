@@ -31,7 +31,6 @@ this.default = function() {
         },
         saveInterval: 5000,
         created: create,
-        enablePersistence: true,
         change: updateStatus,
         placeholder: 'Start to type a content to save',
 

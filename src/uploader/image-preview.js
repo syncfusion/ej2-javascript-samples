@@ -25,6 +25,7 @@ this.default = function () {
             uploadObj.filesData = [];
             uploadObj.fileList = [];
             filesName = [];
+            uploadObj.element.value = '';
         }
     };
     document.getElementById('uploadbtn').onclick = function () {

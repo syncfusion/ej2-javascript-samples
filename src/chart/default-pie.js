@@ -6,35 +6,41 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                dataSource: [
-                    { 'x': 'Chrome', y: 37, text: '37%' }, { 'x': 'UC Browser', y: 17, text: '17%' },
-                    { 'x': 'iPhone', y: 19, text: '19%' },
-                    { 'x': 'Others', y: 4, text: '4%' }, { 'x': 'Opera', y: 11, text: '11%' },
-                    { 'x': 'Android', y: 12, text: '12%' }
-                ],
+                dataSource: ej.base.Browser.isDevice ?
+                    [{ 'x': 'Chrome', y: 59.28, text: 'Chrome: 59.28%' },
+                    { 'x': 'Safari', y: 4.73, text: 'Safari <br> 4.73%' },
+                    { 'x': 'Opera', y: 6.12, text: 'Opera: 6.12%' },
+                    { 'x': 'Edge', y: 7.48, text: 'Edge: 7.48%' },
+                    { 'x': 'Others', y: 22.39, text: 'Others: 22.39%' }] :
+                    [
+                        { 'x': 'Chrome', y: 59.28, text: 'Chrome: 59.28%' },
+                        { 'x': 'UC Browser', y: 4.37, text: 'UC Browser: 4.37%' },
+                        { 'x': 'Opera', y: 3.12, text: 'Opera: 3.12%' },
+                        { 'x': 'Sogou Explorer', y: 1.73, text: 'Sogou Explorer: 1.73%' },
+                        { 'x': 'QQ', y: 3.96, text: 'QQ: 3.96%' },
+                        { 'x': 'Safari', y: 4.73, text: 'Safari: 4.73%' },
+                        { 'x': 'Internet Explorer', y: 6.12, text: 'Internet Explorer: 6.12%' },
+                        { 'x': 'Edge', y: 7.48, text: 'Edge: 7.48%' },
+                        { 'x': 'Others', y: 9.57, text: 'Others: 9.57%' }
+                    ],
                 dataLabel: {
-                    visible: true,
-                    position: 'Inside', name: 'text',
-                    font: {
-                        fontWeight: '600'
-                    }
-                },
-                radius: '70%', xName: 'x',
-                yName: 'y', startAngle: 0,
-                endAngle: 0, innerRadius: '0%',
+                    visible: true, position: 'Outside', name: 'text', font: { fontWeight: '600' }, connectorStyle:{length : '20px', type: 'Curve'}
+                },radius: ej.base.Browser.isDevice ? '40%' : '70%',
+                xName: 'x', yName: 'y', startAngle: ej.base.Browser.isDevice ? 55 : 35,
                 explode: true, explodeOffset: '10%', explodeIndex: 0, name: 'Browser'
             }
         ],
         center: {x: '50%', y: '50%'},
         enableSmartLabels: true,
+        enableBorderOnMouseMove:false,
         enableAnimation: false,
         legendSettings: {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true, header: 'Browser', format: '${point.x}:<b> ${point.y}%<b>' },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"" },
         //Initializing Title
-        title: 'Mobile Browser Statistics',
+        title: 'Browser Market Share',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -45,76 +51,5 @@ this.default = function () {
          // custom code end
     });
     pie.appendTo('#pie-container');
-    function anglechange(value) {
-        pie.series[0].startAngle = +value;
-        pie.series[0].endAngle = +value;
-		pie.series[0].animation.enable = false;
-        document.getElementById('anglevalue').innerHTML = value.toString();
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('pieangle').onpointermove = document.getElementById('pieangle').ontouchmove =
-        document.getElementById('pieangle').onchange = function (e) {
-            anglechange(+document.getElementById('pieangle').value);
-        };
-    function radiuschange(value) {
-        pie.series[0].radius = value + '%';
-		pie.series[0].animation.enable = false;
-        document.getElementById('radius').innerHTML = (value / 100).toFixed(2);
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('pieradius').onpointermove = document.getElementById('pieradius').ontouchmove =
-        document.getElementById('pieradius').onchange = function (e) {
-            radiuschange(+document.getElementById('pieradius').value);
-        };
-    function exploderadius(value) {
-        pie.visibleSeries[0].explodeOffset = value + '%';
-        document.getElementById('exploderadius').innerHTML = (value / 100).toFixed(2);
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('pieexploderadius').onpointermove = document.getElementById('pieexploderadius').ontouchmove =
-        document.getElementById('pieexploderadius').onchange = function (e) {
-            exploderadius(+document.getElementById('pieexploderadius').value);
-        };
-    function explodeIndex(value) {
-        pie.visibleSeries[0].explodeIndex = +value;
-		pie.series[0].animation.enable = false;
-        document.getElementById('explodeindex').innerHTML = value.toString();
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('pieexplodeindex').onpointermove = document.getElementById('pieexplodeindex').ontouchmove =
-        document.getElementById('pieexplodeindex').onchange = function (e) {
-            explodeIndex(+document.getElementById('pieexplodeindex').value);
-        };
-    function piecenterx(value) {
-        pie.center.x = value + '%';
-		pie.series[0].animation.enable = false;
-        document.getElementById('xvalue').innerHTML = value + '%';
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('x').onpointermove = document.getElementById('x').ontouchmove =
-        document.getElementById('x').onchange = function (e) {
-            piecenterx(+document.getElementById('x').value);
-        };
-    function piecentery(value) {
-        pie.center.y = value + '%';
-		pie.series[0].animation.enable = false;
-        document.getElementById('yvalue').innerHTML = value + '%';
-        pie.removeSvg();
-        pie.refreshSeries();
-        pie.refreshChart();
-    }
-    document.getElementById('y').onpointermove = document.getElementById('y').ontouchmove =
-        document.getElementById('y').onchange = function (e) {
-            piecentery(+document.getElementById('y').value);
-        };
+  
 };

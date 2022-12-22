@@ -74,8 +74,7 @@ this.default = function () {
                 description: { title: 'Reason', name: 'Description' }
             }
         },
-        actionBegin: onActionBegin,
-        drag: onItemDrag
+        actionBegin: onActionBegin
     });
     scheduleObj.appendTo('#Schedule');
 
@@ -84,7 +83,9 @@ this.default = function () {
         fields: { dataSource: waitingList, id: 'Id', text: 'Name' },
         allowDragAndDrop: true,
         nodeDragStop: onTreeDragStop,
-        nodeDragging: onItemDrag,
+        nodeDragging: onTreeDrag,
+        nodeDragStart: onTreeDragStart,
+        nodeSelecting: onItemSelecting,
         nodeTemplate: '#treeTemplate',
         cssClass: 'treeview-external-drag',
         dragArea: ".content-wrapper"
@@ -94,23 +95,18 @@ this.default = function () {
     var isTreeItemDropped = false;
     var draggedItemId = '';
 
-    function onItemDrag(event) {
+    function onItemSelecting(args) {
+        args.cancel = true;
+    } 
+
+    function onTreeDrag(event) {
         if (scheduleObj.isAdaptive) {
             var classElement = scheduleObj.element.querySelector('.e-device-hover');
             if (classElement) {
                 classElement.classList.remove('e-device-hover');
             }
-            if (event.event.target.classList.contains('e-work-cells')) {
-                ej.base.addClass([event.event.target], 'e-device-hover');
-            }
-        }
-        if (document.body.style.cursor === 'not-allowed') {
-            document.body.style.cursor = '';
-        }
-        if (event.name == 'nodeDragging') {
-            var dragElementIcon = document.querySelectorAll('.e-drag-item .e-icon-expandable');
-            for (var i = 0; i < dragElementIcon.length; i++) {
-                dragElementIcon[i].style.display = 'none';
+            if (event.target.classList.contains('e-work-cells')) {
+                ej.base.addClass([event.target], 'e-device-hover');
             }
         }
     }
@@ -158,5 +154,9 @@ this.default = function () {
                 }
             }
         }
+        document.body.classList.remove('e-disble-not-allowed');
+    }
+    function onTreeDragStart() {
+        document.body.classList.add('e-disble-not-allowed');
     }
 };

@@ -14,6 +14,7 @@ this.default = function () {
         function onFileSelect(args) {
             var inputElement = document.getElementById('upload');
             inputElement.value = args.filesData[0].name;
+            formObj.validate('upload');
         }
         var options = {
             customPlacement: function (inputElement, errorElement) {
@@ -53,7 +54,8 @@ this.default = function () {
             }
         });
         confirm.appendTo('#confirmationDialog');
-        document.getElementById('submit-btn').onclick = function () {
+        document.getElementById('submit-btn').onclick = function (args) {
             onFormSubmit();
+            args.preventDefault();
         };
 };

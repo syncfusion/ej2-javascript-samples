@@ -13,6 +13,7 @@
         { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion Essential JS2 Tree Grid control looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
          { "url": "adaptive","name": "Adaptive Layout", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"] }
          },
+		 { "url": "loading-animation","name": "Loading Animation", "type": "new", "category": "Tree Grid","description":"This demo for Essential JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
        
          {  
             "url":"localdata", "name": "Local Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","childMapping","treeColumnIndex","allowPaging","columns"] },

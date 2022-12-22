@@ -2,7 +2,6 @@
     "name": "Carousel",
     "directory": "carousel",
     "category": "Navigation",
-    "type": "update",
     "ftName": "carousel",
     "samples": [
         {
@@ -54,7 +53,6 @@
             "url": "partial-visible",
             "name": "Partial Visible",
             "category": "Carousel",
-            "type": "new",
             "api": {
                 "Carousel": [
                     "items",

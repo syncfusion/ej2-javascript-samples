@@ -6,10 +6,11 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            minimum: -0.5,
-            maximum: 6.5,
-            labelPlacement: 'OnTicks',
+            labelFormat: 'y',
             majorGridLines: { width: 0 },
+            edgeLabelPlacement: 'Shift',
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         //Initializing Primary Y Axis
         primaryYAxis:
@@ -35,10 +36,10 @@ this.default = function () {
                 dragSettings: {enable: true},
                 type: 'Column',
                 dataSource: [
-                    { x: '2005', y: 21 }, { x: '2006', y: 60 },
-                    { x: '2007', y: 45 }, { x: '2008', y: 50 },
-                    { x: '2009', y: 74 }, { x: '2010', y: 65 },
-                    { x: '2011', y: 85 },
+                    { x: 2005, y: 21 }, { x: 2006, y: 60 },
+                    { x: 2007, y: 45 }, { x: 2008, y: 50 },
+                    { x: 2009, y: 74 }, { x: 2010, y: 65 },
+                    { x: 2011, y: 85 }
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
@@ -50,10 +51,10 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: '2005', y: 21 }, { x: '2006', y: 22 },
-                    { x: '2007', y: 36 }, { x: '2008', y: 34 },
-                    { x: '2009', y: 54 }, { x: '2010', y: 55 },
-                    { x: '2011', y: 60 }
+                    { x: 2005, y: 21 }, { x: 2006, y: 22 },
+                    { x: 2007, y: 36 }, { x: 2008, y: 34 },
+                    { x: 2009, y: 54 }, { x: 2010, y: 55 },
+                    { x: 2011, y: 60 }
                 ],
                 dragSettings: {enable: true},
                 xName: 'x', width: 2, marker: {
@@ -71,7 +72,7 @@ this.default = function () {
         tooltip: {
             enable: true
         },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

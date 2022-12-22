@@ -3,7 +3,6 @@
     "directory": "mention",
     "category": "Dropdowns",
     "ftName": "mention",
-    "type":"preview",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "description": "This example demonstrates the default functionalities of Syncfusion TypeScript Mention component with minimum configuration.", "category": "Mention", "api": { "Mention": ["dataSource", "fields"] } },
         { "url": "multiple-list", "name": "Multiple List", "description": "This example demonstrates the multiple list functionalities of Syncfusion TypeScript Mention component with minimum configuration.", "category": "Mention", "api": { "Mention": ["mentionChar", "dataSource", "fields", "popupWidth", "query", "suggestionCount", "allowSpaces"] } },

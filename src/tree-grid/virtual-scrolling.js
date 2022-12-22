@@ -14,6 +14,7 @@ this.default = function () {
         enableVirtualization: true,
         height: 400,
         treeColumnIndex: 1,
+        enableVirtualMaskRow: true,
         childMapping: 'Crew',
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row', newRowPosition: 'Child' },
         toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Indent', 'Outdent'],

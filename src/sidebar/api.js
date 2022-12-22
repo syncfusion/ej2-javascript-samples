@@ -67,10 +67,16 @@ this.default = function () {
     //click event for sidebar close
     document.getElementById('close').onclick = function() {
         sidebarObj.hide();
+        if (sidebarObj.showBackdrop == true){
+            sidebarObj.showBackdrop = false;
+        }
     };
     //click event for sidebar close
     document.getElementById('togglesidebar').onclick = function() {
         sidebarObj.toggle();
+        if (backDropElement.content == "True") {
+            sidebarObj.showBackdrop = true;
+        }
     };
     function BackBtnClick() {
         if (backDropElement.content == "True") {

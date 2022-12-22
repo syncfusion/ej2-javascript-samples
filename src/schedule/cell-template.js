@@ -1,4 +1,5 @@
 this.default = function () {
+    var data = new ej.base.extend([], null, true);
     window.getCellContent = function (date) {
         if (date.getMonth() === 10 && date.getDate() === 23) {
             return '<img src="src/schedule/images/thanksgiving-day.svg" /><div class="caption">Thanksgiving day</div>';
@@ -25,6 +26,7 @@ this.default = function () {
         cellTemplate: '${if(type === "monthCells")}<div class="templatewrap">${getCellContent(data.date)}</div>${/if}',
         views: ['Month'],
         currentView: 'Month',
+        eventSettings: { dataSource: data },
         selectedDate: new Date(2021, 11, 15)
     });
     scheduleObj.appendTo('#Schedule');

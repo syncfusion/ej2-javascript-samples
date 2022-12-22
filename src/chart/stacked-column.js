@@ -16,16 +16,13 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Sales',
-            minimum: 0,
-            maximum: 500,
-            interval: 100,
+            title: 'Vehicles Production (In Millions)',
             lineStyle: { width: 0 },
-            minorGridLines: { width: 1 },
-            minorTickLines: { width: 0 },
             majorTickLines: { width: 0 },
             majorGridLines: { width: 1 },
-            labelFormat: '{value}B',
+            minorGridLines: { width: 1 },
+            minorTickLines: { width: 0 },
+            labelFormat: '{value}',
         },
         chartArea: { border: { width: 0 } },
         //Initializing Chart Series
@@ -33,61 +30,69 @@ this.default = function () {
             {
                 type: 'StackingColumn',
                 dataSource: [
-                    { x: '2014', y: 111.1 },
-                    { x: '2015', y: 127.3 },
-                    { x: '2016', y: 143.4 },
-                    { x: '2017', y: 159.9 }
-                ],
+                    { x: '2013', y: 9628912 },
+                    { x: '2014', y: 9609326 },
+                    { x: '2015', y: 7485587 },
+                    { x: '2016', y: 7793066 },
+                    { x: '2017', y: 6856880 }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'UK'
+                yName: 'y', name: 'General Motors', columnWidth:0.6 , border:{width:1,color:"white"}
             },
             {
                 type: 'StackingColumn',
                 dataSource: [
-                    { x: '2014', y: 76.9 },
-                    { x: '2015', y: 99.5 },
-                    { x: '2016', y: 121.7 },
-                    { x: '2017', y: 142.5 }
-                ],
+                    { x: '2013', y: 4298390 },
+                    { x: '2014', y: 4513769 },
+                    { x: '2015', y: 4543838 },
+                    { x: '2016', y: 4999266 },
+                    { x: '2017', y: 5235842 }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'Germany'
+                yName: 'y', name: 'Honda', columnWidth:0.6 , border:{width:1,color:"white"}
             },
             {
                 type: 'StackingColumn',
                 dataSource: [
-                    { x: '2014', y: 66.1 },
-                    { x: '2015', y: 79.3 },
-                    { x: '2016', y: 91.3 },
-                    { x: '2017', y: 102.4 }
-                ],
+                    { x: '2013', y: 2842133 },
+                    { x: '2014', y: 3016710 },
+                    { x: '2015', y: 3034081 },
+                    { x: '2016', y: 2945295 },
+                    { x: '2017', y: 3302336 }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'France'
+                yName: 'y', name: 'Suzuki', columnWidth:0.6 , border:{width:1,color:"white"}
+
             },
             {
                 type: 'StackingColumn',
                 dataSource: [
-                    { x: '2014', y: 34.1 },
-                    { x: '2015', y: 38.2 },
-                    { x: '2016', y: 44.0 },
-                    { x: '2017', y: 51.6 }
-                ],
+                    { x: '2013', y: 2006366  },
+                    { x: '2014', y: 2165566  },
+                    { x: '2015', y: 2279503  },
+                    { x: '2016', y: 2359756  },
+                    { x: '2017', y: 2505741  }],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'Italy'
+                yName: 'y', name: 'BMW', columnWidth:0.6 , border:{width:1,color:"white"}
+
             }
         ],
         //Initializing Tooltip
         tooltip: {
             enable: true
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
-        title: 'Mobile Game Market by Country',
+        title: 'Motor Vehicle Production by Manufacturer',
+        legendSettings: {
+            enableHighlight :true
+        },
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        },
+        axisLabelRender: function (args) {
+            args.text = args.text.replace("0000000", "0M").replace("000000", "M");
         }
            // custom code end
     });

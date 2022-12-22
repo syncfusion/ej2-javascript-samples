@@ -58,7 +58,7 @@ this.renderChartATR = function (chartData) {
             crosshair: { enable: true, lineType: 'Vertical' },
             chartArea: { border: { width: 0 } },
             title: 'AAPL 2012-2017',
-            width: ej.base.Browser.isDevice ? '100%' : '80%',
+            width: ej.base.Browser.isDevice ? '100%' : '75%',
              // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

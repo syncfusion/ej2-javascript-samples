@@ -23,6 +23,7 @@ this.default = function () {
     ];
 
     var radialSetting = { offset:'70px' };
+    var radialSetting1 = { offset: '110px' };
     
      var topLeft = new  ej.buttons.SpeedDial(
         {
@@ -30,6 +31,7 @@ this.default = function () {
         items:items,
         target: '#target',
         cssClass:"e-success",
+        radialSettings:radialSetting1,
         position:'TopLeft',
         mode:'Radial'
         });
@@ -53,6 +55,7 @@ this.default = function () {
         items:items,
         target: '#target',
         cssClass:"e-success",
+        radialSettings:radialSetting1,
         position:'TopRight',
         mode:'Radial'
         });
@@ -99,6 +102,7 @@ this.default = function () {
         items:items,
         target: '#target',
         cssClass:"e-success",
+        radialSettings:radialSetting1,
         position:'BottomLeft',
         mode:'Radial'
         });
@@ -122,6 +126,7 @@ this.default = function () {
         items:items,
         target: '#target',
         cssClass:"e-success",
+        radialSettings:radialSetting1,
         position:'BottomRight',
         mode:'Radial'
         });

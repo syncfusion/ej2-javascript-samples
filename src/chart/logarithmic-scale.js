@@ -5,7 +5,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            labelFormat: 'y',
+            labelFormat: 'y',interval:2,
             valueType: 'DateTime',
             edgeLabelPlacement: 'Shift'
         },
@@ -19,7 +19,6 @@ this.default = function () {
             minimum: 0,
             maximum: 100000,
             interval: 1,
-            title: ej.base.Browser.isDevice ? '' : 'Profit',
             labelFormat: '${value}'
         },
         //Initializing Chart Series
@@ -50,7 +49,7 @@ this.default = function () {
         title: 'Product X Growth [1995-2005]', legendSettings: { visible: false },
         //Initializing Tooltip
         tooltip: { enable: true },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var logTheme = location.hash.split('/')[1];

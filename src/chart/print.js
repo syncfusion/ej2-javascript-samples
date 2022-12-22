@@ -39,9 +39,10 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Manager',
             valueType: 'Category',
-            majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 },
+            majorTickLines: {width : 0},
+            minorTickLines: {width: 0}
         },
         chartArea: {
             border: {
@@ -52,9 +53,11 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             title: 'Sales',
-            minimum: 0,
+            minimum: 0,labelFormat:'${value}',
             maximum: 20000,
-            majorGridLines: { width: 0 }
+            lineStyle: { width: 0 },
+            minorTickLines: { width: 0 },
+            majorTickLines: { width: 0 },
         },
         //Initializing Chart Series
         series: [

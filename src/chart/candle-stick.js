@@ -63,7 +63,7 @@
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
              // custom code end
-            width: ej.base.Browser.isDevice ? '100%' : '80%', chartArea: { border: { width: 0 } },
+            width: ej.base.Browser.isDevice ? '100%' : '75%', chartArea: { border: { width: 0 } },
             crosshair: { enable: true, lineType: 'Vertical' }
         });
         chart.appendTo('#container');

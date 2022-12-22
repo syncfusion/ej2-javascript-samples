@@ -5,12 +5,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category',
-            interval: 1,
-            labelIntersectAction: 'Rotate90',
-            lineStyle: { width: 0 },
-            majorTickLines: { width: 0 },
-            minorTickLines: { width: 0 }
+            interval: 4, minimum: 2000, maximum: 2016, labelIntersectAction: 'Rotate90', minorTickLines: { width: 0 }, title:'Years'
         },
         chartArea: {
             border: {
@@ -20,51 +15,33 @@ this.default = function () {
         isTransposed: true,
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelFormat: '{value}°C',
-            majorGridLines: { width: 0 }
+            labelFormat: '{value}M', minimum: 0, title: 'Sales (In Millions)', maximum: 25, interval: 5,edgeLabelPlacement: 'Shift',
         },
         //Initializing Chart Series
         series: [
             {
                 type: 'Spline',
                 dataSource: [
-                    { x: 'Jan', y: -1 }, { x: 'Mar', y: 12 },
-                    { x: 'Apr', y: 25 },
-                    { x: 'Jun', y: 31 },
-                    { x: 'Aug', y: 26 }, { x: 'Oct', y: 14 },
-                    { x: 'Dec', y: 8 },
+                    { Month: 2000, LDN_Temperature: -1, FR_Temperature: 10 },{ Month: 2002, LDN_Temperature: -1, FR_Temperature: 7 },{ Month: 2004, LDN_Temperature: 25, FR_Temperature: 13 },
+                    { Month: 2005, LDN_Temperature: 31, FR_Temperature: 16 },{ Month: 2007, LDN_Temperature: 14, FR_Temperature: 11 },{ Month: 2010, LDN_Temperature: 8, FR_Temperature: 10 },
+                    { Month: 2011, LDN_Temperature: 8, FR_Temperature: 15 },{ Month: 2013, LDN_Temperature: 8, FR_Temperature: 20 },{ Month: 2014, LDN_Temperature: 8, FR_Temperature: 17 },
+                    { Month: 2015, LDN_Temperature: 8, FR_Temperature: 5 }
                 ],
-                xName: 'x', width: 2, marker: {
-                    visible: true,
-                    width: 10,
-                    height: 10
-                },
-                yName: 'y', name: 'London',
-            },
-            {
-                type: 'Spline',
-                dataSource: [
-                    { x: 'Jan', y: 7 }, { x: 'Mar', y: 2 },
-                    { x: 'Apr', y: 13 },
-                    { x: 'Jun', y: 21 },
-                    { x: 'Aug', y: 26 }, { x: 'Oct', y: 10 },
-                    { x: 'Dec', y: 0 },
-                ],
-                xName: 'x', width: 2, marker: {
-                    visible: true,
-                    width: 10,
-                    height: 10
-                },
-                yName: 'y', name: 'France',
+                width:2,
+                marker:{ visible: true, width: 7, height: 7, isFilled: true },
+                xName: 'Month',
+                yName: 'FR_Temperature',
+                name: 'Rate'
             }
         ],
         //Initializing Chart Title
-        title: 'Climate Graph - 2012',
+        title: 'Music Album Sales',
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true , shared:true, header:'<b>Album Sale</b>', format:'${point.x}: <b>${point.y}</b>'
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
+        legendSettings:{visible:false},
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

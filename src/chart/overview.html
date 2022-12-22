@@ -1,0 +1,81 @@
+<div class="control-section">
+
+    <div id="defaultLayout">
+    </div>
+ 
+    <div id="headerTemplate">
+        <span id="close" class="e-template-icon e-clear-icon"></span>
+    </div>
+    <div id="content"></div>
+</div>
+
+<div id="modalDialog"></div>
+<script id="bodycontent" type="template">
+    <div class="panel-content">
+        Content Area
+    </div>
+</script>
+<script id="headercontent" type="template">
+    <div>
+        <div class="header-border"></div>
+        <span id="close" class="e-template-icon e-clear-icon"></span>
+        <!-- <span class="e-template-icon menu default"></span> -->
+    </div>
+</script>
+<div id="action-description">
+    <p>
+        This sample shows an overview of <a target="_blank" href="https://www.syncfusion.com/javascript-ui-controls/js-charts">Charts</a> that allows users to visualize data easily and take decisions based on it. There are different types of charts to create feature rich apps.
+    </p>
+</div>
+<div id="description">
+   <p>
+     Chart is a well-crafted charting component to visualize data.In this example, you will see how to render and configure line, column, and pie charts with different features such as highlight, legend, tooltip, and annotation . The Chart uses <code>SfDataManager</code>, which supports both RESTful JSON data services binding and IEnumerable binding.
+    </p>
+    <br>
+   <p>
+    More information on the Chart types can be found in this
+    <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/chart-types/">documentation section</a>.
+    </p>
+</div>
+<style>
+   .e-dashboardlayout {
+  padding: 20px;
+  z-index: 0;
+}
+.e-panel {
+  cursor: auto !important;
+}
+.e-panel-header{
+  border: none !important;
+  height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.template{
+  height: 100%;
+  width: 100%;
+}
+
+#control-container {
+    padding: 0px !important;
+}
+#gradient-chart stop {
+    stop-color: #2485FA;        
+}
+#gradient-chart1 stop{
+    stop-color: #FEC200;
+} 
+.ellipse[id*=_Trackball_1] {
+  stroke-width: 1 !important;
+}
+.e-chart-focused:focus {
+  outline: none !important;
+}
+.title{
+  font-size: 15px;
+  font-weight: bold;
+  color: #737373;
+}
+
+</style>

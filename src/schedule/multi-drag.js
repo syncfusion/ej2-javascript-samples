@@ -3,7 +3,7 @@ this.default = function () {
     var scheduleOptions = {
         width: '100%',
         height: '650px',
-        selectedDate: new Date(2021, 3, 4),
+        selectedDate: new Date(2023, 0, 4),
         views: ['Month', 'TimelineMonth'],
         currentView: 'Month',
         allowMultiDrag: true,

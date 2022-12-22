@@ -42,7 +42,7 @@ this.renderChartBollinger = function (chartData) {
                 mode: 'XY',
                 enablePan: true
             },
-            width: ej.base.Browser.isDevice ? '100%' : '80%',
+            width: ej.base.Browser.isDevice ? '100%' : '75%',
             title: 'AAPL - 2012-2017',
              // custom code start
             load: function (args) {

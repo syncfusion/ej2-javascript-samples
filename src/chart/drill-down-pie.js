@@ -14,8 +14,8 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                type: 'Pie', dataSource: suvs, xName: 'x', yName: 'y',
-                dataLabel: { visible: true, position: 'Outside' }, innerRadius: '30%',
+                type: 'Pie', dataSource: suvs, xName: 'x', yName: 'y',radius: ej.base.Browser.isDevice ? '90%' : '80%',
+                dataLabel: { visible: true, position: ej.base.Browser.isDevice ? 'Inside' : 'Outside', enableRotation:true , connectorStyle: { type: 'Curve',length: '20px'}}, innerRadius: '30%'
             }
         ], textRender: function (args) {
             args.text = args.point.x + ' ' + args.point.y + ' %';
@@ -39,8 +39,10 @@ this.default = function () {
             }
         },
         legendSettings: { visible: false }, enableSmartLabels: true,
+      
         //Initializing Tooltip
         tooltip: { enable: false, format: '${point.x} <br> ${point.y} %' },
+        enableBorderOnMouseMove:false,
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -100,13 +102,13 @@ this.default = function () {
             {
                 dataSource: [{ x: 'SUV', y: 25 }, { x: 'Car', y: 37 }, { x: 'Pickup', y: 15 }, { x: 'Minivan', y: 23 }],
                 dataLabel: {
-                    visible: true, position: 'Inside', connectorStyle: { type: 'Curve', length: '10%' },
+                    visible: true, position: 'Inside', enableRotation: false, 
                     font: { fontWeight: '600', color: 'white' }
                 },
-                radius: '70%', xName: 'x', yName: 'y', startAngle: 0, endAngle: 360, innerRadius: '0%',
+                radius: '70%', xName: 'x', yName: 'y', startAngle: 0, endAngle: 360, innerRadius: '0%', 
                 explode: false
             }
-        ], enableSmartLabels: false, legendSettings: { visible: false }, chartMouseClick: pointClick,
+        ], enableSmartLabels: false,enableBorderOnMouseMove:false,   legendSettings: { visible: false }, chartMouseClick: pointClick,
         textRender: function (args) { args.text = args.point.x + ' ' + args.point.y + ' %'; },
         tooltip: { enable: false, format: '${point.x} <br> ${point.y} %' },
         title: 'Automobile Sales by Category',

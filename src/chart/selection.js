@@ -4,10 +4,11 @@
 this.default = function () {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
-            title: 'Countries',
             valueType: 'Category',
             interval: 1,
-            labelIntersectAction: 'Rotate90'
+            labelIntersectAction: 'Rotate90',
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 }
         },
         primaryYAxis: {
             title: 'Distribution',

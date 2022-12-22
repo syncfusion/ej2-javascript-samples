@@ -5,13 +5,12 @@
 </div>
 <div id="action-description">
     <p>
-        This sample illustrates datalabel template support in the chart. In this sample, images are placed as datalabel by means of templates.
+        This sample illustrates data label template support in charts. Each data label for each point is rendered using the template.
     </p>
 </div>
 <div id="description">
     <p>
-        Label content can be formatted by using the template option in dataLabel. Inside the template, you can add the placeholder
-        text ${point.y}M to display corresponding data points value.
+        The Javascript Charts data label template feature allows you to change the appearance and behavior of the data label for each data point using the <code>Template</code> property.
     </p>
     <br>
     <p>
@@ -38,227 +37,227 @@
         text-align: center;
     }
 </style>
-<script id='Male-Fabric' type="text/x-template">
+<script id='Boys-Fabric' type="text/x-template">
     <div id='templateWrap' style="background-color:#4472c4;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px; padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px; padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Fabric' type="text/x-template">
+<script id='Girls-Fabric' type="text/x-template">
     <div id='templateWrap' style="background-color:#ed7d31;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Material' type="text/x-template">
+<script id='Boys-Material' type="text/x-template">
     <div id='templateWrap' style="background-color:#00bdae;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Material' type="text/x-template">
+<script id='Girls-Material' type="text/x-template">
     <div id='templateWrap' style="background-color:#404041;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Bootstrap' type="text/x-template">
+<script id='Boys-Bootstrap' type="text/x-template">
     <div id='templateWrap' style="background-color:#a16ee5;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Bootstrap' type="text/x-template">
+<script id='Girls-Bootstrap' type="text/x-template">
     <div id='templateWrap' style="background-color:#f7ce69;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Bootstrap4' type="text/x-template">
+<script id='Boys-Bootstrap4' type="text/x-template">
     <div id='templateWrap' style="background-color:#a16ee5;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Bootstrap4' type="text/x-template">
+<script id='Girls-Bootstrap4' type="text/x-template">
     <div id='templateWrap' style="background-color:#f7ce69;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-HighContrast' type="text/x-template">
+<script id='Boys-HighContrast' type="text/x-template">
     <div id='templateWrap' style="background-color:#79ECE4;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-HighContrast' type="text/x-template">
+<script id='Girls-HighContrast' type="text/x-template">
     <div id='templateWrap' style="background-color:#E98272;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Tailwind' type="text/x-template">
+<script id='Boys-Tailwind' type="text/x-template">
     <div id='templateWrap' style="background-color:#5A61F6;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Tailwind' type="text/x-template">
+<script id='Girls-Tailwind' type="text/x-template">
     <div id='templateWrap' style="background-color:#65A30D;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Bootstrap5' type="text/x-template">
+<script id='Boys-Bootstrap5' type="text/x-template">
     <div id='templateWrap' style="background-color:#262E0B;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Bootstrap5' type="text/x-template">
+<script id='Girls-Bootstrap5' type="text/x-template">
     <div id='templateWrap' style="background-color:#668E1F;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-MaterialDark' type="text/x-template">
+<script id='Boys-MaterialDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#00bdae;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-MaterialDark' type="text/x-template">
+<script id='Girls-MaterialDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#404041;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-FabricDark' type="text/x-template">
+<script id='Boys-FabricDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#4472c4;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-FabricDark' type="text/x-template">
+<script id='Girls-FabricDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#ed7d31;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-BootstrapDark' type="text/x-template">
+<script id='Boys-BootstrapDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#a16ee5;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-BootstrapDark' type="text/x-template">
+<script id='Girls-BootstrapDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#f7ce69;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-TailwindDark' type="text/x-template">
+<script id='Boys-TailwindDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#8B5CF6;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-TailwindDark' type="text/x-template">
+<script id='Girls-TailwindDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#22D3EE;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Bootstrap5Dark' type="text/x-template">
+<script id='Boys-Bootstrap5Dark' type="text/x-template">
     <div id='templateWrap' style="background-color:#262E0B;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Bootstrap5Dark' type="text/x-template">
+<script id='Girls-Bootstrap5Dark' type="text/x-template">
     <div id='templateWrap' style="background-color:#668E1F;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-Fluent' type="text/x-template">
+<script id='Boys-Fluent' type="text/x-template">
     <div id='templateWrap' style="background-color:#614570;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-Fluent' type="text/x-template">
+<script id='Girls-Fluent' type="text/x-template">
     <div id='templateWrap' style="background-color:#4C6FB1;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Male-FluentDark' type="text/x-template">
+<script id='Boys-FluentDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#8AB113;border-radius: 3px;">
         <img src='src/chart/images/male.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>
-<script id='Female-FluentDark' type="text/x-template">
+<script id='Girls-FluentDark' type="text/x-template">
     <div id='templateWrap' style="background-color:#2A72D5;border-radius: 3px;">
         <img src='src/chart/images/female.png' />
-        <div class='des' style="color:white; font-family:Roboto; font-style: medium; fontp-size:14px;padding-right:6px">
-            <span>${point.y}M </span>
+        <div class='des' style="color:white; font-family:Roboto; font-style: medium; font-size:14px;padding-right:6px">
+            <span>${point.y} </span>
         </div>
     </div>
 </script>

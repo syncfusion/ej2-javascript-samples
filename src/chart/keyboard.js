@@ -77,9 +77,8 @@ window.default = function () {
             labelStyle: {
                 size: "0px"
             },
-            majorTickLines: {
-                width: 0
-            }
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 },
         },
         primaryYAxis: {
             title: "Sales in Percentage",
@@ -200,7 +199,7 @@ window.default = function () {
         tooltip: {
             enable: true,
         },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendClick: function (args) {
             seriesIndex = 0;
             getStriplineValues(args.series.name);

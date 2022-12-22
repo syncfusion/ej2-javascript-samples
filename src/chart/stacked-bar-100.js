@@ -12,10 +12,14 @@ this.default = function () {
         primaryXAxis: {
             valueType: 'Category',
             majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            edgeLabelPlacement: 'Shift'
+            edgeLabelPlacement: 'Shift',
+            title: 'Sales (In Percentage)',
+            majorTickLines: { width: 0 },
+            lineStyle: {width: 0}
         },
         chartArea: {
             border: {
@@ -25,18 +29,19 @@ this.default = function () {
         //Initializing Chart Series
         series: [
             {
+                //Series type as 100% stacked bar
                 type: 'StackingBar100',
                 name: 'Apple',
-                dataSource: chartData, xName: 'x', yName: 'y'
+                dataSource: chartData, xName: 'x', yName: 'y', border:{width: 1, color: "white" } , columnWidth:0.6
             }, {
                 type: 'StackingBar100', name: 'Orange',
-                dataSource: chartData, xName: 'x', yName: 'y1'
+                dataSource: chartData, xName: 'x', yName: 'y1', border:{width: 1, color: "white" } , columnWidth:0.6
             }, {
                 type: 'StackingBar100', name: 'Wastage',
-                dataSource: chartData, xName: 'x', yName: 'y2'
+                dataSource: chartData, xName: 'x', yName: 'y2', border:{width: 1, color: "white" } , columnWidth:0.6
             }
         ],
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -47,10 +52,12 @@ this.default = function () {
            // custom code end
         //Initializing Chartt Title
         title: 'Sales Comparison',
+        legendSettings: {
+            enableHighlight :true
+        },
         //Initializing Tooltip
         tooltip: {
-            enable: true,
-            format: '${point.x} : <b>${point.y} (${point.percentage}%)</b>'
+            enable: true, format: '${point.x} : <b>${point.y} (${point.percentage}%)</b>'
         }
     });
     chart.appendTo('#bar100-container');

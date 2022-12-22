@@ -43,7 +43,7 @@ this.default = function () {
             },
             {
                 type: 'StackingColumn', dataSource: dataValues,
-                xName: 'x', width: 2, yName: 'cycle', name: 'Cycle'
+                xName: 'x', width: 2, yName: 'cycle', name: 'Cycle' 
             }
         ],
         title: 'Vehicle Sales by Region',

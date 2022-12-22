@@ -33,7 +33,6 @@ this.default = function () {
             marker: { visible: true },
             trendlines: [{ type: 'Linear', width: 3, marker: { visible: false }, name: 'TrendLine' , fill: '#C64A75' }]
         }],
-        tooltip: { enable: true },
         title: 'Historical Indian Rupee Rate (INR/USD)',
         chartArea: { border: { width: 0 } },
         legendSettings: { visible: true },

@@ -18,7 +18,7 @@ this.default = function () {
             labelFormat: 'y',
             intervalType: 'Years',
             edgeLabelPlacement: 'Shift',
-            majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 },
         },
 
         //Initializing Primary Y Axis
@@ -30,7 +30,7 @@ this.default = function () {
                 title: 'Particulate Matter(PM)',
                 lineStyle: { width: 0 },
                 majorTickLines: { width: 0 },
-                minorTickLines: { width: 0 }
+                minorTickLines: { width: 0 },
             },
         chartArea: {
             border: {
@@ -54,7 +54,7 @@ this.default = function () {
         tooltip: {
             enable: true, shared: true,enableAnimation : false
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

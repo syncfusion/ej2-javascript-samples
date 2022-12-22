@@ -6,7 +6,7 @@ this.default = function () {
     var data = [];
     var genarateData = new ej.buttons.Button({}, '#genarate');
     var columns = [
-        { field: 'SNo', headerText: 'S.No', width: 140, isPrimaryKey: true, validationRules: { required: true } },
+        { field: 'SNo', headerText: 'S.No', width: 140, isPrimaryKey: true, validationRules: { required: true, digits: true } },
         { field: 'FIELD1', headerText: 'Player Name', width: 140, validationRules: { required: true } },
         { field: 'FIELD2', headerText: 'Year', width: 120, textAlign: 'right' },
         { field: 'FIELD3', headerText: 'Sports', width: 160, textAlign: 'right', editType: 'dropdownedit', validationRules: { required: true } },

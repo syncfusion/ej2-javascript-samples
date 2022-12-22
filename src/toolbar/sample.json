@@ -2,10 +2,12 @@
     "name": "Toolbar",
     "directory": "toolbar",
     "category": "Navigation",
+    "type": "update",
     "ftName" :"toolbar",
     "samples": [
-        { "url": "default", "name": "Default Functionalities", "category": "Toolbar", "description": "The sample demonstrates the default functionalities of the Toolbar control which place commands with the scrollable mode in JavaScript platform.", "api":{"Item":["text","prefixIcon","type","tooltipText"],"Toolbar":["items"] } },
+        { "url": "default", "name": "Default Functionalities", "category": "Toolbar", "type":"update", "description": "The sample demonstrates the default functionalities of the Toolbar control which place commands with the scrollable mode in JavaScript platform.", "api":{"Item":["text","prefixIcon","type","tooltipText"],"Toolbar":["items"] } },
         { "url": "popup", "name": "Popup", "category": "Toolbar", "description": "The sample exposes popup mode of Toolbar control which configures overflowing toolbar commands inside a popup based on priority in JavaScript platform.", "api":{"Item":["showAlwaysInPopup", "showTextOn", "overflow"],"Toolbar":["overflowMode"] } },
+        { "url": "template", "name": "Template", "category":"Toolbar", "type":"new", "description": "The sample demonstrates the customizing toolbar with other components using the template functionalities.", "api":{"Item":["prefixIcon","tooltipText", "text", "showTextOn"],"Toolbar":["template"] } },
         { "url": "alignment", "name": "Alignment", "category": "Toolbar", "description": "This sample demonstrates how to align commands in left, right and center position in Toolbar control in JavaScript platform.", "api":{"Item":["align", "template"] } },
         { "url": "keyboard-interaction", "name": "Keyboard Interaction", "category": "Toolbar", "description": "This sample showcases the keyboard shortcuts applicable on Toolbar in JavaScript platform.", "api":{"Item":["showAlwaysInPopup", "showTextOn", "overflow"],"Toolbar":["overflowMode"] } }
     ]

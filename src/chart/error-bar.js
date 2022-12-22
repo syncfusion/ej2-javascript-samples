@@ -23,6 +23,8 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category', interval: 1,
+            majorTickLines: {width : 0},
+            minorTickLines: {width: 0},
             majorGridLines: { width: 0 }
         },
         chartArea: {
@@ -44,7 +46,7 @@ this.default = function () {
                     { x: 'DEU', y: 27 }, { x: 'ITA', y: 30 },
                     { x: 'UK', y: 41 }, { x: 'RUS', y: 26 }
                 ],
-                xName: 'x', width: 2, yName: 'y', marker: { height: 10, width: 10 }, name: 'Sales',
+                xName: 'x', width: 2, yName: 'y', marker: { height: 10, width: 10 }, 
                 //Initializing Error Bar
                 errorBar: { visible: true, verticalError: 3, horizontalError: 3 }
             },

@@ -13,8 +13,10 @@ this.default = function () {
             valueType: 'DateTime',
             labelFormat: 'MMM',
             intervalType: 'Months',
-            edgeLabelPlacement: 'Shift',
-            majorGridLines: { width: 0 }
+            interval: 1, majorTickLines: {width : 0},minorTickLines: {width : 0},
+            majorGridLines: { width: 0 },
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0,
+            labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Trim' 
         },
 
         //Initializing Primary Y Axis
@@ -36,11 +38,24 @@ this.default = function () {
         },
         annotations: [
             {
-                content: '#templateWrap',
+                content: "<div style='color:#4ca1af; font-weight:bold'>Winter</div>",
+                region: 'Series',
+                x: '18%',
+                y: '43%'
+            },
+            {
+                content: "<div style='color:#ffa751; font-weight:bold'>Summer</div>",
+                region: 'Series',
+                x: '46%',
+                y: '43%'
+            },
+            {
+                content: "<div style='color:#1d976c; font-weight:bold'>Spring</div>",
                 region: 'Series',
                 x: '90%',
-                y: '12%'
-            }
+                y: '18%'
+            },
+            
         ],
         legendSettings: { visible: false },
         //Initializing Chart Series
@@ -61,12 +76,12 @@ this.default = function () {
             }
         ],
         //Initializing Chart title
-        title: 'Organic Revenue in US - 2016',
+        title: 'US Season Retail Sales Growth',
         //Initializing User Interaction Tooltip
         tooltip: {
-            enable: true
+            enable: true, shared: true, format: '${point.x} : <b>${point.y}</b>'
         },
-        width: ej.base.Browser.isDevice ? '100%' : '60%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

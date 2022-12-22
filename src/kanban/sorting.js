@@ -20,7 +20,7 @@ this.default = function () {
     sortBy.appendTo('#sortBy');
     var field = new ej.dropdowns.DropDownList({ enabled: false });
     field.appendTo('#field');
-    var direction = new ej.dropdowns.DropDownList();
+    var direction = new ej.dropdowns.DropDownList({ change: onChange });
     direction.appendTo('#direction');
     document.getElementById('sort').onclick = function () {
         setKanbanProperties();
@@ -37,8 +37,9 @@ this.default = function () {
         kanbanObj.sortSettings.direction = direction.value;
     }
     function onChange(args) {
+        var data;
         if (args.value === 'DataSourceOrder' || args.value === 'Index') {
-            var data = args.value === 'Index' ? 'RankId' : 'None';
+            data = args.value === 'Index' ? 'RankId' : 'None';
             setFieldValue(data);
         }
         if (args.value === 'Custom') {
@@ -46,6 +47,16 @@ this.default = function () {
             field.value = 'Priority';
             field.enabled = true;
         }
+      if (args.value === 'Ascending') {
+        data = sortBy.value === 'Index' ? 'RankId' : 'None';
+        setFieldValue(data);
+        direction.value = 'Ascending';
+      }
+      if (args.value === 'Descending') {
+        data = sortBy.value === 'Index' ? 'RankId' : 'None';
+        setFieldValue(data);
+        direction.value = 'Descending';
+      }
     }
     function setFieldValue(data) {
         field.dataSource = [data];

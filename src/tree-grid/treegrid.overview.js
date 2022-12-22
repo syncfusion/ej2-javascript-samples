@@ -11,17 +11,17 @@ this.default = function () {
         columns: [
             {
                 field: 'name', headerText: 'Province', template: '#flagtemplate',
-                filter: { type: 'Excel', itemTemplate: '#flagtemplate' }, width: 200
+                filter: { type: 'Excel', itemTemplate: '#flagtemplate' }, width: 220
             },
-            { field: 'population', headerText: 'Population (Million)', valueAccessor: populationValue, textAlign: 'Right', width: 188 },
-            { field: 'gdp', headerText: 'GDP Rate %', template: '#gdptemplate', allowFiltering: false, width: 120 },
+            { field: 'population', headerText: 'Population (Million)', valueAccessor: populationValue, textAlign: 'Right', width: 250 },
+            { field: 'gdp', headerText: 'GDP Rate %', template: '#gdptemplate', allowFiltering: false, width: 140 },
             {
                 field: 'rating', headerText: 'Credit Rating', customAttributes: { class: 'ratingCircle' },
-                template: '#ratingtemplate', width: 150
+                template: '#ratingtemplate', width: 180
             },
             {
                 field: 'unemployment', headerText: 'Unemployment Rate', allowFiltering: false,
-                template: '#unemploymentTemplate', width: 170
+                template: '#unemploymentTemplate', width: 200
             },
             { field: 'coordinates', headerText: 'Coordinates', allowSorting: false, template: '#locationtemplate', width: 220 },
             { field: 'area', headerText: 'Area', template: '#areatemplate', width: 140 },

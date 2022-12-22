@@ -1,0 +1,81 @@
+<div id="target" class="col-lg-12 control-section">
+    <!-- Buttons to open corresponding Dialog -->
+    <button id="alertBtn" class="dlgbtn" type="button">Alert</button>
+    <button id="confirmBtn" class="dlgbtn" type="button">Confirm</button>
+    <button id="promptBtn" class="dlgbtn" type="button">Prompt</button>
+    <div id="dialogWrapper" class="content-wrapper">
+        <!-- Initialize alert Dialog -->
+        <div id="alertDialog"></div>
+        <!-- Initialize confirmation Dialog -->
+        <div id="confirmDialog"></div>
+        <!-- Initialize prompt Dialog -->
+        <div id="promptDialog">
+            <!-- Prompt Dialog content  -->
+            <table style="border-collapse: separate;border-spacing: 10px;width:85%;margin: 0px -5px 0px;">
+                <tr>
+                    <td>SSID:</td>
+                </tr>
+                <tr>
+                    <td><b>AndroidAP</b></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                </tr>
+                <tr>
+                    <td>
+                    <span class="e-input-group">
+                    <input type="password" id="password" name="Required" class="e-input" />
+                    </span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This example demonstrates that you can create different types of custom dialogs such as alert, confirm, and prompt dialogs.
+        The buttons “alert”, “confirm”, and “prompt” are used to open the corresponding dialogs. 
+    </p>
+</div>
+<div id="description">
+    <p>
+        The dialog control is used to create alert, prompt, and confirmation dialogs using content, and buttons property.
+        The content property accepts both string and HTML element as content.
+        <ul>
+            <li>Alert - Used to show errors, warnings, and information that needs user awareness.</li>
+            <li>Prompt - Used to get input from the user.</li>
+            <li>Confirmation - Used to get approval from user that appears before any critical action.</li>
+        </ul>
+    </p>
+    <p>
+    More information on the Dialog instantiation can be found in the <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript/documentation/dialog/es5-getting-started/">
+        documentation section</a>.
+    </p>
+
+</div>
+<style>
+    .e-btn-hide {
+	    display: none;
+	}
+</style>
+
+<!-- custom code start -->
+<style> 
+    .dlgbtn {
+        margin-right: 5%;
+    }
+    #target {
+        height: 100%;
+        min-height: 350px;
+    }
+    @media screen and (min-width: 150px) and (max-width: 480px) {
+        .control-section {
+            margin-bottom: 30px;
+        }
+        .control-wrapper {
+            margin-bottom: 0px;
+        }
+    }
+  </style>
+  <!-- custom code end -->

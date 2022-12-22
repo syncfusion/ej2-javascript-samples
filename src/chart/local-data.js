@@ -78,7 +78,7 @@ this.default = function () {
             },
             lineType: 'Vertical'
         },
-        width: ej.base.Browser.isDevice ? '100%' : '80%',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];
