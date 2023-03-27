@@ -4,7 +4,6 @@
     "category": "Calendars",
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
-    "type":"update",
     "samples": [
         {
             "url": "overview",
@@ -454,7 +453,6 @@
             "name": "Date-wise Grouping",
             "category": "Resource Grouping",
             "description": "This demo shows how to group multiple resources by date in the JS (ES5) Scheduler. The resource row is rendered under each date in the header.",
-            "type": "update",
             "api": {
                 "Schedule": [
                     "group",

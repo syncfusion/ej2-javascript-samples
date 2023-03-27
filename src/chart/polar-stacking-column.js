@@ -34,39 +34,39 @@ this.default = function () {
         series: [
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y', name: '6-9',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y1', name: '9 -11',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y2', name: '11-14',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y3', name: '14-17',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y4', name: '17 - 20',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
-                animation: { enable: true }, border: { color: 'white', width: 1 },
+                animation: { enable: true },
                 xName: 'x', yName: 'y5', name: '23 Above',
             },
         ],
         //Initializing Chart Title
         title: 'Wind Rose Chart',
         legendSettings: {
-            visible: true
+            visible: true, enableHighlight: true
         },
         //Initializing Tooltip
         tooltip: {
@@ -81,26 +81,5 @@ this.default = function () {
         }
            // custom code end
     });
-    chart.appendTo('#polar-stack-container');
-    var polarType = new ej.dropdowns.DropDownList({
-        index: 0,
-        placeholder: 'Select Range Bar Color',
-        width: 120,
-        change: function () {
-            chart.series[0].type = polarType.value;
-            chart.series[1].type = polarType.value;
-            chart.series[2].type = polarType.value;
-            chart.series[3].type = polarType.value;
-            chart.series[2].type = polarType.value;
-            chart.series[5].type = polarType.value;
-            chart.series[0].animation.enable = true;
-            chart.series[1].animation.enable = true;
-            chart.series[2].animation.enable = true;
-            chart.series[3].animation.enable = true;
-            chart.series[4].animation.enable = true;
-            chart.series[5].animation.enable = true;
-            chart.refresh();
-        }
-    });
-    polarType.appendTo('#seltype');
+    chart.appendTo('#container');
 };

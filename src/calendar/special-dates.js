@@ -9,7 +9,7 @@ this.default = function () {
         /*Displays selected date in the label*/
         var title = '';
         if (args.event) {
-            title = event.currentTarget.getAttribute('data-val');
+            title = event.currentTarget.classList.contains('e-selected') ? event.currentTarget.getAttribute('data-val') : args.event.currentTarget.getElementsByClassName('e-selected').length > 0 ? args.event.currentTarget.getElementsByClassName('e-selected')[0].getAttribute('data-val') : null;
             title = title == null ? '' : ' ( ' + title + ' )';
         }
         document.getElementById('date_label').textContent = 'Selected Value: ' + args.value.toLocaleDateString() + title;

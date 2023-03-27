@@ -44,6 +44,7 @@
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Electricity- Production',
+        tooltip: { enable: true },
         legendSettings:{enableHighlight:true},
            // custom code start
         load: function (args) {

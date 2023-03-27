@@ -3,10 +3,10 @@
  */
 this.default = function () {
     var chartData = [
-        { x: 'Income', y: 4711 }, { x: 'Sales', y: -1015 },
-        { x: 'Development', y: -688 },
-        { x: 'Revenue', y: 1030 }, { x: 'Balance' },
-        { x: 'Expense', y: -361 }, { x: 'Tax', y: -695 },
+        { x: 'Income', y: 971  }, { x: 'Sales', y: -101  },
+        { x: 'Development', y: -268  },
+        { x: 'Revenue', y: 403  }, { x: 'Balance' },
+        { x: 'Expense', y: -136  }, { x: 'Tax', y: -365  },
         { x: 'Net Profit' }
     ];
     var chart = new ej.charts.Chart({
@@ -19,16 +19,17 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0, maximum: 5000, interval: 1000,
+            minimum: 0, maximum: 1250, interval: 250,
             majorGridLines: { width: 1 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },
-            title: 'Expenditure'
+            title: 'USD',
+            labelFormat: "{value}K"
         },
         //Initializing Chart Series
         series: [{
                 dataSource: chartData, width: 2, negativeFillColor: '#e56590',
                 xName: 'x', yName: 'y', intermediateSumIndexes: [4], sumIndexes: [7],
-                columnWidth: 0.9,
+                name: 'USA',
                 type: 'Waterfall', animation: { enable: true },
                 marker: {
                     dataLabel: { visible: true }
@@ -37,22 +38,12 @@ this.default = function () {
         chartArea: { border: { width: 0 } },
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true, header:'', format: "<b>${point.x}</b> <br> Product Revenue : <b>${point.y}</b>"
         },
         //Initializing Chart Title
         title: 'Company Revenue and Profit',
         legendSettings: { visible: false },
-        axisLabelRender: function (args) {
-            if (args.axis.name === 'primaryYAxis') {
-                args.text = '$' + Number(args.text) / 1000 + 'B';
-            }
-        },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-        textRender: function (args) {
-            var value = Number(args.text) / 1000;
-            value = Math.round((value * 100)) / 100;
-            args.text = value.toString() + 'B';
-        },
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

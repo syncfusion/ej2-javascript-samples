@@ -4,7 +4,7 @@
             <canvas id="img-canvas" style="max-width: 200px; max-height: 200px;"></canvas>
             <img alt="img" id="custom-img" crossorigin="anonymous" src="src/image-editor/images/profile.png"
             style="display: none;"/>
-            <input type="file" id="img-upload" style="display:none"/>
+            <input type="file" id="img-upload" style="display:none" accept="image/*"/>
         </div>
         <span id="custom-edit" class="e-custom-edit" contenteditable="false">
             <span class="e-custom-icon sb-icons" contenteditable="false"></span>
@@ -69,7 +69,8 @@
         font-size: 28px;
         color: white;
         left: 5px;
-        top: 7px;
+        top: 4px;
+	line-height: initial;
         position: absolute;
     }
 

@@ -11,7 +11,7 @@ this.renderChartOhlc = function (chartData) {
             },
             primaryYAxis: {
                 title: 'Price',
-                labelFormat: 'n0',
+                labelFormat: 'n0', interval: 20,
                 lineStyle: { width: 0 }, rangePadding: 'None',
                 majorTickLines: { width: 0 }
             },
@@ -19,21 +19,16 @@ this.renderChartOhlc = function (chartData) {
             series: [
                 {
                     type: 'HiloOpenClose',
-                    dataSource: chartData, animation: { enable: true },
+                    dataSource: chartValue, animation: { enable: true },
                     bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
-                    xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close', name: 'Apple Inc'
+                    xName: 'period', low: 'low', high: 'high', open: 'open', close: 'close', name: 'Apple Inc.(AAPL)'
                 }
             ],
-            tooltip: { enable: true, shared: true },
+            tooltip: { enable: true, shared: true, header: '', format:'<b>Apple Inc.(AAPL)</b> <br> High : <b>${point.high}</b> <br> Low : <b>${point.low}</b> <br> Open : <b>${point.open}</b> <br> Close : <b>${point.close}</b> ' },
             crosshair: {
-                enable: true, lineType: 'Vertical', line: { width: 0 }
+                enable: true, lineType: 'Vertical'
             },
             legendSettings: { visible: false }, width: ej.base.Browser.isDevice ? '100%' : '75%',
-            axisLabelRender: function (args) {
-                if (args.axis.title === 'Price') {
-                    args.text = '$' + args.text;
-                }
-            },
              // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
@@ -46,14 +41,6 @@ this.renderChartOhlc = function (chartData) {
         chart.appendTo('#container2');
     };
     this.default = function () {
-        var chartData;
         var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            _this.renderChartOhlc(chartData);
+            _this.renderChartOhlc(ajax);
         };
-    };

@@ -1,8 +1,4 @@
-var labelRender = function (args) {
-    if (args.axis.orientation === 'Horizontal') {
-        args.cancel = args.value === 15 || args.value === 21;
-    }
-};
+
 /**
  * Sample for Numerical Axis
  */
@@ -10,7 +6,6 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Death Overs',
             minimum: 15,
             maximum: 21,
             interval: 1,
@@ -39,7 +34,7 @@ this.default = function () {
                     { x: 18, y: 7 }, { x: 19, y: 7 },
                     { x: 20, y: 10 }
                 ],
-                xName: 'x', width: 2,
+                xName: 'x', width: 2, columnSpacing: 0.1,
                 yName: 'y', name: 'England', fill: '#1e90ff',
                 marker: {
                     dataLabel: {
@@ -58,7 +53,7 @@ this.default = function () {
                     { x: 18, y: 11 }, { x: 19, y: 8 },
                     { x: 20, y: 24 }
                 ],
-                xName: 'x', width: 2,
+                xName: 'x', width: 2, columnSpacing: 0.1,
                 yName: 'y', name: 'West Indies', fill: '#b22222',
                 marker: {
                     dataLabel: {
@@ -71,7 +66,6 @@ this.default = function () {
                 }
             }
         ],
-        axisLabelRender: labelRender,
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {
@@ -85,7 +79,8 @@ this.default = function () {
             }
         }, // custom code end
         //Initializing Chart Title
-        title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>' }
+        title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>' },
+        legendSettings: { enableHighlight: true }
     });
     chart.appendTo('#numeric-container');
 };

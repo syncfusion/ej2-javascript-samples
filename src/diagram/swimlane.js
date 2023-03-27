@@ -281,11 +281,10 @@ this.default = function () {
                     var index;
                     var node = diagram.selectedItems.nodes[0];
                     var swimlane = diagram.getObject((diagram.selectedItems.nodes[0]).parentId);
-                    var shap = swimlane.shape;
-                    var existingLane = cloneObject(shape.lanes[0]);
-
+                    var shape = swimlane.shape;
+                    var existingLane = ej.diagrams.cloneObject(shape.lanes[0]);
                     var newLane = {
-                        id: randomId(),
+                        id: ej.diagrams.randomId(),
                         header: {
                             width: existingLane.header.width, height: existingLane.header.height,
                             style: existingLane.header.style
@@ -317,7 +316,6 @@ this.default = function () {
                 diagram.cut();
             } else if (args.item.id === 'Copy') {
                 diagram.copy();
-                diagram.paste();
             } else if (args.item.id === 'Paste') {
                 diagram.paste();
             }

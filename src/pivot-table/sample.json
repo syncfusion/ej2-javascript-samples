@@ -3,13 +3,11 @@
     "directory": "pivot-table",
     "category": "Grids",
     "ftName": "pivot-table",
-    "type": "update",
     "samples": [{
             "url": "overview",
             "name": "Overview",
             "category": "Pivot Table",
-            "description": "This sample shows an overview of Essential JS2 Pivot Table that allows to organize and summarize the pivot data in a detailed or abstract view and displays it as a grid and chart.",
-            "type": "new"
+            "description": "This sample shows an overview of Essential JS2 Pivot Table that allows to organize and summarize the pivot data in a detailed or abstract view and displays it as a grid and chart."
         },
         {
             "url": "default",
@@ -33,7 +31,6 @@
             "url": "olap",
             "name": "OLAP",
             "category": "Data Binding",
-            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the basic rendering of the pivot table with olap datasource"
         },
         {
@@ -76,7 +73,6 @@
             "url": "summary-customization",
             "name": "Show/Hide Totals",
             "category": "User Interaction",
-            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the summary customization feature of the pivot table"
         },
         {
@@ -95,7 +91,6 @@
             "url": "toolbar",
             "name": "Toolbar",
             "category": "User Interaction",
-            "type": "update",
             "description": "This demo for Essential JS2 Pivot Table control demonstrate the toolbar support of the pivot table widget"
         },
         {

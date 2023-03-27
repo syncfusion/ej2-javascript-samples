@@ -1,10 +1,10 @@
 /**
  * Sample for MACD Indicator
  */
-this.renderChartMACD = function (chartData) {
+this.renderChartMACD = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
-                valueType: 'DateTime',
+                valueType: 'DateTime', intervalType: 'Months',
                 majorGridLines: { width: 0 },
                 zoomFactor: 0.2, zoomPosition: 0.6,
                 crosshairTooltip: { enable: true }
@@ -13,7 +13,7 @@ this.renderChartMACD = function (chartData) {
                 title: 'Price',
                 labelFormat: '${value}',
                 plotOffset: 25,
-                minimum: 50, maximum: 170,
+                maximum: 170, majorTickLines: { width: 0 },
                 interval: 30, rowIndex: 1, opposedPosition: true, lineStyle: { width: 0 }
             },
             rows: [
@@ -29,16 +29,16 @@ this.renderChartMACD = function (chartData) {
                     majorGridLines: { width: 0 }, lineStyle: { width: 0 }, minimum: -3.5, maximum: 3.5, interval: 3.5,
                     majorTickLines: { width: 0 }, title: 'MACD', stripLines: [
                         {
-                            start: -3.5, end: 3.5, text: '', color: '#6063ff', visible: true,
-                            opacity: 0.1, zIndex: 'Behind'
+                            start: -3.5, end: 3.5, text: '', color: '#000000', visible: true,
+                            opacity: 0.03, zIndex: 'Behind'
                         }
                     ]
                 }],
             series: [{
-                    dataSource: chartData, width: 2,
-                    xName: 'x', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
+                    dataSource: chartValue, width: 2,
+                    xName: 'period', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
                     name: 'Apple Inc', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
-                    type: 'Candle', animation: { enable: true }
+                    type: 'Candle'
                 }],
             indicators: [{
                     type: 'Macd',
@@ -64,7 +64,7 @@ this.renderChartMACD = function (chartData) {
             },
             crosshair: { enable: true, lineType: 'Vertical' },
             chartArea: { border: { width: 0 } },
-            title: 'AAPL 2012-2017',
+            title: 'AAPL Stock Price 2012-2017',
             width: ej.base.Browser.isDevice ? '100%' : '75%',
              // custom code start
             load: function (args) {
@@ -79,14 +79,5 @@ this.renderChartMACD = function (chartData) {
         chart.appendTo('#macd-container');
     };
     this.default = function () {
-        var chartData;
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChartMACD(chartData);
+            renderChartMACD();
         };
-    };

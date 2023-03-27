@@ -2,31 +2,38 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 var diagram;
 var element;
+var lockElement;
 
 /**
  * Getting started -  nodes
  */
-//Enable or disable the Constraints for Node.
-function updateAnnotation(args) {
+//Enable or disable the lock Constraints for Node.
+function updateLock(args) {
     for (var i = 0; i < diagram.nodes.length; i++) {
         var node = diagram.nodes[i];
-        if (args.event.target.id === 'lock') {
-            if (args.checked) {
-                node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
-                node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
-            } else {
-                node.constraints |= ej.diagrams.NodeConstraints.Default & ~(ej.diagrams.NodeConstraints.ReadOnly);
-            }
+        if (lockElement.checked) {
+            node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
+            node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
         } else {
-            if (element.checked) {
-                node.constraints |= ej.diagrams.NodeConstraints.AspectRatio;
-            } else {
-                node.constraints &= ~ej.diagrams.NodeConstraints.AspectRatio;
-            }
+            node.constraints |= ej.diagrams.NodeConstraints.Default & ~(ej.diagrams.NodeConstraints.ReadOnly);
         }
-        diagram.dataBind();
     }
+    diagram.dataBind();
 }
+
+//Enable or disable the Aspect Ratio Constraints for Node.
+function updateAspectRatio(args) {
+    for (var i = 0; i < diagram.nodes.length; i++) {
+        var node = diagram.nodes[i];
+        if (element.checked) {
+            node.constraints |= ej.diagrams.NodeConstraints.AspectRatio;
+        } else {
+            node.constraints &= ~(ej.diagrams.NodeConstraints.AspectRatio);
+        }
+    }
+    diagram.dataBind();
+}
+
 //Set customStyle for Node.
 function applyStyle(node, width, array, con, type) {
     node.style.fill = '#37909A';
@@ -95,15 +102,15 @@ this.default = function () {
     });
     diagram.appendTo('#diagram');
     //Enable or disable the AspectRatio for Node.
-     element = new ej.buttons.CheckBox({
+    element = new ej.buttons.CheckBox({
         checked: false, label: 'Aspect ratio',
-        change: updateAnnotation
+        change: updateAspectRatio
     });
     element.appendTo('#aspectRatio');
     //Enable or disable the Interaction for Node.
-    var lockElement = new ej.buttons.CheckBox({
+    lockElement = new ej.buttons.CheckBox({
         checked: false, label: 'Lock',
-        change: updateAnnotation
+        change: updateLock
     });
     lockElement.appendTo('#lock');
 

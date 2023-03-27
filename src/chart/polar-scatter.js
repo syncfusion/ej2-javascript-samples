@@ -15,7 +15,7 @@ this.default = function () {
         { text: 'Poland', x: 'POL', y: 3.9, y1: 2.7, y2: 3.4 },
         { text: 'Australia', x: 'AUS', y: 2.4, y1: 2.5, y2: 3.1 },
         { text: 'Korea', x: 'KOR', y: 2.8, y1: 2.8, y2: 2.7 },
-        { text: 'Singapore', x: 'SGP', y: 1.9, y1: 2.0, y2: 2.0 },
+        { text: 'Singapore', x: 'SGP', y: 1.9, y1: 2.0, y2: 2 },
         { text: 'Canada', x: 'CAN', y: 0.9, y1: 1.4, y2: 1.9 },
         { text: 'Germany', x: 'DEU', y: 1.5, y1: 1.8, y2: 1.6 },
         { text: 'Denmark', x: 'DNK', y: 1.6, y1: 1.1, y2: 1.5 },
@@ -39,20 +39,20 @@ this.default = function () {
             {
                 type: 'Polar', drawType: 'Scatter', dataSource: data,
                 animation: { enable: true },
-                marker: { height: 10, width: 10, dataLabel: { name: 'text' } },
-                xName: 'x', yName: 'y', name: '2015'
+                marker: { height: 7, width: 7, dataLabel: { name: 'text' } },
+                xName: 'text', yName: 'y', name: '2015'
             },
             {
                 type: 'Polar', drawType: 'Scatter', dataSource: data,
                 animation: { enable: true },
-                marker: { height: 10, width: 10, shape: 'Diamond', dataLabel: { name: 'text' } },
-                xName: 'x', yName: 'y1', name: '2016'
+                marker: { height: 7, width: 7, shape: 'Diamond', dataLabel: { name: 'text' } },
+                xName: 'text', yName: 'y1', name: '2016'
             },
             {
                 type: 'Polar', drawType: 'Scatter', dataSource: data,
                 animation: { enable: true },
-                marker: { height: 10, width: 10, shape: 'Triangle', dataLabel: { name: 'text' } },
-                xName: 'x', yName: 'y2', name: '2017'
+                marker: { height: 7, width: 7, shape: 'Triangle', dataLabel: { name: 'text' } },
+                xName: 'text', yName: 'y2', name: '2017'
             },
         ],
         //Initializing Chart Title
@@ -61,7 +61,7 @@ this.default = function () {
         tooltip: {
             enable: true,
             format: '${point.text} : <b>${point.y}%</b>'
-        },
+        }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {
             var polarScatterTheme = location.hash.split('/')[1];

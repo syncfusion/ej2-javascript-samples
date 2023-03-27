@@ -9,7 +9,8 @@ this.default = function () {
             getImageUrl: hostUrl + 'FirebaseRealtimeGetImage',
             uploadUrl: hostUrl + 'FirebaseRealtimeUpload',
             downloadUrl: hostUrl + 'FirebaseRealtimeDownload'
-        }
+        },
+        toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] }
     });
     fileObject.appendTo('#filemanager');
 };

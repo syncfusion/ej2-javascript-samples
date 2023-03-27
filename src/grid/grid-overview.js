@@ -1,6 +1,6 @@
 this.default = function () {
     var urlapi = new ej.data.DataManager({
-        url: "https://ej2services.syncfusion.com/production/web-services/api/UrlDataSource",
+        url: "https://services.syncfusion.com/js/production/api/UrlDataSource",
         adaptor: new ej.data.UrlAdaptor()
     });
     var grid = new ej.grids.Grid({
@@ -15,7 +15,7 @@ this.default = function () {
         selectionSettings: { persistSelection: true, type: "Multiple", checkboxOnly: true },
         enableHover: false,
 		enableHeaderFocus: true,
-        height: 600,
+        height: 400,
         rowHeight: 38,
         columns: [
             { type: "checkbox", field: "", allowFiltering: false, allowSorting: false, width: '60' },
@@ -95,21 +95,16 @@ this.default = function () {
         return div.outerHTML;
     };
     window.ratingDetail = function (e) {
-        var div = document.createElement('div');
-        div.className = 'rating';
-        var span;
-        for (var i = 0; i < 5; i++) {
-            if (i < e.Rating) {
-                span = document.createElement('span');
-                span.className = 'star checked';
-                div.appendChild(span);
-            } else {
-                span = document.createElement('span');
-                span.className = 'star';
-                div.appendChild(span);
-            }
-        }
-        return div.outerHTML;
+        var temp = document.getElementsByTagName("template")[0];
+        var cloneTemplate = temp.content.cloneNode(true);
+        var ratingElement = cloneTemplate.querySelector(".rating");
+        var rating = new ej.inputs.Rating({
+            value: e.Rating,
+            readOnly: true,
+            cssClass: 'custom-rating'
+        });
+        rating.appendTo(ratingElement);
+        return ratingElement.ej2_instances[0].wrapper.outerHTML;
     };
     window.statusDetail = function(e) {
         var div = document.createElement('div');

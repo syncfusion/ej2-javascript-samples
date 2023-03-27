@@ -1,12 +1,12 @@
 {
     "name": "Progress Bar",
-    "directory": "progress-bar",
+    "directory": "progress-bar","type":"update",
     "category": "Notifications",
     "ftName": "progress-bar",
     "samples": [
         {
             "url": "linear",
-            "name": "Linear",
+            "name": "Linear","type":"update",
             "description":"This demo for Essential JS2 Progress Bar control shows the linear rendering of progress bar",
             "category": "Progress Bar",
             "api": {
@@ -59,7 +59,21 @@
                     "type"
                 ]
             }
-        },       
+        },
+        {
+            "url": "tooltip",
+            "name": "Tooltip",
+            "type": "new",
+            "description": "This demo for Essential JS2 Progress Bar control shows the progress bar rendering with tooltip",
+            "category": "Progress Bar",
+            "api": {
+                "ProgressBar": [
+                    "value",
+                    "annotations",
+                    "type"
+                ]
+            }
+        },
         {
             "url": "labels",
             "name": "Labels",

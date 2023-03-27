@@ -238,7 +238,9 @@ var DeleteClick = (function (_super) {
             if (selectedObject[0]) {
                 if (selectedObject[0] instanceof ej.diagrams.Node) {
                     var node = selectedObject[0];
+                    diagram.startGroupAction();
                     this.removeSubChild(node);
+                    diagram.endGroupAction();
                 }
                 diagram.doLayout();
             }
@@ -332,7 +334,8 @@ this.default = function () {
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         tool: ej.diagrams.DiagramTools.SingleSelect,
         layout: {
-            type: 'MindMap', horizontalSpacing: 50,
+            type: 'MindMap',orientation:'LeftToRight',
+             horizontalSpacing: 50,
             getBranch: function (node) {
                 return node.data.branch;
             }

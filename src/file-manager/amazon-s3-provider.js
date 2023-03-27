@@ -9,7 +9,12 @@ this.default = function() {
                 getImageUrl: hostUrl + 'AmazonS3GetImage',
                 uploadUrl: hostUrl + 'AmazonS3Upload',
                 downloadUrl: hostUrl + 'AmazonS3Download'
-            }
+            },            
+            contextMenuSettings: {
+                layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+                visible: true
+            },
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] }
     });
     fileObject.appendTo('#filemanager');
 };

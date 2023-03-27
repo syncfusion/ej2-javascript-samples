@@ -1,10 +1,10 @@
 var dataManager = new ej.data.DataManager({
-    url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders'
+    url: 'https://services.syncfusion.com/js/production/api/orders'
 });
 var query = new ej.data.Query().take(5).where('Estimate', 'lessThan', 3, false);
 var labelRender = function (args) {
-    if (args.axis.orientation === 'Horizontal') {
-        args.text = args.text.split(' ')[0];
+    if (args.axis.name === 'primaryYAxis') {
+        args.text = '' + args.value * 1000;
     }
 };
 var loaded = 1;
@@ -57,7 +57,6 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            title: 'Assignee',
             rangePadding: 'Additional',
             majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
@@ -65,12 +64,11 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            majorGridLines: { width: 0 },
+            majorGridLines: { width: 1 },
             majorTickLines: { width: 0 },
             lineStyle: { width: 0 },
-            labelStyle: {
-                color: 'transparent'
-            }
+            labelFormat: "{value}00",
+            title: 'Freight rate in U.S. dollars',
         },
         chartArea: {
             border: {
@@ -83,12 +81,12 @@ this.default = function () {
                 type: 'Column',
                 dataSource: dataManager,
                 xName: 'CustomerID', yName: 'Freight', query: query,
-                name: 'Story Point',
                 animation: { enable: false },
                 marker: {
                     dataLabel: {
                         visible: true,
                         position: 'Top',
+                        format: '{value}K',
                         font: {
                             fontWeight: '600',
                             color: '#ffffff'
@@ -101,24 +99,13 @@ this.default = function () {
         axisLabelRender: labelRender,
         loaded: loadedChart,
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-           // custom code start
-        load: function (args) {
-            var div = document.getElementById('waitingpopup');
-            div.style.display = 'block';
-            var width = args.chart.element.offsetWidth;
-            var height = args.chart.element.offsetHeight;
-            div.style.top = (height ? height : 300 / 2 - 25) + 'px';
-            div.style.left = (width / 2 - 25) + 'px';
-            div.style.display = '';
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        },
-           // custom code end
-        title: 'Sprint Task Analysis', legendSettings: { visible: false },
+        title: "Container freight rate", legendSettings: { visible: false },
         tooltip: {
-            enable: true
+            enable: true,
+            header: 'Freight rate' 
+        },
+        tooltipRender: function (args)  {
+            args.text = '<b>' + args.data.pointX + ': ' + '$' + args.data.pointY * 1000;
         }
     });
     chart.appendTo('#remote-container');

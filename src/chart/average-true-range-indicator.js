@@ -14,14 +14,14 @@ this.renderChartATR = function (chartData) {
                 labelFormat: '${value}',
                 minimum: 50, maximum: 170,
                 interval: 30, rowIndex: 1,
-                plotOffset: 25,
+                plotOffset: 25, majorTickLines: { width: 0 },
                 majorGridLines: { width: 1 }, opposedPosition: true, lineStyle: { width: 0 }
             },
             axes: [{
                     name: 'secondary',
                     opposedPosition: true, rowIndex: 0,
                     majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 },
-                    maximum: 14, minimum: 0, interval: 7, title: 'ATR',
+                    title: 'ATR',
                     stripLines: [
                         {
                             start: 0, end: 14, text: '', color: '#6063ff', visible: true,
@@ -37,14 +37,14 @@ this.renderChartATR = function (chartData) {
                 }
             ],
             series: [{
-                    dataSource: chartData, width: 2,
-                    xName: 'x', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
+                    dataSource: chartValue, width: 2,
+                    xName: 'period', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
                     name: 'Apple Inc', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
-                    type: 'Candle', animation: { enable: true }
+                    type: 'Candle'
                 }],
             indicators: [{
                     type: 'Atr', field: 'Close', seriesName: 'Apple Inc', yAxisName: 'secondary', fill: '#6063ff',
-                    period: 3, animation: { enable: true }
+                    period: 3
                 }],
             zoomSettings: {
                 enableSelectionZooming: true,
@@ -57,7 +57,7 @@ this.renderChartATR = function (chartData) {
             },
             crosshair: { enable: true, lineType: 'Vertical' },
             chartArea: { border: { width: 0 } },
-            title: 'AAPL 2012-2017',
+            title: 'AAPL Stock Price 2012-2017',
             width: ej.base.Browser.isDevice ? '100%' : '75%',
              // custom code start
             load: function (args) {
@@ -74,14 +74,7 @@ this.renderChartATR = function (chartData) {
         chart.appendTo('#atr-container');
     };
     this.default = function () {
-        var chartData;
         var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChartATR(chartData);
+       
+            renderChartATR(ajax);
         };
-    };

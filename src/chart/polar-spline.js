@@ -57,7 +57,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true
-        },
+        }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {
             var polarSplineTheme = location.hash.split('/')[1];

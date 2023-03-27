@@ -40,6 +40,13 @@
             "description": "This example demonstrates the how to upload the folder (directory) in a JavaScript(ES5) File Manager."
         },
         {
+            "url": "virtualization",
+            "name": "Virtualization",
+            "category": "File Manager",
+            "api": { "FileManager": ["ajaxSettings", "view"] },
+            "description": "This example demonstrates on how to enable the virtual scrolling feature in a JavaScript(ES5) File Manager."
+        },
+        {
             "url": "usecase",
             "name": "File Upload",
             "category": "Use Case",

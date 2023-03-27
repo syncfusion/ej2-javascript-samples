@@ -95,4 +95,21 @@ this.default = function () {
             args.target.classList.add('e-selected-style');
         }
     };
+    var checkBoxObj = new ej.buttons.CheckBox({ change:  function (){
+        for (var _i = 0, _a = diagram.nodes; _i < _a.length; _i++) {
+            var node = _a[_i];
+            if (args.checked) {
+                node.expandIcon.shape = 'Minus';
+                node.collapseIcon.shape = 'Plus';
+            }
+            else {
+                node.expandIcon.shape = 'None';
+                node.collapseIcon.shape = 'None';
+            }
+        }
+        diagram.dataBind();
+        diagram.doLayout();
+    }
+    });
+    checkBoxObj.appendTo('#expand');
 };

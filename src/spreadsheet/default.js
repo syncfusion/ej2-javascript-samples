@@ -22,8 +22,8 @@ this.default = function () {
                 ]
             }
         ],
-        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
-        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+        openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: function () {
             // Applies cell and number formatting to specified range of the active sheet
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');

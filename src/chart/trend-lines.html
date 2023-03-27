@@ -1,89 +1,32 @@
 <div>
-    <div class="col-lg-8 control-section">
-        <div class="content-wrapper">
-            <div id="container"></div>
-        </div>
-    </div>
-    <div class="col-lg-4 property-section">
-        <table id="property" title="Properties" style="width: 100%">
-            <tr style="height: 50px">
-                <td style="width: 50%">
-                    <div>TrendLine Type:
-                    </div>
-                </td>
-                <td style="width: 50%;">
-                    <div>
-                        <select id="trendLineType">
-                            <option value="Linear">Linear</option>
-                            <option value="Exponential">Exponential</option>
-                            <option value="Power">Power</option>
-                            <option value="Logarithmic">Logarithmic</option>
-                            <option value="Polynomial">Polynomial</option>
-                            <option value="MovingAverage">Moving Average</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr id='' style="height: 50px">
-                <td style="width: 80%">
-                    <div> Forward Forecast:</div>
-                </td>
-                <td style="width: 20%;">
-                    <div style='margin-top: 0px;'>
-                        <input type="text" id="forwardForecast">
-                    </div>
-                </td>
-            </tr>
-            <tr id='' style="height: 50px">
-                <td style="width: 80%">
-                    <div>Backward Forecast:</div>
-                </td>
-                <td style="width: 20%;">
-                    <div style='margin-top: 0px;'>
-                        <input type="text" id="backwardForecast">
-                    </div>
-                </td>
-            </tr>
-            <tr id='' style="height: 50px">
-                <td style="width: 80%">
-                    <div>Polynomial Order:</div>
-                </td>
-                <td style="width: 20%;">
-                    <div style='margin-top: 0px;'>
-                        <input type="text" id="polynomialOrder">
-                    </div>
-                </td>
-            </tr>
-            <tr id='' style="height: 50px">
-                <td style="width: 80%">
-                    <div>Period:</div>
-                </td>
-                <td style="width: 20%;">
-                    <div style='margin-top: 0px;'>
-                        <input type="text" id="period">
-                    </div>
-                </td>
-            </tr>
-        </table>
+    <div class="control-section">
+        <div id="container" align="center"></div>
     </div>
 </div>
 <div id="action-description">
     <p>
-        This sample visualizes the trend of Indian rupees and US dollar variation with trendline in the chart. 
-        The type of trend line can be changed by using <code>TrendLine Type</code>, forward and backward forecasting of trendlines can be changed by <code>Forward Forecasting</code> and <code>Backward Forecast</code> respectively. 
-        Polynomial and period for a trendlines can be changed by using <code>Polynomial order</code> and <code>Period</code>.
+        This sample shows the trend of Indian rupees and US dollar variations in the chart.
     </p>
 </div>
 <div id="description">
     <p>
-        In this example, you can see how to render and configure the Trend Lines. You can use
-        <code>border</code>,
-        <code>fill</code> properties to customize the area.
+        In this example, you can see how to render and configure the trendlines. The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/trendline/">trendline</a> is a line drawn over the chart to display the overall direction of the results.
     </p>
+    <p>This chart supports the following types.</p>
+    <ul>
+        <li>Linear</li>
+        <li>Exponential</li>
+        <li>Logarithmic</li>
+        <li>Polynomial</li>
+        <li>Power</li>
+        <li>Moving Average</li>
+        <li>Forecasting</li>
+    </ul>
+    <p><code>Tooltip</code> is enabled in this example. To see the tooltip in action, hover a point or tap on a point in touch enabled devices.</p>
     <br>
     <p>
         More information on the Trend Lines can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation/chart/api-series.html#type-chartseriestype">documentation section</a>.
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/trend-lines/">documentation section</a>.
     </p>
 </div>
 <style>

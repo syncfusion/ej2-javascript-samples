@@ -32,6 +32,7 @@ this.default = function () {
                 pie.removeSvg();
                 pie = null;
                 pie = new ej.charts.AccumulationChart(instance);
+                pie.series[0].animation.enable = false;
                 pie.appendTo('#drill-container');
                 ej.charts.getElement('category').style.visibility = 'hidden';
                 ej.charts.getElement('symbol').style.visibility = 'hidden';
@@ -91,6 +92,7 @@ this.default = function () {
                     break;
             }
             pie = new ej.charts.AccumulationChart(clickInstance);
+            pie.series[0].animation.enable = false;
             pie.appendTo('#drill-container');
             ej.charts.getElement('symbol').style.visibility = 'visible';
             ej.charts.getElement('category').style.visibility = 'visible';
@@ -135,6 +137,7 @@ this.default = function () {
         pie.removeSvg();
         pie = null;
         pie = new ej.charts.AccumulationChart(instance);
+        pie.series[0].animation.enable = false;
         pie.appendTo('#drill-container');
         e.target.style.visibility = 'hidden';
         ej.charts.getElement('symbol').style.visibility = 'hidden';

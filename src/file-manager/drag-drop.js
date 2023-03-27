@@ -10,8 +10,13 @@ this.default = function() {
                 getImageUrl: hostUrl + 'api/FileManager/GetImage',
                 uploadUrl: hostUrl + 'api/FileManager/Upload',
                 downloadUrl: hostUrl + 'api/FileManager/Download'    
-            },
-            allowDragAndDrop: true
+            },            
+            allowDragAndDrop: true,
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'View', 'Details', 'Cut', 'Copy', 'Delete', 'Download', 'Rename'] },
+            contextMenuSettings: {
+                layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+                visible: true
+            }
     });
     fileObject.appendTo('#filemanager');
 };

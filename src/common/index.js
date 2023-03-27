@@ -1180,7 +1180,7 @@ function plunker(results) {
         ej.base.detach(prevForm);
     }
     var form = ej.base.createElement('form');
-    var res = ((location.href).indexOf('ej2.syncfusion.com') !== -1 ? 'https:' : 'http:') + '//stackblitz.com/run';
+    var res = 'https://stackblitz.com/run';
     form.setAttribute('action', res);
     form.setAttribute('method', 'post');
     form.setAttribute('target', '_blank');

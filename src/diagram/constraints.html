@@ -1,0 +1,99 @@
+<div class="col-lg-10 control-section">
+    <style>
+            .image-pattern-style {
+                background-color: white;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 45px;
+                width: calc((100% - 13px) / 3);
+                cursor: pointer;
+                border: 1px solid #D5D5D5;
+                background-position: center;
+                float: left;
+            }
+        
+            .image-pattern-style:hover {
+                border-color: gray;
+                border-width: 2px;
+            }
+        
+            .row {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        
+            .row-header {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        
+            .e-checkbox-wrapper .e-label {
+                font-size: 12px;
+            }
+        
+            .col-xs-6 {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        
+            .e-selected-style {
+                border-color: #006CE6;
+                border-width: 2px;
+            }
+        </style>
+<div class="content-wrapper" style="width:100%;background: white">
+    <div id="diagram"></div>
+</div>
+    <div id="action-description">
+        <p>
+            This sample illustrates how node constraints are used to restrict end-users from performing certain operations on nodes and connector constraints are used to restrict end-users from performing certain operation on connectors.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            This sample illustrates how node constraints are used to restrict end-users from performing certain operations on nodes and connector constraints are used to restrict end-users from performing certain operation on connectors.
+        </p>
+        <p>
+            The <code>NodeConstraints</code> property allows you to enable or disable node behaviors like select, drag, resize, rotate, and delete. 
+        </p>
+        <p> 
+            The <code>ConnectorConstraints</code> property allows you to enable or disable connector behaviors like select, drag, delete, drag source end, and drag target end. 
+        <p>
+            The <code>AnnotationConstraints</code> property allows you to enable or disable the annotation behavior, text editing.
+        </p>
+        <p>
+            Using the <code>DiagramConstraints</code> property, enable or disable certain features of the diagram like zoom, undo/redo, context menu, drag, and select.
+        </p>
+        <br>
+    </div>
+</div>
+<div class="col-lg-2 property-section">
+    <div class="property-panel-header">
+        Diagram Constraints
+    </div>
+    <!-- <div class="row property-panel-content" id="appearance">
+        <div class="row row-header">
+            Appearance
+        </div>
+    </div> -->
+    <div class="row property-panel-content" style="padding-top: 10px">
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='zooming' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='undoRedo' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='editing' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='contextmenu' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='selectable' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+        <div class="row" style="padding-top: 8px">
+            <input type="checkbox" id='draggable' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        </div>
+    </div>
+</div>

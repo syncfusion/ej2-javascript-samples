@@ -30,19 +30,19 @@ this.default = function () {
             {
                 type: 'Polar', drawType: 'Column', dataSource: data,
                 animation: { enable: true }, border: { width: 1, color: 'white' },
-                xName: 'x', yName: 'y', name: 'Mobile Subscriptions',
+                xName: 'text', yName: 'y', name: 'Mobile Subscriptions',
                 marker: { dataLabel: { name: 'text' } }
             },
             {
                 type: 'Polar', drawType: 'Column', dataSource: data,
                 animation: { enable: true }, border: { width: 1, color: 'white' },
-                xName: 'x', yName: 'y1', name: 'Population in Millions',
+                xName: 'text', yName: 'y1', name: 'Population in Millions',
                 marker: { dataLabel: { name: 'text' } }
             },
             {
                 type: 'Polar', drawType: 'Column', dataSource: data,
                 animation: { enable: true }, border: { width: 1, color: 'white' },
-                xName: 'x', yName: 'y2', name: '3G/4G Subscriptions',
+                xName: 'text', yName: 'y2', name: '3G/4G Subscriptions',
                 marker: { dataLabel: { name: 'text' } }
             },
         ],
@@ -50,9 +50,9 @@ this.default = function () {
         title: 'Top 10 Mobile Markets by Number of Subscriptions',
         //Initializing Tooltip
         tooltip: {
-            enable: true,
-            format: '${point.text} : <b>${point.y}%</b>'
-        },
+            enable: true, header: '',
+            format: '<b>${point.text}</b> <br> ${series.name} : <b>${point.y}</b>'
+        }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {
             var polarColumnTheme = location.hash.split('/')[1];
@@ -71,9 +71,9 @@ this.default = function () {
             chart.series[0].type = polarType.value;
             chart.series[1].type = polarType.value;
             chart.series[2].type = polarType.value;
-            chart.series[0].animation.enable = true;
-            chart.series[1].animation.enable = true;
-            chart.series[2].animation.enable = true;
+            chart.series[0].animation.enable = false;
+            chart.series[1].animation.enable = false;
+            chart.series[2].animation.enable = false;
             chart.refresh();
         }
     });

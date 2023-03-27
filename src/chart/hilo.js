@@ -5,9 +5,7 @@ this.renderChart = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
-                crosshairTooltip: { enable: true },
-                minimum: new Date('2016-12-31'),
-                maximum: new Date('2017-09-30'),
+                crosshairTooltip: { enable: false },
                 majorGridLines: { width: 0 }
             },
             chartArea: {
@@ -17,7 +15,7 @@ this.renderChart = function (chartData) {
             },
             primaryYAxis: {
                 title: 'Price',
-                minimum: 100,
+                minimum: 10,
                 maximum: 180,
                 interval: 20,
                 labelFormat: '${value}',
@@ -28,13 +26,13 @@ this.renderChart = function (chartData) {
             series: [
                 {
                     type: 'Hilo',
-                    dataSource: chartData, animation: { enable: true },
-                    xName: 'x', low: 'low', high: 'high', name: 'Apple Inc'
+                    dataSource: chartValue, animation: { enable: true },
+                    xName: 'period', low: 'low', high: 'high', name: 'Apple Inc'
                 }
             ],
             title: 'AAPL Historical',
             tooltip: {
-                enable: true, shared: true
+                enable: true, shared: true, header:'', format:'<b>Apple Inc.(AAPL)</b> <br> High : <b>${point.high}</b> <br> Low : <b>${point.low}</b>', enableMarker: false
             },
             crosshair: {
                 enable: true, lineType: 'Vertical', line: {
@@ -54,14 +52,6 @@ this.renderChart = function (chartData) {
         chart.appendTo('#hilo-container');
     };
     this.default = function () {
-        var chartData;
         var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChart(chartData);
+            renderChart(ajax);
         };
-    };

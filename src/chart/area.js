@@ -48,13 +48,13 @@
                 y: '98%'
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 6px;">DOWNLOADS</div>' : '<div style="font-weight: bold; color: white; font-size: 9px;">DOWNLOADS</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 6px;">DOWNLOADS</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">DOWNLOADS</div>',
                 region: 'Series',
                 x: '85%',
-                y: '93%'
+                y: '92%'
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;">STREAMING</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">STREAMING</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;"></div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">STREAMING</div>',
                 region: 'Series',
                 x: '93%',
                 y: '96%'

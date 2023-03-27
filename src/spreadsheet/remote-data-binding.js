@@ -25,8 +25,8 @@ this.default = function () {
             ranges: [{ dataSource: data, query: query, showFieldAsHeader: false, startCell: 'A2' }],
             columns: [{ width: 100 }, { width: 130 }, { width: 100 }, { width: 220 }, { width: 150 }, { width: 180 }]
         }],
-        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
-        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+        openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: function () {
             //Apply style to a range
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:G1');

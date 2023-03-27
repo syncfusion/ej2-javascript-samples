@@ -64,6 +64,7 @@
     height: 27px;
     width: 29px;
     border-radius: 14px;
+    background-color:#e3165b;
     }
    
 
@@ -94,19 +95,6 @@
     .e-bigger .e-grid .statustxt{
         position: relative;
         top:-2px;
-    }
-
-    .rating .star {
-        font-size: 132%;
-        color: lightgrey;
-    }
-
-    .rating .star.checked {
-        color: #ffa600;
-    }
-
-    .rating .star:before {
-        content: '★';
     }
 
     td.e-rowcell.e-selectionbackground.e-active {
@@ -230,12 +218,26 @@
         font-size: 10px;
         color: white;
       }
+      .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+          -webkit-text-fill-color: lightgrey;
+          -webkit-text-stroke: 1px lightgrey;
+          font-size: 11px;
+      }
+      .custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
+          background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 1px #ffa600;
+      }
 </style>
 
 <script type="text/x-jsrender" id="progessTemplate">
     ${progessDetail(data)}
 </script>
 
+<template>
+    <input class="rating">
+</template>
 <script type="text/x-jsrender" id="ratingTemplate">
     ${ratingDetail(data)}
 </script>

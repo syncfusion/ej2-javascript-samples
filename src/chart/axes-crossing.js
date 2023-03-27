@@ -50,7 +50,7 @@ this.default = function () {
                     { x: -6, y: 2 }, { x: -3, y: -4 }, { x: 1.5, y: 3.5 }, { x: 6, y: 4.5 },
                 ],
                 fill: 'Red', name: 'Data Points', xName: 'x', width: 2,
-                yName: 'y', marker: { visible: false, width: 12, height: 12 }
+                yName: 'y', marker: { visible: false, width: 7, height: 7 }
             }
         ],
          // custom code start
@@ -64,6 +64,7 @@ this.default = function () {
         },
          // custom code end
         tooltip: { enable: true },
+        legendSettings: { enableHighlight: true },
         title: 'Spline Interpolation',
     });
     chart.appendTo('#container');

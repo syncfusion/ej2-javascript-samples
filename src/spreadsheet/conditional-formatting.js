@@ -47,8 +47,8 @@ this.default = function () {
                 width: 73
             }]
         },  ],
-        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
-        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+        openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: function() {
             spreadsheet.merge('A1:H1');
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:H2');

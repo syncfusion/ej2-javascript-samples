@@ -1,20 +1,4 @@
-var fillRender = function (args) {
-    var errorTheme = location.hash.split('/')[1];
-    if (errorTheme && errorTheme.indexOf('fabric') > -1) {
-        args.fill = window.fabricColors[args.point.index % 10];
-    } else if (errorTheme === 'material') {
-        args.fill = window.materialColors[args.point.index % 10];
-    } else if (errorTheme === 'highcontrast') {
-        args.fill = window.highcontrastColors[args.point.index % 10];
-    } else if (errorTheme === 'fluent') {
-        args.fill = window.fluentColors[args.point.index % 10];
-    } else if (errorTheme === 'fluent-dark') {
-        args.fill = window.fluentDarkColors[args.point.index % 10];
-    }
-     else {
-        args.fill = window.bootstrapColors[args.point.index % 10];
-    }
-};
+
 /**
  * Sample for Error Bar
  */
@@ -22,10 +6,9 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category', interval: 1,
-            majorTickLines: {width : 0},
-            minorTickLines: {width: 0},
-            majorGridLines: { width: 0 }
+            valueType: 'Category', interval: 1, majorGridLines: { width: 0 },
+            labelIntersectAction: ej.base.Browser.isDevice ? "None" : "Trim",
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0
         },
         chartArea: {
             border: {
@@ -34,95 +17,53 @@ this.default = function () {
         },
         //Initializing Primary X Axis
         primaryYAxis: {
-            labelFormat: '{value}%', minimum: 15, maximum: 45,
-            lineStyle: { width: 0 }
+            minimum: 0, 
+            maximum: 1250, 
+            interval: 250,
+            title: "Quantity",
+            lineStyle: { width: 0 },
+            majorTickLines: { width: 0 },
         },
         //Initializing Chart Series
         series: [
             {
-                type: 'Scatter',
+                type: 'Column',
                 dataSource: [
-                    { x: 'IND', y: 24 }, { x: 'AUS', y: 20 }, { x: 'USA', y: 35 },
-                    { x: 'DEU', y: 27 }, { x: 'ITA', y: 30 },
-                    { x: 'UK', y: 41 }, { x: 'RUS', y: 26 }
+                    { x: "Printer", y: 750, error: 50 },
+                    { x: "Desktop", y: 500, error: 70 },
+                    { x: "Charger", y: 550, error: 60 },
+                    { x: "Mobile", y: 575, error: 80 },
+                    { x: "Keyboard", y: 400, error: 20 },
+                    { x: "Power Bank", y: 450, error: 90 },
+                    { x: "Laptop", y: 650, error: 40 },
+                    { x: "Battery", y: 525, error: 84 }
                 ],
-                xName: 'x', width: 2, yName: 'y', marker: { height: 10, width: 10 }, 
-                //Initializing Error Bar
-                errorBar: { visible: true, verticalError: 3, horizontalError: 3 }
+                xName: 'x', yName: 'y', marker: { height: 7, width: 7 },
+                errorBar: { visible: true, verticalError: 'error'}
             },
         ],
-        //Initializing Tootlip
-        tooltip: {
-            enable: true
-        },
-        pointRender: fillRender,
-        legendSettings: { visible: false },
-        //Initializing Chart Title
-        title: 'Sales Distribution of Car by Region',
-         // custom code start
+        //Initializing Chart title
+        title: 'Quantity vs Items',
+        width: ej.base.Browser.isDevice ? '100%' : '75%',
         load: function (args) {
             var errorBarTheme = location.hash.split('/')[1];
             errorBarTheme = errorBarTheme ? errorBarTheme : 'Material';
             args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() +
-                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            if (errorBarTheme === 'bootstrap5' || errorBarTheme === 'fluent') {
+                chart.series[0].fill = '#81CCBB';
+                chart.highlightColor = '#C7E9B6';
+            }
+        },
+        tooltipRender: function (args)  {
+            args.text =  '<b>'+args.data.pointX + ' Count'  + ': ' + args.data.pointY  + '</b> (error range: ' + (args.data.pointY - args.series.visiblePoints[args.data.pointIndex].verticalError / 2 ) + '-' + (args.data.pointY + args.series.visiblePoints[args.data.pointIndex].verticalError / 2 ) + ')';
+        },
+        //Initializing tooltip
+        tooltip: { enable: true, enableMarker: false},
+        legendSettings: {
+            visible: false
         }
          // custom code end
     });
-    chart.appendTo('#error-container');
-    var typemode = new ej.dropdowns.DropDownList({
-        index: 0,
-        placeholder: 'Select Range Bar Color',
-        width: 120,
-        change: function () {
-            chart.series[0].errorBar.type = typemode.value;
-            chart.series[0].animation.enable = false;
-            chart.refresh();
-        }
-    });
-    typemode.appendTo('#selmode');
-    var drawmode = new ej.dropdowns.DropDownList({
-        index: 0,
-        placeholder: 'Select Range Bar Color',
-        width: 120,
-        change: function () {
-            chart.series[0].errorBar.mode = drawmode.value;
-            chart.refresh();
-        }
-    });
-    drawmode.appendTo('#drawmode');
-    var direction = new ej.dropdowns.DropDownList({
-        index: 0,
-        placeholder: 'Select Range Bar Color',
-        width: 120,
-        change: function () {
-            chart.series[0].errorBar.direction = direction.value;
-            chart.series[0].animation.enable = false;
-            chart.refresh();
-        }
-    });
-    direction.appendTo('#direction');
-    var verticalerrror = new ej.inputs.NumericTextBox({
-        value: 3,
-        min: 1,
-        max: 20,
-        step: 1,
-        change: function () {
-            chart.series[0].errorBar.verticalError = verticalerrror.value;
-            chart.series[0].animation.enable = false;
-            chart.refresh();
-        }
-    });
-    verticalerrror.appendTo('#verticalerrror');
-    var horizontalerrror = new ej.inputs.NumericTextBox({
-        value: 3,
-        min: 1,
-        max: 20,
-        step: 1,
-        change: function () {
-            chart.series[0].errorBar.horizontalError = horizontalerrror.value;
-            chart.series[0].animation.enable = false;
-            chart.refresh();
-        }
-    });
-    horizontalerrror.appendTo('#horizontalerrror');
+    chart.appendTo('#container');
 };

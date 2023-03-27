@@ -2,17 +2,34 @@
  * Sample for vertical chart
  */
 this.default = function () {
+    var chartData = [
+        { x:"2016", y:13600, y1:0.5},
+        { x:"2017", y:12900, y1:1.5},
+        { x:"2018", y:12500, y1:3.5},
+        { x:"2019", y:14500, y1:1.5},
+        { x:"2020", y:14500, y1:3},
+        { x:"2021", y:12000, y1:2.5},
+    ];
     var interval;
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
-        primaryXAxis: { title: 'Time (s)', majorGridLines: { width: 0 } },
+        primaryXAxis: {  valueType: 'Category', majorGridLines: { width: 0 }, majorTickLines: { width: 0 }  },
         //Initializing Primary Y Axis
-        primaryYAxis: { title: 'Velocity (m/s)', majorGridLines: { width: 0 }, minimum: -15, maximum: 15, interval: 5 },
-        //Initializing Chart Series
+        primaryYAxis: { title: 'Sales in Billion', majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minimum: 11000, maximum: 15000, interval: 1000, edgeLabelPlacement: 'Shift' },
+        axes: [
+            {
+                minimum: 0, maximum: 4, interval: 0.5, opposedPosition: true, name: 'yAxis2', title: 'Profit(In Percentage)',
+                labelFormat: '{value}%', edgeLabelPlacement: 'Shift', lineStyle: { width: 0 }, majorGridLines: { width: 0 }, majorTickLines: { width: 0 }
+            }
+        ],
         series: [
             {
-                type: 'Line', xName: 'x', yName: 'y', dataSource: [{ x: 0, y: 0 }],
-                animation: { enable: false }, width: 2
+                type: 'Column', xName: 'x', yName: 'y', dataSource: chartData,
+                width: 2
+            },
+            {
+                dataSource: chartData, type: 'Line', yAxisName: 'yAxis2', xName: 'x', yName: 'y1', width: 2,
+                marker: { isFilled: true, visible: true, width: 7, height: 7 }
             }
         ],
         chartArea: {
@@ -22,9 +39,9 @@ this.default = function () {
         },
         isTransposed: true,
         //Initializing Chart Title
-        title: 'Indonesia - Seismograph Analysis',
+        title: 'Sales Vs Profit Margin',
         //Initializing Tooltip
-        tooltip: { enable: false },
+        tooltip: { enable: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {
@@ -33,47 +50,6 @@ this.default = function () {
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
            // custom code end
-        loaded: function (args) {
-            chart.loaded = null;
-            interval =
-                setInterval(function () {
-                    chart.series[0].dataSource = liveData(chart.series[0].dataSource, chart.series[0]);
-                    chart.refresh();
-                }, 10);
-        }
     });
     chart.appendTo('#vertical-container');
-    var count = 0;
-    function liveData(data, series) {
-        count = count + 1;
-        var newData = data;
-        if (count > 350 || document.getElementById('vertical-container') === null) {
-            clearInterval(interval);
-        }
-        else if (count > 300) {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(0, 0) });
-        }
-        else if (count > 250) {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(-2, 1) });
-        }
-        else if (count > 180) {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(-3, 2) });
-        }
-        else if (count > 100) {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(-7, 6) });
-        }
-        else if (count < 50) {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(-3, 3) });
-        }
-        else {
-            newData.push({ x: getXValue(data), y: getRandomArbitrary(-9, 9) });
-        }
-        return newData;
-    }
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-    function getXValue(data) {
-        return data.length;
-    }
 };

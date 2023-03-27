@@ -3,6 +3,7 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
+    "type": "update",
     "samples": [{
             "url": "tools",
             "name": "Overview",
@@ -44,13 +45,6 @@
             "description": "This demo explains how to clean up HTML when pasting a content from Microsoft Word, Visual Studio, or a web page in JS (ECMAScript 5) HTML Editor.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "pasteCleanupSettings"], "pasteCleanupSettings": ["prompt", "plainText", "keepFormat", "deniedTags", "deniedAttrs", "allowedStyleProps"] }
-        },
-        {
-            "url": "mention-integration",
-            "name": "Mention Integration",
-            "description": "This demo explains the mention integration using the Rich Text Editor component with minimum configuration.",
-            "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
         },
         {
             "url": "iframe",
@@ -135,6 +129,21 @@
             "description": "The online HTML editor is a demo that provides LIVE experience for both content and HTML editing with Rich Text Editor features in a real-world scenario.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["actionComplete", "saveInterval", "change", "toolbarSettings", "appendTo"] }
+        },
+        {
+            "url": "mention-integration",
+            "name": "@ Mention",
+            "description": "This demo explains the mention integration using the Rich Text Editor control with minimum configuration.",
+            "category": "Mention Integration",
+            "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
+        },
+        {
+            "url": "smart-suggestion",
+            "name": "Smart Suggestion",
+            "description": "This demo explains the mention inline format integration using the Rich Text Editor control with minimum configuration.",
+            "category": "Mention Integration",
+            "type": "new",
+            "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
         },
         {
             "url": "types",

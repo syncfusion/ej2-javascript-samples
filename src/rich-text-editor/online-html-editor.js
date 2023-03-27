@@ -16,8 +16,8 @@ this.default = function () {
       width: '100%',
       paneSettings: [{
         resizable: true,
-        size: '50%', min: '20%',
-      }, {}],
+        size: '50%', min: '400px',
+      }, {min: '60px'}],
     });
     splitObj.appendTo('#horizontal');
     defaultRTE = new ej.richtexteditor.RichTextEditor({

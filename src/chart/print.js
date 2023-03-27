@@ -39,7 +39,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            valueType: 'Category',
+            valueType: 'Category', interval: 1,
             majorGridLines: { width: 0 },
             majorTickLines: {width : 0},
             minorTickLines: {width: 0}
@@ -52,21 +52,25 @@ this.default = function () {
         pointRender: labelRender,
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Sales',
-            minimum: 0,labelFormat:'${value}',
-            maximum: 20000,
+            minimum: 0,
+            labelFormat:'${value}',
+            maximum: 20,
+            interval: 4,
             lineStyle: { width: 0 },
-            minorTickLines: { width: 0 },
+            majorGridLines: { width: 2 },
             majorTickLines: { width: 0 },
         },
         //Initializing Chart Series
         series: [
             {
                 type: 'Column',
-                dataSource: [{ x: 'John', y: 10000 }, { x: 'Jake', y: 12000 }, { x: 'Peter', y: 18000 },
-                { x: 'James', y: 11000 }, { x: 'Mary', y: 9700 }],
+                dataSource: [    { x : "John", y : 10, text:"$10k" },
+                { x : "Jake", y : 12, text:"$12k" },
+                { x : "Peter", y : 18, text:"$18k" },
+                { x : "James", y : 11, text:"$11k" },
+                { x : "Mary", y : 9.7, text:"$9.7k" }],
                 xName: 'x', width: 2,
-                yName: 'y'
+                yName: 'y', marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } }
             }
         ],
         //Initializing Chart Title

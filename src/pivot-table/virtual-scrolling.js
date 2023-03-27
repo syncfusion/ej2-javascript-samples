@@ -56,7 +56,7 @@ this.default = function () {
             columns: [{ name: 'Year' }],
             values: [{ name: 'Price', caption: 'Unit Price' }, { name: 'Sold', caption: 'Unit Sold' }],
         },
-        width: 860,
+        width: ej.base.Browser.isDevice ? '100%' : 860,
         height: 300,
         enableVirtualization: true,
         gridSettings: { columnWidth: 140 },

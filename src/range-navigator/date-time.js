@@ -25,11 +25,6 @@ this.renderDateTimeChart = function (dataSource) {
             labelFormat: 'n1', minimum: 0.6,
             maximum: 1, interval: 0.1, majorTickLines: { width: 0 }, lineStyle: { width: 0 }
         },
-        axisLabelRender: function (args) {
-            if (args.axis.name === 'primaryYAxis') {
-                args.text = '€' + args.text;
-            }
-        },
         height: '350', legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         theme: theme

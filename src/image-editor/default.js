@@ -17,5 +17,15 @@ this.default = function () {
 		}	
 	}
   });
+    if (document.getElementById('right-pane')) {
+        document.getElementById('right-pane').addEventListener('scroll', onScroll);
+    }
+    // Handler used to reposition the tooltip on page scroll
+    function onScroll() {
+        if (document.getElementById('imageeditor_sliderWrapper')) {
+            var slider = ej.base.getComponent(document.getElementById('imageeditor_sliderWrapper'), 'slider');
+            slider.refreshTooltip(slider.tooltipTarget);
+        }
+    }
   imageEditorObj.appendTo('#imageeditor');
 };

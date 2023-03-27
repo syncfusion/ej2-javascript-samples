@@ -8,7 +8,6 @@ this.default = function () {
             minimum: 40,
             maximum: 56,
             majorGridLines: { width: 0 },
-            edgeLabelPlacement: 'Shift',
             title: 'Shoulder Breadth (cm)'
 
         },
@@ -557,7 +556,7 @@ this.default = function () {
         tooltip: {
             enable: true,
             format: 'Weight: <b>${point.y} kg</b> <br/> Height: <b>${point.x} cm</b>'
-        },
+        }, legendSettings: { enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {

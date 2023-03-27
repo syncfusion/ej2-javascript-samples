@@ -26,16 +26,17 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            minimum: new Date(2000, 1, 1), maximum: new Date(2006, 2, 11),
             valueType: 'DateTime',
-            skeleton: 'y',
-            lineStyle: { width: 0 },
+            labelFormat: 'yyyy',
+            intervalType: 'Years',
             majorGridLines: { width: 0 },
             edgeLabelPlacement: 'Shift'
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Revenue',
+            title: 'Revenue (in Million)',
+            rangePadding: 'None',
+            edgeLabelPlacement: 'Shift',
             labelFormat: '{value}M',
             majorTickLines: { width: 0 },
             minimum: 10, maximum: 80,
@@ -54,7 +55,7 @@ this.default = function () {
                 name: 'John',
                 xName: 'x', width: 2,
                 yName: 'y',
-                marker: { visible: true }
+                marker: { visible: true, height : 7, width: 7, isFilled: true}
             },
             {
                 type: 'Line',
@@ -62,7 +63,7 @@ this.default = function () {
                 name: 'Andrew',
                 xName: 'x', width: 2,
                 yName: 'y',
-                marker: { visible: true }
+                marker: { visible: true, height : 7, width: 7, isFilled: true }
             },
             {
                 type: 'Line',
@@ -70,11 +71,12 @@ this.default = function () {
                 name: 'Thomas',
                 xName: 'x', width: 2,
                 yName: 'y',
-                marker: { visible: true }
+                marker: { visible: true, height : 7, width: 7, isFilled: true }
             }
         ],
         //Initializing Tooltip and Crosshair
         tooltip: { enable: true, shared: true },
+        legendSettings: { enableHighlight: true },
         crosshair: { enable: true, lineType: 'Vertical' },
         //Initializing Chart Title
         title: 'Average Sales per Person',

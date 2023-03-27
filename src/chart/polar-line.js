@@ -8,8 +8,7 @@ this.default = function () {
             title: 'Months',
             valueType: 'Category',
             labelPlacement: 'OnTicks',
-            interval: 1,
-            coefficient: ej.base.Browser.isDevice ? 80 : 100
+            interval: 1, coefficient: ej.base.Browser.isDevice ? 80 : 100
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
@@ -33,11 +32,12 @@ this.default = function () {
                     { x: 'Nov', y: -3.8 }, { x: 'Dec', y: -6.8 },
                 ],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'Warmest',
+                yName: 'y', name: 'Germany', opacity: 1,
                 marker: {
                     visible: true,
-                    height: 10, width: 10,
+                    height: 7, width: 7,
                     shape: 'Pentagon',
+                    isFilled: true
                 }
             }, {
                 type: 'Polar',
@@ -50,9 +50,9 @@ this.default = function () {
                     { x: 'Nov', y: -13.4 }, { x: 'Dec', y: -16.4 },
                 ],
                 xName: 'x', width: 2,
-                yName: 'y', name: 'Coldest',
+                yName: 'y', name: 'England',
                 marker: {
-                    visible: true, height: 10, width: 10, shape: 'Diamond',
+                    visible: true, height: 7, width: 7, shape: 'Diamond', isFilled: true
                 }
             }
         ],
@@ -61,7 +61,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true
-        },
+        }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {
             var polarLineTheme = location.hash.split('/')[1];
@@ -87,8 +87,8 @@ this.default = function () {
         change: function () {
             chart.series[0].type = polarType.value;
             chart.series[1].type = polarType.value;
-            chart.series[0].animation.enable = true;
-            chart.series[1].animation.enable = true;
+            chart.series[0].animation.enable = false;
+            chart.series[1].animation.enable = false;
             chart.refresh();
         }
     });

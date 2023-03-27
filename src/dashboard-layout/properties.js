@@ -49,14 +49,16 @@ this.default = function () {
         dashboard.cellSpacing = [parseInt(args.value, 10), parseInt(args.value, 10)];
     }
     function onChange(args) {
-        if (args.event.target.previousElementSibling.id === 'floating') {
-                  dashboardObject.allowFloating = args.checked;
-	}
-	if (args.event.target.previousElementSibling.id === 'resizing') {
-		   dashboardObject.allowResizing = args.checked;
-        }
+        var targetElement = args.event.target;
+        var previousElement = targetElement.previousElementSibling;
+        var nextElement = targetElement.nextElementSibling;
+        if ((previousElement !== null && previousElement.id === 'floating') || nextElement !== null && nextElement.previousElementSibling.id === 'floating') {
+            dashboardObject.allowFloating = args.checked;
+         }
+         if ((previousElement !== null && previousElement.id === 'resizing') || nextElement !== null && nextElement.previousElementSibling.id === 'resizing') {
+            dashboardObject.allowResizing = args.checked;
+         }
     }
-
     document.getElementById('remove').onclick = function (e) {
 		if (dashboardObject.panels.length > 0) {
 			for (var i = dashboardObject.panels.length - 1; i < dashboardObject.panels.length; i++) {

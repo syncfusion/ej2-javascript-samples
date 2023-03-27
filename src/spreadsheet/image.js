@@ -90,8 +90,8 @@ this.default = function() {
         ],
             columns: [{ width: 20 }, { width: 100 }, { width: 208 }, { width: 200 }, { width: 200 }, { width: 200 }]
         }],
-        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
-        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+        openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         //Application level customization
         created: function() {
             spreadsheet.merge('B2:F2');

@@ -10,12 +10,11 @@ this.default = function () {
             isIndexed: true,
             labelRotation: ej.base.Browser.isDevice ? -45 : 0,
             labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45',
-            majorTickLines: { width: 0 },
-            minorTickLines: { width: 0 }
+            ajorTickLines: { width: 0 }, crosshairTooltip: { enable: true }
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelFormat: '{value}%'
+            labelFormat: '{value}%', majorTickLines: { width: 0 }
         },
         chartArea: {
             border: {
@@ -27,11 +26,11 @@ this.default = function () {
             {
                 type: 'Column',
                 dataSource: [
-                    { x: 'India', y: 7.3 },
-                    { x: 'Myanmar', y: 7.9 },
-                    { x: 'Bangladesh', y: 6.8 },
-                    { x: 'Cambodia', y: 7.0 },
-                    { x: 'China', y: 6.9 }
+                    { x: "India", y: 7.9 },
+                    { x: "Myanmar", y: 7.3 },
+                    { x: "Bangladesh", y: 6.0 },
+                    { x: "Cambodia", y: 7.0 },
+                    { x: "China", y: 6.9 },
                 ],
                 xName: 'x', width: 2, marker: { visible: false, height: 10, width: 10, dataLabel: { visible: true,  position: 'Top', font: { size : ej.base.Browser.isDevice ? '8px' : '11px'}}},
                 yName: 'y', name: '2015'
@@ -39,11 +38,11 @@ this.default = function () {
             {
                 type: 'Column',
                 dataSource: [
-                    { x: 'Australia', y: 2.7 },
-                    { x: 'Poland', y: 2.5 },
-                    { x: 'Singapore', y: 2.0 },
-                    { x: 'Canada', y: 1.4 },
-                    { x: 'Germany', y: 1.8 }
+                    { x: "Australia", y: 2.5 },
+                    { x: "Poland", y: 2.7 },
+                    { x: "Singapore", y: 2.0 },
+                    { x: "Canada", y: 1.4 },
+                    { x: "Germany", y: 1.8 }
                 ],
                 xName: 'x', width: 2,marker: { visible: false, height: 10, width: 10, dataLabel: { visible: true,  position: 'Top',  font: { size : ej.base.Browser.isDevice ? '8px' : '11px'}}},
                 yName: 'y', name: '2016'

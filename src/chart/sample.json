@@ -185,6 +185,19 @@
             }
         },
         {
+            "url": "range-step-area",
+            "name": "Range Step Area","type":"new",
+            "description": "This demo for Essential JS2 Chart control shows how to render the range step area series.",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
             "url": "range-area",
             "name": "Range Area",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the range area series.",
@@ -503,6 +516,150 @@
             }
         },
         {
+            "url": "default-pie",
+            "name": "Pie",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-radius",
+            "name": "Pie with Various Radius",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the various radius pie chart.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "donut",
+            "name": "Donut",
+            "type":"update",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the doughnut charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pyramid",
+            "name": "Pyramid",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pyramid charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "funnel",
+            "name": "Funnel",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the funnel charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-legend",
+            "name": "Pie with Legend",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "semi-pie",
+            "name": "Semi Pie",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render semi-pie and doughnut charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "smart-labels",
+            "name": "Smart Labels",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "drill-down-pie",
+            "name": "Drilldown",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to achieve the drill-down concept using pie charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "grouping",
+            "name": "Grouping",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to group points in pie charts.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-empty-point",
+            "name": "Empty Points",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
             "url": "waterfall",
             "name": "Waterfall",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the waterfall series.",
@@ -550,7 +707,7 @@
         },
         {
             "url": "error-bar",
-            "name": "Error Bar",
+            "name": "Error Bar","type":"update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the error bars in charts.",
             "category": "Other Types",
             "api": {
@@ -809,149 +966,6 @@
                     "primaryXAxis",
                     "primaryYAxis",
                     "series"
-                ]
-            }
-        },
-        {
-            "url": "default-pie",
-            "name": "Pie",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "pie-radius",
-            "name": "Pie with Various Radius",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the various radius pie chart.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "donut",
-            "name": "Donut",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the doughnut charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "pyramid",
-            "name": "Pyramid",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pyramid charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "funnel",
-            "name": "Funnel",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the funnel charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "pie-legend",
-            "name": "Pie with Legend",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "semi-pie",
-            "name": "Semi Pie","type":"update",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render semi-pie and doughnut charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "smart-labels",
-            "name": "Smart Labels",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "drill-down-pie",
-            "name": "Drilldown",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to achieve the drill-down concept using pie charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "grouping",
-            "name": "Grouping",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to group points in pie charts.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
-                ]
-            }
-        },
-        {
-            "url": "pie-empty-point",
-            "name": "Empty Points",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
-            "category": "Accumulation Charts",
-            "api": {
-                "AccumulationChart": [
-                    "series",
-                    "legendSettings",
-                    "tooltip"
                 ]
             }
         },

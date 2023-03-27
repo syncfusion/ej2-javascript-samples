@@ -9,7 +9,12 @@ this.default = function() {
                 getImageUrl: hostUrl + 'GetImage',
                 uploadUrl: hostUrl + 'Upload',
                 downloadUrl: hostUrl + 'Download'
-            }
-    });
+            },
+            contextMenuSettings: {
+                layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+                visible: true
+            },
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
+        });
     fileObject.appendTo('#filemanager');
 };

@@ -7,24 +7,24 @@ this.default = function () {
         backgroundImage: 'src/chart/images/wheat.png',
         //Initializing Primary X Axis
         primaryXAxis: {
-                labelStyle: { color: 'white'},
-                valueType: 'Category',
-                labelFormat: 'y',
-                intervalType: 'Years',
-                edgeLabelPlacement: 'Shift',
-                majorGridLines: { width: 0 },
-                majorTickLines: { width: 0 },
-                lineStyle: { color: '#EFEFEF', width: 3 },
+            labelStyle: { color: 'white'},
+            intervalType: 'Years',
+            labelFormat: 'y',
+            valueType: 'Category',
+            edgeLabelPlacement: 'Shift',
+            majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
+            lineStyle: { color: '#EFEFEF', width: 3 },
         },
         //Initializing Primary X Axis
         primaryYAxis: {
-            rangePadding: 'None',  
+            rangePadding: 'None',
             labelStyle: { color: 'white'},
             majorGridLines: { color: '#EFEFEF', width: 2 },
             majorTickLines: { width: 0},
             title: 'Billion Bushels',
             titleStyle: { color: 'white'},
-            lineStyle: { color: '#EFEFEF', width: 3 },
+            lineStyle: { width: 0 },
         },
         chartArea: {
             border: {

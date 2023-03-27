@@ -1,69 +1,58 @@
 this.default = function () {
     var intlObj = new ej.base.Internationalization();
-    window.getDateHeaderText = function (value) {
-        return intlObj.formatDate(value, { skeleton: 'Ed' });
+    window.getDateHeaderDay = function (value) {
+        return intlObj.formatDate(value, { skeleton: 'E' });
+    };
+    window.getDateHeaderDate = function (value) {
+        return intlObj.formatDate(value, { skeleton: 'd' });
     };
     window.getWeather = function (value) {
-        var weatherList = [
-            '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/><div class="weather-text">25°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">18°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/><div class="weather-text">10°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">16°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/><div class="weather-text">8°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/><div class="weather-text">27°C</div>',
-            '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/><div class="weather-text">17°C</div>'
-        ];
-        var index = value.getDay();
-        return weatherList[index] ? weatherList[index] : null;
-    };
-    window.getResourceData = function (data) {
-        var resources = scheduleObj.getResourceCollections().slice(-1)[0];
-        var resourceData = resources.dataSource.filter(function (resource) {
-            return resource.CalendarId === data.CalendarId;
-        })[0];
-        return resourceData;
-    };
-    window.getHeaderDetails = function (data) {
-        return intlObj.formatDate(data.StartTime, { type: 'date', skeleton: 'full' }) + ' (' +
-            intlObj.formatDate(data.StartTime, { skeleton: 'hm' }) + ' - ' + intlObj.formatDate(data.EndTime, { skeleton: 'hm' }) + ')';
-    };
-    window.getHeaderStyles = function (data) {
-        if (data.elementType === 'event') {
-            var resourceData = window.getResourceData(data);
-            var calendarColor = '#3f51b5';
-            if (resourceData) {
-                calendarColor = (resourceData.CalendarColor).toString();
-            }
-            return 'background:' + calendarColor + '; color: #FFFFFF;';
-        }
-        else {
-            return 'align-items: center; color: #919191;';
+        switch (value.getDay()) {
+            case 0:
+                return '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/>';
+            case 1:
+                return '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/>';
+            case 2:
+                return '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/>';
+            case 3:
+                return '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/>';
+            case 4:
+                return '<img class="weather-image" src="src/schedule/images/weather-rain.svg"/>';
+            case 5:
+                return '<img class="weather-image" src="src/schedule/images/weather-clear.svg"/>';
+            case 6:
+                return '<img class="weather-image" src="src/schedule/images/weather-clouds.svg"/>';
+            default:
+                return null;
         }
     };
-    window.getEventType = function (data) {
-        var resourceData = window.getResourceData(data);
-        var calendarText = '';
-        if (resourceData) {
-            calendarText = resourceData.CalendarName.toString();
-        }
-        return calendarText;
-    };
+
     var importTemplateFn = function (data) {
         var template = '<div class="e-template-btn"><span class="e-btn-icon e-icons e-upload-1 e-icon-left"></span>${text}</div>';
         return ej.base.compile(template.trim())(data);
     };
+    var liveTimeInterval;
+    var defaultAppBarObj = new ej.navigations.AppBar({
+        colorMode: 'Primary'
+    });
+    defaultAppBarObj.appendTo('#defaultAppBar');
     var updateLiveTime = function () {
         var scheduleTimezone = scheduleObj ? scheduleObj.timezone : 'Etc/GMT';
-        var timeBtn = document.querySelector('.schedule-overview #timeBtn');
-        if (timeBtn) {
-            timeBtn.innerHTML = '<span class="e-btn-icon e-icons e-clock e-icon-left"></span>' +
-                new Date().toLocaleTimeString('en-US', { timeZone: scheduleTimezone });
+        var timeBtn = document.querySelector('.current-time');
+        if (!timeBtn) {
+            return;
+        }
+        if (scheduleObj.isAdaptive) {
+            timeBtn.innerHTML = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: scheduleTimezone });
+        }
+        else {
+            timeBtn.innerHTML = new Date().toLocaleTimeString('en-US', { timeZone: scheduleTimezone });
         }
     };
     var generateEvents = function () {
         var eventData = [];
         var eventSubjects = [
-            'Bering Sea Gold', 'Technology', 'Maintenance', 'Meeting', 'Travelling', 'Annual Conference', 'Birthday Celebration',
+            'Bering Sea Gold', 'Technology', 'Maintenance', 'Meeting', 'Traveling', 'Annual Conference', 'Birthday Celebration',
             'Farewell Celebration', 'Wedding Anniversary', 'Alaska: The Last Frontier', 'Deadliest Catch', 'Sports Day', 'MoonShiners',
             'Close Encounters', 'HighWay Thru Hell', 'Daily Planet', 'Cash Cab', 'Basketball Practice', 'Rugby Match', 'Guitar Class',
             'Music Lessons', 'Doctor checkup', 'Brazil - Mexico', 'Opening ceremony', 'Final presentation'
@@ -121,53 +110,8 @@ this.default = function () {
         }
         return overviewEvents;
     };
-    var buttonClickActions = function (e) {
-        var popupElement = ej.base.closest(e.target, '.e-quick-popup-wrapper');
-        var getSlotData = function () {
-            var cellDetails = scheduleObj.getCellDetails(scheduleObj.getSelectedElements());
-            if (ej.base.isNullOrUndefined(cellDetails)) {
-                cellDetails = scheduleObj.getCellDetails(scheduleObj.activeCellsData.element);
-            }
-            var subject = popupElement.querySelector('#title').ej2_instances[0].value;
-            var notes = popupElement.querySelector('#notes').ej2_instances[0].value;
-            var eventObj = {};
-            eventObj.Id = scheduleObj.getEventMaxID();
-            eventObj.Subject = ej.base.isNullOrUndefined(subject) ? 'Add title' : subject;
-            eventObj.StartTime = new Date(+cellDetails.startTime);
-            eventObj.EndTime = new Date(+cellDetails.endTime);
-            eventObj.IsAllDay = cellDetails.isAllDay;
-            eventObj.Description = ej.base.isNullOrUndefined(notes) ? 'Add notes' : notes;
-            eventObj.CalendarId = popupElement.querySelector('#eventType').ej2_instances[0].value;
-            return eventObj;
-        };
-        if (e.target.id === 'add') {
-            var addObj = getSlotData();
-            scheduleObj.addEvent(addObj);
-        }
-        else if (e.target.id === 'delete') {
-            var currentAction = void 0;
-            if (scheduleObj.activeEventData.event.RecurrenceRule) {
-                currentAction = 'DeleteOccurrence';
-            }
-            scheduleObj.deleteEvent(scheduleObj.activeEventData.event, currentAction);
-        }
-        else {
-            var isCellPopup = popupElement.firstElementChild.classList.contains('e-cell-popup');
-            var eventDetails = isCellPopup ? getSlotData() : scheduleObj.activeEventData.event;
-            var action = isCellPopup ? 'Add' : 'Save';
-            if (eventDetails.RecurrenceRule) {
-                action = 'EditOccurrence';
-            }
-            scheduleObj.openEditor(eventDetails, action, true);
-        }
-        scheduleObj.closeQuickInfoPopup();
-    };
     var isTimelineView = false;
-    var timezoneBtn = new ej.buttons.Button({ iconCss: 'e-icons e-time-zone', cssClass: 'title-bar-btn', disabled: true });
-    timezoneBtn.appendTo('#timezoneBtn');
-    var timeBtn = new ej.buttons.Button({ iconCss: 'e-icons e-clock', cssClass: 'title-bar-btn', disabled: true });
-    timeBtn.appendTo('#timeBtn');
-    var printBtn = new ej.buttons.Button({ iconCss: 'e-icons e-print', cssClass: 'title-bar-btn' });
+    var printBtn = new ej.buttons.Button({ iconCss: 'e-icons e-print', cssClass: 'e-inherit' });
     printBtn.appendTo('#printBtn');
     printBtn.element.onclick = function () { scheduleObj.print(); };
     var importObj = new ej.inputs.Uploader({
@@ -179,11 +123,13 @@ this.default = function () {
         selected: function (args) { return scheduleObj.importICalendar(args.event.target.files[0]); }
     });
     importObj.appendTo('#icalendar');
+    document.querySelector('.calendar-import .e-btn').classList.add('e-inherit');
     var exportObj = new ej.splitbuttons.DropDownButton({
         items: [
             { text: 'iCalendar', iconCss: 'e-icons e-export' },
             { text: 'Excel', iconCss: 'e-icons e-export-excel' }
         ],
+        cssClass: 'e-inherit',
         select: function (args) {
             if (args.item.text === 'Excel') {
                 var exportDatas = [];
@@ -207,46 +153,41 @@ this.default = function () {
             }
         }
     });
-    exportObj.appendTo('#exporting');
-    var timelineTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="timeline_views"></button></div><div class="text-child" style="font-size: 14px;">Timeline Views</div></div>';
-    var multiDragTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="multi_Drag"></button></div><div class="text-child" style="font-size: 14px;">Allow Multi Drag</div></div>';
-    var groupTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="grouping"></button></div><div class="text-child" style="font-size: 14px;">Grouping</div></div>';
-    var gridlineTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="gridlines"></button></div><div class="text-child" style="font-size: 14px;">Gridlines</div></div>';
-    var autoHeightTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="row_auto_height"></button></div><div class="text-child" style="font-size: 14px;">Row Auto Height</div></div>';
-    var tooltipTemplate = '<div style="height: 46px; line-height: 23px;"><div class="icon-child" style="text-align: center;">' +
-        '<button id="tooltip"></button></div><div class="text-child" style="font-size: 14px;">Tooltip</div></div>';
+    exportObj.appendTo('#exportBtn');
+    var timelineTemplate = '<div class="template"><div class="icon-child">' +
+        '<input id="timeline-views" aria-label="Timeline Views"></input></div><div class="text-child">Timeline Views</div></div>';
+    var groupTemplate = '<div class="template"><div class="icon-child">' +
+        '<input id="grouping" aria-label="Grouping"></input></div><div class="text-child">Grouping</div></div>';
+    var gridlineTemplate = '<div class="template"><div class="icon-child">' +
+        '<input id="timeSlot" aria-label="Time Slots"></input></div><div class="text-child">Time Slots</div></div>';
+    var autoHeightTemplate = '<div class="template"><div class="icon-child">' +
+        '<input id="row_auto_height" aria-label="Auto Fit Rows"></input></div><div class="text-child">Auto Fit Rows</div></div>';
     var toolbarObj = new ej.navigations.Toolbar({
         height: 70,
         overflowMode: 'Scrollable',
         scrollStep: 100,
+        cssClass: 'overview-toolbar',
         items: [
-            { prefixIcon: 'e-icons e-plus', tooltipText: 'New Event', text: 'New Event' },
-            { prefixIcon: 'e-icons e-repeat', tooltipText: 'New Recurring Event', text: 'New Recurring Event' },
+            { prefixIcon: 'e-icons e-plus', tooltipText: 'New Event', text: 'New Event',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-repeat', tooltipText: 'New Recurring Event', text: 'New Recurring Event',  tabIndex: 0 },
             { type: 'Separator' },
-            { prefixIcon: 'e-icons e-day', tooltipText: 'Day', text: 'Day' },
-            { prefixIcon: 'e-icons e-week', tooltipText: 'Week', text: 'Week' },
-            { prefixIcon: 'e-icons e-week', tooltipText: 'WorkWeek', text: 'WorkWeek' },
-            { prefixIcon: 'e-icons e-month', tooltipText: 'Month', text: 'Month' },
-            { prefixIcon: 'e-icons e-month', tooltipText: 'Year', text: 'Year' },
-            { prefixIcon: 'e-icons e-agenda-date-range', tooltipText: 'Agenda', text: 'Agenda' },
+            { prefixIcon: 'e-icons e-day', tooltipText: 'Day', text: 'Day',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-week', tooltipText: 'Week', text: 'Week',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-week', tooltipText: 'WorkWeek', text: 'WorkWeek',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-month', tooltipText: 'Month', text: 'Month',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-month', tooltipText: 'Year', text: 'Year',  tabIndex: 0 },
+            { prefixIcon: 'e-icons e-agenda-date-range', tooltipText: 'Agenda', text: 'Agenda',  tabIndex: 0 },
             { tooltipText: 'Timeline Views', text: 'Timeline Views', template: timelineTemplate },
             { type: 'Separator' },
             { tooltipText: 'Grouping', text: 'Grouping', template: groupTemplate },
-            { tooltipText: 'Gridlines', text: 'Gridlines', template: gridlineTemplate },
-            { tooltipText: 'Row Auto Height', text: 'Row Auto Height', template: autoHeightTemplate },
-            { tooltipText: 'Tooltip', text: 'Tooltip', template: tooltipTemplate },
-            { tooltipText: 'Allow Multi Drag', text: 'Allow Multi Drag', template: multiDragTemplate }
+            { tooltipText: 'Time Slots', text: 'Time Slots', template: gridlineTemplate },
+            { tooltipText: 'Auto Fit Rows', text: 'Auto Fit Rows', template: autoHeightTemplate },
         ],
         created: function () {
-            setInterval(function () { updateLiveTime(); }, 1000);
-            var timelineView = new ej.buttons.Switch({
+            liveTimeInterval = setInterval(function () { updateLiveTime(); }, 1000);
+            var timelineView = new ej.buttons.CheckBox({
                 checked: false,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
+                created: function () { this.element.setAttribute('tabindex', '0'); },
                 change: function (args) {
                     isTimelineView = args.checked;
                     switch (scheduleObj.currentView) {
@@ -276,37 +217,25 @@ this.default = function () {
                     }
                 }
             });
-            timelineView.appendTo('#timeline_views');
-            var multiDrag = new ej.buttons.Switch({
-                checked: false,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
-                change: function (args) { scheduleObj.allowMultiDrag = args.checked; }
-            });
-            multiDrag.appendTo('#multi_Drag');
-            var grouping = new ej.buttons.Switch({
+            timelineView.appendTo('#timeline-views');
+            var grouping = new ej.buttons.CheckBox({
                 checked: true,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
+                created: function () { this.element.setAttribute('tabindex', '0'); },
                 change: function (args) { scheduleObj.group.resources = args.checked ? ['Calendars'] : []; }
             });
             grouping.appendTo('#grouping');
-            var gridlines = new ej.buttons.Switch({
+            var timeSlot = new ej.buttons.CheckBox({
                 checked: true,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
+                created: function () { this.element.setAttribute('tabindex', '0'); },
                 change: function (args) { scheduleObj.timeScale.enable = args.checked; }
             });
-            gridlines.appendTo('#gridlines');
-            var rowAutoHeight = new ej.buttons.Switch({
+            timeSlot.appendTo('#timeSlot');
+            var rowAutoHeight = new ej.buttons.CheckBox({
                 checked: false,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
+                created: function () { this.element.setAttribute('tabindex', '0'); },
                 change: function (args) { scheduleObj.rowAutoHeight = args.checked; }
             });
             rowAutoHeight.appendTo('#row_auto_height');
-            var tooltip = new ej.buttons.Switch({
-                checked: false,
-                created: function () { this.element.setAttribute('tabindex', '-1'); },
-                change: function (args) { scheduleObj.eventSettings.enableTooltip = args.checked; }
-            });
-            tooltip.appendTo('#tooltip');
             document.querySelector('#settingsBtn').onclick = function () {
                 var settingsPanel = document.querySelector('.overview-content .right-panel');
                 if (settingsPanel.classList.contains('hide')) {
@@ -371,10 +300,10 @@ this.default = function () {
             }
         }
     });
-    toolbarObj.appendTo('#toolbar_options');
+    toolbarObj.appendTo('#toolbarOptions');
     var settingsBtn = new ej.buttons.Button({
         iconCss: 'e-icons e-settings',
-        cssClass: 'overview-toolbar-settings', iconPosition: 'Top'
+        cssClass: 'e-inherit'
     });
     settingsBtn.appendTo('#settingsBtn');
     var resourceData = [
@@ -394,58 +323,18 @@ this.default = function () {
         timezone: 'UTC',
         group: { resources: ['Calendars'] },
         resources: [{
-            field: 'CalendarId', title: 'Calendars', name: 'Calendars', allowMultiple: true,
-            textField: 'CalendarName', idField: 'CalendarId', colorField: 'CalendarColor',
-            dataSource: resourceData, query: new ej.data.Query().where('CalendarId', 'equal', 1)
-        }],
-        dateHeaderTemplate: '<div class="date-text">${getDateHeaderText(data.date)}</div>${getWeather(data.date)}',
-        quickInfoTemplates: {
-            header: '#header-template',
-            content: '#content-template',
-            footer: '#footer-template'
-        },
+                field: 'CalendarId', title: 'Calendars', name: 'Calendars', allowMultiple: true,
+                textField: 'CalendarName', idField: 'CalendarId', colorField: 'CalendarColor',
+                dataSource: resourceData, query: new ej.data.Query().where('CalendarId', 'equal', 1)
+            }],
+        dateHeaderTemplate: '<div class="date-text">${getDateHeaderDay(data.date)}</div><div class="date-text">' +
+            '${getDateHeaderDate(data.date)}</div>${getWeather(data.date)}',
         eventSettings: { dataSource: generateEvents() },
-        popupOpen: function (args) {
-            if (args.type === 'QuickInfo' || args.type === 'ViewEventInfo') {
-                if (!args.target.classList.contains('e-appointment')) {
-                    var titleObj = new ej.inputs.TextBox({ placeholder: 'Title' });
-                    titleObj.appendTo(args.element.querySelector('#title'));
-                    titleObj.focusIn();
-                    var eventTypeObj = new ej.dropdowns.DropDownList({
-                        dataSource: resourceData,
-                        placeholder: 'Choose Type',
-                        fields: { text: 'CalendarName', value: 'CalendarId' },
-                        index: args.data.CalendarId - 1 
-                    });
-                    eventTypeObj.appendTo(args.element.querySelector('#eventType'));
-                    var eventNotesObj = new ej.inputs.TextBox({ placeholder: 'Notes' });
-                    eventNotesObj.appendTo(args.element.querySelector('#notes'));   
-                }
-                var detailsBtn = args.element.querySelector('#more-details');
-                if (detailsBtn) {
-                    var moreObj = new ej.buttons.Button({
-                        content: 'More Details', cssClass: 'e-flat',
-                        isPrimary: args.element.firstElementChild.classList.contains('e-event-popup')
-                    });
-                    moreObj.appendTo(detailsBtn);
-                    detailsBtn.onclick = function (e) { buttonClickActions(e); };
-                }
-                var addBtn = args.element.querySelector('#add');
-                if (addBtn) {
-                    var addBtnObj = new ej.buttons.Button({ content: 'Add', cssClass: 'e-flat', isPrimary: true });
-                    addBtnObj.appendTo(addBtn);
-                    addBtn.onclick = function (e) { buttonClickActions(e); };
-                }
-                var deleteBtn = args.element.querySelector('#delete');
-                if (deleteBtn) {
-                    var deleteBtnObj = new ej.buttons.Button({ content: 'Delete', cssClass: 'e-flat' });
-                    deleteBtnObj.appendTo(deleteBtn);
-                    deleteBtn.onclick = function (e) { buttonClickActions(e); };
-                }
-            }
-        },
         destroyed: function () {
             contextMenuObj.destroy();
+            if (liveTimeInterval) {
+                clearInterval(liveTimeInterval);
+            }
         }
     });
     scheduleObj.appendTo('#scheduler');
@@ -480,13 +369,12 @@ this.default = function () {
                 ej.base.removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
             }
             scheduleObj.closeQuickInfoPopup();
-            var targetElement = args.event.target;
-            if (ej.base.closest(targetElement, '.e-contextmenu')) {
+            var targetEle = args.event.target;
+            if (ej.base.closest(targetEle, '.e-contextmenu')) {
                 return;
             }
-            var selectors = '.e-appointment,.e-work-cells,.e-vertical-view .e-date-header-wrap .e-all-day-cells,' +
-                '.e-vertical-view .e-date-header-wrap .e-header-cells';
-            selectedTarget = ej.base.closest(targetElement, selectors);
+            selectedTarget = ej.base.closest(targetEle, '.e-appointment,.e-work-cells,' +
+                '.e-vertical-view .e-date-header-wrap .e-all-day-cells,.e-vertical-view .e-date-header-wrap .e-header-cells');
             if (ej.base.isNullOrUndefined(selectedTarget)) {
                 args.cancel = true;
                 return;
@@ -502,6 +390,12 @@ this.default = function () {
                     contextMenuObj.hideItems(['Add', 'AddRecurrence', 'Today', 'EditRecurrenceEvent', 'DeleteRecurrenceEvent'], true);
                 }
                 return;
+            } else if ((selectedTarget.classList.contains('e-work-cells') || selectedTarget.classList.contains('e-all-day-cells')) &&
+                !selectedTarget.classList.contains('e-selected-cell')) {
+                var selectedCells = [].slice.call(scheduleObj.element.querySelectorAll('.e-selected-cell'));
+                ej.base.removeClass(selectedCells, 'e-selected-cell');
+                selectedTarget.classList.add('e-selected-cell');
+                selectedTarget.setAttribute('aria-selected', 'true');
             }
             contextMenuObj.hideItems(['Save', 'Delete', 'EditRecurrenceEvent', 'DeleteRecurrenceEvent'], true);
             contextMenuObj.showItems(['Add', 'AddRecurrence', 'Today'], true);
@@ -547,7 +441,7 @@ this.default = function () {
         },
         cssClass: 'schedule-context-menu'
     });
-    contextMenuObj.appendTo('#OverViewContextMenu');
+    contextMenuObj.appendTo('#overviewContextMenu');
     var weekDays = [
         { text: 'Sunday', value: 0 },
         { text: 'Monday', value: 1 },
@@ -573,7 +467,6 @@ this.default = function () {
         enableSelectionOrder: false,
         showClearButton: false,
         showDropDownIcon: true,
-        popupHeight: 150,
         value: [1, 2, 3, 4, 5],
         change: function (args) { scheduleObj.workDays = args.value; }
     });
@@ -583,10 +476,8 @@ this.default = function () {
         dataSource: resourceData,
         fields: { text: 'CalendarName', value: 'CalendarId' },
         mode: 'CheckBox',
-        enableSelectionOrder: false,
         showClearButton: false,
         showDropDownIcon: true,
-        popupHeight: 150,
         value: [1],
         change: function (args) {
             var resourcePredicate;
@@ -641,8 +532,7 @@ this.default = function () {
         change: function (args) {
             scheduleObj.timezone = args.value;
             updateLiveTime();
-            document.querySelector('.schedule-overview #timezoneBtn').innerHTML =
-                '<span class="e-btn-icon e-icons e-time-zone e-icon-left"></span>' + args.itemData.text;
+            document.querySelector('.schedule-overview #timezoneBtn').innerHTML = args.itemData.text;
         }
     });
     timezone.appendTo('#timezone');
@@ -721,7 +611,7 @@ this.default = function () {
         fields: { text: 'Name', value: 'Value' },
         popupHeight: 150,
         value: 'hh:mm a',
-        change: function (args) { scheduleObj.timeFormat = args.value; }
+        change: function (args) { scheduleObj.timeFormat = args.value; },
     });
     timeFormat.appendTo('#timeFormat');
     var weekNumber = new ej.dropdowns.DropDownList({
@@ -737,11 +627,30 @@ this.default = function () {
         change: function (args) {
             if (args.value === 'Off') {
                 scheduleObj.showWeekNumber = false;
-            } else {
+            }
+            else {
                 scheduleObj.showWeekNumber = true;
                 scheduleObj.weekRule = args.value;
             }
-        }
+        },
     });
-    weekNumber.appendTo('#week_number');
+    weekNumber.appendTo('#weekNumber');
+    var tooltip = new ej.dropdowns.DropDownList({
+        dataSource: [
+            { Name: 'Off', Value: 'Off' },
+            { Name: 'On', Value: 'On' },
+        ],
+        fields: { text: 'Name', value: 'Value' },
+        popupHeight: 150,
+        value: 'Off',
+        change: function (args) {
+            if (args.value === 'Off') {
+                scheduleObj.eventSettings.enableTooltip = false;
+            }
+            else {
+                scheduleObj.eventSettings.enableTooltip = true;
+            }
+        },
+    });
+    tooltip.appendTo('#tooltip');
 };

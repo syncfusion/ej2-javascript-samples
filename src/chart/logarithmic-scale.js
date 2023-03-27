@@ -41,14 +41,14 @@ this.default = function () {
                 xName: 'x', width: 2,
                 yName: 'y', name: 'Product X',
                 marker: {
-                    visible: true, height: 10, width: 10
+                    visible: true, height: 7, width: 7, isFilled: true
                 }
             }
         ],
         //Initializing Chart Title
         title: 'Product X Growth [1995-2005]', legendSettings: { visible: false },
         //Initializing Tooltip
-        tooltip: { enable: true },
+        tooltip: { enable: true,  shared: true, header: '', format: '${point.x} : <b>${point.y}</b>' },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start
         load: function (args) {

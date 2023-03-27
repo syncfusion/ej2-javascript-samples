@@ -1,7 +1,7 @@
 this.default = function () {
-    var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
+    var hostUrl = 'https://services.syncfusion.com/js/production/api/orders';
     var data = new ej.data.DataManager({
-        url: hostUrl + 'api/Orders',
+        url: hostUrl,
         adaptor: new ej.data.WebApiAdaptor(),
         crossDomain: true
     });
@@ -14,8 +14,7 @@ this.default = function () {
             { field: 'EmployeeID', headerText: 'Employee ID', width: 135, textAlign: 'Right' },
             { field: 'Freight', headerText: 'Freight', width: 160, textAlign: 'Right', format: 'C2' },
             { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Center' },
-        ],
-        pageSettings: { pageCount: 3 }
+        ]
     });
     grid.appendTo('#Grid');
 };

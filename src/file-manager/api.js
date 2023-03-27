@@ -10,8 +10,12 @@ this.default = function () {
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             downloadUrl: hostUrl + 'api/FileManager/Download'
         },
-        toolbarSettings: { visible: true },
         navigationPaneSettings: { visible: false },
+        contextMenuSettings: {
+            layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+            visible: true
+        },
+        toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
         view: 'LargeIcons'
     });
     fileObject.appendTo('#filemanager');

@@ -184,6 +184,10 @@ this.default = function () {
                 report = JSON.parse(localStorage.pivotviewReports);
             }
             if (args.report && args.reportName && args.reportName !== '') {
+                var reports = JSON.parse(args.report);
+                reports.dataSourceSettings.dataSource = [];
+                reports.pivotValues = [];
+                args.report = JSON.stringify(reports);
                 report.map(function (currentReport) {
                     if (args.reportName === currentReport.reportName) {
                         currentReport.report = args.report;
@@ -207,7 +211,9 @@ this.default = function () {
                 }
             });
             if (args.report) {
-                pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
+                var reports = JSON.parse(args.report);
+                reports.dataSourceSettings.dataSource = pivotObj.dataSourceSettings.dataSource;
+                pivotObj.dataSourceSettings = reports.dataSourceSettings;
             }
         },
         fetchReport: function (args) {
@@ -282,6 +288,11 @@ this.default = function () {
                 mode: 'Cell',
                 type: 'Single',
                 cellSelectionMode: 'Box'
+            },
+            excelQueryCellInfo: function (args) {
+                if (args.cell.axis === 'value' && args.cell.value === undefined) {
+                    args.style.numberFormat = undefined;
+                }
             }
         },
         cellTemplate: '${getCellContent(data)}',

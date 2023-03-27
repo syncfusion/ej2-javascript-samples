@@ -28,8 +28,8 @@
                     { width: 88,  }, { width: 120 }, { width: 106 }, { width: 98 }, { width: 110 }, { width: 110 }, { width: 110 }, { width: 98}, { width: 130}
                 ]
             }  ],
-        openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
-        saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save',
+        openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: function() {
             spreadsheet.merge('A1:I2');
             spreadsheet.setBorder({ border: '1px solid #A6A6A6' }, "A1:I13");

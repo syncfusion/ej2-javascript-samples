@@ -18,7 +18,7 @@ this.default = function () {
                 yName: 'y',
                 startAngle: 270,
                 endAngle: 90,
-                explode: true,
+                explode: false,
                 innerRadius: '40%',
                 radius: ej.base.Browser.isDevice ? '85%' : '100%',
                 dataLabel: {

@@ -56,4 +56,27 @@ this.default = function () {
         projectEndDate: new Date('05/18/2019')
     });
     ganttChart.appendTo('#ResourceMultiTaskbar');
+
+    var taskbarDragDrop = new ej.buttons.Switch({ value: 'allowTaskbarDragAndDrop', change: dragDropChange});
+    taskbarDragDrop.appendTo('#checked');
+
+    var taskbarOverlap = new ej.buttons.Switch({ value: 'allowTaskbarOverlap',checked: true, change: overlapChange });
+    taskbarOverlap.appendTo('#unchecked');
+
+    function dragDropChange(args) {
+        var gantt =document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        if (args.checked) {
+            gantt.allowTaskbarDragAndDrop = true;
+        } else {
+            gantt.allowTaskbarDragAndDrop = false;
+        }
+    }
+    function overlapChange(args) {
+        var gantt =document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        if (args.checked) {
+            gantt.allowTaskbarOverlap = true;
+        } else {
+            gantt.allowTaskbarOverlap = false;
+        }
+    }
 };

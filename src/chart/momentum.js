@@ -13,7 +13,7 @@
                 title: 'Price',
                 labelFormat: '${value}',
                 plotOffset: 25,
-                minimum: 50, maximum: 170,
+                minimum: 50, maximum: 170, majorGridLines: { width: 0 },
                 interval: 30, rowIndex: 1, opposedPosition: true, lineStyle: { width: 0 },
             },
             rows: [
@@ -29,20 +29,20 @@
                     majorGridLines: { width: 0 }, lineStyle: { width: 0 }, minimum: 80, maximum: 120, interval: 20,
                     majorTickLines: { width: 0 }, title: 'Momentum', stripLines: [
                         {
-                            start: 80, end: 120, text: '', color: '#6063ff', visible: true,
-                            opacity: 0.1, zIndex: 'Behind'
+                            start: 80, end: 120, text: '', color: '#000000', visible: true,
+                            opacity: 0.03, zIndex: 'Behind'
                         }
                     ]
                 }],
             series: [{
-                    dataSource: chartData, width: 2,
-                    xName: 'x', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
+                    dataSource: chartValue, width: 2,
+                    xName: 'period', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
                     name: 'Apple Inc', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
                     type: 'Candle', animation: { enable: true }
                 }],
             indicators: [{
                     type: 'Momentum', field: 'Close', seriesName: 'Apple Inc', yAxisName: 'secondary', fill: '#6063ff',
-                    period: 3, animation: { enable: true }, upperLine: { color: '#e74c3d' }
+                    period: 3, upperLine: { color: '#ffb735' }
                 }],
             zoomSettings: {
                 enableSelectionZooming: true,
@@ -55,7 +55,7 @@
             },
             crosshair: { enable: true, lineType: 'Vertical' },
             chartArea: { border: { width: 0 } },
-            title: 'AAPL 2012-2017',
+            title: 'AAPL Stock Price 2012-2017',
             width: ej.base.Browser.isDevice ? '100%' : '75%',
              // custom code start
             load: function (args) {
@@ -72,12 +72,5 @@
     this.default = function () {
         var chartData;
         var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChartMomentum(chartData);
+            renderChartMomentum(ajax);
         };
-    };

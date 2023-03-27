@@ -1,10 +1,9 @@
 this.default = function () {
 
   //Documenteditor control rendering starts
-  var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
-  var container = new ej.documenteditor.DocumentEditorContainer({ height:'590px' });
+  var hostUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
+  var container = new ej.documenteditor.DocumentEditorContainer({ serviceUrl:hostUrl,height:'590px' });
   ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
-  container.serviceUrl = hostUrl + 'api/documenteditor/';
   container.appendTo('#container');
 
   var menuItems = [

@@ -5,6 +5,8 @@ this.default = function () {
         allowFiltering: true,
         allowSorting: true,
         allowPaging: true,
+        allowSelection: true,
+        selectionSettings: { type: 'Multiple' },
         filterSettings: { type:'Menu' },
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode:'Normal' },
         pageSettings: { pageCount: 5 },

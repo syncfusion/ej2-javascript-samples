@@ -1,5 +1,5 @@
 var dataManger = new ej.data.DataManager({
-    url: 'https://js.syncfusion.com/ejServices/wcf/Northwind.svc/Tasks',
+    url: 'https://services.syncfusion.com/js/production/api/Kanban',
     crossDomain: true
 });
 this.default = function () {

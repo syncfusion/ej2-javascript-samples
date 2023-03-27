@@ -20,7 +20,9 @@ this.default = function () {
         // set the placeholder to MultiSelect filter input element
         filterBarPlaceholder: 'Search countries',
         // set the MultiSelect popup height
-        popupHeight: '350px'
+        popupHeight: '350px',
+        // set the cssClass to Multiselect input element
+        cssClass: 'e-specific'
 
     });
     checkList.appendTo('#selectLimit');

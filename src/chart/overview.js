@@ -10,8 +10,8 @@
             this.layoutColor = '#303030';
         }
         else if (selectedTheme.indexOf('bootstrap5') > -1) {
-            args.border.color = '#343a40';
-            this.layoutColor = '#343a40';
+            args.border.color = '#212529';
+            this.layoutColor = '#212529';
         }
         else if (selectedTheme.indexOf('bootstrap') > -1) {
             args.border.color = '#1A1A1A';
@@ -56,10 +56,16 @@
     }
     var layoutelement = document.querySelector('#layout_0template');
     layoutelement.style.background = this.layoutColor;
+    var layoutelementBody = document.querySelector('#head1');
+    layoutelementBody.style.setProperty('background', this.layoutColor);
     var layoutelement1 = document.querySelector('#layout_1template');
     layoutelement1.style.background = this.layoutColor;
+    var layoutelement1Body = document.querySelector('#head2');
+    layoutelement1Body.style.setProperty('background', this.layoutColor);
     var layoutelement2 = document.querySelector('#layout_2template');
     layoutelement2.style.background = this.layoutColor;
+    var layoutelement2Body = document.querySelector('#head3');
+    layoutelement2Body.style.setProperty('background', this.layoutColor);
 
 };
  this.default = function () {

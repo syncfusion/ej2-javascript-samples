@@ -1,0 +1,65 @@
+
+<div class="control-section" style="width: 100%">
+<style>
+    .db-toolbar-container {
+        width: 100% ;
+       height: 44px;
+    }
+    .db-palette-parent {
+        background-color:#fafafa;
+        width: 255px!important;
+        float: left;
+        height:calc(100% - 28px);
+    }
+    .db-diagram-container {
+        width:calc(100% - 260px);
+        height: 100%;
+        float: right;
+    }
+    .e-toolbar .e-toolbar-items .e-toolbar-item.tb-item-selected .e-tbar-btn.e-btn,
+    .e-toolbar .e-toolbar-items .e-toolbar-item .e-dropdown-btn.tb-item-selected {
+        background: #5f6161;
+    }
+
+    .e-toolbar .e-toolbar-items .e-toolbar-item.tb-item-selected .e-tbar-btn .e-icons.e-btn-icon,
+    .e-toolbar .e-toolbar-items .e-toolbar-item .e-dropdown-btn.tb-item-selected .e-btn-icon {
+        color: #ffffff;
+    }
+</style>
+    <div class="db-toolbar-container">
+        <div id="toolbarEditor"></div>
+    </div>
+    <div>
+        <div class="db-palette-parent">
+            <div id="symbolpalette"></div>
+        </div>
+        <div class="db-diagram-container">
+            <div id="diagram"></div>
+        </div>
+    </div>
+    <div id="action-description">
+        <p>
+            This sample illustrates how to group, ungroup, and order commands with the diagram.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            The <code>group</code> method groups diagram nodes and connectors into a single entity.
+        </p>
+        <p>
+            The <code>unGroup</code> method ungroups nodes and/or connectors that have been previously grouped together using the group method.
+        </p>
+        <p> 
+            The <code>moveForward</code> and <code>bringToFront</code> methods adjust the visual order of nodes or connectors within a diagram. This method takes a single parameter that specifies the node or connector that you want to bring forward in the order. 
+        <p>
+            The <code>sendBackward</code> and <code>sendToBack</code> method allows you to send a selected object to the back of the z-order (the order in which objects are stacked on top of one another).
+        </p>
+        <p>
+            In this sample, node annotation styles such as font family, font size, bold, italic, underline, and fontcolor can be customized.
+        </p>
+        <br>
+    </div>
+</div>
+    
+    
+    

@@ -1,47 +1,37 @@
 <div class="col-lg-12 control-section">
     <div class="content-wrapper">
         <div class="schedule-overview">
-            <div class="overview-header">
-                <div class="overview-titlebar">
-                    <div class="left-panel">
-                        <div class="schedule-overview-title" style="border: 1px solid transparent;">
-                            Scheduler Overview Functionalities
-                        </div>
-                    </div>
-                    <div class="center-panel">
-                        <button id="timezoneBtn">UTC</button>
-                        <button id="timeBtn">Time</button>
-                    </div>
-                    <div class="right-panel">
-                        <div class="control-panel calendar-export">
-                            <button id="printBtn">Print</button>
-                        </div>
-                        <div class="control-panel">
-                            <input type='file' id='icalendar' name='iCalendar' />
-                        </div>
-                        <div class="control-panel calendar-export">
-                            <button id="exporting">Export</button>
-                        </div>
-                    </div>
+            <header id="defaultAppBar">
+                <span class="time e-icons e-time-zone"></span>
+                <span id="timezoneBtn" class="time ">UTC</span>
+                <span class="time e-icons e-clock"></span>
+                <span id="timeBtn" class="time current-time">Time</span>
+                <div class="e-appbar-spacer"></div>
+                <button id="printBtn">Print</button>
+                <div class="import-button">
+                    <input type='file' id='icalendar' name='iCalendar' />
                 </div>
-            </div>
-            <div class="overview-toolbar">
-                <div style="height: 70px;width: calc(100% - 90px);">
-                    <div id="toolbar_options"></div>
-                </div>
-                <div style="height:70px;width:90px;">
-                    <button id="settingsBtn">Settings</button>
-                </div>
-            </div>
+                <button id="exportBtn">Export</button>
+                <button id="settingsBtn" aria-label="settings"></button>
+            </header>
+            <div id="toolbarOptions"></div>
             <div class="overview-content">
                 <div class="left-panel">
                     <div class="overview-scheduler">
                         <div id="scheduler"></div>
-                        <ul id="OverViewContextMenu"></ul>
+                        <ul id="overviewContextMenu"></ul>
                     </div>
                 </div>
                 <div class="right-panel hide">
                     <div class="control-panel e-css">
+                        <div class="col-row">
+                            <div class="col-left">
+                                <label style="line-height: 34px; margin: 0;">Calendar</label>
+                            </div>
+                            <div class="col-right">
+                                <input type="text" id="resources" />
+                            </div>
+                        </div>
                         <div class="col-row">
                             <div class="col-left">
                                 <label style="line-height: 34px; margin: 0;">First Day of Week</label>
@@ -52,18 +42,10 @@
                         </div>
                         <div class="col-row">
                             <div class="col-left">
-                                <label style="line-height: 34px; margin: 0;">Work week</label>
+                                <label style="line-height: 34px; margin: 0;">Work Week</label>
                             </div>
                             <div class="col-right">
                                 <input type="text" id="workWeekDays" />
-                            </div>
-                        </div>
-                        <div class="col-row">
-                            <div class="col-left">
-                                <label style="line-height: 34px; margin: 0;">Resources</label>
-                            </div>
-                            <div class="col-right">
-                                <input type="text" id="resources" />
                             </div>
                         </div>
                         <div class="col-row">
@@ -79,7 +61,7 @@
                                 <label style="line-height: 34px; margin: 0;">Day Start Hour</label>
                             </div>
                             <div class="col-right">
-                                <input type="text" id="dayStartHour" />
+                                <input type="text" id="dayStartHour" aria-label="Day Start Hour" />
                             </div>
                         </div>
                         <div class="col-row">
@@ -87,7 +69,7 @@
                                 <label style="line-height: 34px; margin: 0;">Day End Hour</label>
                             </div>
                             <div class="col-right">
-                                <input type="text" id="dayEndHour" />
+                                <input type="text" id="dayEndHour" aria-label="Day End Hour" />
                             </div>
                         </div>
                         <div class="col-row">
@@ -95,7 +77,7 @@
                                 <label style="line-height: 34px; margin: 0;">Work Start Hour</label>
                             </div>
                             <div class="col-right">
-                                <input type="text" id="workHourStart" />
+                                <input type="text" id="workHourStart" aria-label="Work Start Hour" />
                             </div>
                         </div>
                         <div class="col-row">
@@ -103,7 +85,7 @@
                                 <label style="line-height: 34px; margin: 0;">Work End Hour</label>
                             </div>
                             <div class="col-right">
-                                <input type="text" id="workHourEnd" />
+                                <input type="text" id="workHourEnd" aria-label="Work End Hour" />
                             </div>
                         </div>
                         <div class="col-row">
@@ -135,7 +117,15 @@
                                 <label style="line-height: 34px; margin: 0;">Week Numbers</label>
                             </div>
                             <div class="col-right">
-                                <input type="text" id="week_number" />
+                                <input type="text" id="weekNumber" />
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="col-left">
+                                <label style="line-height: 34px; margin: 0;">Tooltip</label>
+                            </div>
+                            <div class="col-right">
+                                <input type="text" id="tooltip" />
                             </div>
                         </div>
                     </div>
@@ -146,423 +136,120 @@
 </div>
 
 <div id="action-description">
-    <p>
-        This <a href="https://www.syncfusion.com/javascript-ui-controls/js-scheduler" target="_blank">JavaScript
+    <p>This <a href="https://www.syncfusion.com/javascript-ui-controls/js-scheduler" target="_blank">JavaScript
             Scheduler example</a> demonstrates the overview of Javascript Scheduler with its overall features. Use the
-        toolbar buttons to play with Scheduler functionalities.
-    </p>
+        toolbar buttons to play with Scheduler functionalities.</p>
 </div>
 <div id="description">
-    <p>
-        The Javascript Scheduler is a fully-features calendar component that is used to manage appointments with
-        multiple
+    <p>The Javascript Scheduler is a fully-features calendar component that is used to manage appointments with multiple
         resources. The data can be pulled from the <code>dataManager</code> component or valid local JSON data or
         Restful web services and bind the data fields using <code>eventSettings.fields</code>.
     </p>
-    <p>
-        In this demo, Javascript Scheduler features such as Multiple views, Templates (Date Header, Quick Info),
-        Resources, Grouping, Timezone, Timescale, etc... are used along with multiple resources.
-    </p>
+    <p>In this demo, Javascript Scheduler features such as Multiple views, Templates (Date Header, Quick Info),
+        Resources, Grouping, Timezone, Timescale, etc... are used along with multiple resources.</p>
 </div>
 
-<script id="header-template" type="text/x-template">
-    <div class="quick-info-header">
-        <div class="quick-info-header-content" style="${getHeaderStyles(data)}">
-            <div class="quick-info-title">${if (elementType == "cell")}Add Appointment${else}Appointment Details${/if}</div>
-            <div class="duration-text">${getHeaderDetails(data)}</div>
-        </div>
-    </div>
-</script>
-
-<script id="content-template" type="text/x-template">
-    <div class="quick-info-content">
-        ${if (elementType == "cell")}
-        <div class="e-cell-content">
-            <div class="content-area">
-                <input id="title" placeholder="Title" />
-            </div>
-            <div class="content-area">
-                <input id="eventType" placeholder="Choose Type" />
-            </div>
-            <div class="content-area">
-                <input id="notes" placeholder="Notes" />
-            </div>
-        </div>
-        ${else}
-        <div class="event-content">
-            <div class="meeting-type-wrap">
-                <label>Subject</label>:
-                <span>${Subject}</span>
-            </div>
-            <div class="meeting-subject-wrap">
-                <label>Type</label>:
-                <span>${getEventType(data)}</span>
-            </div>
-            <div class="notes-wrap">
-                <label>Notes</label>:
-                <span>${Description}</span>
-            </div>
-        </div>
-        ${/if}
-    </div>
-</script>
-
-<script id="footer-template" type="text/x-template">
-    <div class="quick-info-footer">
-        ${if (elementType == "cell")}
-        <div class="cell-footer">
-            <button id="more-details">More Details</button>
-            <button id="add">Add</button>
-        </div>
-        ${else}
-        <div class="event-footer">
-            <button id="delete">Delete</button>
-            <button id="more-details">More Details</button>
-        </div>
-        ${/if}
-    </div>
-</script>
-
-
 <style type="text/css">
-    .tailwind .e-settings::before,
-    .tailwind-dark .e-settings::before {
-        font-size: 14px;
-    }
-
-    .tailwind.e-bigger .e-settings,
-    .tailwind-dark.e-bigger .e-settings {
-        font-size: 16px !important;
-    }
-
-    .material .schedule-overview .overview-toolbar .e-toolbar {
-        border-style: solid;
-    }
-
-    .material .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import .e-upload-browse-btn,
-    .material-dark .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import .e-upload-browse-btn {
-        text-transform: capitalize;
-        box-shadow: none;
-    }
-
-    .highcontrast .schedule-overview .overview-header .overview-titlebar {
-        background-color: #ffd939;
-        color: black;
-    }
-
-    .highcontrast .schedule-overview .overview-header,
-    .highcontrast .schedule-overview .overview-content {
-        border: 1px solid #969696;
-    }
-
-    .tailwind-dark .schedule-overview .overview-header,
-    .tailwind-dark .schedule-overview .overview-content {
-        border: 1px solid #4b5563;
-        border-top: 0;
-    }
-
-    .highcontrast .schedule-overview .overview-content {
-        border-top: 0;
-    }
-
-    .fabric-dark .schedule-overview .overview-content {
-        border: 1px solid #414040;
-    }
-
-    .fluent-dark .schedule-overview .overview-content {
-        border: 1px solid #c1c1c1;
-    }
-
-    .fluent-dark .schedule-overview .overview-toolbar .e-toolbar {
-        border: 1px solid #c1c1c1;
-        border-top-color: transparent;
-    }
-
-    .fabric-dark .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #414040;
-    }
-
-    .fluent-dark .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #c1c1c1;
-    }
-
-    .tailwind .schedule-overview .overview-toolbar .e-toolbar {
-        border: 1px solid #e5e7eb;
-    }
-
-    .tailwind-dark .schedule-overview .overview-toolbar .e-toolbar {
-        border: 1px solid #4b5563;
-    }
-
-    .tailwind .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .tailwind .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #f3f4f6;
-        border-color: #e5e7eb;
-        box-shadow: none;
     }
 
-    .tailwind-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .tailwind-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #374151;
-        border-color: #4b5563;
-        box-shadow: none;
         color: #fff;
     }
 
-    .highcontrast .schedule-overview .overview-toolbar .e-toolbar,
-    .highcontrast .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-items .e-toolbar-item.e-separator,
-    .highcontrast .schedule-overview .overview-toolbar .e-toolbar .e-hscroll .e-scroll-nav.e-scroll-left-nav,
-    .highcontrast .schedule-overview .overview-toolbar .e-toolbar .e-hscroll .e-scroll-nav.e-scroll-right-nav {
-        border-color: #969696;
-    }
-
-    .material .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .material .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #fafafa;
-        text-transform: capitalize;
-        box-shadow: none;
     }
 
-    .material-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .material-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #2a2a2a;
         color: #ffff;
     }
 
-    .fabric .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .fabric .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #ffffff;
     }
 
-    .fabric-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .fabric-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #333232;
         color: #fff;
     }
 
-    .fluent .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .fluent .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #f3f2f1;
     }
 
-    .bootstrap .schedule-overview .overview-toolbar .overview-toolbar-settings,
-    .bootstrap .schedule-overview .overview-content .right-panel .control-panel {
-        background-color: #f8f8f8;
-    }
-
-    .bootstrap5 .schedule-overview .overview-toolbar .overview-toolbar-settings,
-    .bootstrap5 .schedule-overview .overview-content .right-panel .control-panel {
-        background-color: #f8f9fa;
-        color: #212529;
-        font-weight: 400;
-    }
-
-    .bootstrap5-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
-    .bootstrap5-dark .schedule-overview .overview-content .right-panel .control-panel {
-        background-color: #343a40;
-        color: #fff;
-        font-weight: 400;
-    }
-
-    .fluent-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
     .fluent-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #252423;
         border-color: #c1c1c1;
         color: #fff;
     }
 
-    .bootstrap-dark .schedule-overview .overview-toolbar .overview-toolbar-settings,
+    .bootstrap .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #f8f8f8;
+    }
+
     .bootstrap-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #2a2a2a;
         color: #fff;
     }
 
-
-    .highcontrast .schedule-overview .overview-toolbar .overview-toolbar-settings,
-    .highcontrast .schedule-overview .overview-content .right-panel .control-panel {
-        background-color: #000000;
-        border-color: #969696;
-        color: #ffffff;
-    }
-
-    .highcontrast .schedule-overview .overview-header .overview-titlebar .title-bar-btn,
-    .highcontrast .schedule-overview .overview-header .overview-titlebar .calendar-import .e-file-select-wrap .e-css.e-btn,
-    .highcontrast .schedule-overview .overview-header .overview-titlebar .e-dropdown-btn.e-btn {
-        color: black;
-    }
-
-    .schedule-overview .overview-header {
-        border: 1px solid #007bff;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar {
-        background-color: #007bff;
-        color: #ffffff;
-        height: 40px;
-        line-height: 40px;
-        width: 100%;
-        font-size: 12px;
-        padding: 0 10px;
-        font-family: inherit;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar .right-panel {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import {
-        line-height: 40px;
-    }
-
-    .bootstrap5 .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import,
-    .bootstrap5 .schedule-overview .overview-header .overview-titlebar .calendar-export,
-    .bootstrap5-dark .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import,
-    .bootstrap5-dark .schedule-overview .overview-header .overview-titlebar .calendar-export,
-    .fabric .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import,
-    .fabric .schedule-overview .overview-header .overview-titlebar .calendar-export,
-    .fabric-dark .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import,
-    .fabric-dark .schedule-overview .overview-header .overview-titlebar .calendar-export,
-    .highcontrast .schedule-overview .overview-header .overview-titlebar .calendar-export,
-    .highcontrast .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import {
-        line-height: 1.5em;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import button,
-    .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import button:focus,
-    .schedule-overview .overview-header .overview-titlebar .e-upload.calendar-import button:hover {
-        background-color: transparent;
-        border-color: transparent;
-        box-shadow: none;
-        color: inherit;
-        font-size: 12px;
-        height: 40px;
-        text-transform: capitalize;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar .title-bar-btn,
-    .schedule-overview .overview-header .overview-titlebar .title-bar-btn:hover,
-    .schedule-overview .overview-header .overview-titlebar .title-bar-btn:focus,
-    .schedule-overview .overview-header .overview-titlebar .e-dropdown-btn,
-    .schedule-overview .overview-header .overview-titlebar .e-dropdown-btn.e-btn {
-        background: transparent;
-        box-shadow: none;
-        font-family: inherit;
-        border-color: transparent;
-        border-radius: 2px;
-        color: inherit;
-        font-size: 12px;
-        text-transform: capitalize;
-        height: 40px;
-        font-weight: 400;
-    }
-
-    .schedule-overview .overview-header .overview-titlebar .e-btn:not([disabled]):focus {
-        background-color: rgba(255, 255, 255, 0.4) !important;
-    }
-
-    .schedule-overview .overview-toolbar {
-        display: flex;
-        height: 70px;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar {
-        border-radius: 0;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn.e-tbtn-txt {
-        display: inline-grid;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item.e-template {
-        margin: 0 5px;
-    }
-
-    .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-radius: 0;
+    .bootstrap5 .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #f8f9fa;
-        border-color: rgba(0, 0, 0, 0.15);
-        border-left-width: 0;
-        border-top-width: 0;
-        box-shadow: none;
-        color: #495057;
-        height: 72px;
-        line-height: 1.6;
-        outline: none;
-        text-transform: capitalize;
-        width: 100%;
+        color: #212529;
     }
 
-    .material .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #0000001f;
-    }
-
-    .fabric .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #f4f4f4;
-    }
-
-    .bootstrap .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: rgb(230, 230, 230);
-    }
-
-    .bootstrap4 .schedule-overview .overview-toolbar .overview-toolbar-settings:focus,
-    .bootstrap5 .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #5c636a;
+    .bootstrap5-dark .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #343a40;
         color: #fff;
     }
 
-    .tailwind .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #e5e7eb;
+    .highcontrast .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #000000;
+        color: #ffffff;
     }
 
-    .highcontrast .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: rgb(104, 87, 8);
+    .schedule-overview .overview-toolbar.e-toolbar {
+        border-radius: 0;
     }
 
-    .material-dark .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #ffffff1a;
+    .schedule-overview .overview-toolbar.e-toolbar .e-toolbar-item .e-tbar-btn.e-tbtn-txt {
+        display: inline-grid;
     }
 
-    .fabric-dark .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: rgb(65, 64, 64);
+    .material .schedule-overview .overview-toolbar.e-toolbar {
+        border-style: solid;
     }
 
-    .bootstrap-dark .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: rgb(49, 49, 49);
+    .schedule-overview .overview-toolbar.e-toolbar .e-toolbar-item:not(.e-separator) {
+        padding: 3.5px;
     }
 
-    .tailwind-dark .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #4b5563;
+    .schedule-overview .overview-toolbar.e-toolbar .e-toolbar-item .e-btn.e-tbar-btn .e-icons.e-btn-icon,
+    .schedule-overview .overview-toolbar.e-toolbar .e-toolbar-item .e-btn.e-tbar-btn .e-tbar-btn-text {
+        line-height: 23px !important;
+        min-height: 23px !important;
+        padding: 0px !important;
     }
 
-    .bootstrap5-dark .schedule-overview .overview-toolbar .overview-toolbar-settings:focus {
-        background-color: #5c636a;
-    }
-
-    .bootstrap5 .schedule-overview .overview-toolbar .e-toolbar {
-        border: 1px solid #dee2e6;
-    }
-
-    .bootstrap5-dark .schedule-overview .overview-toolbar .e-toolbar {
-        border: 1px solid #444c54;
+    .schedule-overview .overview-toolbar.e-toolbar .e-toolbar-item.e-template {
+        margin: 0 5px;
     }
 
     .schedule-overview .overview-content {
-        border: 1px solid #00000026;
-        border-top: 0;
         display: flex;
     }
 
     .schedule-overview .overview-content .left-panel {
-        height: 600px;
+        height: 700px;
         width: 100%;
     }
 
     .schedule-overview .overview-content .right-panel {
         display: block;
-        height: 600px;
+        height: 700px;
         transform: translateX(0%);
         transition: transform .5s ease, width 500ms;
         width: 500px;
@@ -577,16 +264,11 @@
 
     .schedule-overview .overview-content .right-panel .control-panel {
         background: #f8f9fa;
-        border-left: 1px solid #00000026;
         font-size: 14px;
         height: 100%;
         overflow: auto;
         padding: 15px;
         width: 100%;
-    }
-
-    .tailwind-dark .schedule-overview .overview-content .right-panel .control-panel {
-        background: #374151;
     }
 
     .schedule-overview .overview-content .right-panel .control-panel .col-row {
@@ -612,32 +294,7 @@
 
     .schedule-overview .overview-scheduler {
         height: 100%;
-        padding: 10px;
         width: 100%;
-    }
-
-    .schedule-overview .e-schedule .e-vertical-view .e-header-cells {
-        text-align: center !important;
-    }
-
-    .schedule-overview .e-schedule .date-text {
-        font-size: 14px;
-    }
-
-    .schedule-overview .e-schedule.e-device .date-text {
-        font-size: 12px;
-    }
-
-    .schedule-overview .e-schedule .weather-image {
-        width: 20px;
-        height: 20px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .schedule-overview .e-schedule .weather-text {
-        font-size: 11px;
     }
 
     .schedule-overview .e-schedule-toolbar .e-views,
@@ -659,149 +316,6 @@
         user-select: none;
     }
 
-    .schedule-overview .quick-info-header {
-        background-color: white;
-        padding: 8px 18px;
-    }
-
-    .tailwind-dark .schedule-overview .quick-info-header {
-        background-color: #374151;
-    }
-
-    .bootstrap5-dark .schedule-overview .quick-info-header {
-        background-color: transparent;
-    }
-
-    .bootstrap-dark .schedule-overview .quick-info-header {
-        background-color: #1a1a1a;
-    }
-
-    .fabric-dark .schedule-overview .quick-info-header {
-        background-color: #201f1f;
-    }
-
-    .fluent-dark .schedule-overview .quick-info-header {
-        background-color: #252423;
-    }
-
-    .material-dark .schedule-overview .quick-info-header {
-        background-color: #424242;
-    }
-
-    .highcontrast .schedule-overview .quick-info-header {
-        background-color: #000000;
-    }
-
-    .schedule-overview .quick-info-header-content {
-        justify-content: flex-end;
-        display: flex;
-        flex-direction: column;
-        padding: 5px 10px 5px;
-    }
-
-    .tailwind-dark .schedule-overview .quick-info-header-content,
-    .bootstrap-dark .schedule-overview .quick-info-header-content,
-    .bootstrap5-dark .schedule-overview .quick-info-header-content,
-    .fabric-dark .schedule-overview .quick-info-header-content,
-    .material-dark .schedule-overview .quick-info-header-content,
-    .highcontrast .schedule-overview .quick-info-header-content {
-        color: #fff !important;
-    }
-
-    .schedule-overview .quick-info-title {
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: 0.48px;
-        height: 22px;
-    }
-
-    .schedule-overview .duration-text {
-        font-size: 11px;
-        letter-spacing: 0.33px;
-        height: 14px;
-    }
-
-    .schedule-overview .content-area {
-        padding: 10px;
-        width: auto;
-        margin: unset;
-    }
-
-    .schedule-overview .event-content {
-        height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 15px;
-    }
-
-    .schedule-overview .meeting-type-wrap,
-    .schedule-overview .meeting-subject-wrap,
-    .schedule-overview .notes-wrap {
-        font-size: 11px;
-        color: #666;
-        letter-spacing: 0.33px;
-        height: 24px;
-        padding: 5px;
-        display: flex;
-    }
-
-    .schedule-overview .event-content div label {
-        display: inline-block;
-        min-width: 45px;
-        color: #666;
-    }
-
-    .schedule-overview .event-content div span {
-        font-size: 11px;
-        color: #151515;
-        letter-spacing: 0.33px;
-        line-height: 14px;
-        padding-left: 8px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .tailwind-dark .schedule-overview .event-content div label,
-    .bootstrap-dark .schedule-overview .event-content div label,
-    .bootstrap5-dark .schedule-overview .event-content div label,
-    .fluent-dark .schedule-overview .event-content div label,
-    .fabric-dark .schedule-overview .event-content div label,
-    .material-dark .schedule-overview .event-content div label,
-    .highcontrast .schedule-overview .event-content div label,
-    .tailwind-dark .schedule-overview .event-content div span,
-    .bootstrap-dark .schedule-overview .event-content div span,
-    .bootstrap5-dark .schedule-overview .event-content div span,
-    .fluent-dark .schedule-overview .event-content div span,
-    .fabric-dark .schedule-overview .event-content div span,
-    .material-dark .schedule-overview .event-content div span,
-    .highcontrast .schedule-overview .event-content div span {
-        color: #fff;
-    }
-
-    .schedule-overview .cell-footer.e-btn {
-        background-color: #ffffff;
-        border-color: #878787;
-        color: #878787;
-    }
-
-    .schedule-overview .cell-footer {
-        padding-top: 10px;
-    }
-
-    .schedule-overview .e-quick-popup-wrapper .e-cell-popup .e-popup-content {
-        padding: 0 14px;
-    }
-
-    .schedule-overview .e-quick-popup-wrapper .e-event-popup .e-popup-footer {
-        display: block;
-    }
-
-    .schedule-overview .e-quick-popup-wrapper .e-popup-footer button:first-child {
-        margin-right: 5px;
-    }
-
     .schedule-overview .calendar-import.e-upload {
         border: 0;
         padding-left: 0 !important;
@@ -814,90 +328,6 @@
     .schedule-overview .calendar-import.e-upload .e-file-select-wrap .e-file-drop,
     .calendar-import .e-upload-files {
         display: none;
-    }
-
-    .quick-info-header {
-        background-color: white;
-        padding: 8px 18px;
-    }
-
-    .quick-info-header-content {
-        justify-content: flex-end;
-        display: flex;
-        flex-direction: column;
-        padding: 5px 10px 5px;
-    }
-
-    .quick-info-title {
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: 0.48px;
-        height: 22px;
-    }
-
-    .duration-text {
-        font-size: 11px;
-        letter-spacing: 0.33px;
-        height: 14px;
-    }
-
-    .content-area {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .event-content {
-        height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 15px;
-    }
-
-    .meeting-type-wrap,
-    .meeting-subject-wrap,
-    .notes-wrap {
-        font-size: 11px;
-        color: #666;
-        letter-spacing: 0.33px;
-        height: 24px;
-        padding: 5px;
-    }
-
-    .event-content div label {
-        display: inline-block;
-        min-width: 45px;
-        color: #666;
-    }
-
-    .event-content div span {
-        font-size: 11px;
-        color: #151515;
-        letter-spacing: 0.33px;
-        line-height: 14px;
-        padding-left: 8px;
-    }
-
-    .cell-footer.e-btn {
-        background-color: #ffffff;
-        border-color: #878787;
-        color: #878787;
-    }
-
-    .cell-footer {
-        padding-top: 10px;
-    }
-
-    .e-quick-popup-wrapper .e-cell-popup .e-popup-content {
-        padding: 0 14px;
-    }
-
-    .e-quick-popup-wrapper .e-event-popup .e-popup-footer {
-        display: block;
-    }
-
-    .e-quick-popup-wrapper .e-popup-footer button:first-child {
-        margin-right: 5px;
     }
 
     .e-bigger .schedule-context-menu ul .e-menu-item .e-menu-icon {
@@ -930,10 +360,6 @@
         background-size: cover;
     }
 
-    .schedule-overview.e-schedule .weather-text {
-        font-size: 11px;
-    }
-
     .schedule-overview.e-schedule .e-month-view .weather-image {
         float: right;
         margin: -20px 2px 0 0;
@@ -941,91 +367,59 @@
         height: 20px;
     }
 
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn.e-btn {
-        height: 50px !important;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item:not(.e-separator) {
-        padding: 3.5px;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn {
-        padding: 1.5px;
-    }
-
-    .e-bigger .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item:not(.e-separator) {
-        padding: 5px;
-    }
-
-    .e-bigger .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn {
-        padding: 6px;
-    }
-
-    .bootstrap:not(.e-bigger) .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn.e-btn:hover,
-    .bootstrap-dark:not(.e-bigger) .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn.e-btn:hover,
-    .bootstrap4:not(.e-bigger) .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-tbar-btn.e-btn:hover {
-        border-width: 1.5px;
-        padding: unset !important;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-btn.e-tbar-btn .e-icons.e-btn-icon,
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item .e-btn.e-tbar-btn .e-tbar-btn-text {
-        line-height: 23px !important;
-        min-height: 23px !important;
-        padding: 0px !important;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item.e-template .icon-child {
-        height: 23px !important;
-    }
-
-    .schedule-overview .overview-toolbar .e-toolbar .e-toolbar-item.e-template .text-child {
-        line-height: 23px !important;
-    }
-
     .tailwind .schedule-overview.e-schedule .e-left-indent .e-header-cells,
     .tailwind-dark .schedule-overview.e-schedule .e-left-indent .e-header-cells {
         height: 66px;
     }
 
-    .tailwind .e-more-popup-wrapper .e-more-event-close .e-btn-icon,
-    .tailwind-dark .e-more-popup-wrapper .e-more-event-close .e-btn-icon {
-        margin-top: 0px;
+    #exportBtn {
+        white-space: nowrap;
     }
 
-    .bootstrap-dark .schedule-overview .overview-content {
-        border: 1px solid #505050;
+    .time {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        padding: 0 5px;
     }
 
-    .bootstrap5-dark .schedule-overview .overview-content {
-        border: 1px solid #444c54;
+    .template {
+        height: 46px;
+        line-height: 23px;
     }
 
-    .material-dark .schedule-overview .overview-content {
-        border: 1px solid #616161;
+    .template .icon-child {
+        text-align: center;
+        height: 23px !important;
     }
 
-    .bootstrap5 .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #dee2e6;
+    .template .text-child {
+        font-size: 14px;
+        line-height: 23px !important;
     }
 
-    .bootstrap5-dark .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #444c54;
+    .fluent .e-appbar .e-btn-icon.e-icons,
+    .fluent-dark .e-appbar .e-btn-icon.e-icons {
+        margin-top: -2px;
+    }
+    .fluent .e-toolbar-item .e-checkbox-wrapper .e-icons.e-frame,
+    .fluent-dark .e-toolbar-item .e-checkbox-wrapper .e-icons.e-frame {
+        height: 17px;
+        line-height: 17px;
+        width: 17px;
     }
 
-    .bootstrap-dark .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #505050;
+    .fluent .e-toolbar-item .e-checkbox-wrapper .e-icons.e-frame.e-check,
+    .fluent-dark .e-toolbar-item .e-checkbox-wrapper .e-icons.e-frame.e-check {
+        font-size: 15px;
+        line-height: 16px;
     }
 
-    .material-dark .schedule-overview .overview-toolbar .overview-toolbar-settings {
-        border-color: #616161;
+    .e-toolbar .e-toolbar-item .e-tbar-btn {
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
 
-    .bootstrap-dark .schedule-overview .overview-header .overview-titlebar .title-bar-btn,
-    .material-dark .schedule-overview .overview-header .overview-titlebar .title-bar-btn,
-    .material .schedule-overview .overview-header .overview-titlebar .title-bar-btn {
-        box-shadow: none;
-    }
 
     @media (max-width: 481px) {
         .schedule-overview .overview-content .right-panel {
@@ -1033,8 +427,28 @@
             width: 90%;
         }
 
-        .schedule-overview .overview-header .overview-titlebar {
-           overflow: auto;
+        .import-button,
+        #printBtn,
+        #exportBtn {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+        .schedule-overview .overview-content .right-panel .control-panel .col-row {
+            display: initial;
+        }
+
+        .schedule-overview .overview-content .right-panel .control-panel .col-left {
+            flex: initial;
+            max-width: initial;
+            margin-bottom: initial;
+        }
+
+        .schedule-overview .overview-content .right-panel .control-panel .col-right {
+            flex: initial;
+            max-width: initial;
         }
     }
 </style>

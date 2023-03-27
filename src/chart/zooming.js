@@ -1,3 +1,4 @@
+
 this.default = function () {
     var series1 = [];
     var point1;
@@ -10,7 +11,7 @@ this.default = function () {
         else {
             value -= Math.random();
         }
-        point1 = { x: new Date(1950, i + 2, i), y: value.toFixed(1) };
+        point1 = { x: new Date(1960, i + 2, i), y: Math.round(value) };
         series1.push(point1);
     }
 /**
@@ -27,14 +28,13 @@ var fill = 'url(#' + selectedTheme + '-gradient-chart)';
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'DateTime',
-            skeleton: 'yMMM',
             edgeLabelPlacement: 'Shift',
             majorGridLines: { width: 0 }
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
             title: 'Profit ($)',
-            rangePadding: 'None',
+            rangePadding: 'None', labelFormat: '${value}k',
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 }
         },
@@ -56,8 +56,7 @@ var fill = 'url(#' + selectedTheme + '-gradient-chart)';
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
             enableSelectionZooming: true,
-            mode: 'X',
-            enableScrollbar: true
+            mode: 'X'
         },
         //Initializing Chart Title
         title: 'Sales History of Product X',

@@ -15589,3 +15589,22 @@ window.virtualizationData =
     { "Name": "Consolata Taggart" }
 ];
 
+window.treeData = [
+    { Name: "Plant Manager", Id: "1", hasChild: true, expanded: true },
+    { Name: "Production Manager", Id: "2", ParentId: "1", hasChild: true, expanded: true },
+    { Name: "Control Room", Id: "3", ParentId: "2", hasChild: true, expanded: true },
+    { Name: "Foreman1", Id: "4", ParentId: "3", hasChild: true, expanded: true },
+    { Name: "Craft Personnel5", Id: "5", ParentId: "4" },
+    { Name: "Craft Personnel6", Id: "6", ParentId: "4" },
+    { Name: "Plant Operator", Id: "7", ParentId: "2", hasChild: true, expanded: true },
+    { Name: "Foreman2", Id: "8", ParentId: "7", hasChild: true, expanded: true },
+    { Name: "Craft Personnel7", Id: "9", ParentId: "8" },
+    { Name: "Administrative Officer", Id: "10", ParentId: "1" },
+    { Name: "Maintenance Manager", Id: "11", ParentId: "1", hasChild: true, expanded: true },
+    { Name: "Electrical Supervisor", Id: "12", ParentId: "11", hasChild: true, expanded: true },
+    { Name: "Craft Personnel1", Id: "13", ParentId: "12" },
+    { Name: "Craft Personnel2", Id: "14", ParentId: "12" },
+    { Name: "Mechanical Supervisor", Id: "15", ParentId: "11", hasChild: true, expanded: true },
+    { Name: "Craft Personnel3", Id: "16", ParentId: "15" },
+    { Name: "Craft Personnel4", Id: "17", ParentId: "15" }
+];

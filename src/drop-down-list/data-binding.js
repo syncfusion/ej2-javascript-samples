@@ -5,7 +5,7 @@ this.default = function () {
     var dropDownListObj = new ej.dropdowns.DropDownList({
         // bind the DataManager instance to dataSource property
         dataSource: new ej.data.DataManager({
-            url: 'https://ej2services.syncfusion.com/production/web-services/api/Employees',
+            url: 'https://ej2services.syncfusion.com/js/development/api/Employees',
             adaptor: new ej.data.WebApiAdaptor(),
             crossDomain: true
         }),

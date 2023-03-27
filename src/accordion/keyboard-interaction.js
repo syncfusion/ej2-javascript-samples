@@ -12,4 +12,14 @@ this.default = function () {
     });
     //Render initialized Accordion component
     accordion.appendTo('#Accordion_keyboard_interaction');
+
+     //Focus the Accordion header (alt+j) key combination
+    document.body.addEventListener('keydown', function (e) {
+        var accordionElement = document.querySelector(
+            '#Accordion_keyboard_interaction .e-acrdn-header'
+        );
+        if (e.altKey && e.keyCode === 74 && accordionElement) {
+            accordionElement.focus();
+        }
+    });
 };

@@ -38,7 +38,7 @@ this.default = function () {
             showLabel: true,
         },
         tooltipRender: function (args)  {
-            args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' deffective units'];
+            args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' defective units'];
         },
         load: function (args) {
             var emptyPointTheme = location.hash.split('/')[1];

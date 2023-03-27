@@ -6,7 +6,7 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'DateTime',
-            labelFormat: 'MMM',
+            labelFormat: 'MMM d',
             edgeLabelPlacement: 'Shift',
             majorGridLines: { width: 0 }
         },
@@ -40,8 +40,8 @@ this.default = function () {
                 yName: 'y', name: 'Warmest',
                 marker: {
                     visible: true,
-                    height: 10, width: 10,
-                    shape: 'Pentagon',
+                    height: 8, width: 8,
+                    shape: 'Pentagon', isFilled: true,
                     dataLabel: { visible: true, position: 'Top' }
                 }
             }, {
@@ -55,7 +55,7 @@ this.default = function () {
                 xName: 'x', width: 2,
                 yName: 'y', name: 'Coldest',
                 marker: {
-                    visible: true, height: 10, width: 10, shape: 'Diamond',
+                    visible: true, height: 8, width: 8, shape: 'Diamond', isFilled: true,
                     dataLabel: { visible: true, position: 'Top' }
                 }
             }

@@ -9,7 +9,8 @@ this.default = function() {
                 getImageUrl: hostUrl + 'api/FTPProvider/FTPGetImage',
                 uploadUrl: hostUrl + 'api/FTPProvider/FTPUpload',
                 downloadUrl: hostUrl + 'api/FTPProvider/FTPDownload'
-            }
+            },
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] }
     });
     fileObject.appendTo('#ftpFilemanager');
 };

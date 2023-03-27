@@ -4,7 +4,7 @@ this.default = function () {
         { id: 'Spinner', type: 'Spinner' },
     ];
     var data = new ej.data.DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/UrlDataSource',
+        url: 'https://services.syncfusion.com/js/production/api/UrlDataSource',
         adaptor: new ej.data.UrlAdaptor()
     });
     var grid = new ej.grids.Grid({

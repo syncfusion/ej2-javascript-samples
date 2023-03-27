@@ -48,7 +48,7 @@ this.default = function() {
                 dataSource: data.listdata,
                 fields: { text: "text" },
                 height: '420px',
-                cssClass: 'e-list-template e-card',
+                cssClass: 'e-list-template',
                 template: template,
                 sortOrder: "Ascending"
             });

@@ -3,7 +3,6 @@
     "directory": "tree-grid",
     "category": "Grids",
     "ftName" :"treegrid",
-    "type":"update",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
       {  
@@ -13,7 +12,7 @@
         { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion Essential JS2 Tree Grid control looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
          { "url": "adaptive","name": "Adaptive Layout", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"] }
          },
-		 { "url": "loading-animation","name": "Loading Animation", "type": "new", "category": "Tree Grid","description":"This demo for Essential JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
+		 { "url": "loading-animation","name": "Loading Animation", "category": "Tree Grid","description":"This demo for Essential JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
        
          {  
             "url":"localdata", "name": "Local Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","childMapping","treeColumnIndex","allowPaging","columns"] },
@@ -170,7 +169,7 @@
             "url":"freezedirection", "name": "Freeze Direction", "category":"Scrolling","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
             "description": "This demo for Essential JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content."
          },
-         { "url":"virtual-scrolling", "name": "Virtual Scrolling", "type": "update", "description":"This demo demonstrates how to use Essential JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] } }, 
+         { "url":"virtual-scrolling", "name": "Virtual Scrolling", "description":"This demo demonstrates how to use Essential JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] } }, 
          { "url":"infinite-scrolling", "name": "Infinite Scrolling", "description":"This sample demonstrates the Tree Grid component with infinite scrolling feature.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableInfiniteScrolling","dataBound","height","columns"] } }, 
          {  
             "url":"aggregate.default", "name": "Default Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","height","aggregates"] },

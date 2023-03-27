@@ -12,8 +12,36 @@ this.default = function () {
               div[i].setAttribute('style', 'color:white');
           }
       }
+      if (linearTheme === 'fabric') {
+        args.progressBar.secondaryProgressColor = '#b0d0e9';
+      } else if (linearTheme === 'material-dark') {
+        args.progressBar.secondaryProgressColor = '#b8b8b8';
+      } else if (linearTheme === 'material') {
+        args.progressBar.secondaryProgressColor = '#f087ab';
+      } else if (linearTheme === 'bootstrap5-dark') {
+        args.progressBar.secondaryProgressColor = '#2b5288';
+      } else if (linearTheme === 'bootstrap5') {
+        args.progressBar.secondaryProgressColor = '#98c5f5';
+      } else if (linearTheme === 'bootstrap') {
+        args.progressBar.secondaryProgressColor = '#acc6dc';
+      }
+      else if (linearTheme === 'bootstrap4') {
+        args.progressBar.secondaryProgressColor = '#98c5f5';
+      }
+      else if (linearTheme === 'bootstrap-dark') {
+        args.progressBar.secondaryProgressColor = '#b8b8b8';
+      } else if (linearTheme === 'highcontrast') {
+        args.progressBar.secondaryProgressColor = '#aca379';
+      } else if (linearTheme === 'fluent-dark') {
+        args.progressBar.secondaryProgressColor = '#2b5288';
+      } else if (linearTheme === 'fluent') {
+        args.progressBar.secondaryProgressColor = '#98c5f5';
+      } else if (linearTheme === 'tailwind-dark') {
+        args.progressBar.secondaryProgressColor = '#386e7f';
+      } else if (linearTheme === 'tailwind') {
+        args.progressBar.secondaryProgressColor = '#b1afe9';
+      }
   };
-
   var button = new ej.buttons.Button();
   button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
   button.appendTo('#reLoad');

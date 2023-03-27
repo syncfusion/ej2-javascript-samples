@@ -1,5 +1,5 @@
 this.default = function () {
-    var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
+    var hostUrl = 'https://services.syncfusion.com/js/production/api/GanttData';
     var data = new ej.data.DataManager({
         url: hostUrl + 'api/GanttData',
         adaptor: new ej.data.WebApiAdaptor(),

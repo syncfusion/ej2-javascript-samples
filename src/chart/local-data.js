@@ -26,9 +26,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            title: 'Years',
             majorGridLines: { width: 0 },
-            skeleton: 'y',
             valueType: 'DateTime',
             edgeLabelPlacement: 'Shift'
         },
@@ -53,14 +51,13 @@ this.default = function () {
                 dataSource: series1,
                 xName: 'x', yName: 'y',
                 width: 2, name: 'Product X',
-                animation: { enable: true }, marker: { visible: false }
+                marker: { visible: false }
             },
             {
                 type: 'Line',
                 dataSource: series2,
                 xName: 'x', yName: 'y',
-                width: 2, name: 'Product Y',
-                animation: { enable: true }, marker: { visible: false }
+                width: 2, name: 'Product Y', marker: { visible: false }
             }
         ],
         //Initializing Chart Title
@@ -68,7 +65,7 @@ this.default = function () {
         //Initializing Tooltip and Crosshair
         tooltip: {
             enable: true, shared: true
-        },
+        }, legendSettings: { enableHighlight: true },
         // Initializing the crosshair
         crosshair: {
             enable: true,

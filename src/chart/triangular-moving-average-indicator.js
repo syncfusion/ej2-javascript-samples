@@ -1,10 +1,10 @@
 /**
  * Sample for TMA Indicator
  */
-this.renderChartTMA = function (chartData) {
+this.renderChartTMA = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
-                valueType: 'DateTime',
+                valueType: 'DateTime', intervalType: 'Months',
                 majorGridLines: { width: 0 },
                 zoomFactor: 0.2, zoomPosition: 0.6,
                 crosshairTooltip: { enable: true },
@@ -15,19 +15,19 @@ this.renderChartTMA = function (chartData) {
                 }
             },
             primaryYAxis: {
-                title: 'Price',
+                title: 'Price (in Million)',
                 labelFormat: '${value}M',
                 minimum: 50, maximum: 170, interval: 30,
-                majorGridLines: { width: 1 }, lineStyle: { width: 0 }
+                majorTickLines: { width: 0 }, lineStyle: { width: 0 }
             },
             series: [{
-                    dataSource: chartData, width: 2,
-                    xName: 'x', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
+                    dataSource: chartValue, width: 2,
+                    xName: 'period', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
                     name: 'Apple Inc', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
                     type: 'Candle', animation: { enable: false }
                 }],
             indicators: [{
-                    type: 'Tma', field: 'Close', seriesName: 'Apple Inc', fill: '#6063ff',
+                    type: 'Tma', field: 'Close', seriesName: 'Apple Inc', fill: '#6063ff', xName: 'period',
                     period: 14, animation: { enable: true }
                 }],
             tooltip: {
@@ -40,7 +40,7 @@ this.renderChartTMA = function (chartData) {
                 mode: 'XY',
                 enablePan: true
             },
-            title: 'AAPL - 2012-2017',
+            title: 'AAPL Stock Price 2012-2017',
             width: ej.base.Browser.isDevice ? '100%' : '75%',
                // custom code start
             load: function (args) {
@@ -54,14 +54,5 @@ this.renderChartTMA = function (chartData) {
         chart.appendTo('#tma-container');
     };
     this.default = function () {
-        var chartData;
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChartTMA(chartData);
+            renderChartTMA();
         };
-    };

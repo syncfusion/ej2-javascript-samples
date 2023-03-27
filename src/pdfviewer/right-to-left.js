@@ -4,7 +4,7 @@
         documentPath: "RTLText.pdf",
         locale: 'ar-AE',
         enableRtl: true,
-        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer',
+        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
         annotationSettings:{author :'مقبول'}
     });
 

@@ -4,7 +4,7 @@ this.default = function () {
         height: '30',
         width: '70%',
         value: 40,
-        segmentCount: 50,
+        segmentCount: ej.base.Browser.isDevice ? 25 : 50,
         gapWidth: 5,
         trackThickness: 15,
         progressThickness: 15,

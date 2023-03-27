@@ -6,14 +6,13 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category',
-            title: 'Months',
             labelPlacement: 'OnTicks',
-            startAngle: 90, interval: 1,
+            interval: 1,
             coefficient: ej.base.Browser.isDevice ? 80 : 100
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            labelFormat: '{value}˚C',
+            labelFormat: '{value}',
             minimum: 0, maximum: 15, interval: 5
         },
         //Initializing Chart Series
@@ -41,7 +40,7 @@ this.default = function () {
         },
         legendSettings: { visible: false },
         //Initializing Chart Title
-        title: 'Maximum and Minimum Temperature',
+        title: 'Temperatures of Germany',
            // custom code start
         load: function (args) {
             var polarRangeTheme = location.hash.split('/')[1];

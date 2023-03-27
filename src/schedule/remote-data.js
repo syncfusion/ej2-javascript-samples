@@ -1,6 +1,6 @@
 this.default = function () {
     var dataManager = new ej.data.DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Schedule',
+        url: 'https://services.syncfusion.com/js/production/api/schedule',
         adaptor: new ej.data.WebApiAdaptor(),
         crossDomain: true
     });

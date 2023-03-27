@@ -1,7 +1,7 @@
 /**
  * Sample for RSI Indicator
  */
-this.renderChartRSI = function (chartData) {
+this.renderChartRSI = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -10,10 +10,10 @@ this.renderChartRSI = function (chartData) {
                 crosshairTooltip: { enable: true },
             },
             primaryYAxis: {
-                title: 'Price',
-                labelFormat: '${value}',
+                title: 'Price (in Million)',
+                labelFormat: '${value}M',
                 plotOffset: 25,
-                minimum: 50, maximum: 170,
+                minimum: 50, maximum: 170, majorTickLines: { width: 0 },
                 interval: 30, rowIndex: 1, opposedPosition: true, lineStyle: { width: 0 }
             },
             rows: [
@@ -35,28 +35,27 @@ this.renderChartRSI = function (chartData) {
                     ]
                 }],
             series: [{
-                    dataSource: chartData, width: 2,
-                    xName: 'x', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
+                    dataSource: chartValue, width: 2,
+                    xName: 'period', yName: 'y', low: 'low', high: 'high', close: 'close', volume: 'volume', open: 'open',
                     name: 'Apple Inc', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
-                    type: 'Candle', animation: { enable: true }
+                    type: 'Candle'
                 }],
             indicators: [{
                     type: 'Rsi', field: 'Close', seriesName: 'Apple Inc', yAxisName: 'secondary', fill: '#6063ff',
                     showZones: true, overBought: 70, overSold: 30,
-                    period: 3, animation: { enable: true }, upperLine: { color: '#e74c3d' }, lowerLine: { color: '#2ecd71' }
+                    period: 3, upperLine: { color: '#ffb735' }, lowerLine: { color: '#f2ec2f' }
                 }],
             zoomSettings: {
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
                 mode: 'XY',
-                enablePan: true
             },
             tooltip: {
                 enable: true, shared: true
             },
             crosshair: { enable: true, lineType: 'Vertical' },
             chartArea: { border: { width: 0 } },
-            title: 'AAPL 2012-2017',
+            title: 'AAPL Stock Price 2012-2017',
             width: ej.base.Browser.isDevice ? '100%' : '75%',
                // custom code start
             load: function (args) {
@@ -71,14 +70,5 @@ this.renderChartRSI = function (chartData) {
         chart.appendTo('#rsi-container');
     };
     this.default = function () {
-        var chartData;
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
-            chartData.map(function (data) {
-                data.x = new Date(data.x);
-            });
-            renderChartRSI(chartData);
+            renderChartRSI();
         };
-    };

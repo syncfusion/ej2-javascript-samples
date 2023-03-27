@@ -56,13 +56,13 @@ this.default = function () {
                 { x: 'Russia', y: 41 }, { x: 'Mexico', y: 31 },
                 { x: 'Brazil', y: 76 }, { x: 'China', y: 51 }],
                 xName: 'x', width: 2, name: 'Users',
-                yName: 'y', marker: { dataLabel: { visible: true, position: ej.base.Browser.isDevice ? 'Outer' : 'Top', font: { fontWeight: '600', color: ej.base.Browser.isDevice ? '#404041' : '#ffffff' } } }
+                yName: 'y', marker: { dataLabel: { visible: true, enableRotation: ej.base.Browser.isDevice ? true : false, angle: -90, position: 'Top', format: "{value}M", font: { fontWeight: '600' } } }
             },
         ],
         //Initializing Chart Title
         title: 'Internet Users in Millions',
         //Initializing Tooltip
-        tooltip : { enable: true },
+        tooltip : { enable: true, header: '', format: '<b>${point.x}</b> <br> Internet Users : <b>${point.y}M</b>' },
         pointRender: labelRender,
         legendSettings: { visible: false },
            // custom code start
