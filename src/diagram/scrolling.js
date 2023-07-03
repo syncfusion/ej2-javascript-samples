@@ -42,7 +42,7 @@ this.default = function () {
         rulerSettings: { showRulers: true },
         pageSettings: { width: 1500, height: 1500 },
         scrollSettings: {
-            scrollLimit: 'Diagram', canAutoScroll: true, autoScrollBorder: { left: 10, right: 10, top: 10, bottom: 10 },
+            scrollLimit: 'Infinity', canAutoScroll: true, autoScrollBorder: { left: 30, right: 30, top: 30, bottom: 30 },
             scrollableArea: scrollableArea
         },
         //Sets the default values of a node
@@ -151,6 +151,30 @@ this.default = function () {
         { id: 'multiDocument1', shape: { type: 'Flow', shape: 'MultiDocument' } },
         { id: 'collate1', shape: { type: 'Flow', shape: 'Collate' } },
     ];
+    var connectorSymbols = [
+        {
+            id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            targetDecorator: { shape: 'Arrow', style: { strokeColor: '#757575', fill: '#757575' } },
+            style: { strokeWidth: 1, strokeColor: '#757575' }
+        },
+        {
+            id: 'Link5', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            targetDecorator: { shape: 'Arrow', style: { strokeColor: '#757575', fill: '#757575' } },
+            style: { strokeWidth: 1, strokeColor: '#757575' }
+        },
+        {
+            id: 'link4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+        },
+        {
+            id: 'link3', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+        },
+        {
+            id: 'link6', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+        },
+    ];
 
     //Initializes the symbol palette
     var palette = new ej.diagrams.SymbolPalette({
@@ -174,7 +198,8 @@ this.default = function () {
         },
         palettes: [
             { id: 'basic', expanded: true, symbols: basicShapes, iconCss: 'e-ddb-icons e-basic', title: 'Basic Shapes' },
-            { id: 'flow', expanded: false, symbols: flowShapes, iconCss: 'e-ddb-icons e-flow', title: 'Flow Shapes' }
+            { id: 'flow', expanded: false, symbols: flowShapes, iconCss: 'e-ddb-icons e-flow', title: 'Flow Shapes' },
+            { id: 'connectors', expanded: false, symbols: connectorSymbols, iconCss: 'e-ddb-icons e-connector', title: 'Connectors' }
         ],
         symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 },
         getSymbolInfo: function (symbol) {
@@ -210,7 +235,7 @@ this.default = function () {
     var scrollLimit = new ej.dropdowns.DropDownList({
         dataSource: scrollLimitDatasource,
         fields: { text: 'text', value: 'value' },
-        value: 'Diagram',
+        value: 'Infinity',
         change: function (args) {
             var element = document.getElementById('scrollableDiv');
             element.className = args.value === "Limited" ? "" : "disabledbutton";
@@ -218,6 +243,21 @@ this.default = function () {
         }
     });
     scrollLimit.appendTo('#scrollLimit');
+
+    var checkBoxObj = new ej.buttons.CheckBox({
+        checked: true,
+        change: function (args) {
+            var element4 = document.getElementById('autoScrollDiv');
+            if (args.checked) {
+              element4.className = '';
+              diagram.scrollSettings.canAutoScroll = true;
+            } else {
+              element4.className = 'disabledbutton';
+              diagram.scrollSettings.canAutoScroll = false;
+            }
+        }
+    });
+    checkBoxObj.appendTo('#checked');
 
     var numeric = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
@@ -265,7 +305,7 @@ this.default = function () {
 
     var leftTextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
-        value: 10,
+        value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.left = Number(args.value);
         }
@@ -276,7 +316,7 @@ this.default = function () {
 
     var rightTextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
-        value: 10,
+        value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.right = Number(args.value);
         }
@@ -287,7 +327,7 @@ this.default = function () {
 
     var topTextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
-        value: 10,
+        value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.top = Number(args.value);
         }
@@ -298,7 +338,7 @@ this.default = function () {
 
     var bottomTextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
-        value: 10,
+        value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.bottom = Number(args.value);
         }

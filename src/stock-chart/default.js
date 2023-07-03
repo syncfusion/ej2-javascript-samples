@@ -3,7 +3,7 @@ window.default = function () {
             chartArea: { border: { width: 0 } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', width: 0 },
+                majorTickLines: { color: 'transparent', height: 0 },
                 crosshairTooltip: { enable: true },
             },
             primaryXAxis: { 
@@ -26,7 +26,8 @@ window.default = function () {
             title: 'AAPL Stock Price',
             tooltip: { enable: true },
             crosshair: {
-                enable: true,  
+                enable: true,
+                lineType:'Both'
             },
             // custom code start
             load: function (args) {

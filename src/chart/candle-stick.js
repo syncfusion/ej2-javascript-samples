@@ -53,12 +53,11 @@
             },
              // custom code end
             width: ej.base.Browser.isDevice ? '100%' : '75%', chartArea: { border: { width: 0 } },
+            title: 'AAPL Historical',
             crosshair: { enable: true, lineType: 'None' }
         });
         chart.appendTo('#container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-
-            _this.renderChart2(ajax);
+            _this.renderChart2();
         };

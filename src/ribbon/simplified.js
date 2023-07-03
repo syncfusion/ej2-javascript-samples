@@ -70,7 +70,8 @@ this.default = function () {
                         dataSource: fontSize,
                         allowFiltering: true,
                         index: 4,
-                        width: '80px',
+                        width: '65px',
+                        popupWidth: '85px',
                         change: function (args) { updateContent("Font Size -> " + args.itemData.text); }
                     }
                 }]
@@ -82,7 +83,7 @@ this.default = function () {
                         value: '#123456',
                         change: function (args) { updateContent(args.currentValue.hex + " color"); }
                     },
-                    displayOptions: ej.ribbon.DisplayMode.Simplified,
+                    displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
                 }, {
                     type: 'Button',
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
@@ -243,6 +244,7 @@ this.default = function () {
             groupIconCss: 'e-icons e-image',
             collections: [{
                 items: [{
+                    id: 'pictureddl',
                     type: 'DropDown',
                     dropDownSettings: {
                         content: 'Pictures',

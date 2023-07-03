@@ -46,7 +46,7 @@ this.default = function () {
         title: 'Fruit Production Statistics',
         //Initializing Tooltip
         tooltip: {  enable: true ,
-            shared:true , header:"<b>Fruit Production</b>" , format:"${point.x} : <b>${point.y}" },
+            shared:true , header:"<b>Fruit Production</b>" , format:"${point.x} : <b>${point.y}</b>" },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendSettings:{visible : false },
            // custom code start

@@ -579,7 +579,7 @@ function setNodeTemplate(node, diagram) {
 this.default = function () {
     //Initializes diagram control
     diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '500px',
+        width: '100%', height: '500px', selectionChange : selectionChange,
         snapSettings: { constraints: 0 },
     //Configrues hierarchical tree layout
     layout: {
@@ -613,6 +613,24 @@ this.default = function () {
     }
 });
 diagram.appendTo('#diagram');
+
+function selectionChange(args) {
+    if (args.state === 'Changed') {
+        var selectedItems = diagram.selectedItems.nodes;
+        if (selectedItems.length === 0) {
+            toolbarEditor.items[9].disabled = true;
+            toolbarEditor.items[10].disabled = true;
+        }
+        if (selectedItems.length === 1) {
+            toolbarEditor.items[9].disabled = false;
+            toolbarEditor.items[10].disabled = false;
+        }
+        if (selectedItems.length > 1) {
+            toolbarEditor.items[9].disabled = false;
+            toolbarEditor.items[10].disabled = false;
+        }
+    }
+}
 
 //create the Toolbar and adding items in ToolBar.
 var toolbarEditor = new ej.navigations.Toolbar({
@@ -655,13 +673,16 @@ var toolbarEditor = new ej.navigations.Toolbar({
                 type: 'Button',
                 tooltipText: 'Bring Into View',
                 prefixIcon: 'e-icons e-bring-to-view',
+                disabled: true
             },
             {
                 type: 'Button',
                 tooltipText: 'Bring Into Center',
                 prefixIcon: 'e-icons e-bring-to-center',
+                disabled: true
             },
         ]
 });
 toolbarEditor.appendTo('#toolbar');
 };
+

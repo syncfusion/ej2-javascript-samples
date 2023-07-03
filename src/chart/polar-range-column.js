@@ -39,6 +39,7 @@ this.default = function () {
             args.text = args.text.replace('˚C', '');
         },
         legendSettings: { visible: false },
+        tooltip: { enable: true, header: '', format: '<b>${point.x}</b> <br> Low : <b>${point.low}°C</b> <br> High : <b>${point.high}°Cd'},
         //Initializing Chart Title
         title: 'Temperatures of Germany',
            // custom code start

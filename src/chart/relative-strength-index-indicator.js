@@ -46,6 +46,7 @@ this.renderChartRSI = function () {
                     period: 3, upperLine: { color: '#ffb735' }, lowerLine: { color: '#f2ec2f' }
                 }],
             zoomSettings: {
+                enablePan: true,
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
                 mode: 'XY',

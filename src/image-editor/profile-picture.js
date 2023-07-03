@@ -4,12 +4,16 @@
 
  this.default = function () {
   var img = document.querySelector('#custom-img');
+  var imageEditor, imgSrc = '';
   img.onload = function () {
-      var canvas = document.querySelector('#img-canvas');
-      var ctx = canvas.getContext('2d');
-      canvas.width = img.width < img.height ? img.width : img.height;
-      canvas.height = canvas.width;
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      if (imgSrc === '') {
+         var canvas = document.querySelector('#img-canvas');
+         var ctx = canvas.getContext('2d');
+         canvas.width = img.width < img.height ? img.width : img.height;
+         canvas.height = canvas.width;
+         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+         document.querySelector('.e-profile').classList.remove('e-hide');
+      }
   };
   var dialogObj = new ej.popups.Dialog({
       header: 'Edit Profile Image',
@@ -27,7 +31,7 @@
           document.getElementById('image-editor').className = '';
       },
       open: function () {
-          new ej.imageeditor.ImageEditor({
+          imageEditor = new ej.imageeditor.ImageEditor({
               fileOpened: function () {
                   var imageEditor = ej.base.getComponent(document.getElementById('image-editor'), 'image-editor');
                   imageEditor.select('circle');
@@ -37,10 +41,10 @@
                 if (imageEditor.theme && window.location.href.split('#')[1]) {
                     imageEditor.theme = window.location.href.split('#')[1].split('/')[1];
                 }
-                
-            },
+              },
               toolbar: []
-          }, '#image-editor');
+          });
+          imageEditor.appendTo('#image-editor');
       },
       buttons: [
             {
@@ -81,16 +85,20 @@
                 parentDiv.style.borderRadius = '100%';
                 canvas.style.backgroundColor = '#fff';
                 dialogObj.hide();
+                if (imgSrc !== '') {
+                    var img = document.querySelector('#custom-img');
+                    img.src = imgSrc;
+                }
             },
-              buttonModel: { content: 'Apply', isPrimary: true, cssClass: 'e-img-custom-apply' }
+              buttonModel: { content: 'Apply', isPrimary: true, cssClass: 'e-custom-img-btn e-img-custom-apply' }
           }]
   });
   dialogObj.appendTo('#profile-dialog');
   document.getElementById('custom-edit').onclick = function () {
     dialogObj.show();
     var imageEditor = ej.base.getComponent(document.getElementById('image-editor'), 'image-editor');
-    var canvas = document.querySelector('#img-canvas');
-    imageEditor.open(canvas.toDataURL());
+    var img = document.querySelector('#custom-img');
+    imageEditor.open(img.src);
   };
   document.getElementById('img-upload').onchange = function (args) {
     var URL = window.URL;
@@ -98,6 +106,7 @@
     var imageEditor = ej.base.getComponent(document.getElementById('image-editor'), 'image-editor');
     imageEditor.open(url.toString());
     document.getElementById('img-upload').value = null;
+    imgSrc = url.toString();
   };
   var imageHide = document.getElementsByClassName('sb-desktop-wrapper')[0];
   if (imageHide) {

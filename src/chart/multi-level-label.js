@@ -13,6 +13,9 @@ var labelRender = function (args) {
     else if(selectedTheme === 'highcontrast') {
         args.fill = window.highcontrastColors[args.point.index % 10];
     }
+    else if (selectedTheme === 'fluent' || selectedTheme === 'fluent-dark') {
+        args.fill = window.fluentColors[args.point.index % 10];
+    }
     else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }

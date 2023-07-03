@@ -56,6 +56,11 @@ this.default = function () {
         ],
         //Initializing Crosshair
         crosshair: { enable: true },
+        zoomSettings: {
+            enablePinchZooming: true,
+            enableSelectionZooming: true,
+            mode: 'X'
+        },
         legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title

@@ -4,13 +4,12 @@
 this.default = function () {
 
     //Initialize Query to select required columns with defined record count.
-    var query = new ej.data.Query().select([
-        'OrderID', 'CustomerID', 'ShipName', 'ShipCity', 'ShipCountry', 'Freight'
-    ]).take(200);
+    var query = new ej.data.Query().from('Orders').select('OrderID,CustomerID,Freight,ShipName,ShipCity,ShipCountry').take(20); 
 
     //Initialize DataManager.
     var data = new ej.data.DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices//wcf/Northwind.svc/Orders',
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc',
+        adaptor: new ej.data.ODataV4Adaptor(), 
         crossDomain: true
     });
 

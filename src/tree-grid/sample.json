@@ -93,7 +93,7 @@
             "description": "This demo for Essential JS 2 Tree Grid control how the rows can be dragged within the Tree Grid using the row drag-and-drop feature."
          },
          {  
-            "url":"row.hover", "name": "Row Hover", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
+            "url":"row.hover", "name": "Row Hover", "category":"Rows", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
             "description": "This demo explains how the Tree Grid row color is changed while move the mouse over a row in Syncfusion Essential JS2 Tree Grid content."
          },
          {  
@@ -162,7 +162,7 @@
          }, 
          { "url":"default-scrolling", "name": "Default Scrolling", "description":"This demo for Essential JS 2 Tree Grid control shows the usage of horizontal and vertical scrollbars to view Tree Grid content that exceeds the Tree Grid area.", "category":"Scrolling","api":{"TreeGrid":["dataSource","height","width","columns"] } },
          {
-            "url":"frozencolumn", "name": "Frozen Columns", "category":"Scrolling","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
+            "url":"frozencolumn", "name": "Frozen Columns", "category":"Scrolling", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
             "description": "This demo for Essential JS 2 Tree Grid control shows frozen columns feature of Tree Grid. Scroll the movable content to view the frozen columns."
          },
          {
@@ -223,7 +223,7 @@
          {"url":"events", "name": "Events", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","allowPaging","childMapping","treeColumnIndex","load","created","actionBegin","actionComplete","allowReordering","allowSorting","dataBound","rowSelecting","rowSelected","columnDragStart","columnDrag","columnDrop","columns","pageSettings"] },
             "description": "This demo explains the basic functionalities of the events that are available in the Syncfusion Essential JS2 Tree Grid."
          },
-         {"url":"keyboard", "name": "Keyboard Navigation", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","columns","height"] },
+         {"url":"keyboard", "name": "Keyboard Navigation", "category":"Miscellaneous", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","columns","height"] },
             "description": "This demo explains the key combinations used to perform corresponding Tree Grid actions in Syncfusion Essential JS2 Tree Grid."
          }
     ]

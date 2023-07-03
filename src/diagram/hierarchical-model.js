@@ -95,7 +95,7 @@ this.default = function () {
             args.target.classList.add('e-selected-style');
         }
     };
-    var checkBoxObj = new ej.buttons.CheckBox({ change:  function (){
+    var checkBoxObj = new ej.buttons.CheckBox({ change:  function (args){
         for (var _i = 0, _a = diagram.nodes; _i < _a.length; _i++) {
             var node = _a[_i];
             if (args.checked) {

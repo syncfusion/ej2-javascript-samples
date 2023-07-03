@@ -1,7 +1,7 @@
 /**
  * Sample for EMA Indicator
  */
-this.renderChartEMA = function (chartData) {
+this.renderChartEMA = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -35,6 +35,7 @@ this.renderChartEMA = function (chartData) {
             },
             crosshair: { enable: true, lineType: 'Vertical' },
             zoomSettings: {
+                enablePan: 'true',
                 enableSelectionZooming: true,
                 mode: 'X',
             },
@@ -53,7 +54,6 @@ this.renderChartEMA = function (chartData) {
         chart.appendTo('#ema-container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-            renderChartEMA(ajax);
+            renderChartEMA();
         };
  

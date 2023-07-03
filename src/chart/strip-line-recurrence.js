@@ -42,7 +42,7 @@ this.default = function () {
             }
         ],
         //Initializing Chart title
-        title: 'World Pollution Report', tooltip: { enable: true, format: ' Year: ${point.x}<br> Tons Per Day: ${point.y}' },
+        title: 'World Pollution Report', tooltip: { enable: true, format: ' Year: <b>${point.x}</b><br> Tons Per Day: <b>${point.y}</b>' },
         legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {

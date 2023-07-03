@@ -98,7 +98,7 @@ this.default = function () {
         items: [
             { type: 'Button',  text: 'Zoom In', tooltipText: 'ZoomIn', prefixIcon: 'e-ddb-icons e-zoomin' }, { type: 'Separator' },
             { type: 'Button',  text: 'Zoom Out', tooltipText: 'ZoomOut', prefixIcon: 'e-ddb-icons e-zoomout' }, { type: 'Separator' },
-            { type: 'Button',  text: 'Reset', tooltipText: 'Reset', prefixIcon: 'e-ddb-icons e-reset' }
+            { type: 'Button',  text: 'Reset', tooltipText: 'Reset', prefixIcon: 'e-diagram-icons e-diagram-reset' }
         ]
     });
     toolbarObj.appendTo('#toolbar');

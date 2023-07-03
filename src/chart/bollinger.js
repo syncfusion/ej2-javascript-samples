@@ -57,7 +57,5 @@ this.renderChartBollinger = function () {
         chart.appendTo('#bollinger-container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-        
-            renderChartBollinger(ajax);
+            renderChartBollinger();
         };

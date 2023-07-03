@@ -1,0 +1,40 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="lineardeterminate"></div>
+        <div id="overviewSample">
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample shows an overview of the EJ2 Gantt Chart features that visualize the progress of each feature of the product towards its release and make it easier to monitor the scheduling of the dependent items.</p>
+</div>
+
+<div id="description">
+    <p>This example shows the three-quarter release planning of product features rendered in the EJ2 Gantt chart. It tracks the quarterly release planning of product status, resources, and task scheduling.</p>
+    <p>EJ2 Gantt Chart features such as Sorting, Filtering, Column resizing, Column menu, column template and so on are used in this demo.</p>
+</div>
+
+
+<script type="text/x-template" id="columnTemplate">
+    ${if(ganttProperties.resourceNames)}
+      <div class="image">
+           <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:25px;width:25px" /><div style="display:inline-block;width:100%;position:relative;left:5px">${ganttProperties.resourceNames}</div>
+       </div>
+   ${/if}
+</script>
+<script type="text/x-template" id="columnTemplate1">
+    ${if(taskData.Status)}
+    <div style="${Status(taskData.Status)}"><span style="${StatusContent(taskData.Status)}">${taskData.Status}</span></div>
+    ${/if}
+</script>
+<script type="text/x-template" id="columnTemplate2">
+    ${if(taskData.Priority)}
+    <div style="${Priority(taskData.Priority)}"><span style="${PriorityContent(taskData.Priority)}">${taskData.Priority}</span></div>
+    ${/if}
+</script>
+<style>
+    #overviewSample .e-gantt-child-taskbar,
+    #overviewSample .e-gantt-parent-taskbar {
+        border-radius: 10px !important
+    }
+</style>

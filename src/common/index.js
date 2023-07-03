@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['fluent', 'fluent-dark', 'bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
+var themeCollection = ['fluent', 'fluent-dark', 'bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'material3', 'material3-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
 var themeDropDown;
 var contentTab;
 var sourceTab;
@@ -46,7 +46,7 @@ var setResponsiveElement = ej.base.select('.setting-responsive');
 var isMobile = window.matchMedia('(max-width:550px)').matches;
 var isTablet = window.matchMedia('(min-width:600px) and (max-width: 850px)').matches;
 var isPc = window.matchMedia('(min-width:850px)').matches;
-var selectedTheme = location.hash.split('/')[1] || 'bootstrap5';
+var selectedTheme = location.hash.split('/')[1] || 'material3';
 var toggleAnim = new ej.base.Animation({ duration: 500, timingFunction: 'ease' });
 var controlSampleData = {};
 var samplesList = getSampleList();
@@ -94,8 +94,12 @@ var matchedCurrency = {
 };
 settingsidebar = new ej.navigations.Sidebar({
     position: 'Right', width: '282', zIndex: '1003', showBackdrop: true, type: 'Over', enableGestures: false,
-    closeOnDocumentClick: true
+    closeOnDocumentClick: true, close: closeRightSidebar
 });
+function closeRightSidebar(args) {
+  let targetEle = args.event ? args.event.target : null;
+  if (targetEle && targetEle.closest('.e-popup')) args.cancel = true;
+}
 function changeCulture(cul) {
     if (cul === 'ar') {
         changeRtl(true);
@@ -1004,7 +1008,7 @@ function controlSelect(arg) {
         controlListRefresh(arg.node || arg.item);
         if (path !== curHashCollection) {
             sampleOverlay();
-            var theme = location.hash.split('/')[1] || 'bootstrap5';
+            var theme = location.hash.split('/')[1] || 'material3';
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
                 ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
@@ -1215,7 +1219,7 @@ function addRoutes(samplesList) {
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
                 (subNode.category + ' / ') : '') + subNode.name;
-            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'bootstrap5';
+            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'material3';
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {

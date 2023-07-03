@@ -1,5 +1,5 @@
 <div class="col-lg-12 control-section e-img-editor-sample">
-    <div class="e-profile">
+    <div class="e-profile e-hide">
         <div class="e-custom-wrapper">
             <canvas id="img-canvas" style="max-width: 200px; max-height: 200px;"></canvas>
             <img alt="img" id="custom-img" crossorigin="anonymous" src="src/image-editor/images/profile.png"
@@ -124,7 +124,17 @@
         padding: 1px 10px !important;
     }
 	
-	.e-img-editor-sample {
+    .e-img-editor-sample {
         min-height: 450px;
+    }
+    .e-img-editor-sample .e-hide {
+	display: none;
+    }
+    .material3 .e-custom-img-btn,
+    .material3-dark .e-custom-img-btn,
+    .e-bigger.material3 .e-custom-img-btn,
+    .e-bigger.material3-dark .e-custom-img-btn
+    { 
+     	margin-left: 3px !important;
     }
 </style>

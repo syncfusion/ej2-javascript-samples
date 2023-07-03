@@ -215,7 +215,7 @@ this.default = function () {
         items: [
             { id: 'palette-icon', prefixIcon: 'e-ddb-icons2 e-toggle-palette', align: 'Right' },
             { text: 'New', tooltipText: 'New', prefixIcon: 'e-ddb-icons e-new' },
-            { type: 'Separator' }, { text: 'Save', tooltipText: 'Save', prefixIcon: 'e-ddb-icons e-save' },
+            { type: 'Separator' }, { text: 'Save', tooltipText: 'Save', prefixIcon: 'e-diagram-icons e-diagram-save' },
             { type: 'Separator' }, { text: 'Load', tooltipText: 'Load', prefixIcon: 'e-ddb-icons e-open' }
         ]
     });

@@ -1,4 +1,5 @@
 this.default = function () {
+    var globalize = new ej.base.Internationalization();
     var data = new ej.base.extend([], window.employeeEventData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
@@ -31,9 +32,8 @@ this.default = function () {
     var button = new ej.buttons.Button();
     button.appendTo('#submit');
     document.getElementById('submit').onclick = function () {
-        var start = document.getElementById('startTime');
-        var end = document.getElementById('endTime');
-        scheduleObj.startHour = start.value;
-        scheduleObj.endHour = end.value;
+        scheduleObj.startHour = globalize.formatDate(start.value, { skeleton: 'Hm' });
+        scheduleObj.endHour = globalize.formatDate(end.value, { skeleton: 'Hm' });
+        scheduleObj.dataBind();
     };
 };

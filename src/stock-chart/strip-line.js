@@ -5,7 +5,7 @@ renderLineStockChart = function (amzn) {
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', width: 0 },
+                majorTickLines: { color: 'transparent', height: 0 },
                 stripLines: [{ start: 340, end: 380, color: '#3CB371', opacity: 0.1 }]
             },
             series: [
@@ -16,6 +16,7 @@ renderLineStockChart = function (amzn) {
             title: 'AAPL Historical',
             seriesType : [],
             indicatorType : [],
+            trendlineType: ['Linear', 'Exponential', 'Polynomial', 'Logarithmic', 'MovingAverage'],
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
@@ -29,10 +30,10 @@ renderLineStockChart = function (amzn) {
     };
     this.default = function () {
         var amzn;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/aman.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            amzn = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/aman.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            amzn = data;
             amzn.map(function (data) {
                 data.x = new Date(data.x);
             });

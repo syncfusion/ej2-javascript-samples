@@ -5,7 +5,6 @@ this.default = function () {
             location.hash.split('/')[1].slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
     };
 
-
     var nearProgress = new ej.progressbar.ProgressBar({
         type: 'Linear',
         height: '30',

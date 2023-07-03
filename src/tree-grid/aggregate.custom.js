@@ -47,7 +47,7 @@ this.default = function () {
         columns: [
             { field: 'ID', headerText: 'S.No', width: 60, textAlign: 'Right' },
             { field: 'Name', headerText: 'Shipment Name', width: 170 },
-            { field: 'category', headerText: 'Category', width: 180 },
+            { field: 'category', headerText: 'Category', width: 230 },
             { field: 'units', headerText: 'Unit', width: 60 },
             { field: 'unitPrice', headerText: 'Unit Price($)', width: 85,  format: 'C0',  type: 'number', textAlign: 'Right' },
             { field: 'price', headerText: 'Price($)', width: 90,  format: 'C', textAlign: 'Right', type: 'number' },

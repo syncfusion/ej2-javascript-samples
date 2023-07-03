@@ -37,7 +37,6 @@ this.default = function () {
                     visible: true,
                     width: 7,
                     height: 7,
-                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Vietnam',
@@ -51,7 +50,6 @@ this.default = function () {
                     visible: true,
                     width: 6,
                     height: 6,
-                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Canada',
@@ -65,7 +63,6 @@ this.default = function () {
                     visible: true,
                     width: 7,
                     height: 7,
-                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Malaysia',
@@ -79,7 +76,6 @@ this.default = function () {
                     visible: true,
                     width: 5,
                     height: 5,
-                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Egypt',
@@ -93,7 +89,6 @@ this.default = function () {
                     visible: true,
                     width: 7,
                     height: 7,
-                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Indonesia',

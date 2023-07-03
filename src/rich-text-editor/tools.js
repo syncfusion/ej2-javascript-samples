@@ -11,7 +11,7 @@ this.default = function() {
         toolbarSettings: {
             items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-                'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
+                'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', 'EmojiPicker', '|',
                 'Formats', 'Alignments', 'NumberFormatList', 'BulletFormatList',
                 'Outdent', 'Indent', '|',
                 'CreateTable', 'CreateLink', 'Image', 'FileManager', '|', 'ClearFormat', 'Print',

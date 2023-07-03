@@ -11,8 +11,8 @@ this.default = function () {
             'CsvExport', 'FirstPage', 'PrevPage', 'LastPage', 'NextPage'],
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', isPrimaryKey: true },
-            { field: 'CustomerName', headerText: 'Customer Name' },
-            { field: 'Freight', format: 'C2', textAlign: 'Right', editType: 'numericedit' },
+            { field: 'CustomerName', headerText: 'Customer Name', width: 160 },
+            { field: 'Freight', format: 'C2', textAlign: 'Right', width: 120, editType: 'numericedit' },
             { field: 'ShipName', headerText: 'Ship Name', width: 200 },
             { field: 'ShipCountry', headerText: 'Ship Country', width: 150, editType: 'dropdownedit' },
             { field: 'ShipCity', headerText: 'Ship City', width: 150 }

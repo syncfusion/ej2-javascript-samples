@@ -5,7 +5,7 @@ renderAreaStockChart = function (aapl) {
             crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent' },
+                majorTickLines: { color: 'transparent', height: 0},
                 crosshairTooltip: { enable: true }
             },
             series: [
@@ -13,10 +13,10 @@ renderAreaStockChart = function (aapl) {
                     dataSource: aapl, xName: 'x', yName: 'high', type: 'Area'
                 }
             ],
-            seriesType : [],
+            seriesType: [],
             indicatorType : [],
             title: 'AAPL Stock Price',
-            crosshair: { enable: true },
+            crosshair: { enable: true , lineType:'Both'},
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];
@@ -30,10 +30,10 @@ renderAreaStockChart = function (aapl) {
     };
     this.default = function () {
         var aapl;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/aapl.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            aapl = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/aapl.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            aapl = data;
             aapl.map(function (data) {
                 data.x = new Date(data.x);
             });

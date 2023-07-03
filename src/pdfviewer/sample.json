@@ -3,6 +3,7 @@
     "directory": "pdfviewer",
     "category": "File Viewers & Editors",
     "ftName": "pdfviewer",
+    "type": "update",
     "samples": [
         {            
             "url":"default", "name": "Default Functionalities", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with minimum configuration.", "category": "PDF Viewer", "api": {
@@ -40,7 +41,7 @@
             }
         },
         {
-            "url":"form-designer", "name": "Form Designer", "description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer", "api": {
+            "url":"form-designer", "name": "Form Designer", "type": "update" ,"description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

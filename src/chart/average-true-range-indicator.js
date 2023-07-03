@@ -1,7 +1,7 @@
 /**
  * Sample for ATR Indicator
  */
-this.renderChartATR = function (chartData) {
+this.renderChartATR = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -74,7 +74,5 @@ this.renderChartATR = function (chartData) {
         chart.appendTo('#atr-container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-       
-            renderChartATR(ajax);
+            renderChartATR();
         };

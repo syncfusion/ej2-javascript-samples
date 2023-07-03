@@ -82,7 +82,7 @@ this.default = function () {
         items: [
             { type: 'Button', tooltipText: 'ZoomIn', text: 'Zoom In', prefixIcon: 'e-ddb-icons e-zoomin' }, { type: 'Separator' },
             { type: 'Button', tooltipText: 'ZoomOut', text: 'Zoom Out', prefixIcon: 'e-ddb-icons e-zoomout' }, { type: 'Separator' },
-            { type: 'Button', tooltipText: 'Reset', text: 'Reset', prefixIcon: 'e-ddb-icons e-reset' }
+            { type: 'Button', tooltipText: 'Reset', text: 'Reset', prefixIcon: 'e-diagram-icons e-diagram-reset' }
         ]
     });
 

@@ -184,8 +184,8 @@
             "category": "Map Providers",
             "description": "This demo for Essential JS2 Maps control depicts the OpenStreetMap with legend for markers.",
             "sourceFiles":[
-                { "displayName": "osm-with-sublayers.html", "path":"src/maps/osm-with-legend.html" },
-                { "displayName": "osm-with-sublayers.js", "path":"src/maps/osm-with-legend.js" }
+                { "displayName": "osm-with-legend.html", "path":"src/maps/osm-with-legend.html" },
+                { "displayName": "osm-with-legend.js", "path":"src/maps/osm-with-legend.js" }
             ]
         },
         {

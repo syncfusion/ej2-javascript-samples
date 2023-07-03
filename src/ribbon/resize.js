@@ -73,7 +73,8 @@ this.default = function () {
                     comboBoxSettings: {
                         dataSource: fontSize,
                         index: 4,
-                        width: '80px',
+                        width: '65px',
+                        popupWidth: '85px',
                         allowFiltering: true,
                         change: function (args) { updateContent("Font Size -> " + args.itemData.text); }
                     }
@@ -81,7 +82,7 @@ this.default = function () {
             }, {
                 items: [{
                     type: 'ColorPicker',
-                    displayOptions: ej.ribbon.DisplayMode.Simplified,
+                    displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     colorPickerSettings: {
                         value: '#123456',

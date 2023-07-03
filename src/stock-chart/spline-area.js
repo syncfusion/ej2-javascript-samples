@@ -4,7 +4,7 @@ renderSplineAreaStockChart = function (googl) {
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', width: 0 },
+                majorTickLines: { color: 'transparent', height: 0 },
                 crosshairTooltip: { enable: true }
             },
             chartArea: { border: { width: 0 } },
@@ -13,11 +13,12 @@ renderSplineAreaStockChart = function (googl) {
                     dataSource: googl, xName: 'x', yName: 'high', type: 'SplineArea'
                 }
             ],
-            seriesType : [],
+            seriesType: [],
             indicatorType : [],
             title: 'Google Stock Price',
             crosshair: {
-                enable: true
+                enable: true,
+                lineType:'Both'
             },
             // custom code start
             load: function (args) {
@@ -32,10 +33,10 @@ renderSplineAreaStockChart = function (googl) {
     };
     this.default = function () {
         var googl;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/googl.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            googl = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/googl.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            googl = data;
             googl.map(function (data) {
                 data.x = new Date(data.x);
             });
