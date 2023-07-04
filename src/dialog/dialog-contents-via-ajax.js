@@ -30,10 +30,10 @@ this.default = function () {
         function dlgButtonClick() {
             if (this.btnObj[0].properties.content === 'More Details') {
             // Request to load AJAX content
-            var ajax = new ej.base.Ajax('./src/dialog/blog.html', 'GET', true);
-            ajax.send().then();
+            var fetchApi = new ej.base.Fetch('./src/dialog/blog.html', 'GET');
+            fetchApi.send().then();
              // Rendering Dialog on AJAX success
-            ajax.onSuccess = function(data) {
+            fetchApi.onSuccess = function(data) {
                dialogObj.setProperties ({content: data});
             };
             dialogObj.buttons = [{click: dlgButtonClick, buttonModel: { content: 'Less Details', isPrimary: true }}];

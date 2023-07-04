@@ -2,7 +2,7 @@
  * Sample for Hilo Open Close Series
  */
 var _this = this;
-this.renderChartOhlc = function (chartData) {
+this.renderChartOhlc = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -35,12 +35,12 @@ this.renderChartOhlc = function (chartData) {
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                     selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            }
+            },
+            title: 'AAPL Historical',
              // custom code end
         });
         chart.appendTo('#container2');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-            _this.renderChartOhlc(ajax);
+            _this.renderChartOhlc();
         };

@@ -1,7 +1,7 @@
 /**
  * Sample for Momentum Indicator
  */
- this.renderChartMomentum = function (chartData) {
+ this.renderChartMomentum = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -70,7 +70,5 @@
         chart.appendTo('#momentum-container');
     };
     this.default = function () {
-        var chartData;
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-            renderChartMomentum(ajax);
+            renderChartMomentum();
         };

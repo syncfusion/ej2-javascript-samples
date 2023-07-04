@@ -135,7 +135,7 @@ this.default = function () {
             return connector;
         }
     });
-    var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }];
+    var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'SVG' }];
     //DropDownButton used to perform exporting.
     btnObj = new ej.splitbuttons.DropDownButton({
         items: items, iconCss: 'e-ddb-icons e-export', content: 'Export', select: onselect,
@@ -152,7 +152,7 @@ this.default = function () {
                 type: 'Input', text: 'Export', template: '<button id="custombtn" style="width:100%;"></button>'
             },
             {
-                type: 'Button', text: 'Print', prefixIcon: 'e-ddb-icons e-print',
+                type: 'Button', text: 'Print', prefixIcon: 'e-diagram-icons e-diagram-print',
             },
             {
                 type: 'Input', template: checkBoxObj

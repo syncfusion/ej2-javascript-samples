@@ -3,8 +3,8 @@
  */
 var defaultRTE;
 this.default = function() {
-    var ajax = new ej.base.Ajax('./src/rich-text-editor/ajax-content.html', 'GET', false);
-    ajax.send().then(function(data) {
+    var fetch = new ej.base.Fetch('./src/rich-text-editor/ajax-content.html', 'GET');
+    fetch.send().then(function(data) {
         defaultRTE = new ej.richtexteditor.RichTextEditor({ value: data });
         defaultRTE.appendTo('#defaultRTE');
     });

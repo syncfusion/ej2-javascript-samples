@@ -49,9 +49,6 @@ this.default = function () {
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendSettings: { visible: false },
         title: 'Sales Comparison of a Product',
-        tooltip: {
-            enable: true
-        },
         annotations: [
             {
                 x: new Date(2017, 11, 22), y: 90, coordinateUnits: 'Point',

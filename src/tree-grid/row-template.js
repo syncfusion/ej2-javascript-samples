@@ -9,9 +9,9 @@ this.default = function () {
             rowHeight: 83,
             columns: [
                 { field: "EmpID", headerText: "Employee ID", width: "180" },
-                { field: "Name", headerText: "Employee Name" },
-                { field: "Address", headerText: "Employee Details", width: "360" },
-                { field: "DOB", headerText: "DOB" }
+                { field: "Name", headerText: "Employee Name", width:'140' },
+                { field: "Address", headerText: "Employee Details", width: "390" },
+                { field: "DOB", headerText: "DOB", width: "100" }
             ]
         });
     treegrid.appendTo('#TreeGrid');

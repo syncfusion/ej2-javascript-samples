@@ -8,12 +8,13 @@ renderMultipleStockChart = function (goog) {
     primaryYAxis: {
       interval: 40,
       lineStyle: { color: "transparent" },
-      majorTickLines: { color: "transparent", width: 0 },
+      majorTickLines: { color: "transparent", height: 0 },
       crosshairTooltip: { enable: true },
     },
     chartArea: { border: { width: 0 } },
     indicatorType: [],
     trendlineType: [],
+    seriesType: ['Line', 'Hilo', 'HiloOpenClose', 'Spline', 'Candle'],
     series: [
       {
         dataSource: goog,
@@ -31,7 +32,7 @@ renderMultipleStockChart = function (goog) {
       },
     ],
     crosshair: {
-      enable: true,
+      enable: true, lineType:'Both'
     },
     legendSettings: {
       visible: true,
@@ -53,14 +54,14 @@ renderMultipleStockChart = function (goog) {
 this.default = function () {
   var goog;
   var googl;
-  var ajax = new ej.base.Ajax(
+  var fetchApi = new ej.base.Fetch(
     "./src/stock-chart/data-source/goog.json",
     "GET",
     true
   );
-  ajax.send().then();
-  ajax.onSuccess = function (data) {
-    goog = JSON.parse(data);
+  fetchApi.send().then();
+  fetchApi.onSuccess = function (data) {
+    goog = data;
     goog.map(function (data) {
       data.x = new Date(data.x);
     });

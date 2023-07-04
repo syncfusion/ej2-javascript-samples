@@ -1,7 +1,7 @@
 /**
  * Sample for Hilo Series
  */
-this.renderChart = function (chartData) {
+this.renderChart = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',
@@ -52,6 +52,5 @@ this.renderChart = function (chartData) {
         chart.appendTo('#hilo-container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-            renderChart(ajax);
+            renderChart();
         };

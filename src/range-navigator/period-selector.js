@@ -4,7 +4,7 @@
 var _this = this;
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
 var removeSecondaryElement;
 var datasrc;
 var data1 = [];
@@ -122,10 +122,10 @@ this.default = function () {
     var data1 = [];
     var value;
     var j = 2100;
-    var ajax = new ej.base.Ajax('./src/range-navigator/data-source/period-data.json', 'GET', true);
-    ajax.send().then();
-    ajax.onSuccess = function (data) {
-        datasrc = JSON.parse(data);
+    var fetchApi = new ej.base.Fetch('./src/range-navigator/data-source/period-data.json', 'GET', true);
+    fetchApi.send().then();
+    fetchApi.onSuccess = function (data) {
+        datasrc = data;
         for (var i = 0; i < datasrc.length; i++) {
             value = datasrc[i];
             data1.push({

@@ -9,6 +9,19 @@ this.default = function () {
            'New', 'Open', 'Separator', 'Undo',
            'Redo',
            'Separator',
+           {
+               prefixIcon: 'sf-icon-InsertMergeField',
+               tooltipText: 'Insert Field',
+               text: onWrapText('Insert Field'),
+               id: 'InsertField'
+           },
+           {
+               prefixIcon: 'sf-icon-FinishMerge',
+               tooltipText: 'Merge Document',
+               text: onWrapText('Merge Document'),
+               id: 'MergeDocument'
+           },
+           'Separator',
            'Image',
            'Table',
            'Hyperlink',
@@ -31,19 +44,6 @@ this.default = function () {
            'Separator',
            'FormFields',
            'UpdateFields',
-           'Separator',
-           {
-               prefixIcon: 'sf-icon-InsertMergeField',
-               tooltipText: 'Insert Field',
-               text: onWrapText('Insert Field'),
-               id: 'InsertField'
-           },
-           {
-               prefixIcon: 'sf-icon-FinishMerge',
-               tooltipText: 'Merge Document',
-               text: onWrapText('Merge Document'),
-               id: 'MergeDocument'
-           },
        ]
     });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);

@@ -281,7 +281,47 @@ this.default = function () {
     
     var Editing = new ej.buttons.CheckBox({ label: 'Editing',checked:true,
     change:function () { 
-        diagram.constraints = diagram.constraints ^ ej.diagrams.DiagramConstraints.UserInteraction;
+        for (var i = 0; i < diagram.nodes.length; i++) {
+            var node = diagram.nodes[i];
+            for (var j = 0; j < node.annotations.length; j++) {
+              if (node.annotations[j].content) {
+                if (args.checked) {
+                  if (node.id !== 'Plus') {
+                    node.annotations[j].constraints =
+                      node.annotations[j].constraints ^
+                      ej.diagrams.AnnotationConstraints.ReadOnly;
+                  }
+                } else {
+                  node.annotations[j].constraints =
+                    node.annotations[j].constraints |
+                    ej.diagrams.AnnotationConstraints.ReadOnly;
+                }
+              }
+            }
+          }
+          for (var x = 0; x < diagram.connectors.length; x++) {
+            var connector = diagram.connectors[x];
+            for (var y = 0; y < connector.annotations.length; y++) {
+              if (connector.annotations[y].content) {
+                if (args.checked) {
+                  if (connector.id === 'select') {
+                    connector.constraints =
+                      connector.constraints &
+                      ~ej.diagrams.ConnectorConstraints.Select;
+                  } else {
+                    connector.annotations[y].constraints =
+                      connector.annotations[y].constraints ^
+                      ej.diagrams.AnnotationConstraints.ReadOnly;
+                  }
+                } else {
+                  connector.annotations[y].constraints =
+                    connector.annotations[y].constraints ^
+                    ej.diagrams.AnnotationConstraints.ReadOnly;
+                }
+              }
+            }
+          }
+          diagram.dataBind();
     }});
     Editing.appendTo('#editing');
     

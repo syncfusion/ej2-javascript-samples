@@ -82,7 +82,7 @@ this.default = function () {
         tooltip: {
             enable: true,
             shared: true,
-            format: '${point.x} : <b>${point.y}',
+            format: '${point.x} : <b>${point.y}</b>',
             header: '<b>Fruits Production</b>'
         },
         //Initializing Crosshair
@@ -102,7 +102,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).
-                replace(/-dark/i, "Dark");
+                replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast');
             if (selectedTheme && selectedTheme.indexOf('fabric-dark') > -1) {
                 annotationColor = 'dark';
             }
@@ -140,6 +140,12 @@ this.default = function () {
                 annotationColor = 'dark';
             }
             else if (selectedTheme === 'tailwind') {
+                annotationColor = 'light';
+            }
+            else if (selectedTheme === 'material3-dark') {
+                annotationColor = 'dark';
+            }
+            else if (selectedTheme === 'material3') {
                 annotationColor = 'light';
             }
             else {

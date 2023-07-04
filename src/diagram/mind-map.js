@@ -179,7 +179,8 @@ var LeftExtendTool = (function (_super) {
                     diagram.add(connector);
                     diagram.doLayout();
                     diagram.bringIntoView(nd.wrapper.bounds);
-                    diagram.startTextEdit(nd);
+                    diagram.select([diagram.nameTable[nd.id]]);
+                    diagram.startTextEdit(diagram.selectedItems.nodes[0]);
                 }
             }
         }
@@ -201,21 +202,22 @@ var RightExtendTool = (function (_super) {
             var selectedObject = this.commandHandler.getSelectedObject();
             if (selectedObject[0]) {
                 if (selectedObject[0] instanceof ej.diagrams.Node) {
-                    var node = addNode();
+                    var newNode = addNode();
                     if (selectedObject[0].data.branch === 'Root') {
-                        node.data.branch = 'Left';
+                        newNode.data.branch = 'Left';
                     }
                     else if (selectedObject[0].data.branch === 'Left' ||
                         selectedObject[0].data.branch === 'subLeft') {
-                        node.data.branch = 'subLeft';
+                        newNode.data.branch = 'subLeft';
                     }
-                    var connector = addConnector(selectedObject[0], node);
+                    var r_connector = addConnector(selectedObject[0], newNode);
                     diagram.clearSelection();
-                    var nd = diagram.add(node);
-                    diagram.add(connector);
+                    var r_node = diagram.add(newNode);
+                    diagram.add(r_connector);
                     diagram.doLayout();
-                    diagram.bringIntoView(nd.wrapper.bounds);
-                    diagram.startTextEdit(nd);
+                    diagram.bringIntoView(r_node.wrapper.bounds);
+                    diagram.select([diagram.nameTable[r_node.id]]);
+                    diagram.startTextEdit(diagram.selectedItems.nodes[0]);
                 }
             }
         }
@@ -334,7 +336,7 @@ this.default = function () {
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         tool: ej.diagrams.DiagramTools.SingleSelect,
         layout: {
-            type: 'MindMap',orientation:'LeftToRight',
+            type: 'MindMap',orientation:'Horizontal',
              horizontalSpacing: 50,
             getBranch: function (node) {
                 return node.data.branch;

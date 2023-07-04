@@ -17,18 +17,35 @@ this.default = function () {
         alertDialogObj.hide();
     }
     var grid = new ej.grids.Grid({
-        dataSource: window.inventoryData,
+        dataSource: window.orderDataSource,
+        editSettings: { allowEditing: true },
+        toolbar: ['Edit', 'Update', 'Cancel'],
         allowPaging: true,
         allowSorting: true,
         allowGrouping: true,
-        groupSettings: { columns: ['Country'] },
+        groupSettings: { columns: ['ShipCountry'] },
         height: 400,
         columns: [
-            { field: 'Inventor', headerText: 'Inventor Name', width: 160 },
-            { field: 'NumberofPatentFamilies', headerText: 'No of Patent Families', width: 195, textAlign: 'Right' },
-            { field: 'Country', headerText: 'Country', width: 120 },
-            { field: 'Active', headerText: 'Active', width: 120 },
-            { field: 'Mainfieldsofinvention', headerText: 'Main fields of invention',allowGrouping: false, width: 200 },
+            {
+                field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'Right',
+                validationRules: { required: true, number: true }, width: 140
+            },
+            {
+                field: 'CustomerID', headerText: 'Customer ID',
+                validationRules: { required: true }, width: 140
+            },
+            {
+                field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit',
+                width: 140, format: 'C2', validationRules: { required: true }
+            },
+            {
+                field: 'OrderDate', headerText: 'Order Date', editType: 'datetimepickeredit', format: { type: 'dateTime', format: 'M/d/y hh:mm a' },
+                width: 160, allowGrouping: false
+            },
+            {
+                field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150,
+                edit: { params: { popupHeight: '300px' } }
+            }
         ],
         pageSettings: { pageCount: 5 },
         load: function() {
@@ -36,7 +53,7 @@ this.default = function () {
         },
         dataBound: function() {
             if (refresh) {
-                grid.groupColumn('Country');
+                grid.groupColumn('ShipCountry');
                 refresh = false;
             }
         },
@@ -46,7 +63,7 @@ this.default = function () {
     });
     grid.appendTo('#Grid');
     function columnDragStart(args) {
-        if(args.column.field === "Mainfieldsofinvention"){
+        if(args.column.field === "OrderDate"){
             alertDialogObj.show();
        }
     }

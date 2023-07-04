@@ -101,6 +101,40 @@ var nodes = [
 ];
 
 this.default = function () {
+
+    if(this.location.href){
+        if(this.location.href.includes('bootstrap5')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('bootstrap4')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('bootstrap')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('material3')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('material')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('fabric')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('fluent')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('tailwind')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('highcontrast')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('fusion')){
+            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
+        }
+    }
+
     //Initialize diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '800px',

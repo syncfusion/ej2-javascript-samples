@@ -3,7 +3,7 @@ this.default = function () {
     // initialize AutoComplete component
     var atcObj1 = new ej.dropdowns.AutoComplete({
         // bind the DataManager instance to dataSource property
-        dataSource: new ej.data.DataManager({ url: 'https://ej2services.syncfusion.com/js/development/api/Employees', adaptor: new ej.data.WebApiAdaptor(), crossDomain: true}),
+        dataSource: new ej.data.DataManager({ url: 'https://services.syncfusion.com/js/production/api/Employees', adaptor: new ej.data.WebApiAdaptor(), crossDomain: true}),
         // set the count for displays the suggestion items.
         suggestionCount: 5,
         // bind the Query instance to query property

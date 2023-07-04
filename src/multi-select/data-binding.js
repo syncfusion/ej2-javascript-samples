@@ -2,7 +2,7 @@
 this.default = function () {
     var listObj = new ej.dropdowns.MultiSelect({
         // bind the DataManager instance to dataSource property
-        dataSource: new ej.data.DataManager({ url: 'https://ej2services.syncfusion.com/js/development/api/Employees', adaptor: new ej.data.WebApiAdaptor(), crossDomain: true}),
+        dataSource: new ej.data.DataManager({ url: 'https://services.syncfusion.com/js/production/api/Employees', adaptor: new ej.data.WebApiAdaptor(), crossDomain: true}),
         // bind the Query instance to query property
         query: new ej.data.Query().select(['FirstName', 'EmployeeID']).take(10).requiresCount(),
         // set the placeholder to MultiSelect input element

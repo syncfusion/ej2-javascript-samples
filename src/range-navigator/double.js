@@ -71,10 +71,10 @@ this.renderNumericChart = function (chartData) {
 };
 this.default = function () {
     var datasrc;
-    var ajax = new ej.base.Ajax('./src/range-navigator/data-source/double.json', 'GET', true);
-    ajax.send().then();
-    ajax.onSuccess = function (data) {
-        datasrc = JSON.parse(data);
+    var fetchApi = new ej.base.Fetch('./src/range-navigator/data-source/double.json', 'GET', true);
+    fetchApi.send().then();
+    fetchApi.onSuccess = function (data) {
+        datasrc = data;
         sl = datasrc.srilanka;
         aus = datasrc.aus;
         getAnnotaiton(aus, ej.charts.getSeriesColor(theme)[0]);

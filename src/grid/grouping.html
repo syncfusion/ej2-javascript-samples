@@ -24,7 +24,7 @@
 <!-- custom code end -->
 <div id="action-description">
     <p>This sample demonstrates grouping feature of the Grid component. 
-        In this sample, the Grid data is grouped against Country column. To group any other columns simply drag the column header and drop on the group drop area.</p>
+        In this sample, the Grid data is grouped against ShipCountry column. To group any other columns simply drag the column header and drop on the group drop area.</p>
 </div>
 
 <div id="description">
@@ -36,6 +36,12 @@
         allowGrouping</a></code> property as true.</p>
     <p>Columns can be grouped by simply dragging the column header and drop on the group drop area.</p>
     <p>In this demo, to group a specify column, drag and drop the column in the group drop area.</p>
+    <p>
+        In this demo, editing options can be enabled by setting <code>editSettings.allowEditing</code> as <code>true</code>.
+        You can start editing by double-clicking a row or the toolbar `Edit` button. 
+        Once in edit mode, you have the ability to modify the values of the selected row. 
+        When saving the record, the Grid will refresh the specific edited row without affecting the expanded group state.
+    </p>
     <p>
         More information on the grouping feature configuration can be found in this
         <a target="_blank" 

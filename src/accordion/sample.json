@@ -13,10 +13,10 @@
             "api": {"AccordionItem": ["header", "content", "expanded"], "Accordion":["items"] }
         },
         {
-            "url": "ajax",
-            "name": "Ajax Content",
+            "url": "fetch",
+            "name": "Fetch Content",
             "category": "Accordion",
-            "description":"The sample demonstrates how to load the content to the Accordion control from external sources using Ajax library in JavaScript platform.",
+            "description":"The sample demonstrates how to load the content to the Accordion control from external sources using Fetch library in JavaScript platform.",
             "api": {"Accordion": ["expandMode","expanding"] }
         },
         {

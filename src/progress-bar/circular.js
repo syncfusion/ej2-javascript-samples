@@ -5,7 +5,7 @@ this.default = function () {
       circularTheme = circularTheme ? circularTheme : 'Material';
       args.progressBar.theme = (circularTheme.charAt(0).toUpperCase() +
           circularTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark') {
+      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark') {
           for (var j = 0; j < div.length; j++) {
               div[j].setAttribute('style', 'color:white');
           }

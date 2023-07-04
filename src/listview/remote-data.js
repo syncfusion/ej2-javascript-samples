@@ -8,18 +8,18 @@ this.default = function () {
 
         //Initialize dataSource with the DataManager instance.
         dataSource: new ej.data.DataManager({
-            url: '//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/',
-            crossDomain: true
+            url: 'https://services.syncfusion.com/js/production/api/',
+            crossDomain: true,
         }),
 
         //Initialize query with the Query instance to get specified set of data
-        query: new ej.data.Query().from('Products').select('ProductID,ProductName').take(10),
+        query: new ej.data.Query().from('ListView').select('EmployeeID,FirstName').take(10),
 
         //Map the appropriate columns to fields property
-        fields: { id: 'ProductID', text: 'ProductName' },
+        fields: { id: 'EmployeeID', text: 'FirstName' },
 
         //Set header title
-        headerTitle: 'Products',
+        headerTitle: 'Employees',
 
         //Set true to show header title
         showHeader: true

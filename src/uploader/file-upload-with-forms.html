@@ -21,7 +21,7 @@
 
                     <div class="form-group" style="padding-top: 11px;">
                             <div class="e-float-input">
-                                <input type="text" id="Mobileno" name="MobileNo" data-required-message="* Enter your mobile number" required="" data-msg-containerid="noError">
+                                <input type="tel" maxlength="10" id="Mobileno" name="MobileNo" data-required-message="* Enter your mobile number" required="" data-msg-containerid="noError">
                                 <span class="e-float-line"></span>
                                 <label class="e-float-text e-label-top" for="name">Mobile No</label>
                             </div>   
@@ -83,6 +83,7 @@
 
     .highcontrast #control_wrapper,
     .material-dark #control_wrapper,
+    .material3-dark #control_wrapper,
     .fabric-dark #control_wrapper,
     .bootstrap-dark #control_wrapper,
     .bootstrap5-dark #control_wrapper {
@@ -214,8 +215,10 @@
         .tailwind-dark .e-bigger .e-dialog .e-dlg-header-content{
             padding-bottom: 2%;
         }
+        .material3-dark .e-bigger .e-dialog .e-dlg-header-content,
+        .material3 .e-bigger .e-dialog .e-dlg-header-content,
         .material-dark .e-bigger .e-dialog .e-dlg-header-content,
-        .material .e-bigger .e-dialog .e-dlg-header-content{
+        .material .e-bigger .e-dialog .e-dlg-header-content {
             padding-bottom: 3%;
         }
 </style>

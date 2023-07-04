@@ -4,6 +4,7 @@
     "category": "Data Visualization",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
+    "type":"update",
     "samples": [
         {
             "url": "overview",
@@ -60,6 +61,14 @@
             "category": "Kanban",
             "description": "The example demonstrates how to sort the cards in the ascending or descending based on the data source order or indexing or custom field on the Kanban board.",
             "api": { "Kanban": ["dataSource", "keyField", "columns", "cardSettings", "sortSettings"] }
+        },
+        {
+            "url": "virtual-scrolling",
+            "name": "Virtual Scrolling",
+            "category": "Kanban",
+            "description": "The example demonstrates how to load a large number of cards in the JavaScript Kanban board with optimal load time using the virtual scrolling feature.",
+            "api": { "Kanban": ["enableVirtualization"] },
+            "type": "new"
         },
         {
             "url": "local-data",

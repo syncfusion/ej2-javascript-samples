@@ -38,6 +38,41 @@ function openPalette() {
 }
 
 this.default = function () {
+
+    if (this.location.href ){
+        if(this.location.href.includes('bootstrap5')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
+        }
+        else if(this.location.href.includes('bootstrap4')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('bootstrap')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('material3')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('material')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('fabric')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('tailwind')){
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('fusion')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('highcontrast')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
+        }
+        else if (this.location.href.includes('fluent')) {
+            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
+        }
+       
+    }
+
     var bounds = document.getElementById('diagram-space').getBoundingClientRect();
     var centerX = bounds.width / 2;
     //Initializes the nodes for the diagram
@@ -153,18 +188,19 @@ this.default = function () {
         snapSettings: { horizontalGridlines: gridlines, verticalGridlines: gridlines },
         //Sets the default values of a node
         getNodeDefaults: function (node) {
-            var obj = {};
-            if (obj.width === undefined) {
-                obj.width = 145;
-            } else {
-                var ratio = 100 / obj.width;
-                obj.width = 100;
-                obj.height *= ratio;
+            if (node.width === undefined) {
+                node.width = 145;
             }
-            obj.style = { fill: '#357BD2', strokeColor: 'white' };
-            obj.annotations = [{ style: { color: 'white', fill: 'transparent' } }];
-            obj.ports = getNodePorts(node);
-            return obj;
+            node.style = { fill: '#357BD2', strokeColor: 'white' };
+            for (var i = 0; i < node.annotations.length; i++) {
+                node.annotations[i].style = {
+                  color: 'white',
+                  fill: 'transparent',
+                };
+            }
+            //Set ports
+            node.ports = getNodePorts(node);
+            return node;
         },
         //Sets the default values of a Connector.
         getConnectorDefaults: function (obj) {
@@ -409,7 +445,7 @@ var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems
 btnZoomIncrement.appendTo('#btnZoomIncrement');
 
 var exportBtn = new ej.splitbuttons.DropDownButton({
-    items: exportItems, iconCss: 'e-export e-icons',  select: onselectExport,
+    items: exportItems, iconCss: 'e-ddb-icons e-export',  select: onselectExport,
  });
  exportBtn.appendTo('#exportBtn');
 
@@ -491,7 +527,7 @@ var shapesItems = [
                      {text: 'Polygon',iconCss: 'e-line e-icons'}
 ];
  var exportItems = [
-        {text:'JPG'},{text:'PNG'},{text:'BMP'},{text:'SVG'}
+        {text:'JPG'},{text:'PNG'},{text:'SVG'}
  ];
  var groupItems = [
     {text:'Group',iconCss:'e-icons e-group-1'},{text:'Ungroup',iconCss:'e-icons e-ungroup-1'}
@@ -516,7 +552,7 @@ var shapesItems = [
                     });
                     shapesBtn.appendTo('#shapesBtn');
                     var exportBtn = new ej.splitbuttons.DropDownButton({
-                        items: exportItems, iconCss: 'e-icons e-export',  select: function (args) {onselectExport(args);},
+                        items: exportItems, iconCss: 'e-ddb-icons e-export',  select: function (args) {onselectExport(args);},
                      });
                      exportBtn.appendTo('#exportBtn');
                     
@@ -570,20 +606,42 @@ function zoomChange(args){
                 zoomCurrentValue.content = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
                 break;
             case 'Zoom to Fit':
-                diagram.fitToPage({ mode: 'Page', region: 'Content'});
+                zoom.zoomFactor = 1 / currentZoom - 1;
+                diagram.zoomTo(zoom);
                 zoomCurrentValue.content = diagram.scrollSettings.currentZoom;
                 break;
             case 'Zoom to 50%':
-                zoom.zoomFactor = (0.5 / currentZoom) - 1;
-                diagram.zoomTo(zoom);
+                if(currentZoom === 0.5)
+                {
+                    currentZoom = 0;
+                    zoom.zoomFactor = (0.5 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }else {
+                    zoom.zoomFactor = (0.5 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }               
                 break;
             case 'Zoom to 100%':
-                zoom.zoomFactor = (1 / currentZoom) - 1;
-                diagram.zoomTo(zoom);
+                if (currentZoom === 1) {
+                    currentZoom = 0;
+                    zoom.zoomFactor = (1 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }
+                else {
+                    zoom.zoomFactor = (1 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }
                 break;
             case 'Zoom to 200%':
-                zoom.zoomFactor = (2 / currentZoom) - 1;
-                diagram.zoomTo(zoom);
+                if (currentZoom === 2) {
+                    currentZoom = 0;
+                    zoom.zoomFactor = (2 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }
+                else {
+                    zoom.zoomFactor = (2 / currentZoom) - 1;
+                    diagram.zoomTo(zoom);
+                }
                 break;
         }
       

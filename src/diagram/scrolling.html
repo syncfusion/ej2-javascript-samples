@@ -8,6 +8,20 @@
             font-style: normal;
         }
 
+        .texstyle {
+            display: table;
+            /* height: 35px; */
+            padding-right: 10px;
+            padding-left: 0px;
+            width: 50%;
+            padding-top: 5px;
+            float: left;
+            position: relative;
+            min-height: 1px;
+        }
+        .text{
+            text-align: center;
+        }
         .e-ddb-icons {
             font-family: 'e-ddb-icons';
             speak: none;
@@ -72,12 +86,14 @@
             <div class="property-panel-header">
                 Properties
             </div>
-            <div class="row db-prop-row">
+            <!-- <div class="row db-prop-row"  style="margin-left: 0px;">
+            <div class="row db-prop-row" style="margin-left: 0px;"> -->
+            <div class="row db-prop-row">        
                 
                 <div class="col-xs-5 db-col-right db-prop-text-style" style="padding-top: 14px">
                     <span class="db-prop-text-style db-spacing-text">Scroll Limit</span>
                 </div>
-                <div class="col-xs-7 db-col-left" style="padding-top: 10px;">
+                <div class="col-xs-7 db-col-left" style="padding-top: 10px;padding-right: 0px;">
                     <div class="db-text-input">
                         <input type="text" id='scrollLimit' />
                     </div>
@@ -87,93 +103,100 @@
                 <div class="property-panel-header">
                     Scrollable Area
                 </div>
-                <div class="row db-prop-row">
-                    <div class="col-xs-6 db-col-left" style="padding-right: 5px;">
-                        <div class="db-text-container">
+                <div class="row db-prop-row"  style="padding-top: 15px;">
+                    <div class="col-xs-6" style="padding-right: 15px;width: 150px;">
                             <div style="width:40%;float:left;margin-top: 5px;">
-                                <span>X</span>
+                                <span class="texstyle" style="display: block;">X</span>
                             </div>
-                            <div style="width:60%;float:right">
+                            <div style="width:60%;float:right;padding-left: 20px;">
                                 <input type="text" id='x' />
                             </div>
-                        </div>
                     </div>
-                    <div class="col-xs-6 db-col-right">
+                </div>
+
+                <div class="row db-prop-row"  style="padding-top: 15px;">
+                    <div class="col-xs-6" style="padding-right: 15px;width: 150px;">
                         <div style="width:40%;float:left;margin-top: 5px;">
-                            <span>Y</span>
+                            <span class="texstyle" style="width: fit-content;">Y</span>
                         </div>
-                        <div style="width:60%;float:right">
+                        <div style="width:60%;float:right;padding-left: 20px;">
                             <input type="text" id='y' />
                         </div>
                     </div>
                 </div>
+                
                 <div class="row db-prop-row" style="padding-top: 15px;">
-                    <div class="col-xs-6 db-col-left" style="padding-right: 5px;">
-                        <div class="db-text-container">
+                    <div class="col-xs-6 db-col-left" style="width: 150px;">
                             <div style="width:40%;float:left;margin-top: 5px;">
-                                <span>Width</span>
+                                <span class="texstyle" >Width</span>
                             </div>
-                            <div style="width:60%;float:right">
+                            <div style="width:60%;float:right;padding-left: 20px;">
                                 <input type="text" id='width' />
                             </div>
-                        </div>
                     </div>
-                    <div class="col-xs-6 db-col-right">
+                </div>
+                <div class="row db-prop-row" style="padding-top: 15px;">    
+                    <div class="col-xs-6 db-col-right" style="width: 150px;">
                         <div style="width:40%;float:left;margin-top: 5px;">
-                            <span>Height</span>
+                            <span class="texstyle">Height</span>
                         </div>
-                        <div style="width:60%;float:right">
-                            <input type="text" id='height' />
+                        <div style="width:60%;float:right;padding-left: 20px">
+                            <input type="text" id='height'/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="autoScrollDiv">
+            <div style="padding-top:5px;margin-top: 20px;" >
+                <div style="float:left">Enable AutoScroll</div>
+                <div style="float: left;margin-left: 10px;">
+                    <input type="checkbox" id="checked">
+                </div>
+            </div>
+            <div id="autoScrollDiv" style="margin-top: 30px">
                 <div class="property-panel-header">
                     AutoScroll border
                 </div>
-                <div class="row db-prop-row">
-                    <div class="col-xs-6 db-col-left" style="padding-right: 5px;">
-                        <div class="db-text-container">
+                <div class="row db-prop-row"  style="padding-top: 15px;">
+                    <div class="col-xs-6 db-col-left" style="width: 150px;">
                             <div style="width:40%;float:left;margin-top: 5px;">
                                 <span>Left</span>
                             </div>
-                            <div style="width:60%;float:right">
+                            <div style="width:60%;float:right;padding-left: 20px;">
                                 <input type="text" id='left' />
                             </div>
-                        </div>
                     </div>
-                    <div class="col-xs-6 db-col-right">
+                </div>
+                <div class="row db-prop-row"  style="padding-top: 15px;">
+                    <div class="col-xs-6 db-col-right" style="width: 150px;">
                         <div style="width:40%;float:left;margin-top: 5px;">
                             <span>Top</span>
                         </div>
-                        <div style="width:60%;float:right">
-                            <input type="text" id='top' />
+                        <div style="width:60%;float:right;padding-left: 20px;">
+                            <input  type="text" id='top' />
                         </div>
                     </div>
                 </div>
                 <div class="row db-prop-row" style="padding-top: 15px;">
-                    <div class="col-xs-6 db-col-left" style="padding-right: 5px;">
-                        <div class="db-text-container">
+                    <div class="col-xs-6 db-col-left" style="width: 150px;">
                             <div style="width:40%;float:left;margin-top: 5px;">
                                 <span>Right</span>
                             </div>
-                            <div style="width:60%;float:right">
-                                <input type="text" id='right' />
+                            <div style="width:60%;float:right;padding-left: 20px;">
+                                <input  type="text" id='right' />
                             </div>
-                        </div>
                     </div>
-                    <div class="col-xs-6 db-col-right">
+                </div>
+                <div class="row db-prop-row" style="padding-top: 15px;">
+                    <div class="col-xs-6 db-col-right" style="width: 150px;">
                         <div style="width:40%;float:left;margin-top: 5px;">
                             <span>Bottom</span>
                         </div>
-                        <div style="width:60%;float:right">
-                            <input type="text" id='bottom' />
+                        <div style="width:60%;float:right;padding-left: 20px;">
+                            <input  type="text" id='bottom' />
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
