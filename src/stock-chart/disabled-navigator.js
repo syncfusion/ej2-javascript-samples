@@ -3,7 +3,7 @@ renderDisabledStockChart = function (chartData) {
             chartArea: { border: { width: 0 } },
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 },crosshairTooltip: { enable: true } },
             primaryYAxis: { lineStyle: { color: 'transparent' },
-                            majorTickLines: { color: 'transparent', width: 0 },
+                            majorTickLines: { color: 'transparent', height: 0 },
                             crosshairTooltip: { enable: true } },
             series: [
                 {
@@ -12,7 +12,7 @@ renderDisabledStockChart = function (chartData) {
             ],
             tooltip: { enable: true },
             crosshair: {
-                enable: true
+                enable: true, lineType:'Both'
             }, 
             enableSelector: false,
             // custom code start
@@ -35,10 +35,10 @@ renderDisabledStockChart = function (chartData) {
     };
     this.default = function () {
         var chartData;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/indicator-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            chartData = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/indicator-data.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            chartData = data;
             chartData.map(function (data) {
                 data.date = new Date(data.date);
             });

@@ -7,10 +7,9 @@ this.default = function () {
     var params;
     var serviceURL = [
         { text: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/', value: 'ODataV4Adaptor' },
-        { text: 'https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders/', value: 'ODataAdaptor' },
         { text: 'https://services.syncfusion.com/js/production/api/Orders', value: 'WebApiAdaptor' },
         { text: 'https://services.syncfusion.com/js/production/api/UrlDataSource', value: 'UrlAdaptor' },
-        { text: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders', value: 'Custom Binding' }
+        { text: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders', value: 'Custom Binding' }
     ];
     var defaultColumns = [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
@@ -37,9 +36,6 @@ this.default = function () {
             var headerElements = document.querySelectorAll('.header_show_hide');
             ej.base.removeClass(paramElements, 'hide_elem');
             ej.base.removeClass(headerElements, 'hide_elem');
-            if (changedAdaptor === 'ODataAdaptor') {
-                ej.base.addClass(headerElements, 'hide_elem');
-            }
             if (changedAdaptor === 'Custom Binding') {
                 ej.base.addClass(paramElements, 'hide_elem');
                 ej.base.addClass(headerElements, 'hide_elem');
@@ -80,7 +76,7 @@ this.default = function () {
         var result = headers.trim().split('\n').map(function (head) { return JSON.parse(head); });
         return result;
     }
-    var BASE_URL = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+    var BASE_URL = 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders';
     var ajax = new ej.base.Ajax({
         type: 'GET', mode: true,
         onFailure: function (e) { return false; }
@@ -97,17 +93,16 @@ this.default = function () {
         params = defaultParam ? createObjectArray(defaultParam) : [];
         var pageQuery = "$skip=" + state.skip + "&$top=" + state.take;
         if (document.getElementById("pageCheckbox").ej2_instances[0].checked) {
-            ajax.url = BASE_URL + "?" + pageQuery + "&$inlinecount=allpages&$format=json";
+            ajax.url = BASE_URL + "?" + pageQuery + "&$count=true";
         }
         else {
-            ajax.url = BASE_URL + "?" + "&$inlinecount=allpages&$format=json";
+            ajax.url = BASE_URL + "?" + "&$count=true";
         }
-        ajax.data = Object.assign.apply(Object, [{}].concat(params));
         return ajax.send()
             .then(function (response) {
                 var data = JSON.parse(response);
-                var result = data.d.results;
-                var count = parseInt(data.d.__count, 10);
+                var result = data.value;
+                var count = parseInt(data['@odata.count'], 10);
                 return { result: result, count: count };
             });
     }
@@ -172,21 +167,11 @@ this.default = function () {
                     crossDomain: true
                 });
             }
-            else if (changedAdaptor === 'ODataAdaptor') {
-                newDataSource = new ej.data.DataManager({
-                    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders',
-                    adaptor: new ej.data.ODataAdaptor(),
-                    crossDomain: true
-                });
-            }
             grid.changeDataSource(newDataSource, col);
         }
         var payloadInfo;
         if (changedAdaptor === 'Custom Binding') {
             payloadInfo = "<b><u>Payload Information</u></b><br> Custom Binding <br> Service URL: " + selectedService;
-        }
-        else if (changedAdaptor === 'ODataAdaptor') {
-            payloadInfo = "<b><u>Payload Information</u></b><br> Service URL: " + selectedService + " <br> Adaptor Type: " + changedAdaptor + " <br> Additional Parameters: " + defaultParam;
         }
         else {
             payloadInfo = "<b><u>Payload Information</u></b><br> Service URL: " + selectedService + " <br> Adaptor Type: " + changedAdaptor + " <br> Additional Parameters: " + defaultParam + " <br> Headers: " + defaultHeader;
@@ -196,7 +181,6 @@ this.default = function () {
         document.getElementById("addParams").value = '';
         document.getElementById("hdvalue").value = '';
     };
-};
 var httpAdditionalInfo = function (name, val, btn) {
     var parameterKey = document.getElementById(name).value;
     var parameterValue = document.getElementById(val).value;
@@ -205,4 +189,5 @@ var httpAdditionalInfo = function (name, val, btn) {
     }
     document.getElementById(name).value = '';
     document.getElementById(val).value = '';
+};
 };

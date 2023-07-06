@@ -15,11 +15,11 @@ this.default = function () {
             { field: 'startDate', headerText: 'Start Date', textAlign: 'Right', width: 130, editType: 'datepickeredit',
               format: 'yMd', validationRules: { date: true} },
             {
-                field: 'duration', headerText: 'Duration', textAlign: 'Right', width: 100, editType: 'numericedit',
+                field: 'duration', headerText: 'Duration', textAlign: 'Right', width: 140, editType: 'numericedit',
                 validationRules: { number: true, min: 0}, edit: { params: {  format: 'n'}}
             },
             {
-                field: 'progress', headerText: 'Progress', textAlign: 'Right', width: 80,
+                field: 'progress', headerText: 'Progress', textAlign: 'Right', width: 150,
                 editType: 'numericedit', validationRules: { number: true, min: 0 }, edit: { params: {  format: 'n'}}
             },
             {

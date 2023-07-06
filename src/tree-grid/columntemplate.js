@@ -41,20 +41,20 @@ this.default = function () {
         },
         rowHeight: 83,
         columns: [
-            { field: 'EmpID', headerText: 'Employee ID', width: 100 },
-            { field: 'Name', headerText: 'Name', width: 110 },
-            { field: 'DOB', headerText: 'DOB', width: 90, textAlign: 'Right', format: 'yMd' },
+            { field: 'EmpID', headerText: 'Employee ID', width: 180 },
+            { field: 'Name', headerText: 'Name', width: 170 },
+            { field: 'DOB', headerText: 'DOB', width: 110, textAlign: 'Right', format: 'yMd' },
             {
                 headerText: 'Tax per annum', textAlign: 'Center',
-                template: '#columnTemplate1', width: 90
+                template: '#columnTemplate1', width: 170
             },
             {
                 headerText: 'One day index', textAlign: 'Center',
-                template: '#columnTemplate2', width: 90
+                template: '#columnTemplate2', width: 170
             },
             {
                 headerText: 'Year GR', textAlign: 'Center',
-                template: '#columnTemplate3', width: 120
+                template: '#columnTemplate3', width: 180
             },
         ],
         width: 'auto',

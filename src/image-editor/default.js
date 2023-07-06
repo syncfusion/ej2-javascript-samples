@@ -10,7 +10,7 @@ this.default = function () {
 		if (ej.base.Browser.isDevice) {
 			imageEditorObj.open('src/image-editor/images/flower.png');
 		} else {
-			imageEditorObj.open('src/image-editor/images/bridge.png');
+			imageEditorObj.open('src/image-editor/images/default.png');
 		}
 		if (imageEditorObj.theme && window.location.href.split('#')[1]) {
 			imageEditorObj.theme = window.location.href.split('#')[1].split('/')[1];

@@ -86,8 +86,8 @@ var customProgress = new ej.progressbar.ProgressBar({
     width: '100%',
     showProgressValue: true,
     value: 70,
-    trackThickness: 24,
-    progressThickness: 24,
+    trackThickness: 20,
+    progressThickness: 20,
     role: 'Danger',
     load: progressLoad,
     labelStyle: {

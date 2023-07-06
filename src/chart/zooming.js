@@ -20,8 +20,8 @@ this.default = function () {
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind','MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Fluent', 'FluentDark'];
-var borderColor = ['#FF4081', '#007897', '#428BCA', '#FFD939', '#262E0B', '#4F46E5','#FF4081', '#007897', '#428BCA', '#22D3EE', '#ADB5BD', '#614570', '#8AB113'];
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind','MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Fluent', 'FluentDark', 'Material3', 'Material3Dark'];
+var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#FFD939', '#6355C7', '#4F46E5','#9ECB08', '#4472c4', '#a16ee5', '#8B5CF6', '#8F80F4', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF'];
 var fill = 'url(#' + selectedTheme + '-gradient-chart)';
     var chart = new ej.charts.Chart({
         chartArea: { border: { width: 0 } },
@@ -41,14 +41,14 @@ var fill = 'url(#' + selectedTheme + '-gradient-chart)';
         //Initializing Chart Series
         series: [
             {
-                type: 'Area',
+                type: 'SplineArea',
                 dataSource: series1,
                 name: 'Product X',
                 xName: 'x',
                 yName: 'y',
                 fill: fill,
                 animation: { enable: false },
-                border: { width: 0.5, color: borderColor[themes.indexOf(theme)] },
+                border: { width: 2, color: borderColor[themes.indexOf(theme)] },
             },
         ],
         //Initializing Zooming
@@ -56,7 +56,8 @@ var fill = 'url(#' + selectedTheme + '-gradient-chart)';
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
             enableSelectionZooming: true,
-            mode: 'X'
+            mode: 'X',
+            showToolbar: true
         },
         //Initializing Chart Title
         title: 'Sales History of Product X',

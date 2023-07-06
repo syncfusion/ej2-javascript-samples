@@ -1,7 +1,7 @@
 /**
  * Sample for ADI Indicator
  */
- this.renderChartADI = function (chartData) {
+ this.renderChartADI = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', intervalType: "Months",
@@ -80,8 +80,6 @@
         chart.appendTo('#adi-container');
     };
     this.default = function () {
-        var ajax = new ej.base.Ajax('./src/chart/data-source/financial-data.json', 'GET', true);
-      
-            renderChartADI(ajax);
+            renderChartADI();
         };
         

@@ -57,9 +57,8 @@ function onBeforeRender(args) {
     var _this = this;
     this.content = 'Loading...';
     this.dataBind();
-    var ajax = new ej.base.Ajax('./src/tooltip/tooltipdata.json', 'GET', true);
-    ajax.send().then(function (result) {
-        result = JSON.parse(result);
+    var fetchApi = new ej.base.Fetch('./src/tooltip/tooltipdata.json', 'GET');
+    fetchApi.send().then(function (result) {
         for (var i = 0; i < result.length; i++) {
             if (result[i].Id === args.target.getAttribute('data-content')) {
                 /* tslint:disable */

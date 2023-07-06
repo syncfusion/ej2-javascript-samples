@@ -22,9 +22,40 @@ this.default = function () {
 
     checkBoxObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
     checkBoxObj.appendTo('#toolbar');
+    multiSelectObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
+    multiSelectObj.appendTo('#multiSelect');
+    fileExtendObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
+    fileExtendObj.appendTo('#fileExtension');
+    thumbnailObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
+    thumbnailObj.appendTo('#thumbnail');
+    var items = ['NewFolder', 'Cut', 'Copy', 'Paste', 'Download', 'Delete', 'Refresh', 'Selection', 'View', 'Details'];
+    disableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item", change: onItemChange });
+    disableObj.appendTo('#disable');
+    enableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item" ,change: onItemChange });
+    enableObj.appendTo('#enable');
 
     function onToolbarChange(args) {
-        fileObject.toolbarSettings.visible = args.checked;
+        if (this.element.id == "toolbar") {
+            fileObject.toolbarSettings.visible = args.checked;
+        }
+        if (this.element.id == "multiSelect") {
+            fileObject.allowMultiSelection = args.checked;
+        }
+        if (this.element.id == "fileExtension") {
+            fileObject.showFileExtension = args.checked;
+        }
+        if (this.element.id == "thumbnail") {
+            fileObject.showThumbnail = args.checked;
+        }
     }
 
+    function onItemChange(args) {
+        var changedItem = args.itemData.value;
+        if (args.element.id == "enable") {
+            fileObject.enableToolbarItems([changedItem]);
+        }
+        else {
+            fileObject.disableToolbarItems([changedItem]);
+        }
+    }
 };

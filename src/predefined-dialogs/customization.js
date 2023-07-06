@@ -9,7 +9,8 @@ this.default = function () {
             content: '<div class="new" style="display: flex;flex-direction: column;align-items: center;"><p><span class="circle-border"><span class="e-icons e-check" style="font-size: 30px; color: green; font-weight: 700;"></span></span></p><p><b style="font-size:25px; font-weight: 500 !important;">Good job!</b></p><p>You clicked the button!</p></div>',
             okButton: { text: 'OK',click:alertOkAction.bind(this)},
             position: { X: 'center', Y: 'center' },
-            width:'240px'
+            width:'240px',
+            closeOnEscape: true
         });
     };
     function alertOkAction() {
@@ -27,7 +28,8 @@ this.default = function () {
                 okButton: { text: 'YES',click:confirmOkAction.bind(this)},
                 cancelButton: { text: 'No',click:confirmCancelAction.bind(this)},
                 position: { X: 'center', Y: 'center' },
-                width:'420px'
+                width:'420px',
+                closeOnEscape: true
             });
         };
         var confirmOkAction = function () {
@@ -51,13 +53,23 @@ this.default = function () {
                 okButton: { text: 'OK',click:promptOkAction.bind(this)},
                 cancelButton: { click:promptCancelAction.bind(this)},
                 position: { X: 'center', Y: 'center' },
-                width: '240px'
+                width: '240px',
+                closeOnEscape: true
             });
         };
         function promptOkAction() {
-            dialogObj.hide();
-            document.getElementById("status").innerHTML = " The user confirmed the dialog box";
-            document.getElementById("status").style.display="block";
+            var value;
+            value = document.getElementById("password").value;
+            if (value == "") {
+                dialogObj.hide();
+                document.getElementById("status").innerHTML = "The user's input is returned as\" \" ";
+                document.getElementById("status").style.display="block";
+            }
+            else {
+                dialogObj.hide();
+                document.getElementById("status").innerHTML = "The user's input is returned as" + " " + value;
+                document.getElementById("status").style.display="block";
+            }
         }
         function promptCancelAction() {
             dialogObj.hide();

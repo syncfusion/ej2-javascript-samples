@@ -43,8 +43,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 7,
-                    height: 7
+                    width: 10,
+                    height: 10
                 },
                 yName: 'y', name: 'Max Temp',
             },
@@ -59,8 +59,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 7,
-                    height: 7
+                    width: 10,
+                    height: 10
                 },
                 yName: 'y', name: 'Avg Temp',
             },
@@ -75,8 +75,8 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 7,
-                    height: 7
+                    width: 10,
+                    height: 10
                 },
                 yName: 'y', name: 'Min Temp',
             }

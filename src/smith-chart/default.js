@@ -25,7 +25,7 @@ this.default = function () {
                     { resistance: 0.3, reactance: 0.2 }, { resistance: 0, reactance: 0.15 },
                 ],
                 name: 'Transmission1',
-                enableAnimation: true,
+                enableAnimation: false,
                 tooltip: { visible: true },
                 marker: {
                     shape: 'Circle',
@@ -46,7 +46,7 @@ this.default = function () {
                     { resistance: 0.3, reactance: 0.1 }, { resistance: 0, reactance: 0.05 }                    
                 ],
                 name: 'Transmission2',
-                enableAnimation: true,
+                enableAnimation: false,
                 tooltip: { visible: true },
                 marker: {
                     shape: 'Circle',

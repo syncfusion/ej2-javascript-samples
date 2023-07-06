@@ -10,7 +10,7 @@ renderOhlcStockChart = function () {
                 labelFormat: 'n0',
                 rangePadding: 'None',
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent' }
+                majorTickLines: { color: 'transparent', height: 0 }
             },    
             chartArea: { border: { width: 0 } },
             series: [
@@ -21,7 +21,7 @@ renderOhlcStockChart = function () {
                     bearFillColor: '#2ecd71', bullFillColor: '#e74c3d',
                 }
             ],
-            tooltip: { enable: true, shared: true },
+            tooltip: { enable: true, shared: true, position: 'Nearest' },
             crosshair: {
                 enable: true
             },
@@ -46,10 +46,10 @@ renderOhlcStockChart = function () {
     };
     this.default = function () {
         var googl;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/googl.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            googl = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/googl.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            googl = data;
             googl.map(function (data) {
                 data.x = new Date(data.x);
             });

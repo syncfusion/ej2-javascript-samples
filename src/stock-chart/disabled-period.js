@@ -9,7 +9,7 @@ renderStockChart = function (aapl) {
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
                     lineStyle: { color: 'transparent' },
-                    majorTickLines: { color: 'transparent', width: 0 }
+                    majorTickLines: { color: 'transparent', height: 0 }
             },
             series: [
                 {
@@ -34,10 +34,10 @@ renderStockChart = function (aapl) {
     };
     this.default = function () {
         var aapl;
-        var ajax = new ej.base.Ajax('./src/stock-chart/data-source/aapl.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            aapl = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/stock-chart/data-source/aapl.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            aapl = data;
             aapl.map(function (data) {
                 data.x = new Date(data.x);
             });

@@ -5,7 +5,7 @@ window.default = function () {
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', width: 0 },
+                majorTickLines: { color: 'transparent', height: 0 },
                 
             },
             axes: [{
@@ -17,13 +17,16 @@ window.default = function () {
             series: [
                 {
                     dataSource: window.chartData, 
-                    type: 'Candle', yAxisName: 'yAxis1'
+                    type: 'Candle', yAxisName: 'yAxis1', name: "Apple Inc",
                 },
                 {
                     dataSource: window.chartData, 
-                    type: 'Column', yName: 'volume', enableTooltip: false
+                    type: 'Column', yName: 'volume', enableTooltip: false, name: "Volume",
                 }
             ],
+            legendSettings: {
+                visible: true,
+              },
             tooltipRender: function (args) {
                 if  (args.text.split('<br/>')[4]) {
                     var target = parseFloat(args.text.split('<br/>')[4].split('<b>')[1].split('</b>')[0]);
@@ -39,7 +42,7 @@ window.default = function () {
             },
             crosshair: { enable: true },
             title: 'AAPL Historical',
-            tooltip: { enable: true },
+            tooltip: { enable: true, format:'High : <b>${point.high}</b><br/>Low :<b>${point.low}</b><br/>Open : <b>${point.open}</b><br/>Close : <b>${point.close}</b><br/>Volume : <b>${point.volume}</b>' },
             // custom code start
             load: function (args) {
                 var selectedTheme = location.hash.split('/')[1];

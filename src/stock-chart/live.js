@@ -17,7 +17,7 @@
     var stockChart = new ej.charts.StockChart({
         primaryXAxis: { valueType: 'DateTime', majorGridLines: { color: 'transparent' } },
         primaryYAxis: { lineStyle: { color: ' transparent' },
-            majorTickLines: { color: 'transparent', width: 0 } },
+            majorTickLines: { color: 'transparent', height: 0 } },
         chartArea: { border: { width: 0 } },
         seriesType: [],
         indicatorType: [],

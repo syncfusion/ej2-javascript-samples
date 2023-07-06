@@ -6,9 +6,9 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: gridData,
         toolbar: [
-            { prefixIcon: 'e-small-icon', id: 'big', align: 'right' },
-            { prefixIcon: 'e-medium-icon', id: 'medium', align: 'right' },
-            { prefixIcon: 'e-big-icon', id: 'small', align: 'right' }
+            { prefixIcon: 'e-small-icon', id: 'big', align: 'right', tooltipText: 'Row-height-big' },
+            { prefixIcon: 'e-medium-icon', id: 'medium', align: 'right', tooltipText: 'Row-height-medium' },
+            { prefixIcon: 'e-big-icon', id: 'small', align: 'right', tooltipText: 'Row-height-small' }
         ],
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },

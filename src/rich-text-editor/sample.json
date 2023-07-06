@@ -3,10 +3,11 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "type": "update",
+    "type" : "update",
     "samples": [{
             "url": "tools",
             "name": "Overview",
+            "type" : "update",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"] }
@@ -45,6 +46,14 @@
             "description": "This demo explains how to clean up HTML when pasting a content from Microsoft Word, Visual Studio, or a web page in JS (ECMAScript 5) HTML Editor.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "pasteCleanupSettings"], "pasteCleanupSettings": ["prompt", "plainText", "keepFormat", "deniedTags", "deniedAttrs", "allowedStyleProps"] }
+        },
+        {
+            "url": "format-painter",
+            "name": "Format Painter",
+            "type": "new",
+            "description": "This demo explains how to use Format Painter feature of the Rich Text Editor control.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "formatPainterSettings", "appendTo"], "FormatPainterSettings": ["allowedContext", "allowedFormats", "deniedFormats"] }
         },
         {
             "url": "iframe",
@@ -124,9 +133,25 @@
             "api": { "RichTextEditor": ["fileManagerSettings", "toolbarSettings", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["enable", "path", "ajaxSettings"] }
         },
         {
+            "url": "insert-emoticons",
+            "name": "Insert  Emoticons",
+            "type": "update",
+            "description": "This demo demonstrates how to insert emoticons into the rich content in JS WYSIWYG HTML Editor using a custom tool in the editor toolbar.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value","emojiPickerSettings", "appendTo"], "ToolbarSettings": ["items"] }
+        },
+        {
             "url": "online-html-editor",
             "name": "Online Html Editor",
             "description": "The online HTML editor is a demo that provides LIVE experience for both content and HTML editing with Rich Text Editor features in a real-world scenario.",
+            "category": "Rich Text Editor",
+            "api": { "RichTextEditor": ["actionComplete", "saveInterval", "change", "toolbarSettings", "appendTo"] }
+        },
+        {
+            "url": "image-editor-integration",
+            "name": "Image Editor Integration",
+            "type": "new",
+            "description": "This demo explains the image editor integration using the Rich Text Editor control with minimum configuration.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["actionComplete", "saveInterval", "change", "toolbarSettings", "appendTo"] }
         },
@@ -142,7 +167,6 @@
             "name": "Smart Suggestion",
             "description": "This demo explains the mention inline format integration using the Rich Text Editor control with minimum configuration.",
             "category": "Mention Integration",
-            "type": "new",
             "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
         },
         {
@@ -151,13 +175,6 @@
             "description": "This demo demonstrates different types and behaviors of a toolbar used in the JS (ECMAScript 5) HTML Editor such as expand/collapse, multirow, and floating.",
             "category": "Toolbar",
             "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
-        },
-        {
-            "url": "insert-emoticons",
-            "name": "Insert Emoticons",
-            "description": "This demo demonstrates how to insert emoticons into the rich content in JS (ECMAScript 5) WYSIWYG HTML Editor using a custom tool in the editor toolbar.",
-            "category": "Custom Tool",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "created", "appendTo"], "ToolbarSettings": ["items"] }
         },
         {
             "url": "insert-special-characters",

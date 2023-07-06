@@ -267,8 +267,6 @@ function getEventDetails(args) {
         if (elementName) {
             eventInformation(args);
         }
-    } else {
-        eventInformation(args);
     }
 }
 

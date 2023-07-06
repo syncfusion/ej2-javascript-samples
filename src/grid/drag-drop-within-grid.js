@@ -2,6 +2,8 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.orderDatas,
         allowRowDragAndDrop: true,
+        allowGrouping: true,
+        allowSorting: true,
         selectionSettings: { type: 'Multiple' },
         height: 400,
         columns: [

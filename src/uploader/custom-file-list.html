@@ -131,7 +131,7 @@
         left: 7px;
         position: inherit;
         top: 7px;
-        content: '\e932';
+        content: '\e7e7';
     }
 
     .bootstrap4 .close-icon-container.e-icons::before {
@@ -143,15 +143,13 @@
 
     .tailwind .close-icon-container.e-icons::before,
     .tailwind-dark .close-icon-container.e-icons::before {
-        content: '\e771';
+        content: '\e7e7';
     }
 
     .fabric .close-icon-container.e-icons::before,
     .fabric-dark .close-icon-container.e-icons::before,
-    .bootstrap .close-icon-container.e-icons::before,
-    .bootstrap-dark .close-icon-container.e-icons::before,
     .highcontrast .close-icon-container.e-icons::before {
-        content: '\e7fc';
+        content: '\e953';
     }
 
     .bootstrap5 .close-icon-container.e-icons::before,
@@ -159,13 +157,29 @@
         content: '\e7e7';
     }
 
+    .material3 .close-icon-container.e-icons::before,
+    .material3-dark .close-icon-container.e-icons::before,
+    .material .close-icon-container.e-icons::before,
+    .material-dark .close-icon-container.e-icons::before {
+        content: '\e932';
+    }
+
+    .bootstrap .close-icon-container.e-icons::before,
+    .bootstrap-dark .close-icon-container.e-icons::before {
+        content: '\e7fc';
+    }
+
     .tailwind .close-icon-container.e-icons {
         top: 10px;
     }
 
+    .close-icon-container.delete-icon::before {
+        content: '\e94a';
+    }
+
     .tailwind .close-icon-container.delete-icon::before,
     .tailwind-dark .close-icon-container.delete-icon::before {
-        content: '\e78d';
+        content: '\e820';
     }
 
     .tailwind .close-icon-container.delete-icon {
@@ -174,10 +188,6 @@
 
     .bootstrap4 .file-lists {
         background: #fff;
-    }
-
-    .close-icon-container.delete-icon::before {
-        content: '\e94a';
     }
 
     .bootstrap4 .close-icon-container.delete-icon::before {
@@ -195,7 +205,7 @@
     }
 
     .highcontrast .close-icon-container.delete-icon::before {
-        content: '\e84e';
+        content: '\e965';
     }
     
     .close-icon-container.delete-icon:hover {
@@ -301,6 +311,7 @@
     .highcontrast span a:hover {
         color: #ffd939;
     }
+    .material3-dark span a,
     .material-dark span a {
         color:#56a4fd;
     }
@@ -319,7 +330,7 @@
 
     .fluent .close-icon-container.delete-icon::before,
     .fluent-dark .close-icon-container.delete-icon::before {
-        content: '\e7e7';
+        content: '\e820';
     }
 
 </style>

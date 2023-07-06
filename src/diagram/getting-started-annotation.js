@@ -25,13 +25,13 @@ function updateAnnotation(value, fontSize, fontFamily) {
             if (value === 'fontsize') {
                 annotationStyle.fontSize = fontSize.value;
             } else if (value === 'underline') {
-                annotationStyle.textDecoration = 'Underline';
+                annotationStyle.textDecoration = annotationStyle.textDecoration === 'Underline' ? 'None' : 'Underline';
             } else if (value === 'fontfamily') {
                 annotationStyle.fontFamily = fontFamily.value.toString();
             } else if (value === 'bold') {
-                annotationStyle.bold = true;
+                annotationStyle.bold = !annotationStyle.bold;
             } else if (value === 'italic') {
-                annotationStyle.italic = true;
+                annotationStyle.italic = !annotationStyle.italic;
             } else if (value === 'template') {
                 if (fontFamily === 'none') {
                     node.annotations[j].template = '';
@@ -247,8 +247,8 @@ this.default = function () {
     italic.element.onclick = function () { updateAnnotation('italic'); };
     //NumericTextBox used to apply for Fontsize of the Annotation
     fontSize = new ej.inputs.NumericTextBox({
-        value: 0, min: 1,
-        max: 8, width: '100%',
+        value: 12, min: 1,
+        max: 16, width: '100%',
         format: '##.##',
         step: 2,
         change: function () { updateAnnotation('fontsize', fontSize); }

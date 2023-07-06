@@ -24,10 +24,10 @@ var bootstrapColors = ['#a16ee5', '#f7ce69', '#55a5c2', '#7ddf1e', '#ff6ea6',
     '#7953ac', '#b99b4f', '#407c92', '#5ea716', '#b91c52'];
 var highcontrastColors = ['#79ECE4', '#E98272', '#DFE6B6', '#C6E773', '#BA98FF',
     '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
-var fluentColors = ["#614570", "#4C6FB1", "#CC6952", "#3F579A", "#4EA09B", "#6E7A89", "#D4515C", "#E6AF5D", "#639751",
-    "#9D4D69"];
-var fluentDarkColors = ["#8AB113", "#2A72D5", "#43B786", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#EBA844", "#26BC7A", 
-    "#BC4870"];
+var fluentColors = ["#1AC9E6", "#DA4CB2", "#EDBB40", "#AF4BCF", "#FF7266", "#1BD565", "#EE993D", "#5887FF", "#EC548D",
+    "#7D39C0"];
+var fluentDarkColors =  ["#1AC9E6", "#DA4CB2", "#EDBB40", "#AF4BCF", "#FF7266", "#1BD565", "#EE993D", "#5887FF", "#EC548D",
+"#7D39C0"];
 var pointRender = function (args) {
     var dataTheme = location.hash.split('/')[1];
     if (dataTheme && dataTheme.indexOf('fabric') > -1) {
@@ -102,11 +102,17 @@ this.default = function () {
         title: "Container freight rate", legendSettings: { visible: false },
         tooltip: {
             enable: true,
-            header: 'Freight rate' 
+            header: '<b>Freight rate</b>' 
         },
         tooltipRender: function (args)  {
-            args.text = '<b>' + args.data.pointX + ': ' + '$' + args.data.pointY * 1000;
-        }
+            args.text =  args.data.pointX + ': ' + '<b>$' + args.data.pointY * 1000;
+        },
+        load: function (args) {
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        },
     });
     chart.appendTo('#remote-container');
 };

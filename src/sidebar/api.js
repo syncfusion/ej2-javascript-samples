@@ -71,9 +71,15 @@ this.default = function () {
             sidebarObj.showBackdrop = false;
         }
     };
+    var sidebarOpened = true;
     //click event for sidebar close
     document.getElementById('togglesidebar').onclick = function() {
         sidebarObj.toggle();
+        if (document.querySelector("#apiSidebar").classList.contains('e-open')) {
+            sidebarOpened = true;
+        } else {
+            sidebarOpened = false;
+        }
         if (backDropElement.content == "True") {
             sidebarObj.showBackdrop = true;
         }
@@ -84,7 +90,9 @@ this.default = function () {
             sidebarObj.showBackdrop = false;
         } else {
             backDropElement.content = "True";
-            sidebarObj.showBackdrop = true;
+            if (sidebarOpened) {
+                sidebarObj.showBackdrop = true;
+            }
         }
     }
     function ToggleBtnClick() {

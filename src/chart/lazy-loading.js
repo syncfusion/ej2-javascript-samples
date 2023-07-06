@@ -3,7 +3,6 @@ window.default = function () {
     //var spinnerEle = document.getElementById('spinner');
     var chart = new ej.charts.Chart({
         primaryXAxis: {
-            title: 'Day',
             valueType: 'DateTime',
             edgeLabelPlacement: 'Shift',
             skeleton: 'yMMM',
@@ -14,7 +13,9 @@ window.default = function () {
                     maximum: new Date(2014, 0, 1)
                 },
                 enable: true,
-                pointsLength: 1000
+                pointsLength: 1000,
+                enableZoom: false,
+                height: 14
             }
         },
         primaryYAxis: {
@@ -24,7 +25,7 @@ window.default = function () {
         series: [{
             dataSource: GetDateTimeData(new Date(2009, 0, 1), new Date(2009, 8, 1)),
             xName: 'x', yName: 'y',
-            type: 'Line', animation: { enable: false },
+            type: 'Line', animation: { enable: false }
         }],
         height: '450',
         title: 'Network Load',

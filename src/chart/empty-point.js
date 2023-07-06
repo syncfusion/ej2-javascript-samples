@@ -64,6 +64,9 @@ this.default = function () {
             if(chart.series[0].type === 'Spline'){
                 chart.series[0].marker.visible = true;
             }
+            else {
+                chart.series[0].marker.visible = false;
+            }
             chart.refresh();
         }
     });

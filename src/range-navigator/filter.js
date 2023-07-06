@@ -4,7 +4,7 @@
 var _this = this;
  var selectedTheme = location.hash.split('/')[1];
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
-    var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark');
+    var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
     this.renderFilterChart = function (datasrc) {
         var grid = new ej.grids.Grid({
             height: '350',
@@ -43,10 +43,10 @@ var _this = this;
     };
     this.default = function () {
         var datasrc;
-        var ajax = new ej.base.Ajax('./src/range-navigator/data-source/grid-data.json', 'GET', true);
-        ajax.send().then();
-        ajax.onSuccess = function (data) {
-            datasrc = JSON.parse(data);
+        var fetchApi = new ej.base.Fetch('./src/range-navigator/data-source/grid-data.json', 'GET', true);
+        fetchApi.send().then();
+        fetchApi.onSuccess = function (data) {
+            datasrc = data;
             datasrc.map(function (data) {
                 data.HireDate = new Date(data.HireDate);
             });
