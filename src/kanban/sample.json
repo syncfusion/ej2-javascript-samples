@@ -4,7 +4,6 @@
     "category": "Data Visualization",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
-    "type":"update",
     "samples": [
         {
             "url": "overview",
@@ -67,8 +66,7 @@
             "name": "Virtual Scrolling",
             "category": "Kanban",
             "description": "The example demonstrates how to load a large number of cards in the JavaScript Kanban board with optimal load time using the virtual scrolling feature.",
-            "api": { "Kanban": ["enableVirtualization"] },
-            "type": "new"
+            "api": { "Kanban": ["enableVirtualization"] }
         },
         {
             "url": "local-data",

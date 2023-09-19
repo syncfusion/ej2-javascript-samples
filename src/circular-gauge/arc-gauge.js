@@ -1,44 +1,28 @@
-/**
- * Arc gauge sample
- */
 var sliderValue = 60;
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
-        // custom code start
-        load: function (args) {
-            var arctheme = location.hash.split('/')[1];
-            arctheme = arctheme ? arctheme : 'Material';
-            args.gauge.theme = (arctheme.charAt(0).toUpperCase() +
-            arctheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        },
-        //custom code end
-        loaded: function (args) {
-            var annotation = document.getElementById(args.gauge.element.id + '_Annotations_0');
-            if (annotation) {
-                annotationRender('slider', circulargauge.axes[0].pointers[0].value);
-            }
-        },
         title: 'Progress Tracker',
-        titleStyle: { size: '18px', },
+        titleStyle: { size: '16px', fontFamily: 'inherit' },
+        background:'transparent',
         axes: [{
             annotations: [{
-                    content: '<div id="pointervalue" style="font-size:35px;width:120px;text-align:center">' +
+                content: '<div id="pointervalue" style="font-size:35px;width:120px;text-align:center">' +
                     sliderValue.toString() + '/100</div>',
-                    angle: 0,
-                    zIndex: '1',
-                    radius: '0%'
-                },
-                {
-                    content: '<div id="slider" style="height:70px;width:250px;"></div>',
-                    angle: 0,
-                    zIndex: '1',
-                    radius: '-100%'
-                },
+                angle: 0,
+                zIndex: '1',
+                radius: '0%'
+            },
+            {
+                content: '<div id="slider" style="height:70px;width:250px;"></div>',
+                angle: 0,
+                zIndex: '1',
+                radius: '-100%'
+            },
             ],
             lineStyle: { width: 0 },
             labelStyle: {
                 position: 'Inside', useRangeColor: true,
-                font: { size: '0px', color: 'white', fontFamily: 'Segoe UI', fontStyle: 'Regular' }
+                font: { size: '0px', color: 'white', fontFamily: 'Roboto', fontStyle: 'Regular' }
             }, majorTicks: { height: 0, }, minorTicks: { height: 0 },
             startAngle: 200, endAngle: 160, minimum: 0, maximum: 100, radius: '80%',
             ranges: [
@@ -51,21 +35,39 @@ this.default = function () {
                 },
             ],
             pointers: [{
-                    roundedCornerRadius: 20,
-                    value: 60,
-                    type: 'RangeBar',
-                    radius: '90%',
-                    color: '#e5ce20',
-                    border: {
-                        color: 'grey',
-                        width: 0
-                    },
-                    animation: {
-                        enable: false
-                    },
-                    pointerWidth: 30
-                }]
-        }]
+                roundedCornerRadius: 20,
+                value: 60,
+                type: 'RangeBar',
+                radius: '90%',
+                color: '#e5ce20',
+                border: {
+                    color: 'grey',
+                    width: 0
+                },
+                animation: {
+                    enable: false
+                },
+                pointerWidth: 30
+            }]
+        }],
+        resized: function (args) {
+            args.gauge.axes[0].annotations[0].content = '<div id="pointervalue" style="font-size:35px;width:120px;text-align:center">' +
+            circulargauge.axes[0].pointers[0].value.toString() + '/100</div>';
+        },
+        load: function (args) {
+            // custom code start
+            var selectTheme = location.hash.split('/')[1];
+            selectTheme = selectTheme ? selectTheme : 'Material';
+            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            // custom code end
+        },
+        loaded: function (args) {
+            var annotation = document.getElementById(args.gauge.element.id + '_Annotations_0');
+            if (annotation) {
+                annotationRender('slider', circulargauge.axes[0].pointers[0].value);
+            }
+        }
     });
     circulargauge.appendTo('#range-container');
     function annotationRender(id, sliderValue) {

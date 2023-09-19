@@ -1,16 +1,22 @@
 <div class="control-section">
     <div class="sample-container">
         <div class="default-section">
-            <div id="defaultRTE"> 
-In Rich Text Editor, you click the toolbar buttons to format the words and the changes are visible immediately. 
-Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words 
-and phrases should look different from each other
+            <div id="horizontal">
+                <div class="splitter-default-content pane1">
+                    <div id="defaultRTE">
+In Rich Text Editor, you click the toolbar buttons to format the words and the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to theto indicate which words and phrases should look different from each other
 
-Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyinteraction* and *toolbar action*, you can apply the formatting to text.
 
-We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
+We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com).
 
-The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content           
+The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content
+                    </div>
+                </div>
+                <div class="heading right">
+                    <h6 class="title"><b>Markdown Preview</b></h6>
+                    <div class="splitter-default-content source-code pane2" style="padding: 20px;"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -18,17 +24,30 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
 
 <div id="action-description">
     <p>
-        This sample demonstrates how to preview markdown changes in Rich Text Editor. 
-        Type or edit the display text, and apply format to view the preview of markdown. 
-        You can preview the markdown changes immediately in the preview area.
+        This example illustrates how to preview Markdown changes within the Rich Text Editor. You can input or modify the display text, apply formatting, and observe the Markdown preview alongside. This capability is enabled by utilizing the splitter component, which effectively separates the Rich Text Editor from the preview section.
     </p>
 </div>
 
 <div id="description">
-    <p>The Rich Text Editor allows you to preview markdown changes immediately using <code>preview</code>. 
-        The third-party library <code>Marked</code> is used in this sample to convert markdown into HTML content.</p>
+    <p>The Rich Text Editor provides the ability to instantly <code>preview</code> Markdown changes through the preview functionality. To achieve this, the sample utilizes the third-party library Marked.js to convert Markdown into HTML content.</p>
 </div>
 <style>
+    .heading {
+     float: left;
+     width: 50%;
+     position: relative;
+     box-sizing: border-box;
+     padding: 0px;
+     padding-left:0px;
+     padding-right:0px;
+   }
+   .title {
+     color: #333333;
+     letter-spacing: 1px;
+     padding-left: 10px;
+     text-align: center;
+     margin: 15px 0;
+   }
     .e-richtexteditor textarea.e-content {
         float: left;
         border-right: 1px solid rgba(0, 0, 0, 0.12);
@@ -62,7 +81,9 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
     .fluent .e-icon-btn.e-active .e-md-preview::before,
     .fluent-dark .e-icon-btn.e-active .e-md-preview::before,
     .bootstrap5 .e-icon-btn.e-active .e-md-preview::before,
-    .bootstrap5-dark .e-icon-btn.e-active .e-md-preview::before {
+    .bootstrap5-dark .e-icon-btn.e-active .e-md-preview::before,
+    .material3 .e-icon-btn.e-active .e-md-preview::before,
+    .material3-dark .e-icon-btn.e-active .e-md-preview::before {
         content: '\e80e';
     }
     

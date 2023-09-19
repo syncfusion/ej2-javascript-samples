@@ -21,7 +21,6 @@
         {
             "url": "ohlc",
             "name": "OHLC",
-            "type":"update",
             "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with Hilo Open Close series.",
             "category": "Stock Chart",
             "api": {
@@ -176,6 +175,20 @@
             }
         } ,
         {
+            "url": "datetime-category",
+            "name": "DateTime Category Axis",
+            "type": "new",
+            "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with DateTime Category Axis.",
+            "category": "Stock Chart",
+            "api": {
+                "RangeNavigator": [
+                    "valueType",
+                    "series",
+                    "intervalType"
+                ]
+            }
+        },
+        {
             "url": "stock-events",
             "name": "Stock Events",
             "description":"This demo for Essential JS2 Stock Chart control shows how to render and configure the stock events in stock chart.",
@@ -187,7 +200,7 @@
                     "intervalType"
                 ]
             }
-        }  
+        }
     ],
     "dataSourcePath": "src/stock-chart/stock-data.js"
     

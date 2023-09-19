@@ -44,10 +44,24 @@ this.default = function () {
         enableToolbar: false,
         enableNavigationToolbar: false,
         enableThumbnail: false,
-        documentPath: 'Hive_Succinctly.pdf',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
     });
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation);
+      
+    var switchObj = new ejs.buttons.Switch({ checked: true });
+    switchObj.appendTo('#checked');
+
+    switchObj.change = function (args) {
+        if (args.checked) {
+            viewer.serviceUrl = '';
+        }
+        else {
+            viewer.serviceUrl = 'https://ej2services.syncfusion.com/js/development/api/pdfviewer';
+        }
+        viewer.dataBind();
+        viewer.load(viewer.documentPath, null);
+    };
+    
     viewer.appendTo('#pdfViewer');
     isBookmarkView = false;
     document.getElementById('fileUpload').addEventListener('change', readFile, false);
@@ -369,5 +383,3 @@ function updateSearchInputIcon(isEnable) {
         searchButton.classList.add('e-pv-search-close');
     }
 }
-
-

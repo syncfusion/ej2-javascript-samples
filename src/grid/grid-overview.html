@@ -4,86 +4,98 @@
     <div class="content-wrapper">
         <div style="padding-bottom: 10px;">
             <select id="ddl">
-                     <option value="1000">1,000 Rows and 11 Columns</option>
-                     <option value="10000">10,000 Rows and 11 Columns</option>
-                     <option value="100000">1,00,000 Rows and 11 Columns</option>
+                <option value="1000">1,000 Rows and 11 Columns</option>
+                <option value="10000">10,000 Rows and 11 Columns</option>
+                <option value="100000">1,00,000 Rows and 11 Columns</option>
             </select>
             <span id='msg'></span>
-            <br/>
+            <br />
         </div>
         <div id="Grid">
         </div>
     </div>
 </div>
 <style>
-    .fabric .empimg{
-        background-color:#0078d6; 
+    .fabric .empimg {
+        background-color: #0078d6;
     }
-    .material .empimg{
-        background-color:#e3165b; 
+
+    .material .empimg {
+        background-color: #e3165b;
     }
-    .highcontrast .empimg{
-        background-color:#ffd939; 
+
+    .highcontrast .empimg {
+        background-color: #ffd939;
     }
-    .tailwind .empimg{
-        background-color:#4f46e5;  
+
+    .tailwind .empimg {
+        background-color: #4f46e5;
     }
-    .fluent .empimg{
-        background-color:#106EBE;
+
+    .fluent .empimg {
+        background-color: #106EBE;
     }
-    _:-ms-fullscreen, :root .highcontrast .e-userimg.sf-icon-Male::before,
-    _:-ms-fullscreen, :root .highcontrast .e-userimg.sf-icon-FeMale::before{
+
+    _:-ms-fullscreen,
+    :root .highcontrast .e-userimg.sf-icon-Male::before,
+    _:-ms-fullscreen,
+    :root .highcontrast .e-userimg.sf-icon-FeMale::before {
         color: black;
     }
+
     .highcontrast .e-userimg.sf-icon-Male::before,
-    .highcontrast .e-userimg.sf-icon-FeMale::before{       
+    .highcontrast .e-userimg.sf-icon-FeMale::before {
         color: black;
     }
-    .bootstrap .empimg{
-        background-color:#0078d6; 
+
+    .bootstrap .empimg {
+        background-color: #0078d6;
     }
-    
+
     .bootstrap4 .empimg,
     .bootstrap5 .empimg {
-        background-color:#0078d6; 
+        background-color: #0078d6;
     }
 
-    #Emptext{
-    top: -12px;
-    left: 41px;
-    position: relative;
+    #Emptext {
+        top: -12px;
+        left: 41px;
+        position: relative;
     }
 
-    .e-grid.e-rtl #Emptext{
-    top: -12px;
-    left: -41px;
-    position: relative;
+    .e-grid.e-rtl #Emptext {
+        top: -12px;
+        left: -41px;
+        position: relative;
     }
 
-    .empimg{
-    height: 27px;
-    width: 29px;
-    border-radius: 14px;
-    background-color:#e3165b;
+    .empimg {
+        height: 27px;
+        width: 29px;
+        border-radius: 14px;
+        background-color: #e3165b;
     }
-   
+
 
     .e-userimg.sf-icon-Male::before,
-    .e-userimg.sf-icon-FeMale::before{      
-        font-size: 13px;
-    }
-    .e-userimg.sf-icon-Male, .e-userimg.sf-icon-FeMale {  
-        margin: 0px 8px;
-        line-height: 26px;
-        color: white; 
+    .e-userimg.sf-icon-FeMale::before {
         font-size: 13px;
     }
 
-    .e-userimg.sf-icon-Male::before{
-        content: '\e700';      
+    .e-userimg.sf-icon-Male,
+    .e-userimg.sf-icon-FeMale {
+        margin: 0px 8px;
+        line-height: 26px;
+        color: white;
+        font-size: 13px;
     }
-    .e-userimg.sf-icon-FeMale::before{
-        content: '\e701';      
+
+    .e-userimg.sf-icon-Male::before {
+        content: '\e700';
+    }
+
+    .e-userimg.sf-icon-FeMale::before {
+        content: '\e701';
     }
 
 
@@ -92,9 +104,9 @@
         color: white;
     }
 
-    .e-bigger .e-grid .statustxt{
+    .e-bigger .e-grid .statustxt {
         position: relative;
-        top:-2px;
+        top: -2px;
     }
 
     td.e-rowcell.e-selectionbackground.e-active {
@@ -178,61 +190,63 @@
     }
 
     @media only screen and (max-width: 370px) {
-        #msg {           
+        #msg {
             float: left;
             margin-top: 3px;
         }
-        #Grid{
-            margin-top:36px;
+
+        #Grid {
+            margin-top: 36px;
         }
     }
 
     #samplecontainer {
         padding-top: 5px;
     }
-  
+
     #myProgress {
         position: relative;
         height: 18px;
         width: 10em;
         text-align: left;
         background-color: white;
-      }
-      .highcontrast .e-grid #myProgress{
+    }
+
+    .highcontrast .e-grid #myProgress {
         background-color: black;
-      }
-      
-      #myBar {
+    }
+
+    #myBar {
         position: absolute;
         width: 10%;
         height: 100%;
         background-color: #00b300;
-      }
-      #myBar.progressdisable {
+    }
+
+    #myBar.progressdisable {
         background-color: #df2222;
-      }
-      #pbarlabel {
+    }
+
+    #pbarlabel {
         position: relative;
-        left:10px;
+        left: 10px;
         line-height: 18px;
         font-size: 10px;
         color: white;
-      }
-      .custom-rating.e-rating-container .e-rating-item-container ,
-      .e-bigger .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon,
-      .e-bigger.custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+    }
+
+    .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
+        -webkit-text-fill-color: lightgrey;
+        -webkit-text-stroke: 1px lightgrey;
         font-size: 11px;
-      }
-      .custom-rating.e-rating-container .e-rating-item-container .e-rating-icon {
-          -webkit-text-fill-color: lightgrey;
-          -webkit-text-stroke: 1px lightgrey;
-      }
-      .custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
-          background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -webkit-text-stroke: 1px #ffa600;
-      }
+    }
+
+    .custom-rating.e-rating-container .e-rating-item-container.e-rating-selected .e-rating-icon {
+        background: linear-gradient(to right, #ffa600 var(--rating-value), #ffa600 var(--rating-value));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #ffa600;
+    }
 </style>
 
 <script type="text/x-jsrender" id="progessTemplate">
@@ -267,29 +281,33 @@
 </script>
 
 <div id="action-description">
-    <p>This sample demonstrates the overview of basic grid features with its performance metrics of large data. To change datasource count, select rows and columns count from dropdown.</p>
+    <p>This sample demonstrates the overview of basic grid features with its performance metrics of large data. To
+        change datasource count, select rows and columns count from dropdown.</p>
 </div>
 
 <div id="description">
     <p>
-        The Grid is used to display and manipulate tabular data with configuration options to control 
-        the way the data is presented and manipulated. 
+        The Grid is used to display and manipulate tabular data with configuration options to control
+        the way the data is presented and manipulated.
         It will pull the data from a data source, such as an array of JSON objects, OData web services,
         or <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/data/api-dataManager.html">
-        DataManager</a></code> binding data fields to columns. 
+                href="https://ej2.syncfusion.com/javascript/documentation/data/api-datamanager">
+                DataManager</a></code> binding data fields to columns.
         Also, displaying a column header to identify the field with support for grouped records.
     </p>
     <p>
-        In this demo, Grid features such as <code>Virtual Scrolling, Filtering, Sorting, Column Template, filter template </code> etc... are used along with large data source.
+        In this demo, Grid features such as <code>Virtual Scrolling, Filtering, Sorting, Column Template, filter
+            template </code> etc... are used along with large data source.
     </p>
     <p>
-        You can follow the guidelines in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/virtual-scroll/#browser-height-limitation-in-virtual-scrolling-and-solution">
-        documentation</a> to get around the browser height restriction when loading and viewing millions of records.
+        You can follow the guidelines in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/grid/virtual-scroll/#browser-height-limitation-in-virtual-scrolling-and-solution">
+            documentation</a> to get around the browser height restriction when loading and viewing millions of records.
     </p>
     <p>
         More information on the Grid instantiation can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/grid/getting-started.html#getting-started">
+        <a target="_blank"
+            href="http://ej2.syncfusion.com/javascript/documentation/grid/getting-started.html#getting-started">
             documentation section</a>.
     </p>
 </div>

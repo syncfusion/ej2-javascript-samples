@@ -2,8 +2,8 @@
     "name": "Rich Text Editor",
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
-    "ftName": "wysiwyg-rich-text-editor",
     "type" : "update",
+    "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
             "url": "tools",
             "name": "Overview",
@@ -50,7 +50,6 @@
         {
             "url": "format-painter",
             "name": "Format Painter",
-            "type": "new",
             "description": "This demo explains how to use Format Painter feature of the Rich Text Editor control.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "formatPainterSettings", "appendTo"], "FormatPainterSettings": ["allowedContext", "allowedFormats", "deniedFormats"] }
@@ -135,7 +134,6 @@
         {
             "url": "insert-emoticons",
             "name": "Insert  Emoticons",
-            "type": "update",
             "description": "This demo demonstrates how to insert emoticons into the rich content in JS WYSIWYG HTML Editor using a custom tool in the editor toolbar.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value","emojiPickerSettings", "appendTo"], "ToolbarSettings": ["items"] }
@@ -150,7 +148,6 @@
         {
             "url": "image-editor-integration",
             "name": "Image Editor Integration",
-            "type": "new",
             "description": "This demo explains the image editor integration using the Rich Text Editor control with minimum configuration.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["actionComplete", "saveInterval", "change", "toolbarSettings", "appendTo"] }
@@ -165,13 +162,23 @@
         {
             "url": "smart-suggestion",
             "name": "Smart Suggestion",
+            "type" : "update",
             "description": "This demo explains the mention inline format integration using the Rich Text Editor control with minimum configuration.",
             "category": "Mention Integration",
             "api": { "RichTextEditor": ["Inject", "actionBegin", "appendTo"] }
         },
         {
+            "url": "quick-format-toolbar",
+            "name": "Quick Format Toolbar",
+            "type" : "new",
+            "description": "This sample demonstrates the 'Quick Format Toolbar' option in Rich Text Editor content. To select the text content inside the Rich Text Editor and open the quick format toolbar for editing the Rich Text Editor value.",
+            "category": "Toolbar",
+            "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarSettings", "dataBind", "appendTo"], "ToolbarSettings": ["enableFloating"] }
+        },
+        {
             "url": "types",
             "name": "Type",
+            "type" : "update",
             "description": "This demo demonstrates different types and behaviors of a toolbar used in the JS (ECMAScript 5) HTML Editor such as expand/collapse, multirow, and floating.",
             "category": "Toolbar",
             "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
@@ -193,6 +200,7 @@
         {
             "url": "markdown-editor-preview",
             "name": "Preview",
+            "type" : "update",
             "description": "This demo covers all supported features and functionalities of the JS (ECMAScript 5) Markdown editor, which  is another mode of the JavaScript Rich Text Editor.",
             "category": "Markdown",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "actionBegin", "appendTo"], "ToolbarSettings": ["items"] }

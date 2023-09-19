@@ -1,23 +1,13 @@
-/**
- * Sample for Apple watch rings
- */
 this.default = function () {
-    var gauge1 = new ej.circulargauge.CircularGauge(circular1(), '#gauge1');
-    var gauge2 = new ej.circulargauge.CircularGauge(circular2(), '#gauge2');
-    var gauge3 = new ej.circulargauge.CircularGauge(circular3(), '#gauge3');
-    var gauge4 = new ej.circulargauge.CircularGauge(circular4(), '#gauge4');
-    function circular1() {
+    circularGauge1();
+    circularGauge2();
+    circularGauge3();
+    circularGauge4();
+    function circularGauge1() {
         var circulargauge1 = new ej.circulargauge.CircularGauge({
-            // custom code start
-            load: function (args) {
-                var selectedTheme1 = location.hash.split('/')[1];
-                selectedTheme1 = selectedTheme1 ? selectedTheme1 : 'Material';
-                args.gauge.theme = (selectedTheme1.charAt(0).toUpperCase() +
-                selectedTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            },
-            // custom code end
-            width: '400px',
+            width: '500px',
             height: '400px',
+            background:'transparent',
             axes: [{
                 annotations: [{
                     angle: 8, radius: '80%', zIndex: '1',
@@ -90,14 +80,22 @@ this.default = function () {
                     animation: { enable: true },
                     pointerWidth: 40
                 }]
-            }]
-        });
-        return circulargauge1;
-    }
-    function circular2() {
-        var circulargauge2 = new ej.circulargauge.CircularGauge({
-            // custom code start
+            }], 
             load: function (args) {
+                // custom code start
+                var selectedTheme1 = location.hash.split('/')[1];
+                selectedTheme1 = selectedTheme1 ? selectedTheme1 : 'Material';
+                args.gauge.theme = (selectedTheme1.charAt(0).toUpperCase() +
+                selectedTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+               // custom code end
+            },
+        });
+        circulargauge1.appendTo('#gauge1');      
+    }
+    function circularGauge2() {
+        var circulargauge2 = new ej.circulargauge.CircularGauge({            
+            load: function (args) {
+            // custom code start
                 var selectedTheme2 = location.hash.split('/')[1];
                 selectedTheme2 = selectedTheme2 ? selectedTheme2 : 'Material';
                 args.gauge.theme = (selectedTheme2.charAt(0).toUpperCase() +
@@ -106,10 +104,11 @@ this.default = function () {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation4"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image4.svg" /></div>';
                 }
-            },
             // custom code end
+            },            
             height: '65px',
             width: '65px',
+            background:'transparent',
             axes: [{
                 annotations: [{
                     angle: 0, radius: '0%', zIndex: '1',
@@ -140,12 +139,12 @@ this.default = function () {
                 }]
             }]
         });
-        return circulargauge2;
+        circulargauge2.appendTo('#gauge2');
     }
-    function circular3() {
-        var circulargauge3 = new ej.circulargauge.CircularGauge({
-            // custom code start
+    function circularGauge3() {
+        var circulargauge3 = new ej.circulargauge.CircularGauge({            
             load: function (args) {
+            // custom code start
                 var selectedTheme3 = location.hash.split('/')[1];
                 selectedTheme3 = selectedTheme3 ? selectedTheme3 : 'Material';
                 args.gauge.theme = (selectedTheme3.charAt(0).toUpperCase() +
@@ -154,10 +153,11 @@ this.default = function () {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation5"><img style="width:15px;height:15px;" src="src/circular-gauge/images/image5.svg" /></div>';
                 }
-            },
             // custom code end
+            },
             height: '65px',
             width: '65px',
+            background:'transparent',
             axes: [{
                 annotations: [{
                     angle: 0, radius: '0%', zIndex: '1',
@@ -188,12 +188,12 @@ this.default = function () {
                 }]
             }]
         });
-        return circulargauge3;
+        circulargauge3.appendTo('#gauge3');
     }
-    function circular4() {
+    function circularGauge4() {
         var circulargauge4 = new ej.circulargauge.CircularGauge({
-            // custom code start
             load: function (args) {
+            // custom code start
                 var selectedTheme4 = location.hash.split('/')[1];
                 selectedTheme4 = selectedTheme4 ? selectedTheme4 : 'Material';
                 args.gauge.theme = (selectedTheme4.charAt(0).toUpperCase() +
@@ -202,10 +202,11 @@ this.default = function () {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation6"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image6.svg" /></div>';
                 }
-            },
             // custom code end
+            },
             height: '65px',
             width: '65px',
+            background:'transparent',
             axes: [{
                 annotations: [{
                     angle: 0, radius: '0%', zIndex: '1',
@@ -236,7 +237,6 @@ this.default = function () {
                 }]
             }]
         });
-        return circulargauge4;
+        circulargauge4.appendTo('#gauge4') 
     }
 };
-

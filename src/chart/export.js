@@ -48,8 +48,7 @@ this.default = function () {
         pointRender: labelRender,
         //Initializing Primary Y Axis
         primaryYAxis: {
-            title: 'Measurements (in Gigawatt)',
-            labelFormat: ej.base.Browser.isDevice? '{value}' : '{value}GW',
+            labelFormat: '{value}GW',
             minimum: 0,
             maximum: 40,
             interval: 10,
@@ -61,6 +60,7 @@ this.default = function () {
         series: [
             {
                 type: 'Column',
+                name: 'Measurements (in Gigawatt)',
                 dataSource: [
                     { x: "India", y: 35.5, text: ej.base.Browser.isDevice ? "35.5" : "35.5GW" },
                     { x: "China", y: 18.3, text: ej.base.Browser.isDevice ? "18.3" : "18.3GW" },
@@ -78,6 +78,7 @@ this.default = function () {
             }
         ],
         title: 'Top 10 Countries Using Solar Power',
+        legendSettings: { visible: false },
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
@@ -93,11 +94,11 @@ this.default = function () {
         width: 100
     });
     mode.appendTo('#mode');
-    var togglebtn = new ej.buttons.Button({
-        iconCss: 'e-icons e-export-icon', cssClass: 'e-flat', isPrimary: true,
+    var togglebutton = new ej.buttons.Button({
+        iconCss: 'e-icons e-export icon', isPrimary: true,
     });
-    togglebtn.appendTo('#togglebtn');
-    document.getElementById('togglebtn').onclick = function () {
+    togglebutton.appendTo('#exporttogglebtn');
+    document.getElementById('exporttogglebtn').onclick = function () {
         var fileName = (document.getElementById('fileName')).value;
         chart.exportModule.export(mode.value, fileName);
     };

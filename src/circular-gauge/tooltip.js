@@ -1,18 +1,6 @@
-/**
- * Sample for Tooltip
- */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
-        title: 'Tooltip Customization',
-        titleStyle: { size: '15px', color: 'grey', fontFamily: 'Segoe UI' },
-        // custom code start
-        load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        },
-        // custom code end
+        background:'transparent',
         axes: [{
             radius: '90%',
             minimum: 0,
@@ -47,44 +35,18 @@ this.default = function () {
         tooltip: {
             type: ['Pointer', 'Range'],
             enable: true,
+            showAtMousePosition: true,
+            format: 'Current Value:  {value}',
             enableAnimation: false,
             textStyle: {
-                fontFamily: 'Segoe UI'
-            }
-
-        },
-        tooltipRender: function (args) {
-            var imageName, borderColor, textColor;
-            if (args.pointer) {
-                imageName = ((args.pointer.currentValue >= 0 && args.pointer.currentValue <= 50) ? 'min' : 'max');
-                borderColor = ((args.pointer.currentValue >= 0 && args.pointer.currentValue <= 50) ? '#3A5DC8' : '#33BCBD');
-				textColor = circulargauge.theme.toLowerCase() === 'highcontrast' ? 'White' : borderColor;
-				if (circulargauge.theme.toLowerCase() === 'highcontrast') {
-                    args.tooltip.template = '<div id="templateWrap" style="border:2px solid ' + borderColor +
-                    ';background-color:black"><img src="src/circular-gauge/images/' + imageName + '.png"/><div class="des" style="color: ' +
-                    textColor + '"><span>${value} MPH</span></div></div>';
-                } else {
-                    args.tooltip.template = '<div id="templateWrap" style="border:2px solid ' + borderColor +
-                    '"><img src="src/circular-gauge/images/' + imageName + '.png"/><div class="des" style="color: ' +
-                    borderColor + '"><span>${value} MPH</span></div></div>'; 
+                size: '13px',
+                fontFamily: 'inherit'
+            },
+            rangeSettings: {
+                showAtMousePosition: true, format: "Start Value: {start} <br/> End Value: {end}", textStyle: {
+                    size: '13px',
+                    fontFamily: 'inherit'
                 }
-                
-            } else if (args.range) {
-                imageName = ((args.range.start >= 0 && args.range.end <= 50)) ? 'min' : 'max';
-                borderColor = ((args.range.start >= 0 && args.range.end <= 50)) ? '#3A5DC8' : '#33BCBD';
-				textColor = circulargauge.theme.toLowerCase() === 'highcontrast' ? 'White' : borderColor;
-                var start = args.range.start;
-                var end = args.range.end;
-                if (circulargauge.theme.toLowerCase() === 'highcontrast') {
-                    args.tooltip.rangeSettings.template = '<div id=templateWrap style="padding:5px;border:2px solid' + borderColor + ';color: ' +
-                    textColor + ';background-color:black"><img src="src/circular-gauge/images/' + imageName +
-                    '.png"/> <span>' + start + ' - ' + end + ' MPH  </span> </div>';
-                } else {
-                    args.tooltip.rangeSettings.template = '<div id=templateWrap style="padding:5px;border:2px solid' + borderColor + ';color: ' +
-                    borderColor + '"><img src="src/circular-gauge/images/' + imageName +
-                    '.png"/> <span>' + start + ' - ' + end + ' MPH  </span> </div>';
-                }
-                
             }
         },
         dragEnd: function (args) {
@@ -102,7 +64,15 @@ this.default = function () {
             }
             circulargauge.refresh();
         },
-        enablePointerDrag: true
+        enablePointerDrag: true,
+        load: function (args) {
+            // custom code start
+            var selectTheme = location.hash.split('/')[1];
+            selectTheme = selectTheme ? selectTheme : 'Material';
+            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            // custom code end
+        }
     });
     circulargauge.appendTo('#tooltip-container');
 };

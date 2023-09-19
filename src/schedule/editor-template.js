@@ -8,6 +8,7 @@ this.default = function () {
         selectedDate: new Date(2021, 1, 15),
         eventSettings: { dataSource: data },
         editorTemplate: '#EventEditorTemplate',
+        editorHeaderTemplate: '#EventEditorHeaderTemplate',
         popupOpen: function (args) {
             if (args.type === 'Editor') {
                 var statusElement = args.element.querySelector('#EventType');

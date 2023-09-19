@@ -50,6 +50,31 @@
     </p>
 </div>
 
+<style>
+    /* Preview area styles */
+    #colorpicker-control #preview {
+        background: transparent url('./src/color-picker/images/pen.png') no-repeat;
+        display: inline-block;
+        height: 80px;
+        margin: 10px 0;
+        width: 600px;
+        background-color: #008000;
+    }
+    #colorpicker-control.e-mobile-control #preview {
+        background: transparent url('./src/color-picker/images/pen_mobile.png') no-repeat;
+        background-color: #008000;
+        height: 35px;
+        width: 300px;
+    }
+    .highcontrast #colorpicker-control #preview {
+        background: transparent url('./src/color-picker/images/pen_highcontrast.png') no-repeat;
+        background-color: #008000;
+    }
+    .highcontrast #colorpicker-control.e-mobile-control #preview {
+        background: transparent url('./src/color-picker/images/pen_mobile_highcontrast.png') no-repeat;
+        background-color: #008000;
+    }
+</style>
 <!-- custom code start -->
 
 <style>
@@ -88,30 +113,6 @@
     }
     .e-bigger #colorpicker-control h4 {
         font-size: 20px;
-    }
-
-    /* Preview area styles */
-    #colorpicker-control #preview {
-        background: transparent url('./src/color-picker/images/pen.png') no-repeat;
-        display: inline-block;
-        height: 80px;
-        margin: 10px 0;
-        width: 600px;
-        background-color: #008000;
-    }
-    #colorpicker-control.e-mobile-control #preview {
-        background: transparent url('./src/color-picker/images/pen_mobile.png') no-repeat;
-        background-color: #008000;
-        height: 35px;
-        width: 300px;
-    }
-    .highcontrast #colorpicker-control #preview {
-        background: transparent url('./src/color-picker/images/pen_highcontrast.png') no-repeat;
-        background-color: #008000;
-    }
-    .highcontrast #colorpicker-control.e-mobile-control #preview {
-        background: transparent url('./src/color-picker/images/pen_mobile_highcontrast.png') no-repeat;
-        background-color: #008000;
     }
 
     /* Common sample level styles for mobile */

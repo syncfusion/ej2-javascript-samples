@@ -68,4 +68,13 @@ this.default = function () {
     });
     //Render initialized Tab component
     tabObj.appendTo('#tab_keyboard_interaction');
+    document.body.addEventListener('keydown', function (e) {
+        var tabElement = document.querySelector(
+            '#tab_keyboard_interaction .e-toolbar-item.e-template.e-active .e-tab-wrap'
+        );
+        
+        if (e.altKey && e.keyCode === 74 && tabElement) {
+            tabElement.focus();
+        }
+    });
 };

@@ -6,8 +6,8 @@ this.default = function () {
         minFileSize: 10000,
         allowedExtensions: '.doc, .docx, .xls, .xlsx',
         asyncSettings: {
-            saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-            removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+            saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
+            removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
         },
         selected: onFileSelected,
         removing: onFileRemove,        

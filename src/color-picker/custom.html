@@ -161,6 +161,18 @@
     .e-container .e-palette .e-scroll-palette.e-selected {
         outline: none;
     }
+    #colorpicker-control #e-shirt-preview {
+        background: transparent url('./src/color-picker/images/shirt.png') no-repeat;
+        height: 320px;
+        margin: 20px auto;
+        display: inline-block;
+        width: 400px;
+        background-color: rgb(244, 67, 54);
+    }
+    .highcontrast #colorpicker-control #e-shirt-preview {
+        background: transparent url('./src/color-picker/images/shirt_highcontrast.png') no-repeat;
+        background-color: rgb(244, 67, 54);
+    }
 </style>
 
 <!-- custom code start -->
@@ -190,21 +202,9 @@
     }
 
     /* Preview area styles */
-    #colorpicker-control #e-shirt-preview {
-        background: transparent url('./src/color-picker/images/shirt.png') no-repeat;
-        height: 320px;
-        margin: 20px auto;
-        display: inline-block;
-        width: 400px;
-        background-color: rgb(244, 67, 54);
-    }
     #colorpicker-control.e-mobile-control #e-shirt-preview {
         margin-left: -21%;
         width: 320px;
-    }
-    .highcontrast #colorpicker-control #e-shirt-preview {
-        background: transparent url('./src/color-picker/images/shirt_highcontrast.png') no-repeat;
-        background-color: rgb(244, 67, 54);
     }
 
     /* Common sample level styles for mobile */

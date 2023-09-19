@@ -26,14 +26,14 @@ this.default = function () {
         enableHover: false,
         frozenRows: 2,
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
+            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', freeze: 'Left' },
             { field: 'Freight', width: 125, format: 'C2', textAlign: 'Right' },
             { field: 'CustomerID', headerText: 'Customer ID', width: 130, freeze: 'Right' },
             { field: 'OrderDate', headerText: 'Order Date', width: 150, format: 'yMd', textAlign: 'Right' },
             { field: 'ShipName', headerText: 'Ship Name', width: 300 },
-            { field: 'ShipAddress', headerText: 'Ship Address', width: 270 },
+            { field: 'ShipAddress', headerText: 'Ship Address', width: 270, freeze: 'Fixed' },
             { field: 'ShipCity', headerText: 'Ship City', width: 250 },
-            { field: 'ShipCountry', headerText: 'Ship Country', width: 250, freeze: 'Left' }
+            { field: 'ShipCountry', headerText: 'Ship Country', width: 250 }
         ]
     });
     grid.appendTo('#Grid');
@@ -51,14 +51,15 @@ this.default = function () {
     var directions = [
         { id: 'Left', name: 'Left' },
         { id: 'Right', name: 'Right' },
-        { id: 'Center', name: 'Center' }
+        { id: 'Center', name: 'Center' },
+        { id: 'Fixed', name: 'Fixed' }
     ];
 
     var refresh = true;
     var columnDropDown = new ej.dropdowns.DropDownList({
         dataSource: columnNames,
         fields: { text: 'name', value: 'id' },
-        value: 'ShipCountry',
+        value: 'OrderID',
         change: function(e) {
             var columnName = e.value;
             var column = grid.getColumnByField(columnName);

@@ -34,7 +34,7 @@ this.default = function () {
     var template = '<div class="e-list-wrapper e-list-avatar">' +
         '<span class="e-avatar e-avatar-circle ${icon} ${$imgUrl ? \'hideUI\' : \'showUI\' }">' +
         '${icon}</span> <img class="e-avatar e-avatar-circle ${$imgUrl ? \'showUI\' : \'hideUI\' }" ' +
-        'src="${$imgUrl ?  $imgUrl : \' \' }" />' +
+        'src="${imgUrl}" />' +
         '<span class="e-list-content">${name}</span></div>';
     listObj = new ej.lists.ListView({
         dataSource: dataSource.data1,

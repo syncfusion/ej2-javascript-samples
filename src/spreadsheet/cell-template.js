@@ -6,6 +6,7 @@ this.default = function () {
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
         showRibbon: false,
         showFormulaBar: false,
+        cssClass: 'e-custom-spreadsheet',
         allowOpen: false,
         allowSave: false,
         allowEditing: false,

@@ -90,7 +90,7 @@
                     img.src = imgSrc;
                 }
             },
-              buttonModel: { content: 'Apply', isPrimary: true, cssClass: 'e-custom-img-btn e-img-custom-apply' }
+              buttonModel: { content: 'Apply', isPrimary: true, cssClass: 'e-img-custom-apply' }
           }]
   });
   dialogObj.appendTo('#profile-dialog');

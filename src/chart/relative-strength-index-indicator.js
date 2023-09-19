@@ -49,7 +49,7 @@ this.renderChartRSI = function () {
                 enablePan: true,
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
-                mode: 'XY',
+                mode: 'X',
             },
             tooltip: {
                 enable: true, shared: true

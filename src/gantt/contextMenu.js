@@ -62,7 +62,7 @@ this.default = function () {
             rightLabel: 'resources'
         },
         splitterSettings: {
-            columnIndex: 2
+            position: "35%"
         },
         editDialogFields: [
             { type: 'General', headerText: 'General' },

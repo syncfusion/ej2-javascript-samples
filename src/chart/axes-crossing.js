@@ -19,7 +19,7 @@ this.default = function () {
             minimum: -8, maximum: 8, interval: 2,
             lineStyle: {
                 color: 'Black',
-                width: 1
+                width: 2
             },
             majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },

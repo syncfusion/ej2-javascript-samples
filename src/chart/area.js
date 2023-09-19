@@ -48,7 +48,7 @@
                 y: '98%'
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 6px;">DOWNLOADS</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">DOWNLOADS</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 6px;">DOWNLOAD</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">DOWNLOAD</div>',
                 region: 'Series',
                 x: '85%',
                 y: '92%'

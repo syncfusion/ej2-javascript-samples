@@ -115,7 +115,7 @@ window.default = function () {
                 chart.primaryXAxis.valueType = 'DateTime';
                 min = chart.primaryXAxis.scrollbarSettings.range.minimum = new Date(2009, 0, 1);
                 max = chart.primaryXAxis.scrollbarSettings.range.maximum = new Date(2014, 0, 1);
-                chart.series[0].dataSource = GetDateTimeData(min, max);
+                chart.series[0].dataSource = GetDateTimeData(new Date(2009, 0, 1), new Date(2009, 8, 1)); 
                 chart.refresh();
                 minDate.enabled = true;
                 maxDate.enabled = true;

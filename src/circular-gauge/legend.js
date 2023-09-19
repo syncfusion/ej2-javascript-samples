@@ -1,21 +1,26 @@
-/**
- * Sample for legend
- */
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
         title: 'Measure of wind speed in Km/h',
+        background:'transparent',
+        titleStyle: {
+            fontFamily: 'inherit'       
+        },
         legendSettings: {
             visible: true,
-            position: 'Bottom'
+            position: 'Bottom',
+            textStyle: {
+                fontFamily: 'inherit',
+                size: '12px'
+            }
         },
         axes: [{
             lineStyle: { width: 2 },
             labelStyle: {
-                position: 'Inside', useRangeColor: false, font: { fontFamily: 'Segoe UI'},
+                position: 'Inside', useRangeColor: false, font: { fontFamily: 'inherit' },
             }, majorTicks: { height: 16, color: '#9E9E9E', interval: 20 }, minorTicks: { height: 8, interval: 10 },
             startAngle: 210, endAngle: 150, minimum: 0, maximum: 120, radius: '80%',
             ranges: [
-                { start: 0, end: 5, color: '#ccffff', radius: '110%', legendText: 'Light air'},
+                { start: 0, end: 5, color: '#ccffff', radius: '110%', legendText: 'Light air' },
                 { start: 5, end: 11, color: '#99ffff', radius: '110%', legendText: 'Light breeze' },
                 { start: 11, end: 19, color: '#99ff99', radius: '110%', legendText: 'Gentle breeze' },
                 { start: 19, end: 28, color: '#79ff4d', radius: '110%', legendText: 'Moderate breeze' },
@@ -30,36 +35,60 @@ this.default = function () {
                 cap: { radius: 7 }, needleTail: { length: '18%' }
             }]
         }],
-        // custom code start
         load: function (args) {
+            // custom code start
             var selectedLegendTheme = location.hash.split('/')[1];
             selectedLegendTheme = selectedLegendTheme ? selectedLegendTheme : 'Material';
             args.gauge.theme = (selectedLegendTheme.charAt(0).toUpperCase() +
-            selectedLegendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        }
-        // custom code end
+                selectedLegendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            // custom code end
+       }
     });
     circulargauge.appendTo('#legend-container');
-    // Code for property panel
-    document.getElementById('enable').onchange = function () {
-        var enableLegend = document.getElementById('enable').checked;
-        circulargauge.legendSettings.visible = enableLegend;
+
+    var showLegendVisible;
+    var showLegendVisibleCheckBox = new ej.buttons.CheckBox({
+        change: showLegendVisible,
+        checked: true
+    }, '#enable');
+    showLegendVisibleCheckBox.change = showLegendVisible = function (e) {
+        var boolean = e.checked;
+        circulargauge.legendSettings.visible = boolean;
         circulargauge.refresh();
     };
-    document.getElementById('toggle').onchange = function () {
-        var toggle = document.getElementById('toggle').checked;
-        circulargauge.legendSettings.toggleVisibility = toggle;
+    var toggelLegend;
+    var toggelLegendCheckBox = new ej.buttons.CheckBox({
+        change: toggelLegend,
+        checked: true
+    }, '#toggle');
+
+    toggelLegendCheckBox.change = toggelLegend = function (e) {
+        var boolean = e.checked;
+        circulargauge.legendSettings.toggleVisibility = boolean;
+        circulargauge.refresh();
     };
-    document.getElementById('alignment').onchange = function (e) {
-        var alignment = e.target.value;
-        circulargauge.legendSettings.alignment = alignment;
-    };
-    document.getElementById('shape').onchange = function (e) {
-        var shape = e.target.value;
-        circulargauge.legendSettings.shape = shape;
-    };
-    document.getElementById('position').onchange = function (e) {
-        var position = e.target.value;
-        circulargauge.legendSettings.position = position;
-    };
+    var labelPosition = new ej.dropdowns.DropDownList({
+        index: 0, width: '100%',
+        change: function () {
+            circulargauge.legendSettings.alignment = labelPosition.value.toString();
+            circulargauge.refresh();
+        }
+    });
+    labelPosition.appendTo('#alignment');
+    var labelPosition1 = new ej.dropdowns.DropDownList({
+        index: 0, width: '100%',
+        change: function () {
+            circulargauge.legendSettings.shape = labelPosition1.value.toString();
+            circulargauge.refresh();
+        }
+    });
+    labelPosition1.appendTo('#shape');
+    var labelPosition2 = new ej.dropdowns.DropDownList({
+        index: 2, width: '100%',
+        change: function () {
+            circulargauge.legendSettings.position = labelPosition2.value.toString();
+            circulargauge.refresh();
+        }
+    });
+    labelPosition2.appendTo('#position');
 };

@@ -1,0 +1,39 @@
+@font-face {
+font-family: 'HighContrast Diagram Builder';
+src:
+url('Fonts/HighContrast Diagram Builder.ttf') format('truetype'),
+url('Fonts/HighContrast Diagram Builder.woff') format('woff'),
+url('Fonts/HighContrast Diagram Builder.eot') format('eot'),
+url('Fonts/HighContrast Diagram Builder.svg?#HighContrast Diagram Builder') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+[class^="sf-icon-"], [class*=" sf-icon-"] {
+ font-family: 'HighContrast Diagram Builder' !important;
+speak: none;
+font-size: 55px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.sf-icon-align-left-1:before { content: "\e97e"; }
+.sf-icon-align-center-1:before { content: "\e980"; }
+.sf-icon-align-right-1:before { content: "\e981"; }
+.sf-icon-align-top-1:before { content: "\e982"; }
+.sf-icon-align-middle-1:before { content: "\e983"; }
+.sf-icon-align-bottom-1:before { content: "\e985"; }
+.sf-icon-distribute-vertical:before { content: "\e986"; }
+.sf-icon-distribute-horizontal:before { content: "\e987"; }
+.sf-icon-elipse:before { content: "\e988"; }
+.sf-icon-line-1:before { content: "\e989"; }
+.sf-icon-orthogonal:before { content: "\e98a"; }
+.sf-icon-bezier:before { content: "\e98b"; }
+.sf-icon-same-width:before { content: "\e98c"; }
+.sf-icon-same-height:before { content: "\e98d"; }
+.sf-icon-same-size:before { content: "\e98e"; }

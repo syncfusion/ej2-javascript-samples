@@ -46,8 +46,8 @@ this.default = function () {
     function trend() {
         var cTable = document.getElementsByClassName("e-table");
         var colLen = pivotObj.pivotValues[3].length;
-        var cLen = cTable[3].children[0].children.length;
-        var rLen = cTable[3].children[1].children.length;
+        var cLen = cTable[1].children[0].children.length - 1;
+        var rLen = cTable[1].children[1].children.length;
      
         for (let k = 0; k < rLen; k++) {
             if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
@@ -55,7 +55,7 @@ this.default = function () {
                 break;
             }
         }
-        var rowHeaders = [].slice.call(cTable[2].children[1].querySelectorAll('td'));
+        var rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
         var rows = pivotObj.dataSourceSettings.rows;
         if (rowHeaders.length > 1) {
             for (var i = 0, Cnt = rows; i < Cnt.length; i++) {
@@ -74,12 +74,12 @@ this.default = function () {
                             if (rnt !== 0) {
                                 var row = fields[fieldHeaders[rnt]];
                                 var prevRow = fields[fieldHeaders[rnt - 1]];
-                                for (var j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                                    if (!cTable[3].children[1].children[row]) {
+                                for (var j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                                    if (!cTable[1].children[1].children[row]) {
                                         break;
                                     }
-                                    var node = cTable[3].children[1].children[row].childNodes[j];
-                                    var prevNode = cTable[3].children[1].children[prevRow].childNodes[j];
+                                    var node = cTable[1].children[1].children[row].childNodes[j];
+                                    var prevNode = cTable[1].children[1].children[prevRow].childNodes[j];
                                     var ri = undefined;
                                     var prevRi = undefined;
                                     if (node) {
@@ -103,12 +103,12 @@ this.default = function () {
                 } else {
                     for (var rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
                         var cRow = fields[fieldHeaders[rnt]];
-                        for (var j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                            if (!cTable[3].children[1].children[cRow]) {
+                        for (var j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                            if (!cTable[1].children[1].children[cRow]) {
                                 break;
                             }
-                            var node = cTable[3].children[1].children[cRow].childNodes[j];
-                            var prevNode = cTable[3].children[1].children[cRow - 1].childNodes[j];
+                            var node = cTable[1].children[1].children[cRow].childNodes[j];
+                            var prevNode = cTable[1].children[1].children[cRow - 1].childNodes[j];
                             var ri = undefined;
                             var prevRi = undefined;
                             if (node) {
@@ -118,8 +118,8 @@ this.default = function () {
                                 prevRi = prevNode.getAttribute("index");
                             }
                             if (ri && ri < pivotObj.pivotValues.length) {
-                                var cRowFieldName = cTable[2].children[1].children[cRow].childNodes[0].getAttribute('fieldname');
-                                var prevRowFieldName = cTable[2].children[1].children[cRow -1].childNodes[0].getAttribute('fieldname');
+                                var cRowFieldName = cTable[1].children[1].children[cRow].childNodes[0].getAttribute('fieldname');
+                                var prevRowFieldName = cTable[1].children[1].children[cRow -1].childNodes[0].getAttribute('fieldname');
                                 if ((pivotObj.pivotValues[prevRi][ci]).value > (pivotObj.pivotValues[ri][ci]).value && node.querySelector('.tempwrap') &&
                                 cRowFieldName === prevRowFieldName) {
                                     var trendElement = node.querySelector('.tempwrap');

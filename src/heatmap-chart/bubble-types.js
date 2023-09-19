@@ -1,6 +1,3 @@
-/**
- * Heatmap Inversed Axis sample
- */
 this.default = function () {
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings: {
@@ -9,16 +6,22 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis: {
             labels: ['Singapore', 'Spain', 'Australia', 'Germany', 'Belgium', 'USA', 'France', 'UK'],
             labelRotation: 45,
-            labelIntersectAction: 'None'
+            labelIntersectAction: 'None',
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         yAxis: {
-            labels: ['1995', '2000', '2005', '2010', '2015']
+            labels: ['1995', '2000', '2005', '2010', '2015'],
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         dataSource: window.tableBubbleData,
         cellSettings: {
@@ -27,7 +30,10 @@ this.default = function () {
             },
             showLabel: false,
             tileType: 'Bubble',
-            bubbleType: 'Size'
+            bubbleType: 'Size',
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         tooltipRender: function (args) {
             args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
@@ -41,14 +47,24 @@ this.default = function () {
             ],
         },
         load: function (args) {
+            // custom code start
             var bubbleTypeTheme = location.hash.split('/')[1];
             bubbleTypeTheme = bubbleTypeTheme ? bubbleTypeTheme : 'Material';
             args.heatmap.theme = (bubbleTypeTheme.charAt(0).toUpperCase() +
             bubbleTypeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         },
         legendSettings: {
-            visible: true
+            visible: true,
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        }
     });
     heatmap.appendTo('#container');
 

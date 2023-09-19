@@ -36,4 +36,12 @@ this.default = function () {
     });
     //Render initialized Toolbar component
     toolbarObj.appendTo('#toolbar_keyboard_interaction');
+    document.body.addEventListener('keydown', function (e) {
+        var tabElement = document.querySelector(
+            '#toolbar_keyboard_interaction .e-toolbar-items .e-toolbar-item .e-tbar-btn'
+        );
+        if (e.altKey && e.keyCode === 74 && tabElement) {
+            tabElement.focus();
+        }
+    });
 };

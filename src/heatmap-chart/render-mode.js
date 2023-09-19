@@ -6,7 +6,7 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis: {
@@ -14,10 +14,16 @@ this.default = function () {
                 'Iceland', 'Ireland', 'Latvia', 'Lithuania', 'Norway', 'Sweden', 'UK'],
             labelRotation: -90,
             labelIntersectAction: 'None',
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         yAxis: {
             labels: ['1965-1970', '1970-1975', '1975-1980', '1980-1985', '1985-1990',
-                '1990-1995', '1995-2000', '2000-2005', '2005-2010', '2010-2015']
+                '1990-1995', '1995-2000', '2000-2005', '2005-2010', '2010-2015'],
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         dataSource: window.renderModeData,
         paletteSettings: {
@@ -33,15 +39,25 @@ this.default = function () {
             showLabel: false,
             format: '{value} %'
         },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        },
         legendSettings: {
             position: 'Bottom',
-            width: '200px'
+            width: '200px',
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         load: function (args) {
+            // custom code start
             var renderModeTheme = location.hash.split('/')[1];
             renderModeTheme = renderModeTheme ? renderModeTheme : 'Material';
             args.heatmap.theme = (renderModeTheme.charAt(0).toUpperCase() +
             renderModeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         },
     });
     heatmap.appendTo('#container');

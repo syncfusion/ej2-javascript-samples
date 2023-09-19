@@ -44,7 +44,6 @@ var listObj3 = new ej.lists.ListView({
 this.default = function () {
     //Initialize Tab component
     var tabObj = new ej.navigations.Tab({
-        heightAdjustMode: 'None',
         height: 320,
         showCloseButton: true
     });

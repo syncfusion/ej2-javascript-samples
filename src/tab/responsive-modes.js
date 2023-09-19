@@ -5,7 +5,6 @@ this.default = function () {
     //Initialize Tab component
     var tabObj = new ej.navigations.Tab({
         cssClass: 'responsive-mode',
-        heightAdjustMode: 'None',
         height: 250,
         items: [
             {

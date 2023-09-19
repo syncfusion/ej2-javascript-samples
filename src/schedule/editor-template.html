@@ -17,6 +17,9 @@
         be achieved by making use of the <code>editorTemplate</code> API. Here, the custom design is built with the
         required fields through the script template and its type should be <code>text/x-template</code>.
     </p>
+    <p> 
+        In this demo, the editor window header is customized based on the appointment subject field which can be achieved by the <code>editorHeaderTemplate</code>. 
+    </p>
     <p>
         Each field defined through it should contain the <code>e-field</code> class, so as to allow the processing of
         those fields in the default event object from internal source. The ID of this customized script template
@@ -53,6 +56,11 @@
         padding-right: 16px;
     }
 </style>
+
+<script id="EventEditorHeaderTemplate" type="text/x-template">
+    ${if (!Subject)}<div>Create New Event</div>${else}<div>${Subject}</div>${/if}
+</script>
+
 <script id="EventEditorTemplate" type="text/x-template">
     <table class="custom-event-editor" width="100%" cellpadding="5">
         <tbody>

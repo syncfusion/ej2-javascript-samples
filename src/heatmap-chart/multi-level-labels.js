@@ -1,6 +1,3 @@
-/**
- * Heatmap Multi-Leval-Labels sample
- */
 this.default = function () {
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings: {
@@ -9,7 +6,7 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis : {
@@ -22,6 +19,7 @@ this.default = function () {
         },
         textStyle: {
             color: 'black',
+            fontFamily: 'inherit'
     
         },
         multiLevelLabels: [
@@ -29,7 +27,8 @@ this.default = function () {
                 border: { type: 'Rectangle', color: '#a19d9d' },
                 textStyle: {
                     color: 'black',
-                    fontWeight: 'Bold'
+                    fontWeight: 'Bold',
+                    fontFamily: 'inherit'
                 },
                 categories: [
                     { start: 0, end: 2, text: 'Electronics', },
@@ -46,7 +45,8 @@ this.default = function () {
                 width: 0
             },
             textStyle: {
-                color: 'black'
+                color: 'black',
+                fontFamily: 'inherit'
             },
             isInversed: true,
             multiLevelLabels: [
@@ -54,7 +54,8 @@ this.default = function () {
                     border: { type: 'Brace', color: '#a19d9d' },
                     textStyle: {
                         color: 'black',
-                        fontWeight: 'Bold'
+                        fontWeight: 'Bold',
+                        fontFamily: 'inherit'
                     },
                     categories: [
                         { start: 0, end: 2, text: 'Q1' },
@@ -71,7 +72,7 @@ this.default = function () {
         ],
         },
         legendSettings: {
-            visible: false,
+            visible: false
         },       
         cellRender: function (args) {
             args.displayText = '$ ' + (args.value / 10) + 'K';
@@ -80,17 +81,27 @@ this.default = function () {
         tooltipRender: function (args) {
             args.content = [args.xLabel + ' | ' + args.yLabel + ' : $ ' + (args.value/ 10) + 'K'];
         },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        },
         cellSettings: {
             border: {
                 width: 0,
             },
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         load: function (args) {
+            // custom code start
             var multiLevelTheme = location.hash.split('/')[1];
             multiLevelTheme  = multiLevelTheme  ? multiLevelTheme  : 'Material';
             args.heatmap.theme =  (multiLevelTheme.charAt(0).toUpperCase() +
             multiLevelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
             multiLevelTheme = multiLevelTheme.toLowerCase();
+            // custom code end
             if(multiLevelTheme === 'highcontrast' || multiLevelTheme === 'bootstrap5-dark' || multiLevelTheme === 'material-dark' || multiLevelTheme === 'fabric-dark' || multiLevelTheme === 'bootstrap-dark' || multiLevelTheme === 'tailwind-dark' || multiLevelTheme === 'material3-dark' || multiLevelTheme === 'fluent-dark')
             {
                 args.heatmap.xAxis.textStyle.color = 'White';

@@ -554,8 +554,7 @@ this.default = function () {
      
         //Initializing Tooltip
         tooltip: {
-            enable: true,
-            format: 'Weight: <b>${point.y} kg</b> <br/> Height: <b>${point.x} cm</b>'
+            enable: true
         }, legendSettings: { enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start

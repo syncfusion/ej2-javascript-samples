@@ -1,20 +1,10 @@
-/**
- * Container Sample
- */
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
         title: 'Temperature Measure',
-        // custom code start
-        load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        },
-        // custom code end
+        background:'transparent',  
         titleStyle: {
-            size: '18px',
-            fontFamily: 'Segoe UI'
+            size: '15px',
+            fontFamily: 'inherit'
         },
         container: {
             width: 13,
@@ -36,7 +26,7 @@ this.default = function () {
             },
             labelStyle: {
                 font: {
-                    fontFamily: 'Segoe UI'
+                    fontFamily: 'inherit'
                 }
             },
             pointers: [
@@ -62,7 +52,7 @@ this.default = function () {
             opposedPosition: true,
             labelStyle: {
                 font: {
-                    fontFamily: 'Segoe UI'
+                    fontFamily: 'inherit'
                 }
             },
             pointers: [
@@ -70,14 +60,21 @@ this.default = function () {
                     width: 0
                 }
             ]
-        }]
+        }],
+        load: function (args) {
+            // custom code start
+            var selectedTheme = location.hash.split('/')[1];
+            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            // custom code end
+        }
     });
     gauge.appendTo('#boxContainer');
-    // Code for property panel
     var containerMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: '100%',
+        width: '93%',
         change: function () {
             gauge.container.type = containerMode.value;
             gauge.refresh();
@@ -87,7 +84,7 @@ this.default = function () {
     var orientationMode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',
-        width: '100%',
+        width: '93%',
         change: function () {
             gauge.orientation = orientationMode.value;
             gauge.refresh();

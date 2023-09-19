@@ -6,27 +6,36 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis: {
             labels: ['Canada', 'China', 'Egypt', 'Mexico', 'Norway', 'Russia', 'UK', 'USA'],
             labelRotation: 45,
             labelIntersectAction: 'None',
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         yAxis: {
             labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010'],
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         dataSource: window.defaultTableDataSource,
         cellSettings: {
             border: {
                 width: 0
             },
-            format: '{value} M'
+            format: '{value} M',
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         legendSettings: {
             visible: false,
-        },
+        },        
         paletteSettings: {
             palette: [{ value: 0, color: '#C2E7EC' },
             { value: 0.6, color: '#AEDFE6' },
@@ -50,22 +59,23 @@ this.default = function () {
             fill: '#265259',
             textStyle: {
                 color: '#FFFFFF',
-                size:"12px"
+                size:"12px",
+                fontFamily: 'inherit'
             },
             border:{
                 width:1,
                 color:"#98BABF"
-            }
-        },
-        tooltipRender: function (args) {
-            args.content = ['In ' + args.yLabel + ', the ' + args.xLabel + ' produced ' + args.value + ' million barrels per day'];
+            },
+            template: '<div style=" border-radius: 5px;fontFamily: inherit; padding-left: 10px;padding-right: 10px;padding-bottom: 6px;padding-top: 6px;background:#000000; border: 1px #919191;" ><span style="color:white">In ${yLabel}, the ${xLabel} produced ${value} million barrels per day.<span></div>',
         },
         load: function (args) {
+            // custom code start
             var templateTheme = location.hash.split('/')[1];
             templateTheme = templateTheme ? templateTheme : 'Material';
             args.heatmap.theme = (templateTheme.charAt(0).toUpperCase() +
             templateTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
-        },
+            // custom code end
+        }
     });
     heatmap.appendTo('#container');
 };

@@ -1,0 +1,63 @@
+<div class="col-lg-9 control-section">
+    <div class="content-wrapper">
+        <p class="e-mastertext">Master Grid</p>
+        <div id="MasterGrid">
+        </div>
+        <p><div class='e-statustext'> Showing orders of Customer: <b id=key></b></div></p>
+        <div id="DetailGrid">
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tr>
+            <td style="width: 100%">
+                <div style="padding-top: 7px">Export grids in same sheet</div>
+            </td>
+            <td style="width: 50%;padding-right: 10px">
+                <input type="checkbox" tabindex="0" id='multipleExport' checked="checked" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    .e-statustext,
+    .e-mastertext {
+        font-size: 15px;
+        padding: 1em;
+        font-family: Roboto;
+        opacity: 0.87;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the client-side exporting of mutliple grids, which allows you to export the data of
+        multiple grids in the same or different pages to Excel and PDF formats.
+    </p>
+</div>
+
+<div id='description'>
+    <p>Data Grids support client-side exporting which allows you to export data to Excel and PDF formats.</p>
+    <p>Multiple grids can be exported by providing their <code>IDs</code> in the <code>exportGrids</code> property.</p>
+    <p>In this demo, Excel and PDF exports are enabled in both grids by setting the <code>allowExcelExport</code> and
+        <code>allowPdfExport</code> properties to true. In the master grid, the grid IDs are listed in the
+        <code>exportGrids</code> property which can be exported to Excel and PDF formats by clicking the toolbar buttons.
+    </p>
+    <p>The ExcelExport and PdfExport items are defined in the toolbar of the Grid. Actions are defined in
+        the <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#toolbarclick">toolbarClick</a></code> event
+        to export Grid data using <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#excelexport">excelExport</a></code> 
+        and<code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#pdfexport">pdfExport</a></code> methods.
+    </p>
+    <p>By default, in this demo grids are exported on the same page. They can be exported in separate pages by
+        unchecking the checkbox. This can be achieved by setting the multipleExport <code>type</code> of
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/grid/excelExportProperties/">ExcelExportProperties</a></code>
+        and <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/grid/pdfExportProperties/">PdfExportProperties.</a></code>
+    </p>
+
+    <p>
+        More information on the exporting configuration can be found in this <a target="_blank"
+        href="https://ej2.syncfusion.com/javascript/documentation/grid/excel-export/excel-exporting">Excel-export</a> 
+        and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/pdf-export/pdf-export">PDF-export</a> documentation sections.
+    </p>
+</div>

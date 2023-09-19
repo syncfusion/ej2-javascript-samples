@@ -59,7 +59,7 @@ this.default = function () {
         tooltip: {
             enable: true
         },
-        title: 'Family Expense for Year',
+        title: 'Family Expenses for Year',
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendSettings:{enableHighlight:true},
         load: function (args) {

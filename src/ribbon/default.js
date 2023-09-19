@@ -17,7 +17,7 @@ this.default = function () {
                     id: 'pastebtn',
                     splitButtonSettings: {
                         iconCss: 'e-icons e-paste',
-                        items: [{ text: 'Keep Source Format' }, { text: 'Merge format' }, { text: 'Keep text only' }],
+                        items: [{ text: 'Keep Source Format' }, { text: 'Merge Format' }, { text: 'Keep Text Only' }],
                         select: function (args) { updateContent("Paste -> " + args.item.text); },
                         click: function () { updateContent("Paste"); },
                         content: 'Paste'
@@ -61,7 +61,11 @@ this.default = function () {
                         dataSource: fontStyle,
                         index: 3,
                         width: '150px',
-                        change: function (args) { updateContent("Font Style -> " + args.itemData.text); },
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Style -> " + args.itemData.text);
+                            }
+                        },
                         allowFiltering: true
                     }
                 }, {
@@ -70,64 +74,106 @@ this.default = function () {
                         dataSource: fontSize,
                         width: '65px',
                         popupWidth: '85px',
-                        change: function (args) { updateContent("Font Size -> " + args.itemData.text); },
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Size -> " + args.itemData.text);
+                            }
+                        },
                         index: 3,
                         allowFiltering: true
                     }
                 }]
             }, {
                 items: [{
+                    type: 'GroupButton',
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    groupButtonSettings: {
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Multiple,
+                        items: [{
+                            iconCss: 'e-icons e-bold',
+                            click: function () { updateContent("Bold"); },
+                            content: 'Bold'
+                        }, {
+                            content: 'Italic',
+                            click: function () { updateContent("Italic"); },
+                            iconCss: 'e-icons e-italic'
+                        }, {
+                            content: 'Underline',
+                            click: function () { updateContent("Underline"); },
+                            iconCss: 'e-icons e-underline'
+                        }, {
+                            content: 'Strikethrough',
+                            click: function () { updateContent("Strikethrough"); },
+                            iconCss: 'e-icons e-strikethrough'
+                        }, {
+                            content: 'Change Case',
+                            click: function () { updateContent("Change Case"); },
+                            iconCss: 'e-icons e-change-case'
+                        }]
+                    }
+                }, {
                     type: 'ColorPicker',
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
                     colorPickerSettings: {
                         change: function (args) { updateContent(args.currentValue.hex + " color"); },
                         value: '#123456'
                     },
-                    displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
-                }, {
-                    type: 'Button',
+                }]
+            }]
+        }, {
+            id: 'paragraph',
+            header: "paragraph",
+            orientation: 'Row',
+            groupIconCss: 'e-icons e-align-center',
+            collections: [{
+                items: [
+                {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    type: "Button",
                     buttonSettings: {
-                        iconCss: 'e-icons e-bold',
-                        isToggle: true,
-                        content: 'Bold',
-                        clicked: function () { updateContent("Bold"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        content: 'Italic',
-                        iconCss: 'e-icons e-italic',
-                        isToggle: true,
-                        clicked: function () { updateContent("Italic"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        content: 'Underline',
-                        iconCss: 'e-icons e-underline',
-                        isToggle: true,
-                        clicked: function () { updateContent("Underline"); }
+                        clicked: function () { updateContent("Cut"); },
+                        iconCss: 'e-icons e-decrease-indent'
                     }
                 }, {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    type: 'Button',
+                    type: "Button",
                     buttonSettings: {
-                        content: 'Strikethrough',
-                        iconCss: 'e-icons e-strikethrough',
-                        isToggle: true,
-                        clicked: function () { updateContent("Strikethrough"); }
+                        clicked: function () { updateContent("Increase Indent"); },
+                        iconCss: 'e-icons e-increase-indent'
                     }
                 }, {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    type: 'Button',
+                    type: "Button",
                     buttonSettings: {
-                        content: 'Change Case',
-                        iconCss: 'e-icons e-change-case',
-                        isToggle: true,
-                        clicked: function () { updateContent("Change Case"); }
+                        clicked: function () { updateContent("Paragraph"); },
+                        iconCss: 'e-icons e-paragraph',
+                    }
+                }
+            ]
+            }, {
+                items: [{
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    type: 'GroupButton',
+                    groupButtonSettings: {
+                        items: [{
+                            selected: true,
+                            click: function ()  { updateContent("Align Left"); },
+                            iconCss: 'e-icons e-align-left'
+                        },
+                        {
+                            click: function ()  { updateContent("Align Center"); },
+                            iconCss: 'e-icons e-align-center'
+                        },
+                        {
+                            click: function ()  { updateContent("Align Right"); },
+                            iconCss: 'e-icons e-align-right'
+                        },
+                        {
+                            click: function ()  { updateContent("Justify"); },
+                            iconCss: 'e-icons e-justify'
+                        }],
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Single
                     }
                 }]
             }]
@@ -489,6 +535,7 @@ this.default = function () {
     });
 
     var ribbon = new ej.ribbon.Ribbon({
+        enablePersistence: true,
         tabs: tabs,
         fileMenu: files,
         launcherIconClick: function (args) {

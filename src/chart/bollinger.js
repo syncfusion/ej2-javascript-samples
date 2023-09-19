@@ -39,7 +39,7 @@ this.renderChartBollinger = function () {
             zoomSettings: {
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
-                mode: 'XY',
+                mode: 'X',
                 enablePan: true
             },
             width: ej.base.Browser.isDevice ? '100%' : '75%',

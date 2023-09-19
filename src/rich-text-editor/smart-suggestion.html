@@ -3,70 +3,6 @@
         <div class="default-section" id="mentionFormatIntegration">
             <div id="mentionEditor"></div>
             <div id="MentionInlineFormat"></div>
-            <div id="emojiDialog" style="display: none">
-                <div id="rteEmoticons-smiley">
-                    <div class="char_block" title="GRINNING FACE">&#128512;</div>
-                    <div class="char_block" title="GRINNING FACE WITH SMILING EYES">&#128513;</div>
-                    <div class="char_block" title="FACE WITH TEARS OF JOY">&#128514;</div>
-                    <div class="char_block" title="SMILING FACE WITH OPEN MOUTH">&#128515;</div>
-                    <div class="char_block" title="SMILING FACE WITH OPEN MOUTH AND SMILING EYES">&#128516;</div>
-                    <div class="char_block" title="SMILING FACE WITH OPEN MOUTH AND COLD SWEAT">&#128517;</div>
-                    <div class="char_block" title="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES">&#128518;</div>
-                    <div class="char_block" title="SMILING FACE WITH HALO">&#128519;</div>
-                    <div class="char_block" title="SMILING FACE WITH HORNS">&#128520;</div>
-                    <div class="char_block" title="WINKING FACE">&#128521;</div>
-                    <div class="char_block" title="SMILING FACE WITH SMILING EYES">&#128522;</div>
-                    <div class="char_block" title="FACE SAVOURING DELICIOUS FOOD">&#128523;</div>
-                    <div class="char_block" title="RELIEVED FACE">&#128524;</div>
-                    <div class="char_block" title="SMILING FACE WITH HEART-SHAPED EYES">&#128525;</div>
-                    <div class="char_block" title="SMILING FACE WITH SUNGLASSES">&#128526;</div>
-                    <div class="char_block" title="SMIRKING FACE">&#128527;</div>
-                    <div class="char_block" title="NEUTRAL FACE">&#128528;</div>
-                    <div class="char_block" title="EXPRESSIONLESS FACE">&#128529;</div>
-                    <div class="char_block" title="UNAMUSED FACE">&#128530;</div>
-                    <div class="char_block" title="FACE WITH COLD SWEAT">&#128531;</div>
-                    <div class="char_block" title="PENSIVE FACE">&#128532;</div>
-                    <div class="char_block" title="CONFUSED FACE">&#128533;</div>
-                    <div class="char_block" title="CONFOUNDED FACE">&#128534;</div>
-                    <div class="char_block" title="KISSING FACE">&#128535;</div>
-                    <div class="char_block" title="FACE THROWING A KISS">&#128536;</div>
-                    <div class="char_block" title="KISSING FACE WITH SMILING EYES">&#128537;</div>
-                    <div class="char_block" title="KISSING FACE WITH CLOSED EYES">&#128538;</div>
-                    <div class="char_block" title="FACE WITH STUCK-OUT TONGUE">&#128539;</div>
-                    <div class="char_block" title="FACE WITH STUCK-OUT TONGUE AND WINKING EYE">&#128540;</div>
-                    <div class="char_block" title="FACE WITH STUCK-OUT TONGUE AND TIGHTLY-CLOSED EYES">&#128541;</div>
-                    <div class="char_block" title="Monkey Face">&#128053;</div>
-                    <div class="char_block" title="Monkey">&#128018;</div>
-                    <div class="char_block" title="Gorilla">&#129421;</div>
-                    <div class="char_block" title="Dog Face">&#128054;</div>
-                    <div class="char_block" title="Dog">&#128021;</div>
-                    <div class="char_block" title="Poodle">&#128041;</div>
-                    <div class="char_block" title="Wolf Face">&#128058;</div>
-                    <div class="char_block" title="Fox Face">&#129418;</div>
-                    <div class="char_block" title="Raccoon">&#129437;</div>
-                    <div class="char_block" title="Cat Face">&#128049;</div>
-                    <div class="char_block" title="Cat">&#128008;</div>
-                    <div class="char_block" title="Lion Face">&#129409;</div>
-                    <div class="char_block" title="Tiger Face">&#128047;</div>
-                    <div class="char_block" title="Tiger">&#128005;</div>
-                    <div class="char_block" title="Leopard">&#128006;</div>
-                    <div class="char_block" title="Horse Face">&#128052;</div>
-                    <div class="char_block" title="Horse">&#128014;</div>
-                    <div class="char_block" title="Unicorn Face">&#129412;</div>
-                    <div class="char_block" title="Zebra">&#129427;</div>
-                    <div class="char_block" title="Deer">&#129420;</div>
-                    <div class="char_block" title="Cow Face">&#128046;</div>
-                    <div class="char_block" title="Ox">&#128002;</div>
-                    <div class="char_block" title="Water Buffalo">&#128003;</div>
-                    <div class="char_block" title="Cow">&#128004;</div>
-                    <div class="char_block" title="Pig Face">&#128055;</div>
-                    <div class="char_block" title="Pig">&#128022;</div>
-                    <div class="char_block" title="Boar">&#128023;</div>
-                    <div class="char_block" title="Pig Nose">&#128061;</div>
-                    <div class="char_block" title="Ram">&#128015;</div>
-                    <div class="char_block" title="Ewe">&#128017;</div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -89,9 +25,6 @@
 </div>
 <!-- custom code start -->
 <style>
-    #emojiDialog{
-        max-height: 450px !important;
-    }
 
     .e-icons.block-view:before{
         content: open-quote;
@@ -110,15 +43,8 @@
     .e-icons.h4-view:before{
         content: 'H4';
     }
-    .e-icons.emoji:before{
-        content: '🙂';
-    }
     .e-icons.e-text:before{
         content: 'T';
-    }
-
-    .format-table .e-icons.emoji {
-        padding: 15px 12px !important;
     }
 
     .format-table #icons.e-icons.e-image, .format-table #icons.e-icons.e-audio, .format-table #icons.e-icons.e-table, 
@@ -150,83 +76,6 @@
     #MentionInlineFormat .e-mention-chip{
         cursor: pointer;
     }
-    .e-rte-emoticon-tbar-section #special_char,
-    .e-rte-emoticon-tbar-section .char_block {
-        display: inline-block;
-    }
-
-    #rteEmoticons-smiley {
-        padding: 15px 0 15px 15px;
-    }
-
-    .e-bigger #emojiDialog .e-footer-content {
-        padding: 5px;
-    }
-    .e-bigger #rteEmoticons-smiley {
-        padding: 15px 0 15px 15px;
-        display: flex;
-        flex-wrap: wrap;
-        overflow: auto;
-        height: 246px;
-    }
-
-    .material .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #e3165b;
-        border-color: #e3165b;
-    }
-
-    .material-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #56a4fd;
-        border-color: #56a4fd;
-    }
-
-    .fabric .e-rte-emoticon-tbar-section .char_block.e-active,
-    .fabric-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #0078d6;
-        border-color: #0078d6;
-    }
-
-    .bootstrap4 .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #007bff;
-        border-color: #007bff;
-    }
-    
-    .bootstrap .e-rte-emoticon-tbar-section .char_block.e-active,
-    .bootstrap-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #317ab9;
-        border-color: #317ab9;
-    }
-    
-    .fluent .e-rte-emoticon-tbar-section .char_block.e-active,
-    .fluent-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #0078DE;
-        border-color: #0078DE;
-    }
-    .material3 .e-rte-emoticon-tbar-section .char_block.e-active,
-    .material3-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #7D69B1;
-      	border-color: #7D69B1;
-    }
-    .highcontrast .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #ffd939;
-        border-color: #ffd939;
-    }
-
-    .tailwind .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #3730a3;
-        border-color: #3730a3;
-    }
-
-    .tailwind-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #22d3ee;
-        border-color: #22d3ee;
-    }
-
-    .bootstrap5 .e-rte-emoticon-tbar-section .char_block.e-active,
-    .bootstrap5-dark .e-rte-emoticon-tbar-section .char_block.e-active {
-        outline: 1px solid #0D6EFD;
-        border-color: #0D6EFD;
-    }
 
     .fabric.e-bigger .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn .e-tbar-btn-text,
     .highcontrast.e-bigger .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn .e-tbar-btn-text {
@@ -241,56 +90,6 @@
     .fabric .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn .e-tbar-btn-text,
     .highcontrast .e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn.e-btn .e-tbar-btn-text {
         padding-right: 8px;
-    }
-
-    .e-rte-emoticon-tbar-section .char_block {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        margin: 0 5px 5px 0;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid #DDDDDD;
-        font-size: 20px;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    @media (min-width: 320px) and (max-width: 480px) {
-        .fabric.e-bigger #emojiDialog {
-            min-width: 281px;
-        }
-		
-		#rteEmoticons-smiley{
-            padding: 15px 0 15px 15px;
-            display: flex;
-            flex-wrap: wrap;
-            overflow: auto;
-            height: 246px;
-		}
-
-        .fabric #emojiDialog {
-            min-width: 241px;
-        }
-
-        .bootstrap.e-bigger #emojiDialog,
-        .bootstrap #emojiDialog {
-            min-width: 223px;
-        }
-
-        .highcontrast.e-bigger #emojiDialog {
-            min-width: 283px;
-        }
-        .highcontrast #emojiDialog {
-            min-width: 243px;
-        }
-        .material #emojiDialog {
-            min-width: 224px;
-        }
-        .material.e-bigger #emojiDialog {
-            min-width: 236px;
-        }     
-
     }
 
     .e-bigger #MentionInlineFormat {

@@ -37,7 +37,7 @@ this.renderChartTMA = function () {
             zoomSettings: {
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
-                mode: 'XY',
+                mode: 'X',
                 enablePan: true
             },
             title: 'AAPL Stock Price 2012-2017',

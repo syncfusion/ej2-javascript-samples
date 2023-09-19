@@ -49,7 +49,7 @@ this.renderChartSto =function () {
             zoomSettings: {
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
-                mode: 'XY',
+                mode: 'X',
                 enablePan: true
             },
             tooltip: {

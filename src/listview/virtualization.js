@@ -32,11 +32,17 @@ this.default = function () {
         dataSource[ds[1]] = data;
     });
 
-    var template = '<div class="e-list-wrapper e-list-avatar">' +
-        '<span class="e-avatar e-avatar-circle ${icon} ${$imgUrl ? \'hideUI\' : \'showUI\' }">' +
-        '${icon}</span> <img class="e-avatar e-avatar-circle ${$imgUrl ? \'showUI\' : \'hideUI\' }" ' +
-        'src="${$imgUrl ?  $imgUrl : \' \' }" />' +
-        '<span class="e-list-content">${name}</span></div>';
+    var template = function (data) {
+        var showIcon = data.imgUrl ? 'hideUI' : 'showUI';
+        var showImg = data.imgUrl ? 'showUI' : 'hideUI';
+        var imgUrl = data.imgUrl || '';
+        var result = '<div class="e-list-wrapper e-list-avatar">' +
+        '<span class="e-avatar e-avatar-circle ' + data.icon + ' ' + showIcon + '">' + data.icon + '</span>' +
+        '<img class="e-avatar e-avatar-circle ' + showImg + '" src="' + imgUrl + '" />' +
+        '<span class="e-list-content">' + data.name + '</span>' +
+        '</div>';
+        return result;
+    };
 
     listObj = new ej.lists.ListView({
 

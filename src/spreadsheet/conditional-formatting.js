@@ -2,6 +2,7 @@
  * Conditional Formatting sample
  */
 this.default = function () {
+    var currencyFormat = ej.spreadsheet.getFormatFromType('Currency');
     //Initialize Spreadsheet component
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
         sheets: [{
@@ -53,7 +54,9 @@ this.default = function () {
             spreadsheet.merge('A1:H1');
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A2:H2');
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle', fontSize: '13pt' }, 'A1:H1');
-            spreadsheet.numberFormat('$#,##0.00', 'F3:F18');
+            spreadsheet.numberFormat(currencyFormat, 'D3:D18');
+            spreadsheet.numberFormat(currencyFormat, 'E3:E18');
+            spreadsheet.numberFormat(currencyFormat, 'F3:F18');
             spreadsheet.conditionalFormat({ type: 'BlueDataBar', range: 'D3:D18' });
             spreadsheet.conditionalFormat({ type: 'GreenDataBar', range: 'E3:E18' });
             spreadsheet.conditionalFormat({ type: 'ThreeStars', range: 'H3:H18' });

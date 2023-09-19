@@ -15,10 +15,6 @@ this.default = function () {
         {
             title: 'Delete',
             iconCss: 'speeddial-icons speeddial-icon-delete'
-        },
-        {
-            title: 'Save',
-            iconCss: 'speeddial-icons speeddial-icon-save'
         }
     ];
 

@@ -1,6 +1,3 @@
-/**
- * Sample for data sample
- */
 this.default = function () {
     var orderData = [
         {
@@ -22,21 +19,14 @@ this.default = function () {
     ];
     function dataSampleGauge1() {
         var dataSampleGauge1 = new ej.circulargauge.CircularGauge({
-            // custom code start
-            load: function (args) {
-                var gauge1Theme = location.hash.split('/')[1];
-                gauge1Theme = gauge1Theme ? gauge1Theme : 'Material';
-                args.gauge.theme = (gauge1Theme.charAt(0).toUpperCase() +
-                gauge1Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            },
-            // custom code end
+            background:'transparent',
             axes: [{
                 startAngle: 230,
                 endAngle: 130,
                 majorTicks: { width: 0 },
                 lineStyle: { width: 0 },
                 minorTicks: { width: 0 },
-                labelStyle: { font: { size: '0', fontFamily:'Segoe UI' } },
+                labelStyle: { font: { size: '0', fontFamily: 'inherit' } },
                 annotations: [{
                     content: '#germany',
                     angle: 180, zIndex: 1,
@@ -69,20 +59,21 @@ this.default = function () {
                         color: '#777777'
                     }
                 }]
-            }]
+            }],
+            load: function (args) {
+                // custom code start
+                var selectTheme = location.hash.split('/')[1];
+                selectTheme = selectTheme ? selectTheme : 'Material';
+                args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                    selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                // custom code end
+            }
         });
         return dataSampleGauge1;
     }
     function dataSampleGauge2() {
         var dataSampleGauge2 = new ej.circulargauge.CircularGauge({
-            // custom code start
-            load: function (args) {
-                var gauge2Theme = location.hash.split('/')[1];
-                gauge2Theme = gauge2Theme ? gauge2Theme : 'Material';
-                args.gauge.theme = (gauge2Theme.charAt(0).toUpperCase() +
-                gauge2Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            },
-            // custom code end
+            background:'transparent',
             axes: [{
                 annotations: [{
                     content: '#usa',
@@ -122,20 +113,21 @@ this.default = function () {
                         color: '#777777'
                     }
                 }]
-            }]
+            }],
+            load: function (args) {
+                // custom code start
+                var selectTheme = location.hash.split('/')[1];
+                selectTheme = selectTheme ? selectTheme : 'Material';
+                args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                    selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                // custom code end
+            }
         });
         return dataSampleGauge2;
     }
     function dataSampleGauge3() {
         var dataSampleGauge3 = new ej.circulargauge.CircularGauge({
-            // custom code start
-            load: function (args) {
-                var gauge3Theme = location.hash.split('/')[1];
-                gauge3Theme = gauge3Theme ? gauge3Theme : 'Material';
-                args.gauge.theme = (gauge3Theme.charAt(0).toUpperCase() +
-                gauge3Theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            },
-            // custom code end
+            background:'transparent',
             axes: [{
                 annotations: [{
                     content: '#uk',
@@ -175,7 +167,15 @@ this.default = function () {
                         color: '#777777'
                     }
                 }]
-            }]
+            }],
+            load: function (args) {
+                // custom code start
+                var selectTheme = location.hash.split('/')[1];
+                selectTheme = selectTheme ? selectTheme : 'Material';
+                args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                    selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                // custom code end
+            }
         });
         return dataSampleGauge3;
     }

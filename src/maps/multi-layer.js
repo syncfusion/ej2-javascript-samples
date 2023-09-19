@@ -35,7 +35,10 @@ this.default = function () {
                 dataLabelSettings: {
                     visible: true,
                     labelPath: 'iso_3166_2',
-                    smartLabelMode: 'Hide'
+                    smartLabelMode: 'Hide',
+                    textStyle: {
+                        color: 'black',
+                    }
                 }
             },
             {
@@ -78,7 +81,7 @@ this.default = function () {
                                 longitude: -98.96484375
                             }
                         ],
-                        template: '<div>TX</div>'
+                        template: '<div style="color: black;">TX</div>'
                     }
                 ]
             },
@@ -122,7 +125,7 @@ this.default = function () {
                                 longitude: -119.35546875000001
                             }
                         ],
-                        template: '<div>CA</div>'
+                        template: '<div style="color: black;">CA</div>'
                     }
                 ]
             }

@@ -41,15 +41,14 @@ this.default = function () {
         },
         //Configures data source
         dataSourceSettings: {
-            id: 'EmployeeID', parentId: 'ReportsTo',
+            id: 'Id', parentId: 'ParentId',
             dataSource: new ej.data.DataManager(
-                { url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/', crossDomain: true },
-                new ej.data.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName').take(9)
+                { url: 'https://ej2services.syncfusion.com/js/development/api/RemoteData', crossDomain: true }
             ),
             //binds the external data with node
             doBinding: function (nodeModel, data, diagram) {
                 nodeModel.annotations = [{
-                    content: data.FirstName,
+                    content: data.Label,
                     style: { color: 'white' }
                 }];
             }

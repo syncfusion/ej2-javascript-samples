@@ -20,6 +20,7 @@ var isExternalNavigation = true;
 var defaultTree = false;
 var intialLoadCompleted = false;
 var resizeManualTrigger = false;
+var reloadPageForRedirection = false;
 var leftToggle = ej.base.select('#sb-toggle-left');
 var sbRightPane = ej.base.select('.sb-right-pane');
 var sbContentOverlay = ej.base.select('.sb-content-overlay');
@@ -314,6 +315,20 @@ function changeTab(args) {
         sourceTab.refresh();
         rendercopycode();
         dynamicTabCreation(sourceTab);
+    }
+    if (args.selectedItem && args.selectedItem.innerText === 'DEMO') {
+        let demoSection = document.getElementsByClassName('sb-demo-section')[0];
+        if (demoSection) {
+            let elementList = demoSection.getElementsByClassName('e-control e-lib');
+            for (let i = 0; i < elementList.length; i++) {
+                let instance = elementList[i].ej2_instances;
+                if (instance && instance[0] && typeof instance[0].refresh === 'function') {
+                    instance[0].refresh();
+                }
+                if (instance && instance[0] && instance[0].getModuleName() !== 'DashboardLayout')
+                    break;
+            }
+        }
     }
 }
 
@@ -828,6 +843,7 @@ function loadTheme(theme) {
         }
         processDeviceDependables();
         addRoutes(samplesList);
+        routeDefault();
         if (isTablet && isLeftPaneOpen()) {
             toggleLeftPane();
         }
@@ -836,6 +852,9 @@ function loadTheme(theme) {
         hasher.initialized.add(parseHash);
         hasher.changed.add(parseHash);
         hasher.init();
+        if (reloadPageForRedirection == true) {
+            window.location.reload();
+        }
     });
 }
 
@@ -1124,6 +1143,7 @@ function routeDefault() {
         if (samplePath.indexOf(hash.slice(1).join('/')) === -1) {
             location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/gridoverview.html');
             isInitRedirected = true;
+            reloadPageForRedirection = true;
         }
     });
 }
@@ -1322,6 +1342,11 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     var p2 = loadScriptfile('src/' + control + '/' + sample + '.js');
     var ajaxJs = new ej.base.Ajax('src/' + control + '/' + sample + '.js', 'GET', true);
     sampleNameElement.innerHTML = node.name;
+    if (node.name === 'PDF Viewer') {
+        document.querySelector('.sb-desktop-setting').style.display = 'none';
+    } else {
+        document.querySelector('.sb-desktop-setting').style.display = '';
+    }
     contentTab.selectedItem = 0;
     breadCrumbComponent.innerHTML = node.name;
     if (node.name !== subNode.category) {
@@ -1601,7 +1626,7 @@ function loadJSON() {
     }
 
     if (isTablet || ej.base.Browser.isDevice) {
-        ej.base.select('.sb-responsive-section').classList.add('sb-hide');
+        ej.base.select('.sb-responsive-section').classList.add('sb-active');
     }
 
     overlay();

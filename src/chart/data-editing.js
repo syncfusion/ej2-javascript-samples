@@ -73,10 +73,6 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Electricity - Production',
-        //Initializing Tooltip
-        tooltip: {
-            enable: true
-        },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         // custom code start
         load: function (args) {

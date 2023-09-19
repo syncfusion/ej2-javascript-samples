@@ -1,10 +1,9 @@
 ﻿this.default = function() {
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer({
-        documentPath: "RTLText.pdf",
+        documentPath: "https://cdn.syncfusion.com/content/pdf/rtl-text.pdf",
         locale: 'ar-AE',
         enableRtl: true,
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
         annotationSettings:{author :'مقبول'}
     });
 
@@ -242,5 +241,19 @@
             }
         }
     });
+    var switchObj = new ejs.buttons.Switch({ checked: true });
+    switchObj.appendTo('#checked');
+
+    switchObj.change = function (args) {
+        if (args.checked) {
+            viewer.serviceUrl = '';
+        }
+        else {
+            viewer.serviceUrl = 'https://ej2services.syncfusion.com/js/development/api/pdfviewer';
+        }
+        viewer.dataBind();
+        viewer.load(viewer.documentPath, null);
+    };
     viewer.appendTo('#pdfViewer');
+    
 };

@@ -41,7 +41,7 @@
             }
         },
         {
-            "url":"form-designer", "name": "Form Designer", "type": "update" ,"description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer", "api": {
+            "url":"form-designer", "name": "Form Designer" ,"description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -58,6 +58,14 @@
         },
         {
             "url":"hand-written", "name": "Handwritten Signature", "description":"This sample demonstrates the Handwritten signature and initial support of the PDF Viewer. The signature or initial support reduces the paperwork of reviewing the contents and it is verified digitally.", "category": "PDF Viewer", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+        {
+            "url":"invisible-signature", "name": "Invisible Signature", "type": "new" ,"description":"This sample demonstrates how to digitally sign a PDF document from code behind using Syncfusion's PDF Viewer and PDF Library", "category": "PDF Viewer", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

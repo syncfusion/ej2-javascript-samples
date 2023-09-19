@@ -1,0 +1,77 @@
+<div class="control-section">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12"
+            style="display: flex;justify-content: center; align-items: center;">
+            <div style="margin: auto;padding: 10px;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id='horizontal'
+                                    style="padding:6px;cursor:pointer;width:86px;color:black;font-size:15px;border:1px solid #0074E3;background-color:white;text-align:center">
+                                    Horizontal</div>
+                            </td>
+                            <td>
+                                <div id='vertical'
+                                    style="padding:6px;cursor:pointer;width:86px;color:white;font-size:15px;border:1px solid #0074E3;background-color: #0074E3;text-align:center">
+                                    Vertical</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <pre style="background-color: inherit; border:hidden"></pre>
+    <div id="containerBox"> </div>
+    <div id='container1' class="col-xs-5 col-sm-5 col-lg-3 col-md-3"
+        style="display: flex; justify-content: center; align-items: center;">
+        <div id='gauge1' style="height: 350px;width:150px;"></div>
+    </div>
+
+    <div id='container2' class="col-xs-5 col-sm-5 col-lg-3 col-md-3"
+        style="display: flex;justify-content: center; align-items: center;">
+        <div id='gauge2' style="height: 350px;width:150px;">
+        </div>
+    </div>
+
+    <div id='container3' class="col-xs-5 col-sm-5 col-lg-3 col-md-3"
+        style="display: flex;justify-content: center; align-items: center;">
+        <div id='gauge3' style="height: 350px;width:150px;"></div>
+    </div>
+
+    <div id='container4' class="col-xs-5 col-sm-5 col-lg-3 col-md-3"
+        style="display: flex;justify-content: center; align-items: center;">
+        <div id='gauge4' style="height: 350px;width:150px;"></div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates the various options for customizing the axis labels, such as styling, formatting,
+        replacing text, and setting offset in the linear gauge.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure axis labels in the linear gauge. The properties in the
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/linear-gauge/labelModel/">labelStyle</a>
+        can be
+        used to style, format, and offset the label, while the label's text can be changed
+        dynamically via the <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/linear-gauge/#axislabelrender">
+            axisLabelRender</a> event.
+    </p>
+    <p>
+        More information on the axis labels can be found in this
+        <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/linear-gauge/axis/#labels-customization">documentation
+            section</a>.
+    </p>
+</div>
+<!-- custom code start -->
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+</style>
+<!-- custom code end -->

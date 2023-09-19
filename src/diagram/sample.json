@@ -3,6 +3,7 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
+    "type":"update",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
         {
@@ -33,7 +34,8 @@
             "url": "connector",
             "name": "Connectors",
             "description": "This sample visualizes the data flow in a marketing process using predefined diagram shapes and connectors.",
-            "category": "Getting Started"
+            "category": "Getting Started",
+            "type":"update"
         },
         {
             "url": "line-routing",

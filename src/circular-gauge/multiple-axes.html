@@ -1,0 +1,92 @@
+<div>
+    <div class="col-md-8 control-section">
+        <div class="content-wrapper">
+            <div id="axis-container"></div>
+        </div>
+    </div>
+    <!-- Property panel -->
+    <br>
+    <div class="col-md-4 property-section">
+        <table id="property" title="Properties" style="width: 100%">
+            <tr>
+                <td>
+                    <div> Axis </div>
+                </td>
+                <td>
+                    <div>
+                        <select id="axisIndex" class="form-control" style="width:90%">
+                            <option value="0" selected=true>Axis 1</option>
+                            <option value="1">Axis 2</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div> Direction </div>
+                </td>
+                <td>
+                    <div>
+                        <select id="axisDirection" class="form-control" style="width:90%">
+                            <option value="ClockWise" selected=true>ClockWise</option>
+                            <option value="AntiClockWise">AntiClockWise</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="margin-top: 10px">Start Angle</div>
+                </td>
+                <td>
+                    <div style="margin-top: 10px">
+                        <input type="range" id="startAngle" value="220" min="0" max="360" style="width: 70%" />
+                    </div>
+                </td>
+                <td style="width: 10%;padding-top: 20px;text-align: center;">
+                    <span id='start' style="margin-left: -25px;">220</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="margin-top: 20px">End Angle</div>
+                </td>
+                <td>
+                    <div style="margin-top: 20px">
+                        <input type="range" id="endAngle" value="140" min="0" max="360" style="width: 70%" />
+                    </div>
+                </td>
+                <td style="width: 10%;padding-top: 30px;text-align: center;">
+                    <span id='end' style="margin-left: -25px;">140</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample illustrates the multiple axes in the circular gauge as well
+        as the options for changing the direction, start, and end angle of an axis.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure multiple axes in the circular gauge. To render multiple
+        axes in the circular gauge, use the axes collection, and each axis can be customized with pointers and ticks.
+    </p>
+    <p>
+        More information on the multiple axes can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-axes/#multiple-axes">documentation
+            section</a>.
+    </p>
+</div>
+
+<style>
+    .property-panel-header {
+        margin-left: 10px
+    }
+
+    tr {
+        height: 50px;
+    }
+</style>

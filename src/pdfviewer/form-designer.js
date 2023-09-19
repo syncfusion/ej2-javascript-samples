@@ -2,13 +2,27 @@ this.default = function () {
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer ({
-    documentPath: "FormDesigner.pdf",
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
-    });
-    
+    documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
+});
+      
+    var switchObj = new ejs.buttons.Switch({ checked: true });
+    switchObj.appendTo('#checked');
+
+    switchObj.change = function (args) {
+        if (args.checked) {
+            viewer.serviceUrl = '';
+        }
+        else {
+            viewer.serviceUrl = 'https://ej2services.syncfusion.com/js/development/api/pdfviewer';
+        }
+        viewer.dataBind();
+        viewer.load(viewer.documentPath, null);
+    };
+
     viewer.appendTo('#pdfViewer');
+
     viewer.documentLoad = function (args) {
-        if(args.documentName === 'FormDesigner.pdf')
+        if(args.documentName === 'form-designer.pdf')
         {
             viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 } });
             viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 } });

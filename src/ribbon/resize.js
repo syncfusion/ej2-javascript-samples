@@ -18,7 +18,7 @@ this.default = function () {
                     splitButtonSettings: {
                         iconCss: 'e-icons e-paste',
                         content: 'Paste',
-                        items: [{ text: 'Keep Source Format' }, { text: 'Merge format' }, { text: 'Keep text only' }],
+                        items: [{ text: 'Keep Source Format' }, { text: 'Merge Format' }, { text: 'Keep Text Only' }],
                         click: function () { updateContent("Paste"); },
                         select: function (args) { updateContent("Paste -> " + args.item.text); }
                     }
@@ -65,7 +65,11 @@ this.default = function () {
                         dataSource: fontStyle,
                         index: 2,
                         allowFiltering: true,
-                        change: function (args) { updateContent("Font Style -> " + args.itemData.text); },
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Style -> " + args.itemData.text);
+                            }
+                        },
                         width: '150px',
                     }
                 }, {
@@ -76,64 +80,106 @@ this.default = function () {
                         width: '65px',
                         popupWidth: '85px',
                         allowFiltering: true,
-                        change: function (args) { updateContent("Font Size -> " + args.itemData.text); }
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Size -> " + args.itemData.text);
+                            }
+                        }
                     }
                 }]
             }, {
                 items: [{
+                    type: 'GroupButton',
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    groupButtonSettings: {
+                        items: [
+                        {
+                            content: 'Bold',
+                            iconCss: 'e-icons e-bold',
+                            click: function () { updateContent("Bold"); }
+                        }, {
+                            content: 'Italic',
+                            iconCss: 'e-icons e-italic',
+                            click: function () { updateContent("Italic"); }
+                        }, {
+                            content: 'Underline',
+                            iconCss: 'e-icons e-underline',
+                            click: function () { updateContent("Underline"); }
+                        }, {
+                            content: 'Strikethrough',
+                            iconCss: 'e-icons e-strikethrough',
+                            click: function () { updateContent("Strikethrough"); }
+                        }, {
+                            content: 'Change Case',
+                            iconCss: 'e-icons e-change-case',
+                            click: function () { updateContent("Change Case"); }
+                        }],
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Multiple
+                    }
+                }, {
                     type: 'ColorPicker',
                     displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     colorPickerSettings: {
-                        value: '#123456',
-                        change: function (args) { updateContent(args.currentValue.hex + " color"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-bold',
-                        isToggle: true,
-                        content: 'Bold',
-                        clicked: function () { updateContent("Bold"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-italic',
-                        isToggle: true,
-                        content: 'Italic',
-                        clicked: function () { updateContent("Italic"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-underline',
-                        isToggle: true,
-                        content: 'Underline',
-                        clicked: function () { updateContent("Underline"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-strikethrough',
-                        isToggle: true,
-                        content: 'Strikethrough',
-                        clicked: function () { updateContent("Strikethrough"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-change-case',
-                        isToggle: true,
-                        content: 'Change Case',
-                        clicked: function () { updateContent("Change Case"); }
-                    }
+                        change: function (args) { updateContent(args.currentValue.hex + " color"); },
+                        value: '#123456'
+                    },
                 }]
+            }]
+        }, {
+            header: "paragraph",
+            id: 'paragraph',
+            orientation: 'Row',
+            groupIconCss: 'e-icons e-align-center',
+            collections: [
+                {
+                items: [{
+                    type: "Button",
+                    buttonSettings: {
+                        iconCss: 'e-icons e-decrease-indent',
+                        clicked: function () { updateContent("Cut"); }
+                    },
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small
+                }, {
+                    type: "Button",
+                    buttonSettings: {
+                        iconCss: 'e-icons e-increase-indent',
+                        clicked: function () { updateContent("Increase Indent"); }
+                    },
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small
+                }, {
+                    type: "Button",
+                    buttonSettings: {
+                        iconCss: 'e-icons e-paragraph',
+                        clicked: function () { updateContent("Paragraph"); }
+                    },
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small
+                }]
+            }, {
+                items: [
+                    {
+                    type: 'GroupButton',
+                    groupButtonSettings: {
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Single,
+                        items: [{
+                            iconCss: 'e-icons e-align-left',
+                            click: function ()  { updateContent("Align Left"); },
+                            selected: true,
+                        }, {
+                            click: function ()  { updateContent("Align Center"); },
+                            iconCss: 'e-icons e-align-center'
+                        }, {
+                            iconCss: 'e-icons e-align-right',
+                            click: function ()  { updateContent("Align Right"); }
+                        }, {
+                            click: function ()  { updateContent("Justify"); },
+                            iconCss: 'e-icons e-justify'
+                        }
+                    ]
+                    },
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small
+                }
+            ]
             }]
         }, {
             header: "Editing",
@@ -468,6 +514,7 @@ this.default = function () {
     slider.appendTo('#ribbonSlider');
 
     var ribbon = new ej.ribbon.Ribbon({
+        enablePersistence: true,
         tabs: tabs,
         fileMenu: files,
         launcherIconClick: function (args) {

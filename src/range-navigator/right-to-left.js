@@ -27,7 +27,7 @@ this.renderRTLChart = function (datasrc) {
             border: { width: 2, color: borderColor[themes.indexOf(theme)] }
         }],
         tooltip: { enable: true, shared: true, header: '<b>England</b>', format: '${point.x} : <b>${point.y}</b>' },
-        height: '350',
+        height: '350', enableRtl: true,
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         theme: theme, legendSettings: { visible: false }
     });

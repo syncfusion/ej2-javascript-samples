@@ -52,6 +52,10 @@ this.default = function () {
                 defaultRTE.toolbarSettings.type = ej.richtexteditor.ToolbarType.MultiRow;
                 defaultRTE.toolbarSettings.enableFloating = float.checked;
                 break;
+            case '3':
+                defaultRTE.toolbarSettings.type = ej.richtexteditor.ToolbarType.Scrollable;
+                defaultRTE.toolbarSettings.enableFloating = float.checked;
+                break;
         }
         defaultRTE.dataBind();
     }

@@ -3,15 +3,15 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-4">
-                    <div id="container1" style="height:250px;">
+                    <div id="container1" style="height:230px;">
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div id="container2" style="height:250px;">
+                    <div id="container2" style="height:230px;">
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div id="container3" style="height:250px;">
+                    <div id="container3" style="height:230px;">
                     </div>
                 </div>
             </div>
@@ -61,22 +61,24 @@
     <div id='templateWrap'>
         <img src="src/circular-gauge/images/negative.png" alt="Negative value for UK"/>
         <div class='des'>
-            <div style="color:#424242;font-size:20px;font-family:Roboto">${pointers[0].value}%</div>
+            <div style="color:#424242;font-size:20px;font-family:Roboto">-${pointers[0].value}%</div>
         </div>
     </div>
 </script>
 <div id="action-description">
     <p>
-        This sample demonstrates the live data sample in circular gauge.
+        This sample shows live stock price data displayed in multiple circular gauges.
     </p>
 </div>
 <div id="description">
     <p>
-        Pointer values in the gauge can be updated dynamically by using <code>setPointerValue</code> method.
-        In this example, a stock price changes over the countries, are showed by using a gauge.
+        The pointer value in the circular gauge can be dynamically updated using the <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/#setpointervalue">setPointerValue</a>
+        method. In this example, the stock price changes across countries are displayed in multiple circular gauges.
     </p>
     <p>
-        More information on the gauge and its methods can be found in can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/documentation"> documentation section</a>.
+        More information on the circular gauge can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/es5-getting-started"> documentation
+            section</a>.
     </p>
 </div>

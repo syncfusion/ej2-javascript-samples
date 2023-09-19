@@ -3,6 +3,7 @@
     "directory": "file-manager",
     "category": "Navigation",
     "ftName": "file-manager",
+    "type": "update",
     "samples": [
         {
             "url": "overview",
@@ -36,6 +37,7 @@
             "url": "directory-upload",
             "name": "Directory upload",
             "category": "File Manager",
+            "type": "update",
             "api": { "FileManager": ["ajaxSettings", "view"] },
             "description": "This example demonstrates the how to upload the folder (directory) in a JavaScript(ES5) File Manager."
         },

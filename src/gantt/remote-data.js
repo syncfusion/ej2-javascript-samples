@@ -1,7 +1,7 @@
 this.default = function () {
     var hostUrl = 'https://services.syncfusion.com/js/production/api/GanttData';
     var data = new ej.data.DataManager({
-        url: hostUrl + 'api/GanttData',
+        url: hostUrl,
         adaptor: new ej.data.WebApiAdaptor(),
         crossDomain: true
     });

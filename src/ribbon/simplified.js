@@ -18,7 +18,7 @@ this.default = function () {
                     splitButtonSettings: {
                         content: 'Paste',
                         iconCss: 'e-icons e-paste',
-                        items: [{ text: 'Keep Source Format' }, { text: 'Merge format' }, { text: 'Keep text only' }],
+                        items: [{ text: 'Keep Source Format' }, { text: 'Merge Format' }, { text: 'Keep Text Only' }],
                         select: function (args) { updateContent("Paste -> " + args.item.text); },
                         click: function () { updateContent("Paste"); }
                     }
@@ -62,7 +62,11 @@ this.default = function () {
                         allowFiltering: true,
                         dataSource: fontStyle,
                         index: 2,
-                        change: function (args) { updateContent("Font Style -> " + args.itemData.text); }
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Style -> " + args.itemData.text);
+                            }
+                        }
                     }
                 }, {
                     type: 'ComboBox',
@@ -72,62 +76,102 @@ this.default = function () {
                         index: 4,
                         width: '65px',
                         popupWidth: '85px',
-                        change: function (args) { updateContent("Font Size -> " + args.itemData.text); }
+                        change: function (args) {
+                            if (args.itemData) {
+                                updateContent("Font Size -> " + args.itemData.text);
+                            }
+                        }
                     }
                 }]
             }, {
                 items: [{
+                    type: 'GroupButton',
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    groupButtonSettings: {
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Multiple,
+                        items: [
+                        {
+                            iconCss: 'e-icons e-bold',
+                            content: 'Bold',
+                            click: function () { updateContent("Bold"); }
+                        }, {
+                            iconCss: 'e-icons e-italic',
+                            content: 'Italic',
+                            click: function () { updateContent("Italic"); }
+                        }, {
+                            iconCss: 'e-icons e-underline',
+                            content: 'Underline',
+                            click: function () { updateContent("Underline"); }
+                        }, {
+                            iconCss: 'e-icons e-strikethrough',
+                            content: 'Strikethrough',
+                            click: function () { updateContent("Strikethrough"); }
+                        }, {
+                            iconCss: 'e-icons e-change-case',
+                            content: 'Change Case',
+                            click: function () { updateContent("Change Case"); }
+                        }]
+                    }
+                }, {
                     type: 'ColorPicker',
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     colorPickerSettings: {
-                        value: '#123456',
-                        change: function (args) { updateContent(args.currentValue.hex + " color"); }
+                        change: function (args) { updateContent(args.currentValue.hex + " color"); },
+                        value: '#123456'
                     },
                     displayOptions: ej.ribbon.DisplayMode.Simplified | ej.ribbon.DisplayMode.Classic,
-                }, {
-                    type: 'Button',
+                }]
+            }]
+        }, {
+            id: 'paragraph',
+            orientation: 'Row',
+            header: "paragraph",
+            groupIconCss: 'e-icons e-align-center',
+            collections: [{
+                items: [{
+                    type: "Button",
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
-                        iconCss: 'e-icons e-bold',
-                        content: 'Bold',
-                        isToggle: true,
-                        clicked: function () { updateContent("Bold"); }
+                        iconCss: 'e-icons e-decrease-indent',
+                        clicked: function () { updateContent("Cut"); }
                     }
                 }, {
-                    type: 'Button',
+                    type: "Button",
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
-                        iconCss: 'e-icons e-italic',
-                        content: 'Italic',
-                        isToggle: true,
-                        clicked: function () { updateContent("Italic"); }
+                        iconCss: 'e-icons e-increase-indent',
+                        clicked: function () { updateContent("Increase Indent"); }
                     }
                 }, {
-                    type: 'Button',
+                    type: "Button",
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
-                        iconCss: 'e-icons e-underline',
-                        content: 'Underline',
-                        isToggle: true,
-                        clicked: function () { updateContent("Underline"); }
+                        iconCss: 'e-icons e-paragraph',
+                        clicked: function () { updateContent("Paragraph"); }
                     }
-                }, {
-                    type: 'Button',
+                }]
+            }, {
+                items: [
+                    {
+                    type: 'GroupButton',
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-strikethrough',
-                        content: 'Strikethrough',
-                        isToggle: true,
-                        clicked: function () { updateContent("Strikethrough"); }
-                    }
-                }, {
-                    type: 'Button',
-                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
-                    buttonSettings: {
-                        iconCss: 'e-icons e-change-case',
-                        content: 'Change Case',
-                        isToggle: true,
-                        clicked: function () { updateContent("Change Case"); }
+                    groupButtonSettings: {
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Single,
+                        items: [{
+                            selected: true,
+                            iconCss: 'e-icons e-align-left',
+                            click: function ()  { updateContent("Align Left"); }
+                        }, {
+                            iconCss: 'e-icons e-align-center',
+                            click: function ()  { updateContent("Align Center"); }
+                        }, {
+                            iconCss: 'e-icons e-align-right',
+                            click: function ()  { updateContent("Align Right"); }
+                        }, {
+                            iconCss: 'e-icons e-justify',
+                            click: function ()  { updateContent("Justify"); }
+                        }
+                    ]
                     }
                 }]
             }]

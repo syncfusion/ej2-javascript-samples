@@ -30,12 +30,12 @@
         <tr>
             <td style="width: 70%">
                 <div>Enable Column Selection</div>
-                </td>
-                <td style="width: 30%;padding:10px 10px 10px 0px">
-                    <div>
-                        <input type="checkbox" tabindex="1" id='columnSelection'/>
-                    </div>
-                    </td>
+            </td>
+            <td style="width: 30%;padding:10px 10px 10px 0px">
+                <div>
+                    <input type="checkbox" tabindex="1" id='columnSelection' />
+                </div>
+            </td>
         </tr>
     </table>
 </div>
@@ -47,57 +47,59 @@
 </style>
 <!-- custom code end -->
 <div id="action-description">
-    <p>This sample demonstrates the selection feature in Grid, which allows you to select row or cell or column through simple mouse down or keyboard interaction.
-       You can change type and mode from the properties panel. </p>
+    <p>This sample demonstrates the selection feature in Grid, which allows you to select row or cell or column through
+        simple mouse down or keyboard interaction.
+        You can change type and mode from the properties panel. </p>
 </div>
 
 <div id="description">
     <p>
-        Selection provides an interactive support to highlight the row or cell or column that you select. 
+        Selection provides an interactive support to highlight the row or cell or column that you select.
         Selection can be done through a simple
         Mouse down or Keyboard interaction. To enable selection, set <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-grid.html#allowselection">
-        allowSelection
-        </a></code> as true.
+                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#allowselection">
+                allowSelection
+            </a></code> as true.
     </p>
-    <p>Grid supports two types of selection which can be set using 
+    <p>Grid supports two types of selection which can be set using
         <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-selectionSettingsModel.html#type">
-        selectionSettings->type
-        </a></code> property. They are,</p>
+                href="http://ej2.syncfusion.com/documentation/grid/api-selectionSettingsModel.html#type">
+                selectionSettings->type
+            </a></code> property. They are,
+    </p>
     <ul>
         <li><code>Single</code> - Enabled by default. Allows the user to select single row/cell at a time.</li>
         <li><code>Multiple</code> - Allows the user to select more than one row/cell/column at a time.</li>
     </ul>
-    <p>Also, supports three modes of selection which can be set using 
+    <p>Also, supports three modes of selection which can be set using
         <code><a target="_blank" class="code"
-        href="http://ej2.syncfusion.com/documentation/grid/api-selectionSettingsModel.html#mode">
-        selectionSettings->mode
-        </a></code> property. They are,
+                href="http://ej2.syncfusion.com/documentation/grid/api-selectionSettingsModel.html#mode">
+                selectionSettings->mode
+            </a></code> property. They are,
     </p>
     <ul>
         <li><code>Row</code> - Enabled by default. Enables the row selection in Grid.</li>
         <li><code>Cell</code> - Enables the cell selection in Grid.</li>
-        <li><code>Both</code> - Enables both the row and cell selection in Grid. 
-        Clicking any cell will select the both row and cell simultaneously.
+        <li><code>Both</code> - Enables both the row and cell selection in Grid.
+            Clicking any cell will select the both row and cell simultaneously.
         </li>
     </ul>
     <p>To perform the column selection, enable the <code><a target="_blank" class="code"
-        href="https://ej2.syncfusion.com/documentation/api/grid/selectionSettings/#allowcolumnselection">
-        selectionSettings->allowColumnSelection
-        </a></code> property.</p>
-    <p>To perform the multi-selection, hold <strong>CTRL</strong> key and click the desired rows/cells/columns. 
-    To select range of rows/cells, hold <strong>SHIFT</strong> key and click the rows/cells/columns.</p>
-    <p>While using the Grid in a touch device environment, there is an option for multi-selection 
-        through single tap on the row and it will show a popup with the multi-selection symbol. 
+                href="https://ej2.syncfusion.com/documentation/api/grid/selectionSettings/#allowcolumnselection">
+                selectionSettings->allowColumnSelection
+            </a></code> property.</p>
+    <p>To perform the multi-selection, hold <strong>CTRL</strong> key and click the desired rows/cells/columns.
+        To select range of rows/cells, hold <strong>SHIFT</strong> key and click the rows/cells/columns.</p>
+    <p>While using the Grid in a touch device environment, there is an option for multi-selection
+        through single tap on the row and it will show a popup with the multi-selection symbol.
         Tap the icon to enable multi-selection in a single tap.
     </p>
     <p>In this demo, select the selection type and selection mode from the properties panel to do the selection.
     </p>
     <p>
         More information on the selection configuration can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/angular/documentation/grid/api-gridComponent.html
+        <a target="_blank" href="http://ej2.syncfusion.com/angular/documentation/api/grid/
 #selectionsettings">
-        documentation section</a>.
+            documentation section</a>.
     </p>
 </div>

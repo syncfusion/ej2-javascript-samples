@@ -9,12 +9,12 @@ this.default = function() {
 
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
-            items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
+            items: ['FormatPainter', 'Bold', 'Italic', 'Underline', 'StrikeThrough',
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
                 'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', 'EmojiPicker', '|',
                 'Formats', 'Alignments', 'NumberFormatList', 'BulletFormatList',
                 'Outdent', 'Indent', '|',
-                'CreateTable', 'CreateLink', 'Image', 'FileManager', '|', 'ClearFormat', 'Print',
+                'CreateTable', 'CreateLink', 'Image', 'Audio', 'Video', 'FileManager', '|', 'ClearFormat', 'Print',
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo'
             ]
         },

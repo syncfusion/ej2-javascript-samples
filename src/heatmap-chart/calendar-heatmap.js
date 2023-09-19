@@ -6,7 +6,7 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         height: '300px',
@@ -20,15 +20,24 @@ this.default = function () {
             labelFormat: 'MMM',
             increment: 7,
             labelIntersectAction: 'Rotate45',
+            textStyle: {
+                fontFamily: 'inherit'
+            }            
         },
         yAxis: {
             labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
             isInversed: true,
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         cellSettings: {
             showLabel: false,
             border: {
                 color: 'white'
+            },
+            textStyle: {
+                fontFamily: 'inherit'
             }
         },
         paletteSettings: {
@@ -48,7 +57,15 @@ this.default = function () {
             alignment: 'Near',
             showLabel: true,
             labelDisplayType: 'None',
-            enableSmartLegend: true
+            enableSmartLegend: true,
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         tooltipRender: function (args) {
             var intl = new ej.base.Internationalization();
@@ -62,10 +79,12 @@ this.default = function () {
             args.content = [(args.value === 0 ? 'No' : args.value) + ' ' + 'contributions' + '<br>' + value];
         },
         load: function (args) {
+            // custom code start
             var calendarHeatmapTheme = location.hash.split('/')[1];
             calendarHeatmapTheme = calendarHeatmapTheme ? calendarHeatmapTheme : 'Material';
             args.heatmap.theme = (calendarHeatmapTheme.charAt(0).toUpperCase() +
             calendarHeatmapTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         },
         dataSource: window.calendarDataSource
     });

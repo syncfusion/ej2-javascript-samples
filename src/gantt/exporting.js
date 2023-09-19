@@ -1,4 +1,5 @@
 this.default = function () {
+    var isFitToWidth;
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.editingData,
         dateFormat: 'MMM dd, y',
@@ -16,12 +17,6 @@ this.default = function () {
         columns: [
             { field: 'TaskID', width: 80 },
             { field: 'TaskName', width: 250 },
-            { field: 'StartDate' },
-            { field: 'EndDate' },
-            { field: 'Duration' },
-            { field: 'Predecessor' },
-            { field: 'resources' },
-            { field: 'Progress' }
         ],
         allowExcelExport: true,
         allowPdfExport: true,
@@ -33,7 +28,12 @@ this.default = function () {
             else if (args.item.id === 'GanttExport_csvexport') {
                 ganttChart.csvExport();
             } else if (args.item.id === 'GanttExport_pdfexport') {
-                ganttChart.pdfExport();
+                var exportProperties = {
+                    fitToWidthSettings: {       
+                        isFitToWidth: isFitToWidth,       
+                    }       
+                };
+                ganttChart.pdfExport(exportProperties);
             }
         },
         allowSelection: true,
@@ -56,15 +56,25 @@ this.default = function () {
             },
         },
         labelSettings: {
-            leftLabel: 'TaskName',
-            rightLabel: 'resources'
+            leftLabel: 'TaskName'
         },
         splitterSettings: {
-            columnIndex: 2
+            columnIndex: 2,
         },
         projectStartDate: new Date('03/25/2019'),
         projectEndDate: new Date('07/28/2019'),
     });
     
     ganttChart.appendTo('#GanttExport');
+
+    var taskbarDragDrop = new ej.buttons.Switch({ value: 'fitToWidth', change: dragDropChange});
+    taskbarDragDrop.appendTo('#checked');
+
+    function dragDropChange(args) {
+        if (args.checked) {
+            isFitToWidth = true;
+        } else {
+            isFitToWidth = false;
+        }
+    }
 };

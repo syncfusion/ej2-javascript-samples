@@ -1,19 +1,8 @@
-/**
- * Speedometer sample
- */
-
 function gauge6() {
     var gauge6 = new ej.circulargauge.CircularGauge({
-        // custom code start
-        load: function (args) {
-            var speedTheme = location.hash.split('/')[1];
-            speedTheme = speedTheme ? speedTheme : 'Material';
-            args.gauge.theme = (speedTheme.charAt(0).toUpperCase() +
-            speedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        },
-        // custom code end
         title: 'Speedometer',
-        titleStyle: { size: '18px' },
+        background:'transparent',
+        titleStyle: { size: '18px', fontFamily: 'inherit' },
         centerY: '75%',
         axes: [{
             radius: '120%',
@@ -22,25 +11,27 @@ function gauge6() {
             lineStyle: { width: 0 },
             majorTicks: { width: 0, },
             minorTicks: { width: 0 },
-            labelStyle: { useRangeColor: false, position: 'Outside', autoAngle: true,
-            font: { size: '13px', fontFamily: 'Segoe UI' } },
+            labelStyle: {
+                useRangeColor: false, position: 'Outside', autoAngle: true,
+                font: { size: '13px', fontFamily: 'inherit' }
+            },
             startAngle: 270, endAngle: 90,
             pointers: [{
-                    animation: { enable: true, duration: 900 },
-                    value: 40,
-                    radius: '80%',
+                animation: { enable: true, duration: 900 },
+                value: 40,
+                radius: '80%',
+                color: '#757575',
+                pointerWidth: 7,
+                cap: {
+                    radius: 8,
                     color: '#757575',
-                    pointerWidth: 7,
-                    cap: {
-                        radius: 8,
-                        color: '#757575',
-                        border: { width: 0 }
-                    },
-                    needleTail: {
-                        color: '#757575',
-                        length: '15%'
-                    },
-                }],
+                    border: { width: 0 }
+                },
+                needleTail: {
+                    color: '#757575',
+                    length: '15%'
+                },
+            }],
             annotations: [
                 {
                     content: '#pointerValue',
@@ -92,11 +83,19 @@ function gauge6() {
                 }
             ]
         }],
+        load: function (args) {
+            // custom code start
+            var selectTheme = location.hash.split('/')[1];
+            selectTheme = selectTheme ? selectTheme : 'Material';
+            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
+                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            // custom code end
+        }
     });
     return gauge6;
 }
 this.default = function () {
-    var circulargauge = new ej.circulargauge.CircularGauge(this.gauge6());
+    var circulargauge = this.gauge6();
     circulargauge.appendTo('#container');
 
     var gauge5Interval1 = setInterval(function () {
@@ -116,20 +115,16 @@ this.default = function () {
         }
     }, 1000);
     // Code for Property Panel
-    var showText;
-    var interval = new ej.buttons.CheckBox({
-        change: showText, checked: false
-    }, '#showText');
     var combineRange;
     var rangeSet = new ej.buttons.CheckBox({
         change: combineRange, checked: false
     }, '#combineRange');
-    var range;
+    var gapRanges;
     var showCheckBox = new ej.buttons.CheckBox({
-        change: range, checked: false
+        change: gapRanges, checked: false
     }, '#range');
     rangeSet.change = combineRange = function (e) {
-        if (e.checked === true) {
+        if (e.checked) {
             showCheckBox.disabled = true;
             circulargauge.axes[0].ranges[0].start = 0;
             circulargauge.axes[0].ranges[0].end = 120;
@@ -200,49 +195,7 @@ this.default = function () {
             circulargauge.refresh();
         }
     };
-    interval.change = range = function (e) {
-        if (e.checked === true) {
-            circulargauge.axes[0].majorTicks.interval = 10;
-            circulargauge.axisLabelRender = function (args) {
-                var text;
-                switch (parseInt(args.text)) {
-                    case 10:
-                        text = 'Ideal';
-                        break;
-                    case 30:
-                        text = 'Safe';
-                        break;
-                    case 50:
-                        text = 'Good';
-                        break;
-                    case 70:
-                        text = 'Ok';
-                        break;
-                    case 90:
-                        text = 'Risk';
-                        break;
-                    case 110:
-                        text = 'Danger';
-                        break;
-                    default:
-                        text = '';
-                        break;
-                }
-                args.text = text;
-            };
-            circulargauge.axes[0].pointers[0].animation.enable = false;
-            circulargauge.refresh();
-        }
-        else {
-            circulargauge.axes[0].majorTicks.interval = 20;
-            circulargauge.axes[0].minimum = 0;
-            circulargauge.axes[0].maximum = 120;
-            circulargauge.axisLabelRender = function (args) { };
-            circulargauge.axes[0].pointers[0].animation.enable = false;
-            circulargauge.refresh();
-        }
-    };
-    showCheckBox.change = range = function (e) {
+    showCheckBox.change = gapRanges = function (e) {
         if (e.checked) {
             circulargauge.axes[0].rangeGap = 5;
         }

@@ -13,11 +13,12 @@ this.default = function () {
     splitObj = new ej.layouts.Splitter({
       height: '450px',
       resizing: onResizing,
+      created: updateOrientation,
       width: '100%',
       paneSettings: [{
         resizable: true,
-        size: '50%', min: '400px',
-      }, {min: '60px'}],
+        size: '50%', min: '40%',
+      }, {min: '40%'}],
     });
     splitObj.appendTo('#horizontal');
     defaultRTE = new ej.richtexteditor.RichTextEditor({
@@ -87,7 +88,12 @@ this.default = function () {
         renderCodeMirror(srcViewEle, defaultRTE.value);
       }
     }
-
+    function updateOrientation() {
+      if (ej.base.Browser.isDevice) {
+          splitObj.orientation = 'Vertical';
+          document.body.querySelector('.heading').style.width = 'auto';
+      }
+    }
     function renderCodeMirror(mirrorView, content) {
       myCodeMirror = CodeMirror(mirrorView, {
         value: content,

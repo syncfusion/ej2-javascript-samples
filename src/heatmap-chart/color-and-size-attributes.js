@@ -1,6 +1,3 @@
-/**
- * Heatmap Inversed Axis sample
- */
 this.default = function () {
     var jsonCellBubbleData = [
         { Year: '2017', Months: 'Jan-Feb', Accidents: 4, Fatalities: 39 },
@@ -47,14 +44,20 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis: {
             labels: ['2017', '2016', '2015', '2014', '2013', '2012'],
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         yAxis: {
             labels:  ['Jan-Feb', 'Mar-Apr', 'May-Jun', 'Jul-Aug', 'Sep-Oct', 'Nov-Dec'],
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         dataSource: jsonCellBubbleData,
         dataSourceSettings: {
@@ -70,7 +73,10 @@ this.default = function () {
             },
             showLabel: false,
             tileType: 'Bubble',
-            bubbleType: 'SizeAndColor'
+            bubbleType: 'SizeAndColor',
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         paletteSettings: {
             palette: [{ color: '#C06C84' },
@@ -84,13 +90,23 @@ this.default = function () {
 			(args.value)[1].bubbleData];
         },
         legendSettings: {
-            visible: true
+            visible: true,
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
+        },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         load: function (args) {
+            // custom code start
             var colorSizeTheme = location.hash.split('/')[1];
             colorSizeTheme = colorSizeTheme ? colorSizeTheme : 'Material';
             args.heatmap.theme = (colorSizeTheme.charAt(0).toUpperCase() +
             colorSizeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         }
     });
     heatmap.appendTo('#container');

@@ -9,7 +9,6 @@
       {
          "url": "overview",
          "name": "Overview",
-         "type": "new",
          "category": "Gantt",
          "api": {
             "Gantt": [
@@ -46,7 +45,6 @@
       {
          "url": "editing",
          "name": "Editing",
-	 "type": "update",
          "category": "Gantt",
          "api": {
             "Gantt": [
@@ -179,6 +177,32 @@
             ]
          },
          "description": "This sample demonstrates the way of binding data to Gantt chart with remote service. The Gantt chart data source is bound to remote data using DataManager."
+      },
+      {
+         "url": "load-on-demand",
+         "name": "Load On Demand",
+         "type": "new",
+         "category": "Data Binding",
+         "api": {
+            "Gantt": [
+               "dataSource",
+               "taskFields",
+               "height",
+               "loadChildOnDemand",
+               "enableVirtualization",
+               "allowSelection",
+               "tooltipSettings",
+               "splitterSettings",
+               "rowHeight",
+               "taskbarHeight",
+               "timelineSettings",
+               "treeColumnIndex",
+               "highlightWeekends",
+               "projectStartDate",
+               "projectEndDate"
+            ]
+         },
+         "description": "This sample demonstrates the load on-demand data binding support in Gantt Chart."
       },
       {
          "url": "self-reference-data",
@@ -759,6 +783,7 @@
       {
          "url": "tooltip-template",
          "name": "Tooltip Template",
+	 "hideOnDevice": true,
          "category": "Templates",
          "api": {
             "Gantt": [
@@ -863,6 +888,7 @@
       {
          "url": "exporting",
          "name": "Exporting",
+         "type": "update",
          "category": "Miscellaneous",
          "api": {
             "Gantt": [
@@ -1010,6 +1036,7 @@
       {
          "url": "keyboard-interactions",
          "name": "Keyboard Navigation",
+	 "hideOnDevice": true,
          "category": "Miscellaneous",
          "api": {
             "Gantt": [

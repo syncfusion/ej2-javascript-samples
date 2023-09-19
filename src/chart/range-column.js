@@ -15,7 +15,6 @@ this.default = function () {
             title:'Temperature (In Celsius)',
             labelFormat: '{value}˚C',
             maximum: 20,
-            interval: 5,
             edgeLabelPlacement: 'Shift',
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 }

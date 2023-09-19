@@ -41,7 +41,7 @@ this.default = function () {
             shared: false
         },
         //Initializing Chart Title
-        title: 'Monthly Temperature Range by Month',
+        title: 'Temperature Variation by Month',
         legendSettings: { enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         load: function (args) {

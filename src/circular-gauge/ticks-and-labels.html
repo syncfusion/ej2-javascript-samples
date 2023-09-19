@@ -1,0 +1,148 @@
+<div>
+    <div class="col-md-8 control-section">
+        <div class="content-wrapper">
+            <div id="labels-container"></div>
+        </div>
+    </div>
+    <!-- Property panel -->
+    <br>
+    <div class="col-md-4 property-section">
+        <table id="property" title="Properties" style="width: 100%; margin-left:0px;">
+            <colgroup>
+                <col span="1" style="width: 50%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 20%;">
+            </colgroup>
+            <tbody>
+                <tr style="height: 50px">
+                    <td>
+                        <div> Ticks </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select id="Ticks" class="form-control">
+                                <option value="major" selected=true>Major Ticks</option>
+                                <option value="minor">Minor Ticks</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div> Tick Position </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select id="tickposition" class="form-control">
+                                <option value="Inside" selected=true>Inside</option>
+                                <option value="Cross">Cross</option>
+                                <option value="Outside">Outside</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div> Label Position </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select id="labelposition" class="form-control">
+                                <option value="Outside">Outside</option>
+                                <option value="Cross">Cross</option>
+                                <option value="Inside">Inside</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div>Tick Offset</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="tickOffset" value="0" min="0" max="50" style="width:70%" />
+                        </div>
+                    </td>
+                    <td style="padding-top: 10px; text-align: center;">
+                        <span id='offset' style="margin-left: -30px;">0</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div>Tick Height</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="tickHeight" value="10" min="1" max="50" style="width:70%" />
+                        </div>
+                    </td>
+                    <td style="padding-top: 10px; text-align: center;">
+                        <span id='height' style="margin-left: -30px;">10</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div>Label Offset</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="labelOffset" value="0" min="0" max="50" style="width:70%" />
+                        </div>
+                    </td>
+                    <td style="padding-top: 10px; text-align: center;">
+                        <span id='labelOffsetValue' style="margin-left: -30px;">0</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div id='enablePointer'>Show Last Label</div>
+                    </td>
+                    <td>
+                        <div style="margin-top: -10px; margin-left: -10px">
+                            <input type="checkbox" id="showLastLabel" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates how to customize the ticks and labels on an axis. The position, offset, and height of
+        the ticks and labels can be changed.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure the ticks and labels of an axis in the circular gauge.
+        Labels are units that are used to display the values on the axis. Labels can be customized using <a
+            target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/labelModel/">labelStyle</a>. Ticks
+        are used to represent values on the axis. Ticks can be customized using <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/tickModel/">majorTicks</a> and <a
+            target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/tickModel/">minorTicks</a>.
+    </p>
+    <p>
+        More information on the ticks and labels can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-axes/">documentation
+            section</a>.
+    </p>
+</div>
+<!-- custom code start -->
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+
+    .property-panel-table div {
+        padding-left: 0px;
+    }
+
+    tr {
+        height: 50px;
+    }
+</style>
+<!-- custom code end -->

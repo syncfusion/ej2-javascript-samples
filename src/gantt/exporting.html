@@ -1,5 +1,11 @@
 <div class="control-section">
     <div class="content-wrapper">
+        <div style="display: flex;">
+            <label for="checked" style="font-size: 15px;padding-bottom: 10px;"> AutoFit in Pdf Export </label>
+            <div style="padding-left: 10px;">
+            <input id="checked" type="checkbox">
+            </div>
+        </div>
         <div id="GanttExport">
         </div>
     </div>
@@ -11,13 +17,25 @@
 </div>
 
 <div id="description">
-    <p>Gantt supports client-side exporting, which allows you to export its data to the Excel, PDF and CSV formats. </p>
-    <p>In this demo, we have defined actions in the <code>toolbarClick</code> event to export the Gantt data using the
-        <code>excelExport</code>, <code>pdfExport</code> and <code>csvExport</code> methods.</p>
-
+     <p>Gantt supports client-side exporting, which allows you to export its data to the Excel, PDF and CSV formats. </p>
+    <p>In this demo, we have defined actions in the
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/documentation/api/gantt/#toolbarclick">toolbarClick</a></code>
+        event to export the Gantt data using the
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/documentation/api/gantt/#excelexport">excelExport</a></code>,
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/documentation/api/gantt/#pdfexport">pdfExport</a></code>
+        and
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/documentation/api/gantt/#csvexport">csvExport</a></code>
+        methods.
+    </p>
+    <p>In addition we have provided support to export the Gantt component where each rows are auto-fit to the PDF
+        document page width using
+        <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/documentation/gantt/pdf-export/pdf-export">fitToWidthSettings</a></code>
+        in <code>PdfExportProperties</code></p>
     <p style="font-weight: 500">Injecting Module:</p>
     <p>To use Excel and CSV export features, inject the <code>ExcelExport</code> module using the
-        <code>Gantt.Inject(ExcelExport)</code> method. </p>
+        <code>Gantt.Inject(ExcelExport)</code> method.
+    </p>
     <p>To use PDF export feature, inject the <code>PdfExport</code> module using the
-        <code>Gantt.Inject(PdfExport)</code> method. </p>
+        <code>Gantt.Inject(PdfExport)</code> method.
+    </p>
 </div>

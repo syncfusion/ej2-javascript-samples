@@ -25,7 +25,7 @@ this.default = function () {
         series: [
             {
                 type: 'Column', xName: 'x', yName: 'y', dataSource: chartData,
-                width: 2
+                width: 2, name: 'Sales'
             },
             {
                 dataSource: chartData, type: 'Line', yAxisName: 'yAxis2', xName: 'x', yName: 'y1', width: 2,

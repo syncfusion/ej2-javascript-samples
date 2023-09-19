@@ -15,7 +15,7 @@ this.default = function () {
         series: [
             {
                 type: 'Pie', dataSource: suvs, xName: 'x', yName: 'y',radius: ej.base.Browser.isDevice ? '90%' : '80%',
-                dataLabel: { visible: true, position: ej.base.Browser.isDevice ? 'Inside' : 'Outside', enableRotation:true , connectorStyle: { type: 'Curve',length: '20px'}}, innerRadius: '30%'
+                dataLabel: { visible: true, font: { fontWeight: '600' }, position: ej.base.Browser.isDevice ? 'Inside' : 'Outside', enableRotation:true , connectorStyle: { type: 'Curve',length: '20px'}}, innerRadius: '30%'
             }
         ], textRender: function (args) {
             args.text = args.point.x + ' ' + args.point.y + ' %';

@@ -1,17 +1,25 @@
-/**
- * Sample for Cell Selection
- */
-this.default = function () {
- 
+this.default = function () { 
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings:{
-            text:'Top export products 2014-2018, Value in USD million'
+            text:'Top export products 2014-2018, Value in USD million',
+            textStyle: {
+                size: '15px',
+                fontWeight: '500',
+                fontStyle: 'Normal',
+                fontFamily: 'inherit'
+            }
         },
         xAxis: {
             labels: ['Cereals', 'Meat', 'Spices', 'Tea', 'Edible Oil', 'Dairy Products', 'Wheat'],
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         yAxis: {
-            labels:['2014','2015','2016','2017','2018']
+            labels:['2014','2015','2016','2017','2018'],
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         allowSelection: true,
         dataSource: window.cellSelectionData,
@@ -21,15 +29,27 @@ this.default = function () {
                 {color: '#86C843 '}
             ],
         },
+        cellSettings: {
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        },
         legendSettings: {
             visible:false,
         },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
+        },
         showTooltip: true,
         load: function (args) {
+            // custom code start
             var cellSelectionTheme = location.hash.split('/')[1];
             cellSelectionTheme = cellSelectionTheme ? cellSelectionTheme : 'Material';
             args.heatmap.theme = (cellSelectionTheme.charAt(0).toUpperCase() +
             cellSelectionTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         },
          cellSelected: function(args) {
             var obj = document.getElementById('container1').ej2_instances[0];
@@ -90,9 +110,11 @@ this.default = function () {
         enable: true
     },
     load: function(args) {
+        // custom code start
         var selectedTheme = location.hash.split('/')[1];
         selectedTheme = selectedTheme ? selectedTheme : 'Material';
         args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+        // custom code end
     }
     });
     chart.appendTo('#container1');

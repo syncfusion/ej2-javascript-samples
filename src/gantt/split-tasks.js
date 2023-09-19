@@ -34,7 +34,7 @@ this.default = function () {
         treeColumnIndex: 1,
         highlightWeekends: true,
         splitterSettings: {
-            columnIndex: 2
+            position: "35%"
         },
         labelSettings: {
             leftLabel: 'TaskName',

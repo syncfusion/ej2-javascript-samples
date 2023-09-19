@@ -32,22 +32,7 @@ function selectionChange(args) {
             if (args.newValue[0] instanceof ej.diagrams.Node && selectedElement.length) {
                 selectedElement[0].classList.remove('e-remove-selection');
                 var port = getPort()[0];
-                portVisibilityDrop.value = [];
-                if (ej.diagrams.PortVisibility.Visible & port.visibility) {
-                    portVisibilityDrop.value.push(ej.diagrams.PortVisibility.Visible);
-                }
-                if (ej.diagrams.PortVisibility.Hidden & port.visibility) {
-                    portVisibilityDrop.value.push(ej.diagrams.PortVisibility.Hidden);
-                }
-                if (ej.diagrams.PortVisibility.Hover & port.visibility) {
-                    portVisibilityDrop.value.push(ej.diagrams.PortVisibility.Hover);
-                }
-                if (ej.diagrams.PortVisibility.Connect & port.visibility) {
-                    portVisibilityDrop.value.push(ej.diagrams.PortVisibility.Connect);
-                }
-                if (portVisibilityDrop.value.length === 0) {
-                    portVisibilityDrop.placeholder = 'Select Visibility';
-                }
+                portVisibilityDrop.value = port.visibility;
                 portVisibilityDrop.dataBind();
                 portFillDrop.value = port.style.fill;
                 portFillDrop.dataBind();
@@ -67,15 +52,12 @@ function selectionChange(args) {
 function portVisibilityChange(args) {
     var port = getPort();
     if (port) {
-        for (var j = 0; j < port.length; j++) {
-            port[j].visibility = 0;
-            for (var i = 0; i < args.value.length; i++) {
-                port[j].visibility += args.value[i];
-            }
-        }
+      for (var j = 0; j < port.length; j++) {
+        port[j].visibility = portVisibilityDrop.value;
+      }
+      diagram.dataBind();
     }
-    diagram.dataBind();
-}
+  }
 //set the appearence of the Port.
 function applyPortStyle(value) {
     var port = getPort();
@@ -346,15 +328,12 @@ this.default = function () {
         { PortVisibility: ej.diagrams.PortVisibility.Connect, text: 'Connect' }
     ];
     //Enable or disable the visibility of the Port
-    portVisibilityDrop = new ej.dropdowns.MultiSelect({
-        enabled: true, dataSource: visibility,
+    portVisibilityDrop = new ej.dropdowns.DropDownList({
+        enabled: true,
+        dataSource: visibility,
         fields: { value: 'PortVisibility', text: 'text' },
-        mode: 'CheckBox',
-        showSelectAll: true,
-        showdropdownsIcon: true,
-        popupHeight: '280px',
-        popupWidth: '180px',
-        change: portVisibilityChange
+        value: 'Visible',
+        change: portVisibilityChange,
     });
     portVisibilityDrop.appendTo('#portsVisiblity');
     //Colorpicker used to apply for fill color of the Port.

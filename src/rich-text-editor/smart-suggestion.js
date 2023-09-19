@@ -14,7 +14,7 @@
         { formatName: "Numbered list", command: "OL", formatType: "Basic blocks", icon: "e-icons e-list-ordered icon", description: "Create an ordered list"},
         { formatName: "Bulleted list", command: "UL", formatType: "Basic blocks", icon: "e-icons e-list-unordered icon", description: "Create an unordered list"},
         { formatName: "Table", command: "CreateTable", formatType: "Basic blocks",icon: "e-icons e-table icon", description: "Insert a table"},
-        { formatName: "Emoji", command: "Emoji", formatType: "Inline", icon: "e-icons emoji",description: "Use emojis to express ideads and emoticons"},
+        { formatName: "Emoji picker", command: "EmojiPicker", formatType: "Inline", icon: "e-icons e-emoji icon",description: "Use emojis to express ideas and emoticons"},
         { formatName: "Image", command: "Image", formatType: "Media", icon: "e-icons e-image icon", description: "Add image to your page"},
         { formatName: "Audio", command: "Audio", formatType: "Media", icon: "e-icons e-audio icon", description: "Add audio to your page"},
         { formatName: "Video", command: "Video", formatType: "Media", icon: "e-icons e-video icon", description: "Add video to your page"},
@@ -31,7 +31,7 @@
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
                 'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
                 'Formats', 'Alignments', 'NumberFormatList', 'BulletFormatList',
-                'Outdent', 'Indent', '|',
+                'Outdent', 'Indent', 'EmojiPicker', '|',
                 'CreateTable', 'CreateLink', 'Image', '|', 
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
         },
@@ -46,34 +46,6 @@
          
     });
     formatRTE.appendTo('#MentionInlineFormat');
-
-    // begins the process of inserting emoticons.
-
-    var dialogContent =  '<div id="emojiIcon"></div>';
-    var dialog = new ej.popups.Dialog({
-        header: 'Custom Emoticons',
-        content: dialogContent,
-        target: document.getElementById('mentionFormatIntegration'),
-        isModal: true,
-        width: '51%',
-        visible: false,
-        overlayClick: dialogOverlay,
-        buttons: [
-            { buttonModel: { content: "Insert", isPrimary: true }, click: onInsert },
-            { buttonModel: { content: 'Cancel' }, click: dialogOverlay }
-        ],
-        created: onDialogCreate,
-        open : onOpen
-    });
-    dialog.appendTo('#emojiDialog');
-    
-    function dialogOverlay() {
-        var activeElement = dialog.element.querySelector('.char_block.e-active');
-        if (activeElement) {
-            activeElement.classList.remove('e-active');
-        }
-        dialog.hide();
-    }
 
     function beforeApplyFormat(isBlockFormat) {
         var range1 = formatRTE.getRange();
@@ -95,56 +67,15 @@
         var range2 = formatRTE.getRange();
         var node2 = formatRTE.formatter.editorManager.nodeCutter.GetSpliceNode(range2, node);
         var previouNode = node2.previousSibling;
+        var brTag = document.createElement('br');
+        if (node2.parentElement && node2.parentElement.innerHTML.length === 1) {
+            node2.parentElement.appendChild(brTag);
+        }
         node2.parentNode.removeChild(node2);
-        if(blockNewLine && isBlockFormat){
-            var defaultTag = document.createElement('p');
-            defaultTag.innerHTML = '</br>';
-            blockNode.parentNode.insertBefore(defaultTag, blockNode.nextSibling);
-           selection.setCursorPoint(document, blockNode.nextSibling, 0);
-        } else if(previouNode) {
+        if(previouNode) {
             selection.setCursorPoint(document, previouNode, previouNode.textContent.length);
         }
     }
-
-    function onInsert() {
-        var activeElement = dialog.element.querySelector('.char_block.e-active');
-        if (activeElement) {
-            if (formatRTE.formatter.getUndoRedoStack().length === 0) {
-                formatRTE.formatter.saveData();
-            }
-            beforeApplyFormat(false);
-            var range =formatRTE.getRange();
-            selection.setCursorPoint(document, range.startContainer, range.startOffset);
-            formatRTE.executeCommand('insertText', activeElement.textContent);
-            formatRTE.formatter.saveData();
-            formatRTE.formatter.enableUndo(formatRTE);
-        }
-        dialogOverlay();
-    }
-
-    function onDialogCreate() {
-        var dialogContent = document.getElementById('emojiDialog');
-        dialogContent.onclick = function (e) {
-            var target = e.target;
-            var activeElement = dialog.element.querySelector('.char_block.e-active');
-            if (target.classList.contains('char_block')) {
-                target.classList.add('e-active');
-                if (activeElement) {
-                    activeElement.classList.remove('e-active');
-                }
-            }
-        };
-    }
-
-    function onOpen() {
-        var emojiElement= document.getElementById("rteEmoticons-smiley");
-        if(!emojiElement.children[0].classList.contains('e-active')){
-            emojiElement.children[0].classList.add('e-active');
-        }  
-    }
-
-    // End the process of inserting the emoticons.
-
 
     // Initialize Mention control.
     
@@ -196,10 +127,10 @@
             mentionObj.hidePopup();
             formatRTE.showDialog('InsertVideo');
         } 
-        else if (args.itemData.command == 'Emoji') {
-            dialog.element.style.display = 'block';
+        else if (args.itemData.command == 'EmojiPicker') {
+            beforeApplyFormat(false);
             mentionObj.hidePopup();
-            dialog.show();
+            formatRTE.showEmojiPicker();
         }
         else {
             formatRTE.executeCommand('formatBlock', args.itemData.command);

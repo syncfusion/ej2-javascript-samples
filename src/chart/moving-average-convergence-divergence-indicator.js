@@ -12,7 +12,7 @@ this.renderChartMACD = function () {
             primaryYAxis: {
                 title: 'Price',
                 labelFormat: '${value}',
-                plotOffset: 25,
+                plotOffset: 25, minimum: 50,
                 maximum: 170, majorTickLines: { width: 0 },
                 interval: 30, rowIndex: 1, opposedPosition: true, lineStyle: { width: 0 }
             },
@@ -56,7 +56,7 @@ this.renderChartMACD = function () {
             zoomSettings: {
                 enableSelectionZooming: true,
                 enablePinchZooming: true,
-                mode: 'XY',
+                mode: 'X',
                 enablePan: true
             },
             tooltip: {

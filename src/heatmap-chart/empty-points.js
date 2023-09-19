@@ -6,23 +6,37 @@ this.default = function () {
                 size: '15px',
                 fontWeight: '500',
                 fontStyle: 'Normal',
-                fontFamily: 'Segoe UI'
+                fontFamily: 'inherit'
             }
         },
         xAxis: {
             labels: ['2007', '2008', '2009', '2010', '2011',
                 '2012', '2013', '2014', '2015', '2016', '2017'],
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         yAxis: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May',
                 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
 
         }, cellSettings: {
             border: {
                 width: '0',
                 color: 'white'
             },
-            showLabel: true
+            showLabel: true,
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
+        },
+        tooltipSettings:{
+            textStyle: {
+                fontFamily: 'inherit'
+            }
         },
         paletteSettings: {
             palette: [{ color: 'rgb(172, 213, 242)' },
@@ -36,15 +50,20 @@ this.default = function () {
             position: 'Bottom',
             width: '250px',
             showLabel: true,
+            textStyle: {
+                fontFamily: 'inherit'                
+            }
         },
         tooltipRender: function (args)  {
             args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' defective units'];
         },
         load: function (args) {
+            // custom code start
             var emptyPointTheme = location.hash.split('/')[1];
             emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'Material';
             args.heatmap.theme =  (emptyPointTheme.charAt(0).toUpperCase() +
             emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            // custom code end
         },
         dataSource: window.emptyPointDataSource
     });
