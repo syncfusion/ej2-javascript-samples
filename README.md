@@ -44,7 +44,7 @@ Configure your sample json file as like below code snippet.
 
 * _category :_ Specify that your sample comes under which category.
 
-* _dataSourcePath :_ Specify that your data source file Path (Optional).
+* _dataSourcePath :_ Specify that your data source file path (optional).
 
 * _samples :_ Specify array of samples in your control.
 
@@ -59,11 +59,11 @@ Configure your sample json file as like below code snippet.
 
 To add datasource file for the component, you need to include the `dataSourcePath` option which need to map the datasource file path in the component's sample.json. 
 
-refer the below link for config
+Refer to the below link for the configuration,
 
 https://github.com/syncfusion/ej2-javascript-samples/blob/master/src/grid/sample.json#L7
 
-The sample datasource file need to store the json in window variable.
+The sample data source file need to store the json in window variable.
 
 Each component's datasource window variable name must be unique.
 
