@@ -152,40 +152,40 @@ this.default = function () {
         { type: 'Mouse', text: 'Mouse' },
     ];
     var positionValue = [
-        { type: 'TopLeft', text: 'TopLeft' },
-        { type: 'TopCenter', text: 'TopCenter' },
-        { type: 'TopRight', text: 'TopRight' },
-        { type: 'BottomLeft', text: 'BottomLeft' },
-        { type: 'BottomCenter', text: 'BottomCenter' },
-        { type: 'BottomRight', text: 'BottomRight' },
-        { type: 'LeftTop', text: 'LeftTop' },
-        { type: 'LeftCenter', text: 'LeftCenter' },
-        { type: 'LeftBottom', text: 'LeftBottom' },
-        { type: 'RightTop', text: 'RightTop' },
-        { type: 'RightCenter', text: 'RightCenter' },
-        { type: 'RightBottom', text: 'RightBottom' },
+        { type: 'TopLeft', text: 'Top Left' },
+        { type: 'TopCenter', text: 'Top Center' },
+        { type: 'TopRight', text: 'Top Right' },
+        { type: 'BottomLeft', text: 'Bottom Left' },
+        { type: 'BottomCenter', text: 'Bottom Center' },
+        { type: 'BottomRight', text: 'Bottom Right' },
+        { type: 'LeftTop', text: 'Left Top' },
+        { type: 'LeftCenter', text: 'Left Center' },
+        { type: 'LeftBottom', text: 'Left Bottom' },
+        { type: 'RightTop', text: 'Right Top' },
+        { type: 'RightCenter', text: 'Right Center' },
+        { type: 'RightBottom', text: 'Right Bottom' },
     ];
     var effectValue = [
-        { type: 'FadeIn', text: 'FadeIn' },
-        { type: 'FadeOut', text: 'FadeOut' },
-        { type: 'FadeZoomIn', text: 'FadeZoomIn' },
-        { type: 'FadeZoomOut', text: 'FadeZoomOut' },
-        { type: 'FlipXDownIn', text: 'FlipXDownIn' },
-        { type: 'FlipXDownOut', text: 'FlipXDownOut' },
-        { type: 'FlipXUpIn', text: 'FlipXUpIn' },
-        { type: 'FlipXUpOut', text: 'FlipXUpOut' },
-        { type: 'FlipYLeftIn', text: 'FlipYLeftIn' },
-        { type: 'FlipYLeftOut', text: 'FlipYLeftOut' },
-        { type: 'FlipYRightIn', text: 'FlipYRightIn' },
-        { type: 'FlipYRightOut', text: 'FlipYRightOut' },
-        { type: 'ZoomIn', text: 'ZoomIn' },
-        { type: 'ZoomOut', text: 'ZoomOut' },
+        { type: 'FadeIn', text: 'Fade In' },
+        { type: 'FadeOut', text: 'Fade Out' },
+        { type: 'FadeZoomIn', text: 'Fade Zoom In' },
+        { type: 'FadeZoomOut', text: 'Fade Zoom Out' },
+        { type: 'FlipXDownIn', text: 'FlipX Down In' },
+        { type: 'FlipXDownOut', text: 'FlipX Down Out' },
+        { type: 'FlipXUpIn', text: 'FlipX Up In' },
+        { type: 'FlipXUpOut', text: 'FlipX Up Out' },
+        { type: 'FlipYLeftIn', text: 'FlipY Left In' },
+        { type: 'FlipYLeftOut', text: 'FlipY Left Out' },
+        { type: 'FlipYRightIn', text: 'FlipY Right In' },
+        { type: 'FlipYRightOut', text: 'FlipY Right Out' },
+        { type: 'ZoomIn', text: 'Zoom In' },
+        { type: 'ZoomOut', text: 'Zoom Out' },
         { type: 'None', text: 'None' },
     ];
     var mode = new ej.dropdowns.DropDownList({
         dataSource: modevalue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '100%', placeholder: 'select a font type', index: 0,
+        width: '85%', placeholder: 'select a font type', index: 0,
         change: function () {
             if (mode.value === 'Mouse') {
                 diagram.tooltip.relativeMode = 'Mouse';
@@ -199,7 +199,7 @@ this.default = function () {
     var position = new ej.dropdowns.DropDownList({
         dataSource: positionValue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '100%', placeholder: 'select a font type', index: 0,
+        width: '85%', placeholder: 'select a font type', index: 0,
         change: function (args) {
             var nodes = diagram.nodes;
             for (var i = 0; i < nodes.length; i++) {
@@ -214,7 +214,7 @@ this.default = function () {
     var effect = new ej.dropdowns.DropDownList({
         dataSource: effectValue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '100%', placeholder: 'select a effect type', index: 0,
+        width: '85%', placeholder: 'select a effect type', index: 0,
         change: function (args) {
             diagram.tooltip.animation.open.effect = args.value;
             diagram.tooltip.animation.close.effect = args.value;
@@ -255,4 +255,22 @@ this.default = function () {
         'border-style: solid;border-color: #d3d3d3; border-radius: 8px;white-space: nowrap;">' +
         ' <span style="margin: 10px;">';
     diagram.fitToPage({ mode: 'Width' });
+    //checkbox is used to enable or disable the connector interaction.
+    var checkBoxObj = new ej.buttons.CheckBox({
+        checked: false,
+        change: function (args) {
+            for (var j = 0; j < diagram.nodes.length; j++) {
+                if (args.checked) {
+                    diagram.tooltipObject.isSticky = true;
+                    diagram.nodes[j].tooltip.isSticky = true;
+                }
+                else {
+                    diagram.tooltipObject.isSticky = false;
+                    diagram.nodes[j].tooltip.isSticky = false;
+                }
+                diagram.dataBind();
+            }
+        }
+    });
+    checkBoxObj.appendTo('#checked');
 };

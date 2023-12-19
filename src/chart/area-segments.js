@@ -38,19 +38,19 @@ this.default = function () {
         },
         annotations: [
             {
-                content: "<div style='color:#4ca1af; font-weight:bold'>Winter</div>",
+                content: "<div style='color:#4ca1af; font-weight:bold; font-size: 14px;'>Winter</div>",
                 region: 'Series',
                 x: '18%',
                 y: '43%'
             },
             {
-                content: "<div style='color:#ffa751; font-weight:bold'>Summer</div>",
+                content: "<div style='color:#ffa751; font-weight:bold; font-size: 14px;'>Summer</div>",
                 region: 'Series',
                 x: '46%',
                 y: '43%'
             },
             {
-                content: "<div style='color:#1d976c; font-weight:bold'>Spring</div>",
+                content: "<div style='color:#1d976c; font-weight:bold; font-size: 14px;'>Spring</div>",
                 region: 'Series',
                 x: '90%',
                 y: '18%'
@@ -79,7 +79,7 @@ this.default = function () {
         title: 'US Season Retail Sales Growth',
         //Initializing User Interaction Tooltip
         tooltip: {
-            enable: true, shared: true, format: '${point.x} : <b>${point.y}</b>'
+            enable: true, shared: true, header: '<b>Revenue</b>', format: '${point.x} : <b>${point.y}</b>'
         },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start

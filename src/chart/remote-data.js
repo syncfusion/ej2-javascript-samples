@@ -68,7 +68,7 @@ this.default = function () {
             majorTickLines: { width: 0 },
             lineStyle: { width: 0 },
             labelFormat: "{value}00",
-            title: 'Freight rate in U.S. dollars',
+            title: 'Freight rate in U.S dollars',
         },
         chartArea: {
             border: {

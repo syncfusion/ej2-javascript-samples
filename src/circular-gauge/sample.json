@@ -9,7 +9,8 @@
             "url": "default-functionalities",
             "name": "Default Functionalities",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates the default rendering of circular gauge.",
-            "category": "Circular Gauge"
+            "category": "Circular Gauge",
+            "type": "update"
         },
         {
             "url": "ticks-and-labels",
@@ -28,21 +29,20 @@
             "name": "Custom Labels",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates the custom labels in the circular gauge.",
             "category": "Axis",
-            "type": "new"
+            "type": "update"
         },
         {
             "url": "range-color-for-axis",
             "name": "Range Color for Axis",
             "description": "This demo for Essential JS2 Circular Gauge control demonstrate the range color for axis in the circular gauge..",
             "category": "Axis",
-            "type": "new"
+            "type": "update"
         },
         {
             "url": "axis-background",
             "name": "Axis Background",
             "description": "This demo for Essential JS2 Circular Gauge control demonstrate the axis background in the circular gauge..",
-            "category": "Axis",
-            "type": "new"
+            "category": "Axis"
         },
         {
             "url": "pointer-types",
@@ -54,8 +54,7 @@
             "url": "text-pointer",
             "name": "Text Pointer",
             "description": "This demo for Essential JS2 Circular Gauge control visualizes the text pointer in the circular gauge.",
-            "category": "Pointer",
-            "type": "new"
+            "category": "Pointer"
         },
         {
             "url": "image-pointer",
@@ -74,7 +73,7 @@
             "name": "Multiple Ranges",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates the multiple ranges in the circular gauge.",
             "category": "Range",
-            "type": "new"
+            "type": "update"
         },
         {
             "url": "legend",
@@ -104,7 +103,8 @@
             "url": "tooltip",
             "name": "Tooltip",
             "description": "This demo for Essential JS2 Circular Gauge control visualizes the tooltip for circular gauge pointer and ranges.",
-            "category": "User Interaction"
+            "category": "User Interaction",
+            "type": "update"
         },
         {
             "url": "print-export",
@@ -116,15 +116,13 @@
             "url": "clock",
             "name": "Clock",
             "description": "This demo for Essential JS2 Circular Gauge control illustrates a clock by using annotation feature in the gauge.",
-            "category": "Use Cases",
-            "type": "new"
+            "category": "Use Cases"
         },
         {
             "url": "radial-slider",
             "name": "Radial Slider",
             "description": "Thhis demo for Essential JS2 Circular Gauge control to design the radial slider by using the circular gauge.",
-            "category": "Use Cases",
-            "type": "new"
+            "category": "Use Cases"
         },
         {
             "url": "direction-compass",
@@ -142,8 +140,7 @@
             "url": "sleep-tracker",
             "name": "Sleep Tracker",
             "category": "Use Cases",
-            "description": "This demo for Essential JS2 Circular Gauge control to design sleep tracker by using circular gauge.",
-            "type": "new"
+            "description": "This demo for Essential JS2 Circular Gauge control to design sleep tracker by using circular gauge."
         },
         {
             "url": "data-sample",

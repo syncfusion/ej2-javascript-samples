@@ -24,15 +24,15 @@ var labelRender = function (args) {
         series: [
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Sales', columnSpacing: 0.1,
-                dataSource: [{ x: 2016, y: 1000 }, { x: 2017, y: 970}, { x: 2018, y: 1060 }, { x: 2019, y: 1030 }]
+                dataSource: [{ x: 2016, y: 1000 }, { x: 2017, y: 1170}, { x: 2018, y: 660 }, { x: 2019, y: 1030 }]
             },
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Expense', columnSpacing: 0.1,
-                dataSource: [{ x: 2016, y: 400 }, { x: 2017, y: 360 }, { x: 2018, y: 920 }, { x: 2019, y: 540 }]
+                dataSource: [{ x: 2016, y: 400 }, { x: 2017, y: 460 }, { x: 2018, y: 1120 }, { x: 2019, y: 540 }]
             },
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y', name: 'Profit', columnSpacing: 0.1,
-                dataSource: [{ x: 2016, y: 600 }, { x: 2017, y: 610 }, { x: 2018, y: 140 }, { x: 2019, y: 490 }]
+                dataSource: [{ x: 2016, y: 200 }, { x: 2017, y: 250 }, { x: 2018, y: 300 }, { x: 2019, y: 350 }]
             }
         ],
         //Initializing Chart Title

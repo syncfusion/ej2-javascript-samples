@@ -15,7 +15,7 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {  valueType: 'Category', majorGridLines: { width: 0 }, majorTickLines: { width: 0 }  },
         //Initializing Primary Y Axis
-        primaryYAxis: { title: 'Sales in Billion', majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minimum: 11000, maximum: 15000, interval: 1000, edgeLabelPlacement: 'Shift' },
+        primaryYAxis: { title: 'Sales in Billion', majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minimum: 11000, maximum: 15000, interval: 500, edgeLabelPlacement: 'Shift' },
         axes: [
             {
                 minimum: 0, maximum: 4, interval: 0.5, opposedPosition: true, name: 'yAxis2', title: 'Profit(In Percentage)',
@@ -39,9 +39,10 @@ this.default = function () {
         },
         isTransposed: true,
         //Initializing Chart Title
-        title: 'Sales Vs Profit Margin',
+        title: 'Sales Vs Profit Margins',
         //Initializing Tooltip
         tooltip: { enable: true },
+        legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {

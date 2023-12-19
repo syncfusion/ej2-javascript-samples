@@ -3,6 +3,7 @@ this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
         orientation: 'Horizontal',
         background:'transparent',
+        animationDuration: 3000,
         axes: [{
             minimum: 0,
             maximum: 12000,

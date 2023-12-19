@@ -6,31 +6,33 @@
     </div>
 </div>
 <!-- Property Panel -->
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%;">
+<div class="col-md-4 property-section">
+    <div class="property-panel-section">
+    <table id="property" title="Properties" style="width: 100%;margin-left: -10px;">
         <tbody>
             <tr>
-                <td style="width: 80%">
-                    <div> Combine Ranges</div>
+                <td style="width: 60%">
+                    <div style="font-size: 14px;"> Combine Ranges</div>
                 </td>
-                <td style="width: 20%;">
-                    <div style="margin-left: 40px;margin-top: -6px;">
+                <td>
+                    <div style="margin-top: -6px;">
                         <input type="checkbox" id="combineRange" checked />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="width: 80%">
-                    <div>Gap Between Ranges</div>
+                <td style="width: 60%">
+                    <div style="font-size: 14px;">Gap Between Ranges</div>
                 </td>
-                <td style="width: 20%;">
-                    <div style="margin-left: 40px;margin-top: -6px;">
+                <td>
+                    <div style="margin-top: -6px;">
                         <input type="checkbox" id="range" checked />
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
+    </div>
 </div>
 <script id='pointerValue' type="text/x-template">
         <div id='templateWrap'>
@@ -67,10 +69,6 @@
     </p>
 </div>
 <style>
-    .property-panel-table div {
-        padding-left: 0px;
-    }
-
     tr {
         height: 48px;
     }

@@ -217,7 +217,6 @@
             "name": "Data Virtualization",
             "category": "Scrolling",
             "hideOnDevice": true,
-            "type": "new",
             "description": "This example illustrates how to load events on demand in JavaScript Scheduler.",
             "api": {
                 "Schedule": [
@@ -300,8 +299,9 @@
         {
             "url": "custom-month-view",
             "name": "Custom Month View",
+            "type": "update",
             "category": "Views",
-            "description": "This example showcases how to customize the starting week of the month and also customize the number of weeks to be rendered in month view with JavaScript (ES5) Scheduler.",
+            "description": "This example showcases how to customize the starting week, number of weeks, and number of events displayed in a single row in the JS (ES5) Scheduler month view.",
             "api": {
                 "Schedule": [
                     "eventSettings",
@@ -541,7 +541,7 @@
             "url": "event-template",
             "name": "Events",
             "category": "Templates",
-            "description": "This demo shows how to customize the look and feel of appointments (events) in the JS Shceduler with images and links by using an event template.",
+            "description": "This demo shows how to customize the look and feel of appointments (events) in the JS Scheduler with images and links by using an event template.",
             "api": {
                 "Schedule": [
                     "width",
@@ -612,7 +612,6 @@
             "url": "editor-template",
             "name": "Editor Template",
             "category": "Editor Window",
-            "type": "update",
             "description": "This demo shows how to design custom appointment (event) editor windows by adding or removing fields from the JavaScript (ES5) Scheduler appointment window.",
             "api": {
                 "Schedule": [
@@ -669,6 +668,7 @@
         {
             "url": "header-bar",
             "name": "Header Bar",
+            "type": "update",
             "category": "Customization",
             "description": "This demo shows how to use templating to customize the header bar of the JavaScript (ES5) Scheduler with images, links, styles, and other UI controls.",
             "api": {

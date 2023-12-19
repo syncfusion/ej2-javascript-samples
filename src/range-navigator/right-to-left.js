@@ -3,7 +3,7 @@
  */
 var _this = this;
 var selectedTheme = location.hash.split('/')[1];
-selectedTheme = selectedTheme ? selectedTheme : 'Material';
+selectedTheme = selectedTheme ? selectedTheme : 'material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
 var themes = ['Material', 'Fabric', 'Bootstrap', 'HighContrast', 'Bootstrap5', 'Tailwind', 'MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Fluent', 'FluentDark', 'Material3','Material3Dark', 'Bootstrap5Dark'];
 var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#79ECE4', '#6355C7', '#4F46E5', '#00bdae', '#4472c4', '#8F80F4', '#8B5CF6', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF', '#8F80F4'];
@@ -14,7 +14,7 @@ this.renderRTLChart = function (datasrc) {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
             valueType: 'DateTime', crosshairTooltip: { enable: true }, edgeLabelPlacement: 'Shift',
-            isInversed: true, majorGridLines: { width: 0 }
+            majorGridLines: { width: 0 }
         },
         primaryYAxis: {
             majorTickLines: { width: 0 }, lineStyle: { width: 0 }, labelFormat: '{value}%',

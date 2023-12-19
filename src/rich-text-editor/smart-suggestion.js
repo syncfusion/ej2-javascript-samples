@@ -27,12 +27,12 @@
 
     var formatRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
-            items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-                'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-                'LowerCase', 'UpperCase', 'SuperScript', 'SubScript', '|',
-                'Formats', 'Alignments', 'NumberFormatList', 'BulletFormatList',
-                'Outdent', 'Indent', 'EmojiPicker', '|',
-                'CreateTable', 'CreateLink', 'Image', '|', 
+            items: ['Bold', 'Italic', 'Underline', 'StrikeThrough', 'SuperScript', 'SubScript', '|',
+                'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
+                'LowerCase', 'UpperCase', '|',
+                'Formats', 'Alignments', '|', 'NumberFormatList', 'BulletFormatList', '|',
+                'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
+                '|', 'EmojiPicker', '|',
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
         },
          placeholder: 'Type "/" and choose format',
@@ -106,9 +106,11 @@
             beforeApplyFormat(true);
         }
         if (args.itemData.command == 'OL'){
+            mentionObj.hidePopup();
             formatRTE.executeCommand('insertOrderedList');
         }
         else if (args.itemData.command == 'UL') {
+            mentionObj.hidePopup();
             formatRTE.executeCommand('insertUnorderedList');
         } 
         else if (args.itemData.command == 'CreateTable') {
@@ -133,6 +135,7 @@
             formatRTE.showEmojiPicker();
         }
         else {
+            mentionObj.hidePopup();
             formatRTE.executeCommand('formatBlock', args.itemData.command);
         }
     } 

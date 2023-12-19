@@ -2,10 +2,10 @@
 /**
  * Rich Text Editor text quick toolbar sample
  */
-this.default = function() {
+this.default = function () {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         quickToolbarSettings: {
-            text: ['FormatPainter', 'Bold', 'Italic', 'Underline', 'Formats', '-', 'Alignments', 'OrderedList', 'UnorderedList', 'CreateLink', 'Image']
+            text: ['Bold', 'Italic', 'Underline', 'FontColor', 'BackgroundColor', 'Alignments', '-', 'FontSize', 'FontName', 'Formats', 'OrderedList', 'UnorderedList', 'FormatPainter']
         },
         toolbarSettings: {
             type: 'MultiRow',
@@ -14,4 +14,3 @@ this.default = function() {
     });
     defaultRTE.appendTo("#quickRTE");
 };
-    

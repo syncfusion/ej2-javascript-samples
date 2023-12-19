@@ -2,6 +2,7 @@
     "name": "ListView",
     "directory": "listview",
     "category": "Layout",
+    "type": "update",
     "ftName" :"listview",
     "dataSourcePath": "src/listview/datasource.js",
     "samples": [
@@ -158,6 +159,25 @@
                 "FieldSettings": [
                     "groupBy",
                     "iconCss"
+                ]
+            }
+        },
+        {
+            "url": "scrolling",
+            "name": "Scrolling",
+            "category": "ListView",
+            "type": "new",
+            "description":"Demo of Essential JS 2 ListView control in a real-world use case as a food order application built using a list view.",
+            "api": {
+                "ListView": [
+                    "dataSource",
+                    "showIcon",
+                    "select",
+                    "appendTo"
+                ],
+                "FieldSettings": [
+                    "id",
+                    "text"
                 ]
             }
         }

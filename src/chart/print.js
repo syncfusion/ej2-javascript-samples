@@ -48,7 +48,7 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             minimum: 0,
-            labelFormat:'${value}',
+            labelFormat:'${value}k',
             maximum: 20,
             interval: 4,
             lineStyle: { width: 0 },

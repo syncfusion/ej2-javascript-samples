@@ -1,6 +1,7 @@
 function pointeGauge1() {
     var pointeGauge1 = new ej.circulargauge.CircularGauge({
         background:'transparent',
+        centerY: '40%',
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -30,8 +31,8 @@ function pointeGauge1() {
             annotations: [
                 {
                     angle: 180,
-                    radius: '20%', zIndex: 1,
-                    content: '<div style="font-size:14px;">Range bar pointer</div>'
+                    radius: '28%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:11px;">Range bar pointer</div>'
                 }
             ]
         }],
@@ -50,6 +51,7 @@ function pointeGauge1() {
 function pointeGauge2() {
     var pointeGauge2 = new ej.circulargauge.CircularGauge({
         background:'transparent',
+        centerY: '40%',
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -80,8 +82,8 @@ function pointeGauge2() {
             annotations: [
                 {
                     angle: 180,
-                    radius: '20%', zIndex: 1,
-                    content: '<div style="font-size:14px;">Marker pointer</div>'
+                    radius: '28%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:10px">Marker pointer</div>'
                 }
             ]
         }],
@@ -100,6 +102,7 @@ function pointeGauge2() {
 function pointeGauge3() {
     var pointeGauge3 = new ej.circulargauge.CircularGauge({
         background:'transparent',
+        centerY: '40%',
         axes: [{
             startAngle: 270,
             endAngle: 90,
@@ -137,8 +140,8 @@ function pointeGauge3() {
             annotations: [
                 {
                     angle: 180,
-                    radius: '20%', zIndex: 1,
-                    content: '<div style="font-size:14px; padding-top: 26px">Customized pointer</div>'
+                    radius: '28%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:29px">Customized pointer</div>'
                 }
             ]
         }],
@@ -196,8 +199,8 @@ function pointeGauge4() {
             annotations: [
                 {
                     angle: 180,
-                    radius: '20%', zIndex: 1,
-                    content: '<div style="font-size:14px;">Needle pointer</div>'
+                    radius: '28%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:10px;">Needle pointer</div>'
                 }
             ]
         }],
@@ -229,7 +232,7 @@ function pointeGauge5() {
             maximum: 100,
             pointers: [{
                 radius: '100%',
-                animation: { enable: true, duration: 900 },
+                animation: { enable: false, duration: 100 },
                 value: 40,
                 color: '#067bc2',
                 pointerWidth: 6,
@@ -238,7 +241,7 @@ function pointeGauge5() {
             }, {
                 radius: '100%',
                 type: 'RangeBar',
-                animation: { enable: true, duration: 900 },
+                animation: { enable: false, duration: 100 },
                 value: 40,
                 color: '#067bc2',
                 pointerWidth: 5
@@ -246,8 +249,8 @@ function pointeGauge5() {
             annotations: [
                 {
                     angle: 180,
-                    radius: '20%', zIndex: 1,
-                    content: '<div style="font-size:14px; padding-top:26px">Live update</div>'
+                    radius: '32%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:22px;">Live update</div>'
                 }
             ]
         }],
@@ -327,8 +330,8 @@ this.default = function () {
             annotations: [
                 {
                     angle: 180,
-                    radius: '25%', zIndex: 1,
-                    content: '<div style="font-size:14px; padding-top:20px">Multiple pointers</div>'
+                    radius: '32%', zIndex: 1,
+                    content: '<div style="font-size:14px;margin-top:22px">Multiple pointers</div>'
                 }
             ]
         }],

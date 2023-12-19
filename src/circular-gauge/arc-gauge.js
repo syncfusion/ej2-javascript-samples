@@ -2,7 +2,7 @@ var sliderValue = 60;
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
         title: 'Progress Tracker',
-        titleStyle: { size: '16px', fontFamily: 'inherit' },
+        titleStyle: { fontFamily: 'inherit' },
         background:'transparent',
         axes: [{
             annotations: [{
@@ -50,10 +50,6 @@ this.default = function () {
                 pointerWidth: 30
             }]
         }],
-        resized: function (args) {
-            args.gauge.axes[0].annotations[0].content = '<div id="pointervalue" style="font-size:35px;width:120px;text-align:center">' +
-            circulargauge.axes[0].pointers[0].value.toString() + '/100</div>';
-        },
         load: function (args) {
             // custom code start
             var selectTheme = location.hash.split('/')[1];
@@ -66,6 +62,9 @@ this.default = function () {
             var annotation = document.getElementById(args.gauge.element.id + '_Annotations_0');
             if (annotation) {
                 annotationRender('slider', circulargauge.axes[0].pointers[0].value);
+                if (document.getElementById('pointervalue')) {
+                    document.getElementById('pointervalue').innerHTML = circulargauge.axes[0].pointers[0].value.toString() + '/100';
+                }
             }
         }
     });

@@ -72,7 +72,6 @@ this.default = function () {
         var tabElement = document.querySelector(
             '#tab_keyboard_interaction .e-toolbar-item.e-template.e-active .e-tab-wrap'
         );
-        
         if (e.altKey && e.keyCode === 74 && tabElement) {
             tabElement.focus();
         }

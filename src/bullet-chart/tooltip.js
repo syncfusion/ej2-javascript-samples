@@ -4,7 +4,6 @@
 this.default = function () {
     var bullet = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '70%',
-        height: '110px',
         tooltip: { enable: true, template : '#Tooltip' },
         dataSource: [{ value: 70, target: 50 }],
         valueField: 'value',
@@ -16,6 +15,7 @@ this.default = function () {
         ],
         minimum: 0, maximum: 100, interval: 10,
         title: 'Revenue YTD',
+        subtitle: 'US $ (in Thousands)',
         labelFormat: '${value}K',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

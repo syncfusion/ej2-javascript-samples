@@ -1,0 +1,54 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="PivotView" style="height:100%;">
+        </div>
+    </div>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This sample demonstrates how to use a server-side pivot engine to obtain, process and return the summarized data via a remote service and display it in the pivot table.</p>
+</div>
+<div id="description">
+    <p>
+        The Pivot Table's server-side pivot engine (external pivot engine) uses the Syncfusion package <a target="_blank"
+            href="https://www.nuget.org/packages/Syncfusion.Pivot.Engine/"> Syncfusion.Pivot.Engine</a> to gather data from the data
+        source and perform all pivot operations such as <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/pivotview/aggregation/#aggregation">
+            aggregation</a>, <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/pivotview/filtering/#filtering">
+            filtering</a>, <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/pivotview/sorting/#sorting">
+            sorting</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pivotview/grouping">
+            grouping</a>, and more on a separate hosted server and only paged
+        data is sent to the pivot table viewport via web service.
+        The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/pivotview/dataSourceSettings/#url">
+            dataSourceSettings-&gt;url</a> property allows this web service URL to be
+        connected to the pivot table.
+    </p>
+    <p>
+        In this demo, the pivot table is shown with the virtualization option enabled through the <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/pivotview/#enablevirtualization"> enableVirtualization</a> property
+        and an external server engine. This would improve pivot table rendering performance when working with large amounts of data.
+    </p>
+    <br />
+    <p>
+        More information about server-side aggregation can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/pivotview/server-side-pivot-engine">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+.e-pivotview {
+    width: 100%;
+    height: 100%;
+}
+
+.sb-sample-content-area {
+    min-height: 255px !important;
+}
+
+.control-section {
+    min-height: 255px !important;
+}
+</style>
+<!-- custom code end -->

@@ -51,6 +51,7 @@ this.default = function () {
         width:'150px',
         title: 'Inverted triangle',
         background:'transparent',
+        animationDuration: 2000,
         titleStyle: {
             fontFamily: "inherit",
             fontWeight: '499'
@@ -63,7 +64,6 @@ this.default = function () {
                 width: 5,
                 value: 40,
                 height: 5,
-                enableDrag: true,
                 placement: 'Near',
                 type: 'Bar',
                 offset: 12,
@@ -122,6 +122,7 @@ this.default = function () {
         height: '350px',
         width:'150px',
         background:'transparent',
+        animationDuration: 2000,
         title: 'Circle',
         titleStyle: {
             fontFamily: "inherit",
@@ -135,7 +136,6 @@ this.default = function () {
                 width: 5,
                 value: 20,
                 height: 5,
-                enableDrag: true,
                 placement: 'Near',
                 type: 'Bar',
                 offset: 12,
@@ -188,17 +188,19 @@ this.default = function () {
         },
         dragMove: function (args) {
             if (args.pointerIndex == 1) {
+                gauge3.axes[0].pointers[1].text = Math.round(args.currentValue).toString() + " Points";
                 gauge3.setPointerValue(0, 0, args.currentValue);
             }
         },
-        title: 'Diamond',
+        title: 'Text',
         titleStyle: {
             fontFamily: "inherit",
             fontWeight: '499'
         },
         height: '350px',
-        width:'150px',
+        width:'168px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -207,7 +209,6 @@ this.default = function () {
                 width: 5,
                 value: 50,
                 height: 5,
-                enableDrag: true,
                 placement: 'Near',
                 type: 'Bar',
                 offset: 12,
@@ -219,8 +220,11 @@ this.default = function () {
                 height: 15,
                 enableDrag: true,
                 placement: 'Near',
-                markerType: 'Diamond',
-                animationDuration: 1500
+                markerType: 'Text',
+                text:'50 Points',
+                textStyle:{ fontFamily: 'inherit' },
+                animationDuration: 1500,
+                offset:-10
             }
             ],
             minimum: 0,
@@ -243,7 +247,7 @@ this.default = function () {
             // custom code end
         }
     });
-    gauge3.appendTo('#gaugeDiamond');
+    gauge3.appendTo('#gaugeText');
 
     var gauge4 = new ej.lineargauge.LinearGauge({
         dragStart: function (args) {
@@ -267,6 +271,7 @@ this.default = function () {
         width:'150px',
         title: 'Rectangle',
         background:'transparent',
+        animationDuration: 2000,
         titleStyle: {
             fontFamily: "inherit",
             fontWeight: '499'
@@ -291,7 +296,6 @@ this.default = function () {
                 width: 5,
                 value: 30,
                 height: 5,
-                enableDrag: true,
                 placement: 'Near',
                 type: 'Bar',
                 offset: 12,
@@ -343,6 +347,7 @@ this.default = function () {
         height: '350px',
         width:'150px',
         background:'transparent',
+        animationDuration: 2000,
         title: 'Multiple pointers',
         titleStyle: {
             fontFamily: "inherit",
@@ -368,7 +373,6 @@ this.default = function () {
                 width: 5,
                 value: 10,
                 height: 5,
-                enableDrag: true,
                 placement: 'Near',
                 type: 'Bar',
                 offset: 12,

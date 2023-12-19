@@ -51,7 +51,7 @@ this.default = function () {
         ],
     
         //Initializing Title
-        title: 'Real GDP Growth',
+        title: 'GDP by Countries',
          // custom code start
         load: function (args) {
             var indexedTheme = location.hash.split('/')[1];

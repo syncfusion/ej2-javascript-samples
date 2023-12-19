@@ -1,7 +1,7 @@
 this.default = function () {
     var resourceData = window.generateResourceData(1, 1000, 'Resource');
     var dataManager = new ej.data.DataManager({
-        url: 'https://ej2services.syncfusion.com/js/development/api/VirtualEventData',
+        url: 'https://services.syncfusion.com/js/production/api/VirtualEventData',
         adaptor: new ej.data.WebApiAdaptor(),
         crossDomain: true
     });

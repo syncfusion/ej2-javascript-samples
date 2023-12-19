@@ -122,6 +122,122 @@
             }
         },
         {
+            "url": "document-list",
+            "name": "Document List",
+            "category": "File Management",
+            "type":"new",
+            "description": "The Document Editor component in JavaScript platform is used to opening a Word document in both read-only and editable modes using the Document Editor. It is presented in a modal dialog, initiated from a list of documents within the grid view.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        },
+        {
             "url": "character-formatting",
             "name": "Character Formatting",
             "category": "Editing Features",
@@ -699,7 +815,6 @@
             "url": "table-formatting",
             "name": "Table Formatting",
             "category": "Editing Features",
-            "type": "update",
             "description": "The Document Editor supports table formatting such as cell margins, cell spacing, horizontal merge, vertical merge, border styles, background color, and more.",
             "api": {
                 "DocumentEditor": [
@@ -1358,6 +1473,20 @@
             "api": {
                 "DocumentEditor": [
                     "layoutType"
+                ]
+
+            }
+
+        },
+        {
+            "url": "ruler",
+            "name": "Ruler",
+            "category": "View",
+            "type": "new",
+            "description": "The Document Editor component supports set tab stops, margins, indents and move table borders.",
+            "api": {
+                "DocumentEditorSettings": [
+                    "showRuler"
                 ]
 
             }

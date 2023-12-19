@@ -13,18 +13,34 @@
                 ]
             }
         },
-            {
-                "url":"custom-toolbar", "name": "Custom Toolbar", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "PDF Viewer", "api": {
-                    "PdfViewer": [
-                        "documentPath",
-                        "enableToolbar",
-                        "enableThumbnail",
-                        "serviceUrl"
-                    ]
+        {
+            "url":"read-only", "name": "Read-Only", "type": "new" ,"description":"This sample demonstrates the Pdf Viewer in read only mode", "category": "Document Security", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
             }
         },
         {
-            "url":"right-to-left", "name": "Right to Left", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with Right to Left Configuration.", "category": "PDF Viewer", "api": {
+            "url":"document-list", "name": "Document List", "type": "new" ,"description":"This sample demonstrates to open PDF document in Read-only mode and Editable mode using PDF Viewer in Pop-up dialog", "category": "File Management", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+        {
+            "url":"custom-toolbar", "name": "Custom Toolbar", "type": "update" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "Toolbar", "api": {
+                "PdfViewer": [
+                    "documentPath",
+                    "enableToolbar",
+                    "enableThumbnail",
+                    "serviceUrl"
+                ]
+            }
+        },
+        {
+            "url":"right-to-left", "name": "Right to Left", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with Right to Left Configuration.", "category": "Localization", "api": {
                 "PdfViewer": [
                     "documentPath",
                     "enableRtl",
@@ -33,7 +49,7 @@
             }
         },
         {
-            "url":"form-filling", "name": "Form Filling", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with form filling configuration.", "category": "PDF Viewer", "api": {
+            "url":"form-filling", "name": "Form Filling", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with form filling configuration.", "category": "PDF Form", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -41,7 +57,7 @@
             }
         },
         {
-            "url":"form-designer", "name": "Form Designer" ,"description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Viewer", "api": {
+            "url":"form-designer", "name": "Form Designer" ,"description":"This sample demonstrates the creation of the supported Form fields in the PDF Viewer such as Textbox, Password, Checkbox, Radio Button, Drop Down, List box, Signature, and Initial. We can also customize these fields and can include new fields through the user interaction by switching to the designer mode.", "category": "PDF Form", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -49,7 +65,7 @@
             }
         },
         {
-            "url":"annotations", "name": "Annotations", "description":"This sample demonstrates the creation of different types of annotations such as Text Markup, Shapes, Measurements, Free text, Stamps, Handwritten signature, ink, and sticky notes in the PDF Viewer. And also we can customize the added annotations or we can include new annotations through user interaction from the PDF Viewer.", "category": "PDF Viewer", "api": {
+            "url":"annotations", "name": "Annotations", "description":"This sample demonstrates the creation of different types of annotations such as Text Markup, Shapes, Measurements, Free text, Stamps, Handwritten signature, ink, and sticky notes in the PDF Viewer. And also we can customize the added annotations or we can include new annotations through user interaction from the PDF Viewer.", "category": "Annotation", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -57,7 +73,7 @@
             }
         },
         {
-            "url":"hand-written", "name": "Handwritten Signature", "description":"This sample demonstrates the Handwritten signature and initial support of the PDF Viewer. The signature or initial support reduces the paperwork of reviewing the contents and it is verified digitally.", "category": "PDF Viewer", "api": {
+            "url":"hand-written", "name": "Handwritten Signature", "description":"This sample demonstrates the Handwritten signature and initial support of the PDF Viewer. The signature or initial support reduces the paperwork of reviewing the contents and it is verified digitally.", "category": "Signature", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -65,7 +81,7 @@
             }
         },
         {
-            "url":"invisible-signature", "name": "Invisible Signature", "type": "new" ,"description":"This sample demonstrates how to digitally sign a PDF document from code behind using Syncfusion's PDF Viewer and PDF Library", "category": "PDF Viewer", "api": {
+            "url":"invisible-signature", "name": "Invisible Signature" ,"description":"This sample demonstrates how to digitally sign a PDF document from code behind using Syncfusion's PDF Viewer and PDF Library", "category": "Signature", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"

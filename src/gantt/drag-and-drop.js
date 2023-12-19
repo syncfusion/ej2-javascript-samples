@@ -4,6 +4,14 @@ this.default = function () {
         height: '450px',
         highlightWeekends: true,
         allowRowDragAndDrop: true,
+        allowTaskbarDragAndDrop: true,
+        editSettings: {
+            allowAdding: true,
+            allowEditing: true,
+            allowDeleting: true,
+            allowTaskbarEditing: true,
+            showDeleteConfirmDialog: true
+        },
         treeColumnIndex: 1,
         splitterSettings: {
             columnIndex: 3

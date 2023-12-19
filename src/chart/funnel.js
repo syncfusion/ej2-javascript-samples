@@ -34,10 +34,6 @@ this.default = function () {
             funnelTheme = funnelTheme ? funnelTheme : 'Material';
             args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() +
                 funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-            if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
-                args.accumulation.series[0].height = '70%';
-                args.accumulation.series[0].width = '80%';
-            }
         },
         //Initializing Title
         title: 'Recruitment Process',

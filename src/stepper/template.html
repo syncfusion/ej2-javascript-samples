@@ -1,0 +1,78 @@
+<div id="stepper-template" class="control-section">
+    <div class="stepper-template-section">
+        <nav id="template-stepper"></nav>
+    </div>
+</div>
+
+<style>
+    #stepper-template.control-section {
+        min-height: 600px;
+    }
+    .stepper-template-section {
+        min-height: 450px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 3%;
+    }
+    #template-stepper button {
+        padding: 5px 8px;
+        margin: 0 10px 0 0;
+    }
+    #template-stepper .e-text-step {
+        padding-left: 12px;
+        font-size: 18px;
+    }
+    #template-stepper .stepper-content {
+        position: absolute;
+        width: 450px;
+        text-align: left;
+        top: 38px;
+        left: 46px;
+        font-size: 15px;
+    }
+    .e-bigger #template-stepper .stepper-content {
+        left: 53px;
+    }
+    #template-stepper .e-step-template .e-step {
+        border-radius: 0px;
+        font-size: 16px;
+    }
+    #template-stepper .e-step-template.e-step-notstarted .e-step {
+        border: 2px solid grey;
+        background: white;
+        color: transparent;
+    }
+    #template-stepper .e-step-template.e-step-completed .e-step,
+    #template-stepper .e-step-template.e-step-inprogress .e-step {
+        background: #63c1a2;
+        color: white;
+    }
+    #template-stepper .e-step-template.e-step-inprogress .e-step {
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #52aa86;
+    }
+    #template-stepper .e-step-template.e-step-inprogress .e-step::before {
+        color: transparent;
+    }
+    #template-stepper .e-progressbar-value {
+        background-color: #9adfc8;
+    }
+    @media only screen and (max-width: 960px) {
+        #template-stepper .stepper-content {
+            width: 200px;
+            font-size: 13px;
+        }
+        #stepper-template.control-section {
+            min-height: 620px;
+        }
+        .stepper-template-section {
+            min-height: 500px;
+        }
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample showcases the customization of each Stepper step using the template support.</p>
+</div>
+<div id="description">
+    <p>In this example, Stepper steps are customized using the <code>template</code> property. Template customization allows us to define unique visual styles for various progress states within the Stepper, including their indicators and progress bars.</p>
+</div>

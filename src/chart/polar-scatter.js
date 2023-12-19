@@ -32,7 +32,7 @@ this.default = function () {
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0, maximum: 8, interval: 2
+            minimum: 0, maximum: 8, interval: 2, labelFormat: '{value}%',
         },
         //Initializing Chart Series
         series: [
@@ -56,11 +56,11 @@ this.default = function () {
             },
         ],
         //Initializing Chart Title
-        title: 'Real GDP Growth',
+        title: 'GDP by Countries',
         //Initializing Tooltip
         tooltip: {
             enable: true,
-            format: '${point.text} : <b>${point.y}%</b>'
+            format: '${point.text} : <b>${point.y}</b>'
         }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {
@@ -80,9 +80,9 @@ this.default = function () {
             chart.series[0].type = polarType.value;
             chart.series[1].type = polarType.value;
             chart.series[2].type = polarType.value;
-            chart.series[0].animation.enable = true;
-            chart.series[1].animation.enable = true;
-            chart.series[2].animation.enable = true;
+            chart.series[0].animation.enable = false;
+            chart.series[1].animation.enable = false;
+            chart.series[2].animation.enable = false;
             chart.refresh();
         }
     });

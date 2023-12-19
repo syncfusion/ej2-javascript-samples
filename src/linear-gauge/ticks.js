@@ -43,6 +43,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -80,6 +81,7 @@ this.default = function () {
         height:'350px',
         title: 'Cross ticks',
         background:'transparent',
+        animationDuration: 2000,
         titleStyle: {
             fontFamily: "inherit",
             fontWeight: '499'
@@ -124,6 +126,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -168,6 +171,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5

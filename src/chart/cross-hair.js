@@ -13,8 +13,8 @@ this.default = function () {
         //Initializing Primary Y Axis
         primaryYAxis: {
             minimum: 83, maximum: 87, interval: 1,
-            title: 'Million in USD',
-            labelFormat: '{value}M',
+            title: 'Millions in USD',
+            labelFormat: '{value} M',
             rowIndex: 0,
             crosshairTooltip: {
                 enable: true
@@ -28,7 +28,7 @@ this.default = function () {
                 opposedPosition: true,
                 minimum: 82, maximum: 88, interval: 2,
                 name: 'yAxis',
-                title: 'Million in USD (Stock)',
+                title: 'Millions in USD (Stock)',
                 crosshairTooltip: { enable: true }
             }
         ],
@@ -64,7 +64,7 @@ this.default = function () {
         legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
-        title: 'Conns,Inc Stock Details',
+        title: 'Conns, Inc Stock Details',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

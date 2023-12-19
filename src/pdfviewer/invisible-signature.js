@@ -30,7 +30,7 @@ this.default = function () {
         enableToolbar: false,
         enableNavigationToolbar: false,
         enableThumbnail: false,
-        serviceUrl: 'https://ej2services.syncfusion.com/js/development/api/pdfviewer',
+        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
         documentPath: 'InvisibleDigitalSignature.pdf'
     });
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields,ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation);
@@ -68,7 +68,7 @@ this.default = function () {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(postData)
         };
-        var apiUrl = 'https://ej2services.syncfusion.com/js/development/api/pdfviewer/ValidateSignature';
+        var apiUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer/ValidateSignature';
         fetch(apiUrl, options)
             .then(function (response) { return response.json(); })
             .then(function (body) {
@@ -163,5 +163,4 @@ function readFile(args) {
 function openDocument() {
     document.getElementById('fileUpload').click();
 }
-
 };

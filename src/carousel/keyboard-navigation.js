@@ -15,7 +15,7 @@ this.default = function () {
     //Focus the Carousel Control (alt+j) key combination
     document.body.addEventListener('keydown', function (e) {
         if (e.altKey && e.keyCode === 74 && carouselObj.element) {
-            carouselObj.element.focus();
+            carouselObj.element.firstElementChild.focus();
         }
     });
 };

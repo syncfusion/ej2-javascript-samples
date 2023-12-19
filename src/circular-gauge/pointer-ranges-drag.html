@@ -7,11 +7,11 @@
     <br>
     <!-- Property Panel -->
     <div class="col-md-4 property-section" style="margin-left:-8px;">
-        <table id="property" title="Properties" style="width: 100%;">
+        <table id="property" title="Properties" style="width: 100%;margin-left: -10px;">
             <tbody>
                 <tr style="height: 50px">
                     <td>
-                        <div>Pointer Value</div>
+                        <div style="font-size: 14px;">Pointer Value</div>
                     </td>
                     <td>
                         <div>
@@ -24,20 +24,20 @@
                 </tr>
                 <tr style="height: 50px">
                     <td>
-                        <div id='enablePointer' style="width: 97%">Allow Pointer Drag</div>
+                        <div id='enablePointer' style="width: 97%; font-size: 14px;">Allow Pointer Drag</div>
                     </td>
                     <td>
-                        <div style="padding-top: 2px;">
+                        <div id="checkbox1" style="padding-top: 2px;margin-left: -10px;">
                             <input type="checkbox" id="enable" checked="true" />
                         </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
                     <td>
-                        <div id='enableRange' style="width: 98%">Allow Ranges Drag</div>
+                        <div id='enableRange' style="width: 98%; font-size: 14px;">Allow Ranges Drag</div>
                     </td>
                     <td>
-                        <div style="padding-top: 2px;">
+                        <div id="checkbox2" style="padding-top: 2px;margin-left: -10px;">
                             <input type="checkbox" id="enable1" />
                         </div>
                     </td>
@@ -47,6 +47,11 @@
         </table>
     </div>
 </div>
+<style>
+    .e-view.fluent #checkbox1, .e-view.fluent-dark #checkbox1, .e-view.fluent #checkbox2, .e-view.fluent-dark #checkbox2 {
+        margin-top: 3px;
+    }
+</style>
 <div id="action-description">
     <p>
         This sample illustrates dragging a pointer and a range in a circular gauge. End-user can drag the pointer and
@@ -70,12 +75,3 @@
             section</a>.
     </p>
 </div>
-<style>
-    .property-panel-table div {
-        padding-left: 0px;
-    }
-
-    .property-panel-section {
-        padding-left: 20px;
-    }
-</style>

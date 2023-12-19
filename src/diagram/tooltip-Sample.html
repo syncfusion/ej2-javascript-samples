@@ -43,6 +43,14 @@
         .content-wrapper {
             border: 1px solid #D7D7D7;
         }
+
+        .e-checkbox-wrapper .e-label {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .e-checkbox-wrapper {
+            margin-left: 0px;
+        }
     </style>
     <div id="tooltipDiagramSection" class="content-wrapper" style="width: 100%">
         <div id="diagram"></div>
@@ -82,7 +90,7 @@
             </td>
             <td>
                 <div>
-                    <input type="text" id="duration" style="width: 100%" min="100" max="2000" step="100" value="100" />
+                    <input type="text" id="duration" style="width: 85%" min="100" max="2000" step="100" value="100" />
                 </div>
             </td>
         </tr>
@@ -98,8 +106,21 @@
                 </div>
             </td>
         </tr>
+        <tr>
+            <td>
+                <div>
+                    Sticky Mode
+                </div>
+            </td>
+            <td>
+                <div style="padding-top:0px;padding-left: 0px;">
+                    <input type="checkbox" id="checked" unchecked="false">
+                </div>
+            </td>
+        </tr>
     </table>
 </div>
+
 <div id="action-description">
     <p>
         This sample demonstrates how to add the extra information to the nodes and connectors and how to show the information through

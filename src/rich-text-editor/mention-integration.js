@@ -36,7 +36,7 @@
          dataSource: emailData,
          fields: { text: 'Name' },
          suggestionCount: 8,
-         displayTemplate: '<a title=${EmailId}>@${Name}</a>',
+         displayTemplate: '<a href=mailto:${EmailId} title=${EmailId}>@${Name}</a>',
          itemTemplate: '<table><tr><td><div id="mention-TemplateList"><img class="mentionEmpImage" src="src/rich-text-editor/images/${Eimg}.png" alt="employee" /><span class="e-badge e-badge-success e-badge-overlap e-badge-dot e-badge-bottom ${Status}"></span></div></td><td><span class="person">${Name}</span><span class="email">${EmailId}</span></td</tr></table>',
          popupWidth: '250px',
          popupHeight: '200px',

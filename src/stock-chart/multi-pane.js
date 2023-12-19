@@ -1,4 +1,4 @@
-window.default = function () {
+this.default = function () {
         var stockChart = new ej.charts.StockChart({
             rows: [{ height: '30%' }, { height: '70%' }],
             chartArea: { border: { width: 0 } },

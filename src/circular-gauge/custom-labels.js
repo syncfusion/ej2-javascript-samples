@@ -5,6 +5,7 @@ this.default = function () {
             args.text = textValues[(args.value)];
         },
         background: 'transparent',
+        animationDuration: 2000,
         axes: [{
             lineStyle: { width: 0 },
             startAngle: 210, endAngle: 150, minimum: 0, maximum: 8, radius: '80%',

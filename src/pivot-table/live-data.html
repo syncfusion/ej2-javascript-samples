@@ -1,0 +1,71 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div style="padding-bottom: 10px">
+            <h4 style="display: inline-block; font-size: 14px;">Feed Delay(ms):</h4>
+            <input type="text" id="feeddelay" style="margin-left: 7px;">
+            <button id="update1" style="margin-left: 10px;">Start Updating...</button>
+            <button id="clear" style="margin-left: 10px;">Stop Updating...</button>
+        </div>
+        <div id="PivotView-LiveData" style="height:100%;">
+        </div>
+    </div>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This sample demonstrates how frequently the pivot table and the pivot chart are updated with real-time data
+        at a given time interval.</p>
+</div>
+<div id="description">
+    <p>Both the pivot table and the pivot chart are receiving real-time data and
+        periodically updating themselves every 5000 milliseconds. Furthermore, in this demonstration,
+    </p>
+    <ul>
+        <li>
+            The <strong>"Feed Delay"</strong> numeric text box can be used to change the time interval.
+        </li>
+        <li>
+            The <strong>"Start Updating..."</strong> button causes the pivot table to automatically update at the interval
+            specified in the <strong>"Feed Delay"</strong> numeric text box, which is measured in milliseconds.
+        </li>
+        <li>
+            The pivot table's automatic updating can be stopped by selecting the <strong>"Stop Updating..."</strong> button.
+        </li>
+        <li>
+            Displayed the <strong>"Change(%)"</strong> values in the pivot table as red for negative values and
+            green for positive values using the cell template concept.
+        </li>
+    </ul>
+</div>
+<!-- custom code end -->
+<style>
+.e-pivotview {
+  width: 100%;
+  height: 100%;
+}
+
+.sb-sample-content-area {
+  min-height: 255px !important;
+}
+
+.control-section {
+  min-height: 255px !important;
+}
+
+#PivotView-LiveData_chart {
+  margin-top: 15px;
+}
+
+.bg-fade {
+  background-color: #FFEBE9 !important;
+  color: #FF3740 !important;
+}
+
+.bg-fade1 {
+  background-color: #DFFFE2 !important;
+  color: #00A653 !important;
+}
+
+.bg-fade2 {
+  color: rgba(0, 0, 0, 0.87);
+}
+</style>

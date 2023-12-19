@@ -43,7 +43,7 @@ this.default = function () {
         dataSourceSettings: {
             id: 'Id', parentId: 'ParentId',
             dataSource: new ej.data.DataManager(
-                { url: 'https://ej2services.syncfusion.com/js/development/api/RemoteData', crossDomain: true }
+                { url: 'https://services.syncfusion.com/js/production/api/RemoteData', crossDomain: true }
             ),
             //binds the external data with node
             doBinding: function (nodeModel, data, diagram) {

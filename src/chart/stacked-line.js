@@ -34,6 +34,7 @@ this.default = function () {
             minorGridLines: { width: 1 },
             minorTickLines: { width: 0 },
             labelFormat: '${value}',
+            title: 'Expense'
         },
         chartArea: { border: { width: 0 } },
         //Initializing Chart Series

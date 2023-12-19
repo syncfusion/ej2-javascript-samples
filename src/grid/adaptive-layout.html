@@ -110,12 +110,77 @@
         border-radius: 1px;
     }
 
+    .material3 .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .material3-dark .e-adaptive-demo.e-pager-pagesizes .e-pager {
+        padding-top: 0;
+    }
+
+    .material .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .material-dark .e-adaptive-demo.e-pager-pagesizes .e-pager {
+        padding-top: 2px;
+    }
+
+    .fluent .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .fluent-dark .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .bootstrap5 .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .bootstrap5-dark .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .tailwind .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .tailwind-dark .e-adaptive-demo.e-pager-pagesizes .e-pager {
+        padding-top: 10px;
+    }
+
+    .bootstrap .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .bootstrap-dark .e-adaptive-demo.e-pager-pagesizes .e-pager,
+    .bootstrap4 .e-adaptive-demo.e-pager-pagesizes .e-pager {
+        padding-top: 8px;
+    }
+
     /* Render the mobile pager by default */
     @media (max-width: 3840px) {
         .e-adaptive-demo .e-pager {
             padding: 13px 0;
         }
 
+        .e-adaptive-demo .e-rtl.e-pager div.e-parentmsgbar {
+            margin-top: 0;
+        }
+
+        .material3 .e-adaptive-demo .e-pager div.e-parentmsgbar,
+        .material3-dark .e-adaptive-demo .e-pager div.e-parentmsgbar {
+            padding-top: 3px;
+        }
+
+        .material3 .e-adaptive-demo.e-pager-pagesizes .e-pager div.e-parentmsgbar,
+        .material3-dark .e-adaptive-demo.e-pager-pagesizes .e-pager div.e-parentmsgbar {
+            padding-top: 0;
+        }
+
+        .material3 .e-adaptive-demo.e-pager-pagesizes .e-pager .e-mprev,
+        .material3 .e-adaptive-demo.e-pager-pagesizes .e-pager .e-mnext,
+        .material3-dark .e-adaptive-demo.e-pager-pagesizes .e-pager .e-mprev,
+        .material3-dark .e-adaptive-demo.e-pager-pagesizes .e-pager .e-mnext {
+            width: 7%;
+        }
+
+        .e-adaptive-demo.e-pager-pagesizes .e-pager {
+            padding: 6px 0;
+            .e-mfirst,
+            .e-mprev,
+            .e-mnext,
+            .e-mlast {
+                padding: 1% 2%;
+            }
+
+            .e-mfirst,
+            .e-mlast {
+                width: calc(5% + 11px);
+            }
+
+            .e-mprev,
+            .e-mnext {
+                width: 5%;
+            }
+        }
         .e-adaptive-demo .e-pager div.e-parentmsgbar {
             box-sizing: border-box;
             display: inline-block;
@@ -126,19 +191,6 @@
             text-align: center;
             vertical-align: top;
             width: calc(60% - 48px);
-        }
-
-        .material3 .e-adaptive-demo .e-pager div.e-parentmsgbar,
-        .material3-dark .e-adaptive-demo .e-pager div.e-parentmsgbar {
-            padding-top: 3px;
-        }
-
-        .e-adaptive-demo .e-rtl.e-pager div.e-parentmsgbar {
-            margin-top: 0;
-        }
-
-        .e-adaptive-demo .e-pager .e-pagesizes {
-            display: none;
         }
 
         .e-adaptive-demo .e-pager .e-pagecountmsg {
@@ -161,17 +213,6 @@
             box-sizing: border-box;
             display: inline-block;
             padding: 1% 5%;
-        }
-
-        .material3 .e-adaptive-demo .e-pager .e-mfirst,
-        .material3 .e-adaptive-demo .e-pager .e-mprev,
-        .material3 .e-adaptive-demo .e-pager .e-mnext,
-        .material3 .e-adaptive-demo .e-pager .e-mlast,
-        .material3-dark .e-adaptive-demo .e-pager .e-mfirst,
-        .material3-dark .e-adaptive-demo .e-pager .e-mprev,
-        .material3-dark .e-adaptive-demo .e-pager .e-mnext,
-        .material3-dark .e-adaptive-demo .e-pager .e-mlast {
-            padding: 1% 4%;
         }
 
         .e-adaptive-demo .e-pager .e-mfirst {
@@ -204,7 +245,7 @@
 
         .e-adaptive-demo .e-bigger .e-pager,
         .e-adaptive-demo .e-pager.e-bigger {
-            padding: 19px 0;
+            padding: 6px 0;
         }
 
         .e-adaptive-demo .e-bigger .e-pager.e-rtl div.e-parentmsgbar,
@@ -224,13 +265,13 @@
 </style>
 <!-- custom code end -->
 <div id="action-description">
-    <p>This sample demonstrates the rendering order of the grid row elements and adaptive dialogs.</p>
+    <p>This sample demonstrates optimal viewing experience and improve usability on small screens.</p>
 </div>
 <div id="description">
     <p>
         The <code><a target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#enableadaptiveui">
-                enableAdaptiveUI</a></code> property is used to render the grid filter, sort and edit dialogs adaptively
+                enableAdaptiveUI</a></code> property is used to render the grid filter, sort, edit, pager and toolbars like column chooser, pdf export, excel export, etc... dialogs adaptively
         and
         <code><a target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#rowrenderingmode">
@@ -242,6 +283,9 @@
         <li><code>Vertical</code> - Renders the grid row elements in the vertical direction.</li>
     </ul>
     <p> In this sample, you can change the row elements rendering direction by using the properties panel checkbox
+    </p>
+    <p> In this demo, the column menu feature is only supported for the Grid <code>rowRenderingMode</code> mode as <code>Vertical</code>.
+        This feature includes grouping, sorting, autofit, filter, and column chooser feature.
     </p>
     <p>
         More information on the rowRenderingMode configuration can be found in this

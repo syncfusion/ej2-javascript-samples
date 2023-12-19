@@ -57,12 +57,14 @@ this.default = function () {
             groupIconCss: 'e-icons e-bold',
             isCollapsible: false,
             enableGroupOverflow: true,
+            overflowHeader: 'More Font Options',
             cssClass: 'font-group',
             collections: [{
                 items: [{
                     type: 'ComboBox',
                     comboBoxSettings: {
                         dataSource: fontStyle,
+                        label: 'Font Style',
                         index: 2,
                         allowFiltering: true,
                         change: function (args) {
@@ -70,12 +72,14 @@ this.default = function () {
                                 updateContent("Font Style -> " + args.itemData.text);
                             }
                         },
-                        width: '150px',
+                        width: '115px',
+                        popupWidth: '150px',
                     }
                 }, {
                     type: 'ComboBox',
                     comboBoxSettings: {
                         dataSource: fontSize,
+                        label: 'Font Size',
                         index: 4,
                         width: '65px',
                         popupWidth: '85px',
@@ -114,7 +118,8 @@ this.default = function () {
                             iconCss: 'e-icons e-change-case',
                             click: function () { updateContent("Change Case"); }
                         }],
-                        selection: ej.ribbon.RibbonGroupButtonSelection.Multiple
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Multiple,
+                        header: 'Format Styles'
                     }
                 }, {
                     type: 'ColorPicker',
@@ -127,7 +132,7 @@ this.default = function () {
                 }]
             }]
         }, {
-            header: "paragraph",
+            header: "Paragraph",
             id: 'paragraph',
             orientation: 'Row',
             groupIconCss: 'e-icons e-align-center',
@@ -137,6 +142,7 @@ this.default = function () {
                     type: "Button",
                     buttonSettings: {
                         iconCss: 'e-icons e-decrease-indent',
+                        content: 'Decrease Indent',
                         clicked: function () { updateContent("Cut"); }
                     },
                     allowedSizes: ej.ribbon.RibbonItemSize.Small
@@ -144,6 +150,7 @@ this.default = function () {
                     type: "Button",
                     buttonSettings: {
                         iconCss: 'e-icons e-increase-indent',
+                        content: 'Increase Indent',
                         clicked: function () { updateContent("Increase Indent"); }
                     },
                     allowedSizes: ej.ribbon.RibbonItemSize.Small
@@ -151,6 +158,7 @@ this.default = function () {
                     type: "Button",
                     buttonSettings: {
                         iconCss: 'e-icons e-paragraph',
+                        content: 'Paragraph',
                         clicked: function () { updateContent("Paragraph"); }
                     },
                     allowedSizes: ej.ribbon.RibbonItemSize.Small
@@ -161,6 +169,7 @@ this.default = function () {
                     type: 'GroupButton',
                     groupButtonSettings: {
                         selection: ej.ribbon.RibbonGroupButtonSelection.Single,
+                        header: 'Alignment',
                         items: [{
                             iconCss: 'e-icons e-align-left',
                             click: function ()  { updateContent("Align Left"); },
@@ -261,6 +270,7 @@ this.default = function () {
             showLauncherIcon: true,
             orientation: 'Row',
             enableGroupOverflow: true,
+            overflowHeader: 'Illustrations',
             groupIconCss: 'e-icons e-image',
             collections: [{
                 items: [{
@@ -358,7 +368,7 @@ this.default = function () {
                 }]
             }]
         }, {
-            header: 'Link',
+            header: 'Links',
             groupIconCss: 'e-icons e-link',
             isCollapsible: false,
             collections: [{
@@ -473,7 +483,7 @@ this.default = function () {
     var list = new ej.lists.ListView({
         showHeader: true,
         headerTitle: 'Insert Picture From',
-        dataSource: ['This device', 'Stock Images', 'Online Images'],
+        dataSource: ['This Device', 'Stock Images', 'Online Images'],
         select: function (args) { updateContent("Picture -> " + args.text); }
     });
     list.appendTo('#pictureList');

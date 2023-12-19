@@ -1,7 +1,8 @@
 this.default = function () {
     var gauge = new ej.lineargauge.LinearGauge({
         orientation: 'Horizontal',
-        background:'transparent',  
+        background:'transparent',
+        animationDuration: 2000,
         container: {
             width: 30,
             roundedCornerRadius: 20,

@@ -1,25 +1,61 @@
 
 this.default = function () {
     // define the array of data
-    var records = [];
-        for (var i = 1; i <= 150; i++) {
-            var item = {
-                id: 'id' + i,
-                text: "Item " + i,
-            };
-            records.push(item);
+    var autoCompleteRecords = [];
+    for (var i = 1; i <= 150; i++) {
+        var autoItem = {};
+        autoItem.id = 'id' + i;
+        autoItem.text = "Item ".concat(i);
+        var randomGroup = Math.floor(Math.random() * 4) + 1;
+        switch (randomGroup) {
+            case 1:
+                autoItem.group = 'Group A';
+                break;
+            case 2:
+                autoItem.group = 'Group B';
+                break;
+            case 3:
+                autoItem.group = 'Group C';
+                break;
+            case 4:
+                autoItem.group = 'Group D';
+                break;
+            default:
+                break;
         }
+        autoCompleteRecords.push(autoItem);
+    }
 
     // initialize AutoComplete component
-    var atcObj = new ej.dropdowns.AutoComplete({
+    var localObj = new ej.dropdowns.AutoComplete({
         //set the data to dataSource property
-        dataSource: records,
+        dataSource: autoCompleteRecords,
         //enable the virtualization property
         enableVirtualization: true,
         popupHeight: '200px',
-        fields: { text: 'text', value: 'text' },
+        fields: { value: 'text' },
         // set the placeholder to AutoComplete input element
         placeholder: 'e.g. Item 1'
     });
-    atcObj.appendTo('#data');
+    localObj.appendTo('#local');
+    var remoteObj = new ej.dropdowns.AutoComplete({
+        dataSource: new ej.data.DataManager({
+            url: 'https://services.syncfusion.com/js/production/api/orders',
+            adaptor: new ej.data.WebApiAdaptor(),
+            crossDomain: true
+        }),
+        fields: { value: 'OrderID' },
+        enableVirtualization: true,
+        popupHeight: '200px',
+        placeholder: 'OrderID'
+    });
+    remoteObj.appendTo('#remote');
+    var groupObj = new ej.dropdowns.AutoComplete({
+        dataSource: autoCompleteRecords,
+        enableVirtualization: true,
+        popupHeight: '200px',
+        fields: { groupBy: 'group', value: 'text'},
+        placeholder: 'e.g. Item 1'
+    });
+    groupObj.appendTo('#group');
 };

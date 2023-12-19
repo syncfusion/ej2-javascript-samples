@@ -45,7 +45,7 @@ this.default = function () {
             },
         ],
         //Initializing Chart Title
-        title: 'GDP, Current Prices (in Billions)',
+        title: 'GDP in Current Prices (USD Billion)',
         legendSettings: {
             visible: true, enableHighlight: true
         },
@@ -72,10 +72,10 @@ this.default = function () {
             chart.series[1].type = polarType.value;
             chart.series[2].type = polarType.value;
             chart.series[3].type = polarType.value;
-            chart.series[0].animation.enable = true;
-            chart.series[1].animation.enable = true;
-            chart.series[2].animation.enable = true;
-            chart.series[3].animation.enable = true;
+            chart.series[0].animation.enable = false;
+            chart.series[1].animation.enable = false;
+            chart.series[2].animation.enable = false;
+            chart.series[3].animation.enable = false;
             chart.refresh();
         }
     });

@@ -37,6 +37,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 2000,
         width:'150px',
         height:'350px',
         annotations: [{
@@ -92,6 +93,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 20
@@ -136,6 +138,7 @@ this.default = function () {
         width:'170px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         annotations: [{
             axisIndex: 0,
             axisValue: 60,

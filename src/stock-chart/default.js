@@ -1,4 +1,4 @@
-window.default = function () {
+this.default = function () {
         var stockChart = new ej.charts.StockChart({
             chartArea: { border: { width: 0 } },
             primaryYAxis: {

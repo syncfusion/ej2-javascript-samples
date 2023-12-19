@@ -1,7 +1,20 @@
-<div class="col-lg-12 control-section">
-    <div class="control-wrapper">
-        <div style='padding-top:70px;'>
-            <input type="text" id="data" tabindex="1" />
+<div class="control-section col-lg-12">
+    <div id='local-data' class='col-lg-6' style='padding-top:15px'>
+        <div class='content'>
+            <h4>Local Data</h4>
+            <input type="text" id="local" tabindex="1" />
+        </div>
+    </div>
+    <div id='remote-data' class='col-lg-6' style='padding-top:15px'>
+        <div class='content'>
+            <h4>Remote Data</h4>
+            <input type="text" id="remote" tabindex="1" />
+        </div>
+    </div>
+    <div id='group-data' class='col-lg-6' style='padding-top:15px'>
+        <div class='content'>
+            <h4>Grouping</h4>
+            <input type="text" id="group" tabindex="1" />
         </div>
     </div>
 </div>
@@ -17,9 +30,9 @@
 
 <!-- custom code start -->
 <style>
-    .control-wrapper {
-        margin: 0 auto;
-        width: 250px;
+     .content {
+        margin: 0 auto; 
+        width: 320px;
     }
 </style>
 <!-- custom code end-->

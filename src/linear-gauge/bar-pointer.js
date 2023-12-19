@@ -39,6 +39,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -85,6 +86,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -131,6 +133,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -177,6 +180,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5
@@ -238,6 +242,7 @@ this.default = function () {
         width:'150px',
         height:'350px',
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             line: {
                 width: 5

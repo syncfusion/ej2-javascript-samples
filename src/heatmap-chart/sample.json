@@ -3,6 +3,7 @@
     "directory": "heatmap-chart",
     "category": "Data Visualization",
     "ftName": "heatmap-chart",
+    "type": "update",
     "samples": [
         {
             "url": "default-functionalities",
@@ -97,6 +98,26 @@
                 {"displayName": "opposed-axis.html", "path": "./src/heatmap-chart/opposed-axis.html"},
                 {"displayName": "opposed-axis-data.js", "path": "./src/heatmap-chart/opposed-axis-data.js"}],
             "api": {"HeatMap": [ "titleSettings", "xAxis", "yAxis", "dataSource", "legendSettings", "cellSettings"] }
+        },
+        {
+            "url": "label-template",
+            "name": "Label Template",
+            "category": "Features",
+            "description": "This demo for Essential JS2 Heatmap control shows how to place the label template in heatmap.",
+            "sourceFiles": [{"displayName": "label-template.js", "path": "./src/heatmap-chart/label-template.js"},
+                {"displayName": "label-template.html", "path": "./src/heatmap-chart/label-template.html"}
+            ],
+            "api": {
+                "HeatMap": [
+                    "titleSettings",
+                    "xAxis",
+                    "yAxis",
+                    "dataSource",
+                    "cellSettings",
+                    "legendSettings"
+                ]
+            },
+            "type": "new"
         },
         {
             "url": "multi-level-labels",

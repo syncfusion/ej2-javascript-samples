@@ -116,6 +116,7 @@ this.default = function () {
             }
         ],
         pointRender: pointRender,
+        highlightColor: 'transparent',
         legendSettings: { visible: false },
         title: 'Literacy rate by Country in 2015', tooltip: { enable: true, header: "<b>${point.x}</b>", format: "Rate : <b>${point.text}</b>" },
         width: ej.base.Browser.isDevice ? '100%' : '75%',

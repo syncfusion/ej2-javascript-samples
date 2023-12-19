@@ -14,7 +14,6 @@ this.renderChartSto =function () {
                 labelFormat: '${value}M',
                 minimum: 50, maximum: 170,
                 plotOffset: 25, 
-                majorGridLines: { width: 0 },
                 interval: 30, rowIndex: 1, opposedPosition: true, lineStyle: { width: 0 }
             },
             rows: [

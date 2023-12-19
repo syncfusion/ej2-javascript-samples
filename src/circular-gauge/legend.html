@@ -6,53 +6,53 @@
     </div>
     <br>
     <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%;">
+        <table id="property" title="Properties" style="width: 100%; margin-left: -10px">
             <tbody>
                 <tr style="height: 50px">
-                    <td style="width: 20%">
-                        <div id="enablelegend">Show legend </div>
+                    <td>
+                        <div id="enablelegend" style="font-size: 14px;">Show legend </div>
                     </td>
-                    <td style="width: 40%;">
-                        <div style="padding-top: 0px;">
+                    <td>
+                        <div style="padding-top: 0px;margin-left: -10px;margin-top: 3px;">
                             <input type="checkbox" id="enable">
                         </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
-                    <td style="width: 60%">
-                        <div id="togglelegend" style="width: 80%">Show range when the legend item is toggled</div>
+                    <td>
+                        <div id="togglelegend" style="width: 80%; font-size: 14px;">Show range when the legend item is toggled</div>
                     </td>
-                    <td style="width: 30%;">
-                        <div style="padding-top: 0px;">
+                    <td >
+                        <div style="padding-top: 0px;margin-left: -10px;margin-top: 1px;">
                             <input type="checkbox" id="toggle">
                         </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
                     <td>
-                        <div> Position </div>
+                        <div style="font-size: 14px;"> Position </div>
                     </td>
                     <td>
                         <div style="width: 100%">
                             <select id="position" class="form-control">
-                                <option value="Auto">Auto</option>
-                                <option value="Top">Top</option>
                                 <option value="Bottom" selected='true'>Bottom</option>
+                                <option value="Top">Top</option>
                                 <option value="Left">Left</option>
                                 <option value="Right">Right</option>
+                                <option value="Auto">Auto</option>
                             </select>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div> Alignment </div>
+                        <div style="font-size: 14px;"> Alignment </div>
                     </td>
                     <td>
                         <div style="width: 100%">
                             <select id="alignment" class="form-control">
-                                <option value="Far">Far</option>
                                 <option value="Center" selected="true">Center</option>
+                                <option value="Far">Far</option>
                                 <option value="Near">Near</option>
                             </select>
                         </div>
@@ -60,7 +60,7 @@
                 </tr>
                 <tr style="height: 50px">
                     <td>
-                        <div> Shape </div>
+                        <div style="font-size: 14px;"> Shape </div>
                     </td>
                     <td>
                         <div style="width: 100%">
@@ -70,7 +70,6 @@
                                 <option value="Triangle">Triangle</option>
                                 <option value="Diamond">Diamond</option>
                                 <option value="InvertedTriangle">Inverted triangle</option>
-                                <!-- <option value="Image">Image</option> -->
                             </select>
                         </div>
                     </td>
@@ -99,12 +98,3 @@
             section</a>.
     </p>
 </div>
-<style>
-    #control-container {
-        padding: 0px !important;
-    }
-
-    .property-panel-table div {
-        padding-left: 0px;
-    }
-</style>

@@ -18,8 +18,6 @@ this.default = function () {
         height: '400',
         minimum: 0, maximum: 30, interval: 5,
         labelFormat: '{value}%',
-        title: 'Profit in Percent',
-        titlePosition: 'Top',
         orientation: 'Vertical',
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

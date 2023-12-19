@@ -53,14 +53,17 @@ this.default = function () {
             groupIconCss: 'e-icons e-bold',
             isCollapsible: false,
             enableGroupOverflow: true,
+            overflowHeader: 'More Font Options',
             cssClass: 'font-group',
             collections: [{
                 items: [{
                     type: 'ComboBox',
                     comboBoxSettings: {
-                        width: '150px',
+                        width: '115px',
+                        popupWidth: '150px',
                         allowFiltering: true,
                         dataSource: fontStyle,
+                        label: 'Font Style',
                         index: 2,
                         change: function (args) {
                             if (args.itemData) {
@@ -72,6 +75,7 @@ this.default = function () {
                     type: 'ComboBox',
                     comboBoxSettings: {
                         dataSource: fontSize,
+                        label: 'Font Size',
                         allowFiltering: true,
                         index: 4,
                         width: '65px',
@@ -89,6 +93,7 @@ this.default = function () {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     groupButtonSettings: {
                         selection: ej.ribbon.RibbonGroupButtonSelection.Multiple,
+                        header: 'Format Styles',
                         items: [
                         {
                             iconCss: 'e-icons e-bold',
@@ -125,7 +130,7 @@ this.default = function () {
         }, {
             id: 'paragraph',
             orientation: 'Row',
-            header: "paragraph",
+            header: "Paragraph",
             groupIconCss: 'e-icons e-align-center',
             collections: [{
                 items: [{
@@ -133,6 +138,7 @@ this.default = function () {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
                         iconCss: 'e-icons e-decrease-indent',
+                        content: 'Decrease Indent',
                         clicked: function () { updateContent("Cut"); }
                     }
                 }, {
@@ -140,6 +146,7 @@ this.default = function () {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
                         iconCss: 'e-icons e-increase-indent',
+                        content: 'Increase Indent',
                         clicked: function () { updateContent("Increase Indent"); }
                     }
                 }, {
@@ -147,6 +154,7 @@ this.default = function () {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     buttonSettings: {
                         iconCss: 'e-icons e-paragraph',
+                        content: 'Paragraph',
                         clicked: function () { updateContent("Paragraph"); }
                     }
                 }]
@@ -157,6 +165,7 @@ this.default = function () {
                     allowedSizes: ej.ribbon.RibbonItemSize.Small,
                     groupButtonSettings: {
                         selection: ej.ribbon.RibbonGroupButtonSelection.Single,
+                        header: 'Alignment',
                         items: [{
                             selected: true,
                             iconCss: 'e-icons e-align-left',
@@ -285,6 +294,7 @@ this.default = function () {
             id: 'illustration',
             orientation: 'Row',
             enableGroupOverflow: true,
+            overflowHeader: 'Illustrations',
             groupIconCss: 'e-icons e-image',
             collections: [{
                 items: [{
@@ -382,7 +392,7 @@ this.default = function () {
                 }]
             }]
         }, {
-            header: 'Link',
+            header: 'Links',
             groupIconCss: 'e-icons e-link',
             isCollapsible: false,
             collections: [{
@@ -498,7 +508,7 @@ this.default = function () {
         showHeader: true,
         id: 'listview',
         headerTitle: 'Insert Picture From',
-        dataSource: ['This device', 'Stock Images', 'Online Images'],
+        dataSource: ['This Device', 'Stock Images', 'Online Images'],
         select: function (args) { updateContent("Picture -> " + args.text); }
     });
     list.appendTo('#pictureList');

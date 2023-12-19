@@ -6,7 +6,7 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             title: 'Years',
-            interval: 1,
+            interval: ej.base.Browser.isDevice ? 2 : 1,
             labelIntersectAction: 'Rotate45',
             valueType: 'Category',
             majorGridLines: { width: 0 }, minorGridLines: { width: 0 },
@@ -58,7 +58,7 @@ this.default = function () {
                 dataSource: [
                     { x: '2005', y: 0.7 }, { x: '2006', y: 1.4 },
                     { x: '2007', y: 1.5 }, { x: '2008', y: 0.35 },
-                    { x: '2009', y: -2.7 }, { x: '2010', y: 0.5 },
+                    { x: '2009', y: -2.7 }, { x: '2010', y: -0.5 },
                     { x: '2011', y: 0.25 }, { x: '2012', y: -0.1 },
                     { x: '2013', y: -0.3 }, { x: '2014', y: -0.6 },
                     { x: '2015', y: 0 }
@@ -69,7 +69,7 @@ this.default = function () {
                 dataSource: [
                     { x: '2005', y: -0.8 }, { x: '2006', y: 0 },
                     { x: '2007', y: -1 }, { x: '2008', y: -0.35 },
-                    { x: '2009', y: -0.3 }, { x: '2010', y: 0.5 },
+                    { x: '2009', y: -0.3 }, { x: '2010', y: -0.5 },
                     { x: '2011', y: 0 }, { x: '2012', y: -0.4 },
                     { x: '2013', y: 0 }, { x: '2014', y: -0.6 },
                     { x: '2015', y: -0.3 }

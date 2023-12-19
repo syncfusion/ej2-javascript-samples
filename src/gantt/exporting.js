@@ -14,6 +14,38 @@ this.default = function () {
             child: 'subtasks',
             resourceInfo: 'resources'
         },
+        eventMarkers: [
+                {
+                    day: new Date('04/02/2019'),
+                }, {
+                    day: new Date('04/09/2019'),
+                    label: 'Research phase'
+                }, {
+                    day: new Date('04/30/2019'),
+                    label: 'Design phase'
+                }, {
+                    day: new Date('05/23/2019'),
+                    label: 'Production phase'
+                }, {
+                    day: new Date('06/20/2019'),
+                    label: 'Sales and marketing phase'
+                }
+            ],
+            holidays: [
+                {
+                    from: new Date('04/04/2019'),
+                    to: new Date('04/04/2019'),
+                    label: 'Local Holiday'
+                }, {
+                    from: new Date('04/19/2019'),
+                    to: new Date('04/19/2019'),
+                    label: 'Good Friday'
+                }, {
+                    from: new Date('04/30/2019'),
+                    to: new Date('04/30/2019'),
+                    label: 'Release Holiday'
+                },
+            ],
         columns: [
             { field: 'TaskID', width: 80 },
             { field: 'TaskName', width: 250 },

@@ -55,10 +55,12 @@ this.default = function () {
         },
         resized: function (args) {
             window.location.reload();
+        },
+        loaded: function (args) {
+            updateGauge();
         }
     });
     circulargauge.appendTo('#gauge');
-    updateGauge();   
 };
 function updateGauge() {
     var annotationGauge = new ej.circulargauge.CircularGauge({
@@ -75,7 +77,7 @@ function updateGauge() {
                 value: 90,
                 radius: '45%', markerWidth: 12, markerHeight: 12,
                 type: 'Marker', markerShape: 'Triangle', color: 'Orange',
-                animation: { enable: false }
+                animation: { enable: true, duration: 500 }
             }], startAngle: 0, endAngle: 0, radius: '60%', lineStyle: { width: 0 }
         }],
         load: function (args) {

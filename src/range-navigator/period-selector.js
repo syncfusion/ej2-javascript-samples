@@ -15,7 +15,7 @@ this.renderPeriodSelectorChart = function (data1) {
             dataSource: data1, width: 2, type: 'Candle', animation: { enable: true }, xName: 'date', low: 'Low',
             high: 'High', close: 'Close', volume: 'Volume', open: 'Open', name: 'Bitcoin', bearFillColor: '#2ecd71',
             bullFillColor: '#e74c3d', yName: 'Close'
-        }], width: ej.base.Browser.isDevice ? '100%' : '80%', crosshair: { enable: true },
+        }], width: ej.base.Browser.isDevice ? '100%' : '88%', crosshair: { enable: true },
         annotations: [{ content: '<div id="annotation"></div>', coordinateUnits: 'Pixel', region: 'Chart', x: '15%', y: '25%' }],
         zoomSettings: { enableMouseWheelZooming: true, mode: 'X', toolbarItems: [] }, tooltip: { enable: true, shared: true },
         chartArea: { border: { width: 0 } }, theme: theme, legendSettings: { visible: false }, height: '250',
@@ -73,8 +73,8 @@ this.renderPeriodSelectorChart = function (data1) {
         }, labelPosition: 'Outside', valueType: 'DateTime', dataSource: data1, xName: 'date', yName: 'Close', theme: theme,
         periodSelectorSettings: {
             periods: [{ text: '1M', interval: 1, intervalType: 'Months' }, { text: '3M', interval: 3, intervalType: 'Months' },
-            { text: '6M', interval: 6, intervalType: 'Months' }, { text: '1Y', interval: 1, intervalType: 'Years' },
-            { text: '2Y', interval: 2, intervalType: 'Years', selected: true }, { text: 'ALL' }], position: 'Top',
+            { text: '6M', interval: 6, intervalType: 'Months' }, { text: '1Y', interval: 1, intervalType: 'Years', selected: true },
+            { text: '2Y', interval: 2, intervalType: 'Years' }, { text: 'ALL' }], position: 'Top',
         }
     });
     rangeTop.appendTo('#container');
@@ -102,7 +102,7 @@ this.renderPeriodSelectorChart = function (data1) {
             chart.series[0].dataSource = filterData;
             chart.setAnnotationValue(0, '<div id="annotation"></div>');
             chart.refresh();
-        }, width: ej.base.Browser.isDevice ? '100%' : '80%', value: [new Date('2016-05-15'), new Date('2018-05-15')], theme: theme,
+        }, width: ej.base.Browser.isDevice ? '100%' : '80%', value: [new Date('2017-04-30'), new Date('2018-04-30')], theme: theme,
     });
     rangeBottom.appendTo('#range');
     rangeTop.changed = function (args) {
@@ -126,7 +126,7 @@ this.default = function () {
     fetchApi.send().then();
     fetchApi.onSuccess = function (data) {
         datasrc = data;
-        for (var i = 0; i < datasrc.length; i++) {
+        for (var i = 0; i < datasrc.length - 20; i++) {
             value = datasrc[i];
             data1.push({
                 High: value.High, Low: value.Low, Close: value.Close, Open: value.Open, date: new Date(2010, 6, j)

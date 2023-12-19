@@ -7,96 +7,125 @@
     <!-- Property Panel -->
     <br>
     <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%;">
-            <tr>
+        <table id="property" title="Properties" style="width: 100%;margin-left: -10px;">
+            <colgroup>
+                <col span="1" style="width: 50%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 20%;">
+            </colgroup>
+            <tbody>
+            <tr style="height: 50px">
                 <td>
-                    <div>Start Angle</div>
+                    <div style="font-size: 14px;">Start Angle</div>
                 </td>
-                <td>
-                    <div style="padding-left: 10px;">
+                <td style="width: 80%;">
+                    <div>
                         <input type="range" id="start" value="270" min="0" max="360" style="width: 70%" />
                     </div>
                 </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeStart' style="margin-left: -25px;">270°</span>
+                <td style="width: 20%;padding-top: 10px;text-align: center;">
+                    <span id='rangeStart' style="margin-left: -20px;font-size:14px">270°</span>
                 </td>
             </tr>
 
-            <tr>
+            <tr style="height: 50px">
                 <td>
-                    <div>End Angle</div>
+                    <div style="font-size: 14px;">End Angle</div>
                 </td>
-                <td>
-                    <div style="padding-left: 10px;">
+                <td style="width: 80%">
+                    <div>
                         <input type="range" id="end" value="90" min="0" max="360" style="width: 70%" />
                     </div>
                 </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeEnd' style="margin-left: -25px;">90°</span>
+                <td style="width: 20%;padding-top: 10px;text-align: center;">
+                    <span id='rangeEnd' style="margin-left: -20px;font-size:14px;">90°</span>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 50px">
                 <td>
-                    <div>Radius</div>
+                    <div style="font-size: 14px;">Radius</div>
                 </td>
-                <td>
-                    <div style="padding-left: 10px;">
+                <td style="width: 80%">
+                    <div>
                         <input type="range" id="radius" value="100" min="30" max="100" style="width: 70%" />
                     </div>
                 </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='radius1' style="margin-left: -25px;">100%</span>
+                <td style="width: 20%;padding-top: 10px;text-align: center;">
+                    <span id='radius1' style="margin-left: -20px;font-size:14px">100%</span>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 50px">
                 <td style="width: 40%">
-                    <div class="property-text"> Radius based on angle</div>
+                    <div class="property-text" style="font-size: 14px;"> Radius based on angle</div>
                 </td>
                 <td style="width: 40%;">
-                    <div style="padding-top: 0px; margin-left: 10px">
-                        <input type="checkbox" id="angle" checked />
+                    <div id="checkbox1" style="margin-left:-10px;">
+                        <input type="checkbox" id="angle" />
                     </div>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 50px">
                 <td>
-                    <div>Center X</div>
+                    <div style="margin-top: 10px;font-size: 14px;">Center X</div>
                 </td>
-                <td>
-                    <div style="padding-left: 10px;">
-                        <input type="range" id="centerX" value="50" min="0" max="100" style="width: 70%" />
+                <td style="width: 80%">
+                    <div>
+                        <input type="range" id="centerX" value="50" min="0" max="100" style="width: 70%;margin-top: 10px;" />
                     </div>
                 </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='center1' style="margin-left: -25px;">50%</span>
+                <td style="width: 20%;padding-top: 20px;text-align: center;">
+                    <span id='center1' style="margin-left: -20px;font-size: 14px;">50%</span>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 50px">
                 <td>
-                    <div>Center Y</div>
+                    <div style="margin-top: 10px;font-size: 14px;">Center Y</div>
                 </td>
-                <td>
-                    <div style="padding-left: 10px;">
-                        <input type="range" id="centerY" value="50" min="0" max="100" style="width: 70%" />
+                <td style="width: 80%">
+                    <div>
+                        <input type="range" id="centerY" value="50" min="0" max="100" style="width: 70%; margin-top: 10px;" />
                     </div>
                 </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='center2' style="margin-left: -25px;">50%</span>
+                <td style="width: 20%;padding-top: 20px;text-align: center;">
+                    <span id='center2' style="margin-left: -20px;font-size: 14px;">50%</span>
                 </td>
             </tr>
-            <tr>
+            <tr style="height: 50px">
                 <td>
-                    <div id="enablehide"> Hide intersecting labels</span> </div>
+                    <div id="enablehide" style="font-size: 14px;margin-top: 5px"> Hide Intersecting Labels</span> </div>
                 </td>
                 <td>
-                    <div style="padding-top: 0px; margin-left: 10px">
+                    <div id="checkbox2" style="margin-left: -10px;">
                         <input type="checkbox" id="hidelabel" checked>
                     </div>
                 </td>
             </tr>
+        </tbody>
         </table>
     </div>
 </div>
+<style>
+    #checkbox1{
+        margin-top: -7px;
+    }
+    #checkbox2{
+        margin-top: -2px;
+    }
+    .e-view.fluent #checkbox2, .e-view.fluent-dark #checkbox2 {
+        margin-top: 1px;
+    }
+    .e-view.bootstrap5 #checkbox2, .e-view.bootstrap5-dark #checkbox2 {
+        margin-top: -3px;
+    }
+    .e-view.material #checkbox1, .e-view.material-dark #checkbox1, .e-view.bootstrap4 #checkbox1, .e-view.bootstrap4-dark #checkbox1,
+    e.view.bootstrap #checkbox1, .e-view.bootstrap-dark #checkbox1, .e-view.material #checkbox2, .e-view.material-dark #checkbox2 {
+        margin-top: -8px;
+    }
+    .e-view.material3 #checkbox2, .e-view.material3-dark #checkbox2, .e-view.bootstrap4 #checkbox2, .e-view.bootstrap4-dark #checkbox2,
+    .e-view.bootstrap #checkbox2, .e-view.bootstrap-dark #checkbox2 {
+        margin-top: -5px;
+    }
+</style>
 <div id="action-description">
     <p>
         This sample shows how to create semi-circular or quarter-circular gauges by modifying a circular gauge with
@@ -112,19 +141,11 @@
     <p>
         More information on the semi-circular or quarter-circular gauges can be found in this <a target="_blank"
             href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-appearance/#radius-calculation-based-on-angles">documentation
-            section</a> .
+            section</a>.
     </p>
 </div>
 <!-- custom code start -->
 <style>
-    #control-container {
-        padding: 0px !important;
-    }
-
-    .property-panel-table div {
-        padding-left: 0px;
-    }
-
     tr {
         height: 50px;
     }

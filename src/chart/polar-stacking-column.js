@@ -40,27 +40,27 @@ this.default = function () {
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y1', name: '9 -11',
+                xName: 'x', yName: 'y1', name: '9-11',
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y2', name: '11-14',
+                xName: 'x', yName: 'y2', name: '11-14', border:{color:'white', width: 1}
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y3', name: '14-17',
+                xName: 'x', yName: 'y3', name: '14-17', border:{color:'white', width: 1}
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y4', name: '17 - 20',
+                xName: 'x', yName: 'y4', name: '17-20', border:{color:'white', width: 1}
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y5', name: '23 Above',
+                xName: 'x', yName: 'y5', name: '23 Above', border:{color:'white', width: 1}
             },
         ],
         //Initializing Chart Title

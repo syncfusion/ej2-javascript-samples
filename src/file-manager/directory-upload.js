@@ -3,7 +3,7 @@
  */
 this.default = function() {
     var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
-    var buttonTemplate = '<button id="dropButton" class="e-tbar-btn e-tbtn-txt">Upload</button>';
+    var buttonTemplate = '<button id="dropButton" class="e-tbar-btn e-tbtn-txt"> <span class="e-tbar-btn-text">Upload</span> </button>';
     // Initialize the FileManager component
     var fileObject = new ej.filemanager.FileManager({
             ajaxSettings: {

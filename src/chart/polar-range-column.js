@@ -39,7 +39,7 @@ this.default = function () {
             args.text = args.text.replace('˚C', '');
         },
         legendSettings: { visible: false },
-        tooltip: { enable: true, header: '', format: '<b>${point.x}</b> <br> Low : <b>${point.low}°C</b> <br> High : <b>${point.high}°Cd'},
+        tooltip: { enable: true, header: '', format: '<b>${point.x}</b> <br> Low : <b>${point.low}°C</b> <br> High : <b>${point.high}°C'},
         //Initializing Chart Title
         title: 'Temperatures of Germany',
            // custom code start
@@ -58,7 +58,7 @@ this.default = function () {
         width: 120,
         change: function () {
             chart.series[0].type = polarType.value;
-            chart.series[0].animation.enable = true;
+            chart.series[0].animation.enable = false;
             chart.refresh();
         }
     });

@@ -280,7 +280,7 @@ this.default = function () {
     
     
     var Editing = new ej.buttons.CheckBox({ label: 'Editing',checked:true,
-    change:function () { 
+    change:function (args) { 
         for (var i = 0; i < diagram.nodes.length; i++) {
             var node = diagram.nodes[i];
             for (var j = 0; j < node.annotations.length; j++) {

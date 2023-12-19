@@ -4,7 +4,12 @@
         </div>
     </div>
 </div>
-
+<template>
+    <tr class="infinite-row">
+        <td style="width: 30%"><div>Enable OnDemand: </div></td>
+        <td style="width: 70%;padding-right: 10px"><div><input type="checkbox" tabindex="1" id='dataloadtype'/></div></td>
+    </tr>
+</template>
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tr>
@@ -30,10 +35,7 @@
 <!-- custom code end -->
 <div id="action-description">
     <p>
-        This sample demonstrates filtering Grid columns using menu, checkbox, and Excel filter UI.
-        In this sample, click the filter icon on the column header to filter a particular column.
-        You can change the filter type on the properties panel. When Excel filter type is selected, you can sort the
-        column using the sort option in the Excel filter dialog.
+        This sample demonstrates the grid's multiple-type filter functionality and user interface.
     </p>
 </div>
 
@@ -43,39 +45,22 @@
         be enabled by setting the <code><a target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#allowfiltering">allowFiltering
             </a></code> property to true. </p>
-    <p>Grid supports the following filter types.</p>
+    <p>The grid supports the following filter types:</p>
     <ul>
         <li><code>FilterBar</code></li>
         <li><code>Menu</code></li>
         <li><code>CheckBox</code></li>
         <li><code>Excel</code></li>
     </ul>
-    you can change the filter type by setting <code><a target="_blank" class="code"
-            href="http://ej2.syncfusion.com/javascript/documentation/api/grid/filterSettings/#type">filterSettings->type</a></code>
-    <p>Now, the following additional filter operators are incorporated with the already existing operators.</p>
-    <p>String type columns:
-    <ul>
-        <li>Not Equal</li>
-        <li>Does Not Start With</li>
-        <li>Does Not End With</li>
-        <li>Does Not Contain</li>
-        <li>Empty</li>
-        <li>Not Empty</li>
-        <li>Like</li>
-    </ul>
+    You can change the filter type by setting <code><a target="_blank" class="code"
+            href="http://ej2.syncfusion.com/javascript/documentation/api/grid/filterSettings/#type">filterSettings->type</a></code>.
+    <p>In this demo, the filter menu is enabled by default. You can switch to other filter types using the dropdown.
     </p>
-    <p>Number and Date type columns:
-    <ul>
-        <li>Null</li>
-        <li>Not Null</li>
-    </ul>
-    </p>
-    <p>For example, when the <b>Like</b> search operator is used:</p>
-    <ul>
-        <li>%a% - Filters words containing the character 'a'</li>
-        <li>a% - Filters words ending with 'a'</li>
-        <li>%a - Filters words starting with 'a'</li>
-    </ul>
-    <p>In this demo, filter menu is enabled by default. You can switch to other filter types using the dropdown.
+    <p>Additionally, we have an on-demand data fetch functionality and UI for the checkbox/Excel filter type. It can be enabled by setting the <code><a target="_blank" class="code"
+        href="">filterSettings->enableInfiniteScrolling</a></code> property to true. In this demo, on-demand data fetch is not enabled by default. To enable the on-demand data fetch for the checkbox/Excel filter type, the Enable OnDemand option must be checked after selecting the checkBox/Excel filter type using the dropdown menu.</p>
+    <p>
+        More information on the filter configuration can be found in this
+        <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#filtersettings">
+            documentation section</a>.
     </p>
 </div>

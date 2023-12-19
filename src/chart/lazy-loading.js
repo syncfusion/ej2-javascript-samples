@@ -1,4 +1,4 @@
-window.default = function () {
+this.default = function () {
     var intl = new ej.base.Internationalization();
     //var spinnerEle = document.getElementById('spinner');
     var chart = new ej.charts.Chart({

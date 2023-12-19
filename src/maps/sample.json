@@ -4,6 +4,7 @@
     "category": "Data Visualization",
     "ftName": "maps",
     "dataSourcePath":"src/maps/map-data.js",
+    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -149,6 +150,16 @@
                 { "displayName": "annotation.js", "path":"src/maps/annotation.js" },
                 { "displayName": "africa-continent.json", "path":"src/maps/map-data/africa-continent.json" }
             ]
+        },
+        {
+            "url": "polygon",
+            "name": "Polygon",
+            "category": "Polygon",
+            "sourceFiles":[
+                { "displayName": "polygon.html", "path":"src/maps/polygon.html" },
+                { "displayName": "polygon.js", "path":"src/maps/polygon.js" }
+            ],
+            "type": "new"
         },
         {
             "url": "osm",

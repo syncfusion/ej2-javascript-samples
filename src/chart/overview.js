@@ -127,11 +127,10 @@
     });
     linechartObj.appendTo('#head1');
     var pie = new ej.charts.AccumulationChart({
+        enableSmartLabels: false,
         series: [
             {
                 legendSettings:{ visible: false },
-                
-                enableSmartLabels:true, 
                 tooltipMappingName :'Product',
                 dataLabel:{
                     visible: true,
@@ -147,7 +146,7 @@
                     { Product: "Mobile : 90 (36%)", Percentage: 36, r: 'Mobile, 90<br>36%' },
                     { Product: "Camera : 27 (11%)", Percentage: 11, r: 'Camera, 27<br>11%' },
                 ],
-                xName:"Product", yName:"Percentage", innerRadius:"40%",
+                xName:"Product", yName:"Percentage", innerRadius:"40%", radius: "75%", startAngle: 270, endAngle: 270
             }
 
         ],

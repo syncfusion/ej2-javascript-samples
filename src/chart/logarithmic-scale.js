@@ -5,7 +5,7 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            labelFormat: 'y',interval:2,
+            labelFormat: 'y',
             valueType: 'DateTime',
             edgeLabelPlacement: 'Shift'
         },

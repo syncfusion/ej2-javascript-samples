@@ -37,7 +37,7 @@
             ],
           },
         
-          toolbarClick: onToolbarClick,
+          toolbarClick: onToolbarClick
       });
      defaultRTE.appendTo('#defaultRTE');
  
@@ -58,6 +58,7 @@
             range = selection.getRange(document);
             saveSelection = selection.save(range, document);
             dialogObj.show();
+            defaultRTE.quickToolbarModule.imageQTBar.hidePopup();
           }
     }
     function onInsert() {
@@ -86,18 +87,23 @@
       
       function onCancel() {
         dialogObj.hide();
+        imageEditorObj.reset();
       }
       function OnOpen() {
-        imageEditorObj = new ej.imageeditor.ImageEditor({
-          height: '450px',
-        });
-        imageEditorObj.appendTo('#imageeditor');
+        if (!imageEditorObj) {
+          imageEditorObj = new ej.imageeditor.ImageEditor({
+            height: '450px',
+          });
+          imageEditorObj.appendTo('#imageeditor');
+        }
         var imageELement;
         var selectNodes =
           defaultRTE.formatter.editorManager.nodeSelection.getNodeCollection(range);
         if (selectNodes.length == 1 && selectNodes[0].tagName == 'IMG') {
           imageELement = selectNodes[0];
           imageELement.crossOrigin = 'anonymous';
+          var imageUrl = imageELement.src + '?timestamp=' + Date.now();
+          imageELement.src = imageUrl;
           var canvas = document.createElement('CANVAS');
           var ctx = canvas.getContext('2d');
           canvas.height = imageELement.offsetHeight;

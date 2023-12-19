@@ -1,0 +1,27 @@
+<div class="col-lg-12 control-section">
+    <h4 style="text-align: center; padding-bottom: 10px">Food Items</h4>
+    <div id="list-scrolling-down"></div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the functionalities of infinite scrolling. When user scrolls to the bottom, new data is fetched and added to the existing list through scroll event. This creates an infinite scrolling effect, enhancing the user experience by loading new data dynamically as needed.
+    </p>
+ </div>
+ <div id="description">
+    <p>The Listview control scroll event allows users to load data using a load on demand concept, where buffered data is fetched only when the scrollbar reaches the end of the scroller. Scroll event provides the necessary details to dynamically add the new data to the ListView.</p>
+ </div>
+
+<style>
+    #list-scrolling-down {
+        margin: auto;
+        max-width: 800px;
+    }
+
+    #list-scrolling-down.e-listview.e-list-template .e-list-wrapper.e-list-multi-line.e-list-avatar .e-avatar {
+        background: transparent;
+        width: 85px;
+        height: 85px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+</style>

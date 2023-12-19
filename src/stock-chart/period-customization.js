@@ -1,4 +1,4 @@
- window.default = function () {
+ this.default = function () {
         var series1 = [];
         var point1;
         var value = 80;

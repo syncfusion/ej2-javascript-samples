@@ -1,5 +1,12 @@
 this.default = function () {
     var data = new ej.base.extend([], window.employeeEventData, null, true);
+    var onIconClick = function () {
+        if (profilePopup.element.classList.contains('e-popup-close')) {
+            profilePopup.show();
+        } else {
+            profilePopup.hide();
+        }
+    };
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
@@ -7,31 +14,16 @@ this.default = function () {
         views: ['Month'],
         currentView: 'Month',
         eventSettings: { dataSource: data },
+        toolbarItems: [{ name: 'Previous', align: 'Left' }, { name: 'Next', align: 'Left' }, { name: 'DateRangeText', align: 'Left' }, { name: 'Today', align: 'Right' }, { align: 'Right', prefixIcon: 'user-icon', text: 'Nancy', cssClass: 'e-schedule-user-icon', click: onIconClick }],
         eventRendered: function (args) {
             window.applyCategoryColor(args, scheduleObj.currentView);
         },
-        actionBegin: function (args) {
-            if (args.requestType === 'toolbarItemRendering') {
-                var userIconItem = {
-                    align: 'Right', prefixIcon: 'user-icon', text: 'Nancy', cssClass: 'e-schedule-user-icon'
-                };
-                args.items.push(userIconItem);
-            }
-        },
-        actionComplete: function (args) {
-            if (args.requestType === 'toolBarItemRendered') {
-                var userIconEle = scheduleObj.element.querySelector('.e-schedule-user-icon');
-                userIconEle.onclick = function () {
-                    profilePopup.relateTo = userIconEle;
-                    profilePopup.dataBind();
-                    if (profilePopup.element.classList.contains('e-popup-close')) {
-                        profilePopup.show();
-                    } else {
-                        profilePopup.hide();
-                    }
-                };
-            }
+        // custom code start
+        destroyed: function () {
+            document.removeEventListener('keydown', hidePopup);
+            document.removeEventListener('click', hidePopup);
         }
+        // custom code end
     });
     scheduleObj.appendTo('#Schedule');
     var headerBarCheckObj = new ej.buttons.CheckBox({
@@ -48,7 +40,6 @@ this.default = function () {
     });
     scheduleObj.element.parentElement.appendChild(userContentEle);
 
-    var userIconEle = scheduleObj.element.querySelector('.e-schedule-user-icon');
     var getDOMString = new ej.base.compile('<div class="profile-container"><div class="profile-image">' +
         '</div><div class="content-wrap"><div class="name">Nancy</div>' +
         '<div class="destination">Product Manager</div><div class="status">' +
@@ -56,7 +47,7 @@ this.default = function () {
     var output = getDOMString({});
     var profilePopup = new ej.popups.Popup(userContentEle, {
         content: output[0],
-        relateTo: userIconEle,
+        relateTo: '.e-schedule-user-icon',
         position: { X: 'left', Y: 'bottom' },
         collision: { X: 'flip', Y: 'flip' },
         targetType: 'relative',
@@ -65,4 +56,17 @@ this.default = function () {
         height: 80
     });
     profilePopup.hide();
+
+    // custom code start
+    document.addEventListener('keydown', hidePopup);
+    document.addEventListener('click', hidePopup);
+
+    function hidePopup(event) {
+        if (profilePopup.element.classList.contains('e-popup-open') && (event.type === 'keydown' && (event.key === 'Escape') ||
+            (event.type === 'click' && event.target && !(event.target.closest('.e-schedule-user-icon') ||
+                event.target.closest('.e-profile-wrapper'))))) {
+            profilePopup.hide();
+        }
+    }
+    // custom code end
 };

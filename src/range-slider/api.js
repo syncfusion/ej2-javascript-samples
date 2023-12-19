@@ -54,7 +54,6 @@ this.default = function () {
         label: 'Show Buttons',
         change: function (args) {
             sliderObj.showButtons = args.checked;
-
         }
     });
     button.appendTo('#button');
@@ -72,6 +71,7 @@ this.default = function () {
         checked: false,
         change: function (args) {
             sliderObj.orientation = args.checked ? 'Vertical' : 'Horizontal';
+            sliderObj.refresh();
         }
     });
     orientationMb.appendTo('#mb-orientation');
@@ -80,6 +80,7 @@ this.default = function () {
         checked: false,
         change: function (args) {
             sliderObj.readonly = args.checked;
+            sliderObj.refresh();
         }
     });
     readOnlyMb.appendTo('#mb-readOnly');
@@ -97,6 +98,7 @@ this.default = function () {
         label: 'Vertical Orientation',
         change: function (args) {
             sliderObj.orientation = args.checked ? 'Vertical' : 'Horizontal';
+            sliderObj.refresh();
         }
     });
     orientation.appendTo('#orientation');
@@ -106,6 +108,7 @@ this.default = function () {
         label: 'Readonly',
         change: function (args) {
             sliderObj.readonly = args.checked;
+            sliderObj.refresh();
         }
     });
     readOnly.appendTo('#readOnly');

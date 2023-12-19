@@ -2,6 +2,7 @@
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer({
         documentPath: "https://cdn.syncfusion.com/content/pdf/rtl-text.pdf",
+        resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
         locale: 'ar-AE',
         enableRtl: true,
         annotationSettings:{author :'مقبول'}
@@ -249,11 +250,10 @@
             viewer.serviceUrl = '';
         }
         else {
-            viewer.serviceUrl = 'https://ej2services.syncfusion.com/js/development/api/pdfviewer';
+            viewer.serviceUrl = 'https://services.syncfusion.com/js/production/api/pdfviewer';
         }
         viewer.dataBind();
         viewer.load(viewer.documentPath, null);
     };
     viewer.appendTo('#pdfViewer');
-    
 };

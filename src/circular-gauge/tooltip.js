@@ -1,6 +1,7 @@
 this.default = function () {
     var circulargauge = new ej.circulargauge.CircularGauge({
         background:'transparent',
+        animationDuration: 2000,
         axes: [{
             radius: '90%',
             minimum: 0,

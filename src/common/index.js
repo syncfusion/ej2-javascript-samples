@@ -1342,11 +1342,6 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     var p2 = loadScriptfile('src/' + control + '/' + sample + '.js');
     var ajaxJs = new ej.base.Ajax('src/' + control + '/' + sample + '.js', 'GET', true);
     sampleNameElement.innerHTML = node.name;
-    if (node.name === 'PDF Viewer') {
-        document.querySelector('.sb-desktop-setting').style.display = 'none';
-    } else {
-        document.querySelector('.sb-desktop-setting').style.display = '';
-    }
     contentTab.selectedItem = 0;
     breadCrumbComponent.innerHTML = node.name;
     if (node.name !== subNode.category) {

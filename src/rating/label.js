@@ -1,17 +1,17 @@
 this.default = function () {
 
-var right = new ej.inputs.Rating({
+var rightLabelPosition = new ej.inputs.Rating({
     showLabel: true,
     value: 3.0
 });
-right.appendTo('#rating1');
+rightLabelPosition.appendTo('#rating1');
 
-var left = new ej.inputs.Rating({
+var leftLabelPosition = new ej.inputs.Rating({
     showLabel: true,
     labelPosition: 'Left',
     value: 3.0
 });
-left.appendTo('#rating2');
+leftLabelPosition.appendTo('#rating2');
 
 var template = new ej.inputs.Rating({
     showLabel: true,
@@ -20,17 +20,17 @@ var template = new ej.inputs.Rating({
 });
 template.appendTo('#rating3');
 
-var top = new ej.inputs.Rating({
+var topLabelPosition = new ej.inputs.Rating({
     showLabel: true,
     labelPosition: 'Top',
     value: 3.0
 });
-top.appendTo('#rating4');
+topLabelPosition.appendTo('#rating4');
 
-var bottom = new ej.inputs.Rating({
+var bottomLabelPosition = new ej.inputs.Rating({
     showLabel: true,
     labelPosition: 'Bottom',
     value: 3.0
 });
-bottom.appendTo('#rating5');
+bottomLabelPosition.appendTo('#rating5');
 };

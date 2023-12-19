@@ -19,7 +19,8 @@ this.default = function () {
             enableSorting: true,
             columns: [{ name: 'Year' }, { name: 'Order_Source', caption: 'Order Source' }],
             rows: [{ name: 'Country' }, { name: 'Products' }],
-            valueSortSettings: { headerDelimiter: ' - ' }
+            valueSortSettings: { headerDelimiter: ' - ' },
+            formatSettings: [{ name: 'Sold', format: 'N0' }],
         },
         showTooltip: false,
         width: '100%',
@@ -95,12 +96,13 @@ this.default = function () {
                     text: 'Sales Analysis'
                 },
                 legendSettings: {
+                    visible: false,
                     position: 'Top'
                 },
                 xAxis: {
                     title: { text: pivotObj.dataSourceSettings.rows.map(function (args) { return args.caption || args.name; }).join(' ~ ') },
                     labels: xLabels,
-                    labelRotation: 315
+                    labelIntersectAction: "Trim" 
                 },
                 yAxis: {
                     title: { text: pivotObj.dataSourceSettings.values.map(function (args) { return args.caption || args.name; }).join(' ~ ') },
@@ -123,7 +125,7 @@ this.default = function () {
             heatmap.xAxis = {
                 title: { text: pivotObj.dataSourceSettings.rows.map(function (args) { return args.caption || args.name; }).join(' ~ ') },
                 labels: xLabels,
-                labelRotation: 315
+                labelIntersectAction: "Trim"
             };
             heatmap.yAxis = {
                 title: { text: pivotObj.dataSourceSettings.values.map(function (args) { return args.caption || args.name; }).join(' ~ ') },

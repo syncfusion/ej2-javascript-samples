@@ -32,7 +32,7 @@ this.default = function () {
                     radius: 0
                 },
                 animation: {
-                    enable: false,
+                    enable: true,
                 },
                 textStyle: {
                     fontFamily: 'inherit',

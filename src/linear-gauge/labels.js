@@ -33,6 +33,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 1500,
         axes: [{
             line: {
                 width: 5
@@ -165,6 +166,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 1500,
         axes: [{
             line: {
                 width: 5
@@ -203,6 +205,7 @@ this.default = function () {
             fontWeight: '499'
         },
         background:'transparent',
+        animationDuration: 1500,
         axes: [{
             line: {
                 width: 5

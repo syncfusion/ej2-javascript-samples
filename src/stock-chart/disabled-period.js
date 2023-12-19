@@ -1,5 +1,5 @@
 var selectedTheme = location.hash.split('/')[1];
-selectedTheme = selectedTheme ? selectedTheme : 'Material';
+selectedTheme = selectedTheme ? selectedTheme : 'material';
 var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
 var fill = 'url(#' + selectedTheme + '-gradient-chart)';
 

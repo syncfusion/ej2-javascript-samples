@@ -52,13 +52,16 @@ this.default = function () {
             groupIconCss: 'e-icons e-bold',
             cssClass: 'font-group',
             enableGroupOverflow: true,
+            overflowHeader: 'More Font Options',
             orientation: 'Row',
             collections: [{
                 items: [{
                     type: 'ComboBox',
                     comboBoxSettings: {
                         dataSource: fontStyle,
-                        width: '150px',
+                        label: 'Font Style',
+                        width: '115px',
+                        popupWidth: '150px',
                         index: 3,
                         allowFiltering: true,
                         change: function (args) {
@@ -71,6 +74,7 @@ this.default = function () {
                     type: 'ComboBox',
                     comboBoxSettings: {
                         dataSource: fontSize,
+                        label: 'Font Size',
                         popupWidth: '85px',
                         width: '65px',
                         allowFiltering: true,
@@ -135,6 +139,66 @@ this.default = function () {
                         content: 'Change Case',
                         isToggle: true,
                         clicked: function () { updateContent("Change Case"); }
+                    }
+                }]
+            }]
+        }, {
+            id: 'paragraph_group',
+            orientation: 'Row',
+            header: "Paragraph",
+            groupIconCss: 'e-icons e-align-center',
+            collections: [{
+                items: [
+                {
+                    type: "Button",
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    buttonSettings: {
+                        iconCss: 'e-icons e-decrease-indent',
+                        content: 'Decrease Indent',
+                        clicked: function () { updateContent("Cut"); },
+                    }
+                }, {
+                    type: "Button",
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    buttonSettings: {
+                        iconCss: 'e-icons e-increase-indent',
+                        content: 'Increase Indent',
+                        clicked: function () { updateContent("Increase Indent"); },
+                    }
+                }, {
+                    type: "Button",
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    buttonSettings: {
+                        iconCss: 'e-icons e-paragraph',
+                        content: 'Paragraph',
+                        clicked: function () { updateContent("Paragraph"); },
+                    }
+                }
+            ]
+            }, {
+                items: [{
+                    type: 'GroupButton',
+                    allowedSizes: ej.ribbon.RibbonItemSize.Small,
+                    groupButtonSettings: {
+                        selection: ej.ribbon.RibbonGroupButtonSelection.Single,
+                        header: 'Alignment',
+                        items: [{
+                            iconCss: 'e-icons e-align-left',
+                            selected: true,
+                            click: function ()  { updateContent("Align Left"); },
+                        },
+                        {
+                            iconCss: 'e-icons e-align-center',
+                            click: function ()  { updateContent("Align Center"); },
+                        },
+                        {
+                            iconCss: 'e-icons e-align-right',
+                            click: function ()  { updateContent("Align Right"); },
+                        },
+                        {
+                            iconCss: 'e-icons e-justify',
+                            click: function ()  { updateContent("Justify"); },
+                        }],
                     }
                 }]
             }]
@@ -254,6 +318,7 @@ this.default = function () {
             id: 'illustration',
             header: 'Illustrations',
             enableGroupOverflow: true,
+            overflowHeader: 'Illustrations',
             showLauncherIcon: true,
             orientation: 'Row',
             groupIconCss: 'e-icons e-image',
@@ -371,7 +436,7 @@ this.default = function () {
             }]
         }, {
             id: 'linkGroup',
-            header: 'Link',
+            header: 'Links',
             groupIconCss: 'e-icons e-link',
             collections: [{
                 items: [{
@@ -496,7 +561,7 @@ this.default = function () {
         }]
     }];
     var list = new ej.lists.ListView({
-        dataSource: ['Stock Images', 'This device', 'Online Images'],
+        dataSource: ['Stock Images', 'This Device', 'Online Images'],
         showHeader: true,
         headerTitle: 'Insert Picture From',
         select: function (args) { updateContent("Pictures -> " + args.text); }
@@ -587,11 +652,11 @@ this.default = function () {
     }
 
     function getBackstageContent(item) {
-        var homeContentTemplate = "<div id='home-wrapper'>{{newSection}}{{recentSection}}</div>";
-        var newSection = "<div id='new-section' class='new-wrapper'><div class='section-title'> New </div><div class='category_container'><div class='doc_category_image'></div> <span class='doc_category_text'> New document </span></div></div>";
-        var recentSection = "<div id='block-wrapper'><div class='section-title'> Recent </div>{{recentWrapper}}</div>";
+        var homeContentTemplate = "<div class='home-wrapper'>{{newSection}}{{recentSection}}</div>";
+        var newSection = "<div class='new-wrapper'><div class='section-title'> New </div><div class='category_container'><div class='doc_category_image'></div> <span class='doc_category_text'> New document </span></div></div>";
+        var recentSection = "<div class='block-wrapper'><div class='section-title'> Recent </div>{{recentWrapper}}</div>";
         var recentWrapper = "<div class='section-content'><table><tbody><tr><td> <span class='doc_icon e-icons {{icon}}'></span> </td><td><span style='display: block; font-size: 14px'> {{title}} </span><span style='font-size: 12px'> {{description}} </span></td></tr></tbody></table></div>";
-        var blockSection = "<div id='block-wrapper'> <div class='section-title'> {{blockTitle}} </div> {{blockSection}} </div>";
+        var blockSection = "<div class='block-wrapper'> <div class='section-title'> {{blockTitle}} </div> {{blockSection}} </div>";
         var content = "";
         var recentDocUpdatedString = "";
         switch (item) {

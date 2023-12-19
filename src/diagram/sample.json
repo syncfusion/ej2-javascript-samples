@@ -25,17 +25,10 @@
             "category": "Getting Started"
         },
         {
-            "url": "custom-shapes",
-            "name": "HTML Shapes",
-            "description": "This sample demonstrates how to host a HTML elements inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
-            "category": "Getting Started"
-        },
-        {
             "url": "connector",
             "name": "Connectors",
             "description": "This sample visualizes the data flow in a marketing process using predefined diagram shapes and connectors.",
-            "category": "Getting Started",
-            "type":"update"
+            "category": "Getting Started"
         },
         {
             "url": "line-routing",
@@ -95,7 +88,8 @@
             "url": "tooltip-Sample",
             "name": "Tooltip",
             "description": "This sample demonstrates how to add the extra information to the nodes and connectors and how to show the information through diagram's tooltip feature.",
-            "category": "Getting Started"
+            "category": "Getting Started",
+            "type":"update"
         },
         {
             "url": "symbol-palette",
@@ -257,7 +251,8 @@
             "url": "uml-class-diagram",
             "name": "UML Class Diagram",
             "description": "This sample represents the hospital management system using diagram's built-in UML class diagram shapes.",
-            "category": "Use Case Diagram"
+            "category": "Use Case Diagram",
+            "type":"update"
         },
         {
             "url": "venn-diagram",
@@ -278,6 +273,13 @@
             "category": "Real-time Diagrams"
         },
         {
+            "url": "workflow-editor",
+            "name": "WorkFlow Diagram",
+            "description": "This sample visually represents a simple workflow of a Travel Request Agency using Syncfusion EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
+            "category": "Real-time Diagrams",
+            "type":"new"
+        },
+        {
             "url": "diagram-binding-treeview",
             "name": "Diagram Binding with TreeView",
             "description": "This example illustrates how to create a tree view and a diagram with a datasource. It provides support for selecting, adding, deleting, dragging and dropping, and editing annotations of the nodes during runtime. These actions will be reflected in the corresponding nodes of the tree view component.",
@@ -288,6 +290,8 @@
             "name": "Flow Execution",
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
             "category": "Real-time Diagrams"
-        }  
+        }     
+        
+        
     ]
 }

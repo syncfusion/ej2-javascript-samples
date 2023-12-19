@@ -15,6 +15,7 @@ this.default = function () {
         ],
         minimum: 0, maximum: 300, interval: 50,
         title: 'Revenue YTD',
+        subtitle: '$ in Thousands',
         labelFormat: '${value}K',
         enableRtl: true,
         titleStyle: { textAlignment: 'Center', },
