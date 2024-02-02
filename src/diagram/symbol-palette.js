@@ -98,7 +98,7 @@ this.default = function () {
             { id: 'basic', expanded: true, symbols: basicShapes, iconCss: 'e-ddb-icons e-flow', title: 'Basic Shapes' },
             { id: 'connectors', expanded: true, symbols: connectorSymbols, iconCss: 'e-ddb-icons e-connector', title: 'Connectors' }
         ], enableAnimation: true,
-        width: '100%', height: '700px', symbolHeight: 80, symbolWidth: 80,
+        width: '100%', height: '500px', symbolHeight: 80, symbolWidth: 80,
         //set Node default value
         getNodeDefaults: function (symbol) {
             if (symbol.id === 'terminator' || symbol.id === 'process') {

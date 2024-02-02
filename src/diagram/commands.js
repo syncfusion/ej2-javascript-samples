@@ -101,7 +101,7 @@ var nodes = [
 ];
 
 this.default = function () {
-
+//custom code start
     if(this.location.href){
         if(this.location.href.includes('bootstrap5')){
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
@@ -134,7 +134,7 @@ this.default = function () {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
         }
     }
-
+//custom code end
     //Initialize diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '800px',

@@ -8,7 +8,7 @@ this.default = function () {
         { id: 'Excel', type: 'Excel' }
     ];
     var urlapi = new ej.data.DataManager({
-        url: 'https://ej2services.syncfusion.com/js/release/api/UrlDataSource',
+        url: 'https://services.syncfusion.com/js/production/api/UrlDataSource',
         adaptor: new ej.data.UrlAdaptor()
     });
     var grid = new ej.grids.Grid({

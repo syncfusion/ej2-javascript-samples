@@ -47,35 +47,26 @@
     });
     formatRTE.appendTo('#MentionInlineFormat');
 
-    function beforeApplyFormat(isBlockFormat) {
-        var range1 = formatRTE.getRange();
-        var node = formatRTE.formatter.editorManager.nodeSelection.getNodeCollection(range1)[0];
-        var blockNewLine= !(node.parentElement.innerHTML.replace(/&nbsp;|<br>/g, '').trim() == '/' || node.textContent.trim().indexOf('/')==0);
-        var blockNode = void 0;
-        var startNode =node;
-        if (blockNewLine && isBlockFormat) {
-            while (startNode != formatRTE.inputElement) {
-                blockNode = startNode;
-                startNode = startNode.parentElement;
-            }
-        }            
-        var startPoint = range1.startOffset;
-        while(formatRTE.formatter.editorManager.nodeSelection.getRange(document).toString().indexOf("/") ==-1 ){
-            formatRTE.formatter.editorManager.nodeSelection.setSelectionText(document, node, node, startPoint, range1.endOffset);
+    function beforeApplyFormat() {
+        var currentRange = formatRTE.getRange();
+        var node = formatRTE.formatter.editorManager.nodeSelection.getNodeCollection(currentRange)[0];
+    
+        var startPoint = currentRange.startOffset;
+        while (formatRTE.formatter.editorManager.nodeSelection.getRange(document).toString().indexOf('/') == -1) {
+            formatRTE.formatter.editorManager.nodeSelection.setSelectionText(document, node, node, startPoint, currentRange.endOffset);
             startPoint--;
         }
-        var range2 = formatRTE.getRange();
-        var node2 = formatRTE.formatter.editorManager.nodeCutter.GetSpliceNode(range2, node);
-        var previouNode = node2.previousSibling;
-        var brTag = document.createElement('br');
-        if (node2.parentElement && node2.parentElement.innerHTML.length === 1) {
-            node2.parentElement.appendChild(brTag);
+        var slashRange = formatRTE.getRange();
+        var slashNode = formatRTE.formatter.editorManager.nodeCutter.GetSpliceNode(slashRange, node);
+        var previouNode = slashNode.previousSibling;
+        if (slashNode.parentElement && slashNode.parentElement.innerHTML.length === 1) {
+            slashNode.parentElement.appendChild(document.createElement('br'));
         }
-        node2.parentNode.removeChild(node2);
-        if(previouNode) {
+        slashNode.parentNode.removeChild(slashNode);
+        if (previouNode) {
             selection.setCursorPoint(document, previouNode, previouNode.textContent.length);
         }
-    }
+    }   
 
     // Initialize Mention control.
     
@@ -103,40 +94,31 @@
         formatRTE.focusIn();
         saveSelection.restore();
         if (args.itemData.formatType !== 'Inline') {
-            beforeApplyFormat(true);
+            beforeApplyFormat();
         }
-        if (args.itemData.command == 'OL'){
-            mentionObj.hidePopup();
-            formatRTE.executeCommand('insertOrderedList');
-        }
-        else if (args.itemData.command == 'UL') {
-            mentionObj.hidePopup();
-            formatRTE.executeCommand('insertUnorderedList');
-        } 
-        else if (args.itemData.command == 'CreateTable') {
-            mentionObj.hidePopup();
-            formatRTE.showDialog('InsertTable');
-        } 
-        else if (args.itemData.command == 'Image') {
-            mentionObj.hidePopup();
-            formatRTE.showDialog('InsertImage');
-        } 
-        else if (args.itemData.command == 'Audio') {
-            mentionObj.hidePopup();
-            formatRTE.showDialog('InsertAudio');
-        } 
-        else if (args.itemData.command == 'Video') {
-            mentionObj.hidePopup();
-            formatRTE.showDialog('InsertVideo');
-        } 
-        else if (args.itemData.command == 'EmojiPicker') {
-            beforeApplyFormat(false);
-            mentionObj.hidePopup();
-            formatRTE.showEmojiPicker();
-        }
-        else {
-            mentionObj.hidePopup();
-            formatRTE.executeCommand('formatBlock', args.itemData.command);
+        
+        switch (args.itemData.command) {
+            case 'OL':
+                formatRTE.executeCommand('insertOrderedList');
+                break;
+            case 'UL':
+                formatRTE.executeCommand('insertUnorderedList');
+                break;
+            case 'CreateTable':
+            case 'Image':
+            case 'Audio':
+            case 'Video':
+                mentionObj.hidePopup();
+                formatRTE.showDialog(args.itemData.command === 'Video'? 'InsertVideo': args.itemData.command === 'Audio'? 'InsertAudio': args.itemData.command === 'Image'? 'InsertImage': 'InsertTable');
+                break;
+            case 'EmojiPicker':
+                beforeApplyFormat();
+                mentionObj.hidePopup();
+                formatRTE.showEmojiPicker();
+                break;
+            default:
+                formatRTE.executeCommand('formatBlock', args.itemData.command);
+                break;
         }
     } 
  };

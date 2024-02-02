@@ -38,7 +38,7 @@ function openPalette() {
 }
 
 this.default = function () {
-
+//custom code start
     if (this.location.href ){
         if(this.location.href.includes('bootstrap5')) {
             document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
@@ -72,7 +72,7 @@ this.default = function () {
         }
        
     }
-
+//custom code end
     var bounds = document.getElementById('diagram-space').getBoundingClientRect();
     var centerX = bounds.width / 2;
     //Initializes the nodes for the diagram
