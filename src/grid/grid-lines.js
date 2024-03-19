@@ -9,13 +9,14 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.employeeData,
         gridLines: 'Default',
+        allowSorting: true,
         columns: [
             { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125 },
             { field: 'FirstName', headerText: 'Name', width: 125 },
             { field: 'Title', headerText: 'Title', width: 180 },
             {
                 field: 'HireDate', headerText: 'Hire Date', textAlign: 'Right',
-                width: 135, format: { skeleton: 'yMd', type: 'date' }
+                width: 135, format: { skeleton: 'yMd', type: 'date' },
             }
         ]
     });

@@ -78,16 +78,16 @@ this.default = function () {
         ],
         contextMenuClick: function (args) {
             var record = args.rowData;
-            if (args.item.id === 'collapserow') {
+            if (args.item.id === 'collapserow' && record) {
                 ganttChart.collapseByID(Number(record.ganttProperties.taskId));
             }
-            if (args.item.id === 'expandrow') {
+            if (args.item.id === 'expandrow' && record) {
                 ganttChart.expandByID(Number(record.ganttProperties.taskId));
             }
         },
         contextMenuOpen: function (args) {
             var record = args.rowData;
-            if (args.type !== 'Header') {
+            if (args.type !== 'Header' && record) {
                 if (!record.hasChildRecords) {
                     args.hideItems.push('Collapse the Row');
                     args.hideItems.push('Expand the Row');

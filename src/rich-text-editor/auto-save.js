@@ -41,8 +41,10 @@ this.default = function() {
         document.getElementById('saving').style.display = 'block';
         document.getElementById('saved').style.display = 'none';
         setTimeout(() => {
-            document.getElementById('saving').style.display = 'none';
-            document.getElementById('saved').style.display = 'block';
+            if (!ej.base.isNullOrUndefined(document.getElementById('saving')) && !ej.base.isNullOrUndefined(document.getElementById('saved'))) {
+                document.getElementById('saving').style.display = 'none';
+                document.getElementById('saved').style.display = 'block';
+            }
         }, 500);
     }
 };

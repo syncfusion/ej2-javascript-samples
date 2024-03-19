@@ -1,13 +1,13 @@
 {
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
-    "Data Visualization": ["Chart", "3D Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
+    "Data Visualization": ["Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
     "Forms": ["Form Validation", "Query Builder"],
-    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "DocumentEditor", "Image Editor"],
+    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Document Editor", "Image Editor"],
     "Calendars": ["Scheduler", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker", "Gantt"],
     "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box","Mention"],
     "Navigation": ["Accordion", "AppBar", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "Ribbon", "Stepper", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Message", "Toast", "Progress Bar", "Skeleton"],
-    "Inputs": ["TextBox", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating"],
-    "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout"]
+    "Inputs": ["TextBox", "TextArea", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating"],
+    "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout", "Timeline"]
 }

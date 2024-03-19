@@ -1,5 +1,5 @@
 {
-    "name": "DocumentEditor",
+    "name": "Document Editor",
     "directory": "document-editor",
     "category": "File Viewers & Editors",
     "type": "update",
@@ -9,7 +9,8 @@
         {
             "url": "default",
             "name": "Default Functionalities",
-            "category": "DocumentEditor",
+            "category": "Document Editor",
+            "type":"update",
             "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
             "api": {
                 "DocumentEditor": [
@@ -125,7 +126,6 @@
             "url": "document-list",
             "name": "Document List",
             "category": "File Management",
-            "type":"new",
             "description": "The Document Editor component in JavaScript platform is used to opening a Word document in both read-only and editable modes using the Document Editor. It is presented in a modal dialog, initiated from a list of documents within the grid view.",
             "api": {
                 "DocumentEditor": [
@@ -235,6 +235,568 @@
                     "canUndo",
                     "canRedo"
                 ]
+            }
+        },
+        {
+            "url": "mail-merge",
+            "name": "Mail Merge",
+            "category": "Mail Merge",
+            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion DocIO.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ]
+            }
+        },
+        {
+            "url": "comments",
+            "name": "Comments",
+            "category": "Review",
+            "type":"update",
+            "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
+            "api": {
+                "Editor": [
+                    "insertComment",
+                    "deleteComment",
+                    "deleteAllComments"
+                ],
+                "Selection": [
+                    "navigateNextComment",
+                    "navigatePreviousComment"
+                ]
+
+            }
+        },
+        {
+            "url": "track-changes",
+            "name": "Track Changes",
+            "category": "Review",
+            "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ]
+            }
+        },
+        {
+            "url": "document-protection",
+            "name": "Document Protection",
+            "category": "Security",
+            "description": "The Document Editor provides document protection supports to restrict the types of changes can be made to the document by a user/user group.",
+            "api": {
+                "DocumentEditor": [
+                    "enforceProtection",
+                    "protectionType",
+                    "enforcement"
+                ]
+            }
+
+        },
+        {
+            "url": "custom-context-menu",
+            "name": "Custom Context Menu",
+            "category": "Customization",
+            "description": "The Document Editor supports custom options for users who use to add custom options in context menu.",
+            "api": {
+                "ContextMenu": [
+                    "addCustomMenu",
+                    "customContextMenuSelect",
+                    "customContextMenuBeforeOpen"
+                ]
+            }
+        },
+        {
+            "url": "auto-save",
+            "name": "Auto Save",
+            "category": "Customization",
+            "description": "The Document Editor supports auto save functionality to let the users for saving the documents automatically at customized time interval."
+        },
+        {
+            "url": "toolbar-customization",
+            "name": "Toolbar Customization",
+            "category": "Customization",
+            "description": "The Document Editor component supports to show or hide existing items in the toolbar.",
+            "api": {
+                "ToolbarModule": [
+                    "toolbarItems",
+                    "enableItems"
+                ]
+            }
+ 
+        },
+        {
+            "url": "colorpicker-customization",
+            "name": "Color Picker Customization",
+            "category": "Customization",
+            "type":"new",
+            "description": "The Document Editor component supports to to customize color picker in appearance.",
+            "api": {
+                "DocumentEditorSettings": [
+                    "colorPickerSettings"
+                ]
+            } 
+        },
+        {
+            "url": "right-to-left",
+            "name": "Right To Left",
+            "category": "RTL",
+            "description": "The Document Editor supports right to left for users who use right-to-left languages (Arabic, Hebrew, Urdu, etc.).",
+            "api": {
+                "DocumentEditor": [
+                    "enableRtl"
+                ]
+            }
+        },
+        {
+            "url": "print",
+            "name": "Print",
+            "category": "Exporting",
+            "description": "The Document Editor component in JavaScript is used to view and print Word documents in web applications by injecting only the modules that are necessary.",
+            "api": {
+                "DocumentEditor": [
+                    "enablePrint",
+                    "documentName",
+                    "pageOutline",
+                    "scrollToPage",
+                    "viewChange",
+                    "documentChange",
+                    "zoomFactorChange"
+                ]
+            }
+        },
+        {
+            "url": "advanced-exporting",
+            "name": "Advanced Exporting",
+            "type":"new",
+            "category": "Exporting",
+            "description": "This example demonstrates how to export the document to other formats like Pdf, Rtf, HTML, ODT, WordML etc. from document editor",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        },
+        {
+            "url": "table-of-contents",
+            "name": "Table of Contents",
+            "category": "References",
+            "description": "The Document Editor supports table of contents with options for including hyperlink, page number, right-aligned tabs, and styles.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        },
+        {
+            "url": "notes",
+            "name": "Footnotes and Endnotes",
+            "category": "References",
+            "description": "The DocumentEditor provides support to insert footnotes and endnotes to provide more information about something in the document.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        },
+        {
+            "url": "web-layout",
+            "name": "Web Layout",
+            "category": "View",
+            "description": "The Document Editor component supports the continuous layout type to display the document in a single page.",
+            "api": {
+                "DocumentEditor": [
+                    "layoutType"
+                ]
+
+            }
+
+        },
+        {
+            "url": "ruler",
+            "name": "Ruler",
+            "category": "View",
+            "description": "The Document Editor component supports set tab stops, margins, indents and move table borders.",
+            "api": {
+                "DocumentEditorSettings": [
+                    "showRuler"
+                ]
+
+            }
+
+        },
+        {
+            "url": "heading-navigation",
+            "name": "Heading Navigation",
+            "type": "new",
+            "category": "View",
+            "description": "The Document Editor component supports navigating documents by heading allows users to move around the document very quickly.",
+            "api": {
+                "DocumentEditorSettings": [
+                    "showNavigationPane"
+                ]
+
             }
         },
         {
@@ -1157,436 +1719,10 @@
             }
         },
         {
-            "url": "table-of-contents",
-            "name": "Table of Contents",
-            "category": "References",
-            "description": "The Document Editor supports table of contents with options for including hyperlink, page number, right-aligned tabs, and styles.",
-            "api": {
-                "DocumentEditor": [
-                    "isReadOnly",
-                    "enableAllModules",
-                    "acceptTab",
-                    "documentName",
-                    "pageOutline",
-                    "selection",
-                    "editor",
-                    "editorHistory",
-                    "enableLocalPaste",
-                    "pageCount",
-                    "zoomFactor",
-                    "documentChange",
-                    "viewChange",
-                    "selectionChange",
-                    "requestNavigate",
-                    "contentChange",
-                    "open",
-                    "print",
-                    "openBlank",
-                    "focusIn",
-                    "save",
-                    "showDialog",
-                    "showOptionsPane",
-                    "fitPage",
-                    "getStyleNames",
-                    "resize"
-                ],
-                "Selection": [
-                    "contextType",
-                    "characterFormat",
-                    "paragraphFormat",
-                    "sectionFormat",
-                    "cellFormat",
-                    "imageFormat",
-                    "goToPage",
-                    "goToHeader",
-                    "goToFooter",
-                    "closeHeaderFooter"
-                ],
-                "SelectionCharacterFormat": [
-                    "bold",
-                    "italic",
-                    "underline",
-                    "fontFamily",
-                    "fontSize",
-                    "fontColor",
-                    "highlightColor",
-                    "strikethrough",
-                    "baselineAlignment"
-                ],
-                "SelectionParagraphFormat": [
-                    "textAlignment",
-                    "lineSpacing",
-                    "styleName"
-                ],
-                "SelectionSectionFormat": [
-                    "differentFirstPage",
-                    "differentOddAndEvenPages",
-                    "headerDistance",
-                    "footerDistance"
-                ],
-                "SelectionCellFormat": [
-                    "topMargin",
-                    "bottomMargin",
-                    "leftMargin",
-                    "rightMargin",
-                    "verticalAlignment",
-                    "background"
-                ],
-                "SelectionImageFormat": [
-                    "width",
-                    "height",
-                    "resize"
-                ],
-                "Editor": [
-                    "insertImage",
-                    "toggleBold",
-                    "toggleItalic",
-                    "toggleUnderline",
-                    "toggleStrikethrough",
-                    "toggleSubscript",
-                    "toggleSuperscript",
-                    "toggleTextAlignment",
-                    "increaseIndent",
-                    "decreaseIndent",
-                    "applyNumbering",
-                    "applyBullet",
-                    "applyStyle",
-                    "clearList",
-                    "clearFormatting",
-                    "canMergeCells",
-                    "mergeCells",
-                    "applyBorders",
-                    "insertPageNumber",
-                    "insertTableOfContents",
-                    "insertRow",
-                    "insertColumn",
-                    "deleteRow",
-                    "deleteColumn"
-                ],
-                "EditorHistory": [
-                    "undo",
-                    "redo",
-                    "canUndo",
-                    "canRedo"
-                ]
-            }
-        },
-        {
-            "url": "notes",
-            "name": "Footnotes and Endnotes",
-            "category": "References",
-            "description": "The DocumentEditor provides support to insert footnotes and endnotes to provide more information about something in the document.",
-            "api": {
-                "DocumentEditor": [
-                    "isReadOnly",
-                    "enableAllModules",
-                    "acceptTab",
-                    "documentName",
-                    "pageOutline",
-                    "selection",
-                    "editor",
-                    "editorHistory",
-                    "enableLocalPaste",
-                    "pageCount",
-                    "zoomFactor",
-                    "documentChange",
-                    "viewChange",
-                    "selectionChange",
-                    "requestNavigate",
-                    "contentChange",
-                    "open",
-                    "print",
-                    "openBlank",
-                    "focusIn",
-                    "save",
-                    "showDialog",
-                    "showOptionsPane",
-                    "fitPage",
-                    "getStyleNames",
-                    "resize"
-                ],
-                "Selection": [
-                    "contextType",
-                    "characterFormat",
-                    "paragraphFormat",
-                    "sectionFormat",
-                    "cellFormat",
-                    "imageFormat",
-                    "goToPage",
-                    "goToHeader",
-                    "goToFooter",
-                    "closeHeaderFooter"
-                ],
-                "SelectionCharacterFormat": [
-                    "bold",
-                    "italic",
-                    "underline",
-                    "fontFamily",
-                    "fontSize",
-                    "fontColor",
-                    "highlightColor",
-                    "strikethrough",
-                    "baselineAlignment"
-                ],
-                "SelectionParagraphFormat": [
-                    "textAlignment",
-                    "lineSpacing",
-                    "styleName"
-                ],
-                "SelectionSectionFormat": [
-                    "differentFirstPage",
-                    "differentOddAndEvenPages",
-                    "headerDistance",
-                    "footerDistance"
-                ],
-                "SelectionCellFormat": [
-                    "topMargin",
-                    "bottomMargin",
-                    "leftMargin",
-                    "rightMargin",
-                    "verticalAlignment",
-                    "background"
-                ],
-                "SelectionImageFormat": [
-                    "width",
-                    "height",
-                    "resize"
-                ],
-                "Editor": [
-                    "insertImage",
-                    "toggleBold",
-                    "toggleItalic",
-                    "toggleUnderline",
-                    "toggleStrikethrough",
-                    "toggleSubscript",
-                    "toggleSuperscript",
-                    "toggleTextAlignment",
-                    "increaseIndent",
-                    "decreaseIndent",
-                    "applyNumbering",
-                    "applyBullet",
-                    "applyStyle",
-                    "clearList",
-                    "clearFormatting",
-                    "canMergeCells",
-                    "mergeCells",
-                    "applyBorders",
-                    "insertPageNumber",
-                    "insertTableOfContents",
-                    "insertRow",
-                    "insertColumn",
-                    "deleteRow",
-                    "deleteColumn"
-                ],
-                "EditorHistory": [
-                    "undo",
-                    "redo",
-                    "canUndo",
-                    "canRedo"
-                ]
-            }
-        },
-        {
-            "url": "print",
-            "name": "Print",
-            "category": "Print",
-            "description": "The Document Editor component in JavaScript is used to view and print Word documents in web applications by injecting only the modules that are necessary.",
-            "api": {
-                "DocumentEditor": [
-                    "enablePrint",
-                    "documentName",
-                    "pageOutline",
-                    "scrollToPage",
-                    "viewChange",
-                    "documentChange",
-                    "zoomFactorChange"
-                ]
-            }
-        },
-        {
-            "url": "right-to-left",
-            "name": "Right To Left",
-            "category": "RTL",
-            "description": "The Document Editor supports right to left for users who use right-to-left languages (Arabic, Hebrew, Urdu, etc.).",
-            "api": {
-                "DocumentEditor": [
-                    "enableRtl"
-                ]
-            }
-        },
-        {
-            "url": "custom-context-menu",
-            "name": "Custom Context Menu",
-            "category": "Customization",
-            "description": "The Document Editor supports custom options for users who use to add custom options in context menu.",
-            "api": {
-                "ContextMenu": [
-                    "addCustomMenu",
-                    "customContextMenuSelect",
-                    "customContextMenuBeforeOpen"
-                ]
-            }
-        },
-        {
-            "url": "auto-save",
-            "name": "Auto Save",
-            "category": "Customization",
-            "description": "The Document Editor supports auto save functionality to let the users for saving the documents automatically at customized time interval."
-        },
-        {
-            "url": "toolbar-customization",
-            "name": "Toolbar Customization",
-            "category": "Customization",
-            "description": "The Document Editor component supports to show or hide existing items in the toolbar.",
-            "api": {
-                "ToolbarModule": [
-                    "toolbarItems",
-                    "enableItems"
-                ]
-            }
- 
-        }, {
-            "url": "chart",
-            "name": "Chart Preservation",
-            "category": "Charts",
-            "description": "The Document Editor supports chart preservation for users who use to view their business reports with intuitive graphical data visualization."
-        },
-        {
-            "url": "document-protection",
-            "name": "Document Protection",
-            "category": "Security",
-            "description": "The Document Editor provides document protection supports to restrict the types of changes can be made to the document by a user/user group.",
-            "api": {
-                "DocumentEditor": [
-                    "enforceProtection",
-                    "protectionType",
-                    "enforcement"
-                ]
-            }
-
-        },
-        {
-            "url": "web-layout",
-            "name": "Web Layout",
-            "category": "View",
-            "description": "The Document Editor component supports the continuous layout type to display the document in a single page.",
-            "api": {
-                "DocumentEditor": [
-                    "layoutType"
-                ]
-
-            }
-
-        },
-        {
-            "url": "ruler",
-            "name": "Ruler",
-            "category": "View",
-            "type": "new",
-            "description": "The Document Editor component supports set tab stops, margins, indents and move table borders.",
-            "api": {
-                "DocumentEditorSettings": [
-                    "showRuler"
-                ]
-
-            }
-
-        },
-        {
-            "url": "comments",
-            "name": "Comments",
-            "category": "Review",
-            "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
-            "api": {
-                "Editor": [
-                    "insertComment",
-                    "deleteComment",
-                    "deleteAllComments"
-                ],
-                "Selection": [
-                    "navigateNextComment",
-                    "navigatePreviousComment"
-                ]
-
-            }
-        },
-        {
-            "url": "track-changes",
-            "name": "Track Changes",
-            "category": "Review",
-            "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
-            "api": {
-                "DocumentEditor": [
-                    "isReadOnly",
-                    "enableAllModules",
-                    "acceptTab",
-                    "documentName",
-                    "pageOutline",
-                    "selection",
-                    "editor",
-                    "editorHistory",
-                    "enableLocalPaste",
-                    "pageCount",
-                    "zoomFactor",
-                    "documentChange",
-                    "viewChange",
-                    "selectionChange",
-                    "requestNavigate",
-                    "contentChange",
-                    "open",
-                    "print",
-                    "openBlank",
-                    "focusIn",
-                    "save",
-                    "showDialog",
-                    "showOptionsPane",
-                    "fitPage",
-                    "getStyleNames",
-                    "resize"
-                ]
-            }
-        },
-        {
             "url": "form-fields",
             "name": "Form Fields",
             "category": "Editing Features",
             "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
-            "api": {
-                "DocumentEditor": [
-                    "isReadOnly",
-                    "enableAllModules",
-                    "acceptTab",
-                    "documentName",
-                    "pageOutline",
-                    "selection",
-                    "editor",
-                    "editorHistory",
-                    "enableLocalPaste",
-                    "pageCount",
-                    "zoomFactor",
-                    "documentChange",
-                    "viewChange",
-                    "selectionChange",
-                    "requestNavigate",
-                    "contentChange",
-                    "open",
-                    "print",
-                    "openBlank",
-                    "focusIn",
-                    "save",
-                    "showDialog",
-                    "showOptionsPane",
-                    "fitPage",
-                    "getStyleNames",
-                    "resize"
-                ]
-            }
-        },
-        {
-            "url": "mail-merge",
-            "name": "Mail Merge",
-            "category": "Mail Merge",
-            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion DocIO.",
             "api": {
                 "DocumentEditor": [
                     "isReadOnly",
@@ -1732,6 +1868,12 @@
                     "canRedo"
                 ]
             }
+        },
+        {
+            "url": "chart",
+            "name": "Chart Preservation",
+            "category": "Charts",
+            "description": "The Document Editor supports chart preservation for users who use to view their business reports with intuitive graphical data visualization."
         }
     ]
 }

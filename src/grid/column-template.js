@@ -1,6 +1,7 @@
 this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: new ej.data.DataManager(window.employeeData).executeLocal(new ej.data.Query().take(8)),
+        allowSorting: true,
         columns: [
             {
                 headerText: 'Employee Image', textAlign: 'Center',

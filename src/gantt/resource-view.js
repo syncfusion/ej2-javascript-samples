@@ -16,6 +16,7 @@ this.default = function () {
             work: 'work',
             child: 'subtasks'
         },
+	taskType:'FixedWork',
         resourceFields: {
             id: 'resourceId',
             name: 'resourceName',

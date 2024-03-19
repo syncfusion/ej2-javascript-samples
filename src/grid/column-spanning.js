@@ -3,8 +3,10 @@ this.default = function () {
         dataSource: window.columnSpanData,
         queryCellInfo: QueryCellEvent,
         gridLines: 'Both',
+        enableHover: false,
+        allowSelection: false,
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, textAlign: 'Right', width: 150 },
+            { field: 'EmployeeID', headerText: 'Employee ID', freeze: 'Left', isPrimaryKey: true, textAlign: 'Right', width: 150 },
             { field: 'EmployeeName', headerText: 'Employee Name', width: 200 },
             { field: '9:00', headerText: '9.00 AM', width: 120 },
             { field: '9:30', headerText: '9.30 AM', width: 120 },
@@ -117,7 +119,7 @@ function extendQueryCellEvent(args, value) {
                 args.colSpan = 2;
             }
             break;
-        case 100010:
+        case 10010:
             if (args.column.field === '9:00' || args.column.field === '2:30' ||
                 args.column.field === '4:00' || args.column.field === '11:30') {
                 args.colSpan = 3;

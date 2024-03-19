@@ -2,6 +2,7 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.categoryData,
         allowPaging: true,
+        allowSorting: true,
         allowFiltering: true,
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 150 },

@@ -18,9 +18,12 @@
         'Extension': '5467',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 2,
-        'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/davolio.bmp',
+        'IsDeveloper': true,
+        'Age': 41,
+        'PrimaryFramework': 'React'
+      },
+      {
         'EmployeeID': 2,
         'LastName': 'Fuller',
         'FirstName': 'Andrew',
@@ -37,9 +40,12 @@
         'Extension': '3457',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 0,
-        'PhotoPath': 'http://accweb/emmployees/fuller.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/fuller.bmp',
+        'IsDeveloper': false,
+        'Age': 42,
+        'PrimaryFramework': 'Angular'
+      },
+      {
         'EmployeeID': 3,
         'LastName': 'Leverling',
         'FirstName': 'Janet',
@@ -56,9 +62,12 @@
         'Extension': '3355',
         'Photo': { 'Length': 21722 },
         'ReportsTo': 2,
-        'PhotoPath': 'http://accweb/emmployees/leverling.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/leverling.bmp',
+        'IsDeveloper': true,
+        'Age': 43,
+        'PrimaryFramework': 'Vue'
+      },
+      {
         'EmployeeID': 4,
         'LastName': 'Peacock',
         'FirstName': 'Margaret',
@@ -75,9 +84,12 @@
         'Extension': '5176',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 2,
-        'PhotoPath': 'http://accweb/emmployees/peacock.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/peacock.bmp',
+        'IsDeveloper': false,
+        'Age': 44,
+        'PrimaryFramework': 'Javascript'
+      },
+      {
         'EmployeeID': 5,
         'LastName': 'Buchanan',
         'FirstName': 'Steven',
@@ -95,9 +107,12 @@
         'Extension': '3453',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 2,
-        'PhotoPath': 'http://accweb/emmployees/buchanan.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/buchanan.bmp',
+        'IsDeveloper': true,
+        'Age': 45, 
+        'PrimaryFramework': 'Typescript'
+      },
+      {
         'EmployeeID': 6,
         'LastName': 'Suyama',
         'FirstName': 'Michael',
@@ -114,9 +129,12 @@
         'Extension': '428',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 5,
-        'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/davolio.bmp',
+        'IsDeveloper': false,
+        'Age': 46, 
+        'PrimaryFramework': 'Blazor'
+      },
+      {
         'EmployeeID': 7,
         'LastName': 'King',
         'FirstName': 'Robert',
@@ -133,9 +151,12 @@
         'Extension': '465',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 5,
-        'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/davolio.bmp',
+        'IsDeveloper': true,
+        'Age': 47,
+        'PrimaryFramework': 'ASP.NET Core'
+      },
+      {
         'EmployeeID': 8,
         'LastName': 'Callahan',
         'FirstName': 'Laura',
@@ -152,9 +173,12 @@
         'Extension': '2344',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 2,
-        'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
-    },
-    {
+        'PhotoPath': 'http://accweb/emmployees/davolio.bmp',
+        'IsDeveloper': false,
+        'Age': 48,
+        'PrimaryFramework': 'ASP.NET MVC'
+      },
+      {
         'EmployeeID': 9,
         'LastName': 'Dodsworth',
         'FirstName': 'Anne',
@@ -171,8 +195,11 @@
         'Extension': '452',
         'Photo': { 'Length': 21626 },
         'ReportsTo': 5,
-        'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
-    }];
+        'PhotoPath': 'http://accweb/emmployees/davolio.bmp',
+        'IsDeveloper': true,
+        'Age': 49, 
+        'PrimaryFramework': 'Java'
+      }];
     window.expenseData = [{
         'UniqueId': 'T100001',
         'DateTime': 1496288520000,

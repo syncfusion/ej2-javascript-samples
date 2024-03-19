@@ -15,7 +15,7 @@ this.default = function () {
     var zoom;
     var editorPageCount;
 
-    var documentEditor = new ej.documenteditor.DocumentEditor({ serviceUrl:hostUrl,enablePrint: true, height: '590px' });
+    var documentEditor = new ej.documenteditor.DocumentEditor({ serviceUrl:hostUrl,enablePrint: true, height: '590px',documentEditorSettings: { showRuler: true } });
     ej.documenteditor.DocumentEditor.Inject(ej.documenteditor.Print);
     var hostUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
     documentEditor.appendTo('#container');
@@ -182,8 +182,10 @@ this.default = function () {
         print = addButton('e-de-icon-Print e-de-padding-right', printText, btnStyles, 'de-print', printToolTip, false);
         openBtn = addButton('e-de-icon-Open e-de-padding-right', openText, btnStyles, 'de-open', openText, false);
         var items = [
-            { text: 'Microsoft Word (.docx)', id: 'word' },
-            { text: 'Syncfusion Document Text (.sfdt)', id: 'sfdt' },
+            { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
+            { text: 'Word Document (*.docx)', id: 'word' },
+            { text: 'Word Template (*.dotx)', id: 'dotx'},
+            { text: 'Plain Text (*.txt)', id: 'txt'},
         ];
         download = addButton('e-de-icon-Download e-de-padding-right', downloadText, btnStyles, 'documenteditor-share', downloadToolTip, true, items);
         if (!isShareNeeded) {
@@ -245,14 +247,22 @@ this.default = function () {
             case 'sfdt':
                 save('Sfdt');
                 break;
+            case 'txt':
+                save('Txt');
+                break;
+            case 'dotx':
+                save('Dotx');
+                break;
         }
     }
     function save(format) {
         documentEditor.save(documentEditor.documentName === '' ? 'sample' : documentEditor.documentName, format);
     }
     function setTooltipForPopup() {
-        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[0].setAttribute('title', 'Download a copy of this document to your computer as a DOCX file.');
-        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[1].setAttribute('title', 'Download a copy of this document to your computer as an SFDT file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[0].setAttribute('title', 'Download a copy of this document to your computer as an SFDT file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[1].setAttribute('title', 'Download a copy of this document to your computer as a DOCX file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[2].setAttribute('title', 'Download a copy of this document to your computer as a DOTX file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[3].setAttribute('title', 'Download a copy of this document to your computer as a TXT file.');
     }
     function addButton(iconClass, btnText, styles, id, tooltipText, isDropDown, items) {
         var button = ej.base.createElement('button', { id: id, styles: styles });

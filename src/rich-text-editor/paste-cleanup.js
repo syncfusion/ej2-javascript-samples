@@ -37,15 +37,26 @@ this.default = function() {
     var deniedTagsElem = document.getElementById('deniedTags');
     var deniedAttrsElem = document.getElementById('deniedAttributes');
     allowedStylePropsElem.addEventListener('blur', function(e) {
-        defaultRTE.pasteCleanupSettings.allowedStyleProps = (eval)('[' + (e.target).value + ']' );// jshint ignore:line
+        onPasteCleanupSettingsChange((e.target).value, 'allowedStyleProps');
         defaultRTE.dataBind();
     });
-    deniedAttrsElem.addEventListener('blur', function(e) {
-        defaultRTE.pasteCleanupSettings.deniedAttrs = (eval)('[' + (e.target).value + ']' );// jshint ignore:line
+    deniedAttrsElem.addEventListener('blur', function(e) {        
+        onPasteCleanupSettingsChange((e.target).value, 'deniedAttrs');
         defaultRTE.dataBind();
     });
     deniedTagsElem.addEventListener('blur', function(e) {
-        defaultRTE.pasteCleanupSettings.deniedTags = (eval)('[' + (e.target).value + ']' );// jshint ignore:line
+        onPasteCleanupSettingsChange((e.target).value, 'deniedTags');
         defaultRTE.dataBind();
     });
+
+    function onPasteCleanupSettingsChange(value, settingsProperty) {
+        if (value) {
+            var arrayValue = value.split(',').map(function (item) {
+                return item.trim().replace(/^['"]|['"]$/g, '');
+            });
+            defaultRTE.pasteCleanupSettings[settingsProperty] = arrayValue.filter(function (prop) {
+                return prop !== '';
+            });
+        }
+    }
 };

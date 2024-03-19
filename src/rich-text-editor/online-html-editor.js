@@ -20,7 +20,7 @@ this.default = function () {
         size: '50%', min: '40%',
       }, {min: '40%'}],
     });
-    splitObj.appendTo('#horizontal');
+    splitObj.appendTo('#splitter-rte-online-html-editor');
     defaultRTE = new ej.richtexteditor.RichTextEditor({
       height: '100%',
       enableFloating: false,

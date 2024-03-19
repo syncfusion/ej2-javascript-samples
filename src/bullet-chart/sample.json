@@ -3,7 +3,6 @@
     "directory": "bullet-chart",
     "category": "Data Visualization",
     "ftName": "bullet-chart",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -22,7 +21,6 @@
         {
             "url": "multiple-data",
             "name": "Multiple Data",
-            "type": "update",
             "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with multiple local data values.",
             "category": "Bullet Chart",
             "api": {

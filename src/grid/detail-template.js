@@ -3,6 +3,7 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.employeeData,
         detailTemplate: '#detailtemplate',
+        allowSorting: true,
         height: 335,
         width: 'auto',
         columns: [

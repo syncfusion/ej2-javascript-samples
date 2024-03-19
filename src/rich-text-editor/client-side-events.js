@@ -3,6 +3,7 @@
  * Rich Text Editor client side events samples
  */
 this.default = function() {
+    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
             items: ['Bold', 'Italic', 'Underline', 'StrikeThrough', 'SuperScript', 'SubScript', '|',
@@ -12,6 +13,16 @@ this.default = function() {
                 'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'FileManager', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
                 '|', 'EmojiPicker', 'Print', '|',
                 'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+        },
+        fileManagerSettings: {
+            enable: true,
+            path: '/Pictures/Food',
+            ajaxSettings: {
+                url: hostUrl + 'api/FileManager/FileOperations',
+                getImageUrl: hostUrl + 'api/FileManager/GetImage',
+                uploadUrl: hostUrl + 'api/FileManager/Upload',
+                downloadUrl: hostUrl + 'api/FileManager/Download'
+            }
         },
         created: create,
         actionBegin: actionBegin,

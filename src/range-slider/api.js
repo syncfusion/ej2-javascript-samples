@@ -54,6 +54,7 @@ this.default = function () {
         label: 'Show Buttons',
         change: function (args) {
             sliderObj.showButtons = args.checked;
+
         }
     });
     button.appendTo('#button');
@@ -62,7 +63,6 @@ this.default = function () {
         checked: false,
         change: function (args) {
             sliderObj.showButtons = args.checked;
-
         }
     });
     buttonMb.appendTo('#mb-button');

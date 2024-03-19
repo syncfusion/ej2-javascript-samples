@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.inventoryData,
         allowPaging: true,
         allowSelection: true,
+        allowSorting: true,
         selectionSettings: { persistSelection: true },
         editSettings: { allowDeleting: true },
         toolbar: [ 'Delete' ],

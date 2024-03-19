@@ -14,7 +14,7 @@
             }
         },
         {
-            "url":"read-only", "name": "Read-Only", "type": "new" ,"description":"This sample demonstrates the Pdf Viewer in read only mode", "category": "Document Security", "api": {
+            "url":"read-only", "name": "Read-Only", "description":"This sample demonstrates the Pdf Viewer in read only mode", "category": "Document Security", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -22,7 +22,7 @@
             }
         },
         {
-            "url":"document-list", "name": "Document List", "type": "new" ,"description":"This sample demonstrates to open PDF document in Read-only mode and Editable mode using PDF Viewer in Pop-up dialog", "category": "File Management", "api": {
+            "url":"document-list", "name": "Document List", "description":"This sample demonstrates to open PDF document in Read-only mode and Editable mode using PDF Viewer in Pop-up dialog", "category": "File Management", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -30,11 +30,35 @@
             }
         },
         {
-            "url":"custom-toolbar", "name": "Custom Toolbar", "type": "update" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "Toolbar", "api": {
+            "url":"multi-format-viewer", "name": "Multi-Format Viewer", "type": "new", "description":"This sample demonstrates to loads various file types like PDFs, images, and Microsoft Office documents (Word, Excel, PowerPoint) into the PDF Viewer", "category": "File Management", "api": {
+                "PdfViewer": [
+                   "serviceUrl",
+                   "documentPath"
+                ]
+            }
+        },
+        {
+            "url":"organize-pages", "name": "Organize Pages", "type": "new" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "Editor", "api": {
+                "PdfViewer": [
+                    "serviceUrl",
+                    "documentPath"
+                 ]
+            }
+        },
+        {
+            "url":"custom-toolbar", "name": "Toolbar" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "Customization", "api": {
                 "PdfViewer": [
                     "documentPath",
                     "enableToolbar",
                     "enableThumbnail",
+                    "serviceUrl"
+                ]
+            }
+        },
+        {
+            "url":"custom-context-menu", "name": "Context Menu", "type": "new" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom context menu configuration.", "category": "Customization", "api": {
+                "PdfViewer": [
+                    "documentPath",
                     "serviceUrl"
                 ]
             }

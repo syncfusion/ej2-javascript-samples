@@ -8,7 +8,7 @@
             "name": "Overview",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "fileManagerSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["path", "enable", "ajaxSettings"], "QuickToolbarSettings": ["table"] }
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "fileManagerSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "enableTabKey", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["path", "enable", "ajaxSettings"], "QuickToolbarSettings": ["table"] }
         },
         {
             "url": "rich-text-editor",

@@ -55,7 +55,10 @@ this.default = function() {
         //Set tooltip content
         content: 'Tooltip content',
         //Set open mode for Tooltip
-        opensOn: 'Click'
+        opensOn: 'Click',
+        //Set tooltip position
+        position: 'TopCenter',
+        windowCollision: true
     });
     //Render initialized Tooltip component
     tooltip.appendTo('#default');

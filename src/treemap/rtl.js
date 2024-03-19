@@ -1,14 +1,13 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({                
-        // custom code start
-        load: function (args) {
+        load: function (args) {         // custom code start
             var drilltheme = location.hash.split('/')[1];
             drilltheme = drilltheme ? drilltheme : 'Material';
             args.treemap.theme = (drilltheme.charAt(0).toUpperCase() +
             drilltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
-        // custom code end
-        titleSettings: {
+        
+        titleSettings: {              // custom code end
             text: 'List of Countries by Unemployment Rate',
             textStyle: { size: '15px', fontFamily: 'Segoe UI' }
         },

@@ -32,6 +32,12 @@ this.default = function() {
 			'</p>' +
 			'</div>' +
 		    '</div>',
+
+    //Set tooltip position
+    position: 'BottomCenter',
+    //Set tooltip height
+    height: ej.base.Browser.isDevice ? '60%' : 'Auto',
+    windowCollision: true
   });
   //Render initialized Tooltip component
   tooltip.appendTo('#content');

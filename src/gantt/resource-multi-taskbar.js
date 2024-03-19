@@ -5,6 +5,7 @@ this.default = function () {
         viewType: 'ResourceView',
         enableMultiTaskbar: true,
         showOverAllocation: true,
+        taskType:'FixedWork',
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',

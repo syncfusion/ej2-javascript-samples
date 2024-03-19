@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.orderDatas,
         height: 410,
         width: 'auto',
+        allowSorting: true,
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
             { field: 'CustomerName', headerText: 'Customer Name', width: 160 },

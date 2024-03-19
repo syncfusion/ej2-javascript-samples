@@ -4,22 +4,24 @@
     "category": "Forms",
     "ftName": "query-builder",
     "dataSourcePath": "src/query-builder/data-source.js",
+    "type": "update",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
             "category": "Query Builder",
             "ftName": "query-builder",
+            "type": "update",
             "api": {
                 "QueryBuilder": [
                     "width",
                     "dataSource",
                     "columns",
                     "rule",
-					"created"
+		    "created"
                 ]
             },
-            "description": "This sample demonstrates the default functionalities of the Query Builder component. Click the plus button to add group or conditions."
+            "description": "This sample demonstrates the default functionalities of the Query Builder component with importing and exporting the filter as JSON. Click the plus button to add a group or conditions."
         },
         {
             "url": "complex-databinding",
@@ -38,9 +40,60 @@
             "description": "This sample demonstrates the Complex Databinding with integration of DropdownTree functionalities of the Query Builder component. This can be specified by using fieldMode property."
         },
         {
+            "url": "mongo-sql",
+            "name": "Mongo and SQL Query",
+            "category": "Query Builder",
+            "ftName": "query-builder",
+            "type": "new",
+            "api": {
+                "QueryBuilder": [
+                    "width",
+                    "dataSource",
+                    "columns",
+                    "rule"
+                ]
+            },
+            "description": "This sample demonstrates the Query Builder component by showing different types of queries such as SQL and MongoDB. The query preview can be changed using the tab component. Queries can be imported to the Query Builder using the import dropdown button."
+        },
+        {
+            "url": "lock-group",
+            "name": "Lock Group/Rule",
+            "category": "Query Builder",
+            "ftName": "query-builder",
+            "type": "new",
+            "api": {
+                "QueryBuilder": [
+                    "width",
+                    "dataSource",
+                    "columns",
+                    "rule",
+                    "fieldMode"
+                ]
+            },
+            "description": "This sample demonstrates the lock support of the Query Builder component. Click the lock button to lock the group or rule."
+        },
+        {
+            "url": "clone-group",
+            "name": "Clone Group/Rule",
+            "category": "Query Builder",
+            "ftName": "query-builder",
+            "type": "new",
+            "api": {
+                "QueryBuilder": [
+                    "width",
+                    "dataSource",
+                    "columns",
+                    "rule",
+                    "fieldMode"
+                ]
+            },
+            "description": "This sample demonstrates the clone support of the Query Builder component. Click the clone button to clone the group or rule."
+        },
+        {
             "url": "template",
             "name": "Value Template",
             "category": "Template",
+	    "type": "update",
             "api": {
                 "QueryBuilder": [
                     "width",
@@ -49,7 +102,7 @@
                     "ruleChange"
                 ]
             },
-            "description": "This sample demonstrates the integration of DropdownList, Slider controls as Templates in the Query Builder component."
+            "description": "This sample demonstrates the integration of the Dropdown List and Slider components as templates in the Query Builder component and also showing the different types of queries such as CEL and SpEL. The query preview can be changed using the tab component."
         },
         {
             "url": "rule-template",

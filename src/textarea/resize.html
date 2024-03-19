@@ -1,0 +1,45 @@
+<div class="col-lg-8 control-section resize">
+    <div class="content-wrapper">
+        <div class="resize-row">
+            <textarea id="resize"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" class="resize-property">
+        <tr>
+            <td class="left-side">Resize Mode</td>
+            <td>
+                <select id="select">
+                    <option value="Vertical">Vertical</option>
+                    <option value="Horizontal">Horizontal</option>
+                    <option value="Both">Both</option>
+                    <option value="None">None</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        This example demonstrates the resize functionalities of the textarea control.
+        Choose the corresponding resizeMode option from the property panel to update the resize behavior in the textarea.
+    </p>
+</div>
+<div id="description">
+    <p>The textarea can be resized vertically, horizontally, or in both directions by selecting the following corresponding options:</p>
+    <ul>
+        <li>Choose resizeMode options such as 'Both', 'Vertical', 'Horizontal', or 'None' to control the resize behavior of the textarea.</li>
+    </ul>
+</div>
+<style>
+    .content-wrapper div.resize-row {
+        margin: 30px 150px;
+    }
+
+    .resize-property .left-side {
+        font-size: 14px;
+        padding: 8px;
+    }
+</style>

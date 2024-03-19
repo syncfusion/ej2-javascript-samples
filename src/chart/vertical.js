@@ -15,7 +15,7 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {  valueType: 'Category', majorGridLines: { width: 0 }, majorTickLines: { width: 0 }  },
         //Initializing Primary Y Axis
-        primaryYAxis: { title: 'Sales in Billion', majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minimum: 11000, maximum: 15000, interval: 500, edgeLabelPlacement: 'Shift' },
+        primaryYAxis: { title: 'Sales in Billion', majorGridLines: { width: 0 }, lineStyle: { width: 0 }, majorTickLines: { width: 0 }, minimum: 11000, maximum: 15000, interval: 500 },
         axes: [
             {
                 minimum: 0, maximum: 4, interval: 0.5, opposedPosition: true, name: 'yAxis2', title: 'Profit(In Percentage)',
@@ -29,7 +29,7 @@ this.default = function () {
             },
             {
                 dataSource: chartData, type: 'Line', yAxisName: 'yAxis2', xName: 'x', yName: 'y1', width: 2,
-                marker: { isFilled: true, visible: true, width: 7, height: 7 }
+                marker: { isFilled: true, visible: true, width: 7, height: 7 }, name: 'Profit Margin'
             }
         ],
         chartArea: {

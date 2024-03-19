@@ -12,7 +12,9 @@ this.renderChartOhlc = function () {
             primaryYAxis: {
                 title: 'Price',
                 labelFormat: 'n0', interval: 20,
-                lineStyle: { width: 0 }, rangePadding: 'None',
+                lineStyle: { width: 0 },
+                minimum: 40,
+                maximum: 140,
                 majorTickLines: { width: 0 }
             },
             chartArea: { border: { width: 0 } },

@@ -5,9 +5,10 @@ this.default = function () {
     ];
     var grid = new ej.grids.Grid({
         dataSource: window.orderDataSource,
-        editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal', newRowPosition:'Top' },
+        editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal', showAddNewRow: true, newRowPosition:'Top' },
         allowPaging: true,
         pageSettings: { pageCount: 5 },
+        allowSorting: true,
         toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
         actionBegin: actionBegin,
         columns: [
@@ -17,11 +18,11 @@ this.default = function () {
             },
             {
                 field: 'CustomerID', headerText: 'Customer ID',
-                validationRules: { required: true }, width: 140
+                validationRules: { required: true, minLength: 5 }, width: 140
             },
             {
                 field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit',
-                width: 140, format: 'C2', validationRules: { required: true }
+                width: 140, format: 'C2', validationRules: { required: true, min: 0 }
             },
             {
                 field: 'OrderDate', headerText: 'Order Date', editType: 'datetimepickeredit', format: { type: 'dateTime', format: 'M/d/y hh:mm a' },
@@ -52,6 +53,7 @@ this.default = function () {
         change: function (e) {
             var newRowPosition = e.value;
             grid.editSettings.newRowPosition = newRowPosition;
+            grid.refresh();
         }
     });
     dropDownType.appendTo('#newRowPosition');

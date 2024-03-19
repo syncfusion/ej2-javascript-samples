@@ -80,37 +80,38 @@ this.default = function () {
     });
     labelPosition.appendTo('#labelposition');
     
-    document.getElementById('tickOffset').onpointermove = document.getElementById('tickOffset').ontouchmove =
-        document.getElementById('tickOffset').onchange = function () {
-            var value = parseInt(document.getElementById('tickOffset').value, 10);
-            if (isMajorTicks) {
-                circulargauge.axes[0].majorTicks.offset = value;
-            }
-            else {
-                circulargauge.axes[0].minorTicks.offset = value;
-            }
-            document.getElementById('offset').innerHTML = value.toString();
-            circulargauge.refresh();
-        };
-    document.getElementById('tickHeight').onpointermove = document.getElementById('tickHeight').ontouchmove =
-        document.getElementById('tickHeight').onchange = function () {
-            var value = parseInt(document.getElementById('tickHeight').value, 10);
-            if (isMajorTicks) {
-                circulargauge.axes[0].majorTicks.height = value;
-            }
-            else {
-                circulargauge.axes[0].minorTicks.height = value;
-            }
-            document.getElementById('height').innerHTML = value.toString();
-            circulargauge.refresh();
-        };
-    document.getElementById('labelOffset').onpointermove = document.getElementById('labelOffset').ontouchmove =
-        document.getElementById('labelOffset').onchange = function () {
-            var value = parseInt(document.getElementById('labelOffset').value, 10);
-            circulargauge.axes[0].labelStyle.offset = value;
-            document.getElementById('labelOffsetValue').innerHTML = value.toString();
-            circulargauge.refresh();
-        };
+    var tickOffsetInput = document.getElementById('tickOffset');
+    tickOffsetInput.addEventListener('input', function () {
+        var value = parseInt(tickOffsetInput.value, 10);
+        if (isMajorTicks) {
+            circulargauge.axes[0].majorTicks.offset = value;
+        } else {
+            circulargauge.axes[0].minorTicks.offset = value;
+        }
+        document.getElementById('offset').innerHTML = value.toString();
+        circulargauge.refresh();
+    });
+
+    var tickHeightInput = document.getElementById('tickHeight')
+    tickHeightInput.addEventListener('input', function () {
+        var value = parseInt(tickHeightInput.value, 10);
+        if (isMajorTicks) {
+            circulargauge.axes[0].majorTicks.height = value;
+        }
+        else {
+            circulargauge.axes[0].minorTicks.height = value;
+        }
+        document.getElementById('height').innerHTML = value.toString();
+        circulargauge.refresh();
+    });
+    
+    var labelOffsetInput = document.getElementById('labelOffset')
+    labelOffsetInput.addEventListener('input', function () {
+        var value = parseInt(labelOffsetInput.value, 10);
+        circulargauge.axes[0].labelStyle.offset = value;
+        document.getElementById('labelOffsetValue').innerHTML = value.toString();
+        circulargauge.refresh();
+    });
     var enableRTLChange;
     var enableRTLCheckbox = new ej.buttons.CheckBox({
         change: enableRTLChange, checked: false,

@@ -16,14 +16,14 @@ this.default = function () {
             work:'work',
             resourceInfo: 'resources',
             type:'taskType'
-        },       
+        },
         resources: resourceResources,
         resourceFields: {
             id: 'resourceId',
             name: 'resourceName',
             unit: 'unit'
         },
-        taskType:"FixedDuration",
+        taskType:"FixedWork",
         workUnit:"Hour",
         editSettings: {
             allowAdding: true,

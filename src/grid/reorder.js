@@ -14,8 +14,9 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.employeeData,
         allowReordering: true,
+        allowSorting: true,
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125 },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 150 },
             { field: 'FirstName', headerText: 'Name', width: 125 },
             { field: 'Title', headerText: 'Title', width: 190 },
             {

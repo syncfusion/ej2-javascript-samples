@@ -20,11 +20,12 @@
         { Name: "Albert", Status: "active", Eimg: "pic03", EmailId: "albert@gmail.com" },
         { Name: "William", Status: "away", Eimg: "10", EmailId: "william@gmail.com" }
     ];
- 
+    
+     var emailObj;
      var defaultRTE = new ej.richtexteditor.RichTextEditor({
          placeholder: 'Type @ and tag the name',
          actionBegin: function (args) {
-             if (args.requestType === 'EnterAction') {
+             if (args.requestType === 'EnterAction' && emailObj.element.classList.contains('e-popup-open')) {
                  args.cancel = true;
              }
          }
@@ -32,7 +33,7 @@
      defaultRTE.appendTo('#mention_integration');
  
      // Initialize Mention component.
-     var emailObj = new ej.dropdowns.Mention({
+         emailObj = new ej.dropdowns.Mention({
          dataSource: emailData,
          fields: { text: 'Name' },
          suggestionCount: 8,

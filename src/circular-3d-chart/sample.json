@@ -1,0 +1,71 @@
+{
+    "name": "3D Circular Chart",
+    "directory": "circular-3d-chart",
+    "type": "preview",
+    "category": "Data Visualization",
+    "ftName": "circular3d",
+    "samples": [
+        {
+            "url": "pie",
+            "name": "Pie",
+            "description": "This demo sample for Essential JavaScript2 Circular 3D Chart control demonstrates how to render and configure the pie charts.",
+            "category": "3D Circular Chart",
+            "api": {
+                "CircularChart3D": [
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "donut",
+            "name": "Donut",
+            "description": "This demo sample for Essential JavaScript2 Circular 3D Chart control demonstrates how to render and configure the doughnut charts.",
+            "category": "3D Circular Chart",
+            "api": {
+                "CircularChart3D": [
+                    "series",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "pie-legend",
+            "name": "Pie with Legend",
+            "description": "This demo sample for Essential JavaScript2 Circular 3D Chart control demonstrates how to render and configure the legends in pie charts.",
+            "category": "3D Circular Chart",
+            "api": {
+                "CircularChart3D": [
+                    "series",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "pie-radius",
+            "name": "Pie with Various Radius",
+            "description": "This demo sample for Essential JavaScript2 Circular 3D Chart control demonstrates how to render and configure the various radius pie chart.",
+            "category": "3D Circular Chart",
+            "api": {
+                "CircularChart3D": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "selection",
+            "name": "Selection",
+            "description": "This demo sample for Essential JavaScript2 Circular 3D Chart control demonstrates the selection behavior in pie charts.",
+            "category": "3D Circular Chart",
+            "api": {
+                "CircularChart3D": [
+                    "series",
+                    "legendSettings",
+                    "selectionMode"
+                ]
+            }
+        }
+    ]
+}

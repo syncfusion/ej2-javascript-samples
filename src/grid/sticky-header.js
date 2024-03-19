@@ -2,6 +2,7 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.orderData.slice(0, 50),
         enableStickyHeader: true,
+        allowSorting: true,
         columns: [
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
             { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 135, format: 'yMd' },

@@ -31,9 +31,10 @@ var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|pr
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
 // Regex for removing hidden codes
 var reg = /.*custom code start([\S\s]*?)custom code end.*/g;
-var sbArray = ['angular', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue', 'blazor'];
+var sbArray = ['angular', 'nextjs','react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue', 'blazor'];
 var sbObj = {
     'angular': 'angular',
+    'nextjs': 'nextjs',
     'typescript': '',
     'react': 'react',
     'vue': 'vue',
@@ -62,10 +63,10 @@ var breadCrumSeperator = ej.base.select('.category-seperator');
 var breadCrumbSubCategory = document.querySelector('.sb-bread-crumb-text>.component');
 var breadCrumbSample = document.querySelector('.sb-bread-crumb-text>.crumb-sample');
 var hsplitter = '<div class="sb-toolbar-splitter sb-custom-item"></div>';
-var openNewTemplate = "<div class=\"sb-custom-item sb-open-new-wrapper\"><a id=\"openNew\" target=\"_blank\" aria-label=\"Open new sample\">\n<div class=\"sb-icons sb-icon-Popout\"></div></a></div>";
-var sampleNavigation = "<div class=\"sb-custom-item sample-navigation\"><button id='prev-sample' class=\"sb-navigation-prev\" \n    aria-label=\"previous sample\">\n<span class='sb-icons sb-icon-Previous'></span>\n</button>\n<button  id='next-sample' class=\"sb-navigation-next\" aria-label=\"next sample\">\n<span class='sb-icons sb-icon-Next'></span>\n</button>\n</div>";
-var plnrTemplate = '<span class="sb-icons sb-icons-plnkr"></span><span class="sb-plnkr-text">Edit in StackBlitz</span>';
-var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="open-plnkr" class="sb-custom-item sb-plnr-section">' +
+var openNewTemplate = "<div class=\"sb-custom-item sb-open-new-wrapper\"><a id=\"openNew\" role='tab' target=\"_blank\" aria-label=\"Open new sample\">\n<div class=\"sb-icons sb-icon-Popout\"></div></a></div>";
+var sampleNavigation = "<div class=\"sb-custom-item sample-navigation\"><button id='prev-sample' role='tab' class=\"sb-navigation-prev\" \n    aria-label=\"Navigate to previous sample\">\n<span class='sb-icons sb-icon-Previous'></span>\n</button>\n<button role='tab' id='next-sample' class=\"sb-navigation-next\" aria-label=\"Navigate to next sample\">\n<span class='sb-icons sb-icon-Next'></span>\n</button>\n</div>";
+var plnrTemplate = '<span class="sb-icons sb-icons-plnkr" role="presentation"></span><span class="sb-plnkr-text">Edit in StackBlitz</span>';
+var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="open-plnkr" role="tab" aria-label="Open Edit in StackBlitz" tabindex="0" class="sb-custom-item sb-plnr-section">' +
     plnrTemplate + '</button>' + hsplitter + openNewTemplate + hsplitter +
     '</div>' + sampleNavigation + '<div class="sb-icons sb-mobile-setting"></div>';
 var tabContentToolbar = ej.base.createElement('div', { className: 'sb-content-toolbar', innerHTML: contentToolbarTemplate });
@@ -157,6 +158,12 @@ if (ej.base.Browser.isDevice || isMobile) {
         change:resizeFunction
     });
     sidebar.appendTo('#left-sidebar');
+}
+
+if (ej.base.Browser.isDevice || isMobile) {
+    leftToggle.setAttribute('aria-expanded', 'false');
+} else {
+    leftToggle.setAttribute('aria-expanded', 'true');
 }
 
 function resizeFunction() {
@@ -524,7 +531,7 @@ function onsearchInputChange(e) {
                 fields: { id: 'uid', text: 'name', groupBy: 'sortId' },
                 select: controlSelect,
                 template: '<div class="e-text-content e-icon-wrapper" data="${dir}/${url}" uid="${uid}" pid="${parentId}">' +
-                    '<span class="e-list-text" role="list-item">' +
+                    '<span class="e-list-text">' +
                     '${name}</span></div>',
                 groupTemplate: '${if(items[0]["component"])}<div class="e-text-content"><span class="e-search-group">${items[0].component}</span>' +
                     '</div>${/if}',
@@ -685,6 +692,11 @@ function bindEvents() {
         e.stopPropagation();
         sbHeaderClick('changeSampleBrowser');
     });
+    document.getElementById('sb-switcher').addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            sbHeaderClick('changeSampleBrowser');
+        }
+    });
     ej.base.select('.sb-header-text-right').addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -695,6 +707,11 @@ function bindEvents() {
         e.stopPropagation();
         sbHeaderClick('changeTheme');
     });
+    headerThemeSwitch.addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            sbHeaderClick('changeTheme');
+        }
+    });
     themeList.addEventListener('click', changeTheme);
     document.addEventListener('click', sbHeaderClick.bind(this, 'closePopup'));
     settingElement.addEventListener('click', function (e) {
@@ -702,10 +719,20 @@ function bindEvents() {
         e.stopPropagation();
         sbHeaderClick('toggleSettings');
     });
+    settingElement.addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            sbHeaderClick('toggleSettings');
+        }
+     });
     searchButton.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         toggleSearchOverlay();
+    });
+    searchButton.addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            toggleSearchOverlay();
+        }
     });
     document.getElementById('settings-popup').addEventListener('click', function (e) {
         e.preventDefault();
@@ -719,6 +746,11 @@ function bindEvents() {
     setResponsiveElement.addEventListener('click', setMouseOrTouch);
     ej.base.select('#sb-left-back').addEventListener('click', showHideControlTree);
     leftToggle.addEventListener('click', toggleLeftPane);
+    leftToggle.addEventListener('keydown', (e) => {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            toggleLeftPane();
+        }
+    });
     ej.base.select('.sb-mobile-overlay').addEventListener('click', toggleMobileOverlay);
     ej.base.select('.sb-header-settings').addEventListener('click', viewMobilePrefPane);
     ej.base.select('.sb-mobile-setting').addEventListener('click', viewMobilePropPane);
@@ -794,7 +826,8 @@ function setSbLink() {
         var ele = ej.base.select('#' + sb);
         if (sb === 'aspnetcore' || sb === 'aspnetmvc') {
             ele.href = sb === 'aspnetcore' ? 'https://ej2.syncfusion.com/aspnetcore/' : 'https://ej2.syncfusion.com/aspnetmvc/';
-
+        } else if (sb === 'nextjs') {
+            ele.href = 'https://ej2.syncfusion.com/nextjs/demos/';
         } else if (sb === 'blazor') {
             ele.href = 'https://blazor.syncfusion.com/demos/';
         } else {
@@ -885,6 +918,7 @@ function setLeftPaneHeight() {
 function toggleLeftPane() {
     var reverse = sidebar.isOpen;
     ej.base.select('#left-sidebar').classList.remove('sb-hide');
+    leftToggle.setAttribute('aria-expanded', (!reverse).toString());
     if (!reverse) {
         leftToggle.classList.add('toggle-active');
     } else {
@@ -972,7 +1006,7 @@ function renderLeftPaneComponents() {
         dataSource: controlSampleData[location.hash.split('/')[2]] || controlSampleData.grid,
         fields: { id: 'uid', text: 'name', groupBy: 'order', htmlAttributes: 'data' },
         select: controlSelect,
-        template: '<div class="e-text-content ${if(type)}e-icon-wrapper${/if}"> <span class="e-list-text" role="listitem">${name}' +
+        template: '<div class="e-text-content ${if(type)}e-icon-wrapper${/if}"> <span class="e-list-text">${name}' +
             '</span>${if(type === "update")}<span class="e-badge sb-badge e-samplestatus ${type}">Updated</span>' +
             '${else}${if(type)}<span class="e-badge sb-badge e-samplestatus ${type}">${type}</span>${/if}${/if}' +
             '${if(directory)}<div class="e-icons e-icon-collapsible"></div>${/if}</div>',

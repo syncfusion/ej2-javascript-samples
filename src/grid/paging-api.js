@@ -13,10 +13,11 @@ this.default = function () {
         locale: 'en-US',
         allowPaging: true,
         pageSettings: { pageCount: 2 },
+        allowSorting: true,
         columns: [
             { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right' },
             { field: 'ProductName', headerText: 'Product Name', width: 190 },
-            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2', },
+            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2' },
             { field: 'UnitsInStock', headerText: 'Units In Stock', width: 160, textAlign: 'Right' }
         ],
         actionComplete: paging

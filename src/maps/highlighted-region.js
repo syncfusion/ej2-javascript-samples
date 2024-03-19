@@ -200,9 +200,6 @@ this.default = function () {
                                 longitude: -97.1191406, latitude: 34.5042932, name: 'Davis'
                             },
                             {
-                                longitude: -98.0310059, latitude: 37.1537496, name: 'Anthony'
-                            },
-                            {
                                 longitude: -98.3564758, latitude: 36.7542898, name: 'Cherokee'
                             },
                             {

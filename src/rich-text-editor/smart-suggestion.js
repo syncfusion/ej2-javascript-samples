@@ -109,12 +109,14 @@
             case 'Audio':
             case 'Video':
                 mentionObj.hidePopup();
-                formatRTE.showDialog(args.itemData.command === 'Video'? 'InsertVideo': args.itemData.command === 'Audio'? 'InsertAudio': args.itemData.command === 'Image'? 'InsertImage': 'InsertTable');
+                setTimeout(function() {
+                    formatRTE.showDialog(args.itemData.command === 'Video'? 'InsertVideo': args.itemData.command === 'Audio'? 'InsertAudio': args.itemData.command === 'Image'? 'InsertImage': 'InsertTable');
+                }, 150);
                 break;
             case 'EmojiPicker':
                 beforeApplyFormat();
                 mentionObj.hidePopup();
-                formatRTE.showEmojiPicker();
+                setTimeout(function () { formatRTE.showEmojiPicker(); }, 150);
                 break;
             default:
                 formatRTE.executeCommand('formatBlock', args.itemData.command);

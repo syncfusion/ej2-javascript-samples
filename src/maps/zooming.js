@@ -26,6 +26,7 @@ this.default = function () {
                     colorValuePath: 'color'
                 },
                 dataSource: new ej.maps.MapAjax('./src/maps/map-data/zooming-datasource.json'),
+                animationDuration: 500,
             }
         ]
     });

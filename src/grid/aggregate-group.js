@@ -5,6 +5,7 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageCount: 5 },
         allowGrouping: true,
+        allowSorting: true,
         groupSettings: { showDropArea: false, columns: ['CategoryName'] },
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 160 },

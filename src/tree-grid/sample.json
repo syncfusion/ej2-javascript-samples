@@ -2,7 +2,6 @@
     "name": "Tree Grid",
     "directory": "tree-grid",
     "category": "Grids",
-    "type":"update",
     "ftName" :"treegrid",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
@@ -174,7 +173,7 @@
          { "url":"virtual-scrolling", "name": "Virtual Scrolling", "description":"This demo demonstrates how to use Essential JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] } }, 
          { "url":"infinite-scrolling", "name": "Infinite Scrolling", "description":"This sample demonstrates the Tree Grid component with infinite scrolling feature.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableInfiniteScrolling","dataBound","height","columns"] } }, 
          {  
-            "url":"aggregate.default", "type": "update", "name": "Default Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","height","aggregates", "toolbar", "toolbarClick", "allowPdfExport", "allowExcelExport"] },
+            "url":"aggregate.default", "name": "Default Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","height","aggregates", "toolbar", "toolbarClick", "allowPdfExport", "allowExcelExport"] },
             "description": "This demo explains how to display the summary values such as average, minimum, etc., for the columns in Syncfusion Essential JS2 Tree Grid."
          },
          {  

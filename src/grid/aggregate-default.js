@@ -3,11 +3,13 @@ this.default = function () {
         dataSource: window.orderData,
         allowPaging: true,
         pageSettings: { pageCount: 5 },
+        allowSorting: true,
         columns: [
-            { field: 'CustomerName', headerText: 'Customer Name', width: 150 },
-            { field: 'Freight', width: 160, format: 'C2', textAlign: 'Right' },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-            { field: 'ShipCountry', headerText: 'Ship Country', width: 140 }
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140},
+            { field: 'CustomerName', headerText: 'Customer Name', width: 150},
+            { field: 'Freight', width: 160, format: 'C2', textAlign: 'Right'},
+            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right'},
+            { field: 'ShipCountry', headerText: 'Ship Country', width: 140}
         ],
         aggregates: [{
             columns: [{

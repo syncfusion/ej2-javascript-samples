@@ -1,29 +1,57 @@
-<div class="col-lg-8 control-section">
+<div class="col-lg-12 control-section">
     <div id="querybuilder" class="row">
     </div>
-</div>
-<div class="col-lg-4 property-section">
-    <table id="property" title="Properties" class="querybuilder-property" style="width: 100%; margin:10px">
-        <tr>
-            <td>
-                <div class="row"> <input id="radio1" type="radio"> </div>
-            </td>
-            <td>
-                <div class="row"> <input id="radio2" type="radio"> </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <textarea id='ruleContent' readonly = true> </textarea>
-            </td>
-        </tr>
-    </table>
+    <div class="e-query-preview">
+        <div class="e-tab-section">
+            <div>
+                <div class="e-sample-resize-container">
+                    <div id="tab_orientation">
+                        <div class="e-tab-header">
+                            <div>CEL</div>
+                            <div>SpEL</div>
+                        </div>
+
+                        <div class="e-content" id="e-query-preview">
+                            <div class="content">
+                                <div>
+                                    <div class="e-preview-options" style="height: 40px;">
+                                        <div class="copy-tooltip" style="display: none;" id="copy-cel">
+                                            <div id="celTooltip">
+                                                <div class="e-icons copycode"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <textarea readonly class='e-text-area-content e-cel-content'></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <div class="e-preview-options" style="height: 40px;">
+                                        <div class="copy-tooltip" style="display: none;" id="copy-spel">
+                                            <div id="spelTooltip">
+                                                <div class="e-icons copycode"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <textarea readonly class='e-text-area-content e-spel-content'></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="action-description">
-    <p>This sample demonstrates the integration of the Dropdown List and Slider components as templates in the Query Builder control.</p>
+    <p>This sample demonstrates the integration of the Dropdown List and Slider controls as templates in the Query Builder control and also showing the different types of queries such as CEL and SpEL. The query preview can be changed using the tab control.</p>
 </div>
 <div id="description">
-    <p> This sample illustrates how to integrate the Dropdown List, Slider, and Checkbox components with the Query Builder. The available types of templates are:
+    <p> This sample illustrates how to integrate the Dropdown List, Slider, and Checkbox controls with the Query Builder. The available types of templates are:
         <ul>
             <li>
                 <code>DropDownList</code>
@@ -39,41 +67,115 @@
             </li>
         </ul>
     </p>
-    <p>This sample also illustrates the created filters in JSON and SQL modes.</p>
+    <p> In this demo queries are exported and imported in CEL and SpEL formats. For Common Expression Language (CEL) output, use the "cel" format. CEL is used for validating data.
+        For Spring Expression Language (SpEL) output, use the "spel" format. The Spring Expression Language (SpEL) is a powerful expression language that supports querying and manipulating an object graph at runtime.</p>
     <p>
-        More information about Query Builder can be found in this 
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/query-builder/es5-getting-started/">
+        More information about Query Builder can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/query-builder/getting-started/">
             documentation section</a>.
     </p>
 </div>
+<!-- custom code start -->
 <style>
-    .e-query-builder .e-control-wrapper.e-slider-container.e-horizontal {
+    .e-control-wrapper.e-slider-container.e-horizontal {
         height: 0;
     }
 
-    #ruleContent {
-        border: 1px solid #d3d3d3;
-        width: 100%;
-        height: 500px;
+    .e-query-builder {
+        margin: 3% auto;
+    }
+    .e-query-preview {
+        margin-top: 20px !important;
+        border: 1px solid #e5e7eb;
+        border-radius: 4px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .e-query-preview .e-tab {
+        height: 200px;
+    }
+
+    .e-query-preview .e-tab .e-content {
+        margin: 10px;
+    }
+
+    .e-query-preview .copycode::before {
+        content: '\e77c';
+        font-size: 25px;
+    }
+
+    .e-query-preview .copy-tooltip {
+        margin-right: 10px;
+        position: unset;
+        float: right;
+        height: 32px;
+        width: 32px;
+        right: 12px;
+        top: 12px;
+        background: #f4f4f4;
+        border-radius: 2px;
+    }
+
+    .e-query-preview .copy-tooltip.e-control.e-tooltip:hover {
+        background: #D8D8D8;
+    }
+
+    .e-query-preview .e-icons.copycode {
+        padding-left: 3px;
+        padding-top: 4px;
+        color: rgba(0, 0, 0, .54);
+    }
+
+
+    .e-query-preview .e-cel-content,
+    .e-query-preview .e-spel-content {
+        border: none;
+        height: 180px;
+        width: 98%;
+    }
+
+    .e-query-preview .e-text-area-content:focus-visible {
+        outline: none;
+    }
+
+    .e-query-preview .preview {
+        margin-top: 20px;
+    }
+
+    .content-area {
+        height: 260px !important;
+        width: 99% !important;
+        overflow-x: hidden;
+        margin: 10px !important;
+    }
+
+    .e-text-area-content {
+        margin: 10px;
         overflow: auto;
-    }
-	
-	.highcontrast textarea#ruleContent {
-	  background-color: #000;
-	}
-    
-    /* custom code start */
-    .querybuilder-property {
-        width: 100%;
+        border: none;
+        width: 96%;
     }
 
-    .querybuilder-property td:first-child {
-        width: auto;
+    .e-text-area-content:focus-visible {
+        outline: none;
     }
 
-    .querybuilder-property div.row,
-    .querybuilder-property div.e-radio-wrapper {
-        padding-bottom: 10px;
+    .e-text-area-content {
+        margin: 10px !important;
+        overflow: auto;
+        border: none;
+        width: 96%;
     }
-    /* custom code end */
+
+    .e-text-area-content:focus-visible {
+        outline: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .e-query-preview .copy-tooltip {
+           display: block !important;
+        }
+    }
 </style>
+<!-- custom code end -->

@@ -6,6 +6,7 @@ this.default = function () {
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog', template: '#dialogtemplate' },
         allowPaging: true,
         pageSettings: { pageCount: 5 },
+        allowSorting: true,
         toolbar: ['Add', 'Edit', 'Delete'],
         columns: [
             {

@@ -2,6 +2,7 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.orderData,
         allowPaging: true,
+        allowSorting: true,
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
             { field: 'CustomerName', headerText: 'Customer Name', width: 150 },

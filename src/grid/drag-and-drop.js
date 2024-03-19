@@ -6,11 +6,12 @@ this.default = function () {
         selectionSettings: { type: 'Multiple' },
         rowDropSettings: { targetID: 'DestGrid' },
         pageSettings: { pageCount: 2 },
+        allowSorting: true,
         width: '49%',
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
-            { field: 'CustomerName', headerText: 'Customer Name', width: 135 },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' }
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140},
+            { field: 'CustomerName', headerText: 'Customer Name', width: 150 },
+            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
         ]
     });
     grid.appendTo('#Grid');
@@ -21,11 +22,12 @@ this.default = function () {
         selectionSettings: { type: 'Multiple' },
         rowDropSettings: { targetID: 'Grid' },
         pageSettings: { pageCount: 2 },
+        allowSorting: true,
         width: '49%',
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
-            { field: 'CustomerName', headerText: 'Customer Name', width: 135 },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' }
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140},
+            { field: 'CustomerName', headerText: 'Customer Name', width: 150 },
+            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
         ]
     });
     destGrid.appendTo('#DestGrid');

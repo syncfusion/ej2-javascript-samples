@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.productData,
         allowPaging: true,
         allowSelection: false,
+        allowSorting: true,
         enableHover: true,
         columns: [
             { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right' },

@@ -296,6 +296,7 @@ this.default = function () {
             }
         },
         cellTemplate: '${getCellContent(data)}',
+        enableFieldSearching: true
     });
     pivotObj.appendTo('#PivotView');
 

@@ -1,7 +1,7 @@
 this.default = function() {
   //Documenteditor control rendering starts
   var hostUrl = "https://services.syncfusion.com/js/production/api/documenteditor/";
-  var container = new ej.documenteditor.DocumentEditorContainer({ serviceUrl:hostUrl,height:'590px' });
+  var container = new ej.documenteditor.DocumentEditorContainer({ serviceUrl:hostUrl,height:'590px',documentEditorSettings: { showRuler: true } });
   ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
   container.appendTo("#container");
   container.documentEditorSettings.showHiddenMarks = true;
@@ -60,9 +60,11 @@ this.default = function() {
       false
     );
     var items = [
-      { text: "Microsoft Word (.docx)", id: "word" },
-      { text: "Syncfusion Document Text (.sfdt)", id: "sfdt" }
-    ];
+      { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
+      { text: 'Word Document (*.docx)', id: 'word' },
+      { text: 'Word Template (*.dotx)', id: 'dotx'},
+      { text: 'Plain Text (*.txt)', id: 'txt'},
+  ];
     download = addButton(
       "e-de-icon-Download e-de-padding-right",
       "Download",
@@ -130,6 +132,12 @@ this.default = function() {
       case "sfdt":
         save("Sfdt");
         break;
+      case 'txt':
+        save('Txt');
+        break;
+      case 'dotx':
+        save('Dotx');
+        break;
     }
   }
   function save(format) {
@@ -139,21 +147,11 @@ this.default = function() {
     );
   }
   function setTooltipForPopup() {
-    document
-      .getElementById("documenteditor-share-popup")
-      .querySelectorAll("li")[0]
-      .setAttribute(
-        "title",
-        "Download a copy of this document to your computer as a DOCX file."
-      );
-    document
-      .getElementById("documenteditor-share-popup")
-      .querySelectorAll("li")[1]
-      .setAttribute(
-        "title",
-        "Download a copy of this document to your computer as an SFDT file."
-      );
-  }
+    document.getElementById('documenteditor-share-popup').querySelectorAll('li')[0].setAttribute('title', 'Download a copy of this document to your computer as an SFDT file.');
+    document.getElementById('documenteditor-share-popup').querySelectorAll('li')[1].setAttribute('title', 'Download a copy of this document to your computer as a DOCX file.');
+    document.getElementById('documenteditor-share-popup').querySelectorAll('li')[2].setAttribute('title', 'Download a copy of this document to your computer as a DOTX file.');
+    document.getElementById('documenteditor-share-popup').querySelectorAll('li')[3].setAttribute('title', 'Download a copy of this document to your computer as a TXT file.');
+}
   function addButton(
     iconClass,
     btnText,

@@ -234,7 +234,7 @@ function renderSchedule() {
     scheduleObj = new ej.schedule.Schedule({
         height: 350,
         cssClass: 'Schedule',
-        selectedDate: new Date(2020, 9, 20),
+        currentView: 'Month',
         readonly: true,
         eventSettings: { dataSource: dataManager }
     });

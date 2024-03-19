@@ -10,7 +10,6 @@
             "name": "Default Functionalities",
             "category": "Image Editor",
             "ftName": "image-editor",
-	        "type": "update",
             "api": {
                 "ImageEditor": [
                     "width",             
@@ -30,6 +29,19 @@
                 ]
             },
             "description": "ImageEditor component provides built in support to rotate the image using rotate method and crop the image using the select and crop method."
+        },
+        {
+            "url": "custom-toolbar",
+            "name": "Custom Toolbar",
+            "category": "Image Editor",
+            "ftName": "image-editor",
+            "type": "new",
+            "api": {
+                "ImageEditor": [
+
+                ]
+            },
+            "description": "ImageEditor component provides built in support to edit the images with custom toolbar."
         }
     ]
 }

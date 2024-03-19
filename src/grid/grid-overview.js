@@ -175,16 +175,23 @@ this.default = function () {
             grid.setProperties({ dataSource: urlapi });
         }, 100);
     }
-    document.getElementById('Grid').addEventListener('DOMSubtreeModified', function () {
-        if (dReady && stTime && isDataChanged) {
-            var msgEle = document.getElementById('msg');          
-            var val = (performance.now() - stTime).toFixed(0);
-            stTime = null;
-            dtTime = false;
-            dReady = false;
-            isDataChanged = false;
-            msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
-            msgEle.classList.remove('e-hide');
-        }
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function () {
+            if (dReady && stTime && isDataChanged) {
+                var msgEle = document.getElementById('msg');
+                var val = (performance.now() - stTime).toFixed(0);
+                stTime = null;
+                dtTime = false;
+                dReady = false;
+                isDataChanged = false;
+                msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
+                msgEle.classList.remove('e-hide');
+            }
+        });
+    });
+    observer.observe(document.getElementById('Grid'), {
+        attributes: true,
+        childList: true,
+        subtree: true,
     });
 };

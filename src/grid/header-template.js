@@ -2,6 +2,7 @@ this.default = function () {
     var data = new ej.data.DataManager(window.employeeData).executeLocal(new ej.data.Query().take(15));
     var grid = new ej.grids.Grid({
         dataSource: data,
+        allowSorting: true,
         columns: [
             { field: 'EmployeeID', headerText: 'Employee ID', width: 120, textAlign: 'Right', headerTemplate: '#employeetemplate' },
             { field: 'FirstName', headerText: 'First Name', width: 140 },

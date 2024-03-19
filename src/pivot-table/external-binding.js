@@ -26,7 +26,7 @@ this.default = function () {
         width: '100%',
         height: 300,
         dataBound: function () {
-            if (onInit) {
+            if (onInit && pivotObj.grid.getRows().length > 1) {
                 pivotObj.grid.selectionModule.selectCellsByRange({ cellIndex: 1, rowIndex: 1 }, { cellIndex: 3, rowIndex: 4 });
             }
         },

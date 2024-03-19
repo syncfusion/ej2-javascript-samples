@@ -111,6 +111,7 @@
 		"common",
 		"sys",
 		"appbar",
+		"textarea",
 		null
 	]
 }

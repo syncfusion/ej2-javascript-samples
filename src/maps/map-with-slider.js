@@ -69,8 +69,7 @@ this.default = function () {
                 }
             }
         ],
-        // custom code start
-        load: function (args) {
+        load: function (args) {        // custom code start
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';
             args.maps.theme = (theme.charAt(0).toUpperCase() +

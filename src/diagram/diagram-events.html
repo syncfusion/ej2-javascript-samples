@@ -1,110 +1,110 @@
-<div class="col-lg-8 control-section">
-    <style>
-    
-      /* Symbol palette alignment CSS */
-      #diagramEventsControlSection .sb-mobile-palette {
-        width: 200px;
-        height: 100%;
-        float: left;
-      }
+<style>
+
+  /* Symbol palette alignment CSS */
+  #diagramEventsControlSection .sb-mobile-palette {
+    width: 200px;
+    height: 100%;
+    float: left;
+  }
+
+ #diagramEventsControlSection .sb-mobile-palette-bar {
+    display: none;
+  }
+  /* Diagram alignment CSS */
+ #diagramEventsControlSection .sb-mobile-diagram {
+    width: calc(100% - 200px);
+    height: 100%;
+    float: left;
+    border: 1px solid #d9dedd;
+  }
+
+  @media (max-width: 550px) {
+    #diagramEventsControlSection .sb-mobile-palette {
+      z-index: 19;
+      position: absolute;
+      display: none;
+      transition: transform 300ms linear, visibility 0s linear 300ms;
+      width: 39%;
+      height: 100%;
+    }
 
     #diagramEventsControlSection .sb-mobile-palette-bar {
-        display: none;
-      }
-      /* Diagram alignment CSS */
+      display: block;
+      width: 100%;
+      background: #fafafa;
+      padding: 10px 10px;
+      border: 0.5px solid #e0e0e0;
+      min-height: 40px;
+    }
+
     #diagramEventsControlSection .sb-mobile-diagram {
-        width: calc(100% - 200px);
-        height: 100%;
-        float: left;
-        border: 1px solid #d9dedd;
-      }
+      width: 100%;
+      height: 100%;
+      float: left;
+      left: 0px;
+    }
+  }
 
-      @media (max-width: 550px) {
-        #diagramEventsControlSection .sb-mobile-palette {
-          z-index: 19;
-          position: absolute;
-          display: none;
-          transition: transform 300ms linear, visibility 0s linear 300ms;
-          width: 39%;
-          height: 100%;
-        }
+  #diagramEventsControlSection .sb-mobile-palette-open {
+    position: absolute;
+    display: block;
+    right: 15px;
+  }
+  /* Event property panel CSS */
+  #diagramEventsPropertySection .event-tracer {
+    width: 240px;
+    height: 700px;
+    min-height: 700px;
+    float: left;
+  }
 
-        #diagramEventsControlSection .sb-mobile-palette-bar {
-          display: block;
-          width: 100%;
-          background: #fafafa;
-          padding: 10px 10px;
-          border: 0.5px solid #e0e0e0;
-          min-height: 40px;
-        }
+ #diagramEventsPropertySection .heading {
+    color: #807f7f;
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #d9dedd;
+    padding: 10px;
+  }
+  /* These color is to indicate the event name in specific color */
+  #EventLog b {
+   color: #388e3c;
+  }
 
-        #diagramEventsControlSection .sb-mobile-diagram {
-          width: 100%;
-          height: 100%;
-          float: left;
-          left: 0px;
-        }
-      }
+  hr {
+    margin: 1px 10px 1px 0px;
+    border-top: 1px solid #eee;
+  }
+  /* Property panel CSS */
+  .property-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 740px;
+    padding-right: 0px;
+  }
 
-      #diagramEventsControlSection .sb-mobile-palette-open {
-        position: absolute;
-        display: block;
-        right: 15px;
-      }
-      /* Event property panel CSS */
-      #diagramEventsPropertySection .event-tracer {
-        width: 240px;
-        height: 700px;
-        min-height: 700px;
-        float: left;
-      }
+  #diagramEventsPropertySection .evtbtn { 
+    float: right; 
+  }
 
-    #diagramEventsPropertySection .heading {
-        color: #807f7f;
-        font-size: 15px;
-        height: 50px;
-        width: 100%;
-        border-bottom: 1px solid #d9dedd;
-        padding: 10px;
-      }
-      /* These color is to indicate the event name in specific color */
-      #EventLog b {
-      color: #388e3c;
-      }
+  #diagramEventsPropertySection .listbox {
+    width: 100%;
+    height: 50%;
+  }
 
-      hr {
-        margin: 1px 10px 1px 0px;
-        border-top: 1px solid #eee;
-      }
-      /* Property panel CSS */
-      .property-section {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        height: 740px;
-        padding-right: 0px;
-      }
+ #diagramEventsPropertySection .event-tracer .prop-grid {
+    width: 100%;
+    height: 50%;
+  }
 
-      #diagramEventsPropertySection .evtbtn { 
-        float: right; 
-      }
-
-      #diagramEventsPropertySection .listbox {
-        width: 100%;
-        height: 50%;
-      }
-
-    #diagramEventsPropertySection .event-tracer .prop-grid {
-        width: 100%;
-        height: 50%;
-      }
-
-    #diagramEventsPropertySection #EventLog {
-        height: calc(100% - 50px);
-        padding: 15px;
-        overflow: auto;
-        width: 100%;
-      }
-    </style>
+ #diagramEventsPropertySection #EventLog {
+    height: calc(100% - 50px);
+    padding: 15px;
+    overflow: auto;
+    width: 100%;
+  }
+</style>
+<div class="col-lg-8 control-section">
     <div id="diagramEventsControlSection" class="content-wrapper" style="width:100%;background: white">
       <div id="palette-space" class="sb-mobile-palette">
         <div id="symbolpalette" style="width:90%;"></div>

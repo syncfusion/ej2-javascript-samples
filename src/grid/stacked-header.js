@@ -4,8 +4,9 @@ this.default = function () {
         allowPaging: true,
         allowResizing: true,
         pageSettings: { pageCount: 5 },
+        allowSorting: true,
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, minWidth: 10 },
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, minWidth: 10},
             {
                 headerText: 'Order Details', columns: [
                     { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 135, format: 'yMd', minWidth: 10 },

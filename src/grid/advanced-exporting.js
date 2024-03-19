@@ -5,9 +5,10 @@ this.default = function () {
         allowPdfExport: true,
         allowPaging: true,
         pageSettings: { pageCount: 2, pageSize: 10 },
-        toolbar: ['ExcelExport', 'PdfExport'],
+        allowSorting: true,
+        toolbar: ['ExcelExport', 'PdfExport' ],
         columns: [
-            { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 120 },
+            { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 120},
             { field: 'ProductName', headerText: 'Product Name', width: 200 },
             { field: 'QuantityPerUnit', headerText: 'Quantity Per Unit', width: 145 },
             { field: 'UnitsInStock', headerText: 'Units In Stock', textAlign: 'Right', width: 140 },

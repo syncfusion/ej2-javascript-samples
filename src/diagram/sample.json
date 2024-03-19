@@ -3,7 +3,6 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
-    "type":"update",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
         {
@@ -22,6 +21,12 @@
             "url": "shape-gallery",
             "name": "Shapes",
             "description": "This sample illustrates list of built-in shapes available in our JavaScript Diagram Library which includes basic shapes, flow shapes, and BPMN shapes.",
+            "category": "Getting Started"
+        },
+        {
+            "url": "custom-shapes",
+            "name": "HTML Shapes",
+            "description":"This sample demonstrates how to host a HTML element inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
             "category": "Getting Started"
         },
         {
@@ -88,8 +93,7 @@
             "url": "tooltip-Sample",
             "name": "Tooltip",
             "description": "This sample demonstrates how to add the extra information to the nodes and connectors and how to show the information through diagram's tooltip feature.",
-            "category": "Getting Started",
-            "type":"update"
+            "category": "Getting Started"
         },
         {
             "url": "symbol-palette",
@@ -251,8 +255,7 @@
             "url": "uml-class-diagram",
             "name": "UML Class Diagram",
             "description": "This sample represents the hospital management system using diagram's built-in UML class diagram shapes.",
-            "category": "Use Case Diagram",
-            "type":"update"
+            "category": "Use Case Diagram"
         },
         {
             "url": "venn-diagram",
@@ -276,8 +279,7 @@
             "url": "workflow-editor",
             "name": "WorkFlow Diagram",
             "description": "This sample visually represents a simple workflow of a Travel Request Agency using Syncfusion EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
-            "category": "Real-time Diagrams",
-            "type":"new"
+            "category": "Real-time Diagrams"
         },
         {
             "url": "diagram-binding-treeview",
@@ -291,7 +293,6 @@
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
             "category": "Real-time Diagrams"
         }     
-        
         
     ]
 }

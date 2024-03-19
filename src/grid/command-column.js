@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: orderData,
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, allowEditOnDblClick: false },
         allowPaging: true,
+        allowSorting: true,
         pageSettings: {pageCount: 5},
         columns: [
             {

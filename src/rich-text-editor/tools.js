@@ -28,9 +28,11 @@ this.default = function() {
             }
         },
         quickToolbarSettings: {
-            table: ['TableHeader', 'TableRows', 'TableColumns', 'TableCell', '-', 'BackgroundColor', 'TableRemove', 'TableCellVerticalAlign', 'Styles']
+            table: ['TableHeader', 'TableRows', 'TableColumns', 'TableCell', '-', 'BackgroundColor', 'TableRemove', 'TableCellVerticalAlign', 'Styles'],
+            showOnRightClick: true,
         },
         showCharCount: true,
+        enableTabKey : true,
         actionBegin: handleFullScreen,
         actionComplete: actionCompleteHandler
     });
@@ -59,7 +61,7 @@ this.default = function() {
             }
             textArea.style.display = 'none';
             mirrorView.style.display = 'block';
-            renderCodeMirror(mirrorView, defaultRTE.value);
+            renderCodeMirror(mirrorView, defaultRTE.value===null ? "" :defaultRTE.value);
             charCount.style.display = 'none';
         }
     }

@@ -39,6 +39,7 @@ var pivotObj = new ej.pivotview.PivotView({
     allowCalculatedField: true,
     showGroupingBar: true,
     showFieldList: true,
+    enableValueSorting: true,
     width: '100%',
     toolbar: ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
     'Grid', 'Chart','MDX', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'FieldList'],

@@ -4,6 +4,7 @@ this.default = function () {
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
         allowPaging: true,
         pageSettings: { pageCount: 5 },
+        allowSorting: true,
         toolbar: ['Add',  'Delete', 'Update', 'Cancel'],
         columns: [
             {
@@ -12,11 +13,11 @@ this.default = function () {
             },
             {
                 field: 'CustomerID', headerText: 'Customer ID',
-                validationRules: { required: true }, width: 140
+                validationRules: { required: true, minLength: 5 }, width: 140
             },
             {
                 field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit',
-                width: 120, format: 'C2', validationRules: { required: true }
+                width: 120, format: 'C2', validationRules: { required: true, min: 0, number: true }
             },
             {
                 field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd',
@@ -29,5 +30,4 @@ this.default = function () {
         ],
     });
     grid.appendTo('#Grid');
-
 };

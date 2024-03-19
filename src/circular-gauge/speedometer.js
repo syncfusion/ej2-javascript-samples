@@ -95,7 +95,7 @@ function gauge6() {
     return gauge6;
 }
 this.default = function () {
-    var circulargauge = this.gauge6();
+    var circulargauge = gauge6();
     circulargauge.appendTo('#container');
 
     var gauge5Interval1 = setInterval(function () {
@@ -114,7 +114,7 @@ this.default = function () {
             clearInterval(this.gauge5Interval1);
         }
     }, 1000);
-    // Code for Property Panel
+    // Code for property panel
     var combineRange;
     var rangeSet = new ej.buttons.CheckBox({
         change: combineRange, checked: false

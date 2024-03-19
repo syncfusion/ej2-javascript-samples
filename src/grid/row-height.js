@@ -5,7 +5,8 @@ this.default = function () {
     var gridData = new ej.data.DataManager(window.data).executeLocal(new ej.data.Query().take(30));
     var grid = new ej.grids.Grid({
         dataSource: gridData,
-        toolbar: [
+        allowSorting: true,
+        toolbar: [ 
             { prefixIcon: 'e-small-icon', id: 'big', align: 'right', tooltipText: 'Row-height-big' },
             { prefixIcon: 'e-medium-icon', id: 'medium', align: 'right', tooltipText: 'Row-height-medium' },
             { prefixIcon: 'e-big-icon', id: 'small', align: 'right', tooltipText: 'Row-height-small' }

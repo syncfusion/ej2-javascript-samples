@@ -1,0 +1,76 @@
+<div class="col-lg-8 control-section api">
+    <div class="content-wrapper">
+        <div class="api-row">
+            <textarea id="api"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" class="api-property">
+
+        <tr>
+            <td class="left-side"> Rows </td>
+            <td><input id="rows" maxlength="2"></td>
+        </tr>
+        <tr>
+            <td class="left-side"> Columns </td>
+            <td><input id="cols" maxlength="2"></td>
+        </tr>
+        <tr>
+            <td class="left-side">Enable</td>
+            <td><input type="checkbox" id="enabled"></td>
+        </tr>
+        <tr>
+            <td class="left-side">Read only</td>
+            <td><input type="checkbox" id="readonly"></td>
+        </tr>
+        <tr>
+            <td class="left-side"> MaxLength </td>
+            <td><input id="maxlength" maxlength="3"></td>
+        </tr>
+        <tr>
+            <td class="left-side"> Value </td>
+            <td>
+                <input type="text" id="value" placeholder="Enter a value"></textbox>
+            </td>
+        </tr>
+        <tr>
+            <td class="left-side">Show clear icon</td>
+            <td><input type="checkbox" id="clearicon"></td>
+        </tr>
+    </table>
+</div>
+<div id="action-description">
+    <p>
+        This example demonstrates the api functionalities of the textarea control. You can customize the appearance and
+        behaviour of textarea component by choosing the corresponding option from the property panel.
+    </p>
+</div>
+<div id="description">
+    <p>The TextArea has the options to customize the appearance and behaviour of the component dynamically by updating
+        the following properties:</p>
+    <ul>
+        <li>Change the number of rows and columns of textarea by updating "Rows" and "Columns" options.</li>
+        <li>To make the textarea read-only, check the "read-only" option.</li>
+        <li>Disable the textarea by unchecking the "enabled" option.</li>
+        <li>Set the maximum length of characters that can be entered in textarea by customizing the "MaxLength" option.
+        </li>
+        <li>Update the value of textarea by entering text in "Value" option.</li>
+        <li>To make the clear button visible, check the "Show clear icon" option..</li>
+    </ul>
+</div>
+<style>
+    .content-wrapper div.api-row {
+        margin: 30px 150px;
+    }
+
+    .api-property .left-side {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .api-property.property-panel-table div.api {
+        padding-left: 0px;
+    }
+</style>

@@ -6,6 +6,7 @@
             dataSource: window.inventoryData,
             allowPaging: true,
             allowSelection: true,
+            allowSorting: true,
             selectionSettings: { type: 'Multiple' },
             enableHover: false,
             columns: [

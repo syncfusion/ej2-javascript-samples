@@ -3,10 +3,9 @@ this.default = function () {
     var viewer = new ej.pdfviewer.PdfViewer ({
     documentPath: "https://cdn.syncfusion.com/content/pdf/restricted-formfield.pdf",
     resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
-    toolbarSettings: { showTooltip : true, toolbarItems: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool','SearchOption', 'PrintOption']}
-    
+    toolbarSettings: { showTooltip : true, toolbarItems: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'PrintOption']}
 });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,ej.pdfviewer.FormFields,ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner);
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,ej.pdfviewer.FormFields,ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer);
       
     var switchObj = new ejs.buttons.Switch({ checked: true });
     switchObj.appendTo('#checked');
@@ -23,8 +22,6 @@ this.default = function () {
     };
     viewer.appendTo('#pdfViewer');
     viewer.enableStickyNotesAnnotation=false;
-
-   
     viewer.annotationSettings = {  
         isLock:true,       
     };
@@ -60,5 +57,4 @@ this.default = function () {
         isReadOnly: true,
     };
     viewer.contextMenuOption = 'None';
-
 };

@@ -17,8 +17,7 @@ var longitude = [];
                 layerType: 'OSM'
             },
         ],
-        // custom code start
-        load: function (args) {
+        load: function (args) {        // custom code start
             var Theme = location.hash.split('/')[1];
             Theme = Theme ? Theme : 'Material';
             args.maps.theme = (Theme.charAt(0).toUpperCase() +
@@ -107,7 +106,6 @@ var longitude = [];
         maps.layers[0].navigationLineSettings = [];
         navigationLines = [];
         emptySavedLinePositions();
-        maps.refresh();
         togglebtn.disabled = true;
     };
     var emptySavedLinePositions = function () {

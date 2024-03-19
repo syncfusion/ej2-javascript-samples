@@ -101,7 +101,7 @@ this.default = function () {
             args.heatmap.theme =  (multiLevelTheme.charAt(0).toUpperCase() +
             multiLevelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
             multiLevelTheme = multiLevelTheme.toLowerCase();
-            // custom code end
+            
             if(multiLevelTheme === 'highcontrast' || multiLevelTheme === 'bootstrap5-dark' || multiLevelTheme === 'material-dark' || multiLevelTheme === 'fabric-dark' || multiLevelTheme === 'bootstrap-dark' || multiLevelTheme === 'tailwind-dark' || multiLevelTheme === 'material3-dark' || multiLevelTheme === 'fluent-dark')
             {
                 args.heatmap.xAxis.textStyle.color = 'White';
@@ -116,6 +116,7 @@ this.default = function () {
                 args.heatmap.xAxis.multiLevelLabels[0].textStyle.color = 'Black';
                 args.heatmap.yAxis.multiLevelLabels[0].textStyle.color = 'Black';
             }
+            // custom code end
         },
         dataSource: window.multiLevelLabelData
     });

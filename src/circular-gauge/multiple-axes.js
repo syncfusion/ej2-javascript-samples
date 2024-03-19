@@ -76,28 +76,28 @@ this.default = function () {
         }
     });
     direction.appendTo('#axisDirection');
-    document.getElementById('startAngle').onpointermove = document.getElementById('startAngle').ontouchmove =
-        document.getElementById('startAngle').onchange = function () {
-            var value = parseInt(document.getElementById('startAngle').value, 10);
-            circulargauge.axes[0].pointers[0].animation.enable = false;
-            circulargauge.axes[1].pointers[0].animation.enable = false;
-            circulargauge.axes[axisIndex].startAngle = value;
-            document.getElementById('start').innerHTML = value.toString();
-            circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
-                ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
-                    'First' : 'None';
-            circulargauge.refresh();
-        };
-    document.getElementById('endAngle').onpointermove = document.getElementById('endAngle').ontouchmove =
-        document.getElementById('endAngle').onchange = function () {
-            var value = parseInt(document.getElementById('endAngle').value, 10);
-            circulargauge.axes[0].pointers[0].animation.enable = false;
-            circulargauge.axes[1].pointers[0].animation.enable = false;
-            circulargauge.axes[axisIndex].endAngle = value;
-            document.getElementById('end').innerHTML = value.toString();
-            circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
-                ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
-                    'First' : 'None';
-            circulargauge.refresh();
-        };
+    var startAngleInput = document.getElementById('startAngle');
+    startAngleInput.addEventListener('input', function () {
+        var value = parseInt(startAngleInput.value, 10);
+        circulargauge.axes[0].pointers[0].animation.enable = false;
+        circulargauge.axes[1].pointers[0].animation.enable = false;
+        circulargauge.axes[axisIndex].startAngle = value;
+        document.getElementById('start').innerHTML = value.toString();
+        circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
+            ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
+                'First' : 'None';
+        circulargauge.refresh();
+    });
+    var endAngleInput = document.getElementById('endAngle');
+    endAngleInput.addEventListener('input', function () {
+        var value = parseInt(endAngleInput.value, 10);
+        circulargauge.axes[0].pointers[0].animation.enable = false;
+        circulargauge.axes[1].pointers[0].animation.enable = false;
+        circulargauge.axes[axisIndex].endAngle = value;
+        document.getElementById('end').innerHTML = value.toString();
+        circulargauge.axes[axisIndex].labelStyle.hiddenLabel =
+            ej.circulargauge.isCompleteAngle(circulargauge.axes[axisIndex].startAngle, circulargauge.axes[axisIndex].endAngle) ?
+                'First' : 'None';
+        circulargauge.refresh();
+    });
 };

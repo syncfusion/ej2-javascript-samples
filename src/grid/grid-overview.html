@@ -231,7 +231,7 @@
         position: relative;
         left: 10px;
         line-height: 18px;
-        font-size: 10px;
+        font-size: 11px;
         color: white;
     }
 
@@ -270,7 +270,7 @@
 </script>
 
 <script type="text/x-jsrender" id="trustTemplate">
-    <img style="width: 31px; height: 24px" src="src/grid/images/${Trustworthiness}.png" />
+    <img style="width: 31px; height: 24px" src="src/grid/images/${Trustworthiness}.png" alt="" />
     <span id="Trusttext">${Trustworthiness}</span>
 </script>
 
@@ -280,7 +280,7 @@
 
 <script id="coltemplate" type="text/x-template">
     <div class="image">
-        <img src="src/grid/images/Map.png" class="e-image" alt="${Location}" /> &nbsp
+        <img src="src/grid/images/Map.png" class="e-image" alt="" /> &nbsp
         <span id="locationtext">${Location}</span>
     </div>
 </script>
@@ -295,7 +295,7 @@
         The Grid is used to display and manipulate tabular data with configuration options to control
         the way the data is presented and manipulated.
         It will pull the data from a data source, such as an array of JSON objects, OData web services,
-        or <code><a target="_blank" class="code"
+        or <code><a target="_blank" class="code" aria-label="API link for documentation"
                 href="https://ej2.syncfusion.com/javascript/documentation/data/api-datamanager">
                 DataManager</a></code> binding data fields to columns.
         Also, displaying a column header to identify the field with support for grouped records.
@@ -305,13 +305,13 @@
             template </code> etc... are used along with large data source.
     </p>
     <p>
-        You can follow the guidelines in this <a target="_blank"
+        You can follow the guidelines in this <a target="_blank" aria-label="API link for documentation"
             href="https://ej2.syncfusion.com/javascript/documentation/grid/virtual-scroll/#browser-height-limitation-in-virtual-scrolling-and-solution">
             documentation</a> to get around the browser height restriction when loading and viewing millions of records.
     </p>
     <p>
         More information on the Grid instantiation can be found in this
-        <a target="_blank"
+        <a target="_blank" aria-label="API link for documentation"
             href="http://ej2.syncfusion.com/javascript/documentation/grid/getting-started.html#getting-started">
             documentation section</a>.
     </p>

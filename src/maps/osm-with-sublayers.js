@@ -1,6 +1,5 @@
 window.default = function () {
-    var maps = new ej.maps.Maps({
-        // custom code start
+    var maps = new ej.maps.Maps({        // custom code starts
         load: function (args) {
             var theme = location.hash.split('/')[1];
             theme = theme ? theme : 'Material';

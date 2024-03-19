@@ -50,7 +50,12 @@ this.default = function () {
         offsetX: 70,
 
         //Set tooltip width
-        width: 170
+        width: 170,
+        
+        //Set tooltip position
+        position: 'BottomCenter',
+
+        windowCollision: true,
 
     });
 

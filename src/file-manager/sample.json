@@ -3,7 +3,6 @@
     "directory": "file-manager",
     "category": "Navigation",
     "ftName": "file-manager",
-    "type": "update",
     "samples": [
         {
             "url": "overview",
@@ -58,7 +57,6 @@
             "url": "access-control",
             "name": "Access Control",
             "category": "Use Case",
-            "type": "new",
             "api": { "FileManager": [ "ajaxSettings" ] },
             "description": "This example of FileManager for JavaScript(ES5) with how to restrict the file operations in the File Manager component."
         },

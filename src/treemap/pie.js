@@ -1,4 +1,5 @@
 this.default = function () {
+    var isInitial = true;
     var treemap = new ej.treemap.TreeMap({
         // custom code start
         load: function (args) {
@@ -9,18 +10,22 @@ this.default = function () {
         },
         // custom code end
         loaded: function (args) {
-            var template = document.getElementById(args.treemap.element.id + '_Label_Template_Group');
-            if (template) {
-                for (var i = 0; i < template.childElementCount; i++) {
-                    AccumulationChartRender(template.childNodes[i].childNodes[0].id);
+            setTimeout(function()  {
+                var template = document.getElementById('container_Label_Template_Group');
+                if (template && isInitial) {
+                    isInitial = false;
+                    for (var i = 0; i < template.childElementCount; i++) {
+                        AccumulationChartRender(template.childNodes[i].childNodes[0].id);
+                    }
+                    count = 0;
                 }
-                count = 0;
-            }
+            }, 500);
         },
         resize: function (args) {
             for (var i = 0; i < chartCollection.length; i++) {
                 chartCollection[i].destroy();
             }
+            isInitial = true;
         },
         tooltipRendering: function (args) {
             if (args.item.groupIndex !== 1 ) {

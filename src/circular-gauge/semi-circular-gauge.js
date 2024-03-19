@@ -60,45 +60,45 @@ this.default = function () {
         }
         circulargauge.refresh();
     };
-    document.getElementById('start').onpointermove = document.getElementById('start').ontouchmove =
-        document.getElementById('start').onchange = function () {
-            var min = parseInt(document.getElementById('start').value, 10);
-            document.getElementById('rangeStart').innerHTML = min + '°';
-            circulargauge.axes[0].startAngle = min;
+    var startInput = document.getElementById('start');
+    startInput.addEventListener('input', function () {
+        var min = parseInt(startInput.value, 10);
+        document.getElementById('rangeStart').innerHTML = min + '°';
+        circulargauge.axes[0].startAngle = min;
+        circulargauge.refresh();
+    });
+    var endInput = document.getElementById('end');
+    endInput.addEventListener('input', function () {
+        var max = parseInt(endInput.value, 10);
+        document.getElementById('rangeEnd').innerHTML = max + '°';
+        circulargauge.axes[0].endAngle = max;
+        circulargauge.refresh();
+    });
+    var radiusInput = document.getElementById('radius');
+    radiusInput.addEventListener('input', function () {
+        var max = parseInt(radiusInput.value, 10);
+        document.getElementById('radius1').innerHTML = max + '%';
+        circulargauge.axes[0].radius = '' + max + '%';
+        circulargauge.refresh();
+    });
+    var centerXInput = document.getElementById('centerX')
+    centerXInput.addEventListener('input', function () {
+        if (!highlightCheckBox.checked) {
+            var max = parseInt(centerXInput.value, 10);
+            document.getElementById('center1').innerHTML = max + '%';
+            circulargauge.centerX = '' + max + '%';
             circulargauge.refresh();
-        };
-    document.getElementById('end').onpointermove = document.getElementById('end').ontouchmove =
-        document.getElementById('end').onchange = function () {
-            var max = parseInt(document.getElementById('end').value, 10);
-            document.getElementById('rangeEnd').innerHTML = max + '°';
-            circulargauge.axes[0].endAngle = max;
+        }
+    });
+    var centerYInput = document.getElementById('centerY');
+    centerYInput.addEventListener('input', function () {
+        if (!highlightCheckBox.checked) {
+            var max = parseInt(centerYInput.value, 10);
+            document.getElementById('center2').innerHTML = max + '%';
+            circulargauge.centerY = '' + max + '%';
             circulargauge.refresh();
-        };
-    document.getElementById('radius').onpointermove = document.getElementById('radius').ontouchmove =
-        document.getElementById('radius').onchange = function () {
-            var max = parseInt(document.getElementById('radius').value, 10);
-            document.getElementById('radius1').innerHTML = max + '%';
-            circulargauge.axes[0].radius = '' + max + '%';
-            circulargauge.refresh();
-        };
-    document.getElementById('centerX').onpointermove = document.getElementById('centerX').ontouchmove =
-        document.getElementById('centerX').onchange = function () {
-            if (!highlightCheckBox.checked) {
-                var max = parseInt(document.getElementById('centerX').value, 10);
-                document.getElementById('center1').innerHTML = max + '%';
-                circulargauge.centerX = '' + max + '%';
-                circulargauge.refresh();
-            }
-        };
-    document.getElementById('centerY').onpointermove = document.getElementById('centerY').ontouchmove =
-        document.getElementById('centerY').onchange = function () {
-            if (!highlightCheckBox.checked) {
-                var max = parseInt(document.getElementById('centerY').value, 10);
-                document.getElementById('center2').innerHTML = max + '%';
-                circulargauge.centerY = '' + max + '%';
-                circulargauge.refresh();
-            }
-        };
+        }
+    });
     var hiddenLabel;
     var labelIntersectionCheckBox = new ej.buttons.CheckBox({
         checked: true,

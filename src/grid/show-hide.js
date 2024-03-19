@@ -9,6 +9,7 @@ this.default = function () {
         dataSource: window.categoryData,
         allowPaging: true,
         pageSettings: { pageCount: 2 },
+        allowSorting: true,
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 160 },
             { field: 'ProductName', headerText: 'Product Name', width: 170 },

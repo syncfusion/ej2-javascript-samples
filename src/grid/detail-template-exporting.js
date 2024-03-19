@@ -6,6 +6,7 @@ this.default = function () {
         toolbar: ['ExcelExport', 'PdfExport'],
         allowPdfExport: true,
         allowExcelExport: true,
+        allowSorting: true,
         toolbarClick: toolbarClick,
         exportDetailTemplate: exportDetailTemplate,
         height: 335,

@@ -3,6 +3,7 @@ this.default = function () {
         dataSource: window.sampleData,
         childMapping: 'subtasks',
         treeColumnIndex: 1,
+        allowResizing: true,
         height: 380,
         contextMenuItems: [
             { text: 'Collapse the Row', target: '.e-content', id: 'collapserow' },

@@ -13,10 +13,11 @@ this.default = function () {
         allowSelection: true,
         selectionSettings: { type: 'Multiple' },
         enableHover: false,
+        allowSorting: true,
         rowSelecting: selectingEvent,
         cellSelecting : selectingEvent,
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 135 },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 150 },
             { field: 'FirstName', headerText: 'Name', width: 125 },
             { field: 'Title', headerText: 'Title', width: 180 },
             {

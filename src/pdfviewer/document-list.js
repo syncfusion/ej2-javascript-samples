@@ -38,32 +38,41 @@ this.default = function () {
     });
     dialogObj.appendTo('#defaultDialog');
 
-    var commandClick = function(args){
+    var commandClick = function (args) {
         var mode = args.target.title;
-        viewer.documentPath = args.rowData.Document;
         dialogObj.header = args.rowData.FileName;
-        if(mode === 'View'){
-            viewer.enableStickyNotesAnnotation=false;
+        if (mode === 'View') {
+            viewer.enableStickyNotesAnnotation = false;
             viewer.enableAnnotationToolbar = false;
-            viewer.enableFormDesignerToolbar = false;
-            viewer.toolbarSettings = { showTooltip : true, toolbarItems: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool','SearchOption', 'PrintOption']};
-            viewer.annotationSettings = {  
-                isLock:true,       
+            viewer.isFormDesignerToolbarVisible = false;
+            viewer.toolbarSettings = {
+                showTooltip: true,
+                toolbarItems: [
+                    'OpenOption',
+                    'PageNavigationTool',
+                    'MagnificationTool',
+                    'PanTool',
+                    'SearchOption',
+                    'PrintOption',
+                ],
             };
-            viewer.textFieldSettings = {        
+            viewer.annotationSettings = {
+                isLock: true,
+            };
+            viewer.textFieldSettings = {
                 isReadOnly: true,
             };
             viewer.radioButtonFieldSettings = {
                 isReadOnly: true,
             };
-            viewer.DropdownFieldSettings = {        
-                isReadOnly: true,        
+            viewer.DropdownFieldSettings = {
+                isReadOnly: true,
             };
-            viewer.checkBoxFieldSettings = {         
-                isReadOnly: true,         
+            viewer.checkBoxFieldSettings = {
+                isReadOnly: true,
             };
             viewer.signatureFieldSettings = {
-                isReadOnly:true,
+                isReadOnly: true,
             };
             viewer.initialFieldSettings = {
                 isReadOnly: true,
@@ -78,25 +87,41 @@ this.default = function () {
         } else {
             viewer.enableStickyNotesAnnotation = true;
             viewer.enableAnnotationToolbar = true;
-            viewer.enableFormDesignerToolbar = true;
-            viewer.toolbarSettings = { showTooltip : true, toolbarItems: ['OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'CommentTool', 'SubmitForm', 'SearchOption', 'AnnotationEditTool', 'FormDesignerEditTool', 'PrintOption', 'DownloadOption']};
-            viewer.annotationSettings = {  
-                isLock:false,       
+            viewer.toolbarSettings = {
+                showTooltip: true,
+                toolbarItems: [
+                    'OpenOption',
+                    'UndoRedoTool',
+                    'PageNavigationTool',
+                    'MagnificationTool',
+                    'PanTool',
+                    'SelectionTool',
+                    'CommentTool',
+                    'SubmitForm',
+                    'SearchOption',
+                    'AnnotationEditTool',
+                    'FormDesignerEditTool',
+                    'PrintOption',
+                    'DownloadOption',
+                ],
             };
-            viewer.textFieldSettings = {        
+            viewer.annotationSettings = {
+                isLock: false,
+            };
+            viewer.textFieldSettings = {
                 isReadOnly: false,
             };
             viewer.radioButtonFieldSettings = {
                 isReadOnly: false,
             };
-            viewer.DropdownFieldSettings = {        
-                isReadOnly: false,        
+            viewer.DropdownFieldSettings = {
+                isReadOnly: false,
             };
-            viewer.checkBoxFieldSettings = {         
-                isReadOnly: false,         
+            viewer.checkBoxFieldSettings = {
+                isReadOnly: false,
             };
             viewer.signatureFieldSettings = {
-                isReadOnly:false,
+                isReadOnly: false,
             };
             viewer.initialFieldSettings = {
                 isReadOnly: false,
@@ -109,17 +134,18 @@ this.default = function () {
             };
             viewer.contextMenuOption = 'RightClick';
         }
-        dialogObj.show();
         viewer.dataBind();
-        viewer.load(viewer.documentPath,"");
+        viewer.load(args.rowData.Document,null);
+        dialogObj.show();
     };
     var grid = new ej.grids.Grid({
         dataSource: data,
-        commandClick:commandClick,
+        commandClick: commandClick,
+        destroyed: destroyed,
         columns: [
             { template: '#fileNameTemplate', headerText: 'File Name' },
-            { headerText: 'Author', field: 'Author'},
-            { textAlign: 'Center', headerText: 'Actions', commands: [{ buttonOption: { cssClass: 'e-icons e-eye e-flat' }, title: 'View'}, { buttonOption: { cssClass: 'e-icons e-edit e-flat' } , title: 'Edit'}] },
+            { headerText: 'Author', field: 'Author' },
+            { textAlign: 'Center', headerText: 'Actions', commands: [{ buttonOption: { cssClass: 'e-icons e-eye e-flat' }, title: 'View' }, { buttonOption: { cssClass: 'e-icons e-edit e-flat' }, title: 'Edit' }] },
         ]
     });
     grid.appendTo('#Grid');
@@ -128,7 +154,7 @@ this.default = function () {
         documentPath: "",
         resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
     });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner);
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer);
         
     var switchObj = new ejs.buttons.Switch({ checked: true });
     switchObj.appendTo('#checked');
@@ -143,4 +169,9 @@ this.default = function () {
     };
     viewer.height ="775px";
     viewer.appendTo('#pdfViewer');
+
+    function destroyed(){
+        viewer.destroy();
+        dialogObj.destroy();
+    }
 };

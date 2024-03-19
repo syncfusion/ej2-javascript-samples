@@ -6,10 +6,12 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             interval: 1,
-            valueType: 'Category',labelIntersectAction: 'Rotate45',
+            valueType: 'Category',
             majorGridLines: { width: 0 }, minorGridLines: { width: 0 },
             majorTickLines: { width: 0 }, minorTickLines: { width: 0 },
             lineStyle: { width: 0 },
+            labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45',
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0
         },
         //Initializing Primary X Axis
         primaryYAxis: {

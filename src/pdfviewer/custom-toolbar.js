@@ -65,6 +65,10 @@ this.default = function () {
     },
   ];
   new ej.navigations.Menu({ items: menuItems,showItemOnClick: true,select: select.bind(this) }, '#menu');
+  var signatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
+  new ej.navigations.Menu({ items: signatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#signatureMenu');
+  var formFieldSignatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
+  new ej.navigations.Menu({ items: formFieldSignatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#formFieldSignatureMenu');
   }
     toolbarObj = new ej.navigations.Toolbar({
         items: [
@@ -111,7 +115,7 @@ this.default = function () {
             { type: 'Separator', tooltipText: 'separator', align: 'Center' },
             { prefixIcon: 'e-icons e-stamp', tooltipText: 'Add Stamp', id: 'stamp', align: 'Center', template: '<ul id="menu"></ul>'},
             { type: 'Separator', tooltipText: 'separator', align: 'Center' },
-            { id: 'signature', prefixIcon: 'e-icons e-signature', click: addSign1.bind(this), tooltipText: 'Add Signature', align: 'Center' },
+            { id: 'signature', prefixIcon: 'e-icons e-signature', tooltipText: 'Add Signature', align: 'Center', template: '<ul id="signatureMenu"></ul>' },
             { type: 'Separator', tooltipText: 'separator', align: 'Center' },
             { prefixIcon: 'e-icons e-style', click: ink.bind(this), id: 'ink', tooltipText: 'Ink', align: 'Center' }
         ]
@@ -125,7 +129,7 @@ this.default = function () {
          { id: 'radio_button', prefixIcon: 'e-icons e-radio-button', click: radioButton.bind(this), tooltipText: 'Radio Button', align: 'Center' },
          { id: 'drop_down', prefixIcon: 'e-icons e-drop-down', click: dropDown.bind(this), tooltipText: 'Drop Down', align: 'Center' },
          { id: 'list_box', prefixIcon: 'e-icons e-list-unordered', click: listBox.bind(this), tooltipText: 'List Box', align: 'Center' },
-         { id: 'formField_signature', prefixIcon: 'e-icons e-signature', click: addSign.bind(this), tooltipText: 'Add Signature', align: 'Center' }
+         { id: 'formField_signature', prefixIcon: 'e-icons e-signature', tooltipText: 'Add Signature', align: 'Center', template: '<ul id="formFieldSignatureMenu"></ul>'  },
         ]
     });
     formFieldToolbar.appendTo('#formFieldToolbar');
@@ -146,7 +150,7 @@ this.default = function () {
         documentPath: 'https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf',
         resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
     });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation);
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.PageOrganizer);
       
     var switchObj = new ejs.buttons.Switch({ checked: true });
     switchObj.appendTo('#checked');
@@ -214,7 +218,7 @@ this.default = function () {
     textSearchPopup.hide();
     enableNextButton(false);
     enablePrevButton(false);
-};
+
 function previousClicked(args) {
     disableInkAnnotation();
     hidePopups();
@@ -277,11 +281,6 @@ function select (args) {
   const textSearchToolbarElement = document.getElementById('textSearchToolbar');
   if (textSearchToolbarElement !== null && textSearchToolbarElement.style.display === 'block') {
     textSearchToolbarElement.style.display = 'none';
-  }
-
-  const signatureToolbarElement = document.getElementById('SignatureToolbar');
-  if (signatureToolbarElement !== null && signatureToolbarElement.style.display === 'block') {
-    signatureToolbarElement.style.display = 'none';
   }
 
   const formFieldToolbarElement = document.getElementById('formFieldToolbar');
@@ -409,11 +408,6 @@ function openEditAnnotation(args) {
       textSearchToolbarElement.style.display = 'none';
     }
 
-    const signatureToolbarElement = document.getElementById('SignatureToolbar');
-    if (signatureToolbarElement !== null && signatureToolbarElement.style.display === 'block') {
-      signatureToolbarElement.style.display = 'none';
-    }
-
     const formFieldToolbarElement = document.getElementById('formFieldToolbar');
     if (formFieldToolbarElement !== null && formFieldToolbarElement.style.display === 'block') {
       formFieldToolbarElement.style.display = 'none';
@@ -454,11 +448,6 @@ function openEditAnnotation(args) {
     const textSearchToolbarElement = document.getElementById('textSearchToolbar');
     if (textSearchToolbarElement !== null && textSearchToolbarElement.style.display === 'block') {
       textSearchToolbarElement.style.display = 'none';
-    }
-
-    const signatureToolbarElement = document.getElementById('SignatureToolbar');
-    if (signatureToolbarElement !== null && signatureToolbarElement.style.display === 'block') {
-      signatureToolbarElement.style.display = 'none';
     }
   }
   function highlight() {
@@ -528,71 +517,6 @@ function openEditAnnotation(args) {
   function freeText(e) {
     disableInkAnnotation();
     viewer.annotation.setAnnotationMode('FreeText');
-  }
-  function addSign(e) {
-    disableInkAnnotation();
-    const element = document.querySelector('.e-dropdown-popup');
-    if (element !== null) {
-      if ('formField_signature') {
-        const editAnnotationToolbarElement = document.getElementById('editAnnotationToolbar');
-        if (editAnnotationToolbarElement !== null && editAnnotationToolbarElement.style.display === 'block') {
-          editAnnotationToolbarElement.style.display = 'none';
-        }
-  
-        element.style.left = '50%';
-        element.style.top = '153px';
-      } else {
-        element.style.left = '790px';
-        element.style.top = '137px';
-      }
-    }
-  
-    const signatureToolbarElement = document.getElementById('SignatureToolbar');
-    if (signatureToolbarElement !== null) {
-      if (signatureToolbarElement.style.display === 'block') {
-        signatureToolbarElement.style.display = 'none';
-      } else {
-        signatureToolbarElement.style.display = 'block';
-      }
-    }
-  
-    const textSearchToolbarElement = document.getElementById('textSearchToolbar');
-    if (textSearchToolbarElement !== null && textSearchToolbarElement.style.display === 'block') {
-      textSearchToolbarElement.style.display = 'none';
-    }
-  }
-  
-  function addSign1(e) {
-    disableInkAnnotation();
-    const element = document.querySelector('.e-dropdown-popup');
-    if (element !== null) {
-      if ('signature') {
-        const editAnnotationToolbarElement = document.getElementById('editAnnotationToolbar');
-        if (editAnnotationToolbarElement !== null && editAnnotationToolbarElement.style.display === 'block') {
-          editAnnotationToolbarElement.style.display = 'block';
-        }
-  
-        element.style.left = '73%';
-        element.style.top = '153px';
-      } else {
-        element.style.left = '790px';
-        element.style.top = '137px';
-      }
-    }
-  
-    const signatureToolbarElement = document.getElementById('SignatureToolbar');
-    if (signatureToolbarElement !== null) {
-      if (signatureToolbarElement.style.display === 'block') {
-        signatureToolbarElement.style.display = 'none';
-      } else {
-        signatureToolbarElement.style.display = 'block';
-      }
-    }
-  
-    const textSearchToolbarElement = document.getElementById('textSearchToolbar');
-    if (textSearchToolbarElement !== null && textSearchToolbarElement.style.display === 'block') {
-      textSearchToolbarElement.style.display = 'none';
-    }
   }
   
   function ink(e) {
@@ -688,7 +612,7 @@ function readFile(args) {
             // tslint:disable-next-line
             reader.onload = function (e) {
                 var uploadedFileUrl = e.currentTarget.result;
-                viewer.load(uploadedFileUrl, null);
+                viewer.documentPath= uploadedFileUrl;
                 currentPageBox.value = '1';
                 document.getElementById("bookmarkview").innerHTML = "";
                 isBookmarkView = false;
@@ -856,30 +780,25 @@ function updateSearchInputIcon(isEnable) {
     }
 }
 function onSignatureClick(event) {
-    const editAnnotationToolbarElement = document.getElementById('editAnnotationToolbar');
-    if (editAnnotationToolbarElement && editAnnotationToolbarElement.style.display === 'block') {
-        if (event.target instanceof HTMLElement) {
-            if (event.target.innerText === 'Add Signature') {
-                viewer.annotationModule.setAnnotationMode('HandWrittenSignature');
-            } else if (event.target.innerText === 'Add Initial') {
-                viewer.annotationModule.setAnnotationMode('Initial');
-            }
-        }
-    }
+  const editAnnotationToolbarElement = document.getElementById('editAnnotationToolbar');
+  if (editAnnotationToolbarElement && editAnnotationToolbarElement.style.display === 'block') {
+      if (event.element instanceof HTMLElement) {
+          if (event.element.innerText === 'Add Signature') {
+            viewer.annotationModule.setAnnotationMode('HandWrittenSignature');
+          } else if (event.element.innerText === 'Add Initial') {
+            viewer.annotationModule.setAnnotationMode('Initial');
+          }
+      }
+  }
 
-    const formFieldToolbarElement = document.getElementById('formFieldToolbar');
-    if (formFieldToolbarElement && formFieldToolbarElement.style.display === 'block') {
-        if (event.target instanceof HTMLElement) {
-            if (event.target.innerText === 'Add Signature') {
-                viewer.formDesignerModule.setFormFieldMode('SignatureField');
-            } else if (event.target.innerText === 'Add Initial') {
-                viewer.formDesignerModule.setFormFieldMode('InitialField');
-            }
-        }
-    }
-
-    const signatureToolbarElement = document.getElementById('SignatureToolbar');
-    if (signatureToolbarElement && signatureToolbarElement.style.display === 'block') {
-        signatureToolbarElement.style.display = 'none';
-    }
-}
+  const formFieldToolbarElement = document.getElementById('formFieldToolbar');
+  if (formFieldToolbarElement && formFieldToolbarElement.style.display === 'block') {
+      if (event.element instanceof HTMLElement) {
+          if (event.element.innerText === 'Add Signature') {
+              viewer.formDesignerModule.setFormFieldMode('SignatureField');
+          } else if (event.element.innerText === 'Add Initial') {
+              viewer.formDesignerModule.setFormFieldMode('InitialField');
+          }
+      }
+  }
+}};

@@ -16,7 +16,7 @@ this.default = function () {
         columns: [
             { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', minWidth: 10 },
             { field: 'Freight', width: 125, format: 'C2', minWidth: 10 },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 130, minWidth: 10 },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 150, minWidth: 10 },
             { field: 'CustomerName', headerText: 'Customer Name', width: 180, minWidth: 10 },
             { field: 'OrderDate', headerText: 'Order Date', width: 150, format: 'yMd', textAlign: 'Right', minWidth: 10 },
             { field: 'ShippedDate', headerText: 'Shipped Date', width: 180, format: 'yMd', textAlign: 'Right', minWidth: 10 },

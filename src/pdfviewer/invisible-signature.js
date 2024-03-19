@@ -33,7 +33,7 @@ this.default = function () {
         serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
         documentPath: 'InvisibleDigitalSignature.pdf'
     });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields,ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation);
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields,ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.PageOrganizer);
     viewer.enableTextSelection = true;
     viewer.downloadFileName = 'InvisibleDigitalSignature.pdf';
       //Triggers while adding the signature in signature field.

@@ -6,14 +6,19 @@ this.default = function () {
                 majorTickLines: { color: 'transparent', height: 0 },
                 crosshairTooltip: { enable: true },
             },
-            primaryXAxis: { 
+            primaryXAxis: {
+                valueType:'DateTimeCategory',
                 majorGridLines: { color: 'transparent' },
                 crosshairTooltip: { enable: true }
              },
             series: [
                 {
-                    dataSource: window.chartData,
-                    type: 'Candle'
+                    dataSource: window.defaultData,
+                    type: 'Candle',
+                    xName:'x',
+                    yName:'high',
+                    high:'high',
+                    low:'low'
                 },
             ],
             tooltipRender: function (args) {

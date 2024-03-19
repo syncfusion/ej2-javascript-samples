@@ -18,7 +18,7 @@ this.default = function () {
             size: '50%', min: '40%',
         }, { min: '40%' }],
     });
-    splitObj.appendTo('#horizontal');
+    splitObj.appendTo('#splitter-rte-markdown-preview');
     defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '100%',
         floatingToolbarOffset: 0,

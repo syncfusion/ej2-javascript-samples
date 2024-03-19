@@ -6,7 +6,13 @@ this.default = function () {
         views: ['Day', 'Week', 'WorkWeek', 'Month'],
         showQuickInfo: false,
         selectedDate: new Date(2021, 1, 15),
-        eventSettings: { dataSource: data },
+        eventSettings: {
+            dataSource: data,
+            fields: {
+                startTime: { name: 'StartTime', validation: { required: true } },
+                endTime: { name: 'EndTime', validation: { required: true } }
+            }
+        },
         editorTemplate: '#EventEditorTemplate',
         editorHeaderTemplate: '#EventEditorHeaderTemplate',
         popupOpen: function (args) {

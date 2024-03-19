@@ -30,7 +30,8 @@ this.default = function() {
         args.chart.theme = (selectTheme.charAt(0).toUpperCase() +
           selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
       },
-    }
+    },
+    height: 450
   });
   pivotObj.appendTo("#PivotView");
   var chartTypesDropDown = new ej.dropdowns.DropDownList({

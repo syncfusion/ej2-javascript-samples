@@ -13,7 +13,7 @@ this.default = function () {
         dataSource: window.employeeData,
         allowSorting: true,
         hierarchyPrintMode: 'All',
-        toolbar: [ 'Print'],
+        toolbar: ['Print' ],
         columns: [
             { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125 },
             { field: 'FirstName', headerText: 'Name', width: 125 },

@@ -209,6 +209,11 @@ this.default = function () {
                 'Edit Field': 'تحرير الحقل',
                 'Bookmark': 'الاشاره المرجعيه',
                 'Page Setup': 'اعداد الصفحة',
+                'Page Breaks':  'فواصل الصفحة',
+                'Section Breaks': 'فواصل القسم',
+                'Column': 'عمود',
+                'Next Page': 'الصفحة التالية',
+                'Continuous': 'الصفحة التالية',
                 'No bookmarks found': 'لم يتم العثور علي إشارات مرجعيه',
                 'Format': 'تنسيق',
                 'Create New Style': 'إنشاء نمط جديد',
@@ -510,7 +515,7 @@ this.default = function () {
     var hostUrl = 'https://services.syncfusion.com/js/production/api/documenteditor/';
     var container = new ej.documenteditor.DocumentEditorContainer({ serviceUrl:hostUrl,
         enableToolbar: true,
-        height: '590px', enableRtl: true, locale: 'ar-AE'
+        height: '590px', enableRtl: true, locale: 'ar-AE',documentEditorSettings: { showRuler: true }
     });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
     container.appendTo('#container');
@@ -545,8 +550,10 @@ this.default = function () {
         print = addButton('e-de-icon-Print e-de-padding-right', 'طباعه', btnStyles, 'de-print', 'طباعه هذا المستند (Ctrl + P)', false);
         openBtn = addButton('e-de-icon-Open e-de-padding-right', 'open', btnStyles, 'de-open', 'Open', false);
         var items = [
-            { text: 'Microsoft Word (.docx)', id: 'word' },
-            { text: 'Syncfusion Document Text (.sfdt)', id: 'sfdt' },
+            { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
+            { text: 'Word Document (*.docx)', id: 'word' },
+            { text: 'Word Template (*.dotx)', id: 'dotx'},
+            { text: 'Plain Text (*.txt)', id: 'txt'},
         ];
         download = addButton('e-de-icon-Download e-de-padding-right',  'تحميل', btnStyles, 'documenteditor-share',  'تحميل هذا المستند', true, items);
         if (!isShareNeeded) {
@@ -608,14 +615,22 @@ this.default = function () {
             case 'sfdt':
                 save('Sfdt');
                 break;
+            case 'txt':
+                save('Txt');
+                break;
+            case 'dotx':
+                save('Dotx');
+                break;
         }
     }
     function save(format) {
         container.documentEditor.save(container.documentEditor.documentName === '' ? 'sample' : container.documentEditor.documentName, format);
     }
     function setTooltipForPopup() {
-        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[0].setAttribute('title', 'Download a copy of this document to your computer as a DOCX file.');
-        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[1].setAttribute('title', 'Download a copy of this document to your computer as an SFDT file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[0].setAttribute('title', 'Download a copy of this document to your computer as an SFDT file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[1].setAttribute('title', 'Download a copy of this document to your computer as a DOCX file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[2].setAttribute('title', 'Download a copy of this document to your computer as a DOTX file.');
+        document.getElementById('documenteditor-share-popup').querySelectorAll('li')[3].setAttribute('title', 'Download a copy of this document to your computer as a TXT file.');
     }
     function addButton(iconClass, btnText, styles, id, tooltipText, isDropDown, items) {
         var button = ej.base.createElement('button', { id: id, styles: styles });
