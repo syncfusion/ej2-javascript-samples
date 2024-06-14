@@ -1,0 +1,82 @@
+<div class="col-lg-8 control-section">
+    <div id="spreadsheet"></div>
+</div>
+<div class="col-lg-4 property-section">
+    <table id="property" title="Properties" style="width: 100%; margin-left: -10px;">
+        <colgroup>
+            <col span="1" style="width: 60%;">
+            <col span="1" style="width: 40%;">
+        </colgroup>
+        <tbody>
+            <tr style="height: 65px">
+                <td>
+                    <div class="property-text" style="padding-top: 0px;">Print type </div>
+                </td>
+                <td>
+                    <select name="selectIndex" autocomplete="off" id="printType">
+                        <option value="ActiveSheet" selected>Active Sheet</option>
+                        <option value="Workbook">Workbook</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="height: 65px">
+                <td>
+                    <div class="property-text" style="width: 83%; padding-top: 0px;">Enable row and column headers</div>
+                </td>
+                <td>
+                    <div style="margin-left: -20px;margin-top: -17px;">
+                        <input type="checkbox" id="header" />
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 65px">
+                <td>
+                    <div class="property-text" style="width: 83%;">Enable gridlines</div>
+                </td>
+                <td>
+                    <div style="margin-left: -20px;margin-top: -10px;">
+                        <input type="checkbox" id="gridline" />
+                    </div>
+                </td>
+            </tr>
+            <tr id="button-control" style="height: 50px">
+                <td align="center" colspan="2" style="padding-left: 50px;">
+                    <div>
+                        <button id="printButton" style="text-transform:none !important;width: 80px;">Print</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>
+        This sample demonstrates the print functionality of the Spreadsheet within a car sales scenario as an example.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, the spreadsheet's <b>"File"</b> menu features a <b>"Print"</b> option, allowing you to print the
+        current worksheet without gridlines as well as row and column headers, which serves as the default print
+        setting.
+        You can also invoke the print option using the <kbd>Ctrl</kbd> + <kbd>P</kbd> keyboard shortcut. Any texts,
+        charts, images, and formatted content incorporated into the document will be previewed and then printed.
+    </p>
+    <p>
+        Furthermore, there are built-in customization options available. If you need to print either the current
+        worksheet or the entire workbook, you can select the appropriate option from the <b>"Print type"</b> dropdown list
+        in the property panel.
+        To include row and column headers in the printed output, you can check the <b>"Enable row and column headers"</b>
+        checkbox. Similarly, you can include gridlines in the printed output by checking the <b>"Enable gridlines"</b>
+        checkbox.
+        Upon selecting the desired options in the property panel and clicking the <b>"Print"</b> button, the
+        <code>print</code> method of the spreadsheet is invoked, facilitating customized printing.
+    </p>
+</div>
+<style>
+    .control-section .control-wrapper {
+        height: 550px;
+    }
+</style>
+<!-- custom code end -->

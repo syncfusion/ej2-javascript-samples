@@ -79,8 +79,7 @@ this.default = function () {
 
     function saveFormat(type) {
         ej.popups.createSpinner({
-            target: document.getElementById('container'),
-            cssClass: 'e-de-spin-overlay'
+            target: document.getElementById('container')
           });
         ej.popups.showSpinner(document.getElementById('container'));
         var format = type;
@@ -93,17 +92,6 @@ this.default = function () {
             Content: container.documentEditor.serialize(),
             Filename: container.documentEditor.documentName,
             Format: '.' + format
-        };
-        http.onloadend = function() {
-            ej.popups.hideSpinner(document.getElementById('container'));
-        };
-        http.onerror = function() {
-            ej.popups.DialogUtility.alert({
-                title: "Information",
-                content: "Error in establishing connection with web server.",
-                okButton: {  text: "OK" },
-                closeOnEscape: true,
-            });
         };
         http.onload = function () {
             if (http.status === 200) {

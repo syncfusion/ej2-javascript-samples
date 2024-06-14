@@ -57,7 +57,7 @@ this.default = function () {
             var indexedTheme = location.hash.split('/')[1];
             indexedTheme = indexedTheme ? indexedTheme : 'Material';
             args.chart.theme = (indexedTheme.charAt(0).toUpperCase() +
-                indexedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                indexedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

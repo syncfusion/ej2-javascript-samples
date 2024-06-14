@@ -1,246 +1,268 @@
-<div class="control-section" align="center"> 
-    <div id="gauge" class="row">
-        <div class="cols-sample-area" align="center">
-            <div class="col-lg-9 col-md-9" id="column1" style="margin-left: -5%">
-                <div id="gauge1"></div>
-            </div>
-            <div class="col-lg-3 col-md-3" style="margin-left: -9%">
-                <div class="panel" id="panel1" align="center">
-                    <div class="subgauge" id="gauge2" style="float: left;margin-top: 3%"></div>
-                    <div class="borderContent">
-                        <span class="firstcontent" style="font-size: 17px;">MOVE</span>
-                        <span class="firstcontent" style="font-size: 17px;color: #fa114f;">65%</span><br />
-                        <span class="secondcontent" style="font-size: 17px;color: #fa114f;">338/520 CAL</span>
-                    </div>
+<main>
+    <div class="control-section" align="center"> 
+        <div id="gauge" class="row">
+            <div class="cols-sample-area" align="center">
+                <div class="col-lg-9 col-md-9" id="column1" style="margin-left: -5%">
+                    <div id="gauge1"></div>
                 </div>
-                <div class="panel" id="panel2" align="center">
-                    <div class="subgauge" id="gauge3" style="float: left;margin-top: 3%"></div>
-                    <div class="borderContent">
-                        <span class="firstcontent" style="font-size: 17px;">EXERCISE</span>
-                        <span class="firstcontent" style="font-size: 17px;color: #99ff01;">43%</span><br />
-                        <span class="secondcontent" style="font-size: 17px;color: #99ff01;">13/30 MIN</span>
+                <div class="col-lg-3 col-md-3" style="margin-left: -9%">
+                    <div class="panel" id="panel1" align="center">
+                        <div class="subgauge" id="gauge2" style="float: left;margin-top: 3%"></div>
+                        <div class="borderContent">
+                            <span class="firstcontent" style="font-size: 17px;">MOVE</span>
+                            <span class="firstcontent" style="font-size: 17px;color: #fa114f;">65%</span><br />
+                            <span class="secondcontent" style="font-size: 17px;color: #fa114f;">338/520 CAL</span>
+                        </div>
                     </div>
-                </div>
-                <div class="panel" id="panel3" align="center">
-                    <div class="subgauge" id="gauge4" style="float: left;margin-top: 3%"></div>
-                    <div class="borderContent">
-                        <span class="firstcontent" style="font-size: 17px;">STAND</span>
-                        <span class="firstcontent" style="font-size: 17px;color: #00d8fe">58%</span><br />
-                        <span class="secondcontent" style="font-size: 17px;color: #00d8fe">7/12 HR</span>
+                    <div class="panel" id="panel2" align="center">
+                        <div class="subgauge" id="gauge3" style="float: left;margin-top: 3%"></div>
+                        <div class="borderContent">
+                            <span class="firstcontent" style="font-size: 17px;">EXERCISE</span>
+                            <span class="firstcontent" style="font-size: 17px;color: #99ff01;">43%</span><br />
+                            <span class="secondcontent" style="font-size: 17px;color: #99ff01;">13/30 MIN</span>
+                        </div>
+                    </div>
+                    <div class="panel" id="panel3" align="center">
+                        <div class="subgauge" id="gauge4" style="float: left;margin-top: 3%"></div>
+                        <div class="borderContent">
+                            <span class="firstcontent" style="font-size: 17px;">STAND</span>
+                            <span class="firstcontent" style="font-size: 17px;color: #00d8fe">58%</span><br />
+                            <span class="secondcontent" style="font-size: 17px;color: #00d8fe">7/12 HR</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="action-description">
-    <p>
-        This sample resembles the appearance of Apple watch rings.
-        This is similar to an activity tracker, which records the specifics of each move, exercise, and stand.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to make the circular gauge look like the Apple watch rings. Ranges have rounded
-        corners and annotations are used to indicate the move, exercise, and stand values.
-    </p>
-    <p>
-        More information on the annotations can be found in this <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-annotations/">documentation
-            section</a>.
-    </p>
-</div>
-
-
-<style>
-    .divide {
-        margin-left: 0%;
-    }
-
-    .panel {
-        width: 190px !important;
-        height: 70px !important;
-        margin-left: 5% !important;
-        margin-top: 10% !important;
-        border-color: lightgray;
-        float: left;
-        background-color: transparent;
-    }
-
-    .borderContent {
-        float: left !important;
-        margin-left: 62px !important;
-        margin-top: 10px !important;
-        text-align: left !important;
-        position: absolute;
-        width: 125px;
-    }
-
-    @media screen and (max-width: 1160px) {
-        .panel {
-            width: 165px !important;
-        }
-
-        .firstcontent {
-            font-size: 13px !important;
-        }
-
-        .secondcontent {
-            font-size: 15px !important;
-        }
-
-        .borderContent {
-            margin-top: 15px !important;
-        }
-
+    <section id="action-description" aria-label="Description of Circular Gauge sample">
+        <p>
+            This sample resembles the appearance of Apple watch rings.
+            This is similar to an activity tracker, which records the specifics of each move, exercise, and stand.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of Circular Gauge features demonstrated in this sample">
+        <p>
+            In this example, you can see how to make the circular gauge look like the Apple watch rings. Ranges have rounded
+            corners and annotations are used to indicate the move, exercise, and stand values.
+        </p>
+        <p>
+            More information on the annotations can be found in this <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-annotations/">documentation
+                section</a>.
+        </p>
+    </section>
+    
+    
+    <style>
         .divide {
             margin-left: 0%;
         }
-    }
-
-    @media screen and (max-width: 990px) {
+    
         .panel {
             width: 190px !important;
             height: 70px !important;
-            margin-left: 37% !important;
-            margin-top: 0% !important;
+            margin-left: 5% !important;
+            margin-top: 10% !important;
+            border-color: lightgray;
+            float: left;
+            background-color: transparent;
         }
-
-        .subgauge {
-            margin-left: 0% !important;
-            margin-top: 1% !important;
-        }
-
+    
         .borderContent {
-            margin-left: 63px !important;
+            float: left !important;
+            margin-left: 62px !important;
             margin-top: 10px !important;
+            text-align: left !important;
+            position: absolute;
+            width: 125px;
+        }
+    
+        @media screen and (max-width: 1160px) {
+            .panel {
+                width: 165px !important;
+            }
+    
+            .firstcontent {
+                font-size: 13px !important;
+            }
+    
+            .secondcontent {
+                font-size: 15px !important;
+            }
+    
+            .borderContent {
+                margin-top: 15px !important;
+            }
+    
+            .divide {
+                margin-left: 0%;
+            }
+        }
+    
+        @media screen and (max-width: 990px) {
+            .panel {
+                width: 190px !important;
+                height: 70px !important;
+                margin-left: 37% !important;
+                margin-top: 0% !important;
+            }
+    
+            .subgauge {
+                margin-left: 0% !important;
+                margin-top: 1% !important;
+            }
+    
+            .borderContent {
+                margin-left: 63px !important;
+                margin-top: 10px !important;
+            }
+    
+            .firstcontent {
+                font-size: 16px !important;
+            }
+    
+            .secondcontent {
+                font-size: 18px !important;
+            }
+    
+            .divide {
+                margin-left: 0%;
+            }
+        }
+    
+        @media screen and (min-width: 768px) {
+            .divide {
+                margin-left: 10%;
+            }
+        }
+    
+        @media screen and (max-width: 410px) {
+            .divide {
+                margin-left: 10%;
+            }
+    
+            #column1 {
+                margin-left: -9% !important;
+            }
+    
+            .subgauge {
+                margin-left: 3% !important;
+            }
+    
+            .panel {
+                width: 165px !important;
+            }
+    
+            .borderContent {
+                margin-top: 3% !important;
+            }
+        }
+    
+        .e-view.tailwind div.annotation4,
+        .e-view.tailwind-dark div.annotation4 {
+            height: 17px;
+            width: 17px;
+            margin-left: 2px;
+            margin-bottom: 4px;
+        }
+    
+        .e-view.fabric div.annotation4,
+        .e-view.fabric-dark div.annotation4 {
+            height: 17px;
+            width: 17px;
+            margin-left: 2px;
+            margin-bottom: 2px;
+            margin-top: -3px;
+        }
+    
+        .e-view.tailwind div.annotation5,
+        .e-view.tailwind-dark div.annotation5,
+        .e-view.fabric div.annotation5,
+        .e-view.fabric-dark div.annotation5 {
+            height: 17px;
+            width: 17px;
+            margin-left: 2px;
+            margin-bottom: 4px;
+        }
+    
+        .e-view.tailwind div.annotation6,
+        .e-view.tailwind-dark div.annotation6,
+        .e-view.fabric div.annotation6,
+        .e-view.fabric-dark div.annotation6 {
+            height: 17px;
+            width: 17px;
+            margin-top: -7px;
+            margin-left: 1px;
+        }
+    
+        .e-view.bootstrap5 div.annotation4,
+        .e-view.bootstrap5-dark div.annotation4 {
+            margin-left: 4px;
+            margin-top: 2px;
+            height: 17px;
+            width: 17px;
+        }
+    
+        .e-view.bootstrap5 div.annotation5,
+        .e-view.bootstrap5-dark div.annotation5 {
+            height: 17px;
+            width: 17px;
+            margin-left: 1px;
+            margin-top: 2px;
+        }
+    
+        .e-view.bootstrap5 div.annotation6,
+        .e-view.bootstrap5-dark div.annotation6 {
+            margin-top: -1px;
+            margin-left: 1px;
+        }
+    
+        .e-view.material div.annotation4,
+        .e-view.material-dark div.annotation4,
+        .e-view.bootstrap div.annotation4,
+        .e-view.bootstrap-dark div.annotation4,
+        .e-view.bootstrap4 div.annotation4 {
+            height: 17px;
+            width: 17px;
+            margin-left: 2px;
+            margin-top: 1px;
+        }
+    
+        .e-view.highcontrast div.annotation4 {
+            margin-left: 2px;
+            margin-top: 1px;
         }
 
-        .firstcontent {
-            font-size: 16px !important;
+        .e-view.highcontrast div.annotation5 {
+            margin-left: 2px;
+            margin-top: -2px;
         }
 
-        .secondcontent {
-            font-size: 18px !important;
+        
+        .e-view.fluent2 div.annotation4,
+        .e-view.fluent2-dark div.annotation4,
+        .e-view.fluent2-highcontrast div.annotation4,
+        .e-view.fluent2-dark div.annotation5,
+        .e-view.fluent2-highcontrast div.annotation5
+        {
+            margin-left: 1px;
         }
 
-        .divide {
-            margin-left: 0%;
+        .e-view.fluent2-dark div.annotation6,
+        .e-view.fluent2-highcontrast div.annotation6
+        {
+            margin-top: -1px;
         }
-    }
-
-    @media screen and (min-width: 768px) {
-        .divide {
-            margin-left: 10%;
+    
+        .e-view.material div.annotation5,
+        .e-view.material-dark div.annotation5,
+        .e-view.bootstrap div.annotation5,
+        .e-view.bootstrap-dark div.annotation5,
+        .e-view.bootstrap4 div.annotation5 {
+            height: 17px;
+            width: 17px;
+            margin-left: 2px;
+            margin-top: 2px;
         }
-    }
-
-    @media screen and (max-width: 410px) {
-        .divide {
-            margin-left: 10%;
-        }
-
-        #column1 {
-            margin-left: -9% !important;
-        }
-
-        .subgauge {
-            margin-left: 3% !important;
-        }
-
-        .panel {
-            width: 165px !important;
-        }
-
-        .borderContent {
-            margin-top: 3% !important;
-        }
-    }
-
-    .e-view.tailwind div.annotation4,
-    .e-view.tailwind-dark div.annotation4 {
-        height: 17px;
-        width: 17px;
-        margin-left: 2px;
-        margin-bottom: 4px;
-    }
-
-    .e-view.fabric div.annotation4,
-    .e-view.fabric-dark div.annotation4 {
-        height: 17px;
-        width: 17px;
-        margin-left: 2px;
-        margin-bottom: 2px;
-        margin-top: -3px;
-    }
-
-    .e-view.tailwind div.annotation5,
-    .e-view.tailwind-dark div.annotation5,
-    .e-view.fabric div.annotation5,
-    .e-view.fabric-dark div.annotation5 {
-        height: 17px;
-        width: 17px;
-        margin-left: 2px;
-        margin-bottom: 4px;
-    }
-
-    .e-view.tailwind div.annotation6,
-    .e-view.tailwind-dark div.annotation6,
-    .e-view.fabric div.annotation6,
-    .e-view.fabric-dark div.annotation6 {
-        height: 17px;
-        width: 17px;
-        margin-top: -7px;
-        margin-left: 1px;
-    }
-
-    .e-view.bootstrap5 div.annotation4,
-    .e-view.bootstrap5-dark div.annotation4 {
-        margin-left: 4px;
-        margin-top: 2px;
-        height: 17px;
-        width: 17px;
-    }
-
-    .e-view.bootstrap5 div.annotation5,
-    .e-view.bootstrap5-dark div.annotation5 {
-        height: 17px;
-        width: 17px;
-        margin-left: 1px;
-        margin-top: 2px;
-    }
-
-    .e-view.bootstrap5 div.annotation6,
-    .e-view.bootstrap5-dark div.annotation6 {
-        margin-top: -1px;
-        margin-left: 1px;
-    }
-
-    .e-view.material div.annotation4,
-    .e-view.material-dark div.annotation4,
-    .e-view.bootstrap div.annotation4,
-    .e-view.bootstrap-dark div.annotation4,
-    .e-view.bootstrap4 div.annotation4 {
-        height: 17px;
-        width: 17px;
-        margin-left: 2px;
-        margin-top: 1px;
-    }
-
-    .e-view.highcontrast div.annotation4 {
-        margin-left: 2px;
-        margin-top: 1px;
-    }
-
-    .e-view.material div.annotation5,
-    .e-view.material-dark div.annotation5,
-    .e-view.bootstrap div.annotation5,
-    .e-view.bootstrap-dark div.annotation5,
-    .e-view.bootstrap4 div.annotation5,
-    .e-view.highcontrast div.annotation5 {
-        height: 17px;
-        width: 17px;
-        margin-left: 2px;
-        margin-top: 2px;
-    }
-</style>
+    </style>
+</main>

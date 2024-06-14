@@ -15,7 +15,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" tabindex="1" id='Pager_Position' />
+                        <input type="text" tabindex="0" id='Pager_Position' />
                     </div>
                 </td>
             </tr>
@@ -26,7 +26,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" tabindex="1" id='Pager_View' />
+                        <input type="text" tabindex="0" id='Pager_View' />
                     </div>
                 </td>
             </tr>
@@ -37,7 +37,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" tabindex="1" id='Page_Size' />
+                        <input type="text" tabindex="0" id='Page_Size' />
                     </div>
                 </td>
             </tr>
@@ -48,7 +48,7 @@
                 </td>
                 <td>
                     <div>
-                        <input id="Compact_View" type="checkbox">
+                        <input id="Compact_View" type="checkbox" aria-label="selectbox">
                     </div>
                 </td>
             </tr>
@@ -59,7 +59,7 @@
                 </td>
                 <td>
                     <div>
-                        <input id="Inverse" type="checkbox">
+                        <input id="Inverse" type="checkbox" aria-label="selectbox">
                     </div>
                 </td>
             </tr>
@@ -178,7 +178,12 @@
             <td>Allows you to change the appearance of the pager UI by displaying user-defined HTML elements instead of
                 built-in HTML elements.</td>
         </tr>
-    </table>
+    </table><br />
+    <p>
+        More information on the pager can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/pivotview/paging">
+        documentation section</a>.
+    </p>
 </div>
 <style>
     .sb-sample-content-area {

@@ -2,6 +2,7 @@
     "name": "Chart",
     "directory": "chart",
     "category": "Data Visualization",
+    "type": "update",
     "ftName": "chart",
     "samples": [
         {
@@ -974,6 +975,62 @@
             "name": "Chart Performance",
             "description": "This demo for Essential JavaScript2 Chart control shows the performance when plotting large volumes of data and handling high frequency real-time data.",
             "category": "Benchmark",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "update-spline",
+            "name": "Spline updating each second",
+            "type": "new",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Real-time Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "live-stock-data",
+            "name": "Live stock data",
+            "type": "new",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Real-time Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "update-data-source",
+            "name": "Update data source",
+            "type": "new",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Real-time Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "click-add-point",
+            "name": "Click to add a point",
+            "type": "new",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Real-time Charts",
             "api": {
                 "Chart": [
                     "primaryXAxis",

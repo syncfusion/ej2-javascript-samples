@@ -30,8 +30,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('04/01/2019'),
-        projectEndDate: new Date('12/31/2025')
+        projectStartDate: new Date('04/01/2024'),
+        projectEndDate: new Date('12/31/2030')
     });
     ganttChart.appendTo('#VirtualScroll');
 };

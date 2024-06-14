@@ -5,7 +5,9 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageCount: 5 },
         allowSorting: true,
-        toolbar: ['Add',  'Delete', 'Update', 'Cancel'],
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
+        toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
         columns: [
             {
                 field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'Right',

@@ -9,6 +9,8 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageCount: 5 },
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
         actionBegin: actionBegin,
         columns: [

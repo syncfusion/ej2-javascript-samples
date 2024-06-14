@@ -7,6 +7,7 @@ function pointeGauge1() {
             endAngle: 90,
             lineStyle: { width: 3, color: '#ff5985' },
             labelStyle: {
+                format:'$ {value}',
                 position: 'Outside',
                 font: { size: '0px', color: '#ff5985', fontFamily: 'inherit' }
             }, majorTicks: {
@@ -30,6 +31,7 @@ function pointeGauge1() {
             }],
             annotations: [
                 {
+                    description:'Range bar pointer',
                     angle: 180,
                     radius: '28%', zIndex: 1,
                     content: '<div style="font-size:14px;margin-top:11px;">Range bar pointer</div>'
@@ -58,6 +60,7 @@ function pointeGauge2() {
             lineStyle: { width: 3, color: '#01aebe' },
             labelStyle: {
                 position: 'Outside',
+                format:'{value}%',
                 font: { size: '0px', color: '#01aebe' }
             }, majorTicks: {
                 width: 1,
@@ -73,6 +76,7 @@ function pointeGauge2() {
             pointers: [{
                 radius: '100%',
                 value: 80,
+                description: 'Marker pointer value : 80',
                 type: 'Marker',
                 markerShape: 'InvertedTriangle',
                 markerWidth: 15,
@@ -109,6 +113,7 @@ function pointeGauge3() {
             lineStyle: { width: 3, color: '#1E7145' },
             labelStyle: {
                 position: 'Outside',
+                format:'${value}',
                 font: { size: '0px', color: '#1E7145' }
             }, majorTicks: {
                 width: 1,
@@ -124,6 +129,7 @@ function pointeGauge3() {
             pointers: [{
                 animation: { enable: true, duration: 1000 },
                 value: 80,
+                description: 'Needle pointer value:80',
                 radius: '80%',
                 color: 'green',
                 pointerWidth: 2,
@@ -139,6 +145,7 @@ function pointeGauge3() {
             }],
             annotations: [
                 {
+                    description:'Customized pointer',
                     angle: 180,
                     radius: '28%', zIndex: 1,
                     content: '<div style="font-size:14px;margin-top:29px">Customized pointer</div>'
@@ -175,6 +182,7 @@ function pointeGauge4() {
             lineStyle: { width: 3, color: '#9250e6' },
             labelStyle: {
                 position: 'Outside',
+                format:'{value} s',
                 font: { size: '0px', color: '#9250e6' }
             }, majorTicks: {
                 width: 1,
@@ -190,6 +198,7 @@ function pointeGauge4() {
             pointers: [{
                 radius: '100%',
                 animation: { enable: true, duration: 900 },
+                description: 'Needle pointer value : 70',
                 value: 70,
                 color: '#923C99',
                 pointerWidth: 6,
@@ -198,6 +207,7 @@ function pointeGauge4() {
             }],
             annotations: [
                 {
+                    description:'Needle pointer',
                     angle: 180,
                     radius: '28%', zIndex: 1,
                     content: '<div style="font-size:14px;margin-top:10px;">Needle pointer</div>'
@@ -217,6 +227,7 @@ function pointeGauge5() {
             endAngle: 90,
             lineStyle: { width: 0 },
             labelStyle: {
+                format:'{value} seconds',
                 position: 'Outside',
                 font: { size: '0px', color: '#067bc2' }
             }, majorTicks: {
@@ -233,12 +244,14 @@ function pointeGauge5() {
             pointers: [{
                 radius: '100%',
                 animation: { enable: false, duration: 100 },
+                description: 'Needle pointer : 40',
                 value: 40,
                 color: '#067bc2',
                 pointerWidth: 6,
                 cap: { radius: 0 },
                 needleTail: { length: '4%', color: '#067bc2' }
             }, {
+                description: 'RangeBar pointer value : 40',
                 radius: '100%',
                 type: 'RangeBar',
                 animation: { enable: false, duration: 100 },
@@ -248,6 +261,7 @@ function pointeGauge5() {
             }],
             annotations: [
                 {
+                    description:'Live update',
                     angle: 180,
                     radius: '32%', zIndex: 1,
                     content: '<div style="font-size:14px;margin-top:22px;">Live update</div>'
@@ -283,6 +297,7 @@ this.default = function () {
             lineStyle: { width: 3, color: '#e3a21a' },
             labelStyle: {
                 position: 'Outside',
+                format:'{value} %',
                 font: { size: '0px', color: '#e3a21a' }
             }, majorTicks: {
                 width: 1,
@@ -297,6 +312,7 @@ this.default = function () {
             maximum: 100,
             pointers: [{
                 radius: '60%',
+                description: 'Needle pointer value : 80',
                 value: 80,
                 markerWidth: 5,
                 markerHeight: 5,
@@ -320,6 +336,7 @@ this.default = function () {
                 markerWidth: 5, markerHeight: 5,
                 animation: { enable: true, duration: 1000 },
                 color: '#ffb133',
+                description: 'Needle pointer value : 40',
                 pointerWidth: 10,
                 cap: {
                     radius: 8, color: 'white',
@@ -329,6 +346,7 @@ this.default = function () {
             }],
             annotations: [
                 {
+                    description:'Multiple pointers',
                     angle: 180,
                     radius: '32%', zIndex: 1,
                     content: '<div style="font-size:14px;margin-top:22px">Multiple pointers</div>'

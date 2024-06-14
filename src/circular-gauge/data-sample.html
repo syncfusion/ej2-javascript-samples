@@ -1,82 +1,84 @@
-<div class="control-section">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div id="container1" style="height:230px;">
+<main>
+    <div class="control-section">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div id="container1" style="height:230px;">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div id="container2" style="height:230px;">
+                    <div class="col-sm-4">
+                        <div id="container2" style="height:230px;">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div id="container3" style="height:230px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="container5">
+                    <div class="col-sm-4">
+                        <div id="container3" style="height:230px;">
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="container5">
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
         </div>
     </div>
-</div>
-<style>
-    #templateWrap img {
-        width: 16px;
-        height: 16px;
-        margin-top: 4px;
-    }
-
-    #templateWrap .des {
-        float: right;
-        padding-left: 5px;
-    }
-</style>
-<script id='germany' type="text/x-template">
-    <div id='templateWrap'>
-        <img src="src/circular-gauge/images/positive.png" alt="Postive value for Germany"/>
-        <div class='des'>
-            <div style="color:#424242;font-size:20px;font-family:Roboto">${pointers[0].value}%</div>
+    <style>
+        #templateWrap img {
+            width: 16px;
+            height: 16px;
+            margin-top: 4px;
+        }
+    
+        #templateWrap .des {
+            float: right;
+            padding-left: 5px;
+        }
+    </style>
+    <script id='germany' type="text/x-template">
+        <div id='templateWrap'>
+            <img src="src/circular-gauge/images/positive.png" alt="Postive value for Germany"/>
+            <div class='des'>
+                <div style="font-size:20px;font-family:Roboto">${pointers[0].value}%</div>
+            </div>
         </div>
-    </div>
-</script>
-<script id='usa' type="text/x-template">
-    <div id='templateWrap'>
-        <img src="src/circular-gauge/images/positive.png" alt="Postive value for USA"/>
-        <div class='des'>
-            <div style="color:#424242;font-size:20px;font-family:Roboto">${pointers[0].value}%</div>
+    </script>
+    <script id='usa' type="text/x-template">
+        <div id='templateWrap'>
+            <img src="src/circular-gauge/images/positive.png" alt="Postive value for USA"/>
+            <div class='des'>
+                <div style="font-size:20px;font-family:Roboto">${pointers[0].value}%</div>
+            </div>
         </div>
-    </div>
-</script>
-<script id='uk' type="text/x-template">
-    <div id='templateWrap'>
-        <img src="src/circular-gauge/images/negative.png" alt="Negative value for UK"/>
-        <div class='des'>
-            <div style="color:#424242;font-size:20px;font-family:Roboto">-${pointers[0].value}%</div>
+    </script>
+    <script id='uk' type="text/x-template">
+        <div id='templateWrap'>
+            <img src="src/circular-gauge/images/negative.png" alt="Negative value for UK"/>
+            <div class='des'>
+                <div style="font-size:20px;font-family:Roboto">-${pointers[0].value}%</div>
+            </div>
         </div>
-    </div>
-</script>
-<div id="action-description">
-    <p>
-        This sample shows live stock price data displayed in multiple circular gauges.
-    </p>
-</div>
-<div id="description">
-    <p>
-        The pointer value in the circular gauge can be dynamically updated using the <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/#setpointervalue">setPointerValue</a>
-        method. In this example, the stock price changes across countries are displayed in multiple circular gauges.
-    </p>
-    <p>
-        More information on the circular gauge can be found in this <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/es5-getting-started"> documentation
-            section</a>.
-    </p>
-</div>
+    </script>
+    <section id="action-description" aria-label="Description of Circular Gauge sample">
+        <p>
+            This sample shows live stock price data displayed in multiple circular gauges.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of Circular Gauge features demonstrated in this sample">
+        <p>
+            The pointer value in the circular gauge can be dynamically updated using the <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/#setpointervalue">setPointerValue</a>
+            method. In this example, the stock price changes across countries are displayed in multiple circular gauges.
+        </p>
+        <p>
+            More information on the circular gauge can be found in this <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/es5-getting-started"> documentation
+                section</a>.
+        </p>
+    </section>
+</main>

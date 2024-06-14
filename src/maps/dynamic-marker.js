@@ -14,7 +14,7 @@ var longitude = [];
         },
         layers: [
             {
-                layerType: 'OSM'
+                urlTemplate:'https://tile.openstreetmap.org/level/tileX/tileY.png'
             },
         ],
         load: function (args) {        // custom code start

@@ -21,13 +21,21 @@ this.default = function () {
         chartArea: { border: { width: 0 } }, title: 'Speed Data Plot for Interlagos Circuit',
         selectionMode: 'Cluster', selectedDataIndexes: [{ series: 0, point: 0 }],
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-        tooltip:{ enable: true, header: '' , enableMarker: false, format: 'Distance: ${point.x} KM <br> ${point.y} KM/H', fill: 'white', border:{ color: 'rgb(247, 206, 105)', width: 2 }, textStyle:{ color: '#000000'}}, 
+        tooltip:{ 
+            enable: true,
+            shared: true,
+            header: '' ,
+            enableMarker: false,
+            format: 'Distance: ${point.x} KM <br> ${point.y} KM/H',
+            fill: 'white',
+            opacity: 1,
+            border:{ color: 'rgb(247, 206, 105)', width: 2 }, textStyle:{ color: 'black'}},
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
                 if (selectedTheme.match('Dark')) {
                     args.chart.series[0].fill = 'url(#dark-gradient-chart)'; 
                 } 

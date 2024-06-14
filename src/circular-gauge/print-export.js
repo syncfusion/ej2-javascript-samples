@@ -76,6 +76,11 @@ this.default = function () {
         isPrimary: true
     });
     exportGauge.appendTo('#export');
+    var fileText = new ej.inputs.TextBox({
+        value: 'Circular Gauge',
+        width: '100%'
+    });
+    fileText.appendTo('#fileName');
     document.getElementById('export').onclick = function () {
         var fileName = (document.getElementById('fileName')).value;
         circulargauge.export(mode.value, fileName);

@@ -57,7 +57,7 @@ this.default = function () {
             var polarAreaTheme = location.hash.split('/')[1];
             polarAreaTheme = polarAreaTheme ? polarAreaTheme : 'Material';
             args.chart.theme = (polarAreaTheme.charAt(0).toUpperCase() + 
-                polarAreaTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarAreaTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

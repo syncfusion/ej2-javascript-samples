@@ -237,7 +237,7 @@ this.default = function () {
                         iconCss: 'e-icons e-search',
                         items: [
                             { text: 'Find', iconCss: 'e-icons e-search' },
-                            { text: 'Advanced find', iconCss: 'e-icons e-search' },
+                            { text: 'Advanced Find', iconCss: 'e-icons e-search' },
                             { text: 'Go to', iconCss: 'e-icons e-arrow-right' }
                         ],
                         click: function () { updateContent("Find"); },

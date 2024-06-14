@@ -28,7 +28,7 @@ this.default = function() {
         var selectTheme = location.hash.split("/")[1];
         selectTheme = selectTheme ? selectTheme : "Material";
         args.chart.theme = (selectTheme.charAt(0).toUpperCase() +
-          selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+          selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
       },
     },
     height: 450

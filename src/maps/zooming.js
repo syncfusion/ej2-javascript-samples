@@ -13,7 +13,11 @@ this.default = function () {
         // custom code end
         zoomSettings: {
             enable: true,
-            toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset'],
+            toolbarSettings:{
+                buttonSettings: {
+                   toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                }
+            },
             pinchZooming: true
         },
         layers: [

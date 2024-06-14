@@ -61,8 +61,13 @@ this.default = function () {
         cssClass: 'e-info', isPrimary: true
     });
     togglebtn1.appendTo('#togglebtn1');
+    var fileText = new ej.inputs.TextBox({
+        value: 'TreeMap',
+        width: '100%'
+    });
+    fileText.appendTo('#fileName');
     document.getElementById('togglebtn1').onclick = function () {
-        var fileName = (document.getElementById('fileName')).value;
+        var fileName = fileText.value;
         treemap.export(mode.value, fileName);
     };
 };

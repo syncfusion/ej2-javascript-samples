@@ -7,7 +7,7 @@ this.default = function () {
       linearTheme = linearTheme ? linearTheme : 'Material';
       args.progressBar.theme = (linearTheme.charAt(0).toUpperCase() +
           linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark') {
+      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark') {
           for (var i = 0; i < div.length; i++) {
               div[i].setAttribute('style', 'color:white');
           }
@@ -24,11 +24,9 @@ this.default = function () {
         args.progressBar.secondaryProgressColor = '#98c5f5';
       } else if (linearTheme === 'bootstrap') {
         args.progressBar.secondaryProgressColor = '#acc6dc';
-      }
-      else if (linearTheme === 'bootstrap4') {
+      } else if (linearTheme === 'bootstrap4') {
         args.progressBar.secondaryProgressColor = '#98c5f5';
-      }
-      else if (linearTheme === 'bootstrap-dark') {
+      } else if (linearTheme === 'bootstrap-dark') {
         args.progressBar.secondaryProgressColor = '#b8b8b8';
       } else if (linearTheme === 'highcontrast') {
         args.progressBar.secondaryProgressColor = '#aca379';
@@ -40,6 +38,10 @@ this.default = function () {
         args.progressBar.secondaryProgressColor = '#386e7f';
       } else if (linearTheme === 'tailwind') {
         args.progressBar.secondaryProgressColor = '#b1afe9';
+      } else if (linearTheme === 'fluent2') {
+        args.progressBar.secondaryProgressColor = '#0F6CBD';
+      } else if (linearTheme === 'fluent2-dark') {
+        args.progressBar.secondaryProgressColor = '#115EA3';
       }
   };
   var button = new ej.buttons.Button();

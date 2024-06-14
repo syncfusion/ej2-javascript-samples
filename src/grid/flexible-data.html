@@ -51,7 +51,7 @@
         </td>
         <td style="width: 50%; ">
           <div class="prop-value">
-            <input type="text" tabindex="1" id="service_drop">
+            <input type="text" tabindex="0" id="service_drop">
           </div>
         </td>
       </tr>
@@ -61,7 +61,7 @@
         </td>
         <td style="width: 50%; ">
           <div class="prop-value">
-            <input type="text" id="adaptor_txt">
+            <input type="text" id="adaptor_txt" aria-label="Adaptor">
           </div>
         </td>
       </tr>
@@ -97,7 +97,7 @@
         </td>
         <td style="width: 50%;">
           <div>
-            <textarea style="width : 100%" class="e-textbox" rows="2" id="addParams" readonly></textarea>
+            <textarea style="width: 100%; height: 45px;" class="e-input e-textarea" rows="2" id="addParams" readonly aria-label="Additional parameters"></textarea>
           </div>
         </td>
       </tr>
@@ -127,7 +127,7 @@
         </td>
         <td style="width: 50%;">
           <div>
-            <textarea style="width : 100%" class="e-textbox" rows="2" id="hdvalue" readonly></textarea>
+            <textarea style="width: 100%; height: 45px;" class="e-input e-textarea" rows="2" id="hdvalue" readonly aria-label="HTTP Headers"></textarea>
           </div>
         </td>
       </tr>
@@ -146,9 +146,9 @@
 
 <!-- custom code end -->
 <div id="description">
-  <p>The Grid supports data binding. The <code><a target="_blank" class="code"
+  <p>The Grid supports data binding. The <code><a aria-label="API link for documentation" target="_blank" class="code"
         href="https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource">
-        dataSource</a></code> property can be assigned with the instance of <code><a target="_blank" class="code"
+        dataSource</a></code> property can be assigned with the instance of <code><a aria-label="API link for documentation" target="_blank" class="code"
         href="https://ej2.syncfusion.com/javascript/documentation/data/api-datamanager">
         DataManager</a></code> to bind remote data.</p>
 
@@ -159,7 +159,7 @@
     <li><code>DataManager->url</code> - Defines the service endpoint to fetch data</li>
     <li><code>DataManager->adaptor</code> - Defines the adaptor option.</li>
   </ul>
-  <p><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/data/adaptors">Adaptor</a> is
+  <p><a aria-label="API link for documentation" target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/data/adaptors">Adaptor</a> is
     responsible for
     processing response and request from/to the service endpoint.
     <code>@syncfusion/ej2-data</code> package provides some predefined adaptors which are designed to interact with
@@ -207,7 +207,7 @@
   </ul>
   <p>
     More information on the data binding can be found in this
-    <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding/">
+    <a aria-label="API link for documentation" target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding/">
       documentation section</a>.
   </p>
 </div>

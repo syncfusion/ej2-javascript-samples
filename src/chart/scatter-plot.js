@@ -562,7 +562,7 @@ this.default = function () {
             var scatterTheme = location.hash.split('/')[1];
             scatterTheme = scatterTheme ? scatterTheme : 'Material';
             args.chart.theme = (scatterTheme.charAt(0).toUpperCase() + 
-                scatterTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                scatterTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

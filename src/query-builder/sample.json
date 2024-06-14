@@ -11,7 +11,6 @@
             "name": "Default Functionalities",
             "category": "Query Builder",
             "ftName": "query-builder",
-            "type": "update",
             "api": {
                 "QueryBuilder": [
                     "width",
@@ -44,7 +43,6 @@
             "name": "Mongo and SQL Query",
             "category": "Query Builder",
             "ftName": "query-builder",
-            "type": "new",
             "api": {
                 "QueryBuilder": [
                     "width",
@@ -60,7 +58,6 @@
             "name": "Lock Group/Rule",
             "category": "Query Builder",
             "ftName": "query-builder",
-            "type": "new",
             "api": {
                 "QueryBuilder": [
                     "width",
@@ -77,7 +74,6 @@
             "name": "Clone Group/Rule",
             "category": "Query Builder",
             "ftName": "query-builder",
-            "type": "new",
             "api": {
                 "QueryBuilder": [
                     "width",
@@ -90,10 +86,43 @@
             "description": "This sample demonstrates the clone support of the Query Builder component. Click the clone button to clone the group or rule."
         },
         {
+            "url": "drag-drop",
+            "name": "Drag and Drop",
+            "category": "Query Builder",
+            "ftName": "query-builder",
+            "type": "new",
+            "api": {
+                "QueryBuilder": [
+                    "width",
+                    "dataSource",
+                    "columns",
+                    "rule",
+                    "fieldMode"
+                ]
+            },
+            "description": "This sample demonstrates the drag and drop support of the Query Builder component."
+        },
+        {
+            "url": "separate-connector",
+            "name": "Separate Connector",
+            "category": "Query Builder",
+            "ftName": "query-builder",
+            "type": "new",
+            "api": {
+                "QueryBuilder": [
+                    "width",
+                    "dataSource",
+                    "columns",
+                    "rule",
+                    "fieldMode"
+                ]
+            },
+            "description": "This sample demonstrates the Separate Connector support of the Query Builder component."
+        },
+        {
             "url": "template",
             "name": "Value Template",
             "category": "Template",
-	    "type": "update",
             "api": {
                 "QueryBuilder": [
                     "width",

@@ -7,6 +7,8 @@
             allowPaging: true,
             allowSelection: true,
             allowSorting: true,
+            allowFiltering: true,
+            filterSettings: { type: 'Excel' },
             selectionSettings: { type: 'Multiple' },
             enableHover: false,
             columns: [

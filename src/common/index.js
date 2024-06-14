@@ -12,7 +12,11 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['fluent', 'fluent-dark', 'bootstrap5', 'bootstrap5-dark', 'tailwind', 'tailwind-dark', 'material', 'material-dark', 'material3', 'material3-dark', 'fabric', 'fabric-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'highcontrast'];
+var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'fluent-dark'];
+var darkIgnore = ['highcontrast'];
+var themeDarkButton = document.getElementById('sb-dark-theme');
+var darkButton = document.getElementById('sb-dark-span');
+var themeModeDropDown;
 var themeDropDown;
 var contentTab;
 var sourceTab;
@@ -31,7 +35,7 @@ var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|pr
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
 // Regex for removing hidden codes
 var reg = /.*custom code start([\S\s]*?)custom code end.*/g;
-var sbArray = ['angular', 'nextjs','react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue', 'blazor'];
+var sbArray = ['angular', 'nextjs', 'react', 'typescript', 'aspnetcore', 'aspnetmvc', 'vue', 'blazor'];
 var sbObj = {
     'angular': 'angular',
     'nextjs': 'nextjs',
@@ -48,7 +52,7 @@ var setResponsiveElement = ej.base.select('.setting-responsive');
 var isMobile = window.matchMedia('(max-width:550px)').matches;
 var isTablet = window.matchMedia('(min-width:600px) and (max-width: 850px)').matches;
 var isPc = window.matchMedia('(min-width:850px)').matches;
-var selectedTheme = location.hash.split('/')[1] || 'material3';
+var selectedTheme = location.hash.split('/')[1] || 'fluent2';
 var toggleAnim = new ej.base.Animation({ duration: 500, timingFunction: 'ease' });
 var controlSampleData = {};
 var samplesList = getSampleList();
@@ -226,10 +230,15 @@ function renderSbPopups() {
     switcherPopup.hide();
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
-        index: 0,
+        index: themeCollection.indexOf(selectedTheme.split('-')[0]),
         change: function (e) { switchTheme(e.value); }
     });
     themeDropDown.appendTo('#sb-setting-theme');
+    themeModeDropDown = new ej.dropdowns.DropDownList({
+        index: (location.hash.split('/')[1] && location.hash.split('/')[1].includes('-dark')) ? 1 : 0,
+        change: function (e) { darkSwitch() }
+    });
+    themeModeDropDown.appendTo('#sb-theme-mode');
     cultureDropDown = new ej.dropdowns.DropDownList({
         index: 0,
         change: function (e) {
@@ -325,11 +334,12 @@ function changeTab(args) {
     }
     if (args.selectedItem && args.selectedItem.innerText === 'DEMO') {
         let demoSection = document.getElementsByClassName('sb-demo-section')[0];
+        const componentToIgnore= ['tab'];
         if (demoSection) {
             let elementList = demoSection.getElementsByClassName('e-control e-lib');
             for (let i = 0; i < elementList.length; i++) {
                 let instance = elementList[i].ej2_instances;
-                if (instance && instance[0] && typeof instance[0].refresh === 'function') {
+                if (instance && instance[0] && typeof instance[0].refresh === 'function' && componentToIgnore.indexOf(instance[0].getModuleName()) === -1) {
                     instance[0].refresh();
                 }
                 if (instance && instance[0] && instance[0].getModuleName() !== 'DashboardLayout')
@@ -469,10 +479,25 @@ function changeTheme(e) {
 function switchTheme(str) {
     var hash = location.hash.split('/');
     if (hash[1] !== str) {
+        if (hash[1].includes('-dark') && darkIgnore.indexOf(str) === -1) {
+            str = str + '-dark';
+        }
         hash[1] = str;
         localStorage.setItem('ej2-switch', ej.base.select('.sb-responsive-section .active').id);
         location.hash = hash.join('/');
     }
+}
+
+themeDarkButton.addEventListener('click', darkSwitch);
+
+function darkSwitch() {
+    var hash = location.hash.split('/');
+    var darkTheme = hash[1]
+    darkTheme = darkTheme.includes("-dark") ? darkTheme.replace("-dark", "") : darkIgnore.indexOf(darkTheme) === 0 ? darkTheme : darkTheme + '-dark';
+    hash[1] = darkTheme;
+    localStorage.setItem('ej2-switch', ej.base.select('.sb-responsive-section .active').id);
+    location.hash = hash.join('/');
+    location.reload();
 }
 
 function onsearchInputChange(e) {
@@ -826,9 +851,11 @@ function setSbLink() {
         var ele = ej.base.select('#' + sb);
         if (sb === 'aspnetcore' || sb === 'aspnetmvc') {
             ele.href = sb === 'aspnetcore' ? 'https://ej2.syncfusion.com/aspnetcore/' : 'https://ej2.syncfusion.com/aspnetmvc/';
+
         } else if (sb === 'nextjs') {
             ele.href = 'https://ej2.syncfusion.com/nextjs/demos/';
-        } else if (sb === 'blazor') {
+        }  
+        else if (sb === 'blazor') {
             ele.href = 'https://blazor.syncfusion.com/demos/';
         } else {
             ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) :
@@ -858,11 +885,28 @@ function loadTheme(theme) {
     if (body.classList.length > 0) {
         for (var themeItem in themeCollection) {
             body.classList.remove(themeCollection[themeItem]);
+            body.classList.remove(themeCollection[themeItem] + '-dark');
         }
     }
     body.classList.add(theme);
-    themeList.querySelector('.active').classList.remove('active');
-    themeList.querySelector('#' + theme).classList.add('active');
+    if (darkIgnore.indexOf(theme) !== -1) {
+        themeDarkButton.style.display = "none";
+        document.getElementById("mobiledarkswitch").style.display = "none";
+    }
+    if (!isMobile) {
+        if (!theme.includes('-dark')) {
+            darkButton.innerHTML = "DARK";
+            document.getElementById("dark-icon").style.display = "inline-block";
+            themeList.querySelector('.active').classList.remove('active');
+            themeList.querySelector('#' + theme).classList.add('active');
+        }
+        else {
+            darkButton.innerHTML = "LIGHT";
+            document.getElementById("light-icon").style.display = "inline-block";
+            themeList.querySelector('.active').classList.remove('active');
+            themeList.querySelector('#' + theme.replace('-dark', "")).classList.add('active');
+        }
+    }
     var doc = document.getElementById('themelink');
     doc.setAttribute('href','./dist/' + theme + '.css');
     var ajax = new ej.base.Ajax('./dist/' + theme + '.css', 'GET', true);
@@ -1061,7 +1105,7 @@ function controlSelect(arg) {
         controlListRefresh(arg.node || arg.item);
         if (path !== curHashCollection) {
             sampleOverlay();
-            var theme = location.hash.split('/')[1] || 'material3';
+            var theme = location.hash.split('/')[1] || 'fluent2';
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
                 ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
@@ -1189,7 +1233,9 @@ function destroyControls() {
         if (control.ej2_instances) {
             for (var a = 0; a < control.ej2_instances.length; a++) {
                 var instance = control.ej2_instances[a];
-                instance.destroy();
+                if (instance.element && document.contains(instance.element)){
+                    instance.destroy();
+                }
             }
         }
 
@@ -1273,7 +1319,7 @@ function addRoutes(samplesList) {
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
                 (subNode.category + ' / ') : '') + subNode.name;
-            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'material3';
+            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'fluent2';
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {

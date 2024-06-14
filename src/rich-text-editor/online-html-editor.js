@@ -28,7 +28,7 @@ this.default = function () {
         type: 'Expand',
         items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
           'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-          'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+          'Formats', 'Alignments', 'Blockquote', 'OrderedList', 'UnorderedList',
           'Outdent', 'Indent',
           'CreateLink', 'Image', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
           '|', 'EmojiPicker', 'SourceCode', '|', 'Undo', 'Redo'
@@ -62,7 +62,8 @@ this.default = function () {
     }
 
     function updateHtmlValue() {
-      textArea.innerHTML = myCodeMirror.getValue();
+      defaultRTE.value = myCodeMirror.getValue();
+      defaultRTE.dataBind();
     }
 
     function updateValue() {

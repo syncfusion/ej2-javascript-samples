@@ -1,7 +1,6 @@
 {
     "name": "3D Circular Chart",
     "directory": "circular-3d-chart",
-    "type": "preview",
     "category": "Data Visualization",
     "ftName": "circular3d",
     "samples": [

@@ -5,7 +5,7 @@ this.default = function () {
     resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     toolbarSettings: { showTooltip : true, toolbarItems: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'PrintOption']}
 });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,ej.pdfviewer.FormFields,ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer);
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation,ej.pdfviewer.FormFields,ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner);
       
     var switchObj = new ejs.buttons.Switch({ checked: true });
     switchObj.appendTo('#checked');

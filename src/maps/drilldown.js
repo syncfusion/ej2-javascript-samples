@@ -56,7 +56,6 @@ this.default = function () {
         },
         layers: [
             {
-                layerType: 'Geometry',
                 shapePropertyPath: 'continent',
                 shapeDataPath: 'continent',
                 dataSource: new ej.maps.MapAjax('./src/maps/map-data/default-datasource.json'),
@@ -126,7 +125,6 @@ this.default = function () {
                 ]
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/africa.json'),
                 shapeSettings: {
                     fill: '#80306A'
@@ -141,7 +139,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/europe.json'),
                 shapeSettings: {
                     fill: '#622D6C'
@@ -156,7 +153,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/asia.json'),
                 shapeSettings: {
                     fill: '#462A6D'
@@ -171,7 +167,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/north-america.json'),
                 shapeSettings: {
                     fill: '#C13664'
@@ -186,7 +181,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/south-america.json'),
                 shapeSettings: {
                     fill: '#9C3367'
@@ -201,7 +195,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/oceania.json'),
                 shapeSettings: {
                     fill: '#2A2870'
@@ -216,7 +209,6 @@ this.default = function () {
                 }
             },
             {
-                layerType: 'Geometry',
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/australia.json'),
                 shapeSettings: {
                     fill: '#2A2870'

@@ -1,57 +1,59 @@
-<div>
-    <div class="col-md-8 control-section">
-        <div class="content-wrapper">
-            <div id="container" style="width:92%"></div>
+<main>
+    <div>
+        <div class="col-md-8 control-section">
+            <div class="content-wrapper">
+                <div id="container" style="width:92%"></div>
+            </div>
+        </div>
+        <div class="col-md-4 property-section">
+            <table id="property" title="Properties" style="width: 100%;margin-left: -10px;" role="none">
+                <tbody>
+                    <tr style="height: 50px">
+                        <td style="width: 60%">
+                            <div>Palette Type:</div>
+                        </td>
+                        <td style="width: 40%;">
+                            <div class="row">
+                                <input id="fixed" type="radio">
+                            </div>
+                            <div class="row">
+                                <input id="gradient" type="radio">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td style="width: 60%">
+                            <div style="margin-top: 22px">Enable Smart Legend:</div>
+                        </td>
+                        <td style="width: 40%;">
+                            <div>
+                                <div class="row" style="margin-left: -25px">
+                                    <input id="smartLegend" type="checkbox">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%;margin-left: -10px;">
-            <tbody>
-                <tr style="height: 50px">
-                    <td style="width: 60%">
-                        <div>Palette Type:</div>
-                    </td>
-                    <td style="width: 40%;">
-                        <div class="row">
-                            <input id="fixed" type="radio">
-                        </div>
-                        <div class="row">
-                            <input id="gradient" type="radio">
-                        </div>
-                    </td>
-                </tr>
-                <tr style="height: 50px">
-                    <td style="width: 60%">
-                        <div style="margin-top: 22px">Enable Smart Legend:</div>
-                    </td>
-                    <td style="width: 40%;">
-                        <div>
-                            <div class="row" style="margin-left: -25px">
-                                <input id="smartLegend" type="checkbox">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div id="action-description">
-    <p>
-        This sample visualizes the energy consumption in trillion British thermal units (btu) by the various public sectors in US
-        government over the years. The data label is disabled in this sample, the tooltip displays the data point values.
-        In property panel, the options are available to change palette type in Heatmap by means of radio button.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to change the palette type between
-        <a href="https://ej2.syncfusion.com/javascript/documentation/heatmap-chart/palette#fixed" target="_blank">Fixed </a> and
-        <a href="https://ej2.syncfusion.com/javascript/documentation/heatmap-chart/palette#gradient" target="_blank">Gradient </a> types in Heatmap. The palette type can be defined using the
-        <a href="https://ej2.syncfusion.com/javascript/documentation/api/heatmap/paletteSettingsModel/#type" target="_blank">type </a> property in
-        <a href="https://ej2.syncfusion.com/javascript/documentation/api/heatmap/paletteSettingsModel/" target="_blank">paletteSettings </a>. Legend is enabled in this example, changing the palette mode the legend type will be automatically switched between
-        gradient legend and list type legend.
-    </p>
-    <p>The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item on touch-enabled devices.</p>
-    <br>
-</div>
+    <section id="action-description" aria-label="Description of HeatMap sample">
+        <p>
+            This sample visualizes the energy consumption in trillion British thermal units (btu) by the various public sectors in US
+            government over the years. The data label is disabled in this sample, the tooltip displays the data point values.
+            In property panel, the options are available to change palette type in Heatmap by means of radio button.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of the HeatMap features demonstrated in this sample">
+        <p>
+            In this example, you can see how to change the palette type between
+            <a href="https://ej2.syncfusion.com/javascript/documentation/heatmap-chart/palette#fixed" target="_blank">Fixed </a> and
+            <a href="https://ej2.syncfusion.com/javascript/documentation/heatmap-chart/palette#gradient" target="_blank">Gradient </a> types in Heatmap. The palette type can be defined using the
+            <a href="https://ej2.syncfusion.com/javascript/documentation/api/heatmap/paletteSettingsModel/#type" target="_blank">type </a> property in
+            <a href="https://ej2.syncfusion.com/javascript/documentation/api/heatmap/paletteSettingsModel/" target="_blank">paletteSettings </a>. Legend is enabled in this example, changing the palette mode the legend type will be automatically switched between
+            gradient legend and list type legend.
+        </p>
+        <p>The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item on touch-enabled devices.</p>
+        <br>
+    </section>
+</main>

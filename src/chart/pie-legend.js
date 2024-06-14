@@ -56,7 +56,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             args.accumulation.legendSettings.position = ej.base.Browser.isDevice ? 'Bottom' : 'Right';
         },
         center:{ x: '50%', y:'50%'},

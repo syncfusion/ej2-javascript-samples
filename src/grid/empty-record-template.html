@@ -10,8 +10,8 @@
 
 <script id="emptytemplate" type="text/x-template">
     <div class='emptyRecordTemplate'>
-        <img src="src/grid/images/emptyRecordTemplate.svg" class="e-emptyRecord" alt="No record">
-        <span>There is no data available to display at the moment.</span>
+        ${renderEmptyImg()}
+        <div>There is no data available to display at the moment.</div>
     </div>
 </script>
 
@@ -30,7 +30,7 @@
         The <code>emptyRecordTemplate</code> property accepts either a string or an HTML element ID value, which will be used as the template when there's no data.</p>
     <p>
         More information on the data binding can be found in this
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding">
+        <a aria-label="API link for documentation" target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding">
             documentation section</a>.
     </p>
 </div>

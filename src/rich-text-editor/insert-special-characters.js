@@ -11,7 +11,7 @@ this.default = function() {
     var saveSelection;
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
-            items: ['Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'OrderedList',
+            items: ['Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'Blockquote', 'OrderedList',
                 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode',
                 {
                     tooltipText: 'Insert Symbol',

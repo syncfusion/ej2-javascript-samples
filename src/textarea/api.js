@@ -41,7 +41,7 @@ this.default = function () {
         value: 2,
         // bind the change event
         change: function (args) {
-            textareaObj.rowsCount = args.value;
+            textareaObj.rows = args.value;
         }
     });
     rows.appendTo('#rows');
@@ -52,7 +52,7 @@ this.default = function () {
         value: 20,
         // bind the change event
         change: function (args) {
-            textareaObj.columnsCount = args.value;
+            textareaObj.cols = args.value;
         }
     });
     cols.appendTo('#cols');

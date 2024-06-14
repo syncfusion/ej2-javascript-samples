@@ -68,6 +68,8 @@ this.default = function () {
     var material3Colors = ["#2196F5", "#4BE0BC", "#FD7400", "#963C70", "#F7523F", "#FFB400", "#00AEE0", "#6355C7"];
     var material3DarkColors = ["#B93CE4", "#B3F32F", "#FF9E45", "#38FFE7", "#17EA58", "#FFF500", "#FA4EAB", "#4EAAFF"];
     var defaultColors = ["#7f84e8", "#dd8abd", "#70ad47", "#f8b883", "#e56590", "#357cd2", "#404041", "#00bdae"];
+    var fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10", "#C19C00"];
+    var fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#0B6A0B", "#C19C00"];
     var bullet = new ej.charts.BulletChart({
         width: ej.base.Browser.isDevice ? '100%' : '80%',
         tooltip: { enable: true },
@@ -137,6 +139,12 @@ this.default = function () {
                     break;
                 case "Material3Dark":
                     color = material3DarkColors;
+                    break;
+                case "Fluent2":
+                    color = fluent2Colors;
+                    break;
+                case "Fluent2Dark":
+                    color = fluent2DarkColors;
                     break;
                 default:
                     color = defaultColors;

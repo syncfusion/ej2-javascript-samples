@@ -78,10 +78,10 @@ this.default = function () {
             if (args.gauge.theme == 'FabricDark' || args.gauge.theme == 'BootstrapDark' || args.gauge.theme == 'MaterialDark' || args.gauge.theme == 'HighContrast' || args.gauge.theme == 'Material' || args.gauge.theme == 'Fabric' || args.gauge.theme == 'Bootstrap') {
                 borderColor = "#bfbfbf";
             }
-            if (args.gauge.theme == 'Fluent') {
+            if (args.gauge.theme == 'Fluent' || args.gauge.theme == 'Fluent2') {
                 borderColor = "#EDEBE9";
             }
-            if (args.gauge.theme == 'FluentDark') {
+            if (args.gauge.theme == 'FluentDark' || args.gauge.theme == 'Fluent2Dark') {
                 borderColor = "#292827";
             }
             if (args.gauge.theme == 'Bootstrap5' || args.gauge.theme == 'Tailwind') {

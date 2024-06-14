@@ -33,7 +33,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         textRender: function (args) {
             args.text = args.point.x + ": $" + args.point.y + "K";
@@ -47,6 +47,7 @@ this.default = function () {
         width: 120,
         change: function () {
             chart.series[0].emptyPointSettings.mode = mode.value;
+            chart.series[0].animation.enable = false;
             chart.refresh();
         }
     });

@@ -1,135 +1,137 @@
-<div>
-    <div class="col-md-8 control-section">
-        <div class="content-wrapper">
-            <div id="range-container"></div>
+<main>
+    <div>
+        <div class="col-md-8 control-section">
+            <div class="content-wrapper">
+                <div id="range-container"></div>
+            </div>
+        </div>
+        <!-- Property Panel -->
+        <div class="col-md-4 property-section">
+            <table id="property" title="Properties" style="width: 100%;" role="none">
+                <tr style="height: 50px">
+                    <td>
+                        <div style="font-size: 14px;"> Select Range </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select id="rangeSelect" class="form-control">
+                                <option value="0" selected=true>Low</option>
+                                <option value="1">Medium</option>
+                                <option value="2">High</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 40px">
+                    <td>
+                        <div style="font-size: 14px;">Range Start </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="start" value="0" min="0" max="40" style="width: 75%" />
+                        </div>
+                    </td>
+                    <td style="width: 10%;padding-top: 10px;text-align: center;">
+                        <span id='rangeStart' style="margin-left: -25px;font-size: 14px;">0</span>
+                    </td>
+                </tr>
+    
+                <tr style="height: 40px">
+                    <td>
+                        <div style="font-size: 14px;">Range End</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="end" value="40" min="0" max="40" style="width: 75%" />
+                        </div>
+                    </td>
+                    <td style="width: 10%;padding-top: 10px;text-align: center;">
+                        <span id='rangeEnd' style="margin-left: -25px;font-size: 14px;">40</span>
+                    </td>
+                </tr>
+                <tr style="height: 40px">
+                    <td>
+                        <div style="font-size: 14px;">Start Width</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="startWidth" value="10" min="0" max="30" style="width: 75%" />
+                        </div>
+                    </td>
+                    <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
+                        <span id='rangeStartWidth' style="margin-left: -25px;font-size: 14px;">10</span>
+                    </td>
+                </tr>
+                <tr style="height: 40px">
+                    <td>
+                        <div style="font-size: 14px;">End Width</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="endWidth" value="10" min="0" max="30" style="width: 75%" />
+                        </div>
+                    </td>
+                    <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
+                        <span id='rangeEndWidth' style="margin-left: -25px;font-size: 14px;">10</span>
+                    </td>
+                </tr>
+                <tr style="height: 40px">
+                    <td>
+                        <div style="font-size: 14px;">Corner Radius</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="range" id="radius" value="0" min="0" max="12" style="width: 75%" />
+                        </div>
+                    </td>
+                    <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
+                        <span id='cornerRadius' style="margin-left: -25px;font-size: 14px;">0</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <!-- Property Panel -->
-    <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%;">
-            <tr style="height: 50px">
-                <td>
-                    <div style="font-size: 14px;"> Select Range </div>
-                </td>
-                <td>
-                    <div>
-                        <select id="rangeSelect" class="form-control">
-                            <option value="0" selected=true>Low</option>
-                            <option value="1">Medium</option>
-                            <option value="2">High</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr style="height: 40px">
-                <td>
-                    <div style="font-size: 14px;">Range Start </div>
-                </td>
-                <td>
-                    <div>
-                        <input type="range" id="start" value="0" min="0" max="40" style="width: 75%" />
-                    </div>
-                </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeStart' style="margin-left: -25px;font-size: 14px;">0</span>
-                </td>
-            </tr>
-
-            <tr style="height: 40px">
-                <td>
-                    <div style="font-size: 14px;">Range End</div>
-                </td>
-                <td>
-                    <div>
-                        <input type="range" id="end" value="40" min="0" max="40" style="width: 75%" />
-                    </div>
-                </td>
-                <td style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeEnd' style="margin-left: -25px;font-size: 14px;">40</span>
-                </td>
-            </tr>
-            <tr style="height: 40px">
-                <td>
-                    <div style="font-size: 14px;">Start Width</div>
-                </td>
-                <td>
-                    <div>
-                        <input type="range" id="startWidth" value="10" min="0" max="30" style="width: 75%" />
-                    </div>
-                </td>
-                <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeStartWidth' style="margin-left: -25px;font-size: 14px;">10</span>
-                </td>
-            </tr>
-            <tr style="height: 40px">
-                <td>
-                    <div style="font-size: 14px;">End Width</div>
-                </td>
-                <td>
-                    <div>
-                        <input type="range" id="endWidth" value="10" min="0" max="30" style="width: 75%" />
-                    </div>
-                </td>
-                <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='rangeEndWidth' style="margin-left: -25px;font-size: 14px;">10</span>
-                </td>
-            </tr>
-            <tr style="height: 40px">
-                <td>
-                    <div style="font-size: 14px;">Corner Radius</div>
-                </td>
-                <td>
-                    <div>
-                        <input type="range" id="radius" value="0" min="0" max="12" style="width: 75%" />
-                    </div>
-                </td>
-                <td align="center" style="width: 10%;padding-top: 10px;text-align: center;">
-                    <span id='cornerRadius' style="margin-left: -25px;font-size: 14px;">0</span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div id="action-description">
-    <p>
-        This sample demonstrates how to highlight a region in an axis using ranges in the circular gauge. The width,
-        corner radius, and start and end range of a range can all be customized.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to render and configure the ranges in the circular gauge. Ranges are used to
-        group the axis values, and you can use <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#start">start</a>, <a
-            target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#end">end</a>,
-        <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#color">color</a>, <a
-            target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#startwidth">startWidth</a>,
-        <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#endwidth">endWidth</a>,
-        <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#radius">radius</a> and
-        <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#roundedcornerradius">roundedCornerRadius</a>
-        properties to customize them. In addition, an axis with multiple ranges is shown in the circular gauge
-        component, as well as options to customize the range properties via the property panel.
-    </p>
-    <p>
-        More information on the ranges can be found in this <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-ranges/">documentation
-            section</a>.
-    </p>
-</div>
-<!-- custom code start -->
-<style>
-    #control-container {
-        padding: 0px !important;
-    }
-
-    .property-panel-table div {
-        padding-left: 0px;
-    }
-</style>
-<!-- custom code end -->
+    <section id="action-description" aria-label="Description of Circular Gauge sample">
+        <p>
+            This sample demonstrates how to highlight a region in an axis using ranges in the circular gauge. The width,
+            corner radius, and start and end range of a range can all be customized.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of Circular Gauge features demonstrated in this sample">
+        <p>
+            In this example, you can see how to render and configure the ranges in the circular gauge. Ranges are used to
+            group the axis values, and you can use <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#start">start</a>, <a
+                target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#end">end</a>,
+            <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#color">color</a>, <a
+                target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#startwidth">startWidth</a>,
+            <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#endwidth">endWidth</a>,
+            <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#radius">radius</a> and
+            <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/api/circular-gauge/rangeModel/#roundedcornerradius">roundedCornerRadius</a>
+            properties to customize them. In addition, an axis with multiple ranges is shown in the circular gauge
+            component, as well as options to customize the range properties via the property panel.
+        </p>
+        <p>
+            More information on the ranges can be found in this <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-ranges/">documentation
+                section</a>.
+        </p>
+    </section>
+    <!-- custom code start -->
+    <style>
+        #control-container {
+            padding: 0px !important;
+        }
+    
+        .property-panel-table div {
+            padding-left: 0px;
+        }
+    </style>
+    <!-- custom code end -->
+</main>

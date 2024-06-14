@@ -56,10 +56,9 @@ this.default = function () {
             columns: [{ name: 'Year' }],
             values: [{ name: 'Price', caption: 'Unit Price' }, { name: 'Sold', caption: 'Unit Sold' }],
         },
-        width: ej.base.Browser.isDevice ? '100%' : 1200,
+        width: '100%',
         height: 300,
         enableVirtualization: true,
-        gridSettings: { columnWidth: 140 },
         virtualScrollSettings: { allowSinglePage: true },
         dataBound: function () {
 			if(this.dataSourceSettings.dataSource.length > 0){

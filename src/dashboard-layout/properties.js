@@ -49,13 +49,10 @@ this.default = function () {
         dashboard.cellSpacing = [parseInt(args.value, 10), parseInt(args.value, 10)];
     }
     function onChange(args) {
-        var targetElement = args.event.target;
-        var previousElement = targetElement.previousElementSibling;
-        var nextElement = targetElement.nextElementSibling;
-        if ((previousElement !== null && previousElement.id === 'floating') || nextElement !== null && nextElement.previousElementSibling.id === 'floating') {
+        if (args.event.currentTarget.firstChild.childNodes[0].id === 'floating') {
             dashboardObject.allowFloating = args.checked;
         }
-        if ((previousElement !== null && previousElement.id === 'resizing') || nextElement !== null && nextElement.previousElementSibling.id === 'resizing') {
+        if (args.event.currentTarget.firstChild.childNodes[0].id === 'resizing') {
             dashboardObject.allowResizing = args.checked;
         }
     }

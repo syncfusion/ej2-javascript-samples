@@ -10,7 +10,122 @@
             "url": "default",
             "name": "Default Functionalities",
             "category": "Document Editor",
-            "type":"update",
+            "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
+            "api": {
+                "DocumentEditor": [
+                    "isReadOnly",
+                    "enableAllModules",
+                    "acceptTab",
+                    "documentName",
+                    "pageOutline",
+                    "selection",
+                    "editor",
+                    "editorHistory",
+                    "enableLocalPaste",
+                    "pageCount",
+                    "zoomFactor",
+                    "documentChange",
+                    "viewChange",
+                    "selectionChange",
+                    "requestNavigate",
+                    "contentChange",
+                    "open",
+                    "print",
+                    "openBlank",
+                    "focusIn",
+                    "save",
+                    "showDialog",
+                    "showOptionsPane",
+                    "fitPage",
+                    "getStyleNames",
+                    "resize"
+                ],
+                "Selection": [
+                    "contextType",
+                    "characterFormat",
+                    "paragraphFormat",
+                    "sectionFormat",
+                    "cellFormat",
+                    "imageFormat",
+                    "goToPage",
+                    "goToHeader",
+                    "goToFooter",
+                    "closeHeaderFooter"
+                ],
+                "SelectionCharacterFormat": [
+                    "bold",
+                    "italic",
+                    "underline",
+                    "fontFamily",
+                    "fontSize",
+                    "fontColor",
+                    "highlightColor",
+                    "strikethrough",
+                    "baselineAlignment"
+                ],
+                "SelectionParagraphFormat": [
+                    "textAlignment",
+                    "lineSpacing",
+                    "styleName"
+                ],
+                "SelectionSectionFormat": [
+                    "differentFirstPage",
+                    "differentOddAndEvenPages",
+                    "headerDistance",
+                    "footerDistance"
+                ],
+                "SelectionCellFormat": [
+                    "topMargin",
+                    "bottomMargin",
+                    "leftMargin",
+                    "rightMargin",
+                    "verticalAlignment",
+                    "background"
+                ],
+                "SelectionImageFormat": [
+                    "width",
+                    "height",
+                    "resize"
+                ],
+                "Editor": [
+                    "insertImage",
+                    "toggleBold",
+                    "toggleItalic",
+                    "toggleUnderline",
+                    "toggleStrikethrough",
+                    "toggleSubscript",
+                    "toggleSuperscript",
+                    "toggleTextAlignment",
+                    "increaseIndent",
+                    "decreaseIndent",
+                    "applyNumbering",
+                    "applyBullet",
+                    "applyStyle",
+                    "clearList",
+                    "clearFormatting",
+                    "canMergeCells",
+                    "mergeCells",
+                    "applyBorders",
+                    "insertPageNumber",
+                    "insertTableOfContents",
+                    "insertRow",
+                    "insertColumn",
+                    "deleteRow",
+                    "deleteColumn"
+                ],
+                "EditorHistory": [
+                    "undo",
+                    "redo",
+                    "canUndo",
+                    "canRedo"
+                ]
+            }
+        },
+        {
+            "url": "bindUI-to-document",
+            "name": "Bind UI To Document",
+            "type": "new",
+            "category": "Document Editor",
             "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
             "api": {
                 "DocumentEditor": [
@@ -277,7 +392,6 @@
             "url": "comments",
             "name": "Comments",
             "category": "Review",
-            "type":"update",
             "description": "The Document Editor component supports add and edit comments in a Word document for comment discussion.",
             "api": {
                 "Editor": [
@@ -378,7 +492,6 @@
             "url": "colorpicker-customization",
             "name": "Color Picker Customization",
             "category": "Customization",
-            "type":"new",
             "description": "The Document Editor component supports to to customize color picker in appearance.",
             "api": {
                 "DocumentEditorSettings": [
@@ -417,7 +530,6 @@
         {
             "url": "advanced-exporting",
             "name": "Advanced Exporting",
-            "type":"new",
             "category": "Exporting",
             "description": "This example demonstrates how to export the document to other formats like Pdf, Rtf, HTML, ODT, WordML etc. from document editor",
             "api": {
@@ -789,7 +901,6 @@
         {
             "url": "heading-navigation",
             "name": "Heading Navigation",
-            "type": "new",
             "category": "View",
             "description": "The Document Editor component supports navigating documents by heading allows users to move around the document very quickly.",
             "api": {

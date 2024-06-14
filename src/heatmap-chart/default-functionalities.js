@@ -1,3 +1,16 @@
+function getDatasource() {
+    var dataSource = [];
+    for (var x = 0; x < 12; x++) {
+        dataSource.push([]);
+        for (var y = 0; y < 6; y++) {
+            dataSource[x].push(getRndInteger(0, 100));
+        }
+    }
+    return dataSource;
+}
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 this.default = function () {
     var heatmap = new ej.heatmap.HeatMap({
         titleSettings: {
@@ -44,7 +57,7 @@ this.default = function () {
             defaultTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
             // custom code end
         },
-        dataSource: window.getDatasource().dataSource,
+        dataSource: getDatasource(),
     });
     heatmap.appendTo('#container');
 };

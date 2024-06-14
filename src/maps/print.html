@@ -1,86 +1,88 @@
-<div>
-    <div class="col-lg-9 control-section">
-        <div class="content-wrapper">
-            <div id="print-container"></div>
-            <!-- Source Link -->
-            <div style="float: right; margin-right: 10px;">Source:
-                <a href="https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population" target="_blank">en.wikipedia.org</a>
-             </div>
+<main>
+    <div>
+        <div class="col-lg-9 control-section">
+            <div class="content-wrapper">
+                <div id="print-container"></div>
+                <!-- Source Link -->
+                <div style="float: right; margin-right: 10px;">Source:
+                    <a href="https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population" target="_blank">en.wikipedia.org</a>
+                 </div>
+            </div>
+        </div>
+        <!-- Property Panel -->
+        <div class="col-lg-3 property-section">
+            <table id="property" title="Properties" style="width: 100%" role="none">
+                <tr id="button-control" style="height: 50px">
+                    <td align='center'>
+                        <div> 
+                            <button id="togglebtn" style="text-transform:none !important">Print</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <!-- Property Panel -->
-    <div class="col-lg-3 property-section">
-        <table id="property" title="Properties" style="width: 100%">
-            <tr id="button-control" style="height: 50px">
-                <td align='center'>
-                    <div> 
-                        <button id="togglebtn" style="text-transform:none !important">Print</button>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
-<div id="action-description">
-    <p>
-        This sample illustrates the print feature in Maps. By clicking the Print button, you can print the maps directly from the browser. 
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to render and configure the print functionality. The rendered maps can
-        be printed directly from the browser by calling the <code>print</code> method when
-        <code>allowPrint</code> is set as true. Also, this sample visualizes the State-wise US population
-        in the year 2010.
-    </p>
-    <p>
-        More information about print can be found in this
-        <a target="_blank" href="https://ej2.syncfusion.com/documentation/maps/print/#print">documentation section</a>.
-    </p>
-
-
-</div>
-<!-- custom code start -->
-<style>
-     #button-control {
-        width: 100%;
-        text-align: center;
-    }
-
-    #control-container {
-        padding: 0px !important;
-    }
+    <section id="action-description" aria-label="Description of Maps sample">
+        <p>
+            This sample illustrates the print feature in Maps. By clicking the Print button, you can print the maps directly from the browser. 
+        </p>
+    </section>
+    <section id="description" aria-label="Description of the Maps features demonstrated in this sample">
+        <p>
+            In this example, you can see how to render and configure the print functionality. The rendered maps can
+            be printed directly from the browser by calling the <code>print</code> method when
+            <code>allowPrint</code> is set as true. Also, this sample visualizes the State-wise US population
+            in the year 2010.
+        </p>
+        <p>
+            More information about print can be found in this
+            <a target="_blank" href="https://ej2.syncfusion.com/documentation/maps/print/#print">documentation section</a>.
+        </p>
     
-    .e-play-icon::before {
-        content: '\e34b';
-    }
-
-    .e-view.fluent .e-play-icon::before, .e-view.fluent-dark .e-play-icon::before {
-        content: '\e75d';
-    }
-
-    .e-view.fabric .e-play-icon::before, .e-view.fabric-dark .e-play-icon::before  {
-        content: '\e7df';
-    }
-
-    .e-view.bootstrap .e-play-icon::before {
-        content: '\ebd2';
-    }
-
-    .e-view.bootstrap4 .e-play-icon::before {
-        content: '\e743';
-    }
-
-    .e-view.highcontrast .e-play-icon::before {
-        content: '\ebf9';
-    }
-
-    .e-view.tailwind .e-play-icon::before, .e-view.tailwind-dark .e-play-icon::before {
-        content: '\e76c';
-    }
-
-    .e-view.bootstrap5 .e-play-icon::before, .e-view.bootstrap5-dark .e-play-icon::before {
-        content: '\e75d';
-    }
-</style>
-<!-- custom code end -->
+    
+    </section>
+    <!-- custom code start -->
+    <style>
+         #button-control {
+            width: 100%;
+            text-align: center;
+        }
+    
+        #control-container {
+            padding: 0px !important;
+        }
+        
+        .e-play-icon::before {
+            content: '\e34b';
+        }
+    
+        .e-view.fluent .e-play-icon::before, .e-view.fluent-dark .e-play-icon::before {
+            content: '\e75d';
+        }
+    
+        .e-view.fabric .e-play-icon::before, .e-view.fabric-dark .e-play-icon::before  {
+            content: '\e7df';
+        }
+    
+        .e-view.bootstrap .e-play-icon::before {
+            content: '\ebd2';
+        }
+    
+        .e-view.bootstrap4 .e-play-icon::before {
+            content: '\e743';
+        }
+    
+        .e-view.highcontrast .e-play-icon::before {
+            content: '\ebf9';
+        }
+    
+        .e-view.tailwind .e-play-icon::before, .e-view.tailwind-dark .e-play-icon::before {
+            content: '\e76c';
+        }
+    
+        .e-view.bootstrap5 .e-play-icon::before, .e-view.bootstrap5-dark .e-play-icon::before {
+            content: '\e75d';
+        }
+    </style>
+    <!-- custom code end -->
+</main>

@@ -1,20 +1,20 @@
 <div class="control-section col-lg-12">
     <div id='local-data' class='col-lg-6' style='padding-top:15px'>
         <div class='content'>
-            <h4>Local Data</h4>
-            <input type="text" id="local" tabindex="1" />
+            <label class="h4">Local Data</label>
+            <input type="text" id="local" tabindex="0" />
         </div>
     </div>
     <div id='remote-data' class='col-lg-6' style='padding-top:15px'>
         <div class='content'>
-            <h4>Remote Data</h4>
-            <input type="text" id="remote" tabindex="1" />
+            <label class="h4">Remote Data</label>
+            <input type="text" id="remote" tabindex="0" />
         </div>
     </div>
     <div id='group-data' class='col-lg-6' style='padding-top:15px'>
         <div class='content'>
-            <h4>Grouping</h4>
-            <input type="text" id="group" tabindex="1" />
+            <label class="h4">Grouping</label>
+            <input type="text" id="group" tabindex="0" />
         </div>
     </div>
 </div>
@@ -33,6 +33,11 @@
      .content {
         margin: 0 auto; 
         width: 320px;
+    }
+    .content .h4 {
+        font-size: 16px;
+        margin: 0 0 10px;
+        font-weight: bold;
     }
 </style>
 <!-- custom code end-->

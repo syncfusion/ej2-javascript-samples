@@ -39,7 +39,7 @@ this.default = function () {
         },
         layers: [
             {
-                layerType: 'OSM',
+                urlTemplate:'https://tile.openstreetmap.org/level/tileX/tileY.png',
                 markerSettings: [
                     {
                         visible: true,

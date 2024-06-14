@@ -10,6 +10,7 @@
             "name": "Default Functionalities",
             "category": "Image Editor",
             "ftName": "image-editor",
+            "type": "update",
             "api": {
                 "ImageEditor": [
                     "width",             
@@ -35,7 +36,6 @@
             "name": "Custom Toolbar",
             "category": "Image Editor",
             "ftName": "image-editor",
-            "type": "new",
             "api": {
                 "ImageEditor": [
 

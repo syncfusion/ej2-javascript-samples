@@ -48,7 +48,8 @@ this.default = function () {
             iconEle.classList.remove('e-code-mirror');
             textArea.style.display = 'block';
             mirrorView.style.display = 'none';
-            textArea.innerHTML = myCodeMirror.getValue();
+            defaultRTE.value = myCodeMirror.getValue();
+            defaultRTE.dataBind();
         }
         else {
             divPreview.classList.add('e-active');

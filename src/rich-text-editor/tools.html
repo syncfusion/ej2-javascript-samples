@@ -1,62 +1,155 @@
 <div class="control-section">
     <div class="sample-container">
         <div class="default-section">
+            <div id="editorMention"></div>
             <div id="defaultRTE">
-                <p>The Rich Text Editor is a WYSIWYG ("what you see is what you get") editor useful to create and edit content and return the valid <a href='https://ej2.syncfusion.com/home/' target='_blank'>HTML markup</a> or <a href='https://ej2.syncfusion.com/home/' target='_blank'>markdown</a> of the content</p>
-
-                <p><b>Toolbar</b></p>
-                <ol>
-                    <li> 
-                        <p>The Toolbar contains commands to align the text, insert a link, insert an image, insert list, undo/redo operations, HTML view, etc </p>
+                <h1>Welcome to the Syncfusion Rich Text Editor</h1>
+                <p>The Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that
+                    allows you to create,
+                    edit, and format rich text content. You can try out a demo of this editor here.</p>
+                <h2>Do you know the key features of the editor?</h2>
+                <ul>
+                    <li>Basic features include headings, block quotes, numbered lists, bullet lists, and support to
+                        insert images,
+                        tables, audio, and video.</li>
+                    <li>Inline styles include <b>bold</b>, <em>italic</em>, <span
+                            style="text-decoration: underline">underline</span>,
+                        <span style="text-decoration: line-through">strikethrough</span>, <a class="e-rte-anchor"
+                            href="https://ej2.syncfusion.com/javascript/demos/#/material/rich-text-editor/tools.html"
+                            title="https://ej2.syncfusion.com/javascript/demos/#/material/rich-text-editor/tools.html"
+                            aria-label="Open in new window">hyperlinks</a>, 😀 and more.
                     </li>
-                    <li> 
-                        <p>The Toolbar is fully customizable </p>
-                    </li>
-                </ol>
-                    
-                <p><b>Links</b></p>
-                <ol>
-                    <li>
-                        <p>You can insert a hyperlink with its corresponding dialog </p>
-                    </li>
-                    <li>
-                        <p>Attach a hyperlink to the displayed text. </p>
-                    </li>
-                    <li>
-                        <p>Customize the quick toolbar based on the hyperlink </p> 
-                    </li>
-                </ol>
-                    
-                <p><b>Image.</b></p>
-                <ol>
-                    <li>
-                        <p>Allows you to insert images from an online source as well as the local computer </p> 
-                    </li>
-                    <li>
-                        <p>You can upload an image </p>
-                    </li>
-                    <li> 
-                        <p>Provides an option to customize the quick toolbar for an image </p> 
-                    </li>
-                </ol>
-                <img alt="Logo" src="./src/rich-text-editor/images/RTEImage-Feather.png" style="width: 300px;"/>
+                    <li>The toolbar has multi-row, expandable, and scrollable modes. The Editor supports an inline
+                        toolbar, a floating
+                        toolbar, and custom toolbar items.</li>
+                    <li>Integration with Syncfusion <span class="e-mention-chip"><a
+                                title="sales@syncfusion.com">@mention</a></span>
+                        control lets users tag other users. To learn more, check out the <a class="e-rte-anchor"
+                            href="https://ej2.syncfusion.com/javascript/documentation/rich-text-editor/mention-integration"
+                            title="Mention Documentation" aria-label="Open in new window">documentation</a> and <a
+                            class="e-rte-anchor"
+                            href="https://ej2.syncfusion.com/javascript/demos/#/material/rich-text-editor/mention-integration.html"
+                            title="Mention Demos" aria-label="Open in new window">demos</a>.</li>
+                    <li><b>Paste from MS Word</b> - helps to reduce the effort while converting the Microsoft Word
+                        content to HTML
+                        format with format and styles. To learn more, check out the documentation <a
+                            class="e-rte-anchor"
+                            href="https://ej2.syncfusion.com/javascript/documentation/rich-text-editor/paste-cleanup"
+                            title="Paste from MS Word Documentation" aria-label="Open in new window">here</a>.</li>
+                    <li>Other features: placeholder text, character count, form validation, enter key configuration,
+                        resizable editor,
+                        IFrame rendering, tooltip, source code view, RTL mode, persistence, HTML Sanitizer, autosave,
+                        and <a class="e-rte-anchor"
+                            href="https://helpej2.syncfusion.com/documentation/api/rich-text-editor/"
+                            title="Rich Text Editor API" aria-label="Open in new window">more</a>.</li>
+                </ul>
+                <blockquote>
+                    <p><em>Easily access Audio, Image, Link, Video, and Table operations through the quick toolbar by
+                            right-clicking on
+                            the corresponding element with your mouse.</em></p>
+                </blockquote>
+                <h2>Unlock the Power of Tables</h2>
+                <p>A table can be created in the editor using either a keyboard shortcut or the toolbar. With the quick
+                    toolbar, you can
+                    perform table cell insert, delete, split, and merge operations. You can style the table cells using
+                    background
+                    colours and borders.</p>
+                <table class="e-rte-table" style="width: 100%; min-width: 0px; height: 151px">
+                    <thead style="height: 16.5563%">
+                        <tr style="height: 16.5563%">
+                            <th style="width: 12.1813%"><span>S No</span><br></th>
+                            <th style="width: 23.2295%"><span>Name</span><br></th>
+                            <th style="width: 9.91501%"><span>Age</span><br></th>
+                            <th style="width: 15.5807%"><span>Gender</span><br></th>
+                            <th style="width: 17.9887%"><span>Occupation</span><br></th>
+                            <th style="width: 21.1048%">Mode of Transport</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="height: 16.5563%">
+                            <td style="width: 12.1813%">1</td>
+                            <td style="width: 23.2295%">Selma Rose</td>
+                            <td style="width: 9.91501%">30</td>
+                            <td style="width: 15.5807%">Female</td>
+                            <td style="width: 17.9887%"><span>Engineer</span><br></td>
+                            <td style="width: 21.1048%"><span style="font-size: 14pt">🚴</span></td>
+                        </tr>
+                        <tr style="height: 16.5563%">
+                            <td style="width: 12.1813%">2</td>
+                            <td style="width: 23.2295%"><span>Robert</span><br></td>
+                            <td style="width: 9.91501%">28</td>
+                            <td style="width: 15.5807%">Male</td>
+                            <td style="width: 17.9887%"><span>Graphic Designer</span></td>
+                            <td style="width: 21.1048%"><span style="font-size: 14pt">🚗</span></td>
+                        </tr>
+                        <tr style="height: 16.5563%">
+                            <td style="width: 12.1813%">3</td>
+                            <td style="width: 23.2295%"><span>William</span><br></td>
+                            <td style="width: 9.91501%">35</td>
+                            <td style="width: 15.5807%">Male</td>
+                            <td style="width: 17.9887%">Teacher</td>
+                            <td style="width: 21.1048%"><span style="font-size: 14pt">🚗</span></td>
+                        </tr>
+                        <tr style="height: 16.5563%">
+                            <td style="width: 12.1813%">4</td>
+                            <td style="width: 23.2295%"><span>Laura Grace</span><br></td>
+                            <td style="width: 9.91501%">42</td>
+                            <td style="width: 15.5807%">Female</td>
+                            <td style="width: 17.9887%">Doctor</td>
+                            <td style="width: 21.1048%"><span style="font-size: 14pt">🚌</span></td>
+                        </tr>
+                        <tr style="height: 16.5563%">
+                            <td style="width: 12.1813%">5</td>
+                            <td style="width: 23.2295%"><span>Andrew James</span><br></td>
+                            <td style="width: 9.91501%">45</td>
+                            <td style="width: 15.5807%">Male</td>
+                            <td style="width: 17.9887%">Lawyer</td>
+                            <td style="width: 21.1048%"><span style="font-size: 14pt">🚕</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Elevating Your Content with Images</h2>
+                <p>Images can be added to the editor by pasting or dragging into the editing area, using the toolbar to
+                    insert one as a
+                    URL, or uploading directly from the File Browser. Easily manage your images on the server by
+                    configuring the <a class="e-rte-anchor"
+                        href="https://ej2.syncfusion.com/documentation/api/rich-text-editor/#insertimagesettings"
+                        title="Insert Image Settings API" aria-label="Open in new window">insertImageSettings</a> to
+                    upload, save, or
+                    remove them. </p>
+                <p>The Editor can integrate with the Syncfusion Image Editor to crop, rotate, annotate, and apply
+                    filters to images.
+                    Check out the demos <a class="e-rte-anchor"
+                        href="https://ej2.syncfusion.com/javascript/demos/#/material/rich-text-editor/image-editor-integration.html"
+                        title="Image Editor Demo" aria-label="Open in new window">here</a>.</p>
+                <p><img alt="Sky with sun"
+                        src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png"
+                        style="width: 440px" class="e-rte-image e-imginline"></p>
             </div>
+            <input type="file" id="rteCustomWordUpload" name="UploadFiles">
         </div>
     </div>
 </div>
 <div id="action-description">
-    <p>This sample demonstrates the full features of Rich Text Editor that includes all the tools and functionalities.</p>
+    <p>This sample demonstrates the full features of Rich Text Editor that includes all the tools and functionalities.
+    </p>
 </div>
 
 <div id="description">
-    <p>This sample used <code>Code mirror</code> plugins helps to highlight the HTML content and when changes happens in code view, the same has been reflected in preview mode. </p>
-    <p>The quick toolbar provides a convenient way to customize Image, Video, Audio, Table, and Link elements. Simply right-click on the desired element, utilizing the <code>showOnRightClick</code> property, and the quick toolbar will appear, providing an easy way for customization.</p>
+    <p>This sample used <code>Code mirror</code> plugins helps to highlight the HTML content and when changes happens in
+        code view, the same has been reflected in preview mode. </p>
+    <p>This sample has <code>Mention</code> control integraed used to display a list of items that users can select or tag
+        from the suggested list.</p>
+    <p>The quick toolbar provides a convenient way to customize Image, Video, Audio, Table, and Link elements. Simply
+        right-click on the desired element, utilizing the <code>showOnRightClick</code> property, and the quick toolbar
+        will appear, providing an easy way for customization.</p>
     <p>The editor’s toolbar contains commands to format the content. The toolbar consists of:</p>
     <ul>
         <li><code>Lists</code> - NumberFormat list and BulletFormat list types.</li>
-        <li><code>Links</code> - A hyperlink can be inserted into the editor for quick access to related information.</li>
+        <li><code>Links</code> - A hyperlink can be inserted into the editor for quick access to related information.
+        </li>
         <li><code>Image</code> - Inserts and manages images.</li>
-         <li><code>Table</code> - Inserts and manages Tables.</li>
+        <li><code>Table</code> - Inserts and manages Tables.</li>
         <li><code>Alignment</code> - Aligns the content with left, center, and right margins.</li>
         <li><code>Undo/Redo</code> - Allows undo/redo operations.</li>
         <li><code>Indent/ Outdent</code> - Increases/decreases the indent level of the content.</li>
@@ -64,69 +157,105 @@
         <li><code>Lower / Upper case</code> – Changes the casing of the selected text.</li>
         <li><code>SubScript / SuperScript</code> - Makes the selected text as subscript (lower)/superscript(upper).</li>
         <li><code>FullScreen</code> - Stretches the editor to the maximum width and height of the browser window.</li>
-        <li><code>Format</code> – Formats the sentence in different ways such as heading level, quotation, and code snippet</li>
-        <li><code>Styles</code> – Allows you to apply inline styles to the selected content like bold, italic, and more.</li>
-        <li><code>Insert Code</code> - Allows you to apply code format to the selected parent nodes. In the above sample, the style for the code format ('pre' tag) is applied by adding the background color.</li>
+        <li><code>Format</code> – Formats the sentence in different ways such as heading level, quotation, and code
+            snippet</li>
+        <li><code>Styles</code> – Allows you to apply inline styles to the selected content like bold, italic, and more.
+        </li>
+        <li><code>Insert Code</code> - Allows you to apply code format to the selected parent nodes. In the above
+            sample, the style for the code format ('pre' tag) is applied by adding the background color.</li>
         <li><code>Insert Emoticon</code> - Inserts the emoticon to the editor</li>
         <li><code>Audio</code> - Inserts and manages audios.</li>
         <li><code>Video</code> - Inserts and manages videos.</li>
-        <li><code>Format Painter</code> - The Format Painter feature allows you to copy the formats and apply them to content without formatting thus saving time to reformat the content.</li>
+        <li><code>Format Painter</code> - The Format Painter feature allows you to copy the formats and apply them to
+            content without formatting thus saving time to reformat the content.</li>
     </ul>
 </div>
 
 <style>
-    .e-code-mirror::before {
-        content: '\e345';
+    .e-rte-code-mirror-enabled .rte-code-mirror {
+        display: block !important;
+        /* To show the custom source code view. */
     }
 
-    .e-html-preview::before {
-        content: '\e350';
+    .e-rte-code-mirror-enabled .e-rte-content {
+        display: none !important;
+        /* To hide the editor area when custom source code enabled. */
     }
 
-    .CodeMirror-linenumber,
-    .CodeMirror-gutters {
-        display: none;
+    .editor-mention-item-template {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .em-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .em-avatar {
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 500;
+        text-indent: 0px;
+        line-height: 13px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .em-name {
+        color: rgb(16, 24, 40);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        margin-bottom: 5px;
+    }
+
+    .em-email {
+        color: gray;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+
+    #defaultRTE_rte-edit-view_options li {
+        padding: 10px;
+        height: 60px;
+    }
+
+    body[class*="-dark"] .em-name {
+        color: #fff !important;
+    }
+
+    /** custom source code styles **/
+    body[class*="-dark"] .rte-code-mirror .cm-tag {
+        color: #00ff00;
+    }
+
+    body[class*="-dark"] .rte-code-mirror .cm-string {
+        color: blue;
+    }
+
+    body[class*="-dark"] .rte-code-mirror .cm-attribute {
+        color: #f00;
+    }
+
+    body[class*="-dark"] .rte-code-mirror .CodeMirror-gutters,
+    body[class*="-dark"] .rte-code-mirror .CodeMirror {
+        background-color: transparent;
+        color: #fff;
     }
 
     .sb-header {
         z-index: 100;
-    }
-    .fabric-dark .cm-s-default .cm-tag,
-    .bootstrap5-dark .cm-s-default .cm-tag,
-    .material-dark .cm-s-default .cm-tag,
-    .tailwind-dark .cm-s-default .cm-tag,
-    .highcontrast .cm-s-default .cm-tag {
-        color: #00ff00;
-    }
-
-    .fabric-dark .cm-s-default .cm-string,
-    .bootstrap5-dark .cm-s-default .cm-string,
-    .material-dark .cm-s-default .cm-string,
-    .tailwind-dark .cm-s-default .cm-string {
-        color: blue;
-    }
-
-    .highcontrast .cm-s-default .cm-string {
-        color: #ffd939;
-    }
-
-    .fabric-dark .cm-s-default .cm-attribute,
-    .bootstrap5-dark .cm-s-default .cm-attribute,
-    .material-dark .cm-s-default .cm-attribute,
-    .tailwind-dark .cm-s-default .cm-attribute,
-    .highcontrast .cm-s-default .cm-attribute {
-        color: #f00;
-    }
-    
-    .fabric-dark .CodeMirror,
-    .bootstrap5-dark .CodeMirror,
-    .material-dark .CodeMirror,
-    .tailwind-dark .CodeMirror {
-        background:  #303030;
-    }
-
-    .highcontrast .CodeMirror {
-        background: black;
     }
 
     .sb-content.e-view.hide-header {
@@ -135,27 +264,5 @@
 
     .sb-header.e-view.hide-header {
         display: none;
-    }
-
-    .e-richtexteditor .e-rte-content .e-content[contenteditable="true"] pre {
-        padding: 10px;
-        background: #F4F5F7;
-    }
-
-    .fabric-dark .e-richtexteditor .e-rte-content .e-content pre,
-    .bootstrap5-dark .e-richtexteditor .e-rte-content .e-content pre,
-    .material-dark .e-richtexteditor .e-rte-content .e-content pre,
-    .tailwind-dark .e-richtexteditor .e-rte-content .e-content pre,
-    .highcontrast .e-richtexteditor .e-rte-content .e-content pre {
-        padding: 10px;
-        background: #303030;
-    }
-    
-    #defaultRTEmirror-view {   
-        padding: 0px;
-    }
-    
-    #defaultRTEmirror-view pre {    
-        background: transparent;
     }
 </style>

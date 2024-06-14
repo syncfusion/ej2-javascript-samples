@@ -19,9 +19,9 @@ this.default = function () {
  */
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind','MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Fluent', 'FluentDark', 'Material3', 'Material3Dark'];
-var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#FFD939', '#6355C7', '#4F46E5','#9ECB08', '#4472c4', '#a16ee5', '#8B5CF6', '#8F80F4', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF'];
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+var themes = ['Material', 'Fabric', 'Bootstrap', 'Highcontrast', 'Bootstrap5', 'Tailwind','MaterialDark', 'FabricDark', 'BootstrapDark', 'TailwindDark', 'Bootstrap5Dark', 'Fluent', 'FluentDark', 'Material3', 'Material3Dark', 'Fluent2', 'Fluent2Dark'];
+var borderColor = ['#00bdae', '#4472c4', '#a16ee5', '#FFD939', '#6355C7', '#4F46E5','#9ECB08', '#4472c4', '#a16ee5', '#8B5CF6', '#8F80F4', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF', '#6200EE', '#9BB449'];
 var fill = 'url(#' + selectedTheme + '-gradient-chart)';
     var chart = new ej.charts.Chart({
         chartArea: { border: { width: 0 } },

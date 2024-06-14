@@ -35,10 +35,10 @@ this.default = function () {
         ],
         //Initializing Chart Annotations
         annotations: [{
-                content: '<div id="chart_cloud"><img src="src/chart/images/cloud.png"  style="width: 41px; height: 41px"/></div>',
+                content: '<div id="chart_cloud"><img src="src/chart/images/cloud.png" alt="Cloud Picture" style="width: 41px; height: 41px"/></div>',
                 x: 'Sun', y: 70, coordinateUnits: 'Point', verticalAlignment: 'Top'
             }, {
-                content: '<div id="chart_cloud"><img src="src/chart/images/sunny.png"  style="width: 41px; height: 41px"/></div>',
+                content: '<div id="chart_cloud"><img src="src/chart/images/sunny.png" alt="Sunny Picture" style="width: 41px; height: 41px"/></div>',
                 x: 'Sat', y: 35, coordinateUnits: 'Point', yAxisName: 'yAxis'
             }],
         //Initializing Chart Series
@@ -80,7 +80,7 @@ this.default = function () {
             var axisTheme = location.hash.split('/')[1];
             axisTheme = axisTheme ? axisTheme : 'Material';
             args.chart.theme = (axisTheme.charAt(0).toUpperCase() + 
-                axisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                axisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

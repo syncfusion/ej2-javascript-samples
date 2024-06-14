@@ -16,33 +16,33 @@ this.default = function () {
         },
         eventMarkers: [
                 {
-                    day: new Date('04/02/2019'),
+                    day: new Date('04/02/2024'),
                 }, {
-                    day: new Date('04/09/2019'),
+                    day: new Date('04/09/2024'),
                     label: 'Research phase'
                 }, {
-                    day: new Date('04/30/2019'),
+                    day: new Date('04/30/2024'),
                     label: 'Design phase'
                 }, {
-                    day: new Date('05/23/2019'),
+                    day: new Date('05/23/2024'),
                     label: 'Production phase'
                 }, {
-                    day: new Date('06/20/2019'),
+                    day: new Date('06/20/2024'),
                     label: 'Sales and marketing phase'
                 }
             ],
             holidays: [
                 {
-                    from: new Date('04/04/2019'),
-                    to: new Date('04/04/2019'),
+                    from: new Date('04/04/2024'),
+                    to: new Date('04/04/2024'),
                     label: 'Local Holiday'
                 }, {
-                    from: new Date('04/19/2019'),
-                    to: new Date('04/19/2019'),
+                    from: new Date('04/19/2024'),
+                    to: new Date('04/19/2024'),
                     label: 'Good Friday'
                 }, {
-                    from: new Date('04/30/2019'),
-                    to: new Date('04/30/2019'),
+                    from: new Date('04/30/2024'),
+                    to: new Date('04/30/2024'),
                     label: 'Release Holiday'
                 },
             ],
@@ -93,8 +93,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2,
         },
-        projectStartDate: new Date('03/25/2019'),
-        projectEndDate: new Date('07/28/2019'),
+        projectStartDate: new Date('03/25/2024'),
+        projectEndDate: new Date('07/28/2024'),
     });
     
     ganttChart.appendTo('#GanttExport');

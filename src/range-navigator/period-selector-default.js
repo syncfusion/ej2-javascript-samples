@@ -3,7 +3,7 @@
  */
 var selectedThemes = location.hash.split('/')[1];
 selectedThemes = selectedTheme ? selectedTheme : 'Material';
-var themes = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+var themes = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
 this.default = function () {
     var chart = new ej.charts.Chart({
         primaryXAxis: {

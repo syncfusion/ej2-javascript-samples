@@ -66,15 +66,18 @@ this.default = function () {
         width: '100%',
         change: function () {
             if (layertype.value === 'OSM') {
+                maps.layers[maps.layersCollection.length - 1].urlTemplate = 'https://tile.openstreetmap.org/level/tileX/tileY.png';
+                maps.layers[maps.layersCollection.length - 1].shapeData = null;
                 if (mode.value === 'SVG')
                 {
                     mode.value = mode.dataSource[0];
                 }
                 mode.dataSource = modeData.slice(0, 3);
             } else {
+                maps.layers[maps.layersCollection.length - 1].urlTemplate = '';
+                maps.layers[maps.layersCollection.length - 1].shapeData = new ej.maps.MapAjax('./src/maps/map-data/world-map.json');
                 mode.dataSource = modeData;
             }
-            maps.layers[maps.layersCollection.length - 1].layerType =layertype.value;
             maps.refresh();
         }
     });
@@ -84,8 +87,15 @@ this.default = function () {
         isPrimary: true
     });
     togglebtn.appendTo('#togglebtn');
+
+    var fileText = new ej.inputs.TextBox({
+        value: 'Maps',
+        width: '100%'
+    });
+    fileText.appendTo('#fileName');
+
     document.getElementById('togglebtn').onclick = function () {
-        var fileName = (document.getElementById('fileName')).value;
+        var fileName = fileText.value;
         maps.export(mode.value, fileName);
     };
 };

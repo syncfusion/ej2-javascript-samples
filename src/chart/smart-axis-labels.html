@@ -53,21 +53,21 @@
             </tr>
             <tr style="height: 50px">
                 <td style="width: 60%">
-                    <div>Enable Trim:</div>
+                    <div id="trim">Enable Trim:</div>
                 </td>
                 <td style="width: 40%;">
                     <div>
-                        <input type="checkbox" name="enableTrim" id="Trim" value= "true" ><br>
+                        <input type="checkbox" name="enableTrim" id="Trim" value= "true" aria-labelledby="Checkbox unchecked"><br>
                     </div>
                 </td>
             </tr>
             <tr style="height: 50px">
                 <td style="width: 60%">
-                    <div>Maximum Label Width:</div>
+                    <div id="labelWidth">Maximum Label Width:</div>
                 </td>
                 <td style="width: 40%;">
                     <div style='margin-top: 0px;'>
-                        <input type="text" id="LabelWidth" >
+                        <input type="text" id="LabelWidth" aria-labelledby="Text">
                     </div>
                 </td>
             </tr>
@@ -81,7 +81,7 @@
 </div>
 <div id="description">
     <p>
-        In this example, you can see how the axis labels are smartly arranged when they overlap with each other using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#labelintersectaction">labelIntersectAction</a> property in the axis.
+        In this example, you can see how the axis labels are smartly arranged when they overlap with each other using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#labelintersectaction" aria-label="Navigate to the labelIntersectAction property reference for JavaScript Chart Axis">labelIntersectAction</a> property in the axis.
     </p>
     <p>The following are the <code>labelIntersectAction</code> property values and their behaviors:
     </p>
@@ -95,7 +95,7 @@
         <li><code>None</code> - Shows all the labels.</li>
     </ul>
     <br>
-    <p>Chart handles edge labels placement using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#edgelabelplacement">edgeLabelPlacement</a> property. Its values and their behaviors are:</code> property.
+    <p>Chart handles edge labels placement using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#edgelabelplacement" aria-label="Navigate to the edgeLabelPlacement property reference for JavaScript Chart Axis">edgeLabelPlacement</a> property. Its values and their behaviors are:</code> property.
     </p>
     <ul>
         <li><code>None</code> - No action will be performed.</li>
@@ -105,7 +105,7 @@
     <br>
     <p>
         More information on the smart axis labels can be found in this
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/axis-labels/#smart-axis-labels">documentation section</a>.
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/axis-labels/#smart-axis-labels" aria-label="Navigate to the documentation for Smart Axis Labels in JavaScript Chart control">documentation section</a>.
     </p>
 </div>
 <style>

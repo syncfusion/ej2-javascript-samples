@@ -136,7 +136,7 @@
 </div>
 
 <div id="action-description">
-    <p>This <a href="https://www.syncfusion.com/javascript-ui-controls/js-scheduler" target="_blank">JavaScript
+    <p>This <a aria-label="Javascript scheduler example" href="https://www.syncfusion.com/javascript-ui-controls/js-scheduler" target="_blank">JavaScript
             Scheduler example</a> demonstrates the overview of Javascript Scheduler with its overall features. Use the
         toolbar buttons to play with Scheduler functionalities.</p>
 </div>
@@ -217,6 +217,18 @@
 
     .material3-dark .schedule-overview .overview-content .right-panel .control-panel {
         background-color: #2a2731;
+    }
+
+    .fluent2 .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #FFFFFF;
+    }
+
+    .fluent2-dark .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #292929;
+    }
+
+    .fluent2-highcontrast .schedule-overview .overview-content .right-panel .control-panel {
+        background-color: #000000;
     }
 
     .schedule-overview .overview-toolbar.e-rtl + *{
@@ -403,6 +415,12 @@
     .template .text-child {
         font-size: 14px;
         line-height: 23px !important;
+    }
+
+    .fluent2 .schedule-overview .overview-toolbar .e-template .template .icon-child .e-checkbox-wrapper .e-frame,
+    .fluent2-dark .schedule-overview .overview-toolbar .e-template .template .icon-child .e-checkbox-wrapper .e-frame,
+    .fluent2-highcontrast .schedule-overview .overview-toolbar .e-template .template .icon-child .e-checkbox-wrapper .e-frame {
+        margin: 0;
     }
 
     .fluent .e-appbar .e-btn-icon.e-icons,

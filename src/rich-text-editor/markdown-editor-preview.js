@@ -21,12 +21,13 @@ this.default = function () {
     splitObj.appendTo('#splitter-rte-markdown-preview');
     defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '100%',
+        placeholder : "Enter your text here...",
         floatingToolbarOffset: 0,
         editorMode: 'Markdown',
         toolbarSettings: {
             type: 'Expand',
             enableFloating: false,
-            items: ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'OrderedList',
+            items: ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'Blockquote', 'OrderedList',
                 'UnorderedList', '|', 'CreateLink', 'Image', 'CreateTable',
                 '|', 'Undo', 'Redo'
             ]

@@ -39,8 +39,8 @@ this.default = function () {
         splitterSettings: {
             position: "35%"
         },
-        projectStartDate: new Date('03/24/2019'),
-        projectEndDate: new Date('05/04/2019'),
+        projectStartDate: new Date('03/24/2024'),
+        projectEndDate: new Date('05/04/2024'),
     });
     ganttChart.appendTo('#TasklabelTemplate');
     window.getResourceElements = function (value) {
@@ -52,6 +52,7 @@ this.default = function () {
         span.style.marginRight = "5px";
         for (var index = 0; index < value.length; index++) {
             img.src = 'https://ej2.syncfusion.com/demos/src/gantt/images/' + value[index].resourceName + '.png';
+            img.alt = value[index].resourceName;
             span.innerHTML = value[index].resourceName;
             out = out + img.outerHTML + span.outerHTML;
         }

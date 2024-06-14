@@ -4,7 +4,6 @@
     "category": "Data Visualization",
     "ftName": "maps",
     "dataSourcePath":"src/maps/map-data.js",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -158,8 +157,7 @@
             "sourceFiles":[
                 { "displayName": "polygon.html", "path":"src/maps/polygon.html" },
                 { "displayName": "polygon.js", "path":"src/maps/polygon.js" }
-            ],
-            "type": "update"
+            ]
         },
         {
             "url": "osm",

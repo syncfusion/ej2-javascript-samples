@@ -347,11 +347,11 @@ window.groupData = [
     { Name: 'SIM cards', id: '3', content: 'AT&T', class: 'sim', category: 'Wireless & networks', order: 0 },
     { Name: 'Display', content: 'Adaptive brightness is OFF', id: '4', class: 'display', category: 'Device', order: 1 },
     { Name: 'Sound', content: 'Ringer volume at 50%', id: '5', class: 'sound', category: 'Device', order: 1 },
-    { Name: 'Battery', content: '85%', id: '5', class: 'battery', category: 'Device', order: 1 },
-    { Name: 'Users', content: 'Signed in as Albert', id: '6', class: 'user', category: 'Device', order: 1 },
-    { Name: 'Location', content: 'ON / High accuracy', id: '7', class: 'location', category: 'Personal', order: 2 },
-    { Name: 'Security', id: '8', content: 'Screen Lock', class: 'security', category: 'Personal', order: 2 },
-    { Name: 'Languages & input', content: 'English (US)', id: '9', class: 'language', category: 'Personal', order: 2 }
+    { Name: 'Battery', content: '85%', id: '6', class: 'battery', category: 'Device', order: 1 },
+    { Name: 'Users', content: 'Signed in as Albert', id: '7', class: 'user', category: 'Device', order: 1 },
+    { Name: 'Location', content: 'ON / High accuracy', id: '8', class: 'location', category: 'Personal', order: 2 },
+    { Name: 'Security', id: '9', content: 'Screen Lock', class: 'security', category: 'Personal', order: 2 },
+    { Name: 'Languages & input', content: 'English (US)', id: '10', class: 'language', category: 'Personal', order: 2 }
 ];
  window.listViewData= [
     {
@@ -506,25 +506,25 @@ window.callHistoryData = [
         group: 'Received', time: 'Yesterday', category: 'Yesterday'
     },
     {
-        text: 'Anderson', id: 'received-01', icon: 'e-custom', type: 'received',
+        text: 'Anderson', id: 'received-04', icon: 'e-custom', type: 'received',
         group: 'Received', time: '12 hours ago', category: 'Today'
     },
     {
-        text: 'Thomas', id: 'received-02', icon: 'e-custom', type: 'received',
+        text: 'Thomas', id: 'received-05', icon: 'e-custom', type: 'received',
         group: 'Received', time: 'Yesterday', category: 'Yesterday'
     },
-    { text: 'Jackson', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-    { text: 'Emily', id: 'missed-01', icon: 'e-custom', type: 'missed', group: 'Missed', time: '14 hours ago', category: 'Today' },
-    { text: 'White', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-    { text: 'Jones', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: '18 hours ago', category: 'Today' },
-    { text: 'Grace', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
-    { text: 'Brooklyn', id: 'missed-02', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Jackson', id: 'missed-03', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Emily', id: 'missed-04', icon: 'e-custom', type: 'missed', group: 'Missed', time: '14 hours ago', category: 'Today' },
+    { text: 'White', id: 'missed-05', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Jones', id: 'missed-06', icon: 'e-custom', type: 'missed', group: 'Missed', time: '18 hours ago', category: 'Today' },
+    { text: 'Grace', id: 'missed-07', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
+    { text: 'Brooklyn', id: 'missed-08', icon: 'e-custom', type: 'missed', group: 'Missed', time: 'Yesterday', category: 'Yesterday' },
     {
-        text: 'Arianna', id: 'received-01', icon: 'e-custom', type: 'received',
+        text: 'Arianna', id: 'received-06', icon: 'e-custom', type: 'received',
         group: 'Received', time: 'Yesterday', category: 'Yesterday'
     },
     {
-        text: 'Katherine', id: 'received-02', icon: 'e-custom', type: 'received',
+        text: 'Katherine', id: 'received-07', icon: 'e-custom', type: 'received',
         group: 'Received', time: 'Yesterday', category: 'Yesterday'
     },
 ];
@@ -544,14 +544,14 @@ window.CheckListData = [
     { text: 'Lamborghini Veneno', id: 'list-12' }
 ];
 window.commonData = [
-    { name: 'Nancy', icon: 'N', id: '0', },
-    { name: 'Andrew', icon: 'A', id: '1' },
-    { name: 'Janet', icon: 'J', id: '2' },
-    { name: 'Margaret', imgUrl: './src/listview/images/margaret.png', id: '3' },
-    { name: 'Steven', icon: 'S', id: '4' },
-    { name: 'Laura', imgUrl: './src/listview/images/laura.png', id: '5' },
-    { name: 'Robert', icon: 'R', id: '6' },
-    { name: 'Michael', icon: 'M', id: '7' },
-    { name: 'Albert', imgUrl: './src/listview/images/albert.png', id: '8' },
-    { name: 'Nolan', icon: 'N', id: '9' }
+    { name: 'Nancy', icon: 'N', id: '0', alttext:'' },
+    { name: 'Andrew', icon: 'A', id: '1', alttext:'' },
+    { name: 'Janet', icon: 'J', id: '2', alttext:'' },
+    { name: 'Margaret', imgUrl: './src/listview/images/margaret.png', id: '3', alttext:'' },
+    { name: 'Steven', icon: 'S', id: '4', alttext:'' },
+    { name: 'Laura', imgUrl: './src/listview/images/laura.png', id: '5', alttext:'' },
+    { name: 'Robert', icon: 'R', id: '6', alttext:'' },
+    { name: 'Michael', icon: 'M', id: '7', alttext:'' },
+    { name: 'Albert', imgUrl: './src/listview/images/albert.png', id: '8', alttext:'' },
+    { name: 'Nolan', icon: 'N', id: '9', alttext:'' }
 ];

@@ -141,7 +141,7 @@ this.default = function () {
     };
     var toggleLegend;
     var legendCheckBox = new ej.buttons.CheckBox({
-        change: toggleLegend, checked: false
+        change: toggleLegend, checked: false 
     }, '#toggleLegend');
     legendCheckBox.change = toggleLegend = function (e) {
         maps.legendSettings.toggleLegendSettings.enable = e.checked;

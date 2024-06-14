@@ -9,7 +9,7 @@ this.default = function () {
             startAngle: 240,
             endAngle: 120,
             lineStyle: { width: 0 },
-            majorTicks: { color: 'white', offset: -5, height: 12 },
+            majorTicks: { color: 'white', offset: -3.7, height: 10 },
             minorTicks: { width: 0 },
             labelStyle: { useRangeColor: true, font: { color: '#424242', size: '13px', fontFamily: 'Segoe UI' } },
             pointers: [{

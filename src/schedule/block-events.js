@@ -5,7 +5,7 @@ this.default = function () {
     window.getEmployeeImage = function (value) {
         var resourceName = value.resourceData[value.resource.textField];
         return '<img class="employee-image" src="src/schedule/images/' +
-            resourceName.toLowerCase() + '.png" />';
+            resourceName.toLowerCase() + '.png" alt="' + resourceName.toLowerCase() + '"/>';
     };
     window.getEmployeeDesignation = function (value) {
         return value.resourceData.Designation;

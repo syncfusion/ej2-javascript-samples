@@ -55,7 +55,7 @@ this.default = function () {
             var logTheme = location.hash.split('/')[1];
             logTheme = logTheme ? logTheme : 'Material';
             args.chart.theme = (logTheme.charAt(0).toUpperCase() + 
-                logTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                logTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
          // custom code end
     });

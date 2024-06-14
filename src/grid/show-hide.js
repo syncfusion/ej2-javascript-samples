@@ -10,6 +10,8 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageCount: 2 },
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 160 },
             { field: 'ProductName', headerText: 'Product Name', width: 170 },

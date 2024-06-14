@@ -47,7 +47,11 @@ this.default = function () {
                 width: 0
             },
             majorTicks: {
-                interval: 20
+                interval: 20,
+                color: '#9e9e9e'
+            },
+            minorTicks: {
+                color: '#9e9e9e'
             },
             opposedPosition: true,
             labelStyle: {

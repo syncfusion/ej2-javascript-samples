@@ -8,7 +8,7 @@ this.default = function () {
         if (resourceName === "GENERAL" || resourceName === "DENTAL") {
             return '';
         } else {
-            return "<img class='specialist-img' src='src/schedule/images/" + resourceName.toLowerCase() + ".png' />";
+            return "<img class='specialist-img' src='src/schedule/images/" + resourceName.toLowerCase() + ".png'  alt='" + resourceName.toLowerCase() + "' />";
         }
     };
 

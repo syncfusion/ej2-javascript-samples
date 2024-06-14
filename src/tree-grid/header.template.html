@@ -545,6 +545,109 @@
     .e-bigger.tailwind img.resources {
         padding-bottom: 36px;
     }
+
+    .fluent2-dark img.taskName {
+        content: url("src/tree-grid/images/Task Name.png");
+        padding-left: 4px;
+        padding-right: 3px;
+        margin-top: -5px;
+        width: 23px;
+    }
+    .fluent2-highcontrast img.taskName {
+        content: url("src/tree-grid/images/Task Name.png");
+        padding-left: 4px;
+        padding-right: 3px;
+        margin-top: -5px;
+        width: 23px;
+    }
+    .fluent2 img.taskName {
+        content: url("src/tree-grid/images/__Task name.png");
+        padding-left: 6px;
+        padding-right: 3px;
+        width: 25px;
+    }
+    .fluent2-dark img.resources {
+        content: url("src/tree-grid/images/Resources.png");
+        padding-left: 0px;
+        padding-right: 5px;
+        width: 21px;
+    }
+    .fluent2-highcontrast img.resources {
+        content: url("src/tree-grid/images/Resources.png");
+        padding-left: 0px;
+        padding-right: 5px;
+        width: 21px;
+    }
+    .fluent2 img.resources {
+        content: url("src/tree-grid/images/__Resources.png");
+        padding-left: 3px;
+        padding-right: 5px;
+        width: 24px;
+    }
+    .fluent2-dark img.startDate {
+        content: url("src/tree-grid/images/Start Date.png");
+        padding-right: 4px;
+        width: 20px;
+    }
+    .fluent2-highcontrast img.startDate {
+        content: url("src/tree-grid/images/Start Date.png");
+        padding-right: 4px;
+        width: 20px;
+    }
+    .fluent2 img.startDate {
+        content: url("src/tree-grid/images/__Start name.png");
+        padding-left: 3px;
+        padding-right: 4px;
+        width: 23px;
+    }
+    .fluent2-dark img.duration {
+        content: url("src/tree-grid/images/Duration.png");
+        padding-left: 1px;
+        padding-right: 5px;
+        width: 22px;
+    }
+    .fluent2-highcontrast img.duration {
+        content: url("src/tree-grid/images/Duration.png");
+        padding-left: 1px;
+        padding-right: 5px;
+        width: 22px;
+    }      
+    .fluent2 img.duration {
+        content: url("src/tree-grid/images/__Duration.png");
+        padding-left: 4px;
+        padding-right: 5px;
+    }
+    .fluent2-dark img.progress {
+	content: url("src/tree-grid/images/Progress.png");
+	padding-left: 3px;
+    margin-top: 1px;
+	padding-right: 6px;
+    margin: 0px;
+	width: 25px;
+    height: 16px;
+	background-color: #fafafa00;
+    }
+	.fluent2-highcontrast img.progress {
+	content: url("src/tree-grid/images/Progress.png");
+	padding-left: 3px;
+    margin-top: 1px;
+	padding-right: 6px;
+    margin: 0px;
+	width: 25px;
+    height: 16px;
+	background-color: #fafafa00;
+    }
+    .fluent2 img.progress {
+	content: url("src/tree-grid/images/__progress.png");
+	padding-left: 9px;
+	padding-right: 6px;
+	background-color: #fafafa00;
+    margin: 0px;
+    height: 16px;
+    width: 31px;
+    }
+
+
 </style>
 <!-- custom code end -->
 <style>
@@ -580,13 +683,16 @@
         width: 31px;
         height: 16px;
     }
+    img.taskName, img.progress, img.startDate, img.duration, img.resources{
+        display: inline-block;
+    }
 </style>
 
 <script type="text/x-template" id="resource">
     <tr >
         <td style="width: 30%">
             <div>
-                <img class="resources"/> Resources
+                <img class="resources" alt="Resources"/> Resources
             </div>
         </td>
     </tr>
@@ -596,7 +702,7 @@
     <tr >
         <td style="width: 30%">
             <div>
-                <img class="taskName"  width="26px" /> Task Name
+                <img class="taskName"  width="26px" alt="TaskName"/> Task Name
             </div>
         </td>
     </tr>
@@ -605,7 +711,7 @@
     <tr >
         <td style="width: 30%">
             <div>
-                <img class="startDate" /> Start Date
+                <img class="startDate" alt="StartDate"/> Start Date
             </div>
         </td>
     </tr>
@@ -615,7 +721,7 @@
     <tr >
         <td style="width: 30%">
             <div>
-                <img class="duration"  width="25" /> Duration
+                <img class="duration"  width="25" alt="Duration"/> Duration
             </div>
         </td>
     </tr>
@@ -625,7 +731,7 @@
      <tr >
         <td style="width: 30%">
             <div>
-                <img class="progress" /> Progress
+                <img class="progress" alt="Progress"/> Progress
             </div>
         </td>
     </tr>
@@ -633,7 +739,7 @@
 </script>
 <div class="control-section">
     <div class="content-wrapper">
-        <div id="TreeGrid">
+        <div id="TreeGrid" role="grid" aria-label="Tree Grid">
         </div>
     </div>
 </div>
@@ -653,7 +759,7 @@
 		<p>
 			More information on the header-template can be found in
 			<a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/columns/#header-template">
-				documentation section
+				documentation</a> section
 		</p>
 </div>
 <style>

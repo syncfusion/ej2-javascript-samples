@@ -9,6 +9,7 @@ this.default = function () {
         cssClass: 'e-custom-spreadsheet',
         allowOpen: false,
         allowSave: false,
+        allowPrint: false,
         allowEditing: false,
         selectionSettings: {
         mode: 'None'
@@ -147,7 +148,7 @@ this.default = function () {
                         new ej.inputs.TextBox({ placeholder: 'Email' }, target);
                         break;
                     case 'C9':
-                        new ej.inputs.TextBox(null, target);
+                        new ej.inputs.TextBox({ placeholder: 'Address' }, target);
                         break;
                 }
             }

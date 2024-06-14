@@ -4,16 +4,16 @@
 
 this.default = function() {
     var foodData = [
-        { text: 'Hamburger', id: 'list-01', price: '$10', src: 'src/listview/images/hamburger.jpg', type: 'non-veg', description: 'A patty of ground beef grilled and placed between two halves of a bun with slices of lettuce and mayonnaise', rating: 3 },
-        { text: 'Cheeseburger', id: 'list-02', price: '$12', src: 'src/listview/images/cheeseburger.jpg', type: 'veg', description: 'A hamburger with a slice of melted cheese on top of the meat patty, added near the end of the cooking time', rating: 4 },
-        { text: 'Sandwich', id: 'list-03', price: '$8', src: 'src/listview/images/sandwich.jpg', type: 'veg', description: 'A combination of vegetables, sliced cheese or meat, placed on or between slices of bread with layer of ingredients', rating: 5 },
-        { text: 'Milkshake', id: 'list-04', price: '$6', src: 'src/listview/images/milkshake.jpg', type: 'veg', description: 'A sweet beverage made by blending milk, ice cream, and flavorings or fruit syrup into a thick, sweet, cold mixture', rating: 3 },
-        { text: 'Muffin', id: 'list-05', price: '$11', src: 'src/listview/images/muffin.jpg', type: 'veg', description: 'Muffins are single-serving quick breads, which rise with the help of baking soda or baking powder and eggs instead of yeast', rating: 4 },
-        { text: 'Pizza', id: 'list-06', price: '$22', src: 'src/listview/images/pizza.jpg', type: 'veg', description: 'A combination of a flattened disk of bread dough with olive oil, oregano, tomato, mozzarella cheese', rating: 3 },
-        { text: 'Onion ring', id: 'list-07', price: '$10', src: 'src/listview/images/onionrings.jpg', type: 'veg', description: 'Consists of a cross-sectional "ring" of onion dipped in bread crumbs and then deep fried; variant is made with onion paste.', rating: 4 },
-        { text: 'Sausage', id: 'list-08', price: '$15', src: 'src/listview/images/sausage.jpg', type: 'veg', description: 'Sausage is a combination of minced/ground meat, a binder, water and seasonings, mild but strongly spiced', rating: 5 },
-        { text: 'Pretzel', id: 'list-09', price: '$25', src: 'src/listview/images/pretzel.jpg', type: 'veg', description: 'Made from a rope of dough, the pretzel is briefly boiled and then glazed with egg, salted, and baked', rating: 3 },
-        { text: 'Pancake', id: 'list-10', price: '$23', src: 'src/listview/images/pancake.jpg', type: 'veg', description: 'A combination of eggs, milk on a hot surface such as a griddle or frying pan, often frying with oil or butter', rating: 4 },
+        { text: 'Hamburger', id: 'list-01', price: '$10', src: 'src/listview/images/hamburger.jpg', alttext:'hamburger', type: 'non-veg', description: 'A patty of ground beef grilled and placed between two halves of a bun with slices of lettuce and mayonnaise', rating: 3 },
+        { text: 'Cheeseburger', id: 'list-02', price: '$12', src: 'src/listview/images/cheeseburger.jpg', alttext:'cheeseburger', type: 'veg', description: 'A hamburger with a slice of melted cheese on top of the meat patty, added near the end of the cooking time', rating: 4 },
+        { text: 'Sandwich', id: 'list-03', price: '$8', src: 'src/listview/images/sandwich.jpg', alttext:'sandwich', type: 'veg', description: 'A combination of vegetables, sliced cheese or meat, placed on or between slices of bread with layer of ingredients', rating: 5 },
+        { text: 'Milkshake', id: 'list-04', price: '$6', src: 'src/listview/images/milkshake.jpg', alttext:'milkshake', type: 'veg', description: 'A sweet beverage made by blending milk, ice cream, and flavorings or fruit syrup into a thick, sweet, cold mixture', rating: 3 },
+        { text: 'Muffin', id: 'list-05', price: '$11', src: 'src/listview/images/muffin.jpg', alttext:'muffin', type: 'veg', description: 'Muffins are single-serving quick breads, which rise with the help of baking soda or baking powder and eggs instead of yeast', rating: 4 },
+        { text: 'Pizza', id: 'list-06', price: '$22', src: 'src/listview/images/pizza.jpg', alttext:'pizza', type: 'veg', description: 'A combination of a flattened disk of bread dough with olive oil, oregano, tomato, mozzarella cheese', rating: 3 },
+        { text: 'Onion ring', id: 'list-07', price: '$10', src: 'src/listview/images/onionrings.jpg', alttext:'onionrings', type: 'veg', description: 'Consists of a cross-sectional "ring" of onion dipped in bread crumbs and then deep fried; variant is made with onion paste.', rating: 4 },
+        { text: 'Sausage', id: 'list-08', price: '$15', src: 'src/listview/images/sausage.jpg', alttext:'sausage', type: 'veg', description: 'Sausage is a combination of minced/ground meat, a binder, water and seasonings, mild but strongly spiced', rating: 5 },
+        { text: 'Pretzel', id: 'list-09', price: '$25', src: 'src/listview/images/pretzel.jpg', alttext:'pretzel', type: 'veg', description: 'Made from a rope of dough, the pretzel is briefly boiled and then glazed with egg, salted, and baked', rating: 3 },
+        { text: 'Pancake', id: 'list-10', price: '$23', src: 'src/listview/images/pancake.jpg', alttext:'pancake', type: 'veg', description: 'A combination of eggs, milk on a hot surface such as a griddle or frying pan, often frying with oil or butter', rating: 4 },
     ];
     //Define customized template
     function loadTemplate(data) {
@@ -23,7 +23,7 @@ this.default = function() {
             return '<div class="e-list-wrapper" style="border-bottom: inset;">' +
             '<div style="display: flex; justify-content: space-between; align-items: flex-start; white-space: normal; padding: 10px;">' +
                 '<div style="display: flex; align-items: center;">' +
-                    '<img class="e-avatar" src="'+ data.src +'" style="background:#BCBCBC; width: 100px; height: 100px; border-radius: 4px;" />' +
+                    '<img class="e-avatar" src="'+ data.src +'" alt="'+ data.alttext +'" style="background:#BCBCBC; width: 100px; height: 100px; border-radius: 4px;" />' +
                     '<div style="margin-left: 20px; text-align: left; max-width: 600px; display: flex; flex-direction: column;">' +
                         '<div style="display: flex; align-items: center;">' +
                             '<span style="font-size: 18px; font-weight: 600; padding-bottom: 3px;" class="e-headertext">' + data.text + '</span>' +
@@ -42,7 +42,7 @@ this.default = function() {
         '</div>';
         } else {
             return '<div class="e-list-wrapper e-list-multi-line e-list-avatar" style="padding-left: 122px; padding-right: 1.0666em; border-bottom: inset;">' +
-            '<img class="e-avatar" src="'+ data.src +'" />' +
+            '<img class="e-avatar" src="'+ data.src +'" alt="'+ data.alttext +'"/>' +
             '<span class="e-list-item-header e-headertext" style="font-size: 14px;">' + data.text +  '</span>' +
             '<svg width="12" height="12" style="right: 10px; margin-top: -15px; position: absolute;" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">' + 
             '<path fill-rule="evenodd" clip-rule="evenodd" d="M2 1H10C10.5523 1 11 1.44771 11 2V10C11 10.5523 10.5523 11 10 11H2C1.44771 11 1 10.5523 1 10V2C1 1.44771 1.44771 1 2 1ZM0 2C0 0.895432 0.895432 0 2 0H10C11.1046 0 12 0.895432 12 2V10C12 11.1046 11.1046 12 10 12H2C0.895432 12 0 11.1046 0 10V2ZM4 3C3.44771 3 3 3.44771 3 4V8C3 8.55229 3.44771 9 4 9H8C8.55229 9 9 8.55229 9 8V4C9 3.44771 8.55229 3 8 3H4Z" fill=" ' + typeValue +' "/>' +

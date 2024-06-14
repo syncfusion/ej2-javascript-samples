@@ -3,6 +3,8 @@ this.default = function () {
         dataSource: window.categoryData,
         allowPaging: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         toolbar: ['Search'],
         columns: [
             { field: 'CategoryName', headerText: 'Category Name', width: 160 },

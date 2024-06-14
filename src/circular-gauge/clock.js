@@ -83,11 +83,13 @@ this.default = function () {
                 },
             }],
             annotations: [{
+                description:'Sub gauge one',
                 content: '<div id="subGaugeOne" style="margin-left: -50%"></div>',
                 angle: 290,
                 radius: '0%',
                 zIndex: '1'
             }, {
+                description:'Sub gauge two',
                 content: '<div id="subGaugeTwo" style="margin-left: -110%;margin-top: -50%;"></div>',
                 angle: 90,
                 radius: '0%',

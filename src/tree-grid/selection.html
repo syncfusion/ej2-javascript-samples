@@ -3,6 +3,17 @@
         <div id="TreeGrid"></div>
     </div>
 </div>
+<!-- custom code start -->
+<style>
+    .fluent2,
+    .fluent2-dark,
+    .fluent2-highcontrast {
+        #selectiondd1 .e-input-group {
+            width: 110px !important;
+        }
+    }
+</style>
+<!-- custom code end -->
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tr>
@@ -10,7 +21,7 @@
                 <div style="padding-top: 7px">Selection Type</div>
             </td>
             <td style="width: 100%;padding-right: 10px">
-                <div>
+                <div id="selectiondd1">
                     <input type="text" tabindex="1" id='type' />
                 </div>
             </td>

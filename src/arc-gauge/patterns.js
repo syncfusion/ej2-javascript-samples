@@ -13,6 +13,7 @@ function pointerGauge1() {
       {
         annotations: [
           {
+            description:'38',
             content: '<div style="font-size:30px;margin-top: -5px;font-family: inherit;">38</div>',
             angle: 1,
             radius: '-20%',
@@ -42,6 +43,7 @@ function pointerGauge1() {
           {
             type: 'RangeBar',
             color: '#7edfb4',
+            description:'RangeBar pointer value : 38',
             value: 38,
             radius: '120%',
             pointerWidth: 28,
@@ -51,6 +53,7 @@ function pointerGauge1() {
           },
           {
             type: 'Marker',
+            description:'Marker pointer value : 38',
             markerShape: 'Rectangle',
             markerWidth: 28,
             markerHeight: 3,
@@ -129,6 +132,7 @@ function pointerGauge2() {
       {
         annotations: [
           {
+            description:'75%',
             content: '<div style="font-size:25px;font-family: inherit;">75%</div>',
             angle: 1,
             radius: '0%',
@@ -136,12 +140,14 @@ function pointerGauge2() {
 
           },
           {
+            description:'Annotation value : 0 %',
             content: '<div style="font-size:22px;font-family: inherit;">0%</div>',
             angle: 255,
             radius: '102%',
             zIndex: '1',
           },
           {
+            description:'Annotation value :100 %',
             content: '<div style="font-size:22px;font-family: inherit;">100%</div>',
             angle: 105,
             radius: '105%',
@@ -159,6 +165,7 @@ function pointerGauge2() {
           width: 0,
         },
         labelStyle: {
+          format:'{value}  %',
           font: {
             size: '0px',
             fontFamily: 'inherit'
@@ -169,6 +176,7 @@ function pointerGauge2() {
             type: 'RangeBar',
             pointerWidth: 40,
             color: '#d6f5e8',
+            description: 'RangeBar pointer value: 75',
             value: 75,
             radius: '125%',
           },
@@ -176,6 +184,7 @@ function pointerGauge2() {
             type: 'RangeBar',
             pointerWidth: 30,
             color: '#7edfb4',
+            description: 'RangeBar pointer value :75',
             value: 75,
             radius: '115%',
           },
@@ -213,6 +222,7 @@ function pointerGauge3() {
       {
         annotations: [
           {
+            description:'450',
             content:
               '<div style="font-size:30px;font-family: inherit;"> 450 </div> </div>',
             zIndex: '1',
@@ -220,18 +230,21 @@ function pointerGauge3() {
             radius: '-10%',
           },
           {
+            description:'300',
             content: '<div style="font-size:12px;font-family: inherit;"> 300 </div>',
             zIndex: '1',
             angle: 0,
             radius: '112%',
           },
           {
+            description:'400',
             content: '<div style="font-size:12px"> 400 </div>',
             zIndex: '1',
             angle: 48,
             radius: '112%',
           },
           {
+            description:'500',
             content: '<div style="font-size:12px;font-family: inherit;"> 500 </div>',
             zIndex: '1',
             angle: 93,
@@ -245,6 +258,7 @@ function pointerGauge3() {
         maximum: 600,
         radius: '75%',
         labelStyle: {
+          format:' {value}%',
           font: { fontFamily: 'inherit', size: '0px' },
           offset: 10,
         },
@@ -343,6 +357,7 @@ function pointerGauge4() {
       {
         annotations: [
           {
+            description:'21%',
             content:
               '<div class="gaugeThreeText" style="font-size:30px;font-family: inherit;">21%</div>',
             angle: 1,
@@ -352,6 +367,7 @@ function pointerGauge4() {
         ],
         lineStyle: { width: 0 },
         labelStyle: {
+          format:'Pointer {value} % ',
           font: {
             size: '0px',
             fontFamily: 'inherit'
@@ -405,6 +421,7 @@ function pointerGauge4() {
             type: 'RangeBar',
             radius: '90%',
             value: 21,
+            description:'RangeBar pointer value : 21',
             roundedCornerRadius: 10,
             color: '#a8f789',
             pointerWidth: 25,
@@ -419,6 +436,7 @@ function pointerGauge4() {
             markerHeight: 30,
             color: 'white',
             radius: '80%',
+            description:'Marker pointer value :22',
             value: 22,
             animation: {
               enable: false
@@ -431,6 +449,7 @@ function pointerGauge4() {
             markerHeight: 18,
             color: '#a8f789',
             radius: '80%',
+            description:'Marker pointer value: 22',
             value: 22,
             animation: {
               enable: false
@@ -454,6 +473,7 @@ function pointerGauge5() {
       {
         annotations: [
           {
+            description:'54%',
             content:
               '<div style="font-size:30px;font-family: inherit;">54%</div>',
             angle: 170,
@@ -463,6 +483,7 @@ function pointerGauge5() {
         ],
         lineStyle: { width: 0 },
         labelStyle: {
+          format:'$ {value} ',
           font: {
             size: '0px',
             fontFamily: 'inherit'
@@ -516,6 +537,7 @@ function pointerGauge5() {
         pointers: [
           {
             roundedCornerRadius: 20,
+            description:'RangeBar pointer value : 54',
             value: 54,
             type: 'RangeBar',
             radius: '90%',
@@ -559,6 +581,7 @@ function pointerGauge6() {
       {
         annotations: [
           {
+            description:'80% Completed',
             content:
               '<div class="annotationText">80% <br/> <div> Completed </div> </div>',
             angle: 10,
@@ -568,6 +591,7 @@ function pointerGauge6() {
         ],
         lineStyle: { width: 0 },
         labelStyle: {
+          format:'{value} % Completed',
           font: {
             size: '0px',
             fontFamily: 'inherit'
@@ -1235,6 +1259,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 54',
             value: 54,
             animation: {
               enable: false,
@@ -1247,6 +1272,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 55',
             value: 55,
             animation: {
               enable: false,
@@ -1259,6 +1285,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 56',
             value: 56,
             animation: {
               enable: false,
@@ -1271,6 +1298,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 57',
             value: 57,
             animation: {
               enable: false,
@@ -1283,6 +1311,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 58',
             value: 58,
             animation: {
               enable: false,
@@ -1295,6 +1324,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 59',
             value: 59,
             animation: {
               enable: false,
@@ -1307,6 +1337,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 60',
             value: 60,
             animation: {
               enable: false,
@@ -1319,6 +1350,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 61',
             value: 61,
             animation: {
               enable: false,
@@ -1331,6 +1363,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 62',
             value: 62,
             animation: {
               enable: false,
@@ -1343,6 +1376,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 63',
             value: 63,
             animation: {
               enable: false,
@@ -1355,6 +1389,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 64',
             value: 64,
             animation: {
               enable: false,
@@ -1367,6 +1402,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 65',
             value: 65,
             animation: {
               enable: false,
@@ -1379,6 +1415,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 66',
             value: 66,
             animation: {
               enable: false,
@@ -1391,6 +1428,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 67',
             value: 67,
             animation: {
               enable: false,
@@ -1403,6 +1441,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 68',
             value: 68,
             animation: {
               enable: false,
@@ -1415,6 +1454,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 69',
             value: 69,
             animation: {
               enable: false,
@@ -1427,6 +1467,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 70',
             value: 70,
             animation: {
               enable: false,
@@ -1439,6 +1480,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 71',
             value: 71,
             animation: {
               enable: false,
@@ -1451,6 +1493,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 72',
             value: 72,
             animation: {
               enable: false,
@@ -1463,6 +1506,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 73',
             value: 73,
             animation: {
               enable: false,
@@ -1475,6 +1519,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 74',
             value: 74,
             animation: {
               enable: false,
@@ -1487,6 +1532,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 75',
             value: 75,
             animation: {
               enable: false,
@@ -1499,6 +1545,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 76',
             value: 76,
             animation: {
               enable: false,
@@ -1511,6 +1558,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 77',
             value: 77,
             animation: {
               enable: false,
@@ -1523,6 +1571,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 78',
             value: 78,
             animation: {
               enable: false,
@@ -1535,6 +1584,7 @@ function pointerGauge6() {
             markerWidth: 38,
             markerHeight: 3,
             color: '#7edfb4',
+            description:'Marker pointer value : 79',
             value: 79,
             animation: {
               enable: false,

@@ -24,6 +24,9 @@ this.default = function () {
             child: 'subtasks'
         },
         treeColumnIndex: 1,
+        splitterSettings: {
+           columnIndex: 1
+        },
         columns: [
             { field: 'TaskID', width: 80 },
             { field: 'TaskName',headerText: 'Name', width: 250 },
@@ -37,8 +40,8 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName'
         },
-        projectStartDate: new Date('03/24/2019'),
-        projectEndDate: new Date('07/06/2019')
+        projectStartDate: new Date('03/24/2024'),
+        projectEndDate: new Date('07/06/2024')
      });
     ganttChart.appendTo('#Workweek');
 

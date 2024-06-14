@@ -22,6 +22,8 @@ this.default = function () {
         toolbar: ['Edit', 'Update', 'Cancel'],
         allowPaging: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         allowGrouping: true,
         groupSettings: { columns: ['ShipCountry'] },
         height: 400,

@@ -58,7 +58,7 @@ this.default = function () {
             var polarColumnTheme = location.hash.split('/')[1];
             polarColumnTheme = polarColumnTheme ? polarColumnTheme : 'Material';
             args.chart.theme = (polarColumnTheme.charAt(0).toUpperCase() + 
-                polarColumnTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarColumnTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

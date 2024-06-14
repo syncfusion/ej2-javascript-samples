@@ -9,7 +9,7 @@
                 <span id="dlgSpan" style="visibility: hidden;">Invalid Query</span>
             </div>
             <div id="querybuilder" class="row"></div>
-            <div class="e-query-json-preview">
+            <div class="e-query-json-preview" title="JSON Preview Container">
                 <div style="border: none; width: 100%;">
                     <label style="padding: 10px;">JSON</label>
                     <div class="copy-tooltip" style="display: none;" id="copy-tooltip">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div readonly id='json-texarea' class='e-json-content'>
+                <div readonly id='json-texarea' class='e-json-content' title="JSON Content">
                     <pre class="e-pre-content"></pre>
                 </div>
             </div>
@@ -124,6 +124,14 @@
         .e-query-json-preview .e-json-content {
             width: 95%;
         }
+    }
+    .fluent2-dark .e-json-content,
+    .fluent2-highcontrast .e-json-content {
+        background-color: #1f1f1f;
+    }
+    .fluent2-dark .e-icons.copycode,
+    .fluent2-highcontrast .e-icons.copycode {
+        color: white;
     }
 </style>
 <!-- custom code end -->

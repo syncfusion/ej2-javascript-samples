@@ -9,10 +9,22 @@ this.default = function () {
             },
             text: 'U.S. Government Energy Consumption by Agency (Trillion Btu)',
         },
-        dataSource: window.palatteSampleData,
+        dataSource: [
+            [17.3, 24.6, 18.4, 9.6, 8.6, 18.8, 10.3, 5.0],
+            [15.7, 29.9, 15.2, 31.3, 18.1, 5.5, 10.2, 14.6],
+            [17.7, 25.5, 19.1, 12.9, 7.5, 30.7, 12.6, 5.6],
+            [7.4, 20.1, 18.8, 20.3, 6.1, 9.0, 29.8, 7.7],
+            [7.9, 30.5, 19.6, 10.8, 7.9, 15.5, 5.2, 14.3],
+            [5.7, 31.7, 17.8, 10.4, 17.3, 15.7, 9.1, 7.7],
+            [11.2, 29.1, 19.5, 11.5, 6.3, 12.9, 10.1, 6.7],
+            [13.6, 31.3, 15.3, 6.2, 7.7, 16.1, 18.9, 12.6],
+            [9.4, 29.9, 16.4, 14.5, 5.2, 12.3, 18.7, 7.3],
+            [16.4, 27.4, 27.0, 5.5, 16.2, 12.6, 8.3, 15.2],
+            [7.3, 20.1, 16.9, 9.0, 7.6, 16.2, 8.4, 29.0]
+        ],
         xAxis: {
-            labels: ['2005', '2006', '2007', '2008', '2009', '2010',
-                '2011', '2012', '2013', '2014', '2015'],
+            labels: ['2006', '2007', '2008', '2009', '2010',
+                '2011', '2012', '2013', '2014', '2015', '2016'],
             labelIntersectAction: 'None',
             labelRotation: 45,
             textStyle: {
@@ -21,7 +33,7 @@ this.default = function () {
         },
         yAxis: {
             labels: ['Agriculture', 'Energy', 'Administration', 'Health', 'Interior',
-                'Justice', 'NASA', 'Transportation'],
+                'Justice', 'Transportation', 'NASA'],
             textStyle: {
                 fontFamily: 'inherit'
             }

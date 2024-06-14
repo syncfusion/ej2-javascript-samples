@@ -45,7 +45,8 @@ renderMultipleStockChart = function (goog) {
         selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)
       )
         .replace(/-dark/i, "Dark")
-        .replace(/contrast/i, "Contrast");
+        .replace(/contrast/i, "Contrast")
+        .replace(/-highContrast/i, 'HighContrast');
     }
     // custom code end
   });

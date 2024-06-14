@@ -8,35 +8,23 @@ this.default = function () {
         centerY: '57%',
         axes: [{
             annotations: [{
-                content: '12 M', radius: '108%', angle: 98, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'12 M',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> 12 M </div>', radius: '108%', angle: 98, zIndex: '1'
             }, {
-                content: '11 M', radius: '80%', angle: 81, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'11 M',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> 11 M </div>', radius: '80%', angle: 81, zIndex: '1'
             }, {
-                content: '10 M', radius: '50%', angle: 69, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'10 M',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> 10 M </div>', radius: '50%', angle: 69, zIndex: '1'
             }, {
-                content: 'Doe', radius: '106%', angle: ej.base.Browser.isDevice ? 190 : 192, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'Doe',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> Doe </div>', radius: '106%', angle: ej.base.Browser.isDevice ? 190 : 192, zIndex: '1'
             }, {
-                content: 'Almaida', radius: '78%', angle: ej.base.Browser.isDevice ? 178 : 184, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'Almaida',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> Almaida </div>', radius: '78%', angle: ej.base.Browser.isDevice ? 178 : 184, zIndex: '1'
             }, {
-                content: 'John', radius: ej.base.Browser.isDevice ? '50%' : '48%', angle: ej.base.Browser.isDevice ? 174 : 179, zIndex: '1',
-                textStyle: {
-                    fontFamily: 'inherit', size: '14px', color: '#9E9E9E'
-                }
+                description:'John',
+                content: '<div style="color:#9E9E9E; font-size:14px; font-family: inherit;"> John </div>', radius: ej.base.Browser.isDevice ? '50%' : '48%', angle: ej.base.Browser.isDevice ? 174 : 179, zIndex: '1'
             }],
             lineStyle: {
                 width: 0, color: '#1d1d1d'
@@ -65,36 +53,43 @@ this.default = function () {
                 color: '#ee4266', startWidth: 25, endWidth: 25
             }],
             pointers: [{
+                description:'Marker pointer foot ball value : 12',
                 type: 'Marker', value: 12, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/football.png',
                 radius: '108%', markerWidth: 28, markerHeight: 28,
                 animation: { duration: 1500 }
             }, {
+                description:'Marker pointer basket ball value : 11',
                 type: 'Marker', value: 11, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/basketball.png',
                 radius: '78%', markerWidth: 28, markerHeight: 28,
                 animation: { duration: 1200 }
             }, {
+                description:'Marker pointer golf ball value : 10',
                 type: 'Marker', value: 10, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/golfball.png',
                 radius: '48%', markerWidth: 28, markerHeight: 28,
                 animation: { duration: 900 }
             }, {
+                description:'Marker pointer athletic value : 10',
                 type: 'Marker', value: 12, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/athletic.png',
                 radius: '0%', markerWidth: 90, markerHeight: 90,
                 animation: { duration: 0 }
             }, {
+                description:'Marker pointer girl value : 10',
                 type: 'Marker', value: 0.1, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/girl-1.png',
                 radius: '108%', markerWidth: 28, markerHeight: 28,
                 animation: { duration: 1500 }
             }, {
+                description:'Marker pointer man value : 10',
                 type: 'Marker', value: 0.1, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/man-1.png',
                 radius: '78%', markerWidth: 28, markerHeight: 28,
                 animation: { duration: 1500 }
             }, {
+                description:'Marker pointer man value: 10',
                 type: 'Marker', value: 0.1, markerShape: 'Image',
                 imageUrl: 'src/circular-gauge/images/man-2.png',
                 radius: '48%', markerWidth: 28, markerHeight: 28,

@@ -114,6 +114,11 @@ this.default = function () {
         isPrimary: true
     });
     printGauge.appendTo('#print');
+    var textbox = new ej.inputs.TextBox({  
+        value: 'Linear Gauge',
+        width: '90%'
+    }); 
+    textbox.appendTo('#fileName');
     document.getElementById('print').onclick = function () {
         gauge.print();
     };

@@ -1,67 +1,69 @@
-<div class="col-lg-9 control-section">
-    <div id="container"></div>
-    <!-- source link -->
-    <div style="float: right; margin-right: 10px;">Source:
-        <a href=" https://en.wikipedia.org/wiki/United_States_presidential_election,_2016" target="_blank">en.wikipedia.org</a>
+<main>
+    <div class="col-lg-9 control-section">
+        <div id="container"></div>
+        <!-- source link -->
+        <div style="float: right; margin-right: 10px;">Source:
+            <a href=" https://en.wikipedia.org/wiki/United_States_presidential_election,_2016" target="_blank">en.wikipedia.org</a>
+        </div>
+    
     </div>
-
-</div>
-<!-- Property Panel -->
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tbody>
-            <tr style="height: 50px">
-                <td style="width: 10%">
-                    <div class="property-text" style="padding: 0px;">Type</div>
-                </td>
-                <td>
-                    <select name="selectIndex" autocomplete="off" id="layoutMode">
-                        <option value="Default" selected>Default</option>
-                        <option value="Interactive">Interactive</option>
-                    </select>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td>
-                    <div class="property-text" style="padding: 0px;">Position</div>
-                </td>
-                <td>
-                    <select name="selectIndex" autocomplete="off" id="legendPosition">
-                        <option value="Top" selected>Top</option>
-                        <option value="Bottom">Bottom</option>
-                        <option value="Left">Left</option>
-                        <option value="Right">Right</option>
-                        <option value="Auto">Auto</option>
-                    </select>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<div id="action-description">
-    <p>
-        This sample visualizes the 2016 United States presidential election results. The type and position of the
-        legends can be changed using the Type and Position options in the properties panel.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see the type of legend available in TreeMap. The equal color mapping is applied based
-        on certain value.
-    </p>
-    <p>
-        The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an
-        item in touch enabled devices
-    </p>
-</div>
-<!-- custom code start -->
-<style>
-    .property-text {
-        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
-        font-size: 13px !important;
-        font-weight: 400 !important;
-    }
-</style>
-<!-- custom code end -->
+    <!-- Property Panel -->
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%" role="none">
+            <tbody>
+                <tr style="height: 50px">
+                    <td style="width: 10%">
+                        <div class="property-text" style="padding: 0px;">Type</div>
+                    </td>
+                    <td>
+                        <select name="selectIndex" autocomplete="off" id="layoutMode">
+                            <option value="Default" selected>Default</option>
+                            <option value="Interactive">Interactive</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div class="property-text" style="padding: 0px;">Position</div>
+                    </td>
+                    <td>
+                        <select name="selectIndex" autocomplete="off" id="legendPosition">
+                            <option value="Top" selected>Top</option>
+                            <option value="Bottom">Bottom</option>
+                            <option value="Left">Left</option>
+                            <option value="Right">Right</option>
+                            <option value="Auto">Auto</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <section id="action-description" aria-label="Description of TreeMap sample">
+        <p>
+            This sample visualizes the 2016 United States presidential election results. The type and position of the
+            legends can be changed using the Type and Position options in the properties panel.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of the TreeMap features demonstrated in this sample">
+        <p>
+            In this example, you can see the type of legend available in TreeMap. The equal color mapping is applied based
+            on certain value.
+        </p>
+        <p>
+            The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an
+            item in touch enabled devices
+        </p>
+    </section>
+    <!-- custom code start -->
+    <style>
+        .property-text {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+        }
+    </style>
+    <!-- custom code end -->
+</main>

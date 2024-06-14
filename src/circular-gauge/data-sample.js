@@ -26,12 +26,14 @@ this.default = function () {
                 majorTicks: { width: 0 },
                 lineStyle: { width: 0 },
                 minorTicks: { width: 0 },
-                labelStyle: { font: { size: '0', fontFamily: 'inherit' } },
+                labelStyle: { format:'positive {value}', font: { size: '0', fontFamily: 'inherit' } },
                 annotations: [{
+                    description:'Positive arrow',
                     content: '#germany',
                     angle: 180, zIndex: 1,
                     radius: '30%'
                 }, {
+                    description:'Germany',
                     content: '<div style="color:#9E9E9E;font-size:16px;font-family:Roboto">Germany</div>',
                     angle: 180, zIndex: 1,
                     radius: '65%'
@@ -76,10 +78,12 @@ this.default = function () {
             background:'transparent',
             axes: [{
                 annotations: [{
+                    description:'Positive arrow',
                     content: '#usa',
                     angle: 180, zIndex: 1,
                     radius: '30%'
                 }, {
+                    description:'USA',
                     content: '<div style="color:#9E9E9E;font-size:16px;font-family:Roboto">USA</div>',
                     angle: 180, zIndex: 1,
                     radius: '65%'
@@ -89,7 +93,7 @@ this.default = function () {
                 majorTicks: { width: 0 },
                 lineStyle: { width: 0 },
                 minorTicks: { width: 0 },
-                labelStyle: { font: { size: '0' } },
+                labelStyle: { format:'positive {value} ', font: { size: '0' } },
                 ranges: [{
                     start: 0, end: 50,
                     startWidth: 15, endWidth: 15,
@@ -130,17 +134,19 @@ this.default = function () {
             background:'transparent',
             axes: [{
                 annotations: [{
+                    description:'Negative arrow',
                     content: '#uk',
                     angle: 180, zIndex: 1,
                     radius: '30%'
                 }, {
+                    description:'UK',
                     content: '<div style="color:#9E9E9E;font-size:16px;font-family:Roboto">UK</div>',
                     angle: 180, zIndex: 1,
                     radius: '65%'
                 }],
                 startAngle: 230,
                 minorTicks: { width: 0 },
-                labelStyle: { font: { size: '0' } },
+                labelStyle: { format:'negative {value}', font: { size: '0' } },
                 endAngle: 130,
                 majorTicks: { width: 0 },
                 lineStyle: { width: 0 },

@@ -46,8 +46,8 @@ this.default = function () {
         },
         height: '503px',
         highlightWeekends: true,
-        projectStartDate: new Date('02/03/2019'),
-        projectEndDate: new Date('03/23/2019'),
+        projectStartDate: new Date('02/03/2024'),
+        projectEndDate: new Date('03/23/2024'),
         timelineSettings: {
             topTier: {
                 format: 'MMM dd, yyyy',

@@ -8,9 +8,11 @@ this.default = function () {
                 font: { size: '12px', fontFamily: 'inherit', fontStyle: 'Regular' }
             }, majorTicks: { height: 10, offset: 5 }, minorTicks: { height: 0 },
             annotations: [{
+                description:'Speedometer',
                 content: '<div><span style="font-size:14px; font-family:inherit">Speedometer</span></div>',
                 radius: '30%', angle: 0, zIndex: 1
             }, {
+                description:'65 MPH',
                 content: '<div><span style="font-size:20px; font-family:inherit">65 MPH</span></div>',
                 radius: '40%', angle: 180, zIndex: 1
             }],

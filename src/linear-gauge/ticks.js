@@ -117,7 +117,7 @@ this.default = function () {
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             // custom code end
-        }, 
+        },
         width:'150px',
         height:'350px',
         title: 'Inside ticks',

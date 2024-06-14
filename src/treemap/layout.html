@@ -1,85 +1,87 @@
-<div class="col-lg-9 control-section">
-    <div id="layout-container" align="center"></div>
-    <!-- source link -->
-    <div style="float: right; margin-right: 10px;">Source:
-        <a href=" https://www.reinisfischer.com/top-10-largest-economies-world-gdp-nominal-2015"
-            target="_blank">www.reinisfischer.com</a>
+<main>
+    <div class="col-lg-9 control-section">
+        <div id="layout-container" align="center"></div>
+        <!-- source link -->
+        <div style="float: right; margin-right: 10px;">Source:
+            <a href=" https://www.reinisfischer.com/top-10-largest-economies-world-gdp-nominal-2015"
+                target="_blank">www.reinisfischer.com</a>
+        </div>
     </div>
-</div>
-<!-- property panel -->
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tbody>
-            <tr>
-                <td>
-                    <div style="padding-left: 0px;">Layout Type</div>
-                </td>
-                <td style="width: 60%;">
-                    <div>
-                        <select name="selectIndex" autocomplete="off" id="layoutMode">
-                            <option value="Squarified" selected>Squarified</option>
-                            <option value="SliceAndDiceHorizontal">Horizontal</option>
-                            <option value="SliceAndDiceVertical">Vertical</option>
-                            <option value="SliceAndDiceAuto">Auto</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div style="padding-left: 0px;">Render Direction</div>
-                </td>
-                <td>
-                    <div>
-                        <select name="selectIndex" id="highlightMode">
-                            <option value="TopLeftBottomRight" selected>TopLeftBottomRight</option>
-                            <option value="TopRightBottomLeft">TopRightBottomLeft</option>
-                            <option value="BottomLeftTopRight">BottomLeftTopRight</option>
-                            <option value="BottomRightTopLeft">BottomRightTopLeft</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<div id="action-description">
-    <p>
-        This sample illustrates the GDP nominal of top 10 countries in the year 2015.
-        The layout and rendering direction of the TreeMap can be changed by using the <code>Layout Type</code> and
-        <code>Render Direction</code>
-        in the properties panel.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can change the layout of the TreeMap as desaturation color mapping has been applied to
-        denote the weightage of the items by varying the fill color.
-        The label's text also has been formatted and placed in multiple lines.
-    </p>
-    <p>
-        The tooltip is enabled in this example. To see the tooltip in action,
-        hover the mouse over an item or tap an item in touch-enabled devices.
-    </p>
-
-
-
-</div>
-<!-- custom code start -->
-<style>
-    .property-text {
-        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
-        font-size: 13px !important;
-        font-weight: 400 !important;
-    }
-    tr {
-        height: 48px;
-    }
-    td {
-        width: 50%;
-        margin-left: 10px;
-    }
-</style>
-<!-- custom code end -->
+    <!-- property panel -->
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%" role="none">
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="padding-left: 0px;">Layout Type</div>
+                    </td>
+                    <td style="width: 60%;">
+                        <div>
+                            <select name="selectIndex" autocomplete="off" id="layoutMode">
+                                <option value="Squarified" selected>Squarified</option>
+                                <option value="SliceAndDiceHorizontal">Horizontal</option>
+                                <option value="SliceAndDiceVertical">Vertical</option>
+                                <option value="SliceAndDiceAuto">Auto</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="padding-left: 0px;">Render Direction</div>
+                    </td>
+                    <td>
+                        <div>
+                            <select name="selectIndex" id="highlightMode" aria-label="Select rendering direction in the TreeMap"> 
+                                <option value="TopLeftBottomRight" selected>TopLeftBottomRight</option>
+                                <option value="TopRightBottomLeft">TopRightBottomLeft</option>
+                                <option value="BottomLeftTopRight">BottomLeftTopRight</option>
+                                <option value="BottomRightTopLeft">BottomRightTopLeft</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <section id="action-description" aria-label="Description of TreeMap sample">
+        <p>
+            This sample illustrates the GDP nominal of top 10 countries in the year 2015.
+            The layout and rendering direction of the TreeMap can be changed by using the <code>Layout Type</code> and
+            <code>Render Direction</code>
+            in the properties panel.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of the TreeMap features demonstrated in this sample">
+        <p>
+            In this example, you can change the layout of the TreeMap as desaturation color mapping has been applied to
+            denote the weightage of the items by varying the fill color.
+            The label's text also has been formatted and placed in multiple lines.
+        </p>
+        <p>
+            The tooltip is enabled in this example. To see the tooltip in action,
+            hover the mouse over an item or tap an item in touch-enabled devices.
+        </p>
+    
+    
+    
+    </section>
+    <!-- custom code start -->
+    <style>
+        .property-text {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif" !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+        }
+        tr {
+            height: 48px;
+        }
+        td {
+            width: 50%;
+            margin-left: 10px;
+        }
+    </style>
+    <!-- custom code end -->
+</main>

@@ -52,12 +52,12 @@ this.default = function () {
                 items: [{
                     type: 'Gallery',
                     gallerySettings: {
-                        popupWidth: "580px",
+                        popupWidth: "544px",
                         itemCount: 3,
                         select: function (args) { updateContent("Gallery -> " + args.currentItem.content); },
                         groups: [{
                                 itemWidth: '100',
-                                itemHeight: '30',
+                                itemHeight: '40',
                                 header: 'Title and Headings',
                                 items: [
                                     {
@@ -83,7 +83,7 @@ this.default = function () {
                                 ]
                             }, {
                                 itemWidth: '100',
-                                itemHeight: '30',
+                                itemHeight: '40',
                                 header: 'Data and Model',
                                 items: [
                                     {
@@ -109,7 +109,7 @@ this.default = function () {
                                 ]
                             }, {
                                 itemWidth: '100',
-                                itemHeight: '30',
+                                itemHeight: '40',
                                 header: 'Good, Bad and Neutral',
                                 items: [{
                                         content: 'Normal',

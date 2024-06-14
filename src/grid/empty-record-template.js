@@ -1,4 +1,17 @@
 this.default = function () {
+
+    window.renderEmptyImg = function () {
+        var img = document.createElement('img');
+        if (document.body.classList.value.indexOf('dark') > -1 || document.body.classList.value.indexOf('highcontrast') > -1) {
+            img.src = "src/grid/images/emptyRecordTemplate_dark.svg";
+        } else {
+            img.src = "src/grid/images/emptyRecordTemplate_light.svg";
+        }
+        img.classList.add("e-emptyRecord");
+        img.alt = "No record";
+        return img.outerHTML;
+    };
+
     var grid = new ej.grids.Grid({
         dataSource: [],
         allowPaging: true,

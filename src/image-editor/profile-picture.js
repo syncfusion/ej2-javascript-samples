@@ -56,6 +56,7 @@
               click: function () {
                   var imageEditor = ej.base.getComponent(document.getElementById('image-editor'), 'image-editor');
                   imageEditor.reset();
+                  imageEditor.select('circle');
               },
               buttonModel: { content: 'Reset', isPrimary: false, cssClass: 'e-custom-img-btn e-img-custom-reset' }
           },

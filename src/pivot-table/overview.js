@@ -166,7 +166,7 @@ this.default = function () {
                 var theme = location.hash.split("/")[1];
                 theme = theme ? theme : "Material";
                 args.chart.theme = (theme.charAt(0).toUpperCase() +
-                    theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                    theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             }
         },
         chartSeriesCreated: function () {
@@ -312,7 +312,7 @@ this.default = function () {
                 className: 'university-logo',
                 attrs: {
                     'src': window.universityData[args.cellInfo.index[0]].logo,
-                    'alt': args.cellInfo.formattedText,
+                    'alt': args.cellInfo.formattedText + " Image",
                     'width': '30',
                     'height': '30'
                 },

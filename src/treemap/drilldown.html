@@ -1,97 +1,104 @@
-<div class="col-lg-9 control-section">
-    <div id="container" align="center"></div>
-    <div style="float: right; margin-right: 10px;">Source:
-        <a href="https://en.wikipedia.org/wiki/List_of_continents_by_population" target="_blank">en.wikipedia.org</a>
+<main>
+    <div class="col-lg-9 control-section">
+        <div id="container" align="center"></div>
+        <div style="float: right; margin-right: 10px;">Source:
+            <a href="https://en.wikipedia.org/wiki/List_of_continents_by_population" target="_blank">en.wikipedia.org</a>
+        </div>
     </div>
-</div>
+    
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%" role="none">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;">Drilldown View</div>
+                    </td>
+                    <td>
+                        <div style="margin-top: -10px;padding-left: 0px;">
+                            <input type="checkbox" id="drillView" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;">Enable Breadcrumb</div>
+                    </td>
+                    <td>
+                        <div style="margin-top: -10px;padding-left: 0px;">
+                            <input type="checkbox" id="breadCrumb" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;">Breadcrumb Connector</div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="text" id="connectorText" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;">Header Alignment</div>
+                    </td>
+                    <td>
+                        <div>
+                            <select name="selectIndex" id="header">
+                                <option value="Near" selected>Near</option>
+                                <option value="Far">Far</option>
+                                <option value="Center">Center</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" style="padding-left: 0px;">Label Alignment</div>
+                    </td>
+                    <td>
+                        <div>
+                            <select name="selectIndex" id="label">
+                                <option value="Near" selected>Near</option>
+                                <option value="Far">Far</option>
+                                <option value="Center">Center</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <section id="action-description" aria-label="Description of TreeMap sample">
+        <p>
+            This sample demonstrates drill-down with the continents at the top level followed by regions and countries. By
+            clicking a continent, you can view all the countries available in that continent clearly.
+            Customizations can be done in the treemap, by using the options in the properties panel
+        </p>
+    </section>
+    <section id="description" aria-label="Description of TreeMap features demonstrated in this sample">
+        <p>
+            In this example, you can see how to render a TreeMap with multiple items and drill it further.
+            Change the drill down view and enable the breadcrumb using the options available in the properties panel.
+        </p>
+        <p>
+            The tooltip is enabled in this example.
+            To see the tooltip in action, hover the mouse over an item or tap an item in touch-enabled devices.
+        </p>
+    </section>
+    <style>
+        .property-panel-section {
+            padding-left: 20px;
+        }
+        tr {
+            height: 60px;
+        }
 
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tbody>
-            <tr>
-                <td>
-                    <div class="property-text" style="padding-left: 0px;">Drilldown View</div>
-                </td>
-                <td>
-                    <div style="margin-top: -10px;padding-left: 0px;">
-                        <input type="checkbox" id="drillView" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" style="padding-left: 0px;">Enable Breadcrumb</div>
-                </td>
-                <td>
-                    <div style="margin-top: -10px;padding-left: 0px;">
-                        <input type="checkbox" id="breadCrumb" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" style="padding-left: 0px;">Breadcrumb Connector</div>
-                </td>
-                <td>
-                    <div>
-                        <input type="text" id="connectorText" value=' - ' disabled=true style="width:100%;" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" style="padding-left: 0px;">Header Alignment</div>
-                </td>
-                <td>
-                    <div>
-                        <select name="selectIndex" id="header">
-                            <option value="Near" selected>Near</option>
-                            <option value="Far">Far</option>
-                            <option value="Center">Center</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" style="padding-left: 0px;">Label Alignment</div>
-                </td>
-                <td>
-                    <div>
-                        <select name="selectIndex" id="label">
-                            <option value="Near" selected>Near</option>
-                            <option value="Far">Far</option>
-                            <option value="Center">Center</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div id="action-description">
-    <p>
-        This sample demonstrates drill-down with the continents at the top level followed by regions and countries. By
-        clicking a continent, you can view all the countries available in that continent clearly.
-        Customizations can be done in the treemap, by using the options in the properties panel
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to render a TreeMap with multiple items and drill it further.
-        Change the drill down view and enable the breadcrumb using the options available in the properties panel.
-    </p>
-    <p>
-        The tooltip is enabled in this example.
-        To see the tooltip in action, hover the mouse over an item or tap an item in touch-enabled devices.
-    </p>
-</div>
-<style>
-    .property-panel-section {
-        padding-left: 20px;
-    }
-    tr {
-        height: 60px;
-    }
-</style>
+        .e-view.fluent2 #property .e-checkbox-wrapper .e-icons, 
+        .e-view.fluent2-dark #property .e-checkbox-wrapper .e-icons {
+            margin-left: 0px;
+        }
+    </style>
+</main>

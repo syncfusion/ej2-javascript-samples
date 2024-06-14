@@ -25,7 +25,7 @@ this.default = function () {
             document.getElementById('horizontal')['style']['backgroundColor'] = "white";
         }
     };
-
+    
     var gauge1 = new ej.lineargauge.LinearGauge({
         title: 'Custom labels',
         titleStyle: {
@@ -154,8 +154,12 @@ this.default = function () {
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            if (args.gauge.theme === "Fluent2Dark") {
+                args.gauge.axes[0].pointers[3].color = "#292827"; 
+            }
             // custom code end
-        } 
+           
+        }
     });
     gauge2.appendTo('#gauge2');
 

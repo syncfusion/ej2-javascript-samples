@@ -39,7 +39,7 @@
                     </td>
                     <td>
                         <div style="padding-top: 0;padding-left: 0;">
-                            <input type="checkbox" id="readonly" checked="false">
+                            <input type="checkbox" id="readonly" checked="false" aria-label="Readonly">
                         </div>
                     </td>
                 </tr>
@@ -49,7 +49,7 @@
                     </td>
                     <td>
                         <div style="padding-top: 0;padding-left: 0;">
-                            <input type="checkbox" id="enable" checked="true">
+                            <input type="checkbox" id="enable" checked="true" aria-label="Enabled">
                         </div>
                     </td>
                 </tr>
@@ -59,7 +59,7 @@
                     </td>
                     <td>
                         <div style="padding-top: 0;padding-left: 0;">
-                            <input type="checkbox" id="enablehtml" checked="false">
+                            <input type="checkbox" id="enablehtml" checked="false"  aria-label="Enable Html Encode">
                         </div>
                     </td>
                 </tr>
@@ -108,3 +108,36 @@
         <li>Click the <code>selectAll</code> button selecting all text content in the RTE.</li>
     </ul>
 </div>
+
+
+<style>
+    .bootstrap-dark button#getVal,
+    .fluent-dark button#getVal,
+    .bootstrap5-dark button#getVal,
+    .tailwind-dark button#getVal,
+    .highcontrast button#getVal,
+    .material3-dark button#getVal {
+        color: #FFFFFF;
+        background: #000000;
+    }
+    
+    .bootstrap-dark button#selectHtml,
+    .fluent-dark button#selectHtml,
+    .bootstrap5-dark button#selectHtml,
+    .tailwind-dark button#selectHtml,
+    .highcontrast button#selectHtml,
+    .material3-dark button#selectHtml {
+        color: #FFFFFF;
+        background: #000000;
+    }
+    
+    .bootstrap-dark button#selectall,
+    .fluent-dark button#selectall,
+    .bootstrap5-dark button#selectall,
+    .tailwind-dark button#selectall,
+    .highcontrast button#selectall,
+    .material3-dark button#selectall {
+        color: #FFFFFF;
+        background: #000000;
+    }
+</style>

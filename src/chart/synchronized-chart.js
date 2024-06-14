@@ -357,6 +357,8 @@ this.default = function () {
         var fabricdarkColors = ['#4472c4', '#ed7d31', '#ffc000', '#70ad47'];
         var material3Colors = ['#6355C7', '#00AEE0', '#FFB400', '#F7523F'];
         var material3DarkColors = ['#4EAAFF', '#FA4EAB', '#FFF500', '#17EA58'];
+        var fluent2Colors = ['#6200EE', '#09AF74', '#0076E5', '#CB3587'];
+        var fluent2DarkColors = ['#9BB449', '#2A72D5', '#43B786', '#3F579A'];
         // check the theme
         if (args.chart.theme === 'MaterialDark') {
             themeColor = materialDarkColors;
@@ -402,6 +404,12 @@ this.default = function () {
         }
         else if (args.chart.theme === 'Material3Dark') {
             themeColor = material3DarkColors;
+        }
+        else if (args.chart.theme === 'Fluent2') {
+            themeColor = fluent2Colors;
+        }
+        else if (args.chart.theme === 'Fluent2Dark') {
+            themeColor = fluent2DarkColors;
         }
         else {
             themeColor = fluentColors;

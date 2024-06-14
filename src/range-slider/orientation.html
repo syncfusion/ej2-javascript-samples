@@ -32,22 +32,22 @@
         <tbody>
             <tr>
                 <td style="width: 50%">
-                    <div class="userselect">Ticks</div>
+                    <div id="ticksLabel" class="userselect">Ticks</div>
                 </td>
                 <td style="width: 50%;padding-right: 10px">
                     <div style="padding-left: 0;padding-top: 0">
-                        <input id="ticks" type="checkbox">
+                        <input id="ticks" type="checkbox" aria-labelledby="ticksLabel">
                     </div>
                 </td>
             </tr>
 
             <tr id="slider-showon">
                 <td style="width: 50%">
-                    <div class="userselect">Tooltip</div>
+                    <div id="tooltipLabel" class="userselect">Tooltip</div>
                 </td>
                 <td style="width: 50%;padding-right: 10px">
                     <div style="padding-left: 0;padding-top: 0">
-                        <input id="tooltip" type="checkbox">
+                        <input id="tooltip" type="checkbox" aria-labelledby="tooltipLabel">
                     </div>
                 </td>
             </tr>
@@ -72,14 +72,15 @@
             in vertical orientation</li>
         <li>Reverse – Allows to render the component in reverse order. To utilise this, set the maximum value to the Min
             property and set the minimum value to the Max property</li>
-        <p>
-            In this demo, the default, MinRange, and range slider types can be seen.
-        </p>
-        <p>The dragInterval is used to drag both handles using the range bar which is also applicable only to the range slider.</p>
-        <p>For more information, refer to the
-            <a target="_blank" href="http://ej2.syncfusion.com/documentation/slider/getting-started.html?lang=es6#orientation">orientation</a> section from the documentation.</p>
-
     </ul>
+    <p>
+        In this demo, the default, MinRange, and range slider types can be seen.
+    </p>
+    <p>The dragInterval is used to drag both handles using the range bar which is also applicable only to the range slider.</p>
+    <p>For more information, refer to the
+        <a target="_blank" href="http://ej2.syncfusion.com/documentation/slider/getting-started.html?lang=es6#orientation">orientation</a> section from the documentation.
+    </p>
+
 </div>
 
 <style>

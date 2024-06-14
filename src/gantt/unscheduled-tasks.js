@@ -29,8 +29,8 @@ this.default = function () {
             rightLabel: 'TaskType'
         },
         allowUnscheduledTasks: true,
-        projectStartDate: new Date('01/01/2019'),
-        projectEndDate: new Date('01/20/2019'),
+        projectStartDate: new Date('01/01/2024'),
+        projectEndDate: new Date('01/20/2024'),
         toolbarClick: toolbarClick,
     });
     ganttChart.appendTo('#Unscheduled');

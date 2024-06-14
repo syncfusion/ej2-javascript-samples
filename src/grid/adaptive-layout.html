@@ -16,7 +16,7 @@
             </td>
             <td style="width: 30%;padding:0px 10px 10px 0px">
                 <div style="padding-top: 0px;">
-                    <input type="checkbox" id='fullscreen' />
+                    <input type="checkbox" id='fullscreen' aria-label="Enable horizontal row mode"/>
                 </div>
             </td>
         </tr>
@@ -181,6 +181,21 @@
                 width: 5%;
             }
         }
+        .fluent2,
+        .fluent2-dark,
+        .fluent2-highcontrast {
+            .e-adaptive-demo.e-pager-pagesizes .e-pager {
+                .e-mfirst,
+                .e-mprev,
+                .e-mnext,
+                .e-mlast {
+                    padding: 1% 1.4%;
+                }
+            }
+            .e-pager.e-adaptive div.e-parentmsgbar {
+                margin: 0;
+            }
+        }
         .e-adaptive-demo .e-pager div.e-parentmsgbar {
             box-sizing: border-box;
             display: inline-block;
@@ -269,11 +284,11 @@
 </div>
 <div id="description">
     <p>
-        The <code><a target="_blank" class="code"
+        The <code><a aria-label="API link for documentation" target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#enableadaptiveui">
                 enableAdaptiveUI</a></code> property is used to render the grid filter, sort, edit, pager and toolbars like column chooser, pdf export, excel export, etc... dialogs adaptively
         and
-        <code><a target="_blank" class="code"
+        <code><a aria-label="API link for documentation" target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#rowrenderingmode">
                 rowRenderingMode</a></code>
         property is used to render the grid row elements in the following directions,
@@ -289,7 +304,7 @@
     </p>
     <p>
         More information on the rowRenderingMode configuration can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#rowrenderingmode">
+        <a aria-label="API link for documentation" target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#rowrenderingmode">
             documentation section</a>.
     </p>
 </div>

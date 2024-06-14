@@ -3,14 +3,14 @@
     <div class="content-wrapper">
         <div style="display: flex;">
         <div style="display: flex;">
-            <label for="checked" style="font-size: 15px;margin-right: 5px;"> Allow Taskbar Drag And Drop </label>
+            <label for="checked" id="ResourceMultiTaskbarallow" style="font-size: 15px;margin-right: 5px;"> Allow Taskbar Drag And Drop </label>
             <div>
             <input id="checked" type="checkbox">
             </div>
         </div>
     
         <div style="display: flex;">
-            <label for="unchecked" style="margin:0px 5px 0px 5px;font-size: 15px;"> Allow Taskbar Overlap </label>
+            <label for="unchecked" id="ResourceMultiTaskbarallow" style="margin:0px 5px 0px 5px;font-size: 15px;"> Allow Taskbar Overlap </label>
             <div>
             <input id="unchecked" type="checkbox">
             </div> 
@@ -49,3 +49,10 @@
         using the <code>Gantt.Inject(Edit)</code> method.
     </p> 
 </div>
+<style>
+    /* Fluent2 Theme */
+    .fluent2 #ResourceMultiTaskbarallow ,
+    .fluent2-dark #ResourceMultiTaskbarallow {
+         padding: 5px;
+    }
+</style>

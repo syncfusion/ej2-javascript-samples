@@ -22,6 +22,7 @@ this.default = function () {
                     smartLabelMode: 'Trim'
                 },
                 shapeData: new ej.maps.MapAjax('./src/maps/map-data/usa.json'),
+                shapePropertyPath:'iso_3166_2',
                 shapeSettings: {
                     autofill: true
                 },

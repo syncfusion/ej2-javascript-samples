@@ -20,7 +20,8 @@ this.default = function () {
                 minimum: 0,
                 maximum: 10,
                 line: {
-                    offset: 140
+                    offset: 140,
+                    color:"#a6a6a6"
                 },
                 majorTicks: {
                     interval: 1,
@@ -50,6 +51,7 @@ this.default = function () {
                 maximum: 25,
                 line: {
                     offset: -140,
+                    color:"#a6a6a6"
                 },
                 majorTicks: {
                     interval: 1,

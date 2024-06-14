@@ -45,15 +45,15 @@ window.ddSocialMedia = [
     { Class: 'youtube', SocialMedia: 'YouTube', Id: 'media10' }
 ];
 window.ddEmployeesList = [
-    { Name: 'Andrew Fuller', Eimg: '7', Designation: 'Team Lead', Country: 'England' },
-    { Name: 'Anne Dodsworth', Eimg: '1', Designation: 'Developer', Country: 'USA' },
-    { Name: 'Janet Leverling', Eimg: '3', Designation: 'HR', Country: 'USA' },
-    { Name: 'Laura Callahan', Eimg: '2', Designation: 'Product Manager', Country: 'USA' },
-    { Name: 'Margaret Peacock', Eimg: '6', Designation: 'Developer', Country: 'USA' },
-    { Name: 'Michael Suyama', Eimg: '9', Designation: 'Team Lead', Country: 'USA' },
-    { Name: 'Nancy Davolio', Eimg: '4', Designation: 'Product Manager', Country: 'USA' },
-    { Name: 'Robert King', Eimg: '8', Designation: 'Developer ', Country: 'England' },
-    { Name: 'Steven Buchanan', Eimg: '10', Designation: 'CEO', Country: 'England' }
+    { Name: 'Andrew Fuller', Eimg: '7', Designation: 'Team Lead', Country: 'England', DateofJoining: "12/10/2010" },
+    { Name: 'Anne Dodsworth', Eimg: '1', Designation: 'Developer', Country: 'USA', DateofJoining: "10/05/2000" },
+    { Name: 'Janet Leverling', Eimg: '3', Designation: 'HR', Country: 'USA', DateofJoining: "23/02/2016" },
+    { Name: 'Laura Callahan', Eimg: '2', Designation: 'Product Manager', Country: 'USA', DateofJoining: "30/1/2012" },
+    { Name: 'Margaret Peacock', Eimg: '6', Designation: 'Developer', Country: 'USA', DateofJoining: "15/08/2014" },
+    { Name: 'Michael Suyama', Eimg: '9', Designation: 'Team Lead', Country: 'USA', DateofJoining: "27/07/2015" },
+    { Name: 'Nancy Davolio', Eimg: '4', Designation: 'Product Manager', Country: 'USA', DateofJoining: "24/05/2017" },
+    { Name: 'Robert King', Eimg: '8', Designation: 'Developer ', Country: 'England', DateofJoining: "08/09/2018" },
+    { Name: 'Steven Buchanan', Eimg: '10', Designation: 'CEO', Country: 'England', DateofJoining: "05/03/2020" }
 ];
 window.ddCountry = [
     { CountryName: 'Australia', CountryId: '2' },
@@ -214,4 +214,89 @@ window.diacritics = [
         { text: "Jaguar XJ220", id: "list-08" },
         { text: "McLaren P1", id: "list-09" },
         { text: "Ferrari LaFerrari", id: "list-10" }
+    ];
+
+    window.statusData = [
+        { "ID": "state1", "Text": "Open", "State": false },
+        { "ID": "state2", "Text": "Waiting for Customer", "State": false },
+        { "ID": "state3", "Text": "On Hold", "State": true },
+        { "ID": "state4", "Text": "Follow-up", "State": false },
+        { "ID": "state5", "Text": "Closed", "State": true },
+        { "ID": "state6", "Text": "Solved", "State": false },
+        { "ID": "state7", "Text": "Feature Request", "State": false }
+    ];
+
+    window.groupingData = [
+        { "Vegetable": "Cabbage", "Category": "Leafy and Salad", "Id": "item1", "State": true },
+        { "Vegetable": "Pumpkins", "Category": "Leafy and Salad", "Id": "item2", "State": false },
+        { "Vegetable": "Spinach", "Category": "Leafy and Salad", "Id": "item3", "State": true },
+        { "Vegetable": "Wheat grass", "Category": "Leafy and Salad", "Id": "item4", "State": false },
+        { "Vegetable": "Yarrow", "Category": "Leafy and Salad", "Id": "item5", "State": false },
+        { "Vegetable": "Chickpea", "Category": "Beans", "Id": "item6", "State": true },
+        { "Vegetable": "Green bean", "Category": "Beans", "Id": "item7", "State": false },
+        { "Vegetable": "Horse gram", "Category": "Beans", "Id": "item8", "State": true },
+        { "Vegetable": "Garlic", "Category": "Bulb and Stem", "Id": "item9", "State": false },
+        { "Vegetable": "Nopal", "Category": "Bulb and Stem", "Id": "item10", "State": true },
+        { "Vegetable": "Onion", "Category": "Bulb and Stem", "Id": "item11", "State": false }
+    ];
+
+    window.statusDatab = [ 
+        { "ID" : "state1", "Text" : "Add to KB", "State" : false },
+        { "ID" : "state2", "Text" : "Crisis", "State" : false },
+        { "ID" : "state3", "Text" : "Enhancement", "State" : true },
+        { "ID" : "state4", "Text" : "Presale", "State" : false },
+        { "ID" : "state5", "Text" : "Needs Approval", "State" : false },
+        { "ID" : "state6", "Text" : "Approved", "State" : true },
+        { "ID" : "state7", "Text" : "Internal Issue", "State" : true },
+        { "ID" : "state8", "Text" : "Breaking Issue", "State" : false },
+        { "ID" : "state9", "Text" : "New Feature", "State" : true },
+        { "ID" : "state10", "Text" : "New Component", "State" : false },
+        { "ID" : "state11", "Text" : "Mobile Issue", "State" : false }
+    ];
+
+    window.statusDatac = [
+        { "Status" : "Open", "State" : false },
+        { "Status" : "Waiting for Customer", "State" : false },
+        { "Status" : "On Hold", "State" : true },
+        { "Status" : "Follow-up", "State" : false },
+        { "Status" : "Closed", "State" : true },
+        { "Status" : "Solved", "State" : false },
+        { "Status" : "Feature Request", "State" : false }
+    ];
+
+    window.groupingDatab = [
+        { "Vegetable": "Cabbage", "Category": "Leafy and Salad", "State" : true },
+        { "Vegetable": "Pumpkins", "Category": "Leafy and Salad", "State" : false },
+        { "Vegetable": "Spinach", "Category": "Leafy and Salad", "State" : true },
+        { "Vegetable": "Wheat grass", "Category": "Leafy and Salad", "State" : false },
+        { "Vegetable": "Yarrow", "Category": "Leafy and Salad", "State" : false },
+        { "Vegetable": "Chickpea", "Category": "Beans", "State" : true },
+        { "Vegetable": "Green bean", "Category": "Beans", "State" : false },
+        { "Vegetable": "Horse gram", "Category": "Beans", "State" : true },
+        { "Vegetable": "Garlic", "Category": "Bulb and Stem", "State" : false },
+        { "Vegetable": "Nopal", "Category": "Bulb and Stem", "State" : true },
+        { "Vegetable": "Onion", "Category": "Bulb and Stem", "State" : false }
+    ];
+
+    window.orderData= [
+        { "OrderID": 1001, "CustomerID": "CID01", "Role": "Admin", "EmployeeID": 5, "OrderDate": "1995-07-04T00:00:00.000Z", "ShipName": "Vins et alcools Chevalier", "ShipCity": "Reims", "ShipAddress": "59 rue de l Abbaye", "ShipRegion": "CJ", "Mask": "1111", "ShipPostalCode": "51100", "ShipCountry": "France", "Freight": 32.38, "Verified": true, "CustomerName" : "John" },
+        { "OrderID": 1002, "CustomerID": "CID02", "Role": "Employee", "EmployeeID": 6, "OrderDate": "1995-07-05T00:00:00.000Z", "ShipName": "Toms Spezialitäten", "ShipCity": "Münster", "ShipAddress": "Luisenstr. 48", "ShipRegion": "CJ", "Mask": "2222", "ShipPostalCode": "44087", "ShipCountry": "Germany", "Freight": 11.61, "Verified": false, "CustomerName" : "Alice" },
+        { "OrderID": 1003, "CustomerID": "CID03", "Role": "Admin", "EmployeeID": 4, "OrderDate": "1995-07-08T00:00:00.000Z", "ShipName": "Hanari Carnes", "ShipCity": "Rio de Janeiro", "ShipAddress": "Rua do Paço, 67", "ShipRegion": "RJ", "Mask": "3333", "ShipPostalCode": "05454-876", "ShipCountry": "Brazil", "Freight": 65.83, "Verified": true, "CustomerName" : "Bob" },
+        { "OrderID": 1004, "CustomerID": "CID04", "Role": "Manager", "EmployeeID": 3, "OrderDate": "1995-07-08T00:00:00.000Z", "ShipName": "Victuailles en stock", "ShipCity": "Lyon", "ShipAddress": "2, rue du Commerce", "ShipRegion": "CJ", "Mask": "4444", "ShipPostalCode": "69004", "ShipCountry": "Argentina", "Freight": 41.34, "Verified": true, "CustomerName" : "Yang Wang" },
+        { "OrderID": 1005, "CustomerID": "CID05", "Role": "Manager", "EmployeeID": 2, "OrderDate": "1995-07-09T00:00:00.000Z", "ShipName": "Suprêmes délices", "ShipCity": "Charleroi", "ShipAddress": "Boulevard Tirou, 255", "ShipRegion": "CJ", "Mask": "5555", "ShipPostalCode": "B-6000", "ShipCountry": "Belgium", "Freight": 51.3, "Verified": true, "CustomerName" : "Michael" },
+        { "OrderID": 1006, "CustomerID": "CID06", "Role": "Admin", "EmployeeID": 7, "OrderDate": "1995-07-10T00:00:00.000Z", "ShipName": "Hanari Carnes", "ShipCity": "Rio de Janeiro", "ShipAddress": "Rua do Paço, 67", "ShipRegion": "RJ", "Mask": "6666", "ShipPostalCode": "05454-876", "ShipCountry": "Armenia", "Freight": 58.17, "Verified": true, "CustomerName" : "Nancy" },
+        { "OrderID": 1007, "CustomerID": "CID07", "Role": "Employee", "EmployeeID": 5, "OrderDate": "1995-07-11T00:00:00.000Z", "ShipName": "Chop-suey Chinese", "ShipCity": "Bern", "ShipAddress": "Hauptstr. 31", "ShipRegion": "CJ", "Mask": "7777", "ShipPostalCode": "3012", "ShipCountry": "Switzerland", "Freight": 22.98, "Verified": false, "CustomerName" : "Robert King" },
+        { "OrderID": 1008, "CustomerID": "CID08", "Role": "Admin", "EmployeeID": 9, "OrderDate": "1995-07-12T00:00:00.000Z", "ShipName": "Richter Supermarkt", "ShipCity": "Genève", "ShipAddress": "Starenweg 5", "ShipRegion": "CJ", "Mask": "8888", "ShipPostalCode": "1204", "ShipCountry": "Antartica", "Freight": 148.33, "Verified": true, "CustomerName" : "Andrew Fuller" },
+        { "OrderID": 1009, "CustomerID": "CID09", "Role": "Employee", "EmployeeID": 3, "OrderDate": "1995-07-15T00:00:00.000Z", "ShipName": "Wellington Importadora", "ShipCity": "Resende", "ShipAddress": "Rua do Mercado, 12", "ShipRegion": "SP", "Mask": "9999", "ShipPostalCode": "08737-363", "ShipCountry": "Albania", "Freight": 13.97, "Verified": false, "CustomerName" : "Anne Dodsworth" },
+        { "OrderID": 1010, "CustomerID": "CID10", "Role": "Admin", "EmployeeID": 4, "OrderDate": "1995-07-16T00:00:00.000Z", "ShipName": "HILARION-Abastos", "ShipCity": "San Cristóbal", "ShipAddress": "Carrera 22 con Ave. Carlos Soublette #8-35", "ShipRegion": "Táchira", "Mask": "1234", "ShipPostalCode": "5022", "ShipCountry": "Venezuela", "Freight": 81.91, "Verified": true, "CustomerName" : "Janet Leverling" },
+        { "OrderID": 1011, "CustomerID": "CID11", "Role": "Manager", "EmployeeID": 1, "OrderDate": "1995-07-17T00:00:00.000Z", "ShipName": "Ernst Handel", "ShipCity": "Graz", "ShipAddress": "Kirchgasse 6", "ShipRegion": "CJ", "Mask": "2345", "ShipPostalCode": "8010", "ShipCountry": "Austria", "Freight": 140.51, "Verified": true, "CustomerName" : "Laura Callahan" },
+        { "OrderID": 1012, "CustomerID": "CID12", "Role": "Admin", "EmployeeID": 4, "OrderDate": "1995-07-18T00:00:00.000Z", "ShipName": "Centro comercial Moctezuma", "ShipCity": "México D.F.", "ShipAddress": "Sierras de Granada 9993", "ShipRegion": "CJ", "Mask": "3456", "ShipPostalCode": "05022", "ShipCountry": "Mexico", "Freight": 3.25, "Verified": false, "CustomerName" : "Margaret Peacock" },
+        { "OrderID": 1013, "CustomerID": "CID13", "Role": "Admin", "EmployeeID": 4, "OrderDate": "1995-07-19T00:00:00.000Z", "ShipName": "Ottilies Käseladen", "ShipCity": "Köln", "ShipAddress": "Mehrheimerstr. 369", "ShipRegion": "CJ", "Mask": "4567", "ShipPostalCode": "50739", "ShipCountry": "Belgium", "Freight": 55.09, "Verified": true, "CustomerName" : "Michael Suyama" },
+        { "OrderID": 1014, "CustomerID": "CID14", "Role": "Manager", "EmployeeID": 4, "OrderDate": "1995-07-19T00:00:00.000Z", "ShipName": "Que Delícia", "ShipCity": "Rio de Janeiro", "ShipAddress": "Rua da Panificadora, 12", "ShipRegion": "RJ", "Mask": "5678", "ShipPostalCode": "02389-673", "ShipCountry": "Cuba", "Freight": 3.05, "Verified": false, "CustomerName" : "Nancy Davolio" },
+        { "OrderID": 1015, "CustomerID": "CID15", "Role": "Employee", "EmployeeID": 8, "OrderDate": "1995-07-22T00:00:00.000Z", "ShipName": "Rattlesnake Canyon Grocery", "ShipCity": "Albuquerque", "ShipAddress": "2817 Milton Dr.", "ShipRegion": "NM", "Mask": "6789", "ShipPostalCode": "87110", "ShipCountry": "USA", "Freight": 48.29, "Verified": true, "CustomerName" : "Robert King" },
+        { "OrderID": 1016, "CustomerID": "CID16", "Role": "Employee", "EmployeeID": 6, "OrderDate": "1995-07-24T00:00:00.000Z", "ShipName": "Blondel père et fils", "ShipCity": "Strasbourg", "ShipAddress": "24, place Kléber", "ShipRegion": "CJ", "Mask": "8901", "ShipPostalCode": "67000", "ShipCountry": "Albania", "Freight": 81.74, "Verified": false, "CustomerName" : "Steven Buchanan" },
+        { "OrderID": 1017, "CustomerID": "CID17", "Role": "Manager", "EmployeeID": 3, "OrderDate": "1995-07-25T00:00:00.000Z", "ShipName": "Wartian Herkku", "ShipCity": "Oulu", "ShipAddress": "Torikatu 38", "ShipRegion": "CJ", "Mask": "9012", "ShipPostalCode": "90110", "ShipCountry": "Finland", "Freight": 44.12, "Verified": true, "CustomerName" : "John Doe" },
+        { "OrderID": 1018, "CustomerID": "CID18", "Role": "Employee", "EmployeeID": 1, "OrderDate": "1995-07-26T00:00:00.000Z", "ShipName": "Simons bistro", "ShipCity": "København", "ShipAddress": "Vinbæltet 34", "ShipRegion": "CJ", "Mask": "0123", "ShipPostalCode": "1734", "ShipCountry": "Denmark", "Freight": 22.77, "Verified": false, "CustomerName" : "Jane Smith" },
+        { "OrderID": 1019, "CustomerID": "CID19", "Role": "Admin", "EmployeeID": 7, "OrderDate": "1995-07-27T00:00:00.000Z", "ShipName": "LILA-Supermercado", "ShipCity": "Barquisimeto", "ShipAddress": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo", "ShipRegion": "Lara", "Mask": "1234", "ShipPostalCode": "3508", "ShipCountry": "China", "Freight": 53.23, "Verified": true, "CustomerName" : "James Brown" },
+        { "OrderID": 1020, "CustomerID": "CID20", "Role": "Manager", "EmployeeID": 2, "OrderDate": "1995-07-28T00:00:00.000Z", "ShipName": "Galería del gastronómo", "ShipCity": "Madrid", "ShipAddress": "Rambla de Cataluña, 23", "ShipRegion": "CJ", "Mask": "2345", "ShipPostalCode": "28014", "ShipCountry": "Spain", "Freight": 89.64, "Verified": false, "CustomerName" : "Mario Pontes" }
     ];

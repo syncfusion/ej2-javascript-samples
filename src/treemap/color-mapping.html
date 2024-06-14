@@ -1,77 +1,84 @@
-<div class="col-lg-9 control-section">
-    <div class="content-wrapper">
-        <div id="default-container"></div>
+<main>
+    <div class="col-lg-9 control-section">
+        <div class="content-wrapper">
+            <div id="default-container"></div>
+        </div>
     </div>
-</div>
-<!-- Property Panel-->
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tbody>
-            <tr>
-                <td style="width: 40%">
-                    <div class="property-text">Color Mapping Type</div>
-                </td>
-                <td style="width: 30%;">
-                    <div>
-                        <select autocomplete="off" id="colorMapping">
-                            <option value="RangeColorMapping" selected>Range</option>
-                            <option value="EqualColorMapping">Equal</option>
-                            <option value="DesaturationColorMapping">Desaturation</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr >
-                <td style="width: 40%">
-                    <div class="property-text" id="text1" style="display: none;"> Change Opacity</div>
-                </td>
-                <td style="width: 40%;">
-                    <div id="input1" style="display: none;margin-left: -10px;margin-top: -6px;">
-                        <input type="checkbox" id="opacity"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" id="text2" style="display: none">Min Opacity</div>
-                </td>
-                <td>
-                    <div id="input2" style="display: none;">
-                        <input type="range" id="minopacity" step="0.1" value="0.5" min="0" max="1" style="width:100%;" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="property-text" id="text3" style="display: none">Max Opacity</div>
-                </td>
-                <td>
-                    <div id="input3" style="display: none;">
-                        <input type="range" id="maxopacity" step="0.1" value="1" min="0" max="1" style="width:100%;" />
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div id="action-description">
-    <p>
-        This sample visualizes the top 10 largest islands in the world based on area. The color mapping is applied to the items to differentiate them from other items.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, you can see how to render a tree map with color mapping. The range color mapping and desaturation color mapping group the shapes based on the area size, whereas the equal color mapping groups the shapes based on the continent value. The legend is enabled in this example to represent each color mapping.
-    </p>
-    <p>
-        The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item in touch enabled devices.
-    </p>
-</div>
-<style>
-    tr {
-        height: 50px;
-    }
-    .property-panel-header {
-        padding-left: 10px;
-    }
-</style>
+    <!-- Property Panel-->
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%" role="none">
+            <tbody>
+                <tr>
+                    <td style="width: 40%">
+                        <div class="property-text">Color Mapping Type</div>
+                    </td>
+                    <td style="width: 30%;">
+                        <div>
+                            <select autocomplete="off" id="colorMapping">
+                                <option value="RangeColorMapping" selected>Range</option>
+                                <option value="EqualColorMapping">Equal</option>
+                                <option value="DesaturationColorMapping">Desaturation</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <td style="width: 40%">
+                        <div class="property-text" id="text1" style="display: none;"> Change Opacity</div>
+                    </td>
+                    <td style="width: 40%;">
+                        <div id="input1" style="display: none;margin-left: -10px;margin-top: -6px;">
+                            <input type="checkbox" id="opacity"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" id="text2" style="display: none">Min Opacity</div>
+                    </td>
+                    <td>
+                        <div id="input2" style="display: none;">
+                            <input type="range" id="minopacity" step="0.1" value="0.5" min="0" max="1" style="width:100%;" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="property-text" id="text3" style="display: none">Max Opacity</div>
+                    </td>
+                    <td>
+                        <div id="input3" style="display: none;">
+                            <input type="range" id="maxopacity" step="0.1" value="1" min="0" max="1" style="width:100%;" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <section id="action-description" aria-label="Description of TreeMap sample">
+        <p>
+            This sample visualizes the top 10 largest islands in the world based on area. The color mapping is applied to the items to differentiate them from other items.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of the TreeMap features demonstrated in this sample">
+        <p>
+            In this example, you can see how to render a tree map with color mapping. The range color mapping and desaturation color mapping group the shapes based on the area size, whereas the equal color mapping groups the shapes based on the continent value. The legend is enabled in this example to represent each color mapping.
+        </p>
+        <p>
+            The tooltip is enabled in this example. To see the tooltip in action, hover the mouse over an item or tap an item in touch enabled devices.
+        </p>
+    </section>
+    <style>
+        tr {
+            height: 50px;
+        }
+        .property-panel-header {
+            padding-left: 10px;
+        }
+
+        .e-view.fluent2 #property .e-checkbox-wrapper .e-icons, 
+        .e-view.fluent2-dark #property .e-checkbox-wrapper .e-icons {
+            margin-left: 0px;
+        }
+    </style>
+</main>

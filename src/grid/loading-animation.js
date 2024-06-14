@@ -9,6 +9,7 @@ this.default = function () {
     });
     var grid = new ej.grids.Grid({
         dataSource: data,
+        query: new ej.data.Query().addParams('dataCount', '1000'),
         allowPaging: true,
         allowFiltering: true,
         allowSorting: true,

@@ -1,109 +1,116 @@
-<div class="col-lg-9 control-section">
-    <div id="container"></div>
-    <div align="center">
+<main>
+    <div class="col-lg-9 control-section">
+        <div id="container"></div>
+        <div align="center">
+                <p>
+                    <i>
+                        <div align="center">
+                            <p id="content" style="font-size: 16px;color:grey">Click on the maps to add marker/navigation line</p>
+                        </div>
+                    </i>
+                </p>
+            </div>
+    </div>
+    <section id="action-description" aria-label="Description of Maps sample">
             <p>
-                <i>
-                    <div align="center">
-                        <p id="content" style="font-size: 16px;color:grey">Click on the maps to add marker/navigation line</p>
-                    </div>
-                </i>
+                This sample shows how custom markers and lines can be dynamically added to our maps with UI interaction. Marker or line can be chosen from the properties panel.
+           </p>
+        </section>
+        <section id="description" aria-label="Description of the Maps features demonstrated in this sample">
+            <p>
+                Using UI interaction, the markers or line can be added as follows: You can get the currently clicked geo location by passing "PointerEvent" or "MouseEvent" argument and layer index to the "getGeoLocation" method. Then, use that geo position to place the marker or line in the appropriate position. 
             </p>
-        </div>
-</div>
-<div id="action-description">
-        <p>
-            This sample shows how custom markers and lines can be dynamically added to our maps with UI interaction. Marker or line can be chosen from the properties panel.
-       </p>
+        <br/>
+            <p style="font-weight: 500">Injecting Module</p>
+            <p>
+                The features of maps component are segregated into individual feature-wise modules. To use navigation lines and marker, you need to inject the <code>NavigationLine </code> and <code>Marker </code> module using the <code>Maps.Inject(NavigationLine, Marker)</code> method.
+            </p>
+           
+        </section>
+    <div class="col-lg-3 property-section">
+        <table id="property" title="Properties" style="width: 100%" role="none">
+            <tbody>
+                <tr>
+                    <td style="width:20%">
+                        <div style="padding: 0px;display:inline-block; margin-top:10px;">Marker</div>
+                    </td>
+                    <td style="width:70%">
+                        <div style="margin-left: -20px;padding-top: 0px;">
+                            <input type="checkbox" id="marker" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:20%">
+                        <div style="padding: 0px; margin-top:10px;">Line</div>
+                    </td>
+                    <td style="width:70%">
+                        <div style="margin-left: -20px;padding-top: 0px;">
+                            <input type="checkbox" name="high" id="line" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:20%">
+                        <div style="margin-left: -10px;">Connecting line</div>
+                    </td>
+                    <td style="width:70%">
+                        <div style="margin-left: -20px;padding-top: 0px;">
+                            <input type="checkbox" id="connect" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;">
+                        Marker type
+                    </td>
+                    <td style="width:70%">
+                        <select id="type">
+                            <option value="Image">Image</option>
+                            <option value="Circle">Circle</option>
+                            <option value="Diamond">Diamond</option>
+                            <option value="Star">Star</option>
+                            <option value="Triangle">Triangle</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:20%">
+                        <div style="padding: 0px;width: 30%">Width</div>
+                    </td>
+                    <td style="width:70%">
+                        <input type="text" class="e-input" value="1" style="width:100%" id="width" disabled />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="margin-left: 70%;">
+                            <button id="togglebtn"
+                                style="text-transform:none !important;margin-top: -2px">Clear</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div id="description">
-        <p>
-            Using UI interaction, the markers or line can be added as follows: You can get the currently clicked geo location by passing "PointerEvent" or "MouseEvent" argument and layer index to the "getGeoLocation" method. Then, use that geo position to place the marker or line in the appropriate position. 
-        </p>
-    <br/>
-        <p style="font-weight: 500">Injecting Module</p>
-        <p>
-            The features of maps component are segregated into individual feature-wise modules. To use navigation lines and marker, you need to inject the <code>NavigationLine </code> and <code>Marker </code> module using the <code>Maps.Inject(NavigationLine, Marker)</code> method.
-        </p>
-       
-    </div>
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tbody>
-            <tr>
-                <td style="width:20%">
-                    <div style="padding: 0px;display:inline-block; margin-top:10px;">Marker</div>
-                </td>
-                <td style="width:70%">
-                    <div style="margin-left: -20px;padding-top: 0px;">
-                        <input type="checkbox" id="marker" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:20%">
-                    <div style="padding: 0px; margin-top:10px;">Line</div>
-                </td>
-                <td style="width:70%">
-                    <div style="margin-left: -20px;padding-top: 0px;">
-                        <input type="checkbox" name="high" id="line" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:20%">
-                    <div style="margin-left: -10px;">Connecting line</div>
-                </td>
-                <td style="width:70%">
-                    <div style="margin-left: -20px;padding-top: 0px;">
-                        <input type="checkbox" id="connect" />
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 0px;">
-                    Marker type
-                </td>
-                <td style="width:70%">
-                    <select id="type">
-                        <option value="Image">Image</option>
-                        <option value="Circle">Circle</option>
-                        <option value="Diamond">Diamond</option>
-                        <option value="Star">Star</option>
-                        <option value="Triangle">Triangle</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td style="width:20%">
-                    <div style="padding: 0px;width: 30%">Width</div>
-                </td>
-                <td style="width:70%">
-                    <input type="text" class="e-input" value="1" style="width:100%" id="width" disabled />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div style="margin-left: 70%;">
-                        <button id="togglebtn"
-                            style="text-transform:none !important;margin-top: -2px">Clear</button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<!-- custom code start-->
-<style>
-    .property-text {
-        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-        font-size: 13px;
-        font-weight: 400;
-    }
-    #width.e-input[disabled] {
-        border-bottom-color: inherit;
-        background-image: none;
-    }
-    tr {
-        height:48px;
-    }
-</style>
+    <!-- custom code start-->
+    <style>
+        .property-text {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+            font-size: 13px;
+            font-weight: 400;
+        }
+        #width.e-input[disabled] {
+            border-bottom-color: inherit;
+            background-image: none;
+        }
+        tr {
+            height:48px;
+        }
+
+        .e-view.fluent2 #property .e-checkbox-wrapper .e-icons, 
+        .e-view.fluent2-dark #property .e-checkbox-wrapper .e-icons {
+            margin-left: 0px;
+        }
+    </style>
+</main>

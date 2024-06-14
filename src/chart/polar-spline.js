@@ -64,7 +64,7 @@ this.default = function () {
             polarSplineTheme = polarSplineTheme ? polarSplineTheme : 'Material';
             args.chart.theme = (polarSplineTheme.indexOf('fabric') > -1) ? 'Fabric' : 'Material';
             args.chart.theme = (polarSplineTheme.charAt(0).toUpperCase() + 
-                polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

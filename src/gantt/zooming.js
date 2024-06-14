@@ -30,8 +30,8 @@ this.default = function () {
         splitterSettings: {
             position: "35%"
         },
-        projectStartDate: new Date('03/24/2019'),
-        projectEndDate: new Date('04/28/2019')
+        projectStartDate: new Date('03/24/2024'),
+        projectEndDate: new Date('04/28/2024')
     });
     ganttChart.appendTo('#Zooming');
 };

@@ -63,7 +63,7 @@ this.renderChartSto =function () {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
                // custom code start
             legendSettings: { visible: false }

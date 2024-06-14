@@ -1,6 +1,6 @@
 <div class="col-lg-9 control-section">
     <div class="content-wrapper">
-        <div id="TreeGrid">
+        <div id="TreeGrid" role="grid" aria-label="Tree Grid">
         </div>
     </div>
 </div>
@@ -13,19 +13,19 @@
             </td>
             <td style="width: 70%;padding-right: 10px">
                 <div id='columnddl'>
-                    <input type="text" tabindex="1" id='ddlelement' />
+                    <input type="text" tabindex="0" id='ddlelement' />
                 </div>
             </td>
         </tr>
         <tr>
             <td style="width: 30%">
                 <div>
-                    <button class="btn btn-default" type="button" id="hide" value="Hide">Hide</button>
+                    <button class="btn btn-default" type="button" id="hide" value="Hide" aria-label="Hide button">Hide</button>
                 </div>
             </td>
             <td style="width: 70%">
                 <div>
-                    <button class="btn btn-default" type="button" id="show" value="Show" disabled>Show</button>
+                    <button class="btn btn-default" type="button" id="show" value="Show" aria-label="Show button" disabled>Show</button>
                 </div>
             </td>
         </tr>
@@ -38,7 +38,7 @@
             <td style="width: 70%; padding:10px 10px 10px 0px">
                 <div>
                     <textarea id="hiddencolumns" style="resize: none;height:65px;background-color: #fff; padding: 6px" 
-                    class="form-control" readonly="readonly"></textarea>
+                    class="form-control" readonly="readonly" aria-label="Hidden Columns"></textarea>
                 </div>
             </td>
         </tr>
@@ -57,6 +57,11 @@
     #hide:disabled:hover,
     #show:disabled:hover {
         color: #000000;
+    }
+    .fluent2 .btn,
+    .fluent2-dark .btn,
+    .fluent2-highcontrast .btn{
+        outline: none !important;
     }
 
 </style>

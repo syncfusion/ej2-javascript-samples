@@ -2,8 +2,8 @@ var selectedTheme = location.hash.split('/')[1];
     selectedTheme = selectedTheme ? selectedTheme : 'Material';
     var theme = (selectedTheme.charAt(0).toUpperCase() +
         selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-    var themes = ['bootstrap5', 'bootstrap5dark', 'tailwind', 'tailwinddark', 'material', 'materialdark', 'bootstrap4', 'bootstrap', 'bootstrapdark', 'fabric', 'fabricdark', 'highcontrast', 'Fluent', 'FluentDark', 'material3', 'material3dark'];
-    var borderColor = ['#6355C7', '#8F80F4', '#5A61F6', '#8B5CF6', '#00bdae', '#9ECB08', '#a16ee5', '#a16ee5', '#a16ee5', '#4472c4', '#4472c4', '#79ECE4', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF'];
+    var themes = ['bootstrap5', 'bootstrap5dark', 'tailwind', 'tailwinddark', 'material', 'materialdark', 'bootstrap4', 'bootstrap', 'bootstrapdark', 'fabric', 'fabricdark', 'highcontrast', 'Fluent', 'FluentDark', 'material3', 'material3dark', 'fluent2', 'fluent2dark'];
+    var borderColor = ['#6355C7', '#8F80F4', '#5A61F6', '#8B5CF6', '#00bdae', '#9ECB08', '#a16ee5', '#a16ee5', '#a16ee5', '#4472c4', '#4472c4', '#79ECE4', '#1AC9E6', '#1AC9E6', '#6355C7', '#4EAAFF', '#6200EE', '#9BB449'];
     var fill = 'url(#' + selectedTheme + '-gradient-chart)';
 var chart;
 var loaded;
@@ -45,7 +45,6 @@ this.default = function () {
         legendSettings: { visible: false },
         width : ej.base.browser ? '100' : '75%',
         title:'Chart with 100k points',
-         // custom code start
         load: function (args) {
             var series1 = [];
             var point1;
@@ -75,8 +74,7 @@ this.default = function () {
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             args.chart.series[0].border = { width: 2, color: borderColor[themes.indexOf(args.chart.theme.toLowerCase())] };
-        },
-         // custom code end
+        }
     });
     chart.appendTo('#container');
 };

@@ -1,7 +1,7 @@
 renderLineStockChart = function (aapl) {
         var stockChart = new ej.charts.StockChart({
             chartArea: { border: { width: 0 } },
-            primaryXAxis: { valueType: 'DateTime', majorGridLines: { color: 'transparent'},crosshairTooltip: { enable: true } },
+            primaryXAxis: { valueType: 'DateTime', majorGridLines: { color: 'transparent' }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
                 majorTickLines: { color: 'transparent', height: 0},
@@ -104,10 +104,10 @@ renderLineStockChart = function (aapl) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             },
             tooltipRender: function (args) {
-                if  (args.text.split('<br/>')[4]) {
+                if (args.text.split('<br/>')[4]) {
                     var target = parseFloat(args.text.split('<br/>')[4].split('<b>')[1].split('</b>')[0]);
                     var value = (target / 100000000).toFixed(1) + 'B';
                     args.text = args.text.replace(args.text.split('<br/>')[4].split('<b>')[1].split('</b>')[0], value);

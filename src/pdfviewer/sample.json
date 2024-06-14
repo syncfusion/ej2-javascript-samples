@@ -30,7 +30,7 @@
             }
         },
         {
-            "url":"multi-format-viewer", "name": "Multi-Format Viewer", "type": "new", "description":"This sample demonstrates to loads various file types like PDFs, images, and Microsoft Office documents (Word, Excel, PowerPoint) into the PDF Viewer", "category": "File Management", "api": {
+            "url":"multi-format-viewer", "name": "Multi-Format Viewer", "description":"This sample demonstrates to loads various file types like PDFs, images, and Microsoft Office documents (Word, Excel, PowerPoint) into the PDF Viewer", "category": "File Management", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -38,7 +38,7 @@
             }
         },
         {
-            "url":"organize-pages", "name": "Organize Pages", "type": "new" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom toolbar configuration.", "category": "Editor", "api": {
+            "url":"organize-pages", "name": "Organize Pages", "type": "update" , "description":"This sample demonstrates the page organization features of the PDF Viewer component, allowing users to effortlessly insert, delete, rearrange, copy, undo, redo, and rotate pages.", "category": "Editor", "api": {
                 "PdfViewer": [
                     "serviceUrl",
                     "documentPath"
@@ -56,7 +56,7 @@
             }
         },
         {
-            "url":"custom-context-menu", "name": "Context Menu", "type": "new" , "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom context menu configuration.", "category": "Customization", "api": {
+            "url":"custom-context-menu", "name": "Context Menu", "description":"This demo for Essential JS 2 PdfViewer shows the default rendering of the PdfViewer with custom context menu configuration.", "category": "Customization", "api": {
                 "PdfViewer": [
                     "documentPath",
                     "serviceUrl"

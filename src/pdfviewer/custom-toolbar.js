@@ -62,13 +62,14 @@ this.default = function () {
           ],
         },
       ],
-    },
-  ];
-  new ej.navigations.Menu({ items: menuItems,showItemOnClick: true,select: select.bind(this) }, '#menu');
-  var signatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
-  new ej.navigations.Menu({ items: signatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#signatureMenu');
-  var formFieldSignatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
-  new ej.navigations.Menu({ items: formFieldSignatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#formFieldSignatureMenu');
+    },];
+    new ej.navigations.Menu({ items: menuItems,showItemOnClick: true,select: select.bind(this) }, '#menu');
+    var signatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
+    new ej.navigations.Menu({ items: signatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#signatureMenu');  
+  }
+  function createFormFieldSignatureMenu() {
+    var formFieldSignatureMenuItems = [{ iconCss: 'e-icons e-signature', items: [{ text: 'Add Signature' }, { text: 'Add Initial' }] }];
+    new ej.navigations.Menu({ items: formFieldSignatureMenuItems, showItemOnClick: true, select: onSignatureClick.bind(this) }, '#formFieldSignatureMenu');
   }
     toolbarObj = new ej.navigations.Toolbar({
         items: [
@@ -122,6 +123,7 @@ this.default = function () {
     });
     editAnnotationToolbarToolbar.appendTo('#editAnnotationToolbar');
     var formFieldToolbar = new ej.navigations.Toolbar({
+        created: createFormFieldSignatureMenu,
         items: [
          { id: 'textbox', prefixIcon: 'e-icons e-text-form', click: textBox.bind(this), tooltipText: 'Textbox', align: 'Center' },
          { id: 'password', prefixIcon: 'e-icons e-password', click: passWord.bind(this), tooltipText: 'Password', align: 'Center' },

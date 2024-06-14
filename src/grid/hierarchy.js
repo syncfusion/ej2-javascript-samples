@@ -12,6 +12,8 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.employeeData,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         columns: [
             { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125 },
             { field: 'FirstName', headerText: 'Name', width: 125 },

@@ -51,7 +51,7 @@ var pivotObj = new ej.pivotview.PivotView({
         load: function(args) {
           var selectingTheme = location.hash.split("/")[1];
           selectingTheme = selectingTheme ? selectingTheme : "Material";
-          args.chart.theme = (selectingTheme.charAt(0).toUpperCase() + selectingTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+          args.chart.theme = (selectingTheme.charAt(0).toUpperCase() + selectingTheme.slice(1)).replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
         title:"Sales Analysis",
     },

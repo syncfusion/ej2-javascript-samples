@@ -15,50 +15,50 @@
         <tbody>
             <tr>
                 <td style="width: 50%">
-                    <div class="userselect">MinStart</div>
+                    <div id="minStartLabel" class="userselect">MinStart</div>
                 </td>
                 <td style="width: 50%">
-                    <input id="minStart" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%">
-                    <div class="userselect">MinEnd</div>
-                </td>
-                <td style="width: 50%">
-                    <input id="minEnd" type="text">
+                    <input id="minStart" type="text" aria-labelledby="minStartLabel">
                 </td>
             </tr>
             <tr>
                 <td style="width: 50%">
-                    <div class="userselect">MaxStart</div>
+                    <div id="minEndLabel" class="userselect">MinEnd</div>
                 </td>
                 <td style="width: 50%">
-                    <input id="maxStart" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%">
-                    <div class="userselect">MaxEnd</div>
-                </td>
-                <td style="width: 50%">
-                    <input id="maxEnd" type="text">
+                    <input id="minEnd" type="text" aria-labelledby="minEndLabel">
                 </td>
             </tr>
             <tr>
                 <td style="width: 50%">
-                    <div class="userselect">Lock First Handle</div>
+                    <div id="maxStartLabel" class="userselect">MaxStart</div>
                 </td>
                 <td style="width: 50%">
-                    <input id="fixedOne" type="checkbox">
+                    <input id="maxStart" type="text" aria-labelledby="maxStartLabel">
                 </td>
             </tr>
             <tr>
                 <td style="width: 50%">
-                    <div class="userselect">Lock Second Handle</div>
+                    <div id="maxEndLabel" class="userselect">MaxEnd</div>
                 </td>
                 <td style="width: 50%">
-                    <input id="fixedSecond" type="checkbox">
+                    <input id="maxEnd" type="text" aria-labelledby="maxEndLabel">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div  id="lockFirstHandleLabel" class="userselect">Lock First Handle</div>
+                </td>
+                <td style="width: 50%">
+                    <input id="fixedOne" type="checkbox" aria-labelledby="lockFirstHandleLabel">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%">
+                    <div id="lockSecondHandleLabel" class="userselect">Lock Second Handle</div>
+                </td>
+                <td style="width: 50%">
+                    <input id="fixedSecond" type="checkbox" aria-labelledby="lockSecondHandleLabel">
                 </td>
             </tr>
         </tbody>

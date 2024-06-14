@@ -57,13 +57,19 @@ this.default = function () {
                 break;
             case 'material3-dark':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[10], args.progressBar.element.id);
-                break;    
+                break;
+            case "fluent2":
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[11], args.progressBar.element.id);
+                break;
+            case "fluent2-dark":
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[12], args.progressBar.element.id);
+                break;
             default:
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[5], args.progressBar.element.id);
                 break;
         }
     };
-    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF'];
+    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF', '#0F6CBD', '#115EA3'];
     var button = new ej.buttons.Button();
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#reLoad');

@@ -12,10 +12,8 @@ this.default = function () {
             dependency: 'Predecessor',
             child: 'subtasks'
         },
-        treeColumnIndex: 1,
         columns: [
-            { field: 'TaskID', width: 80 },
-            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'TaskName',headerText: 'Name', width: 270 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
@@ -34,17 +32,34 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName'
         },
-        projectStartDate: new Date('04/02/2019'),
-        projectEndDate: new Date('04/28/2019')
+        projectStartDate: new Date('04/02/2024'),
+        projectEndDate: new Date('04/28/2024')
     });
     ganttChart.appendTo('#WorkTimeRange');
-
+    var workDays = [
+        { id: 'Monday', day: 'Monday' },
+        { id: 'Tuesday', day: 'Tuesday' },
+        { id: 'Wednesday', day: 'Wednesday' },
+        { id: 'Thursday', day: 'Thursday' },
+        { id: 'Friday', day: 'Friday' },
+    ];
     var workStartTime = new ej.inputs.NumericTextBox({
         min: 0,
         max: 24,
         value: 8,
-        change: updateTime,
         showSpinButton: true,
+        change: function (args) {
+            var startTime = document.getElementById('WorkStartTime').ej2_instances[0].value;
+            var endTime = document.getElementById('WorkEndTime').ej2_instances[0].value;
+            if (startTime >= endTime) {
+                if (startTime < 24) {
+                    document.getElementById('WorkEndTime').ej2_instances[0].value = startTime + 1.00;
+                }
+                else {
+                    document.getElementById('WorkEndTime').ej2_instances[0].value = 0.00;
+                }
+            }
+        },
         step: 0.5
     });
     workStartTime.appendTo('#WorkStartTime');
@@ -53,34 +68,118 @@ this.default = function () {
         min: 0,
         max: 24,
         value: 17,
-        change: updateTime,
         showSpinButton: true,
+        change: function (args) {
+            var startTime = document.getElementById('WorkStartTime').ej2_instances[0].value;
+            var endTime = document.getElementById('WorkEndTime').ej2_instances[0].value;
+            if (startTime >= endTime) {
+                if (startTime < 24) {
+                   document.getElementById('WorkEndTime').ej2_instances[0].value = startTime + 1.00;
+                }
+                else {
+                    document.getElementById('WorkEndTime').ej2_instances[0].value = 0.00;
+                }
+            }
+        },
         step: 0.5
     });
     workEndTime.appendTo('#WorkEndTime');
 
+    var checkList1 = new ej.dropdowns.DropDownList ({
+        dataSource: workDays,
+        value: 'Monday',
+        width:'100%',
+        select: function (args) {
+            var startTime = 8;
+            var endTime = 17;
+            for(var i=0;i<ganttChart.weekWorkingTime.length;i++) {
+                if(ganttChart.weekWorkingTime[i].dayOfWeek === args.item.innerText) {
+                    startTime = ganttChart.weekWorkingTime[i].timeRange[0].from;
+                    endTime = ganttChart.weekWorkingTime[i].timeRange[0].to;
+                    break;
+                }
+            }
+            document.getElementById('WorkStart').ej2_instances[0].value = startTime;
+            document.getElementById('WorkEnd').ej2_instances[0].value = endTime;
+        },
+        fields: { text: 'day', value: 'id' },
+        popupHeight: '300px'
+    });
+    checkList1.appendTo('#Days');
+    var workStartTime1 = new ej.inputs.NumericTextBox({
+        min: 0,
+        max: 24,
+        value: 8,
+        showSpinButton: true,
+        change: function (args) {
+            var startTime = document.getElementById('WorkStart').ej2_instances[0].value;
+            var endTime = document.getElementById('WorkEnd').ej2_instances[0].value;
+            if (startTime >= endTime) {
+                if (startTime < 24) {
+                   document.getElementById('WorkEnd').ej2_instances[0].value = startTime + 1.00;
+                }
+                else {
+                    document.getElementById('WorkEnd').ej2_instances[0].value = 0.00;
+                }
+            }
+        },
+        step: 0.5
+    });
+    workStartTime1.appendTo('#WorkStart');
 
-    var isTimeUpdated = false;
-    function updateTime() {
-        var defaultDate = "08/08/2016", startDate = new Date(defaultDate), endDate = new Date(defaultDate);
-        var decPlace =  workStartTime.value - Math.floor(workStartTime.value);
-        startDate.setHours(workStartTime.value);
-        startDate.setMinutes(decPlace * 60);
-        decPlace = workEndTime.value - Math.floor(workEndTime.value);
-        endDate.setHours(workEndTime.value);
-        endDate.setMinutes(decPlace * 60);
-       
-        /*Validate time value and update the time range*/
-        if (startDate.getTime() < endDate.getTime() && isTimeUpdated == false) {
-            var workingTime = [{ from: workStartTime.value, to: workEndTime.value }];
-            ganttChart.dayWorkingTime = workingTime;
-            isTimeUpdated = false;
+    var workEndTime1  = new ej.inputs.NumericTextBox({
+        min: 0,
+        max: 24,
+        value: 17,
+        showSpinButton: true,
+        change: function (args) {
+            var startTime = document.getElementById('WorkStart').ej2_instances[0].value;
+            var endTime = document.getElementById('WorkEnd').ej2_instances[0].value;
+            if (startTime >= endTime) {
+                if (startTime < 24) {
+                  document.getElementById('WorkEnd').ej2_instances[0].value = startTime + 1.00;
+                }
+                else {
+                    document.getElementById('WorkEnd').ej2_instances[0].value = 0.00;
+                }
+            }
+        },
+        step: 0.5
+    });
+    workEndTime1.appendTo('#WorkEnd');
+    var perform = new ej.buttons.Button();
+    perform.appendTo('#perform');
+
+    document.getElementById('perform').onclick = function () {
+        var selectedDay = document.getElementById('Days').ej2_instances[0].value;
+        var startTime = document.getElementById('WorkStart').ej2_instances[0].value;
+        var endTime = document.getElementById('WorkEnd').ej2_instances[0].value;
+        var workingTime = [];
+        var weekWorkingTime = ganttChart.weekWorkingTime;
+        var isUpdated = false;
+        for (var j = 0; j < weekWorkingTime.length; j++) {
+            workingTime.push({ dayOfWeek: weekWorkingTime[j].dayOfWeek, timeRange: weekWorkingTime[j].timeRange });
         }
-        else {
-            isTimeUpdated = true;
-            workStartTime.value = ganttChart.dayWorkingTime[0].from;
-            workEndTime.value = ganttChart.dayWorkingTime[ganttChart.dayWorkingTime.length - 1].to;
+        for (var i = 0; i < workingTime.length; i++) {
+            if (workingTime[i].dayOfWeek === selectedDay) {
+                workingTime[i].dayOfWeek = workingTime[i].dayOfWeek;
+                workingTime[i].timeRange = [{ from: startTime, to: endTime }];
+                isUpdated = true;
+                break;
+            }
         }
-        isTimeUpdated = false;
-    }
+        if (!isUpdated) {
+            workingTime.push({ dayOfWeek: selectedDay, timeRange: [{ from: startTime, to: endTime }] });
+        }
+        ganttChart.weekWorkingTime = workingTime;
+    };
+    var update = new ej.buttons.Button();
+    update.appendTo('#update');
+
+    document.getElementById('update').onclick = function () {
+        var startTime = document.getElementById('WorkStartTime').ej2_instances[0].value;
+        var endTime = document.getElementById('WorkEndTime').ej2_instances[0].value;
+        var workingTime = [{ from: startTime, to: endTime }];
+        ganttChart.dayWorkingTime = workingTime;
+    };
 };

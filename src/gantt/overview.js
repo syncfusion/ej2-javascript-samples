@@ -111,30 +111,30 @@ this.default = function () {
         },
         eventMarkers: [
             {
-                day: '04/04/2022',
+                day: '04/04/2024',
                 cssClass: 'e-custom-event-marker',
                 label: 'Q-1 Release'
             },
             {
-                day: '06/30/2022',
+                day: '06/30/2024',
                 cssClass: 'e-custom-event-marker',
                 label: 'Q-2 Release'
             },
             {
-                day: '09/29/2022',
+                day: '09/29/2024',
                 cssClass: 'e-custom-event-marker',
                 label: 'Q-3 Release'
             }
         ],
         holidays: [{
-            from: "01/01/2022",
-            to: "01/01/2022",
+            from: "01/01/2024",
+            to: "01/01/2024",
             label: "New Year holiday",
             cssClass: "e-custom-holiday"
         },
         {
-            from: "12/25/2021",
-            to: "12/26/2021",
+            from: "12/25/2023",
+            to: "12/26/2023",
             label: "Christmas holidays",
             cssClass: "e-custom-holiday"
         }],
@@ -145,8 +145,8 @@ this.default = function () {
         allowResizing: true,
         taskbarHeight: 24,
         rowHeight: 36,
-        projectStartDate: new Date('12/17/2021'),
-        projectEndDate: new Date('10/26/2022'),
+        projectStartDate: new Date('12/17/2023'),
+        projectEndDate: new Date('10/26/2024'),
     });
     gantt.appendTo('#overviewSample');
 

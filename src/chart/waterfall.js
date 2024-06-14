@@ -48,7 +48,7 @@ this.default = function () {
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             args.chart.theme = selectedTheme && (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         }
            // custom code end
     });

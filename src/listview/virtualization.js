@@ -38,7 +38,7 @@ this.default = function () {
         var imgUrl = data.imgUrl || '';
         var result = '<div class="e-list-wrapper e-list-avatar">' +
         '<span class="e-avatar e-avatar-circle ' + data.icon + ' ' + showIcon + '">' + data.icon + '</span>' +
-        '<img class="e-avatar e-avatar-circle ' + showImg + '" src="' + imgUrl + '" />' +
+        '<img class="e-avatar e-avatar-circle ' + showImg + '" src="' + imgUrl + '" alt="' + data.alttext + '" />' +
         '<span class="e-list-content">' + data.name + '</span>' +
         '</div>';
         return result;

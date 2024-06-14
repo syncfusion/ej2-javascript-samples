@@ -24,12 +24,12 @@ this.default = function () {
             enable: false
         },
         layers: [{
-                layerType: 'OSM',
+                urlTemplate:'https://tile.openstreetmap.org/level/tileX/tileY.png',
                 animationDuration: 0,
                 markerSettings: [
                     {
                         visible: true,
-                        template: '<div><img src="src/maps/images/ballon.png" style="height:30px;width:20px;"></img></div>',
+                        template: '<div><img alt="Ballon image" src="src/maps/images/ballon.png" style="height:30px;width:20px;"></img></div>',
                         dataSource: [{
                                 name: 'Manhattan, New York, USA',
                                 latitude: 40.7488758,

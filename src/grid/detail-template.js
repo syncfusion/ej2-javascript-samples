@@ -4,6 +4,8 @@ this.default = function () {
         dataSource: window.employeeData,
         detailTemplate: '#detailtemplate',
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         height: 335,
         width: 'auto',
         columns: [

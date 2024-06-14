@@ -25,16 +25,20 @@ this.default = function () {
         height: 410,
         enableHover: false,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
         frozenRows: 2,
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', freeze: 'Left' },
-            { field: 'Freight', width: 125, format: 'C2', textAlign: 'Right' },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 130, freeze: 'Right', },
-            { field: 'OrderDate', headerText: 'Order Date', width: 150, format: 'yMd', textAlign: 'Right', },
+            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', freeze: 'Left', isPrimaryKey: true, validationRules: { required: true, number: true } },
+            { field: 'Freight', width: 125, format: 'C2', textAlign: 'Right', editType: 'numericedit', validationRules: { required: true, min: 0 } },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 130, freeze: 'Right', validationRules: { required: true, minLength: 5 } },
+            { field: 'OrderDate', headerText: 'Order Date', width: 150, format: 'yMd', textAlign: 'Right', editType: 'datepickeredit' },
             { field: 'ShipName', headerText: 'Ship Name', width: 300 },
             { field: 'ShipAddress', headerText: 'Ship Address', width: 270, freeze: 'Fixed' },
             { field: 'ShipCity', headerText: 'Ship City', width: 250 },
-            { field: 'ShipCountry', headerText: 'Ship Country', width: 250 }
+            { field: 'ShipCountry', headerText: 'Ship Country', width: 250, editType: 'dropdownedit' }
         ]
     });
     grid.appendTo('#Grid');

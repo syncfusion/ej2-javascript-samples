@@ -1,6 +1,6 @@
 <div class="col-lg-9 control-section">
     <div class="content-wrapper">
-        <div id="TreeGrid"></div>
+        <div id="TreeGrid" id="TreeGrid" role="grid" aria-label="Tree Grid"></div>
     </div>
 </div>
 
@@ -8,11 +8,11 @@
     <table id="property" title="Properties" style="width: 100%">
         <tr style="height: 50px">
             <td >
-                <div>Disable Rows</div>
+                <label for="lockrows">Disable Rows:</label>
             </td>
             <td style="width: 30%;padding-right: 10px">
                 <div id='columnddl'>
-                    <input type="text" tabindex="1" id='lockrows' />
+                    <input type="text" tabindex="0" id='lockrows' aria-label="Disable Rows Input"/>
                </div>
             </td>
          </tr>
@@ -43,13 +43,11 @@
     </p>
 </div>
 <!-- custom code end -->
-<style>
+<!-- custom code start -->
+    <style>
     .material .disableRow .e-rowcell{
         color: rgba(0, 0, 0, .38) !important;
     }
-</style>
-<!-- custom code start -->
-    <style> 
     .material-dark .disableRow .e-rowcell{
         color: #757575 !important;
     }
@@ -93,6 +91,15 @@
         color: rgba(0, 0, 0, .35) !important;
     }
     .fluent-dark .disableRow .e-rowcell{
+        color: #757575 !important;
+    }
+    .fluent2 .disableRow .e-rowcell{
+        color: rgba(0, 0, 0, .38) !important;
+    }
+    .fluent2-dark .disableRow .e-rowcell{
+        color: #757575 !important;
+    }
+    .fluent2-highcontrast .disableRow .e-rowcell{
         color: #757575 !important;
     }
     .e-multiselect {

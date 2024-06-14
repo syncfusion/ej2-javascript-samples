@@ -195,7 +195,7 @@ this.default = function () {
                         content: 'Find',
                         iconCss: 'e-icons e-search',
                         items: [{ text: 'Find', iconCss: 'e-icons e-search' },
-                        { text: 'Advanced find', iconCss: 'e-icons e-search' },
+                        { text: 'Advanced Find', iconCss: 'e-icons e-search' },
                         { text: 'Go to', iconCss: 'e-icons e-arrow-right' }],
                         select: function (args) { updateContent("Find -> " + args.item.text); },
                         click: function () { updateContent("Find"); }

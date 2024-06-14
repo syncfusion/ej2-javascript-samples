@@ -7,6 +7,8 @@ this.default = function () {
         allowPdfExport: true,
         allowExcelExport: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         toolbarClick: toolbarClick,
         exportDetailTemplate: exportDetailTemplate,
         height: 335,

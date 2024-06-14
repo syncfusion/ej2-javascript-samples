@@ -4,6 +4,8 @@ this.default = function () {
         allowExcelExport: true,
         allowPdfExport: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         editSettings: { allowAdding: true, allowDeleting: true, allowEditing: true },
         allowPaging: true,
         contextMenuItems: ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending',

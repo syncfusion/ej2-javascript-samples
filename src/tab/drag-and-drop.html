@@ -23,7 +23,7 @@
                     <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create
                         and edit content. Also, return the valid <a href="https://ej2.syncfusion.com/home/"
                             target="_blank">HTML
-                            markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the
+                            markup</a> or <a aria-label="markdown" href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the
                         content
                     </p>
                     <p><b>Key features:</b></p>
@@ -95,23 +95,8 @@
         padding: 0 5px;
     }
 
-    .bootstrap5 .treeview-external-drag-tab .e-list-item.e-active > .e-text-content .e-list-text,
-    .bootstrap4 .treeview-external-drag-tab .e-list-item.e-active > .e-text-content .e-list-text {
-        color: #212529;
-    }
-    .bootstrap .treeview-external-drag-tab .e-list-item.e-active > .e-text-content .e-list-text {
-        color: #333;
-    }
-
-    .treeview-external-drag-tab .e-list-item.e-hover>.e-fullrow,
-    .treeview-external-drag-tab .e-list-item.e-active>.e-fullrow,
-    .treeview-external-drag-tab .e-list-item.e-active.e-hover>.e-fullrow,
-    .e-bigger .treeview-external-drag-tab .e-list-item.e-hover>.e-fullrow,
-    .e-bigger .treeview-external-drag-tab .e-list-item.e-active>.e-fullrow,
-    .e-bigger .treeview-external-drag-tab .e-list-item.e-active.e-hover>.e-fullrow {
-        background-color: transparent;
-        border-color: transparent;
-        box-shadow: none !important;
+    .treeview-external-drag-tab.e-treeview .e-ul  {
+        padding: unset;
     }
 
     .sb-property-border {

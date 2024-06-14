@@ -54,19 +54,20 @@
         var element2 = document.querySelector('#header3');
         element2.style.color = '#F3F2F1';
     }
-    var layoutelement = document.querySelector('#layout_0template');
-    layoutelement.style.background = this.layoutColor;
-    var layoutelementBody = document.querySelector('#head1');
-    layoutelementBody.style.setProperty('background', this.layoutColor);
-    var layoutelement1 = document.querySelector('#layout_1template');
-    layoutelement1.style.background = this.layoutColor;
-    var layoutelement1Body = document.querySelector('#head2');
-    layoutelement1Body.style.setProperty('background', this.layoutColor);
-    var layoutelement2 = document.querySelector('#layout_2template');
-    layoutelement2.style.background = this.layoutColor;
-    var layoutelement2Body = document.querySelector('#head3');
-    layoutelement2Body.style.setProperty('background', this.layoutColor);
-
+     if (document.getElementById('defaultLayout')) {
+         var layoutelement = document.querySelector('#layout_0template');
+         layoutelement.style.background = this.layoutColor;
+         var layoutelementBody = document.querySelector('#head1');
+         layoutelementBody.style.setProperty('background', this.layoutColor);
+         var layoutelement1 = document.querySelector('#layout_1template');
+         layoutelement1.style.background = this.layoutColor;
+         var layoutelement1Body = document.querySelector('#head2');
+         layoutelement1Body.style.setProperty('background', this.layoutColor);
+         var layoutelement2 = document.querySelector('#layout_2template');
+         layoutelement2.style.background = this.layoutColor;
+         var layoutelement2Body = document.querySelector('#head3');
+         layoutelement2Body.style.setProperty('background', this.layoutColor);
+     }
 };
  this.default = function () {
     

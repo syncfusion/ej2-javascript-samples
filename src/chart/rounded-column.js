@@ -61,6 +61,14 @@ var pointRender = function (args) {
         if (args.series.yName == "Rate")
             args.fill = "grey";
     }
+    else if (selectedTheme === 'fluent2-dark') {
+        if (args.series.yName == "Rate")
+            args.fill = "#f9fafb";
+    } 
+    else if (selectedTheme === 'fluent2') {
+        if (args.series.yName == "Rate")
+            args.fill = "grey";
+    }
     else {
         if (args.series.yName == "Rate")
             args.fill = "grey";
@@ -81,35 +89,35 @@ this.default = function () {
         enableSideBySidePlacement: false,
         //Initializing Primary Y Axis
         primaryYAxis: {
-            minimum: 0, maximum: 100, title: 'Literacy Rate In Percentage', labelFormat: '{value}%', interval: 25, majorTickLines: { width: 0 }, lineStyle: { width: 0 }
+            minimum: 0, maximum: 100, labelFormat: '{value}%', interval: 25, majorTickLines: { width: 0 }, lineStyle: { width: 0 }
         },
         //Initializing Chart Series
         series: [
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'Rate',
-                dataSource: [
-                    { x: 'Niger', y: 19.1, Rate: 100, text: "19.1%" },
+                dataSource: [                    
                     { x: 'Sierra Leone', y: 48.1, Rate: 100, text: "48.1%" },
                     { x: 'South Sudan', y: 26.8, Rate: 100, text: "26.8%" },
                     { x: 'Nepal', y: 64.7, Rate: 100, text: "64.7%" },
                     { x: 'Gambia', y: 55.5, Rate: 100, text: "55.5%" },
                     { x: 'Gyana', y: 88.5, Rate: 100, text: "88.5%" },
                     { x: 'Kenya', y: 78.0, Rate: 100, text: "78.0%" },
-                    { x: 'Singapore', y: 96.8, Rate: 100, text: "96.8%" }
+                    { x: 'Singapore', y: 96.8, Rate: 100, text: "96.8%" },
+                    { x: 'Niger', y: 19.1, Rate: 100, text: "19.1%" },
                 ], name: 'Tiger', enableTooltip: false, columnWidth: 0.8, opacity: 0.5,
                 cornerRadius: { bottomLeft: ej.base.Browser.isDevice ? 12 : 35, bottomRight: ej.base.Browser.isDevice ? 12 : 35, topLeft: ej.base.Browser.isDevice ? 12 : 35, topRight: ej.base.Browser.isDevice ? 12 : 35, },
             },
             {
                 type: 'Column', xName: 'x', width: 2, yName: 'y',
-                dataSource: [
-                    { x: 'Niger', y: 19.1, Rate: 100, text: "19.1%" },
+                dataSource: [                    
                     { x: 'Sierra Leone', y: 48.1, Rate: 100, text: "48.1%" },
                     { x: 'South Sudan', y: 26.8, Rate: 100, text: "26.8%" },
                     { x: 'Nepal', y: 64.7, Rate: 100, text: "64.7%" },
                     { x: 'Gambia', y: 55.5, Rate: 100, text: "55.5%" },
                     { x: 'Gyana', y: 88.5, Rate: 100, text: "88.5%" },
                     { x: 'Kenya', y: 78.0, Rate: 100, text: "78.0%" },
-                    { x: 'Singapore', y: 96.8, Rate: 100, text: "96.8%" }
+                    { x: 'Singapore', y: 96.8, Rate: 100, text: "96.8%" },
+                    { x: 'Niger', y: 19.1, Rate: 100, text: "19.1%" },
                 ], name: 'Tiger',
                 cornerRadius: { bottomLeft: ej.base.Browser.isDevice ? 12 : 35, bottomRight: ej.base.Browser.isDevice ? 12 : 35, topLeft: ej.base.Browser.isDevice ? 12 : 35, topRight: ej.base.Browser.isDevice ? 12 : 35,}, columnWidth: 0.8,
                 marker: { dataLabel: { visible: true, name: 'text', position: 'Top', font: { fontWeight: '600', color: '#ffffff',size: ej.base.Browser.isDevice ? '9px' : '11px' } } }
@@ -125,7 +133,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
            // custom code end
     });

@@ -1,23 +1,23 @@
 <div class="control-section col-lg-9">
     <div class="control-wrapper">
-        <h4>Local Data</h4>
-        <input type="text" id="local" tabindex="1" />
+        <label class="h4">Local Data</label>
+        <input type="text" id="local" tabindex="0" />
     </div>
     <div class="control-wrapper">
-        <h4>Remote Data</h4>
-        <input type="text" id="remote" tabindex="1" />
+        <label class="h4">Remote Data</label>
+        <input type="text" id="remote" tabindex="0" />
     </div>
     <div class="control-wrapper">
-        <h4>Default Values</h4>
-        <input type="text" id="databind" tabindex="1" />
+        <label class="h4">Default Values</label>
+        <input type="text" id="databind" tabindex="0" />
     </div>
     <div class="control-wrapper">
-        <h4>Grouping</h4>
-        <input type="text" id="group" tabindex="1" />
+        <label class="h4">Grouping</label>
+        <input type="text" id="group" tabindex="0" />
     </div>
     <div class="control-wrapper">
-        <h4>Template</h4>
-        <input type="text" id="template" tabindex="1" />
+        <label class="h4">Template</label>
+        <input type="text" id="template" tabindex="0" />
     </div>
 </div>
 <div class="col-lg-3 property-section">
@@ -74,6 +74,12 @@
         width: 250px;
         padding-top: 15px
     } 
+
+    .control-wrapper .h4 {
+        font-size: 16px;
+        margin: 0 0 10px;
+        font-weight: bold;
+    }
 
     .e-list-icon {
         font-family: 'e-icons' !important;

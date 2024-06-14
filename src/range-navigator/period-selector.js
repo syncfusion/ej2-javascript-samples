@@ -4,7 +4,7 @@
 var _this = this;
 var selectedTheme = location.hash.split('/')[1];
 selectedTheme = selectedTheme ? selectedTheme : 'Material';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
 var removeSecondaryElement;
 var datasrc;
 var data1 = [];

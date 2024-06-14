@@ -22,7 +22,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" tabindex="1" id='sorting-fields' />
+                        <input type="text" tabindex="0" id='sorting-fields' />
                     </div>
                 </td>
             </tr>
@@ -33,7 +33,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" placeholder="Select headers" tabindex="1" id='sorting-members' />
+                        <input type="text" placeholder="Select headers" tabindex="0" aria-label="multiselect"  id='sorting-members' />
                     </div>
                 </td>
             </tr>
@@ -44,7 +44,7 @@
                 </td>
                 <td>
                     <div>
-                        <input type="text" tabindex="1" id='sorting-order' />
+                        <input type="text" tabindex="0" id='sorting-order' />
                     </div>
                 </td>
             </tr>
@@ -65,13 +65,19 @@
         axes in ascending or descending order.</p>
 </div>
 <div id="description">
-    <p>In this sample, any field from the <b>Field</b> dropdown list and its member(s), aka header name(s), from the
+    <p>
+        In this sample, any field from the <b>Field</b> dropdown list and its member(s), aka header name(s), from the
         <b>Headers</b> dropdown list can be ordered ascending or descending.
         It is possible to achieve this by setting the <code>enableSorting</code> property to <b>true</b>,
         as well as the field name, sort order, and member(s) (which can be in any order) inside the pivot table's
         <code>sortSettings</code> property.
-        The <code>dataSourceSettings</code> includes <code>enableSorting</code> and <code>sortSettings</code>
-        properties.</p>
+        The <code>dataSourceSettings</code> includes <code>enableSorting</code> and <code>sortSettings</code>properties.
+    </p><br />
+    <p>
+        More information on the custom sorting can be found in this <a target="_blank"
+        href="https://ej2.syncfusion.com/javascript/documentation/pivotview/sorting#custom-sorting">
+        documentation section</a>.
+    </p>
 </div>
 
 <style>

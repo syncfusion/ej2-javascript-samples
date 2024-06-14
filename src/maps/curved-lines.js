@@ -80,7 +80,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>New Delhi' +
+                        template: '<div style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>New Delhi' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -97,7 +97,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Mumbai' +
+                        template: '<div style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Mumbai' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -114,7 +114,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Chennai' +
+                        template: '<div style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Chennai' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -131,7 +131,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Kolkata' +
+                        template: '<div style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Kolkata' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -148,7 +148,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Kunming' +
+                        template: '<div style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Kunming' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -165,7 +165,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Beijing' +
+                        template: '<div style="font-size: 12px;color:black; font-family: Segeo UI"; font-weight: 500>Beijing' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -182,7 +182,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Shanghai' +
+                        template: '<div style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Shanghai' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -199,7 +199,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Hong Kong' +
+                        template: '<div style="font-size: 12px;color:black;font-family: Segeo UI"; font-weight: 500>Hong Kong' +
                             '</div>',
                         animationDuration: 0,
                         offset: {
@@ -216,7 +216,7 @@ this.default = function () {
                             }
                         ],
                         visible: true,
-                        template: '<div id="marker1" style="font-size: 12px;color:black; "; font-weight: 500>Guangzhou' +
+                        template: '<div style="font-size: 12px;color:black; "; font-weight: 500>Guangzhou' +
                             '</div>',
                         animationDuration: 0,
                         offset: {

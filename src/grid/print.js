@@ -13,10 +13,13 @@ this.default = function () {
         dataSource: window.employeeData,
         allowSorting: true,
         hierarchyPrintMode: 'All',
-        toolbar: ['Print' ],
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Print'],
+        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125 },
-            { field: 'FirstName', headerText: 'Name', width: 125 },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 125, isPrimaryKey: true, validationRules: { required: true, number: true } },
+            { field: 'FirstName', headerText: 'Name', width: 125, validationRules: { required: true, minLength: 5 } },
             { field: 'Title', headerText: 'Title', width: 180 },
             { field: 'City', headerText: 'City', width: 110 }
         ],
@@ -35,7 +38,7 @@ this.default = function () {
                 queryString: 'CustomerID',
                 columns: [
                     { field: 'CustomerID', headerText: 'Customer ID', textAlign: 'Right', width: 75 },
-                    { field: 'Phone', headerText: 'Phone', width: 100 },
+                    { field: 'ContactName', headerText: 'Contact Name', width: 100 },
                     { field: 'Address', headerText: 'Address', width: 120 },
                     { field: 'Country', headerText: 'Country', width: 100 }
                 ]

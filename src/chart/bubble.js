@@ -23,6 +23,10 @@ var labelRender = function (args) {
         "rgba(201, 228, 34, 0.5)", "rgba(222, 61, 138, 0.5)", "rgba(22, 47, 136, 0.5)"];
     var bubbleBootstrap5DarkColors = ["rgba(143, 128, 244, 0.5)", "rgba(255, 212, 109, 0.5)", "rgba(108, 189, 255, 0.5)", "rgba(255, 127, 113, 0.5)", "rgba(255, 109, 179, 0.5)", "rgba(99, 245, 210, 0.5)", "rgba(252, 170, 101, 0.5)",
         "rgba(236, 255, 119, 0.5)", "rgba(239, 142, 255, 0.5)", "rgba(95, 130, 253, 0.5)"];
+    var bubbleFluent2Colors = ["rgba(98, 0, 238, 0.5)", "rgba(9, 175, 116, 0.5)", "rgba(0, 118, 229, 0.5)", "rgba(203, 53, 135, 0.5)", "rgba(231, 145, 15, 0.5)", "rgba(3, 100, 222, 0.5)", "rgba(102, 205, 21, 0.5)", "rgba(243, 169, 60, 0.5)",
+        "rgba(16, 124, 16, 0.5)", "rgba(193, 156, 0, 0.5)"];
+    var bubbleFluent2DarkColors = ["rgba(155, 180, 73, 0.5)", "rgba(42, 114, 213, 0.5)", "rgba(67, 183, 134, 0.5)", "rgba(63, 87, 154, 0.5)", "rgba(88, 78, 198, 0.5)", "rgba(232, 95, 156, 0.5)", "rgba(110, 122, 137, 0.5)", "rgba(234, 98, 102, 0.5)",
+        "rgba(11, 106, 11, 0.5)", "rgba(193, 156, 0, 0.5)"];
     var pointMaterialColors = ["#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883", "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb",
         "#ea7a57", "#404041", "#00bdae"];
     var pointFabricColors = ["#4472c4", "#ed7d31", "#ffc000", "#70ad47", "#5b9bd5", "#c1c1c1", "#6f6fe2", "#e269ae", "#9e480e",
@@ -51,6 +55,10 @@ var labelRender = function (args) {
     var pointMaterial3Colors = ["#6355C7", "#00AEE0", "#FFB400", "#F7523F", "#963C70", "#FD7400", "#4BE0BC", "#2196F5", "#DE3D8A", "#162F88"];
     var pointMaterial3DarkColors = ["#4EAAFF", "#FA4EAB", "#FFF500", "#17EA58", "#38FFE7",
         "#FF9E45", "#B3F32F", "#B93CE4", "#FC5664", "#9B55FF"];
+    var pointFluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10",
+        "#C19C00"];
+    var pointFluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
+        "#0B6A0B", "#C19C00"];
     if (selectedTheme && selectedTheme.indexOf('fabric') > -1) {
         args.fill = bubbleFabricColors[args.point.index % 10];
         args.border.color = pointFabricColors[args.point.index % 10];
@@ -100,6 +108,14 @@ var labelRender = function (args) {
     else if (selectedTheme === 'material3-dark') {
         args.fill = bubbleMaterial3DarkColors[args.point.index % 10];
         args.border.color = pointMaterial3DarkColors[args.point.index % 10];
+    }
+    else if (selectedTheme === 'fluent2') {
+        args.fill = bubbleFluent2Colors[args.point.index % 10];
+        args.border.color = pointFluent2Colors[args.point.index % 10];
+    }
+    else if (selectedTheme === 'fluent2-dark') {
+        args.fill = bubbleFluent2DarkColors[args.point.index % 10];
+        args.border.color = pointFluent2DarkColors[args.point.index % 10];
     }
 };
 /**

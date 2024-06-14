@@ -1,11 +1,13 @@
 {
     "name": "Rich Text Editor",
+    "type": "update",
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
     "samples": [{
             "url": "tools",
             "name": "Overview",
+            "type": "update",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "fileManagerSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "enableTabKey", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["path", "enable", "ajaxSettings"], "QuickToolbarSettings": ["table"] }
@@ -149,6 +151,22 @@
             "description": "This demo explains the image editor integration using the Rich Text Editor control with minimum configuration.",
             "category": "Rich Text Editor",
             "api": { "RichTextEditor": ["actionComplete", "quickToolbarSettings", "toolbarSettings", "saveInterval", "change", "toolbarClick", "appendTo"], "QuickToolbarSettings": ["image"] }
+        },
+        {
+            "url": "export-word",
+            "name": "Export to Word / PDF",
+            "description": "This demo explains how to export the content of the Rich Text Editor to Word and PDF document formats using the Syncfusion Document processing libraries.",
+            "category": "Export / Import",
+            "type": "new",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "actionBegin", "actionComplete", "appendTo"], "ToolbarSettings": ["items"]}
+        },
+        {
+            "url": "import-word",
+            "name": "Import from Word",
+            "description": "This demo explains how to import the content from Word document to the Rich Text Editor using the Syncfusion Document processing libraries.",
+            "category": "Export / Import",
+            "type": "new",
+            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "actionBegin", "actionComplete", "appendTo"], "ToolbarSettings": ["items"]}
         },
         {
             "url": "mention-integration",

@@ -6,14 +6,15 @@ var mdsource;
 this.default = function() {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '250px',
+        placeholder : "Enter your text here...",
         formatter: new ej.richtexteditor.MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.' } }),
         toolbarSettings: {
             items: ['Bold', 'Italic', 'StrikeThrough', '|',
-                'Formats', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
+                'Formats', 'Blockquote', 'OrderedList', 'UnorderedList', 'SuperScript', 'SubScript', '|',
                 'CreateLink', 'Image', 'CreateTable', '|',
                 {
                     tooltipText: 'Preview',
-                    template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
+                    template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn"  aria-label="Preview Code">' +
                         '<span class="e-btn-icon e-md-preview e-icons"></span></button>'
                 }, '|', 'Undo', 'Redo'
             ]
@@ -30,11 +31,11 @@ this.default = function() {
                 fullPreview();
                 if (e.currentTarget.classList.contains('e-active')) {
                     defaultRTE.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo'
+                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo'
                     ]);
                 } else {
                     defaultRTE.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
-                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Undo', 'Redo'
+                        'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo'
                     ]);
                 }
             });

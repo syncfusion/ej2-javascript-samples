@@ -14,10 +14,14 @@ this.default = function () {
         allowPaging: true,
         pageSettings: { pageCount: 2 },
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
         columns: [
-            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right' },
-            { field: 'ProductName', headerText: 'Product Name', width: 190 },
-            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2' },
+            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right', isPrimaryKey: true, validationRules: { required: true, number: true } },
+            { field: 'ProductName', headerText: 'Product Name', width: 190, validationRules: { required: true, minLength: 5 } },
+            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2', editType: 'numericedit' },
             { field: 'UnitsInStock', headerText: 'Units In Stock', width: 160, textAlign: 'Right' }
         ],
         actionComplete: paging

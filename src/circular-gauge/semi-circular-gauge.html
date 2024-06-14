@@ -1,153 +1,171 @@
-<div>
-    <div class="col-md-8 control-section">
-        <div class="content-wrapper">
-            <div id="gauge"></div>
+<main>
+    <div>
+        <div class="col-md-8 control-section">
+            <div class="content-wrapper">
+                <div id="gauge"></div>
+            </div>
+        </div>
+        <!-- Property Panel -->
+        <br>
+        <div class="col-md-4 property-section">
+            <table id="property" title="Properties" style="width: 100%;margin-left: -10px;" role="none">
+                <colgroup>
+                    <col span="1" style="width: 50%;">
+                    <col span="1" style="width: 30%;">
+                    <col span="1" style="width: 20%;">
+                </colgroup>
+                <tbody>
+                <tr style="height: 50px">
+                    <td>
+                        <div style="font-size: 14px;">Start Angle</div>
+                    </td>
+                    <td style="width: 80%;">
+                        <div>
+                            <input type="range" id="start" value="270" min="0" max="360" style="width: 70%" />
+                        </div>
+                    </td>
+                    <td style="width: 20%;padding-top: 10px;text-align: center;">
+                        <span id='rangeStart' style="margin-left: -20px;font-size:14px">270°</span>
+                    </td>
+                </tr>
+    
+                <tr style="height: 50px">
+                    <td>
+                        <div style="font-size: 14px;">End Angle</div>
+                    </td>
+                    <td style="width: 80%">
+                        <div>
+                            <input type="range" id="end" value="90" min="0" max="360" style="width: 70%" />
+                        </div>
+                    </td>
+                    <td style="width: 20%;padding-top: 10px;text-align: center;">
+                        <span id='rangeEnd' style="margin-left: -20px;font-size:14px;">90°</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div style="font-size: 14px;">Radius</div>
+                    </td>
+                    <td style="width: 80%">
+                        <div>
+                            <input type="range" id="radius" value="100" min="30" max="100" style="width: 70%" />
+                        </div>
+                    </td>
+                    <td style="width: 20%;padding-top: 10px;text-align: center;">
+                        <span id='radius1' style="margin-left: -20px;font-size:14px">100%</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td style="width: 40%">
+                        <div class="property-text" style="font-size: 14px;"> Radius based on angle</div>
+                    </td>
+                    <td style="width: 40%;">
+                        <div id="checkbox1" style="margin-left:-10px;">
+                            <input type="checkbox" id="angle" />
+                        </div>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div style="margin-top: 10px;font-size: 14px;">Center X</div>
+                    </td>
+                    <td style="width: 80%">
+                        <div>
+                            <input type="range" id="centerX" value="50" min="0" max="100" style="width: 70%;margin-top: 10px;" />
+                        </div>
+                    </td>
+                    <td style="width: 20%;padding-top: 20px;text-align: center;">
+                        <span id='center1' style="margin-left: -20px;font-size: 14px;">50%</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div style="margin-top: 10px;font-size: 14px;">Center Y</div>
+                    </td>
+                    <td style="width: 80%">
+                        <div>
+                            <input type="range" id="centerY" value="50" min="0" max="100" style="width: 70%; margin-top: 10px;" />
+                        </div>
+                    </td>
+                    <td style="width: 20%;padding-top: 20px;text-align: center;">
+                        <span id='center2' style="margin-left: -20px;font-size: 14px;">50%</span>
+                    </td>
+                </tr>
+                <tr style="height: 50px">
+                    <td>
+                        <div id="enablehide" style="font-size: 14px;margin-top: 5px"> Hide Intersecting Labels</span> </div>
+                    </td>
+                    <td>
+                        <div id="checkbox2" style="margin-left: -10px;">
+                            <input type="checkbox" id="hidelabel" checked>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
         </div>
     </div>
-    <!-- Property Panel -->
-    <br>
-    <div class="col-md-4 property-section">
-        <table id="property" title="Properties" style="width: 100%;margin-left: -10px;">
-            <colgroup>
-                <col span="1" style="width: 50%;">
-                <col span="1" style="width: 30%;">
-                <col span="1" style="width: 20%;">
-            </colgroup>
-            <tbody>
-            <tr style="height: 50px">
-                <td>
-                    <div style="font-size: 14px;">Start Angle</div>
-                </td>
-                <td style="width: 80%;">
-                    <div>
-                        <input type="range" id="start" value="270" min="0" max="360" style="width: 70%" />
-                    </div>
-                </td>
-                <td style="width: 20%;padding-top: 10px;text-align: center;">
-                    <span id='rangeStart' style="margin-left: -20px;font-size:14px">270°</span>
-                </td>
-            </tr>
+    <style>
 
-            <tr style="height: 50px">
-                <td>
-                    <div style="font-size: 14px;">End Angle</div>
-                </td>
-                <td style="width: 80%">
-                    <div>
-                        <input type="range" id="end" value="90" min="0" max="360" style="width: 70%" />
-                    </div>
-                </td>
-                <td style="width: 20%;padding-top: 10px;text-align: center;">
-                    <span id='rangeEnd' style="margin-left: -20px;font-size:14px;">90°</span>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td>
-                    <div style="font-size: 14px;">Radius</div>
-                </td>
-                <td style="width: 80%">
-                    <div>
-                        <input type="range" id="radius" value="100" min="30" max="100" style="width: 70%" />
-                    </div>
-                </td>
-                <td style="width: 20%;padding-top: 10px;text-align: center;">
-                    <span id='radius1' style="margin-left: -20px;font-size:14px">100%</span>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div class="property-text" style="font-size: 14px;"> Radius based on angle</div>
-                </td>
-                <td style="width: 40%;">
-                    <div id="checkbox1" style="margin-left:-10px;">
-                        <input type="checkbox" id="angle" />
-                    </div>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td>
-                    <div style="margin-top: 10px;font-size: 14px;">Center X</div>
-                </td>
-                <td style="width: 80%">
-                    <div>
-                        <input type="range" id="centerX" value="50" min="0" max="100" style="width: 70%;margin-top: 10px;" />
-                    </div>
-                </td>
-                <td style="width: 20%;padding-top: 20px;text-align: center;">
-                    <span id='center1' style="margin-left: -20px;font-size: 14px;">50%</span>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td>
-                    <div style="margin-top: 10px;font-size: 14px;">Center Y</div>
-                </td>
-                <td style="width: 80%">
-                    <div>
-                        <input type="range" id="centerY" value="50" min="0" max="100" style="width: 70%; margin-top: 10px;" />
-                    </div>
-                </td>
-                <td style="width: 20%;padding-top: 20px;text-align: center;">
-                    <span id='center2' style="margin-left: -20px;font-size: 14px;">50%</span>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td>
-                    <div id="enablehide" style="font-size: 14px;margin-top: 5px"> Hide Intersecting Labels</span> </div>
-                </td>
-                <td>
-                    <div id="checkbox2" style="margin-left: -10px;">
-                        <input type="checkbox" id="hidelabel" checked>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
-</div>
-<style>
-    #checkbox1{
-        margin-top: -7px;
-    }
-    #checkbox2{
-        margin-top: -2px;
-    }
-    .e-view.fluent #checkbox2, .e-view.fluent-dark #checkbox2 {
-        margin-top: 1px;
-    }
-    .e-view.bootstrap5 #checkbox2, .e-view.bootstrap5-dark #checkbox2 {
-        margin-top: -3px;
-    }
-    .e-view.material #checkbox1, .e-view.material-dark #checkbox1, .e-view.bootstrap4 #checkbox1, .e-view.bootstrap4-dark #checkbox1,
-    e.view.bootstrap #checkbox1, .e-view.bootstrap-dark #checkbox1, .e-view.material #checkbox2, .e-view.material-dark #checkbox2 {
-        margin-top: -8px;
-    }
-    .e-view.material3 #checkbox2, .e-view.material3-dark #checkbox2, .e-view.bootstrap4 #checkbox2, .e-view.bootstrap4-dark #checkbox2,
-    .e-view.bootstrap #checkbox2, .e-view.bootstrap-dark #checkbox2 {
-        margin-top: -5px;
-    }
-</style>
-<div id="action-description">
-    <p>
-        This sample shows how to create semi-circular or quarter-circular gauges by modifying a circular gauge with
-        different start and end angles.
-    </p>
-</div>
-<div id="description">
-    <p>
-        In this example, a circular gauge is rendered with different start and end angles to create semi-circular or
-        quarter-circular gauges. The radius, start angle, end angle, and center position of the circular gauge can all
-        be customized using the options in the properties panel.
-    </p>
-    <p>
-        More information on the semi-circular or quarter-circular gauges can be found in this <a target="_blank"
-            href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-appearance/#radius-calculation-based-on-angles">documentation
-            section</a>.
-    </p>
-</div>
-<!-- custom code start -->
-<style>
-    tr {
-        height: 50px;
-    }
-</style>
-<!-- custom code end -->
+        #enablehide {
+            margin-top: 5px !important;
+        }
+
+        #checkbox1{
+            margin-top: -7px;
+        }
+        #checkbox2{
+            margin-top: -2px;
+        }
+
+      
+
+        .e-view.fluent2-dark #checkbox1, .e-view.fluent2-dark #checkbox2,
+        .e-view.fluent2 #checkbox1, .e-view.fluent2 #checkbox2 {
+            padding-left: 2px;
+        }
+
+        .e-view.fluent2 #checkbox2, 
+        .e-view.fluent #checkbox2, .e-view.fluent-dark #checkbox2 {
+            margin-top: 1px;
+            
+        }
+        
+        .e-view.bootstrap5 #checkbox2, .e-view.bootstrap5-dark #checkbox2 {
+            margin-top: -3px;
+        }
+        .e-view.material #checkbox1, .e-view.material-dark #checkbox1, .e-view.bootstrap4 #checkbox1, .e-view.bootstrap4-dark #checkbox1,
+        e.view.bootstrap #checkbox1, .e-view.bootstrap-dark #checkbox1, .e-view.material #checkbox2, .e-view.material-dark #checkbox2 {
+            margin-top: -8px;
+        }
+        .e-view.material3 #checkbox2, .e-view.material3-dark #checkbox2, .e-view.bootstrap4 #checkbox2, .e-view.bootstrap4-dark #checkbox2,
+        .e-view.bootstrap #checkbox2, .e-view.bootstrap-dark #checkbox2 {
+            margin-top: -5px;
+        }
+    </style>
+    <section id="action-description" aria-label="Description of Circular Gauge sample">
+        <p>
+            This sample shows how to create semi-circular or quarter-circular gauges by modifying a circular gauge with
+            different start and end angles.
+        </p>
+    </section>
+    <section id="description" aria-label="Description of Circular Gauge features demonstrated in this sample">
+        <p>
+            In this example, a circular gauge is rendered with different start and end angles to create semi-circular or
+            quarter-circular gauges. The radius, start angle, end angle, and center position of the circular gauge can all
+            be customized using the options in the properties panel.
+        </p>
+        <p>
+            More information on the semi-circular or quarter-circular gauges can be found in this <a target="_blank"
+                href="https://ej2.syncfusion.com/javascript/documentation/circular-gauge/gauge-appearance/#radius-calculation-based-on-angles">documentation
+                section</a>.
+        </p>
+    </section>
+    <!-- custom code start -->
+    <style>
+        tr {
+            height: 50px;
+        }
+    </style>
+    <!-- custom code end -->
+</main>

@@ -2,6 +2,7 @@
     "name": "File Manager",
     "directory": "file-manager",
     "category": "Navigation",
+    "type": "update",
     "ftName": "file-manager",
     "samples": [
         {
@@ -10,6 +11,13 @@
             "category": "File Manager",
             "api": { "FileManager": [ "ajaxSettings", "view" ] },
             "description": "FileManager for JavaScript(ES5) with full view of the File Manager like a windows explorer User Interface."
+        },
+        {
+            "url": "flat-data",
+            "name": "Flat Data",
+            "type": "new",
+            "category": "File Manager",
+            "description": "Introduces a new feature in the File Manager, Showcases the seamless integration of Flat Data retrieved as complete folder data as a array of JavaScript objects during the initial rendering of the File Manager."
         },
         {
             "url": "custom-thumbnail",

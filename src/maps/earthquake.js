@@ -18,8 +18,7 @@ this.default = function () {
         zoomSettings: {
             enable: false,
             zoomFactor: 7,
-            mouseWheelZoom: false,
-            toolbars: []
+            mouseWheelZoom: false
         },
         mapsArea: {
             background: '#AEE2FA'

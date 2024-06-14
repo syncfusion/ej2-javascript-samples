@@ -8,7 +8,6 @@ this.default = function () {
         allowFiltering: true,
         filterSettings: { type: 'Menu' },
         allowSorting: true,
-        allowResizing: true,
         showColumnMenu: true,
         treeColumnIndex: 1,
         columns: [

@@ -11,6 +11,7 @@ this.default = function () {
             if (args.cell.innerHTML === 'High') {
                 var x = document.createElement('IMG');
                 x.setAttribute('src', 'src/tree-grid/images/__High.png');
+                x.setAttribute('alt', 'High');
                 x.setAttribute('height', '15px');
                 span = document.createElement('span');
                 span.innerHTML = args.cell.innerHTML;
@@ -22,6 +23,7 @@ this.default = function () {
             else if (args.cell.innerHTML === 'Critical') {
                 var y = document.createElement('IMG');
                 y.setAttribute('src', 'src/tree-grid/images/__Critical.png');
+                y.setAttribute('alt', 'Critical');
                 y.setAttribute('height', '15px');
                 span = document.createElement('span');
                 span.innerHTML = args.cell.innerHTML;
@@ -33,6 +35,7 @@ this.default = function () {
             else if (args.cell.innerHTML === 'Low') {
                 var z = document.createElement('IMG');
                 z.setAttribute('src', 'src/tree-grid/images/__Low.png');
+                z.setAttribute('alt', 'Low');
                 z.setAttribute('height', '15px');
                 span = document.createElement('span');
                 span.innerHTML = args.cell.innerHTML;
@@ -44,6 +47,7 @@ this.default = function () {
             else if (args.cell.innerHTML === 'Normal') {
                 var a = document.createElement('IMG');
                 a.setAttribute('src', 'src/tree-grid/images/__Normal.png');
+                a.setAttribute('alt', 'Normal');
                 a.setAttribute('height', '15px');
                 span = document.createElement('span');
                 span.innerHTML = args.cell.innerHTML;

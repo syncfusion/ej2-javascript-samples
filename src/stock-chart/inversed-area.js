@@ -4,7 +4,7 @@ renderInversedStockChart = function (aapl) {
              majorGridLines: { width: 0 },crosshairTooltip: { enable: true } },
             primaryYAxis: {
                 lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', height: 0 }, isInversed: true,crosshairTooltip: { enable: true }
+                majorTickLines: { color: 'transparent', height: 0 }, isInversed: true, crosshairTooltip: { enable: true }
             },
             chartArea: { border: { width: 0 } },
             series: [
@@ -21,7 +21,7 @@ renderInversedStockChart = function (aapl) {
                 var selectedTheme = location.hash.split('/')[1];
                 selectedTheme = selectedTheme ? selectedTheme : 'Material';
                 args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
             }
             // custom code end
         });

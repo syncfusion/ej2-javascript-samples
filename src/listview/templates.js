@@ -5,7 +5,7 @@ this.default = function () {
 
     var template = '<div ${if(category!==null)} class = "clearfix desc e-list-wrapper e-list-multi-line e-list-avatar" ${else} ' +
     'class = "clearfix e-list-wrapper e-list-multi-line e-list-avatar" ${/if}> ${if(imgSrc!=="")}' +
-    '<img class="e-avatar" src="src/listview/images/${imgSrc}.png" /> ' +
+    '<img class="e-avatar" src="src/listview/images/${imgSrc}.png" alt="image"/> ' +
     '${/if} <span class="e-list-item-header">${title} </span>' +
     '<span class="e-list-content e-text-overflow" >${description} </span> ${if(timeStamp!=="")}  <div id="list-logo">' +
     '<span class="bookmark"></span> <span class="comments"></span>' +

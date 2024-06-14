@@ -5,9 +5,9 @@
     "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Document Editor", "Image Editor"],
     "Calendars": ["Scheduler", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker", "Gantt"],
     "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],
-    "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box","Mention"],
+    "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box", "Mention", "MultiColumn Combobox"],
     "Navigation": ["Accordion", "AppBar", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "Ribbon", "Stepper", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Message", "Toast", "Progress Bar", "Skeleton"],
-    "Inputs": ["TextBox", "TextArea", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating"],
+    "Inputs": ["TextBox", "TextArea", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating", "OTP Input"],
     "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout", "Timeline"]
 }

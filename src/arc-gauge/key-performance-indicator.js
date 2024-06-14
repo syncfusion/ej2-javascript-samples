@@ -7,12 +7,14 @@ this.default = function () {
       {
         annotations: [
           {
+            description:'Triangle',
             content: '<div class="triangle-up"></div>',
             angle: 270,
             zIndex: '1',
             radius: '33%',
           },
           {
+            description:'Current',
             content:
               '<div class="text" style="color:#84cbb5;">Current</div>',
             angle: 0,
@@ -20,6 +22,7 @@ this.default = function () {
             radius: '25%',
           },
           {
+            description:'76.6%',
             content:
               '<div class="percentage" style="color:#84cbb5;">76.6%</div>',
             angle: 125,
@@ -27,6 +30,7 @@ this.default = function () {
             radius: '12%',
           },
           {
+            description:'0',
             content:
               '<div style="font-size:22px;font-family: inherit;">0</div>',
             angle: 213,
@@ -34,6 +38,7 @@ this.default = function () {
             radius: '83%',
           },
           {
+            description:'100',
             content:
               '<div style="font-size:22px;font-family: inherit">100</div>',
             angle: 150,
@@ -43,6 +48,7 @@ this.default = function () {
         ],
         lineStyle: { width: 0 },
         labelStyle: {
+          format:'{value} %',
           font: {
             size: '0px',
           },

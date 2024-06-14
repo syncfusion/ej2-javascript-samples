@@ -13,6 +13,7 @@ this.default = function() {
         value: 1000,
         min: 555,
         max: 2000,
+        placeholder : "Maximum Length",
         format: 'n0',
         change: function (e) {
             defaultAPI.maxLength = maxLength.value;
@@ -56,4 +57,3 @@ this.default = function() {
         defaultAPI.selectAll();
     };
 };
-    

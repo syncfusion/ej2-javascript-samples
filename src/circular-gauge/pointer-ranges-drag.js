@@ -52,6 +52,7 @@ this.default = function () {
                 color: '#F03E3E'
             }],
             pointers: [{
+                description:'Marker pointer value : 70',
                 type: 'Marker', value: 70,
                 markerShape: 'InvertedTriangle',
                 radius: '110%',
@@ -59,6 +60,7 @@ this.default = function () {
                 color: '#E5C31C',
                 markerWidth: 20
             }, {
+                description:'Needle pointer value : 70',
                 value: 70,
                 radius: '60%',
                 cap: { radius: 10, border: { width: 5, color: '#E5C31C' } },

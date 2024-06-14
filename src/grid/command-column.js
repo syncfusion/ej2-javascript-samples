@@ -4,6 +4,8 @@ this.default = function () {
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, allowEditOnDblClick: false },
         allowPaging: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         pageSettings: {pageCount: 5},
         columns: [
             {

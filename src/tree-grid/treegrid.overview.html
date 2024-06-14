@@ -1,8 +1,8 @@
 <div class="control-section">
     <div class="content-wrapper">
-        <div id="TreeGrid">
+        <div id="TreeGrid" role="grid" tabindex="-1" aria-label="Tree Grid">
         </div>
-        <div style="padding-top: 20px; text-align: right">Referecene links:
+        <div style="padding-top: 20px; text-align: right" role="contentinfo" aria-label="Reference links">Referecene links:
             <a href="https://countryeconomy.com/ratings" style="padding-right: 12px">https://countryeconomy.com</a>
             <a href="https://en.wikipedia.org/wiki/" style="padding-right: 12px">https://en.wikipedia.org/wiki/</a>
             <a href="http://worldpopulationreview.com">http://worldpopulationreview.com</a>
@@ -12,11 +12,11 @@
             ${if(name != 'Select All')}
             <div class="image" style="display:inline-block">
                ${if(parentItem)}
-                <img src="src/tree-grid/images/${parentItem.name}.png" class="e-image" alt="${name}" />
+                <img src="src/tree-grid/images/${parentItem.name}.png" class="e-image" role="presentation" alt="${name}" />
                 ${else} 
-                <img src="src/tree-grid/images/${name}.png" class="e-image" alt="${name}" />
+                <img src="src/tree-grid/images/${name}.png" class="e-image" role="presentation"  alt="${name}" />
                 ${/if} 
-            </div> <div style="display:inline-block; padding-left:3px">${name}</div>
+            </div> <div style="display:inline-block; padding-left:3px; vertical-align: middle;">${name}</div>
             ${else} 
                 ${name}
             ${/if}  
@@ -182,9 +182,10 @@
         text-align: left;
         background-color: whitesmoke;
     }
-    #myBar.progressdisable {
+     #myBar.progressdisable {
         background-color: #df2222;
     }
+
 </style>
 <div id="action-description">
     <p>This <a target="_blank" 

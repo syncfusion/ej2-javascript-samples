@@ -22,21 +22,21 @@
                 </tr>
                 <tr style="height: 50px">
                     <td style="width: 60%">
-                        <div>Crosses Value:</div>
+                        <div id="crossValue">Crosses Value:</div>
                     </td>
                     <td style="width: 40%;">
                         <div style="margin-top: 0px;">
-                            <input type="text" id="crossingValue">
+                            <input type="text" id="crossingValue" aria-labelledby="Text">
                         </div>
                     </td>
                 </tr>
                 <tr style="height: 50px">
                     <td style="width: 60%">
-                        <div>Placing Label Near to Axis Line:</div>
+                        <div id="axis">Placing Label Near to Axis Line:</div>
                     </td>
                     <td style="width: 40%;">
                         <div style="margin-top: 0px;">
-                            <input type="checkbox" id="axisElements" name="PlaceNextToAxisLine" checked>
+                            <input type="checkbox" id="axisElements" name="PlaceNextToAxisLine" checked aria-labelledby="Checkbox checked">
                         </div>
                     </td>
                 </tr>
@@ -52,16 +52,16 @@
 </div>
 <div id="description">
     <p>
-        This sample demonstrates the axis-crossing behavior in a chart. The axis can be positioned anywhere in the chart area using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#crossesat">crossesAt</a> property of the axis, which specifies where the horizontal axis should intersect the vertical axis and vice-versa.
+        This sample demonstrates the axis-crossing behavior in a chart. The axis can be positioned anywhere in the chart area using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#crossesat" aria-label="Navigate to the CrossesAt property reference for JavaScript Chart axis">crossesAt</a> property of the axis, which specifies where the horizontal axis should intersect the vertical axis and vice-versa.
     </p>
     <p>
-        You can use the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#placenexttoaxisline">placeNextToAxisLine</a> property to place the axis labels and ticks next to the axis line. If there are multiple axes, the cross-axis can be selected using the <a target="_blank" href="https://ej2.syncfusion.com/documentation/api/chart/axisModel/#crossesinaxis">crossesInAxis</a> property.
+        You can use the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/axisModel/#placenexttoaxisline" aria-label="Navigate to the PlaceNextToAxisLine property reference for JavaScript Chart Axis">placeNextToAxisLine</a> property to place the axis labels and ticks next to the axis line. If there are multiple axes, the cross-axis can be selected using the <a target="_blank" href="https://ej2.syncfusion.com/documentation/api/chart/axisModel/#crossesinaxis" aria-label="Navigate to the CrossesInAxis property reference for JavaScript Chart axis">crossesInAxis</a> property.
     </p>
     <p><code>Tooltip</code> is enabled in this example. To see the tooltip in action, hover over a point or tap on a point in touch-enabled devices. </p>
     <br>
     <p>
         More information on the axis crossing can be found in this
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/axis.customization/#axis-crossing">documentation section</a>.
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/axis.customization/#axis-crossing" aria-label="Navigate to the documentation for Axis Crossing in JavaScript Chart control">documentation section</a>.
     </p>
 </div>
 <style>

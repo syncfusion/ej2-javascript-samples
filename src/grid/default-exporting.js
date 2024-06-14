@@ -3,6 +3,8 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.employeeDetails,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         allowExcelExport: true,
         allowPdfExport: true,
         toolbar: ['ExcelExport', 'PdfExport', 'CsvExport'],

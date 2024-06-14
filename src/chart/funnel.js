@@ -33,7 +33,7 @@ this.default = function () {
             var funnelTheme = location.hash.split('/')[1];
             funnelTheme = funnelTheme ? funnelTheme : 'Material';
             args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() +
-                funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
         },
         //Initializing Title
         title: 'Recruitment Process',

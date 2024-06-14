@@ -56,6 +56,7 @@ this.default = function () {
     };
 
     var jsonReport = {
+        url: '',
         dataSource: remoteData,
         type: 'JSON',
         expandAll: true,

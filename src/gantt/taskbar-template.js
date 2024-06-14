@@ -40,25 +40,25 @@ this.default = function () {
         },
         eventMarkers: [
             {
-                day: new Date('03/05/2018 07:09:00 PM'),
+                day: new Date('03/05/2024 07:09:00 PM'),
                 label: 'Performance'
             }, {
-                day: new Date('03/05/2018 07:46:00 PM'),
+                day: new Date('03/05/2024 07:46:00 PM'),
                 label: 'Moments'
             }, {
-                day: new Date('03/05/2018 07:59:00 PM'),
+                day: new Date('03/05/2024 07:59:00 PM'),
                 label: 'Performance'
             }, {
-                day: new Date('03/05/2018 08:08:00 PM'),
+                day: new Date('03/05/2024 08:08:00 PM'),
                 label: 'Moments'
             }, {
-                day: new Date('03/05/2018 08:24:00 PM'),
+                day: new Date('03/05/2024 08:24:00 PM'),
                 label: 'Moments'
             }, {
-                day: new Date('03/05/2018 08:31:00 PM'),
+                day: new Date('03/05/2024 08:31:00 PM'),
                 label: 'Performance'
             }, {
-                day: new Date('03/05/2018 08:47:00 PM'),
+                day: new Date('03/05/2024 08:47:00 PM'),
                 label: 'Moments'
             }
         ],
@@ -71,8 +71,8 @@ this.default = function () {
         tooltipSettings: {
             taskbar: '#tooltip',
         },
-        projectStartDate: new Date('03/05/2018 06:00 PM'),
-        projectEndDate: new Date('03/05/2018 09:50 PM')
+        projectStartDate: new Date('03/05/2024 06:00 PM'),
+        projectEndDate: new Date('03/05/2024 09:50 PM')
     });
     ganttChart.appendTo('#TaskbarTemplate');
 };

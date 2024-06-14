@@ -1,6 +1,6 @@
 <div class="control-section">
     <div>
-        <div style="width:100%;height: 30px">
+        <div class="btn-container" style="width:100%;">
             <button id="togglebtn" style="float:right;width: 75px;">Edit</button>
         </div>
 
@@ -68,6 +68,14 @@
     .e-btn,
     .e-css.e-btn {
         display: block;
+    }
+
+    .e-bigger .btn-container {
+        height: 40px;
+    }
+
+    .btn-container {
+        height: 32px;
     }
 
     .dialog-text {
@@ -164,8 +172,32 @@
         margin-left: -7px;
         vertical-align: middle;
     }
+    
+    #togglebtn.e-btn .e-btn-icon.e-icon-left,
+    .e-bigger #togglebtn.e-btn .e-btn-icon.e-icon-left {
+        margin-left: 0em;
+        width: 1em;
+    }
 
+    .e-bigger.tailwind #togglebtn.e-btn .e-btn-icon.e-icon-left,
+    .e-bigger.tailwind-dark #togglebtn.e-btn .e-btn-icon.e-icon-left,
+    .e-bigger.fluent #togglebtn.e-btn .e-btn-icon.e-icon-left,
+    .e-bigger.fluent-dark #togglebtn.e-btn .e-btn-icon.e-icon-left {
+        margin-left: -0.3em;
+        width: 1em;
+    }
 
+    .e-bigger.bootstrap4 #togglebtn.e-btn .e-btn-icon.e-icon-left {
+        margin-left: -0.2em;
+        width: 1.3em;
+    }
+
+    .e-bigger.material3 #togglebtn.e-btn .e-btn-icon.e-icon-left,
+    .e-bigger.material3-dark #togglebtn.e-btn .e-btn-icon.e-icon-left {
+        margin-left: -0.5em;
+        width: 1em;
+    }
+    
     /* custom code start*/
     @font-face {
         font-family: 'e-sb-icons';

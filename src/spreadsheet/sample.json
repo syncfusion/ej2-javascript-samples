@@ -3,6 +3,7 @@
     "directory": "spreadsheet",
     "category": "Grids",
     "dataSourcePath": "src/spreadsheet/data-source.js",
+    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -240,6 +241,53 @@
             "category": "Templates",
             "api": {},
             "description": "This demo for Essential JS 2 Spreadsheet control shows the cell template feature."
+        },
+        {
+            "url": "notes",
+            "name": "Notes",
+            "category": "Review",
+            "type": "new",
+            "api": {
+                "sheets": [
+                    "columns",
+                    "rows",
+                    "name"
+                ],
+                "rows": [
+                    "cells",
+                    "index"
+                ],
+                "cells": [
+                    "value",
+                    "style",
+                    "formula",
+                    "noteText"
+                ]
+            },
+            "description": "This demo for Essential JS 2 Spreadsheet control showcases notes feature."
+        },
+        {
+            "url": "print",
+            "name": "Print",
+            "category": "Printing",
+            "type": "new",
+            "api": {
+                "sheets": [
+                    "columns",
+                    "rows",
+                    "name"
+                ],
+                "rows": [
+                    "cells",
+                    "index"
+                ],
+                "cells": [
+                    "value",
+                    "style",
+                    "formula"
+                ]
+            },
+            "description": "This example demonstrates the printing functionalities of the Syncfusion JavaScript Spreadsheet."
         }
     ]
 }

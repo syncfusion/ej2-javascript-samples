@@ -4,7 +4,7 @@
             <button id="reloadSkeleton" class="e-btn e-primary">Reload</button>
         </div>
         <div class="col-sm-6">
-            <h5>Fade Effect</h5>
+            <p class="displayText">Fade Effect</p>
             <br />
             <div id="skeletonCard"  class="e-card" style="display: block;">
                 <div class="cardProfile">
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <h5>Pulse Effect</h5>
+            <p class="displayText">Pulse Effect</p>
             <br />
             <div class="skeleton-listcard e-card">
                 <div id="skeleton-listview" tabindex="1" style="display: none;"></div>
@@ -147,6 +147,10 @@
     .fluent-dark #skeletonCard,
     .fluent-dark #skeleton-list{
         background-color: #313131;
+    }
+    .fluent2 #skeletonCard,
+    .fluent2 #skeleton-list{
+        background-color: #fff;
     }
     .skeleton-listcard,
     .e-bigger .skeleton-listcard{
@@ -257,5 +261,10 @@
 
     #skeleton-listview .pic04 {
         background-image: url("./src/skeleton/images/2.png");
+    }
+
+    p.displayText {
+        margin: 10px 0px;
+        font-weight: 500;
     }
 </style>

@@ -31,8 +31,8 @@ this.default = function () {
         },
         selectedRowIndex: 0,
         sortSettings: { columns: [{ field: 'TaskName', direction: 'Ascending' }, { field: 'TaskID', direction: 'Ascending' }] },
-        projectStartDate: new Date('03/25/2019'),
-        projectEndDate: new Date('07/28/2019'),
+        projectStartDate: new Date('03/25/2024'),
+        projectEndDate: new Date('07/28/2024'),
     });
     ganttChart.appendTo('#Sorting');
 };

@@ -4,7 +4,7 @@
         </div>
     </div>
 </div>
-<!-- custom code start -->
+
 <div id="action-description">
     <p>This sample demonstrates custom aggregate functionality of the Tree Grid. In this sample, the custom aggregate 
         value for the columns “Category” is displayed in column footer with dropdown to display the count of selected category name.</p>
@@ -37,7 +37,7 @@
 			</a>
 		</p>
 </div>
-
+<!-- custom code start -->
 <style>
     .e-input {
         padding-bottom: 1px !important;
@@ -45,6 +45,14 @@
  
     .e-summarycell.e-templatecell {
         pointer-events:visible !important;
-     }
+    }
+
+    .fluent2,
+    .fluent2-dark,
+    .fluent2-highcontrast {
+        .e-treegrid .e-summarycell.e-templatecell .e-input-group {
+            width: 150px !important;
+        }
+    }
  </style>
  <!-- custom code end -->

@@ -5,6 +5,8 @@ this.default = function () {
         pageSettings: { pageCount: 5 },
         allowGrouping: true,
         allowSorting: true,
+        allowFiltering: true,
+        filterSettings: { type: 'Excel' },
         groupSettings: { showDropArea: false, columns: ['CustomerID'] },
         editSettings: { allowEditing: true, allowDeleting: true, mode: 'Batch' },
         toolbar: [ 'Delete', 'Update', 'Cancel'],

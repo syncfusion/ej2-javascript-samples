@@ -55,15 +55,12 @@ this.default = function () {
     var breadCrumbCheckBox = new ej.buttons.CheckBox({
         change: breadCrumbChange, checked: false
     }, '#breadCrumb');
+    var textConnetor = new ej.inputs.TextBox({
+        value: ' - ', width: '100%', enabled: false
+    }, '#connectorText');
     breadCrumbCheckBox.change = breadCrumbChange = function (e) {
         treemap.enableBreadcrumb = e.checked;
-        var breadCrumbText = document.getElementById('connectorText');
-        if (e.checked) {
-            breadCrumbText.disabled = false;
-        }
-        else {
-            breadCrumbText.disabled = true;
-        }
+        textConnetor.enabled = e.checked;
         treemap.refresh();
     };
     var drillChange;

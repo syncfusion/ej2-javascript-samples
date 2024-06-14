@@ -7,7 +7,7 @@
 <template>
     <tr class="infinite-row">
         <td style="width: 30%"><div>Enable OnDemand: </div></td>
-        <td style="width: 70%;padding-right: 10px"><div><input type="checkbox" tabindex="1" id='dataloadtype'/></div></td>
+        <td style="width: 70%;padding-right: 10px"><div><input type="checkbox" tabindex="0" id='dataloadtype'/></div></td>
     </tr>
 </template>
 <div class="col-lg-3 property-section">
@@ -20,7 +20,7 @@
             </td>
             <td style="width: 70%;padding-right: 10px">
                 <div id='typeddl'>
-                    <input type="text" tabindex="1" id='filtertype' />
+                    <input type="text" tabindex="0" id='filtertype' />
                 </div>
             </td>
         </tr>
@@ -42,7 +42,7 @@
 <div id="description">
     <p>
         The filtering feature enables the user to view a reduced number of records based on the filter criteria. It can
-        be enabled by setting the <code><a target="_blank" class="code"
+        be enabled by setting the <code><a aria-label="API link for documentation" target="_blank" class="code"
                 href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#allowfiltering">allowFiltering
             </a></code> property to true. </p>
     <p>The grid supports the following filter types:</p>
@@ -52,15 +52,15 @@
         <li><code>CheckBox</code></li>
         <li><code>Excel</code></li>
     </ul>
-    You can change the filter type by setting <code><a target="_blank" class="code"
+    You can change the filter type by setting <code><a aria-label="API link for documentation" target="_blank" class="code"
             href="http://ej2.syncfusion.com/javascript/documentation/api/grid/filterSettings/#type">filterSettings->type</a></code>.
     <p>In this demo, the filter menu is enabled by default. You can switch to other filter types using the dropdown.
     </p>
-    <p>Additionally, we have an on-demand data fetch functionality and UI for the checkbox/Excel filter type. It can be enabled by setting the <code><a target="_blank" class="code"
+    <p>Additionally, we have an on-demand data fetch functionality and UI for the checkbox/Excel filter type. It can be enabled by setting the <code><a aria-label="API link for documentation" target="_blank" class="code"
         href="">filterSettings->enableInfiniteScrolling</a></code> property to true. In this demo, on-demand data fetch is not enabled by default. To enable the on-demand data fetch for the checkbox/Excel filter type, the Enable OnDemand option must be checked after selecting the checkBox/Excel filter type using the dropdown menu.</p>
     <p>
         More information on the filter configuration can be found in this
-        <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#filtersettings">
+        <a aria-label="API link for documentation" target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#filtersettings">
             documentation section</a>.
     </p>
 </div>

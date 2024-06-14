@@ -107,7 +107,6 @@
          "url": "undo-redo",
          "name": "Undo Redo",
          "category": "Gantt",
-         "type": "new",
          "api": {
             "Gantt": [
                "dataSource",
@@ -214,7 +213,7 @@
       },
       {
          "url": "load-on-demand",
-         "name": "Load On Demand",
+         "name": "Big Data Set",
          "category": "Data Binding",
          "api": {
             "Gantt": [
@@ -302,6 +301,7 @@
       {
          "url": "working-time-range",
          "name": "Working Time Range",
+         "type": "update",
          "category": "Scheduling Concepts",
          "api": {
             "Gantt": [
@@ -314,6 +314,7 @@
                "highlightWeekends",
                "timelineSettings",
                "dayWorkingTime",
+               "weekWorkingTime",
                "durationUnit"
             ]
          },
@@ -462,7 +463,6 @@
          "url": "timeline",
          "name": "Timeline API",
          "category": "Timeline",
-	 "type": "update",
          "api": {
             "Gantt": [
                "dataSource",
@@ -790,6 +790,27 @@
             ]
          },
          "description": "This example demonstrates the taskbar template support with child taskbar template, parent taskbar template and milestone template."
+      },
+      {
+         "url": "timeline-template",
+         "name": "Timeline Template",
+         "category": "Templates",
+         "type": "new",
+         "api": {
+            "Gantt": [
+               "dataSource",
+               "taskFields",
+               "timelineSettings",
+               "timelineTemplate",
+               "height",
+               "allowSelection",
+               "projectStartDate",
+               "projectEndDate",
+               "splitterSettings",
+               "labelSettings"
+            ]
+         },
+         "description": "This sample explains the way of rendering timeline template by mapping template elements to the timelineTemplate property."
       },
       {
          "url": "tasklabel-template",
