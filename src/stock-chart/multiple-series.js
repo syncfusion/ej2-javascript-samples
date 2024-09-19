@@ -40,7 +40,7 @@ renderMultipleStockChart = function (goog) {
     title: "Multiple Series",
     load: function (args) {
       var selectedTheme = location.hash.split("/")[1];
-      selectedTheme = selectedTheme ? selectedTheme : "Material";
+      selectedTheme = selectedTheme ? selectedTheme : "Fluent2";
       args.stockChart.theme = (
         selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)
       )

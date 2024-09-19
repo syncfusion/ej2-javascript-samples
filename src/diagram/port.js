@@ -1,15 +1,12 @@
-ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
-ej.dropdowns.MultiSelect.Inject(ej.dropdowns.CheckBoxSelection);
 //get the port for the selected node.
 var diagram;
 var portVisibilityDrop;
 var portFillDrop;
 var portBorderDrop;
 var portShapeDrop;
-
 var portWidthNum;
 var portSizeNum;
-
+//Retrieves the ports of the currently selected node in the diagram.
 function getPort() {
     var node = diagram.selectedItems.nodes[0];
     var port = [];
@@ -96,189 +93,106 @@ function portShapeChange(args) {
     }
 
 }
-
+//Function to Create nodes by the parameters
+function createNode(id, offsetX, offsetY, annotationContent, ports) {
+    return {
+        id: id,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        annotations: [{ content: annotationContent }],
+        ports: ports
+    };
+}
+//Function to Create connector by the parameters
+function createConnector(id, sourceID, sourcePortID, targetID, targetPortID) {
+    return {
+        id: id,
+        sourceID: sourceID,
+        sourcePortID: sourcePortID,
+        targetID: targetID,
+        targetPortID: targetPortID
+    };
+}
+//Function to Create connector by the parameters
+function createPort(id, shape, offsetX, offsetY, text) {
+    return {
+        id: id,
+        shape: shape,
+        offset: { x: offsetX, y: offsetY },
+        height: 8,
+        width: 8,
+        visibility: ej.diagrams.PortVisibility.Visible,
+        text: text
+    };
+}
+//Sets up the default configuration for the diagram.
 this.default = function () {
+    // Get the bounding rectangle of the control section
     var bounds = document.getElementsByClassName('control-section')[0].getBoundingClientRect();
+    // Calculate the center X coordinate of the control section
     var centerX = bounds.width / 2;
+    // Define ports for each node
     var node1Port = [
-        {
-            id: 'port1', shape: 'Circle', offset: { x: 0, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port2', shape: 'Circle', offset: { x: 1, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 1'
-        },
-        {
-            id: 'port3', shape: 'Circle', offset: { x: 0.25, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 2'
-        },
-        {
-            id: 'port4', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 2'
-        },
-        {
-            id: 'port5', shape: 'Circle', offset: { x: 0.75, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 3'
-        }
+        createPort('port1', 'Circle', 0, 0.5, 'In - 1'),
+        createPort('port2', 'Circle', 1, 0.5, 'OUT - 1'),
+        createPort('port3', 'Circle', 0.25, 1, 'In - 2'),
+        createPort('port4', 'Circle', 0.5, 1, 'OUT - 2'),
+        createPort('port5', 'Circle', 0.75, 1, 'In - 3')
     ];
     var node2Port = [
-        {
-            id: 'port6', shape: 'Circle', offset: { x: 0, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port7', shape: 'Circle', offset: { x: 1, y: 0.35 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 1'
-        },
-        {
-            id: 'port8', shape: 'Circle', offset: { x: 1, y: 0.70 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 2'
-        },
-        {
-            id: 'port9', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 2'
-        }
+        createPort('port6', 'Circle', 0, 0.5, 'In - 1'),
+        createPort('port7', 'Circle', 1, 0.35, 'OUT - 1'),
+        createPort('port8', 'Circle', 1, 0.70, 'In - 2'),
+        createPort('port9', 'Circle', 0.5, 1, 'OUT - 2')
     ];
     var node3Port = [
-        {
-            id: 'port10', shape: 'Circle', offset: { x: 0, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'Out - 1'
-        },
-        {
-            id: 'port11', shape: 'Circle', offset: { x: 0.5, y: 0 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port12', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 2'
-        }
+        createPort('port10', 'Circle', 0, 0.5, 'Out - 1'),
+        createPort('port11', 'Circle', 0.5, 0, 'In - 1'),
+        createPort('port12', 'Circle', 0.5, 1, 'OUT - 2')
     ];
     var node4Port = [
-        {
-            id: 'port13', shape: 'Circle', offset: { x: 0, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port14', shape: 'Circle', offset: { x: 0.5, y: 0 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 2'
-        },
-        {
-            id: 'port15', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 1'
-        }
+        createPort('port13', 'Circle', 0, 0.5, 'In - 1'),
+        createPort('port14', 'Circle', 0.5, 0, 'In - 2'),
+        createPort('port15', 'Circle', 0.5, 1, 'OUT - 1')
     ];
     var node5Port = [
-        {
-            id: 'port16', shape: 'Circle', offset: { x: 0, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'out - 1'
-        },
-        {
-            id: 'port17', shape: 'Circle', offset: { x: 0.5, y: 0 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port18', shape: 'Circle', offset: { x: 1, y: 0.5 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'OUT - 2'
-        }
+        createPort('port16', 'Circle', 0, 0.5, 'out - 1'),
+        createPort('port17', 'Circle', 0.5, 0, 'In - 1'),
+        createPort('port18', 'Circle', 1, 0.5, 'OUT - 2')
     ];
     var node6Port = [
-        {
-            id: 'port19', shape: 'Circle', offset: { x: 0, y: 0.35 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port20', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'Out - 1'
-        }
+        createPort('port19', 'Circle', 0, 0.35, 'In - 1'),
+        createPort('port20', 'Circle', 0.5, 1, 'Out - 1')
     ];
     var node7Port = [
-        {
-            id: 'port21', shape: 'Circle', offset: { x: 0.5, y: 0 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'In - 1'
-        },
-        {
-            id: 'port22', shape: 'Circle', offset: { x: 0.5, y: 1 }, height: 8, width: 8, visibility: ej.diagrams.PortVisibility.Visible,
-            text: 'Out - 1'
-        }
+        createPort('port21', 'Circle', 0.5, 0, 'In - 1'),
+        createPort('port22', 'Circle', 0.5, 1, 'Out - 1')
     ];
+    // Define shapes for nodes
     var shape1 = { type: 'Basic', shape: 'Rectangle' };
     var shape2 = { type: 'Basic', shape: 'Diamond' };
     var nodes = [
-        {
-            id: 'node1', offsetX: centerX - 200, offsetY: 100,
-            annotations: [{ content: 'Publisher' }], ports: node1Port
-        },
-        {
-            id: 'node2', offsetX: centerX, offsetY: 100,
-            annotations: [{ content: 'Completed Book', margin: { left: 5, right: 5 } }], ports: node2Port
-        },
-        {
-            id: 'node3', offsetX: centerX, offsetY: 200,
-            annotations: [{ content: '1st Review' }], ports: node3Port
-        },
-        {
-            id: 'node4', offsetX: centerX, offsetY: 300,
-            annotations: [{ content: 'Legal Terms' }], ports: node4Port
-        },
-        {
-            id: 'node5', offsetX: centerX, offsetY: 400,
-            annotations: [{ content: '2nd Review' }], ports: node5Port
-        },
-        {
-            id: 'node6', offsetX: centerX + 200, offsetY: 100,
-            annotations: [{ content: 'Board' }], ports: node6Port
-        },
-        {
-            id: 'node7', offsetX: centerX + 200, offsetY: 200,
-            annotations: [{ content: 'Approval' }], ports: node7Port
-        }
+        createNode('node1', centerX - 200, 100, 'Publisher', node1Port),
+        createNode('node2', centerX, 100, 'Completed Book', node2Port),
+        createNode('node3', centerX, 200, '1st Review', node3Port),
+        createNode('node4', centerX, 300, 'Legal Terms', node4Port),
+        createNode('node5', centerX, 400, '2nd Review', node5Port),
+        createNode('node6', centerX + 200, 100, 'Board', node6Port),
+        createNode('node7', centerX + 200, 200, 'Approval', node7Port)
     ];
+    // Define connectors for the diagram
     var connectors = [
-        {
-            id: 'connector1', sourceID: 'node1', sourcePortID: 'port2',
-            targetID: 'node2', targetPortID: 'port6'
-        },
-        {
-            id: 'connector2', sourceID: 'node1', sourcePortID: 'port4',
-            targetID: 'node4', targetPortID: 'port13'
-        },
-        {
-            id: 'connector3', sourceID: 'node2', sourcePortID: 'port9',
-            targetID: 'node3', targetPortID: 'port11'
-        },
-        {
-            id: 'connector4', sourceID: 'node2', sourcePortID: 'port7',
-            targetID: 'node6', targetPortID: 'port19'
-        },
-        {
-            id: 'connector5', sourceID: 'node3', sourcePortID: 'port10',
-            targetID: 'node1', targetPortID: 'port5'
-        },
-        {
-            id: 'connector6', sourceID: 'node3', sourcePortID: 'port12',
-            targetID: 'node4', targetPortID: 'port14'
-        },
-        {
-            id: 'connector7', sourceID: 'node4', sourcePortID: 'port15',
-            targetID: 'node5', targetPortID: 'port17'
-        },
-        {
-            id: 'connector8', sourceID: 'node5', sourcePortID: 'port18',
-            targetID: 'node2', targetPortID: 'port8'
-        },
-        {
-            id: 'connector9', sourceID: 'node5', sourcePortID: 'port16',
-            targetID: 'node1', targetPortID: 'port3'
-        },
-        {
-            id: 'connector10', sourceID: 'node6', sourcePortID: 'port20',
-            targetID: 'node7', targetPortID: 'port21'
-        },
-        {
-            id: 'connector11', sourceID: 'node7', sourcePortID: 'port22',
-            targetID: 'node1', targetPortID: 'port1'
-        }
+        createConnector('connector1', 'node1', 'port2', 'node2', 'port6'),
+        createConnector('connector2', 'node1', 'port4', 'node4', 'port13'),
+        createConnector('connector3', 'node2', 'port9', 'node3', 'port11'),
+        createConnector('connector4', 'node2', 'port7', 'node6', 'port19'),
+        createConnector('connector5', 'node3', 'port10', 'node1', 'port5'),
+        createConnector('connector6', 'node3', 'port12', 'node4', 'port14'),
+        createConnector('connector7', 'node4', 'port15', 'node5', 'port17'),
+        createConnector('connector8', 'node5', 'port18', 'node2', 'port8'),
+        createConnector('connector9', 'node5', 'port16', 'node1', 'port3'),
+        createConnector('connector10', 'node6', 'port20', 'node7', 'port21'),
+        createConnector('connector11', 'node7', 'port22', 'node1', 'port1')
     ];
     //Initialize diagram control
     diagram = new ej.diagrams.Diagram({
@@ -286,27 +200,27 @@ this.default = function () {
         nodes: nodes, connectors: connectors, selectionChange: selectionChange,
         snapSettings: { constraints: 0 },
         //Sets the default values of nodes
-        getNodeDefaults: function (obj) {
+        getNodeDefaults: function (node) {
             //Initialize shape
-            if (obj.id === 'node1' || obj.id === 'node2' || obj.id === 'node4' || obj.id === 'node6') {
-                obj.shape = shape1;
-            } else if (obj.id === 'node3' || obj.id === 'node5' || obj.id === 'node7') {
-                obj.shape = shape2;
+            if (node.id === 'node1' || node.id === 'node2' || node.id === 'node4' || node.id === 'node6') {
+                node.shape = shape1;
+            } else if (node.id === 'node3' || node.id === 'node5' || node.id === 'node7') {
+                node.shape = shape2;
             }
             //sets height and width for nodes
-            obj.height = 65;
-            obj.width = 100;
-            obj.style = { fill: '#ebf8fb', strokeColor: '#baeaf5' };
-            for (var i = 0; i < obj.ports.length; i++) {
+            node.height = 65;
+            node.width = 100;
+            node.style = { fill: '#ebf8fb', strokeColor: '#baeaf5' };
+            for (var i = 0; i < node.ports.length; i++) {
                 //sets styles for the ports
-                obj.ports[i].style = {
+                node.ports[i].style = {
                     fill: '#366f8c',
                     strokeColor: '#366f8c'
                 };
-                obj.ports[i].width = 6;
-                obj.ports[i].height = 6;
+                node.ports[i].width = 6;
+                node.ports[i].height = 6;
             }
-            obj.annotations[0].style = {
+            node.annotations[0].style = {
                 fontSize: 13,
                 color: 'black'
             };

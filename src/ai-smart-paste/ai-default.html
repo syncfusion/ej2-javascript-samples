@@ -1,0 +1,141 @@
+<div class="col-lg-8 control-section sb-property-border">
+    <div class="control-wrapper">
+        <form id="bug-report" class="form-container">
+            <div class="single-row-group">
+                <label for="bug-name" class="e-form-label">Bug Name</label>
+                <input type="text" id="bug-name" name="bug-name" class="form-input" />
+            </div>
+    
+            <div class="row-group">
+                <div>
+                    <label for="reporter-name" class="e-form-label">Reporter</label>
+                    <input type="text" id="reporter-name" name="reporter-name" class="form-input" />
+                </div>
+                <div>
+                    <label for="submitted-date" class="e-form-label">Submitted Date</label>
+                    <input type="text" id="submitted-date" name="submit-date" class="form-input" />
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="bug-description" class="e-form-label">Bug Description</label>
+                <textarea id="bug-description" class="form-textarea"></textarea>
+            </div>
+    
+            <div class="row-group">
+                <div style="display: flex;flex-direction: column;">
+                    <label for="reproduce-steps" class="e-form-label">Reproduce Steps</label>
+                    <textarea id="reproduce-steps" name="reproduce-steps" class="form-textarea"></textarea>
+                </div>
+                <div>
+                    <label class="form-label">Bug Priority</label>
+                    <div class="row">
+                        <input id="radio1" type="radio">
+                    </div>
+                    <div class="row">
+                        <input id="radio2" type="radio">
+                    </div>
+                    <div class="row">
+                        <input id="radio3" type="radio">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div>
+                <label for="browser" class="form-label">Select the browser</label>
+                <input type="text" id="browser" name="browser" />
+            </div>
+    
+            <div class="form-footer">
+                <button type="reset" id="reset" class="form-button"></button>
+                <button type="button" id="smart-paste" class="form-button"></button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <div class="property-panel-section">
+        <div class="property-panel-content">
+            <h4> Choose a preset below </h4>
+            <div class="chip-container">
+                <div id="chip-choice" aria-label="choiceChips"></div>
+            </div>
+            <div id="bug-report-text"></div>
+            <button id="copy-btn"></button>
+        </div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This example demonstrates how the <code>SmartPasteButton</code> control can automatically fill out forms using data from the user's clipboard.</p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank' href='https://github.com/syncfusion/smart-ai-samples/tree/master' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub repository</a>.</p>
+</div>
+<div id='description'>
+    <p>In this example, clicking the Smart Paste button retrieves data from the clipboard and automatically fills in the form fields. This streamlines the data entry process by removing the need for manual input.</p>
+</div>
+<style>
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 5px;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .form-label {
+        margin-bottom: 5px;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    .form-textarea {
+        height: 80px;
+    }
+
+
+    .row-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .form-footer {
+        display: flex;
+        margin-top: 20px;
+        justify-content: right;
+        gap: 15px;
+    }
+
+    .form-group {
+        display: grid;
+        gap: 8px;
+    }
+
+    .single-row-group {
+        display: grid;
+        gap: 8px;
+    }
+
+    #bug-report-text {
+        padding: 10px;
+        margin: 15px 0px;
+        background-color: #f3f3f3;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        line-height: 1.5;
+    }
+
+    #reset,
+    #smart-paste {
+        border-radius: 20px;
+    }
+</style>

@@ -8,7 +8,7 @@ this.default = function () {
             var salesmap = location.hash.split('/')[1];
             salesmap = salesmap ? salesmap : 'Material';
             args.maps.theme = (salesmap.charAt(0).toUpperCase() +
-            salesmap.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            salesmap.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         zoomSettings: {

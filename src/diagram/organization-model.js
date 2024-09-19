@@ -3,8 +3,6 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree, ej.diagrams.LayoutAnimation);
 
-//Click Event for pattern of the PropertyPanel.
-
 
 //sets default value for Node.
 function getNodeDefaults(obj) {
@@ -13,13 +11,9 @@ function getNodeDefaults(obj) {
     obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
     obj.expandIcon.verticalAlignment = 'Center';
     obj.expandIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
-    obj.collapseIcon.offset = { x: 0.5, y: 1 };
+    obj.collapseIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
     obj.collapseIcon.verticalAlignment = 'Center';
     obj.collapseIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
-    obj.collapseIcon.height = 10;
-    obj.collapseIcon.width = 10;
-    obj.collapseIcon.shape = 'None';
-    obj.collapseIcon.fill = 'lightgray';
     obj.width = 120;
     obj.height = 30;
     return obj;
@@ -65,36 +59,37 @@ this.default = function () {
         //Defines the default node and connector properties
         getNodeDefaults: function (obj, diagram) {
             return getNodeDefaults(obj, diagram);
-        }, getConnectorDefaults: function (connector, diagram) {
+        },
+        getConnectorDefaults: function (connector, diagram) {
             return getConnectorDefaults(connector, diagram);
         }
     });
     diagram.appendTo('#diagram');
     //NumericTextBox used to increase/decrease horizontalSpacing of the layout.
-    var hSpace = new ej.inputs.NumericTextBox({
+    var horizontalSpace = new ej.inputs.NumericTextBox({
         format: '###.##',
         change: function () {
-            diagram.layout.horizontalSpacing = Number(hSpacing.value);
+            diagram.layout.horizontalSpacing = Number(horizontalSpacing.value);
             diagram.dataBind();
         }
     });
     //NumericTextBox used to increase/decrease verticalSpacing of the layout.
-    hSpace.appendTo('#hSpacing');
-    var vSpace = new ej.inputs.NumericTextBox({
+    horizontalSpace.appendTo('#horizontalSpacing');
+    var verticalSpace = new ej.inputs.NumericTextBox({
         format: '###.##',
         change: function () {
-            diagram.layout.verticalSpacing = Number(vSpacing.value);
+            diagram.layout.verticalSpacing = Number(verticalSpacing.value);
             diagram.dataBind();
         }
     });
-    vSpace.appendTo('#vSpacing');
+    verticalSpace.appendTo('#verticalSpacing');
     //Enable of disable the expandable option for Node.
-    var checkBoxObj = new ej.buttons.CheckBox({
+    var checkBoxExpand = new ej.buttons.CheckBox({
         label: 'Expandable',
         checked: false, change: function () {
             for (var _i = 0, _a = diagram.nodes; _i < _a.length; _i++) {
                 var node_1 = _a[_i];
-                if (checkBoxObj.checked) {
+                if (checkBoxExpand.checked) {
                     node_1.expandIcon.shape = 'Minus';
                     node_1.collapseIcon.shape = 'Plus';
                 }
@@ -107,7 +102,7 @@ this.default = function () {
             diagram.doLayout();
         }
     });
-    checkBoxObj.appendTo('#checked');
+    checkBoxExpand.appendTo('#checked');
 
     //Click Event for orientation of the PropertyPanel.
     document.getElementById('orientation').onclick = function (args) {
@@ -129,7 +124,7 @@ this.default = function () {
             diagram.doLayout();
         }
     };
-
+    //Click Event for Subtree Alignment of the PropertyPanel.
     document.getElementById('pattern').onclick = function (args) {
         var target = args.target;
         // custom code start

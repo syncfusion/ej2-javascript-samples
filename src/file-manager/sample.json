@@ -8,6 +8,14 @@
         {
             "url": "overview",
             "name": "Overview",
+            "type": "new",
+            "category": "File Manager",
+            "api": { "FileManager": [ "ajaxSettings", "view" ] },
+            "description": "File Manager for JavaScript (ES5) with a details view and preview, designed to resemble a OneDrive user interface with customized icons in the File Manager's details view."
+        },
+        {
+            "url": "default",
+            "name": "Default Functionalities",
             "category": "File Manager",
             "api": { "FileManager": [ "ajaxSettings", "view" ] },
             "description": "FileManager for JavaScript(ES5) with full view of the File Manager like a windows explorer User Interface."
@@ -15,7 +23,6 @@
         {
             "url": "flat-data",
             "name": "Flat Data",
-            "type": "new",
             "category": "File Manager",
             "description": "Introduces a new feature in the File Manager, Showcases the seamless integration of Flat Data retrieved as complete folder data as a array of JavaScript objects during the initial rendering of the File Manager."
         },
@@ -29,6 +36,7 @@
         {
             "url": "api",
             "name": "API",
+            "type": "update",
             "category": "File Manager",
             "api": { "FileManager": [ "ajaxSettings" ] },
             "description": "FileManager for JavaScript(ES5) render the File Manager without the navigation pane and enable or disable toolbar dynamically."

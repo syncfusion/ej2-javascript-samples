@@ -1,0 +1,75 @@
+<div class="control-section">
+  <div class="content-wrapper">
+    <div id="e-pv-e-sign-toolbar_user_viewer">
+    </div>
+    <div id="pdfViewer" style="height:640px; width:100%;">
+    </div>
+    <div id="dialog-target">
+      <div id="dialog"></div>
+    </div>
+  </div>
+</div>
+
+<div id="action-description">
+  <p>This sample enables two different users to sign the document. The first user must fill out and sign their designated fields, which are visible only to them. Once the first user has completed their section, the second user can be selected to fill out and sign their own fields. After both users have signed, the document can be finalized.</p>
+</div>
+
+<div id="description">
+  <p>
+    More information on the PDF Viewer instantiation can be found in this
+    <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started">
+      documentation section</a>.
+  </p>
+</div>
+
+<style>
+
+  #e-pv-e-sign-user-field {
+    color: #222933;
+    font-family: Heebo, open sans, 'sans-serif', -apple-system,
+      BlinkMacSystemFont;
+    display: flex;
+    position: relative;
+
+  }
+
+  #e-pv-e-sign-toolbar_user_viewer{
+    z-index: 1001;
+    width: 100% !important;
+    height: 48px !important;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  }
+
+  #e-pv-e-sign-finish-btn{
+    width: 115px !important;
+    height: 28px;
+    min-height: 0;
+    padding: 0;
+    font-size: 12px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid;
+  }
+
+  .e-pv-e-sign-user-dropdown .e-input-group:not(.e-float-icon-left):not(.e-float-input).e-input-focus::before,
+  .e-pv-e-sign-user-dropdown .e-input-group:not(.e-float-icon-left):not(.e-float-input).e-input-focus::after {
+    width: 0px;
+
+  }
+
+  .e-pv-e-sign-empImage {
+    width: 32px;
+    height: 32px;
+    margin-top: 7px;
+    margin-left: 4px;
+    border-radius: 50%;
+  }
+
+  .e-pv-e-sign-user-dropdown> :first-child {
+    border: none !important;
+  }
+
+  #e-pv-e-sign-toolbar_user_viewer.e-toolbar .e-toolbar-items .e-toolbar-left .e-toolbar-item:first-child {
+    margin-left: 0px !important;
+  }
+</style>

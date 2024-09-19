@@ -51,10 +51,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var axisBackgroundTheme = location.hash.split('/')[1];
+            axisBackgroundTheme = axisBackgroundTheme ? axisBackgroundTheme : 'Material';
+            args.gauge.theme = (axisBackgroundTheme.charAt(0).toUpperCase() +
+            axisBackgroundTheme.slice(1)).replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5').replace(/-dark/i, 'Dark');
             // custom code end
         },
         resized: function (args) {
@@ -87,10 +87,10 @@ function updateGauge() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedAnnotationTheme = location.hash.split('/')[1];
+            selectedAnnotationTheme = selectedAnnotationTheme ? selectedAnnotationTheme : 'Material';
+            args.gauge.theme = (selectedAnnotationTheme.charAt(0).toUpperCase() +
+                selectedAnnotationTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         resized: function (args) {

@@ -824,7 +824,7 @@ this.default = function () {
             var largeDataTheme = location.hash.split('/')[1];
             largeDataTheme = largeDataTheme ? largeDataTheme : 'Material';
             args.heatmap.theme = (largeDataTheme.charAt(0).toUpperCase() +
-            largeDataTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            largeDataTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

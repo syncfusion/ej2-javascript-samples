@@ -3,7 +3,7 @@ this.default = function () {
   var uploadProgressValue = 0;
   var pdfViewerProgressValue = 0;
   var totalProgress;
-  var extensions = ['doc','docx','rtf','docm','dotm','dotx','dot','xls','xlsx','pptx','pptm','potx','potm','jpeg','png','bmp','pdf'];
+  var extensions = ['doc','docx','rtf','docm','dotm','dotx','dot','xls','xlsx','pptx','pptm','potx','potm','jpeg','png','bmp','pdf','jpg'];
   var viewer = new ej.pdfviewer.PdfViewer ({
     resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
     documentLoad: documentLoaded,
@@ -24,6 +24,7 @@ this.default = function () {
     viewer.dataBind();
     viewer.load(viewer.documentPath, null);
   };
+  viewer.zoomMode = 'FitToPage';
   viewer.appendTo('#pdfViewer');
 
   var button = new ej.buttons.Button({});
@@ -34,7 +35,7 @@ this.default = function () {
     dropArea: document.getElementById('dropArea'),
     selected: onSelect,
     multiple: false,
-    allowedExtensions: '.doc,.docx,.rtf,.docm,.dotm,.dotx,.dot,.xls,.xlsx,.pptx,.pptm,.potx,.potm.jpeg,.png,.bmp,.pdf',
+    allowedExtensions: '.doc,.docx,.rtf,.docm,.dotm,.dotx,.dot,.xls,.xlsx,.pptx,.pptm,.potx,.potm.jpeg,.png,.bmp,.pdf,.jpg',
   });
   uploadObj.appendTo('#fileupload');
 
@@ -226,7 +227,6 @@ this.default = function () {
       pdfViewerProgressValue = 0;
       progressValue.innerHTML = "0%";
     },1000);
-    viewer.magnification.fitToPage();
   }
 
   function ajaxRequestSuccess(args){

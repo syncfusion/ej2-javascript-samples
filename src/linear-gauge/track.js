@@ -8,8 +8,8 @@ this.default = function () {
         gauge1.height = gauge2.height = gauge3.height = gauge4.height = gauge5.height = '150px';
         gauge1.orientation = gauge2.orientation = gauge3.orientation = gauge4.orientation = gauge5.orientation = "Horizontal";
         if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
             document.getElementById('vertical').style.color = "black";
             document.getElementById('vertical').style.backgroundColor = "white";
         }
@@ -23,10 +23,10 @@ this.default = function () {
         gauge1.height = gauge2.height = gauge3.height = gauge4.height = gauge5.height = '350px';
         gauge1.orientation = gauge2.orientation = gauge3.orientation = gauge4.orientation = gauge5.orientation = "Vertical";
         if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
-            document.getElementById('horizontal')['style']['color'] = "black";
-            document.getElementById('horizontal')['style']['backgroundColor'] = "white";
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
+            document.getElementById('horizontal').style.color = "black";
+            document.getElementById('horizontal').style.backgroundColor = "white";
         }
     };
 
@@ -57,10 +57,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var trackTheme1 = location.hash.split('/')[1];
+            trackTheme1 = trackTheme1 ? trackTheme1 : 'Material';
+            args.gauge.theme = (trackTheme1.charAt(0).toUpperCase() +
+                trackTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -101,10 +101,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var trackTheme2 = location.hash.split('/')[1];
+            trackTheme2 = trackTheme2 ? trackTheme2 : 'Material';
+            args.gauge.theme = (trackTheme2.charAt(0).toUpperCase() +
+                trackTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -161,10 +161,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var trackTheme3 = location.hash.split('/')[1];
+            trackTheme3 = trackTheme3 ? trackTheme3 : 'Material';
+            args.gauge.theme = (trackTheme3.charAt(0).toUpperCase() +
+                trackTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -208,10 +208,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var trackTheme4 = location.hash.split('/')[1];
+            trackTheme4 = trackTheme4 ? trackTheme4 : 'Material';
+            args.gauge.theme = (trackTheme4.charAt(0).toUpperCase() +
+                trackTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -256,10 +256,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var trackTheme5 = location.hash.split('/')[1];
+            trackTheme5 = trackTheme5 ? trackTheme5 : 'Material';
+            args.gauge.theme = (trackTheme5.charAt(0).toUpperCase() +
+                trackTheme5.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

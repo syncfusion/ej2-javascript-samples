@@ -26,7 +26,7 @@ this.default = function () {
         dataSource: [{ id: 'CellEditing', name: 'Cell Editing' }, { id: 'RowEditing', name: 'Row Editing' }],
         fields: { text: 'name', value: 'id' },
         value: 'CellEditing',
-        width: '125px',
+        width: '140px',
         change: function (e) {
             if (e.value === 'CellEditing') {
                 treeGridObj.editSettings.mode = 'Cell';

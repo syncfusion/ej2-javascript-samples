@@ -1,8 +1,8 @@
 this.default = function () {
     var progressLoad = function (args) {
-        location.hash.split('/')[1] = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'Material';
+        location.hash.split('/')[1] = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'Fluent2';
         args.progressBar.theme = (location.hash.split('/')[1].charAt(0).toUpperCase() +
-            location.hash.split('/')[1].slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            location.hash.split('/')[1].slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     };
 
     var nearProgress = new ej.progressbar.ProgressBar({

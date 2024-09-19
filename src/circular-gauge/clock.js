@@ -97,10 +97,10 @@ this.default = function () {
             }]
         }],
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var clockTheme1 = location.hash.split('/')[1];
+            clockTheme1 = clockTheme1 ? clockTheme1 : 'Material';
+            args.gauge.theme = (clockTheme1.charAt(0).toUpperCase() +
+            clockTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         resized: function (args) {
             var timeoutId = setTimeout(function() {
@@ -148,15 +148,16 @@ function renderGauges() {
             pointers: [{
                 value: 8,
                 radius: '50%', pointerWidth: 2, color: '#00A8B5',
-                animation: { enable: false }, cap: { radius: 0 }, needleTail: { length: '0%' }
+                animation: { enable: false },
+                cap: { radius: 0 }, needleTail: { length: '0%' }
             }], startAngle: 0, endAngle: 0, radius: '70%', lineStyle: { width: 2 }
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var clockTheme2 = location.hash.split('/')[1];
+            clockTheme2 = clockTheme2 ? clockTheme2 : 'Material';
+            args.gauge.theme = (clockTheme2.charAt(0).toUpperCase() +
+                clockTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -167,20 +168,23 @@ function renderGauges() {
         background: 'transparent',
         axes: [{
             labelStyle: { hiddenLabel: 'First', font: { fontFamily: 'inherit', size: '7px' }, offset: -5 },
-            majorTicks: { interval: 2, offset: 2 },
-            minorTicks: { interval: 0.4, offset: 2 }, minimum: 0, maximum: 12,
             pointers: [{
                 value: 5,
-                radius: '50%', pointerWidth: 2, color: '#00A8B5',
-                animation: { enable: false }, cap: { radius: 0 }, needleTail: { length: '0%' }
-            }], startAngle: 0, endAngle: 0, radius: '70%', lineStyle: { width: 2 }
+                radius: '50%', pointerWidth: 2,
+                color: '#00A8B5',
+                animation: { enable: false },
+                cap: { radius: 0 }, 
+                needleTail: { length: '0%' }
+            }], startAngle: 0, endAngle: 0, radius: '70%', lineStyle: { width: 2 },
+            majorTicks: { interval: 2, offset: 2 },
+            minorTicks: { interval: 0.4, offset: 2 }, minimum: 0, maximum: 12,
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var clockTheme3 = location.hash.split('/')[1];
+            clockTheme3 = clockTheme3 ? clockTheme3 : 'Material';
+            args.gauge.theme = (clockTheme3.charAt(0).toUpperCase() +
+                clockTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/5.3/i, '5').replace(/-high/i, 'High');
             // custom code end
         }
     });

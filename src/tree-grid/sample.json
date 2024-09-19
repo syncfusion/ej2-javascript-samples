@@ -2,7 +2,6 @@
     "name": "Tree Grid",
     "directory": "tree-grid",
     "category": "Grids",
-    "type":"update",
     "ftName" :"treegrid",
     "dataSourcePath": "src/tree-grid/data-source.js",
     "samples": [
@@ -91,7 +90,7 @@
          },
          
          {  
-            "url": "dragdrop-between-treegrid", "name": "Drag and Drop", "category": "Rows","type":"new","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex","allowPaging"] },
+            "url": "dragdrop-between-treegrid", "name": "Drag and Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex","allowPaging"] },
             "description": "This demo for Essential JS 2 Tree Grid control how the rows can be dragged between the Tree Grid using the row drag-and-drop feature."
          },
          {  

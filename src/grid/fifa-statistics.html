@@ -1,0 +1,97 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="tooltip">
+            <div id="fifa_grid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>In this demo, the Syncfusion DataGrid displays comprehensive FIFA World Cup records and statistics, covering the
+        entire history of the tournament from 1930 to 2022.
+        The FIFA World Cup statistics and data utilized in this application are sourced from
+        <code><a target="_blank" className="code"
+          href="https://en.wikipedia.org/wiki/FIFA_World_Cup_records_and_statistics">Wikipedia
+        </a></code>. We sincerely thank Wikipedia for their invaluable resource, which has been instrumental in
+        preparing this demonstration.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        This section provides detailed information about the FIFA World Cup, including the year, host country,
+        champion team, top scorer, best player, and winning coach. The data is enhanced with flags, icons, and
+        hyperlinks for easy
+        access to more details. The Grid
+        <code><a target="_blank" className="code"
+          href="https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#template">column template
+        </a></code>
+        feature allows custom content in grid cells, creating a rich, interactive display.
+    </p>
+</div>
+
+<style>
+    /* Tooltip */
+
+    .fifa_tooltip.e-tooltip-wrap {
+        border-radius: 15px;
+    }
+
+    .fifa_tooltip.e-tooltip-wrap .e-tip-content {
+        padding: 0;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    /* Grid */
+
+    #fifa_grid .e-gridcontent,
+    #fifa_grid .e-gridcontent .e-content,
+    #fifa_grid .e-gridcontent table {
+        background: transparent;
+    }
+
+    #fifa_grid .goal {
+        margin-right: 3px;
+        margin-top: 5px;
+        opacity: 0.6;
+    }
+
+    #fifa_grid .goal path {
+        fill: #000000;
+    }
+
+    .fluent-dark #fifa_grid .goal path,
+    .fluent2-dark #fifa_grid .goal path,
+    .tailwind-dark #fifa_grid .goal path,
+    .material-dark #fifa_grid .goal path,
+    .material3-dark #fifa_grid .goal path,
+    .fabric-dark #fifa_grid .goal path,
+    .bootstrap-dark #fifa_grid .goal path,
+    .bootstrap4-dark #fifa_grid .goal path,
+    .bootstrap5-dark #fifa_grid .goal path,
+    .highcontrast #fifa_grid .goal path {
+        fill: #D3D8D4;
+    }
+
+    #fifa_grid .e-rowcell img {
+        margin: 0 3px;
+        vertical-align: text-bottom;
+    }
+
+    #fifa_grid .e-gridcontent table.tournament::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg/302px-FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg.png);
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+</style>

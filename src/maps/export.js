@@ -8,7 +8,7 @@ this.default = function () {
             var exporttheme = location.hash.split('/')[1];
             exporttheme = exporttheme ? exporttheme : 'Material';
             args.maps.theme = (exporttheme.charAt(0).toUpperCase() +
-            exporttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            exporttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         titleSettings: {
             text: 'Location of the Wonders in the World',

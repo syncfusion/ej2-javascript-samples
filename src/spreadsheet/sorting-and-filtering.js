@@ -40,6 +40,8 @@ this.default = function () {
             spreadsheet.sort({ sortDescriptors: { field: 'B' } }, 'A2:G51').then(function() {
                 spreadsheet.applyFilter([{ field: 'D', operator: 'equal', value: 'Services' }], 'A1:G51');
             });
+            spreadsheet.numberFormat('m/d/yyyy', 'E2:E51');
+            spreadsheet.numberFormat('$#,##0.00', 'F2:F51');
         }
     }
 );

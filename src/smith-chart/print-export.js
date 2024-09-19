@@ -3,9 +3,9 @@ this.default = function () {
         // custom code start
         load: function (args) {
             var printtheme = location.hash.split('/')[1];
-            printtheme = printtheme ? printtheme : 'Material';
+            printtheme = printtheme ? printtheme : 'Fluent2';
             args.smithchart.theme = (printtheme.charAt(0).toUpperCase() +
-                printtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                printtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
         // custom code end
         horizontalAxis: {

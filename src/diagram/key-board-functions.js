@@ -2,9 +2,9 @@
  * Key Board Interaction sample
  */
 // tslint:disable-next-line:max-func-body-length
-ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.DiagramContextMenu, ej.diagrams.HierarchicalTree, ej.diagrams.DataBinding);
  //Custom command for Diagraming elements.
  var diagram;
+ //Retrieves the command manager settings for the diagram, including custom commands and their associated gestures.
  function getCommandManagerSettings() {
     var commandManager = {
         commands: [{
@@ -82,24 +82,26 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.DiagramContextMenu,
     };
     return commandManager;
 }
+// Navigates between levels in a diagram based on the selected node's relationship with its parent or child.
 function navigateLevels(isParent) {
-    var node = diagram.selectedItems.nodes[0];
-    if (node) {
-        var connectorId = isParent ? node.outEdges[0] : node.inEdges[0];
+    var selectedNode = diagram.selectedItems.nodes[0];
+    if (selectedNode) {
+        var connectorId = isParent ? selectedNode.outEdges[0] : selectedNode.inEdges[0];
         var altNode = isParent ? getNode(connectorId, false) : getNode(connectorId, true);
         selectNode(altNode);
     }
 }
+//Navigates to the right or left sibling node of the currently selected node in a diagram.
 function navigateToSiblings(isRightSibling) {
-    var child = diagram.selectedItems.nodes[0];
-    if (child) {
-        var connectorId = child.inEdges[0];
+    var selectedNode = diagram.selectedItems.nodes[0];
+    if (selectedNode) {
+        var connectorId = selectedNode.inEdges[0];
         var altConnectorId = '';
-        var parent = getNode(connectorId, true);
-        if (parent && parent.length > 0) {
-            for (var i = 0; i < parent[0].outEdges.length; i++) {
-                if (parent[0].outEdges[i] === connectorId) {
-                    altConnectorId = isRightSibling ? parent[0].outEdges[i + 1] : parent[0].outEdges[i - 1];
+        var parentNode = getNode(connectorId, true);
+        if (parentNode && parentNode.length > 0) {
+            for (var i = 0; i < parentNode[0].outEdges.length; i++) {
+                if (parentNode[0].outEdges[i] === connectorId) {
+                    altConnectorId = isRightSibling ? parentNode[0].outEdges[i + 1] : parentNode[0].outEdges[i - 1];
                 }
             }
             var sibling = getNode(altConnectorId, false);
@@ -107,6 +109,7 @@ function navigateToSiblings(isRightSibling) {
         }
     }
 }
+// Retrieves the node connected to the specified connector based on whether it's the parent or child node.
 function getNode(name, isParent) {
     var node = [];
     var connector = diagram.getObject(name);
@@ -115,12 +118,14 @@ function getNode(name, isParent) {
     }
     return node;
 }
+//Selects the specified node(s) in the diagram.
 function selectNode(node) {
     if (node && node.length > 0) {
         diagram.clearSelection();
         diagram.select(node);
     }
 }
+// Initializes the default settings and configuration for the diagram control.
 this.default = function () {
     //Initialize shape
     var shape = { type: 'Basic', shape: 'Ellipse', cornerRadius: 10 };
@@ -129,13 +134,13 @@ this.default = function () {
         width: '100%', height: 645,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         contextMenuSettings: { show: true },
-        getNodeDefaults: function (obj) {
-            if (!obj.children) {
-                obj.shape = shape;
-                obj.width = 70;
-                obj.height = 70;
+        getNodeDefaults: function (node) {
+            if (!node.children) {
+                node.shape = shape;
+                node.width = 70;
+                node.height = 70;
             }
-            return obj;
+            return node;
         },
         layout: {
             type: 'HierarchicalTree'

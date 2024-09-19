@@ -8,7 +8,7 @@ this.default = function () {
             var heatmaptheme = location.hash.split('/')[1];
             heatmaptheme = heatmaptheme ? heatmaptheme : 'Material';
             args.maps.theme = (heatmaptheme.charAt(0).toUpperCase() +
-            heatmaptheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            heatmaptheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         format: 'n',

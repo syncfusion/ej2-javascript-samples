@@ -75,10 +75,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var progressBarTheme = location.hash.split('/')[1];
+            progressBarTheme = progressBarTheme ? progressBarTheme : 'Material';
+            args.gauge.theme = (progressBarTheme.charAt(0).toUpperCase() +
+                progressBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         axisLabelRender: function (args) {

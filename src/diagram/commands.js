@@ -1,145 +1,105 @@
+/* jshint esversion: 6 */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.BpmnDiagrams);
 
+//Initializes the nodes for the diagram
 var nodes = [
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 150, offsetY: 40
-    },
-    {
-        id: 'node1', width: 60, height: 40, offsetX: 150, offsetY: 100, style: { fill: '#DAEBFF', strokeColor: 'white' },
-    },
-    {
-        id: 'node2', width: 80, height: 40, offsetX: 150, offsetY: 170, style: { fill: '#F5E0F7', strokeColor: 'white' },
-    },
-    {
-        id: 'node3', width: 100, height: 40, offsetX: 150, offsetY: 240, style: { fill: '#E0E5BB', strokeColor: 'white' },
-    },
-    {
-        shape: { type: 'Text', content: 'Try Alignment Commandss(AlignRight, AlignLeft \n and AlignCenter)' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 150, offsetY: 310
-    },
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 150, offsetY: 380
-    },
-    {
-        id: 'node4', width: 40, height: 60, offsetX: 80, offsetY: 470, style: { fill: '#DAEBFF', strokeColor: 'white' },
-    },
-    {
-        id: 'node5', width: 40, height: 80, offsetX: 160, offsetY: 470, style: { fill: '#F5E0F7', strokeColor: 'white' },
-    },
-    {
-        id: 'node6', width: 40, height: 100, offsetX: 240, offsetY: 470, style: { fill: '#E0E5BB', strokeColor: 'white' },
-    },
-    {
-        shape: { type: 'Text', content: 'Try Alignment Commandss(AlignTop, AlignBottom \n and AlignMiddle)' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 150, offsetY: 550
-    },
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 550, offsetY: 40
-    },
-    {
-        id: 'node7', width: 80, height: 40, offsetX: 475, offsetY: 100, style: { fill: '#DAEBFF', strokeColor: 'white' },
-    },
-    {
-        id: 'node8', width: 80, height: 40, offsetX: 625, offsetY: 100, style: { fill: '#F5E0F7', strokeColor: 'white' },
-    },
-    {
-        id: 'node9', width: 80, height: 40, offsetX: 595, offsetY: 180, style: { fill: '#E0E5BB', strokeColor: 'white' },
-    },
-    {
-        shape: { type: 'Text', content: 'Try SpaceAcross Commands' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 550, offsetY: 240
-    },
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 550, offsetY: 320
-    },
-    {
-        id: 'node10', width: 80, height: 40, offsetX: 475, offsetY: 400, style: { fill: '#DAEBFF', strokeColor: 'white' },
-    },
-    {
-        id: 'node11', width: 80, height: 40, offsetX: 475, offsetY: 500, style: { fill: '#F5E0F7', strokeColor: 'white' },
-    },
-    {
-        id: 'node12', width: 80, height: 40, offsetX: 625, offsetY: 430, style: { fill: '#E0E5BB', strokeColor: 'white' },
-    },
-    {
-        shape: { type: 'Text', content: 'Try SpaceAcross Commands' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 550, offsetY: 550
-    },
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 950, offsetY: 40
-    },
+    createTextNode('Select the below shapes', 150, 40),
+    createShapeNode('node1', 60, 40, 150, 100, '#DAEBFF'),
+    createShapeNode('node2', 80, 40, 150, 170, '#F5E0F7'),
+    createShapeNode('node3', 100, 40, 150, 240, '#E0E5BB'),
+    createTextNode('Try Alignment Commands (AlignRight, AlignLeft, and AlignCenter)', 150, 295),
+    createTextNode('Select the below shapes', 150, 395),
+    createShapeNode('node4', 40, 60, 80, 500, '#DAEBFF'),
+    createShapeNode('node5', 40, 80, 160, 500, '#F5E0F7'),
+    createShapeNode('node6', 40, 100, 240, 500, '#E0E5BB'),
+    createTextNode('Try Alignment Commands (AlignTop, AlignBottom, and AlignMiddle)', 150, 595),
+    createTextNode('Select the below shapes', 550, 40),
+    createShapeNode('node7', 80, 40, 485, 100, '#DAEBFF'),
+    createShapeNode('node8', 80, 40, 635, 100, '#F5E0F7'),
+    createShapeNode('node9', 80, 40, 595, 180, '#E0E5BB'),
+    createTextNode('Try SpaceAcross Commands', 550, 295),
+    createTextNode('Select the below shapes', 550, 395),
+    createShapeNode('node10', 80, 40, 475, 430, '#DAEBFF'),
+    createShapeNode('node11', 80, 40, 475, 530, '#F5E0F7'),
+    createShapeNode('node12', 80, 40, 625, 460, '#E0E5BB'),
+    createTextNode('Try SpaceAcross Commands', 550, 595),
+    createTextNode('Select the below shapes', 950, 40),
     {
         id: 'RightTriangle', width: 100, height: 100, offsetX: 950, offsetY: 120, style: { fill: '#E0E5BB', strokeColor: 'white' },
         shape: { type: 'Basic', shape: 'RightTriangle' },
     },
-    {
-        shape: { type: 'Text', content: 'Try Flip Commands' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 950, offsetY: 240
-    },
-    {
-        shape: { type: 'Text', content: 'Select the below shapes' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 950, offsetY: 300
-    },
-    {
-        id: 'node14', width: 60, height: 20, offsetX: 950, offsetY: 350, style: { fill: '#DAEBFF', strokeColor: 'white' },
-    },
-    {
-        id: 'node15', width: 80, height: 40, offsetX: 950, offsetY: 420, style: { fill: '#F5E0F7', strokeColor: 'white' },
-    },
-    {
-        id: 'node16', width: 100, height: 50, offsetX: 950, offsetY: 500, style: { fill: '#E0E5BB', strokeColor: 'white' },
-    },
-    {
-        shape: { type: 'Text', content: 'Try Sizing Commands' }, constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 }, offsetX: 950, offsetY: 550
-    }
+    createTextNode('Try Flip Commands', 950, 295),
+    createTextNode('Select the below shapes', 950, 395),
+    createShapeNode('node14', 60, 20, 950, 420, '#DAEBFF'),
+    createShapeNode('node15', 80, 40, 950, 460, '#F5E0F7'),
+    createShapeNode('node16', 100, 50, 950, 540, '#E0E5BB'),
+    createTextNode('Try Sizing Commands (Same size, Same width, Same height)', 950, 595),
 ];
+
+// Function to create text nodes
+function createTextNode(content, offsetX, offsetY) {
+    return {
+        shape: { type: 'Text', content: content },
+        constraints: ej.diagrams.NodeConstraints.PointerEvents,
+        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 },
+        offsetX: offsetX,
+        offsetY: offsetY
+    };
+}
+
+// Function to create shape nodes
+function createShapeNode(id, width, height, offsetX, offsetY, fill) {
+    return {
+        id: id,
+        width: width,
+        height: height,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        style: { fill: fill, strokeColor: 'white' }
+    };
+}
 
 this.default = function () {
     //custom code start
-    if(this.location.href){
-        if(this.location.href.includes('bootstrap5')){
+    if (this.location.href) {
+        if (this.location.href.includes('bootstrap5')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('bootstrap4')){
+        else if (this.location.href.includes('bootstrap4')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('bootstrap')){
+        else if (this.location.href.includes('bootstrap')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('material3')){
+        else if (this.location.href.includes('material3')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('material')){
+        else if (this.location.href.includes('material')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('fabric')){
+        else if (this.location.href.includes('fabric')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('fluent')){
+        else if (this.location.href.includes('fluent')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('tailwind')){
+        else if (this.location.href.includes('tailwind')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('highcontrast')){
+        else if (this.location.href.includes('highcontrast')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
         }
-        else if(this.location.href.includes('fusion')){
+        else if (this.location.href.includes('fusion')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
         }
     }
     //custom code end
-    //Initialize diagram control
+
+    //Initialize the diagram control.
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '800px',
         nodes: nodes,
-        //Defines the default node and connector properties
+        //Defines the default node properties
         getNodeDefaults: function (obj, diagram) {
             return obj;
         },
@@ -149,6 +109,7 @@ this.default = function () {
     });
     diagram.appendTo('#diagram');
 
+    //Handle selection change in the diagram.
     function selectionChange(args) {
         if (args.state === 'Changed') {
             if (args.type === 'Addition') {
@@ -161,155 +122,124 @@ this.default = function () {
         }
     }
 
+    // Handle history change in the diagram.
     function historyChange() {
-        // Check if undo stack is empty or not
-        if (diagram.historyManager.undoStack.length > 0) {
-            toolbarObj.items[3].disabled = false;
-        } else {
-            toolbarObj.items[3].disabled = true;
+        const undoItem = toolbarObj.items.find(item => item.id === 'undo');
+        if (undoItem) {
+            undoItem.disabled = diagram.historyManager.undoStack.length > 0 ? false : true;
         }
-        // Check if redo stack is empty or not
-        if (diagram.historyManager.redoStack.length > 0) {
-            toolbarObj.items[4].disabled = false;
-        } else {
-            toolbarObj.items[4].disabled = true;
+        const redoItem = toolbarObj.items.find(item => item.id === 'redo');
+        if (redoItem) {
+            redoItem.disabled = diagram.historyManager.redoStack.length > 0 ? false : true;
         }
     }
 
+    // Enable or disable toolbar items based on selection state.
     function onClickDisable(args, selectedItems) {
         if (args === false) {
-            toolbarObj.items[0].disabled = false;
-            toolbarObj.items[1].disabled = false;
-            toolbarObj.items[13].disabled = false;
-            toolbarObj.items[14].disabled = false;
+            const itemIds = ['cut', 'copy', 'transform_right', 'transform_left'];
+            itemIds.forEach(itemId => {
+                const item = toolbarObj.items.find(item => item.id === itemId);
+                if (item) {
+                    item.disabled = false;
+                }
+            });
             if (selectedItems.length === 1) {
-                toolbarObj.items[16].disabled = selectedItems[0].id === "RightTriangle" ? false : true;
-                toolbarObj.items[17].disabled = selectedItems[0].id === "RightTriangle" ? false : true;
+                var index = toolbarObj.items.findIndex(item => item.id === 'flip_vertical');
+                if (index !== -1) {
+                    toolbarObj.items[index].disabled = selectedItems[0].id === "RightTriangle" ? false : true;
+                }
+                index = toolbarObj.items.findIndex(item => item.id === 'flip_horizontal');
+                if (index !== -1) {
+                    toolbarObj.items[index].disabled = selectedItems[0].id === "RightTriangle" ? false : true;
+                }
                 disableCommonItems(true);
             } else if (selectedItems.length > 1) {
                 disableCommonItems(false);
             }
         } else {
-            toolbarObj.items[0].disabled = true;
-            toolbarObj.items[1].disabled = true;
-            toolbarObj.items[13].disabled = true;
-            toolbarObj.items[14].disabled = true;
-            toolbarObj.items[16].disabled = true;
-            toolbarObj.items[17].disabled = true;
+            const itemIds = ['cut', 'copy', 'align_right', 'transform_right', 'transform_left', 'flip_vertical', 'flip_horizontal'];
+            itemIds.forEach(itemId => {
+            const item = toolbarObj.items.find(item => item.id === itemId);
+            if (item) {
+                item.disabled = true;
+            }
+        });
             disableCommonItems(true);
         }
-
     }
 
+    // Disable all common toolbar items.
     function disableCommonItems(args) {
-        toolbarObj.items[6].disabled = args;
-        toolbarObj.items[7].disabled = args;
-        toolbarObj.items[8].disabled = args;
-        toolbarObj.items[9].disabled = args;
-        toolbarObj.items[10].disabled = args;
-        toolbarObj.items[11].disabled = args;
-        toolbarObj.items[19].disabled = args;
-        toolbarObj.items[20].disabled = args;
-        toolbarObj.items[22].disabled = args;
-        toolbarObj.items[23].disabled = args;
-        toolbarObj.items[24].disabled = args;
+        const itemIds = ['align_left', 'align_center', 'align_right', 'align_top', 'align_middle', 'align_bottom', 'distribute_horizontal', 'distribute_vertical', 'same_width', 'same_height', 'same_size'];
+        itemIds.forEach(itemId => {
+            const item = toolbarObj.items.find(item => item.id === itemId);
+            if (item) {
+                item.disabled = args;
+            }
+        });
     }
 
-
-    // Initialize Toolbar control
+    // Initialize the Toolbar control.
     var toolbarObj = new ej.navigations.Toolbar({
         clicked: onItemClick,
         items: [
-            {
-                prefixIcon: 'e-icons e-cut', tooltipText: 'Cut', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-copy', tooltipText: 'Copy', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true
-            },
-            {
-                type: 'Separator'
-            },
-            {
-                prefixIcon: 'sf-icon-align-left-1', tooltipText: 'Align Left', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-align-center-1', tooltipText: 'Align Center', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-align-right-1', tooltipText: 'Align Right', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-align-top-1', tooltipText: 'Align Top', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-align-middle-1', tooltipText: 'Align Middle', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-align-bottom-1', tooltipText: 'Align Bottom', disabled: true
-            },
-            {
-                type: 'Separator'
-            },
-            {
-                prefixIcon: 'e-icons e-transform-right', tooltipText: 'Rotate Right', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-transform-left', tooltipText: 'Rotate Left', disabled: true
-            },
-            {
-                type: 'Separator'
-            },
-            {
-                prefixIcon: 'e-icons e-flip-vertical', tooltipText: 'Flip Vertical', disabled: true
-            },
-            {
-                prefixIcon: 'e-icons e-flip-horizontal', tooltipText: 'Flip Horizontal', disabled: true
-            },
-            {
-                type: 'Separator'
-            },
-            {
-                prefixIcon: 'sf-icon-distribute-horizontal', tooltipText: 'Distribute Objects Horizontally', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-distribute-vertical', tooltipText: 'Distribute Objects Vertically', disabled: true
-            },
-            {
-                type: 'Separator'
-            },
-            {
-                prefixIcon: 'sf-icon-same-width', tooltipText: 'Same Width', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-same-height', tooltipText: 'Same Height', disabled: true
-            },
-            {
-                prefixIcon: 'sf-icon-same-size', tooltipText: 'Same Size', disabled: true
-            }
+            { prefixIcon: 'e-icons e-cut', tooltipText: 'Cut', disabled: true, id: 'cut'},
+            { prefixIcon: 'e-icons e-copy', tooltipText: 'Copy', disabled: true, id:'copy' },
+            { prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true, id:'paste' },
+            { prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true, id:'undo' },
+            { prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true, id:'redo'},
+
+            { type: 'Separator',id: 'seperator1' },
+
+            { prefixIcon: 'sf-icon-align-left-1', tooltipText: 'Align Left', disabled: true, id:'align_left'},
+            { prefixIcon: 'sf-icon-align-center-1', tooltipText: 'Align Center', disabled: true, id: 'align_center'},
+            { prefixIcon: 'sf-icon-align-right-1', tooltipText: 'Align Right', disabled: true, id:'align_right' },
+            { prefixIcon: 'sf-icon-align-top-1', tooltipText: 'Align Top', disabled: true, id:'align_top' },
+            { prefixIcon: 'sf-icon-align-middle-1', tooltipText: 'Align Middle', disabled: true, id:'align_middle'},
+            { prefixIcon: 'sf-icon-align-bottom-1', tooltipText: 'Align Bottom', disabled: true, id: 'align_bottom'},
+
+            { type: 'Separator',id: 'seperator2' },
+
+            { prefixIcon: 'e-icons e-transform-right', tooltipText: 'Rotate Right', disabled: true, id:'transform_right' },
+            { prefixIcon: 'e-icons e-transform-left', tooltipText: 'Rotate Left', disabled: true, id:'transform_left'},
+
+            { type: 'Separator',id:'seperator3'},
+
+            { prefixIcon: 'e-icons e-flip-vertical', tooltipText: 'Flip Vertical', disabled: true, id:'flip_vertical' },
+            { prefixIcon: 'e-icons e-flip-horizontal', tooltipText: 'Flip Horizontal', disabled: true, id: 'flip_horizontal'},
+
+            { type: 'Separator',id: 'seperator4' },
+
+            { prefixIcon: 'sf-icon-distribute-horizontal', tooltipText: 'Distribute Objects Horizontally', disabled: true, id:'distribute_horizontal'},
+            { prefixIcon: 'sf-icon-distribute-vertical', tooltipText: 'Distribute Objects Vertically', disabled: true, id: 'distribute_vertical' },
+
+            { type: 'Separator',id: 'seperator5' },
+
+            { prefixIcon: 'sf-icon-same-width', tooltipText: 'Same Width', disabled: true, id:'same_width' },
+            { prefixIcon: 'sf-icon-same-height', tooltipText: 'Same Height', disabled: true, id:'same_height'},
+            { prefixIcon: 'sf-icon-same-size', tooltipText: 'Same Size', disabled: true, id: 'same_size' }
         ]
     });
 
     toolbarObj.appendTo('#toolbar');
 
+    // Handle toolbar item click events.
     function onItemClick(args) {
         var item = args.item.tooltipText;
+        var index = toolbarObj.items.findIndex(item => item.id === 'paste');
         switch (args.item.tooltipText) {
-            case 'Cut':
-                diagram.cut();
-                toolbarObj.items[2].disabled = false;
-                break;
             case 'Copy':
                 diagram.copy();
-                toolbarObj.items[2].disabled = false;
+                if (index !== -1) {
+                    toolbarObj.items[index].disabled = false;
+                }
+                break;
+            case 'Cut':
+                diagram.cut();
+                if (index !== -1) {
+                    toolbarObj.items[index].disabled = false;
+                }
                 break;
             case 'Paste':
                 diagram.paste();
@@ -360,6 +290,7 @@ this.default = function () {
         }
     }
 
+    // Flip selected objects.
     function flipObjects(flipType) {
         var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
         for (i = 0; i < selectedObjects.length; i++) {

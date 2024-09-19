@@ -11,25 +11,26 @@ var port = [
     { id: 'Port4', offset: { x: 0.5, y: 1 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw }
 ];
 
+//To enhance the functionality of a webpage for mobile devices by adding a click event listener 
 function addEvents() {
     var isMobileDevice = window.matchMedia('(max-width:550px)').matches;
     if (isMobileDevice) {
-        var pIcons = document.getElementById('palette-icon');
-        if (pIcons) {
-            pIcons.addEventListener('click', openPalette, false);
+        var paletteIcons = document.getElementById('palette-icon');
+        if (paletteIcons) {
+            paletteIcons.addEventListener('click', openPalette, false);
         }
     }
 }
-
+//To manage the visibility state of the palette space on a webpage for mobile devices
 function openPalette() {
-    var pSpaces = document.getElementById('palette-space');
+    var paletteSpaces = document.getElementById('palette-space');
     isMobileDevice = window.matchMedia('(max-width:550px)').matches;
     if (isMobileDevice) {
-        if (!pSpaces.classList.contains('sb-mobile-palette-open')) {
-            pSpaces.classList.add('sb-mobile-palette-open');
+        if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
+            paletteSpaces.classList.add('sb-mobile-palette-open');
         }
         else {
-            pSpaces.classList.remove('sb-mobile-palette-open');
+            paletteSpaces.classList.remove('sb-mobile-palette-open');
         }
     }
 }
@@ -39,7 +40,7 @@ this.default = function () {
     var pathData = 'M 120 24.9999 C 120 38.8072 109.642 50 96.8653 50 L 23.135' +
         ' 50 C 10.3578 50 0 38.8072 0 24.9999 L 0 24.9999 C' +
         '0 11.1928 10.3578 0 23.135 0 L 96.8653 0 C 109.642 0 120 11.1928 120 24.9999 Z';
-    //Initializes the nodes for the diagram.
+    // Initialize the nodes for the diagram.
     var nodes = [
         {
             id: 'swimlane',
@@ -174,11 +175,31 @@ this.default = function () {
             width: 650
         },
     ];
+    //Set the default values of a node.
     function getNodeDefaults(node) {
-        node.style.strokeColor = "#717171";
+        node.style.strokeColor = '#717171';
+        node.style.strokeWidth = 1;
         return node;
     }
-    //Initializes the Connectors for the diagram
+    //Set the default values of a Connector.
+    function getConnectorDefaults(connector) {
+        if ((connector.id.indexOf("straight") !== -1) || (connector.id.indexOf("straightdashed") !== -1)) {
+            connector.type = 'Straight';
+        }
+        else {
+            connector.type = 'Orthogonal';
+        }
+        setConnectorStyles(connector, '#717171');
+        return connector;
+    }
+    //set styles for connector
+    function setConnectorStyles(connector, color) {
+       connector.targetDecorator.style.strokeColor = color;
+       connector.targetDecorator.style.fill = color;
+       connector.style.strokeColor = color;
+       connector.style.strokeWidth = 1;
+   } 
+    //Initialize the Connectors for the diagram
     var connectors = [
         {
             id: 'connector1', sourceID: 'node1',
@@ -189,7 +210,7 @@ this.default = function () {
             targetID: 'node3', annotations: [{ content: 'No', style: { fill: 'white' } }]
         },
         {
-            id: 'connector3', sourceID: 'node4',
+            id: 'connector3', sourceID: 'node4', 
             targetID: 'node8'
         },
         {
@@ -206,38 +227,22 @@ this.default = function () {
         },
         {
             id: 'connector7', sourcePortID: 'Port1', targetPortID: 'Port3', sourceID: 'node4',
-            targetID: 'node7',
+            targetID: 'node7'
         },
     ];
-    var intervals = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
-    var hvgridlines = { lineColor: '#e0e0e0', lineIntervals: intervals };
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '100%', nodes: nodes, connectors: connectors,
+        // sets the height and width of the diagram.
+        width: '100%', height: '100%',
+        // sets the nodes and connectors of the diagram.
+         nodes: nodes, connectors: connectors,
         getNodeDefaults: getNodeDefaults,
+        getConnectorDefaults: getConnectorDefaults,
         snapSettings: {
-            horizontalGridlines: hvgridlines,
-            verticalGridlines: hvgridlines,
             constraints: ej.diagrams.SnapConstraints.All & ~ej.diagrams.SnapConstraints.ShowLines
         },
-        //Sets the default values of a Connector.
-        getConnectorDefaults: function (connector) {
-            if (connector.id.indexOf("Link21") !== -1) {
-                connector.type = 'Straight';
-            }
-            else if (connector.id.indexOf("Link22") !== -1) {
-                connector.type = 'Straight';
-            }
-            else {
-                connector.type = 'Orthogonal';
-            }
-            connector.style.strokeColor = "#717171";
-            connector.sourceDecorator.style.strokeColor = "#717171";
-            connector.targetDecorator.style.strokeColor = "#717171";
-            connector.sourceDecorator.style.fill = "#717171";
-            connector.targetDecorator.style.fill = "#717171";
-            return connector;
-        },
+        
+        //Define custom menu items
         contextMenuSettings: {
             show: true, items: [
                 {
@@ -257,6 +262,7 @@ this.default = function () {
                 }],
             showCustomMenuOnly: true,
         },
+        //Open the context menu 
         contextMenuOpen: function (args) {
             for (var i=0; i< args.items.length; i++ ) {
                 var item = args.items[i];
@@ -271,6 +277,7 @@ this.default = function () {
                 }
             }
         },
+        //Handle click event for menu items.
         contextMenuClick: function (args) {
             if (args.item.id === 'InsertLaneBefore' || args.item.id === 'InsertLaneAfter') {
                 if (diagram.selectedItems.nodes.length > 0 && (diagram.selectedItems.nodes[0]).isLane) {
@@ -316,7 +323,7 @@ this.default = function () {
                 diagram.paste();
             }
         },
-        //Sets the Node style for DragEnter element.
+        //Set the node style for the DragEnter element.
         dragEnter: function (args) {
             var obj = args.element;
             if (obj instanceof ej.diagrams.Node) {
@@ -331,48 +338,53 @@ this.default = function () {
                     }
                 }
             }
-        }
+        },
+        selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.Rotate }  
+        
     });
     diagram.appendTo('#diagram');
+    // Check if the current environment is a device and fit diagram to page if true
     if (ej.base.Browser.isDevice) {
         diagram.fitToPage();
     }
-    // Initializes the palettes to be displayed in the symbol palette.
+    // Initializes the palettes for display in the symbol palette 
     var palettes = [
         {
+            // Initialize flowshapes for the palettes 
             id: 'flow', expanded: true, title: 'Flow Shapes', symbols: [
                 {
-                    id: 'Terminator', width: 50, height: 60, addInfo: { tooltip: 'Terminator' }, shape: { type: 'Flow', shape: 'Terminator' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
+                    id: 'Terminator', width: 50, height: 60, addInfo: { tooltip: 'Terminator' }, shape: { type: 'Flow', shape: 'Terminator' }, ports: port
                 },
                 {
-                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
+                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' },  ports: port
                 },
                 {
-                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
+                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' },  ports: port
                 },
                 {
-                    id: 'Document',  addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, style: { strokeWidth: 1, strokeColor: '#757575' }, ports: port
+                    id: 'Document',  addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, ports: port
                 },
                 {
-                    id: 'PreDefinedProcess',  addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port, style: { strokeWidth: 1, strokeColor: '#757575' }
+                    id: 'PreDefinedProcess',  addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port
                 },
                 {
-                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port, style: { strokeWidth: 1, strokeColor: '#757575' }
+                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port, 
                 },
             ]
         },
         {
+            // Initialize Swimlane for the palettes 
             id: 'swimlaneShapes', expanded: true,
             title: 'Swimlane Shapes',
             symbols: [
                 {
-                    id: 'stackCanvas1', addInfo: { tooltip: 'Horizontal swimlane' },
+                    id: 'horizontalSwimlane', addInfo: { tooltip: 'Horizontal swimlane' },
                     shape: {
                         type: 'SwimLane', lanes: [
                             {
                                 id: 'lane1',
-                                style: { strokeColor: '#757575' }, height: 60, width: 150,
-                                header: { width: 50, height: 50, style: { strokeColor: '#757575', fontSize: 11 } },
+                                 height: 60, width: 150,
+                                header: { width: 50, height: 50, style: { fontSize: 11 } },
                             }
                         ],
                         orientation: 'Horizontal', isLane: true
@@ -382,14 +394,14 @@ this.default = function () {
                     offsetX: 70,
                     offsetY: 30,
                 }, {
-                    id: 'stackCanvas2', addInfo: { tooltip: 'Vertical swimlane' },
+                    id: 'verticalSwimlane', addInfo: { tooltip: 'Vertical swimlane' },
                     shape: {
                         type: 'SwimLane',
                         lanes: [
                             {
                                 id: 'lane1',
-                                style: { strokeColor: '#757575' }, height: 150, width: 60,
-                                header: { width: 50, height: 50, style: { strokeColor: '#757575', fontSize: 11 } },
+                                height: 150, width: 60,
+                                header: { width: 50, height: 50, style: {fontSize: 11 } },
                             }
                         ],
                         orientation: 'Vertical', isLane: true
@@ -402,46 +414,43 @@ this.default = function () {
                     id: 'verticalPhase', addInfo: { tooltip: 'Vertical phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#757575' }, }],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' }}],
                         annotations: [{ text: '' }],
                         orientation: 'Vertical', isPhase: true
                     },
                     height: 60,
-                    width: 140,
-                    style: { strokeColor: '#757575' },
+                    width: 140
                 }, {
                     id: 'horizontalPhase', addInfo: { tooltip: 'Horizontal phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3', strokeColor: '#757575' }, }],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3'} }],
                         annotations: [{ text: '' }],
                         orientation: 'Horizontal', isPhase: true
                     },
                     height: 60,
                     width: 140,
-                    style: { strokeColor: '#757575' },
                 }
             ]
         },
         {
+             // Initialize connectors for the palettes 
             id: 'connectors', expanded: true, symbols: [
                 {
-                    id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
+                    id: 'orthogonal', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 }
                 },
                 {
-                    id: 'Link2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeDashArray: '4 4', strokeColor: '#757575' }
+                    id: 'orthogonaldashed', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
+                     style: { strokeDashArray: '4 4'}
                 },
                 {
-                    id: 'Link21', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
+                    id: 'straight', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
                 },
                 {
-                    id: 'Link22', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-                    targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeDashArray: '4 4', strokeColor: '#757575' }
+                    id: 'straightdashed', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+                    style: { strokeDashArray: '4 4'}
                 }
-            ], title: 'Connectors'
+            ], title: 'Connectors'  
         }
     ];
     //Initializes the symbol palette
@@ -451,9 +460,12 @@ this.default = function () {
         width: '100%', height: '100%',
         symbolMargin: { left: 8, right: 8, top: 8, bottom: 8 },
         symbolHeight: 48, symbolWidth: 48,
+        getNodeDefaults: getNodeDefaults,
+        getConnectorDefaults:getConnectorDefaults,
         getSymbolInfo: function (symbol) {
             return { tooltip: symbol.addInfo ? symbol.addInfo.tooltip : symbol.id };
-        }
+        },
+        
     });
 
     palette.appendTo('#symbolpalette');

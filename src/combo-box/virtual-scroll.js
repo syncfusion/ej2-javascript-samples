@@ -26,8 +26,8 @@ this.default = function () {
         ComboBoxRecords.push(comboItem);
     }
     var remoteComboData = new ej.data.DataManager({
-        url: 'https://services.syncfusion.com/js/production/api/orders',
-        adaptor: new ej.data.WebApiAdaptor(),
+        url: 'https://services.syncfusion.com/js/production/api/VirtualDropdownData',
+        adaptor: new ej.data.UrlAdaptor(),
         crossDomain: true
     });
     var remoteComboFields = { text: 'OrderID', value: 'OrderID' };

@@ -8,7 +8,7 @@ this.default = function () {
             var highlighttheme = location.hash.split('/')[1];
             highlighttheme = highlighttheme ? highlighttheme : 'Material';
             args.maps.theme = (highlighttheme.charAt(0).toUpperCase() +
-            highlighttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            highlighttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         centerPosition: {

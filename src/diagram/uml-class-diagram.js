@@ -3,21 +3,21 @@
  */
 
  var diagram;
- 
- function getNodeDefaults(obj) {
-   obj.style = { fill: "#26A0DA", strokeColor: "white" };
-   return obj;
+ //Set default values for a node.
+ function getNodeDefaults(node) {
+  node.style = { fill: "#26A0DA", strokeColor: "white" };
+  //set the style of annotations for a given node.
+  if (node.annotations.length > 0) {
+    for (var i = 0; i < node.annotations.length; i++) {
+      node.annotations[i].style.color = "white";
+    }
+    }
+   return node;
  }
  function getConnectorDefaults(connector) {
- return connector;
- }
- function setNodeTemplate(node) {
-   if (node.annotations.length > 0) {
-     for (var i = 0; i < node.annotations.length; i++) {
-       node.annotations[i].style.color = "white";
-     }
-   }
- }
+  return connector;
+  }
+ // Create and return a connector object with specified properties during initial rendering
  function createConnector(Id, sourceID, targetID) {
    var connector = {};
    connector.id = Id;
@@ -25,6 +25,7 @@
    connector.targetID = targetID;
    return connector;
  }
+// Create and return a node object with specified properties during initial rendering
  function createNode(Id, offsetX, offsetY, className) {
    var node = {};
    node.id = Id;
@@ -47,6 +48,7 @@
  }
  
  this.default = function() {
+  //Initialize nodes for the diagram.
    var nodes = [
      {
        id: "Patient",
@@ -163,6 +165,7 @@
      createNode("Technologist", 1015, 535, "Technologist"),
      createNode("SurgicalTechnologist", 1015, 630, "SurgicalTechnologist")
    ];
+   //Initialize connector for the diagram.
    var connectors = [
      createConnector("connect1", "Patient", "Person"),
      createConnector("connect2", "Person", "Hospital"),
@@ -181,103 +184,88 @@
      createConnector("connect15", "AdministrativeStaff", "Staff"),
      createConnector("connect16", "TechnicalStaff", "Staff")
    ];
+     //Initialize diagram control
    diagram = new ej.diagrams.Diagram({
      width: '100%', height: '100%',
      nodes: nodes,
      connectors: connectors,
+     //Set default values for nodes
      getNodeDefaults: getNodeDefaults,
      getConnectorDefaults: getConnectorDefaults,
-     setNodeTemplate: setNodeTemplate,
-     dragEnter:function(args){
-       if(args.element instanceof ej.diagrams.Connector){
-         args.element.targetPoint.x += 100;
-         args.element.targetPoint.y += 20;
-       }
-     },
      created: function () { diagram.fitToPage(); }
- 
    });
    diagram.appendTo("#diagram");
  
-   // Initializes the palettes to be displayed in the symbol palette.
+  // Initialize the palettes displayed in the symbol palette
    var palettes = [
        {
            id: 'UmlActivity', expanded: true, title: 'UML Classifier Nodes', symbols: [
            {
                id: 'class',
-               style: {
-                   fill: '#26A0DA',
-               },
-               borderColor: 'white',
                shape: {
                    type: 'UmlClassifier',
                    classShape: {
-                       attributes: [
-                           { name: 'accepted', type: 'Date', style: { color: "red", fontFamily: "Arial", textDecoration: 'Underline',  italic: true },isSeparator: true },
-                           { name: 'sickness', type: 'History' },
-                           { name: 'prescription', type: 'String[*]' },
-                           { name: 'allergies', type: 'String[*]' }
-                       ],
-                       methods: [{ name: 'getHistory', style: {}, parameters: [{ name: 'Date', style: {} }], type: 'History' }],
-                       name: 'Patient'
-                   },
+                    attributes: [
+                      { name: 'accepted', type: 'Date',isSeparator: true },
+                      { name: 'sickness', type: 'History' },
+                      { name: 'prescription', type: 'String[*]' },
+                      { name: 'allergies', type: 'String[*]' }
+                  ],
+                  methods: [{ name: 'getHistory', style: {}, parameters: [{ name: 'Date', style: {} }], type: 'History' }],
+                  name: 'Patient'
+              },
                    classifier: 'Class'
                },
            },
            {
                id: 'Interface',
-               style: {
-                   fill: '#26A0DA',
-               }, borderColor: 'white',
                shape: {
                    type: 'UmlClassifier',
                    interfaceShape: {
-                       name: "Bank Account",
-                       attributes: [{
-                               name: "owner",
-                               type: "String[*]", style: {}
-                           },
-                           {
-                               name: "balance",
-                               type: "Dollars"
-                           }],
-                       methods: [{
-                               name: "deposit", style: {},
-                               parameters: [{
-                                       name: "amount",
-                                       type: "Dollars",
-                                       style: {}
-                                   }],
-                           }]
-                   },
+                    name: "Bank Account",
+                    attributes: [{
+                            name: "owner",
+                            type: "String[*]", style: {}
+                        },
+                        {
+                            name: "balance",
+                            type: "Dollars"
+                        }],
+                    methods: [{
+                            name: "deposit", style: {},
+                            parameters: [{
+                                    name: "amount",
+                                    type: "Dollars",
+                                    style: {}
+                                }],
+                        }]
+                },
                    classifier: 'Interface'
                },
            },
            {
                id: 'Enumeration',
-               style: {
-                   fill: '#26A0DA',
-               }, borderColor: 'white',
                shape: {
                    type: 'UmlClassifier',
                    enumerationShape: {
-                       name: 'AccountType',
-                       members: [
-                           {
-                               name: 'Checking Account', style: {}
-                           },
-                           {
-                               name: 'Savings Account'
-                           },
-                           {
-                               name: 'Credit Account'
-                           }
-                       ]
-                   },
+                    name: 'AccountType',
+                    members: [
+                        {
+                            name: 'Checking Account', style: {}
+                        },
+                        {
+                            name: 'Savings Account'
+                        },
+                        {
+                            name: 'Credit Account'
+                        }
+                    ]
+                },
                    classifier: 'Enumeration'
                },
            },
            ]
+
        },
        {
          id: 'umlConnectorrs', expanded: true, title: 'UML Classifier Connectors', symbols: [
@@ -483,23 +471,22 @@
        }
      
    ];
-   function setPaletteNodeDefaults(node) {
-     node.width = 100;
-     node.height = 100;
-   }
    //Initializes the symbol palette
    var palette = new ej.diagrams.SymbolPalette({
        expandMode: 'Multiple',
-     palettes:palettes,
-     getNodeDefaults: setPaletteNodeDefaults,
+       palettes:palettes,
        width: '100%', height: '100%',
        symbolMargin: { left: 12, right: 12, top: 12, bottom: 12 },
        symbolHeight: 90, symbolWidth: 100,
+       getNodeDefaults: function(symbol){
+        symbol.width = 100;
+        symbol.height = 100;
+       },
        getSymbolInfo: function (symbol) {
          return { fit: true, description: { text: symbol.id, } ,tooltip: symbol.addInfo ? symbol.addInfo.tooltip : symbol.id};
        }
    });
- 
+  
    palette.appendTo('#symbolpalette');
  };
  

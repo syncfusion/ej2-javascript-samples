@@ -143,10 +143,10 @@ this.default = function () {
         ],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedCustomerTheme = location.hash.split('/')[1];
+            selectedCustomerTheme = selectedCustomerTheme ? selectedCustomerTheme : 'Material';
+            args.gauge.theme = (selectedCustomerTheme.charAt(0).toUpperCase() +
+                selectedCustomerTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/-high/i, 'High').replace(/contrast/i, 'Contrast').replace(/5.3/i, '5');
             // custom code end
         }
     });

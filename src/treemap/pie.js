@@ -6,7 +6,7 @@ this.default = function () {
             var pietheme = location.hash.split('/')[1];
             pietheme = pietheme ? pietheme : 'Material';
             args.treemap.theme = (pietheme.charAt(0).toUpperCase() +
-            pietheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            pietheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         loaded: function (args) {

@@ -10,10 +10,11 @@ this.default = function() {
                 getImageUrl: hostUrl + 'api/FileManager/GetImage',
                 uploadUrl: hostUrl + 'api/FileManager/Upload',
                 downloadUrl: hostUrl + 'api/FileManager/Download'    
-            },            
+            },
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'View', 'Details', 'Cut', 'Copy', 'Delete', 'Download', 'Rename'] },            
             allowDragAndDrop: true,
-            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'View', 'Details', 'Cut', 'Copy', 'Delete', 'Download', 'Rename'] },
             contextMenuSettings: {
+                file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
                 layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
                 visible: true
             }

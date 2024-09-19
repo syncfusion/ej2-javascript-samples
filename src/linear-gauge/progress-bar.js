@@ -12,7 +12,6 @@ this.default = function () {
                 width: 1
             }
         },
-        orientation: 'Horizontal',
         axes: [{
             minimum: 0,
             maximum: 100,
@@ -46,10 +45,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedBarTheme = location.hash.split('/')[1];
+            selectedBarTheme = selectedBarTheme ? selectedBarTheme : 'Material';
+            args.gauge.theme = (selectedBarTheme.charAt(0).toUpperCase() +
+                selectedBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

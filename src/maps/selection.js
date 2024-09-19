@@ -9,7 +9,7 @@ this.default = function () {
             var selectiontheme = location.hash.split('/')[1];
             selectiontheme = selectiontheme ? selectiontheme : 'Material';
             args.maps.theme = (selectiontheme.charAt(0).toUpperCase() +
-            selectiontheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            selectiontheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         itemSelection: function (args) {

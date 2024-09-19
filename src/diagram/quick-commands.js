@@ -2,7 +2,6 @@
 /**
  * UserHandle
  */
-ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.MindMap, ej.diagrams.HierarchicalTree);
 var diagram;
 //Defines the nodes collection in diagram
 var nodes = [
@@ -23,7 +22,8 @@ var nodes = [
         annotations: [{ content: 'Implement and Deliver' }]
     }, {
         id: 'Decision', width: 250, height: 60, offsetX: 550, offsetY: 60, shape: { type: 'Flow', shape: 'Card' },
-        annotations: [{ content: 'Decision process for new software ideas' }]
+        annotations: [{ content: 'Decision process for new software ideas', }],
+        fixedUserHandles: [{ padding: { left: 2, right: 2, top: 2, bottom: 2 }, offset:{x:1.1,y:0.5}, width: 20, height: 20,}],
     }, {
         id: 'Reject', width: 150, height: 60, offsetX: 550, offsetY: 280, shape: { type: 'Flow', shape: 'Process' },
         annotations: [{ content: 'Reject' }]
@@ -70,7 +70,6 @@ function applyUserHandleStyle(bgcolor, target) {
 }
 
 //Defines the user handle collection for nodes in diagram
-
 var handles = [
     {
         name: 'clone', pathData: 'M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,' +
@@ -90,11 +89,13 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+//function to clone object 
 var CloneTool = (function (_super) {
     __extends(CloneTool, _super);
     function CloneTool() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    //Defines the clone tool for copying node or connector objects.
     CloneTool.prototype.mouseDown = function (args) {
         var newObject;
         if (diagram.selectedItems.nodes.length > 0) {
@@ -105,7 +106,14 @@ var CloneTool = (function (_super) {
         }
         newObject.id += ej.diagrams.randomId();
         diagram.paste([newObject]);
-        args.source = diagram.nodes[diagram.nodes.length - 1];
+        if(diagram.selectedItems.connectors.length > 0)
+        {
+            args.source = diagram.connectors[diagram.connectors.length - 1];
+        }
+        else
+        {
+            args.source = diagram.nodes[diagram.nodes.length - 1];
+        }
         args.sourceWrapper = args.source.wrapper;
         _super.prototype.mouseDown.call(this, args);
         this.inAction = true;
@@ -114,13 +122,18 @@ var CloneTool = (function (_super) {
 }(ej.diagrams.MoveTool));
 
 this.default = function () {
-    //Defines the diagram content
+    // Defines the content of the diagram.
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '600px', nodes: nodes,
         connectors: connectors,
         selectedItems: { constraints: ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles },
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
-        //set Node default value 
+        fixedUserHandleTemplate: '#fixeduserhandletemplate',
+        fixedUserHandleClick: function (args) {
+            diagram.select([diagram.nameTable.Decision]);
+            diagram.remove();
+        },
+        // Sets default values for a Node.
         getNodeDefaults: function (node) {
             return {
                 style: { fill: '#578CA9', strokeColor: 'none' },
@@ -128,7 +141,23 @@ this.default = function () {
             };
         },
         //set CustomTool 
-        getCustomTool: getTool
+        getCustomTool: getTool,
+        selectionChange:function (arg) {
+            var propertyAppearance = document.getElementById('propertypanel');
+            var blockSelectedElement = document.getElementsByClassName('e-remove-selection');
+            if (arg.newValue) {
+                if( (arg.newValue[0] instanceof ej.diagrams.Node)||(arg.newValue[0] instanceof ej.diagrams.Connector)) {
+                    if (blockSelectedElement.length) {
+                        blockSelectedElement[0].classList.remove('e-remove-selection');
+                    }
+                } 
+                else {
+                    if (!propertyAppearance.classList.contains('e-remove-selection')) {
+                        propertyAppearance.classList.add('e-remove-selection');
+                    }
+                }
+            }
+        }
 
     });
     diagram.appendTo('#diagram');
@@ -156,10 +185,9 @@ this.default = function () {
                     setUserHandlePosition(0, 'Right', target);
                     break;
             }
-        }
-        diagram.dataBind();
+        }       
     };
-    //Change the Appearence of the UserHandle
+    //Change the appearence of the UserHandle
     document.getElementById('pattern').onclick = function (args) {
         var target = args.target;
         var patternBlock = document.getElementById('pattern');
@@ -181,9 +209,10 @@ this.default = function () {
                     applyUserHandleStyle('#FF6347', target);
                     break;
             }
-        }
-        diagram.dataBind();
+        }       
     };
+
+    
 };
 
 

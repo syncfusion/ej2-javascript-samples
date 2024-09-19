@@ -25,8 +25,7 @@ this.default = function() {
     });
     dialogObj.appendTo('#dialog');
 
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
-    var contextmenuItems = ['Open', '|', 'Cut', 'Copy', 'Delete', 'Rename', '|', 'Details'];
+    var hostUrl = 'https://services.syncfusion.com/filemanager/production/';
 
     // Initialize the FileManager component
     var filemanagerInstance = new ej.filemanager.FileManager({
@@ -36,12 +35,13 @@ this.default = function() {
             uploadUrl: hostUrl + 'api/FileManager/Upload',
             downloadUrl: hostUrl + 'api/FileManager/Download'
         },
-        allowMultiSelection: false,
         toolbarSettings: {
-            items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details']},
+            items: ['NewFolder', 'Upload', 'Delete', 'Cut', 'Copy', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details']
+        },
+        allowMultiSelection: false,
         contextMenuSettings: {
-            file: contextmenuItems,
-            folder: contextmenuItems
+            file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
+            visible: true
         },
         fileOpen : onFileOpen
     });

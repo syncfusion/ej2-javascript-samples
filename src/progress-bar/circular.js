@@ -2,10 +2,10 @@ this.default = function () {
   var div = document.getElementsByClassName('progress-text-align');
   var progressLoad = function (args) {
       var circularTheme = location.hash.split('/')[1];
-      circularTheme = circularTheme ? circularTheme : 'Material';
+      circularTheme = circularTheme ? circularTheme : 'Fluent2';
       args.progressBar.theme = (circularTheme.charAt(0).toUpperCase() +
-          circularTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark') {
+          circularTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark' || args.progressBar.theme === 'Fluent2HighContrast') {
           for (var j = 0; j < div.length; j++) {
               div[j].setAttribute('style', 'color:white');
           }

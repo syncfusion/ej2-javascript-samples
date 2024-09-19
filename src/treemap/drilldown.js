@@ -18,7 +18,7 @@ this.default = function () {
             var drilltheme = location.hash.split('/')[1];
             drilltheme = drilltheme ? drilltheme : 'Material';
             args.treemap.theme = (drilltheme.charAt(0).toUpperCase() +
-            drilltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            drilltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

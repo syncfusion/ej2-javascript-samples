@@ -5,7 +5,7 @@ this.default = function () {
             var selecttheme = location.hash.split('/')[1];
             selecttheme = selecttheme ? selecttheme : 'Material';
             args.maps.theme = (selecttheme.charAt(0).toUpperCase() +
-            selecttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            selecttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         centerPosition: {

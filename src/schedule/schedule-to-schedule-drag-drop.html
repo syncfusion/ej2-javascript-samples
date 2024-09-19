@@ -1,0 +1,49 @@
+<div class="control-section main-wrapper">
+    <div class="content-wrapper  multiple-schedulers">
+        <div class="schedule-container">
+            <div id="first-schedule"></div>
+            <div id="second-schedule"></div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This example illustrates how to drag and drop events among multiple Scheduler. You can drag
+        events from one Scheduler to another.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, <code>eventDragArea</code> is used to drag a range of events from one Scheduler to another. The
+        <code>dragStop</code> event of the Scheduler is triggered when an item is dropped from one Scheduler onto
+        another. Within the <code>dragStop</code> event, the <code>addEvent</code> method is used to add the dropped event to the
+        target Scheduler, and the <code>deleteEvent</code> method is used to remove the dragged event from the source
+        Scheduler.
+    </p>
+</div>
+
+<style>
+    .content-wrapper.multiple-schedulers .schedule-container {
+      display: flex;
+    }
+
+    #first-schedule {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .content-wrapper.multiple-schedulers .schedule-container {
+          flex-direction: column;
+        }
+
+        #first-schedule {
+          margin-right: 0;
+        }
+
+        #second-schedule {
+          margin-top: 10px;
+        }
+    }
+</style>

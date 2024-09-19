@@ -1,5 +1,5 @@
 this.default = function () {
-
+    
     window.renderEmptyImg = function () {
         var img = document.createElement('img');
         if (document.body.classList.value.indexOf('dark') > -1 || document.body.classList.value.indexOf('highcontrast') > -1) {
@@ -11,7 +11,7 @@ this.default = function () {
         img.alt = "No record";
         return img.outerHTML;
     };
-
+    
     var grid = new ej.grids.Grid({
         dataSource: [],
         allowPaging: true,

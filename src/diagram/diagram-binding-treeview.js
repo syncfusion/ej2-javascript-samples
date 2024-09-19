@@ -13,7 +13,7 @@ this.default = function () {
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '700px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
-        //configures data source settings
+        //Configures data source settings
         dataSourceSettings: {
             id: 'Id', parentId: 'ParentId',
             dataSource: new ej.data.DataManager(window.treeData),
@@ -40,6 +40,7 @@ this.default = function () {
             obj.style = { strokeColor: 'CornflowerBlue' };
             obj.targetDecorator = { shape: 'Arrow', height: 10, width: 10, style: { fill: 'CornflowerBlue', strokeColor: 'white' } };
         },
+        //Enable or disable the add and delete button.
         selectionChange: function (args) {
             if (args.state === 'Changed') {
                 if (args.type === "Addition") {
@@ -49,8 +50,14 @@ this.default = function () {
                     deleteButton.disabled = true;
                     addButton.disabled = true;
                 }
+                var selectedItems = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
+                if(selectedItems.length==0)
+                {
+                    treeObj.selectedNodes=[];
+                }
             }
         },
+        //Click event handler
         click: function (args) {
             if(args.element instanceof ej.diagrams.Node){
             treeObj.selectedNodes = [args.element.data.Id];
@@ -63,6 +70,7 @@ this.default = function () {
     });
     diagram.appendTo('#diagram');
 
+    //Drag a node from the palette into the diagram
     function dragEnter(args) {
         var lable = '';
         if (args.dragData) {
@@ -81,14 +89,17 @@ this.default = function () {
 
     var elementNodeId;
 
+    //Check data function
     function checkData(a) {
         return a.Id === targetNodeId;
     }
 
+    //Check element data function
     function checkElementData(a) {
         return a.Id === elementNodeId;
     }
 
+    //Drop a node from the palette into the diagram 
     function drop(args) {
         var connector;
         var tempData;
@@ -131,6 +142,7 @@ this.default = function () {
 
     }
 
+    //Change the annotation of the node
     function textEdit(args) {
         setTimeout(function () {
             if (args.annotation) {
@@ -142,25 +154,27 @@ this.default = function () {
         }, 0);
     }
 
-    // Button Initialization
+    //Button Initialization
 
     var addButton = new ej.buttons.Button({ isPrimary: true, disabled: true });
-    addButton.appendTo('#addBtn');
+    addButton.appendTo('#addButton');
 
     var deleteButton = new ej.buttons.Button({ isPrimary: true, disabled: true });
-    deleteButton.appendTo('#deleteBtn');
+    deleteButton.appendTo('#deleteButton');
 
-    document.getElementById('addBtn').onclick = function () {
+    //Add button on click
+    document.getElementById('addButton').onclick = function () {
         add();
     };
 
-    document.getElementById('deleteBtn').onclick = function () {
+    //Delete button on click
+    document.getElementById('deleteButton').onclick = function () {
         if (diagram.selectedItems.nodes[0].data.Id !== "1") {
             remove();
         }
     };
 
-    // Treeview Initialization
+    //Treeview Initialization
     var treeObj = new ej.navigations.TreeView({
         fields: {
             dataSource: workingData,
@@ -179,29 +193,33 @@ this.default = function () {
 
     treeObj.appendTo('#tree');
 
+    //Enable the add and delete button
     function nodeSelected(args) {
         deleteButton.disabled = false;
         addButton.disabled = false;
     }
 
+    //Node click event
     function nodeClicked(args) {
         var node = diagram.getObject(treeObj.selectedNodes[0]);
         diagram.select([node]);
     }
 
-    // Key Press Event
+    //Key Press Event
     function keyPress(args) {
         if (args.event.key === 'Enter') {
             add();
         }
     }
 
+    //Node edited event
     function nodeEdited(args) {
         var node = diagram.getObject(args.nodeData.id);
         node.annotations[0].content = args.newText;
         treeObj.selectedNodes = [args.nodeData.id];
     }
 
+    //Remove node
     function remove() {
         var nodeId;
         if (diagram.selectedItems.nodes.length > 0) {
@@ -223,6 +241,7 @@ this.default = function () {
 
     }
 
+    //Remove sub child node
     function removeSubChild(node, canDelete) {
         var childNode;
         var connector;
@@ -272,6 +291,7 @@ this.default = function () {
         }
     }
 
+    //Add function
     function add() {
         var nodeId;
         if (diagram.selectedItems.nodes.length > 0) {
@@ -283,10 +303,12 @@ this.default = function () {
         }
     }
 
+    //filter Node Data Function
     function filterNodeData(a) {
         return a.data.Id === targetNodeId;
     }
 
+    //Add node Function
     function addNode(nodeId) {
         targetNodeId = nodeId ? nodeId : treeObj.selectedNodes[0];
         var tempData = workingData.filter(checkData);

@@ -80,7 +80,7 @@ this.default = function () {
             var calendarHeatmapTheme = location.hash.split('/')[1];
             calendarHeatmapTheme = calendarHeatmapTheme ? calendarHeatmapTheme : 'Material';
             args.heatmap.theme = (calendarHeatmapTheme.charAt(0).toUpperCase() +
-            calendarHeatmapTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            calendarHeatmapTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             args.heatmap.cellSettings.border.color = calendarHeatmapTheme.indexOf('dark') > -1 || calendarHeatmapTheme.indexOf('highcontrast') > -1 ? '#000' : '#fff';
             // custom code end
             

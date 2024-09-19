@@ -6,7 +6,7 @@ this.default = function () {
             var navigateTheme = location.hash.split('/')[1];
             navigateTheme = navigateTheme ? navigateTheme : 'Material';
             args.maps.theme = (navigateTheme.charAt(0).toUpperCase() +
-            navigateTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            navigateTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         titleSettings: {

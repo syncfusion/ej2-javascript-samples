@@ -1,0 +1,34 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <img src='src/ai-grid/images/anomaly-detection.gif' width='100%' height='100%'
+            alt="Showcase Anomaly Detection Gif"></img>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates how the syncfusion JavaScript DataGrid, enhanced with AI, can detect anomalies within
+        its data.
+    </p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank'
+            href='https://github.com/syncfusion/smart-ai-samples/tree/master' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub
+            repository</a>.</p>
+</div>
+<div id="description">
+    <p>In this example, the DataGrid displays details like Machine ID, Voltage, Pressure, Temperature, Motor Speed, and
+        Production Rate. AI analyzes this data to identify unusual points and explains why they are considered
+        anomalies. When you press the "Detect Anomaly" button, the grid updates to display the anomaly details.
+    </p>
+</div>
+<style>
+    .anomaly-cell {
+        background-color: #B8595A;
+    }
+
+    .e-grid .e-rowcell.anomaly-cell:not(.e-editedbatchcell):not(.e-updatedtd) {
+        color: #FFFFFF;
+    }
+
+    .normal-cell {
+        background-color: #AAF38C;
+    }
+</style>

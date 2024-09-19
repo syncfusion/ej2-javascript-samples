@@ -186,11 +186,11 @@ this.default = function () {
     ],
     load: function (args) {
       // custom code start
-      var selectTheme = location.hash.split('/')[1];
-      selectTheme = selectTheme ? selectTheme : 'Material';
-      args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-        selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var selectedDefaultTheme = location.hash.split('/')[1];
+      selectedDefaultTheme = selectedDefaultTheme ? selectedDefaultTheme : 'Material';
+      args.gauge.theme = (selectedDefaultTheme.charAt(0).toUpperCase() +
+          selectedDefaultTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+      if (selectedDefaultTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 342;
         args.gauge.axes[0].annotations[0].radius = "92%";
         args.gauge.axes[0].annotations[1].angle = 337;

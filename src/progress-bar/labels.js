@@ -1,9 +1,9 @@
 this.default = function () {
   var progressLoad = function (args) {
     var labelTheme = location.hash.split('/')[1];
-    labelTheme = labelTheme ? labelTheme : 'Material';
+    labelTheme = labelTheme ? labelTheme : 'Fluent2';
     args.progressBar.theme = (labelTheme.charAt(0).toUpperCase() +
-        labelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        labelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
 
     if (args.progressBar.theme === 'Material') {
         args.progressBar.trackColor = '#EAEAEA';

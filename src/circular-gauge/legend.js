@@ -40,7 +40,7 @@ this.default = function () {
             var selectedLegendTheme = location.hash.split('/')[1];
             selectedLegendTheme = selectedLegendTheme ? selectedLegendTheme : 'Material';
             args.gauge.theme = (selectedLegendTheme.charAt(0).toUpperCase() +
-                selectedLegendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedLegendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
        }
     });
@@ -84,7 +84,7 @@ this.default = function () {
     });
     labelPosition1.appendTo('#shape');
     var labelPosition2 = new ej.dropdowns.DropDownList({
-        index: 2, width: '100%',
+        index: 0, width: '100%',
         change: function () {
             circulargauge.legendSettings.position = labelPosition2.value.toString();
             circulargauge.refresh();

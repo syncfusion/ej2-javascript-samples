@@ -2,31 +2,32 @@
 this.default = function () {
 
     var columns = [
-        { field: 'OrderID', width: 110, header: 'Order ID' },
-        { field: 'CustomerID', width: 130, header: 'Customer ID' },
-        { field: 'Freight', width: 90, header: 'Freight' },
-        { field: 'ShipCountry', width: 140, header: 'Ship Country' }
+        { field: 'Name', header: 'Name', width: 100 },
+        { field: 'YearOfJoining', header: 'Year Of Joining', width: 120 },               
+        { field: 'Status', header: 'Status', width: 90 },
+        { field: 'Location', header: 'Location', width: 100 },
+        { field: 'Experience', header: 'Experience in Years', width: 150 }                  
     ];
 
     // Initialize multicolumn ComboBox component
     var multicolumnObj = new ej.multicolumncombobox.MultiColumnComboBox({
         //set the local data to dataSource property
-        dataSource: window.orderData,
+        dataSource: window.workDetails,
         //set column of the multicolumn combobox
         columns: columns,
         //set the fields of the multicolumn combobox
-        fields: { text: 'ShipCountry', value: 'OrderID' },
+        fields: { text: 'Name', value: 'Experience' },
         // set the placeholder to multicolumn combobox input element
-        placeholder: 'Select a country',
+        placeholder: 'Select a name',
         // set the height of the popup element
-        popupHeight: '200px',
+        popupHeight: '230px',
         // bind the filtering event
         filtering: function (e) {
             var query = new ej.data.Query();
             // frame the query based on search string with filter type.
-            query = (e.text !== '') ? query.where('ShipCountry', 'startswith', e.text, true) : query;
+            query = (e.text !== '') ? query.where('Name', 'startswith', e.text, true) : query;
             // pass the filter data source, filter query to updateData method.
-            e.updateData(window.orderData, query);
+            e.updateData(window.workDetails, query);
         }
     });
     multicolumnObj.appendTo('#filtering');

@@ -1,10 +1,10 @@
 this.default = function () {
     var treemap = new ej.treemap.TreeMap({                
         load: function (args) {         // custom code start
-            var drilltheme = location.hash.split('/')[1];
-            drilltheme = drilltheme ? drilltheme : 'Material';
-            args.treemap.theme = (drilltheme.charAt(0).toUpperCase() +
-            drilltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var rtlTheme = location.hash.split('/')[1];
+            rtlTheme = rtlTheme ? rtlTheme : 'Material';
+            args.treemap.theme = (rtlTheme.charAt(0).toUpperCase() +
+                rtlTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         
         titleSettings: {              // custom code end

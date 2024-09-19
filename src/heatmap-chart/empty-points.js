@@ -62,7 +62,7 @@ this.default = function () {
             var emptyPointTheme = location.hash.split('/')[1];
             emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'Material';
             args.heatmap.theme =  (emptyPointTheme.charAt(0).toUpperCase() +
-            emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         dataSource:  [

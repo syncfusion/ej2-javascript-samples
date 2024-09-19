@@ -5,7 +5,7 @@ this.default = function () {
             var tooltheme = location.hash.split('/')[1];
             tooltheme = tooltheme ? tooltheme : 'Material';
             args.treemap.theme = (tooltheme.charAt(0).toUpperCase() +
-            tooltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            tooltheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end 
         tooltipSettings: {

@@ -5,29 +5,29 @@ this.default = function () {
         gauge1.width = gauge2.width = gauge3.width = '450px';
         gauge1.height = gauge2.height = gauge3.height = '150px';
         gauge1.orientation = gauge2.orientation = gauge3.orientation = "Horizontal";
-        gauge1.axes[0].pointers[0].offset = 2;
-        gauge3.axes[0].pointers[0].offset = 2;
         if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
             document.getElementById('vertical').style.color = "black";
             document.getElementById('vertical').style.backgroundColor = "white";
         }
+        gauge1.axes[0].pointers[0].offset = 2;
+        gauge3.axes[0].pointers[0].offset = 2;
     };
     document.getElementById('vertical').onclick = function (e) {
         document.getElementById('container1').className = document.getElementById('container2').className =
         document.getElementById('container3').className = "col-xs-5 col-sm-5 col-lg-4 col-md-4";
+        if (e.currentTarget != null) {
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
+            document.getElementById('horizontal').style.color = "black";
+            document.getElementById('horizontal').style.backgroundColor = "white";
+        }
         gauge1.width = gauge2.width = gauge3.width = '170px';
         gauge1.height = gauge2.height = gauge3.height = '350px';
         gauge1.orientation = gauge2.orientation = gauge3.orientation = "Vertical";
         gauge1.axes[0].pointers[0].offset = -2;
         gauge3.axes[0].pointers[0].offset = -2;
-        if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
-            document.getElementById('horizontal')['style']['color'] = "black";
-            document.getElementById('horizontal')['style']['backgroundColor'] = "white";
-        }
     };
 
     var gauge1 = new ej.lineargauge.LinearGauge({
@@ -75,10 +75,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var customPointerTheme1 = location.hash.split('/')[1];
+            customPointerTheme1 = customPointerTheme1 ? customPointerTheme1 : 'Material';
+            args.gauge.theme = (customPointerTheme1.charAt(0).toUpperCase() +
+                customPointerTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -120,10 +120,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var customPointerTheme2 = location.hash.split('/')[1];
+            customPointerTheme2 = customPointerTheme2 ? customPointerTheme2 : 'Material';
+            args.gauge.theme = (customPointerTheme2.charAt(0).toUpperCase() +
+                customPointerTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -182,10 +182,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var customPointerTheme3 = location.hash.split('/')[1];
+            customPointerTheme3 = customPointerTheme3 ? customPointerTheme3 : 'Material';
+            args.gauge.theme = (customPointerTheme3.charAt(0).toUpperCase() +
+                customPointerTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

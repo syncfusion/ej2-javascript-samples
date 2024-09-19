@@ -5,7 +5,7 @@ this.default = function () {
             var printtheme = location.hash.split('/')[1];
             printtheme = printtheme ? printtheme : 'Material';
             args.treemap.theme = (printtheme.charAt(0).toUpperCase() +
-            printtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            printtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         allowPdfExport : true,
         allowImageExport: true,

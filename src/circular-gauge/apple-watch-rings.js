@@ -93,7 +93,7 @@ this.default = function () {
                 var selectedTheme1 = location.hash.split('/')[1];
                 selectedTheme1 = selectedTheme1 ? selectedTheme1 : 'Material';
                 args.gauge.theme = (selectedTheme1.charAt(0).toUpperCase() +
-                selectedTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
                // custom code end
             },
         });
@@ -106,7 +106,7 @@ this.default = function () {
                 var selectedTheme2 = location.hash.split('/')[1];
                 selectedTheme2 = selectedTheme2 ? selectedTheme2 : 'Material';
                 args.gauge.theme = (selectedTheme2.charAt(0).toUpperCase() +
-                selectedTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
                 if (selectedTheme2.indexOf('highcontrast') !== -1 || selectedTheme2.indexOf('dark') !== -1) {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation4"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image4.svg" /></div>';
@@ -158,7 +158,7 @@ this.default = function () {
                 var selectedTheme3 = location.hash.split('/')[1];
                 selectedTheme3 = selectedTheme3 ? selectedTheme3 : 'Material';
                 args.gauge.theme = (selectedTheme3.charAt(0).toUpperCase() +
-                selectedTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
                 if (selectedTheme3.indexOf('highcontrast') > -1 || selectedTheme3.indexOf('dark') > -1) {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation5"><img style="width:15px;height:15px;" src="src/circular-gauge/images/image5.svg" /></div>';
@@ -210,7 +210,7 @@ this.default = function () {
                 var selectedTheme4 = location.hash.split('/')[1];
                 selectedTheme4 = selectedTheme4 ? selectedTheme4 : 'Material';
                 args.gauge.theme = (selectedTheme4.charAt(0).toUpperCase() +
-                selectedTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
                 if (selectedTheme4.indexOf('highcontrast') !== -1 || selectedTheme4.indexOf('dark') !== -1) {
                     args.gauge.axes[0].annotations[0].content =
                         '<div class="annotation6"><img style="width:17px;height:17px;" src="src/circular-gauge/images/image6.svg" /></div>';
@@ -253,6 +253,6 @@ this.default = function () {
                 }]
             }]
         });
-        circulargauge4.appendTo('#gauge4') 
+        circulargauge4.appendTo('#gauge4');
     }
 };

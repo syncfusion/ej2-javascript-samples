@@ -68,10 +68,10 @@ this.default = function () {
         enablePointerDrag: true,
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedTooltipTheme = location.hash.split('/')[1];
+            selectedTooltipTheme = selectedTooltipTheme ? selectedTooltipTheme : 'Material';
+            args.gauge.theme = (selectedTooltipTheme.charAt(0).toUpperCase() +
+                selectedTooltipTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

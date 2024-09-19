@@ -19,9 +19,9 @@ this.default = function () {
     }
     var progressLoad = function (args) {
         var angleTheme = location.hash.split('/')[1];
-        angleTheme = angleTheme ? angleTheme : 'Material';
+        angleTheme = angleTheme ? angleTheme : 'Fluent2';
         args.progressBar.theme = (angleTheme.charAt(0).toUpperCase() +
-            angleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            angleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         switch (angleTheme) {
             case 'material':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[0], args.progressBar.element.id);
@@ -61,15 +61,18 @@ this.default = function () {
             case "fluent2":
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[11], args.progressBar.element.id);
                 break;
-            case "fluent2-dark":
+            case "fluent2-highcontrast":
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[12], args.progressBar.element.id);
+                break;
+            case "fluent2-dark":
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[13], args.progressBar.element.id);
                 break;
             default:
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[5], args.progressBar.element.id);
                 break;
         }
     };
-    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF', '#0F6CBD', '#115EA3'];
+    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF', '#0F6CBD', '#1AEBFF', '#115EA3'];
     var button = new ej.buttons.Button();
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#reLoad');

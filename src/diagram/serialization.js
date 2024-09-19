@@ -1,47 +1,41 @@
+/*jslint esversion: 6 */
 /**
  * Serialization sample
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 
-//save the diagram object in json data.
+// Save the diagram object as a JSON file.
 function download(data) {
-    if (window.navigator.msSaveBlob) {
-        var blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
-        window.navigator.msSaveOrOpenBlob(blob, 'Diagram.json');
-    }
-    else {
-        var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
-        var a = document.createElement('a');
-        a.href = dataStr;
-        a.download = 'Diagram.json';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-    }
-}
-//create and add ports for Node.
-function getPorts(obj) {
-    var ports = [
-        { id: 'port1', shape: 'Circle', offset: { x: 0, y: 0.5 } },
-        { id: 'port2', shape: 'Circle', offset: { x: 0.5, y: 1 } },
-        { id: 'port3', shape: 'Circle', offset: { x: 1, y: 0.5 } },
-        { id: 'port4', shape: 'Circle', offset: { x: 0.5, y: 0 } }
-    ];
-    var additionalports = [{ id: 'port2', shape: 'Circle', offset: { x: 0.5, y: 1 } },
-    { id: 'port4', shape: 'Circle', offset: { x: 0.5, y: 0 } }];
-    if (obj.id === 'Data') {
-        return additionalports;
-    }
-    else {
-        return ports;
+    // MIME type for JSON data.
+    var mimeType = "data:text/json;charset=utf-8,";
+    // Checks for MS browser to use the msSaveBlob method.
+    if ((window.navigator).msSaveBlob) {
+        // Creates a new Blob object containing the JSON data.
+        var blob = new Blob([data], { type: mimeType });
+        // Saves or opens the blob depending on the browser capability.
+        (window.navigator).msSaveOrOpenBlob(blob, "Diagram.json");
+    } else {
+        // Encodes the JSON data as a data URL.
+        var dataStr = mimeType + encodeURIComponent(data);
+        // Creates an anchor element to facilitate downloading.
+        var downloadAnchor = document.createElement("a");
+        downloadAnchor.href = dataStr;
+        downloadAnchor.download = "Diagram.json";
+        document.body.appendChild(downloadAnchor);
+        // Triggers the download process.
+        downloadAnchor.click();
+        // Removes the anchor element from the document.
+        downloadAnchor.remove();
     }
 }
-
+// Function to toggle palette visibility
 function openPalette() {
     var paletteSpace = document.getElementById('palette-space');
+    // Checks if the current viewport width is less than or equal to 550 pixels.
     var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
+        // Toggles the class to show or hide the palette.
         if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
             paletteSpace.classList.add('sb-mobile-palette-open');
         }
@@ -51,75 +45,55 @@ function openPalette() {
     }
 }
 this.default = function () {
-    //Initializes the nodes for the diagram
+    // Predefined styles for different types of nodes in the diagram. 
+    var nodeStyles = {
+        terminator: { fill: "#d0f0f1", strokeColor: "#797979", height: 50, width: 100 },
+        process: { fill: "#fbfdc5", strokeColor: "#797979", height: 50, width: 120 },
+        decision: { fill: "#c5efaf", strokeColor: "#797979", height: 90, width: 120 },
+        delay: { fill: "#f8eee5", strokeColor: "#797979", height: 50, width: 100 }
+    };
+    // Initializing nodes for the diagram.
     var nodes = [
-        {
-            id: 'Start', height: 50, width: 100, offsetX: 250, offsetY: 60,
-            shape: { type: 'Flow', shape: 'Terminator' },
-            annotations: [{
-                content: 'Start'
-            }],
-            style: { fill: '#d0f0f1', strokeColor: '#797979' }
-        }, {
-            id: 'Alarm', height: 50, width: 100, offsetX: 250, offsetY: 160,
-            shape: { type: 'Flow', shape: 'Process' },
-            annotations: [{
-                content: 'Alarm Rings'
-            }],
-            style: { fill: '#fbfdc5', strokeColor: '#797979' }
-        }, {
-            id: 'Ready', height: 80, width: 100, offsetX: 250, offsetY: 260,
-            shape: { type: 'Flow', shape: 'Decision' },
-            annotations: [{
-                content: 'Ready to Get Up?'
-            }],
-            style: { fill: '#c5efaf', strokeColor: '#797979' }
-        }, {
-            id: 'Climb', height: 50, width: 100, offsetX: 250, offsetY: 370,
-            shape: { type: 'Flow', shape: 'Process' },
-            annotations: [{
-                content: 'Climb Out of Bed'
-            }],
-            style: { fill: '#fbfdc5', strokeColor: '#797979' }
-        }, {
-            id: 'End', height: 50, width: 100, offsetX: 250, offsetY: 460,
-            shape: { type: 'Flow', shape: 'Terminator' },
-            annotations: [{
-                content: 'End'
-            }],
-            style: { fill: '#d0f0f1', strokeColor: '#797979' }
-        }, {
-            id: 'Relay', height: 50, width: 100, offsetX: 450, offsetY: 160,
-            shape: { type: 'Flow', shape: 'Delay' },
-            annotations: [{
-                content: 'Relay'
-            }],
-            style: { fill: '#f8eee5', strokeColor: '#797979' }
-        }, {
-            id: 'Hit', height: 50, width: 100, offsetX: 450, offsetY: 260,
-            shape: { type: 'Flow', shape: 'Process' },
-            annotations: [{
-                content: 'Hit Snooze Button'
-            }],
-            style: { fill: '#fbfdc5', strokeColor: '#797979' }
-        }];
-    //Initializes the connector for the diagram
+        createNode("Start", 250, 60, "Terminator", "Start", nodeStyles.terminator),
+        createNode("Alarm", 250, 160, "Process", "Alarm Rings", nodeStyles.process),
+        createNode("Ready", 250, 260, "Decision", "Ready to Get Up?", nodeStyles.decision),
+        createNode("Climb", 250, 370, "Process", "Climb Out of Bed", nodeStyles.process),
+        createNode("End", 250, 460, "Terminator", "End", nodeStyles.terminator),
+        createNode("Relay", 450, 160, "Delay", "Relay", nodeStyles.delay),
+        createNode("Hit", 450, 260, "Process", "Hit Snooze Button", nodeStyles.process)
+    ];
+    // Function to create a node with given parameters.
+    function createNode(id, offsetX, offsetY, shapeType, content, style) {
+        return {
+            id: id,
+            height: style.height,
+            width: style.width,
+            offsetX: offsetX,
+            offsetY: offsetY,
+            shape: { type: "Flow", shape: shapeType },
+            annotations: [{ content: content }],
+            style: style
+        };
+    }
+    // Function to create a connector with given parameters.
+    function createConnector(id, sourceID, targetID, annotations) {
+        return {
+            id: id,
+            sourceID: sourceID,
+            targetID: targetID,
+            annotations: annotations
+        };
+    }
+    // Initializing connectors for the diagram.
     var connectors = [
-        {
-            id: 'connector1', sourceID: 'Start', targetID: 'Alarm'
-        },
-        { id: 'connector2', sourceID: 'Alarm', targetID: 'Ready' },
-        {
-            id: 'connector3', sourceID: 'Ready', targetID: 'Climb',
-            annotations: [{ content: 'Yes', style: { fill: 'white' } }]
-        },
-        { id: 'connector4', sourceID: 'Climb', targetID: 'End', },
-        {
-            id: 'connector5', sourceID: 'Ready', targetID: 'Hit',
-            annotations: [{ content: 'No', style: { fill: 'white' } }]
-        },
-        { id: 'connector6', sourceID: 'Hit', targetID: 'Relay' },
-        { id: 'connector7', sourceID: 'Relay', targetID: 'Alarm' }];
+        createConnector("connector1", "Start", "Alarm"),
+        createConnector("connector2", "Alarm", "Ready"),
+        createConnector("connector3", "Ready", "Climb", [{ content: "Yes", style: { fill: "white" } }]),
+        createConnector("connector4", "Climb", "End"),
+        createConnector("connector5", "Ready", "Hit", [{ content: "No", style: { fill: "white" } }]),
+        createConnector("connector6", "Hit", "Relay"),
+        createConnector("connector7", "Relay", "Alarm")
+    ];
     var lineinterval;
     lineinterval = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
     var gridlines = { lineColor: '#e0e0e0', lineIntervals: lineinterval };
@@ -128,6 +102,10 @@ this.default = function () {
         width: '100%', height: '645px',
         nodes: nodes,
         connectors: connectors,
+        // event triggers after the diagram elements finished loading using loadDiagram method
+          loaded: function(){
+                diagram.select([diagram.nodes[0]]);
+            },
         snapSettings: { horizontalGridlines: gridlines, verticalGridlines: gridlines },
         //set default value for Connectors.
         getConnectorDefaults: function (args) {
@@ -148,55 +126,46 @@ this.default = function () {
         }
     });
     diagram.appendTo('#diagram');
-    //Initialize the flowshapes for the symbol palatte
-    var flowshapes = [
-        { id: 'Terminator', shape: { type: 'Flow', shape: 'Terminator' } },
-        { id: 'Process', shape: { type: 'Flow', shape: 'Process' } },
-        { id: 'Decision', shape: { type: 'Flow', shape: 'Decision' } },
-        { id: 'Document', shape: { type: 'Flow', shape: 'Document' } },
-        { id: 'PreDefinedProcess', shape: { type: 'Flow', shape: 'PreDefinedProcess' } },
-        { id: 'PaperTap', shape: { type: 'Flow', shape: 'PaperTap' } },
-        { id: 'DirectData', shape: { type: 'Flow', shape: 'DirectData' } },
-        { id: 'SequentialData', shape: { type: 'Flow', shape: 'SequentialData' } },
-        { id: 'Sort', shape: { type: 'Flow', shape: 'Sort' } },
-        { id: 'MultiDocument', shape: { type: 'Flow', shape: 'MultiDocument' } },
-        { id: 'Collate', shape: { type: 'Flow', shape: 'Collate' } },
-        { id: 'SummingJunction', shape: { type: 'Flow', shape: 'SummingJunction' } },
-        { id: 'Or', shape: { type: 'Flow', shape: 'Or' } },
-        { id: 'InternalStorage', shape: { type: 'Flow', shape: 'InternalStorage' } },
-        { id: 'Extract', shape: { type: 'Flow', shape: 'Extract' } },
-        { id: 'ManualOperation', shape: { type: 'Flow', shape: 'ManualOperation' } },
-        { id: 'Merge', shape: { type: 'Flow', shape: 'Merge' } },
-        { id: 'OffPageReference', shape: { type: 'Flow', shape: 'OffPageReference' } },
-        { id: 'SequentialAccessStorage', shape: { type: 'Flow', shape: 'SequentialAccessStorage' } },
-        { id: 'Annotation', shape: { type: 'Flow', shape: 'Annotation' } },
-        { id: 'Annotation2', shape: { type: 'Flow', shape: 'Annotation2' } },
-        { id: 'data', shape: { type: 'Flow', shape: 'Data' } },
-        { id: 'Card', shape: { type: 'Flow', shape: 'Card' } },
-        { id: 'Delay', shape: { type: 'Flow', shape: 'Delay' } },
+
+    // Preparing flow shapes for the symbol palette.
+    const flowShapeTypes = [
+        "Terminator", "Process", "Decision", "Document",
+        "PreDefinedProcess", "PaperTap", "DirectData",
+        "SequentialData", "Sort", "MultiDocument",
+        "Collate", "SummingJunction", "Or", "InternalStorage",
+        "Extract", "ManualOperation", "Merge", "OffPageReference",
+        "SequentialAccessStorage", "Annotation", "Annotation2",
+        "Data", "Card", "Delay"
     ];
-    //Initializes connector symbols for the symbol palette
-    var connectorSymbols = [
-        {
-            id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },  style: { strokeWidth: 2, strokeColor: '#757575' },
-            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
-        },
-        {
-            id: 'link2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 2, strokeColor: '#757575' }
-        },
-        {
-            id: 'Link3', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 }, style: { strokeWidth: 2, strokeColor: '#757575' },
-            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
-        },
-        {
-            id: 'link4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'None' }, style: { strokeWidth: 2, strokeColor: '#757575' }
-        },
-        {
-            id: 'link5', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
-        },
+    let flowshapes = flowShapeTypes.map(type => ({ id: type, shape: { type: "Flow", shape: type } }));
+
+    // Function to create a connector symbol for the symbol palette.
+    function createConnectorSymbol(id, type, targetDecoratorShape = "None") {
+        let connector = {
+            id,
+            type,
+            sourcePoint: { x: 0, y: 0 },
+            targetPoint: { x: 40, y: 40 },
+            style: { strokeWidth: 2, strokeColor: '#757575' }
+        };
+
+        if (targetDecoratorShape !== "None") {
+            connector.targetDecorator = { shape: targetDecoratorShape, style: { strokeColor: '#757575', fill: '#757575' } };
+        }
+        else {
+            connector.targetDecorator = { shape: "None" };
+        }
+
+        return connector;
+    }
+
+    // Initializing connector symbols for the symbol palette.
+    let connectorSymbols = [
+        createConnectorSymbol("Link1", "Orthogonal", "Arrow"),
+        createConnectorSymbol("link2", "Orthogonal"),
+        createConnectorSymbol("Link3", "Straight", "Arrow"),
+        createConnectorSymbol("link4", "Straight"),
+        createConnectorSymbol("link5", "Bezier")
     ];
     //Initializes ToolBar control to invoke save and load the diagram
     var toolbarObj = new ej.navigations.Toolbar({
@@ -258,17 +227,22 @@ this.default = function () {
             removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
         },
         success: onUploadSuccess,
-        showFileList:false
+        showFileList: false
     });
     uploadObj.appendTo('#fileupload');
+    // Function to handle upload success
     function onUploadSuccess(args) {
         var file1 = args.file;
+        // Extracts the file from the upload success event arguments.
         var file = file1.rawFile;
+        // Creates a FileReader to read the content of the file.
         var reader = new FileReader();
+        // Reads the content of the file as a text string.
         reader.readAsText(file);
+        // Assigns the loadDiagram function to execute when the file read operation completes.
         reader.onloadend = loadDiagram;
     }
-    //Load the diagraming object.
+    // Load the diagram object from a JSON string.
     function loadDiagram(event) {
         diagram.loadDiagram(event.target.result);
     }

@@ -61,10 +61,10 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var polarSplineTheme = location.hash.split('/')[1];
-            polarSplineTheme = polarSplineTheme ? polarSplineTheme : 'Material';
-            args.chart.theme = (polarSplineTheme.indexOf('fabric') > -1) ? 'Fabric' : 'Material';
+            polarSplineTheme = polarSplineTheme ? polarSplineTheme : 'Fluent2';
+            args.chart.theme = (polarSplineTheme.indexOf('fabric') > -1) ? 'Fabric' : 'Fluent2';
             args.chart.theme = (polarSplineTheme.charAt(0).toUpperCase() + 
-                polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarSplineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

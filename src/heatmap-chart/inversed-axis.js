@@ -66,7 +66,7 @@ this.default = function () {
             var inversedAxisTheme = location.hash.split('/')[1];
             inversedAxisTheme = inversedAxisTheme ? inversedAxisTheme : 'Material';
             args.heatmap.theme =  (inversedAxisTheme.charAt(0).toUpperCase() +
-            inversedAxisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            inversedAxisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         legendSettings: {

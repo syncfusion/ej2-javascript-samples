@@ -5,6 +5,7 @@ this.default = function () {
         height: '650px',
         selectedDate: new Date(2021, 7, 2),
         currentView: 'TimelineWeek',
+        cssClass: 'adaptive-rows',
         rowAutoHeight: true,
         views: [
             { option: 'TimelineDay' },

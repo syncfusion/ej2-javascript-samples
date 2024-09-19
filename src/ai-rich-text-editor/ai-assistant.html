@@ -1,0 +1,236 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <div id='container' class='e-rte-custom-tbar-section'>
+            <div id='defaultRTE'></div>
+            <div id="dialog" class="modal" style="display: none;">
+                <div id="dialog-content" class="dialog-content" style="height: 100%;">
+                    <div class="custom-row-0">
+                        <div class="cuscol-0" style="width:100%; align-items: center;justify-content: left;">
+                            <div style="width:75%; text-align: left;">
+                                <button id="queryCategory">Rephrase</button>
+                            </div>
+                        </div>
+                        <div class="cuscol-1" style="justify-content: space-between; align-items: center; width: 100%;">
+                            <div id="language" style="width: 100%; display: none;">
+                                <div style="display: flex; justify-content: right; align-items: center;">
+                                    <div style="text-align: end; padding-right: 20px">
+                                        <span>Target Language</span>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <button id="language-Category"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="chips-container"
+                                style="justify-content: right; align-items: center; width: 100%; display: none"></div>
+                        </div>
+                    </div>
+                    <div class="custom-row-1" style="height:74%">
+                        <div class="cuscol-0"
+                            style="width:100%; height: 100%; align-items: center;justify-content: left;">
+                            <div style="text-align: left;">
+                                <div id="leftRte"></div>
+                            </div>
+                        </div>
+                        <div class="cuscol-1"
+                            style="display: flex; justify-content: space-between; width: 100%; height: 100%;">
+                            <div style="text-align: left; width: 100%;">
+                                <div id="rightRte" style="display: none;"></div>
+                                <div class="no-results-found" id="no-results-found"
+                                    style="height: 244px; align-content: center; display: none;">
+                                    <img height="50" width="50"
+                                        src="https://storage.googleapis.com/cdn-bolddesk/agent-angular-app/images/light/no-records-warning.svg">
+                                    <div>No results found</div>
+                                </div>
+                                <div id='skeletonId' style="display: none;">
+                                    <div id='skeletonId1'></div><br>
+                                    <div id='skeletonId2'></div><br>
+                                    <div id='skeletonId3'></div><br>
+                                    <div id='skeletonId4'></div><br>
+                                    <div id='skeletonId5'></div><br>
+                                    <div id='skeletonId6'></div><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dialog-footer-content">
+                        <div class="custom-row-0">
+                            <div class="cuscol-0" style="width:100%; align-items: center;justify-content: left;">
+                                <div style="text-align: right;">
+                                    <button id="regenerate"></button>
+                                </div>
+                            </div>
+                            <div class="cuscol-1"
+                                style="display: flex; flex-direction: column;justify-content: center; align-items: center; width: 100%;">
+                                <div style="text-align: right; width: 100%;">
+                                    <button id="sentiment"></button>
+                                    <button id="copy"></button>
+                                    <button id="replace"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="toast_default">
+            </div>
+        </div>
+    </div>
+    <div id="action-description">
+        <p>
+            This sample demonstrates the AI Integration with Rich Text Editor and has enabled the AI features like
+            content generation, summarization, rephrasing, translate and grammar correction.
+        </p>
+        <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a
+                target='_blank' href='https://github.com/syncfusion/smart-ai-samples/tree/master'
+                aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub repository</a>.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this sample, the Rich Text Editor content can be selected, and AI Assistant dropdown menu can be opened
+            to use the following AI features,
+        </p>
+        <ul>
+            <li><strong>Rephrase:</strong> Selecting this option will offer alternative phrasings for sentences to
+                improve clarity.
+            </li>
+            <li><strong>Correct Grammar:</strong> Selecting this option will correct the grammar for the selected
+                content.
+            </li>
+            <li><strong>Summarize:</strong> Selecting this option will summarize long documents or sections into concise
+                versions.
+            </li>
+            <li><strong>Content Generation:</strong> Selecting this option will generate content based on selected
+                content.
+            </li>
+            <li><strong>Translate:</strong> Selecting this will translate the selected content into the desired language
+                based on the language selection.
+            </li>
+        </ul>
+    </div>
+    <style>
+        .custom-row-0,
+        .custom-row-1,
+        .custom-row-2 {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #ddd;
+            padding: 12px 24px;
+        }
+
+        .cuscol-0,
+        .cuscol-1,
+        .cuscol-2 {
+            padding: 0.5rem;
+        }
+
+        .no-results-found {
+            text-align: center;
+        }
+
+        .no-results-found img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .e-custom {
+            margin-right: 0.5rem;
+            border-radius: 25px !important;
+        }
+
+        .custom-dialog .skeleton-rectangle {
+            border-radius: 4px;
+        }
+
+        @media (max-width: 767px) {
+
+            .cuscol-0,
+            .cuscol-1,
+            .cuscol-2 {
+                justify-content: center !important;
+            }
+
+            .custom-row-0,
+            .custom-row-1,
+            .custom-row-2 {
+                flex-direction: column !important;
+            }
+
+            .cuscol-1 {
+                border-right: none !important;
+            }
+
+            .cuscol-0 {
+                border-right: none !important;
+            }
+
+            .custom-dialog .e-dialog .e-dlg-content {
+                overflow-y: auto !important;
+            }
+
+            .custom-dialog .e-dialog .e-dlg-content .e-richtexteditor {
+                height: 100px !important;
+            }
+
+            .cuscol-noresult {
+                padding-bottom: 20px !important;
+            }
+
+            .e-chip-list {
+                padding: 5px !important;
+            }
+
+            .cuscol {
+                padding-right: 0.2rem !important;
+                width: auto !important;
+            }
+
+            .custom-row-1 {
+                height: auto !important;
+            }
+        }
+
+        .cuscol-1 {
+            display: flex;
+            flex-direction: row !important;
+        }
+
+        .cuscol-2 {
+            display: flex;
+            flex-direction: column !important;
+        }
+
+        .sentiment {
+            color: #000 !important;
+        }
+
+        .custom-dialog .e-dialog .e-dlg-content {
+            padding: 0px !important;
+            overflow-y: hidden;
+        }
+
+        .custom-dialog .e-dialog .e-dlg-header-content {
+            padding: 10px !important;
+            border-bottom: 1px solid #dee2e6 !important;
+        }
+
+        .custom-dialog .e-dialog .e-footer-content {
+            padding: 0px !important;
+        }
+
+        .custom-dialog .e-dialog .e-dlg-content .e-richtexteditor.e-rte-tb-expand .e-rte-content,
+        .e-richtexteditor.e-rte-tb-expand .e-source-content {
+            border: 0;
+            border-bottom: 1px solid #dee2e6;
+            border-top: 0px solid #dee2e6 !important;
+        }
+
+        .custom-dialog .dialog-content .custom-row-0 {
+            border-top: 0px solid #ddd !important;
+        }
+
+        .e-control.e-btn {
+            margin: 0 5px;
+        }
+    </style>

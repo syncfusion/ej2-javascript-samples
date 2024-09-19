@@ -1,28 +1,27 @@
 
 this.default = function () {
-
-    var columns = [
-        { field: 'OrderID', header: 'Order ID', width: 110 },
-        { field: 'CustomerID', width: 130, header: 'Customer ID' },
-        { field: 'Freight', header: 'Freight', width: 90 },
-        { field: 'ShipCountry', header: 'Ship Country', width: 140 }
+    var defaultColumns = [
+        { field: 'Name', width: 90, header: 'Name' },
+        { field: 'Position', width: 85, header: 'Position', },
+        { field: 'Department', width: 98, header: 'Department' }, 
+        { field: 'PhoneNo', width: 105, header: 'Phone No' },    
+        { field: 'Location',  width: 98, header: 'Location' }
     ];
-
-    // Initialize multicolumn ComboBox component
+    // Initialize the default multicolumn ComboBox component
     var multicolumnObj = new ej.multicolumncombobox.MultiColumnComboBox({
-        //set the local data to dataSource property
-        dataSource: window.orderData,
         //set column of the multicolumn combobox
-        columns: columns,
+        columns: defaultColumns,
         //set the fields of the multicolumn combobox
-        fields: { text: 'ShipCountry', value: 'OrderID' },
+        fields: { text: 'Name', value: 'Department' },
+        //set the local data to dataSource property
+        dataSource: window.employeeData,
         // set the height of the popup element
         popupHeight: '230px',
         // set the placeholder to multicolumn combobox input element
-        placeholder: 'Select the country',
+        placeholder: 'Select a name',
         showClearButton: true,
-        value: '1001',
-        text: 'France',
+        value: 'HR',
+        text: 'John Smith',
         change: valueChange
     });
     multicolumnObj.appendTo('#default');

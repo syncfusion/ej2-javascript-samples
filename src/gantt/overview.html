@@ -1,17 +1,28 @@
 <div class="control-section">
-    <div class="content-wrapper">
-        <div id="lineardeterminate"></div>
-        <div id="overviewSample">
+    <div id="lineardeterminate"></div>
+    <div id="gantt-sidebar-parent"></div>
+    <div>
+        <div style="padding: 16px;">
+            <button id="settings-btn" class="gantt-settings-button" aria-label="Open settings">
+                <span class="e-ganttoverview-settings-icon"></span>
+                Settings
+            </button>
+        </div>
+        <div id="sidebar-gantt">
+            <div id="overviewSample"></div>
         </div>
     </div>
 </div>
 <div id="action-description">
-    <p>This sample shows an overview of the EJ2 Gantt Chart features that visualize the progress of each feature of the product towards its release and make it easier to monitor the scheduling of the dependent items.</p>
+    <p>This sample shows an overview of the EJ2 Gantt Chart features that visualize the progress of each feature of the
+        product towards its release and make it easier to monitor the scheduling of the dependent items.</p>
 </div>
 
 <div id="description">
-    <p>This example shows the three-quarter release planning of product features rendered in the EJ2 Gantt chart. It tracks the quarterly release planning of product status, resources, and task scheduling.</p>
-    <p>EJ2 Gantt Chart features such as Sorting, Filtering, Column resizing, Column menu, column template and so on are used in this demo.</p>
+    <p>This example shows the three-quarter release planning of product features rendered in the EJ2 Gantt chart. It
+        tracks the quarterly release planning of product status, resources, and task scheduling.</p>
+    <p>EJ2 Gantt Chart features such as Sorting, Filtering, Column resizing, Column menu, column template and so on are
+        used in this demo.</p>
 </div>
 
 
@@ -33,18 +44,170 @@
     ${/if}
 </script>
 <style>
+    .gantt-settings-button {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        z-index: 20;
+        padding: 5px;
+        display: flex;
+    }
+
+    .gantt-settings-button .e-ganttoverview-settings-icon {
+        margin-right: 5px;
+    }
+
+    .ganttoverview-title-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        width: 261px;
+        color: #fff;
+        height: 57px;
+        background-color: #56697f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .ganttoverview-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .e-ganttoverview-close {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ganttoverview-settings-list {
+        margin: 15px 15px;
+        padding-left: 5px;
+    }
+
+    .ganttoverview-list-fields-labels {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .ganttoverview-labels {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .ganttoverview-right-aligned-input {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .ganttoverview-section-header {
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #837c7c;
+        margin: 10px 0 5px 0;
+    }
+
+    .ganttoverview-section-header-label {
+        color: #837c7c;
+        font-size: 16px !important;
+        font-weight: 600;
+    }
+
+    .e-ganttoverview-settings-icon::before {
+        font-family: 'e-icons' !important;
+        content: '\e880';
+        font-size: 15px;
+    }
+
+    .e-ganttoverview-close::before {
+        font-family: 'e-icons' !important;
+        content: '\e7e7';
+        font-size: 15px;
+    }
+
+    .highcontrast .e-ganttoverview-close::before {
+        content: '\e7fc';
+        font-family: 'e-icons';
+        font-size: 15px;
+    }
+
+    .highcontrast .e-ganttoverview-settings-icon::before {
+        content: '\e679';
+        font-family: 'e-icons';
+    }
+
+    /* Gantt Chart Styling */
     #overviewSample .e-gantt-child-taskbar,
     #overviewSample .e-gantt-parent-taskbar {
-        border-radius: 10px !important
+        border-radius: 10px !important;
     }
-    /* Fluent2 Theme */
-    .fluent2 #overviewSample .e-toolbar-items .e-toolbar-right .e-template .e-input-group,
-    .fluent2-dark #overviewSample .e-toolbar-items .e-toolbar-right .e-template .e-input-group,
-    .fluent2-highcontrast #overviewSample .e-toolbar-items .e-toolbar-right .e-template .e-input-group {
-         width: 99px !important;
+
+
+    .ganttoverview-side-by-side-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
     }
-    /* tailwind Theme */
-    .tailwind #overviewSample .e-toolbar-items .e-toolbar-right .e-template .e-input-group {
-         width: 93px !important;
+
+    .ganttoverview-stack-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+
+    .ganttoverview-right-aligned-input {
+        width: auto;
+    }
+
+
+    .ganttoverview-section-header {
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .ganttoverview-left-aligned-label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .ganttoverview-list-fields {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+
+    .ganttoverview-labels-style {
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 5px;
+        text-align: left;
+        padding: 12px;
+    }
+
+    .ganttoverview-container {
+        width: 100%
+    }
+
+    #overivew-sidebar-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #overviewSample .e-tbar-btn-text {
+        display: none;
     }
 </style>

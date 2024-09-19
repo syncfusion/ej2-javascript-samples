@@ -1,45 +1,42 @@
 /**
  * Sequence Diagram
  */
+//Function to Create nodes by the parameters
+function createNode(id, width, height, offsetX, offsetY, shapeType, content, fill, bold) {
+    return {
+        id: id,
+        width: width,
+        height: height,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        shape: { type: shapeType, content: content },
+        style: { fill: fill, bold: bold }
+    };
+}
+//Function to Create connectors by the parameters
+function createConnector(id, sourceX, sourceY, targetX, targetY) {
+    return {
+        id: id,
+        type: 'Straight',
+        sourcePoint: { x: sourceX, y: sourceY },
+        targetPoint: { x: targetX, y: targetY },
+        targetDecorator: { shape: 'None' },
+        style: { strokeColor: '#A5A6A7' }
+    };
+  }
 this.default = function () {
+// Define nodes for the diagram
 var nodes = [
-    {
-        id: 'employee', width: 100, height: 60, offsetX: 100, offsetY: 100,
-	    shape: { type: 'Text', content: 'Employee'},style:{fill:'transparent',bold:true}
-    },
-    {
-        id: 'teamLead', width: 100, height: 60, offsetX: 350, offsetY: 100,
-	    shape: { type: 'Text',content:'Team Lead' },style:{fill:'transparent',bold:true}
-    },
-    {
-        id: 'dashboard', width: 100, height: 60, offsetX: 600, offsetY: 100,
-	    shape: { type: 'Text', content: 'Dashboard'},style:{fill:'transparent',bold:true}
-    },
-    {
-        id: 'manager', width: 100, height: 60, offsetX: 850, offsetY: 100,
-	    shape: { type: 'Text', content: 'Manager'},style:{fill:'transparent',bold:true}
-    },
-    {
-        id: 'leaveRequest', width: 100, height: 60, offsetX: 225, offsetY: 250,
-	    shape: { type: 'Text',content:'Leave Request' },style:{fill:'transparent'}
-    },
-    {
-        id: 'leaveApproval', width: 100, height: 60, offsetX: 225, offsetY: 484,
-	    shape: { type: 'Text', content: 'Leave Approval'},style:{fill:'transparent'}
-    },
-    {
-        id:'checkEmplyeeAvail',shape:{type:'Text',content:'Check Employee availability and task status'},height:30,width:175,
-        offsetX:470,offsetY:345,style:{fill:'transparent'},
-    },
-    {
-        id:'forwardLeaveMssg',shape:{type:'Text',content:'Forward Leave Request'},height:30,width:150,
-        offsetX:600,offsetY:420,style:{fill:'transparent'}
-    },
-    {
-        id:'noObjection',shape:{type:'Text',content:'No Objection'},height:30,width:150,
-        offsetX:600,offsetY:460,style:{fill:'transparent'}
-    },
-    // Normal nodes
+    createNode('employee', 100, 60, 100, 100, 'Text', 'Employee', 'transparent', true),
+    createNode('teamLead', 100, 60, 350, 100, 'Text', 'Team Lead', 'transparent', true),
+    createNode('dashboard', 100, 60, 600, 100, 'Text', 'Dashboard', 'transparent', true),
+    createNode('manager', 100, 60, 850, 100, 'Text', 'Manager', 'transparent', true),
+    createNode('leaveRequest', 100, 60, 225, 250, 'Text', 'Leave Request', 'transparent', false),
+    createNode('leaveApproval', 100, 60, 225, 484, 'Text', 'Leave Approval', 'transparent', false),
+    createNode('checkEmplyeeAvail', 175, 30, 470, 345, 'Text', 'Check Employee availability and task status', 'transparent', false),
+    createNode('forwardLeaveMssg', 150, 30, 600, 420, 'Text', 'Forward Leave Request', 'transparent', false),
+    createNode('noObjection', 150, 30, 600, 460, 'Text', 'No Objection', 'transparent', false),
+    //Basic shape nodes
     {
         id:'employeeNode',shape:{type:'Basic',shape:'Rectangle'},width:10,height:250,offsetX:100,offsetY:350,
         style:{fill:'orange',strokeColor:'orange'},
@@ -66,41 +63,17 @@ var nodes = [
     },
   
 ];
-
+// Define connectors for the diagram
 var connectors = [
     // straight connectors 
-    {
-        id:'employeeCon1',type:'Straight',sourcePoint:{x:100,y:120},targetPoint:{x:100,y:225},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'employeeCon2',type:'Straight',sourcePoint:{x:100,y:475},targetPoint:{x:100,y:600},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'teamLeanCon1',type:'Straight',sourcePoint:{x:350,y:120},targetPoint:{x:350,y:225},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'teamLeanCon2',type:'Straight',sourcePoint:{x:350,y:415},targetPoint:{x:350,y:600},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'dashboardCon1',type:'Straight',sourcePoint:{x:600,y:120},targetPoint:{x:600,y:307},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'dashboardCon2',type:'Straight',sourcePoint:{x:600,y:333},targetPoint:{x:600,y:600},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'managerCon1',type:'Straight',sourcePoint:{x:850,y:120},targetPoint:{x:850,y:395},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
-    {
-        id:'managerCon2',type:'Straight',sourcePoint:{x:850,y:445},targetPoint:{x:850,y:600},
-        targetDecorator:{shape:'None'},style:{strokeColor:'#A5A6A7'}
-    },
+    createConnector('employeeCon1', 100, 120, 100, 225),
+    createConnector('employeeCon2', 100, 475, 100, 600),
+    createConnector('teamLeanCon1', 350, 120, 350, 225),
+    createConnector('teamLeanCon2', 350, 415, 350, 600),
+    createConnector('dashboardCon1', 600, 120, 600, 307),
+    createConnector('dashboardCon2', 600, 333, 600, 600),
+    createConnector('managerCon1', 850, 120, 850, 395),
+    createConnector('managerCon2', 850, 445, 850, 600),
 
     // arrow connectors
     {
@@ -124,7 +97,7 @@ var connectors = [
         targetPoint:{x:350,y:440},style:{strokeDashArray:'4 4'}
     },
 ];
-
+// Create a new instance of the diagram
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '600px', nodes: nodes,connectors:connectors,
     snapSettings: { constraints: 0 },
@@ -134,11 +107,13 @@ var diagram = new ej.diagrams.Diagram({
         diagram.fitToPage();
     }
     });
+    // Append the diagram to the DOM
     diagram.appendTo('#diagram');
-    function getConnectorDefaults(obj){
-        obj.targetDecorator.style = {fill:'#489ECC',strokeColor:'#489ECC'};
-        if(obj.targetDecorator.shape === 'Arrow'){
-        obj.style = {strokeColor:'#489ECC',strokeWidth:2};
+    // Function to customize connector defaults
+    function getConnectorDefaults(connector){
+        connector.targetDecorator.style = {fill:'#489ECC',strokeColor:'#489ECC'};
+        if(connector.targetDecorator.shape === 'Arrow'){
+            connector.style = {strokeColor:'#489ECC',strokeWidth:2};
         }
     }
     

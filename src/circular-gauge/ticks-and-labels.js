@@ -26,10 +26,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var ticksAndLabelsTheme = location.hash.split('/')[1];
+            ticksAndLabelsTheme = ticksAndLabelsTheme ? ticksAndLabelsTheme : 'Material';
+            args.gauge.theme = (ticksAndLabelsTheme.charAt(0).toUpperCase() +
+                ticksAndLabelsTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -92,7 +92,7 @@ this.default = function () {
         circulargauge.refresh();
     });
 
-    var tickHeightInput = document.getElementById('tickHeight')
+    var tickHeightInput = document.getElementById('tickHeight');
     tickHeightInput.addEventListener('input', function () {
         var value = parseInt(tickHeightInput.value, 10);
         if (isMajorTicks) {
@@ -105,7 +105,7 @@ this.default = function () {
         circulargauge.refresh();
     });
     
-    var labelOffsetInput = document.getElementById('labelOffset')
+    var labelOffsetInput = document.getElementById('labelOffset');
     labelOffsetInput.addEventListener('input', function () {
         var value = parseInt(labelOffsetInput.value, 10);
         circulargauge.axes[0].labelStyle.offset = value;

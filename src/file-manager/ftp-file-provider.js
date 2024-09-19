@@ -10,6 +10,11 @@ this.default = function() {
                 uploadUrl: hostUrl + 'api/FTPProvider/FTPUpload',
                 downloadUrl: hostUrl + 'api/FTPProvider/FTPDownload'
             },
+            contextMenuSettings: {
+                visible: true,
+                file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
+                layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+            },
             toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] }
     });
     fileObject.appendTo('#ftpFilemanager');

@@ -38,9 +38,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var emptyPointTheme = location.hash.split('/')[1];
-            emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'MAterial';
+            emptyPointTheme = emptyPointTheme ? emptyPointTheme : 'Fluent2';
             args.chart.theme = (emptyPointTheme.charAt(0).toUpperCase() +
-                emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                emptyPointTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

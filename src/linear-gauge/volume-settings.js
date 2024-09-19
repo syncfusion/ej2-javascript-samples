@@ -55,7 +55,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args1.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');            
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');            
             // custom code end            
             textColor = args1.gauge.theme.indexOf('Dark') > -1 || args1.gauge.theme.indexOf('HighContrast') > -1 ? '#FFFFFF' : '#000000';
             args1.gauge.annotations[0].content = "<div style=\"width: 70px;font-size: 16px;margin-left:64px;margin-top: -31px;font-family:inherit;color:" + textColor + ";\">100%</div>";
@@ -116,7 +116,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args2.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end            
             textColor = args2.gauge.theme.indexOf('Dark') > -1 || args2.gauge.theme.indexOf('HighContrast') > -1 ? '#FFFFFF' : '#000000';
             args2.gauge.annotations[0].content = "<div style=\"width: 70px;font-size: 16px;margin-left:73px;margin-top: -31px;font-family:inherit;color:" + textColor + ";\"> 85%</div>";
@@ -177,7 +177,7 @@ this.default = function () {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args3.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end            
             textColor = args3.gauge.theme.indexOf('Dark') > -1 || args3.gauge.theme.indexOf('HighContrast') > -1 ? '#FFFFFF' : '#000000';
             args3.gauge.annotations[0].content = "<div style=\"width: 70px;font-size: 16px;margin-left:71px;margin-top: -31px;font-family:inherit;color:" + textColor + ";\"> 65%</div>";

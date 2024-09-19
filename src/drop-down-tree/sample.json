@@ -3,6 +3,7 @@
     "directory": "drop-down-tree",
     "category": "Dropdowns",
     "ftName": "dropdown-tree",
+    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -62,6 +63,7 @@
             "name": "Template",
             "description": "This example demonstrates how to customize the appearance of each item in the JavaScript(ES5) drop-down tree control pop-up list using the template.",
             "category": "Dropdown Tree",
+            "type": "update",
             "api": {
                 "DropDownTree": [
                     "popupHeight",
@@ -69,7 +71,8 @@
                     "fields",
                     "headerTemplate",
                     "itemTemplate",
-                    "footerTemplate"
+                    "footerTemplate",
+                    "valueTemplate"
                 ]
             }
         },

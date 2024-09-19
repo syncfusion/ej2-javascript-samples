@@ -8,7 +8,7 @@ this.default = function () {
             var defaulttheme = location.hash.split('/')[1];
             defaulttheme = defaulttheme ? defaulttheme : 'Material';
             args.maps.theme = (defaulttheme.charAt(0).toUpperCase() +
-            defaulttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            defaulttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

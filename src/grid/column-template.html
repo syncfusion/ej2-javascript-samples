@@ -3,14 +3,62 @@
         height: 55px;
         width: 55px;
         border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(68, 66, 66, 0.2);
+    }
+    .statustemp.e-nonavailablecolor {
+        background-color: indianred;
+        width: 100px;
+        height: 30px;
+    }
+    .statustemp.e-availablecolor {
+        background-color: #58d378;
+        width: 100px;
+        height: 30px;
+    }
+    .statustxt.e-availablecolor {
+        color: white
+    }
+    .statustxt.e-nonavailablecolor {
+        color: white;
+    }
+    .statustemp {
+        position: relative;
+        height: 19px;
+        text-align: center
+    }
+    td.e-rowcell .statustxt.e-availablecolor {
+        color: white;
+        position: relative;
+        top: 4px;
+    }
+    td.e-rowcell .statustxt.e-nonavailablecolor {
+        color: white;
+        position: relative;
+        top: 4px;
+    }
+    .e-icon-location::before {
+        content: "\e30c";
+    }
+    .e-location {
+        margin-right: 5px;
     }
 </style>
 
 <script id="template" type="text/x-template">
-    <div class="image">
-        <img src="src/grid/images/${EmployeeID}.png" alt="${EmployeeID}" />
-    </div>
+    ${employeeTemplate(data)}
+</script>
+<script id="locationTemplate" type="text/x-template">
+    <span class="e-location e-icons location"></span>
+    ${Location}
+</script>
+<script id="mailIDTemplate" type="text/x-template">
+    <a href="mailto:${MailID}">${MailID}</a>
+</script>
+<script type="text/x-template" id="assetTemplate" >
+    <div id="assetElement" ></div>
+</script>
+<script type="text/x-template" id="statusTemplate">
+    ${statusTemplate(data)}
 </script>
 <div>
     <div class="control-section">
@@ -20,24 +68,27 @@
     </div>
 </div>
 <div id="action-description">
-    <p>This sample demonstrates usage of template columns in Grid. In this sample,
-        we have shown custom images in the Employee Image column.</p>
+    <p>This sample demonstrates the usage of template columns in a Grid. In this sample, custom images are shown in the Employee
+        Image column.
+    </p>
 </div>
-
 <div id="description">
     <p>
-        The Grid provides a way to use a custom layout for each cell using column template feature. The
-        <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column/#template">columns->template
-            </a></code> property accepts either string or HTML element`s ID value, which will be used
-        as the template for the particular cell.
+        The Grid creates a custom layout for each cell using the column template feature. The 
+        <code><a target="_blank" class="code"
+        href="https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#template">columns->template
+        </a></code> property accepts either string or HTML element`s ID value, which will be used 
+        as the template for the cell.  
     </p>
     <p>
-        In this demo, using column template, we have presented <strong>Employee Image</strong>
-        column with Employee Photo and the <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column/#template">columns->template
-            </a></code> is assigned with
-        the ID of a SCRIPT element whose content is used as the template.
+        The column template feature allows the customization of grid cells. In this demo, the Grid showcases the <strong>Employee Image</strong>
+        column with employee photos, <strong>Mail ID</strong> column with link tags, <strong>Location</strong> column with location icons, <strong>Asset Kit</strong> column with Syncfusion Chip components and <strong>Employee Availability</strong> column with HTML span elements, using green to indicate available and red to indicate for not available.
     </p>
-    <p>The template expression should be provided inside <code>${...}</code> interpolation syntax.</p>
+    <p>The template expression should be provided inside <code>${...}</code> interpolation syntax</p>
+    <p>
+        More information on the column template can be found in this
+        <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript/documentation/grid/columns/column-template">
+        documentation section</a>.
+    </p>
 </div>

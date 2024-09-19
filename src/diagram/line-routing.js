@@ -61,7 +61,7 @@ this.default = function () {
         { id: 'Connector9', sourceID: 'start', sourcePortID: 'port1', targetID: 'card', targetPortID: 'port1' },
         { id: 'Connector10', sourceID: 'card', sourcePortID: 'port2', targetID: 'document', targetPortID: 'port1' }
     ];
-
+    // Used to set default values of nodes
     function getNodeDefaults(node) {
         node.height = 50;
         if(node.id === 'decision') {
@@ -71,7 +71,7 @@ this.default = function () {
         node.style = { strokeColor: 'transparent' };
         return node;
     }
-
+    // Used to set default values of connector
     function getConnectorDefaults(connector) {
         connector.type = 'Orthogonal';
         connector.style = { strokeColor: '#707070 ', strokeWidth: 1.25 };
@@ -81,15 +81,23 @@ this.default = function () {
 
     //initialize the diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: 600, nodes: nodes, connectors: connectors,
+        width: '100%', height: '500px', nodes: nodes, connectors: connectors,
+        // Set diagram constraints to include bridging and line routing
         constraints: ej.diagrams.DiagramConstraints.Default | (ej.diagrams.DiagramConstraints.Bridging | ej.diagrams.DiagramConstraints.LineRouting),
+        // Disable snapping for diagram elements
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
+        // Define default settings for nodes
         getNodeDefaults: getNodeDefaults,
+        // Define default settings for connectors
         getConnectorDefaults: getConnectorDefaults,
+         // Callback function triggered when the diagram is created
         created: onCreated,
     });
+    // Append the diagram to the element with id 'diagram'
     diagram.appendTo('#diagram');
+    // Function called when the diagram is created
     function onCreated() {
+        // Fit the diagram to the page after it is created
         diagram.fitToPage();
     }
 };

@@ -10,7 +10,10 @@ this.default = function () {
         height: '150px',
         mode: 'SVG',
         type: 'QRCode',
-        displayText: { visibility: false },
+        displayText: { visibility: true },
+        logo: {
+            imageSource: "https://www.syncfusion.com/web-stories/wp-content/uploads/sites/2/2022/02/cropped-Syncfusion-logo.png",
+        },
         invalid: invalidInputQrCode,
         value: 'Syncfusion',
     });
@@ -73,6 +76,16 @@ this.default = function () {
         }
     });
     textVisibilityQrCode.appendTo('#textVisibility');
+
+    var logo = new ej.buttons.CheckBox({
+        checked: true,
+        change:function (args) {
+            if (barcodeQrCode.logo) {
+                barcodeQrCode.logo.imageSource = args.checked ? "https://www.syncfusion.com/web-stories/wp-content/uploads/sites/2/2022/02/cropped-Syncfusion-logo.png" : '';
+            }
+        }
+    });
+    logo.appendTo('#logo');
 
     var svgModeQrCode = new ej.buttons.CheckBox({
         checked: true,

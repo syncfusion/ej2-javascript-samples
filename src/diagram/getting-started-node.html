@@ -1,8 +1,7 @@
 
 <style>
     /* Css for images in property panel  */
-    .diagram-nodes .image-pattern-style {
-        background-color: white;
+    .diagramNodes-property .image-pattern-style {
         background-size: contain;
         background-repeat: no-repeat;
         height: 75px;
@@ -13,35 +12,34 @@
         float: left;
     }
     
-    .diagram-nodes .row {
+    .diagramNodes-property .row {
         margin-left: 0px;
         margin-right: 0px;
     }
     
-    .diagram-nodes .sb-child-row {
+    .sb-child-row {
         padding-top: 8px;
     }
     
-    .diagram-nodes .row-header {
+    .diagramNodes-property .row-header {
         font-size: 13px;
         font-weight: 500;
     }
     
     /* Selection indicator */
-    .diagram-nodes .e-selected-style {
+    .e-selected-style {
         border-color: #006CE6;
         border-width: 2px;
     }
     
 </style>
-<div class="control-section diagram-nodes">
 <div class="col-lg-8 control-section">
   
     <div class="content-wrapper">
         <div id="diagram"></div>
     </div>
 </div>
-<div class="col-lg-4 property-section">
+<div class="col-lg-4 property-section diagramNodes-property">
     <div class="property-panel-header">
         Properties
     </div>
@@ -76,7 +74,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div id="action-description">
     <p>
         This sample visualizes the different stages of a software development life cycle using a circular flow diagram. Customizing the appearance of the nodes is illustrated in this example.

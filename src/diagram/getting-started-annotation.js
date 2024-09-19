@@ -1,9 +1,13 @@
+
+// Inject the UndoRedo module into the Diagram to enable undo and redo functionality
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
+
 /**
- * Getting started -  Annotation
+ * Getting started - Annotation
  */
 // tslint:disable-next-line:max-func-body-length
 
+// Variable declarations (some might not be used in this snippet)
 var diagram;
 var fontSize;
 var fontColor;
@@ -15,48 +19,56 @@ var template;
 var labelConstraints;
 var underline;
 
-
-//Apply the appearence of the Annotation 
+// Function to update the appearance of the Annotation
 function updateAnnotation(value, fontSize, fontFamily) {
+    // Loop through each selected node in the diagram
     for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
         var node = diagram.selectedItems.nodes[i];
-        for (var j = 0; j < node.annotations.length; j++) {
-            var annotationStyle = node.annotations[j].style;
+            var annotationStyle = node.annotations[0].style;
+            // Update the font size of the annotation
             if (value === 'fontsize') {
                 annotationStyle.fontSize = fontSize.value;
+            // Toggle the underline text decoration of the annotation
             } else if (value === 'underline') {
                 annotationStyle.textDecoration = annotationStyle.textDecoration === 'Underline' ? 'None' : 'Underline';
+            // Update the font family of the annotation
             } else if (value === 'fontfamily') {
                 annotationStyle.fontFamily = fontFamily.value.toString();
+            // Toggle the bold style of the annotation
             } else if (value === 'bold') {
                 annotationStyle.bold = !annotationStyle.bold;
+            // Toggle the italic style of the annotation
             } else if (value === 'italic') {
                 annotationStyle.italic = !annotationStyle.italic;
+            // Update the template of the annotation
             } else if (value === 'template') {
                 if (fontFamily === 'none') {
-                    node.annotations[j].template = '';
-                    node.annotations[j].width = undefined;
-                    node.annotations[j].height = undefined;
+                    node.annotations[0].template = '';
+                    node.annotations[0].width = undefined;
+                    node.annotations[0].height = undefined;
                 } else {
-                    node.annotations[j].width = 25;
-                    node.annotations[j].height = 25;
-                    node.annotations[j].template =
+                    node.annotations[0].width = 25;
+                    node.annotations[0].height = 25;
+                    node.annotations[0].template =
                         '<img src="src/diagram/Images/annotation/' + fontFamily + '.svg" style="width:100%;height:100%"/>';
                 }
+            // Toggle the interaction constraint of the annotation
             } else if (value === 'interaction') {
-                node.annotations[j].constraints = node.annotations[j].constraints ^ ej.diagrams.AnnotationConstraints.Interaction;
+                node.annotations[0].constraints = node.annotations[0].constraints ^ ej.diagrams.AnnotationConstraints.Interaction;
             }
-            diagram.dataBind();
         }
+        // Apply the changes to the diagram
+        diagram.dataBind();
     }
-}
-//Update the Annotation Position based on the selection
-function updatePosition(id) {
+// Function to update the annotation position based on the selection
+function updateAnnotationPosition(id) {
+    // Get the target element by its ID
     var target = document.getElementById(id);
+    // Loop through each selected node in the diagram
     for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
         var node = diagram.selectedItems.nodes[i];
-        for (var j = 0; j < node.annotations.length; j++) {
-            var annotation = node.annotations[j];
+            var annotation = node.annotations[0];
+        // Update the annotation position based on the selected option
             switch (target.id) {
                 case 'left':
                     setAnnotationPosition(annotation, 0, 0, 'Top', 'Left', target);
@@ -64,53 +76,58 @@ function updatePosition(id) {
                 case 'right':
                     setAnnotationPosition(annotation, 1, 0, 'Top', 'Right', target);
                     break;
-                case 'bottoml':
+                case 'bottomLeft':
                     setAnnotationPosition(annotation, 0, 1, 'Bottom', 'Left', target);
                     break;
-                case 'bottomr':
+                case 'bottomRight':
                     setAnnotationPosition(annotation, 1, 1, 'Bottom', 'Right', target);
                     break;
                 case 'center':
                     setAnnotationPosition(annotation, 0.5, 0.5, 'Center', 'Center', target);
                     break;
-                case 'bottomcenter_top':
+                case 'bottomCenter':
                     setAnnotationPosition(annotation, 0.5, 1, 'Top', 'Center', target);
                     break;
             }
         }
     }
-}
-//set the Annotation Position
-function setAnnotationPosition(annotation, offsetX, offsetY, vAlignment, hAlignment, target) {
+// Function to set the annotation position and margin
+function setAnnotationPosition(annotation, offsetX, offsetY, verticalAlignment, horizontalAlignment, target) {
+    // Set the annotation's offset position
     annotation.offset.x = offsetX;
     annotation.offset.y = offsetY;
-    annotation.verticalAlignment = vAlignment;
-    annotation.horizontalAlignment = hAlignment;
-    if (vAlignment === 'Top' && hAlignment === 'Left') {
+    // Set the annotation's vertical and horizontal alignment
+    annotation.verticalAlignment = verticalAlignment;
+    annotation.horizontalAlignment = horizontalAlignment;
+    // Set the margin based on the alignment
+    if (verticalAlignment === 'Top' && horizontalAlignment === 'Left') {
         annotation.margin = { left: 3, top: 3 };
-    } else if (vAlignment === 'Top' && hAlignment === 'Right') {
+    } else if (verticalAlignment === 'Top' && horizontalAlignment === 'Right') {
         annotation.margin = { right: 3, top: 3 };
-    } else if (vAlignment === 'Bottom' && hAlignment === 'Left') {
+    } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Left') {
         annotation.margin = { left: 3, bottom: 3 };
-    } else if (vAlignment === 'Bottom' && hAlignment === 'Right') {
+    } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Right') {
         annotation.margin = { right: 3, bottom: 3 };
     }
+    // Add a class to the target element for styling
     target.classList.add('e-selected-style');
 }
-//Enable or disable the property panel
-function enableOptions(arg) {
+// Function to enable or disable the property panel
+function enablePropertyPanel(arg) {
     var appearance = document.getElementById('propertypanel');
     var selectedElement = document.getElementsByClassName('e-remove-selection');
+    // Check if a new node is selected
     if (arg.newValue) {
         if (arg.newValue[0] instanceof ej.diagrams.Node) {
+            // If there is a previously selected element, remove the selection class
             if (selectedElement.length) {
                 selectedElement[0].classList.remove('e-remove-selection');
             }
         } else {
+            // If no node is selected, add the selection class to the appearance element
             if (!appearance.classList.contains('e-remove-selection')) {
                 appearance.classList.add('e-remove-selection');
             }
-
         }
     }
 }
@@ -124,10 +141,9 @@ this.default = function () {
             selectedElement[0].classList.remove('e-selected-style');
         }
         if (target.className === 'image-pattern-style') {
-            updatePosition(target.id);
+            updateAnnotationPosition(target.id);
         }
     };
-
     var bounds = document.getElementsByClassName('content-wrapper')[0].getBoundingClientRect();
     var centerX = (bounds.width / 2);
     //Initializes the nodes for the diagram
@@ -177,60 +193,73 @@ this.default = function () {
             segments: [{ direction: 'Top', type: 'Orthogonal', length: 100 }], targetDecorator: { shape: 'None' }
         }
     ];
-    //Initializes diagram control
+    // Initializes the diagram control
     diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '645px', nodes: nodes, connectors: connectors,
+        // Set the dimensions of the diagram
+        width: '100%', height: '550px', 
+        // Define the nodes and connectors
+        nodes: nodes, connectors: connectors,
+        // Disable snapping to grid or objects
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
+        // Event handler for selection change
         selectionChange: function (arg) {
+            // Check if the selection state has changed
             if (arg.state === 'Changed') {
+                // Remove the 'e-selected-style' class from the previously selected element
                 var selectedElement = document.getElementsByClassName('e-selected-style');
                 if (selectedElement.length) {
                     selectedElement[0].classList.remove('e-selected-style');
-                }
+                }          
+                // Check if a new node is selected
                 if (arg.newValue[0]) {
                     var node = arg.newValue[0];
-                    var offset = node.annotations[0].offset;
+                    var offset = node.annotations[0].offset;                  
+                    // Update the annotation position based on the offset values
                     if (offset.x === 0 && offset.y === 0) {
-                        updatePosition('left');
+                        updateAnnotationPosition('left');
                     }
                     else if (offset.x === 1 && offset.y === 0) {
-                        updatePosition('right');
-                    }
-                    else if (offset.x === 1 && offset.y === 0) {
-                        updatePosition('right');
+                        updateAnnotationPosition('right');
                     }
                     else if (offset.x === 0 && offset.y === 1) {
-                        updatePosition('bottoml');
+                        updateAnnotationPosition('bottomLeft');
                     }
                     else if (offset.x === 1 && offset.y === 1) {
-                        updatePosition('bottomr');
+                        updateAnnotationPosition('bottomRight');
                     }
                     else if (offset.x === 0.5 && offset.y === 0.5) {
-                        updatePosition('center');
+                        updateAnnotationPosition('center');
                     }
                     else if (offset.x === 0.5 && offset.y === 1) {
-                        updatePosition('bottomcenter_top');
+                        updateAnnotationPosition('bottomCenter');
                     }
                 }
-                enableOptions(arg);
+                // Enable or disable the property panel based on the selection
+                enablePropertyPanel(arg);
             }
         },
-        //Sets the default values of a node
+        
+        // Sets the default values of a node
         getNodeDefaults: function (node) {
             var obj = {
-                width: 130, height: 50, style: { fill: '#D5EDED', strokeColor: '#7DCFC9', strokeWidth: 1 },
+                width: 130, 
+                height: 50, 
+                style: { fill: '#D5EDED', strokeColor: '#7DCFC9' },
                 shape: { cornerRadius: 5 }
             };
             return obj;
         },
-        //Sets the default values of a connector
+        
+        // Sets the default values of a connector
         getConnectorDefaults: function (obj) {
             obj.type = 'Orthogonal';
             obj.constraints = ej.diagrams.ConnectorConstraints.None;
-        },
-    });
-    diagram.appendTo('#diagram');
-    diagram.select([diagram.nodes[0]]);
+    },
+});
+// Append the diagram to the HTML element with id 'diagram'
+diagram.appendTo('#diagram');
+// Select the first node in the diagram
+diagram.select([diagram.nodes[0]]);
     //Button used to apply for Bold of the Annotation
     bold = new ej.buttons.Button({
         cssClass: 'e-small',
@@ -256,14 +285,12 @@ this.default = function () {
     fontSize.appendTo('#fontSize');
     fontSize.dataBind();
     //Colorpicker used to apply for Color of the Annotation
-    fontColor = new ej.inputs.ColorPicker({
+    var fontColor = new ej.inputs.ColorPicker({
         value: '#000', change: function (arg) {
             for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
                 var node = diagram.selectedItems.nodes[i];
-                for (var j = 0; j < node.annotations.length; j++) {
-                    node.annotations[j].style.color = arg.currentValue.rgba;
+                    node.annotations[0].style.color = arg.currentValue.rgba;
                     diagram.dataBind();
-                }
             }
         }
     });
@@ -286,7 +313,7 @@ this.default = function () {
         { type: 'Verdana', text: 'Verdana' }
     ];
     //DropDownList used to apply for fontFamily of the Annotation
-    fontFamily = new ej.dropdowns.DropDownList({
+    var fontFamily = new ej.dropdowns.DropDownList({
         dataSource: fontType,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
         width: '100%', placeholder: 'select a font type',
@@ -295,8 +322,7 @@ this.default = function () {
         }
     });
     fontFamily.appendTo('#fontfamily');
-
-    templateList = [
+    var templateList = [ 
         { value: 'none', text: 'None' },
         { value: 'industry', text: 'Industry Competitors' },
         { value: 'suppliers', text: 'Suppliers' },
@@ -304,7 +330,7 @@ this.default = function () {
         { value: 'buyers', text: 'Buyers' },
         { value: 'substitutes', text: 'Substitutes' }
     ];
-
+    //DropDownList used to apply for template for nodes
     var template = new ej.dropdowns.DropDownList({
         dataSource: templateList,
         fields: { value: 'value', text: 'text' }, popupWidth: 200,
@@ -314,7 +340,7 @@ this.default = function () {
         }
     });
     template.appendTo('#template');
-
+    //CheckBox used to enable intractions with templates
     labelConstraints = new ej.buttons.CheckBox({
         checked: false,
         label: 'Label interaction',

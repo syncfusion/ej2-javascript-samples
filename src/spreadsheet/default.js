@@ -27,7 +27,9 @@ this.default = function () {
         created: function () {
             // Applies cell and number formatting to specified range of the active sheet
             spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+            // Apply format to the specified range in the active sheet.
             spreadsheet.numberFormat('$#,##0.00', 'F2:F31');
+            spreadsheet.numberFormat('m/d/yyyy', 'E2:E30');
         }
     });
 

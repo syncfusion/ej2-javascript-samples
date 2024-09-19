@@ -7,20 +7,19 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 /*eslint eslint-comments/no-duplicate-disable: error */
 
 /*eslint-disable no-undef */
-//Create and add ports for node.
 
-
+//To enhance the functionality of a webpage for mobile devices by adding a click event listener 
 function addMobileEvents() {
     var isMobileMode = window.matchMedia('(max-width:550px)').matches;
     if (isMobileMode) {
-        var pIcon = document.getElementById('palette-icon');
-        if (pIcon) {
-            pIcon.addEventListener('click', opensymbolPalette, false);
+        var paletteIcon = document.getElementById('palette-icon');
+        if (paletteIcon) {
+            paletteIcon.addEventListener('click', openSymbolPalette, false);
         }
     }
 }
-
-function opensymbolPalette() {
+//To manage the visibility state of the palette space on the webpage on a mobile device
+function openSymbolPalette() {
     var paletteSpace = document.getElementById('palette-space');
     isMobileMode = window.matchMedia('(max-width:550px)').matches;
     if (isMobileMode) {
@@ -32,7 +31,18 @@ function opensymbolPalette() {
         }
     }
 }
-
+//Sets the default values of a Connector.
+  function getConnectorDefaults (connector) {
+    setConnectorStyles(connector, '#757575');
+    return connector;
+  }
+    //set styles for connector
+    function setConnectorStyles(connector, color) {
+    connector.style.strokeWidth = 1;
+    connector.style.strokeColor = color;
+    connector.targetDecorator.style.fill = color;
+    connector.targetDecorator.style.strokeColor = color;
+    }
 this.default = function () {
     var scrollableArea = new ej.diagrams.Rect(0, 0, 1500, 1500);
 
@@ -45,47 +55,30 @@ this.default = function () {
             scrollLimit: 'Infinity', canAutoScroll: true, autoScrollBorder: { left: 30, right: 30, top: 30, bottom: 30 },
             scrollableArea: scrollableArea
         },
-        //Sets the default values of a node
-        getNodeDefaults: function (node) {
-            if (node.width === undefined) {
-                node.width = 145;
-            } else {
-                var ratio = 100 / node.width;
-                node.width = 100;
-                node.height *= ratio;
-            }
-            node.style = { fill: '#357BD2', strokeColor: 'white' };
-            node.annotations = [{ style: { color: 'white', fill: 'transparent' } }];
-            return node;
-        },
-        //Sets the default values of a Connector.
-        getConnectorDefaults: function (connector) {
-            if (connector.id.indexOf('connector') !== -1) {
-                connector.type = 'Orthogonal';
-                connector.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
-            }
-        },
-        //Sets the Node style for DragEnter element.
+        getConnectorDefaults: getConnectorDefaults,
+        //Sets the node style for DragEnter element.
         dragEnter: function (args) {
             var node = args.element;
             if (node instanceof ej.diagrams.Node) {
-                var oWidth = node.width;
-                var oHeight = node.height;
+                var nodeWidth = node.width;
+                var nodeHeight = node.height;
                 var ratio = 100 / node.width;
                 node.width = 100;
                 node.height *= ratio;
-                node.offsetX += (node.width - oWidth) / 2;
-                node.offsetY += (node.height - oHeight) / 2;
+                node.offsetX += (node.width - nodeWidth) / 2;
+                node.offsetY += (node.height - nodeHeight) / 2;
                 node.style = { fill: '#357BD2', strokeColor: 'white' };
+                node.annotations = [{ style: { color: 'white', fill: 'transparent' } }];
             }
         },
+        //Disable the scrollable area
         created: function (args) {
-            var element2 = document.getElementById('scrollableDiv');
-            element2.className = "disabledbutton";
+            var scrollElement = document.getElementById('scrollableDiv');
+            scrollElement.className = "disabledbutton";
         }
     });
     diagram.appendTo('#diagram');
-    //Initialize the flowshapes for the symbol palatte
+    //Initialize the basicshapes for the symbol palette
     var basicShapes = [
         {
             id: 'rectangle', shape: { type: 'Basic', shape: 'Rectangle' }
@@ -124,7 +117,7 @@ this.default = function () {
             id: 'parallelogram', shape: { type: 'Basic', shape: 'Parallelogram' }
         },
     ];
-    //Initialize the flowshapes for the symbol palatte
+    //Initialize the flowshapes for the symbol palette
     var flowShapes = [
         { id: 'terminator1', shape: { type: 'Flow', shape: 'Terminator' } },
         { id: 'process1', shape: { type: 'Flow', shape: 'Process' } },
@@ -151,28 +144,25 @@ this.default = function () {
         { id: 'multiDocument1', shape: { type: 'Flow', shape: 'MultiDocument' } },
         { id: 'collate1', shape: { type: 'Flow', shape: 'Collate' } },
     ];
+   //Initialize the connector for the symbol palette 
     var connectorSymbols = [
         {
-            id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow', style: { strokeColor: '#757575', fill: '#757575' } },
-            style: { strokeWidth: 1, strokeColor: '#757575' }
+            id: 'orthogonal', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 }
         },
         {
-            id: 'Link5', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow', style: { strokeColor: '#757575', fill: '#757575' } },
-            style: { strokeWidth: 1, strokeColor: '#757575' }
+            id: 'straight', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 }
         },
         {
-            id: 'link4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            id: 'straightConnector', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+             targetDecorator: { shape: 'None' }
         },
         {
-            id: 'link3', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            id: 'orthogonalConnector', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+            targetDecorator: { shape: 'None' }
         },
         {
-            id: 'link6', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            id: 'bezier', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
+             targetDecorator: { shape: 'None' }
         },
     ];
 
@@ -181,12 +171,12 @@ this.default = function () {
         expandMode: 'Single',
         getNodeDefaults: function (symbol) {
             var obj = symbol;
-            if (obj.id === 'terminator' || obj.id === 'process') {
+            if (obj.id === 'terminator1' || obj.id === 'process1') {
                 obj.width = 80;
                 obj.height = 40;
             }
-            else if (obj.id === 'decision' || obj.id === 'document' || obj.id === 'preDefinedProcess' ||
-                obj.id === 'paperTap' || obj.id === 'directData' || obj.id === 'multiDocument' || obj.id === 'data') {
+            else if (obj.id === 'decision1' || obj.id === 'document1' || obj.id === 'preDefinedProcess1' ||
+                obj.id === 'paperTap1' || obj.id === 'directData1' || obj.id === 'multiDocument1' || obj.id === 'data') {
                 obj.width = 50;
                 obj.height = 40;
             }
@@ -205,33 +195,20 @@ this.default = function () {
         getSymbolInfo: function (symbol) {
             return { fit: true };
         },
+        getConnectorDefaults: getConnectorDefaults,
         width: '100%', height: '700px', symbolHeight: 60, symbolWidth: 60,
     });
     palette.appendTo('#symbolpalette');
     addMobileEvents();
     /* tslint:enable */
 
-    var items = [
-        { text: 'Auto', value: 'Auto' }, { text: 'Scroll', value: 'Scroll' },
-        { text: 'Drag', value: 'Drag' }
-    ];
-
+    //Sets the scroll limit
     var scrollLimitDatasource = [
         { text: 'Infinity', value: 'Infinity' }, { text: 'Diagram', value: 'Diagram' },
         { text: 'Limited', value: 'Limited' }
     ];
 
-    var scrollLevel = new ej.dropdowns.DropDownList({
-        dataSource: items,
-        fields: { text: 'text', value: 'value' },
-        value: 'Scroll',
-        change: function (args) {
-            var element = document.getElementById('autoScrollDiv');
-            element.className = args.value === "Auto" ? "" : "disabledbutton";
-        }
-    });
-    scrollLevel.appendTo('#scrollLevel');
-
+    //Initializes a dropdown for scrollLimit
     var scrollLimit = new ej.dropdowns.DropDownList({
         dataSource: scrollLimitDatasource,
         fields: { text: 'text', value: 'value' },
@@ -243,34 +220,32 @@ this.default = function () {
         }
     });
     scrollLimit.appendTo('#scrollLimit');
-
+    //Initializes a checkbox to enable or disable autoscroll
     var checkBoxObj = new ej.buttons.CheckBox({
         checked: true,
         change: function (args) {
-            var element4 = document.getElementById('autoScrollDiv');
+            var autoScrollElement = document.getElementById('autoScrollDiv');
             if (args.checked) {
-              element4.className = '';
+                autoScrollElement.className = '';
               diagram.scrollSettings.canAutoScroll = true;
             } else {
-              element4.className = 'disabledbutton';
+                autoScrollElement.className = 'disabledbutton';
               diagram.scrollSettings.canAutoScroll = false;
             }
         }
     });
     checkBoxObj.appendTo('#checked');
 
-    var numeric = new ej.inputs.TextBox({
+    var offsetXtextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
         value: 10,
         change: function (args) {
             diagram.scrollSettings.scrollableArea.x = Number(args.value);
         }
     });
-
-    // renders initialized NumericTextBox
-    numeric.appendTo('#x');
-
-    var numeric2 = new ej.inputs.TextBox({
+    // Renders initialized NumericTextBox 
+    offsetXtextBox.appendTo('#x');
+    var offsetYtextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
         value: 10,
         change: function (args) {
@@ -278,8 +253,8 @@ this.default = function () {
         }
     });
 
-    // renders initialized NumericTextBox
-    numeric2.appendTo('#y');
+    // Renders initialized NumericTextBox
+    offsetYtextBox.appendTo('#y');
 
     var widthTextBox = new ej.inputs.TextBox({
         // sets value to the NumericTextBox
@@ -289,7 +264,7 @@ this.default = function () {
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     widthTextBox.appendTo('#width');
 
     var heightTextBox = new ej.inputs.TextBox({
@@ -300,51 +275,51 @@ this.default = function () {
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     heightTextBox.appendTo('#height');
 
     var leftTextBox = new ej.inputs.TextBox({
-        // sets value to the NumericTextBox
+        // Sets value to the NumericTextBox
         value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.left = Number(args.value);
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     leftTextBox.appendTo('#left');
 
     var rightTextBox = new ej.inputs.TextBox({
-        // sets value to the NumericTextBox
+        // Sets value to the NumericTextBox
         value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.right = Number(args.value);
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     rightTextBox.appendTo('#right');
 
     var topTextBox = new ej.inputs.TextBox({
-        // sets value to the NumericTextBox
+        // Sets value to the NumericTextBox
         value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.top = Number(args.value);
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     topTextBox.appendTo('#top');
 
     var bottomTextBox = new ej.inputs.TextBox({
-        // sets value to the NumericTextBox
+        // Sets value to the NumericTextBox
         value: 30,
         change: function (args) {
             diagram.scrollSettings.autoScrollBorder.bottom = Number(args.value);
         }
     });
 
-    // renders initialized NumericTextBox
+    // Renders initialized NumericTextBox
     bottomTextBox.appendTo('#bottom');
 
 };

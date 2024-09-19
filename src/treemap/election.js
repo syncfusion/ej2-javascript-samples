@@ -5,7 +5,7 @@ this.default = function () {
             var legendtheme = location.hash.split('/')[1];
             legendtheme = legendtheme ? legendtheme : 'Material';
             args.treemap.theme = (legendtheme.charAt(0).toUpperCase() +
-            legendtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            legendtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         resize: function (args) {

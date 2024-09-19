@@ -40,8 +40,8 @@ this.default = function () {
     localObj.appendTo('#local');
     var remoteObj = new ej.dropdowns.AutoComplete({
         dataSource: new ej.data.DataManager({
-            url: 'https://services.syncfusion.com/js/production/api/orders',
-            adaptor: new ej.data.WebApiAdaptor(),
+            url: 'https://services.syncfusion.com/js/production/api/VirtualDropdownData',
+            adaptor: new ej.data.UrlAdaptor(),
             crossDomain: true
         }),
         fields: { value: 'OrderID' },

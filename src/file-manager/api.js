@@ -11,35 +11,34 @@ this.default = function () {
             downloadUrl: hostUrl + 'api/FileManager/Download'
         },
         navigationPaneSettings: { visible: false },
+        toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
+        view: 'LargeIcons',
         contextMenuSettings: {
+            file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
             layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
             visible: true
         },
-        toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
-        view: 'LargeIcons'
+        enableRangeSelection: true
     });
     fileObject.appendTo('#filemanager');
 
+    rangeSelectionObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
+    rangeSelectionObj.appendTo('#rangeSelection');
     checkBoxObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
     checkBoxObj.appendTo('#toolbar');
-    multiSelectObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
-    multiSelectObj.appendTo('#multiSelect');
     fileExtendObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
     fileExtendObj.appendTo('#fileExtension');
     thumbnailObj = new ej.buttons.CheckBox({ checked: true, change: onToolbarChange });
     thumbnailObj.appendTo('#thumbnail');
     var items = ['NewFolder', 'Cut', 'Copy', 'Paste', 'Download', 'Delete', 'Refresh', 'Selection', 'View', 'Details'];
-    disableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item", change: onItemChange });
+    disableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item", change: onDisableItemChange });
     disableObj.appendTo('#disable');
-    enableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item" ,change: onItemChange });
+    enableObj = new ej.dropdowns.DropDownList({ dataSource: items, placeholder: "Select item" ,change: onEnableItemChange });
     enableObj.appendTo('#enable');
 
     function onToolbarChange(args) {
         if (this.element.id == "toolbar") {
             fileObject.toolbarSettings.visible = args.checked;
-        }
-        if (this.element.id == "multiSelect") {
-            fileObject.allowMultiSelection = args.checked;
         }
         if (this.element.id == "fileExtension") {
             fileObject.showFileExtension = args.checked;
@@ -47,15 +46,26 @@ this.default = function () {
         if (this.element.id == "thumbnail") {
             fileObject.showThumbnail = args.checked;
         }
+        if (this.element.id == "rangeSelection") {
+            fileObject.enableRangeSelection = args.checked;
+        }
     }
 
-    function onItemChange(args) {
-        var changedItem = args.itemData.value;
-        if (args.element.id == "enable") {
-            fileObject.enableToolbarItems([changedItem]);
+    function onDisableItemChange(args) {
+        if (args.itemData != null){
+            fileObject.disableToolbarItems([args.itemData.value]);
+            if(args.value === enableObj.value){
+                enableObj.value = null;
+            }
         }
-        else {
-            fileObject.disableToolbarItems([changedItem]);
+    }
+    
+    function onEnableItemChange(args) {
+        if (args.itemData != null){
+            fileObject.enableToolbarItems([args.itemData.value]);
+            if(args.value === disableObj.value){
+                disableObj.value = null;
+            }
         }
     }
 };

@@ -12,7 +12,7 @@ var updatedData = [
 ];
 var labelRender = function(args) {
     var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'Material';
+    selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
     var materialColors = ['#00bdae', '#404041', '#357cd2', '#e56590', '#f8b883', '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb',
         '#ea7a57', '#404041', '#00bdae'];
     var fabricColors = ['#4472c4', '#ed7d31', '#ffc000', '#70ad47', '#5b9bd5',
@@ -25,7 +25,7 @@ var labelRender = function(args) {
     "#7D39C0"];
     var fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10",
         "#C19C00"];
-    var fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
+    var fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
         "#0B6A0B", "#C19C00"];
     if (selectedTheme && selectedTheme.indexOf('fabric') > -1) {
         args.fill = fabricColors[args.point.index % 10];
@@ -35,8 +35,8 @@ var labelRender = function(args) {
         args.fill = highcontrastColors[args.point.index % 10];
     } else if (selectedTheme === 'fluent2') {
         args.fill = fluent2Colors[args.point.index % 10];
-    } else if (selectedTheme === 'fluent2-dark') {
-        args.fill = fluent2DarkColors[args.point.index % 10];
+    } else if (selectedTheme === 'fluent2-highcontrast' || selectedTheme === 'fluent2-dark') {
+        args.fill = fluent2HighContrastColors[args.point.index % 10];
     } else {
         args.fill = bootstrapColors[args.point.index % 10];
     }
@@ -56,7 +56,7 @@ this.default = function () {
         //Initializing Chart Series
         series: [
             {
-                dataSource: updatedData, xName: 'x', yName: 'y', type: 'Column',
+                dataSource: updatedData, xName: 'x', yName: 'y', type: 'Column', marker: {visible: false, dataLabel: {visible: true, position: 'Top', format: '{value}%', font: { color: '#ffffff' }}},
                 cornerRadius: { topLeft: ej.base.Browser.isDevice ? 10 : 15, topRight: ej.base.Browser.isDevice ? 10 : 15 }, columnWidth: 0.5
             }
         ],
@@ -65,9 +65,9 @@ this.default = function () {
         pointRender: labelRender,
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             args.chart.updateClearInterval();
 
             intervalId = setInterval(function() {

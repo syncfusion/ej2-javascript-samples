@@ -65,9 +65,9 @@ this.default = function () {
         legendSettings:{enableHighlight:true},
         load: function (args) {
             var stackedTheme = location.hash.split('/')[1];
-            stackedTheme = stackedTheme ? stackedTheme : 'Material';
+            stackedTheme = stackedTheme ? stackedTheme : 'Fluent2';
             args.chart.theme = (stackedTheme.charAt(0).toUpperCase() + 
-            stackedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            stackedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
     });
     chart.appendTo('#stacked-container');

@@ -11,6 +11,8 @@ define(["require", "exports"], function (require, exports) {
         '#FA83C3', '#00C27A', '#43ACEF', '#D681EF', '#D8BC6E'];
     exports.fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10",
         "#C19C00"];
+    exports.fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
+        "#0B6A0B", "#C19C00"];
     exports.fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
         "#0B6A0B", "#C19C00"];
 });

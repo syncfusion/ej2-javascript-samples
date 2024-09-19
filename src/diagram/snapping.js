@@ -2,6 +2,7 @@
  * Snapping diagram
  */
  this.default = function () {
+// Define an array of nodes with their properties
  var nodes = [
     {
         id:'node_1',width:100,height:100,offsetX:350,offsetY:250,
@@ -33,16 +34,20 @@
     },
 ];
 
+// Define an array of connectors with their properties
 var connectors = [
     {
         id:'connector_1',sourceID:'node_1',targetID:'node_3',type:'Orthogonal',
     }
 ];
 
+// Define context menu settings
 var contextMenu = {
     show: true,
     showCustomMenuOnly: false,
 };
+
+// Define custom handles for user interaction
 var handles = [
     {
         name: 'Clone', pathData: 'M0,2.4879999 L0.986,2.4879999 0.986,9.0139999 6.9950027,9.0139999 6.9950027,10 0.986,10 C0.70400238,10 0.47000122,9.9060001 0.28100207,9.7180004 0.09400177,9.5300007 0,9.2959995 0,9.0139999 z M3.0050011,0 L9.0140038,0 C9.2960014,0 9.5300026,0.093999863 9.7190018,0.28199956 9.906002,0.47000027 10,0.70399952 10,0.986 L10,6.9949989 C10,7.2770004 9.906002,7.5160007 9.7190018,7.7110004 9.5300026,7.9069996 9.2960014,8.0049992 9.0140038,8.0049992 L3.0050011,8.0049992 C2.7070007,8.0049992 2.4650002,7.9069996 2.2770004,7.7110004 2.0890007,7.5160007 1.9950027,7.2770004 1.9950027,6.9949989 L1.9950027,0.986 C1.9950027,0.70399952 2.0890007,0.47000027 2.2770004,0.28199956 2.4650002,0.093999863 2.7070007,0 3.0050011,0 z',
@@ -58,9 +63,9 @@ var handles = [
     },
 ];
 
+// Initialize the diagram with specified settings and properties
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '645px', nodes: nodes,
-    rulerSettings:{showRulers:true},
     scrollSettings:{scrollLimit:'Infinity'},
     drawingObject:{type:'Orthogonal'},
     contextMenuSettings: contextMenu,
@@ -74,10 +79,11 @@ var diagram = new ej.diagrams.Diagram({
     rotateChange:rotateChange
     });
     diagram.appendTo('#diagram');
-    
+    // Function to fit the diagram to the page width
     function created(){
         diagram.fitToPage({mode:'Width'});
     }
+    // Function to handle changes in selected Item
     function selectionChange(args){
         if(args.state === 'Changed'){
             var selectedItems = diagram.selectedItems.nodes;
@@ -96,21 +102,25 @@ var diagram = new ej.diagrams.Diagram({
 
         }
     }
-    function getConnectorDefaults(obj){
-        obj.constraints = ej.diagrams.ConnectorConstraints.Default|ej.diagrams.ConnectorConstraints.DragSegmentThumb;
+    // Function to set defaults for connectors
+    function getConnectorDefaults(connector){
+        connector.constraints = ej.diagrams.ConnectorConstraints.Default|ej.diagrams.ConnectorConstraints.DragSegmentThumb;
     }
-    function getNodeDefaults(obj){
-        obj.style = {fill:'orange',strokeColor:'orange'};
+    // Function to set defaults for nodes
+    function getNodeDefaults(node){
+        node.style = {fill:'orange',strokeColor:'orange'};
     }
+    // Function to handle rotation changes
     function rotateChange(args){
         if(args.state === 'Start' || args.state === 'Progress')
-    {
-        diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All&~ej.diagrams.SelectorConstraints.UserHandle};
+        {
+            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All&~ej.diagrams.SelectorConstraints.UserHandle};
+        }
+        if(args.state === 'Completed'){
+            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All|ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles };
+        }
     }
-    if(args.state === 'Completed'){
-        diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All|ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles };
-    }
-    }
+    // Function to handle user handle click events
     function userHandelClick(args){
         switch(args.element.name)
         {
@@ -129,6 +139,7 @@ var diagram = new ej.diagrams.Diagram({
         }
     }
 
+    // Create a numeric text box for adjusting snapping intervals
     var snappingInterval = new ej.inputs.NumericTextBox({
         min: 1,
         step: 1,
@@ -145,6 +156,7 @@ var diagram = new ej.diagrams.Diagram({
     });
     snappingInterval.appendTo('#snappingInterval');
 
+    // Create a numeric text box for adjusting snapping angle
     var snappingAngle = new ej.inputs.NumericTextBox({
         min: 1,
         step: 1,
@@ -157,6 +169,7 @@ var diagram = new ej.diagrams.Diagram({
     });
     snappingAngle.appendTo('#snappingAngle');
 
+    // Create a color picker for snapping line color
     var snappingLineColor = new ej.inputs.ColorPicker({
         mode: 'Palette',
         width: '100%',
@@ -170,6 +183,7 @@ var diagram = new ej.diagrams.Diagram({
     });
     snappingLineColor.appendTo('#snappingLineColor');
 
+    // Create a checkbox to toggle the visibility of gridlines
     var showGridlines = new ej.buttons.CheckBox({ label: 'Show Gridline', checked: true,
     change: function (args) { 
         diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.ShowLines;
@@ -178,6 +192,7 @@ var diagram = new ej.diagrams.Diagram({
      }});
     showGridlines.appendTo('#showGridlines');
 
+    // Create a checkbox to toggle snapping to objects
      var snapToObject = new ej.buttons.CheckBox({ label: 'Snapping To Objects', checked: true,
      change: function (args) { 
          diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;
@@ -186,18 +201,22 @@ var diagram = new ej.diagrams.Diagram({
       }});
       snapToObject.appendTo('#snapToObject');
 
+    // Create a radio button with the label "Snap To Gridlines"
     var radioButton = new ej.buttons.RadioButton({ label: 'Snap To Gridlines', name: 'snapToLines', value: 'Snap To Gridlines', checked: true,change:snapToLines });
     radioButton.appendTo('#radio1');
 
+    // Create a radio button with the label "Snap To Horizontal Gridlines"
     var radioButton1 = new ej.buttons.RadioButton({ label: 'Snap To Horizontal Gridlines', name: 'snapToLines', value: 'Snap To Horizontal Gridlines',change:snapToLines });
     radioButton1.appendTo('#radio2');
 
+    // Create a radio button with the label "Snap To Vertical Gridlines"
     var radioButton2 = new ej.buttons.RadioButton({ label: 'Snap To Vertical Gridlines', name: 'snapToLines', value: 'Snap To Vertical Gridlines',change:snapToLines });
     radioButton2.appendTo('#radio3');
 
+    // Create a radio button with the label "None"
    var radioButton3 = new ej.buttons.RadioButton({ label: 'None', name: 'snapToLines', value: 'None',change:snapToLines });
     radioButton3.appendTo('#radio4');
-
+    // Function to handle snapping behavior based on gridlines and object snapping checkboxes
     function snapToLines(args){
         if(showGridlines.checked && snapToObject.checked){
             diagram.snapSettings.constraints = ej.diagrams.SnapConstraints.All;
@@ -211,9 +230,12 @@ var diagram = new ej.diagrams.Diagram({
        else if(!showGridlines.checked && !snapToObject.checked){
         diagram.snapSettings.constraints = ej.diagrams.SnapConstraints.All &~(ej.diagrams.SnapConstraints.ShowLines|ej.diagrams.SnapConstraints.SnapToObject);
        }
+       // Switch statement to handle different snapping options
         switch(args.value){
             case 'Snap To Gridlines':
+                // Enable snapping to gridlines and object boundaries
                 diagram.snapSettings.constraints =  ej.diagrams.SnapConstraints.All| ej.diagrams.SnapConstraints.SnapToLines;
+                // Update constraints based on checkboxes' states
                 if( !showGridlines.checked && !snapToObject.checked ) {
                    diagram.snapSettings.constraints = ej.diagrams.SnapConstraints.All &~ (ej.diagrams.SnapConstraints.ShowLines|ej.diagrams.SnapConstraints.SnapToObject);
                 }
@@ -225,12 +247,15 @@ var diagram = new ej.diagrams.Diagram({
                 }
             break;
             case 'Snap To Horizontal Gridlines':
+                // Toggle snapping to horizontal gridlines
                 diagram.snapSettings.constraints =  diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToVerticalLines;
             break;
             case 'Snap To Vertical Gridlines':
+                // Toggle snapping to vertical gridlines
                 diagram.snapSettings.constraints =  diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToHorizontalLines;
             break;
             case 'None':
+                // Disable all snapping constraints
                 diagram.snapSettings.constraints = ej.diagrams.SnapConstraints.All &~ (ej.diagrams.SnapConstraints.SnapToHorizontalLines|ej.diagrams.SnapConstraints.SnapToVerticalLines|ej.diagrams.SnapConstraints.SnapToLines);
                 if(!showGridlines.checked && !snapToObject.checked){
                     diagram.snapSettings.constraints = ej.diagrams.SnapConstraints.All &~ (ej.diagrams.SnapConstraints.ShowLines|ej.diagrams.SnapConstraints.SnapToObject|ej.diagrams.SnapConstraints.SnapToHorizontalLines|ej.diagrams.SnapConstraints.SnapToVerticalLines|ej.diagrams.SnapConstraints.SnapToLines);
@@ -247,6 +272,7 @@ var diagram = new ej.diagrams.Diagram({
         scale();
         
     }
+    //Adjusts the snapping intervals for horizontal and vertical gridlines in the diagram.
     function scale(){
         diagram.snapSettings.horizontalGridlines.scaledIntervals[0] = snappingInterval.value;
         diagram.snapSettings.verticalGridlines.scaledIntervals[0] = snappingInterval.value;

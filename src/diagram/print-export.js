@@ -1,3 +1,4 @@
+/*jslint esversion: 6 */
 /**
  * Print and Export
  */
@@ -9,120 +10,82 @@ var diagram;
 //click event to perform printing the diagraming objects.
 function onItemClick(args) {
     if (args.item.text === 'Print') {
-        var printOptions = {};
-        printOptions.mode = 'Data';
-        printOptions.region = 'PageSettings';
-        printOptions.multiplePage = checkBoxObj.checked;
-        printOptions.margin = { left: 0, top: 0, bottom: 0, right: 0 };
+        var printOptions = {
+            mode: 'Data',
+            region: 'PageSettings',
+            multiplePage: checkBoxObj.checked,
+            margin: { left: 0, top: 0, bottom: 0, right: 0 }
+        };
         diagram.print(printOptions);
     }
 }
 //Export the diagraming object based on the format.
-function onselect(args) {
-    var exportOptions = {};
-    exportOptions.format = args.item.text;
-    exportOptions.mode = 'Download';
-    exportOptions.region = 'PageSettings';
-    exportOptions.multiplePage = checkBoxObj.checked;
-    exportOptions.fileName = 'Export';
-    exportOptions.margin = { left: 0, top: 0, bottom: 0, right: 0 };
+function onSelect(args) {
+    var exportOptions = {
+        format: args.item.text,
+        mode: 'Download',
+        region: 'PageSettings',
+        multiplePage: checkBoxObj.checked,
+        fileName: 'Export',
+        margin: { left: 0, top: 0, bottom: 0, right: 0 }
+    };
     diagram.exportDiagram(exportOptions);
 }
 
-this.default = function () {   
-    var nodes = [
-        {
-            id: 'sourceNode1', width: 100, height: 50, offsetX: 120, offsetY: 100,
-            style: { strokeColor: '#868686', fill: '#d5f5d5' },
-            annotations: [{ content: 'Source Document', margin: { left: 15, right: 15, bottom: 15, top: 15 } }]
-        },
-        {
-            id: 'censusNode2', width: 100, height: 75, offsetX: 120, offsetY: 200,
-            shape: { type: 'Basic', shape: 'Diamond' },
-            style: { strokeColor: '#8f908f', fill: '#e2f3fa' },
-            annotations: [{ content: 'Census Record', margin: { left: 15, right: 15, bottom: 15, top: 15 } }]
-        },
-        {
-            id: 'booksNode3', width: 100, height: 75, offsetX: 120, offsetY: 325,
-            shape: { type: 'Basic', shape: 'Diamond' },
-            style: { strokeColor: '#8f908f', fill: '#e2f3fa' },
-            annotations: [{ content: 'Books and Magazine' }]
-        },
-        {
-            id: 'recordNode4', width: 125, height: 50, offsetX: 320, offsetY: 200,
-            style: { strokeColor: '#868686', fill: '#d5f5d5' },
-            annotations: [{ content: 'Record Template' }]
-        },
-        {
-            id: 'traditionalNode5', width: 125, height: 50, offsetX: 320, offsetY: 325,
-            style: { strokeColor: '#868686', fill: '#d5f5d5' },
-            annotations: [{ content: 'Traditional Template' }]
-        },
-        {
-            id: 'nontraditionalNode6', width: 135, height: 50, offsetX: 120, offsetY: 425,
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Nontraditional' }]
-        },
-        {
-            id: 'Radial1', width: 125, height: 50, offsetX: 850, offsetY: 225,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#fef0db' },
-            annotations: [{ content: 'Health Fitness', }]
-        },
-        {
-            id: 'Radial2', width: 125, height: 75, offsetX: 850, offsetY: 100,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Diet' }]
-        },
-        {
-            id: 'Radial3', width: 125, height: 75, offsetX: 1025, offsetY: 175,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Flexibility' }]
-        },
-        {
-            id: 'Radial4', width: 125, height: 75, offsetX: 1000, offsetY: 350,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Muscular Endurance' }]
-        },
-        {
-            id: 'Radial5', width: 125, height: 75, offsetX: 675, offsetY: 175,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Cardiovascular Strength' }]
-        },
-        {
-            id: 'Radial6', width: 125, height: 75, offsetX: 770, offsetY: 350,
-            shape: { type: 'Basic', shape: 'Ellipse' },
-            style: { strokeColor: '#a8a8a8', fill: '#faebee' },
-            annotations: [{ content: 'Muscular Strength' }]
-        },
+this.default = function () {
+
+    // Helper function to create a node with common properties
+    function createNode(id, width, height, offsetX, offsetY, strokeColor, fillColor, content, shape = 'Rectangle') {
+        return {
+            id,
+            width,
+            height,
+            offsetX,
+            offsetY,
+            shape: { type: 'Basic', shape: shape },
+            style: { strokeColor: strokeColor, fill: fillColor },
+            annotations: [{ content }]
+        };
+    }
+
+    // Initialize Diagram Nodes with helper function
+    let nodes = [
+        createNode('sourceNode1', 100, 50, 120, 100, '#868686', '#d5f5d5', 'Source Document'),
+        createNode('censusNode2', 100, 75, 120, 200, '#8f908f', '#e2f3fa', 'Census Record', 'Diamond'),
+        createNode('booksNode3', 100, 75, 120, 325, '#8f908f', '#e2f3fa', 'Books and Magazine', 'Diamond'),
+        createNode('recordNode4', 125, 50, 320, 200, '#868686', '#d5f5d5', 'Record Template'),
+        createNode('traditionalNode5', 125, 50, 320, 325, '#868686', '#d5f5d5', 'Traditional Template'),
+        createNode('nontraditionalNode6', 135, 50, 120, 425, '#a8a8a8', '#faebee', 'Nontraditional'),
+        createNode('Radial1', 125, 50, 850, 225, '#a8a8a8', '#fef0db', 'Health Fitness', 'Ellipse'),
+        createNode('Radial2', 125, 75, 850, 100, '#a8a8a8', '#faebee', 'Diet', 'Ellipse'),
+        createNode('Radial3', 125, 75, 1025, 175, '#a8a8a8', '#faebee', 'Flexibility', 'Ellipse'),
+        createNode('Radial4', 125, 75, 1000, 350, '#a8a8a8', '#faebee', 'Muscular Endurance', 'Ellipse'),
+        createNode('Radial5', 125, 75, 675, 175, '#a8a8a8', '#faebee', 'Cardiovascular Strength', 'Ellipse'),
+        createNode('Radial6', 125, 75, 770, 350, '#a8a8a8', '#faebee', 'Muscular Strength', 'Ellipse')
     ];
-    var connectors = [
-        { id: 'flowChartConnector1', sourceID: 'sourceNode1', targetID: 'censusNode2' },
-        {
-            id: 'flowChartConnector2', sourceID: 'censusNode2', targetID: 'booksNode3',
-            annotations: [{ content: 'No', style: { fill: 'White' } }]
-        },
-        {
-            id: 'flowChartConnector3', sourceID: 'booksNode3', targetID: 'nontraditionalNode6',
-            annotations: [{ content: 'No', style: { fill: 'White' } }]
-        },
-        {
-            id: 'flowChartConnector4', sourceID: 'censusNode2', targetID: 'recordNode4',
-            annotations: [{ content: 'Yes', style: { fill: 'White' } }]
-        },
-        {
-            id: 'flowChartConnector5', sourceID: 'booksNode3', targetID: 'traditionalNode5',
-            annotations: [{ content: 'Yes', style: { fill: 'White' } }]
-        },
-        { id: 'RadialConnector1', sourceID: 'Radial1', targetID: 'Radial2', annotations: [{ content: 'Yes', style: { fill: 'White' } }] },
-        { id: 'RadialConnector2', sourceID: 'Radial1', targetID: 'Radial3', annotations: [{ content: 'Yes', style: { fill: 'White' } }] },
-        { id: 'RadialConnector3', sourceID: 'Radial1', targetID: 'Radial4', annotations: [{ content: 'Yes', style: { fill: 'White' } }] },
-        { id: 'RadialConnector4', sourceID: 'Radial1', targetID: 'Radial5', annotations: [{ content: 'Yes', style: { fill: 'White' } }] },
-        { id: 'RadialConnector5', sourceID: 'Radial1', targetID: 'Radial6', annotations: [{ content: 'Yes', style: { fill: 'White' } }] },
+
+    // Helper function to create a connector with common properties
+    function createConnector(id, sourceID, targetID, content = 'Yes') {
+        return {
+            id,
+            sourceID,
+            targetID,
+            annotations: content ? [{ content, style: { fill: 'White' } }] : []
+        };
+    }
+
+    // Initialize Diagram Connectors with helper function
+    let connectors = [
+        createConnector('flowChartConnector1', 'sourceNode1', 'censusNode2', ''),
+        createConnector('flowChartConnector2', 'censusNode2', 'booksNode3', 'No'),
+        createConnector('flowChartConnector3', 'booksNode3', 'nontraditionalNode6', 'No'),
+        createConnector('flowChartConnector4', 'censusNode2', 'recordNode4'),
+        createConnector('flowChartConnector5', 'booksNode3', 'traditionalNode5'),
+        createConnector('RadialConnector1', 'Radial1', 'Radial2'),
+        createConnector('RadialConnector2', 'Radial1', 'Radial3'),
+        createConnector('RadialConnector3', 'Radial1', 'Radial4'),
+        createConnector('RadialConnector4', 'Radial1', 'Radial5'),
+        createConnector('RadialConnector5', 'Radial1', 'Radial6')
     ];
     //initialize the diagram control
     diagram = new ej.diagrams.Diagram({
@@ -138,7 +101,7 @@ this.default = function () {
     var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'SVG' }];
     //DropDownButton used to perform exporting.
     btnObj = new ej.splitbuttons.DropDownButton({
-        items: items, iconCss: 'e-ddb-icons e-export', content: 'Export', select: onselect,
+        items: items,  content: 'Export', select: onSelect,
     });
     //enable or disable the multiple page printing and exporting.
     checkBoxObj = new ej.buttons.CheckBox({
@@ -159,6 +122,7 @@ this.default = function () {
             },
         ]
     });
+    // Append elements to DOM.
     toolbarObj.appendTo('#toolbar_default');
     btnObj.appendTo('#custombtn');
     diagram.appendTo('#diagram');

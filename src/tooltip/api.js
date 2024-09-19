@@ -89,7 +89,7 @@ this.default = function() {
 
     var rightPane = document.getElementById('right-pane');
     var tooltipWrap = document.getElementsByClassName('e-tooltip-wrap');
-    var contentField = document.querySelector('#value');
+    var contentField = document.querySelector('#tooltipContentValue');
 
     //Attached scroll and click event listners in right pane
     if (rightPane) {

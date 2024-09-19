@@ -126,7 +126,6 @@
                         src="https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png"
                         style="width: 440px" class="e-rte-image e-imginline"></p>
             </div>
-            <input type="file" id="rteCustomWordUpload" name="UploadFiles">
         </div>
     </div>
 </div>
@@ -168,6 +167,8 @@
         <li><code>Video</code> - Inserts and manages videos.</li>
         <li><code>Format Painter</code> - The Format Painter feature allows you to copy the formats and apply them to
             content without formatting thus saving time to reformat the content.</li>
+        <li><code>Slash Menu</code> - The Slash Menu feature lets users apply formats, open dialogs by typing "/" in the editor.</li>
+        <li><code>Import / Export</code> - The Import/Export feature enables users to import content from Word documents into the editor and export the editor's content into Word and PDF files.</li>
     </ul>
 </div>
 
@@ -231,25 +232,32 @@
         height: 60px;
     }
 
-    body[class*="-dark"] .em-name {
+    body[class*="-dark"] .em-name,
+    body[class*="highcontrast"] .em-name {
         color: #fff !important;
     }
 
     /** custom source code styles **/
-    body[class*="-dark"] .rte-code-mirror .cm-tag {
+    body[class*="-dark"] .rte-code-mirror .cm-tag,
+    body[class*="highcontrast"] .rte-code-mirror .cm-tag
+     {
         color: #00ff00;
     }
 
-    body[class*="-dark"] .rte-code-mirror .cm-string {
+    body[class*="-dark"] .rte-code-mirror .cm-string,
+    body[class*="highcontrast"] .rte-code-mirror .cm-string {
         color: blue;
     }
 
-    body[class*="-dark"] .rte-code-mirror .cm-attribute {
+    body[class*="-dark"] .rte-code-mirror .cm-attribute,
+    body[class*="highcontrast"] .rte-code-mirror .cm-attribute {
         color: #f00;
     }
-
+    
     body[class*="-dark"] .rte-code-mirror .CodeMirror-gutters,
-    body[class*="-dark"] .rte-code-mirror .CodeMirror {
+    body[class*="-dark"] .rte-code-mirror .CodeMirror
+    body[class*="highcontrast"] .rte-code-mirror .CodeMirror-gutters,
+    body[class*="highcontrast"] .rte-code-mirror .CodeMirror {
         background-color: transparent;
         color: #fff;
     }

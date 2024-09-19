@@ -62,6 +62,7 @@ this.default = function () {
                     ({ fontWeight: 'bold', backgroundColor: '#279377', color: '#fff', textAlign: 'center', verticalAlign:'middle', fontSize: '14px' }, 'A1:F1');
             spreadsheet.cellFormat({ fontWeight: 'bold', backgroundColor: '#EEEEEE' }, 'A12:F15');
             spreadsheet.numberFormat('0.00', 'F2:F11');
+            spreadsheet.numberFormat('m/d/yyyy', 'A2:A11');
         }
     });
     //Render initialized Spreadsheet component

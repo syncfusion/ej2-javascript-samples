@@ -1,4 +1,5 @@
 this.default = function () {
+    var startDate;
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.editingData,
             dateFormat: 'MMM dd, y',
@@ -30,6 +31,10 @@ this.default = function () {
                 id: 'resourceId',
                 name: 'resourceName'
             },
+            actionBegin: function (args){
+                if (args.columnName === "EndDate")
+                    startDate = args.rowData.ganttProperties.startDate;
+            },
             resources: editingResources,
             highlightWeekends: true,
             timelineSettings: {
@@ -41,14 +46,15 @@ this.default = function () {
                     unit: 'Day',
                 },
             },
-            columns: [
-                { field: 'TaskID', width: 80 },
-                { field: 'TaskName', headerText: 'Job Name', width: '250', clipMode: 'EllipsisWithTooltip' },
-                { field: 'StartDate' },
-                { field: 'Duration' },
-                { field: 'Progress' },
-                { field: 'Predecessor' }
-            ],
+        columns: [
+            { field: 'TaskID', width: 80 },
+            { field: 'TaskName', headerText: 'Job Name', width: '250', clipMode: 'EllipsisWithTooltip', validationRules: { required: true, minLength: [5, 'Task name should have a minimum length of 5 characters'], } },
+            { field: 'StartDate' },
+            { field: 'EndDate', validationRules: { date: true, required: [customFn, 'Please enter a value greater than the start date.'] } },
+            { field: 'Duration', validationRules: { required: true} },
+            { field: 'Progress', validationRules: { required: true, min: 0, max: 100 } },
+            { field: 'Predecessor' }
+        ],
             eventMarkers: [
                 { day: '4/17/2024', label: 'Project approval and kick-off' },
                 { day: '5/3/2024', label: 'Foundation inspection' },
@@ -72,4 +78,17 @@ this.default = function () {
             projectEndDate: new Date('07/28/2024'),
     });
     ganttChart.appendTo('#Editing');
+    function customFn(args) {
+        var endDate;
+        if (args.element && args.value) {
+            endDate = new Date(args.value);
+            if (!startDate && ganttChart.editModule.dialogModule.beforeOpenArgs) {
+                startDate = ganttChart.editModule.dialogModule.beforeOpenArgs.rowData.ganttProperties.startDate;
+                endDate = ganttChart.editModule.dialogModule.beforeOpenArgs.rowData.ganttProperties.endDate;
+            }
+            startDate.setHours(0, 0, 0, 0);
+            endDate.setHours(0, 0, 0, 0);
+        }
+        return startDate <= endDate;
+    }
 };

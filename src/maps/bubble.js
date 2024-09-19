@@ -9,7 +9,7 @@ this.default = function () {
             var bubbletheme = location.hash.split('/')[1];
             bubbletheme = bubbletheme ? bubbletheme : 'Material';
             args.maps.theme = (bubbletheme.charAt(0).toUpperCase() +
-            bubbletheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            bubbletheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         bubbleRendering: function (args) {

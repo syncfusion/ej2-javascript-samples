@@ -80,7 +80,7 @@ this.default = function () {
             var jsonRowTheme = location.hash.split('/')[1];
             jsonRowTheme = jsonRowTheme ? jsonRowTheme : 'Material';
             args.heatmap.theme = (jsonRowTheme.charAt(0).toUpperCase() +
-            jsonRowTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            jsonRowTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

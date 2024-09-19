@@ -40,10 +40,10 @@ function pointeGauge1() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme1 = location.hash.split('/')[1];
+            selectPointerTheme1 = selectPointerTheme1 ? selectPointerTheme1 : 'Material';
+            args.gauge.theme = (selectPointerTheme1.charAt(0).toUpperCase() +
+                selectPointerTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -93,10 +93,10 @@ function pointeGauge2() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme2 = location.hash.split('/')[1];
+            selectPointerTheme2 = selectPointerTheme2 ? selectPointerTheme2 : 'Material';
+            args.gauge.theme = (selectPointerTheme2.charAt(0).toUpperCase() +
+                selectPointerTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -154,10 +154,10 @@ function pointeGauge3() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme3 = location.hash.split('/')[1];
+            selectPointerTheme3 = selectPointerTheme3 ? selectPointerTheme3 : 'Material';
+            args.gauge.theme = (selectPointerTheme3.charAt(0).toUpperCase() +
+                selectPointerTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -170,10 +170,10 @@ function pointeGauge4() {
         centerY: '40%',
         // custom code start
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme4 = location.hash.split('/')[1];
+            selectPointerTheme4 = selectPointerTheme4 ? selectPointerTheme4 : 'Material';
+            args.gauge.theme = (selectPointerTheme4.charAt(0).toUpperCase() +
+                selectPointerTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         axes: [{
@@ -270,10 +270,10 @@ function pointeGauge5() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme5 = location.hash.split('/')[1];
+            selectPointerTheme5 = selectPointerTheme5 ? selectPointerTheme5 : 'Material';
+            args.gauge.theme = (selectPointerTheme5.charAt(0).toUpperCase() +
+                selectPointerTheme5.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -355,10 +355,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectPointerTheme6 = location.hash.split('/')[1];
+            selectPointerTheme6 = selectPointerTheme6 ? selectPointerTheme6 : 'Material';
+            args.gauge.theme = (selectPointerTheme6.charAt(0).toUpperCase() +
+                selectPointerTheme6.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

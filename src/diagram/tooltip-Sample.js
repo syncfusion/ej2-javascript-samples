@@ -2,14 +2,8 @@
 ej.diagrams.Diagram.Inject(ej.diagrams.BpmnDiagrams);
 
 
-function getcontent() {
-    var tooltipContent = document.createElement('div');
-    tooltipContent.innerHTML = '<div style="background-color: #f4f4f4; color: black; border-width:1px;border-style: solid;border-color: #d3d3d3; border-radius: 8px;white-space: nowrap;"> <span style="margin: 10px;"> Tooltip !!! </span> </div>';
-    return tooltipContent;
-}
-
-
 this.default = function () {
+        //Initialize Diagram Nodes
         var nodes = [
             {
                 id: 'node1', width: 60, height: 60, offsetX: 35, offsetY: 120,
@@ -74,21 +68,22 @@ this.default = function () {
                 }
             },
             {
-                id: 'node12', width: 60, height: 60, offsetX: 265, offsetY: 430, tooltip: { content: 'Provide the solution' },
+                id: 'node11', width: 60, height: 60, offsetX: 265, offsetY: 430, tooltip: { content: 'Provide the solution' },
                 shape: { type: 'Bpmn', shape: 'Event', event: { event: 'End', trigger: 'Message' } }
             },
             {
-                id: 'node13', width: 60, height: 60, offsetX: 720, offsetY: 430, tooltip: { content: 'Share the task details' },
+                id: 'node12', width: 60, height: 60, offsetX: 720, offsetY: 430, tooltip: { content: 'Share the task details' },
                 shape: { type: 'Bpmn', shape: 'Event', event: { event: 'End', trigger: 'Message' } }
             },
             {
-                id: 'node14', width: 60, height: 60, offsetX: 570, offsetY: 430, shape: {
+                id: 'node13', width: 60, height: 60, offsetX: 570, offsetY: 430, shape: {
                     type: 'Bpmn', shape: 'Gateway',
                     gateway: { type: 'Parallel' }
                 },
                 tooltip: { content: 'can log?' },
             },
         ];
+    //Initialize Diagram connectors
     var connectors = [
         { id: 'connector1', sourceID: 'node1', targetID: 'node2' },
         { id: 'connector2', sourceID: 'node2', targetID: 'node3' },
@@ -107,26 +102,29 @@ this.default = function () {
             annotations: [{ content: 'How to?', offset: 0.5, style: { fill: 'white' } }]
         },
         { id: 'connector8', sourceID: 'node5', targetID: 'node9' },
-        { id: 'connector9', sourceID: 'node14', targetID: 'node13' },
+        { id: 'connector9', sourceID: 'node13', targetID: 'node12' },
         {
             id: 'connector10', sourceID: 'node7', targetID: 'node3', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 100, direction: 'Right' }, { type: 'Orthogonal', length: 100, direction: 'Top' }]
         },
-        { id: 'connector11', sourceID: 'node14', targetID: 'node10' },
-        { id: 'connector12', sourceID: 'node10', targetID: 'node12' },
-        { id: 'connector13', sourceID: 'node9', targetID: 'node14' },
+        { id: 'connector11', sourceID: 'node13', targetID: 'node10' },
+        { id: 'connector12', sourceID: 'node10', targetID: 'node11' },
+        { id: 'connector13', sourceID: 'node9', targetID: 'node13' },
     ];
+    //set content for diagram tooltip
     function getcontent() {
         var tooltipContent = document.createElement('div');
         tooltipContent.innerHTML =
             '<div style="border-width:1px;"><span> Tooltip !!! </span> </div>';
         return tooltipContent;
     }
+    //set default value for connectors.
     function getConnectorDefaults(connector, diagram) {
         connector.type = 'Orthogonal';
         connector.style = { strokeWidth: 2 };
         return connector;
     }
+    //set default value for Nodes.
     function getNodeDefaults(obj) {
         obj.offsetX += 0.5;
         obj.offsetY += 0.5;
@@ -137,7 +135,7 @@ this.default = function () {
 
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: '645px', connectors: connectors, nodes: nodes,
+        width: '100%', height: '550px', connectors: connectors, nodes: nodes,
         getConnectorDefaults: getConnectorDefaults,
         getNodeDefaults: getNodeDefaults,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
@@ -147,10 +145,12 @@ this.default = function () {
         }
     });
     diagram.appendTo('#diagram');
+    //Collection of relative modes for tooltip
     var modevalue = [
         { type: 'Object', text: 'Object' },
         { type: 'Mouse', text: 'Mouse' },
     ];
+    //Collection of positions for tooltip
     var positionValue = [
         { type: 'TopLeft', text: 'Top Left' },
         { type: 'TopCenter', text: 'Top Center' },
@@ -165,6 +165,7 @@ this.default = function () {
         { type: 'RightCenter', text: 'Right Center' },
         { type: 'RightBottom', text: 'Right Bottom' },
     ];
+    //Collection of effects for tooltip
     var effectValue = [
         { type: 'FadeIn', text: 'Fade In' },
         { type: 'FadeOut', text: 'Fade Out' },
@@ -182,10 +183,11 @@ this.default = function () {
         { type: 'ZoomOut', text: 'Zoom Out' },
         { type: 'None', text: 'None' },
     ];
+    //Set relative mode for tooltip
     var mode = new ej.dropdowns.DropDownList({
         dataSource: modevalue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '85%', placeholder: 'select a font type', index: 0,
+        width: '85%', index: 0,
         change: function () {
             if (mode.value === 'Mouse') {
                 diagram.tooltip.relativeMode = 'Mouse';
@@ -196,10 +198,11 @@ this.default = function () {
         }
     });
     mode.appendTo('#mode');
+    //Set position for tooltip
     var position = new ej.dropdowns.DropDownList({
         dataSource: positionValue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '85%', placeholder: 'select a font type', index: 0,
+        width: '85%', index: 0,
         change: function (args) {
             var nodes = diagram.nodes;
             for (var i = 0; i < nodes.length; i++) {
@@ -211,38 +214,18 @@ this.default = function () {
         }
     });
     position.appendTo('#position');
+    //Set effect for tooltip
     var effect = new ej.dropdowns.DropDownList({
         dataSource: effectValue,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
-        width: '85%', placeholder: 'select a effect type', index: 0,
+        width: '85%', index: 0,
         change: function (args) {
             diagram.tooltip.animation.open.effect = args.value;
             diagram.tooltip.animation.close.effect = args.value;
         }
     });
     effect.appendTo('#effect');
-    var textContent = new ej.inputs.TextBox({
-        placeholder: 'Enter text content',
-        floatLabelType: 'Auto',
-        change: function (args) {
-            diagram.tooltip.content = args.value.toString();
-            diagram.dataBind();
-        }
-    });
-    textContent.appendTo('#textContent');
-    var htmlContent = new ej.inputs.TextBox({
-        placeholder: 'Enter html content',
-        floatLabelType: 'Auto',
-        change: function (args) {
-            var tooltipContent = document.createElement('div');
-            var description = args.value.toString();
-            tooltipContent.innerHTML =
-                '<div style="border-width:1px;"><span> ' + description + ' </span></div>';
-            diagram.tooltip.content = tooltipContent;
-            diagram.dataBind();
-        }
-    });
-    htmlContent.appendTo('#htmlContent');
+    //Set animation for tooltip
     var animation = new ej.inputs.NumericTextBox({
         format: '###.##',
         change: function (args) {
@@ -251,12 +234,9 @@ this.default = function () {
         }
     });
     animation.appendTo('#duration');
-    var temp = '<div style="background-color: #f4f4f4; color: black; border-width:1px;' +
-        'border-style: solid;border-color: #d3d3d3; border-radius: 8px;white-space: nowrap;">' +
-        ' <span style="margin: 10px;">';
     diagram.fitToPage({ mode: 'Width' });
-    //checkbox is used to enable or disable the connector interaction.
-    var checkBoxObj = new ej.buttons.CheckBox({
+    //checkbox is used to enable or disable the sticky mode.
+    var stickyMode = new ej.buttons.CheckBox({
         checked: false,
         change: function (args) {
             for (var j = 0; j < diagram.nodes.length; j++) {
@@ -272,5 +252,5 @@ this.default = function () {
             }
         }
     });
-    checkBoxObj.appendTo('#checked');
+    stickyMode.appendTo('#checked');
 };

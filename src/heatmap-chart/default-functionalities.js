@@ -54,7 +54,7 @@ this.default = function () {
             var defaultTheme = location.hash.split('/')[1];
             defaultTheme = defaultTheme ? defaultTheme : 'Material';
             args.heatmap.theme = (defaultTheme.charAt(0).toUpperCase() +
-            defaultTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            defaultTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         dataSource: getDatasource(),

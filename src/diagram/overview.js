@@ -6,12 +6,14 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
 
 //Funtion to add the Template of the Node.
 function setNodeTemplate(obj, diagram) {
+    // Create the outer container for the node content.
     var content = new ej.diagrams.StackPanel();
     content.id = obj.id + '_outerstack';
     content.orientation = 'Horizontal';
     content.style.strokeColor = 'gray';
     content.padding = { left: 5, right: 10, top: 5, bottom: 5 };
 
+    // Create an image element for the employee image.
     var image = new ej.diagrams.ImageElement();
     image.width = 50;
     image.height = 50;
@@ -19,11 +21,13 @@ function setNodeTemplate(obj, diagram) {
     image.source = obj.data.ImageUrl;
     image.id = obj.id + '_pic';
 
+    // Create an inner stack panel for text elements (name and designation).
     var innerStack = new ej.diagrams.StackPanel();
     innerStack.style.strokeColor = 'none';
     innerStack.margin = { left: 5, right: 0, top: 0, bottom: 0 };
     innerStack.id = obj.id + '_innerstack';
 
+    // Create a text element for the employee name.
     var text = new ej.diagrams.TextElement();
     text.content = obj.data.Name;
     text.style.color = 'black';
@@ -33,6 +37,7 @@ function setNodeTemplate(obj, diagram) {
     text.style.fill = 'none';
     text.id = obj.id + '_text1';
 
+    // Create a text element for the employee designation.
     var desigText = new ej.diagrams.TextElement();
     desigText.margin = { left: 0, right: 0, top: 5, bottom: 0 };
     desigText.content = obj.data.Designation;
@@ -87,8 +92,8 @@ this.default = function () {
         }
     });
     diagram.appendTo('#diagram');
-    //Initializtion of the Overview.
 
+    //Initializtion of the Overview.
     overview = new ej.diagrams.Overview({
         width: '100%', height: '150px', sourceID: 'diagram'
     });

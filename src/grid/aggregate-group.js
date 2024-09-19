@@ -1,50 +1,59 @@
 this.default = function () {
-    var refresh;
     var grid = new ej.grids.Grid({
-        dataSource: window.categoryData,
-        allowPaging: true,
-        pageSettings: { pageCount: 5 },
+        dataSource: window.energyData,
         allowGrouping: true,
         allowSorting: true,
+        allowMultiSorting:true,
         allowFiltering: true,
+        height:300,
+        gridLines:'Vertical',
+        enableHover: false,
         filterSettings: { type: 'Excel' },
-        groupSettings: { showDropArea: false, columns: ['CategoryName'] },
+        groupSettings: { showDropArea: false, columns: ['ConsumptionCategory'], showGroupedColumn:true },
         columns: [
-            { field: 'CategoryName', headerText: 'Category Name', width: 160 },
-            { field: 'ProductName', headerText: 'Product Name', width: 170 },
-            { field: 'QuantityPerUnit', headerText: 'Quantity Per Unit', width: 170, textAlign: 'Right' },
-            { field: 'UnitsInStock', headerText: 'Units In Stock', width: 170, textAlign: 'Right' },
-            {
-                field: 'Discontinued', headerText: 'Discontinued', width: 150,
-                textAlign: 'Center', displayAsCheckBox: true, type: 'boolean'
-            }
+            { field: 'ID', headerText: 'ID', textAlign: 'Right', isPrimaryKey: true, visible: false },
+            { field: 'Month', headerText: 'Month', textAlign: 'Right', width: 120, format: 'yMd', allowEditing: false, clipMode:'EllipsisWithTooltip' },
+            { headerText: 'Category', field: 'ConsumptionCategory', width: 130, clipMode:'EllipsisWithTooltip'},
+            { headerTemplate: "#energyTemplate", textAlign: 'Center', columns: [
+                    { field: 'EnergyConsumed', headerText: 'Consumed', width: 150, textAlign: 'Right', clipMode:'EllipsisWithTooltip' },
+                    { field: 'EnergyProduced', headerText: 'Produced', width: 300, textAlign: 'Right', editType: 'numericedit', validationRules: { required: true, min: 0 } },
+                ] },
+            { field: 'WeatherCondition', headerText: 'Weather', width: 120, clipMode:'EllipsisWithTooltip' },
+            { field: 'EnergyPrice', headerText: 'Price ($)', format: 'C2', width: 130, clipMode:'EllipsisWithTooltip', textAlign: 'Right' },
         ],
-        load: function() {
-            refresh = grid.refreshing;
-        },
-        dataBound: function() {
-            if (refresh) {
-                grid.groupColumn('CategoryName');
-                refresh = false;
-            }
-        },
         aggregates: [{
             columns: [{
-                type: 'Sum',
-                field: 'UnitsInStock',
-                groupFooterTemplate: 'Total units: ${Sum}'
-            },
-            {
-                type: 'TrueCount',
-                field: 'Discontinued',
-                groupFooterTemplate: 'Discontinued: ${TrueCount}'
-            },
-            {
-                type: 'Max',
-                field: 'UnitsInStock',
-                groupCaptionTemplate: 'Maximum: ${Max}'
-            }]
-        }]
+                    type: 'Sum',
+                    field: 'EnergyProduced',
+                    format: 'N2',
+                    footerTemplate: 'Total Energy Produced: ${Sum} KWh'
+                }]
+        },
+        {
+            columns: [{
+                    type: 'Sum',
+                    field: 'EnergyProduced',
+                    format: 'N2',
+                    groupFooterTemplate: 'Total Energy Produced: ${Sum} KWh'
+                }]
+        },
+        {
+            columns: [{
+                    type: 'Average',
+                    field: 'EnergyProduced',
+                    format: 'N2',
+                    footerTemplate: 'Average Energy Produced: ${Average} KWh'
+                }]
+        },
+        {
+            columns: [{
+                    type: ["Min","Max"],
+                    field: 'EnergyProduced',
+                    format: 'N2',
+                    groupCaptionTemplate: '<div class="e-grid-group-caption-temp"><span class="e-minimum">Min: ${Min}</span><span>||</span> <span class="e-maximum"> Max : ${Max}</span></div> '
+                }]
+        }
+    ],
     });
-    grid.appendTo('#Grid');
+    grid.appendTo('#group-aggregate-grid');
 };

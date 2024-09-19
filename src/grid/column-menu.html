@@ -1,39 +1,62 @@
-<div class="control-section">
+<div class="col-lg-9 control-section">
     <div class="content-wrapper">
         <div id="Grid">
         </div>
     </div>
 </div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="Properties" style="width: 100%">
+        <tbody><tr>
+            <td style="width: 100%">
+                <div style="padding-top: 7px">Column menu</div>
+            </td>
+            <td style="width: 50%;padding-right: 10px">
+                <div id="typeddl">
+                    <input type="text" tabindex="0" id="grid-menu">
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
 <div id="action-description">
-    <p>This sample demonstrates the column menu feature. Click the multiple icon of each column to show the column menu.
-    </p>
+    <p>This sample demonstrates the default functionalities of the ColumnMenu. Click the icon of each column to open the column menu.</p>
 </div>
 <div id="description">
     <p>
-        Grid has option to show column menu when click on multiple icon of each column. The column menu has integrated
-        options to interact the features like sorting, grouping, filtering, column chooser and autoFit.
-        This features can be enabled by defining the <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/?lang=typescript#showcolumnmenu">showColumnMenu
-            </a></code> as true. The default items are
+            The grid provides an option to display a column menu when the user clicks the icon on each column. This menu includes integrated features like sorting, 
+            grouping, filtering, column chooser, and auto-fitting. These features can be enabled by setting the <code><a target="_blank" class="code"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/grid#showcolumnmenu">showColumnMenu
+            </a></code> property to `true`. The default menu items include:
         <br>
     </p>
     <ul>
-        <li><code>SortAscending</code> - Sort the current column in ascending order.</li>
-        <li><code>SortDescending</code> - Sort the current column in descending order.</li>
-        <li><code>Group</code> - Group the current column.</li>
-        <li><code>Ungroup</code> - Ungroup the current column.</li>
-        <li><code>AutoFit</code> - Auto fit current column.</li>
-        <li><code>AutoFitAll</code> - Auto fit all columns.</li>
-        <li><code>ColumnChooser</code> - Choose the column visibility.</li>
-        <li><code>Filter</code> - Show the filter option as given in <code>filterSetting-> type</code>.</li>
+            <li><code>SortAscending</code>: Sort the current column in ascending order.</li>
+            <li><code>SortDescending</code>: Sort the current column in descending order.</li>
+            <li><code>Group</code>: Group the current column.</li>
+            <li><code>Ungroup</code>: Ungroup the current column.</li>
+            <li><code>AutoFit</code>: Auto-fit current column.</li>
+            <li><code>AutoFitAll</code>: Auto-fit all columns.</li>
+            <li><code>ColumnChooser</code>:  Toggle column visibility.</li>
+            <li><code>Filter</code>: Display the filter option as specified in the <code>filterSetting-> type</code>.</li>
     </ul>
-
-    <br />
-
+    
+    <br/>
     <p>
-        In this demo, Column Menu feature has enabled by defining <code> showColumnMenu </code> as true with sorting,
-        grouping, filtering, column chooser and autoFit options.
-
+        The default column menu items are enabled based on the corresponding feature settings. Additionally, the column menu allows users to include  
+        custom menu items with the default ones, or the replacement of the default items entirely with custom options.
     </p>
-
+    <p>
+        In this demo, the Column Menu feature is initially enabled by setting <code><a target="_blank" class="code"
+            href="https://ej2.syncfusion.com/documentation/api/grid#showcolumnmenu">showColumnMenu
+            </a></code> to `true`, with sorting, grouping, filtering, column chooser, 
+        and auto-fit options. Users also have the option to toggle custom column menu items through using the dropdown list in the property panel. In the custom menu, sorting, grouping, 
+        and filtering are enabled, and custom options like column selection and clear selection have been added.
+         
+    </p>
+    <p>
+        More information on the column menu can be found in this
+        <a target="_blank" 
+        href="https://ej2.syncfusion.com/javascript//grid/columns/column-menu">
+        documentation section</a>.
+    </p>
 </div>

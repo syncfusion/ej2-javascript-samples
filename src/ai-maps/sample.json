@@ -1,0 +1,17 @@
+{
+    "name": "Maps",
+    "directory": "ai-maps",
+    "category": "Smart AI Solutions",
+    "samples": [
+        {
+            "url": "weather-prediction",
+            "name": "Weather Prediction",
+            "category": "Maps",
+            "sourceFiles": [
+                { "displayName": "weather-prediction.js", "path": "src/ai-maps/weather-prediction.js" },
+                { "displayName": "weather-prediction.html", "path": "src/ai-maps/ai-weather-prediction.html" }
+            ],
+            "description": "This demo showcases the Maps AI feature."
+        }
+    ]
+}

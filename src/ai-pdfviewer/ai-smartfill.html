@@ -1,0 +1,180 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <div id="e-pv-smartfill-parent-container">
+            <div id="e-pv-smartfill-appbar-container" style="display: none;">
+                <header id="e-pv-smartfill-defaultappbar">
+                    <span class="e-pv-smartfill-regular">Smart Fill</span>
+                </header>
+            </div>
+            <div id="e-pv-smart-fill-container">
+                <div id='e-pv-smartfill-left-container'>
+                    <div id="e-pv-smartfill-toolbar" style="top:0px"></div>
+                    <div id='e-pv-smartfill-pdfviewer' style="height:100%;width:100%;"></div>    
+                    <input type ="file" id="e-pv-smartfill-fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;"/>    
+                </div>
+                <div id="e-pv-smartfill-right-container-blackout" style="display: none;">
+                </div>
+                <div id='e-pv-smartfill-right-container' style="display: none;">
+                    <div id="e-pv-smartfill-text">Choose Form Templates</div>
+                    <div id="e-pv-smartfill-dropdown">
+                        <select id="e-pv-smartfill-dropdown-options"> 
+                            <option value="e-pv-smartfill-dropdown-form1">User Registration Form</option>
+                            <option value="e-pv-smartfill-dropdown-form2">Job Application Form</option>
+                            <option value="e-pv-smartfill-dropdown-form3">Contact Form</option>
+                        </select>
+                    </div>
+                    <div id="e-pv-smartfill-textarea">
+                        <textarea id="e-pv-smartfill-default-textarea" rows="10"></textarea>
+                    </div>
+                    <div id="e-pv-smartfill-button-container">
+                        <button id="e-pv-smartfill-submit"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample illustrates how the Syncfusion EJ2 PDF Viewer, with the help of AI, can automatically fill form
+        fields using the data provided by the user. </p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank' href='https://github.com/syncfusion/smart-ai-samples/tree/master'
+            aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub repository</a>.</p>
+</div>
+
+<div id="description">
+    <p>
+        The AI processes the input information to populate the relevant fields in the PDF form, improving efficiency and
+        reducing manual entry errors. However, users may need to review and adjust the filled fields as needed.
+    </p>
+</div>
+<style>
+    #e-pv-smartfill-right-container .e-input-group.e-control-wrapper.e-ddl.e-lib.e-keyboard.e-valid-input,
+    #e-pv-smartfill-textarea .e-float-input.e-control-wrapper.e-input-group.e-no-float-label.e-multi-line-input.e-auto-width {
+        width: 90% !important;
+    }
+    #e-pv-smartfill-dropdown,
+    #e-pv-smartfill-textarea {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #e-pv-smartfill-button-container {
+        width: 100%;
+        display: flex;
+        align-items: Right;
+        justify-content: Right;       
+    }
+    #e-pv-smartfill-submit {
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+    #e-pv-smartfill-textarea {
+        margin-top: 5%;    
+    }
+    #e-pv-smartfill-body-container {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    #e-pv-smartfill-parent-container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #e-pv-smart-fill-container {
+        width: 100%;
+        height: calc(100% - 40px);
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    #e-pv-smartfill-left-container {
+        width: 100%;
+        height: calc(100% - 40px);
+    }
+
+    #e-pv-smartfill-appbar-container {
+        width: 100%;
+        position: relative;
+    }
+
+    #e-pv-smartfill-defaultappbar {
+        height: 40px !important;
+        border-radius: 0px !important;
+    }
+
+    #e-pv-smartfill-text {
+        height: 3%;
+        margin: 20px;
+    }
+
+    #e-pv-smartfill-right-container {
+        width: 30% !important;
+        height: calc(100% - 40px) !important;
+        border-left: 1px solid #e0e0e0;
+    }
+    #e-pv-smartfill-right-container-blackout .e-spinner-pane {
+        left: 35% !important;
+        width: 30% !important;
+        height: calc(100% - 40px) !important;
+    }
+
+    #e-pv-smartfill-right-container-blackout {
+        background-color: black;
+        width: 70% !important;
+        top: 40px;
+        height: calc(100% - 40px) !important;
+        opacity: 0.3;
+        position: absolute;
+        left: 0;
+        z-index: 99999;
+    }
+
+    @media only screen and (max-width: 768px) {
+        #e-pv-smartfill-text {
+            height: 3%;
+        }
+        #e-pv-smartfill-left-container .e-toolbar .e-toolbar-item .e-tbar-btn .e-tbar-btn-text {
+            display: none;
+        }
+    }
+    @media (max-width: 450px) {
+        #e-pv-smartfill-parent-container {
+            flex-direction: column;
+            position: absolute;
+        }
+        #e-pv-smartfill-text {
+            height: 3%;
+        }
+
+        #e-pv-smartfill-left-container .e-toolbar .e-toolbar-item .e-tbar-btn .e-tbar-btn-text {
+            display: none;
+        }
+        #e-pv-smartfill-right-container .e-spinner-pane {
+            left: 35%;
+        }
+        #e-pv-smartfill-right-container {
+            width: 75% !important;
+            height: calc(100% - 80px) !important;
+            z-index: 101;
+            position: absolute;
+            top: 80px;
+            right: 0 !important;
+            background-color: #fff;
+        }
+        #e-pv-smartfill-right-container-blackout {
+            background-color: black;
+            width: 25% !important;
+            top: 80px;
+            height: calc(100% - 80px) !important;
+            opacity: 0.3;
+            position: absolute;
+            right: 0;
+            z-index: 101;
+        }
+    }
+</style>

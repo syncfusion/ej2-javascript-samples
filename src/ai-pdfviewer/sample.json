@@ -1,0 +1,37 @@
+{
+    "name": "PDF Viewer",
+    "directory": "ai-pdfviewer",
+    "category": "Smart AI Solutions",
+    "samples": [
+        {
+            "url": "smartfill",
+            "name": "Smart Fill",
+            "category": "PDF Viewer",
+            "sourceFiles": [
+                { "displayName": "smartfill.js", "path": "src/ai-pdfviewer/smartfill.js" },
+                { "displayName": "smartfill.html", "path": "src/ai-pdfviewer/ai-smartfill.html" }
+            ],
+            "description": "This demo showcases the PDF Viewer AI feature."
+        },
+        {
+            "url": "smartredact",
+            "name": "Smart Redact",
+            "category": "PDF Viewer",
+            "sourceFiles": [
+                { "displayName": "smartredact.js", "path": "src/ai-pdfviewer/smartredact.js" },
+                { "displayName": "smartredact.html", "path": "src/ai-pdfviewer/ai-smartredact.html" }
+            ],
+            "description": "This demo showcases the PDF Viewer AI feature."
+        },
+        {
+            "url": "summarizer",
+            "name": "Summarizer",
+            "category": "PDF Viewer",
+            "sourceFiles": [
+                { "displayName": "summarizer.js", "path": "src/ai-pdfviewer/summarizer.js" },
+                { "displayName": "summarizer.html", "path": "src/ai-pdfviewer/ai-summarizer.html" }
+            ],
+            "description": "This demo showcases the PDF Viewer AI feature."
+        }
+    ]
+}

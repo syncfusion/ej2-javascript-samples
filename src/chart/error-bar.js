@@ -7,7 +7,7 @@ this.default = function () {
         //Initializing Primary X Axis
         primaryXAxis: {
             valueType: 'Category', interval: 1, majorGridLines: { width: 0 },
-            labelIntersectAction: ej.base.Browser.isDevice ? "None" : "Trim",
+            labelIntersectAction: ej.base.Browser.isDevice ? "None" : "Rotate45",
             labelRotation: ej.base.Browser.isDevice ? -45 : 0
         },
         chartArea: {
@@ -47,9 +47,9 @@ this.default = function () {
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         load: function (args) {
             var errorBarTheme = location.hash.split('/')[1];
-            errorBarTheme = errorBarTheme ? errorBarTheme : 'Material';
+            errorBarTheme = errorBarTheme ? errorBarTheme : 'Fluent2';
             args.chart.theme = (errorBarTheme.charAt(0).toUpperCase() +
-                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                errorBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             if (errorBarTheme === 'bootstrap5' || errorBarTheme === 'fluent') {
                 chart.series[0].fill = '#81CCBB';
                 chart.highlightColor = '#C7E9B6';

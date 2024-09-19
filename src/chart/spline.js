@@ -43,8 +43,9 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7,
+                    isFilled:true
                 },
                 yName: 'y', name: 'Max Temp',
             },
@@ -59,8 +60,9 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7,
+                    isFilled:true
                 },
                 yName: 'y', name: 'Avg Temp',
             },
@@ -75,8 +77,9 @@ this.default = function () {
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
-                    width: 10,
-                    height: 10
+                    width: 7,
+                    height: 7,
+                    isFilled:true
                 },
                 yName: 'y', name: 'Min Temp',
             }
@@ -89,9 +92,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var splineTheme = location.hash.split('/')[1];
-            splineTheme = splineTheme ? splineTheme : 'Material';
+            splineTheme = splineTheme ? splineTheme : 'Fluent2';
             args.chart.theme = (splineTheme.charAt(0).toUpperCase() + 
-                splineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                splineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

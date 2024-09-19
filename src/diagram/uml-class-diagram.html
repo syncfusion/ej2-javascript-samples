@@ -1,18 +1,18 @@
 <div class="control-section">
   <link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
   <style>
-
-    .sb-mobile-palette {
+    /* These styles are used for aligning palette and diagram */
+    .diagram-umlclass .sb-mobile-palette {
         width: 250px;
         height: 559px;
         float: left;
     }
 
-    .sb-mobile-palette-bar {
+    .diagram-umlclass .sb-mobile-palette-bar {
         display: none;
     }
 
-    .sb-mobile-diagram {
+    .diagram-umlclass .sb-mobile-diagram {
         width: calc(99% - 242px);
         height: 559px;
         float: left;
@@ -21,7 +21,7 @@
     }
 
     @media (max-width: 550px) {
-        .sb-mobile-palette {
+        .diagram-umlclass .sb-mobile-palette {
             z-index: 19;
             position: absolute;
             display: none;
@@ -29,13 +29,13 @@
             width: 39%;
             height: 100%;
         }
-        .sb-mobile-diagram {
+        .diagram-umlclass .sb-mobile-diagram {
             width: 60%;
             height: 100%;
             float: left;
             left: 0px;
         }
-        .sb-mobile-palette-bar {
+        .diagram-umlclass .sb-mobile-palette-bar {
             display: block;
             width: 100%;
             background: #fafafa;
@@ -43,19 +43,19 @@
             border: 0.5px solid #e0e0e0;
             min-height: 40px;
         }
-        #palette-icon {
+        .diagram-umlclass #palette-icon {
             font-size: 20px;
         }
     }
 
-    .sb-mobile-palette-open {
+    .diagram-umlclass .sb-mobile-palette-open {
         position: absolute;
         display: block;
         right: 15px;
     }
 
 </style>
-  <div id="swimlaneDiagram" style="width: 100%;">
+  <div id="umlclassDiagram" style="width: 100%;" class="diagram-umlclass">
     <div class="sb-mobile-palette-bar">
         <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
     </div>

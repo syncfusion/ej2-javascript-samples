@@ -52,9 +52,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var stepTheme = location.hash.split('/')[1];
-            stepTheme = stepTheme ? stepTheme : 'Material';
+            stepTheme = stepTheme ? stepTheme : 'Fluent2';
             args.chart.theme = (stepTheme.charAt(0).toUpperCase() + 
-                stepTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                stepTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

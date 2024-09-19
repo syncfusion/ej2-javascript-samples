@@ -45,19 +45,19 @@ this.default = function () {
             },
         },
         splitterSettings: {
-            columnIndex: 3
+            columnIndex: 2
         },
         durationUnit: 'Hour',
         dayWorkingTime: [{ from: 0, to: 24 }],
         labelSettings: {
             rightLabel: 'TaskName',
         },
-        projectStartDate: new Date('07/16/1969 01:00:00 AM'),
-        projectEndDate: new Date('07/25/1969'),
+        projectStartDate: new Date('07/16/2024 01:00:00 AM'),
+        projectEndDate: new Date('07/25/2024'),
         actionComplete: function (args) {
             if (args.requestType == "filterafteropen" && (args.columnName === "StartDate" || args.columnName === "EndDate") && ganttChart.filterSettings.type === "Menu") {
-                args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].min = new Date(1969, 5, 1);
-                args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].max = new Date(1969, 8, 30);
+                args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].min = new Date(2024, 5, 1);
+                args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].max = new Date(2024, 8, 30);
                 args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].showTodayButton = false;
                 args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].dataBind();
             }

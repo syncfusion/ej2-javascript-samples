@@ -2,8 +2,8 @@ this.default = function () {
     // custom code start
     var sparkload = function(args) {
         var customtheme = location.hash.split('/')[1];
-        customtheme = customtheme ? customtheme : 'Material';
-        args.sparkline.theme = (customtheme.charAt(0).toUpperCase() + customtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        customtheme = customtheme ? customtheme : 'Fluent2';
+        args.sparkline.theme = (customtheme.charAt(0).toUpperCase() + customtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     };
     // custom code end
     var percentage = new ej.charts.Sparkline({

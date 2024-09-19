@@ -93,7 +93,7 @@ this.default = function () {
             var cellSelectionTheme = location.hash.split('/')[1];
             cellSelectionTheme = cellSelectionTheme ? cellSelectionTheme : 'Material';
             args.heatmap.theme = (cellSelectionTheme.charAt(0).toUpperCase() +
-            cellSelectionTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            cellSelectionTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
          cellSelected: function(args) {
@@ -158,7 +158,8 @@ this.default = function () {
         // custom code start
         var selectedTheme = location.hash.split('/')[1];
         selectedTheme = selectedTheme ? selectedTheme : 'Material';
-        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
+            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         // custom code end
     }
     });

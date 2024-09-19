@@ -4,10 +4,10 @@ this.default = function () {
 
   var progressLoad = function (args) {
       var linearTheme = location.hash.split('/')[1];
-      linearTheme = linearTheme ? linearTheme : 'Material';
+      linearTheme = linearTheme ? linearTheme : 'Fluent2';
       args.progressBar.theme = (linearTheme.charAt(0).toUpperCase() +
-          linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark') {
+          linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+      if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark' || args.progressBar.theme === 'Fluent2HighContrast') {
           for (var i = 0; i < div.length; i++) {
               div[i].setAttribute('style', 'color:white');
           }
@@ -40,6 +40,8 @@ this.default = function () {
         args.progressBar.secondaryProgressColor = '#b1afe9';
       } else if (linearTheme === 'fluent2') {
         args.progressBar.secondaryProgressColor = '#0F6CBD';
+      } else if (linearTheme === 'fluent2-highcontrast') {
+        args.progressBar.secondaryProgressColor = '#1AEBFF';
       } else if (linearTheme === 'fluent2-dark') {
         args.progressBar.secondaryProgressColor = '#115EA3';
       }

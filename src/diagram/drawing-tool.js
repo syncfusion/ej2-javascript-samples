@@ -1,84 +1,63 @@
+/*jslint esversion: 6 */
 /**
  * Drawing tools sample
  */
-ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.Snapping);
-var diagram;
-var checkBoxObj;
+const { Diagram, UndoRedo, Snapping, DiagramTools, SnapConstraints } = ej.diagrams;
+Diagram.Inject(UndoRedo, Snapping);
 
-function documentClick(args) {
-    var target = args.target;
-    // custom code start
-    var selectedElement = document.getElementsByClassName('e-selected-style');
-    if (selectedElement.length && target.id !== '' && target.id !== 'checked') {
-        selectedElement[0].classList.remove('e-selected-style');
-    }
-    // custom code end
-    var drawingObject = null;
-    if (target.className === 'image-pattern-style') {
-        switch (target.id) {
-            case 'shape1':
-                drawingObject = { shape: { type: 'Basic', shape: 'Rectangle' } };
-                break;
-            case 'shape2':
-                drawingObject = { shape: { type: 'Basic', shape: 'Ellipse' } };
-                break;
-            case 'shape3':
-                drawingObject = { shape: { type: 'Basic', shape: 'Hexagon' } };
-                break;
-            case 'shape4':
-                drawingObject = { shape: { type: 'Basic', shape: 'Pentagon' } };
-                break;
-            case 'shape5':
-                drawingObject = { shape: { type: 'Basic', shape: 'Triangle' } };
-                break;
-            case 'straight':
-                drawingObject = { type: 'Straight' };
-                break;
-            case 'ortho':
-                drawingObject = { type: 'Orthogonal' };
-                break;
-            case 'cubic':
-                drawingObject = { type: 'Bezier' };
-                break;
-            case 'freehand':
-                drawingObject = { type: 'Freehand' };
-                break;
-            case 'path':
-                drawingObject = {
-                    shape: {
-                        type: 'Path',
-                        data: 'M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,' +
-                            '179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z'
-                    }
-                };
-                break;
-            case 'image':
-                drawingObject = { shape: { type: 'Image', source: './src/diagram/employees/image16.png' } };
-                break;
-            case 'svg':
-                drawingObject = { shape: { type: 'Native', content: getPath() } };
-                break;
-            case 'text':
-                drawingObject = { shape: { type: 'Text' } };
-                break;
+let diagram;
+let checkBoxObj;
+
+// Mapping of shape IDs to drawing objects
+const shapeMapping = {
+    'shape1': { shape: { type: 'Basic', shape: 'Rectangle' } },
+    'shape2': { shape: { type: 'Basic', shape: 'Ellipse' } },
+    'shape3': { shape: { type: 'Basic', shape: 'Hexagon' } },
+    'shape4': { shape: { type: 'Basic', shape: 'Pentagon' } },
+    'shape5': { shape: { type: 'Basic', shape: 'Triangle' } },
+    'straight': { type: 'Straight' },
+    'ortho': { type: 'Orthogonal' },
+    'cubic': { type: 'Bezier' },
+    'freehand': { type: 'Freehand' },
+    'path': {
+        shape: {
+            type: 'Path',
+            data: 'M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,' +
+                '179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z'
         }
-        if (drawingObject) {
-            diagram.drawingObject = drawingObject;
-            diagram.tool = checkBoxObj.checked ? ej.diagrams.DiagramTools.ContinuousDraw : ej.diagrams.DiagramTools.DrawOnce;
-            diagram.dataBind();
-            // custom code start
-            target.classList.add('e-selected-style');
-            // custom code end
-        }
+    },
+    'image': { shape: { type: 'Image', source: './src/diagram/employees/image16.png' } },
+    'svg': { shape: { type: 'Native', content: getPath() } },
+    'text': { shape: { type: 'Text' } }
+};
+
+// Function to handle document click events
+function documentClick(event) {
+    const target = event.target;
+    handleSelection(target);
+
+    const drawingObject = shapeMapping[target.id];
+    if (drawingObject) {
+        diagram.drawingObject = drawingObject;
+        diagram.tool = checkBoxObj.checked ? DiagramTools.ContinuousDraw : DiagramTools.DrawOnce;
+        diagram.dataBind();
     }
 }
 
-function onChange(args) {
-    diagram.tool = args.checked ? ej.diagrams.DiagramTools.ContinuousDraw : ej.diagrams.DiagramTools.DrawOnce;
+// Function to handle selection and deselection of elements
+function handleSelection(target) {
+    const selectedElement = document.querySelector('.e-selected-style');
+    if (selectedElement && target.id !== '' && target.id !== 'checked') {
+        selectedElement.classList.remove('e-selected-style');
+    }
+    if (target.classList.contains('image-pattern-style')) {
+        target.classList.add('e-selected-style');
+    }
 }
-// custom code start
+
+// Function to get SVG path
 function getPath() {
-    var str = '<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="350.000000pt" ' +
+    return '<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="350.000000pt" ' +
         'height="229.000000pt" viewBox="0 0 350.000000 229.000000" ' +
         'preserveAspectRatio="xMidYMid meet"> <metadata>' +
         ' Created by potrace 1.11, written by Peter Selinger 2001-2013' +
@@ -98,35 +77,41 @@ function getPath() {
         ' -39 -104 -83 -220 l-80 -211 -37 0 c-35 0 -37 2 -56 53 -11 28 -48 124 -81 ' +
         '211 -34 87 -61 163 -61 168 0 5 14 8 32 6 31 -3 32 -5 98 -182z" />' +
         '</g> </svg>';
-    return str;
 }
-// custom code end
 
-
+// Initialize diagram and checkbox
 this.default = function () {
-    var interval = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
-    var gridlines = { lineColor: '#e0e0e0', lineIntervals: interval };
-    var snapSettings = {
+    const interval = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
+    const gridlines = { lineColor: '#e0e0e0', lineIntervals: interval };
+    const snapSettings = {
         snapObjectDistance: 5,
-        constraints: (ej.diagrams.SnapConstraints.SnapToObject | ej.diagrams.SnapConstraints.SnapToLines) | ej.diagrams.SnapConstraints.ShowLines,
+        constraints: (SnapConstraints.SnapToObject | SnapConstraints.SnapToLines) | SnapConstraints.ShowLines,
         horizontalGridlines: gridlines, verticalGridlines: gridlines
     };
-    //Initializes diagram control
-    diagram = new ej.diagrams.Diagram({
+
+    // Initialize diagram control
+    diagram = new Diagram({
         width: '100%', height: '540px', snapSettings: snapSettings,
         rulerSettings: {
             showRulers: true, dynamicGrid: true
         },
-        created: function (obj) {
-            diagram.drawingObject = { shape: { type: 'Basic', shape: 'Rectangle' } };
-            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+        created: (obj) => {
+            diagram.drawingObject = shapeMapping.shape1; // Initial shape
+            diagram.tool = DiagramTools.ContinuousDraw; // Continuous draw by default
             diagram.dataBind();
         }
     });
     diagram.appendTo('#diagram');
-    //Initializes the check box inorder to enable Continuous draw
+
+    // Initialize checkbox for Continuous Draw
     checkBoxObj = new ej.buttons.CheckBox({ label: 'Continuous Draw', checked: true, change: onChange });
     checkBoxObj.appendTo('#checked');
-    //Click Event used to decide the drawing object.
-    document.getElementById('appearance').onclick = documentClick;
+
+    // Click event used to determine the drawing object
+    document.getElementById('appearance').addEventListener('click', documentClick);
 };
+
+// Function to handle change event of checkbox
+function onChange(args) {
+    diagram.tool = args.checked ? DiagramTools.ContinuousDraw : DiagramTools.DrawOnce;
+}

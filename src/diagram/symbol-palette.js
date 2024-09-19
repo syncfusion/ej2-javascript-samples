@@ -1,14 +1,13 @@
 /**
  * Default symbol palette sample
  */
-ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
-//enable or disable the header icon for Symbol palette.
 var palette;
 var animation;
 var expand;
 var size;
 var headericon;
 var itemtext;
+//Enable or disable the headerIcon for symbol palette headers
 function onHeaderIconChange(args) {
     for (var i = 0; i < palette.palettes.length; i++) {
         if (args.checked) {
@@ -24,11 +23,11 @@ function onHeaderIconChange(args) {
         }
     }
 }
-
+//Enable or disable the animation for symbol palette
 function onAnimationChange(args) {
     palette.enableAnimation = args.checked;
 }
-
+//Enable or disable the Text for Symbol palette item.
 function onItemTextChange(args) {
     if (args.checked) {
         palette.getSymbolInfo = function (symbol) {
@@ -57,6 +56,7 @@ this.default = function () {
         { id: 'directdata', shape: { type: 'Flow', shape: 'DirectData' } },
         { id: 'sequentialdata', shape: { type: 'Flow', shape: 'SequentialData' } },
     ];
+    //Initialize the basicshapes for the symbol palatte
     var basicShapes = [
         { id: 'Rectangle', shape: { type: 'Basic', shape: 'Rectangle' } },
         { id: 'Ellipse', shape: { type: 'Basic', shape: 'Ellipse' } },
@@ -71,23 +71,21 @@ this.default = function () {
     var connectorSymbols = [
         {
             id: 'Link1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: {  style:{ fill: '#757575', strokeColor: '#757575'}, shape: 'Arrow' }, style: { strokeWidth: 2, strokeColor: '#757575' }
         },
         {
             id: 'link3', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'None' }, style: { strokeColor: '#757575', strokeWidth: 2 },
+            targetDecorator: { shape: 'None' }
         },
         {
             id: 'Link21', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 2, strokeColor: '#757575' }
         },
         {
             id: 'link23', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
         {
             id: 'link33', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-            style: { strokeWidth: 2, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
     ];
     //Initializes the symbol palette
@@ -99,7 +97,7 @@ this.default = function () {
             { id: 'connectors', expanded: true, symbols: connectorSymbols, iconCss: 'e-ddb-icons e-connector', title: 'Connectors' }
         ], enableAnimation: true,
         width: '100%', height: '500px', symbolHeight: 80, symbolWidth: 80,
-        //set Node default value
+        //Set Node default value
         getNodeDefaults: function (symbol) {
             if (symbol.id === 'terminator' || symbol.id === 'process') {
                 symbol.width = 80;
@@ -111,6 +109,13 @@ this.default = function () {
                 symbol.height = 40;
             }
             symbol.style = { strokeWidth: 2, strokeColor: '#757575' };
+        },
+        //Set connector default value
+        getConnectorDefaults: function (symbol) {
+            symbol.style.strokeWidth = 2;
+            symbol.style.strokeColor = '#757575';
+            symbol.targetDecorator.style.strokeColor = '#757575';
+            symbol.targetDecorator.style.fill = '#757575';
         },
         getSymbolInfo: function (symbol) {
             return { fit: true };
@@ -136,7 +141,7 @@ this.default = function () {
     expand.appendTo('#expand');
     //NumericTextBox is used to apply the size of the Symbol.
     size = new ej.inputs.NumericTextBox({
-        value: 80, min: 40,
+        value: 80, min: 60,
         max: 100, width: 120,
         step: 5,
         format: '##.##',
@@ -152,6 +157,7 @@ this.default = function () {
         change: onItemTextChange
     });
     itemtext.appendTo('#itemtext');
+    //Checkbox to enable or disable symbol palette header icons.
     headericon = new ej.buttons.CheckBox({
         checked: true,
         change: onHeaderIconChange

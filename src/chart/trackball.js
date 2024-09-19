@@ -28,9 +28,10 @@ this.default = function () {
         primaryXAxis: {
             valueType: 'DateTime',
             labelFormat: 'yyyy',
-            intervalType: 'Years',
             majorGridLines: { width: 0 },
-            edgeLabelPlacement: 'Shift'
+            edgeLabelPlacement: 'Shift',
+            minimum: new Date(2000, 1, 1), maximum: new Date(2006, 2, 11),
+            skeleton: 'y'
         },
         //Initializing Primary Y Axis
         primaryYAxis: {
@@ -84,8 +85,8 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             args.chart.width = ej.base.Browser.isDevice ? '100%' : '75%';
         }
            // custom code end

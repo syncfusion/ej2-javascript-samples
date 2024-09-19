@@ -1,18 +1,18 @@
-var instance = new ej.base.Internationalization();
 this.default = function () {
     var grid = new ej.grids.Grid({
-        dataSource: window.employeeData,
+        dataSource: window.pizzaData,
         rowTemplate: '#rowtemplate',
         height: 335,
         width: 'auto',
         columns: [
-            { headerText: 'Employee Image', width: 150, textAlign: 'Center', field: 'OrderID' },
-            { headerText: 'Employee Details', width: 300, field: 'EmployeeID', textAlign: 'Left' }
+            { headerText: 'PIZZA MENU', headerTextAlign: 'Center', field: 'Title', customAttributes: { class: 'e-pizza-cell' } },
         ]
     });
     grid.appendTo('#Grid');
 
-window.format = function (value) {
-    return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
-};
+    window.chiptags = function (tags) {
+        var chipElement = document.createElement('div');
+        var chipList = new ej.buttons.ChipList({ chips: tags, cssClass: 'e-outline' }, chipElement);
+        return chipList.element.outerHTML;
+    };
 };

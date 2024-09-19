@@ -1,5 +1,7 @@
+// Inject necessary dependencies for the diagram
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.DiagramContextMenu, ej.diagrams.Snapping);
 
+// Function to define default properties for symbols in the diagram
 function getSymbolDefaults(symbol) {
     symbol.width = 50;
     symbol.height = 50;
@@ -7,112 +9,141 @@ function getSymbolDefaults(symbol) {
     symbol.style.strokeColor = '#757575';
 }
 
+// Event handler for symbol info event
 function getSymbolInfo(symbol) {
     return { fit: true };
 }
 
+// Event handler for drag enter event
 function dragEnter(args) {
     getEventDetails(args);
 }
 
+// Event handler for drag leave event
 function dragLeave(args) {
     getEventDetails(args);
 }
 
+// Event handler for drag over event
 function dragOver(args) {
     if (args.target) {
         getEventDetails(args);
     }
 }
 
+// Event handler for click event
 function click(args) {
     getEventDetails(args);
 }
 
+// Event handler for history change event
 function historyChange(args) {
     getEventDetails(args);
 }
 
+// Event handler for double click event
 function doubleClick(args) {
     getEventDetails(args);
 }
 
+// Event handler for text edit event
 function textEdit(args) {
     getEventDetails(args);
 }
 
+// Event handler for scroll change event
 function scrollChange(args) {
     getEventDetails(args);
 }
 
+// Event handler for selection change event
 function selectionChange(args) {
     getEventDetails(args);
 }
 
+// Event handler for size change event
 function sizeChange(args) {
+     // Check if the state is completed and get event details
     if (args.state === 'Completed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for connection change event
 function connectionChange(args) {
+     // Check if the state is changed and get event details
     if (args.state === 'Changed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for source point change event
 function sourcePointChange(args) {
+     // Check if the state is completed and get event details
     if (args.state === 'Completed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for target point change event
 function targetPointChange(args) {
+    // Check if the state is completed and get event details
     if (args.state === 'Completed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for property change event
 function propertyChange(args) {
     getEventDetails(args);
 }
 
+// Event handler for position change event
 function positionChange(args) {
     if (args.state === 'Completed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for rotate change event
 function rotateChange(args) {
+    // Check if the state is completed and get event details
     if (args.state === 'Completed') {
         getEventDetails(args);
     }
 }
 
+// Event handler for collection change event
 function collectionChange(args) {
     getEventDetails(args);
 }
 
+// Event handler for mouse enter event
 function mouseEnter(args) {
     getEventDetails(args);
 }
 
+// Event handler for mouse leave event
 function mouseLeave(args) {
     getEventDetails(args);
 }
 
+// Event handler for mouse over event
 function mouseOver(args) {
     getEventDetails(args);
 }
 
+// Event handler for context menu open event
 function contextMenuOpen(args) {
     getEventDetails(args);
 }
 
+// Event handler for context menu before item render event
 function contextMenuBeforeItemRender(args) {
     getEventDetails(args);
 }
 
+// Event handler for context menu click event
 function contextMenuClick(args) {
     getEventDetails(args);
 }
@@ -120,6 +151,7 @@ function contextMenuClick(args) {
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
 
+     // Define data for the ListView
     var data = [
         { text: 'Drag enter', id: 'dragEnter' },
         { text: 'Drag leave', id: 'dragLeave' },
@@ -159,7 +191,7 @@ this.default = function () {
 
     //Render initialized button component
     var button = new ej.buttons.Button();
-    button.appendTo('#clearbtn');
+    button.appendTo('#clearButton');
 
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
@@ -216,23 +248,23 @@ this.default = function () {
     var connectorSymbols = [
         {
             id: 'connector1', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
         },
         {
             id: 'connector2', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
         {
             id: 'connector3', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }, style: { strokeWidth: 1, strokeColor: '#757575' }
+            targetDecorator: { shape: 'Arrow', style:{strokeColor: '#757575', fill: '#757575'} }
         },
         {
             id: 'connector4', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
         {
             id: 'connector5', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-            style: { strokeWidth: 1, strokeColor: '#757575' }, targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
     ];
 
@@ -246,11 +278,16 @@ this.default = function () {
         expandMode: 'Multiple', palettes: palettes,
         width: '100%', height: '700px', symbolHeight: 60, symbolWidth: 60,
         symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 },
-        getNodeDefaults: getSymbolDefaults, getSymbolInfo: getSymbolInfo
+        getNodeDefaults: getSymbolDefaults, getSymbolInfo: getSymbolInfo,
+         //Sets the default values of a Connectors
+        getConnectorDefaults: function (connector) {
+            connector.style = { strokeWidth: 1 , strokeColor: '#757575' };
+        },
     });
     palette.appendTo('#symbolpalette');
 
-    document.getElementById('clearbtn').onclick = function (args) {
+     // Event handler for clearing the event log
+    document.getElementById('clearButton').onclick = function (args) {
         var data = document.getElementById("EventLog");
         for (var i = data.childNodes.length - 1; i >= 0; i--) {
             data.removeChild(data.childNodes[i]);
@@ -258,6 +295,7 @@ this.default = function () {
     };
 };
 
+// Function to get event details based on selected items
 function getEventDetails(args) {
     var listView = document.getElementById("listview-def");
     var listViewComponent = listView.ej2_instances[0];
@@ -270,6 +308,7 @@ function getEventDetails(args) {
     }
 }
 
+// Function to check if the event name matches any selected item
 function getName(selectedItems, args) {
     for (var i = 0; i < selectedItems.data.length; i++) {
         var eventName = selectedItems.data[i].id;
@@ -280,11 +319,13 @@ function getName(selectedItems, args) {
     return false;
 }
 
+// Function to clear the event log
 function clearEventLog() {
     var data = document.getElementById('EventLog');
     data.innerHTML = '';
 }
 
+// Function to display event information in the event log
 function eventInformation(args) {
     var span = document.createElement('span');
     span.innerHTML = 'Diagram ' + args.name.bold() + ' event called' + '<hr>';

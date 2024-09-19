@@ -2,22 +2,23 @@
 this.default = function () {
 
     var columns = [
-        { field: 'Eimg', header: 'Employee ID', width: 120 },
-        { field: 'Name', header: 'Employee Name', width: 160 },
-        { field: 'Designation', width: 150, header: 'Designation' },
-        { field: 'Country', header: 'Country', width: 100 }
+        { field: 'Title', header: 'Title', width: 200 },
+        { field: 'Author', header: 'Author', width: 150 },
+        { field: 'Genre', header: 'Genre', width: 100 },
+        { field: 'PublishedYear', header: 'Published Year', width: 125 },     
+        { field: 'Price', header: 'Price', width: 80 }
     ];
 
     // Initialize multicolumn ComboBox component
     var multicolumnObj = new ej.multicolumncombobox.MultiColumnComboBox({
         //set the local data to dataSource property
-        dataSource: window.ddEmployeesList,
+        dataSource: window.bookDetails,
          //set column of the multicolumn combobox
         columns: columns,
         //set the fields of the multicolumn combobox
-        fields: { text: 'Name', value: 'Designation' },
+        fields: { text: 'Title', value: 'Author' },
         //set the placeholder to multicolumn combobox input element
-        placeholder: 'Select an employee',
+        placeholder: 'Select a title',
         // set the height of the popup element
         popupHeight: '230px',
         // set enableRtl tru to enable rtl

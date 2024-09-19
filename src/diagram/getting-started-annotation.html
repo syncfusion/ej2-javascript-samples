@@ -23,7 +23,7 @@
                     pointer-events: none;
                 }
             
-                .column-style {
+                .diagram-property-tab .column-style {
                     display: table;
                     height: 35px;
                     padding-right: 4px;
@@ -31,25 +31,25 @@
                     width: calc((100% - 12px) / 3);
                 }
             
-                .row {
+                .diagram-property-tab .row {
                     margin-left: 0px;
                     margin-right: 0px;
                 }
             
-                .row-header {
+                .diagram-property-tab .row-header {
                     font-size: 15px;
                     font-weight: 500;
+                }
+
+                .diagram-property-tab .col-xs-6 {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 5px;
                 }
                 /* Selection indicator */
                 .e-selected-style {
                     border-color: #006CE6;
                     border-width: 2px;
-                }
-            
-                .col-xs-6 {
-                    padding-left: 0px;
-                    padding-right: 0px;
-                    padding-top: 5px;
                 }
             
                 .property-section .e-remove-selection {
@@ -65,7 +65,6 @@
             
                 .e-ddb-icons {
                     font-family: 'e-ddb-icons';
-                    speak: none;
                     font-size: 55px;
                     font-style: normal;
                     font-weight: normal;
@@ -92,7 +91,7 @@
         <div id="diagram"></div>
     </div>
 </div>
-<div class="col-lg-4 property-section">
+<div class="col-lg-4 property-section diagram-property-tab">
     <div class="property-panel-header">
         Properties
     </div>
@@ -108,15 +107,15 @@
                         </div>
                         <div class="image-pattern-style" id="right" style="background-image: url(./src/diagram/Images/annotation/Annotation_2.png); margin: 0px 4px">
                         </div>
-                        <div class="image-pattern-style" id="bottoml" style="background-image: url(./src/diagram/Images/annotation/Annotation_3.png);margin-left: 4px">
+                        <div class="image-pattern-style" id="bottomLeft" style="background-image: url(./src/diagram/Images/annotation/Annotation_3.png);margin-left: 4px">
                         </div>
                     </div>
                     <div class="row" style="padding-top: 8px">
-                        <div class="image-pattern-style" id="bottomr" style="background-image: url(./src/diagram/Images/annotation/Annotation_4.png); margin-right: 4px">
+                        <div class="image-pattern-style" id="bottomRight" style="background-image: url(./src/diagram/Images/annotation/Annotation_4.png); margin-right: 4px">
                         </div>
                         <div class="image-pattern-style" id="center" style="background-image: url(./src/diagram/Images/annotation/Annotation_5.png); margin: 0px 4px">
                         </div>
-                        <div class="image-pattern-style" id="bottomcenter_top" style="background-image: url(./src/diagram/Images/annotation/Annotation_6.png);margin-left: 4px">
+                        <div class="image-pattern-style" id="bottomCenter" style="background-image: url(./src/diagram/Images/annotation/Annotation_6.png);margin-left: 4px">
                         </div>
                     </div>
                 </div>

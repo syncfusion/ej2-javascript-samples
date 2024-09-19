@@ -5,10 +5,10 @@ this.default = function () {
     var maps = new ej.maps.Maps({
         // custom code start
         load: function (args) {
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.maps.theme = (selectedTheme.charAt(0).toUpperCase() +
-            selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var sampleTheme = location.hash.split('/')[1];
+            sampleTheme = sampleTheme ? sampleTheme : 'Material';
+            args.maps.theme = (sampleTheme.charAt(0).toUpperCase() +
+                sampleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

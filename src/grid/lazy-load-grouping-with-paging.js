@@ -4,10 +4,10 @@ this.default = function () {
     var grid = new ej.grids.Grid({
         dataSource: window.lazyLoadData,
         allowPaging: true,
-        height: 400,
         allowSorting: true,
         allowGrouping: true,
         groupSettings: { enableLazyLoading: true, columns: ['ProductName', 'CustomerName'] },
+        height: 400,
         columns: [
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
             { field: 'ProductName', headerText: 'Product Name', width: 160 },

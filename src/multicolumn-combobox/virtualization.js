@@ -21,11 +21,11 @@ this.default = function () {
     };
 
     var columns = [
-        { field: 'TaskID', header: 'Task ID', width: 100 },
-        { field: 'Engineer', header: 'Engineer', width: 140 },
-        { field: 'Designation', header: 'Designation', width: 130 },
-        { field: 'Estimation', header: 'Estimation', width: 120 },
-        { field: 'Status', header: 'Status', width: 120,}
+        { field: 'TaskID', header: 'Task ID', width: 70 },
+        { field: 'Engineer', header: 'Engineer', width: 100 },
+        { field: 'Designation', header: 'Designation', width: 100 },
+        { field: 'Estimation', header: 'Estimation', width: 90 },
+        { field: 'Status', header: 'Status', width: 90,}
     ];
 
     // Initialize multicolumn ComboBox component

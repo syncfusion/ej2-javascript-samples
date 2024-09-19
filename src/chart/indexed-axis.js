@@ -55,9 +55,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var indexedTheme = location.hash.split('/')[1];
-            indexedTheme = indexedTheme ? indexedTheme : 'Material';
+            indexedTheme = indexedTheme ? indexedTheme : 'Fluent2';
             args.chart.theme = (indexedTheme.charAt(0).toUpperCase() +
-                indexedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                indexedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

@@ -2,18 +2,16 @@
  * virtualization sample
  */
 // tslint:disable-next-line:max-func-body-length
-ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.ComplexHierarchicalTree);
 var bound = new ej.diagrams.Rect(100, 100, 500, 100);
 var diagram;
+// Handles the click event for the context menu items.
 function onClick(args) {
     switch (args.item.tooltipText) {
         case 'ZoomIn':
-            var zoomin = { type: 'ZoomIn', zoomFactor: 0.2 };
-            diagram.zoomTo(zoomin);
+            diagram.zoomTo({ type: 'ZoomIn', zoomFactor: 0.2 });
             break;
         case 'ZoomOut':
-            var zoomout = { type: 'ZoomOut', zoomFactor: 0.2 };
-            diagram.zoomTo(zoomout);
+            diagram.zoomTo({ type: 'ZoomOut', zoomFactor: 0.2 });
             break;
         case 'Reset':
             diagram.reset();
@@ -21,17 +19,18 @@ function onClick(args) {
             break;
     }
 }
+// Generates virtualized data for the diagram based on the provided window.virtualizationData.
 function dataVirtualization() {
-    var i = 0, j, k, name, parentName;
+    var i = 0;
     var data = [];
-    parentName = window.virtualizationData[0].Name;
+    var parentName = window.virtualizationData[0].Name;
     data.push({ 'Name': parentName, 'Parent': "" });
     i++;
-    for (j = 1; j < 100; j++) {
-        name = window.virtualizationData[i].Name;
+    for (var j = 1; j < 100; j++) {
+        var name = window.virtualizationData[i].Name;
         data.push({ 'Name': name, 'Parent': parentName });
         i++;
-        for (k = 0; k < 2; k++) {
+        for (var k = 0; k < 2; k++) {
             data.push({ 'Name': window.virtualizationData[i].Name, 'Parent': name });
             i++;
         }
@@ -52,14 +51,14 @@ this.default = function () {
             orientation: 'TopToBottom',
         },
         //Sets the default values of nodes
-        getNodeDefaults: function (obj) {
-            obj.shape = { type: 'Text', content: obj.data.Name, shape: 'Rectangle', cornerRadius: 5 };
-            obj.style = { fill: '#659be5', strokeColor: 'none', color: 'white', strokeWidth: 2 };
-            obj.backgroundColor = '#659be5';
-            obj.shape.margin = { left: 5, right: 5, bottom: 5, top: 5 };
-            obj.width = 80;
-            obj.height = 30;
-            return obj;
+        getNodeDefaults: function (node) {
+            node.shape = { type: 'Text', content: node.data.Name, shape: 'Rectangle', cornerRadius: 5 };
+            node.style = { fill: '#659be5', strokeColor: 'none', color: 'white', strokeWidth: 2 };
+            node.backgroundColor = '#659be5';
+            node.shape.margin = { left: 5, right: 5, bottom: 5, top: 5 };
+            node.width = 80;
+            node.height = 30;
+            return node;
         },
         //Sets the default values of connectors
         getConnectorDefaults: function (connector) {

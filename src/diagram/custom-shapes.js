@@ -1,11 +1,14 @@
+// Enable ripple effect on the window
 ej.base.enableRipple(window.ripple);
+// Inject necessary dependencies for the diagram
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.charts.Chart);/**
 
  * Getting started -  Html Node
  */
 
 // tslint:disable-next-line:max-func-body-length
-//custom code start
+// Set up initial variables and data structures required for data processing and visualization
+
 var pie;
 var grid;
 var dataSource = new ej.data.DataManager(window.expenseData);
@@ -20,9 +23,12 @@ var tempChartExpenseDS = {};
 var tempChartLineDS = {};
 var curDateTime;
 var lineD = [];
-//custom code end
+
+
+// Define predicates for filtering data based on date range
 var predicateStart = new ej.data.Predicate('DateTime', 'greaterthanorequal', window.startDate);
 var predicateEnd = new ej.data.Predicate('DateTime', 'lessthanorequal', window.endDate);
+//Compound predicate by combining predicateStart and predicateEnd
 var predicate = predicateStart.and(predicateEnd);
 this.default = function () {
 
@@ -60,6 +66,7 @@ this.default = function () {
     diagram.appendTo('#diagram');
     getTotalExpense();
     initialRender();
+    // Initialize pie chart and grid
     pie = new ej.charts.AccumulationChart({
         enableSmartLabels: true, width: '100%', height: '350px', series: getSeries(),
         legendSettings: { visible: true }, textRender: function (args) {
@@ -78,9 +85,10 @@ this.default = function () {
     });
     grid.appendTo('#grid');
 
+    // Initialize date range picker
     dateRangePickerObject = new ej.calendars.DateRangePicker({
         format: 'MM/dd/yyyy', change: onDateRangeChange, startDate: window.startDate,
-        min: new Date(2017, 05, 01), max: new Date(2017, 10, 30),
+        min: new Date(2017, 5, 1), max: new Date(2017, 10, 30),
         endDate: window.endDate, showClearButton: false, allowEdit: false,
         presets: [
             { label: 'Last Month', start: new Date('10/1/2017'), end: new Date('10/31/2017') },
@@ -91,8 +99,9 @@ this.default = function () {
     dateRangePickerObject.appendTo('#daterange');
     window.startDate = dateRangePickerObject.startDate;
     window.endDate = dateRangePickerObject.endDate;
+    
 };
-//custom code start
+//Function to get series data for the pie chart
 function getSeries() {
     var series = [
         {
@@ -108,7 +117,8 @@ function getSeries() {
     ];
     return series;
 }
-//custom code end
+
+// Function to handle date range change
 function onDateRangeChange(args) {
     window.startDate = args.startDate;
     window.endDate = args.endDate;
@@ -126,15 +136,16 @@ function onDateRangeChange(args) {
     grid.refresh();
 }
 function initialRender() {
+    //DataManager is a class provided by Syncfusion's Essential JS 2 library for data operations.
     new ej.data.DataManager(window.expenseData)
         .executeQuery(new ej.data.Query().where(predicate.and('TransactionType', 'equal', 'Expense')))
         .then(function (e) {
-            getCoulmnChartExpenseDS(e);
+            getColumnChartExpenseDS(e);
         });
     new ej.data.DataManager(window.expenseData)
         .executeQuery(new ej.data.Query().where(predicate.and('TransactionType', 'equal', 'Income')))
         .then(function (e) {
-            getCoulmnChartIncomeDS(e);
+            getColumnChartIncomeDS(e);
             columnChartObj = new ej.charts.Chart({
                 width: '100%', height: '400px',
                 primaryXAxis: { labelFormat: 'MMM', valueType: 'DateTime', intervalType: 'Months', edgeLabelPlacement: 'Shift' },
@@ -190,11 +201,18 @@ function initialRender() {
             linechartObj.appendTo('#lineChart');
         });
 }
+
+// Function to calculate total expenses and prepare data for pie chart rendering
 function getTotalExpense() {
+    //Calculate total expense
     expTotal = 0;
+    //This array will store unique expense categories extracted from the data.
     category = [];
+    //This array will store the expense data for each category.
     legendData = [];
+    //This array will store data in a format suitable for rendering the pie chart.
     var renderingData = [];
+    // Iterate through each expense item in the data
     tempData.forEach(function (item) {
         if (item.TransactionType === 'Expense' && window.startDate.valueOf() <= item.DateTime.valueOf() && window.endDate.valueOf() >= item.DateTime.valueOf()) {
             expTotal += Number(item.Amount);
@@ -204,6 +222,7 @@ function getTotalExpense() {
             }
         }
     });
+    // Iterate through each unique expense category
     category.forEach(function (str) {
         var total = 0;
         legendData.forEach(function (item) {
@@ -221,8 +240,8 @@ function getTotalExpense() {
         hiGridData = new ej.data.DataManager(JSON.parse(JSON.stringify(renderingData))).executeLocal((new ej.data.Query().sortByDesc('y').skip(9)));
     }
 }
-//custom code start
-function getCoulmnChartExpenseDS(e) {
+// Function to get data for column chart (expense) ( bar & line chart)
+function getColumnChartExpenseDS(e) {
     columnExpenseDS = [];
     tempChartExpenseDS = [];
     var result = objectAssign(e);
@@ -240,7 +259,9 @@ function getCoulmnChartExpenseDS(e) {
         columnExpenseDS.push(tempChartExpenseDS[data]);
     }
 }
-function getCoulmnChartIncomeDS(e) {
+
+// Function to get data for column chart (income)( bar & line chart)
+function getColumnChartIncomeDS(e) {
     columnIncomeDS = [];
     tempChartIncomeDS = [];
     var result = objectAssign(e);
@@ -258,6 +279,8 @@ function getCoulmnChartIncomeDS(e) {
         columnIncomeDS.push(tempChartIncomeDS[data]);
     }
 }
+
+// Function to combine objects and arrays
 function objectAssign(e) {
     var result = [];
     var obj;
@@ -267,6 +290,8 @@ function objectAssign(e) {
     }
     return result;
 }
+
+// Function to prepare data for the line chart
 function getLineChartDS() {
     lineD = [];
     lineDS = [];
@@ -287,6 +312,8 @@ function getLineChartDS() {
         }
     }
 }
+
+// Function to create legend data for the pie chart (% value in pie chart)
 function createLegendData(initiate) {
     if (pieRenderingData.length > 10) {
         pie.series[0].groupTo = groupValue.toString();
@@ -308,4 +335,3 @@ function createLegendData(initiate) {
         pieRenderData.push(data);
     }
 }
-//custom code end

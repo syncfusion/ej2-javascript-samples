@@ -35,7 +35,7 @@ this.default = function () {
     treeGridObj.appendTo('#TreeGrid');
     var dropDownColumn = new ej.dropdowns.DropDownList({
         dataSource: columnNames,
-        width: '120px',
+        width: '140px',
         fields: { text: 'name', value: 'id' },
         value: 'price',
         change: function (e) {
@@ -52,7 +52,7 @@ this.default = function () {
     dropDownColumn.appendTo('#columns');
     var dropDownFormat = new ej.dropdowns.DropDownList({
         dataSource: priceFormat,
-        width: '120px',
+        width: '140px',
         fields: { text: 'format', value: 'id' },
         value: 'c2',
         change: function (e) {

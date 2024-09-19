@@ -3,9 +3,9 @@ this.default = function () {
         // custom code start
         load: function (args) {
             var customtheme = location.hash.split('/')[1];
-            customtheme = customtheme ? customtheme : 'Material';
+            customtheme = customtheme ? customtheme : 'Fluent2';
             args.smithchart.theme = (customtheme.charAt(0).toUpperCase() +
-                customtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                customtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
         // custom code end
         horizontalAxis: {

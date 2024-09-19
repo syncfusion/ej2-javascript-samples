@@ -1,0 +1,173 @@
+<div id="action-description">
+  <p>This sample enables the design of a PDF form that accommodates signatures from two different users. The form includes distinct fields for each user: when the first user is selected, specific fields can be added that apply only to that user. Upon switching the user via the dropdown menu, new fields can be added for the second user. The fields for each user are distinguishable by different background colors.</p>
+</div>
+<div>
+  <div class="e-pv-e-sign-control control-section">
+    <div class="content-wrapper">
+      <div id="e-pv-e-sign-toolbar_template">
+      </div>
+      <div id="e-pv-e-sign-layout" style="position: relative;">
+        <div id="e-pv-e-sign-defaultSidebar_user">
+          <div class="content-wrapper" style="margin: 9px;">
+            <div style="font-weight: 500; font-size: 16px; width: 43px; height: 24px; margin: 15px 10px 5px;">
+              Fields
+            </div>
+            <div id='e-pv-e-sign-user-field' style='width: 190px; right: 4px;'>
+              <div class='e-pv-e-sign-user-dropdown' style='width: 190px;'> <input id='userMenu' width='190px'></input>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <button class="e-pv-e-sign-form-field-property" id="Signature">
+                <i class="e-icons e-signature"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Signature</span>
+              </button>
+              <button class="e-pv-e-sign-form-field-property" id="initialBtn">
+                <i class="e-icons e-font-name"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Initial</span>
+              </button>
+            </div>
+            <div style="display: flex;">
+              <button class="e-pv-e-sign-form-field-property" id="textBoxBtn">
+                <i class="e-icons e-text-form"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Textbox</span>
+              </button>
+              <button class="e-pv-e-sign-form-field-property" id="passwordBtn">
+                <i class="e-icons e-password"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Password</span>
+              </button>
+            </div>
+            <div style="display: flex;">
+              <button class="e-pv-e-sign-form-field-property" id="checkBoxBtn">
+                <i class="e-icons e-check-box"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Checkbox</span>
+              </button>
+              <button class="e-pv-e-sign-form-field-property" id="radioBtn">
+                <i class="e-icons e-radio-button"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Radio</span>
+              </button>
+            </div>
+            <div style="display: flex;">
+              <button class="e-pv-e-sign-form-field-property" id="dropDownBtn">
+                <i class="e-icons e-drop-down"></i>
+                <span style="font-size: 11px; margin-top: 6px;">Dropdown</span>
+              </button>
+              <button class="e-pv-e-sign-form-field-property" id="listBoxBtn">
+                <i class="e-icons e-list-unordered"></i>
+                <span style="font-size: 11px; margin-top: 6px;">List</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="e-pv-e-sign-pdfViewer-div">
+          <div id="pdfViewer" style="display: block"></div>
+        </div>
+        <div id="e-pv-e-sign-toolbar_template-mob"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="description">
+  <p>
+    More information on the PDF Viewer instantiation can be found in this
+    <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/getting-started">
+      documentation section</a>.
+  </p>
+</div>
+
+<style>
+  .e-pv-e-sign-control {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    padding-top: 20px;
+    margin-top: 0px !important;
+  }
+
+  .e-pv-e-sign-form-field-property {
+    width: 72px !important;
+    height: 72px !important;
+    margin: 9px;
+    border: 1px solid #C4C7C5!important;
+    border-radius: 8px;
+    display: grid;
+    font-size: 12px !important;
+    place-content: center;
+  }
+
+  #e-pv-e-sign-user-field {
+    color: #222933;
+    font-family: Heebo, open sans, 'sans-serif', -apple-system,
+      BlinkMacSystemFont;
+    display: flex;
+    position: relative;
+    padding-bottom: 3px;
+    margin: 5px 0px 20px;
+    border-radius: 4px;
+    border: 1px solid #C4C7C5;
+    z-index: 1000;
+  }
+
+  #e-pv-e-sign-user-field .e-input-group .e-input-group-icon:last-child {
+    margin-left: -16px !important;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  .e-pv-e-sign-user-dropdown> :first-child {
+    border: none !important;
+  }
+
+  .e-pv-e-sign-user-dropdown .e-input-group:not(.e-float-icon-left):not(.e-float-input).e-input-focus::before,
+  .e-pv-e-sign-user-dropdown .e-input-group:not(.e-float-icon-left):not(.e-float-input).e-input-focus::after {
+    width: 0px !important;
+  }
+
+  .e-pv-e-sign-empImage {
+    width: 32px;
+    height: 32px;
+    margin-top: 7px;
+    margin-left: 4px;
+    border-radius: 50%;
+  }
+
+  #e-pv-e-sign-defaultSidebar_user {
+    height: 638px;
+    position: absolute;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  }
+
+  #e-pv-e-sign-toolbar_template,
+  #e-pv-e-sign-toolbar_template-mob {
+    z-index: 1001;
+    width: 100% !important;
+    height: 48px !important;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  }
+
+  #e-pv-e-sign-toolbar_template-mob {
+    z-index: 1 !important;
+  }
+
+  #e-pv-e-sign-download {
+    width: 115px;
+    height: 32px;
+    min-height: 0;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid var(--Color-variables-outline, #79747E);
+  }
+
+  #e-pv-e-sign-toolbar_template.e-toolbar .e-toolbar-items .e-toolbar-left .e-toolbar-item:first-child {
+    margin-left: 0px !important;
+    padding: 0px !important;
+  }
+
+  #e-pv-e-sign-toolbar_template-mob .e-toolbar-items
+  {
+    width: 100%;
+    justify-content: space-between;
+  }
+</style>

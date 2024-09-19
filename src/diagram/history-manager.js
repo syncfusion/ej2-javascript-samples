@@ -1,70 +1,79 @@
+/*jslint esversion: 6 */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 var diagram;
-var nodes = [
-    {
-        id: 'node1', offsetX: 400, offsetY: 30, style: { fill: '#FFB2B2', strokeColor: '#FFB2B2' }, width: 70, height: 40,
-        shape: { type: 'Flow', shape: 'Terminator' },
-        annotations: [{ id: 'label1', content: 'Start' }],
-    },
-    {
-        id: 'node2', offsetX: 400, offsetY: 100, style: { fill: '#DCDCDC', strokeColor: '#DCDCDC' },
-        shape: { type: 'Flow', shape: 'Process' }, annotations: [{ id: 'label1', content: 'Design' }],
-        ports: [{ id: 'designPort', offset: { x: 0, y: 0.5 } }]
-    },
-    {
-        id: 'node3', offsetX: 400, offsetY: 180, style: { fill: '#DCDCDC', strokeColor: '#DCDCDC' },
-        annotations: [{ id: 'label1', content: 'Coding' }],
-        shape: { type: 'Flow', shape: 'Process' }, ports: [{ id: 'codingPort', offset: { x: 0, y: 0.5 } }]
-    },
-    {
-        id: 'node4', offsetX: 400, offsetY: 260, style: { fill: '#DCDCDC', strokeColor: '#DCDCDC' },
-        annotations: [{ id: 'label1', content: 'Testing' }], shape: { type: 'Flow', shape: 'Process' }
-    },
-    {
-        id: 'node5', offsetX: 400, offsetY: 340, style: { fill: '#A2D8B0', strokeColor: '#A2D8B0' }, width: 80, height: 60,
-        annotations: [{ id: 'label1', content: 'Errors?' }], shape: { type: 'Flow', shape: 'Decision' }
-    },
-    {
-        id: 'node6', offsetX: 400, offsetY: 430, style: { fill: '#FFB2B2', strokeColor: '#FFB2B2' }, width: 70, height: 40,
-        annotations: [{ id: 'label1', content: 'End' }], shape: { type: 'Flow', shape: 'Terminator' }
-    },
-    {
-        id: 'node7', width: 100, offsetX: 220, offsetY: 180, style: { fill: '#A2D8B0', strokeColor: '#A2D8B0' }, height: 60,
-        annotations: [{ id: 'label1', content: 'Design Error?' }], shape: { type: 'Flow', shape: 'Decision' },
-        ports: [
-            { id: 'porterror', offset: { x: 0.5, y: 0 } },
-            { id: 'portcoding', offset: { x: 1, y: 0.5 } },
-            { id: 'portdesign', offset: { x: 0.5, y: 1 } }
-        ]
-    }
+// Helper function to create a NodeModel with default parameters
+function createNode(
+    id,
+    offsetX,
+    offsetY,
+    fill,
+    strokeColor,
+    shape,
+    content,
+    width = 70,
+    height = 40,
+    ports = []) {
+    return {
+        id,
+        offsetX,
+        offsetY,
+        style: { fill, strokeColor },
+        width,
+        height,
+        shape: { type: 'Flow', shape: shape },
+        annotations: [{ content: content }],
+        ports
+    };
+}
+
+// Initialize Diagram Nodes using the createNode function
+let nodes = [
+    createNode('node1', 400, 30, '#FFB2B2', '#FFB2B2', 'Terminator', 'Start'),
+    createNode('node2', 400, 100, '#DCDCDC', '#DCDCDC', 'Process', 'Design', undefined, undefined, [{ id: 'designPort', offset: { x: 0, y: 0.5 } }]),
+    createNode('node3', 400, 180, '#DCDCDC', '#DCDCDC', 'Process', 'Coding', undefined, undefined, [{ id: 'codingPort', offset: { x: 0, y: 0.5 } }]),
+    createNode('node4', 400, 260, '#DCDCDC', '#DCDCDC', 'Process', 'Testing'),
+    createNode('node5', 400, 340, '#A2D8B0', '#A2D8B0', 'Decision', 'Errors?', 80, 60),
+    createNode('node6', 400, 430, '#FFB2B2', '#FFB2B2', 'Terminator', 'End'),
+    createNode('node7', 220, 180, '#A2D8B0', '#A2D8B0', 'Decision', 'Design Error?', 100, 60, [
+        { id: 'porterror', offset: { x: 0.5, y: 0 } },
+        { id: 'portcoding', offset: { x: 1, y: 0.5 } },
+        { id: 'portdesign', offset: { x: 0.5, y: 1 } }
+    ])
 ];
 
-var connectors = [
-    { id: 'connector1', sourceID: 'node1', targetID: 'node2' },
-    { id: 'connector2', sourceID: 'node2', targetID: 'node3' },
-    { id: 'connector3', sourceID: 'node3', targetID: 'node4' },
-    { id: 'connector4', sourceID: 'node4', targetID: 'node5' },
-    {
-        id: 'connector5', sourceID: 'node5', targetID: 'node6',
-        annotations: [{ content: 'No', style: { fill: 'white' } }]
-    },
-    {
-        id: 'connector6', sourceID: 'node5', targetID: 'node7', type: 'Orthogonal',
-        segments: [{ type: 'Orthogonal', length: 150, direction: 'Left' }],
-        annotations: [{ content: 'Yes', style: { fill: 'white' } }]
-    },
-    {
-        id: 'connector7', sourceID: 'node7', targetID: 'node3', sourcePortID: 'portcoding',
-        targetPortID: 'codingPort', type: 'Orthogonal',
-        segments: [{ type: 'Orthogonal', length: 10, direction: 'left' }],
-        annotations: [{ content: 'No', style: { fill: 'white' } }]
-    },
-    {
-        id: 'connector8', sourceID: 'node7', targetID: 'node2', sourcePortID: 'porterror',
-        targetPortID: 'designPort', type: 'Orthogonal',
-        annotations: [{ content: 'Yes', style: { fill: 'white' } }]
-    }
+// Initialize Diagram Connectors using the createConnector function
+let connectors = [
+    createConnector('connector1', 'node1', 'node2'),
+    createConnector('connector2', 'node2', 'node3'),
+    createConnector('connector3', 'node3', 'node4'),
+    createConnector('connector4', 'node4', 'node5'),
+    createConnector('connector5', 'node5', 'node6', [{ content: 'No', style: { fill: 'white' } }]),
+    createConnector('connector6', 'node5', 'node7', [{ content: 'Yes', style: { fill: 'white' } }], [{ type: 'Orthogonal', length: 150, direction: 'Left' }]),
+    createConnector('connector7', 'node7', 'node3', [{ content: 'No', style: { fill: 'white' } }], [{ type: 'Orthogonal', length: 10, direction: 'Left' }], 'portcoding', 'codingPort'),
+    createConnector('connector8', 'node7', 'node2', [{ content: 'Yes', style: { fill: 'white' } }], [], 'porterror', 'designPort')
 ];
+
+// Helper function to create a ConnectorModel with default parameters
+function createConnector(
+    id,
+    sourceID,
+    targetID,
+    annotations,
+    segments= [],
+    sourcePortID = '',
+    targetPortID = '') {
+    return {
+        id,
+        sourceID,
+        targetID,
+        annotations,
+        type: 'Orthogonal',
+        segments,
+        sourcePortID,
+        targetPortID
+    };
+}
+
 this.default = function () {
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '600px', nodes: nodes, connectors: connectors,
@@ -77,42 +86,45 @@ this.default = function () {
         }
     });
     diagram.appendTo('#diagram');
-
+    // Callback function when history changes
     diagram.historyChange = function (arg) {
-        getValue();
+        updateHistoryLists();
     };
+    // Fit diagram to page height
     diagram.fitToPage({ mode: 'Height' });
-    var stackLimit = new ej.inputs.NumericTextBox({
+    // Numeric text box for stack limit
+    var stackLimitTextBox = new ej.inputs.NumericTextBox({
         value: 0, min: 0, max: 50, width: '100%',
         format: '##.##', step: 1,
         change: function (args) {
             diagram.setStackLimit(args.value);
         }
     });
-    stackLimit.appendTo('#StackLimit');
-
+    stackLimitTextBox.appendTo('#StackLimit');
+    // ListView for redo history
     var listviewInstance = new ej.lists.ListView({
         fields: { value: 'value', text: 'text' },
         headerTitle: 'Device settings',
         height: "180px",
     });
     listviewInstance.appendTo("#redoList");
-
+    // ListView for undo history
     var listview = new ej.lists.ListView({
         fields: { value: 'value', text: 'text' },
         headerTitle: 'Device settings',
         height: "180px",
     });
     listview.appendTo("#undoList");
-
+    // Button to clear history
     var clearHistory = new ej.buttons.Button({
         content: 'Clear History',       
     });
     clearHistory.appendTo('#clearHistory');
     clearHistory.element.onclick = function () {
         diagram.clearHistory();
-        getValue();
+        updateHistoryLists();
     };
+    // Toggle button for starting and ending group action
     var startGroupAction = new ej.buttons.Button({
         isToggle: true,        
     });
@@ -127,6 +139,7 @@ this.default = function () {
             startGroupAction.content = 'Start Group Action';
         }
     };
+    // Button for undo action
     var undoButton = new ej.buttons.Button({
         disabled: true
     });
@@ -134,7 +147,7 @@ this.default = function () {
     undoButton.element.onclick = function () {
         diagram.undo();
     };
-
+    // Button for redo action
     var redoButton = new ej.buttons.Button({
         disabled: true
     });
@@ -142,35 +155,32 @@ this.default = function () {
     redoButton.element.onclick = function () {
         diagram.redo();
     };
+    
+    // Function to define default properties for Node 
     function getNodeDefaults(obj) {
         obj.annotations[0].style.color = '#111111';
         return obj;
     }
-    function getValue() {
-        var undoStack = diagram.historyManager.undoStack;
-        var redoStack = diagram.historyManager.redoStack;
-        var undo = [];
-        for (var i = 0; i < undoStack.length; i++) {
-            undo.push({ 'text': undoStack[i].type, 'value': undoStack[i].type });
-        }
-        var redo = [];
-        for (var j = 0; j < redoStack.length; j++) {
-            redo.push({ 'text': redoStack[j].type, 'value': redoStack[j].type });
-        }
-        var itemsCount = diagram.historyManager.stackLimit ? diagram.historyManager.stackLimit : 0;
-        var undoList = document.getElementById('undoList').ej2_instances[0];
-
-        undoButton.disabled = undo.length ? false : true;
-        redoButton.disabled = redo.length ? false : true;
-        undoList.dataSource = undo;
-        undoList.fields = { text: 'text', value: 'text' };
-        undoList.index = 0;
-        undoList.dataBind();
-        var redoList = document.getElementById('redoList').ej2_instances[0];
-        redoList.dataSource = redo;
-        redoList.fields = { text: 'text', value: 'text' };
-        redoList.index = 0;
-        redoList.dataBind();
+    // Function to update lists and button states based on history
+    function updateHistoryLists() {
+        var historyManager = diagram.historyManager;
+        var undoStack = historyManager.undoStack;
+        var redoStack = historyManager.redoStack;
+        var undo = undoStack.map(item => ({ text: item.type, value: item.type }));
+        var redo = redoStack.map(item => ({ text: item.type, value: item.type }));
+    
+        undoButton.disabled = undo.length === 0;
+        redoButton.disabled = redo.length === 0;
+    
+        updateListView('#undoList', undo);
+        updateListView('#redoList', redo);
+    }
+    
+    function updateListView(selector, data) {
+        var listView = document.querySelector(selector).ej2_instances[0];
+        listView.dataSource = data;
+        listView.fields = { text: 'text', value: 'value' };
+        listView.index = 0;
+        listView.dataBind();
     }
 };
-

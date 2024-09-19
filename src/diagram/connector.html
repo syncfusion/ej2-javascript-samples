@@ -1,6 +1,6 @@
 <style>
     /* Css for images in property panel  */
-    .image-pattern-style {
+    .diagram-connectors .image-pattern-style {
         background-color: white;
         background-size: contain;
         background-repeat: no-repeat;
@@ -12,32 +12,28 @@
         float: left;
     }
 
-    .image-pattern-style:hover {
+    .diagram-connectors .image-pattern-style:hover {
         border-color: gray;
         border-width: 2px;
     }
 
-    .row {
+    .diagram-connectors .row {
         margin-left: 0px;
         margin-right: 0px;
     }
 
-    .row-header {
+    .diagram-connectors .row-header {
         font-size: 13px;
         font-weight: 500;
     }
             
-    .col-xs-6 {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
     /* Selection indicator */
-    .e-selected-style {
+    .diagram-connectors .e-selected-style {
         border-color: #006CE6;
         border-width: 2px;
     }
     /* Align the names in property panel */
-    label{
+    .diagram-connectors label{
         display: inline-block;
         font-size: 13px;
         font-weight: 400;
@@ -45,12 +41,13 @@
         margin-top: auto;
     }
 </style>
-<div class="col-lg-9 control-section">
+<div class="diagram-connectors">
+<div class="col-lg-8 control-section">
     <div class="content-wrapper" style="width:100%;background: white">
         <div id="diagram"></div>
     </div>
 </div>
-<div class="col-lg-3 property-section">
+<div class="col-lg-4 property-section">
     <div class="property-panel-header">
         Properties
     </div>
@@ -115,6 +112,29 @@
             </div>
         </div>
     </div>
+     <div class="row property-panel-content" id="decoratorsSize"  style="padding-top: 10px">
+        <div class="row row-header" style="padding-top: 8px">
+           <b>Decorators Size</b>
+        </div>
+        <div class="row" style="padding-top: 8px; display: flex;">
+            <label>Source Decorators Size</label>
+            <div>
+                <input type="text" id='sourceDecoratorSize' />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px; display: flex;">
+            <label>Target Decorators Size</label>
+            <div>
+                <input type="text" id='targetDecoratorSize' />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 8px; display: flex;">
+            <label>Segment Decorators Size</label>
+            <div>
+                <input type="text" id='segmentDecoratorSize' />
+            </div>
+        </div>
+    </div>
     <div class="row property-panel-content" id="color-tab" style="padding-top: 10px">
         <div class="row row-header">
            <b> Appearance</b>
@@ -124,6 +144,7 @@
             <input  id="color" type="color"/>
         </div>
     </div>
+</div>
 </div>
 <div id="action-description">
     <p>
@@ -138,7 +159,9 @@
     </p>
 
     <p>
-        To change the appearance, click different styles in the property panel.
+        To change the appearance, click on different styles in the property panel to modify the connector type, decorator shapes, and decorator sizes.
+        The <code>type</code> property of the connector defines its segment type. The <code>shape</code> property specifies the shapes for the source, target, and segment decorators. You can adjust the size of the source and target decorators by setting their
+        <code>width</code>and <code>height</code>. Additionally, the<code>segmentThumbSize</code>property allows you to modify the size of the segment decorator when the connector is selected.
     </p>
 
     <p>

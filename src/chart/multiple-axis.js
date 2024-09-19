@@ -78,9 +78,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var axisTheme = location.hash.split('/')[1];
-            axisTheme = axisTheme ? axisTheme : 'Material';
+            axisTheme = axisTheme ? axisTheme : 'Fluent2';
             args.chart.theme = (axisTheme.charAt(0).toUpperCase() + 
-                axisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                axisTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

@@ -2,8 +2,8 @@
  * Sample for stock chart
  */
 var selectedThemes = location.hash.split('/')[1];
-selectedThemes = selectedTheme ? selectedTheme : 'Material';
-var themes = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+selectedThemes = selectedTheme ? selectedTheme : 'Fluent2';
+var themes = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
 this.default = function () {
     var chart = new ej.charts.Chart({
         primaryXAxis: {

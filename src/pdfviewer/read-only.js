@@ -20,6 +20,7 @@ this.default = function () {
         viewer.dataBind();
         viewer.load(viewer.documentPath, null);
     };
+    viewer.enablePageOrganizer = false;
     viewer.appendTo('#pdfViewer');
     viewer.enableStickyNotesAnnotation=false;
     viewer.annotationSettings = {  

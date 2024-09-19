@@ -211,7 +211,7 @@ this.default = function () {
     document.getElementById('dialogBtn').onclick = function () {
 
         dialogObj.show();
-        document.getElementById('linetemplate').onclick = function (e) {
+        window.lineTemplateClick = function() {
             var countValue = count.toString();
             var panel = [{
                 'id': '_layout' + countValue, 'sizeX': 1, 'sizeY': 1, 'row': 0, 'col': 0,
@@ -263,7 +263,7 @@ this.default = function () {
             linechartObj.refresh();
             dialogObj.hide();
         };
-        document.getElementById('pietemplate').onclick = function (e) {
+        window.pieTemplateClick = function() {
             var  countValue = count.toString();
             var panel = [{
                 'id': '_layout' + countValue, 'sizeX': 1, 'sizeY': 1, 'row': 0, 'col': 0,
@@ -306,7 +306,7 @@ this.default = function () {
             pie.refresh();
             dialogObj.hide();
         };
-        document.getElementById('splinetemplate').onclick = function (e) {
+        window.splineTemplateClick = function() {
             var countValue = count.toString();
             var panel = [{
                 'id': '_layout' + countValue, 'sizeX': 2, 'sizeY': 1, 'row': 0, 'col': 0,

@@ -31,9 +31,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var funnelTheme = location.hash.split('/')[1];
-            funnelTheme = funnelTheme ? funnelTheme : 'Material';
+            funnelTheme = funnelTheme ? funnelTheme : 'Fluent2';
             args.accumulation.theme = (funnelTheme.charAt(0).toUpperCase() +
-                funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                funnelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
         //Initializing Title
         title: 'Recruitment Process',

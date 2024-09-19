@@ -2,7 +2,7 @@
  * Conditional Formatting sample
  */
 this.default = function () {
-    var currencyFormat = ej.spreadsheet.getFormatFromType('Currency');
+    var currencyFormat = '$#,##0.00';
     //Initialize Spreadsheet component
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
         sheets: [{
@@ -21,7 +21,7 @@ this.default = function () {
             name: 'Inventory List',
             conditionalFormats: [
                 { type: 'GYRColorScale', range: 'C3:C18' },
-                { type: 'LessThan', cFColor: 'RedFT', value: '8/30/2019', range: 'G3:G18' }
+                { type: 'LessThan', cFColor: 'RedFT', value: '8-8-2019', range: 'G3:G18' }
             ],
             columns: [{
                 width: 100
@@ -57,6 +57,7 @@ this.default = function () {
             spreadsheet.numberFormat(currencyFormat, 'D3:D18');
             spreadsheet.numberFormat(currencyFormat, 'E3:E18');
             spreadsheet.numberFormat(currencyFormat, 'F3:F18');
+            spreadsheet.numberFormat('m/d/yyyy', 'G3:G18');
             spreadsheet.conditionalFormat({ type: 'BlueDataBar', range: 'D3:D18' });
             spreadsheet.conditionalFormat({ type: 'GreenDataBar', range: 'E3:E18' });
             spreadsheet.conditionalFormat({ type: 'ThreeStars', range: 'H3:H18' });

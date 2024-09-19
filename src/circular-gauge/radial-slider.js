@@ -57,10 +57,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedSliderTheme = location.hash.split('/')[1];
+            selectedSliderTheme = selectedSliderTheme ? selectedSliderTheme : 'Material';
+            args.gauge.theme = (selectedSliderTheme.charAt(0).toUpperCase() +
+                selectedSliderTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

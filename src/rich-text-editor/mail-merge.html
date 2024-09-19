@@ -1,0 +1,94 @@
+<div class="control-section">
+    <div class="sample-container">
+        <div id="mailMergeEditor"></div>
+        <button class="e-control e-lib e-btn e-formats-tbar-btn e-rte-elements e-tbar-btn"
+            tabindex="-1" id="merge_data" style="width: 100%">
+            <span style="display: inline-flex"><span class="e-tbar-btn-text">Merge Data</span></span>
+        </button>
+        <button
+            class="e-rte-dropdown-btn e-control e-dropdown-btn e-lib e-btn e-rte-dropdown-popup e-rte-dropdown-items e-formats-tbar-btn e-rte-elements e-tbar-btn"
+            id="insertField"></button>
+        <div id="mentionField"></div>
+    </div>
+</div>
+<div id="action-description">
+    <p>This sample demonstrates how to implement a mail merge in the Rich Text Editor sample by inserting placeholders into the editor using custom toolbar item, which are then replaced with actual data to create personalized content.</p>
+</div>
+
+<div id="description">
+    <p>The mail merge in the Rich Text Editor sample enables users to insert placeholders for personalized content. These placeholders are replaced with actual data when generating the final content, making it easy
+        to create customized letters, invoices, and more.</p>
+    <p>The following configurations are used in this sample:</p>
+    <ul>
+        <li>The <code>Button</code> and <code>DropDownButton</code> control are configured in the custom toolbar of
+            the Rich Text Editor.</li>
+        <li>The <code>Button</code> click action performs the merge of the editor placeholder content.</li>
+        <li>The <code>DropDownButton</code> control provides a list of available fields, such as "First Name" or
+            "Email Address." A selected field from this dropdown is inserted into the editor as a placeholder.</li>
+        <li>The <code>Mention</code> control allows insertion of merge fields by pressing the mention character, such
+            as <code>{{</code>, in the editor and selecting an item. These chips make it easy to see and select fields
+            directly within the content.</li>
+    </ul>
+</div>
+<!-- custom code start -->
+<style>
+    #mention-TemplateList {
+        position: relative;
+        display: inline-block;
+        padding: 2px;
+    }
+
+    .person,
+    .email {
+        display: block;
+        line-height: 20px;
+        text-indent: 5px;
+    }
+
+    .person {
+        font-size: 16px;
+    }
+
+    .mentionEmpImage {
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        padding: 3px;
+        border-radius: 25px;
+    }
+
+    #mention-TemplateList .e-badge-success {
+        left: 76%;
+        bottom: 4px;
+        top: auto;
+    }
+
+    #mention_integration_rte-edit-view_popup .e-dropdownbase .e-list-item {
+        line-height: 8px;
+    }
+
+    #mention-TemplateList .e-badge-success {
+        background-color: #4d841d;
+        color: #fff;
+    }
+
+    #mention-TemplateList .e-badge-success.away {
+        background-color: #fedd2d;
+        color: #fff;
+    }
+
+    #mention-TemplateList .e-badge-success.busy {
+        background-color: #de1a1a;
+        color: #fff;
+    }
+
+    #mention-TemplateList .e-badge.e-badge-dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    #mention_integration .e-mention-chip {
+        cursor: pointer;
+    }
+</style>
+<!-- custom code end -->

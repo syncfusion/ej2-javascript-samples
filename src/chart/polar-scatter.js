@@ -65,9 +65,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var polarScatterTheme = location.hash.split('/')[1];
-            polarScatterTheme = polarScatterTheme ? polarScatterTheme : 'Material';
+            polarScatterTheme = polarScatterTheme ? polarScatterTheme : 'Fluent2';
             args.chart.theme = (polarScatterTheme.charAt(0).toUpperCase() + 
-                polarScatterTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarScatterTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

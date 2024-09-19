@@ -3,7 +3,7 @@
  */ var layoutColor;
  var labelRender = function (args) {
     var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'Material';
+    selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
     if (selectedTheme.indexOf('dark') > -1) {
         if (selectedTheme.indexOf('material') > -1) {
             args.border.color = '#303030';
@@ -39,6 +39,10 @@
         }
     }
     else if (selectedTheme.indexOf('highcontrast') > -1) {
+        args.border.color = '#000000';
+        this.layoutColor = '#000000';
+    }
+    else if (selectedTheme.indexOf('fluent2-highcontrast') > -1) {
         args.border.color = '#000000';
         this.layoutColor = '#000000';
     }
@@ -220,14 +224,14 @@
 
     function lineChartTheme(args) {
         var selectedTheme = location.hash.split('/')[1];
-        selectedTheme = selectedTheme ? selectedTheme : 'Material';
-        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast');
+        selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
+        args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     }
     function accumulationload(args) {
         var selectedTheme = location.hash.split('/')[1];
-        selectedTheme = selectedTheme ? selectedTheme : 'Material';
+        selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
         args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).
-            replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast');
+            replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     }
     
 

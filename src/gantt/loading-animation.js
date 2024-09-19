@@ -3,6 +3,16 @@ this.default = function () {
         { id: 'Shimmer', type: 'Shimmer' },
         { id: 'Spinner', type: 'Spinner' },
     ];
+    function isFluent2OrBootstrap() {
+        // Check for Bootstrap 5 or Bootstrap 5 dark theme
+        return document.body.classList.contains('bootstrap5.3') || document.body.classList.contains('bootstrap5.3-dark') ||
+        document.body.classList.contains('fluent2') || document.body.classList.contains('fluent2-dark') || document.body.classList.contains('fluent2-highcontrast');
+    }
+    
+    if (isFluent2OrBootstrap) {
+        var indicator = document.getElementById('indicator');
+        indicator.style.width = '103%';
+    }
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.virtualData,
         treeColumnIndex: 1,

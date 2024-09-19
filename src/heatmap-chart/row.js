@@ -71,7 +71,7 @@ this.default = function () {
             var arrayRowTheme = location.hash.split('/')[1];
             arrayRowTheme = arrayRowTheme ? arrayRowTheme : 'Material';
             args.heatmap.theme =  (arrayRowTheme.charAt(0).toUpperCase() +
-            arrayRowTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            arrayRowTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
             
         }

@@ -15,9 +15,9 @@ this.default = function () {
         },
         load: function (args) {
             var circularSegment = location.hash.split('/')[1];
-            circularSegment = circularSegment ? circularSegment : 'Material';
+            circularSegment = circularSegment ? circularSegment : 'Fluent2';
             args.progressBar.theme = (circularSegment.charAt(0).toUpperCase() +
-                circularSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                circularSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
     });
     linearProgress.appendTo('#linearSegment');
@@ -42,9 +42,9 @@ this.default = function () {
         cornerRadius: 'Square',
         load: function (args) {
             var linearSegment = location.hash.split('/')[1];
-            linearSegment = linearSegment ? linearSegment : 'Material';
+            linearSegment = linearSegment ? linearSegment : 'Fluent2';
             args.progressBar.theme = (linearSegment.charAt(0).toUpperCase() +
-                linearSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                linearSegment.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             switch (linearSegment) {
                 case 'material':
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#e91e63"><span></span></div>';
@@ -86,6 +86,9 @@ this.default = function () {
                     break; 
                 case "fluent2-dark":
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#115EA3"><span></span></div>';
+                    break; 
+                case "fluent2-highcontrast":
+                    args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#1AEBFF"><span></span></div>';
                     break; 
                 default:
                     args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#FFD939"><span></span></div>';

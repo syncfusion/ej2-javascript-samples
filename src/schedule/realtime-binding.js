@@ -27,7 +27,7 @@ this.default = function () {
     scheduleObj.appendTo('#Schedule');
 
     function scriptLoaded() {
-        connection = new signalR.HubConnectionBuilder().withUrl("https://ej2.syncfusion.com/aspnetcore/scheduleHub/", { withCredentials: false }).withAutomaticReconnect().build();
+        connection = new signalR.HubConnectionBuilder().withUrl("https://ej2.syncfusion.com/aspnetcore/schedulehub/", { withCredentials: false, skipNegotiation: true, transport: signalR.HttpTransportType.WebSockets }).withAutomaticReconnect().build();
         connection.on('ReceiveData', function (action, data) {
             if (action == 'view') {
                 scheduleObj.currentView = data;

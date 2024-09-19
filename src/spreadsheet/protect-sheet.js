@@ -3,7 +3,7 @@
  */
 this.default = function() {
     // Initialize Spreadsheet component.
-    var numberFormat = ej.spreadsheet.getFormatFromType('Currency');
+    var numberFormat = '$#,##0.00';
     var percentageFormat = ej.spreadsheet.getFormatFromType('Percentage');
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
          // To protect the workbook
@@ -114,6 +114,8 @@ this.default = function() {
             //Applied style and number formatting to a range
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'EMI Schedule!A1:F1');
             spreadsheet.numberFormat(numberFormat, 'EMI Schedule!C2:F13');
+            spreadsheet.numberFormat('m/d/yyyy', 'EMI Calculator!C5:C5');
+            spreadsheet.numberFormat('m/d/yyyy', 'EMI Schedule!B2:B13');
         },
         beforeCellRender: function(args) {
             //Merged cells using custom code

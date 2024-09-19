@@ -5,30 +5,22 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
 //Click event for Appearance of the Property Panel.
 
 //sets node default value
-function nodeDefaults(obj, diagram) {
+function nodeDefaults(obj) {
     obj.style = { fill: '#659be5', strokeColor: 'none', color: 'white', strokeWidth: 2 };
     obj.borderColor = '#3a6eb5';
     obj.backgroundColor = '#659be5';
     obj.shape.margin = { left: 5, right: 5, bottom: 5, top: 5 };
     obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
-    obj.expandIcon.verticalAlignment = 'Auto';
-    obj.expandIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
     obj.collapseIcon.offset = { x: 0.5, y: 1 };
-    obj.collapseIcon.verticalAlignment = 'Auto';
-    obj.collapseIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
-    obj.collapseIcon.height = 10;
-    obj.collapseIcon.width = 10;
     obj.collapseIcon.padding.top = 5;
-    obj.collapseIcon.shape = 'None';
     obj.collapseIcon.fill = 'lightgray';
     return obj;
 }
 //sets connector default value
-function connectorDefaults(connector, diagram) {
+function connectorDefaults(connector) {
     connector.targetDecorator.shape = 'None';
     connector.type = 'Orthogonal';
     connector.style.strokeColor = '#6d6d6d';
-    connector.constraints = 0;
     connector.cornerRadius = 5;
     return connector;
 }
@@ -42,7 +34,7 @@ this.default = function () {
         dataSourceSettings: {
             id: 'Name', parentId: 'Category',
             dataSource: new ej.data.DataManager(window.hierarchicalTree),
-            doBinding: function (nodeModel, data, diagram) {
+            doBinding: function (nodeModel, data) {
                 nodeModel.shape = { type: 'Text', content: data.Name };
             }
         },
@@ -54,50 +46,57 @@ this.default = function () {
             enableAnimation: true
         },
         //Defines the default node and connector properties
-        getNodeDefaults: function (obj, diagram) {
-            return nodeDefaults(obj, diagram);
-        }, getConnectorDefaults: function (connector, diagram) {
-            return connectorDefaults(connector, diagram);
+        getNodeDefaults: function (obj) {
+            return nodeDefaults(obj);
+        }, getConnectorDefaults: function (connector) {
+            return connectorDefaults(connector);
         }
     });
     diagram.appendTo('#diagram');
 
-    var hSpacing = new ej.inputs.NumericTextBox({
+    //sets horizontal spacing between nodes
+    var horizontalSpacing = new ej.inputs.NumericTextBox({
         format: '###.##',
         change: function () {
-            diagram.layout.horizontalSpacing = Number(hSpacing.value);
-            diagram.dataBind();
+            diagram.layout.horizontalSpacing = Number(horizontalSpacing.value);
+            diagram.doLayout();
         }
     });
-    hSpacing.appendTo('#hSpacing');
-    var vSpacing = new ej.inputs.NumericTextBox({
+    horizontalSpacing.appendTo('#horizontalSpacing');
+
+    //sets vertical spacing between nodes
+    var verticalSpacing = new ej.inputs.NumericTextBox({
         format: '###.##',
         change: function () {
-            diagram.layout.verticalSpacing = Number(vSpacing.value);
-            diagram.dataBind();
+            diagram.layout.verticalSpacing = Number(verticalSpacing.value);
+            diagram.doLayout();
         }
     });
-    vSpacing.appendTo('#vSpacing');
+    verticalSpacing.appendTo('#verticalSpacing');
+
+    //Changing appearence and applying style for property panal
     document.getElementById('appearance').onclick = function (args) {
         var targetelement = args.target;
         // custom code start
+        // Styling the selected appearence
         var selectedElement1 = document.getElementsByClassName('e-selected-style');
         if (selectedElement1.length) {
             selectedElement1[0].classList.remove('e-selected-style');
         }
         // custom code end
+        // Changes appearence of tree
         if (targetelement.className === 'image-pattern-style') {
             var id = args.target.id;
-            var orientation1 = id.substring(0, 1).toUpperCase() + id.substring(1, id.length);
-            diagram.layout.orientation = orientation1;
-            diagram.dataBind();
+            var orientation = id.substring(0, 1).toUpperCase() + id.substring(1, id.length);
+            diagram.layout.orientation = orientation;
             diagram.doLayout();
             args.target.classList.add('e-selected-style');
         }
     };
+    // Check box to enable expand and collapse icon
     var checkBoxObj = new ej.buttons.CheckBox({ change:  function (args){
-        for (var _i = 0, _a = diagram.nodes; _i < _a.length; _i++) {
-            var node = _a[_i];
+        for (var i = 0, diagramNodes = diagram.nodes; i < diagramNodes.length; i++) {
+            var node = diagramNodes[i];
             if (args.checked) {
                 node.expandIcon.shape = 'Minus';
                 node.collapseIcon.shape = 'Plus';
@@ -107,7 +106,6 @@ this.default = function () {
                 node.collapseIcon.shape = 'None';
             }
         }
-        diagram.dataBind();
         diagram.doLayout();
     }
     });

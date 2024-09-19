@@ -10,6 +10,11 @@ this.default = function () {
             uploadUrl: hostUrl + 'FirebaseRealtimeUpload',
             downloadUrl: hostUrl + 'FirebaseRealtimeDownload'
         },
+        contextMenuSettings: {
+            layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+            visible: true,
+            file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"]
+        },
         toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] }
     });
     fileObject.appendTo('#filemanager');

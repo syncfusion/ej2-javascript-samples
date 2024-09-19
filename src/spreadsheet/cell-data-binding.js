@@ -3,7 +3,7 @@
  */
 this.default = function() {
     // Initialize Spreadsheet component.
-    var numberFormat = ej.spreadsheet.getFormatFromType('Currency');
+    var numberFormat = '$#,##0.00';
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
         showRibbon: false,
         showFormulaBar: false,

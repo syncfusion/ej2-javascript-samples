@@ -6,7 +6,7 @@ this.default = function () {
     });
     var ganttChart = new ej.gantt.Gantt({
         dataSource: data,
-        loadChildOnDemand: false,
+        loadChildOnDemand: true,
         taskFields: {
             id: 'taskId',
             name: 'taskName',

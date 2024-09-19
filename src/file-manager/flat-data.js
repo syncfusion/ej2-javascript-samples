@@ -260,7 +260,7 @@ this.default = function () {
     var fileObject = new ej.filemanager.FileManager({
         fileSystemData: resultData,
         toolbarSettings: { items: ['NewFolder', 'Cut', 'Copy', 'Paste', 'Delete', 'Rename', 'SortBy', 'Refresh', 'Selection', 'View', 'Details'], visible: true },
-        contextMenuSettings: { file: ["Open", "|", "Cut", "Copy", "Paste", "Delete", "Rename", "|", "Details"], folder: ["Open", "|", "Cut", "Copy", "Paste", "|", "Delete", "Rename", "|", "Details"], layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"], visible: true }
+        contextMenuSettings: { file: [ "Cut", "Copy", "|", "Delete", "Rename", "|", "Details"], folder: ["Open", "|", "Cut", "Copy", "Paste", "|", "Delete", "Rename", "|", "Details"], layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"], visible: true }
     });
     fileObject.appendTo('#filemanager');
 };

@@ -1,132 +1,124 @@
 <style type="text/css" class="cssStyles">
-    .photo img {
+    .e-pizza-info-container {
+        display: flex;
+        padding: 10px 100px 10px 30px;
+    }
+
+    .e-flex-grow {
+        flex-grow: 1;
+    }
+
+    .e-pizza-image-layout {
+        margin-right: 30px;
+    }
+
+    .e-pizza-image {
         width: 100px;
         height: 100px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
     }
 
-    @media screen and (max-width: 600px) and (min-width: 320px) {
-        .photo img {
-            width: 50px;
-            height: 50px;
-        }
+    .e-pizza-info-layout {
+        text-wrap: pretty;
     }
 
-    @media screen and (max-width: 800px) and (min-width: 600px) {
-        .photo img {
-            width: 70px;
-            height: 70px;
-        }
+    .e-info-text-separator {
+        margin-bottom: 10px;
     }
 
-    .photo,
+    .e-pizza-title {
+        font-weight: 700;
+    }
+
+    .e-pizza-size {
+        font-weight: 300;
+        margin-left: 10px;
+    }
+
+    .e-pizza-price-layout {
+        text-align: center;
+        margin-left: 30px;
+    }
+
+    .e-pizza-price-text {
+        font-weight: 300;
+    }
+
+    .e-pizza-price {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .e-pizza-original-price {
+        text-decoration: line-through;
+    }
+
+    .e-chip-list {
+        padding-left: 0px;
+    }
+
+    .e-chip.e-outline {
+        margin-left: 0px;
+    }
+
+    .e-pizza-price-min-layout {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .e-grid .e-headercell.e-pizza-cell .e-headertext {
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
     .details {
         border-color: #e0e0e0;
         border-style: solid;
-    }
-
-    .material-dark .photo,
-    .material-dark .details {
-        border-color: #616161;
-    }
-
-    .fabric-dark .photo,
-    .fabric-dark .details {
-        border-color: #414040;
-    }
-
-    .bootstrap-dark .photo,
-    .bootstrap-dark .details {
-        border-color: #484848;
-    }
-
-    .tailwind-dark .photo,
-    .tailwind-dark .details {
-        border-color: #4b5563;
-    }
-
-    .bootstrap5-dark .photo,
-    .bootstrap5-dark .details {
-        border-color: rgb(68, 76, 84);
-    }
-
-    .highcontrast .photo,
-    .highcontrast .details {
-        border-color: #969696;
-    }
-
-    .photo {
-        border-width: 1px 0px 0px 0px;
-        text-align: center;
-    }
-
-    .details {
         border-width: 1px 0px 0px 0px;
         padding-left: 18px;
     }
 
-    .e-bigger .details {
-        padding-left: 25px;
-    }
+    @media only screen and (max-width: 1050px) {
+        .e-pizza-info-container {
+            padding: 10px 15%;
+        }
 
-    .e-device .details {
-        padding-left: 8px;
-    }
+        .e-pizza-price-layout {
+            display: none;
+        }
 
-    .details>table {
-        width: 100%;
-    }
-
-    .CardHeader {
-        font-weight: 600;
-    }
-
-    td {
-        padding: 2px 2px 3px 4px;
+        .e-pizza-price-min-layout {
+            display: block;
+        }
     }
 </style>
 <script id="rowtemplate" type="text/x-template">
     <tr>
-        <td class="photo">
-            <img src="src/grid/images/${EmployeeID}.png" alt="${EmployeeID}" />
-        </td>
         <td class="details">
-            <table class="CardTable" cellpadding="3" cellspacing="2">
-                <colgroup>
-                    <col width="50%">
-                    <col width="50%">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <td class="CardHeader">First Name </td>
-                        <td>${FirstName} </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Last Name</td>
-                        <td>${LastName} </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Title
-                        </td>
-
-                        <td>${Title}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Birth Date
-                        </td>
-                        <td>${format(data.BirthDate)}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Hire Date
-                        </td>
-                        <td>${format(data.HireDate)}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="e-pizza-info-container">
+            <div class="e-pizza-image-layout">
+                <img class="e-pizza-image" src="src/grid/images/pizza/${ImageURL}" alt="${Title}" />
+            </div>
+            <div class="e-pizza-info-layout">
+                <div class="e-info-text-separator"><span class="e-pizza-title">${Title}</span><span class="e-pizza-size">(${Size} size)</span></div>
+                <div class="e-info-text-separator"><span>${Description}</span></div>
+                <div class="e-info-text-separator">${chiptags(Tags)}</div>
+                <div class="e-pizza-price-min-layout e-info-text-separator">
+                    <span class="e-pizza-price-text">Buy at&nbsp;</span>
+                    <span class="e-pizza-price">${Price}</span>
+                    ${if(OriginalPrice)}
+                        (<span class="e-pizza-original-price">${OriginalPrice}</span>)
+                    ${/if}
+                </div>
+            </div>
+            <div class="e-flex-grow"></div>
+            <div class="e-pizza-price-layout">
+                <div class="e-info-text-separator"><span class="e-pizza-price-text">Buy at</span></div>
+                <div class="e-info-text-separator"><span class="e-pizza-price">${Price}</span></div>
+                ${if(OriginalPrice)}
+                <div class="e-info-text-separator"><span class="e-pizza-original-price">${OriginalPrice}</span></div>
+                ${/if}
+            </div>
+        </div>
         </td>
     </tr>
 </script>
@@ -138,21 +130,20 @@
     </div>
 </div>
 <div id="action-description">
-        <p>This sample demonstrates the Grid component with the row template feature.
-             In this sample, we have rendered each Grid row using the template.</p>
-    </div>
-
+    <p>
+        The Grid utilizes the row template feature to design a custom layout for its rows.
+        The <code><a target="_blank" class="code"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/grid#rowtemplate">rowTemplate</a></code> property can accept either a string or the ID of an HTML element, which is used as
+        the template for each row.
+    </p>
+</div>
 <div id="description">
     <p>
-        The Grid provides a way to use a custom layout for its rows using template feature. The
-        <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#rowtemplate">rowTemplate
-            </a></code> property accepts either string or HTML element`s ID value, which will be used
-        as the template for the row.
+        In this demo, various types of pizza are displayed along with their ingredients, additional toppings,
+        prices, and discount offers, all presented within a custom layout in the Grid.
     </p>
     <p>
-        In this demo, we have presented Employee Information with Employee Photo in the
-        first column and employee details like Name, Address etc. in the second column.
+        For more details on the row template feature, refer to this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/row/row-template">
+            documentation section</a>.
     </p>
-    <p>The template expression should be provided inside <code>${...}</code> interpolation syntax.</p>
 </div>

@@ -2,6 +2,7 @@
     "name": "Diagram",
     "directory": "diagram",
     "category": "Data Visualization",
+    "type":"update",
     "ftName": "diagram",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
@@ -33,7 +34,8 @@
             "url": "connector",
             "name": "Connectors",
             "description": "This sample visualizes the data flow in a marketing process using predefined diagram shapes and connectors.",
-            "category": "Getting Started"
+            "category": "Getting Started",
+            "type":"update"
         },
         {
             "url": "line-routing",
@@ -135,7 +137,8 @@
             "url": "quick-commands",
             "name": "User Handles",
             "description": "This sample visualizes a simple flow diagram along with options to execute the frequently used commands using user handles.",
-            "category": "Interactive Features"
+            "category": "Interactive Features",
+            "type":"update"
         },
         {
             "url": "overview",
@@ -148,6 +151,13 @@
             "name": "Organizational Chart",
             "description": "This sample illustrates a simple business management structure that is built from an external data source.",
             "category": "Automatic Layouts"
+        },
+        {
+            "url": "flowchart-layout",
+            "name": "Flowchart Layout",
+            "description": "This sample illustrates the flowchart layout algorithm that is used to automatically arrange the flow shapes.",
+            "category": "Automatic Layouts",
+            "type":"new"
         },
         {
             "url": "mind-map",
@@ -219,7 +229,8 @@
             "url": "serialization",
             "name": "Serialization",
             "description": "This sample visualizes building diagrams interactively and editing the saved diagrams. Symbol Palette is used to easily build diagrams.",
-            "category": "Save and Restore "
+            "category": "Save and Restore ",
+            "type":"update"
         },
         {
             "url": "print-export",

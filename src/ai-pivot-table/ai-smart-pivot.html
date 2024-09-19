@@ -1,0 +1,123 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+    <div id="pivotTable" class="row"></div>
+    <div id="pivotDialog"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This demo showcases the integration of AI with the Syncfusion JavaScript Pivot Table, designed to dynamically
+        visualize
+        and analyze data based on user queries. By leveraging advanced AI capabilities, this integration simplifies the
+        process of extracting valuable insights from various data categories, making complex </p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank'
+            href='https://github.com/syncfusion/smart-ai-samples/tree/master' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub
+            repository</a>.</p>
+</div>
+<div id="description">
+    <p>
+        This showcase highlights the advanced capabilities of the Syncfusion JavaScript Pivot Table integrated with AI,
+        designed to streamline data exploration and visualization. Leveraging AI-driven features like Smart Data
+        Aggregation, Predictive Modeling, and Adaptive Filtering, this sample demonstrates how the Pivot Table can
+        automatically generate and adjust pivot tables based on user queries.
+    </p>
+    <p>
+        Users can interact with the EJ2 Pivot Table in real-time to experience the power of AI-assisted data analysis.
+        By selecting and updating queries through the AI Assist dialog UI, the Pivot Table dynamically recalculates and
+        displays relevant insights, offering a more intuitive and responsive way to explore data.
+    </p>
+</div>
+
+<style>
+    .prompt-box {
+        width: -webkit-fill-available;
+        height: 150px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        resize: none;
+    }
+
+    #pivotDialog {
+        max-width: 500px;
+    }
+
+    .e-toolbar-item.e-separator {
+        border: 1px solid #000000 !important
+    }
+
+    #pivotDialog_dialog-header {
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .e-custom-class {
+        background-color: yellow !important;
+    }
+
+    .category-title {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .AI-dialog {
+        max-height: 350px !important;
+        max-width: 500px !important;
+    }
+
+    .inlinecss.e-ddl .e-input-group-icon.e-ddl-icon {
+        display: none;
+    }
+
+    .inlinecss.e-ddl .e-control.e-dropdownlist.e-input {
+        font-size: 16px;
+        font-weight: 500;
+        margin: -7px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    #contentText .e-input-group.e-control-wrapper.e-ddl::before,
+    #contentText .e-input-group.e-control-wrapper.e-ddl::after {
+        content: none;
+    }
+
+    #contentText .e-input-group.e-control-wrapper.e-ddl,
+    #contentText .e-input-group.e-control-wrapper.e-ddl:hover,
+    #contentText .e-input-group.e-ddl.e-input-focus,
+    #contentText .e-input-group.e-ddl.e-input-focus::before,
+    #contentText .e-input-group.e-ddl.e-input-focus::after {
+        border-width: 0px;
+        border: none;
+        border-bottom: 1px dashed black;
+        box-shadow: none;
+    }
+
+    #contentText .e-multi-select-wrapper {
+        padding: 0px !important;
+    }
+
+    #contentText .e-multiselect.e-input-group {
+        max-width: 200px !important;
+        margin-right: 10px;
+    }
+
+    #contentText .product-class.e-control-wrapper {
+        border-width: 0px;
+        border: none;
+        border-bottom: 1px dashed black;
+        box-shadow: none;
+        max-width: 150px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    #yearInput,
+    #aggregateInput {
+        text-align: right !important;
+    }
+
+    #filterInput {
+        font-weight: 900;
+        padding-left: 10px;
+    }
+</style>

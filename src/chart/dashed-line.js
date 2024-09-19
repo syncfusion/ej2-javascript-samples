@@ -100,9 +100,9 @@ this.default = function () {
             args.chart.annotations[0].content = '<div style="color:black; font-weight:bold;">Actual</div>';
             args.chart.annotations[1].content = '<div style="color:black; font-weight:bold;">Forecast</div>';
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'material';
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).
-                replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast');
+                replace(/-dark/i, "Dark").replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
             if (selectedTheme && selectedTheme.indexOf('fabric-dark') > -1) {
                 annotationColor = 'dark';
             }
@@ -151,7 +151,7 @@ this.default = function () {
             else if (selectedTheme === 'fluent2') {
                 annotationColor = 'light';
             } 
-            else if (selectedTheme === 'fluent2-dark') {
+            else if (selectedTheme === 'fluent2-highcontrast' || selectedTheme === 'fluent2-dark') {
                 annotationColor = 'dark';
             }
             else {

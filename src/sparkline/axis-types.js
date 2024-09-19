@@ -2,8 +2,8 @@ this.default = function () {
     // custom code start
     var sparkload = function(args) {
         var defaulttheme = location.hash.split('/')[1];
-        defaulttheme = defaulttheme ? defaulttheme : 'Material';
-        args.sparkline.theme = (defaulttheme.charAt(0).toUpperCase() + defaulttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        defaulttheme = defaulttheme ? defaulttheme : 'Fluent2';
+        args.sparkline.theme = (defaulttheme.charAt(0).toUpperCase() + defaulttheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     };
     // custom code end
     var model = {

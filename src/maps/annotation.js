@@ -8,7 +8,7 @@ this.default = function () {
             var selectedtheme = location.hash.split('/')[1];
             selectedtheme = selectedtheme ? selectedtheme : 'Material';
             args.maps.theme = (selectedtheme.charAt(0).toUpperCase() +
-            selectedtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            selectedtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         zoomSettings: {

@@ -30,7 +30,7 @@ this.default = function () {
     treeGridObj.appendTo('#TreeGrid');
     var dropDownColumn = new ej.dropdowns.DropDownList({
         dataSource: columnNames,
-        width: '110px',
+        width: '130px',
         fields: { text: 'name', value: 'id' },
         value: 'taskID',
         change: function (e) {
@@ -42,7 +42,7 @@ this.default = function () {
     dropDownColumn.appendTo('#columns');
     var dropDownAlign = new ej.dropdowns.DropDownList({
         dataSource: alignment,
-        width: '110px',
+        width: '130px',
         fields: { text: 'name', value: 'id' },
         value: 'Right',
         change: function (e) {

@@ -5,7 +5,7 @@ this.default = function() {
             var colormappingtheme = location.hash.split('/')[1];
             colormappingtheme = colormappingtheme ? colormappingtheme : 'Material';
             args.treemap.theme = (colormappingtheme.charAt(0).toUpperCase() +
-            colormappingtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            colormappingtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

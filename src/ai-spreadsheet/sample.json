@@ -1,0 +1,18 @@
+{
+    "name": "Spreadsheet",
+    "directory": "ai-spreadsheet",
+    "category": "Smart AI Solutions",
+    "dataSourcePath": "src/ai-spreadsheet/data-source.js",
+    "samples": [
+        {
+            "url": "smart-spreadsheet",
+            "name": "Smart Spreadsheet",
+            "category": "Spreadsheet",
+            "sourceFiles":[
+                { "displayName": "smart-spreadsheet.js", "path":"src/ai-spreadsheet/smart-spreadsheet.js" },
+                { "displayName": "smart-spreadsheet.html", "path":"src/ai-spreadsheet/ai-smart-spreadsheet.html" }
+            ],
+            "description": "This demo showcases the Spreadsheet AI feature."
+        }
+    ]
+}

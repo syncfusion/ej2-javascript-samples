@@ -3,17 +3,17 @@
 <div class="control-section">
 <style>
     /* These styles are used for aligning palette and diagram */
-    .sb-mobile-palette {
+    .diagram-property-tab .sb-mobile-palette {
         width: 215px;
         height: 559px;
         float: left;
     }
-
-    .sb-mobile-palette-bar {
+    
+    .diagram-property-tab .sb-mobile-palette-bar {
         display: none;
     }
 
-    .sb-mobile-diagram {
+    .diagram-property-tab .sb-mobile-diagram {
         width: calc(100% - 217px);
         height: 559px;
         float: left;
@@ -22,7 +22,7 @@
     }
 
     @media (max-width: 550px) {
-        .sb-mobile-palette {
+        .diagram-property-tab .sb-mobile-palette {
             z-index: 19;
             position: absolute;
             display: none;
@@ -31,14 +31,14 @@
             height: 100%;
         }
 
-        .sb-mobile-diagram {
+        .diagram-property-tab .sb-mobile-diagram {
             width: 100%;
             height: 100%;
             float: left;
             left: 0px;
         }
 
-        .sb-mobile-palette-bar {
+        .diagram-property-tab .sb-mobile-palette-bar {
             display: block;
             width: 100%;
             background: #fafafa;
@@ -52,17 +52,17 @@
         }
     }
 
-    .sb-mobile-palette-open {
+    .diagram-property-tab .sb-mobile-palette-open {
         position: absolute;
         display: block;
         right: 15px;
     }
 
-    .e-file-select-wrap {
+    .diagram-property-tab .e-file-select-wrap {
         display: none;
     }
 </style>
-    <div id="networkDiagram" style="width: 100%; height: 600px">
+    <div id="networkDiagram" class="diagram-property-tab" style="width: 100%; height: 600px">
         <div class="sb-mobile-palette-bar">
             <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
         </div>

@@ -3,8 +3,8 @@
         <div style="padding-bottom: 10px">
             <strong style="display: inline-block; font-size: 14px;">Feed Delay(ms):</strong>
             <input type="text" id="feeddelay" style="margin-left: 7px;">
-            <button id="update1" style="margin-left: 10px;">Start Updating...</button>
-            <button id="clear" style="margin-left: 10px;">Stop Updating...</button>
+            <button id="update1" class="update-btn">Start Updating...</button>
+            <button id="clear" class="update-btn">Stop Updating...</button>
         </div>
         <div id="PivotView-LiveData" style="height:100%;">
         </div>
@@ -72,5 +72,16 @@
 
 .bg-fade2 {
   color: rgba(0, 0, 0, 0.87);
+}
+
+.update-btn {
+    margin-left: 10px;
+}
+
+/* Mobile mode */
+@media (max-width: 688px) {
+    .update-btn {
+        margin: 10px 10px 0 0;
+    }
 }
 </style>

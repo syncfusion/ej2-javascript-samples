@@ -24,7 +24,7 @@ this.default = function () {
     treegrid.appendTo('#TreeGrid');
     var dropDownListObject = new ej.dropdowns.DropDownList({
         dataSource: lines,
-        width: '110px',
+        width: '135px',
         fields: { text: 'type', value: 'id' },
         value: 'Vertical',
         change: function (e) {

@@ -1,45 +1,61 @@
 <style>
+    #control-container {
+        padding: 0px !important;
+    }
+
     #material-gradient-chart stop {
         stop-color: #00bdae;
     }
+
     #fabric-gradient-chart stop {
         stop-color: #4472c4;
     }
+
     #bootstrap-gradient-chart stop {
         stop-color: #a16ee5;
     }
+
     #bootstrap4-gradient-chart stop {
         stop-color: #a16ee5;
     }
-    #highcontrast-gradient-chart stop {
-        stop-color: #79ECE4;
-    }
-    #tailwind-gradient-chart stop {
-        stop-color: #4f46e5;
-    }
-    #bootstrap5-gradient-chart stop {
-        stop-color: #6355C7;
-    }
-    #material-dark-gradient-chart stop {
-        stop-color: #9ECB08;
-    }
-    #fabric-dark-gradient-chart stop {
-        stop-color: #4472c4;
-    }
-    #bootstrap-dark-gradient-chart stop {
-        stop-color: #a16ee5;
-    }
-    #tailwind-dark-gradient-chart stop {
-        stop-color: #8B5CF6;
-    }
-    #bootstrap5-dark-gradient-chart stop {
-        stop-color: #8F80F4;
-    }
+
     #fluent-gradient-chart stop {
         stop-color: #1AC9E6;
     }
     #fluent-dark-gradient-chart stop {
         stop-color: #1AC9E6;
+    }
+
+    #highcontrast-gradient-chart stop {
+        stop-color: #79ECE4;
+    }
+
+    #tailwind-gradient-chart stop {
+        stop-color: #5A61F6;
+    }
+
+    #bootstrap5-gradient-chart stop {
+        stop-color: #FD7E14;
+    }
+
+    #material-dark-gradient-chart stop {
+        stop-color: #9ECB08;
+    }
+
+    #fabric-dark-gradient-chart stop {
+        stop-color: #4472c4;
+    }
+
+    #bootstrap-dark-gradient-chart stop {
+        stop-color: #a16ee5;
+    }
+
+    #tailwind-dark-gradient-chart stop {
+        stop-color: #8B5CF6;
+    }
+
+    #bootstrap5-dark-gradient-chart stop {
+        stop-color:  #FD7E14;
     }
     #material3-gradient-chart stop {
         stop-color: #6355C7;
@@ -53,28 +69,32 @@
         stop-color: #6200EE;
     }
 
+    #fluent2-highcontrast-gradient-chart stop {
+        stop-color: #9BB449;
+    }
+
     #fluent2-dark-gradient-chart stop {
         stop-color: #9BB449;
     }
-    
+
     .chart-gradient stop[offset="0"] {
         stop-opacity: 0.75;
     }
+
     .chart-gradient stop[offset="1"] {
         stop-opacity: 0;
     }
-	#control-container {
-		padding: 0px !important;
-	}
+
 </style>
 <div class="control-section">
-   <div id="zoom-container" align='center'></div>
+    <div id="chartzoom-container" align='center'></div>
 </div>
 <div id="action-description">
     <p>
-        This sample demonstrates the zooming and panning features of the charts. 
+        This sample demonstrates the zooming and panning features of the charts.
     </p>
 </div>
+
 <div id="description">
    <p>This sample shows the following zooming and panning behaviors.</p>
    <ul>
@@ -84,9 +104,9 @@
        <li>Touch and drag to pan the chart.</li>
        <li>Double tap to reset the zoomed chart.</li>
    </ul>
-    <p>The chart component supports four types of zooming which can be set using <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enableselectionzooming" aria-label="Navigate to the enableSelectionZooming property reference for JavaScript Chart ZoomSettings">enableSelectionZooming</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enablepinchzooming" aria-label="Navigate to the enablePinchZooming property reference for JavaScript Chart ZoomSettings">enablePinchZooming</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enablemousewheelzooming" aria-label="Navigate to the enableMouseWheelZooming property reference for JavaScript Chart ZoomSettings">enableMouseWheelZooming</a>, and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enabledeferredzooming" aria-label="Navigate to the enableDeferredZooming property reference for JavaScript Chart ZoomSettings">enableDeferredZooming</a> properties.</p>
-    <p>The chart supports different mode of zooming which can be set using  <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/chart/api-zoomSettings.html#mode-zoommode" aria-label="Navigate to the mode property reference for JavaScript Chart ZoomSettings">mode</a> property.</code>
-    </p>
+   <p>The chart component supports four types of zooming which can be set using <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enableselectionzooming" aria-label="Navigate to the enableSelectionZooming property reference for JavaScript Chart ZoomSettings">enableSelectionZooming</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enablepinchzooming" aria-label="Navigate to the enablePinchZooming property reference for JavaScript Chart ZoomSettings">enablePinchZooming</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enablemousewheelzooming" aria-label="Navigate to the enableMouseWheelZooming property reference for JavaScript Chart ZoomSettings">enableMouseWheelZooming</a>, and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/chart/zoomSettingsModel/#enabledeferredzooming" aria-label="Navigate to the enableDeferredZooming property reference for JavaScript Chart ZoomSettings">enableDeferredZooming</a> properties.</p>
+   <p>The chart supports different mode of zooming which can be set using  <a target="_blank" href="http://ej2.syncfusion.com/javascript/documentation/chart/api-zoomSettings.html#mode-zoommode" aria-label="Navigate to the mode property reference for JavaScript Chart ZoomSettings">mode</a> property.</code>
+   </p>
     <ul>
          <li><code>XY</code> - Zoom the chart with respect to both the axis.</li>
          <li><code>X</code> - Zoom the chart with respect to horizontal axis.</li>
@@ -94,83 +114,7 @@
     </ul>     
     <br>
     <p>
-         More information on the Zooming can be found in this
-         <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/zooming/" aria-label="Navigate to the documentation for Zooming in JavaScript Chart control">documentation section</a>.
-    </p> 
+        More information on the Zooming can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/zooming/" aria-label="Navigate to the documentation for Zooming in JavaScript Chart control">documentation section</a>.
+   </p> 
 </div>
-<svg style="height: 0">
-	<defs>
-        <linearGradient id="material-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="fabric-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="bootstrap-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="bootstrap4-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="highcontrast-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="tailwind-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="bootstrap5-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="material-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="fabric-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="bootstrap-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="tailwind-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="bootstrap5-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-			<stop offset="0"></stop>
-			<stop offset="1"></stop>
-		</linearGradient>
-        <linearGradient id="fluent-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-			<stop offset="0"></stop>
-			<stop offset="1"></stop>
-		</linearGradient>
-        <linearGradient id="fluent-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-			<stop offset="0"></stop>
-			<stop offset="1"></stop>
-		</linearGradient>
-        <linearGradient id="material3-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="material3-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="fluent2-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-        <linearGradient id="fluent2-dark-gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0"></stop>
-            <stop offset="1"></stop>
-        </linearGradient>
-    </defs>
-</svg>

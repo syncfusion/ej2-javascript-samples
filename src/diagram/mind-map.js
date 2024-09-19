@@ -1,7 +1,10 @@
 /*jshint esversion: 6 */
+// Injecting required modules
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.MindMap, ej.diagrams.HierarchicalTree);
+// Declaring global variables
 var diagram;
 
+// Extending functionality for class inheritance
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__; var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         /* jshint proto: true */
@@ -17,12 +20,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__; var __extends =
  * Mind-map sample
  */
 
+
+// Function to handle selection change in diagram if node or connector is selected
 function selectionChange(arg) {
     if (arg.state === 'Changing') {
         if (arg.newValue[0] instanceof ej.diagrams.Node) {
-            for (var _i = 0, _a = diagram.selectedItems.userHandles; _i < _a.length; _i++) {
-                var handle_1 = _a[_i];
-                handle_1.visible = true;
+            for (var i = 0, a = diagram.selectedItems.userHandles; i < a.length; i++) {
+                var handle = a[i];
+                handle.visible = true;
             }
             if (arg.newValue[0].data.branch === 'Left' ||
                 arg.newValue[0].data.branch === 'subLeft') {
@@ -46,6 +51,7 @@ function selectionChange(arg) {
     }
 }
 
+// Function to define defaults for nodes
 function getNodeDefaults(obj) {
     obj.constraints = ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Drag;
     if (obj.data.branch === 'Left' || obj.data.branch === 'Right' || obj.data.branch === 'Root') {
@@ -89,6 +95,7 @@ function getNodeDefaults(obj) {
     return obj;
 }
 
+// Function to define defaults for connectors
 function getConnectorDefaults(connector, diagram) {
     connector.type = 'Bezier';
     connector.targetDecorator = { shape: 'None' };
@@ -108,7 +115,7 @@ function getConnectorDefaults(connector, diagram) {
     return connector;
 }
 
-//creation of the Ports
+//Function to create ports for nodes
 function getPort() {
     var port =
         [{
@@ -122,7 +129,7 @@ function getPort() {
         ];
     return port;
 }
-
+// Function to add a new node
 function addNode() {
     var obj = {};
     obj.id = ej.diagrams.randomId();
@@ -130,6 +137,7 @@ function addNode() {
     obj.data.Label = 'Node';
     return obj;
 }
+// Function to add a new connector
 function addConnector(source, target) {
     var connector = {};
     connector.id = ej.diagrams.randomId();
@@ -138,7 +146,7 @@ function addConnector(source, target) {
     return connector;
 }
 
-//Tool for Userhandles.
+// Function to get the tool for user handles
 function getTool(action) {
     var tool;
     if (action === 'leftHandle') {
@@ -151,6 +159,8 @@ function getTool(action) {
     return tool;
 }
 
+
+// Class definition for handling left extension tool
 var LeftExtendTool = (function (_super) {
     __extends(LeftExtendTool, _super);
     function LeftExtendTool() {
@@ -175,11 +185,11 @@ var LeftExtendTool = (function (_super) {
                     }
                     var connector = addConnector(selectedElement[0], node);
                     diagram.clearSelection();
-                    var nd = diagram.add(node);
+                    var newNode = diagram.add(node);
                     diagram.add(connector);
                     diagram.doLayout();
-                    diagram.bringIntoView(nd.wrapper.bounds);
-                    diagram.select([diagram.nameTable[nd.id]]);
+                    diagram.bringIntoView(newNode.wrapper.bounds);
+                    diagram.select([diagram.nameTable[newNode.id]]);
                     diagram.startTextEdit(diagram.selectedItems.nodes[0]);
                 }
             }
@@ -188,6 +198,7 @@ var LeftExtendTool = (function (_super) {
     return LeftExtendTool;
 }(ej.diagrams.ToolBase));
 
+// Class definition for handling right extension tool
 var RightExtendTool = (function (_super) {
     __extends(RightExtendTool, _super);
     function RightExtendTool() {
@@ -210,13 +221,13 @@ var RightExtendTool = (function (_super) {
                         selectedObject[0].data.branch === 'subLeft') {
                         newNode.data.branch = 'subLeft';
                     }
-                    var r_connector = addConnector(selectedObject[0], newNode);
+                    var rightConnector = addConnector(selectedObject[0], newNode);
                     diagram.clearSelection();
-                    var r_node = diagram.add(newNode);
-                    diagram.add(r_connector);
+                    var rightNode = diagram.add(newNode);
+                    diagram.add(rightConnector);
                     diagram.doLayout();
-                    diagram.bringIntoView(r_node.wrapper.bounds);
-                    diagram.select([diagram.nameTable[r_node.id]]);
+                    diagram.bringIntoView(rightNode.wrapper.bounds);
+                    diagram.select([diagram.nameTable[rightNode.id]]);
                     diagram.startTextEdit(diagram.selectedItems.nodes[0]);
                 }
             }
@@ -225,6 +236,7 @@ var RightExtendTool = (function (_super) {
     return RightExtendTool;
 }(ej.diagrams.ToolBase));
 
+// Class definition for handling delete tool
 var DeleteClick = (function (_super) {
     __extends(DeleteClick, _super);
     function DeleteClick() {
@@ -264,36 +276,31 @@ var DeleteClick = (function (_super) {
     return DeleteClick;
 }(ej.diagrams.ToolBase));
 
-function onchange(params) {
-    if (selectedObject[0].data.branch === 'Root' || selectedObject[0].data.branch === 'Left' || selectedObject[0].data.branch === 'Right') {
-        selectedObject[0].style.fill = args.target.value;
-        diagram.dataBind();
-    } else {
-        selectedObject[0].annotations[0].style.color = args.target.value;
-        diagram.dataBind();
-    }
-}
-//hide the require userhandle.
+// 
+
+// Function to hide user handles
 function hideUserHandle(name) {
-    for (var _i = 0, _a = diagram.selectedItems.userHandles; _i < _a.length; _i++) {
-        var handle_2 = _a[_i];
-        if (handle_2.name === name) {
-            handle_2.visible = false;
+    for (var i = 0, a = diagram.selectedItems.userHandles; i < a.length; i++) {
+        var handle = a[i];
+        if (handle.name === name) {
+            handle.visible = false;
         }
     }
 }
 
+// Definitions for user handle icons
 var leftarrow = 'M11.924,6.202 L4.633,6.202 L4.633,9.266 L0,4.633 L4.632,0 L4.632,3.551 L11.923,3.551 L11.923,6.202Z';
 var rightarrow = 'M0,3.063 L7.292,3.063 L7.292,0 L11.924,4.633 L7.292,9.266 L7.292,5.714 L0.001,5.714 L0.001,3.063Z';
 var deleteicon = 'M 7.04 22.13 L 92.95 22.13 L 92.95 88.8 C 92.95 91.92 91.55 94.58 88.76' +
     '96.74 C 85.97 98.91 82.55 100 78.52 100 L 21.48 100 C 17.45 100 14.03 98.91 11.24 96.74 C 8.45 94.58 7.04' +
     '91.92 7.04 88.8 z M 32.22 0 L 67.78 0 L 75.17 5.47 L 100 5.47 L 100 16.67 L 0 16.67 L 0 5.47 L 24.83 5.47 z';
+
 var leftuserhandle = setUserHandle('leftHandle', leftarrow, 'Left', 1, { top: 0, bottom: 0, left: 0, right: 10 }, 'Left', 'Top');
 var rightuserhandle = setUserHandle('rightHandle', rightarrow, 'Right', 1, { top: 0, bottom: 0, left: 10, right: 0 }, 'Right', 'Top');
 var deleteuserhandle = setUserHandle('delete', deleteicon, 'Top', 0.5, { top: 0, bottom: 10, left: 0, right: 0 }, 'Center', 'Center');
 var handle = [leftuserhandle, rightuserhandle, deleteuserhandle];
-//set and creation of the Userhandle.
-function setUserHandle(name, pathData, side, offset, margin, halignment, valignment) {
+//Function to set and creation of the Userhandle.
+function setUserHandle(name, pathData, side, offset, margin,  horizontalAlignment, verticalAlignment) {
     var userhandle = {
         name: name,
         pathData: pathData,
@@ -302,12 +309,12 @@ function setUserHandle(name, pathData, side, offset, margin, halignment, valignm
         side: side,
         offset: offset,
         margin: margin,
-        horizontalAlignment: halignment,
-        verticalAlignment: valignment,
+        horizontalAlignment:  horizontalAlignment,
+        verticalAlignment: verticalAlignment,
     };
     return userhandle;
 }
-//Change the Position of the UserHandle.
+//Function to Change the Position of the UserHandle.
 function changeUserHandlePosition(change) {
     for (var handle in diagram.selectedItems.userHandles) {
         if (handle.name === 'delete' && change === 'leftHandle') {
@@ -319,12 +326,12 @@ function changeUserHandlePosition(change) {
     }
 }
 //set the value for UserHandle element
-function applyHandle(handle, side, offset, margin, halignment, valignment) {
+function applyHandle(handle, side, offset, margin,  horizontalAlignment, verticalAlignment) {
     handle.side = side;
     handle.offset = offset;
     handle.margin = margin;
-    handle.horizontalAlignment = halignment;
-    handle.verticalAlignment = valignment;
+    handle.horizontalAlignment =  horizontalAlignment;
+    handle.verticalAlignment = verticalAlignment;
 }
 this.default = function () {
 
@@ -333,6 +340,7 @@ this.default = function () {
     //initialization of the Diagram.
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '550px',
+        constraints: ej.diagrams.DiagramConstraints.Default & ~ej.diagrams.DiagramConstraints.UndoRedo,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         tool: ej.diagrams.DiagramTools.SingleSelect,
         layout: {

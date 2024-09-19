@@ -8,38 +8,50 @@ this.default = function() {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
             items: [
-                'Undo', 'Redo', '|',
-                {
-                    tooltipText: 'Import from Word',
-                    template: `<button class="e-tbar-btn e-control e-btn e-lib e-icon-btn" tabindex="-1" id="custom_tbarbtn_1" style="width:100%">
-                      <span class="e-icons e-rte-import-doc e-btn-icon"></span></button>`,
-                    click: importContentFromWord,
-                },
-                {
-                    tooltipText: 'Export to Word',
-                    template: `<button class="e-tbar-btn e-control e-btn e-lib e-icon-btn" tabindex="-1" id="custom_tbarbtn_2" style="width:100%">
-                      <span class="e-icons e-rte-export-doc e-btn-icon"></span></button>`,
-                    click: exportContentToWord,
-                },
-                {
-                    tooltipText: 'Export to PDF',
-                    template: `<button class="e-tbar-btn e-control e-btn e-lib e-icon-btn" tabindex="-1" id="custom_tbarbtn_3" style="width:100%">
-                      <span class="e-icons e-rte-export-pdf e-btn-icon"></span></button>`,
-                    click: exportContentToPDF,
-                },
-                '|',
-                'Bold', 'Italic', 'Underline', 'StrikeThrough', 'SuperScript', 'SubScript', '|',
+                'Undo', 'Redo', '|', 'ImportWord', 'ExportWord', 'ExportPdf', '|',
+                'Bold', 'Italic', 'Underline', 'StrikeThrough', 'InlineCode', 'SuperScript', 'SubScript', '|',
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
                 'LowerCase', 'UpperCase', '|',
                 'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList', '|',
                 'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'FileManager', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
                 '|', 'EmojiPicker', 'Print', '|',
-                'SourceCode', 'FullScreen',]
+                'SourceCode', 'FullScreen']
+        },
+        slashMenuSettings: {
+            enable: true,
+            items: ['Paragraph', 'Heading 1', 'Heading 2', 'Heading 3', 'Heading 4', 'OrderedList', 'UnorderedList',
+                'CodeBlock', 'Blockquote', 'Link', 'Image','Video', 'Audio', 'Table', 'Emojipicker',
+            ]
         },
         insertImageSettings: {
             saveUrl: hostUrl + 'api/RichTextEditor/SaveFile',
             removeUrl: hostUrl + 'api/RichTextEditor/DeleteFile',
             path: hostUrl + 'RichTextEditor/',
+        },
+        importWord: {
+            serviceUrl: hostUrl + 'api/RichTextEditor/ImportFromWord',
+        },
+        exportWord: {
+            serviceUrl: hostUrl + 'api/RichTextEditor/ExportToDocx',
+            fileName: 'RichTextEditor.docx',
+            stylesheet: `
+        .e-rte-content {
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }
+    `
+        },
+        exportPdf: {
+            serviceUrl: 'https://ej2services.syncfusion.com/js/development/api/RichTextEditor/ExportToPdf',
+            fileName: 'RichTextEditor.pdf',
+            stylesheet: `
+        .e-rte-content{
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }
+    `
         },
         fileManagerSettings: {
             enable: true,
@@ -61,19 +73,8 @@ this.default = function() {
         placeholder: 'Type something or use @ to tag a user...',
         actionBegin: actionBeginHandler,
         actionComplete: actionCompleteHandler,
-        beforeQuickToolbarOpen: quickToolbarOpenHandler,
-        quickToolbarClose: quickToolbarClosehandler
     });
     defaultRTE.appendTo("#defaultRTE");
-    var uploadObj = new ej.inputs.Uploader({
-        allowedExtensions: '.docx,.doc,.rtf',
-        asyncSettings: {
-            saveUrl: hostUrl + 'api/RichTextEditor/ImportFromWord',
-        },
-        success: onUploadSuccess,
-    });
-    uploadObj.appendTo('#rteCustomWordUpload');
-    uploadObj.element.closest('.e-upload').style.display = 'none';
     var emailData = [
         { name: "Selma Rose", initial: 'SR', email: "selma@gmail.com", color: '#FAFDFF', bgColor: '#01579B' },
         { name: "Maria", initial: 'MA', email: "maria@gmail.com", color: '#004378', bgColor: '#ADDBFF' },
@@ -188,103 +189,6 @@ this.default = function() {
         if (e.targetItem && (e.targetItem === 'SourceCode' || e.targetItem === 'Preview')) {
             mirrorConversion(e);
         }
-        if (e.requestType === 'SourceCode') {
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_1').parentElement.classList.add('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_2').parentElement.classList.add('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_3').parentElement.classList.add('e-overlay');
-        } else if (e.requestType === 'Preview') {
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_1').parentElement.classList.remove('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_2').parentElement.classList.remove('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_3').parentElement.classList.remove('e-overlay');
-        }
-    }
-    function quickToolbarOpenHandler(args) {
-        if (!ej.base.isNullOrUndefined(args.targetElement) && args.targetElement.nodeName === 'IMG') {
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_1').parentElement.classList.add('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_2').parentElement.classList.add('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_3').parentElement.classList.add('e-overlay');
-        }
-
-    }
-    function quickToolbarClosehandler(args) {
-        if (!ej.base.isNullOrUndefined(args.element) && args.element.classList.contains('e-rte-image-popup')) {
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_1').parentElement.classList.remove('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_2').parentElement.classList.remove('e-overlay');
-            defaultRTE.getToolbar().querySelector('#custom_tbarbtn_3').parentElement.classList.remove('e-overlay');
-        }
-
-    }
-    function importContentFromWord() {
-        uploadObj.element.click();
-    }
-    function exportContentToWord() {
-        var rteHtmlData = defaultRTE.getHtml();
-        var html = `<html><head></head><body>${rteHtmlData}</body></html>`;
-        fetch(hostUrl + 'api/RichTextEditor/ExportToDocx', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ html: html }) // Wrap HTML in a JSON object
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                var filename = 'Result.docx';
-                // Create a Blob from the response and initiate the download
-                return response.blob().then((blob) => ({ blob, filename }));
-            })
-            .then(({ blob, filename }) => {
-                var url = window.URL.createObjectURL(blob); // Create a Blob URL from the response and initiate the download
-                var a = document.createElement('a'); // Create an anchor element
-                a.href = url;
-                a.download = filename;
-                document.body.appendChild(a); // Append the anchor element to the document
-                a.click(); // Trigger a click on the anchor element to initiate the download
-                document.body.removeChild(a); // Remove the anchor element from the document
-                window.URL.revokeObjectURL(url); // Revoke the object URL to free up resources
-            })
-            .catch((error) => {
-                console.error('Fetch error:', error);
-            });
-    }
-
-    function exportContentToPDF() {
-        var rteHtmlData = defaultRTE.getHtml();
-        var html = `<html><head></head><body>${rteHtmlData}</body></html>`;
-        fetch(hostUrl + 'api/RichTextEditor/ExportToPdf', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ html: html }) // Wrap HTML in a JSON object
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.blob();
-            })
-            .then((blob) => {
-                var url = window.URL.createObjectURL(blob); // Create a Blob URL from the response and initiate the download
-                var a = document.createElement('a'); // Create an anchor element
-                a.href = url;
-                a.download = 'Sample.pdf';
-                document.body.appendChild(a); // Append the anchor element to the document
-                a.click(); // Trigger a click on the anchor element to initiate the download
-                document.body.removeChild(a); // Remove the anchor element from the document
-                window.URL.revokeObjectURL(url); // Revoke the object URL to free up resources
-            })
-            .catch((error) => {
-                console.error('Fetch error:', error);
-            });
-    }
-
-    function onUploadSuccess(args) {
-        defaultRTE.executeCommand('insertHTML', args.e.currentTarget.response, {
-            undo: true,
-        });
     }
 };
     

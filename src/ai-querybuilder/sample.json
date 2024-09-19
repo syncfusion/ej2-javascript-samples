@@ -1,0 +1,17 @@
+{
+    "name": "Query Builder",
+    "directory": "ai-querybuilder",
+    "category": "Smart AI Solutions",
+    "samples": [
+        {
+            "url": "natural-language-query",
+            "name": "Natural Language Query",
+            "category": "Query Builder",
+            "sourceFiles": [
+                { "displayName": "natural-language-query.js", "path": "src/ai-querybuilder/natural-language-query.js" },
+                { "displayName": "natural-language-query.html", "path": "src/ai-querybuilder/ai-natural-language-query.html" }
+            ],
+            "description": "This demo shows the natural language query AI feature in query builder."
+        }
+    ]
+}

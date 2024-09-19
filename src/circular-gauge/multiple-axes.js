@@ -43,10 +43,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectedAxesTheme = location.hash.split('/')[1];
+            selectedAxesTheme = selectedAxesTheme ? selectedAxesTheme : 'Material';
+            args.gauge.theme = (selectedAxesTheme.charAt(0).toUpperCase() +
+                selectedAxesTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             //custom code end
         }
     });

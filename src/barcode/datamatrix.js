@@ -59,7 +59,7 @@ this.default = function () {
     barcodeHeight.appendTo('#height');
 
     var textVisibility = new ej.buttons.CheckBox({
-        checked: true,
+        checked: false,
         change: function (args) {
             barcode.displayText.visibility = args.checked;
         }

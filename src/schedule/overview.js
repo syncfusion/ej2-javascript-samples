@@ -154,14 +154,14 @@ this.default = function () {
         }
     });
     exportObj.appendTo('#exportBtn');
-    var timelineTemplate = '<div class="template"><div class="icon-child">' +
-        '<input id="timeline-views" aria-label="Timeline Views"></input></div><div class="text-child">Timeline Views</div></div>';
-    var groupTemplate = '<div class="template"><div class="icon-child">' +
-        '<input id="grouping" aria-label="Grouping"></input></div><div class="text-child">Grouping</div></div>';
-    var gridlineTemplate = '<div class="template"><div class="icon-child">' +
-        '<input id="timeSlot" aria-label="Time Slots"></input></div><div class="text-child">Time Slots</div></div>';
-    var autoHeightTemplate = '<div class="template"><div class="icon-child">' +
-        '<input id="row_auto_height" aria-label="Auto Fit Rows"></input></div><div class="text-child">Auto Fit Rows</div></div>';
+    var timelineTemplate = '<div class="template"><label><div class="icon-child">' +
+        '<input id="timeline-views" aria-label="Timeline Views"></input></div><div class="text-child">Timeline Views</div></label></div>';
+    var groupTemplate = '<div class="template"><label><div class="icon-child">' +
+        '<input id="grouping" aria-label="Grouping"></input></div><div class="text-child">Grouping</div></label></div>';
+    var gridlineTemplate = '<div class="template"><label><div class="icon-child">' +
+        '<input id="timeSlot" aria-label="Time Slots"></input></div><div class="text-child">Time Slots</div></label></div>';
+    var autoHeightTemplate = '<div class="template"><label><div class="icon-child">' +
+        '<input id="row_auto_height" aria-label="Auto Fit Rows"></input></div><div class="text-child">Auto Fit Rows</div></label></div>';
     var toolbarObj = new ej.navigations.Toolbar({
         height: 70,
         overflowMode: 'Scrollable',

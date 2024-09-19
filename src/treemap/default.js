@@ -10,7 +10,7 @@ this.default = function () {
             var defaultheme = location.hash.split('/')[1];
             defaultheme = defaultheme ? defaultheme : 'Material';
             args.treemap.theme = (defaultheme.charAt(0).toUpperCase() +
-            defaultheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            defaultheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

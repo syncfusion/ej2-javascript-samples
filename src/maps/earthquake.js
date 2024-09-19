@@ -8,7 +8,7 @@ this.default = function () {
             var earththeme = location.hash.split('/')[1];
             earththeme = earththeme ? earththeme : 'Material';
             args.maps.theme = (earththeme.charAt(0).toUpperCase() +
-            earththeme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            earththeme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         centerPosition: {

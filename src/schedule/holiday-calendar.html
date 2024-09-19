@@ -1,0 +1,55 @@
+<div class="col-lg-9 control-section">
+    <div id="Schedule"></div>
+    <div id="schedule-reminder"></div>
+</div>
+<div class="col-lg-3 property-section">
+    <table id="property" title="">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 100%;">
+                    <div>
+                        <input id="holiday-list" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 100%;">
+                    <div>
+                        <input id="event-schedule" type="checkbox">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<style>
+    .schedule-holiday-calendar.e-schedule .e-appointment.e-read-only .e-appointment-details .e-subject.e-text-center {
+        text-align: left;
+    }
+</style>
+<div id="action-description">
+    <p>
+        This demo illustrates how to add and remove holiday events and perform CRUD operations on holiday dates in the
+        Scheduler.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        This sample demonstrates how to perform CRUD operations on holiday dates in a calendar. If a user wants to
+        schedule an appointment on a holiday, they should check the <code>Scheduling event on holiday</code> checkbox.
+        This will enable them to add an appointment on a holiday date.If a holiday list is displayed in the calendar, the
+        <code>Holiday events</code> checkbox will be checked. The holiday list is highlighted in a different color.
+    </p>
+    <ul>
+        <li>
+            When an action is performed to drag and resize an event, if the <code>Scheduling event on holiday</code>
+            checkbox is checked, the appointment can be scheduled on holiday dates. If it is unchecked, the appointment
+            cannot have CRUD actions performed on it, and a warning message will be displayed.
+        </li>
+        <li>If a recurring event is added on a holiday date and the <code>Scheduling event on holiday</code> checkbox is
+            checked, it allows the event to occur on that dates. If the checkbox is unchecked, it prevents the event from
+            occurring, based on the dates in the holiday collection.
+        </li>
+    </ul>
+</div>

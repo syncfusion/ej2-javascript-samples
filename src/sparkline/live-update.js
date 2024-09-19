@@ -2,8 +2,8 @@ this.default = function () {
     // custom code start
     var liveload = function(args) {
         var livetheme = location.hash.split('/')[1];
-        livetheme = livetheme ? livetheme : 'Material';
-        args.sparkline.theme = (livetheme.charAt(0).toUpperCase() + livetheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+        livetheme = livetheme ? livetheme : 'Fluent2';
+        args.sparkline.theme = (livetheme.charAt(0).toUpperCase() + livetheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
     };
     // custom code end
     var spark = new ej.charts.Sparkline({

@@ -105,7 +105,7 @@ this.default = function () {
             var colorSizeTheme = location.hash.split('/')[1];
             colorSizeTheme = colorSizeTheme ? colorSizeTheme : 'Material';
             args.heatmap.theme = (colorSizeTheme.charAt(0).toUpperCase() +
-            colorSizeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            colorSizeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

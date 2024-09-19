@@ -105,11 +105,11 @@ function pointerGauge1() {
     load: function (args) {
       // custom code start
       gaugeObj = args.gauge;
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme1 = location.hash.split('/')[1];
+      patternTheme1 = patternTheme1 ? patternTheme1 : 'Material';
+      args.gauge.theme = (patternTheme1.charAt(0).toUpperCase() +
+      patternTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+      if (patternTheme1.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 188;
         args.gauge.axes[0].annotations[0].radius = "15%";
       }
@@ -193,11 +193,11 @@ function pointerGauge2() {
     ],
     load: function (args) {
       // custom code start
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme2 = location.hash.split('/')[1];
+      patternTheme2 = patternTheme2 ? patternTheme2 : 'Material';
+      args.gauge.theme = (patternTheme2.charAt(0).toUpperCase() +
+        patternTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+      if (patternTheme2.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 12;
         args.gauge.axes[0].annotations[0].radius = "18%";
         args.gauge.axes[0].annotations[1].angle = 258;
@@ -320,11 +320,11 @@ function pointerGauge3() {
     ],
     load: function (args) {
       // custom code start
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme3 = location.hash.split('/')[1];
+      patternTheme3 = patternTheme3 ? patternTheme3 : 'Material';
+      args.gauge.theme = (patternTheme3.charAt(0).toUpperCase() +
+        patternTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/-high/i, 'High').replace(/contrast/i, 'Contrast').replace(/5.3/i, '5');
+      if (patternTheme3.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 194;
         args.gauge.axes[0].annotations[0].radius = "8%";
       }
@@ -341,11 +341,11 @@ function pointerGauge4() {
   var pointerGauge4 = new ej.circulargauge.CircularGauge({
     load: function (args) {
       // custom code start
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme4 = location.hash.split('/')[1];
+      patternTheme4 = patternTheme4 ? patternTheme4 : 'Material';
+      args.gauge.theme = (patternTheme4.charAt(0).toUpperCase() +
+      patternTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+      if (patternTheme4.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 174;
         args.gauge.axes[0].annotations[0].radius = "5%";
       }
@@ -556,11 +556,11 @@ function pointerGauge5() {
     ],
     load: function (args) {
       // custom code start
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme5 = location.hash.split('/')[1];
+      patternTheme5 = patternTheme5 ? patternTheme5 : 'Material';
+      args.gauge.theme = (patternTheme5.charAt(0).toUpperCase() +
+        patternTheme5.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+      if (patternTheme5.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 174;
         args.gauge.axes[0].annotations[0].radius = "12%";
       }
@@ -1604,11 +1604,11 @@ function pointerGauge6() {
     ],
     load: function (args) {
       // custom code start
-      var selectedTheme = location.hash.split('/')[1];
-      selectedTheme = selectedTheme ? selectedTheme : 'Material';
-      args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-        selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-      if (selectedTheme.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
+      var patternTheme6 = location.hash.split('/')[1];
+      patternTheme6 = patternTheme6 ? patternTheme6 : 'Material';
+      args.gauge.theme = (patternTheme6.charAt(0).toUpperCase() +
+        patternTheme6.slice(1)).replace(/-dark/i, 'Dark').replace(/-high/i, 'High').replace(/5.3/i, '5').replace(/contrast/i, 'Contrast');
+      if (patternTheme6.indexOf("tailwind") != -1 && args.gauge.axes[0].annotations != null) {
         args.gauge.axes[0].annotations[0].angle = 180;
         args.gauge.axes[0].annotations[0].radius = "6%";
       }

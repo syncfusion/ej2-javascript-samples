@@ -1,0 +1,28 @@
+{
+    "name": "Kanban",
+    "directory": "ai-kanban",
+    "category": "Smart AI Solutions",
+    "dataSourcePath": "src/ai-kanban/data-source.js",
+    "samples": [
+        {
+            "url": "task-recommendation",
+            "name": "AITask Recommendation",
+            "category": "Kanban",
+            "sourceFiles":[
+                { "displayName": "task-recommendation.js", "path":"src/ai-kanban/task-recommendation.js" },
+                { "displayName": "task-recommendation.html", "path":"src/ai-kanban/ai-task-recommendation.html" }
+            ],
+            "description": "This demo shows the anomaly detection AI feature in kanban"
+        },
+        {
+            "url": "sentiment-analysis",
+            "name": "Sentiment Analysis",
+            "category": "Kanban",
+            "sourceFiles":[
+                { "displayName": "sentiment-analysis.js", "path":"src/ai-kanban/sentiment-analysis.js" },
+                { "displayName": "sentiment-analysis.html", "path":"src/ai-kanban/ai-sentiment-analysis.html" }
+            ],
+            "description": "This demo shows the anomaly detection AI feature in kanban"
+        }
+    ]
+}

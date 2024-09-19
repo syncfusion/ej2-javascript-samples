@@ -128,7 +128,7 @@ this.default = function () {
             var jsonCellTheme = location.hash.split('/')[1];
             jsonCellTheme = jsonCellTheme ? jsonCellTheme : 'Material';
             args.heatmap.theme = (jsonCellTheme.charAt(0).toUpperCase() +
-            jsonCellTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            jsonCellTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         paletteSettings: {

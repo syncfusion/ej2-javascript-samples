@@ -60,7 +60,7 @@ this.default = function () {
             var bubbleTypeTheme = location.hash.split('/')[1];
             bubbleTypeTheme = bubbleTypeTheme ? bubbleTypeTheme : 'Material';
             args.heatmap.theme = (bubbleTypeTheme.charAt(0).toUpperCase() +
-            bubbleTypeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            bubbleTypeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         legendSettings: {

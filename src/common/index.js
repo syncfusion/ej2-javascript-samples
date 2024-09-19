@@ -12,8 +12,9 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'fluent-dark'];
-var darkIgnore = ['highcontrast'];
+var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'fluent2-highcontrast', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'fluent-dark'];
+var themesToRedirect = ['material', 'material-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'fabric', 'fabric-dark'];
+var darkIgnore = ['highcontrast', 'fluent2-highcontrast'];
 var themeDarkButton = document.getElementById('sb-dark-theme');
 var darkButton = document.getElementById('sb-dark-span');
 var themeModeDropDown;
@@ -32,6 +33,8 @@ var sbBodyOverlay = ej.base.select('.sb-body-overlay');
 var sbHeader = ej.base.select('#sample-header');
 var resetSearch = ej.base.select('.sb-reset-icon');
 var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|production)*/;
+var aiUrlRegex = /\/ai-[^\/]+\//;
+var aiControlRegex = /^ai-.*/;
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
 // Regex for removing hidden codes
 var reg = /.*custom code start([\S\s]*?)custom code end.*/g;
@@ -206,12 +209,57 @@ function renderSbPopups() {
         position: { X: 'left', Y: 'bottom' },
         collision: { X: 'flip', Y: 'flip' }
     });
-    searchPopup = new ej.popups.Popup(searchEle, {
-        offsetY: -80,
-        relateTo: inputele,
-        position: { X: 'left', Y: 'bottom' },
-        collision: { X: 'flip', Y: 'flip' }
-    });
+
+// Initialize AutoComplete
+searchPopup = new ej.dropdowns.AutoComplete({
+    dataSource: [], // Initialize with an empty data source
+    filtering: function (e) {
+        if (e.text && e.text.length < 3) {
+            return;
+        }
+        let val = searchInstance.search(e.text, {
+            fields: {
+                component: { boost: 1 },
+                name: { boost: 2 }
+            },
+            expand: true,
+            boolean: 'AND'
+        });
+        val.map(function (item) {
+            item['doc'] = searchInstance.documentStore.docs[item.ref];
+        });
+        let value = [];
+        if (ej.base.Browser.isDevice) {
+            for (let file of val) {
+                if (file.doc.hideOnDevice !== true) {
+                    value = value.concat(file);
+                }
+            }
+        }
+        let query = new ej.data.Query().take(10).select('doc');
+        let fields = searchInstance.fields;
+        let searchValue = ej.base.Browser.isDevice ? value : val;
+        e.updateData(searchValue, query, fields);
+    },
+    placeholder: 'Search here...',
+    noRecordsTemplate: '<div class="search-no-record">We’re sorry. We cannot find any matches for your search term.</div>',
+    fields: { groupBy: 'doc.component', value: 'doc.uid', text: 'doc.name' },
+    highlight: true,
+    select: function (e) {
+        let data = e.itemData.doc;
+        let hashval = '#/' + location.hash.split('/')[1] + '/' + data.dir + '/' + data.url + '.html';
+        searchPopup.hidePopup();
+        searchOverlay.classList.add('e-search-hidden');
+        if (location.hash !== hashval) {
+            sampleOverlay();
+            location.hash = hashval;
+            setSelectList();
+        }
+    }
+}, inputele);
+
+// Append the AutoComplete to the search element
+// searchPopup.appendTo(inputele);
     settingsPopup = new ej.popups.Popup(document.getElementById('settings-popup'), {
         offsetY: 5,
         zIndex: 1001,
@@ -226,7 +274,7 @@ function renderSbPopups() {
     } else {
         ej.base.select('.sb-mobile-preference').appendChild(ej.base.select('#settings-popup'));
     }
-    searchPopup.hide();
+    searchPopup.hidePopup();
     switcherPopup.hide();
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
@@ -339,7 +387,7 @@ function changeTab(args) {
             let elementList = demoSection.getElementsByClassName('e-control e-lib');
             for (let i = 0; i < elementList.length; i++) {
                 let instance = elementList[i].ej2_instances;
-                if (instance && instance[0] && typeof instance[0].refresh === 'function' && componentToIgnore.indexOf(instance[0].getModuleName()) === -1) {
+                if (instance && instance[0] && typeof instance[0].refresh === 'function' && componentToIgnore.indexOf(instance[0].getModuleName()) === -1 && currentControl !== 'rich-text-editor') {
                     instance[0].refresh();
                 }
                 if (instance && instance[0] && instance[0].getModuleName() !== 'DashboardLayout')
@@ -455,7 +503,7 @@ function sbHeaderClick(action, preventSearch) {
 function toggleSearchOverlay() {
     sbHeaderClick('closePopup', true);
     inputele.value = '';
-    searchPopup.hide();
+    searchPopup.hidePopup();
     searchButton.classList.toggle('active');
     setPressedAttribute(searchButton);
     searchOverlay.classList.toggle('sb-hide');
@@ -501,12 +549,12 @@ function darkSwitch() {
 }
 
 function onsearchInputChange(e) {
-    if (e.keyCode === 27) {
+    if (e.keyCode === 27 || e.keyCode === 13) {
         toggleSearchOverlay();
     }
     var searchString = e.target.value;
     if (searchString.length <= 2) {
-        searchPopup.hide();
+        searchPopup.hidePopup();
         return;
     }
     var val = [];
@@ -526,53 +574,7 @@ function onsearchInputChange(e) {
             }
         }
     }
-    var searchVal = ej.base.Browser.isDevice ? value : val;
-    if (searchVal.length) {
-        var data = new ej.data.DataManager(searchVal);
-        var controls = data.executeLocal(new ej.data.Query().take(10).select('doc'));
-        var controlsAccess = [];
-        for (var x = 0; x < controls.length; x++) {
-            controlsAccess.push(controls[x].doc);
-        }
-        controls = controlsAccess;
-        var count = 1;
-        var controlCollection = {};
-        controlCollection[controls[0].component] = count;
-        controls[0].sortId = count;
-        for (var i = 1; i < controls.length; i++) {
-            var curComponent = controls[i].component;
-            var previd = controlCollection[curComponent];
-            if (previd) {
-                controls[i].sortId = previd;
-            } else {
-                ++count;
-                controlCollection[curComponent] = count;
-                controls[i].sortId = count;
-            }
-        }
-        if (!searchListView) {
-            searchListView = new ej.lists.ListView({
-                dataSource: controls,
-                fields: { id: 'uid', text: 'name', groupBy: 'sortId' },
-                select: controlSelect,
-                template: '<div class="e-text-content e-icon-wrapper" data="${dir}/${url}" uid="${uid}" pid="${parentId}">' +
-                    '<span class="e-list-text">' +
-                    '${name}</span></div>',
-                groupTemplate: '${if(items[0]["component"])}<div class="e-text-content"><span class="e-search-group">${items[0].component}</span>' +
-                    '</div>${/if}',
-                actionComplete: function () {
-                    var searchValue = ej.base.select('#search-input').value;
-                    highlight(searchValue, this.element);
-                }
-            }, searchPopup.element);
-        } else {
-            searchListView.dataSource = controls;
-        }
-        searchPopup.show();
-    } else {
-        searchPopup.element.innerHTML = '<div class="search-no-record">We’re sorry. We cannot find any matches for your search term.</div>';
-        searchPopup.show();
-    }
+    
 }
 
 function highlight(searchString, listElement) {
@@ -709,7 +711,7 @@ function resetInput(arg) {
     arg.stopPropagation();
     document.getElementById('search-input').value = '';
     document.getElementById('search-input-wrapper').setAttribute('data-value', '');
-    searchPopup.hide();
+    searchPopup.hidePopup();
 }
 function bindEvents() {
     document.getElementById('sb-switcher').addEventListener('click', function (e) {
@@ -806,22 +808,6 @@ function bindEvents() {
         }
     });
     // ej.base.select('.copycode').addEventListener('click', copyCode);
-    searchEle.addEventListener('click', function (e) {
-        var curEle = ej.base.closest(e.target, 'li');
-        if (curEle && curEle.classList.contains('e-list-item')) {
-            var tcontent = curEle.querySelector('.e-text-content');
-            var hashval = '#/' + selectedTheme + '/' + tcontent.getAttribute('data') + '.html';
-            inputele.value = '';
-            searchPopup.hide();
-            searchOverlay.classList.add('e-search-hidden');
-            if (location.hash !== hashval) {
-                sampleOverlay();
-                location.hash = hashval;
-                window.hashString = location.hash;
-                setSelectList();
-            }
-        }
-    });
 }
 
 function copyCode() {
@@ -843,7 +829,8 @@ function rendercopycode() {
 
 
 function setSbLink() {
-    var href = location.href;
+    var hrefLink = location.hash.split('/').slice(1);
+    var href = location.href = '#/' + selectedTheme + '/' + hrefLink.slice(1).join('/');
     var link = href.match(urlRegex);
     var sample = href.match(sampleRegex);
     for (var i = 0, len = sbArray.length; i < len; i++) {
@@ -857,6 +844,9 @@ function setSbLink() {
         }  
         else if (sb === 'blazor') {
             ele.href = 'https://blazor.syncfusion.com/demos/';
+        }
+        else if (sb === 'react' && location.href.includes('grid/grid-overview.html')) {
+            ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) : ('https://ej2.syncfusion.com/')) + 'react/demos/#/' + selectedTheme + '/grid/overview';
         } else {
             ele.href = ((link) ? ('http://' + link[1] + '/' + (link[3] ? (link[3] + '/') : '')) :
                 ('https://ej2.syncfusion.com/')) + (sbObj[sb] ? (sb + '/') : '') +
@@ -881,6 +871,8 @@ function changeMouseOrTouch(str) {
 }
 
 function loadTheme(theme) {
+    theme = themesToRedirect.indexOf(theme) !== -1 ? 'fluent2' : theme;
+    theme =  theme.includes('bootstrap5') ? theme.replace('bootstrap5', 'bootstrap5.3') : theme;
     var body = document.body;
     if (body.classList.length > 0) {
         for (var themeItem in themeCollection) {
@@ -897,14 +889,16 @@ function loadTheme(theme) {
         if (!theme.includes('-dark')) {
             darkButton.innerHTML = "DARK";
             document.getElementById("dark-icon").style.display = "inline-block";
-            themeList.querySelector('.active').classList.remove('active');
-            themeList.querySelector('#' + theme).classList.add('active');
+            themeList.querySelector('.active').classList.remove('active'); 
+            theme== 'bootstrap5.3'?themeList.querySelector('#bootstrap5').classList.add('active'): 
+                themeList.querySelector('#' + theme).classList.add('active');
         }
         else {
             darkButton.innerHTML = "LIGHT";
             document.getElementById("light-icon").style.display = "inline-block";
             themeList.querySelector('.active').classList.remove('active');
-            themeList.querySelector('#' + theme.replace('-dark', "")).classList.add('active');
+            theme== 'bootstrap5.3-dark'? themeList.querySelector('#bootstrap5').classList.add('active'):
+                themeList.querySelector('#' + theme.replace('-dark', "")).classList.add('active');
         }
     }
     var doc = document.getElementById('themelink');
@@ -912,6 +906,7 @@ function loadTheme(theme) {
     var ajax = new ej.base.Ajax('./dist/' + theme + '.css', 'GET', true);
     ajax.send().then(function (result) {
         selectedTheme = theme;
+        selectedTheme = selectedTheme === "bootstrap5.3" ? 'bootstrap5' : selectedTheme === "bootstrap5.3-dark" ? "bootstrap5-dark" : selectedTheme;
         renderLeftPaneComponents();
         renderSbPopups();
         bindEvents();
@@ -1373,6 +1368,10 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
         openNew.href = location.href.split('#')[0] +  node.directory + '/' + subNode.url + '/';
     }
     setSbLink();
+    const desktopSettings = ej.base.select('.sb-desktop-setting');
+    if (!ej.base.Browser.isDevice && desktopSettings) {
+        desktopSettings.style.display = !(/^ai-assistview/).test(control) && aiControlRegex.test(control) ? 'none' : '';
+    }
     var ajaxFile = [];
     var nameFile = [];
     var tabObj = [];
@@ -1419,8 +1418,12 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     sourceTabItems = tabObj;
     var ajaxHTML = new ej.base.Ajax('src/' + control + '/' + sample + '.html', 'GET', true);
     var p1 = ajaxHTML.send();
-    var p2 = loadScriptfile('src/' + control + '/' + sample + '.js');
-    var ajaxJs = new ej.base.Ajax('src/' + control + '/' + sample + '.js', 'GET', true);
+    var jsScriptName = sample;
+    if ((aiControlRegex).test(control) && aiControlRegex.test(sample)) {
+        jsScriptName = sample.split('ai-')[1];
+    }
+    var p2 = loadScriptfile('src/' + control + '/' + jsScriptName + '.js');
+    var ajaxJs = new ej.base.Ajax('src/' + control + '/' + jsScriptName + '.js', 'GET', true);
     sampleNameElement.innerHTML = node.name;
     contentTab.selectedItem = 0;
     breadCrumbComponent.innerHTML = node.name;
@@ -1445,12 +1448,15 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     //     document.querySelector('.js-source-content').innerHTML = value.toString().replace(/</g, '&lt;').replace(/\>/g, '&gt;');
     //     hljs.highlightBlock(document.querySelector('.js-source-content'));
     // });
-    var plunk = new ej.base.Ajax('src/' + control + '/' + sample + '-stack.json', 'GET', true);
-    var p3 = plunk.send();
-    p3.then(function (result) {
-        document.getElementById('open-plnkr').disabled = false;
-        plunker(result);
-    });
+    if (!(aiControlRegex).test(control) || (/^ai-assistview/).test(control)) {
+        var plunk = new ej.base.Ajax('src/' + control + '/' + sample + '-stack.json', 'GET', true);
+        var p3 = plunk.send();
+
+        p3.then(function (result) {
+            document.getElementById('open-plnkr').disabled = false;
+            plunker(result);
+        });
+    }
     Promise.all([
         p1,
         p2

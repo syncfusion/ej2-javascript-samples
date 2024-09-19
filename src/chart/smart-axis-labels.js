@@ -12,7 +12,7 @@ var fluentDarkColors =  ["#1AC9E6", "#DA4CB2", "#EDBB40", "#AF4BCF", "#FF7266", 
 "#7D39C0"];
 var fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10",
     "#C19C00"];
-var fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
+var fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
     "#0B6A0B", "#C19C00"];
 var labelRender = function (args) {
     var selectedTheme = location.hash.split('/')[1];
@@ -34,8 +34,8 @@ var labelRender = function (args) {
     else if (selectedTheme === 'fluent2') {
         args.fill = fluent2Colors[args.point.index % 10];
     } 
-    else if (selectedTheme === 'fluent2-dark') {
-        args.fill = fluent2DarkColors[args.point.index % 10];
+    else if (selectedTheme === 'fluent2-highcontrast' || selectedTheme === 'fluent2-dark') {
+        args.fill = fluent2HighContrastColors[args.point.index % 10];
     }
     else {
         args.fill = bootstrapColors[args.point.index % 10];
@@ -90,13 +90,14 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });
     chart.appendTo('#smart-container');
+    chart.series[0].animation.enable = false;
     var mode = new ej.dropdowns.DropDownList({
         index: 0,
         placeholder: 'Select Range Bar Color',

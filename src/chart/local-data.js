@@ -80,7 +80,7 @@ this.default = function () {
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];
             args.chart.theme = selectTheme && (selectTheme.charAt(0).toUpperCase() + 
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

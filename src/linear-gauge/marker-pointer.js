@@ -1,33 +1,33 @@
 this.default = function () {
     document.getElementById('horizontal').onclick = function (e) {
+        gauge1.width = gauge2.width = gauge3.width = gauge4.width = gauge5.width = '450px';
+        gauge1.height = gauge2.height = gauge3.height = gauge4.height = gauge5.height = '150px';
+        if (e.currentTarget != null) {
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
+            document.getElementById('vertical').style.color = "black";
+            document.getElementById('vertical').style.backgroundColor = "white";
+        }
+        gauge5.orientation = gauge4.orientation = gauge3.orientation = gauge2.orientation = gauge1.orientation = "Horizontal";
         document.getElementById('containerBox').style.padding = "0%"; 
         document.getElementById('container1').className = document.getElementById('container2').className =
         document.getElementById('container3').className = document.getElementById('container4').className =
         document.getElementById('container5').className = "col-xs-12 col-sm-12 col-lg-12 col-md-12";
-        gauge1.width = gauge2.width = gauge3.width = gauge4.width = gauge5.width = '450px';
-        gauge1.height = gauge2.height = gauge3.height = gauge4.height = gauge5.height = '150px';
-        gauge1.orientation = gauge2.orientation = gauge3.orientation = gauge4.orientation = gauge5.orientation = "Horizontal";
-        if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
-            document.getElementById('vertical').style.color = "black";
-            document.getElementById('vertical').style.backgroundColor = "white";
-        }
     };
     document.getElementById('vertical').onclick = function (e) {
-        document.getElementById('containerBox').style.padding = "4%";
         document.getElementById('container1').className = document.getElementById('container2').className =
         document.getElementById('container3').className = document.getElementById('container4').className =
         document.getElementById('container5').className = "col-xs-4 col-sm-4 col-lg-2 col-md-2";
+        document.getElementById('containerBox').style.padding = "4%";
+        gauge1.orientation = gauge2.orientation = gauge3.orientation = gauge5.orientation = gauge4.orientation = "Vertical";
+        if (e.currentTarget != null) {
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.backgroundColor = "#0074E3";
+            document.getElementById('horizontal').style.color = "black";
+            document.getElementById('horizontal').style.backgroundColor = "white";
+        }
         gauge1.width = gauge2.width = gauge3.width = gauge4.width = gauge5.width = '200px';
         gauge1.height = gauge2.height = gauge3.height = gauge4.height = gauge5.height = '350px';
-        gauge1.orientation = gauge2.orientation = gauge3.orientation = gauge4.orientation = gauge5.orientation = "Vertical";
-        if (e.currentTarget != null) {
-            e.currentTarget['style']['color'] = "white";
-            e.currentTarget['style']['backgroundColor'] = "#0074E3";
-            document.getElementById('horizontal')['style']['color'] = "black";
-            document.getElementById('horizontal')['style']['backgroundColor'] = "white";
-        }
     };
     var gauge1 = new ej.lineargauge.LinearGauge({
         dragStart: function (args) {
@@ -79,23 +79,23 @@ this.default = function () {
                 animationDuration: 1500
             }
             ],
+            minimum: 0,
+            maximum: 100,
+            opposedPosition: true,
+            labelStyle: { font: { fontFamily: 'inherit' } },
             majorTicks: {
                 interval: 20, height: 7, width: 1
             },
             minorTicks: {
                 interval: 10, height: 3
             },
-            minimum: 0,
-            maximum: 100,
-            opposedPosition: true,
-            labelStyle: { font: { fontFamily: 'inherit' } }
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var markerPointerTheme1 = location.hash.split('/')[1];
+            markerPointerTheme1 = markerPointerTheme1 ? markerPointerTheme1 : 'Material';
+            args.gauge.theme = (markerPointerTheme1.charAt(0).toUpperCase() +
+                markerPointerTheme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -164,10 +164,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var markerPointerTheme2 = location.hash.split('/')[1];
+            markerPointerTheme2 = markerPointerTheme2 ? markerPointerTheme2 : 'Material';
+            args.gauge.theme = (markerPointerTheme2.charAt(0).toUpperCase() +
+                markerPointerTheme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -240,10 +240,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var markerPointerTheme3 = location.hash.split('/')[1];
+            markerPointerTheme3 = markerPointerTheme3 ? markerPointerTheme3 : 'Material';
+            args.gauge.theme = (markerPointerTheme3.charAt(0).toUpperCase() +
+                markerPointerTheme3.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -317,10 +317,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var markerPointerTheme4 = location.hash.split('/')[1];
+            markerPointerTheme4 = markerPointerTheme4 ? markerPointerTheme4 : 'Material';
+            args.gauge.theme = (markerPointerTheme4.charAt(0).toUpperCase() +
+                markerPointerTheme4.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });
@@ -357,14 +357,14 @@ this.default = function () {
             line: {
                 width: 5
             },
+            minorTicks: {
+                interval: 10,
+                height: 3
+            },
             majorTicks: {
                 interval: 20,
                 height: 7,
                 width: 1
-            },
-            minorTicks: {
-                interval: 10,
-                height: 3
             },
             labelStyle: {
                 font: { fontFamily: 'inherit' }
@@ -402,10 +402,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var markerPointerTheme5 = location.hash.split('/')[1];
+            markerPointerTheme5 = markerPointerTheme5 ? markerPointerTheme5 : 'Material';
+            args.gauge.theme = (markerPointerTheme5.charAt(0).toUpperCase() +
+            markerPointerTheme5.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

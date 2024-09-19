@@ -1,0 +1,40 @@
+{
+    "name": "Data Grid",
+    "directory": "ai-grid",
+    "category": "Smart AI Solutions",
+    "dataSourcePath": "src/ai-grid/data-source.js",
+    "samples": [
+        {
+            "url": "predictive-entry",
+            "name": "Predictive Data Entry",
+            "category": "Data Grid",
+            "sourceFiles":[
+                { "displayName": "predictive-entry.js", "path":"src/ai-grid/predictive-entry.js" },
+                { "displayName": "predictive-entry.html", "path":"src/ai-grid/ai-predictive-entry.html" }
+            ],
+            "description": "This demo shows the predictive data entry AI feature in Data Grid."
+        },
+        {
+            "url": "anomaly-detection",
+            "name": "Anomaly Detection",
+            "category": "Data Grid",
+            "sourceFiles":[
+                { "displayName": "anomaly-detection.js", "path":"src/ai-grid/anomaly-detection.js" },
+                { "displayName": "anomaly-detection.html", "path":"src/ai-grid/ai-anomaly-detection.html" }
+            ],
+            "description": "This demo shows the anomaly detection AI feature in Data Grid."
+        },
+        {
+            "url": "semantic-filtering",
+            "name": "Semantic Filtering (Embedding)",
+            "category": "Data Grid",
+            "sourceFiles":[
+                { "displayName": "semantic-filtering.js", "path":"src/ai-grid/semantic-filtering.js" },
+                { "displayName": "semantic-filtering.html", "path":"src/ai-grid/ai-semantic-filtering.html" }
+            ],
+            "description": "This demo shows the semantic filtering AI feature in Data Grid."
+        }
+    ]
+}
+
+

@@ -1,0 +1,38 @@
+{
+    "name": "Gantt Chart",
+    "directory": "ai-gantt",
+    "category": "Smart AI Solutions",
+    "dataSourcePath": "src/ai-gantt/data-source.js",
+    "samples": [
+        {
+            "url": "task-prioritizer",
+            "name": "Smart Task Prioritizer",
+            "category": "Gantt",
+            "sourceFiles": [
+                { "displayName": "task-prioritizer.js", "path": "src/ai-gantt/task-prioritizer.js" },
+                { "displayName": "task-prioritizer.html", "path": "src/ai-gantt/ai-task-prioritizer.html" }
+            ],
+            "description": "This demo showcases the Pivot Table AI feature."
+        },
+        {
+            "url": "progress-predictor",
+            "name": "Smart Progress Predictor",
+            "category": "Gantt",
+            "sourceFiles": [
+                { "displayName": "progress-predictor.js", "path": "src/ai-gantt/progress-predictor.js" },
+                { "displayName": "progress-predictor.html", "path": "src/ai-gantt/ai-progress-predictor.html" }
+            ],
+            "description": "This demo showcases the Pivot Table AI feature."
+        },
+        {
+            "url": "resource-manager",
+            "name": "Smart Resource Allocation",
+            "category": "Gantt",
+            "sourceFiles": [
+                { "displayName": "resource-manager.js", "path": "src/ai-gantt/resource-manager.js" },
+                { "displayName": "resource-manager.html", "path": "src/ai-gantt/ai-resource-manager.html" }
+            ],
+            "description": "This demo showcases the Pivot Table AI feature."
+        }
+    ]
+}

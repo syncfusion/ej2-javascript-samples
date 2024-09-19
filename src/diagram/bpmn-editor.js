@@ -1,165 +1,118 @@
-ej.diagrams.Diagram.Inject(ej.diagrams.BpmnDiagrams, ej.diagrams.UndoRedo, ej.diagrams.DiagramContextMenu);
-ej.diagrams.SymbolPalette.Inject(ej.diagrams.BpmnDiagrams);
+/**
+ * Sample for BPMN Editor.
+ */
+
 var diagram;
-var nodes = [
-    {
-        id: 'start', width: 40, height: 40, offsetX: 35, offsetY: 180, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'Start' }
-        }
-    },
-    {
-        id: 'subProcess', width: 520, height: 250, offsetX: 355, offsetY: 180,
-        constraints: ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.AllowDrop,
-        shape: {
-            shape: 'Activity', type: 'Bpmn',
-            activity: {
-                activity: 'SubProcess', subProcess: {
-                    type: 'Transaction', collapsed: false,
-                    processes: ['processesStart', 'service', 'compensation', 'processesTask',
-                        'error', 'processesEnd', 'user', 'subProcessesEnd']
-                }
-            }
-        }
-    },
-    {
-        id: 'hazardEnd', width: 40, height: 40, offsetX: 305, offsetY: 370, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'End' },
-        }, annotations: [{
-            id: 'label2', content: 'Hazard',
-            style: { fill: 'white', color: 'black' }, verticalAlignment: 'Top', margin: { top: 20 }
-        }]
-    },
-    {
-        id: 'cancelledEnd', width: 40, height: 40, offsetX: 545, offsetY: 370, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'End' },
-        }, annotations: [{
-            id: 'cancelledEndLabel2', content: 'Cancelled',
-            style: { fill: 'white', color: 'black' }, verticalAlignment: 'Top', margin: { top: 20 }
-        }]
-    },
-    {
-        id: 'end', width: 40, height: 40, offsetX: 665, offsetY: 180, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'End' }
-        },
-    },
-    {
-        id: 'processesStart', width: 30, height: 30, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'Start' }
-        }, margin: { left: 40, top: 80 }
-    },
-    {
-        id: 'service', style: { fill: '#6FAAB0' }, width: 95, height: 70,
-        shape: {
-            type: 'Bpmn', shape: 'Activity', activity: {
-                activity: 'Task', task: {
-                    type: 'Service',
-                    loop: 'parallelmultiinstance',
-                },
-            },
-        }, annotations: [{
-            id: 'serviceLabel2', content: 'Book hotel', offset: { x: 0.50, y: 0.50 },
-            style: { color: 'white', }
-        }], margin: { left: 110, top: 20 },
-    },
-    {
-        id: 'compensation', width: 30, height: 30,
-        shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'Intermediate', trigger: 'Compensation' }
-        }, margin: { left: 170, top: 100 }
-    },
-    {
-        id: 'processesTask', style: { fill: '#F6B53F' }, width: 95, height: 70,
-        shape: {
-            type: 'Bpmn', shape: 'Activity', activity: {
-                activity: 'Task', task: {
-                    type: 'Service',
-                },
-            },
-        }, annotations: [{
-            id: 'serviceLabel2', content: 'Charge credit card', offset: { x: 0.50, y: 0.60 },
-            style: { color: 'white' }
-        }], margin: { left: 290, top: 20 },
-    },
-    {
-        id: 'error', width: 30, height: 30,
-        shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: {
-                event: 'Intermediate', trigger: 'Error'
-            }
-        }, margin: { left: 350, top: 100 }
-    },
-    {
-        id: 'processesEnd', width: 30, height: 30, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'End' }
-        }, margin: { left: 440, top: 80 }
-    },
-    {
-        id: 'user', style: { fill: '#E94649' }, width: 90, height: 80,
-        shape: {
-            type: 'Bpmn', shape: 'Activity', activity: {
-                activity: 'Task', task: {
-                    type: 'User', Compensation: true, offset: { x: 0.50, y: 1 }
-                },
-            },
-        }, annotations: [{
-            id: 'serviceLabel2', content: 'Cancel hotel reservation', offset: { x: 0.50, y: 0.60 },
-            style: { color: 'white' }
-        }], margin: { left: 240, top: 160 },
-    },
-    {
-        id: 'subProcessesEnd', width: 30, height: 30, shape: {
-            type: 'Bpmn', shape: 'Event',
-            event: { event: 'End' }
-        }, margin: { left: 440, top: 210 }
-    },
+
+// Function to initialize a node
+function createNode(id, width, height, offsetX, offsetY, shape, annotations, margin, style, constraints){
+    return {
+        id: id,
+        width: width,
+        height: height,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        shape: shape,
+        annotations:annotations,
+        margin: margin,
+        style: style,
+        constraints: constraints
+    };
+}
+      
+  //Initializes the nodes for the diagram.
+  var nodes= [    
+    createNode('start', 40, 40, 35, 180, { type: 'Bpmn', shape: 'Event', event: { event: 'Start' } }),
+
+    createNode('subProcess', 520, 250, 355, 180, { shape: 'Activity', type: 'Bpmn', activity: { activity: 'SubProcess',
+        subProcess: { type: 'Transaction', collapsed: false, processes: ['processesStart', 'service', 'compensation', 
+        'error','processesTask', 'processesEnd', 'user', 'subProcessesEnd']}}},[],{},{},
+        ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.AllowDrop
+    ),
+    
+    createNode('hazardEnd', 40, 40, 305, 370, { type: 'Bpmn', shape: 'Event', event: { event: 'End' } }, [
+      { id: 'label2', content: 'Hazard', verticalAlignment: 'Top', style: { fill: 'white', color: 'black' }, margin: { top: 20 } }
+    ]),
+    
+    createNode('cancelledEnd', 40, 40, 545, 370, { type: 'Bpmn', shape: 'Event', event: { event: 'End' } }, [
+      { id: 'cancelledEndLabel2', content: 'Cancelled', verticalAlignment: 'Top', style: { fill: 'white', color: 'black' }, margin: { top: 20 } }
+    ]),
+    
+    createNode('end', 40, 40, 665, 180, { type: 'Bpmn', shape: 'Event', event: { event: 'End' } }),
+    
+    createNode('processesStart', 30, 30, 0, 0, { type: 'Bpmn', shape: 'Event', event: { event: 'Start' } }, [], { left: 40, top: 80 }),
+    
+    createNode('service', 95, 70, 0, 0, {
+      type: 'Bpmn', shape: 'Activity', activity: { activity: 'Task', task: { type: 'Service', loop: 'ParallelMultiInstance' } } },
+      [{ id: 'serviceLabel2', content: 'Book hotel', style: { color: 'white' }, offset: { x: 0.5, y: 0.5 } }],
+      { left: 110, top: 20 }, { fill: '#6FAAB0' }
+    ),
+    
+    createNode('compensation', 30, 30, 0, 0, { type: 'Bpmn', shape: 'Event', event: { event: 'Intermediate', trigger: 'Compensation' } }, [], { left: 170, top: 100 }),
+    
+    createNode('processesTask', 95, 70, 0, 0, {
+      type: 'Bpmn', shape: 'Activity', activity: { activity: 'Task', task: { type: 'Service' } } }, 
+      [{ id: 'serviceLabel2', content: 'Charge credit card', style: { color: 'white' }, offset: { x: 0.5, y: 0.6 } } ],
+      { left: 290, top: 20 }, { fill: '#F6B53F' }
+    ),
+    
+    createNode('error', 30, 30, 0, 0, { type: 'Bpmn', shape: 'Event', event: { event: 'Intermediate', trigger: 'Error' } }, [], { left: 350, top: 100 }),
+    
+    createNode('processesEnd', 30, 30, 0, 0, { type: 'Bpmn', shape: 'Event', event: { event: 'End' } },[], { left: 440, top: 80 }),
+    
+    createNode('user', 90, 80, 0, 0, {
+      type: 'Bpmn', shape: 'Activity', activity: { activity: 'Task', task: { type: 'User', compensation: true } } }, 
+      [ { id: 'serviceLabel2', content: 'Cancel hotel reservation', style: { color: 'white' }, offset: { x: 0.5, y: 0.6 } } ], 
+      { left: 30, top: 160 }, { fill: '#E94649' }
+    ),
+    
+    createNode('subProcessesEnd', 30, 30, 0, 0, { type: 'Bpmn', shape: 'Event', event: { event: 'End' } }, [], { left: 440, top: 210 }),
+  ];
+
+
+// Function to create a connector
+function createConnector (id, sourceID, targetID, sourcePortID, targetPortID, type, segments, annotations, shape, style){
+        return{
+        id: id,
+        sourceID: sourceID,
+        targetID: targetID,
+        sourcePortID: sourcePortID,
+        targetPortID: targetPortID,
+        type: type,
+        segments: segments,
+        annotations:annotations,
+        shape: shape,
+        style: style
+    };
+}
+
+//Initializes the connectors for the diagram.
+var connectors= [
+  createConnector('connector1', 'start', 'subProcess'),
+  createConnector('connector2', 'subProcess', 'end', 'success'),
+  createConnector('connector3', 'subProcess', 'hazardEnd', 'failure',"", 'Orthogonal', 
+    [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }],
+    [{ id: 'connector3Label2', content: 'Booking system failure', offset: 0.50, style: { fill: 'white' }}]
+  ),
+  createConnector('connector4', 'subProcess', 'cancelledEnd', 'cancel',"", 'Orthogonal', 
+    [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }]
+  ),
+  createConnector('connector5', 'processesStart', 'service', "", "", 'Orthogonal'),
+  createConnector('connector6', 'service', 'processesTask'),
+  createConnector('connector7', 'processesTask', 'processesEnd', "", "", 'Orthogonal'),
+  createConnector('connector8', 'compensation', 'user', "", "", 'Orthogonal', 
+    [{ type: 'Orthogonal', length: 30, direction: 'Bottom' },{ type: 'Orthogonal', length: 80, direction: 'Left' }],
+    [],{ type: 'Bpmn', flow: 'Association', association: 'Directional'},{ strokeDashArray: '2,2'}
+  ),
+  createConnector('connector9', 'error', 'subProcessesEnd', null, null, 'Orthogonal', 
+    [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }],
+    [{ id: 'connector9Label2', content: 'Cannot charge card', offset: 0.5,
+      style: { fill: 'white', color: 'black' } } ]
+  )
 ];
-var connectors = [
-    { id: 'connector1', sourceID: 'start', targetID: 'subProcess' },
-    { id: 'connector2', sourceID: 'subProcess', sourcePortID: 'success', targetID: 'end' },
-    {
-        id: 'connector3', sourceID: 'subProcess', sourcePortID: 'failure', targetID: 'hazardEnd', type: 'Orthogonal',
-        segments: [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }],
-        annotations: [{
-            id: 'connector3Label2', content: 'Booking system failure', offset: 0.50,
-            style: { fill: 'white' }
-        }]
-    },
-    {
-        id: 'connector4', sourceID: 'subProcess', sourcePortID: 'cancel', targetID: 'cancelledEnd', type: 'Orthogonal',
-        segments: [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }],
-    },
-    { id: 'connector5', sourceID: 'processesStart', targetID: 'service', type: 'Orthogonal', },
-    { id: 'connector6', sourceID: 'service', targetID: 'processesTask' },
-    { id: 'connector7', sourceID: 'processesTask', targetID: 'processesEnd', type: 'Orthogonal', },
-    {
-        id: 'connector8', sourceID: 'compensation', targetID: 'user', type: 'Orthogonal',
-        shape: {
-            type: 'Bpmn',
-            flow: 'association',
-            association: 'Directional'
-        }, style: {
-            strokeDashArray: '2,2'
-        },
-        segments: [{ type: 'Orthogonal', length: 30, direction: 'Bottom' },
-        { type: 'Orthogonal', length: 80, direction: 'Right' }]
-    },
-    {
-        id: 'connector9', sourceID: 'error', targetID: 'subProcessesEnd', type: 'Orthogonal',
-        annotations: [{
-            id: 'connector9Label2', content: 'Cannot charge card', offset: 0.50,
-            style: { fill: 'white', color: 'black' }
-        }],
-        segments: [{ type: 'Orthogonal', length: 50, direction: 'Bottom' }]
-    }
-];
+
+
+//Initializes the bpmn shapes for the symbol pallete.
 var bpmnShapes = [
     {
         id: 'Start', width: 35, height: 35, shape: {
@@ -174,23 +127,20 @@ var bpmnShapes = [
         },
     },
     {
-        id: 'End', width: 35, height: 35, offsetX: 665, offsetY: 230, shape: {
+        id: 'End', width: 35, height: 35, shape: {
             type: 'Bpmn', shape: 'Event',
             event: { event: 'End' }
         },
     },
     {
-        id: 'Task', width: 35, height: 35, offsetX: 700, offsetY: 700,
-        shape: {
+        id: 'Task', width: 35, height: 35, shape: {
             type: 'Bpmn', shape: 'Activity', activity: {
                 activity: 'Task',
             },
         },
     },
     {
-        id: 'Transaction', width: 35, height: 35, offsetX: 300, offsetY: 100,
-        constraints: ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.AllowDrop,
-        shape: {
+        id: 'Transaction', width: 35, height: 35, shape: {
             type: 'Bpmn', shape: 'Activity',
             activity: {
                 activity: 'SubProcess', subProcess: {
@@ -200,23 +150,22 @@ var bpmnShapes = [
                 }
             }
         },
-    }, {
-        id: 'Task_Service', width: 35, height: 35, offsetX: 700, offsetY: 700,
-        shape: {
+    },
+    {
+        id: 'Task_Service', width: 35, height: 35, shape: {
             type: 'Bpmn', shape: 'Activity', activity: {
                 activity: 'Task', task: { type: 'Service' }
             },
         },
     },
     {
-        id: 'Gateway', width: 35, height: 35, offsetX: 100, offsetY: 100,
-        shape: { type: 'Bpmn', shape: 'Gateway', gateway: { type: 'Exclusive' } },
+        id: 'Gateway', width: 35, height: 35, shape: { type: 'Bpmn', shape: 'Gateway', gateway: { type: 'Exclusive' } },
     },
     {
-        id: 'DataObject', width: 35, height: 35, offsetX: 500, offsetY: 100,
-        shape: { type: 'Bpmn', shape: 'DataObject', dataObject: { collection: false, type: 'None' } },
-    }, {
-        id: 'subProcess', width: 520, height: 250, offsetX: 355, offsetY: 230,
+        id: 'DataObject', width: 35, height: 35, shape: { type: 'Bpmn', shape: 'DataObject', dataObject: { collection: false, type: 'None' } },
+    },
+    {
+        id: 'subProcess', width: 520, height: 250,
         constraints: ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.AllowDrop,
         shape: {
             shape: 'Activity', type: 'Bpmn',
@@ -231,6 +180,8 @@ var bpmnShapes = [
         },
     }
 ];
+
+//Initializes the context menu for shapes.
 var contextMenu = {
     show: true, items: [
         {
@@ -308,7 +259,7 @@ var contextMenu = {
                 { text: 'Receive', id: 'Receive', iconCss: 'e-task e-bpmn-icons e-InMessage' },
                 { text: 'Script', id: 'Script', iconCss: 'e-task e-bpmn-icons e-ScriptCall' },
                 { text: 'Send', id: 'Send', iconCss: 'e-task e-bpmn-icons e-InMessage' },
-                { text: 'User', id: 'User', iconCss: 'e-task e-bpmn-icons e-UserCall' },
+                { text: 'User', id: 'User', iconCss: 'e-task e-icons e-user' },
             ]
         }, {
             text: 'GateWay', id: 'GateWay',
@@ -327,6 +278,7 @@ var contextMenu = {
     showCustomMenuOnly: true,
 };
 
+//Initializes the Connector shapes for the symbol pallete.
 function getConnectors() {
     var connectorSymbols = [
         {
@@ -356,27 +308,31 @@ function getConnectors() {
     return connectorSymbols;
 }
 
+//function drag enter from palette to diagram
 function dragEnter(args) {
-    var obj = args.element;
-    if (obj instanceof ej.diagrams.Node) {
-        if (!obj.shape.activity.subProcess.collapsed) {
-            obj.shape.activity.subProcess.transaction.cancel.visible = true;
-            obj.shape.activity.subProcess.transaction.failure.visible = true;
-            obj.shape.activity.subProcess.transaction.success.visible = true;
+    var node = args.element;
+    if (node instanceof ej.diagrams.Node) {
+        if (!node.shape.activity.subProcess.collapsed) {
+            // Make certain transaction-related elements visible
+            node.shape.activity.subProcess.transaction.cancel.visible = true;
+            node.shape.activity.subProcess.transaction.failure.visible = true;
+            node.shape.activity.subProcess.transaction.success.visible = true;
         }
         else {
-            var oWidth = obj.width;
-            var oHeight = obj.height;
-            var ratio = 100 / obj.width;
-            obj.width = 100;
-            obj.height *= ratio;
-            obj.offsetX += (obj.width - oWidth) / 2;
-            obj.offsetY += (obj.height - oHeight) / 2;
+            var nodeWidth = node.width;
+            var nodeHeight = node.height;
+            var ratio = 100 / node.width;
+            node.width = 100;
+            node.height *= ratio;
+            node.offsetX += (node.width - nodeWidth) / 2;
+            node.offsetY += (node.height - nodeHeight) / 2;
         }
     }
 }
 
+//function context menu click
 function contextMenuClick(args) {
+    // Check if any node is selected in the diagram
     if (diagram.selectedItems.nodes.length > 0) {
         var bpmnShape = diagram.selectedItems.nodes[0].shape;
         if (args.item.iconCss.indexOf('e-adhocs') > -1) {
@@ -452,6 +408,8 @@ function contextMenuClick(args) {
         diagram.dataBind();
     }
 }
+
+//function context menu Open
 function contextMenuOpen(args) {
     var hiddenId = [];
     if (args.element.className !== 'e-menu-parent e-ul ') {
@@ -568,6 +526,7 @@ function contextMenuOpen(args) {
     args.hiddenItems = hiddenId;
 }
 
+// Function to handle click event on the palette icon in a mobile view
 function paletteIconClick() {
     var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
@@ -577,7 +536,7 @@ function paletteIconClick() {
         }
     }
 }
-// custom code start
+// Function to toggle the visibility of the palette toolbar in a mobile view
 function showPaletteToolbar() {
     var element = document.getElementById('palette-space');
     isMobile = window.matchMedia('(max-width:550px)').matches;
@@ -590,19 +549,22 @@ function showPaletteToolbar() {
         }
     }
 }
-// custom code end
+
+// Initialization function for the diagram and symbol palette
 this.default = function () {
+     //Initializtion of the diagram.
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '445px', nodes: nodes, connectors: connectors,
         contextMenuSettings: contextMenu,
         contextMenuOpen: contextMenuOpen,
         contextMenuClick: contextMenuClick,
+        //Set the constraints of the SnapSettings
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         dragEnter: dragEnter
     });
     diagram.appendTo('#diagram');
     diagram.fitToPage();
-    
+    //Initializes the symbol palette
     var palette = new ej.diagrams.SymbolPalette({
         expandMode: 'Multiple', symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 }, symbolHeight: 60, symbolWidth: 60,
         palettes: [

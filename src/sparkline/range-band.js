@@ -19,7 +19,7 @@ this.default = function () {
         // custom code start
         load: function (args) {             
             var rangetheme = location.hash.split('/')[1];             
-            rangetheme = rangetheme ? rangetheme : 'Material';             
+            rangetheme = rangetheme ? rangetheme : 'Fluent2';             
             args.sparkline.theme = (rangetheme.charAt(0).toUpperCase() + rangetheme.slice(1));         
         },
         // custom code end

@@ -65,7 +65,7 @@ this.default = function () {
             var colorRangeTheme = location.hash.split('/')[1];
             colorRangeTheme = colorRangeTheme ? colorRangeTheme : 'Material';
             args.heatmap.theme = (colorRangeTheme.charAt(0).toUpperCase() +
-            colorRangeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            colorRangeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
             var width = parseInt(((args.heatmap.width, args.heatmap.element.offsetWidth) || args.heatmap.element.offsetWidth || 600), 10);
             if (width < 500) {

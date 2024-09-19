@@ -1,5 +1,6 @@
 
 var diagram;
+//Initialize the connector object with basic properties
 function CreateConnector(
     name, source, target, content, type,
     direction, targePort, length) {
@@ -31,6 +32,7 @@ function CreateConnector(
     return connector;
 }
 
+//Initialize the node object with basic properties.
 function CreateNodes(
     name, offsetX, offsetY, shape, content,
     width, height, ports) {
@@ -107,7 +109,7 @@ this.default = function () {
     radioButton = new ej.buttons.RadioButton({ label: 'Incoming and outgoing nodes', change: buttonChange, name: 'radio', value: 'NodesConnected' });
     radioButton.appendTo('#NodesConnected');
 
-    radioButton = new ej.buttons.RadioButton({ label: 'Adjacent nodes', change: buttonChange, name: 'radio', value: 'NodesReachable' });
+    radioButton = new ej.buttons.RadioButton({ label: 'Flow of execution', change: buttonChange, name: 'radio', value: 'NodesReachable' });
     radioButton.appendTo('#NodesReachable');
 
 
@@ -116,6 +118,7 @@ this.default = function () {
         selectedButton = args.event.srcElement.id;
     }
 
+    //Function to apply changes based on selection.
     function applyChanges(id) {
         Unhighlight();
         switch (id) {
@@ -142,36 +145,46 @@ this.default = function () {
                 break;
         }
     }
+
+    // Function to display the incoming connectors.
     function linkedIn() {
         if (diagram.selectedItems.nodes.length) {
             var nodes = diagram.selectedItems.nodes[0].inEdges;
             for (var i = 0; i < nodes.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[nodes[i]]);
                 highLightedObjects.push(nodes[i]);
-                diagram.connectors[index].style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.fill = '#1413F8';
+                var connector=diagram.connectors[index];
+                connector.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.fill = '#1413F8';
                 diagram.dataBind();
             }
         }
     }
+
+    // Function to display the outgoing connectors.
     function LinksOut() {
         if (diagram.selectedItems.nodes.length) {
             var node = diagram.selectedItems.nodes[0].outEdges;
             for (var i = 0; i < node.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[node[i]]);
                 highLightedObjects.push(node[i]);
-                diagram.connectors[index].style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.fill = '#1413F8';
+                var connector=diagram.connectors[index];
+                connector.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.fill = '#1413F8';
                 diagram.dataBind();
             }
         }
     }
+
+    // Function to display both the incoming and outgoing connectors.
     function LinksConnector() {
         LinksOut();
         linkedIn();
     }
+
+    // Function to display the incoming nodes.
     function NodesIn() {
         if (diagram.selectedItems.nodes.length) {
             var node = diagram.selectedItems.nodes[0].inEdges;
@@ -184,6 +197,8 @@ this.default = function () {
             }
         }
     }
+
+    // Function to display the outgoing nodes.
     function NodesOut() {
         if (diagram.selectedItems.nodes.length) {
             var node = diagram.selectedItems.nodes[0].outEdges;
@@ -196,10 +211,14 @@ this.default = function () {
             }
         }
     }
+
+    // Function to display both the incoming and outgoing nodes.
     function NodesConnect() {
         NodesOut();
         NodesIn();
     }
+
+    //Function to display the flow of execution
     function NodeReachable() {
         if (diagram.selectedItems.nodes.length) {
             var connectors_1 = diagram.selectedItems.nodes[0].outEdges;
@@ -207,13 +226,16 @@ this.default = function () {
             for (var i = 0; i < nodeList.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[nodeList[i]]);
                 highLightedObjects.push(nodeList[i]);
-                diagram.connectors[index].style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.strokeColor = '#1413F8';
-                diagram.connectors[index].targetDecorator.style.fill = '#1413F8';
+                var connector=diagram.connectors[index];
+                connector.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.strokeColor = '#1413F8';
+                connector.targetDecorator.style.fill = '#1413F8';
                 diagram.dataBind();
             }
         }
     }
+
+    //Function to find the connected nodes
     function foundNode(list, nodeList) {
         for (var i = 0; i < list.length; i++) {
             var connector = diagram.nameTable[list[i]];
@@ -231,6 +253,8 @@ this.default = function () {
         }
         return nodeList;
     }
+
+    //Function to unhighlight the diagram objects
     function Unhighlight() {
         for (var i = highLightedObjects.length - 1; i >= 0; i--) {
             if (diagram.nameTable[highLightedObjects[i]] instanceof ej.diagrams.Node) {
@@ -240,9 +264,10 @@ this.default = function () {
             }
             else {
                 var firstIndex = diagram.connectors.indexOf(diagram.nameTable[highLightedObjects[i]]);
-                diagram.connectors[firstIndex].style.strokeColor = '#8D8D8D';
-                diagram.connectors[firstIndex].targetDecorator.style.strokeColor = '#8D8D8D';
-                diagram.connectors[firstIndex].targetDecorator.style.fill = '#8D8D8D';
+                var connector= diagram.connectors[firstIndex];
+                connector.style.strokeColor = '#8D8D8D';
+                connector.targetDecorator.style.strokeColor = '#8D8D8D';
+                connector.targetDecorator.style.fill = '#8D8D8D';
                 diagram.dataBind();
             }
         }

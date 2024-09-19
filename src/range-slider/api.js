@@ -54,7 +54,6 @@ this.default = function () {
         label: 'Show Buttons',
         change: function (args) {
             sliderObj.showButtons = args.checked;
-
         }
     });
     button.appendTo('#button');

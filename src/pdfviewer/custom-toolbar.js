@@ -1,10 +1,11 @@
 /*jshint esversion: 6 */
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
-var ele = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
+var ele = '<div class="" style="margin:0px 6px"><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
 var isBookmarkClick = false;
 var isBookmarkView = false;
 var isTextSearchBoxOpen = false;
+var searchActive = false;
 var bookmarkPopup;
 var textSearchPopup;
 var toolbarObj;
@@ -208,9 +209,11 @@ this.default = function () {
         updatePageNavigation();
     };
     searchButton = document.getElementById('searchBtn');
+    document.addEventListener('click', checkSearchActive);
     searchInput.addEventListener('focus', function () { searchInput.parentElement.classList.add('e-input-focus'); });
     searchInput.addEventListener('blur', function () { searchInput.parentElement.classList.remove('e-input-focus'); });
     searchInput.addEventListener('keypress', searchInputKeypressed);
+    searchInput.addEventListener('input', inputChange);
     document.getElementById('previousSearch').addEventListener('click', previousSearchClicked);
     document.getElementById('nextSearch').addEventListener('click', nextSearchClicked);
     searchButton.addEventListener('click', searchClickHandler);
@@ -220,11 +223,26 @@ this.default = function () {
     textSearchPopup.hide();
     enableNextButton(false);
     enablePrevButton(false);
-
+    
 function previousClicked(args) {
     disableInkAnnotation();
     hidePopups();
     viewer.navigation.goToPreviousPage();
+    searchActive = true;
+}
+
+function checkSearchActive(args) {
+  if(!searchActive) {
+    viewer.textSearch.clearAllOccurrences();
+  }
+}
+
+function inputChange(args) {
+  viewer.textSearch.clearAllOccurrences();
+  searchActive = false;
+  if(searchInput.value == '') {
+    updateSearchInputIcon(true);
+  }
 }
 function hidePopups() {
     isBookmarkOpen = false;
@@ -564,6 +582,8 @@ function searchClicked(args) {
         textSearchPopup.show();
     }
     else {
+        updateSearchInputIcon(true);
+        searchInput.value = '';
         viewer.textSearch.cancelTextSearch();
         textSearchPopup.hide();
     }
@@ -620,6 +640,7 @@ function readFile(args) {
                 isBookmarkView = false;
                 isBookmarkOpen = false;
                 viewer.fileName = filename;
+                viewer.downloadFileName = filename;
             };
         }
     }
@@ -713,18 +734,22 @@ function searchInputKeypressed(event) {
     enablePrevButton(true);
     enableNextButton(true);
     if (event.which === 13) {
+        searchActive = true;
         initiateTextSearch();
         updateSearchInputIcon(false);
     }
 }
 function searchClickHandler() {
+  searchActive = true;
     if (searchButton.classList.contains('e-pv-search-icon')) {
         viewer.textSearch.cancelTextSearch();
+        updateSearchInputIcon(false);
         initiateTextSearch();
     }
     else if (searchButton.classList.contains('e-pv-search-close')) {
         searchInput.value = '';
         searchInput.focus();
+        updateSearchInputIcon(true);
         viewer.textSearch.cancelTextSearch();
     }
 }
@@ -739,6 +764,7 @@ function previousSearchClicked() {
     }
 }
 function nextSearchClicked() {
+  searchActive = true;
     var searchString = searchInput.value;
     if (searchString) {
         viewer.textSearch.searchNext();

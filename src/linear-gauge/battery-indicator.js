@@ -65,10 +65,10 @@ this.default = function () {
         },
         load: function (args) {
             // custom code start
-            var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
-            args.gauge.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var batteryTheme = location.hash.split('/')[1];
+            batteryTheme = batteryTheme ? batteryTheme : 'Material';
+            args.gauge.theme = (batteryTheme.charAt(0).toUpperCase() +
+                batteryTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
             borderColor = args.gauge.theme.indexOf('Dark') > -1 ? 'white' : '#bfbfbf';
             textColor = args.gauge.theme.indexOf('Dark') > -1 || args.gauge.theme.indexOf('HighContrast') > -1 ? '#FFFFFF' : '#000000';            
@@ -81,7 +81,7 @@ this.default = function () {
             if (args.gauge.theme == 'Fluent' || args.gauge.theme == 'Fluent2') {
                 borderColor = "#EDEBE9";
             }
-            if (args.gauge.theme == 'FluentDark' || args.gauge.theme == 'Fluent2Dark') {
+            if (args.gauge.theme == 'FluentDark' || args.gauge.theme == 'Fluent2Dark' || args.gauge.theme == 'Fluent2HighContrast') {
                 borderColor = "#292827";
             }
             if (args.gauge.theme == 'Bootstrap5' || args.gauge.theme == 'Tailwind') {

@@ -16,7 +16,16 @@ this.default = function () {
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140, isPrimaryKey: true, validationRules: { required: true, number: true }},
             { field: 'CustomerName', headerText: 'Customer Name', width: 150, validationRules: { required: true, minLength: 5 } },
             { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right', editType: 'datepickeredit' },
-        ]
+        ],
+        rowDragStart: function (args) {
+            if (destGrid.isEdit) {
+                if (destGrid.editModule.formObj.validate()) {
+                    destGrid.endEdit();
+                } else {
+                    destGrid.closeEdit();
+                }
+            }
+        },
     });
     grid.appendTo('#Grid');
     var destGrid = new ej.grids.Grid({
@@ -36,7 +45,7 @@ this.default = function () {
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140, isPrimaryKey: true, validationRules: { required: true, number: true }},
             { field: 'CustomerName', headerText: 'Customer Name', width: 150, validationRules: { required: true, minLength: 5 } },
             { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right', editType: 'datepickeredit' },
-        ]
+        ],
     });
     destGrid.appendTo('#DestGrid');
 };

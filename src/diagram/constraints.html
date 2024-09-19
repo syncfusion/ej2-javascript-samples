@@ -1,12 +1,13 @@
 <div class="col-lg-10 control-section">
     <style>
         /* Property panel CSS */
-            .row {
+            .diagram-property-tab .row {
                 margin-left: 0px;
                 margin-right: 0px;
+                padding-top: 8px;
             }
         </style>
-<div class="content-wrapper" style="width:100%;background: white">
+<div class="content-wrapper" style="width:100%; background: white">
     <div id="diagram"></div>
 </div>
     <div id="action-description">
@@ -32,33 +33,28 @@
         <br>
     </div>
 </div>
-<div class="col-lg-2 property-section">
+<div class="col-lg-2 property-section diagram-property-tab">
     <div class="property-panel-header">
         Diagram Constraints
     </div>
-    <!-- <div class="row property-panel-content" id="appearance">
-        <div class="row row-header">
-            Appearance
+    <div class="row property-panel-content">
+        <div class="row">
+            <input type="checkbox" id='zooming'>
         </div>
-    </div> -->
-    <div class="row property-panel-content" style="padding-top: 10px">
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='zooming' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        <div class="row">
+            <input type="checkbox" id='undoRedo'>
         </div>
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='undoRedo' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        <div class="row">
+            <input type="checkbox" id='editing'>
         </div>
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='editing' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        <div class="row">
+            <input type="checkbox" id='contextMenu'>
         </div>
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='contextmenu' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        <div class="row">
+            <input type="checkbox" id='selectable'>
         </div>
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='selectable' style="width: 15px;margin-left:30px;margin-right: 10px;">
-        </div>
-        <div class="row" style="padding-top: 8px">
-            <input type="checkbox" id='draggable' style="width: 15px;margin-left:30px;margin-right: 10px;">
+        <div class="row">
+            <input type="checkbox" id='draggable'>
         </div>
     </div>
 </div>

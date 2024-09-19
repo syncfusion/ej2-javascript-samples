@@ -11,12 +11,13 @@ this.default = function () {
             downloadUrl: hostUrl + 'api/FileManager/Download',
         },
         toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
+        showThumbnail: false,
+        view: 'LargeIcons',
         contextMenuSettings: {
+            file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
             layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
             visible: true
-        },
-        showThumbnail: false,
-        view: 'LargeIcons'
+        }
     });
     fileObject.appendTo('#filemanager');
 };

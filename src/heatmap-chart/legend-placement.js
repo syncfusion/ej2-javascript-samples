@@ -55,7 +55,10 @@ this.default = function () {
             var legendTheme = location.hash.split('/')[1];
             legendTheme = legendTheme ? legendTheme : 'Material';
             args.heatmap.theme = (legendTheme.charAt(0).toUpperCase() +
-            legendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            legendTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
+            if (legendTheme.indexOf("fluent2") > -1) {
+                args.heatmap.cellSettings.border.color = args.heatmap.theme === 'Fluent2' ? '#fff' : '#000';
+            }
             // custom code end
         },
         legendSettings: {

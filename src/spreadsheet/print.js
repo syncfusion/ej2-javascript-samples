@@ -412,6 +412,7 @@ this.default = function () {
             spreadsheet.cellFormat({ fontSize: '13pt', fontWeight: 'bold', textAlign: 'center', backgroundColor: '#919aff',
                     verticalAlign: 'middle', color: '#ffffff' }, 'Yearly Report!A2:G2');
             spreadsheet.numberFormat('$#,##0.00', 'Car Sales!F3:F59');
+            spreadsheet.numberFormat('m/d/yyyy', 'Car Sales!E3:E58');
         },
         openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
         saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',

@@ -76,6 +76,21 @@
             }
         },
         {
+            "url": "custom-animation",
+            "name": "Custom Animation",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline series with delay animation.",
+            "category": "Line Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
             "url": "spline-inversed",
             "name": "Inversed Spline",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the inversed spline series.",
@@ -181,6 +196,21 @@
                     "primaryXAxis",
                     "primaryYAxis",
                     "series"
+                ]
+            }
+        },
+        {
+            "url": "step-without-riser",
+            "name": "Step Without Riser",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the step area without vertical risers.",
+            "category": "Area Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip"
                 ]
             }
         },
@@ -674,9 +704,66 @@
             }
         },
         {
+            "url": "rounded-corner",
+            "name": "Rounded Corner",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "category": "Accumulation Charts",
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "pie-with-patterns",
+            "name": "Pie with Patterns",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie chart with patterns.",
+            "category": "Accumulation Charts",
+            "api": {
+                "Chart": [
+                    "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "live-update",
+            "name": "Live Update",
+            "type": "new",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Accumulation Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
             "url": "waterfall",
             "name": "Waterfall",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the waterfall series.",
+            "category": "Other Types",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "horizontal-waterfall",
+            "name": "Horizontal Waterfall",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the horizontal waterfall series.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -986,7 +1073,6 @@
         {
             "url": "update-spline",
             "name": "Spline updating each second",
-            "type": "new",
             "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
@@ -1000,7 +1086,6 @@
         {
             "url": "live-stock-data",
             "name": "Live stock data",
-            "type": "new",
             "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
@@ -1014,7 +1099,6 @@
         {
             "url": "update-data-source",
             "name": "Update data source",
-            "type": "new",
             "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
@@ -1028,6 +1112,19 @@
         {
             "url": "click-add-point",
             "name": "Click to add a point",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
+            "category": "Real-time Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series"
+                ]
+            }
+        },
+        {
+            "url": "live-data-sorting",
+            "name": "Live Data Sorting",
             "type": "new",
             "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
@@ -1615,6 +1712,7 @@
         {
             "url": "zooming",
             "name": "Zooming and Panning",
+            "type": "update",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the zooming and panning behavior in chart.",
             "category": "User Interaction",
             "api": {

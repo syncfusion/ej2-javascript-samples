@@ -68,7 +68,7 @@ this.default = function () {
             var renderModeTheme = location.hash.split('/')[1];
             renderModeTheme = renderModeTheme ? renderModeTheme : 'Material';
             args.heatmap.theme = (renderModeTheme.charAt(0).toUpperCase() +
-            renderModeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            renderModeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
     });

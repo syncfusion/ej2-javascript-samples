@@ -63,7 +63,7 @@ this.default = function () {
     // custom code start
     function load(args) {
         var gridtheme = location.hash.split('/')[1];
-        gridtheme = gridtheme ? gridtheme : 'Material';                          
+        gridtheme = gridtheme ? gridtheme : 'Fluent2';                          
         args.sparkline.theme = (gridtheme.charAt(0).toUpperCase() + gridtheme.slice(1));                  
     }
     // custom code end

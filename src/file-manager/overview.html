@@ -1,23 +1,553 @@
 <div class="col-lg-12 control-section">
     <div class="control_wrapper">
-        <!-- Initialize FileManager -->
-        <div id="filemanager"></div>
+        <div class="mainLayout-content">
+            <div>
+            <div class="filemanager-container">
+                <div id="filemanager"></div>
+            </div>
+            <aside id="default_left_sidebar">
+                <div id="tree"></div>
+            </aside>
+            
+            <aside id="default_right_sidebar">
+                <div id="single-selection-pane" style="display: none;" class="folder-info">
+                    <div id="folder-info-header">
+                        <span id="fileType"></span>
+                        <button id="close-btn" class="e-icons e-close close-sidebar"></button>
+                    </div>
+                    <div class="folder-container">
+                        <div id="imageType" class="e-filemanager-image"></div>
+                    </div>
+                    <div class="folder-details">
+                        <div class="file-name">Name</div>
+                        <div class="input-container">
+                            <input id="fm-file-name" readonly></input>
+                            <span id="rename-icon" class="e-icons e-edit fm-edit-icon-span"></span>
+                        </div>
+                        <div style="margin-bottom: 7px;">
+                            <span id="tick-icon" class="e-icons e-check fm-action-icon-span"></span>
+                            <span id="close-icon" class="e-icons e-close fm-action-icon-span" style="margin-right: 7px;"></span>
+                        </div>
+                        <div id="tag-name">Tags</div>
+                        <div class="tags">
+                            <span id="tag-name1" class="tag-span"></span>
+                            <span id="tag-name2" class="tag-span"></span>
+                        </div>
+                        <div class="file-info">
+                            <div class="detail">
+                                <span class="labels">Type</span>:<span id="fmType" class="fileItems-span"></span>
+                            </div>
+                            <div class="detail">
+                                <span class="labels">Size</span>:<span id="fmSize" class="fileItems-span"></span>
+                            </div>
+                            <div class="detail">
+                                <span class="labels">Location</span>:<span id="fmLocation" class="fileItems-span"></span>
+                            </div>
+                            <div class="detail">
+                                <span class="labels">Modified</span>:<span id="fmModified" class="fileItems-span"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="multiple-selection-pane" style="display: none;">
+                    <div class="multi-folder-info">
+                        <div class="multi-folder-container">
+                            <div class="e-filemanager-image folder"></div>
+                        </div>
+                        <div class="selected-count-container">
+                            <span id="selected-count"></span>
+                        </div>
+                        <div class="more-detais-container">
+                            <span>Select a single file to get more details.</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="no-selection-pane" style="display: none;">
+                    <div class="no-selection-folder-info">
+                        <div class="no-selection-folder-container">
+                            <div class="e-filemanager-image folder"></div>
+                        </div>
+                        <div class="current-folder-container">
+                            <span id="current-folder"></span>
+                        </div>
+                        <div class="more-detais-container">
+                            <span>Select a single file to get more details.</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    </div>
+    <!-- Initialize Dialog -->
+    <div id="deleteDialog">
     </div>
 </div>
 <style>
+    #imageType.e-filemanager-image.folder {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.269631 16.0936C0.126239 14.9028 1.05591 13.8545 2.25529 13.8545H37.7447C38.9441 13.8545 39.8738 14.9028 39.7304 16.0936L37.7574 32.4777C37.5154 34.4873 35.8103 35.9994 33.7861 35.9994H6.21389C4.18972 35.9994 2.48458 34.4873 2.24258 32.4777L0.269631 16.0936Z" fill="%23FDDD35"/%3E%3Cpath d="M2.5 8V14.1587H37.5V11.9798C37.5 10.8753 36.6046 9.97984 35.5 9.97984H21.4809C21.0683 9.97984 20.6657 9.85221 20.3285 9.61445L15.7199 6.36538C15.3826 6.12763 14.9801 6 14.5675 6H4.5C3.39543 6 2.5 6.89543 2.5 8Z" fill="%23FAC800"/%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.png {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%238799FB"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M11.25 29.25L16.624 24.2821C17.5393 23.4359 19.0232 23.4359 19.9385 24.2821L25.3125 29.25M22.9688 27.0833L24.8271 25.3654C25.7424 24.5193 27.2264 24.5193 28.1417 25.3654L30 27.0833M22.9688 20.5833H22.9805M13.5938 32.5H27.6562C28.9507 32.5 30 31.5299 30 30.3333V18.4167C30 17.22 28.9507 16.25 27.6562 16.25H13.5938C12.2993 16.25 11.25 17.22 11.25 18.4167V30.3333C11.25 31.5299 12.2993 32.5 13.5938 32.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.png {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%238799FB"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M11.25 29.25L16.624 24.2821C17.5393 23.4359 19.0232 23.4359 19.9385 24.2821L25.3125 29.25M22.9688 27.0833L24.8271 25.3654C25.7424 24.5193 27.2264 24.5193 28.1417 25.3654L30 27.0833M22.9688 20.5833H22.9805M13.5938 32.5H27.6562C28.9507 32.5 30 31.5299 30 30.3333V18.4167C30 17.22 28.9507 16.25 27.6562 16.25H13.5938C12.2993 16.25 11.25 17.22 11.25 18.4167V30.3333C11.25 31.5299 12.2993 32.5 13.5938 32.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.jpg {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%238799FB"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M11.25 29.25L16.624 24.2821C17.5393 23.4359 19.0232 23.4359 19.9385 24.2821L25.3125 29.25M22.9688 27.0833L24.8271 25.3654C25.7424 24.5193 27.2264 24.5193 28.1417 25.3654L30 27.0833M22.9688 20.5833H22.9805M13.5938 32.5H27.6562C28.9507 32.5 30 31.5299 30 30.3333V18.4167C30 17.22 28.9507 16.25 27.6562 16.25H13.5938C12.2993 16.25 11.25 17.22 11.25 18.4167V30.3333C11.25 31.5299 12.2993 32.5 13.5938 32.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.docx {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%2300B0FF"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cline x1="10.5" y1="15.75" x2="22" y2="15.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M11.25 22.5L30 22.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M11.25 30L30 30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="2"/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.pdf {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%23FF8484"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M8.75 28.75V23.75M8.75 23.75V18.75H11.75C12.8546 18.75 13.75 19.6454 13.75 20.75V21.75C13.75 22.8546 12.8546 23.75 11.75 23.75H8.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M26.25 28.75V23.75V18.75H32.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M26.25 23.75H31.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M20.5 18.75H17.5V28.75H20.5C21.6046 28.75 22.5 27.8546 22.5 26.75V20.75C22.5 19.6454 21.6046 18.75 20.5 18.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.pptx {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H30.9997C33.2088 40 34.9997 38.2091 34.9997 36V10L24.9998 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%23FF8E47"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H34.9999L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M11.249 32.499L29.9988 32.499" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cellipse cx="19.9994" cy="20" rx="7.49991" ry="7.5" fill="%23FFA153" stroke="white"/%3E%3Cpath d="M27.5 20H20L20.0001 12.5C24.1422 12.5 27.5 15.8579 27.5 20Z" fill="white"/%3E%3Cpath d="M27.5 20V20.5H28V20H27.5ZM20 20L19.5 20C19.5 20.1326 19.5527 20.2598 19.6464 20.3536C19.7402 20.4473 19.8674 20.5 20 20.5V20ZM20.0001 12.5V12H19.5001L19.5001 12.5L20.0001 12.5ZM20.5 20L20.5001 12.5L19.5001 12.5L19.5 20L20.5 20ZM20.0001 13C23.866 13 27 16.134 27 20H28C28 15.5817 24.4183 12 20.0001 12V13ZM27.5 19.5H20V20.5H27.5V19.5Z" fill="white"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="29.9997" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="13.9999" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.mp3 {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%2333C0FF"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M15.4167 31.5278V17.0833L28.75 13.75V28.1944M15.4167 31.5278C15.4167 32.7551 13.9243 33.75 12.0833 33.75C10.2424 33.75 8.75 32.7551 8.75 31.5278C8.75 30.3005 10.2424 29.3056 12.0833 29.3056C13.9243 29.3056 15.4167 30.3005 15.4167 31.5278ZM28.75 28.1944C28.75 29.4217 27.2576 30.4167 25.4167 30.4167C23.5757 30.4167 22.0833 29.4217 22.0833 28.1944C22.0833 26.9671 23.5757 25.9722 25.4167 25.9722C27.2576 25.9722 28.75 26.9671 28.75 28.1944ZM15.4167 21.5278L28.75 18.1944" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.mp4 {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%23FF8484"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M23.4916 23.5073L20.1611 21.287C19.4689 20.8255 18.5417 21.3218 18.5417 22.1537V26.5943C18.5417 27.4263 19.4689 27.9225 20.1611 27.461L23.4916 25.2407C24.1101 24.8284 24.1101 23.9196 23.4916 23.5073Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M30 24.374C30 29.5517 25.8027 33.749 20.625 33.749C15.4473 33.749 11.25 29.5517 11.25 24.374C11.25 19.1964 15.4473 14.999 20.625 14.999C25.8027 14.999 30 19.1964 30 24.374Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.txt {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%239A9DA2"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cline x1="11.75" y1="17" x2="23.25" y2="17" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M11.25 23.75L30 23.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M11.25 31.25L30 31.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #imageType.e-filemanager-image.xlsx {
+        width: 100%;
+        height: 65px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0)"%3E%3Cg filter="url(%23filter0_i)"%3E%3Cpath d="M9 40H31C33.2091 40 35 38.2091 35 36V10L25 0H9C6.79086 0 5 1.79086 5 4V36C5 38.2091 6.79086 40 9 40Z" fill="%2337E170"/%3E%3C/g%3E%3Cg filter="url(%23filter1_d)"%3E%3Cpath d="M27 10H35L25 0V8C25 9.10457 25.8954 10 27 10Z" fill="white" fill-opacity="0.5"/%3E%3C/g%3E%3Cpath d="M11.25 25L30 25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M20 16.875L20 33.125" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M30 33.75H11.25V16.25H30V33.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id="filter0_i" x="5" y="0" width="30" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation="2"/%3E%3CfeComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/%3E%3CfeBlend mode="normal" in2="shape" result="effect1_innerShadow"/%3E%3C/filter%3E%3Cfilter id="filter1_d" x="23" y="-1" width="14" height="14" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"%3E%3CfeFlood flood-opacity="0" result="BackgroundImageFix"/%3E%3CfeColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/%3E%3CfeOffset dy="1"/%3E%3CfeGaussianBlur stdDeviation="1"/%3E%3CfeColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/%3E%3CfeBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/%3E%3CfeBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/%3E%3C/filter%3E%3CclipPath id="clip0"%3E%3Crect width="40" height="40" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A');
+    }
+
+    #folder-info-header {
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: larger;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #folder-info-header .close-sidebar {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .folder-details .file-name {
+        margin-bottom: 10px;
+    }
+
+    .folder-details #fm-file-name {
+        border: none;
+        background-color: #F5F5F5;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    .input-container {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        background-color: #F5F5F5;
+    }
+
+    #tag-name {
+        margin-bottom: 5px;
+    }
+
+    .tags {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 5px;
+        background-color: #F5F5F5;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .tag-span {
+        background-color: #FFFFFF;
+        padding: 1px 4px;
+        border-radius: 4px;
+    }
+    
+    .file-info {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .detail {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 6px;
+    }
+
+    .labels {
+        width: 60px;
+        flex-shrink: 0;
+    }
+
+    .fileItems-span {
+        margin-left: 5px;
+        flex-grow: 1;
+        max-width: calc(100% - 87px);
+    }
+
+    .folder-info {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .folder-container {
+        background: #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .folder-details {
+        flex-grow: 1;
+    }
+
+    .input-container, .file-info, .tags {
+        width: 100%;
+    }
+
+    #tree.e-treeview .e-list-icon {
+        margin: 0px;
+    }
+
+    #filemanager.e-filemanager .e-address .e-search-wrap {
+        display: none;
+    }
+
+    #default_right_sidebar {
+        min-width: 200px;
+        max-width: 204px;
+        padding: 5px;
+    }
+
+    #default_left_sidebar {
+        min-width: 160px;
+        max-width: 165px;
+    }
+
+    #default_left_sidebar, #default_right_sidebar, #tree.e-treeview {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .e-bigger .mainLayout-content {
+        height: 440px;
+    }
+    .e-bigger .filemanager-container #filemanager {
+        height: 440px !important;
+    }
+
+    #tree.e-treeview {
+        border: transparent;
+    }
+
+    #filemanager.e-filemanager .e-toolbar.fmFavoriteToolbar, #filemanager.e-filemanager .e-address.fmFavoriteBreadcrumb {
+        display: none;
+    }
+
+    #fmLocation {
+        white-space: unset;
+        word-break: break-word;
+    }
+    
+    #rename-icon.fm-edit-icon-span{
+        position: absolute;
+        right: 10px;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1000;
+        top: 13px;
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    #tick-icon.fm-action-icon-span,
+    #close-icon.fm-action-icon-span {
+        position: relative;
+        right: 10px;
+        opacity: 0;
+        cursor: pointer;
+        float: right;
+        border-radius: 17px;
+        padding: 4px;
+    }
+
+    #tick-icon.fm-action-icon-span {
+        background-color: #0F6CBD;
+        color: #FFFFFF;
+    }
+
+    #close-icon.fm-action-icon-span {
+        background-color: #FFFFFF;
+        color: #242424;
+    }
+ 
+    .input-container:hover #rename-icon.fm-edit-icon-span {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .input-container.typing #tick-icon.fm-action-icon-span,
+    .input-container.typing #close-icon.fm-action-icon-span {
+        opacity: 1; 
+    }
+
     .control_wrapper {
         margin: auto;
         border-radius: 3px;
     }
+
+    #filemanager.e-filemanager .e-fe-grid-name .fmNameColumn {
+        display: flex;
+        align-items: center;
+    }
+
+    #filemanager.e-filemanager .custom-icons {
+        opacity: 0; 
+        visibility: hidden;
+        margin-left: auto;
+        width: fit-content;
+    }
+
+    #filemanager.e-filemanager .e-row:hover .custom-icons {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #filemanager.e-filemanager .e-fe-grid-name .fmNameColumn span:first-child {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #filemanager.e-filemanager .custom-icons .e-icons {
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    #filemanager.e-filemanager .custom-icons .favorite-icon.filled {
+        color: black; 
+    }
+
+    #filemanager.e-filemanager .custom-icons .favorite-icon:not(.filled) {
+        opacity: 0.3;
+    }
+
+    #deleteDialog {
+        max-width: 350px;
+    }
+
+    .bootstrap5 #filemanager.e-filemanager .custom-icons .e-icons,
+    .bootstrap5\.3 #filemanager.e-filemanager .custom-icons .e-icons {
+        color: black;
+    }
+
+    .fluent2-highcontrast #filemanager.e-filemanager .custom-icons .favorite-icon:not(.filled),
+    .highcontrast #filemanager.e-filemanager .custom-icons .favorite-icon:not(.filled),
+    .fluent-dark #filemanager.e-filemanager .custom-icons .favorite-icon:not(.filled) {
+        opacity: 1;
+    }
+
+    #tree.e-treeview .e-list-icon + .e-list-text {
+        padding: 0px 12px;
+    }
+
+    
+    #no-selection-pane {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #no-selection-pane .no-selection-folder-container {
+        background: #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+    }
+
+    #no-selection-pane .e-filemanager-image.folder {
+        width: 40%;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.269631 16.0936C0.126239 14.9028 1.05591 13.8545 2.25529 13.8545H37.7447C38.9441 13.8545 39.8738 14.9028 39.7304 16.0936L37.7574 32.4777C37.5154 34.4873 35.8103 35.9994 33.7861 35.9994H6.21389C4.18972 35.9994 2.48458 34.4873 2.24258 32.4777L0.269631 16.0936Z" fill="%23FDDD35"/%3E%3Cpath d="M2.5 8V14.1587H37.5V11.9798C37.5 10.8753 36.6046 9.97984 35.5 9.97984H21.4809C21.0683 9.97984 20.6657 9.85221 20.3285 9.61445L15.7199 6.36538C15.3826 6.12763 14.9801 6 14.5675 6H4.5C3.39543 6 2.5 6.89543 2.5 8Z" fill="%23FAC800"/%3E%3C/svg%3E%0A');
+    }
+
+    #no-selection-pane .current-folder-container {
+        padding: 20px 0px;
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    #multiple-selection-pane {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #multiple-selection-pane .multi-folder-container {
+        background: #e9e9e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+    }
+
+    #multiple-selection-pane .e-filemanager-image.folder {
+        width: 40%;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('data:image/svg+xml,%3Csvg width="auto" height="auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.269631 16.0936C0.126239 14.9028 1.05591 13.8545 2.25529 13.8545H37.7447C38.9441 13.8545 39.8738 14.9028 39.7304 16.0936L37.7574 32.4777C37.5154 34.4873 35.8103 35.9994 33.7861 35.9994H6.21389C4.18972 35.9994 2.48458 34.4873 2.24258 32.4777L0.269631 16.0936Z" fill="%23FDDD35"/%3E%3Cpath d="M2.5 8V14.1587H37.5V11.9798C37.5 10.8753 36.6046 9.97984 35.5 9.97984H21.4809C21.0683 9.97984 20.6657 9.85221 20.3285 9.61445L15.7199 6.36538C15.3826 6.12763 14.9801 6 14.5675 6H4.5C3.39543 6 2.5 6.89543 2.5 8Z" fill="%23FAC800"/%3E%3C/svg%3E%0A');
+    }
+
+    #multiple-selection-pane .selected-count-container {
+        padding: 20px 0px;
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    .more-detais-container {
+        display: flex;
+        background-color: #F5F5F5;
+        padding: 5px 0px 10px 10px;
+        border-radius: 5px;
+        font-size: larger;
+    }
+
+    #tree.e-treeview .e-text-content {
+        padding: 0px;
+    }
+
+    .material3-dark .folder-details #fm-file-name,
+    .material3-dark .tag-span,
+    .material3-dark .more-detais-container,
+    .material3-dark #rename-icon.fm-edit-icon-span,
+    .bootstrap5-dark .folder-details #fm-file-name,
+    .bootstrap5-dark .tag-span,
+    .bootstrap5-dark .more-detais-container,
+    .bootstrap5-dark #rename-icon.fm-edit-icon-span,
+    .bootstrap5\.3-dark .folder-details #fm-file-name,
+    .bootstrap5\.3-dark .tag-span,
+    .bootstrap5\.3-dark .more-detais-container,
+    .bootstrap5\.3-dark #rename-icon.fm-edit-icon-span,
+    .fluent2-dark .folder-details #fm-file-name,
+    .fluent2-dark .tag-span,
+    .fluent2-dark .more-detais-container,
+    .fluent2-dark #rename-icon.fm-edit-icon-span,
+    .tailwind-dark #rename-icon.fm-edit-icon-span,
+    .tailwind-dark .folder-details #fm-file-name,
+    .tailwind-dark .tag-span,
+    .tailwind-dark .more-detais-container,
+    .fluent2-highcontrast .folder-details #fm-file-name,
+    .fluent2-highcontrast .tag-span,
+    .fluent2-highcontrast .more-detais-container,
+    .fluent2-highcontrast #rename-icon.fm-edit-icon-span,
+    .highcontrast #rename-icon.fm-edit-icon-span,
+    .highcontrast .folder-details #fm-file-name,
+    .highcontrast .tag-span,
+    .highcontrast .more-detais-container,
+    .fluent-dark #rename-icon.fm-edit-icon-span,
+    .fluent-dark .folder-details #fm-file-name,
+    .fluent-dark .tag-span,
+    .fluent-dark .more-detais-container {
+        color: #100f0f;
+    }
+
+    .material3 #tree.e-treeview .e-list-icon + .e-list-text,
+    .material3-dark #tree.e-treeview .e-list-icon + .e-list-text {
+        padding: 10px 12px;
+    }
+
 </style>
 
+
+
 <div id="action-description">
-    <p>This sample demonstrates the full features of the File Manager that includes <a href="https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#toolbarsettings" target="_blank"> toolbar</a>, <a href="https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#navigationpanesettings" target="_blank"> navigation pane</a> and <a href="https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#detailsviewsettings" target="_blank"> details view.</a></p>
+    <p>
+        The File Manager control, with a details view and preview pane, is designed to resemble a OneDrive user interface, featuring customized icons in the details view. The preview pane displays the details of the currently selected files or folders on the right side inside the Sidebar control. This preview pane can be toggled using the preview pane option available in the File Manager control toolbar items on the right side. On the left side of the File Manager control, available items can be used to navigate to the corresponding path achieved using the File Manager <a target='_blank' href='https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#path'>path</a> property. Additionally, you can perform <code>favorites</code>, <code>delete</code>, and <code>rename</code> functionalities using icon items by hovering over the corresponding folder or file items in the FileManager details view.
+    </p>
 </div>
 
 <div id="description">
-    <p>The File Manager component is used to explore a file system through a web application, similar to the windows explorer for windows. It supports all the basic file operations such as create, rename, delete, cut, copy, paste, upload, download and so on.</p>
 
-    <p><b>Note: </b>File Manager’s upload functionality is restricted in the online demo. If you need to test upload functionality, please install 
-         <a target="_blank" href="https://www.syncfusion.com/downloads">Syncfusion Essential Studio </a>on your machine and run the demo.</p>
+    <p>The JavaScript File Manager control has been enhanced with custom icons to improve user interaction:</p>
+    <ul>
+        <li><code>Delete</code>: This icon appears when hovering over items in the details view, allowing users to remove files or folders from the File Manager control. This is achieved using the File Manager control's <a target='_blank' href='https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#deletefiles'>deleteFiles</a> method.</li>
+        <li><code>Download</code>: This icon is shown when hovering over items in the details view, enabling users to download files or folders from the File Manager control. This is achieved using the File Manager control's <a target='_blank' href='https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#downloadfiles'>downloadFiles</a> method.</li>
+        <li><code>Favorite</code>: This icon appears when hovering over items, allowing users to add files or folders to a "favorite" directory. You can view the favorite items by clicking on the "Favorite" option on the left side.</li>
+        <li><code>Rename</code>: This icon appears when hovering over the file or folder name in the preview pane, allowing users to edit names in the File Manager control. This is achieved using the File Manager control's <a target='_blank' href='https://ej2.syncfusion.com/javascript/documentation/api/file-manager/#renamefile'>renameFile</a> method.</li>
+        <li><code>Preview pane</code>: This icon allows users to select items and click the preview icon to display detailed information about the selected items in a preview pane.</li>
+    </ul>
 </div>

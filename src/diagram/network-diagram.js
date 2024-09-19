@@ -1,4 +1,3 @@
-// custom code start
 var template1 =
     '<g xmlns="http://www.w3.org/2000/svg" id="Server" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">    <path d="M6,11 L30,11 C31.1045695,11 32,10.1045695 32,9 L32,5 C32,3.8954305 31.1045695,3 30,3 L6,3 C4.8954305,3 4,3.8954305 4,5 L4,9 C4,10.1045695 4.8954305,11 6,11 Z" id="Stroke-61" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6"/>    <path d="M6,19 L30,19 C31.1045695,19 32,18.1045695 32,17 L32,13 C32,11.8954305 31.1045695,11 30,11 L6,11 C4.8954305,11 4,11.8954305 4,13 L4,17 C4,18.1045695 4.8954305,19 6,19 Z" id="Stroke-61-Copy" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6"/>    <path d="M6,27 L30,27 C31.1045695,27 32,26.1045695 32,25 L32,21 C32,19.8954305 31.1045695,19 30,19 L6,19 C4.8954305,19 4,19.8954305 4,21 L4,25 C4,26.1045695 4.8954305,27 6,27 Z" id="Stroke-61-Copy-2" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6"/>    <path d="M18,28 L18,33" id="Stroke-62" stroke="#5C90DF" stroke-width="2"/>    <path d="M5,33 L31,33" id="Stroke-64" stroke="#5C90DF" stroke-width="2" stroke-linecap="round"/>    <path d="M23,7 C23,7.552 22.552,8 22,8 C21.4473333,8 21,7.552 21,7 C21,6.448 21.4473333,6 22,6 C22.552,6 23,6.448 23,7" id="Fill-97" fill="#5C90DF" opacity="0.4"/>    <path d="M23,15 C23,15.552 22.552,16 22,16 C21.4473333,16 21,15.552 21,15 C21,14.448 21.4473333,14 22,14 C22.552,14 23,14.448 23,15" id="Fill-97-Copy-3" fill="#5C90DF" opacity="0.4"/>    <path d="M23,23 C23,23.552 22.552,24 22,24 C21.4473333,24 21,23.552 21,23 C21,22.448 21.4473333,22 22,22 C22.552,22 23,22.448 23,23" id="Fill-97-Copy-6" fill="#5C90DF" opacity="0.4"/>    <path d="M26,7 C26,7.552 25.552,8 25,8 C24.4473333,8 24,7.552 24,7 C24,6.448 24.4473333,6 25,6 C25.552,6 26,6.448 26,7" id="Fill-97-Copy" fill="#5C90DF" opacity="0.7"/>    <path d="M26,15 C26,15.552 25.552,16 25,16 C24.4473333,16 24,15.552 24,15 C24,14.448 24.4473333,14 25,14 C25.552,14 26,14.448 26,15" id="Fill-97-Copy-4" fill="#5C90DF" opacity="0.7"/>    <path d="M26,23 C26,23.552 25.552,24 25,24 C24.4473333,24 24,23.552 24,23 C24,22.448 24.4473333,22 25,22 C25.552,22 26,22.448 26,23" id="Fill-97-Copy-7" fill="#5C90DF" opacity="0.7"/>    <path d="M29,7 C29,7.552 28.552,8 28,8 C27.4473333,8 27,7.552 27,7 C27,6.448 27.4473333,6 28,6 C28.552,6 29,6.448 29,7" id="Fill-97-Copy-2" fill="#5C90DF"/>    <path d="M29,15 C29,15.552 28.552,16 28,16 C27.4473333,16 27,15.552 27,15 C27,14.448 27.4473333,14 28,14 C28.552,14 29,14.448 29,15" id="Fill-97-Copy-5" fill="#5C90DF"/>    <path d="M29,23 C29,23.552 28.552,24 28,24 C27.4473333,24 27,23.552 27,23 C27,22.448 27.4473333,22 28,22 C28.552,22 29,22.448 29,23" id="Fill-97-Copy-8" fill="#5C90DF"/>    <path d="M7,7 L18,7" id="Path-9" stroke="#FFFFFF" stroke-width="2"/>    <path d="M7,15 L18,15" id="Path-9-Copy" stroke="#FFFFFF" stroke-width="2"/>    <path d="M7,23 L18,23" id="Path-9-Copy-2" stroke="#FFFFFF" stroke-width="2"/></g>';
 var template2 =
@@ -25,8 +24,8 @@ var template16 = '<g xmlns="http://www.w3.org/2000/svg" id="Subwoofer" stroke="n
 var template17 = '<g xmlns="http://www.w3.org/2000/svg" id="Speaker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M7,34 L29,34 C29.5522847,34 30,33.5522847 30,33 L30,3 C30,2.44771525 29.5522847,2 29,2 L7,2 C6.44771525,2 6,2.44771525 6,3 L6,33 C6,33.5522847 6.44771525,34 7,34 Z" id="Fill-5" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6"/><circle id="Oval-4" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6" cx="18" cy="24" r="6"/><circle id="Oval-4" fill="#5C90DF" cx="18" cy="24" r="2"/><circle id="Oval-4-Copy" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6" cx="18" cy="10" r="4"/><circle id="Oval-4-Copy-2" fill="#5C90DF" cx="18" cy="10" r="1"/></g>';
 var template18 = '<g xmlns="http://www.w3.org/2000/svg" id="Security-camera" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M5,14 L31,14 C32.6568542,14 34,12.6568542 34,11 L34,8.1 C34,8.04477153 33.9552285,8 33.9,8 L2.1,8 C2.04477153,8 2,8.04477153 2,8.1 L2,11 C2,12.6568542 3.34314575,14 5,14 Z" id="Fill-60-Copy-7" stroke="#5C90DF" stroke-width="2" fill="#C6D9F6"/><g id="Rectangle-3">    <use fill="#C6D9F6" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path-1"/>    <path stroke="#5C90DF" stroke-width="2" d="M6,14 L6,21 C6,27.627417 11.372583,33 18,33 C24.627417,33 30,27.627417 30,21 L30,14 L6,14 Z"/></g>path d="M10.7131909,30.4389491 C10.6918801,30.423109 10.6701242,30.4087605 10.6482026,30.395712 L10.7131909,30.4389491 Z M11,30.6451981 C13.289733,32.2606898 15.7637224,32.9992203 18.4541771,32.8758063 C21.0894422,32.7549239 23.2603428,31.9860703 25,30.5711756 L25,26.6652832 C25,22.79929 21.8659932,19.6652832 18,19.6652832 C14.1340068,19.6652832 11,22.79929 11,26.6652832 C11,27.7731018 11,27.7731018 11,28.8809204 C11,29.8134885 11,29.9610154 11,30.6452056 Z" id="Rectangle-4" stroke="#5C90DF" stroke-width="2"/><path d="M18,30 C19.6568542,30 21,28.6568542 21,27 C21,25.3431458 19.6568542,24 18,24 C16.3431458,24 15,25.3431458 15,27 C15,28.6568542 16.3431458,30 18,30 Z" id="Oval-3" stroke="#5C90DF" stroke-width="2" fill="#FFFFFF"/></g>';
 var arrow = 'M 0 26.4576 L 26.4576 0 L 26.4576 0 L 26.4576 17.46239 L 26.4576 17.46239 L 113.3856 17.46239 L 113.3856 17.46239' + 'L 113.3856 35.45279 L 113.3856 35.45279 L 26.4576 35.45279 L 26.4576 35.45279 L 26.4576 52.91519 L 26.4576 52.91519 L 0 26.4576 Z';
-// custom code end
 
+//Sets the default values of nodes
 function getNetworkNodeDefaults(node) {
     node.style.strokeColor = '#5C90DF';
     node.style.fill = 'transparent';
@@ -96,6 +95,7 @@ function getNetworkNodeDefaults(node) {
     return node;
 }
 
+//Sets the default values of connectors
 function getConnectorDefaults(connector) {
     connector.targetDecorator = { shape: 'Arrow', width: 8, height: 8, style: { fill: '#5C90DF', strokeColor: '#5C90DF' } };
     connector.style.strokeColor = '#5C90DF';
@@ -105,6 +105,7 @@ function getConnectorDefaults(connector) {
     return connector;
 }
 
+//Sets the default values of symbols
 function getSymbolDefaults(symbol) {
     if (symbol.id === 'arrow1') {
         symbol.width = 75; symbol.height = 60;
@@ -123,20 +124,24 @@ function getSymbolDefaults(symbol) {
     }
 }
 
+// Disables posting raw files
 function onFileRemove(args) {
     args.postRawFile = false;
 }
 
+//Check the device is mobile or not
 function addEvents() {
     var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
         var paletteIcons = document.getElementById('palette-icon');
         if (paletteIcons) {
+            //if mobile openPallete called
             paletteIcons.addEventListener('click', openPalette, false);
         }
     }
 }
 
+//Creates pallatte space
 function openPalette() {
     var paletteSpaces = document.getElementById('palette-space');
     isMobile = window.matchMedia('(max-width:550px)').matches;
@@ -155,41 +160,43 @@ function openPalette() {
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
 
-    var port = [
+    //Initializes the ports for the nodes.
+    var port1 = [
         { id: 'port1', offset: { x: 0, y: 0.5 } },
         { id: 'port2', offset: { x: 1, y: 0.5 } },
         { id: 'port3', offset: { x: 0.5, y: 0.1 } },
         { id: 'port4', offset: { x: 0.5, y: 0.92 } }
-    ];
-    var portrc = [
-        { id: 'port1', offset: { x: 0.05, y: 0.5 } },
-        { id: 'port2', offset: { x: 1, y: 0.5 } },
-        { id: 'port3', offset: { x: 0.85, y: 0.1 } },
-        { id: 'port4', offset: { x: 0.6, y: 0.97 } }
-    ];
-    var porthmi = [
-        { id: 'port1', offset: { x: 0.34, y: 0.5 } },
-        { id: 'port2', offset: { x: 0.75, y: 0.5 } },
-        { id: 'port3', offset: { x: 0.5, y: 0.05 } },
-        { id: 'port4', offset: { x: 0.6, y: 0.9 } }
     ];
     var port2 = [
         { id: 'port1', offset: { x: 0.45, y: 0.5 } },
         { id: 'port2', offset: { x: 0.97, y: 0.5 } },
         { id: 'port3', offset: { x: 0.5, y: 0.97 } }
     ];
-    var portmo = [
+    var port3 = [
+        { id: 'port1', offset: { x: 0.05, y: 0.5 } },
+        { id: 'port2', offset: { x: 1, y: 0.5 } },
+        { id: 'port3', offset: { x: 0.85, y: 0.1 } },
+        { id: 'port4', offset: { x: 0.6, y: 0.97 } }
+    ];
+    var port4 = [
+        { id: 'port1', offset: { x: 0.34, y: 0.5 } },
+        { id: 'port2', offset: { x: 0.75, y: 0.5 } },
+        { id: 'port3', offset: { x: 0.5, y: 0.05 } },
+        { id: 'port4', offset: { x: 0.6, y: 0.9 } }
+    ];
+    var port5 = [
         { id: 'port1', offset: { x: 0.02, y: 0.6 } },
         { id: 'port2', offset: { x: 0.98, y: 0.625 } },
         { id: 'port3', offset: { x: 0.5, y: 0.3 } },
         { id: 'port4', offset: { x: 0.5, y: 0.97 } }
     ];
+    //Initializes the nodes for the diagram.
     var nodes = [
         {
             id: 'Server1', offsetX: 80, offsetY: 75,
             shape: { type: 'Native', content: template1 },
             annotations: [{ content: 'Server', offset: { x: 0.5, y: 0 }, margin: { bottom: 10 } }],
-            ports: port
+            ports: port1
         },
         {
             id: 'WorkStation1', offsetX: 250, offsetY: 75,
@@ -206,37 +213,37 @@ this.default = function () {
             id: 'modem1', offsetX: 450, offsetY: 125,
             shape: { type: 'Native', content: template3 },
             annotations: [{ content: 'Modem', margin: { right: 25 }, offset: { x: 0, y: 0.5 } }],
-            ports: portmo
+            ports: port5
         },
         {
             id: 'modem2', offsetX: 525, offsetY: 175,
             shape: { type: 'Native', content: template3 },
             annotations: [{ content: 'Modem1', margin: { bottom: 10 }, offset: { x: 0.5, y: 0 } }],
-            ports: portmo
+            ports: port5
         },
         {
             id: 'RemoteController1', offsetX: 600, offsetY: 125,
             shape: { type: 'Native', content: template4 },
             annotations: [{ content: 'Remote Controller', margin: { bottom: 10 }, offset: { x: 0.5, y: 0 } }],
-            ports: portrc
+            ports: port3
         },
         {
             id: 'modem3', offsetX: 350, offsetY: 205,
             shape: { type: 'Native', content: template3 },
             annotations: [{ content: 'Modem4', margin: { left: 35 }, offset: { x: 1, y: 0.5 } }],
-            ports: portmo
+            ports: port5
         },
         {
             id: 'modem4', offsetX: 450, offsetY: 245,
             shape: { type: 'Native', content: template3 },
             annotations: [{ content: 'Modem2', offset: { x: 0.5, y: 1.3 } }],
-            ports: portmo
+            ports: port5
         },
         {
             id: 'modem5', offsetX: 350, offsetY: 330,
             shape: { type: 'Native', content: template3 },
             annotations: [{ content: 'Modem3', margin: { right: 25 }, offset: { x: 0, y: 0.5 } }],
-            ports: portmo
+            ports: port5
         },
         {
             id: 'WorkStation3', offsetX: 600, offsetY: 250,
@@ -254,49 +261,49 @@ this.default = function () {
             id: 'RemoteController2', offsetX: 80, offsetY: 400,
             shape: { type: 'Native', content: template4 },
             annotations: [{ content: 'Control Logic', margin: { top: 8 }, offset: { x: 0.5, y: 1 } }],
-            ports: portrc
+            ports: port3
         },
         {
             id: 'RemoteController3', offsetX: 500, offsetY: 400,
             shape: { type: 'Native', content: template4 },
             annotations: [{ content: 'Control Logic', margin: { top: 8 }, offset: { x: 0.5, y: 1 } }],
-            ports: portrc
+            ports: port3
         },
         {
             id: 'AnalogIO', offsetX: 160, offsetY: 500,
             shape: { type: 'Native', content: template5 },
             annotations: [{ content: 'Analog IO', margin: { top: 13 }, offset: { x: 0.5, y: 1 } }],
-            ports: porthmi
+            ports: port4
         },
         {
             id: 'sensor', offsetX: 260, offsetY: 500,
             shape: { type: 'Native', content: template6 },
             annotations: [{ content: 'Sensor', margin: { top: 10 }, offset: { x: 0.5, y: 1 } }],
-            ports: port
+            ports: port1
         },
         {
             id: 'DeviceDriver1', offsetX: 360, offsetY: 500,
             shape: { type: 'Native', content: template7 },
             annotations: [{ content: 'DriverA', offset: { x: 0.5, y: 1.3 } }],
-            ports: porthmi
+            ports: port4
         },
         {
             id: 'DeviceDriver2', offsetX: 460, offsetY: 500,
             shape: { type: 'Native', content: template7 },
             annotations: [{ content: 'DriverB', offset: { x: 0.5, y: 1.3 } }],
-            ports: porthmi
+            ports: port4
         },
         {
             id: 'DeviceDriver3', offsetX: 550, offsetY: 500,
             shape: { type: 'Native', content: template7 },
             annotations: [{ content: 'DriverC', offset: { x: 0.5, y: 1.3 } }],
-            ports: porthmi
+            ports: port4
         },
         {
             id: 'HMI', offsetX: 625, offsetY: 450,
             shape: { type: 'Native', content: template8 },
             annotations: [{ content: 'HMI', offset: { x: 0.5, y: 1.3 } }],
-            ports: port
+            ports: port1
         },
         {
             id: 'controlNet', offsetX: 218.5, offsetY: 380,
@@ -329,89 +336,90 @@ this.default = function () {
             id: 'connector6', offsetX: 370, offsetY: 380
         }
     ];
+    //Initializes the connectors for the diagram.
     var connectors = [
         {
-            id: 'connectora', sourceID: 'Server1', targetID: 'WorkStation1',
+            id: 'connector11', sourceID: 'Server1', targetID: 'WorkStation1',
             targetPortID: 'port1'
         },
         {
-            id: 'connectorawork', sourceID: 'WorkStation1', targetID: 'WorkStation2',
+            id: 'connector12', sourceID: 'WorkStation1', targetID: 'WorkStation2',
             sourcePortID: 'port2', targetPortID: 'port1'
         },
         {
-            id: 'connectoraworkm', sourceID: 'WorkStation2', targetID: 'modem1', type: 'Orthogonal',
+            id: 'connector13', sourceID: 'WorkStation2', targetID: 'modem1', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             targetPortID: 'port3', sourcePortID: 'port2'
         },
         {
-            id: 'connectorm1m2', sourceID: 'modem2', targetID: 'modem1', type: 'Orthogonal',
+            id: 'connector14', sourceID: 'modem2', targetID: 'modem1', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port1', targetPortID: 'port4'
         },
         {
-            id: 'connectorm2m3', sourceID: 'modem2', targetID: 'RemoteController1', type: 'Orthogonal',
+            id: 'connector15', sourceID: 'modem2', targetID: 'RemoteController1', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port2', targetPortID: 'port4'
         },
         {
-            id: 'connectorws2m3', sourceID: 'WorkStation2', targetID: 'modem3',
+            id: 'connector16', sourceID: 'WorkStation2', targetID: 'modem3',
             sourcePortID: 'port3', targetPortID: 'port3'
         },
         {
-            id: 'connectorws2m4', sourceID: 'modem4', targetID: 'modem3', type: 'Orthogonal',
+            id: 'connector17', sourceID: 'modem4', targetID: 'modem3', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port1', targetPortID: 'port4'
         },
         {
-            id: 'connectorm3m4', sourceID: 'modem5', targetID: 'modem3',
+            id: 'connector18', sourceID: 'modem5', targetID: 'modem3',
             sourcePortID: 'port3', targetPortID: 'port4'
         },
         {
-            id: 'connectorm4ws3', sourceID: 'modem5', targetID: 'WorkStation4',
+            id: 'connector19', sourceID: 'modem5', targetID: 'WorkStation4',
             sourcePortID: 'port2', targetPortID: 'port1'
         },
         {
-            id: 'connectorm4m5', sourceID: 'modem4', targetID: 'WorkStation3',
+            id: 'connector20', sourceID: 'modem4', targetID: 'WorkStation3',
             sourcePortID: 'port2', targetPortID: 'port1'
         },
         {
-            id: 'connectorr2r3', sourceID: 'RemoteController2', targetID: 'RemoteController3',
+            id: 'connector21', sourceID: 'RemoteController2', targetID: 'RemoteController3',
             targetPortID: 'port1'
         },
         {
-            id: 'connectorr2r3qq', sourceID: 'Server1', targetID: 'RemoteController2',
+            id: 'connector22', sourceID: 'Server1', targetID: 'RemoteController2',
             sourcePortID: 'port4'
         },
         {
-            id: 'connectorm3se1', sourceID: 'modem3', targetID: 'Server1', type: 'Orthogonal',
+            id: 'connector23', sourceID: 'modem3', targetID: 'Server1', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port1', targetPortID: 'port4'
         },
         {
-            id: 'connectorws2aio1', sourceID: 'RemoteController2', targetID: 'AnalogIO',
+            id: 'connector24', sourceID: 'RemoteController2', targetID: 'AnalogIO',
             type: 'Orthogonal', sourcePortID: 'port2', targetPortID: 'port3'
         },
         {
-            id: 'connectorb', sourceID: 'RemoteController2', targetID: 'sensor', type: 'Orthogonal',
+            id: 'connector25', sourceID: 'RemoteController2', targetID: 'sensor', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port2', targetPortID: 'port3'
         },
         {
-            id: 'connectord1', sourceID: 'RemoteController2', targetID: 'DeviceDriver1', type: 'Orthogonal',
+            id: 'connector26', sourceID: 'RemoteController2', targetID: 'DeviceDriver1', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port2', targetPortID: 'port3'
         },
         {
-            id: 'connectord2', sourceID: 'RemoteController2', targetID: 'DeviceDriver2', type: 'Orthogonal',
+            id: 'connector27', sourceID: 'RemoteController2', targetID: 'DeviceDriver2', type: 'Orthogonal',
             segments: [{ type: 'Orthogonal', length: 25 }],
             sourcePortID: 'port2', targetPortID: 'port3'
         },
         {
-            id: 'connectordh1d3', sourceID: 'HMI', targetID: 'DeviceDriver3', type: 'Orthogonal',
+            id: 'connector28', sourceID: 'HMI', targetID: 'DeviceDriver3', type: 'Orthogonal',
             sourcePortID: 'port1', targetPortID: 'port3'
         },
         {
-            id: 'connectordh1d2', sourceID: 'HMI', type: 'Orthogonal', targetID: 'DeviceDriver2',
+            id: 'connector29', sourceID: 'HMI', type: 'Orthogonal', targetID: 'DeviceDriver2',
             sourcePortID: 'port1', targetPortID: 'port3'
         }
     ];
@@ -430,6 +438,7 @@ this.default = function () {
         created: created
     });
     diagram.appendTo('#diagram');
+    // initializes the network symbols to the UML Shapes in the symbol palette.
     var symbols = [
         { id: 'server', shape: { type: 'Native', content: template1 } },
         { id: 'workStation', shape: { type: 'Native', content: template2 } },
@@ -454,6 +463,7 @@ this.default = function () {
     var targetPoint = { x: 40, y: 40 };
     var targetDecorator = { shape: 'Arrow', style: {strokeColor: '#757575', fill: '#757575'} };
     var style = { strokeWidth: 2, strokeColor: '#757575' };
+    // initializes the connector symbols to the UML Shapes in the symbol palette.
     var connectorSymbols = [
         {
             id: 'link11', type: 'Straight', sourcePoint: sourcePoint, targetPoint: targetPoint,
@@ -464,10 +474,12 @@ this.default = function () {
             targetDecorator: targetDecorator, style: style
         }
     ];
+    // Initializes the palettes to be displayed in the symbol palette.
     var palettes = [
         { id: 'network', expanded: true, symbols: symbols, title: 'Network Shapes' },
         { id: 'connectors', expanded: true, symbols: connectorSymbols, title: 'Connectors' }
     ];
+    // Initializes symbol palette.
     var palette = new ej.diagrams.SymbolPalette({
         // sets the expandable mode of the symbol palette.
         expandMode: 'Multiple',
@@ -481,12 +493,18 @@ this.default = function () {
         getSymbolInfo: function (symbol) { return { fit: true }; }
     });
     palette.appendTo('#symbolpalette');
+    // Initializes HTMLElement.
     var dropElement = document.getElementsByClassName('control-fluid')[0];
 
+    // Initializes button.
     var button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#browse');
 
+    //Uploader to select svg file
     var uploadObj = new ej.inputs.Uploader({
+         // Allow only SVG files to be uploaded
+        allowedExtensions: '.svg',
+        // Set the URLs for the async settings
         asyncSettings: {
             saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
             removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
@@ -494,17 +512,24 @@ this.default = function () {
         success: onUploadSuccess,
         removing: onFileRemove
     });
+    // Append the uploader to the element with id 'fileupload'
     uploadObj.appendTo('#fileupload');
+    // Set the click event for the button
     button.element.onclick = function () {
+        // Trigger the click event of the hidden file input element
         document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
         return false;
     };
     var id = 0;
 
+    // Function called on successful file upload to add SVG image to palette
     function onUploadSuccess(arg) {
+        // Retrieve the uploaded file
         var file1 = arg.file;
         var file = file1.rawFile;
+        // Create a new FileReader instance to read the file content
         var reader = new FileReader();
+        // Initialize variables to store shape details
         reader.addEventListener('load', function (event) {
             var shape;
             var shapeContent = getNativeContent(event.target.result);
@@ -513,11 +538,12 @@ this.default = function () {
         });
         id++;
         reader.readAsText(file);
+        // Clear the uploader to prepare for the next upload
         uploadObj.clearAll();
     }
 
+    //Set content to div
     function getNativeContent(content) {
-        var attr = { id: 'svgdiv' };
         var div =  document.createElementNS('http://www.w3.org/2000/svg', 'div');
         document.body.appendChild(div);
         div.innerHTML = content;
@@ -526,6 +552,7 @@ this.default = function () {
         return svgContent;
     }
 
+    //Diagram set to center
     function created() {
         addEvents();
         diagram.fitToPage();

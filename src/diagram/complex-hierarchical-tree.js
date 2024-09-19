@@ -12,20 +12,26 @@ var verticalSpacingObj;
 var marginTopObj;
 var marginLeftObj;
 var diagram;
+
 //Apply the Alignment for the layout.
 function update(value) {
-    if (value === 'left') {
-        diagram.layout.margin.left = marginLeftObj.value;
-    } else if (value === 'top') {
-        diagram.layout.margin.top = marginTopObj.value;
-    } else if (value === 'hspacing') {
-        diagram.layout.horizontalSpacing = horizontalSpacingObj.value;
-    } else if (value === 'vspacing') {
-        diagram.layout.verticalSpacing = verticalSpacingObj.value;
+    switch (value) {
+        case 'left':
+            diagram.layout.margin.left = marginLeftObj.value;
+            break;
+        case 'top':
+            diagram.layout.verticalAlignment = 'Top';
+            diagram.layout.margin.top = marginTopObj.value;
+            break;
+        case 'hspacing':
+            diagram.layout.horizontalSpacing = horizontalSpacingObj.value;
+            break;
+        case 'vspacing':
+            diagram.layout.verticalSpacing = verticalSpacingObj.value;
+            break;
     }
     diagram.dataBind();
 }
-
 
 
 this.default = function () {
@@ -72,12 +78,8 @@ this.default = function () {
      var checkBoxObj = new ej.buttons.CheckBox({
          checked: true, label: 'Prevent Connector Overlapping',
           change: function (args) {
-           if (args.checked) {
-                 diagram.layout.connectionPointOrigin = ej.diagrams.ConnectionPointOrigin.DifferentPoint;
-              }
-              else {
-                  diagram.layout.connectionPointOrigin = ej.diagrams.ConnectionPointOrigin.SamePoint;
-              }
+              diagram.layout.connectionPointOrigin = args.checked ? ej.diagrams.ConnectionPointOrigin.DifferentPoint :
+               ej.diagrams.ConnectionPointOrigin.SamePoint;
           }
       });
      checkBoxObj.appendTo('#checked');
@@ -122,6 +124,7 @@ this.default = function () {
         }
     });
     verticalSpacingObj.appendTo('#vertical');
+    
     //Click Event for Appearance of the layout.
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;

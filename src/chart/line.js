@@ -31,12 +31,13 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: new Date(2012, 6, 11), y: 13.5 }, { x: new Date(2013, 6, 11), y: 12.4 }, { x: new Date(2014, 6, 11), y: 12.7 }, { x: new Date(2015, 6, 11), y: 12.5 }, { x: new Date(2016, 6, 11), y: 12.7 }, { x: new Date(2017, 6, 11), y: 13.7 }, { x: new Date(2018, 6, 11), y: 13.4 }, { x: new Date(2019, 6, 11), y: 12.9 }, { x: new Date(2020, 6, 11), y: 11.0 },
+                    { x: new Date(2012, 6, 11), y: 5.3 },{ x: new Date(2013, 6, 11), y: 5.6 },{ x: new Date(2014, 6, 11), y: 5.9 },{ x: new Date(2015, 6, 11), y: 5.7 },{ x: new Date(2016, 6, 11), y: 7.8 },{ x: new Date(2017, 6, 11), y: 10.3 }, { x: new Date(2018, 6, 11), y: 15.5 }, { x: new Date(2019, 6, 11), y: 17.5 }, { x: new Date(2020, 6, 11), y: 19.5 }
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
                     width: 7,
                     height: 7,
+                    shape: 'Circle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Vietnam',
@@ -44,12 +45,13 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: new Date(2012, 6, 11), y: 5.3 },{ x: new Date(2013, 6, 11), y: 5.6 },{ x: new Date(2014, 6, 11), y: 5.9 },{ x: new Date(2015, 6, 11), y: 5.7 },{ x: new Date(2016, 6, 11), y: 7.8 },{ x: new Date(2017, 6, 11), y: 10.3 }, { x: new Date(2018, 6, 11), y: 15.5 }, { x: new Date(2019, 6, 11), y: 17.5 }, { x: new Date(2020, 6, 11), y: 19.5 }
+                    { x: new Date(2012, 6, 11), y: 13.5 }, { x: new Date(2013, 6, 11), y: 12.4 }, { x: new Date(2014, 6, 11), y: 12.7 }, { x: new Date(2015, 6, 11), y: 12.5 }, { x: new Date(2016, 6, 11), y: 12.7 }, { x: new Date(2017, 6, 11), y: 13.7 }, { x: new Date(2018, 6, 11), y: 13.4 }, { x: new Date(2019, 6, 11), y: 12.9 }, { x: new Date(2020, 6, 11), y: 11.0 }
                 ],
-                xName: 'x', width: 2,marker: {
+                xName: 'x', width: 2, marker: {
                     visible: true,
                     width: 6,
                     height: 6,
+                    shape: 'Triangle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Canada',
@@ -57,12 +59,13 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: new Date(2012, 6, 11), y: 5.6 },{ x: new Date(2013, 6, 11), y: 4.7 }, { x: new Date(2014, 6, 11), y: 4.3 },{ x: new Date(2015, 6, 11), y: 3.8 }, { x: new Date(2016, 6, 11), y: 2.8 },  { x: new Date(2017, 6, 11), y: 2.8 }, { x: new Date(2018, 6, 11), y: 4.1 }, { x: new Date(2019, 6, 11), y: 6.8 },  { x: new Date(2020, 6, 11), y: 7.1 }, 
+                    { x: new Date(2012, 6, 11), y: 5.6 }, { x: new Date(2013, 6, 11), y: 4.7 }, { x: new Date(2014, 6, 11), y: 4.3 }, { x: new Date(2015, 6, 11), y: 3.8 }, { x: new Date(2016, 6, 11), y: 2.8 }, { x: new Date(2017, 6, 11), y: 2.8 }, { x: new Date(2018, 6, 11), y: 4.1 }, { x: new Date(2019, 6, 11), y: 6.8 }, { x: new Date(2020, 6, 11), y: 7.1 },
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
                     width: 7,
                     height: 7,
+                    shape: 'Diamond',
                     isFilled: true
                 },
                 yName: 'y', name: 'Malaysia',
@@ -70,12 +73,13 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: new Date(2012, 6, 11), y: 6.6 }, { x: new Date(2013, 6, 11), y: 6.8 }, { x: new Date(2014, 6, 11), y: 6.5 },{ x: new Date(2015, 6, 11), y: 5.5 }, { x: new Date(2016, 6, 11), y: 5.0 }, { x: new Date(2017, 6, 11), y: 6.8 }, { x: new Date(2018, 6, 11), y: 7.8 }, { x: new Date(2019, 6, 11), y: 7.3 }, { x: new Date(2020, 6, 11), y: 8.2 }, 
+                    { x: new Date(2012, 6, 11), y: 6.6 }, { x: new Date(2013, 6, 11), y: 6.8 }, { x: new Date(2014, 6, 11), y: 6.5 }, { x: new Date(2015, 6, 11), y: 5.5 }, { x: new Date(2016, 6, 11), y: 5.0 }, { x: new Date(2017, 6, 11), y: 6.8 }, { x: new Date(2018, 6, 11), y: 7.8 }, { x: new Date(2019, 6, 11), y: 7.3 }, { x: new Date(2020, 6, 11), y: 8.2 },
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
                     width: 5,
                     height: 5,
+                    shape: 'Rectangle',
                     isFilled: true
                 },
                 yName: 'y', name: 'Egypt',
@@ -83,12 +87,13 @@ this.default = function () {
             {
                 type: 'Line',
                 dataSource: [
-                    { x: new Date(2012, 6, 11), y: 2.3 }, { x: new Date(2013, 6, 11), y: 2.6 },{ x: new Date(2014, 6, 11), y: 4.4 },{ x: new Date(2015, 6, 11), y: 4.9 },{ x: new Date(2016, 6, 11), y: 4.8 }, { x: new Date(2017, 6, 11), y: 5.3 }, { x: new Date(2018, 6, 11), y: 6.2 }, { x: new Date(2019, 6, 11), y: 7.8 },  { x: new Date(2020, 6, 11), y: 9.3 }
+                    { x: new Date(2012, 6, 11), y: 2.3 }, { x: new Date(2013, 6, 11), y: 2.6 }, { x: new Date(2014, 6, 11), y: 4.4 }, { x: new Date(2015, 6, 11), y: 4.9 }, { x: new Date(2016, 6, 11), y: 4.8 }, { x: new Date(2017, 6, 11), y: 5.3 }, { x: new Date(2018, 6, 11), y: 6.2 }, { x: new Date(2019, 6, 11), y: 7.8 }, { x: new Date(2020, 6, 11), y: 9.3 }
                 ],
                 xName: 'x', width: 2, marker: {
                     visible: true,
                     width: 7,
                     height: 7,
+                    shape: 'Pentagon',
                     isFilled: true
                 },
                 yName: 'y', name: 'Indonesia',
@@ -96,7 +101,7 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Crude Steel Production Annual Growth',
-        legendSettings: {enableHighlight: true},
+        legendSettings: { visible: true, enableHighlight: true },
         //Initializing Tooltip
         tooltip: {
             enable: true
@@ -105,11 +110,10 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var lineTheme = location.hash.split('/')[1];
-            lineTheme = lineTheme ? lineTheme: 'Material';
+            lineTheme = lineTheme ? lineTheme: 'Fluent2';
             args.chart.theme = (lineTheme.charAt(0).toUpperCase() + 
-                lineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
-        }
-         // custom code end
+                lineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+        } ,
     });
     chart.appendTo('#line-container');
 };

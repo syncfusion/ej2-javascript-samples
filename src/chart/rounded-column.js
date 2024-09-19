@@ -1,6 +1,6 @@
 var pointRender = function (args) {
     var selectedTheme = location.hash.split('/')[1];
-    selectedTheme = selectedTheme ? selectedTheme : 'material';
+    selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
     if (selectedTheme && selectedTheme.indexOf('fabric-dark') > -1) {
         if (args.series.yName == "Rate")
             args.fill = "f9fafb";
@@ -61,7 +61,7 @@ var pointRender = function (args) {
         if (args.series.yName == "Rate")
             args.fill = "grey";
     }
-    else if (selectedTheme === 'fluent2-dark') {
+    else if (selectedTheme === 'fluent2-highcontrast' || selectedTheme === 'fluent2-dark') {
         if (args.series.yName == "Rate")
             args.fill = "#f9fafb";
     } 
@@ -131,9 +131,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
            // custom code end
     });

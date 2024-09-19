@@ -124,7 +124,6 @@
         {
             "url": "bindUI-to-document",
             "name": "Bind UI To Document",
-            "type": "new",
             "category": "Document Editor",
             "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
             "api": {
@@ -869,6 +868,18 @@
                     "redo",
                     "canUndo",
                     "canRedo"
+                ]
+            }
+        },
+        {
+            "url": "autoshapes",
+            "name": "Auto Shapes",
+            "category": "Shapes",
+            "type": "new",
+            "description":"This sample shows Auto shapes preservation in Document Editor.",
+            "api": {
+                "Editor": [
+                    "insertShape"
                 ]
             }
         },

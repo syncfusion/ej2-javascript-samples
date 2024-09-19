@@ -59,9 +59,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var lineTheme = location.hash.split('/')[1];
-            lineTheme = lineTheme ? lineTheme: 'Material';
+            lineTheme = lineTheme ? lineTheme: 'Fluent2';
             args.chart.theme = (lineTheme.charAt(0).toUpperCase() + 
-                lineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                lineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

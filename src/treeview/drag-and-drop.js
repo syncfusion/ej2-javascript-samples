@@ -18,7 +18,7 @@ this.default = function () {
     var listObj = new ej.lists.ListView({
         dataSource: [],
         cssClass: 'custom-list',
-        template: '<div><span>${text}</span><span id=${iconId} class=${class}></span></div>',
+        template: '<div class="dropped-list-view-item"><span>${text}</span><span id=${iconId} class=${class}></span></div>',
     });
     listObj.appendTo('#list');
     // Drop the dragged TreeView node into ListView

@@ -99,7 +99,7 @@ this.default = function () {
             var multiLevelTheme = location.hash.split('/')[1];
             multiLevelTheme  = multiLevelTheme  ? multiLevelTheme  : 'Material';
             args.heatmap.theme =  (multiLevelTheme.charAt(0).toUpperCase() +
-            multiLevelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast');
+            multiLevelTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i,  'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             multiLevelTheme = multiLevelTheme.toLowerCase();
             if(multiLevelTheme.indexOf('dark') > -1 || multiLevelTheme.indexOf('highcontrast') > -1)
             {

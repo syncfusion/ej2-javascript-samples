@@ -4,225 +4,609 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "samples": [{
+    "samples": [
+        {
             "url": "tools",
             "name": "Overview",
-            "type": "update",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "fileManagerSettings", "showCharCount", "actionBegin", "actionComplete", "maxLength", "enableTabKey", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["path", "enable", "ajaxSettings"], "QuickToolbarSettings": ["table"] }
+            "type": "update",
+            "api": {
+                "RichTextEditor": [
+                    "Inject",  
+                    "toolbarSettings",
+                    "quickToolbarSettings",
+                    "fileManagerSettings",
+                    "showCharCount",
+                    "actionBegin",
+                    "actionComplete",
+                    "maxLength",
+                    "enableTabKey",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ],
+                "FileManagerSettings": [
+                    "path",
+                    "enable",
+                    "ajaxSettings"
+                ],
+                "QuickToolbarSettings": [
+                    "table"
+                ],
+                "SlashMenuSettings": [  
+                    "items",
+                    "enable"
+            ]
+            }
         },
         {
+  
             "url": "rich-text-editor",
             "name": "Default Functionalities",
             "description": "This demo shows how to render JavaScript (ECMAScript 5) Rich Text Editor (WYSIWYG HTML editor) control with a minimum configuration setting.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "image",
             "name": "Image",
             "description": "This demo explains how to insert images with a blob or base64 format, link to the images, image upload, rotate left/right, and more in JS (ECMAScript 5) Editor.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarClick", "appendTo", "getRange"], "QuickToolbarSettings": ["image"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "quickToolbarSettings",
+                    "toolbarClick",
+                    "appendTo",
+                    "getRange"
+                ],
+                "QuickToolbarSettings": [
+                    "image"
+                ]
+            }
         },
         {
             "url": "insert-media",
             "name": "Insert Media",
             "description": "This demo shows how to insert audio and video, Embed video, upload audio and video, and more in Insert Media.",
-            "category":"Rich Text Editor",
-            "api": { "RichTextEditor":  ["Inject", "quickToolbarSettings", "toolbarClick", "appendTo", "getRange"], "ToolbarSettings": ["items"] }
+            "category": "Rich Text Editor",
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "quickToolbarSettings",
+                    "toolbarClick",
+                    "appendTo",
+                    "getRange"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "inline",
             "name": "Inline",
             "description": "This demo shows inline HTML editor that is displayed when selecting the content or simply focusing on the content inside the JS (ECMAScript 5) Rich Text Editor.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "inlineMode", "toolbarSettings", "format", "fontFamily", "appendTo", "dataBind"], "InlineMode": ["enable", "onSelection"], "ToolbarSettings": ["items"], "Format": ["width"], "FontFamily": ["width"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "inlineMode",
+                    "toolbarSettings",
+                    "format",
+                    "fontFamily",
+                    "appendTo",
+                    "dataBind"
+                ],
+                "InlineMode": [
+                    "enable",
+                    "onSelection"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ],
+                "Format": [
+                    "width"
+                ],
+                "FontFamily": [
+                    "width"
+                ]
+            }
         },
         {
             "url": "paste-cleanup",
             "name": "Paste from MS Word",
             "description": "This demo explains how to clean up HTML when pasting a content from Microsoft Word, Visual Studio, or a web page in JS (ECMAScript 5) HTML Editor.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "pasteCleanupSettings", "appendTo"], "pasteCleanupSettings": ["prompt", "plainText", "keepFormat", "deniedTags", "deniedAttrs", "allowedStyleProps"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "pasteCleanupSettings",
+                    "appendTo"
+                ],
+                "pasteCleanupSettings": [
+                    "prompt",
+                    "plainText",
+                    "keepFormat",
+                    "deniedTags",
+                    "deniedAttrs",
+                    "allowedStyleProps"
+                ]
+            }
         },
         {
             "url": "format-painter",
             "name": "Format Painter",
             "description": "This demo explains how to use Format Painter feature of the Rich Text Editor control.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "formatPainterSettings", "appendTo"], "FormatPainterSettings": ["allowedContext", "allowedFormats", "deniedFormats"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "formatPainterSettings",
+                    "appendTo"
+                ],
+                "FormatPainterSettings": [
+                    "allowedContext",
+                    "allowedFormats",
+                    "deniedFormats"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "iframe",
             "name": "IFrame",
             "description": "This demo shows how to render a  JS (ECMAScript 5) Rich Text Editor (iframe) that was designed by using the iframe element covering all tool functionalities.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "height", "iframeSettings", "toolbarSettings", "fileManagerSettings", "actionBegin", "actionComplete", "appendTo"], "IFrameSettings": ["enable"], "ToolbarSettings": ["items"], "FileManagerSettings": ["enable", "path", "ajaxSettings"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "height",
+                    "iframeSettings",
+                    "toolbarSettings",
+                    "fileManagerSettings",
+                    "actionBegin",
+                    "actionComplete",
+                    "appendTo"
+                ],
+                "IFrameSettings": [
+                    "enable"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ],
+                "FileManagerSettings": [
+                    "enable",
+                    "path",
+                    "ajaxSettings"
+                ]
+            }
         },
         {
             "url": "print",
             "name": "Print",
             "description": "This demo sample shows how to print the content of the JS(ECMAScript 5) Rich Text Editor (HTML editor) with styles and formatting using the print module.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "print", "appendTo"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "print",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "ajax-load",
             "name": "Ajax Content",
             "description": "This demo shows how to load the content to the editor from external sources like external pages and files using the AJAX library in JS (ECMAScript 5) Editor.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "value", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "value",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "form-validation",
             "name": "Form Validation",
             "description": "This demo shows how to validate the content of the JS (ECMAScript 5) WYSIWYG editor using obtrusive validation  with the Form validation library.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "placeholder", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "showCharCount",
+                    "maxLength",
+                    "placeholder",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "resize-editor",
             "name": "Resizable Editor",
             "description": "This demo explains how to render a resizable JS(ECMAScript 5) Editor that allows resizing an editor and viewing its content with an enlarging or shrunk scale.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "enableResize", "height", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "enableResize",
+                    "height",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "api",
             "name": "API",
             "description": "This demo covers important APIs of the JS(ECMAScript 5) Rich Text Editor such as HTML encoding, read-only, retrieve the selected content, and more.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "showCharCount", "maxLength", "appendTo", "readonly", "enabled", "enableHtmlEncode", "value", "getSelection", "selectAll"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "showCharCount",
+                    "maxLength",
+                    "appendTo",
+                    "readonly",
+                    "enabled",
+                    "enableHtmlEncode",
+                    "value",
+                    "getSelection",
+                    "selectAll"
+                ]
+            }
         },
         {
             "url": "enter-key-configuration",
             "name": "Enter Key Configuration",
             "description": "This demo explains the API usage to customize the enter and shift + enter key actions in the Rich Text Editor content.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "appendTo", "saveInterval", "value", "height", "change", "created", "enterKey", "shiftEnterKey"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "appendTo",
+                    "saveInterval",
+                    "value",
+                    "height",
+                    "change",
+                    "created",
+                    "enterKey",
+                    "shiftEnterKey"
+                ]
+            }
         },
         {
             "url": "client-side-events",
             "name": "Events",
             "description": "This demo explains client-side events of JavaScript (ECMAScript 5) HTML Text Editor that is triggered on editing and formatting operations with an event tracer.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "created", "actionBegin", "actionComplete", "focus", "blur", "change", "toolbarClick", "appendTo", "beforeDialogOpen", "dialogOpen", "dialogClose", "beforeQuickToolbarOpen", "quickToolbarOpen", "quickToolbarClose", "imageSelected", "imageUploading", "imageUploadSuccess", "imageUploadFailed", "imageRemoving", "destroyed", "beforeSanitizeHtml", "resizing", "resizeStart", "resizeStop"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "created",
+                    "actionBegin",
+                    "actionComplete",
+                    "focus",
+                    "blur",
+                    "change",
+                    "toolbarClick",
+                    "appendTo",
+                    "beforeDialogOpen",
+                    "dialogOpen",
+                    "dialogClose",
+                    "beforeQuickToolbarOpen",
+                    "quickToolbarOpen",
+                    "quickToolbarClose",
+                    "imageSelected",
+                    "imageUploading",
+                    "imageUploadSuccess",
+                    "imageUploadFailed",
+                    "imageRemoving",
+                    "destroyed",
+                    "beforeSanitizeHtml",
+                    "resizing",
+                    "resizeStart",
+                    "resizeStop"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "blog-posting",
             "name": "Use Case",
             "description": "The Rich Text Editor is used in most real-time applications. The Javascript (ECMAScript 5) Rich Text Editor example shows how to design a forum application.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "placeholder", "value", "dataBind", "refresh", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "placeholder",
+                    "value",
+                    "dataBind",
+                    "refresh",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "auto-save",
             "name": "Auto Save",
             "description": "This demo shows how to autosave the content of the editor with customized time intervals and retrieve the saved content in JS (ECMAScript 5) Rich Text Editor.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "placeholder", "saveInterval", "created", "change", "enablePersistence", "toolbarSettings", "appendTo"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "placeholder",
+                    "saveInterval",
+                    "created",
+                    "change",
+                    "enablePersistence",
+                    "toolbarSettings",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "file-browser",
             "name": "File Browser",
             "description": "This demo shows how to insert the image into the Rich Text Editor content using FileManager.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject","fileManagerSettings", "toolbarSettings", "appendTo"], "ToolbarSettings": ["items"], "FileManagerSettings": ["enable", "path", "ajaxSettings"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "fileManagerSettings",
+                    "toolbarSettings",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ],
+                "FileManagerSettings": [
+                    "enable",
+                    "path",
+                    "ajaxSettings"
+                ]
+            }
         },
         {
             "url": "insert-emoticons",
             "name": "Insert  Emoticons",
             "description": "This demo demonstrates how to insert emoticons into the rich content in JS WYSIWYG HTML Editor using a custom tool in the editor toolbar.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "emojiPickerSettings", "appendTo"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "value",
+                    "emojiPickerSettings",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "online-html-editor",
             "name": "Online Html Editor",
             "description": "The online HTML editor is a demo that provides LIVE experience for both content and HTML editing with Rich Text Editor features in a real-world scenario.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["Inject","actionComplete", "height", "enableFloating", "created", "maxLength", "showCharCount", "saveInterval", "change", "toolbarSettings", "appendTo"], "ToolbarSettings": ["type", "items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "actionComplete",
+                    "height",
+                    "enableFloating",
+                    "created",
+                    "maxLength",
+                    "showCharCount",
+                    "saveInterval",
+                    "change",
+                    "toolbarSettings",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "type",
+                    "items"
+                ]
+            }
         },
         {
             "url": "image-editor-integration",
             "name": "Image Editor Integration",
             "description": "This demo explains the image editor integration using the Rich Text Editor control with minimum configuration.",
             "category": "Rich Text Editor",
-            "api": { "RichTextEditor": ["actionComplete", "quickToolbarSettings", "toolbarSettings", "saveInterval", "change", "toolbarClick", "appendTo"], "QuickToolbarSettings": ["image"] }
+            "api": {
+                "RichTextEditor": [
+                    "actionComplete",
+                    "quickToolbarSettings",
+                    "toolbarSettings",
+                    "saveInterval",
+                    "change",
+                    "toolbarClick",
+                    "appendTo"
+                ],
+                "QuickToolbarSettings": [
+                    "image"
+                ]
+            }
+        },
+        {
+            "url": "mail-merge",
+            "name": "Mail Merge",
+            "description": "This sample demonstrates how to utilize the Mail Merge feature in the Rich Text Editor. It shows how to insertplaceholders into the editor, which are then replaced with actual data to create personalized content.",
+            "category": "Rich Text Editor",
+            "type": "new",
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "actionBegin",
+                    "saveInterval",
+                    "value",
+                    "toolbarSettings",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "export-word",
             "name": "Export to Word / PDF",
             "description": "This demo explains how to export the content of the Rich Text Editor to Word and PDF document formats using the Syncfusion Document processing libraries.",
             "category": "Export / Import",
-            "type": "new",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "actionBegin", "actionComplete", "appendTo"], "ToolbarSettings": ["items"]}
+            "type": "update",
+            "api": {
+                "RichTextEditor": [
+                    "Inject",  
+                    "toolbarSettings",
+                    "quickToolbarSettings",
+                    "actionBegin",
+                    "actionComplete",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "import-word",
             "name": "Import from Word",
             "description": "This demo explains how to import the content from Word document to the Rich Text Editor using the Syncfusion Document processing libraries.",
             "category": "Export / Import",
-            "type": "new",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "quickToolbarSettings", "actionBegin", "actionComplete", "appendTo"], "ToolbarSettings": ["items"]}
+            "type": "update",
+            "api": {
+                "RichTextEditor": [
+                    "Inject",  
+                    "toolbarSettings",
+                    "quickToolbarSettings",
+                    "actionBegin",
+                    "actionComplete",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         },
         {
             "url": "mention-integration",
             "name": "@ Mention",
             "description": "This demo explains the mention integration using the Rich Text Editor control with minimum configuration.",
             "category": "Mention Integration",
-            "api": { "RichTextEditor": ["Inject", "placeholder", "actionBegin", "appendTo"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "placeholder",
+                    "actionBegin",
+                    "appendTo"
+                ]
+            }
         },
         {
             "url": "smart-suggestion",
             "name": "Smart Suggestion",
-            "description": "This demo explains the mention inline format integration using the Rich Text Editor control with minimum configuration.",
+            "type": "update",
+            "description": "This demo explains to how to use the slash menu feature of the Rich Text Editor to apply formats, open dialogs easily. ",
             "category": "Mention Integration",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "placeholder","actionBegin", "appendTo"], "ToolbarSettings":["items"] }
-        },
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "placeholder",
+                    "slashMenuSettings",
+                    "slashMenuItemSelect",
+                    "appendTo"
+                ],
+                "SlashMenuSettings": [
+                    "items",
+                    "enable",
+                    "popupWidth",
+                    "popupHeight"
+                ]
+            }
+        },  
         {
             "url": "quick-format-toolbar",
             "name": "Quick Format Toolbar",
             "description": "This sample demonstrates the 'Quick Format Toolbar' option in Rich Text Editor content. To select the text content inside the Rich Text Editor and open the quick format toolbar for editing the Rich Text Editor value.",
             "category": "Toolbar",
-            "api": { "RichTextEditor": ["Inject", "quickToolbarSettings", "toolbarSettings", "dataBind", "appendTo"], "ToolbarSettings": ["enableFloating","type"], "QuickToolbarSettings": ["text"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "quickToolbarSettings",
+                    "toolbarSettings",
+                    "dataBind",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "enableFloating",
+                    "type"
+                ],
+                "QuickToolbarSettings": [
+                    "text"
+                ]
+            }
         },
         {
             "url": "types",
             "name": "Type",
             "description": "This demo demonstrates different types and behaviors of a toolbar used in the JS (ECMAScript 5) HTML Editor such as expand/collapse, multirow, and floating.",
             "category": "Toolbar",
-            "api": { "RichTextEditor": ["Inject", "floatingToolbarOffset", "toolbarSettings", "actionBegin", "actionComplete", "dataBind", "appendTo"], "ToolbarSettings": ["items", "type", "enableFloating"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "floatingToolbarOffset",
+                    "toolbarSettings",
+                    "actionBegin",
+                    "actionComplete",
+                    "dataBind",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items",
+                    "type",
+                    "enableFloating"
+                ]
+            }
         },
         {
             "url": "insert-special-characters",
             "name": "Insert Special Characters",
             "description": "The demo demonstrates how to add special characters or symbols into the rich content in JS (ECMAScript 5) Rich Text Editor using a custom toolbar command.",
             "category": "Custom Tool",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "value", "actionComplete", "created", "appendTo"], "ToolbarSettings": ["items"] }
-        },
-        {
-            "url": "markdown-editor",
-            "name": "Overview",
-            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) Rich Text Editor control shows the markdown editing in the Rich Text Editor with complete features.",
-            "category": "Markdown",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "formatter", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
-        },
-        {
-            "url": "markdown-editor-preview",
-            "name": "Preview",
-            "description": "This demo covers all supported features and functionalities of the JS (ECMAScript 5) Markdown editor, which  is another mode of the JavaScript Rich Text Editor.",
-            "category": "Markdown",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "floatingToolbarOffset", "disableToolbarItem", "enableToolbarItem", "editorMode", "actionBegin", "saveInterval", "actionComplete", "change", "maxLength", "showCharCount", "appendTo"], "ToolbarSettings": ["items", "enableFloating", "type"] }
-        },
-        {
-            "url": "markdown-editor-custom-format",
-            "name": "Custom Format",
-            "description": "This demo shows how to convert markdown content (with the custom format) to valid HTML markup using Markdown-to-HTML of the markdown parser in JS(ECMAScript 5).",
-            "category": "Markdown",
-            "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "formatter", "appendTo"], "ToolbarSettings": ["items"] }
+            "api": {
+                "RichTextEditor": [
+                    "Inject",
+                    "toolbarSettings",
+                    "value",
+                    "actionComplete",
+                    "created",
+                    "appendTo"
+                ],
+                "ToolbarSettings": [
+                    "items"
+                ]
+            }
         }
     ]
 }

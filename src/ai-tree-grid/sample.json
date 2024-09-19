@@ -1,0 +1,20 @@
+{
+    "name": "Tree Grid",
+    "directory": "ai-tree-grid",
+    "category": "Smart AI Solutions",
+    "dataSourcePath": "src/ai-tree-grid/data-source.js",
+    "samples": [
+        {
+            "url": "adaptive-datastructuring",
+            "name": "Adaptive Data Structuring",
+            "category": "Tree Grid",
+            "sourceFiles":[
+                { "displayName": "adaptive-datastructuring.js", "path":"src/ai-tree-grid/adaptive-datastructuring.js" },
+                { "displayName": "adaptive-datastructuring.html", "path":"src/ai-tree-grid/ai-adaptive-datastructuring.html" }
+            ],
+            "description": "This demo shows the adaptive data structuring AI feature in Tree Grid."
+        }
+    ]
+}
+
+

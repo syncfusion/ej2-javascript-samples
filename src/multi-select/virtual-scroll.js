@@ -47,8 +47,8 @@ this.default = function () {
     var remoteObj = new ej.dropdowns.MultiSelect({
         //set the remote data to dataSource property
         dataSource: new ej.data.DataManager({
-            url: 'https://services.syncfusion.com/js/production/api/orders',
-            adaptor: new ej.data.WebApiAdaptor(),
+            url: 'https://services.syncfusion.com/js/production/api/VirtualDropdownData',
+            adaptor: new ej.data.UrlAdaptor(),
             crossDomain: true
         }),
         fields: { text: 'OrderID', value: 'OrderID' },

@@ -13,6 +13,7 @@ this.default = function() {
         },
         toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'View', 'Details'] },
         contextMenuSettings: {
+            file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
                 layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
                 visible: true
             },

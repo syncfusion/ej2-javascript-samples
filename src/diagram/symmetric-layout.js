@@ -2,10 +2,6 @@
  * Sample for Symmentric layout.
  */
 
-ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.SymmetricLayout);
-
-
-
 this.default = function () {
     //Initializtion of the diagram.
     var diagram = new ej.diagrams.Diagram({
@@ -16,11 +12,11 @@ this.default = function () {
         //Set the constraints of the SnapSettings
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         //Set the default values of Node
-        getNodeDefaults: function (obj) {
-            obj.height = 20;
-            obj.width = 20;
-            obj.style = { fill: 'transparent', strokeWidth: 2 };
-            return obj;
+        getNodeDefaults: function (node) {
+            node.height = 20;
+            node.width = 20;
+            node.style = { fill: 'transparent', strokeWidth: 2 };
+            return node;
         },
         //Sets the default values of connector
         getConnectorDefaults: function (connector) {
@@ -28,12 +24,13 @@ this.default = function () {
             connector.type = 'Straight';
             return connector;
         },
-        setNodeTemplate: function (obj) {
+        //customize the visual representation of nodes within a diagram.
+        setNodeTemplate: function (node) {
             var shape = { type: 'Basic', shape: 'Ellipse' };
-            if (!(obj.data.Type) || obj.data.Type === 'Server') {
-                obj.width = 30;
-                obj.height = 30;
-                obj.shape = {
+            if (!(node.data.Type) || node.data.Type === 'Server') {
+                node.width = 30;
+                node.height = 30;
+                node.shape = {
                     type: 'Native', content: '<svg width="50" height="65"><g id="Server2_shape" fill="transparent" stroke="transparent" stroke-width="1"' +
                         ' opacity="1" stroke-dasharray="" transform="translate(-15.517241379310343,-2.6329421835819375),' +
                         'scale(1.7241379310344827,1.3774530437803194)" width="50" height="65"><g><g xmlns="http://www.w3.org/2000/svg">' +
@@ -52,14 +49,15 @@ this.default = function () {
                 };
             }
             else {
-                obj.shape = shape;
-                obj.style = { fill: 'orange' };
+                node.shape = shape;
+                node.style = { fill: 'orange' };
             }
         },
         tool: ej.diagrams.DiagramTools.ZoomPan
     });
     diagram.appendTo('#diagram');
     diagram.pan(0, 0);
+    // Initialization of input elements for layout customization
     var springLength = new ej.inputs.NumericTextBox({
         format: '###.##',
         value: 80,
@@ -81,7 +79,7 @@ this.default = function () {
     maxiteration.appendTo('#maxiteration');
     var layout = new ej.buttons.Button({ cssClass: 'e-small' });
     layout.appendTo('#refresh');
-    //used to apply the alignment of the layout. 
+    // Apply layout alignment when the button is clicked
     document.getElementById('refresh').onclick = function () {
         diagram.layout.springLength = springLength.value;
         diagram.layout.springFactor = springfactor.value;

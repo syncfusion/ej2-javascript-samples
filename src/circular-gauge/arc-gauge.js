@@ -54,10 +54,10 @@ this.default = function () {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var arcgaugeTheme = location.hash.split('/')[1];
+            arcgaugeTheme = arcgaugeTheme ? arcgaugeTheme : 'Material';
+            args.gauge.theme = (arcgaugeTheme.charAt(0).toUpperCase() +
+                arcgaugeTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         },
         loaded: function (args) {

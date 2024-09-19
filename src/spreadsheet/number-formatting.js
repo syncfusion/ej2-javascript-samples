@@ -17,7 +17,7 @@ this.default = function () {
                     { value: 'Table No.' },
                     { value: '8' },
                     { index: 3, value: 'Date' },
-                    { value: '5/7/2019' },
+                    { value: '5-7-2019' },
                 ], height: 30
             }, {
                 index: 14, cells: [
@@ -62,6 +62,7 @@ this.default = function () {
             spreadsheet.cellFormat({ backgroundColor: '#1E88E5', color: '#F5F5F5' }, 'A1:E2');
             spreadsheet.cellFormat({ backgroundColor: '#BBDEFB' }, 'A3:E3');
             spreadsheet.cellFormat({ backgroundColor: '#B3E5FC' }, 'A15:E17');
+            // Apply format to the specified range in the active sheet.
             spreadsheet.numberFormat('$#,##0.00', 'D4:E14');
             spreadsheet.numberFormat('$#,##0.00', 'E15:E17');
             spreadsheet.numberFormat('[Red][<=350]$#,##0.00;[Blue][>350]$#,##0.00', 'E4:E14');

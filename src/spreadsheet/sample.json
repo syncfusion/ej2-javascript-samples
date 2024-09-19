@@ -3,7 +3,6 @@
     "directory": "spreadsheet",
     "category": "Grids",
     "dataSourcePath": "src/spreadsheet/data-source.js",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -246,7 +245,6 @@
             "url": "notes",
             "name": "Notes",
             "category": "Review",
-            "type": "new",
             "api": {
                 "sheets": [
                     "columns",
@@ -270,7 +268,6 @@
             "url": "print",
             "name": "Print",
             "category": "Printing",
-            "type": "new",
             "api": {
                 "sheets": [
                     "columns",

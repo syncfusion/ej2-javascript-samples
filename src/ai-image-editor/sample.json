@@ -1,0 +1,18 @@
+{
+    "name": "Image Editor",
+    "directory": "ai-image-editor",
+    "category": "Smart AI Solutions",
+    "samples": [
+        {
+            "url": "smart-image-editor",
+            "name": "Smart Image Editor",
+            "category": "Image Editor",
+            "sourceFiles":[
+                { "displayName": "smart-image-editor.js", "path":"src/ai-image-editor/smart-image-editor.js" },
+                { "displayName": "stability-model.js", "path":"src/ai-image-editor/stability-model.js" },
+                { "displayName": "smart-image-editor.html", "path":"src/ai-image-editor/ai-smart-image-editor.html" }
+            ],
+            "description": "This demo highlights the advanced features of the Syncfusion JavaScript Image Editor."
+        }
+    ]
+}

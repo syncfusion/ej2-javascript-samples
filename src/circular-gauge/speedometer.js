@@ -85,10 +85,10 @@ function gauge6() {
         }],
         load: function (args) {
             // custom code start
-            var selectTheme = location.hash.split('/')[1];
-            selectTheme = selectTheme ? selectTheme : 'Material';
-            args.gauge.theme = (selectTheme.charAt(0).toUpperCase() +
-                selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var speedometerTheme = location.hash.split('/')[1];
+            speedometerTheme = speedometerTheme ? speedometerTheme : 'Material';
+            args.gauge.theme = (speedometerTheme.charAt(0).toUpperCase() +
+                speedometerTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

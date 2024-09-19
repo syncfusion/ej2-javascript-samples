@@ -7,7 +7,7 @@ this.default = function () {
             var seattheme = location.hash.split('/')[1];
             seattheme = seattheme ? seattheme : 'Material';
             args.maps.theme = (seattheme.charAt(0).toUpperCase() +
-            seattheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            seattheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         projectionType: 'Equirectangular',

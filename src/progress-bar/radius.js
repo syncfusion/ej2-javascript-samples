@@ -1,10 +1,10 @@
 this.default = function () {
   var progressLoad1 = function (args) {
     var theme1 = location.hash.split('/')[1];
-    theme1 = theme1 ? theme1 : 'Material';
+    theme1 = theme1 ? theme1 : 'Fluent2';
     args.progressBar.progressColor = '#FFFFFF';
     args.progressBar.theme = (theme1.charAt(0).toUpperCase() +
-      theme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+      theme1.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
       switch (theme1) {
         case 'material':
           args.progressBar.trackColor = '#f8c2d4';
@@ -64,6 +64,10 @@ this.default = function () {
           args.progressBar.progressColor = '#115EA3';
           args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#115EA3"><span></span></div>';
           break;
+        case "fluent2-highcontrast":
+          args.progressBar.progressColor = '#1AEBFF';
+          args.progressBar.annotations[0].content = '<div id="point1" style="font-size:24px;font-weight:bold;color:#1AEBFF"><span></span></div>';
+          break;
         default:
           args.progressBar.trackColor = '#007bff';
           break;
@@ -71,9 +75,9 @@ this.default = function () {
   };
   var progressLoad = function (args) {
     var theme2 = location.hash.split('/')[1];
-    theme2 = theme2 ? theme2 : 'Material';
+    theme2 = theme2 ? theme2 : 'Fluent2';
     args.progressBar.theme = (theme2.charAt(0).toUpperCase() +
-    theme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+    theme2.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
   };
   var fullBackground = new ej.progressbar.ProgressBar({
     type: 'Circular',

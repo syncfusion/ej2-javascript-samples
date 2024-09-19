@@ -11,6 +11,7 @@ this.default = function () {
 
     var grid = new ej.grids.Grid({
         dataSource: window.employeeData,
+        cssClass: document.querySelector('.fluent2-highcontrast') ? 'e-print-fluent2-highcontrast' : '',
         allowSorting: true,
         hierarchyPrintMode: 'All',
         allowFiltering: true,

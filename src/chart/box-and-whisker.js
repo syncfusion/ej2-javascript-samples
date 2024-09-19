@@ -6,7 +6,9 @@ this.default = function () {
         var selectedTheme = location.hash.split('/')[1];
         selectedTheme = selectedTheme ? selectedTheme : 'Material';
         var fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10", "#C19C00"];
-        var fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#0B6A0B", "#C19C00"];
+        var fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266", "#0B6A0B", "#C19C00"];
+        var bootstrap5Colors = ['#FD7E14', '#6610F2', '#6F42C1', '#D63384', '#DC3545',
+            '#FFC107', '#198754', '#0DCAF0','#FD7E14', '#6610F2'];
         if (selectedTheme && selectedTheme.indexOf('fabric') > -1) {
             args.fill = window.fabricColors[args.point.index % 10];
         }
@@ -22,8 +24,11 @@ this.default = function () {
         else if (selectedTheme === 'fluent2') {
             args.fill = fluent2Colors[args.point.index % 10];
         } 
-        else if (selectedTheme === 'fluent2-dark') {
-            args.fill = fluent2DarkColors[args.point.index % 10];
+        else if (selectedTheme === 'fluent2-highcontrast' || selectedTheme === 'fluent2-dark') {
+            args.fill = fluent2HighContrastColors[args.point.index % 10];
+        }
+        else if (selectedTheme === 'bootstrap5' || selectedTheme === 'bootstrap5-dark') {
+            args.fill = bootstrap5Colors[args.point.index % 10];
         }
         else {
             args.fill = window.bootstrapColors[args.point.index % 10];
@@ -36,7 +41,7 @@ this.default = function () {
             valueType: 'Category',
             majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
-            labelIntersectAction: ej.base.Browser ? 'None' : 'Rotate45',
+            labelIntersectAction: ej.base.Browser.isDevice ? 'None' : 'Rotate45',
             labelRotation: ej.base.Browser.isDevice ? -45 : 0,
         },
         chartArea: {
@@ -91,9 +96,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
-            selectedTheme = selectedTheme ? selectedTheme : 'Material';
+            selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
-                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
          // custom code end
     });

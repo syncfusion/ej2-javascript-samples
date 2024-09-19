@@ -37,9 +37,17 @@ this.default = function () {
         position: { X: 'center', Y: 'center' }
     });
     dialogObj.appendTo('#defaultDialog');
-
+    var mode;
+    function documentLoaded(){
+        if (mode === 'View') {
+            viewer.enablePageOrganizer = false;
+        }
+        else {
+            viewer.enablePageOrganizer = true;
+        }
+    }
     var commandClick = function (args) {
-        var mode = args.target.title;
+        mode = args.target.title;
         dialogObj.header = args.rowData.FileName;
         if (mode === 'View') {
             viewer.enableStickyNotesAnnotation = false;
@@ -57,7 +65,7 @@ this.default = function () {
                 ],
             };
             viewer.annotationSettings = {
-                isLock: true,
+                isLock: true, author: 'Guest',
             };
             viewer.textFieldSettings = {
                 isReadOnly: true,
@@ -106,7 +114,7 @@ this.default = function () {
                 ],
             };
             viewer.annotationSettings = {
-                isLock: false,
+                isLock: false, author: 'Guest',
             };
             viewer.textFieldSettings = {
                 isReadOnly: false,
@@ -152,7 +160,8 @@ this.default = function () {
 
     var viewer = new ej.pdfviewer.PdfViewer ({
         documentPath: "",
-        resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'
+        resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
+        documentLoad: documentLoaded
     });
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer);
         

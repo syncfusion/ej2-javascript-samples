@@ -5,12 +5,12 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
 this.default = function () {
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
-        width: '100%', height: 490,
+        width: '100%', height: '350px',
         //Configures data source
         dataSourceSettings: {
             id: 'Name', parentId: 'Category', dataSource: new ej.data.DataManager(window.species),
             //binds the external data with node
-            doBinding: function (nodeModel, data, diagram) {
+            doBinding: function (nodeModel, data) {
                 nodeModel.annotations = [{
                     content: data.Name, style: { color: 'black' }
                 }];

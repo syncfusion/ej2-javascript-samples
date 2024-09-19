@@ -1,17 +1,17 @@
 <style>
 
   /* Symbol palette alignment CSS */
-  #diagramEventsControlSection .sb-mobile-palette {
+  .diagram-events-control-section .sb-mobile-palette {
     width: 200px;
     height: 100%;
     float: left;
   }
 
- #diagramEventsControlSection .sb-mobile-palette-bar {
+  .diagram-events-control-section .sb-mobile-palette-bar {
     display: none;
   }
   /* Diagram alignment CSS */
- #diagramEventsControlSection .sb-mobile-diagram {
+  .diagram-events-control-section .sb-mobile-diagram {
     width: calc(100% - 200px);
     height: 100%;
     float: left;
@@ -19,7 +19,7 @@
   }
 
   @media (max-width: 550px) {
-    #diagramEventsControlSection .sb-mobile-palette {
+    .diagram-events-control-section .sb-mobile-palette {
       z-index: 19;
       position: absolute;
       display: none;
@@ -28,7 +28,7 @@
       height: 100%;
     }
 
-    #diagramEventsControlSection .sb-mobile-palette-bar {
+    .diagram-events-control-section .sb-mobile-palette-bar {
       display: block;
       width: 100%;
       background: #fafafa;
@@ -37,28 +37,28 @@
       min-height: 40px;
     }
 
-    #diagramEventsControlSection .sb-mobile-diagram {
-      width: 100%;
-      height: 100%;
-      float: left;
-      left: 0px;
-    }
+    .diagram-events-control-section .sb-mobile-diagram {
+        width: 100%;
+        height: 100%;
+        float: left;
+        left: 0px;
+      }
   }
 
-  #diagramEventsControlSection .sb-mobile-palette-open {
+  .diagram-events-control-section .sb-mobile-palette-open {
     position: absolute;
     display: block;
     right: 15px;
   }
   /* Event property panel CSS */
-  #diagramEventsPropertySection .event-tracer {
+  .diagram-events-property-section .event-tracer {
     width: 240px;
     height: 700px;
     min-height: 700px;
     float: left;
   }
 
- #diagramEventsPropertySection .heading {
+  .diagram-events-property-section .diagramEvents-heading {
     color: #807f7f;
     font-size: 15px;
     height: 50px;
@@ -66,7 +66,7 @@
     border-bottom: 1px solid #d9dedd;
     padding: 10px;
   }
-  /* These color is to indicate the event name in specific color */
+  /* This color is to indicate the event name in specific color */
   #EventLog b {
    color: #388e3c;
   }
@@ -83,29 +83,32 @@
     padding-right: 0px;
   }
 
-  #diagramEventsPropertySection .evtbtn { 
+  .diagram-events-property-section .evtbtn { 
     float: right; 
   }
 
-  #diagramEventsPropertySection .listbox {
+  .diagram-events-property-section .diagramEvents-listbox {
     width: 100%;
     height: 50%;
   }
 
- #diagramEventsPropertySection .event-tracer .prop-grid {
+  .diagram-events-property-section .event-tracer .prop-grid {
     width: 100%;
     height: 50%;
   }
 
- #diagramEventsPropertySection #EventLog {
+  .diagram-events-property-section #EventLog {
     height: calc(100% - 50px);
     padding: 15px;
     overflow: auto;
     width: 100%;
   }
+  .diagram-events-control-section{
+    display: flex;
+  }
 </style>
 <div class="col-lg-8 control-section">
-    <div id="diagramEventsControlSection" class="content-wrapper" style="width:100%;background: white">
+    <div id="diagramEventsControlSection" class="content-wrapper diagram-events-control-section" style="width:100%;background: white">
       <div id="palette-space" class="sb-mobile-palette">
         <div id="symbolpalette" style="width:90%;"></div>
       </div>
@@ -115,15 +118,15 @@
     </div>
   </div>
   <div class="col-lg-4 property-section">
-    <div id="diagramEventsPropertySection" style="height:100%;border: 1px solid #e0e0e0">
-      <div class="listbox">
-        <div class="heading" style="height:40px"><span>Client-side events</span></div>
+    <div id="diagramEventsPropertySection" class="diagram-events-property-section" style="height:100%;border: 1px solid #e0e0e0">
+      <div class="diagramEvents-listbox">
+        <div class="diagramEvents-heading" style="height:40px"><span>Client-side events</span></div>
         <div id="listview-def" tabindex="1"></div>
       </div>
       <div class="prop-grid content" style="height:50%; border-top: 1px solid #e0e0e0">
-        <div class="heading">
+        <div class="diagramEvents-heading">
           <span style="display: inline-block;margin-top: 5px;">Event arguments</span>
-          <div class="evtbtn"><button id="clearbtn">Clear</button></div>
+          <div class="evtbtn"><button id="clearButton">Clear</button></div>
         </div>
         <div id="EventLog">
         </div>

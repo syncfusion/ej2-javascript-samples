@@ -1,3 +1,4 @@
+// Injecting required modules
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 var diagram;
@@ -7,19 +8,34 @@ var lockElement;
 /**
  * Getting started -  nodes
  */
-//Enable or disable the lock Constraints for Node.
+//Enable or disable the lock Constraints for Nodes and Connectors
 function updateLock(args) {
+    //If the lock checkbox is checked then the node constraints such as Resize,Delete,Rotate,Drag will be disabled
     for (var i = 0; i < diagram.nodes.length; i++) {
         var node = diagram.nodes[i];
         if (lockElement.checked) {
-            node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
+            node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Delete | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
             node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
         } else {
             node.constraints |= ej.diagrams.NodeConstraints.Default & ~(ej.diagrams.NodeConstraints.ReadOnly);
         }
     }
+    //If the lock checkbox is checked then the Connector constraints such as DragSourceEnd,DragTargetEnd,Delete,Drag will be disabled
+    for (var j = 0; j < diagram.connectors.length; j++) {
+        var connector = diagram.connectors[j];
+        if (lockElement.checked) {
+            connector.constraints &= ~(ej.diagrams.ConnectorConstraints.DragSourceEnd | ej.diagrams.ConnectorConstraints.DragTargetEnd | ej.diagrams.ConnectorConstraints.Drag | ej.diagrams.ConnectorConstraints.Delete);
+            connector.constraints |= ej.diagrams.ConnectorConstraints.ReadOnly;
+        } else {
+            connector.constraints |= ej.diagrams.ConnectorConstraints.Default & ~(ej.diagrams.ConnectorConstraints.ReadOnly);
+        }
+    }
+
+
     diagram.dataBind();
 }
+
+
 
 //Enable or disable the Aspect Ratio Constraints for Node.
 function updateAspectRatio(args) {
@@ -30,12 +46,13 @@ function updateAspectRatio(args) {
         } else {
             node.constraints &= ~(ej.diagrams.NodeConstraints.AspectRatio);
         }
+
     }
     diagram.dataBind();
 }
 
 //Set customStyle for Node.
-function applyStyle(node, width, array, con, type) {
+function applyStyleForNodes(node, width, array, con, type) {
     node.style.fill = '#37909A';
     node.style.strokeWidth = width;
     node.style.strokeColor = '#024249';
@@ -97,14 +114,24 @@ this.default = function () {
             return { style: { strokeColor: '#024249', strokeWidth: 2 } };
         },
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
-        created: function () { diagram.fitToPage({ mode: 'Width' }); }
+        created: function () { diagram.fitToPage({ mode: 'Width' }); },
 
+         //Function to Enable or disable the AspectRatio if multiple nodes or connectors is selected .
+        selectionChange: function (){
+            if (diagram.selectedItems.nodes.length > 1 || diagram.selectedItems.connectors.length > 0) {
+                element.disabled = true;
+            }
+            else {
+                element.disabled = false;
+            }
+        }
     });
     diagram.appendTo('#diagram');
     //Enable or disable the AspectRatio for Node.
     element = new ej.buttons.CheckBox({
         checked: false, label: 'Aspect ratio',
         change: updateAspectRatio
+
     });
     element.appendTo('#aspectRatio');
     //Enable or disable the Interaction for Node.
@@ -114,10 +141,12 @@ this.default = function () {
     });
     lockElement.appendTo('#lock');
 
+   
+   
     //Click event for Appearance of the Property Panel
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
-        // custom code start
+        // Remove any existing 'e-selected-style' class from elements with that class name
         var selectedElement = document.getElementsByClassName('e-selected-style');
         if (selectedElement.length) {
             selectedElement[0].classList.remove('e-selected-style');
@@ -128,19 +157,19 @@ this.default = function () {
                 var node = diagram.nodes[i];
                 switch (target.id) {
                     case 'preview0':
-                        applyStyle(node, 0, '', ~ej.diagrams.NodeConstraints.Shadow, undefined);
+                        applyStyleForNodes(node, 0, '', ~ej.diagrams.NodeConstraints.Shadow, undefined);
                         break;
                     case 'preview1':
-                        applyStyle(node, 2, '', ~ej.diagrams.NodeConstraints.Shadow, undefined);
+                        applyStyleForNodes(node, 2, '', ~ej.diagrams.NodeConstraints.Shadow, undefined);
                         break;
                     case 'preview2':
-                        applyStyle(node, 2, '5 5', ~ej.diagrams.NodeConstraints.Shadow, undefined);
+                        applyStyleForNodes(node, 2, '5 5', ~ej.diagrams.NodeConstraints.Shadow, undefined);
                         break;
                     case 'preview3':
-                        applyStyle(node, 2, '5 5', ~ej.diagrams.NodeConstraints.Shadow, 'Radial');
+                        applyStyleForNodes(node, 2, '5 5', ~ej.diagrams.NodeConstraints.Shadow, 'Radial');
                         break;
                     case 'preview4':
-                        applyStyle(node, 2, '5 5', ej.diagrams.NodeConstraints.Shadow, undefined);
+                        applyStyleForNodes(node, 2, '5 5', ej.diagrams.NodeConstraints.Shadow, undefined);
                         break;
                 }
                 // custom code start

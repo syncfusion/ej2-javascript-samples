@@ -1,10 +1,10 @@
 window.default = function () {
     var maps = new ej.maps.Maps({        // custom code starts
         load: function (args) {
-            var theme = location.hash.split('/')[1];
-            theme = theme ? theme : 'Material';
-            args.maps.theme = (theme.charAt(0).toUpperCase() +
-            theme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+            var selectTheme = location.hash.split('/')[1];
+            selectTheme = selectTheme ? selectTheme : 'Material';
+            args.maps.theme = (selectTheme.charAt(0).toUpperCase() +
+            selectTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
         titleSettings: {

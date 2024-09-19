@@ -1,0 +1,126 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <div id="e-pv-AI-parent-container">
+            <div id='e-pv-left-container'>
+                <button id="e-pv-fab-btn" title="Open AI Assist" style="display: none;"></button>
+                <div id='PdfViewer' style="height:100%;width:100%;"></div>
+            </div>
+            <div id="e-pv-right-container" style="display: none;">
+                <div id="container-ai-assist">
+                    <div id="e-pv-defaultAIAssistView"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>PDF Summarization provides users with a comprehensive overview of a document's content. The AI generates a
+        detailed summary, highlighting key points. This feature streamlines understanding complex documents in just a
+        few clicks.</p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank'
+            href='https://github.com/syncfusion/smart-ai-samples/tree/master' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub
+            repository</a>.</p>
+</div>
+<div id="description">
+    <p><strong>Summarization:</strong> PDF Summarization provides users with a comprehensive overview of a document's content. The AI
+        generates a detailed summary, highlighting key points. This feature streamlines understanding complex documents
+        in just a few clicks.</p>
+    <p><strong>Q&A:</strong> Q&A feature allows users to ask questions about the document's content. Users can either
+        input their own
+        queries or choose from AI-generated suggestions. This makes it easier to find specific information within the
+        document.
+    </p>
+    <p><strong>Reference Page Navigation:</strong> This also allows users to navigate directly to relevant pages in the
+        document based on their queries. When a
+        question is asked, the tool identifies the specific content and directs the user to the corresponding page. It
+        streamlines finding specific information within the document.</p>
+</div>
+<style>
+    #e-pv-AI-body-container {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #e-pv-AI-parent-container {
+        display: flex;
+        height: 100vh;
+        width: 100%
+    }
+
+    #e-pv-left-container {
+        width: 100%;
+        position: relative;
+    }
+
+    #e-pv-AI-parent-container .ai-assist-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+    }
+
+    #e-pv-right-container {
+        width: 30% !important;
+        height: 100% !important;
+    }
+
+    #e-pv-fab-btn {
+        height: 40px;
+        min-height: 56px;
+        width: 40px;
+        position: absolute;
+        z-index: 1001;
+        top: calc(100% - 125px);
+        left: calc(100% - 155px);
+        border-radius: 50%;
+        min-height: 34px;
+        min-width: 34px;
+    }
+
+    #e-pv-fab-btn .e-btn-icon.e-icons.e-aiassist-chat {
+        margin-bottom: 1px;
+        margin-right: 2px;
+        font-size: 18px;
+    }
+
+    #e-pv-AI-parent-container .ai-assist-banner .e-icons:before {
+        font-size: 40px;
+    }
+
+    #e-pv-AI-parent-container .e-aiassist-footer,
+    #e-pv-AI-parent-container .e-aiassist-view-container {
+        width: 100% !important;
+    }
+
+    #e-pv-AI-parent-container .e-aiassist-output-icon.e-icons.e-icons.e-aiassist-chat:before {
+        margin-right: 3px;
+    }
+
+    @media (max-width: 450px) {
+        #e-pv-AI-parent-container {
+            flex-direction: column;
+        }
+
+        #e-pv-left-container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #e-pv-fab-btn {
+            top: calc(100% - 75px);
+            left: calc(100% - 75px);
+        }
+
+        #e-pv-right-container {
+            position: absolute;
+            left: 0;
+            width: 100% !important;
+            height: 100vh;
+            z-index: 1001;
+        }
+    }
+</style>

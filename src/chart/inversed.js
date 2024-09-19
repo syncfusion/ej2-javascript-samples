@@ -1,9 +1,9 @@
 var pointRender = function (args) {
     var inverseTheme = location.hash.split('/')[1];
-    inverseTheme = inverseTheme ? inverseTheme : 'Material';
+    inverseTheme = inverseTheme ? inverseTheme : 'Fluent2';
     var fluent2Colors = ["#6200EE", "#09AF74", "#0076E5", "#CB3587", "#E7910F", "#0364DE", "#66CD15", "#F3A93C", "#107C10",
         "#C19C00"];
-    var fluent2DarkColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
+    var fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#584EC6", "#E85F9C", "#6E7A89", "#EA6266",
         "#0B6A0B", "#C19C00"];
     if (inverseTheme && inverseTheme.indexOf('fabric') > -1) {
         args.fill = window.fabricColors[args.point.index % 10];
@@ -17,8 +17,8 @@ var pointRender = function (args) {
         args.fill = window.fluentDarkColors[args.point.index % 10];
     } else if (inverseTheme === 'fluent2') {
         args.fill = fluent2Colors[args.point.index % 10];
-    } else if (inverseTheme === 'fluent2-dark') {
-        args.fill = fluent2DarkColors[args.point.index % 10];
+    } else if (inverseTheme === 'fluent2-highcontrast' || inverseTheme === 'fluent2-dark') {
+        args.fill = fluent2HighContrastColors[args.point.index % 10];
     } else {
         args.fill = window.bootstrapColors[args.point.index % 10];
     }
@@ -82,9 +82,9 @@ this.default = function () {
          // custom code start
         load: function (args) {
             var inversedTheme = location.hash.split('/')[1];
-            inversedTheme = inversedTheme ? inversedTheme : 'Material';
+            inversedTheme = inversedTheme ? inversedTheme : 'Fluent2';
             args.chart.theme = (inversedTheme.charAt(0).toUpperCase() +
-                inversedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                inversedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
          // custom code end
     });

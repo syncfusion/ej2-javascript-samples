@@ -84,7 +84,8 @@ this.default = function () {
             // custom code start
             var labelTemplateTheme = location.hash.split('/')[1];
             labelTemplateTheme = labelTemplateTheme ? labelTemplateTheme : 'Material';
-            args.heatmap.theme = (labelTemplateTheme.charAt(0).toUpperCase() + labelTemplateTheme.slice(1)).replace(/-dark/i, "Dark");
+            args.heatmap.theme = (labelTemplateTheme.charAt(0).toUpperCase() +
+                labelTemplateTheme.slice(1)).replace(/-dark/i, "Dark").replace(/-high/i, 'High').replace(/5.3/i, '5');
             // custom code end
         }
     });

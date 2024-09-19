@@ -42,9 +42,11 @@ this.default = function () {
         spreadsheet.cellFormat({ textIndent: '2pt' }, 'G1:G16');
         spreadsheet.cellFormat({ textAlign: 'center', fontWeight: 'bold' }, 'H2:H16');
         spreadsheet.cellFormat({ fontFamily: 'Helvetica New', verticalAlign: 'middle' }, 'A1:I16');
-        //Applying border to a range
+        spreadsheet.numberFormat('m/d/yyyy', 'C2:C16');
+        spreadsheet.numberFormat('$#,##0.00', 'I2:I16');
+        //Applying border to a range.
         spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A1:I16', 'Outer');
-        spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A2:I15', 'Horizontal');    
+        spreadsheet.setBorder({ border: '1px solid #e0e0e0' }, 'A2:I15', 'Horizontal');
     }
     function beforeCellRender(args) {
         if (!spreadsheet.isOpen && spreadsheet.activeSheetIndex === 0) {

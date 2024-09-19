@@ -65,9 +65,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var polarLineTheme = location.hash.split('/')[1];
-            polarLineTheme = polarLineTheme ? polarLineTheme : 'Material';
+            polarLineTheme = polarLineTheme ? polarLineTheme : 'Fluent2';
             args.chart.theme = (polarLineTheme.charAt(0).toUpperCase() + 
-                polarLineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                polarLineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

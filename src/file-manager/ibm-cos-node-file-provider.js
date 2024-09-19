@@ -10,8 +10,13 @@ this.default = function() {
                 uploadUrl: hostUrl + 'Upload',
                 downloadUrl: hostUrl + 'Download'
             },
-            rootAliasName: 'Files',
             toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'Cut', 'Copy', 'Paste', 'Delete', 'Download', 'Rename', 'Selection', 'View', 'Details'] },
+            rootAliasName: 'Files',
+            contextMenuSettings: {
+                file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],
+                layout: ["SortBy", "View", "Refresh", "|", "Paste", "|", "NewFolder", "|", "Details", "|", "SelectAll"],
+                visible: true
+            }
     });
     fileObject.appendTo('#filemanager');
 };

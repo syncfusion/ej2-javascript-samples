@@ -84,9 +84,9 @@ this.default = function () {
            // custom code start
         load: function (args) {
             var stackedBarTheme = location.hash.split('/')[1];
-            stackedBarTheme = stackedBarTheme ? stackedBarTheme : 'Material';
+            stackedBarTheme = stackedBarTheme ? stackedBarTheme : 'Fluent2';
             args.chart.theme = (stackedBarTheme.charAt(0).toUpperCase() + 
-                stackedBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+                stackedBarTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
            // custom code end
     });

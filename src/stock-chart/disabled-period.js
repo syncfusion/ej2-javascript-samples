@@ -1,6 +1,6 @@
 var selectedTheme = location.hash.split('/')[1];
-selectedTheme = selectedTheme ? selectedTheme : 'material';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast');
+selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
+var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
 var fill = 'url(#' + selectedTheme + '-gradient-chart)';
 
 renderStockChart = function (aapl) {

@@ -1,7 +1,7 @@
 /**
  * Sample for PERT Chart
  */
-
+// Injecting required modules
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree, ej.diagrams.ComplexHierarchicalTree);
 
     //customization of the node template.
@@ -16,7 +16,6 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
         stack.id = ej.diagrams.randomId();
         stack.height = 25;
         stack.orientation = 'Horizontal';
-        stack.style.fill = 'white';
         stack.horizontalAlignment = 'Stretch';
         addRows(stack, node);
         table.children = [(getTextElement(node.data[nameKey], 'Stretch', 170, 'Stretch')), stack];
@@ -25,14 +24,15 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
         return table;
     }
 
-    function getTextElement(text, alignment, width, valignment) {
+    //Function to create a text element with specified content, alignment, width, and vertical alignment
+    function getTextElement(text, horizontalAlignment, width, verticalAlignment) {
         var textElement = new ej.diagrams.TextElement();
         textElement.content = text;
         textElement.id = ej.diagrams.randomId();
         textElement.width = width;
         textElement.height = 25;
-        textElement.horizontalAlignment = alignment;
-        textElement.verticalAlignment = valignment;
+        textElement.horizontalAlignment = horizontalAlignment;
+        textElement.verticalAlignment = verticalAlignment;
         textElement.style.strokeWidth = 1;
         textElement.style.strokeColor = '#b5b5b5';
         textElement.style.fill = 'transparent';
@@ -41,6 +41,7 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
         return textElement;
     }
 
+    //Function to add rows of data representing start date, duration, and end date to a column within a node.
     function addRows(column, node) {
         column.children.push(getTextElement(node.data.startDate, 'Left', 70));
         column.children.push(getTextElement(node.data.duration, 'Center', 30));
@@ -53,14 +54,13 @@ this.default = function () {
         dataSourceSettings: {
             id: 'id', parentId: 'Category',
             dataSource: new ej.data.DataManager(window.pertChartData),
-            doBinding: function (nodeModel, data, diagram) {
+            doBinding: function (nodeModel) {
                 nodeModel.shape = { type: 'Text' };
             }
         }, layout: {
             type: 'ComplexHierarchicalTree', orientation: 'LeftToRight', verticalSpacing: 100, horizontalSpacing: 70
         },
-        getConnectorDefaults: function (connector, diagram) {
-            connector.type = 'Straight';
+        getConnectorDefaults: function (connector) {
             connector.style.strokeColor = '#979797';
             connector.targetDecorator.width = 10;
             connector.targetDecorator.height = 10;

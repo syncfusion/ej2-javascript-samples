@@ -2,22 +2,23 @@
 this.default = function () {
 
     var columns = [
-        { width: 110, field: 'OrderID', header: 'Order ID' },
-        { width: 130, field: 'CustomerID', header: 'Customer ID' },
-        { width: 90, field: 'Freight', header: 'Freight' },
-        { width: 140, field: 'ShipCountry', header: 'Ship Country' }
-      ];
+        { field: 'Name', header: 'Name', width: 100 },
+        { field: 'YearOfJoining', header: 'Year Of Joining', width: 100 },                      
+        { field: 'Status', header: 'Status', width: 60 },
+        { field: 'Location', header: 'Location', width: 90 },
+        { field: 'Experience', header: 'Experience in Year', width: 120 }                  
+    ];
 
     // Initialize multicolumn ComboBox component
     var sortingComboboxObj = new ej.multicolumncombobox.MultiColumnComboBox({
         //set the local data to dataSource property
-        dataSource: window.orderData,
+        dataSource: window.workDetails,
         //set column of the multicolumn combobox
         columns: columns,
         //set the fields of the multicolumn combobox
-        fields: { text: 'OrderID', value: 'CustomerID' },
+        fields: { text: 'Name', value: 'YearOfJoining' },
         //set the placeholder to multicolumn combobox input element
-        placeholder: 'Select an order ID',
+        placeholder: 'Select a name',
         // set the height of the popup element
         popupHeight: '230px',
         //set allowsorting to true to enable sort

@@ -1,7 +1,6 @@
 /**
  * Remote Data binding sample
  */
-ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree);
 this.default = function () {
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
@@ -10,27 +9,14 @@ this.default = function () {
         layout: {
             type: 'HierarchicalTree', margin: { left: 0, right: 0, top: 100, bottom: 0 },
             verticalSpacing: 40,
-            getLayoutInfo: function (node, options) {
-                if (options.level === 3) {
-                    node.style.fill = '#3c418d';
-                }
-                if (options.level === 2) {
-                    node.style.fill = '#108d8d';
-                    options.type = 'Center';
-                    options.orientation = 'Horizontal';
-                }
-                if (options.level === 1) {
-                    node.style.fill = '#822b86';
-                }
-            }
         },
         //Sets the default values of nodes
-        getNodeDefaults: function (obj) {
-            obj.width = 80;
-            obj.height = 40;
-            obj.shape = { type: 'Basic', shape: 'Rectangle' };
-            obj.style = { fill: '#048785', strokeColor: 'Transparent' };
-            return obj;
+        getNodeDefaults: function (node) {
+            node.width = 80;
+            node.height = 40;
+            node.shape = { type: 'Basic', shape: 'Rectangle' };
+            node.style = { fill: '#048785', strokeColor: 'Transparent' };
+            return node;
         },
         //Sets the default values of connector
         getConnectorDefaults: function (connector) {

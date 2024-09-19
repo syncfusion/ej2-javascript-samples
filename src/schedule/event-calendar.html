@@ -1,0 +1,173 @@
+<div id="wrapper" class="control-section event-calendar-control-section">
+    <div class="toolbar-container">
+        <div id="event-calendar-toolbar">
+        </div>
+    </div>
+    <aside id="sidebar-left" class="sidebar-left">
+        <div class="table-content">
+            <div id="calendar"></div>
+            <div class='calendar-list-container'>
+                <div id="listview-def">
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside id="sidebar-right">
+        <div id="unplanned-events-toolbar">
+        </div>
+        <div id="unplanned-events-grid"></div>
+    </aside>
+    <div class="main-content">
+        <div class="sidebar-content">
+            <div class="schedule-container">
+                <div id="Schedule"></div>
+            </div>
+            <div class="unplanned-container">
+                <div id="plannedOpen" class="e-icons e-chevron-left-double"></div>
+                <div class="unplanned-text-container">Unplanned events</div>
+            </div>
+        </div>
+    </div>
+    <div id='dialog' class='custom-template'>
+    </div>
+</div>
+
+<style>
+    .event-calendar-control-section .sidebar-content {
+        display: flex;
+    }
+
+    .event-calendar-control-section .unplanned-text-container {
+        writing-mode: vertical-rl;
+        margin: auto;
+    }
+
+    .event-calendar-control-section .unplanned-container {
+        width: 50px;
+        display: block;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .event-calendar-control-section .unplanned-events-toolbar h4 {
+        font-size: 16px;
+    }
+
+    .event-calendar-control-section .unplanned-container div {
+        padding: 6px 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .event-calendar-control-section #plannedOpen {
+        width: inherit;
+    }
+
+    .calendar-edit-dialog .dialog-content {
+        display: flex;
+    }
+
+    .calendar-edit-dialog .dialog-content .calendar-name,
+    .event-calendar-control-section .schedule-container {
+        flex-grow: 1;
+    }
+
+    .event-calendar-control-section .table-content {
+        padding: 10px;
+    }
+
+    .event-calendar-control-section .calendar-list-container {
+        padding-top: 10px;
+    }
+
+    .event-calendar-control-section .e-grid .e-headercelldiv {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .event-calendar-control-section .selected-date-calendar.e-calendar {
+        max-width: inherit;
+    }
+
+    .event-calendar-control-section .selected-date-calendar.e-calendar .e-btn.e-today.e-flat.e-primary,
+    .event-calendar-control-section .selected-date-calendar.e-calendar .e-css.e-btn.e-today.e-flat.e-primary {
+        display: none;
+    }
+
+    .event-calendar-control-section .control-wrapper {
+        border: 1px solid #D7D7D7;
+    }
+
+    .event-calendar-control-section .event-calendar-toolbar.e-toolbar {
+        border-bottom: 1px solid #D7D7D7;
+    }
+
+    .event-calendar-control-section .event-calendar-toolbar.e-toolbar .e-toolbar-item.e-create .e-tbar-btn.e-btn {
+        background-color: #0f6cbd;
+    }
+
+    .event-calendar-control-section .event-calendar-toolbar.e-toolbar .e-toolbar-item.e-create .e-tbar-btn.e-btn .e-btn-icon,
+    .event-calendar-control-section .event-calendar-toolbar.e-toolbar .e-toolbar-item.e-create .e-tbar-btn.e-btn .e-tbar-btn-text {
+        color: white;
+    }
+
+    .event-calendar-control-section .e-list-header,
+    .event-calendar-control-section .e-list-header .calendars-list-header,
+    .event-calendar-control-section .calendar-list-item.e-checkbox.e-checkbox-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .event-calendar-control-section .e-list-header .e-headertemplate-text,
+    .event-calendar-control-section .e-list-header .e-headertemplate-text .header-text {
+        flex-grow: 1;
+        font-size: 16px;
+    }
+
+    .event-calendar-control-section .e-list-header .e-headertemplate-text .header-icon:hover {
+        cursor: pointer;
+    }
+
+    .event-calendar-control-section .calendar-list-item .calendar-name {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-grow: 1;
+    }
+
+    .event-calendar-control-section .calendar-list-item .calendar-buttons {
+        display: none;
+    }
+
+    .event-calendar-control-section .calendar-list-item:hover .calendar-buttons {
+        display: flex;
+    }
+
+    .event-calendar-control-section .calendar-list-item #calendar-edit-btn,
+    .event-calendar-control-section .calendar-list-item #calendar-delete-btn {
+        padding: 0 6px;
+    }
+
+    .event-calendar-control-section .e-sidebar {
+        z-index: 1 !important;
+    }
+</style>
+
+<div id="action-description">
+    <p>This demo showcases the way to organize and filter multiple types of events such as Personal, Birthdays, Work,
+        and Holidays in the scheduler.</p>
+</div>
+<div id="description">
+    <p>In this example the multiple type of appointments such as Personal, Birthdays, Work,
+        and Holidays organized with filter option in a single scheduler. It helps the user to view a
+        specific or multiple type of appointments at one place.</p>
+    <p>The left sidebar helps the user to navigate between the scheduler dates and filter the appointments based
+        on their type. <a href="https://ej2.syncfusion.com/javascript/documentation/api/sidebar/" target="_blank">API
+            documentation for SideBar</a></p>
+    <p>The Schedule component is configured to show the appointments in colors based on their type to identify
+        the appointment type. <a href="https://ej2.syncfusion.com/javascript/documentation/api/schedule/"
+            target="_blank">API documentation for Schedule</a></p>
+    <p>The right sidebar displays the list of unplanned events, which can be useful for the user to plan them later.</p>
+    </p>
+</div>
