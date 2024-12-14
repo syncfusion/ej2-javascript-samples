@@ -4,6 +4,8 @@
 // Injecting required modules
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree, ej.diagrams.ComplexHierarchicalTree);
 
+
+this.default = function () {
     //customization of the node template.
     function getNodeTemplate(node) {
         var table = new ej.diagrams.StackPanel();
@@ -47,7 +49,6 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
         column.children.push(getTextElement(node.data.duration, 'Center', 30));
         column.children.push(getTextElement(node.data.endDate, 'Right', 70));
     }
-this.default = function () {
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '499px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },

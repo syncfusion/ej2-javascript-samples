@@ -7,7 +7,7 @@
         {
             "url": "default",
             "name": "Default",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with different customized values.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the default rendering of bullet chart with different customized values.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -21,7 +21,7 @@
         {
             "url": "multiple-data",
             "name": "Multiple Data",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with multiple local data values.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the default rendering of bullet chart with multiple local data values.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -35,7 +35,7 @@
         {
             "url": "right-to-left",
             "name": "RTL",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with right to left mode.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the default rendering of bullet chart with right to left mode.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -49,7 +49,7 @@
         {
             "url": "bar-customization",
             "name": "Feature and Target Bar",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with different customized bar types.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the default rendering of bullet chart with different customized bar types.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -62,7 +62,7 @@
         {
             "url": "customization",
             "name": "Range and Label Settings",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the default rendering of bullet chart with different customized values.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the default rendering of bullet chart with different customized values.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -75,7 +75,7 @@
         {
             "url": "tooltip",
             "name": "Tooltip Template",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the tooltip customization.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the tooltip customization.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -88,7 +88,7 @@
         {
             "url": "orientation",
             "name": "Orientation",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the orientation sample.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the orientation sample.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [
@@ -101,7 +101,7 @@
         {
             "url": "bullet-legend",
             "name": "Legend",
-            "description":"This demo for Essential JS2 Bullet Chart control shows the legend sample.Bullet chart legend display the information of the data.",
+            "description":"This demo for Essential<sup>®</sup> JS2 Bullet Chart control shows the legend sample.Bullet chart legend display the information of the data.",
             "category": "Bullet Chart",
             "api": {
                 "BulletChart": [

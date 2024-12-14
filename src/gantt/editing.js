@@ -31,9 +31,13 @@ this.default = function () {
                 id: 'resourceId',
                 name: 'resourceName'
             },
-            actionBegin: function (args){
-                if (args.columnName === "EndDate")
+            actionBegin: function (args) {
+                if (args.columnName === "EndDate" || args.requestType === "beforeOpenAddDialog" || args.requestType === "beforeOpenEditDialog") {
                     startDate = args.rowData.ganttProperties.startDate;
+                }
+                if (args.requestType === "taskbarediting" && args.taskBarEditAction === "ChildDrag") {
+                    startDate = args.data.ganttProperties.startDate;
+                } 
             },
             resources: editingResources,
             highlightWeekends: true,

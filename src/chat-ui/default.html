@@ -1,0 +1,48 @@
+<div class="control-section chat-ui">
+    <div class="default-chatui">
+        <div id="chatUser1"></div>
+        <div id="chatUser2"></div>
+    </div>
+</div>
+
+<style>
+    .default-chatui {
+        height: 500px;
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .default-chatui .chat_user1_avatar {
+        background-image: url('./src/chat-ui/images/andrew.png');
+        background-color: unset;
+    }
+
+    .default-chatui .chat_user2_avatar {
+        background-image: url('./src/chat-ui/images/reena.png');
+        background-color: unset;
+    }    
+
+    @media only screen and (max-width: 850px) {
+        .default-chatui {
+            flex-direction: column;
+            height: 500px;
+            width: 80%;
+        }
+        .chat-ui.control-section {
+            height: 1050px;
+        }
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the features of the Chat UI control, designed to simulate a real-time chat interface. It highlights customizable elements like headers, avatars, synchronized messaging update, and real-time typing indicators.</p>
+</div>
+<div id="description">
+    <p>
+        In this example, two Chat UI web controls are used to represent users <b>Albert</b> and <b>Reena</b>, each with a unique header, avatar, and toolbar. Messages are instantly synchronized between the two users through the <code>messageSend</code> event, while typing indicators are shown in the other chat interface via the <code>userTyping</code> event, adding a more interactive feel.
+        The toolbar for each chat includes a dropdown menu with options like muting and deleting messages, demonstrating the component’s ability to customize and control the chat experience.
+    </p>
+</div>

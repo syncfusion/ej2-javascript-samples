@@ -42,7 +42,7 @@ this.default = function () {
             visible: false
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format:'<b>${point.x}</b><br> Gold Medals: <b>${point.y}</b>'  },
+        tooltip: { enable: true, format:'<b>${point.x}</b><br> Gold Medals: <b>${point.y}</b>', enableHighlight: true  },
         enableBorderOnMouseMove:false,
 
         //Initializing Title

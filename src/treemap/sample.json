@@ -8,7 +8,7 @@
         {
             "url": "default",
             "name": "Default Functionalities",
-            "description": "This demo for Essential JS2 TreeMap control visualizes the sales of cars across various countries in 2017.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control visualizes the sales of cars across various countries in 2017.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -20,7 +20,7 @@
         {
             "url": "layout",
             "name": "Layout",
-            "description": "This demo for Essential JS2 TreeMap control illustrates the GDP nominal of top 10 countries in the year 2015. The layout of the TreeMap can also be changed.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control illustrates the GDP nominal of top 10 countries in the year 2015. The layout of the TreeMap can also be changed.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -32,7 +32,7 @@
         {
             "url": "drilldown",
             "name": "Drilldown",
-            "description": "This demo for Essential JS2 TreeMap control demonstrates drill-down with the continents at the top level followed by regions and countries.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control demonstrates drill-down with the continents at the top level followed by regions and countries.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -44,7 +44,7 @@
         {
             "url": "customization",
             "name": "Customization",
-            "description": "This demo for Essential JS2 TreeMap control depicts the gold medal categories of the 2016 US Summer Olympics. Each category is denoted with label template.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control depicts the gold medal categories of the 2016 US Summer Olympics. Each category is denoted with label template.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -56,7 +56,7 @@
         {
             "url": "label",
             "name": "Data Label",
-            "description": "This demo for Essential JS2 TreeMap control depicts the population level of various countries in 2017 along with data labels.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control depicts the population level of various countries in 2017 along with data labels.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -68,7 +68,7 @@
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "description": "This demo for Essential JS2 TreeMap control depicts the number of international airports available in various countries in South America along with tooltip.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control depicts the number of international airports available in various countries in South America along with tooltip.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -80,7 +80,7 @@
         {
             "url": "election",
             "name": "Legend",
-            "description": "This demo for Essential JS2 TreeMap control visualizes the 2016 U.S.A. presidential election results. Default and interactive are the two types of legend.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control visualizes the 2016 U.S.A. presidential election results. Default and interactive are the two types of legend.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -92,7 +92,7 @@
         {
             "url": "color-mapping",
             "name": "Color Mapping",
-            "description": "This demo for Essential JS2 TreeMap control visualizes the population level of various continents in 2011 based on the gender and age group.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control visualizes the population level of various continents in 2011 based on the gender and age group.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -104,7 +104,7 @@
         {
             "url": "selection",
             "name": "Selection & Highlight",
-            "description": "This demo for Essential JS2 TreeMap control depicts the details of goods imported by Japan. Selection and highlight options have been enabled.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control depicts the details of goods imported by Japan. Selection and highlight options have been enabled.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -116,7 +116,7 @@
         {
             "url": "print",
             "name": "Print & Export",
-            "description": "This demo for Essential JS2 TreeMap control depicts the top 10 best-selling smartphone brands. Print and export options have been enabled.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control depicts the top 10 best-selling smartphone brands. Print and export options have been enabled.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -128,7 +128,7 @@
         {
             "url": "pie",
             "name": "TreeMap with Pie",
-            "description": "This demo for Essential JS2 TreeMap control visualizes the population level of various continents in 2011 based on the gender and age group.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control visualizes the population level of various continents in 2011 based on the gender and age group.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles":[
@@ -140,7 +140,7 @@
         {
             "url": "rtl",
             "name": "RTL",
-            "description": "This demo for Essential JS2 TreeMap control visualizes the unemployment rate of various continents based on the countries.",
+            "description": "This demo for Essential<sup>®</sup> JS2 TreeMap control visualizes the unemployment rate of various continents based on the countries.",
             "category": "TreeMap",
             "api": {},
             "sourceFiles": [

@@ -33,12 +33,12 @@ this.default = function () {
         center: {x: '50%', y: '50%'},
         enableSmartLabels: true,
         enableBorderOnMouseMove:false,
-        enableAnimation: false,
+        enableAnimation: true ,
         legendSettings: {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"" },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"" ,enableHighlight: true },
         //Initializing Title
         title: 'Browser Market Share',
          // custom code start

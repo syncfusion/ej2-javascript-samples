@@ -1,0 +1,58 @@
+{
+    "name": "Chat UI",
+    "directory": "chat-ui",
+    "category": "Interactive Chat",
+    "ftName": "chat-ui",
+    "type": "preview",
+    "dataSourcePath": "src/chat-ui/messageData.js",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities",
+            "category": "Chat UI",
+            "api":{ "ChatUI": ["suggestions", "headerText", "headerIconCss", "messages", "user"] },
+            "description": "Showcases the default combinations of the Chat UI control.",
+            "sourceFiles": [
+                { "displayName": "default.js", "path":"src/chat-ui/default.js" },
+                { "displayName": "default.html", "path":"src/chat-ui/default.html" },
+                { "displayName": "messageData.js", "path":"src/chat-ui/messageData.js" }
+            ]
+        },
+        {
+            "url": "template",
+            "name": "Template",
+            "category": "Chat UI",
+            "api":{ "ChatUI": ["messages", "user", "emptyChatTemplate", "messageTemplate", "timeBreakTemplate", "showTimeBreak", "headerText", "headerIconCss", "messageSend"] },
+            "description": "Showcases the template UI's of the Chat UI control.",
+            "sourceFiles": [
+                { "displayName": "template.js", "path":"src/chat-ui/template.js" },
+                { "displayName": "template.html", "path":"src/chat-ui/template.html" },
+                { "displayName": "messageData.js", "path":"src/chat-ui/messageData.js" }
+            ]
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Chat UI",
+            "api":{ "ChatUI": ["messages", "user", "timeStampFormat", "showTimeStamp", "headerText", "headerIconCss"] },
+            "description": "Showcases the API combinations of the Chat UI control.",
+            "sourceFiles": [
+                { "displayName": "api.js", "path":"src/chat-ui/api.js" },
+                { "displayName": "api.html", "path":"src/chat-ui/api.html" },
+                { "displayName": "messageData.js", "path":"src/chat-ui/messageData.js" }
+            ]
+        },
+        {
+            "url": "chat-integration",
+            "name": "Use Case",
+            "category": "Integration",
+            "api":{ "ChatUI": ["messages", "user", "timeStampFormat", "showTimeStamp", "headerText", "headerIconCss"] },
+            "description": "Showcases the chat component integration with other Chat UI control",
+            "sourceFiles": [
+                { "displayName": "chat-integration.js", "path":"src/chat-ui/chat-integration.js" },
+                { "displayName": "chat-integration.html", "path":"src/chat-ui/chat-integration.html" },
+                { "displayName": "messageData.js", "path":"src/chat-ui/messageData.js" }
+            ]
+        }
+    ]
+}

@@ -154,7 +154,7 @@ this.default = function () {
     var measuresddl = new ej.dropdowns.DropDownList({
         dataSource: measures,
         fields: { value: 'value', text: 'text' },
-        value: 'In Stock',
+        value: 'In_Stock',
         width: '100%'
     });
     measuresddl.appendTo('#hyperlinks-measures');

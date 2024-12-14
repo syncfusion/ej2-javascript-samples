@@ -3,69 +3,69 @@
  * Logic circuit sample
  */
 
-var nodeY = 30;
-// Create nodes as logic gates
-function createNode(
-    id, offsetX, offsetY, height,
-    width, pathData, ports) {
-    // update node properties
-    var node = {};
-    node.id = id;
-    node.offsetX = offsetX;
-    node.offsetY = offsetY - nodeY;
-    node.height = height;
-    node.width = width;
-    node.shape = { type: 'Path', data: pathData };
-    node.ports = ports;
-    return node;
-}
 
-// Create Connectors to connect two logic gates
-function createConnector(
-    id,
-    sourcePoint, targetPoint,
-    sourceID, targetID,
-    sourcePortID, targetPortID,
-    sourceDecorator, targetDecorator,
-    annotation, segments, isStraight) {
-    // update connector properties
-    var connector = {};
-    connector.id = id;
-    if (sourcePoint) {
-        connector.sourcePoint = { x: sourcePoint.x, y: sourcePoint.y - nodeY };
-    }
-    if (targetPoint) {
-        connector.targetPoint = { x: targetPoint.x, y: targetPoint.y - nodeY };
-    }
-    connector.sourceID = sourceID;
-    connector.targetID = targetID;
-    connector.type = isStraight ? 'Straight' : 'Orthogonal';
-    connector.sourcePortID = sourcePortID;
-    connector.targetPortID = targetPortID;
-    // update connector annotation properties
-    connector.annotations = [{
-        content: annotation.content, offset: 0, margin: {
-            left: (annotation.margin && annotation.margin.left) ? annotation.margin.left : 0,
-            top: (annotation.margin && annotation.margin.top) ? annotation.margin.top : 0,
-        },
-        style: {
-            //bold: true,
-            fontFamily: 'Segoe UI',
-            textWrapping: 'NoWrap', fontSize: 14,
-        }
-    }];
-    // update connector decorators
-    connector.sourceDecorator = sourceDecorator;
-    connector.targetDecorator = targetDecorator;
-    // update connector segments
-    if (segments) {
-        connector.segments = [{ length: 100, direction: 'Right', type: 'Orthogonal' }];
-    }
-    return connector;
-}
 
 this.default = function () {
+    var nodeY = 30;
+    // Create nodes as logic gates
+    function createNode(
+        id, offsetX, offsetY, height,
+        width, pathData, ports) {
+        // update node properties
+        var node = {};
+        node.id = id;
+        node.offsetX = offsetX;
+        node.offsetY = offsetY - nodeY;
+        node.height = height;
+        node.width = width;
+        node.shape = { type: 'Path', data: pathData };
+        node.ports = ports;
+        return node;
+    }
 
+    // Create Connectors to connect two logic gates
+    function createConnector(
+        id,
+        sourcePoint, targetPoint,
+        sourceID, targetID,
+        sourcePortID, targetPortID,
+        sourceDecorator, targetDecorator,
+        annotation, segments, isStraight) {
+        // update connector properties
+        var connector = {};
+        connector.id = id;
+        if (sourcePoint) {
+            connector.sourcePoint = { x: sourcePoint.x, y: sourcePoint.y - nodeY };
+        }
+        if (targetPoint) {
+            connector.targetPoint = { x: targetPoint.x, y: targetPoint.y - nodeY };
+        }
+        connector.sourceID = sourceID;
+        connector.targetID = targetID;
+        connector.type = isStraight ? 'Straight' : 'Orthogonal';
+        connector.sourcePortID = sourcePortID;
+        connector.targetPortID = targetPortID;
+        // update connector annotation properties
+        connector.annotations = [{
+            content: annotation.content, offset: 0, margin: {
+                left: (annotation.margin && annotation.margin.left) ? annotation.margin.left : 0,
+                top: (annotation.margin && annotation.margin.top) ? annotation.margin.top : 0,
+            },
+            style: {
+                //bold: true,
+                fontFamily: 'Segoe UI',
+                textWrapping: 'NoWrap', fontSize: 14,
+            }
+        }];
+        // update connector decorators
+        connector.sourceDecorator = sourceDecorator;
+        connector.targetDecorator = targetDecorator;
+        // update connector segments
+        if (segments) {
+            connector.segments = [{ length: 100, direction: 'Right', type: 'Orthogonal' }];
+        }
+        return connector;
+    }
     /* tslint:disable */
     var orData = 'M21.7,76.5L21.7,76.5c6.4-18.1,6.4-37.8,0-55.9l0-0.1h1.6c21.5,0,41.7,10.4,54.2,28l0,0l0,0  c-12.5,17.6-32.7,28-54.2,28H21.7z M99.5,48.5l-22,0 M0,31.5h25 M0,65.5h25';
     var andData = 'M21.5,20.5h28a28,28,0,0,1,28,28v0a28,28,0,0,1-28,28h-28a0,0,0,0,1,0,0v-56a0,0,0,0,1,0,0Z M78,48.5 L 100,48.5Z M0,32.5 L 21.4,32.5Z M0,65.5 L 21.4,65.5Z';

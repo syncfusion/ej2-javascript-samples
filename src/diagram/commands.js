@@ -1,65 +1,66 @@
 /* jshint esversion: 6 */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.BpmnDiagrams);
 
-//Initializes the nodes for the diagram
-var nodes = [
-    createTextNode('Select the below shapes', 150, 40),
-    createShapeNode('node1', 60, 40, 150, 100, '#DAEBFF'),
-    createShapeNode('node2', 80, 40, 150, 170, '#F5E0F7'),
-    createShapeNode('node3', 100, 40, 150, 240, '#E0E5BB'),
-    createTextNode('Try Alignment Commands (AlignRight, AlignLeft, and AlignCenter)', 150, 295),
-    createTextNode('Select the below shapes', 150, 395),
-    createShapeNode('node4', 40, 60, 80, 500, '#DAEBFF'),
-    createShapeNode('node5', 40, 80, 160, 500, '#F5E0F7'),
-    createShapeNode('node6', 40, 100, 240, 500, '#E0E5BB'),
-    createTextNode('Try Alignment Commands (AlignTop, AlignBottom, and AlignMiddle)', 150, 595),
-    createTextNode('Select the below shapes', 550, 40),
-    createShapeNode('node7', 80, 40, 485, 100, '#DAEBFF'),
-    createShapeNode('node8', 80, 40, 635, 100, '#F5E0F7'),
-    createShapeNode('node9', 80, 40, 595, 180, '#E0E5BB'),
-    createTextNode('Try SpaceAcross Commands', 550, 295),
-    createTextNode('Select the below shapes', 550, 395),
-    createShapeNode('node10', 80, 40, 475, 430, '#DAEBFF'),
-    createShapeNode('node11', 80, 40, 475, 530, '#F5E0F7'),
-    createShapeNode('node12', 80, 40, 625, 460, '#E0E5BB'),
-    createTextNode('Try SpaceAcross Commands', 550, 595),
-    createTextNode('Select the below shapes', 950, 40),
-    {
-        id: 'RightTriangle', width: 100, height: 100, offsetX: 950, offsetY: 120, style: { fill: '#E0E5BB', strokeColor: 'white' },
-        shape: { type: 'Basic', shape: 'RightTriangle' },
-    },
-    createTextNode('Try Flip Commands', 950, 295),
-    createTextNode('Select the below shapes', 950, 395),
-    createShapeNode('node14', 60, 20, 950, 420, '#DAEBFF'),
-    createShapeNode('node15', 80, 40, 950, 460, '#F5E0F7'),
-    createShapeNode('node16', 100, 50, 950, 540, '#E0E5BB'),
-    createTextNode('Try Sizing Commands (Same size, Same width, Same height)', 950, 595),
-];
 
-// Function to create text nodes
-function createTextNode(content, offsetX, offsetY) {
-    return {
-        shape: { type: 'Text', content: content },
-        constraints: ej.diagrams.NodeConstraints.PointerEvents,
-        style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 },
-        offsetX: offsetX,
-        offsetY: offsetY
-    };
-}
-
-// Function to create shape nodes
-function createShapeNode(id, width, height, offsetX, offsetY, fill) {
-    return {
-        id: id,
-        width: width,
-        height: height,
-        offsetX: offsetX,
-        offsetY: offsetY,
-        style: { fill: fill, strokeColor: 'white' }
-    };
-}
 
 this.default = function () {
+    //Initializes the nodes for the diagram
+    var nodes = [
+        createTextNode('Select the below shapes', 150, 40),
+        createShapeNode('node1', 60, 40, 150, 100, '#DAEBFF'),
+        createShapeNode('node2', 80, 40, 150, 170, '#F5E0F7'),
+        createShapeNode('node3', 100, 40, 150, 240, '#E0E5BB'),
+        createTextNode('Try Alignment Commands (AlignRight, AlignLeft, and AlignCenter)', 150, 295),
+        createTextNode('Select the below shapes', 150, 395),
+        createShapeNode('node4', 40, 60, 80, 500, '#DAEBFF'),
+        createShapeNode('node5', 40, 80, 160, 500, '#F5E0F7'),
+        createShapeNode('node6', 40, 100, 240, 500, '#E0E5BB'),
+        createTextNode('Try Alignment Commands (AlignTop, AlignBottom, and AlignMiddle)', 150, 595),
+        createTextNode('Select the below shapes', 550, 40),
+        createShapeNode('node7', 80, 40, 485, 100, '#DAEBFF'),
+        createShapeNode('node8', 80, 40, 635, 100, '#F5E0F7'),
+        createShapeNode('node9', 80, 40, 595, 180, '#E0E5BB'),
+        createTextNode('Try SpaceAcross Commands', 550, 295),
+        createTextNode('Select the below shapes', 550, 395),
+        createShapeNode('node10', 80, 40, 475, 430, '#DAEBFF'),
+        createShapeNode('node11', 80, 40, 475, 530, '#F5E0F7'),
+        createShapeNode('node12', 80, 40, 625, 460, '#E0E5BB'),
+        createTextNode('Try SpaceAcross Commands', 550, 595),
+        createTextNode('Select the below shapes', 950, 40),
+        {
+            id: 'RightTriangle', width: 100, height: 100, offsetX: 950, offsetY: 120, style: { fill: '#E0E5BB', strokeColor: 'white' },
+            shape: { type: 'Basic', shape: 'RightTriangle' },
+        },
+        createTextNode('Try Flip Commands', 950, 295),
+        createTextNode('Select the below shapes', 950, 395),
+        createShapeNode('node14', 60, 20, 950, 420, '#DAEBFF'),
+        createShapeNode('node15', 80, 40, 950, 460, '#F5E0F7'),
+        createShapeNode('node16', 100, 50, 950, 540, '#E0E5BB'),
+        createTextNode('Try Sizing Commands (Same size, Same width, Same height)', 950, 595),
+    ];
+
+    // Function to create text nodes
+    function createTextNode(content, offsetX, offsetY) {
+        return {
+            shape: { type: 'Text', content: content },
+            constraints: ej.diagrams.NodeConstraints.PointerEvents,
+            style: { fontSize: 10, fill: 'None', fontFamily: 'sans-serif', strokeWidth: 0 },
+            offsetX: offsetX,
+            offsetY: offsetY
+        };
+    }
+
+    // Function to create shape nodes
+    function createShapeNode(id, width, height, offsetX, offsetY, fill) {
+        return {
+            id: id,
+            width: width,
+            height: height,
+            offsetX: offsetX,
+            offsetY: offsetY,
+            style: { fill: fill, strokeColor: 'white' }
+        };
+    }
     //custom code start
     if (this.location.href) {
         if (this.location.href.includes('bootstrap5')) {
@@ -160,11 +161,11 @@ this.default = function () {
         } else {
             const itemIds = ['cut', 'copy', 'align_right', 'transform_right', 'transform_left', 'flip_vertical', 'flip_horizontal'];
             itemIds.forEach(itemId => {
-            const item = toolbarObj.items.find(item => item.id === itemId);
-            if (item) {
-                item.disabled = true;
-            }
-        });
+                const item = toolbarObj.items.find(item => item.id === itemId);
+                if (item) {
+                    item.disabled = true;
+                }
+            });
             disableCommonItems(true);
         }
     }
@@ -184,40 +185,40 @@ this.default = function () {
     var toolbarObj = new ej.navigations.Toolbar({
         clicked: onItemClick,
         items: [
-            { prefixIcon: 'e-icons e-cut', tooltipText: 'Cut', disabled: true, id: 'cut'},
-            { prefixIcon: 'e-icons e-copy', tooltipText: 'Copy', disabled: true, id:'copy' },
-            { prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true, id:'paste' },
-            { prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true, id:'undo' },
-            { prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true, id:'redo'},
+            { prefixIcon: 'e-icons e-cut', tooltipText: 'Cut', disabled: true, id: 'cut' },
+            { prefixIcon: 'e-icons e-copy', tooltipText: 'Copy', disabled: true, id: 'copy' },
+            { prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true, id: 'paste' },
+            { prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true, id: 'undo' },
+            { prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true, id: 'redo' },
 
-            { type: 'Separator',id: 'seperator1' },
+            { type: 'Separator', id: 'seperator1' },
 
-            { prefixIcon: 'sf-icon-align-left-1', tooltipText: 'Align Left', disabled: true, id:'align_left'},
-            { prefixIcon: 'sf-icon-align-center-1', tooltipText: 'Align Center', disabled: true, id: 'align_center'},
-            { prefixIcon: 'sf-icon-align-right-1', tooltipText: 'Align Right', disabled: true, id:'align_right' },
-            { prefixIcon: 'sf-icon-align-top-1', tooltipText: 'Align Top', disabled: true, id:'align_top' },
-            { prefixIcon: 'sf-icon-align-middle-1', tooltipText: 'Align Middle', disabled: true, id:'align_middle'},
-            { prefixIcon: 'sf-icon-align-bottom-1', tooltipText: 'Align Bottom', disabled: true, id: 'align_bottom'},
+            { prefixIcon: 'sf-icon-align-left-1', tooltipText: 'Align Left', disabled: true, id: 'align_left' },
+            { prefixIcon: 'sf-icon-align-center-1', tooltipText: 'Align Center', disabled: true, id: 'align_center' },
+            { prefixIcon: 'sf-icon-align-right-1', tooltipText: 'Align Right', disabled: true, id: 'align_right' },
+            { prefixIcon: 'sf-icon-align-top-1', tooltipText: 'Align Top', disabled: true, id: 'align_top' },
+            { prefixIcon: 'sf-icon-align-middle-1', tooltipText: 'Align Middle', disabled: true, id: 'align_middle' },
+            { prefixIcon: 'sf-icon-align-bottom-1', tooltipText: 'Align Bottom', disabled: true, id: 'align_bottom' },
 
-            { type: 'Separator',id: 'seperator2' },
+            { type: 'Separator', id: 'seperator2' },
 
-            { prefixIcon: 'e-icons e-transform-right', tooltipText: 'Rotate Right', disabled: true, id:'transform_right' },
-            { prefixIcon: 'e-icons e-transform-left', tooltipText: 'Rotate Left', disabled: true, id:'transform_left'},
+            { prefixIcon: 'e-icons e-transform-right', tooltipText: 'Rotate Right', disabled: true, id: 'transform_right' },
+            { prefixIcon: 'e-icons e-transform-left', tooltipText: 'Rotate Left', disabled: true, id: 'transform_left' },
 
-            { type: 'Separator',id:'seperator3'},
+            { type: 'Separator', id: 'seperator3' },
 
-            { prefixIcon: 'e-icons e-flip-vertical', tooltipText: 'Flip Vertical', disabled: true, id:'flip_vertical' },
-            { prefixIcon: 'e-icons e-flip-horizontal', tooltipText: 'Flip Horizontal', disabled: true, id: 'flip_horizontal'},
+            { prefixIcon: 'e-icons e-flip-vertical', tooltipText: 'Flip Vertical', disabled: true, id: 'flip_vertical' },
+            { prefixIcon: 'e-icons e-flip-horizontal', tooltipText: 'Flip Horizontal', disabled: true, id: 'flip_horizontal' },
 
-            { type: 'Separator',id: 'seperator4' },
+            { type: 'Separator', id: 'seperator4' },
 
-            { prefixIcon: 'sf-icon-distribute-horizontal', tooltipText: 'Distribute Objects Horizontally', disabled: true, id:'distribute_horizontal'},
+            { prefixIcon: 'sf-icon-distribute-horizontal', tooltipText: 'Distribute Objects Horizontally', disabled: true, id: 'distribute_horizontal' },
             { prefixIcon: 'sf-icon-distribute-vertical', tooltipText: 'Distribute Objects Vertically', disabled: true, id: 'distribute_vertical' },
 
-            { type: 'Separator',id: 'seperator5' },
+            { type: 'Separator', id: 'seperator5' },
 
-            { prefixIcon: 'sf-icon-same-width', tooltipText: 'Same Width', disabled: true, id:'same_width' },
-            { prefixIcon: 'sf-icon-same-height', tooltipText: 'Same Height', disabled: true, id:'same_height'},
+            { prefixIcon: 'sf-icon-same-width', tooltipText: 'Same Width', disabled: true, id: 'same_width' },
+            { prefixIcon: 'sf-icon-same-height', tooltipText: 'Same Height', disabled: true, id: 'same_height' },
             { prefixIcon: 'sf-icon-same-size', tooltipText: 'Same Size', disabled: true, id: 'same_size' }
         ]
     });

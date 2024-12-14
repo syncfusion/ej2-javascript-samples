@@ -1,7 +1,7 @@
 this.default = function () {
     //Icon and isPrimary is false
     var fabObj1 = new ej.buttons.Fab({
-        iconCss: 'fab-icons fab-icon-mic',
+        iconCss: 'e-icons e-people',
         position:'MiddleCenter',
         isPrimary: false,
         target: '#target1'
@@ -10,7 +10,7 @@ this.default = function () {
 
     //Icon with Label
     var fabObj3 = new ej.buttons.Fab({
-        iconCss: 'fab-icons fab-icon-people',
+        iconCss: 'e-icons e-people',
         position:'MiddleCenter',
         content: "Contact",
         target: '#target2'
@@ -22,7 +22,7 @@ this.default = function () {
         content: 'Disabled',
         disabled: true,
         position:'MiddleCenter',
-        iconCss: 'fab-icons fab-icon-people',
+        iconCss: 'e-icons e-people',
         target: '#target3',
     });
     fabObj2.appendTo('#fab3');

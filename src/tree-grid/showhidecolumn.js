@@ -24,6 +24,7 @@ this.default = function () {
     var dropDownListObject = new ej.dropdowns.DropDownList({
         dataSource: columnsName,
         fields: { text: 'name', value: 'id' },
+        width: '85%',
         value: 'taskID',
         change: function (e) {
             var columnName = e.value;

@@ -5,10 +5,9 @@
 const { Diagram, UndoRedo, Snapping, DiagramTools, SnapConstraints } = ej.diagrams;
 Diagram.Inject(UndoRedo, Snapping);
 
-let diagram;
-let checkBoxObj;
-
-// Mapping of shape IDs to drawing objects
+// Initialize diagram and checkbox
+this.default = function () {
+    // Mapping of shape IDs to drawing objects
 const shapeMapping = {
     'shape1': { shape: { type: 'Basic', shape: 'Rectangle' } },
     'shape2': { shape: { type: 'Basic', shape: 'Ellipse' } },
@@ -78,9 +77,6 @@ function getPath() {
         '211 -34 87 -61 163 -61 168 0 5 14 8 32 6 31 -3 32 -5 98 -182z" />' +
         '</g> </svg>';
 }
-
-// Initialize diagram and checkbox
-this.default = function () {
     const interval = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
     const gridlines = { lineColor: '#e0e0e0', lineIntervals: interval };
     const snapSettings = {
@@ -90,7 +86,7 @@ this.default = function () {
     };
 
     // Initialize diagram control
-    diagram = new Diagram({
+   let diagram = new Diagram({
         width: '100%', height: '540px', snapSettings: snapSettings,
         rulerSettings: {
             showRulers: true, dynamicGrid: true
@@ -104,14 +100,15 @@ this.default = function () {
     diagram.appendTo('#diagram');
 
     // Initialize checkbox for Continuous Draw
-    checkBoxObj = new ej.buttons.CheckBox({ label: 'Continuous Draw', checked: true, change: onChange });
+   let checkBoxObj = new ej.buttons.CheckBox({ label: 'Continuous Draw', checked: true, change: onChange });
     checkBoxObj.appendTo('#checked');
 
     // Click event used to determine the drawing object
     document.getElementById('appearance').addEventListener('click', documentClick);
-};
-
-// Function to handle change event of checkbox
+    // Function to handle change event of checkbox
 function onChange(args) {
     diagram.tool = args.checked ? DiagramTools.ContinuousDraw : DiagramTools.DrawOnce;
 }
+};
+
+

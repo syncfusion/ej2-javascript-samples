@@ -25,7 +25,7 @@ this.default = function () {
             { field: 'Title', headerText: 'Title', width: 190 },
             {
                 field: 'HireDate', headerText: 'Hire Date', textAlign: 'Right',
-                width: 135, format: { skeleton: 'yMd', type: 'date' }, editType: 'datepickeredit'
+                width: 135, format: { skeleton: 'yMd', type: 'date' }, editType: 'datepickeredit', type:'date'
             }
         ],
         actionComplete: function (args) {

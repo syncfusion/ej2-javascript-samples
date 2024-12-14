@@ -26,7 +26,7 @@ this.default = function () {
         title: 'Annual Product-Wise Profit Analysis',
         legendSettings: { visible: false },
         //Initializing Tooltip
-        tooltip: {enable: true,header:"", format: '<b>${point.x}</b><br> Profit: <b>$${point.y}K</b>'  },
+        tooltip: {enable: true,header:"", format: '<b>${point.x}</b><br> Profit: <b>$${point.y}K</b>', enableHighlight: true  },
         enableBorderOnMouseMove:false,
            // custom code start
         load: function (args) {

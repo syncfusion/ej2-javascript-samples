@@ -33,7 +33,7 @@ this.default = function () {
                 dataSource: foods,
                 fields: { value: 'food' },
                 placeholder: 'Select a Category',
-                width: '140px',
+                width: '160px',
                 value: value,
                 change: function () {
                     setTimeout(function () {

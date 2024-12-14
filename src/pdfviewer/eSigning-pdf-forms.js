@@ -9,8 +9,7 @@ this.default = function () {
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer({
         documentPath: "https://cdn.syncfusion.com/content/pdf/eSign_filling.pdf",
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer'
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     });
     viewer.enableToolbar = false;
     viewer.enableNavigationToolbar = false;
@@ -105,16 +104,84 @@ this.default = function () {
         for (var formField of viewer.formFieldCollections) {
             viewer?.formDesignerModule.updateFormField(formField, { backgroundColor: finishedBackground });
         }
-        viewer.serverActionSettings.download = "FlattenDownload";
-        viewer.download();
-        viewer.serverActionSettings.download = "Download";
+        var url = "https://ej2services.syncfusion.com/js/development/api/pdfviewer/FlattenDownload";
+        viewer.saveAsBlob().then(function (blob) {
+            return convertBlobToBase64(blob);
+        }).then(function (base64String) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+            var requestData = JSON.stringify({ base64String: base64String });
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var responseBase64 = xhr.responseText.split('base64,')[1];
+                    if (responseBase64) {
+                        var blob = createBlobFromBase64(responseBase64, 'application/pdf');
+                        var blobUrl = URL.createObjectURL(blob);
+                        downloadDocument(blobUrl);
+                        viewer.load(xhr.responseText, null);
+                        finishBtnObj.disabled = true;
+                        listObj.enabled = false;
+                    } else {
+                        console.error('Invalid base64 response.');
+                    }
+                } else {
+                    console.error('Download failed:', xhr.statusText);
+                }
+            };
+            xhr.onerror = function () {
+                console.error('An error occurred during the download:', xhr.statusText);
+            };
+            xhr.send(requestData);
+        }).catch(function (error) {
+            console.error('Error saving Blob:', error);
+        });
     };
 
-    viewer.downloadEnd = function (args) {
-        viewer.load(args.downloadDocument, null);
-        finishBtnObj.disabled = true;
-        listObj.enabled = false;
-    };
+    function convertBlobToBase64(blob) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = function () {
+                if (typeof reader.result === 'string') {
+                    resolve(reader.result);
+                } else {
+                    reject(new Error('Failed to convert Blob to Base64'));
+                }
+            };
+            reader.onerror = function (error) {
+                reject(error);
+            };
+        });
+    }
+    
+    function createBlobFromBase64(base64String, contentType) {
+        var sliceSize = 512;
+        var byteCharacters = atob(base64String);
+        var byteArrays = [];
+        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+            var byteArray = new Uint8Array(byteNumbers);
+            byteArrays.push(byteArray);
+        }
+        return new Blob(byteArrays, { type: contentType });
+    }
+    
+    function downloadDocument(blobUrl) {
+        var anchorElement = document.createElement('a');
+        anchorElement.href = blobUrl;
+        anchorElement.target = '_parent';
+        var downloadFileName = viewer.fileName || 'default.pdf';
+        anchorElement.download = downloadFileName.endsWith('.pdf') ? downloadFileName : downloadFileName.split('.pdf')[0] + '.pdf';
+        document.body.appendChild(anchorElement);
+        anchorElement.click();
+        document.body.removeChild(anchorElement);
+        URL.revokeObjectURL(blobUrl);
+    }
 
     var dialogObj = new ej.popups.Dialog({
         width: '350px',

@@ -2,7 +2,6 @@
     "name": "Diagram",
     "directory": "diagram",
     "category": "Data Visualization",
-    "type":"update",
     "ftName": "diagram",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
@@ -34,8 +33,7 @@
             "url": "connector",
             "name": "Connectors",
             "description": "This sample visualizes the data flow in a marketing process using predefined diagram shapes and connectors.",
-            "category": "Getting Started",
-            "type":"update"
+            "category": "Getting Started"
         },
         {
             "url": "line-routing",
@@ -137,8 +135,7 @@
             "url": "quick-commands",
             "name": "User Handles",
             "description": "This sample visualizes a simple flow diagram along with options to execute the frequently used commands using user handles.",
-            "category": "Interactive Features",
-            "type":"update"
+            "category": "Interactive Features"
         },
         {
             "url": "overview",
@@ -156,8 +153,7 @@
             "url": "flowchart-layout",
             "name": "Flowchart Layout",
             "description": "This sample illustrates the flowchart layout algorithm that is used to automatically arrange the flow shapes.",
-            "category": "Automatic Layouts",
-            "type":"new"
+            "category": "Automatic Layouts"
         },
         {
             "url": "mind-map",
@@ -229,8 +225,7 @@
             "url": "serialization",
             "name": "Serialization",
             "description": "This sample visualizes building diagrams interactively and editing the saved diagrams. Symbol Palette is used to easily build diagrams.",
-            "category": "Save and Restore ",
-            "type":"update"
+            "category": "Save and Restore "
         },
         {
             "url": "print-export",
@@ -289,7 +284,7 @@
         {
             "url": "workflow-editor",
             "name": "WorkFlow Diagram",
-            "description": "This sample visually represents a simple workflow of a Travel Request Agency using Syncfusion EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
+            "description": "This sample visually represents a simple workflow of a Travel Request Agency using Syncfusion<sup>®</sup> EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
             "category": "Real-time Diagrams"
         },
         {

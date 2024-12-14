@@ -7,40 +7,39 @@ ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
  */
 // tslint:disable-next-line:max-func-body-length
 
-// Variable declarations (some might not be used in this snippet)
-var diagram;
-var fontSize;
-var fontColor;
-var fontFamily;
-var bold;
-var italic;
-var underLine;
-var template;
-var labelConstraints;
-var underline;
+this.default = function () {
+    var fontSize;
+    var fontColor;
+    var fontFamily;
+    var bold;
+    var italic;
+    var underLine;
+    var template;
+    var labelConstraints;
+    var underline;
 
-// Function to update the appearance of the Annotation
-function updateAnnotation(value, fontSize, fontFamily) {
-    // Loop through each selected node in the diagram
-    for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
-        var node = diagram.selectedItems.nodes[i];
+    // Function to update the appearance of the Annotation
+    function updateAnnotation(value, fontSize, fontFamily) {
+        // Loop through each selected node in the diagram
+        for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
+            var node = diagram.selectedItems.nodes[i];
             var annotationStyle = node.annotations[0].style;
             // Update the font size of the annotation
             if (value === 'fontsize') {
                 annotationStyle.fontSize = fontSize.value;
-            // Toggle the underline text decoration of the annotation
+                // Toggle the underline text decoration of the annotation
             } else if (value === 'underline') {
                 annotationStyle.textDecoration = annotationStyle.textDecoration === 'Underline' ? 'None' : 'Underline';
-            // Update the font family of the annotation
+                // Update the font family of the annotation
             } else if (value === 'fontfamily') {
                 annotationStyle.fontFamily = fontFamily.value.toString();
-            // Toggle the bold style of the annotation
+                // Toggle the bold style of the annotation
             } else if (value === 'bold') {
                 annotationStyle.bold = !annotationStyle.bold;
-            // Toggle the italic style of the annotation
+                // Toggle the italic style of the annotation
             } else if (value === 'italic') {
                 annotationStyle.italic = !annotationStyle.italic;
-            // Update the template of the annotation
+                // Update the template of the annotation
             } else if (value === 'template') {
                 if (fontFamily === 'none') {
                     node.annotations[0].template = '';
@@ -52,7 +51,7 @@ function updateAnnotation(value, fontSize, fontFamily) {
                     node.annotations[0].template =
                         '<img src="src/diagram/Images/annotation/' + fontFamily + '.svg" style="width:100%;height:100%"/>';
                 }
-            // Toggle the interaction constraint of the annotation
+                // Toggle the interaction constraint of the annotation
             } else if (value === 'interaction') {
                 node.annotations[0].constraints = node.annotations[0].constraints ^ ej.diagrams.AnnotationConstraints.Interaction;
             }
@@ -60,15 +59,15 @@ function updateAnnotation(value, fontSize, fontFamily) {
         // Apply the changes to the diagram
         diagram.dataBind();
     }
-// Function to update the annotation position based on the selection
-function updateAnnotationPosition(id) {
-    // Get the target element by its ID
-    var target = document.getElementById(id);
-    // Loop through each selected node in the diagram
-    for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
-        var node = diagram.selectedItems.nodes[i];
+    // Function to update the annotation position based on the selection
+    function updateAnnotationPosition(id) {
+        // Get the target element by its ID
+        var target = document.getElementById(id);
+        // Loop through each selected node in the diagram
+        for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
+            var node = diagram.selectedItems.nodes[i];
             var annotation = node.annotations[0];
-        // Update the annotation position based on the selected option
+            // Update the annotation position based on the selected option
             switch (target.id) {
                 case 'left':
                     setAnnotationPosition(annotation, 0, 0, 'Top', 'Left', target);
@@ -91,48 +90,46 @@ function updateAnnotationPosition(id) {
             }
         }
     }
-// Function to set the annotation position and margin
-function setAnnotationPosition(annotation, offsetX, offsetY, verticalAlignment, horizontalAlignment, target) {
-    // Set the annotation's offset position
-    annotation.offset.x = offsetX;
-    annotation.offset.y = offsetY;
-    // Set the annotation's vertical and horizontal alignment
-    annotation.verticalAlignment = verticalAlignment;
-    annotation.horizontalAlignment = horizontalAlignment;
-    // Set the margin based on the alignment
-    if (verticalAlignment === 'Top' && horizontalAlignment === 'Left') {
-        annotation.margin = { left: 3, top: 3 };
-    } else if (verticalAlignment === 'Top' && horizontalAlignment === 'Right') {
-        annotation.margin = { right: 3, top: 3 };
-    } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Left') {
-        annotation.margin = { left: 3, bottom: 3 };
-    } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Right') {
-        annotation.margin = { right: 3, bottom: 3 };
+    // Function to set the annotation position and margin
+    function setAnnotationPosition(annotation, offsetX, offsetY, verticalAlignment, horizontalAlignment, target) {
+        // Set the annotation's offset position
+        annotation.offset.x = offsetX;
+        annotation.offset.y = offsetY;
+        // Set the annotation's vertical and horizontal alignment
+        annotation.verticalAlignment = verticalAlignment;
+        annotation.horizontalAlignment = horizontalAlignment;
+        // Set the margin based on the alignment
+        if (verticalAlignment === 'Top' && horizontalAlignment === 'Left') {
+            annotation.margin = { left: 3, top: 3 };
+        } else if (verticalAlignment === 'Top' && horizontalAlignment === 'Right') {
+            annotation.margin = { right: 3, top: 3 };
+        } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Left') {
+            annotation.margin = { left: 3, bottom: 3 };
+        } else if (verticalAlignment === 'Bottom' && horizontalAlignment === 'Right') {
+            annotation.margin = { right: 3, bottom: 3 };
+        }
+        // Add a class to the target element for styling
+        target.classList.add('e-selected-style');
     }
-    // Add a class to the target element for styling
-    target.classList.add('e-selected-style');
-}
-// Function to enable or disable the property panel
-function enablePropertyPanel(arg) {
-    var appearance = document.getElementById('propertypanel');
-    var selectedElement = document.getElementsByClassName('e-remove-selection');
-    // Check if a new node is selected
-    if (arg.newValue) {
-        if (arg.newValue[0] instanceof ej.diagrams.Node) {
-            // If there is a previously selected element, remove the selection class
-            if (selectedElement.length) {
-                selectedElement[0].classList.remove('e-remove-selection');
-            }
-        } else {
-            // If no node is selected, add the selection class to the appearance element
-            if (!appearance.classList.contains('e-remove-selection')) {
-                appearance.classList.add('e-remove-selection');
+    // Function to enable or disable the property panel
+    function enablePropertyPanel(arg) {
+        var appearance = document.getElementById('propertypanel');
+        var selectedElement = document.getElementsByClassName('e-remove-selection');
+        // Check if a new node is selected
+        if (arg.newValue) {
+            if (arg.newValue[0] instanceof ej.diagrams.Node) {
+                // If there is a previously selected element, remove the selection class
+                if (selectedElement.length) {
+                    selectedElement[0].classList.remove('e-remove-selection');
+                }
+            } else {
+                // If no node is selected, add the selection class to the appearance element
+                if (!appearance.classList.contains('e-remove-selection')) {
+                    appearance.classList.add('e-remove-selection');
+                }
             }
         }
     }
-}
-
-this.default = function () {
     //Click event for Appearance of the Property Panel
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;
@@ -194,9 +191,9 @@ this.default = function () {
         }
     ];
     // Initializes the diagram control
-    diagram = new ej.diagrams.Diagram({
+    var diagram = new ej.diagrams.Diagram({
         // Set the dimensions of the diagram
-        width: '100%', height: '550px', 
+        width: '100%', height: '550px',
         // Define the nodes and connectors
         nodes: nodes, connectors: connectors,
         // Disable snapping to grid or objects
@@ -209,11 +206,11 @@ this.default = function () {
                 var selectedElement = document.getElementsByClassName('e-selected-style');
                 if (selectedElement.length) {
                     selectedElement[0].classList.remove('e-selected-style');
-                }          
+                }
                 // Check if a new node is selected
                 if (arg.newValue[0]) {
                     var node = arg.newValue[0];
-                    var offset = node.annotations[0].offset;                  
+                    var offset = node.annotations[0].offset;
                     // Update the annotation position based on the offset values
                     if (offset.x === 0 && offset.y === 0) {
                         updateAnnotationPosition('left');
@@ -238,28 +235,28 @@ this.default = function () {
                 enablePropertyPanel(arg);
             }
         },
-        
+
         // Sets the default values of a node
         getNodeDefaults: function (node) {
             var obj = {
-                width: 130, 
-                height: 50, 
+                width: 130,
+                height: 50,
                 style: { fill: '#D5EDED', strokeColor: '#7DCFC9' },
                 shape: { cornerRadius: 5 }
             };
             return obj;
         },
-        
+
         // Sets the default values of a connector
         getConnectorDefaults: function (obj) {
             obj.type = 'Orthogonal';
             obj.constraints = ej.diagrams.ConnectorConstraints.None;
-    },
-});
-// Append the diagram to the HTML element with id 'diagram'
-diagram.appendTo('#diagram');
-// Select the first node in the diagram
-diagram.select([diagram.nodes[0]]);
+        },
+    });
+    // Append the diagram to the HTML element with id 'diagram'
+    diagram.appendTo('#diagram');
+    // Select the first node in the diagram
+    diagram.select([diagram.nodes[0]]);
     //Button used to apply for Bold of the Annotation
     bold = new ej.buttons.Button({
         cssClass: 'e-small',
@@ -285,12 +282,12 @@ diagram.select([diagram.nodes[0]]);
     fontSize.appendTo('#fontSize');
     fontSize.dataBind();
     //Colorpicker used to apply for Color of the Annotation
-    var fontColor = new ej.inputs.ColorPicker({
+    fontColor = new ej.inputs.ColorPicker({
         value: '#000', change: function (arg) {
             for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
                 var node = diagram.selectedItems.nodes[i];
-                    node.annotations[0].style.color = arg.currentValue.rgba;
-                    diagram.dataBind();
+                node.annotations[0].style.color = arg.currentValue.rgba;
+                diagram.dataBind();
             }
         }
     });
@@ -313,7 +310,7 @@ diagram.select([diagram.nodes[0]]);
         { type: 'Verdana', text: 'Verdana' }
     ];
     //DropDownList used to apply for fontFamily of the Annotation
-    var fontFamily = new ej.dropdowns.DropDownList({
+    fontFamily = new ej.dropdowns.DropDownList({
         dataSource: fontType,
         fields: { value: 'type', text: 'text' }, popupWidth: 150,
         width: '100%', placeholder: 'select a font type',
@@ -322,7 +319,7 @@ diagram.select([diagram.nodes[0]]);
         }
     });
     fontFamily.appendTo('#fontfamily');
-    var templateList = [ 
+    var templateList = [
         { value: 'none', text: 'None' },
         { value: 'industry', text: 'Industry Competitors' },
         { value: 'suppliers', text: 'Suppliers' },
@@ -331,7 +328,7 @@ diagram.select([diagram.nodes[0]]);
         { value: 'substitutes', text: 'Substitutes' }
     ];
     //DropDownList used to apply for template for nodes
-    var template = new ej.dropdowns.DropDownList({
+    template = new ej.dropdowns.DropDownList({
         dataSource: templateList,
         fields: { value: 'value', text: 'text' }, popupWidth: 200,
         width: '100%', placeholder: 'select a template', index: 0,

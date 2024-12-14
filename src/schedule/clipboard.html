@@ -1,0 +1,36 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
+</div>
+<ul id="ScheduleClipboardMenu"></ul>
+
+<style>
+    .e-bigger .schedule-clipboard-menu ul .e-menu-item .e-menu-icon {
+        font-size: 14px;
+    }
+
+    .schedule-clipboard-menu ul .e-menu-item .e-menu-icon {
+        font-size: 12px;
+    }
+</style>
+
+<div id="action-description">
+    <p>This example demonstrates how to integrate clipboard functionality (cut, copy, paste) and a custom context menu into the Scheduler control.</p>
+</div>
+
+<div id="description">
+    <p>In this example, the <code>allowClipboard</code> property is set to <code>true</code> to enable clipboard functionality. This property allows the following keyboard shortcuts:</p>
+    <ul>
+        <li><strong>Ctrl + X:</strong> To cut the selected appointment from the scheduler.</li>
+        <li><strong>Ctrl + C:</strong> To copy the selected appointment.</li>
+        <li><strong>Ctrl + V:</strong> To paste the cut/copied appointment.</li>
+    </ul>
+    <p>Additionally, we have integrated the ContextMenu control separately from the application end and set its target to the Scheduler control. Also, we have used the following Scheduler's public methods in the context menu handlers:</p>
+    <ul>
+        <li><strong>cut()</strong> method to remove the selected appointment.</li>
+        <li><strong>copy()</strong> method to duplicate the selected appointment.</li>
+        <li><strong>paste()</strong> method to insert the appointment into the target time slot.</li>
+    </ul>
+    <p>On mobile devices, the context menu will open when you tap and hold on the cells or events.</p>
+</div>

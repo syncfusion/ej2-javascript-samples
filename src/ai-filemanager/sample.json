@@ -1,0 +1,17 @@
+{
+    "name": "File Manager",
+    "directory": "ai-filemanager",
+    "category": "Smart AI Solutions",
+    "samples": [
+        {
+            "url": "smart-filemanager",
+            "name": "Smart FileManager",
+            "category": "File Manager",
+            "sourceFiles": [
+                { "displayName": "smart-filemanager.js", "path": "src/ai-filemanager/smart-filemanager.js" },
+                { "displayName": "smart-filemanager.html", "path": "src/ai-filemanager/ai-smart-filemanager.html" }
+            ],
+            "description": "This demo showcases the File Manager AI feature."
+        }
+    ]
+}

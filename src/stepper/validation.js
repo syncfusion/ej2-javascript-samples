@@ -4,7 +4,7 @@ this.default = function() {
     var isUserNavigatingReverse = false;
     var isCurrentStepValid = false;
     var stepperContentWrapper = document.getElementById('validation-step-content');
-    var regex = new RegExp('^[A-Za-z0-9._%+-]{1,}@[A-Za-z0-9._%+-]{1,}');
+    var regex = new RegExp('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
     var stepperWithText = [
         { iconCss: 'sf-icon-survey-intro', text: 'Survey Introduction' },
         { iconCss: 'sf-icon-survey-feedback', text: 'Feedback' },

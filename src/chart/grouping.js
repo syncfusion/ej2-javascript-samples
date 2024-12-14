@@ -54,7 +54,7 @@ this.default = function () {
             args.text = args.point.x + ' ' + args.point.y;
         },
         //Initializing Tooltip
-        tooltip: { enable: true ,format:"<b>${point.x}</b><br> Gold Medals: <b>${point.y}</b>" },
+        tooltip: { enable: true ,format:"<b>${point.x}</b><br> Gold Medals: <b>${point.y}</b>", enableHighlight: true },
         enableBorderOnMouseMove:false,
         //Initializing Title
         title: 'Rio Olympic Gold Medals',

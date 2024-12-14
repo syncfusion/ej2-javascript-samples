@@ -20,29 +20,29 @@
 </div>
 
 <div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
+    <table id="property" title="Properties" style="width: 100%; table-layout: auto">
         <tr>
             <td colspan="2" style="width: 100%">
                 <div><b>Select Rows</b></div>
             </td>
         </tr>
         <tr>
-            <td style="width: 50%">
+            <td style="width: 30%">
                 <div style="padding-top: 8px">Start</div>
 
             </td>
-            <td style="width: 30%;padding-right: 10px">
+            <td style="width: 70%;padding-right: 10px">
                 <div id='numericbox'>
                     <input type="text" id="start" class="form-control" />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width: 50%">
+            <td style="width: 30%">
                 <div style="padding-top: 8px">To</div>
             </td>
-            <td style="width: 30%;padding-right: 10px">
-                <div>
+            <td style="width: 70%;padding-right: 10px">
+                <div id="numericbox2">
                     <input type="text" id="to" class="form-control" />
                 </div>
             </td>
@@ -73,6 +73,14 @@
 <style>
     #numericbox {
         min-width: 130px;
+    }
+
+    @media (min-width: 1900px) and (max-width: 2400px) {
+
+        .property-section #property #numericbox,
+        .property-section #property #numericbox2 {
+            width: 70%;
+        }
     }
 </style>
 

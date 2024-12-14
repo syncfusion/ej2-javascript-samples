@@ -5,9 +5,9 @@
 </div>
 
 <div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
+    <table id="property" title="Properties" style="width: 100%; table-layout: auto">
         <tr>
-            <td style="width: 30%">
+            <td>
                 <div>Column</div>
             </td>
             <td style="width: 70%;padding-right: 10px">
@@ -17,26 +17,19 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 30%">
+            <td>
                 <div>Direction</div>
             </td>
             <td style="width: 70%;padding-right: 10px">
-                <div>
+                <div id="directionddl">
                     <input type="text" tabindex="1" id='direction' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width: 30%">
-                <div>
-                    <button class="btn btn-default" type="button" id="sort">Sort</button>
-                </div>
-
-            </td>
-            <td style="width: 70%; padding:10px 10px 10px 0px">
-                <div>
-                    <button class="btn btn-default" type="button" id="clear">Clear</button>
-                </div>
+            <td colSpan="2" style="padding-top: 10%; padding-left: 10px;">
+                <button class="btn btn-default" type="button" id="sort" style="margin-right: 15px;">Sort</button>
+                <button class="btn btn-default" type="button" id="clear">Clear</button>
             </td>
         </tr>
     </table>
@@ -77,10 +70,13 @@
             margin-top: 30px;
         }
     }
-</style>
-<style>
-    #columnddl {
-        min-width: 130px;
+    
+    @media (min-width: 990px) and (max-width: 1300px) {
+
+        .property-section #property {
+            width: 130% !important;
+        }
     }
+
 </style>
 <!-- custom code end -->

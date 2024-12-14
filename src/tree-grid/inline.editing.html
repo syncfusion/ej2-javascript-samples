@@ -4,23 +4,13 @@
     </div>
 </div>
 
-<style>
-    .fluent2,
-    .fluent2-dark,
-    .fluent2-highcontrast {
-        #columnddl .e-input-group {
-            width: 130px !important;
-        }
-    }
-</style>
-
-<div class="col-lg-2 property-section">
+<div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tr style="height: 50px">
-            <td style="width: 30%">
+            <td>
                 <div>Edit Mode</div>
             </td>
-            <td style="width: 50%;padding-right: 10px">
+            <td class="editmode-data" style="width: 70%;padding-right: 10px">
                 <div id='columnddl'>
                     <input type="text" tabindex="0" id='editmodes' />
                </div>
@@ -66,3 +56,15 @@
     </p>
 </div>
 <!-- custom code end -->
+<style>
+    @media (min-width: 990px) and (max-width: 1300px) {
+
+        .property-section #property {
+            width: 120% !important;
+        }
+
+        .editmode-data {
+            width:115% !important;
+        }
+    }
+</style>

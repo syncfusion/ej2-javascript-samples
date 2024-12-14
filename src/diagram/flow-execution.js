@@ -1,58 +1,58 @@
 
-var diagram;
-//Initialize the connector object with basic properties
-function CreateConnector(
-    name, source, target, content, type,
-    direction, targePort, length) {
-    var connector = {};
-    connector.id = name;
-    connector.sourceID = source;
-    connector.targetID = target;
-    connector.style = { strokeWidth: 2 };
-    var annotation = {};
-    annotation.content = content;
-    annotation.style = { fill: 'white' };
-    connector.annotations = [annotation];
-    connector.style.strokeColor = '#8D8D8D';
-    connector.targetDecorator = {};
-    connector.targetDecorator.style = {};
-    connector.targetDecorator.style.strokeColor = '#8D8D8D';
-    connector.targetDecorator.style.fill = '#8D8D8D';
-    if (targePort) {
-        connector.targetPortID = targePort;
-    }
-    var segment = {};
-    if (type) {
-        connector.type = type;
-        segment.direction = direction;
-        segment.type = type;
-        segment.length = length;
-        connector.segments = [segment];
-    }
-    return connector;
-}
 
-//Initialize the node object with basic properties.
-function CreateNodes(
-    name, offsetX, offsetY, shape, content,
-    width, height, ports) {
-    var node = {};
-    node.id = name;
-    node.offsetX = offsetX;
-    node.width = 150;
-    node.height = 50;
-    node.offsetY = offsetY;
-    var annotations = {};
-    annotations.content = content;
-    node.annotations = [annotations];
-    node.shape = { type: 'Flow', shape: shape };
-    node.style = { fill: '#FBF6E1', strokeColor: '#E8DFB6', strokeWidth: 2 };
-    if (ports) {
-        node.ports = ports;
-    }
-    return node;
-}
 this.default = function () {
+    //Initialize the connector object with basic properties
+    function CreateConnector(
+        name, source, target, content, type,
+        direction, targePort, length) {
+        var connector = {};
+        connector.id = name;
+        connector.sourceID = source;
+        connector.targetID = target;
+        connector.style = { strokeWidth: 2 };
+        var annotation = {};
+        annotation.content = content;
+        annotation.style = { fill: 'white' };
+        connector.annotations = [annotation];
+        connector.style.strokeColor = '#8D8D8D';
+        connector.targetDecorator = {};
+        connector.targetDecorator.style = {};
+        connector.targetDecorator.style.strokeColor = '#8D8D8D';
+        connector.targetDecorator.style.fill = '#8D8D8D';
+        if (targePort) {
+            connector.targetPortID = targePort;
+        }
+        var segment = {};
+        if (type) {
+            connector.type = type;
+            segment.direction = direction;
+            segment.type = type;
+            segment.length = length;
+            connector.segments = [segment];
+        }
+        return connector;
+    }
+
+    //Initialize the node object with basic properties.
+    function CreateNodes(
+        name, offsetX, offsetY, shape, content,
+        width, height, ports) {
+        var node = {};
+        node.id = name;
+        node.offsetX = offsetX;
+        node.width = 150;
+        node.height = 50;
+        node.offsetY = offsetY;
+        var annotations = {};
+        annotations.content = content;
+        node.annotations = [annotations];
+        node.shape = { type: 'Flow', shape: shape };
+        node.style = { fill: '#FBF6E1', strokeColor: '#E8DFB6', strokeWidth: 2 };
+        if (ports) {
+            node.ports = ports;
+        }
+        return node;
+    }
     var selectedButton = 'LinksConnected';
     var nodes = [];
     var port1 = { id: 'port1', offset: { x: 0.5, y: 1 } };
@@ -79,7 +79,7 @@ this.default = function () {
     connectors.push(CreateConnector('connector10', 'node4', 'node5', '', 'Orthogonal', 'Bottom', 'port', 220));
 
     //initialization of the Diagram.
-    diagram = new ej.diagrams.Diagram({
+    var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '600px', nodes: nodes, connectors: connectors,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None }
     });
@@ -113,7 +113,7 @@ this.default = function () {
     radioButton.appendTo('#NodesReachable');
 
 
-    function buttonChange(args) {       
+    function buttonChange(args) {
         applyChanges(args.event.srcElement.id);
         selectedButton = args.event.srcElement.id;
     }
@@ -153,7 +153,7 @@ this.default = function () {
             for (var i = 0; i < nodes.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[nodes[i]]);
                 highLightedObjects.push(nodes[i]);
-                var connector=diagram.connectors[index];
+                var connector = diagram.connectors[index];
                 connector.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.fill = '#1413F8';
@@ -169,7 +169,7 @@ this.default = function () {
             for (var i = 0; i < node.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[node[i]]);
                 highLightedObjects.push(node[i]);
-                var connector=diagram.connectors[index];
+                var connector = diagram.connectors[index];
                 connector.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.fill = '#1413F8';
@@ -226,7 +226,7 @@ this.default = function () {
             for (var i = 0; i < nodeList.length; i++) {
                 var index = diagram.connectors.indexOf(diagram.nameTable[nodeList[i]]);
                 highLightedObjects.push(nodeList[i]);
-                var connector=diagram.connectors[index];
+                var connector = diagram.connectors[index];
                 connector.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.strokeColor = '#1413F8';
                 connector.targetDecorator.style.fill = '#1413F8';
@@ -264,7 +264,7 @@ this.default = function () {
             }
             else {
                 var firstIndex = diagram.connectors.indexOf(diagram.nameTable[highLightedObjects[i]]);
-                var connector= diagram.connectors[firstIndex];
+                var connector = diagram.connectors[firstIndex];
                 connector.style.strokeColor = '#8D8D8D';
                 connector.targetDecorator.style.strokeColor = '#8D8D8D';
                 connector.targetDecorator.style.fill = '#8D8D8D';

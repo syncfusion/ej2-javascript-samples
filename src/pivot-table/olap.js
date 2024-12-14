@@ -24,10 +24,6 @@ var pivotObj = new ej.pivotview.PivotView({
         ],
         filters: [
             { name: '[Date].[Fiscal]', caption: 'Date Fiscal' },
-        ],
-         filterSettings: [
-            { name: '[Date].[Fiscal]', items: ['[Date].[Fiscal].[Fiscal Quarter].&[2002]&[4]', '[Date].[Fiscal].[Fiscal Year].&[2005]'], 
-            levelCount: 3 }
         ]
     },
     allowExcelExport: true,

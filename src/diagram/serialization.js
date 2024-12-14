@@ -5,46 +5,47 @@
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
 
-// Save the diagram object as a JSON file.
-function download(data) {
-    // MIME type for JSON data.
-    var mimeType = "data:text/json;charset=utf-8,";
-    // Checks for MS browser to use the msSaveBlob method.
-    if ((window.navigator).msSaveBlob) {
-        // Creates a new Blob object containing the JSON data.
-        var blob = new Blob([data], { type: mimeType });
-        // Saves or opens the blob depending on the browser capability.
-        (window.navigator).msSaveOrOpenBlob(blob, "Diagram.json");
-    } else {
-        // Encodes the JSON data as a data URL.
-        var dataStr = mimeType + encodeURIComponent(data);
-        // Creates an anchor element to facilitate downloading.
-        var downloadAnchor = document.createElement("a");
-        downloadAnchor.href = dataStr;
-        downloadAnchor.download = "Diagram.json";
-        document.body.appendChild(downloadAnchor);
-        // Triggers the download process.
-        downloadAnchor.click();
-        // Removes the anchor element from the document.
-        downloadAnchor.remove();
-    }
-}
-// Function to toggle palette visibility
-function openPalette() {
-    var paletteSpace = document.getElementById('palette-space');
-    // Checks if the current viewport width is less than or equal to 550 pixels.
-    var isMobile = window.matchMedia('(max-width:550px)').matches;
-    if (isMobile) {
-        // Toggles the class to show or hide the palette.
-        if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
-            paletteSpace.classList.add('sb-mobile-palette-open');
-        }
-        else {
-            paletteSpace.classList.remove('sb-mobile-palette-open');
-        }
-    }
-}
+
 this.default = function () {
+    // Save the diagram object as a JSON file.
+    function download(data) {
+        // MIME type for JSON data.
+        var mimeType = "data:text/json;charset=utf-8,";
+        // Checks for MS browser to use the msSaveBlob method.
+        if ((window.navigator).msSaveBlob) {
+            // Creates a new Blob object containing the JSON data.
+            var blob = new Blob([data], { type: mimeType });
+            // Saves or opens the blob depending on the browser capability.
+            (window.navigator).msSaveOrOpenBlob(blob, "Diagram.json");
+        } else {
+            // Encodes the JSON data as a data URL.
+            var dataStr = mimeType + encodeURIComponent(data);
+            // Creates an anchor element to facilitate downloading.
+            var downloadAnchor = document.createElement("a");
+            downloadAnchor.href = dataStr;
+            downloadAnchor.download = "Diagram.json";
+            document.body.appendChild(downloadAnchor);
+            // Triggers the download process.
+            downloadAnchor.click();
+            // Removes the anchor element from the document.
+            downloadAnchor.remove();
+        }
+    }
+    // Function to toggle palette visibility
+    function openPalette() {
+        var paletteSpace = document.getElementById('palette-space');
+        // Checks if the current viewport width is less than or equal to 550 pixels.
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
+        if (isMobile) {
+            // Toggles the class to show or hide the palette.
+            if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
+                paletteSpace.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpace.classList.remove('sb-mobile-palette-open');
+            }
+        }
+    }
     // Predefined styles for different types of nodes in the diagram. 
     var nodeStyles = {
         terminator: { fill: "#d0f0f1", strokeColor: "#797979", height: 50, width: 100 },
@@ -103,9 +104,9 @@ this.default = function () {
         nodes: nodes,
         connectors: connectors,
         // event triggers after the diagram elements finished loading using loadDiagram method
-          loaded: function(){
-                diagram.select([diagram.nodes[0]]);
-            },
+        loaded: function () {
+            diagram.select([diagram.nodes[0]]);
+        },
         snapSettings: { horizontalGridlines: gridlines, verticalGridlines: gridlines },
         //set default value for Connectors.
         getConnectorDefaults: function (args) {

@@ -4,29 +4,28 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
  */
 //Click event for Appearance of the Property Panel.
 
-//sets node default value
-function nodeDefaults(obj) {
-    obj.style = { fill: '#659be5', strokeColor: 'none', color: 'white', strokeWidth: 2 };
-    obj.borderColor = '#3a6eb5';
-    obj.backgroundColor = '#659be5';
-    obj.shape.margin = { left: 5, right: 5, bottom: 5, top: 5 };
-    obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
-    obj.collapseIcon.offset = { x: 0.5, y: 1 };
-    obj.collapseIcon.padding.top = 5;
-    obj.collapseIcon.fill = 'lightgray';
-    return obj;
-}
-//sets connector default value
-function connectorDefaults(connector) {
-    connector.targetDecorator.shape = 'None';
-    connector.type = 'Orthogonal';
-    connector.style.strokeColor = '#6d6d6d';
-    connector.cornerRadius = 5;
-    return connector;
-}
-
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
+    //sets node default value
+    function nodeDefaults(obj) {
+        obj.style = { fill: '#659be5', strokeColor: 'none', color: 'white', strokeWidth: 2 };
+        obj.borderColor = '#3a6eb5';
+        obj.backgroundColor = '#659be5';
+        obj.shape.margin = { left: 5, right: 5, bottom: 5, top: 5 };
+        obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
+        obj.collapseIcon.offset = { x: 0.5, y: 1 };
+        obj.collapseIcon.padding.top = 5;
+        obj.collapseIcon.fill = 'lightgray';
+        return obj;
+    }
+    //sets connector default value
+    function connectorDefaults(connector) {
+        connector.targetDecorator.shape = 'None';
+        connector.type = 'Orthogonal';
+        connector.style.strokeColor = '#6d6d6d';
+        connector.cornerRadius = 5;
+        return connector;
+    }
     //Initializes the nodes for the diagram
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '499px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
@@ -94,20 +93,21 @@ this.default = function () {
         }
     };
     // Check box to enable expand and collapse icon
-    var checkBoxObj = new ej.buttons.CheckBox({ change:  function (args){
-        for (var i = 0, diagramNodes = diagram.nodes; i < diagramNodes.length; i++) {
-            var node = diagramNodes[i];
-            if (args.checked) {
-                node.expandIcon.shape = 'Minus';
-                node.collapseIcon.shape = 'Plus';
+    var checkBoxObj = new ej.buttons.CheckBox({
+        change: function (args) {
+            for (var i = 0, diagramNodes = diagram.nodes; i < diagramNodes.length; i++) {
+                var node = diagramNodes[i];
+                if (args.checked) {
+                    node.expandIcon.shape = 'Minus';
+                    node.collapseIcon.shape = 'Plus';
+                }
+                else {
+                    node.expandIcon.shape = 'None';
+                    node.collapseIcon.shape = 'None';
+                }
             }
-            else {
-                node.expandIcon.shape = 'None';
-                node.collapseIcon.shape = 'None';
-            }
+            diagram.doLayout();
         }
-        diagram.doLayout();
-    }
     });
     checkBoxObj.appendTo('#expand');
 };

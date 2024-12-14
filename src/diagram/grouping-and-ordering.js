@@ -4,51 +4,49 @@
  */
 
 
-// Function to create a node
-function createNode (id, offsetX, offsetY, width, height, shape, annotations, cornerRadius){
-  return{
-    id: id,
-    offsetX: offsetX,
-    offsetY: offsetY,
-    width: width,
-    height: height,
-    shape: { type: "Basic", shape: shape, cornerRadius: cornerRadius },
-    annotations: annotations,
-  };
-}
-
-// Function to create a group node
-function groupNode (id, children, padding, annotations) {
-  return{
-    id: id,
-    children: children,
-    padding: padding,
-    annotations: annotations
-  };
-}
-
-// Initialize nodes
-var nodes = [
-  createNode('Diamond', 350, 250, 100, 100, 'Diamond', [{ content: 'Decision' }]),
-  createNode('ellipse', 150, 250, 100, 60, 'Ellipse', [{ content: 'Start/Stop' }]),
-  createNode('rectangle', 150, 400, 100, 60, 'Rectangle', [{ content: 'Process' }]),
-  createNode('node1', 150, 100, 100, 55, 'Rectangle'),
-  createNode('node2', 350, 100, 90, 55, 'Rectangle', [], 5),
-  groupNode('group', ['node1', 'node2'], { left: 10, right: 10, top: 10, bottom: 10 }, [{ content: 'Group 1' }])
-];
-
-
-var diagram;
-
 this.default = function () {
+
+  // Function to create a node
+  function createNode(id, offsetX, offsetY, width, height, shape, annotations, cornerRadius) {
+    return {
+      id: id,
+      offsetX: offsetX,
+      offsetY: offsetY,
+      width: width,
+      height: height,
+      shape: { type: "Basic", shape: shape, cornerRadius: cornerRadius },
+      annotations: annotations,
+    };
+  }
+
+  // Function to create a group node
+  function groupNode(id, children, padding, annotations) {
+    return {
+      id: id,
+      children: children,
+      padding: padding,
+      annotations: annotations
+    };
+  }
+
+  // Initialize nodes
+  var nodes = [
+    createNode('Diamond', 350, 250, 100, 100, 'Diamond', [{ content: 'Decision' }]),
+    createNode('ellipse', 150, 250, 100, 60, 'Ellipse', [{ content: 'Start/Stop' }]),
+    createNode('rectangle', 150, 400, 100, 60, 'Rectangle', [{ content: 'Process' }]),
+    createNode('node1', 150, 100, 100, 55, 'Rectangle'),
+    createNode('node2', 350, 100, 90, 55, 'Rectangle', [], 5),
+    groupNode('group', ['node1', 'node2'], { left: 10, right: 10, top: 10, bottom: 10 }, [{ content: 'Group 1' }])
+  ];
+
   //Initializes diagram control
-  diagram = new ej.diagrams.Diagram({
+  var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '500px',
     nodes: nodes,
     rulerSettings: { showRulers: true },
     drawingObject: { type: 'Orthogonal' },
     selectionChange: function (args) { selectionChange(args); },
-    onUserHandleMouseDown: function (args) { userHandleClick(args); },
+    onUserHandleMouseDown: function (args) { handleUserHandleClick(args); },
   });
   diagram.appendTo('#diagram');
 
@@ -68,7 +66,7 @@ this.default = function () {
     },
   ];
 
-   
+
   //Disables specific toolbar items based on the presence of annotations in selected items.
   disableMultiselectedItems = function (selectedItems) {
     for (i = 0; i < selectedItems.length; i++) {
@@ -106,7 +104,7 @@ this.default = function () {
           if (itemId === "Group" || itemId === "UnGroup" || itemId === "BringForward" || itemId === "BringToFront" ||
             itemId === "SendBackward" || itemId === "SendToBack" || itemId === "Bold" || itemId === "Italic" ||
             itemId === "Underline" || itemId === "FontStyle" || itemId === "FontSize" || itemId === "FontColor") {
-              toolbarObj.items[i].disabled = true;
+            toolbarObj.items[i].disabled = true;
           }
         }
       }
@@ -125,7 +123,7 @@ this.default = function () {
           toolbarObj.items.find(item => item.id === 'UnGroup').disabled = true;
         }
       }
-       
+
       // Handling multiple items selection
       if (selectedItems.length > 1) {
         enableItems();
@@ -158,7 +156,7 @@ this.default = function () {
   }
 
   //method to add functionality to user handle
-  userHandleClick = function (args) {
+  handleUserHandleClick = function (args) {
     switch (args.element.name) {
       case 'Delete':
         diagram.remove();
@@ -168,7 +166,7 @@ this.default = function () {
         break;
       case 'Draw':
         diagram.drawingObject.shape = {};
-        diagram.drawingObject.type = diagram.drawingObject.type ? diagram.drawingObject.type : 'Orthogonal';
+        diagram.drawingObject.type = diagram.drawingObject.type || 'Orthogonal';
         diagram.drawingObject.sourceID = drawingNode.id;
         diagram.dataBind();
         break;
@@ -427,13 +425,13 @@ this.default = function () {
   toolbarObj.appendTo('#toolbarEditor');
 
   // Function to create a basic shapes
-  function createBasicShape (id, shape) {
-    return{
-    id: id,
-    shape: { type: "Basic", shape: shape },
-    style: { strokeWidth: 2 }
-  };
-}
+  function createBasicShape(id, shape) {
+    return {
+      id: id,
+      shape: { type: "Basic", shape: shape },
+      style: { strokeWidth: 2 }
+    };
+  }
 
   // Initialize basic shapes
   var basicShapes = [

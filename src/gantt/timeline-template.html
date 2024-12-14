@@ -11,7 +11,7 @@
         <div style=" line-height: initial; font-weight: normal;">${weekDate(date)}</div>
         <div style=" line-height: normal; padding-top: 5px; padding-bottom: 2px; font-weight: normal;">${formatDate(date)}</div>
         <div style="width:20px; height: 20px; line-height: normal;">
-            <img style="width:100%; height:100%;" src =${imageString(value)} >
+            <img style="width:100%; height:100%;" src =${imageString(date)} >
             </div>
     </div> 
     </div>
@@ -22,22 +22,26 @@
     .e-header-cell-label.e-gantt-top-cell-text{
         background-color: #fff
     }
-    .fluent2-highcontrast .e-header-cell-label.e-gantt-top-cell-text , .bootstrap5\.3-dark .e-header-cell-label.e-gantt-top-cell-text{
-        background-color: #000
+    .fluent2-highcontrast .e-header-cell-label.e-gantt-top-cell-text, 
+    .bootstrap5\.3-dark .e-header-cell-label.e-gantt-top-cell-text, 
+    .fluent2-dark .e-header-cell-label.e-gantt-top-cell-text, 
+    .tailwind3-dark .e-header-cell-label.e-gantt-top-cell-text,
+    .highcontrast .e-header-cell-label.e-gantt-top-cell-text,
+    .material3-dark .e-header-cell-label.e-gantt-top-cell-text{
+        background-color: #000;
     }
-    .fluent2-dark .e-header-cell-label.e-gantt-top-cell-text {
-        background-color: #000
+    .e-gantt-single-timeline .e-gantt-tree-grid-pane .e-columnheader{
+        height: 70px !important;
     }
-
-.e-gantt .e-gantt-tree-grid-pane .e-timeline-single-header-outer-div{
-height: 70px !important;
-}
-.e-gantt .e-gantt-chart .e-timeline-single-header-outer-div {
-height: 70px !important;
-}
-.e-gantt .e-gantt-chart .e-timeline-single-header-cell {
-height: 70px !important;
-}
+    .gantt-single-timeline .e-gantt-tree-grid-pane .e-headercell{
+        height: 70px !important;
+    }
+    .e-gantt .e-gantt-chart .e-timeline-header-container {
+        height: 70px !important;
+    }
+    .e-gantt .e-gantt-chart .e-timeline-single-header-cell {
+        height: 70px !important;
+    }   
 </style>
 
 <div id="action-description">

@@ -1,4 +1,4 @@
-window.default = function () {
+this.default = function () {
     var maps = new ej.maps.Maps({        // custom code starts
         load: function (args) {
             var selectTheme = location.hash.split('/')[1];

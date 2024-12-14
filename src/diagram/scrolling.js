@@ -3,47 +3,48 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
-/* tslint:disable */
-/*eslint eslint-comments/no-duplicate-disable: error */
 
-/*eslint-disable no-undef */
+this.default = function () {
+    /* tslint:disable */
+    /*eslint eslint-comments/no-duplicate-disable: error */
 
-//To enhance the functionality of a webpage for mobile devices by adding a click event listener 
-function addMobileEvents() {
-    var isMobileMode = window.matchMedia('(max-width:550px)').matches;
-    if (isMobileMode) {
-        var paletteIcon = document.getElementById('palette-icon');
-        if (paletteIcon) {
-            paletteIcon.addEventListener('click', openSymbolPalette, false);
+    /*eslint-disable no-undef */
+
+    //To enhance the functionality of a webpage for mobile devices by adding a click event listener 
+    function addMobileEvents() {
+        var isMobileMode = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileMode) {
+            var paletteIcon = document.getElementById('palette-icon');
+            if (paletteIcon) {
+                paletteIcon.addEventListener('click', openSymbolPalette, false);
+            }
         }
     }
-}
-//To manage the visibility state of the palette space on the webpage on a mobile device
-function openSymbolPalette() {
-    var paletteSpace = document.getElementById('palette-space');
-    isMobileMode = window.matchMedia('(max-width:550px)').matches;
-    if (isMobileMode) {
-        if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
-            paletteSpace.classList.add('sb-mobile-palette-open');
-        }
-        else {
-            paletteSpace.classList.remove('sb-mobile-palette-open');
+    //To manage the visibility state of the palette space on the webpage on a mobile device
+    function openSymbolPalette() {
+        var paletteSpace = document.getElementById('palette-space');
+        isMobileMode = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileMode) {
+            if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
+                paletteSpace.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpace.classList.remove('sb-mobile-palette-open');
+            }
         }
     }
-}
-//Sets the default values of a Connector.
-  function getConnectorDefaults (connector) {
-    setConnectorStyles(connector, '#757575');
-    return connector;
-  }
+    //Sets the default values of a Connector.
+    function getConnectorDefaults(connector) {
+        setConnectorStyles(connector, '#757575');
+        return connector;
+    }
     //set styles for connector
     function setConnectorStyles(connector, color) {
-    connector.style.strokeWidth = 1;
-    connector.style.strokeColor = color;
-    connector.targetDecorator.style.fill = color;
-    connector.targetDecorator.style.strokeColor = color;
+        connector.style.strokeWidth = 1;
+        connector.style.strokeColor = color;
+        connector.targetDecorator.style.fill = color;
+        connector.targetDecorator.style.strokeColor = color;
     }
-this.default = function () {
     var scrollableArea = new ej.diagrams.Rect(0, 0, 1500, 1500);
 
     //Initializes diagram control
@@ -144,7 +145,7 @@ this.default = function () {
         { id: 'multiDocument1', shape: { type: 'Flow', shape: 'MultiDocument' } },
         { id: 'collate1', shape: { type: 'Flow', shape: 'Collate' } },
     ];
-   //Initialize the connector for the symbol palette 
+    //Initialize the connector for the symbol palette 
     var connectorSymbols = [
         {
             id: 'orthogonal', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 }
@@ -154,7 +155,7 @@ this.default = function () {
         },
         {
             id: 'straightConnector', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-             targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
         {
             id: 'orthogonalConnector', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
@@ -162,7 +163,7 @@ this.default = function () {
         },
         {
             id: 'bezier', type: 'Bezier', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-             targetDecorator: { shape: 'None' }
+            targetDecorator: { shape: 'None' }
         },
     ];
 
@@ -227,10 +228,10 @@ this.default = function () {
             var autoScrollElement = document.getElementById('autoScrollDiv');
             if (args.checked) {
                 autoScrollElement.className = '';
-              diagram.scrollSettings.canAutoScroll = true;
+                diagram.scrollSettings.canAutoScroll = true;
             } else {
                 autoScrollElement.className = 'disabledbutton';
-              diagram.scrollSettings.canAutoScroll = false;
+                diagram.scrollSettings.canAutoScroll = false;
             }
         }
     });

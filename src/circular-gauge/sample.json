@@ -7,145 +7,145 @@
         {
             "url": "default-functionalities",
             "name": "Default Functionalities",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates the default rendering of circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates the default rendering of circular gauge.",
             "category": "Circular Gauge"
         },
         {
             "url": "ticks-and-labels",
             "name": "Ticks and Labels",
-            "description": "This demo for Essential JS2 Circular Gauge control shows various properties available to customize the ticks and labels of an axis.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control shows various properties available to customize the ticks and labels of an axis.",
             "category": "Axis"
         },
         {
             "url": "multiple-axes",
             "name": "Multiple Axes",
-            "description": "This demo for Essential JS2 Circular Gauge control visualizes the circular gauge with multiple axes.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control visualizes the circular gauge with multiple axes.",
             "category": "Axis"
         },
         {
             "url": "custom-labels",
             "name": "Custom Labels",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates the custom labels in the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates the custom labels in the circular gauge.",
             "category": "Axis"
         },
         {
             "url": "range-color-for-axis",
             "name": "Range Color for Axis",
-            "description": "This demo for Essential JS2 Circular Gauge control demonstrate the range color for axis in the circular gauge..",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control demonstrate the range color for axis in the circular gauge..",
             "category": "Axis"
         },
         {
             "url": "axis-background",
             "name": "Axis Background",
-            "description": "This demo for Essential JS2 Circular Gauge control demonstrate the axis background in the circular gauge..",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control demonstrate the axis background in the circular gauge..",
             "category": "Axis"
         },
         {
             "url": "pointer-types",
             "name": "Pointer Types",
-            "description": "This demo for Essential JS2 Circular Gauge control the different types of pointers available in the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control the different types of pointers available in the circular gauge.",
             "category": "Pointer"
         },
         {
             "url": "text-pointer",
             "name": "Text Pointer",
-            "description": "This demo for Essential JS2 Circular Gauge control visualizes the text pointer in the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control visualizes the text pointer in the circular gauge.",
             "category": "Pointer"
         },
         {
             "url": "image-pointer",
             "name": "Image Pointer",
-            "description": "This demo for Essential JS2 Circular Gauge control visualizes the short-put distance covered by the athletes by using the image pointer.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control visualizes the short-put distance covered by the athletes by using the image pointer.",
             "category": "Pointer"
         },
         {
             "url": "range-customization",
             "name": "Range Customization",
-            "description": "This demo for Essential JS2 Circular Gauge control shows various properties available to customize the ranges in the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control shows various properties available to customize the ranges in the circular gauge.",
             "category": "Range"
         },
         {
             "url": "multiple-ranges",
             "name": "Multiple Ranges",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates the multiple ranges in the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates the multiple ranges in the circular gauge.",
             "category": "Range"
         },
         {
             "url": "legend",
             "name": "Legend",
-            "description": "This demo for Essential JS2 Circular Gauge control shows the properties required to customize the legend.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control shows the properties required to customize the legend.",
             "category": "Range"
         },
         {
             "url": "arc-gauge",
             "name": "Arc Gauge",
-            "description": "This demo for Essential JS2 Circular Gauge control shows the properties required to customize the pointers.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control shows the properties required to customize the pointers.",
             "category": "Arc Gauge"
         },
         {
             "url": "semi-circular-gauge",
             "name": "Semi-circular Gauge",
-            "description": "This demo for Essential JS2 Circular Gauge control shows the properties required to customize the pointers.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control shows the properties required to customize the pointers.",
             "category": "Arc Gauge"
         },
         {
             "url": "pointer-ranges-drag",
             "name": "Pointer & Ranges Drag",
-            "description": "This demo for Essential JS2 Circular Gauge control visualizes the pointer drag support and its options.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control visualizes the pointer drag support and its options.",
             "category": "User Interaction"
         },
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "description": "This demo for Essential JS2 Circular Gauge control visualizes the tooltip for circular gauge pointer and ranges.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control visualizes the tooltip for circular gauge pointer and ranges.",
             "category": "User Interaction"
         },
         {
             "url": "print-export",
             "name": "Print & Export",
             "category": "Print & Export",
-            "description": "This demo for Essential JS2 Circular Gauge control will print and export the circular gauge in a required format."
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control will print and export the circular gauge in a required format."
         },
         {
             "url": "clock",
             "name": "Clock",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates a clock by using annotation feature in the gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates a clock by using annotation feature in the gauge.",
             "category": "Use Cases"
         },
         {
             "url": "radial-slider",
             "name": "Radial Slider",
-            "description": "Thhis demo for Essential JS2 Circular Gauge control to design the radial slider by using the circular gauge.",
+            "description": "Thhis demo for Essential<sup>®</sup> JS2 Circular Gauge control to design the radial slider by using the circular gauge.",
             "category": "Use Cases"
         },
         {
             "url": "direction-compass",
             "name": "Direction Compass",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge.",
             "category": "Use Cases"
         },
         {
             "url": "speedometer",
             "name": "Speedometer",
             "category": "Use Cases",
-            "description": "This demo for Essential JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge."
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control illustrates how to make a direction compass by using the circular gauge."
         },
         {
             "url": "sleep-tracker",
             "name": "Sleep Tracker",
             "category": "Use Cases",
-            "description": "This demo for Essential JS2 Circular Gauge control to design sleep tracker by using circular gauge."
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control to design sleep tracker by using circular gauge."
         },
         {
             "url": "data-sample",
             "name": "Data Sample",
-            "description": "This demo for Essential JS2 Circular Gauge control demonstrates live data, along with the data grid control.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control demonstrates live data, along with the data grid control.",
             "category": "Use Cases"
         },
         {
             "url": "apple-watch-rings",
             "name": "Apple Watch Rings",
-            "description": "This demo for Essential JS2 Circular Gauge control demonstrates live data, along with the apple watch rings.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control demonstrates live data, along with the apple watch rings.",
             "category": "Use Cases"
         }
     ]

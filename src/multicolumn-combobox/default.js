@@ -1,27 +1,21 @@
 
 this.default = function () {
-    var defaultColumns = [
-        { field: 'Name', width: 90, header: 'Name' },
-        { field: 'Position', width: 85, header: 'Position', },
-        { field: 'Department', width: 98, header: 'Department' }, 
-        { field: 'PhoneNo', width: 105, header: 'Phone No' },    
-        { field: 'Location',  width: 98, header: 'Location' }
-    ];
     // Initialize the default multicolumn ComboBox component
     var multicolumnObj = new ej.multicolumncombobox.MultiColumnComboBox({
         //set column of the multicolumn combobox
-        columns: defaultColumns,
+        columns: window.multicolumColumns,
         //set the fields of the multicolumn combobox
-        fields: { text: 'Name', value: 'Department' },
+        fields: { text: 'Name', value: 'Category' },
         //set the local data to dataSource property
-        dataSource: window.employeeData,
+        dataSource: window.products,
         // set the height of the popup element
-        popupHeight: '230px',
+        popupHeight: '220px',
+        popupWidth: '520px',
         // set the placeholder to multicolumn combobox input element
-        placeholder: 'Select a name',
+        placeholder: 'Select any product',
         showClearButton: true,
-        value: 'HR',
-        text: 'John Smith',
+        value: 'Electronics',
+        text: 'Smartphone',
         change: valueChange
     });
     multicolumnObj.appendTo('#default');

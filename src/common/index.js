@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'fluent2-highcontrast', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'fluent-dark'];
+var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'tailwind3', 'fluent2-highcontrast', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'tailwind3-dark', 'fluent-dark'];
 var themesToRedirect = ['material', 'material-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'fabric', 'fabric-dark'];
 var darkIgnore = ['highcontrast', 'fluent2-highcontrast'];
 var themeDarkButton = document.getElementById('sb-dark-theme');
@@ -55,7 +55,7 @@ var setResponsiveElement = ej.base.select('.setting-responsive');
 var isMobile = window.matchMedia('(max-width:550px)').matches;
 var isTablet = window.matchMedia('(min-width:600px) and (max-width: 850px)').matches;
 var isPc = window.matchMedia('(min-width:850px)').matches;
-var selectedTheme = location.hash.split('/')[1] || 'fluent2';
+var selectedTheme = location.hash.split('/')[1] || 'tailwind3';
 var toggleAnim = new ej.base.Animation({ duration: 500, timingFunction: 'ease' });
 var controlSampleData = {};
 var samplesList = getSampleList();
@@ -91,7 +91,7 @@ var cultureDropDown;
 var demoSection = ej.base.select('.sb-demo-section');
 var newYear= new Date().getFullYear();
 var copyRight= document.querySelector('.sb-footer-copyright');
-copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion Inc.";
+copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion<sup>®</sup> Inc.";
 ej.base.registerLicense('{SyncfusionJSLicensekey}');
 
 var matchedCurrency = {
@@ -871,7 +871,7 @@ function changeMouseOrTouch(str) {
 }
 
 function loadTheme(theme) {
-    theme = themesToRedirect.indexOf(theme) !== -1 ? 'fluent2' : theme;
+    theme = themesToRedirect.indexOf(theme) !== -1 ? 'tailwind3' : theme;
     theme =  theme.includes('bootstrap5') ? theme.replace('bootstrap5', 'bootstrap5.3') : theme;
     var body = document.body;
     if (body.classList.length > 0) {
@@ -1100,7 +1100,7 @@ function controlSelect(arg) {
         controlListRefresh(arg.node || arg.item);
         if (path !== curHashCollection) {
             sampleOverlay();
-            var theme = location.hash.split('/')[1] || 'fluent2';
+            var theme = location.hash.split('/')[1] || 'tailwind3';
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
                 ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
@@ -1314,7 +1314,7 @@ function addRoutes(samplesList) {
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
                 (subNode.category + ' / ') : '') + subNode.name;
-            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'fluent2';
+            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'tailwind3';
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {

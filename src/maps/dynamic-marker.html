@@ -31,41 +31,41 @@
         <table id="property" title="Properties" style="width: 100%" role="none">
             <tbody>
                 <tr>
-                    <td style="width:20%">
-                        <div style="padding: 0px;display:inline-block; margin-top:10px;">Marker</div>
+                    <td>
+                        <div class="property-text">Marker</div>
                     </td>
-                    <td style="width:70%">
-                        <div style="margin-left: -20px;padding-top: 0px;">
+                    <td>
+                        <div class="checkbox">
                             <input type="checkbox" id="marker" />
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:20%">
-                        <div style="padding: 0px; margin-top:10px;">Line</div>
+                    <td>
+                        <div class="property-text">Line</div>
                     </td>
-                    <td style="width:70%">
-                        <div style="margin-left: -20px;padding-top: 0px;">
+                    <td>
+                        <div class="checkbox">
                             <input type="checkbox" name="high" id="line" />
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:20%">
-                        <div style="margin-left: -10px;">Connecting line</div>
+                    <td>
+                        <div class="property-text">Connecting line</div>
                     </td>
-                    <td style="width:70%">
-                        <div style="margin-left: -20px;padding-top: 0px;">
+                    <td>
+                        <div class="checkbox">
                             <input type="checkbox" id="connect" />
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding: 0px;">
+                    <td class="property-text" >
                         Marker type
                     </td>
-                    <td style="width:70%">
-                        <select id="type">
+                    <td >
+                        <select id="type" >
                             <option value="Image">Image</option>
                             <option value="Circle">Circle</option>
                             <option value="Diamond">Diamond</option>
@@ -75,18 +75,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:20%">
-                        <div style="padding: 0px;width: 30%">Width</div>
+                    <td>
+                        <div class="property-text">Width</div>
                     </td>
                     <td style="width:70%">
                         <input type="text" class="e-input" value="1" style="width:100%" id="width" disabled />
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <div style="margin-left: 70%;">
+                    <td colspan="2">
+                        <div style="display: flex; justify-content: center; align-items: center; height: 48px;">
                             <button id="togglebtn"
-                                style="text-transform:none !important;margin-top: -2px">Clear</button>
+                                style="text-transform:none !important; padding: 5px 10px;">Clear</button>
                         </div>
                     </td>
                 </tr>
@@ -97,12 +97,19 @@
     <style>
         .property-text {
             font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 400;
         }
         #width.e-input[disabled] {
             border-bottom-color: inherit;
             background-image: none;
+        }
+        div.property-text {
+            padding-left: 0px; padding-top: 0px;
+        }
+        div.checkbox {
+            padding-left: 0px; padding-top: 0px;
+            margin-left: -25px; margin-top: 0px;
         }
         tr {
             height:48px;

@@ -1,0 +1,53 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <div class='dddata'>
+            <input type="text" id='year_ddl' />
+            <button id='get_trend_data'>Get Trend Data</button>
+        </div>
+        <div id='Grid'>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates how the syncfusion JavaScript DataGrid, powered by AI, can perform trend analysis on its
+        data.</p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank'
+            href='' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub
+            repository</a>.</p>
+</div>
+
+<div id="description">
+    <p>In this demonstration, the DataGrid shows sales data, market spending, and details about new and returning
+        customers over the past three years. When you click the "Trend Analysis" button, AI analyzes the existing trends
+        and predicts future sales trends, highlighting the trend data in the DataGrid.</p>
+</div>
+<style>
+    #get_trend_data {
+        margin-left: 8px;
+    }
+
+    .low-values {
+        background-color: #B8595A;
+    }
+
+    .e-grid .e-rowcell.low-values:not(.e-editedbatchcell):not(.e-updatedtd) {
+        color: #FFFFFF;
+    }
+
+    .high-values {
+        background-color: #AAF38C;
+    }
+
+    .e-row.e-altrow {
+        background-color: #FAFAFA;
+    }
+
+    .predicted-rows {
+        background-color: lightblue;
+    }
+
+    .dddata {
+        padding-bottom: 10px;
+    }
+</style>

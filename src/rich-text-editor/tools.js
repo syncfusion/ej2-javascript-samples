@@ -125,7 +125,6 @@ this.default = function() {
                 );
             } else {
                 myCodeMirror.setValue(defaultRTE.value === null ? '' : defaultRTE.value);
-                mirrorView.innerHTML = '';
             }
             myCodeMirror.focus();
         }

@@ -13,7 +13,7 @@
         {"url":"position", "name": "Positioning", "description":"This example demonstrates how to display the JavaScript(ES5) dialog control at various built-in and custom positions.", "category":"Dialog","api":{"Dialog":["width","header","target","footerTemplate","open","close","closeOnEscape","position","showCloseIcon"] } },
         {"url":"animation", "name": "Animation", "description":"This example demonstrates how to open or close the JavaScript(ES5) dialog with various animation effects, and how to customize the animation duration and delay.", "category":"Dialog","api":{"Dialog":["header","showCloseIcon","width","target","animationSettings","open","content","buttons"] } },
         {"url":"multiple-dialogs", "name": "Multiple Dialogs", "description":"This example shows how to display multiple dialogs sequentially and open multiple dialogs simultaneously for both modal and modeless JavaScript(ES5) dialogs.", "category":"Dialog","api":{"Dialog":["width","header","target","animationSettings","open","close","closeOnEscape","buttons"] } },
-		{"url":"components-dialog", "name": "Components inside Dialog", "description":"This example demonstrates how to render other JavaScript(ES5) Syncfusion components inside the dialog component.", "category":"Dialog", "api":{"Dialog":["header","target","animationSettings","open","close","closeOnEscape","buttons"] } }  
+		{"url":"components-dialog", "name": "Components inside Dialog", "description":"This example demonstrates how to render other JavaScript(ES5) Syncfusion<sup>®</sup> components inside the dialog component.", "category":"Dialog", "api":{"Dialog":["header","target","animationSettings","open","close","closeOnEscape","buttons"] } }  
     ],
 	"dataSourcePath":"src/dialog/datasource.js"
 }

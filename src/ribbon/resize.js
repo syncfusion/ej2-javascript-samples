@@ -527,6 +527,7 @@ this.default = function () {
         enablePersistence: true,
         tabs: tabs,
         fileMenu: files,
+        cssClass: 'ribbon-resize',
         launcherIconClick: function (args) {
             if (args.groupId == "header_footer") {
                 updateContent("Header & Footer Launcher Icon");
@@ -564,13 +565,15 @@ this.default = function () {
         ribbon.refreshLayout();
     }
 
-    window.addEventListener("resize", function() {
+    function onResize() {
         var container = document.getElementById('ribbonContainer');
         container.style.width = '100%';
         slider.max = container.offsetWidth;
         slider.value = container.offsetWidth;
         ribbon.refreshLayout();
-    });
+    }
+
+    window.addEventListener("resize", onResize);
 
     var isPasteDisabled = true;    
     function enablePaste() { 

@@ -24,7 +24,7 @@ this.default = function () {
         enableBorderOnMouseMove: false,
         legendSettings: { visible: false },
         title: 'Browser Market Share',
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"" },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"", enableHighlight: true },
         pointRender: function (args) {
             if (args.point.index == 0) {
                 args.pattern = 'DiagonalBackward';

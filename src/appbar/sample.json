@@ -14,7 +14,7 @@
                     "colorMode"
                 ]
             },
-            "description": "This sample demonstrates the default functionalities of the Syncfusion JavaScript(ES5) AppBar component."
+            "description": "This sample demonstrates the default functionalities of the Syncfusion<sup>®</sup> JavaScript(ES5) AppBar component."
         },
         {
             "url": "color",
@@ -25,7 +25,7 @@
                     "colorMode"
                 ]
             },
-            "description": "This sample demonstrates the available bar color modes in the Syncfusion JavaScript(ES5) AppBar component."
+            "description": "This sample demonstrates the available bar color modes in the Syncfusion<sup>®</sup> JavaScript(ES5) AppBar component."
         }
     ]
 }

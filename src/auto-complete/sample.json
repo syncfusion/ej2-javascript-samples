@@ -3,6 +3,7 @@
     "directory": "auto-complete",
     "category": "Dropdowns",
     "ftName": "autocomplete",
+    "type": "update",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "description": "This example demonstrates the default functionalities of the JavaScript(ES5) autocomplete control with minimum configuration.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "value", "placeholder"] } },
         { "url": "grouping-icon", "name": "Grouping and Icons", "description": "This example demonstrates how to group based on the different categories with individual header and icon support using the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["fields", "placeholder"] } },
@@ -10,6 +11,7 @@
         { "url": "object-value-binding", "name": "Object Value Binding", "description": "This example demonstrates how to bind with data source in the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["query", "dataSource", "fields", "sortOrder", "placeholder","allowObjectBinding"] } },
         { "url": "disabled-items", "name": "Disabled Items", "description": "This example demonstrates the disabled items of the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "placeholder", "fields"] } },
         { "url": "template", "name": "Template", "description": "This example demonstrates how to customize the appearance of each item in the JavaScript(ES5) autocomplete control pop-up list using template.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "headerTemplate", "itemTemplate", "placeholder", "popupHeight"] } },
+        { "url": "resize", "type": "new", "name": "Popup Resize", "description": "This example demonstrates how to resize the appearance of popup in the JavaScript(ES5) autocomplete .", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "headerTemplate", "itemTemplate", "placeholder", "popupHeight" , "allowResize"] } },
         { "url": "highlight", "name": "Highlight", "description": "This example demonstrates how to highlight the searched characters in the suggested list items of the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "highlight", "placeholder"] } },
         { "url": "virtual-scroll", "name": "Virtualization", "description": "This example demonstrates how to use virtualization support of the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "enableVirtualization", "popupHeight", "placeholder"] } },
         { "url": "custom-filtering", "name": "Custom Filtering", "description": "This example demonstrates how to achieve the custom filtering functionalities in the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "filtering", "fields", "placeholder"] } },

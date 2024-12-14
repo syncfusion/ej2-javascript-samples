@@ -59,7 +59,7 @@ this.default = function() {
       false
     );
     var items = [
-      { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
+      { text: 'Syncfusion® Document Text (*.sfdt)', id: 'sfdt' },
       { text: 'Word Document (*.docx)', id: 'word' },
       { text: 'Word Template (*.dotx)', id: 'dotx'},
       { text: 'Plain Text (*.txt)', id: 'txt'},

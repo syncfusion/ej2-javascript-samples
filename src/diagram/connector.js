@@ -2,11 +2,11 @@
  * Connector sample
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.HierarchicalTree);
-var diagram;
-var sourceDecoratorShape;
-var targetDecoratorShape;
 
-//creation of the TextElement.
+
+// tslint:disable-next-line:max-func-body-length
+this.default = function () {
+    //creation of the TextElement.
 function getTextElement(text) {
     var textElement = new ej.diagrams.TextElement();
     textElement.id = ej.diagrams.randomId(); 
@@ -152,8 +152,6 @@ function segmentDecoratorShapeChange(args)
     } 
     diagram.dataBind();  
 }
-// tslint:disable-next-line:max-func-body-length
-this.default = function () {
     var bounds = document.getElementsByClassName('content-wrapper')[0].getBoundingClientRect();
     var marginLeft = (bounds.width - 560) / 2;
     //Initialize Diagram Nodes
@@ -194,7 +192,7 @@ this.default = function () {
         }
     ];
     //Initializes diagram control
-    diagram = new ej.diagrams.Diagram({
+   var diagram = new ej.diagrams.Diagram({
         width: '100%', height: 680, nodes: nodes,
         connectors: connectors,
         segmentThumbSize:10,
@@ -348,7 +346,7 @@ this.default = function () {
     ];
 
     //DropDownList is used to apply the source decorator shape of the connector.
-    sourceDecoratorShape = new ej.dropdowns.DropDownList({
+   var sourceDecoratorShape = new ej.dropdowns.DropDownList({
         enabled: true, value: 'None',
         dataSource: decoratorShape,
         change: sourceDecoratorShapeChange
@@ -356,7 +354,7 @@ this.default = function () {
     sourceDecoratorShape.appendTo('#sourceDecorator2');
 
     //DropDownList is used to apply the target decorator shape of the connector.
-    targetDecoratorShape = new ej.dropdowns.DropDownList({
+   var targetDecoratorShape = new ej.dropdowns.DropDownList({
         enabled: true, 
         value: 'Arrow',
         dataSource: decoratorShape,

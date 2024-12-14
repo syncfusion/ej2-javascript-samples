@@ -36,6 +36,7 @@ this.default = function () {
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[3], args.progressBar.element.id);
                 break;
             case 'tailwind':
+            case 'tailwind3':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[4], args.progressBar.element.id);
                 break;
             case 'bootstrap-dark':
@@ -67,12 +68,15 @@ this.default = function () {
             case "fluent2-dark":
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[13], args.progressBar.element.id);
                 break;
+            case 'tailwind3-dark':
+                args.progressBar.annotations[0].content = annotationElementContent(annotationColors[14], args.progressBar.element.id);
+                break;
             default:
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[5], args.progressBar.element.id);
                 break;
         }
     };
-    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF', '#0F6CBD', '#1AEBFF', '#115EA3'];
+    var annotationColors = ['#e91e63', '#0078D6', '#317ab9', '#007bff', '#4F46E5', '#FFD939', '#9A9A9A', '#22D3EE', '#0D6EFD', '#6750A4', '#D0BCFF', '#0F6CBD', '#1AEBFF', '#115EA3', '#6366F1'];
     var button = new ej.buttons.Button();
     button = new ej.buttons.Button({ cssClass: 'e-outline', isPrimary: true });
     button.appendTo('#reLoad');

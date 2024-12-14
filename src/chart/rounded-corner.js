@@ -29,7 +29,8 @@ this.default = function () {
         }],
         tooltip: {
             enable: true,
-            header: '<b>Budget</b>', format: '${point.x}: <b>${point.y}%</b>'
+            header: '<b>Budget</b>', format: '${point.x}: <b>${point.y}%</b>',
+            enableHighlight: true
         },
         title: 'Company Budget Distribution',
         enableSmartLabels: true,

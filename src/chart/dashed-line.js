@@ -142,6 +142,12 @@ this.default = function () {
             else if (selectedTheme === 'tailwind') {
                 annotationColor = 'light';
             }
+            else if (selectedTheme === 'tailwind3-dark') {
+                annotationColor = 'dark';
+            } 
+            else if (selectedTheme === 'tailwind3') {
+                annotationColor = 'light';
+            }
             else if (selectedTheme === 'material3-dark') {
                 annotationColor = 'dark';
             }

@@ -24,7 +24,7 @@ this.default = function () {
         max: 200,
         format: '##',
         value: 12,
-        width: 110,
+        width: '100%',
         change: function (e) {
             pageSize.value = pageSize.value > treeGridObj.pageSettings.totalRecordsCount ?
                 treeGridObj.pageSettings.totalRecordsCount : pageSize.value;
@@ -37,6 +37,7 @@ this.default = function () {
         dataSource: type,
         fields: { text: 'type', value: 'id' },
         value: 'All',
+        width: '100%',
         change: function (e) {
             var type = e.value;
             if (type === 'Root') {
@@ -54,7 +55,7 @@ this.default = function () {
         max: 4,
         format: '##',
         value: 2,
-        width: 110,
+        width: '100%',
         change: function (e) {
             pageCount.value = pageCount.value > 8 ? 8 : pageCount.value;
             treeGridObj.pageSettings.pageCount = pageCount.value;
@@ -66,7 +67,7 @@ this.default = function () {
         max: 17,
         format: '##',
         value: 1,
-        width: 110,
+        width: '100%',
         change: function (e) {
             currentPage.value = currentPage.value > currentPage.max ? currentPage.max : currentPage.value;
             var pageNumber = currentPage.value;

@@ -4,32 +4,33 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.PrintAndExport);
 
-//Adds EventListener based on device's viewport width.
-function addEvents() {
-    var isMobile = window.matchMedia('(max-width:550px)').matches;
-    if (isMobile) {
-        var paletteIcon = document.getElementById('palette-icon');
-        if (paletteIcon) {
-            paletteIcon.addEventListener('click', openPalette, false);
-        }
-    }
-}
 
-//Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
-function openPalette() {
-    var paletteSpace = document.getElementById('palette-space');
-    isMobile = window.matchMedia('(max-width:550px)').matches;
-    if (isMobile) {
-        if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
-            paletteSpace.classList.add('sb-mobile-palette-open');
-        }
-        else {
-            paletteSpace.classList.remove('sb-mobile-palette-open');
-        }
-    }
-}
 
 this.default = function () {
+    //Adds EventListener based on device's viewport width.
+    function addEvents() {
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
+        if (isMobile) {
+            var paletteIcon = document.getElementById('palette-icon');
+            if (paletteIcon) {
+                paletteIcon.addEventListener('click', openPalette, false);
+            }
+        }
+    }
+
+    //Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
+    function openPalette() {
+        var paletteSpace = document.getElementById('palette-space');
+        isMobile = window.matchMedia('(max-width:550px)').matches;
+        if (isMobile) {
+            if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
+                paletteSpace.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpace.classList.remove('sb-mobile-palette-open');
+            }
+        }
+    }
     //custom code start
     if (this.location.href) {
         if (this.location.href.includes('bootstrap5')) {
@@ -204,7 +205,7 @@ this.default = function () {
                 disableMultiselectedItems();
 
                 var groupIndex = toolbarObj.items.findIndex(item => item.id === 'Group');
-                if (selectedItems[0].children !== undefined && selectedItems[0].children.length > 0) {    
+                if (selectedItems[0].children !== undefined && selectedItems[0].children.length > 0) {
                     if (groupIndex !== -1) {
                         toolbarObj.items[groupIndex].disabled = false;
                     }
@@ -228,7 +229,7 @@ this.default = function () {
                 });
                 var index = toolbarObj.items.findIndex(item => item.id === 'Distribute_objects');
                 //To enable distribute objcets when selected items length is greater than 2
-                if (selectedItems.length > 2) {                    
+                if (selectedItems.length > 2) {
                     if (index !== -1) {
                         toolbarObj.items[index].disabled = false;
                     }
@@ -844,7 +845,7 @@ this.default = function () {
         for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
             var node = diagram.selectedItems.nodes[i];
             if (node.constraints & ej.diagrams.NodeConstraints.Drag) {
-                node.constraints = ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select;
+                node.constraints = ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select | ej.diagrams.NodeConstraints.ReadOnly;
                 isChecked = true;
             } else {
                 node.constraints = ej.diagrams.NodeConstraints.Default;
@@ -855,14 +856,14 @@ this.default = function () {
         for (var j = 0; j < diagram.selectedItems.connectors.length; j++) {
             var connector = diagram.selectedItems.connectors[j];
             if (connector.constraints & ej.diagrams.ConnectorConstraints.Drag) {
-                connector.constraints = ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select;
+                connector.constraints = ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select | ej.diagrams.ConnectorConstraints.ReadOnly;
                 isChecked = true;
             } else {
                 connector.constraints = ej.diagrams.ConnectorConstraints.Default;
                 isChecked = false;
             }
         }
-        updateToolbarState(isChecked);  
+        updateToolbarState(isChecked);
         diagram.dataBind();
     }
 

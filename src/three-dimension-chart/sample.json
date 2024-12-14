@@ -7,7 +7,7 @@
         {
             "url": "column",
             "name": "Column",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the column3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the column3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -22,7 +22,7 @@
         {
             "url": "back-to-back-column",
             "name": "Back to Back Column",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the column3D charts.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the column3D charts.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -37,7 +37,7 @@
         {
             "url": "cylinder",
             "name": "Cylindrical Column",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the cylindrical column3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the cylindrical column3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -52,7 +52,7 @@
         {
             "url": "bar",
             "name": "Bar",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bar3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bar3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -67,7 +67,7 @@
         {
             "url": "stacked-column",
             "name": "Stacking Column with Grouping",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking column3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking column3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -82,7 +82,7 @@
         {
             "url": "stacked-column-100",
             "name": "100% Stacked Column",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking column3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking column3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -97,7 +97,7 @@
         {
             "url": "stacked-bar",
             "name": "Stacked Bar",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking bar3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking bar3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -112,7 +112,7 @@
         {
             "url": "staked-bar-100",
             "name": "100% Stacked Bar",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking bar3D series.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking bar3D series.",
             "category": "3D Chart",
             "api": {
                 "Chart": [
@@ -127,7 +127,7 @@
         {
             "url": "empty-point",
             "name": "Column with null and 0 values",
-            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bar3D charts.",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bar3D charts.",
             "category": "3D Chart",
             "api": {
                 "Chart": [

@@ -3,12 +3,13 @@
     "directory": "maps",
     "category": "Data Visualization",
     "ftName": "maps",
+    "type": "update",
     "dataSourcePath":"src/maps/map-data.js",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
-            "description": "This demo for Essential JS2 Maps control visualizes the continents in the world by rendering those in a map layer.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes the continents in the world by rendering those in a map layer.",
             "category": "Maps",
             "sourceFiles":[
                 { "displayName": "default.html", "path":"src/maps/default.html" },
@@ -20,7 +21,7 @@
         {
             "url": "projection",
             "name": "Projection",
-            "description": "This demo for Essential JS2 Maps control shows the details of permanent and non-permanent countries in the UN Security Council, in 2017.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control shows the details of permanent and non-permanent countries in the UN Security Council, in 2017.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "projection.html", "path":"src/maps/projection.html" },
@@ -33,7 +34,7 @@
         {
             "url": "multi-layer",
             "name": "Multi-layers",
-            "description": "This demo for Essential JS2 Maps control depicts the layer along with sublayers for California and Texas.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the layer along with sublayers for California and Texas.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "multi-layer.html", "path":"src/maps/multi-layer.html" },
@@ -47,7 +48,7 @@
         {
             "url": "marker",
             "name": "Marker",
-            "description": "This demo for Essential JS2 Maps control shows the top 25 populated cities in the world by displaying the markers in their locations.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control shows the top 25 populated cities in the world by displaying the markers in their locations.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "marker.html", "path":"src/maps/marker.html" },
@@ -59,7 +60,7 @@
         {
             "url": "marker-template",
             "name": "Marker template",
-            "description": "This demo for Essential JS2 Maps control indicates the temperature of various cities of Australia in marker templates.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control indicates the temperature of various cities of Australia in marker templates.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "marker-template.html", "path":"src/maps/marker-template.html" },
@@ -71,7 +72,7 @@
         {
             "url": "marker-cluster",
             "name": "Marker cluster",
-            "description": "This demo for Essential JS2 Maps control indicates the create the marker cluster in more than one marker intersect.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control indicates the create the marker cluster in more than one marker intersect.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "marker-cluster.html", "path":"src/maps/marker-cluster.html" },
@@ -82,7 +83,7 @@
         {
             "url": "data-label",
             "name": "Labels",
-            "description": "This demo for Essential JS2 Maps control shows the names of all the states in USA in data label. Intersect action and smart labels mode can be changed.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control shows the names of all the states in USA in data label. Intersect action and smart labels mode can be changed.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "data-label.html", "path":"src/maps/data-label.html" },
@@ -93,7 +94,7 @@
         {
             "url": "bubble",
             "name": "Bubble",
-            "description": "This demo for Essential JS2 Maps control illustrates the top 30 countries which has highest Internet users in bubbles of the year 2016.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control illustrates the top 30 countries which has highest Internet users in bubbles of the year 2016.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "bubble.html", "path":"src/maps/bubble.html" },
@@ -105,7 +106,7 @@
         {
             "url": "navigation-line",
             "name": "Navigation Line",
-            "description": "This demo for Essential JS2 Maps control illustrates the sea routes between various cities for shipping.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control illustrates the sea routes between various cities for shipping.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "navigation-line.html", "path":"src/maps/navigation-line.html" },
@@ -117,7 +118,7 @@
         {
             "url": "legend",
             "name": "Legend",
-            "description": "This demo for Essential JS2 Maps control visualizes grouping of countries in the legend based on its population density.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes grouping of countries in the legend based on its population density.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "legend.html", "path":"src/maps/legend.html" },
@@ -142,7 +143,7 @@
         {
             "url": "annotation",
             "name": "Annotations",
-            "description": "This demo for Essential JS2 Maps control depicts the facts about Africa continent and a direction compass in an annotation.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the facts about Africa continent and a direction compass in an annotation.",
             "category": "Features",
             "sourceFiles":[
                 { "displayName": "annotation.html", "path":"src/maps/annotation.html" },
@@ -168,16 +169,7 @@
                 { "displayName": "osm.js", "path":"src/maps/osm.js" }
             ]
         },		
-		{
-            "url": "osm-with-navigation-lines",
-            "name": "OSM with Navigation Lines",
-            "category": "Map Providers",
-            "sourceFiles":[
-                { "displayName": "osm-with-navigation-lines.html", "path":"src/maps/osm-with-navigation-lines.html" },
-                { "displayName": "osm-with-navigation-lines.js", "path":"src/maps/osm-with-navigation-lines.js" }
-            ]
-        },
-		{
+	{
             "url": "osm-with-sublayers",
             "name": "OSM with Sublayer",
             "category": "Map Providers",
@@ -188,10 +180,30 @@
             ]
         },
         {
+            "url": "osm-with-marker-clustering",
+            "name": "OSM with Marker Clustering",
+            "category": "Map Providers",
+            "type": "new",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the OpenStreetMap with clusters for markers.",
+            "sourceFiles":[
+                { "displayName": "osm-with-marker-clustering.html", "path":"src/maps/osm-with-marker-clustering.html" },
+                { "displayName": "osm-with-marker-clustering.js", "path":"src/maps/osm-with-marker-clustering.js" }
+            ]
+        },
+	{
+            "url": "osm-with-navigation-lines",
+            "name": "OSM with Navigation Lines",
+            "category": "Map Providers",
+            "sourceFiles":[
+                { "displayName": "osm-with-navigation-lines.html", "path":"src/maps/osm-with-navigation-lines.html" },
+                { "displayName": "osm-with-navigation-lines.js", "path":"src/maps/osm-with-navigation-lines.js" }
+            ]
+        },
+        {
             "url": "osm-with-legend",
             "name": "OSM with Legend",
             "category": "Map Providers",
-            "description": "This demo for Essential JS2 Maps control depicts the OpenStreetMap with legend for markers.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the OpenStreetMap with legend for markers.",
             "sourceFiles":[
                 { "displayName": "osm-with-legend.html", "path":"src/maps/osm-with-legend.html" },
                 { "displayName": "osm-with-legend.js", "path":"src/maps/osm-with-legend.js" }
@@ -200,7 +212,7 @@
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "description": "This demo for Essential JS2 Maps control depicts the countries that were appeared in the finals of Cricket World Cup and their counts.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the countries that were appeared in the finals of Cricket World Cup and their counts.",
             "category": "User Interaction",
             "sourceFiles":[
                 { "displayName": "tooltip-datasource.html", "path":"src/maps/tooltip.html" },
@@ -212,7 +224,7 @@
         {
             "url": "selection",
             "name": "Selection & Highlight",
-            "description": "This demo for Essential JS2 Maps control visualizes USA president election results in the year 2016. Default and interactive are the two types of legend.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes USA president election results in the year 2016. Default and interactive are the two types of legend.",
             "category": "User Interaction",
             "sourceFiles":[
                 { "displayName": "selection.html", "path":"src/maps/selection.html" },
@@ -224,7 +236,7 @@
         {
             "url": "zooming",
             "name": "Zooming & Panning",
-			"description": "This demo for Essential JS2 Maps control depicts the properties required to zoom and pan the rendered map.",
+			"description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the properties required to zoom and pan the rendered map.",
             "category": "User Interaction",
             "sourceFiles":[
                 { "displayName": "zooming.html", "path":"src/maps/zooming.html" },
@@ -236,7 +248,7 @@
         {
             "url": "zoom-marker",
             "name": "Zoom to fit all markers",
-            "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
             "category": "User Interaction",
             "sourceFiles":[
                 { "displayName": "zoom-marker.html", "path":"src/maps/zoom-marker.html" },
@@ -248,7 +260,7 @@
         {
             "url": "drilldown",
             "name": "Drill Down",
-            "description": "This demo for Essential JS2 Maps control demonstrates drill down with all the continents in the initial view and countries on drill.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control demonstrates drill down with all the continents in the initial view and countries on drill.",
             "category": "User Interaction",
             "sourceFiles":[
                 { "displayName": "drilldown.html", "path":"src/maps/drilldown.html" },
@@ -266,7 +278,7 @@
         {
             "url": "print",
             "name": "Print",
-			"description": "This demo for Essential JS2 Maps control illustrates the printing functionality in the maps control.",
+			"description": "This demo for Essential<sup>®</sup> JS2 Maps control illustrates the printing functionality in the maps control.",
             "category": "Print and Export",
             "sourceFiles":[
                 { "displayName": "print.html", "path":"src/maps/print.html" },
@@ -278,7 +290,7 @@
         {
             "url": "export",
             "name": "Export",
-			"description": "This demo for Essential JS2 Maps control illustrates the exporting functionality in the maps control.",
+			"description": "This demo for Essential<sup>®</sup> JS2 Maps control illustrates the exporting functionality in the maps control.",
             "category": "Print and Export",
             "sourceFiles":[
                 { "displayName": "export.html", "path":"src/maps/export.html" },
@@ -289,7 +301,7 @@
         {
             "url": "heat-map",
             "name": "Heat Map",
-            "description": "This demo for Essential JS2 Maps control visualizes the state wise population of India in the year 2011. Color for states will be applied based on its value.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes the state wise population of India in the year 2011. Color for states will be applied based on its value.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "heat-map.html", "path":"src/maps/heat-map.html" },
@@ -301,7 +313,7 @@
         {
             "url": "curved-lines",
             "name": "Flight routes",
-            "description": "This demo for Essential JS2 Maps control demonstrates the flight routes from India to China using navigation lines feature.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control demonstrates the flight routes from India to China using navigation lines feature.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "curved-lines.html", "path":"src/maps/curved-lines.html" },
@@ -313,7 +325,7 @@
         {
             "url": "earthquake",
             "name": "Earthquake indication",
-            "description": "This demo for Essential JS2 Maps control demonstrates the earth quack occurred in Sumatra, Indonesia in the year 2009.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control demonstrates the earth quack occurred in Sumatra, Indonesia in the year 2009.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "earthquake.html", "path":"src/maps/earthquake.html" },
@@ -324,7 +336,7 @@
         {
             "url": "highlighted-region",
             "name": "Highlighted region",
-            "description": "This demo for Essential JS2 Maps control depicts the ATM populated areas in Oklahoma by highlighting the regions.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the ATM populated areas in Oklahoma by highlighting the regions.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "highlighted-region.html", "path":"src/maps/highlighted-region.html" },
@@ -336,7 +348,7 @@
         {
             "url": "cyber-attack-map",
             "name": "Cyber Attack Map",
-            "description": "This demo for Essential JS2 Maps control visualizes the cyber attack map, which displays the cyber attacks and threats from various countries to USA.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes the cyber attack map, which displays the cyber attacks and threats from various countries to USA.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "cyber-attack-map.html", "path":"src/maps/cyber-attack-map.html" },
@@ -347,7 +359,7 @@
         {
             "url": "dynamic-marker",
             "name": "Dynamic Marker",
-            "description": "This demo for Essential JS2 Maps control visualizes the dynamically added the marker and navigation line.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes the dynamically added the marker and navigation line.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "cyber-attack-map.html", "path":"src/maps/dynamic-marker.html" },
@@ -358,7 +370,7 @@
         {
             "url": "pie",
             "name": "Map with Pie chart",
-            "description": "This demo for Essential JS2 Maps control visualizes the placing of pie charts on the maps using marker templates.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control visualizes the placing of pie charts on the maps using marker templates.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "pie.html", "path":"src/maps/pie.html" },
@@ -369,7 +381,7 @@
         {
             "url": "map-with-slider",
             "name": "Map with Slider",
-            "description": "This demo for Essential JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
             "category": "Use Cases",
             "api": {},
             "sourceFiles":[
@@ -382,7 +394,7 @@
         {
             "url": "sales-map",
             "name": "Sales map",
-            "description": "This demo for Essential JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the capitals of all countries in south america using markers and map will zoom based on marker position.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "sales-map.html", "path":"src/maps/sales-map.html" },
@@ -394,7 +406,7 @@
         {
             "url": "seat-selection",
             "name": "Bus seat booking",
-            "description": "This demo for Essential JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
+            "description": "This demo for Essential<sup>®</sup> JS2 Maps control demonstrates the rendering of normal geometry type shapes on the map.",
             "category": "Use Cases",
             "sourceFiles":[
                 { "displayName": "seat-selection.html", "path":"src/maps/seat-selection.html" },

@@ -16,7 +16,7 @@
                     "template"
                 ]
             },
-            "description": "This example demonstrates the simple slide show of images using Syncfusion JavaScript(ES5) Carousel component."
+            "description": "This example demonstrates the simple slide show of images using Syncfusion<sup>®</sup> JavaScript(ES5) Carousel component."
         },
         {
             "url": "datasource-binding",
@@ -29,7 +29,7 @@
                     "showArrows"
                 ]
             },
-            "description": "This example demonstrates how to bind data and customize them by using dataSource and templates to the Syncfusion JavaScript(ES5) Carousel component."
+            "description": "This example demonstrates how to bind data and customize them by using dataSource and templates to the Syncfusion<sup>®</sup> JavaScript(ES5) Carousel component."
         },
         {
             "url": "templates",
@@ -62,7 +62,7 @@
                     "template"
                 ]
             },
-            "description": "This example demonstrates the simple slide show of images using Syncfusion JavaScript Carousel component."
+            "description": "This example demonstrates the simple slide show of images using Syncfusion<sup>®</sup> JavaScript Carousel component."
         },
         {
             "url": "indicator-type",
@@ -77,7 +77,7 @@
                     "template"
                 ]
             },
-            "description": "This example showcases the available indicator types and its functionalities in Syncfusion JavaScript Carousel component."
+            "description": "This example showcases the available indicator types and its functionalities in Syncfusion<sup>®</sup> JavaScript Carousel component."
         },
         {
             "url": "keyboard-navigation",
@@ -93,7 +93,7 @@
                     "template"
                 ]
             },
-            "description": "This example explains the key combinations used to perform various actions in Syncfusion JavaScript(ES5) Carousel component."
+            "description": "This example explains the key combinations used to perform various actions in Syncfusion<sup>®</sup> JavaScript(ES5) Carousel component."
         },
         {
             "url": "api",
@@ -113,7 +113,7 @@
                     "template"
                 ]
             },
-            "description": "This example showcase the available APIs and its functionalities in Syncfusion JavaScript(ES5) Carousel component."
+            "description": "This example showcase the available APIs and its functionalities in Syncfusion<sup>®</sup> JavaScript(ES5) Carousel component."
         }
     ]
 }

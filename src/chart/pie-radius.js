@@ -34,7 +34,7 @@ this.default = function () {
         enableBorderOnMouseMove:false,
         title:'Pie with different Radius',
         enableAnimation: true,
-        tooltip: {enable: true, format:'<b>${point.x}</b><br/>Area in square km: <b>${point.y} </b> <br/> Population density per square km: <b>${point.tooltip}</b>'},
+        tooltip: {enable: true, format:'<b>${point.x}</b><br/>Area in square km: <b>${point.y} </b> <br/> Population density per square km: <b>${point.tooltip}</b>', enableHighlight: true},
         // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

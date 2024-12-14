@@ -2,7 +2,6 @@
     "name": "Document Editor",
     "directory": "document-editor",
     "category": "File Viewers & Editors",
-    "type": "update",
     "hideOnDevice": true,
     "ftName":"document-editor",
     "samples": [
@@ -355,7 +354,7 @@
             "url": "mail-merge",
             "name": "Mail Merge",
             "category": "Mail Merge",
-            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion DocIO.",
+            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion® DocIO.",
             "api": {
                 "DocumentEditor": [
                     "isReadOnly",
@@ -875,7 +874,6 @@
             "url": "autoshapes",
             "name": "Auto Shapes",
             "category": "Shapes",
-            "type": "new",
             "description":"This sample shows Auto shapes preservation in Document Editor.",
             "api": {
                 "Editor": [

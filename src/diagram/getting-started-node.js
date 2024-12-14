@@ -1,7 +1,10 @@
 // Injecting required modules
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
-var diagram;
+
+
+// tslint:disable-next-line:max-func-body-length
+this.default = function () {
 var element;
 var lockElement;
 
@@ -77,9 +80,6 @@ function applyStyleForNodes(node, width, array, con, type) {
     }
     diagram.dataBind();
 }
-
-// tslint:disable-next-line:max-func-body-length
-this.default = function () {
     var nodes = [
         { id: 'sdlc', offsetX: 300, offsetY: 288, annotations: [{ content: 'SDLC' }] },
         { id: 'support', offsetX: 150, offsetY: 250, annotations: [{ content: 'Support' }] },
@@ -96,7 +96,7 @@ this.default = function () {
         { id: 'connector5', sourceID: 'support', targetID: 'analysis' }
     ];
     //Initialize the diagram
-    diagram = new ej.diagrams.Diagram({
+   var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '645px', nodes: nodes, connectors: connections,
         //Sets the default values of a nodes
         getNodeDefaults: function (obj) {

@@ -2,25 +2,26 @@
  * Sample for Radial tree
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.RadialTree);
-// Click event to perform Zoom In, Zoom Out, and Reset based on the option
-function onItemClick(args) {
-    var diagram = document.getElementById('diagram').ej2_instances[0];
-    switch (args.item.text) {
-        case 'Zoom In':
-            var zoomin = { type: 'ZoomIn', zoomFactor: 0.2 };
-            diagram.zoomTo(zoomin);
-            break;
-        case 'Zoom Out':
-            var zoomout = { type: 'ZoomOut', zoomFactor: 0.2 };
-            diagram.zoomTo(zoomout);
-            break;
-        case 'Reset':
-            diagram.reset();
-            diagram.fitToPage();
-            break;
-    }
-}
+
 this.default = function () {
+    // Click event to perform Zoom In, Zoom Out, and Reset based on the option
+    function onItemClick(args) {
+        var diagram = document.getElementById('diagram').ej2_instances[0];
+        switch (args.item.text) {
+            case 'Zoom In':
+                var zoomin = { type: 'ZoomIn', zoomFactor: 0.2 };
+                diagram.zoomTo(zoomin);
+                break;
+            case 'Zoom Out':
+                var zoomout = { type: 'ZoomOut', zoomFactor: 0.2 };
+                diagram.zoomTo(zoomout);
+                break;
+            case 'Reset':
+                diagram.reset();
+                diagram.fitToPage();
+                break;
+        }
+    }
     //Initialize the diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '600px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
@@ -36,7 +37,7 @@ this.default = function () {
                     style: data.Id === 'parent' ? { color: 'white', fontSize: 50 } : { color: 'black', fontSize: 20 }
                 }];
                 nodeModel.constraints = ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.Tooltip;
-               //Set properties for the tooltip
+                //Set properties for the tooltip
                 nodeModel.tooltip = {
                     content: data.Name + '<br/>' + data.Designation, relativeMode: 'Object',
                     position: 'TopCenter', showTipPointer: true

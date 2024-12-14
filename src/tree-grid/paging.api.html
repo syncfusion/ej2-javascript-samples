@@ -4,61 +4,61 @@
     </div>
 </div>
 <div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
+    <table id="property" title="Properties" style="width: 100%; table-layout: auto">
         <tr>
-            <td style="width: 50%">
+            <td>
                 <div>Allow Paging</div>
             </td>
-            <td style="width: 50%;padding-right: 10px">
+            <td style="width: 80%;padding-right: 10px">
                 <div>
                     <input type="checkbox" id="allowCheck" class="checkbox" checked="checked" aria-label="Allow Paging" />
                 </div>
             </td>
         </tr>
         <tr class='con-prop1'>
-            <td style="width: 50%">
+            <td>
                 <div style="padding-top: 7px;">
                     Page Size Mode
                 </div>
             </td>
-            <td style="width: 50%;  padding:10px 10px 10px 0px">
+            <td style="width: 80%;  padding:10px 10px 10px 0px">
                 <div id='dropdown'>
                     <input type="text" tabindex="0" id='sizemode' aria-label=" Page Size mode"/>
                 </div>
             </td>
         </tr>
         <tr class='con-prop2'>
-            <td style="width: 50%">
+            <td>
                 <div style="padding-top: 7px;">
                     Page Size
                 </div>
             </td>
-            <td style="width: 50%;  padding:10px 10px 10px 0px">
+            <td style="width: 80%;  padding:10px 10px 10px 0px">
                 <div id='numericbox'>
                     <input type="text" id="pagesize" class="form-control" aria-label=" Page Size"/>
                 </div>
             </td>
         </tr>
         <tr class='con-prop2'>
-            <td style="width: 50%">
+            <td>
                 <div style="padding-top: 7px">
                     Page Count
                 </div>
             </td>
-            <td style="width: 50%; padding:10px 10px 10px 0px">
-                <div>
+            <td style="width: 80%; padding:10px 10px 10px 0px">
+                <div id="pagecountbox">
                     <input type="text" id="pagecount" class="form-control" aria-label=" Page Count"/>
                 </div>
             </td>
         </tr>
         <tr class='con-prop2'>
-            <td style="width: 50%">
+            <td>
                 <div style="padding-top: 7px">
                     Current Page
                 </div>
             </td>
-            <td style="width: 50%; padding:10px 10px 10px 0px">
-                <div>
+            <td style="width: 80%; padding:10px 10px 10px 0px">
+                <div id="currentpagebox">
                     <input type="text" id="currentpage" class="form-control" aria-label="Current page"/>
                 </div>
             </td>
@@ -94,6 +94,14 @@
         #property tr:nth-child(3) {
             display: none;
         }
+    }
+
+    @media (min-width: 990px) and (max-width: 1300px) {
+      .property-panel-content #property {
+        #dropdown, #numericbox, #pagecountbox, #currentpagebox{
+            width : 130% !important;
+        }
+      }
     }
 </style>
 <!-- custom code end -->

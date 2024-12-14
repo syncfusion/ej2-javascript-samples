@@ -1,3 +1,51 @@
+// Create an Internationalization instance
+var intlObj = new ej.base.Internationalization();
+
+window.weekDate = function (dateString) {
+ 	var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+    var date = gantt.locale === 'ar' ? parseArabicDate(dateString) : parseDateString(dateString);
+    return intlObj.formatDate(date, { skeleton: 'E' });
+};
+
+window.formatDate = function (dateString) {
+    var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+    var date = gantt.locale === 'ar' ? parseArabicDate(dateString) : parseDateString(dateString);
+    return intlObj.formatDate(date, { skeleton: 'd' });
+};
+
+window.imageString = function (date) {
+    var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+    var imageDate = gantt.locale === 'ar' ? parseArabicDate(date) : parseDateString(date);
+    return "src/gantt/images/"+ imageDate.getDay() +".svg" ;
+};
+
+function parseDateString(dateString) {
+    // Check if the date string is in the format "DD.MM.YYYY"
+    if (dateString.includes('.')) {
+        var parts = dateString.split('.');
+        var day = parseInt(parts[0], 10);
+        var month = parseInt(parts[1], 10) - 1; // Months are 0-based in JavaScript
+        var year = parseInt(parts[2], 10);
+        return new Date(year, month, day);
+    }
+    // Fallback to default date parsing
+    return new Date(dateString);
+}
+
+function convertArabicNumeralsToWestern(arabicNumerals) {
+    var arabicToWesternMap = { '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4', '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9' };
+    return arabicNumerals.replace(/[\u0660-\u0669]/g, function (match) { return arabicToWesternMap[match]; });
+}
+function parseArabicDate(arabicDateString) {
+    // To convert the 'arabicDateString' Arabic Date to ISO Date format
+    var normalizedDate = convertArabicNumeralsToWestern(arabicDateString);
+    var parts = normalizedDate.split('/');
+    var day = parseInt(parts[0], 10);
+    var month = parseInt(parts[1], 10) - 1;
+    var year = parseInt(parts[2], 10);
+    return new Date(year, month, day);
+}
+
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.timelineTemplate,
@@ -40,17 +88,4 @@ this.default = function () {
         timelineTemplate:"#TimelineTemplates"
     });
     ganttChart.appendTo('#Timeline');
-};
-window.weekDate = function (dateString) {
-    var date = new Date(dateString);
-    var options = { weekday: 'short' };
-    return date.toLocaleDateString('en-US', options);
-};
-window.formatDate = function (dateString) {
-    var date = new Date(dateString);
-    var options = { day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
-};
-window.imageString = function (value) {
-    return "src/gantt/images/"+ value.toLowerCase() +".svg" ;
 };

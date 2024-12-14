@@ -3,8 +3,10 @@
  */
 // tslint:disable-next-line:max-func-body-length
  //Custom command for Diagraming elements.
- var diagram;
- //Retrieves the command manager settings for the diagram, including custom commands and their associated gestures.
+
+// Initializes the default settings and configuration for the diagram control.
+this.default = function () {
+     //Retrieves the command manager settings for the diagram, including custom commands and their associated gestures.
  function getCommandManagerSettings() {
     var commandManager = {
         commands: [{
@@ -125,12 +127,10 @@ function selectNode(node) {
         diagram.select(node);
     }
 }
-// Initializes the default settings and configuration for the diagram control.
-this.default = function () {
     //Initialize shape
     var shape = { type: 'Basic', shape: 'Ellipse', cornerRadius: 10 };
     //initialize the diagram control
-     diagram = new ej.diagrams.Diagram({
+     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: 645,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
         contextMenuSettings: { show: true },

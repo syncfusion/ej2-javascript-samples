@@ -8,7 +8,7 @@
             "url": "default",
             "name": "Default Functionalities",
             "category": "Tooltip",
-            "description": "Default rendering of the Essential JS 2 Tooltip control, which will open when hovering or tapping and holding, and can be displayed in 12 different positions.",
+            "description": "Default rendering of the Essential<sup>®</sup> JS 2 Tooltip control, which will open when hovering or tapping and holding, and can be displayed in 12 different positions.",
             "api": {
                 "Tooltip": [
                     "content",
@@ -21,7 +21,7 @@
             "url": "template",
             "name": "Template",
             "category": "Tooltip",
-            "description": "Demo of the Essential JS 2 Tooltip control template functionality, which allows HTML content to be rendered in tooltips.",
+            "description": "Demo of the Essential<sup>®</sup> JS 2 Tooltip control template functionality, which allows HTML content to be rendered in tooltips.",
             "api": {
                 "Tooltip": [
                     "content",
@@ -38,7 +38,7 @@
             "url": "ajax-content",
             "name": "Ajax Content",
             "category": "Tooltip",
-            "description": "Demo of the Essential JS 2 Tooltip control loading dynamic content in tooltips through Ajax from JSON files.",
+            "description": "Demo of the Essential<sup>®</sup> JS 2 Tooltip control loading dynamic content in tooltips through Ajax from JSON files.",
             "sourceFiles": [{"displayName": "ajax-content.js", "path": "./src/tooltip/ajax-content.js"},
                 {"displayName": "ajax-content.html", "path": "./src/tooltip/ajax-content.html"},
                 {"displayName": "tooltipdata.json", "path": "./src/tooltip/tooltipdata.json"}],
@@ -57,7 +57,7 @@
             "url": "smart-position",
             "name": "Smart Positioning",
             "category": "Tooltip",
-            "description": "Demo of the Essential JS 2 Tooltip control's smart (flexible) positioning based on the view port's dimensions.",
+            "description": "Demo of the Essential<sup>®</sup> JS 2 Tooltip control's smart (flexible) positioning based on the view port's dimensions.",
             "api": {
                 "Tooltip": [
                     "content",
@@ -75,19 +75,19 @@
             "url": "menu",
             "name": "Tooltip Menu",
             "category": "Tooltip",
-            "description": "Demo of Essential JS 2 Tooltip control customization to look like a menu using toolbar and listview controls."
+            "description": "Demo of Essential<sup>®</sup> JS 2 Tooltip control customization to look like a menu using toolbar and listview controls."
         },
         {
             "url": "html-template",
             "name": "HTML Template",
             "category": "Tooltip",
-            "description": "Demo of Essential JS 2 Tooltip control customization as an HTML page using HTML tags to display a template content."
+            "description": "Demo of Essential<sup>®</sup> JS 2 Tooltip control customization as an HTML page using HTML tags to display a template content."
         },
         {
             "url": "api",
             "name": "API",
             "category": "Tooltip",
-            "description": "Essential JS 2 Tooltip control demo showcasing the most frequently used API combinations, like content, height, width, open, sticky mode, and more."
+            "description": "Essential<sup>®</sup> JS 2 Tooltip control demo showcasing the most frequently used API combinations, like content, height, width, open, sticky mode, and more."
         }
     ]
 }

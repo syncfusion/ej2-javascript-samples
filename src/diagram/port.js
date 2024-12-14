@@ -1,132 +1,132 @@
-//get the port for the selected node.
-var diagram;
-var portVisibilityDrop;
-var portFillDrop;
-var portBorderDrop;
-var portShapeDrop;
-var portWidthNum;
-var portSizeNum;
-//Retrieves the ports of the currently selected node in the diagram.
-function getPort() {
-    var node = diagram.selectedItems.nodes[0];
-    var port = [];
-    if (node) {
-        port = node.ports;
+
+//Sets up the default configuration for the diagram.
+this.default = function () {
+    var diagram;
+    var portVisibilityDrop;
+    var portFillDrop;
+    var portBorderDrop;
+    var portShapeDrop;
+    var portWidthNum;
+    var portSizeNum;
+    //Retrieves the ports of the currently selected node in the diagram.
+    function getPort() {
+        var node = diagram.selectedItems.nodes[0];
+        var port = [];
+        if (node) {
+            port = node.ports;
+        }
+        return port;
     }
-    return port;
-}
-//enable or disable the property panel based on the Selection.
-function selectionChange(args) {
-    if (args.state === 'Changed') {
-        var appearance = document.getElementById('propertypanel');
-        var selectedElement = document.getElementsByClassName('e-remove-selection');
-        if (args.newValue) {
-            // custom code start
-            if (!appearance.classList.contains('e-remove-selection')) {
-                appearance.classList.add('e-remove-selection');
-            }
-            // custom code end
-            if (args.newValue[0] instanceof ej.diagrams.Node && selectedElement.length) {
-                selectedElement[0].classList.remove('e-remove-selection');
-                var port = getPort()[0];
-                portVisibilityDrop.value = port.visibility;
-                portVisibilityDrop.dataBind();
-                portFillDrop.value = port.style.fill;
-                portFillDrop.dataBind();
-                portBorderDrop.value = port.style.strokeColor;
-                portBorderDrop.dataBind();
-                portShapeDrop.value = port.shape;
-                portShapeDrop.dataBind();
-                portSizeNum.value = port.height;
-                portSizeNum.dataBind();
-                portWidthNum.value = port.style.strokeWidth;
-                portWidthNum.dataBind();
+    //enable or disable the property panel based on the Selection.
+    function selectionChange(args) {
+        if (args.state === 'Changed') {
+            var appearance = document.getElementById('propertypanel');
+            var selectedElement = document.getElementsByClassName('e-remove-selection');
+            if (args.newValue) {
+                // custom code start
+                if (!appearance.classList.contains('e-remove-selection')) {
+                    appearance.classList.add('e-remove-selection');
+                }
+                // custom code end
+                if (args.newValue[0] instanceof ej.diagrams.Node && selectedElement.length) {
+                    selectedElement[0].classList.remove('e-remove-selection');
+                    var port = getPort()[0];
+                    portVisibilityDrop.value = port.visibility;
+                    portVisibilityDrop.dataBind();
+                    portFillDrop.value = port.style.fill;
+                    portFillDrop.dataBind();
+                    portBorderDrop.value = port.style.strokeColor;
+                    portBorderDrop.dataBind();
+                    portShapeDrop.value = port.shape;
+                    portShapeDrop.dataBind();
+                    portSizeNum.value = port.height;
+                    portSizeNum.dataBind();
+                    portWidthNum.value = port.style.strokeWidth;
+                    portWidthNum.dataBind();
+                }
             }
         }
     }
-}
-//change the Visibility of the Port.
-function portVisibilityChange(args) {
-    var port = getPort();
-    if (port) {
-      for (var j = 0; j < port.length; j++) {
-        port[j].visibility = portVisibilityDrop.value;
-      }
-      diagram.dataBind();
-    }
-  }
-//set the appearence of the Port.
-function applyPortStyle(value) {
-    var port = getPort();
-    for (var j = 0; j < port.length; j++) {
-        if (value === 'size') {
-
-            port[j].height = portSizeNum.value;
-            port[j].width = portSizeNum.value;
-
-        } else if (value === 'strokewidth') {
-            port[j].style.strokeWidth = portWidthNum.value;
+    //change the Visibility of the Port.
+    function portVisibilityChange(args) {
+        var port = getPort();
+        if (port) {
+            for (var j = 0; j < port.length; j++) {
+                port[j].visibility = portVisibilityDrop.value;
+            }
+            diagram.dataBind();
         }
     }
-    diagram.dataBind();
-}
-//change the shape of the Port.
-function portShapeChange(args) {
-    var port = getPort();
-    for (var j = 0; j < port.length; j++) {
-        switch (portShapeDrop.value) {
-            case 'X':
-                port[j].shape = 'X';
-                break;
-            case 'Circle':
-                port[j].shape = 'Circle';
-                break;
-            case 'Square':
-                port[j].shape = 'Square';
-                break;
-            case 'Custom':
-                port[j].shape = 'Custom';
-                port[j].pathData = 'M6.805,0L13.61,10.703L0,10.703z';
-                break;
+    //set the appearence of the Port.
+    function applyPortStyle(value) {
+        var port = getPort();
+        for (var j = 0; j < port.length; j++) {
+            if (value === 'size') {
+
+                port[j].height = portSizeNum.value;
+                port[j].width = portSizeNum.value;
+
+            } else if (value === 'strokewidth') {
+                port[j].style.strokeWidth = portWidthNum.value;
+            }
         }
         diagram.dataBind();
     }
+    //change the shape of the Port.
+    function portShapeChange(args) {
+        var port = getPort();
+        for (var j = 0; j < port.length; j++) {
+            switch (portShapeDrop.value) {
+                case 'X':
+                    port[j].shape = 'X';
+                    break;
+                case 'Circle':
+                    port[j].shape = 'Circle';
+                    break;
+                case 'Square':
+                    port[j].shape = 'Square';
+                    break;
+                case 'Custom':
+                    port[j].shape = 'Custom';
+                    port[j].pathData = 'M6.805,0L13.61,10.703L0,10.703z';
+                    break;
+            }
+            diagram.dataBind();
+        }
 
-}
-//Function to Create nodes by the parameters
-function createNode(id, offsetX, offsetY, annotationContent, ports) {
-    return {
-        id: id,
-        offsetX: offsetX,
-        offsetY: offsetY,
-        annotations: [{ content: annotationContent }],
-        ports: ports
-    };
-}
-//Function to Create connector by the parameters
-function createConnector(id, sourceID, sourcePortID, targetID, targetPortID) {
-    return {
-        id: id,
-        sourceID: sourceID,
-        sourcePortID: sourcePortID,
-        targetID: targetID,
-        targetPortID: targetPortID
-    };
-}
-//Function to Create connector by the parameters
-function createPort(id, shape, offsetX, offsetY, text) {
-    return {
-        id: id,
-        shape: shape,
-        offset: { x: offsetX, y: offsetY },
-        height: 8,
-        width: 8,
-        visibility: ej.diagrams.PortVisibility.Visible,
-        text: text
-    };
-}
-//Sets up the default configuration for the diagram.
-this.default = function () {
+    }
+    //Function to Create nodes by the parameters
+    function createNode(id, offsetX, offsetY, annotationContent, ports) {
+        return {
+            id: id,
+            offsetX: offsetX,
+            offsetY: offsetY,
+            annotations: [{ content: annotationContent }],
+            ports: ports
+        };
+    }
+    //Function to Create connector by the parameters
+    function createConnector(id, sourceID, sourcePortID, targetID, targetPortID) {
+        return {
+            id: id,
+            sourceID: sourceID,
+            sourcePortID: sourcePortID,
+            targetID: targetID,
+            targetPortID: targetPortID
+        };
+    }
+    //Function to Create connector by the parameters
+    function createPort(id, shape, offsetX, offsetY, text) {
+        return {
+            id: id,
+            shape: shape,
+            offset: { x: offsetX, y: offsetY },
+            height: 8,
+            width: 8,
+            visibility: ej.diagrams.PortVisibility.Visible,
+            text: text
+        };
+    }
     // Get the bounding rectangle of the control section
     var bounds = document.getElementsByClassName('control-section')[0].getBoundingClientRect();
     // Calculate the center X coordinate of the control section

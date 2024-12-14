@@ -119,7 +119,10 @@ this.default = function () {
             case 'Add':
             case 'AddRecurrence':
                 var selectedCells = scheduleObj.getSelectedElements();
-                var activeCellsData = scheduleObj.getCellDetails(selectedCells.length > 0 ? selectedCells : selectedTarget);
+                var isRightClickInSelectedCells = selectedCells.some(function (cell) {
+                    return cell === selectedTarget;
+                });
+                var activeCellsData = scheduleObj.getCellDetails(isRightClickInSelectedCells ? selectedCells : [selectedTarget]);
                 if (selectedMenuItem === 'Add') {
                     scheduleObj.openEditor(activeCellsData, 'Add');
                 } else {

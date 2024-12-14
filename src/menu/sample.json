@@ -9,49 +9,49 @@
             "name": "Default Functionalities",
             "category": "Menu Bar",
             "api":{ "Menu":["items", "orientation"], "MenuItem": ["text", "iconCss", "items", "separator"] },
-            "description": "This example demonstrates the Syncfusion Javascript ES5 Menu items with icons, text, separator and items submenu."
+            "description": "This example demonstrates the Syncfusion<sup>®</sup> Javascript ES5 Menu items with icons, text, separator and items submenu."
         },
         {
             "url": "data-binding",
             "name": "Data Binding",
             "category": "Menu Bar",
             "api":{ "Menu": ["items"] },
-            "description": "This example demonstrates how to bind local data source with Syncfusion Javascript ES5 Menu component."
+            "description": "This example demonstrates how to bind local data source with Syncfusion<sup>®</sup> Javascript ES5 Menu component."
         },
         {
             "url": "scrollable",
             "name": "Scrollable",
             "category": "Menu Bar",
             "api":{ "Menu": ["items", "enableScrolling", "cssClass", "beforeOpen"] },
-            "description": "This example demonstrates how to load menu and sub menus with large number of menu items in horizontal / vertical scrollable Syncfusion JavaScript ES5 menu."
+            "description": "This example demonstrates how to load menu and sub menus with large number of menu items in horizontal / vertical scrollable Syncfusion<sup>®</sup> JavaScript ES5 menu."
         },
         {
             "url": "template",
             "name": "Template",
             "category": "Menu Bar",
             "api":{ "Menu": ["items", "fields", "template"], "FieldSettings": ["text", "children"] },
-            "description": "This example demonstrates how to customize Syncfusion Javascript ES5 Menu popup items by using templates."
+            "description": "This example demonstrates how to customize Syncfusion<sup>®</sup> Javascript ES5 Menu popup items by using templates."
         },
         {
             "url": "hamburger-mode",
             "name": "Hamburger Mode",
             "category": "Menu Bar",
             "api":{ "Menu": ["hamburgerMode", "title"] },
-            "description": "This example demonstrates the hamburger mode of the Syncfusion Javascript ES5 Menu that enables the adaptive view."
+            "description": "This example demonstrates the hamburger mode of the Syncfusion<sup>®</sup> Javascript ES5 Menu that enables the adaptive view."
         },
         {
             "url": "api",
             "name": "API",
             "category": "Menu Bar",
             "api":{ "Menu": ["orientation", "showItemOnClick", "enableItems"] },
-            "description": "This example demonstrates the supported API's and its functionalities of the Syncfusion Javascript ES5 Menu."
+            "description": "This example demonstrates the supported API's and its functionalities of the Syncfusion<sup>®</sup> Javascript ES5 Menu."
         },
         {
             "url": "toolbar-integration",
             "name": "Toolbar Integration",
             "category": "Use Case",
             "api":{ "Menu": ["items"] },
-            "description": "This example demonstrates the real use case of the Syncfusion Javascript ES5 Menu in web application. It is integrated with toolbar component."
+            "description": "This example demonstrates the real use case of the Syncfusion<sup>®</sup> Javascript ES5 Menu in web application. It is integrated with toolbar component."
         }
     ]
 }

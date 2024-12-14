@@ -3,36 +3,36 @@
  * Print and Export
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.PrintAndExport);
-var checkBoxObj;
-var toolbarObj;
-var btnObj;
-var diagram;
-//click event to perform printing the diagraming objects.
-function onItemClick(args) {
-    if (args.item.text === 'Print') {
-        var printOptions = {
-            mode: 'Data',
-            region: 'PageSettings',
-            multiplePage: checkBoxObj.checked,
-            margin: { left: 0, top: 0, bottom: 0, right: 0 }
-        };
-        diagram.print(printOptions);
-    }
-}
-//Export the diagraming object based on the format.
-function onSelect(args) {
-    var exportOptions = {
-        format: args.item.text,
-        mode: 'Download',
-        region: 'PageSettings',
-        multiplePage: checkBoxObj.checked,
-        fileName: 'Export',
-        margin: { left: 0, top: 0, bottom: 0, right: 0 }
-    };
-    diagram.exportDiagram(exportOptions);
-}
 
 this.default = function () {
+    var checkBoxObj;
+    var toolbarObj;
+    var btnObj;
+    var diagram;
+    //click event to perform printing the diagraming objects.
+    function onItemClick(args) {
+        if (args.item.text === 'Print') {
+            var printOptions = {
+                mode: 'Data',
+                region: 'PageSettings',
+                multiplePage: checkBoxObj.checked,
+                margin: { left: 0, top: 0, bottom: 0, right: 0 }
+            };
+            diagram.print(printOptions);
+        }
+    }
+    //Export the diagraming object based on the format.
+    function onSelect(args) {
+        var exportOptions = {
+            format: args.item.text,
+            mode: 'Download',
+            region: 'PageSettings',
+            multiplePage: checkBoxObj.checked,
+            fileName: 'Export',
+            margin: { left: 0, top: 0, bottom: 0, right: 0 }
+        };
+        diagram.exportDiagram(exportOptions);
+    }
 
     // Helper function to create a node with common properties
     function createNode(id, width, height, offsetX, offsetY, strokeColor, fillColor, content, shape = 'Rectangle') {
@@ -101,7 +101,7 @@ this.default = function () {
     var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'SVG' }];
     //DropDownButton used to perform exporting.
     btnObj = new ej.splitbuttons.DropDownButton({
-        items: items,  content: 'Export', select: onSelect,
+        items: items, content: 'Export', select: onSelect,
     });
     //enable or disable the multiple page printing and exporting.
     checkBoxObj = new ej.buttons.CheckBox({

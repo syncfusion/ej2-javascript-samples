@@ -14,7 +14,6 @@ this.default = function () {
         filterSettings: { type: 'Menu' },
         selectionSettings: { persistSelection: true, type: "Multiple", checkboxOnly: true },
         enableHover: false,
-		enableHeaderFocus: true,
         height: 400,
         rowHeight: 38,
         columns: [

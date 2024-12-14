@@ -4,13 +4,13 @@
 this.default = function () {
     ej.base.enableRipple(false);
     var remoteData = new ej.data.DataManager({
-        url: 'https://bi.syncfusion.com/northwindservice/api/orders',
+        url: 'https://ej2services.syncfusion.com/js/development/api/order',
         adaptor: new ej.data.WebApiAdaptor(),
         crossDomain: true
     });
 
     var csvReport = {
-        url: 'https://bi.syncfusion.com/productservice/api/sales',
+        url: 'https://ej2services.syncfusion.com/js/development/api/product',
         type: 'CSV',
         enableSorting: true,
         expandAll: false,

@@ -1,0 +1,59 @@
+<div class="control-section">
+    <div id="link">
+        <a id="category" style="visibility:hidden; display:inline-block">Population</a>
+        <p style="visibility:hidden; display:inline-block" id="symbol">&nbsp;&gt;&gt;&nbsp;</p>
+        <p id="text" style="visibility:hidden; display:inline-block;"></p>
+    </div>
+    <div id="column-container" align="center"></div>
+</div>
+<div id="action-description">
+    <p>
+        This column-container column chart example visualizes the population distribution across different continents. Users
+        can click on the columns to explore further details, allowing for an interactive analysis of population
+        statistics by country within each continent.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, you can see how to render and configure a drilldown column chart. Each column represents a continent, and users can drill down to view detailed population statistics by country upon selection. This functionality enhances data exploration and provides a clearer understanding of demographic distributions.
+    </p>
+    <p>
+       Tooltip is enabled in this example. To see the tooltip in action, hover over a point or tap on a point in touch-enabled devices.
+    </p>
+    <p>
+        More information on the column series can be found in this 
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/Chart-types/column/" aria-label="Navigate to the documentation for Column Chart in JavaScript Chart control">documentation section</a>.
+    </p>
+</div>
+
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+
+    .no-underline {
+        text-decoration: none !important;
+        cursor: auto !important;
+
+    }
+
+    #column-container0_AxisLabel_0,
+    #column-container0_AxisLabel_1,
+    #column-container0_AxisLabel_2,
+    #column-container0_AxisLabel_3,
+    #column-container0_AxisLabel_4,
+    #column-container_Series_0_Point_0,
+    #column-container_Series_0_Point_1,
+    #column-container_Series_0_Point_2,
+    #column-container_Series_0_Point_3,
+    #column-container_Series_0_Point_4,
+    #column-container0_AxisLabel_5 {
+        text-decoration: underline;
+        cursor: pointer;
+
+    }
+
+    #category:hover {
+        cursor: pointer;
+    }
+</style>

@@ -17,7 +17,7 @@
                 ]
             }
         },
-        {"url":"remote-data", "name": "Remote Data", "category": "Data Binding",  "description": "This demo for Essential JS 2 treeview control shows how to bind the data from a remote data service.", "api": {
+        {"url":"remote-data", "name": "Remote Data", "category": "Data Binding",  "description": "This demo for Essential<sup>®</sup> JS 2 treeview control shows how to bind the data from a remote data service.", "api": {
                 "TreeView": [
                     "fields",
                     "created",

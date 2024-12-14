@@ -27,8 +27,8 @@ this.default = function () {
      * FAB rendered with add icon and targeted to Grid component.
      */
     var fabObj = new ej.buttons.Fab({
-        iconCss: 'fab-icons fab-icon-add',
-        target: '#Grid'
+        iconCss: 'e-icons e-plus',
+        target: '#target'
     });
     fabObj.appendTo('#fab');
 

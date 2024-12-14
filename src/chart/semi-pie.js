@@ -36,7 +36,7 @@ this.default = function () {
             y:ej.base.Browser.isDevice ? "82%" :"85%"
         }],
         //Initializing Tooltip
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.tooltip}</b>',header:"" },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.tooltip}</b>',header:"", enableHighlight: true },
         legendSettings: {
             visible: false,
         },

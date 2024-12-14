@@ -58,7 +58,10 @@ function scrollChange(args) {
 
 // Event handler for selection change event
 function selectionChange(args) {
-    getEventDetails(args);
+    // Check if the state is Changed and get event details
+    if (args.state === 'Changed') {
+        getEventDetails(args);
+    }
 }
 
 // Event handler for size change event
@@ -115,7 +118,10 @@ function rotateChange(args) {
 
 // Event handler for collection change event
 function collectionChange(args) {
-    getEventDetails(args);
+    // Check if the state is Changed and get event details
+    if (args.state === 'Changed') {
+        getEventDetails(args);
+    }
 }
 
 // Event handler for mouse enter event

@@ -13,10 +13,10 @@ this.default = function () {
     var bootstrap5DarkColors = ['#FD7E14', '#6610F2', '#6F42C1', '#D63384', '#DC3545', '#FFC107', '#198754', '#0DCAF0'];
     var fluentColors = ["#1AC9E6", "#DA4CB2", "#EDBB40", "#AF4BCF", "#FF7266", "#1BD565", "#EE993D", "#5887FF", "#EC548D",
     "#7D39C0"];
-    var tailwindColors = ["#5A61F6", "#65A30D", "#334155", "#14B8A6", "#8B5CF6", "#0369A1", "#F97316", "#9333EA", "#F59E0B",
-        "#15803D"];
-    var tailwindDarkColors = ["#8B5CF6", "#22D3EE", "#F87171", "#4ADE80", "#E879F9", "#FCD34D", "#F97316", "#2DD4BF", "#F472B6",
-        "#10B981"];
+    var tailwindColors = ["#5A61F6", "#65A30D", "#334155", "#14B8A6", "#8B5CF6", "#0369A1", "#F97316", "#9333EA", "#F59E0B", "#15803D"];
+    var tailwindDarkColors =  ["#8B5CF6", "#22D3EE", "#F87171", "#4ADE80", "#E879F9", "#FCD34D", "#F97316", "#2DD4BF", "#F472B6", "#10B981"];
+    var tailwind3Colors = ['#2F4074', '#03B4B4', '#0D72DE', '#FF5733', '#D63384', '#F39C12', '#EF291F', '#91C822', '#2F4074', '#03B4B4'];
+    var tailwind3DarkColors = ['#8029F1', '#1ABC9C', '#0D72DE', '#FF5733', '#D63384', '#F39C12', '#EF291F', '#91C822', '#8029F1', '#1ABC9C'];
     var fabricdarkColors =  ["#4472C4", "#ED7D31", "#FFC000", "#70AD47"];
     var material3Colors = ["#6355C7", "#00AEE0", "#FFB400", "#F7523F", "#963C70", "#FD7400", "#4BE0BC", "#2196F5", "#DE3D8A", "#162F88"];
     var material3DarkColors = ["#4EAAFF", "#FA4EAB", "#FFF500", "#17EA58", "#38FFE7",
@@ -249,6 +249,14 @@ this.default = function () {
             else if (args.chart.theme === 'Tailwind') {
                 FillColors = tailwindColors;
                 textColor = '#000000';
+            }
+            else if (args.chart.theme === 'Tailwind3Dark') {
+                FillColors = tailwind3DarkColors;
+                textColor = "#FFFFFF";
+            }
+            else if (args.chart.theme === 'Tailwind3') {
+                FillColors = tailwind3Colors;
+                textColor = "#000000";
             }
             else if (args.chart.theme === "HighContrast") {
                 FillColors = highContrastColors;

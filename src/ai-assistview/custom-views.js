@@ -64,7 +64,7 @@ this.default = function() {
             defaultResponse.remove();
         }
         responseView.innerHTML = responseItemElem + responseView.innerHTML;
-        setTimeout(function () {
+        setTimeout(() => {
             var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === prompt);
             var defaultResponse = 'For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
             
@@ -72,9 +72,9 @@ this.default = function() {
             responseView.children[0].querySelector('.content').innerHTML = response;
             var copyBtn = responseView.children[0].querySelector('#copyBtn');
             copyBtn.classList.remove('e-skeleton', 'e-shimmer-wave');
-            copyBtn.addEventListener('click', function(e) {
+            copyBtn.addEventListener('click', (e) => {
                 var textToCopy = e.target.parentElement.parentElement.querySelector('.content').textContent;
-                navigator.clipboard.writeText(textToCopy).then(function() {
+                navigator.clipboard.writeText(textToCopy).then(() => {
                     copyBtn.textContent = 'Copied!';
                     setTimeout(() => {
                         copyBtn.textContent = 'Copy';
@@ -90,7 +90,7 @@ this.default = function() {
             placeholder: "Enter your prompt...",
             rows: 5,
             resizeMode: 'None',
-            input: function(e) {
+            input: (e) => {
                 generateBtn.disabled = !e.value;
             }
         });
@@ -98,7 +98,7 @@ this.default = function() {
 
         var generateBtn = new ej.buttons.Button({ cssClass: 'e-primary generate-btn', content:'Generate Prompt', disabled: true });
         generateBtn.appendTo('#generateBtn');
-        generateBtn.element.addEventListener('click', function() {
+        generateBtn.element.addEventListener('click', () => {
             var promptValue = textareaObj.value;
             if (promptValue) {
                 textareaObj.value = '';
@@ -109,7 +109,7 @@ this.default = function() {
             }
         });
 
-        viewsAIAssistView.element.querySelector('.view-container .suggestions').addEventListener('click', function(e) {
+        viewsAIAssistView.element.querySelector('.view-container .suggestions').addEventListener('click', (e) => {
             if (e.target.classList.contains('suggestion-item')) {
                 textareaObj.value = e.target.textContent;
                 generateBtn.disabled = false;

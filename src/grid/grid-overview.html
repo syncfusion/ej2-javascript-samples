@@ -35,6 +35,10 @@
     .fluent .empimg {
         background-color: #106EBE;
     }
+    .tailwind3 .empimg,
+    .tailwind3-dark .empimg{
+        background-color:rgba(79, 70, 229);
+    }
 
     _:-ms-fullscreen,
     :root .highcontrast .e-userimg.sf-icon-Male::before,
@@ -58,13 +62,13 @@
     }
 
     #Emptext {
-        top: -12px;
+        top: -14px;
         left: 41px;
         position: relative;
     }
 
     .e-grid.e-rtl #Emptext {
-        top: -12px;
+        top: -14px;
         left: -41px;
         position: relative;
     }
@@ -190,7 +194,7 @@
         margin-top: 3px;
     }
 
-    .fabric-dark #msg, .bootstrap-dark #msg, .tailwind-dark #msg, .bootstrap5-dark #msg, .material-dark #msg, .material3-dark #msg, .fluent-dark #msg, .fluent2-dark #msg, .fluent2-highcontrast #msg {
+    .fabric-dark #msg, .bootstrap-dark #msg, .tailwind-dark #msg, .bootstrap5-dark #msg, .material-dark #msg, .material3-dark #msg, .fluent-dark #msg, .fluent2-dark #msg, .fluent2-highcontrast #msg, .tailwind3-dark #msg {
         color: #ffffff !important;
     }
 
@@ -257,15 +261,12 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #ffa600;
     }
-    
-    @-moz-document url-prefix() {     
-        #overviewgrid.e-grid.e-grid-min-height .e-rowcell {       
-            line-height: 0!important;
-    } }
+
     @-moz-document url-prefix() {    
-        #overviewgrid.e-grid.e-grid-min-height .e-rowcell {         
-            line-height: 0!important;
-    } }
+        #Grid.e-grid.e-grid-min-height .e-rowcell {         
+            line-height: 0 !important;
+    } }   
+
 </style>
 
 <script type="text/x-jsrender" id="progessTemplate">

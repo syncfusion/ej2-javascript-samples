@@ -2,7 +2,6 @@
  * Getting started -  Html Node
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo, ej.diagrams.LineRouting, ej.diagrams.ConnectorBridging);
-var diagram;
 
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {

@@ -26,7 +26,7 @@ this.default = function () {
             },
             {
                 field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd',
-                width: 150, textAlign: 'Right',
+                width: 150, textAlign: 'Right', allowGrouping: false
             },
             {
                 field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 160,textAlign: 'Right',

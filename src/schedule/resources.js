@@ -125,7 +125,6 @@ this.default = function () {
         return finalData;
     }
 
-    //custom code start
     function generateEvents(scheduleObj) {
         var collections = [];
         var dataCollections = [
@@ -172,5 +171,4 @@ this.default = function () {
         var filteredCollection = filterByFare(collections, scheduleObj);
         return filteredCollection;
     }
-    //custom code end
 };

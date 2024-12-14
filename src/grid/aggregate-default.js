@@ -6,8 +6,8 @@ this.default = function () {
         allowSorting:true,
         allowMultiSorting:true,
         enableHover: false,
-        height:300,
         gridLines:"Vertical",
+        height:300,
         columns: [
             {
                 field: 'Month',

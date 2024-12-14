@@ -3,7 +3,7 @@
         <div id="ribbon"></div>
         <div id="ribbonPlaceHolder">
             <div style="width:100%; height:40px">
-            <h4 style="margin: 0 0 0 15px;">Resize Ribbon</h4>
+            <h4 class="ribbonResizeDisplayText" style="margin: 0 0 0 15px;">Resize Ribbon</h4>
             <div id ='ribbonSlider' style="width:200px; margin:0 15px"></div>
             </div>
             <div class="content1"></div>
@@ -153,6 +153,11 @@
     .sf-icon-reuse:before { content: "\e70f"; }
     .sf-icon-editor:before { content: "\e70a"; }
     .sf-icon-word:before { content: "\e70d"; }
+
+    .ribbon-resize.e-rtl .ribbonResizeDisplayText{
+        direction: rtl;
+        padding-right: 15px;
+    }
 
 </style>
 <div id="action-description">

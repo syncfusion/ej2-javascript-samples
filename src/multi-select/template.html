@@ -81,7 +81,7 @@
          color: #2899F5;
     }
 
-    .tailwind-dark .header {
+    .tailwind-dark .header, .tailwind3-dark .header {
         background: #374151;
         color: rgb(255, 255, 255);
     }
@@ -139,25 +139,27 @@
         margin-top: 1px;
     }
 
-    .tailwind .value {
+    .tailwind .value, .tailwind3 .value {
         margin-top: 1px;
         width: 22px;
         height: 22px;
     }
 
-    .e-bigger.tailwind .value {
+    .e-bigger.tailwind .value, .e-bigger.tailwind3 .value {
         margin-top: 1px;
         width: 26px;
         height: 26px;
     }
 
-    .tailwind .name {
+    .tailwind .name, .tailwind3 .name {
         padding: 4px 0 0 35px;
         line-height: 1.2em;
     }
 
     .e-bigger.tailwind .name,
-    .e-bigger.tailwind-dark .name {
+    .e-bigger.tailwind-dark .name,
+    .e-bigger.tailwind3 .name,
+    .e-bigger.tailwind3-dark .name {
         padding: 6px 0px 0px 35px;
         line-height: 1.2em;
     }
@@ -389,12 +391,12 @@
         left: 0px;
     }
 
-    .tailwind #template_popup .job {
+    .tailwind #template_popup .job, .tailwind3 #template_popup .job {
         margin-top: -7px;
         margin-bottom: 5px;
     }
 
-    .e-bigger.tailwind #template_popup .job {
+    .e-bigger.tailwind #template_popup .job, .e-bigger.tailwind3 #template_popup .job {
         margin-top: -15px;
         margin-bottom: 5px;
     }
@@ -403,6 +405,7 @@
     .bootstrap-dark #template.e-popup .job,
     .bootstrap5-dark #template.e-popup .job,
     .tailwind-dark #template.e-popup .job,
+    .tailwind3-dark #template.e-popup .job,
     .fluent-dark #template.e-popup .job {
         margin-top: 0;
     }
@@ -410,6 +413,7 @@
     .e-bigger.bootstrap-dark #template.e-popup .job,
     .e-bigger.bootstrap5-dark #template.e-popup .job,
     .e-bigger.tailwind-dark #template.e-popup .job,
+    .e-bigger.tailwind3-dark #template.e-popup .job,
     .e-bigger.fluent-dark #template.e-popup .job {
         margin-top: -15px;
     }

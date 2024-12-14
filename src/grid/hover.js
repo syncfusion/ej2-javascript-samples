@@ -6,13 +6,11 @@ this.default = function () {
         allowSorting: true,
         allowFiltering: true,
         filterSettings: { type: 'Excel' },
-        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
         enableHover: true,
         columns: [
-            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right', isPrimaryKey: true, validationRules: { required: true, number: true } },
-            { field: 'ProductName', headerText: 'Product Name', width: 170, validationRules: { required: true, minLength: 5 } },
-            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2', editType: 'numericedit' },
+            { field: 'ProductID', headerText: 'Product ID', width: 130, textAlign: 'Right', isPrimaryKey: true },
+            { field: 'ProductName', headerText: 'Product Name', width: 170 },
+            { field: 'UnitPrice', headerText: 'Unit Price', width: 135, textAlign: 'Right', format: 'C2' },
             { field: 'UnitsInStock', headerText: 'Units In Stock', width: 160, textAlign: 'Right' },
             {
                 field: 'Discontinued', headerText: 'Discontinued', width: 150, textAlign: 'Center',

@@ -16,17 +16,15 @@ this.default = function () {
         allowSorting: true,
         allowFiltering: true,
         filterSettings: { type: 'Excel' },
-        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
         rowSelecting: selectingEvent,
         cellSelecting : selectingEvent,
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 150, isPrimaryKey: true, validationRules: { required: true, number: true } },
-            { field: 'FirstName', headerText: 'Name', width: 125, validationRules: { required: true, minLength: 5 } },
+            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 150, isPrimaryKey: true },
+            { field: 'FirstName', headerText: 'Name', width: 125 },
             { field: 'Title', headerText: 'Title', width: 180 },
             {
                 field: 'HireDate', headerText: 'Hire Date', textAlign: 'Right',
-                width: 135, format: { skeleton: 'yMd', type: 'date' }, editType: 'datepickeredit'
+                width: 135, format: { skeleton: 'yMd', type: 'date' }, type:'date'
             }
         ]
     });

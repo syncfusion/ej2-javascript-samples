@@ -1,44 +1,45 @@
 /**
  * virtualization sample
  */
-// tslint:disable-next-line:max-func-body-length
-var bound = new ej.diagrams.Rect(100, 100, 500, 100);
-var diagram;
-// Handles the click event for the context menu items.
-function onClick(args) {
-    switch (args.item.tooltipText) {
-        case 'ZoomIn':
-            diagram.zoomTo({ type: 'ZoomIn', zoomFactor: 0.2 });
-            break;
-        case 'ZoomOut':
-            diagram.zoomTo({ type: 'ZoomOut', zoomFactor: 0.2 });
-            break;
-        case 'Reset':
-            diagram.reset();
-            diagram.fitToPage({ mode: 'Page', region: 'CustomBounds', margin: { left: 50, right: 50 }, customBounds: bound });
-            break;
-    }
-}
-// Generates virtualized data for the diagram based on the provided window.virtualizationData.
-function dataVirtualization() {
-    var i = 0;
-    var data = [];
-    var parentName = window.virtualizationData[0].Name;
-    data.push({ 'Name': parentName, 'Parent': "" });
-    i++;
-    for (var j = 1; j < 100; j++) {
-        var name = window.virtualizationData[i].Name;
-        data.push({ 'Name': name, 'Parent': parentName });
-        i++;
-        for (var k = 0; k < 2; k++) {
-            data.push({ 'Name': window.virtualizationData[i].Name, 'Parent': name });
-            i++;
+
+this.default = function () {
+    // tslint:disable-next-line:max-func-body-length
+    var bound = new ej.diagrams.Rect(100, 100, 500, 100);
+    var diagram;
+    // Handles the click event for the context menu items.
+    function onClick(args) {
+        switch (args.item.tooltipText) {
+            case 'ZoomIn':
+                diagram.zoomTo({ type: 'ZoomIn', zoomFactor: 0.2 });
+                break;
+            case 'ZoomOut':
+                diagram.zoomTo({ type: 'ZoomOut', zoomFactor: 0.2 });
+                break;
+            case 'Reset':
+                diagram.reset();
+                diagram.fitToPage({ mode: 'Page', region: 'CustomBounds', margin: { left: 50, right: 50 }, customBounds: bound });
+                break;
         }
     }
-    return data;
-}
-var virtualData = new ej.data.DataManager(dataVirtualization());
-this.default = function () {
+    // Generates virtualized data for the diagram based on the provided window.virtualizationData.
+    function dataVirtualization() {
+        var i = 0;
+        var data = [];
+        var parentName = window.virtualizationData[0].Name;
+        data.push({ 'Name': parentName, 'Parent': "" });
+        i++;
+        for (var j = 1; j < 100; j++) {
+            var name = window.virtualizationData[i].Name;
+            data.push({ 'Name': name, 'Parent': parentName });
+            i++;
+            for (var k = 0; k < 2; k++) {
+                data.push({ 'Name': window.virtualizationData[i].Name, 'Parent': name });
+                i++;
+            }
+        }
+        return data;
+    }
+    var virtualData = new ej.data.DataManager(dataVirtualization());
     //Initializes diagram control
     diagram = new ej.diagrams.Diagram({
         width: '100%', height: '500px',
@@ -95,9 +96,9 @@ this.default = function () {
     var toolbarObj = new ej.navigations.Toolbar({
         clicked: onClick,
         items: [
-            { type: 'Button',  text: 'Zoom In', tooltipText: 'ZoomIn', prefixIcon: 'e-ddb-icons e-zoomin' }, { type: 'Separator' },
-            { type: 'Button',  text: 'Zoom Out', tooltipText: 'ZoomOut', prefixIcon: 'e-ddb-icons e-zoomout' }, { type: 'Separator' },
-            { type: 'Button',  text: 'Reset', tooltipText: 'Reset', prefixIcon: 'e-diagram-icons e-diagram-reset' }
+            { type: 'Button', text: 'Zoom In', tooltipText: 'ZoomIn', prefixIcon: 'e-ddb-icons e-zoomin' }, { type: 'Separator' },
+            { type: 'Button', text: 'Zoom Out', tooltipText: 'ZoomOut', prefixIcon: 'e-ddb-icons e-zoomout' }, { type: 'Separator' },
+            { type: 'Button', text: 'Reset', tooltipText: 'Reset', prefixIcon: 'e-diagram-icons e-diagram-reset' }
         ]
     });
     toolbarObj.appendTo('#toolbar');

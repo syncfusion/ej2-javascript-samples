@@ -4,56 +4,57 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree);
 
-//Funtion to add the Template of the Node.
-function setNodeTemplate(obj, diagram) {
-    // Create the outer container for the node content.
-    var content = new ej.diagrams.StackPanel();
-    content.id = obj.id + '_outerstack';
-    content.orientation = 'Horizontal';
-    content.style.strokeColor = 'gray';
-    content.padding = { left: 5, right: 10, top: 5, bottom: 5 };
 
-    // Create an image element for the employee image.
-    var image = new ej.diagrams.ImageElement();
-    image.width = 50;
-    image.height = 50;
-    image.style.strokeColor = 'none';
-    image.source = obj.data.ImageUrl;
-    image.id = obj.id + '_pic';
-
-    // Create an inner stack panel for text elements (name and designation).
-    var innerStack = new ej.diagrams.StackPanel();
-    innerStack.style.strokeColor = 'none';
-    innerStack.margin = { left: 5, right: 0, top: 0, bottom: 0 };
-    innerStack.id = obj.id + '_innerstack';
-
-    // Create a text element for the employee name.
-    var text = new ej.diagrams.TextElement();
-    text.content = obj.data.Name;
-    text.style.color = 'black';
-    text.style.bold = true;
-    text.style.strokeColor = 'none';
-    text.horizontalAlignment = 'Left';
-    text.style.fill = 'none';
-    text.id = obj.id + '_text1';
-
-    // Create a text element for the employee designation.
-    var desigText = new ej.diagrams.TextElement();
-    desigText.margin = { left: 0, right: 0, top: 5, bottom: 0 };
-    desigText.content = obj.data.Designation;
-    desigText.style.color = 'black';
-    desigText.style.strokeColor = 'none';
-    desigText.style.fontSize = 12;
-    desigText.style.fill = 'none';
-    desigText.horizontalAlignment = 'Left';
-    desigText.style.textWrapping = 'Wrap';
-    desigText.id = obj.id + '_desig';
-    innerStack.children = [text, desigText];
-    content.children = [image, innerStack];
-    return content;
-}
 this.default = function () {
     var overview;
+    //Funtion to add the Template of the Node.
+    function setNodeTemplate(obj, diagram) {
+        // Create the outer container for the node content.
+        var content = new ej.diagrams.StackPanel();
+        content.id = obj.id + '_outerstack';
+        content.orientation = 'Horizontal';
+        content.style.strokeColor = 'gray';
+        content.padding = { left: 5, right: 10, top: 5, bottom: 5 };
+
+        // Create an image element for the employee image.
+        var image = new ej.diagrams.ImageElement();
+        image.width = 50;
+        image.height = 50;
+        image.style.strokeColor = 'none';
+        image.source = obj.data.ImageUrl;
+        image.id = obj.id + '_pic';
+
+        // Create an inner stack panel for text elements (name and designation).
+        var innerStack = new ej.diagrams.StackPanel();
+        innerStack.style.strokeColor = 'none';
+        innerStack.margin = { left: 5, right: 0, top: 0, bottom: 0 };
+        innerStack.id = obj.id + '_innerstack';
+
+        // Create a text element for the employee name.
+        var text = new ej.diagrams.TextElement();
+        text.content = obj.data.Name;
+        text.style.color = 'black';
+        text.style.bold = true;
+        text.style.strokeColor = 'none';
+        text.horizontalAlignment = 'Left';
+        text.style.fill = 'none';
+        text.id = obj.id + '_text1';
+
+        // Create a text element for the employee designation.
+        var desigText = new ej.diagrams.TextElement();
+        desigText.margin = { left: 0, right: 0, top: 5, bottom: 0 };
+        desigText.content = obj.data.Designation;
+        desigText.style.color = 'black';
+        desigText.style.strokeColor = 'none';
+        desigText.style.fontSize = 12;
+        desigText.style.fill = 'none';
+        desigText.horizontalAlignment = 'Left';
+        desigText.style.textWrapping = 'Wrap';
+        desigText.id = obj.id + '_desig';
+        innerStack.children = [text, desigText];
+        content.children = [image, innerStack];
+        return content;
+    }
     //Initializtion of the diagram.
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '590px', scrollSettings: { scrollLimit: 'Infinity' },

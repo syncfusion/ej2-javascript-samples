@@ -31,7 +31,7 @@ this.default = function () {
     var dropDownListObject = new ej.dropdowns.DropDownList({
         dataSource: indicatortypes,
         fields: { text: 'type', value: 'id' },
-        width: '125px',
+        width: 120,
         value: 'Shimmer',
         change: function (e) {
             if (dropDownListObject.value === 'Shimmer') {

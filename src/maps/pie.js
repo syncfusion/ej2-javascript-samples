@@ -7,7 +7,7 @@
             load: function (args) {
                 var pieTheme = location.hash.split('/')[1];
                 pieTheme = pieTheme ? pieTheme : 'Material';
-                args.maps.pieTheme = (pieTheme.charAt(0).toUpperCase() +
+                args.maps.theme = (pieTheme.charAt(0).toUpperCase() +
                 pieTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
             },
             // custom code end            

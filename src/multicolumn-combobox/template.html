@@ -1,6 +1,7 @@
 <div class="control-section">
     <div class='control-wrapper template-multicolumn'>
         <div style='padding-top:55px;'>
+            <label>Select an employee</label>
             <input type="text" tabindex="1" id='template' />
         </div>
     </div>
@@ -23,7 +24,7 @@
 <style>
     .control-wrapper.template-multicolumn {
         margin: 0 auto;
-        width: 540px;
+        width: 250px;
     }
 
     @media screen and (max-width: 480px) {
@@ -35,6 +36,11 @@
     /* template styles */
     .multicolumn-customize .e-headercell.e-templatecell {
         height: 40px;
+    }
+
+    .multicolumn-customize .header {
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .multicolumn-customize .ename {

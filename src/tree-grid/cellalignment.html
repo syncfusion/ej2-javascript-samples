@@ -4,24 +4,30 @@
         </div>
     </div>
 </div>
-
+<style>
+    @media (min-width: 990px) and (max-width: 1300px) {
+        .property-panel-section{
+            padding-left: 0px;
+        }
+    }
+</style>
 <div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
+    <table id="property" title="Properties" style="width: 100%; table-layout: auto">
         <tr style="height: 50px">
-            <td style="width: 30%">
+            <td>
                 <div style="padding-top: 10px">Column</div>
             </td>
-            <td style="width: 100%;padding-right: 10px">
+            <td style="width: 70%;padding-right: 10px; padding-left:2%">
                 <div>
                    <input type="text" tabindex="1" id='columns' />
                 </div>
             </td>
         </tr>
         <tr style="height: 50px">
-            <td style="width: 30%">
+            <td>
                 <div>Cell Alignment</div>
             </td>
-            <td style="width: 30%;padding: 10px 10px 10px 0px">
+            <td style="width: 70%;padding: 10px 10px 10px 2%">
                 <div>
                     <input type="text" tabindex="1" id='alignment' />
                 </div>

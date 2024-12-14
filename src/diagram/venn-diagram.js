@@ -3,7 +3,6 @@
  * Venn Diagram
  */
 ej.diagrams.Diagram.Inject();
-var diagram;
 this.default = function () {
 // Basic shape configuration for nodes
 const basicShape = { type: "Basic", shape: "Ellipse" };
@@ -46,7 +45,7 @@ let nodes= [
     ], styles.programming)
 ];
     //Initializes diagram control
-    diagram = new ej.diagrams.Diagram({
+   var diagram = new ej.diagrams.Diagram({
         width: '100%', height: 580, nodes: nodes,
         snapSettings: { constraints: ej.diagrams.SnapConstraints.None }, tool: ej.diagrams.DiagramTools.ZoomPan
     });

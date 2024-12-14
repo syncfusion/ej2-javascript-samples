@@ -1,50 +1,51 @@
 /**
  * Default symbol palette sample
  */
-var palette;
-var animation;
-var expand;
-var size;
-var headericon;
-var itemtext;
-//Enable or disable the headerIcon for symbol palette headers
-function onHeaderIconChange(args) {
-    for (var i = 0; i < palette.palettes.length; i++) {
-        if (args.checked) {
-            if (i === 0) {
-                palette.palettes[i].iconCss = 'e-ddb-icons e-basic';
-            } else if (i === 1) {
-                palette.palettes[i].iconCss = 'e-ddb-icons e-flow';
-            } else if (i === 2) {
-                palette.palettes[i].iconCss = 'e-ddb-icons e-connector';
+
+this.default = function () {
+    var palette;
+    var animation;
+    var expand;
+    var size;
+    var headericon;
+    var itemtext;
+    //Enable or disable the headerIcon for symbol palette headers
+    function onHeaderIconChange(args) {
+        for (var i = 0; i < palette.palettes.length; i++) {
+            if (args.checked) {
+                if (i === 0) {
+                    palette.palettes[i].iconCss = 'e-ddb-icons e-basic';
+                } else if (i === 1) {
+                    palette.palettes[i].iconCss = 'e-ddb-icons e-flow';
+                } else if (i === 2) {
+                    palette.palettes[i].iconCss = 'e-ddb-icons e-connector';
+                }
+            } else {
+                palette.palettes[i].iconCss = '';
             }
-        } else {
-            palette.palettes[i].iconCss = '';
         }
     }
-}
-//Enable or disable the animation for symbol palette
-function onAnimationChange(args) {
-    palette.enableAnimation = args.checked;
-}
-//Enable or disable the Text for Symbol palette item.
-function onItemTextChange(args) {
-    if (args.checked) {
-        palette.getSymbolInfo = function (symbol) {
-            if (symbol.text !== undefined) {
-                return { description: { text: symbol.text, overflow: 'Wrap' } };
-            }
-            return { description: { text: symbol.id } };
-        };
+    //Enable or disable the animation for symbol palette
+    function onAnimationChange(args) {
+        palette.enableAnimation = args.checked;
     }
-    else {
-        palette.getSymbolInfo = function (symbol) {
-            return { description: { text: '' } };
-        };
+    //Enable or disable the Text for Symbol palette item.
+    function onItemTextChange(args) {
+        if (args.checked) {
+            palette.getSymbolInfo = function (symbol) {
+                if (symbol.text !== undefined) {
+                    return { description: { text: symbol.text, overflow: 'Wrap' } };
+                }
+                return { description: { text: symbol.id } };
+            };
+        }
+        else {
+            palette.getSymbolInfo = function (symbol) {
+                return { description: { text: '' } };
+            };
+        }
+        palette.dataBind();
     }
-    palette.dataBind();
-}
-this.default = function () {
     //Initialize the flowshapes for the symbol palatte
     var flowshapes = [
         { id: 'terminator', shape: { type: 'Flow', shape: 'Terminator' } },

@@ -2,25 +2,25 @@ this.default = function() {
     var items =  [
         {
             title:'Home',
-            iconCss:'speeddial-icons speeddial-icon-house'
+            iconCss:'e-icons e-home'
         },
         {
             title:'People',
-            iconCss:'speeddial-icons speeddial-icon-people'
+            iconCss:'e-icons e-people'
         },
         {
             title:'Search',
-            iconCss:'speeddial-icons speeddial-icon-search'
+            iconCss:'e-icons e-search'
         },
         {
             title:'Message',
-            iconCss:'speeddial-icons speeddial-icon-message'
+            iconCss:'e-icons e-comment-show'
         }
     ];
     var speedDial = new ej.buttons.SpeedDial(
         {
-            openIconCss: 'speeddial-icons speeddial-icon-menu',
-            closeIconCss: 'speeddial-icons speeddial-icon-close',
+            openIconCss:'e-icons e-justify',
+            closeIconCss:'e-icons e-close',
             items: items,
             target: '#target',
             position: 'BottomCenter',

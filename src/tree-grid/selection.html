@@ -3,53 +3,51 @@
         <div id="TreeGrid"></div>
     </div>
 </div>
-<style>
-    .fluent2,
-    .fluent2-dark,
-    .fluent2-highcontrast {
-        #selectiondd1 .e-input-group {
-            width: 110px !important;
-        }
-    }
-</style>
 <div class="col-lg-3 property-section">
     <table id="property" title="Properties" style="width: 100%">
         <tr>
-            <td style="width: 100%">
+            <td id="selection">
                 <div style="padding-top: 7px">Selection Type</div>
             </td>
-            <td style="width: 100%;padding-right: 10px">
+            <td style="width:80%;padding-right: 10px">
                 <div id="selectiondd1">
                     <input type="text" tabindex="1" id='type' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width: 30%">
+            <td id="selection">
                 <div>
                     Selection Mode
                 </div>
             </td>
-            <td style="width: 100%">
-                <div style="padding-right: 10px;padding-bottom: 10px">
+            <td style="width: 80%">
+                <div id="selectionmode" style="padding-right: 10px;">
                     <input type="text" tabindex="1" id='mode' />
                 </div>
             </td>
         </tr>
         <tr id='cellselection' style='display: none'>
-            <td style="width: 30%;">
+            <td id="selection">
                 <div>
                    Cell Selection Mode
                 </div>
             </td>
-            <td style="width: 100%;">
-                <div style="padding-right: 10px;padding-bottom: 10px">
+            <td style="width: 80%;">
+                <div id="cellSelectionMode" style="padding-right: 10px;padding-bottom: 10px">
                     <input type="text" tabindex="1" id='cellmode' />
                 </div>
             </td>
         </tr>
     </table>
 </div>
+<style>
+@media (min-width: 990px) and (max-width: 1300px) {
+#selection{
+    width:auto;
+}
+}
+</style>
 <!-- custom code start -->
 <div id="action-description">
         <p>This sample demonstrates the selection feature in Tree Grid, which allows you to select row or cell through simple mouse down or keyboard interaction.
@@ -108,3 +106,20 @@
     </p>
 </div>
 <!-- custom code end -->
+<style>
+    @media (min-width: 990px) and (max-width: 1300px) {
+
+        .property-section #property {
+            width: 130% !important;
+        }
+    }
+
+    @media (min-width: 1900px) and (max-width: 2400px) {
+
+        .property-section #property #selectiondd1,
+        .property-section #property #selectionmode,
+        .property-section #property #cellSelectionMode {
+            width: 70%;
+        }
+    }
+</style>

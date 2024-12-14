@@ -2,28 +2,29 @@
  * Sample for RTL tree
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree);
- //Create and add ports for Node.
- function getPorts(root) {
-    var ports = [
-        {
-            id: 'port1', shape: 'Circle', offset: { x: 0, y: 0.5 }, horizontalAlignment: 'Left',
-            verticalAlignment: 'Bottom', margin: { right: -2, bottom: -5.5 }
-        },
-        {
-            id: 'port2', shape: 'Circle', offset: { x: 1, y: 0.99 }, horizontalAlignment: 'Right',
-            verticalAlignment: 'Bottom', margin: { right: -2, bottom: -5.5 }
-        }
-    ];
-    if (!root) {
-        ports[0].offset.y = 1;
-    }
-    else {
-        ports[0].verticalAlignment = 'Center';
-        ports[0].horizontalAlignment = 'Center';
-    }
-    return ports;
-}
+
 this.default = function () {
+    //Create and add ports for Node.
+    function getPorts(root) {
+        var ports = [
+            {
+                id: 'port1', shape: 'Circle', offset: { x: 0, y: 0.5 }, horizontalAlignment: 'Left',
+                verticalAlignment: 'Bottom', margin: { right: -2, bottom: -5.5 }
+            },
+            {
+                id: 'port2', shape: 'Circle', offset: { x: 1, y: 0.99 }, horizontalAlignment: 'Right',
+                verticalAlignment: 'Bottom', margin: { right: -2, bottom: -5.5 }
+            }
+        ];
+        if (!root) {
+            ports[0].offset.y = 1;
+        }
+        else {
+            ports[0].verticalAlignment = 'Center';
+            ports[0].horizontalAlignment = 'Center';
+        }
+        return ports;
+    }
     //Initializes diagram control
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '600px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },
@@ -86,5 +87,5 @@ this.default = function () {
         },
     });
     diagram.appendTo('#diagram');
-   
+
 };

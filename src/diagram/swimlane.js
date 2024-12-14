@@ -3,39 +3,39 @@
  */
 ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
 
-//Create and add ports for node.
-var port = [
-    { id: 'Port1', offset: { x: 0, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
-    { id: 'Port2', offset: { x: 0.5, y: 0 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
-    { id: 'Port3', offset: { x: 1, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
-    { id: 'Port4', offset: { x: 0.5, y: 1 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw }
-];
-
-//To enhance the functionality of a webpage for mobile devices by adding a click event listener 
-function addEvents() {
-    var isMobileDevice = window.matchMedia('(max-width:550px)').matches;
-    if (isMobileDevice) {
-        var paletteIcons = document.getElementById('palette-icon');
-        if (paletteIcons) {
-            paletteIcons.addEventListener('click', openPalette, false);
-        }
-    }
-}
-//To manage the visibility state of the palette space on a webpage for mobile devices
-function openPalette() {
-    var paletteSpaces = document.getElementById('palette-space');
-    isMobileDevice = window.matchMedia('(max-width:550px)').matches;
-    if (isMobileDevice) {
-        if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
-            paletteSpaces.classList.add('sb-mobile-palette-open');
-        }
-        else {
-            paletteSpaces.classList.remove('sb-mobile-palette-open');
-        }
-    }
-}
-
 this.default = function () {
+    //Create and add ports for node.
+    var port = [
+        { id: 'Port1', offset: { x: 0, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+        { id: 'Port2', offset: { x: 0.5, y: 0 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+        { id: 'Port3', offset: { x: 1, y: 0.5 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw },
+        { id: 'Port4', offset: { x: 0.5, y: 1 }, visibility: ej.diagrams.PortVisibility.Connect | ej.diagrams.PortVisibility.Hover, constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw }
+    ];
+
+    //To enhance the functionality of a webpage for mobile devices by adding a click event listener 
+    function addEvents() {
+        var isMobileDevice = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileDevice) {
+            var paletteIcons = document.getElementById('palette-icon');
+            if (paletteIcons) {
+                paletteIcons.addEventListener('click', openPalette, false);
+            }
+        }
+    }
+    //To manage the visibility state of the palette space on a webpage for mobile devices
+    function openPalette() {
+        var paletteSpaces = document.getElementById('palette-space');
+        isMobileDevice = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileDevice) {
+            if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
+                paletteSpaces.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpaces.classList.remove('sb-mobile-palette-open');
+            }
+        }
+    }
+
     var bounds = document.getElementById('diagram-space').getBoundingClientRect();
     var pathData = 'M 120 24.9999 C 120 38.8072 109.642 50 96.8653 50 L 23.135' +
         ' 50 C 10.3578 50 0 38.8072 0 24.9999 L 0 24.9999 C' +
@@ -194,11 +194,11 @@ this.default = function () {
     }
     //set styles for connector
     function setConnectorStyles(connector, color) {
-       connector.targetDecorator.style.strokeColor = color;
-       connector.targetDecorator.style.fill = color;
-       connector.style.strokeColor = color;
-       connector.style.strokeWidth = 1;
-   } 
+        connector.targetDecorator.style.strokeColor = color;
+        connector.targetDecorator.style.fill = color;
+        connector.style.strokeColor = color;
+        connector.style.strokeWidth = 1;
+    }
     //Initialize the Connectors for the diagram
     var connectors = [
         {
@@ -210,7 +210,7 @@ this.default = function () {
             targetID: 'node3', annotations: [{ content: 'No', style: { fill: 'white' } }]
         },
         {
-            id: 'connector3', sourceID: 'node4', 
+            id: 'connector3', sourceID: 'node4',
             targetID: 'node8'
         },
         {
@@ -235,13 +235,13 @@ this.default = function () {
         // sets the height and width of the diagram.
         width: '100%', height: '100%',
         // sets the nodes and connectors of the diagram.
-         nodes: nodes, connectors: connectors,
+        nodes: nodes, connectors: connectors,
         getNodeDefaults: getNodeDefaults,
         getConnectorDefaults: getConnectorDefaults,
         snapSettings: {
             constraints: ej.diagrams.SnapConstraints.All & ~ej.diagrams.SnapConstraints.ShowLines
         },
-        
+
         //Define custom menu items
         contextMenuSettings: {
             show: true, items: [
@@ -264,7 +264,7 @@ this.default = function () {
         },
         //Open the context menu 
         contextMenuOpen: function (args) {
-            for (var i=0; i< args.items.length; i++ ) {
+            for (var i = 0; i < args.items.length; i++) {
                 var item = args.items[i];
                 if ((diagram.selectedItems.connectors.length + diagram.selectedItems.nodes.length) > 0) {
                     if (item.id === 'InsertLaneBefore' || item.id === 'InsertLaneAfter') {
@@ -339,8 +339,8 @@ this.default = function () {
                 }
             }
         },
-        selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.Rotate }  
-        
+        selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.Rotate }
+
     });
     diagram.appendTo('#diagram');
     // Check if the current environment is a device and fit diagram to page if true
@@ -356,19 +356,19 @@ this.default = function () {
                     id: 'Terminator', width: 50, height: 60, addInfo: { tooltip: 'Terminator' }, shape: { type: 'Flow', shape: 'Terminator' }, ports: port
                 },
                 {
-                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' },  ports: port
+                    id: 'Process', addInfo: { tooltip: 'Process' }, width: 50, height: 60, shape: { type: 'Flow', shape: 'Process' }, ports: port
                 },
                 {
-                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' },  ports: port
+                    id: 'Decision', addInfo: { tooltip: 'Decision' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Decision' }, ports: port
                 },
                 {
-                    id: 'Document',  addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, ports: port
+                    id: 'Document', addInfo: { tooltip: 'Document' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Document' }, ports: port
                 },
                 {
-                    id: 'PreDefinedProcess',  addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port
+                    id: 'PreDefinedProcess', addInfo: { tooltip: 'Predefined process' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'PreDefinedProcess' }, ports: port
                 },
                 {
-                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port, 
+                    id: 'data', addInfo: { tooltip: 'Data' }, width: 50, height: 50, shape: { type: 'Flow', shape: 'Data' }, ports: port,
                 },
             ]
         },
@@ -383,7 +383,7 @@ this.default = function () {
                         type: 'SwimLane', lanes: [
                             {
                                 id: 'lane1',
-                                 height: 60, width: 150,
+                                height: 60, width: 150,
                                 header: { width: 50, height: 50, style: { fontSize: 11 } },
                             }
                         ],
@@ -401,7 +401,7 @@ this.default = function () {
                             {
                                 id: 'lane1',
                                 height: 150, width: 60,
-                                header: { width: 50, height: 50, style: {fontSize: 11 } },
+                                header: { width: 50, height: 50, style: { fontSize: 11 } },
                             }
                         ],
                         orientation: 'Vertical', isLane: true
@@ -414,7 +414,7 @@ this.default = function () {
                     id: 'verticalPhase', addInfo: { tooltip: 'Vertical phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' }}],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' } }],
                         annotations: [{ text: '' }],
                         orientation: 'Vertical', isPhase: true
                     },
@@ -424,7 +424,7 @@ this.default = function () {
                     id: 'horizontalPhase', addInfo: { tooltip: 'Horizontal phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3'} }],
+                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' } }],
                         annotations: [{ text: '' }],
                         orientation: 'Horizontal', isPhase: true
                     },
@@ -434,23 +434,23 @@ this.default = function () {
             ]
         },
         {
-             // Initialize connectors for the palettes 
+            // Initialize connectors for the palettes 
             id: 'connectors', expanded: true, symbols: [
                 {
                     id: 'orthogonal', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 }
                 },
                 {
                     id: 'orthogonaldashed', type: 'Orthogonal', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 40, y: 40 },
-                     style: { strokeDashArray: '4 4'}
+                    style: { strokeDashArray: '4 4' }
                 },
                 {
                     id: 'straight', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
                 },
                 {
                     id: 'straightdashed', type: 'Straight', sourcePoint: { x: 0, y: 0 }, targetPoint: { x: 60, y: 60 },
-                    style: { strokeDashArray: '4 4'}
+                    style: { strokeDashArray: '4 4' }
                 }
-            ], title: 'Connectors'  
+            ], title: 'Connectors'
         }
     ];
     //Initializes the symbol palette
@@ -461,11 +461,11 @@ this.default = function () {
         symbolMargin: { left: 8, right: 8, top: 8, bottom: 8 },
         symbolHeight: 48, symbolWidth: 48,
         getNodeDefaults: getNodeDefaults,
-        getConnectorDefaults:getConnectorDefaults,
+        getConnectorDefaults: getConnectorDefaults,
         getSymbolInfo: function (symbol) {
             return { tooltip: symbol.addInfo ? symbol.addInfo.tooltip : symbol.id };
         },
-        
+
     });
 
     palette.appendTo('#symbolpalette');

@@ -13,7 +13,7 @@
                     "target"
                 ]
             },
-            "description": "This example demonstrates the overview usage of the Syncfusion Floating Action Button (FAB)."
+            "description": "This example demonstrates the overview usage of the Syncfusion<sup>®</sup> Floating Action Button (FAB)."
         },
         {
             "url": "default",
@@ -29,7 +29,7 @@
                     "disabled"
                 ]
             },
-            "description": "This example demonstrates the default functionalities - icon, only label & icon with label of the Syncfusion Floating Action Button (FAB)."
+            "description": "This example demonstrates the default functionalities - icon, only label & icon with label of the Syncfusion<sup>®</sup> Floating Action Button (FAB)."
         },
         {
             "url": "position",
@@ -58,7 +58,7 @@
                     "target"
                 ]
             },
-            "description": "This example demonstrates the available types of the Syncfusion Floating Action Button (FAB)."
+            "description": "This example demonstrates the available types of the Syncfusion<sup>®</sup> Floating Action Button (FAB)."
         }
     ]
 }

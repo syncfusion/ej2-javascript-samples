@@ -11,13 +11,13 @@ this.default = function () {
             legendtheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-high/i, 'High').replace(/5.3/i, '5');
         },
         // custom code end
+        zoomSettings: {
+            enable: false
+        },
         tooltipRender: function (args) {
             if (!args.options.data) {
                 args.cancel = true;
             }
-        },
-        zoomSettings: {
-            enable: false
         },
         titleSettings: {
             text: 'Population density (per square kilometer) - 2015',

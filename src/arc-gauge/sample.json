@@ -7,25 +7,25 @@
         {
             "url": "default",
             "name": "Default Functionalities",
-            "description": "This Essential JS2 Arc Gauge demo shows the gauge's basic rendering.",
+            "description": "This Essential<sup>®</sup> JS2 Arc Gauge demo shows the gauge's basic rendering.",
             "category": "Arc Gauge"
         },
         {
             "url": "customer-satisfaction-score",
             "name": "Customer Satisfaction Score",
-            "description": "This Essential JS2 Arc Gauge demo shows how the gauge can be customized to represent a customer satisfaction score scenario.",
+            "description": "This Essential<sup>®</sup> JS2 Arc Gauge demo shows how the gauge can be customized to represent a customer satisfaction score scenario.",
             "category": "Arc Gauge"
         },
         {
             "url": "key-performance-indicator",
             "name": "Key Performance Indicator",
-            "description": "This Essential JS2 Arc Gauge demo shows how the gauge can be customized to represent a key performance indicator scenario.",
+            "description": "This Essential<sup>®</sup> JS2 Arc Gauge demo shows how the gauge can be customized to represent a key performance indicator scenario.",
             "category": "Arc Gauge"
         },
         {
             "url": "patterns",
             "name": "Patterns",
-            "description": "This Essential JS2 Arc Gauge demo shows how the gauge can be rendered in many ways to demonstrate different user interfaces by customizing its axis, range, pointer, etc.",
+            "description": "This Essential<sup>®</sup> JS2 Arc Gauge demo shows how the gauge can be rendered in many ways to demonstrate different user interfaces by customizing its axis, range, pointer, etc.",
             "category": "Arc Gauge"
         }
     ]

@@ -10,7 +10,6 @@
             "name": "Default Functionalities",
             "category": "Image Editor",
             "ftName": "image-editor",
-            "type": "update",
             "api": {
                 "ImageEditor": [
                     "width",             
@@ -42,6 +41,19 @@
                 ]
             },
             "description": "ImageEditor component provides built in support to edit the images with custom toolbar."
+        },
+        {
+            "url": "file-restrict",
+            "name": "File Restriction",
+            "category": "Image Editor",
+            "ftName": "image-editor",
+            "type": "new",
+            "api": {
+              "ImageEditor": [
+                
+              ]
+            },
+            "description": "The Image Editor component provides built-in support to restrict uploaded files based on file size and extensions. Users can dynamically customize the restrictions using numeric inputs and a multi-select dropdown."
         }
     ]
 }

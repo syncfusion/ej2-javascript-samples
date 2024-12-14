@@ -6,37 +6,37 @@ ej.diagrams.Diagram.Inject(
     ej.diagrams.DataBinding,
     ej.diagrams.ComplexHierarchicalTree,
     ej.diagrams.LineDistribution
-  );
-var horizontalSpacingObj;
-var verticalSpacingObj;
-var marginTopObj;
-var marginLeftObj;
-var diagram;
+);
 
-//Apply the Alignment for the layout.
-function update(value) {
-    switch (value) {
-        case 'left':
-            diagram.layout.margin.left = marginLeftObj.value;
-            break;
-        case 'top':
-            diagram.layout.verticalAlignment = 'Top';
-            diagram.layout.margin.top = marginTopObj.value;
-            break;
-        case 'hspacing':
-            diagram.layout.horizontalSpacing = horizontalSpacingObj.value;
-            break;
-        case 'vspacing':
-            diagram.layout.verticalSpacing = verticalSpacingObj.value;
-            break;
-    }
-    diagram.dataBind();
-}
 
 
 this.default = function () {
+    var horizontalSpacingObj;
+    var verticalSpacingObj;
+    var marginTopObj;
+    var marginLeftObj;
+
+    //Apply the Alignment for the layout.
+    function update(value) {
+        switch (value) {
+            case 'left':
+                diagram.layout.margin.left = marginLeftObj.value;
+                break;
+            case 'top':
+                diagram.layout.verticalAlignment = 'Top';
+                diagram.layout.margin.top = marginTopObj.value;
+                break;
+            case 'hspacing':
+                diagram.layout.horizontalSpacing = horizontalSpacingObj.value;
+                break;
+            case 'vspacing':
+                diagram.layout.verticalSpacing = verticalSpacingObj.value;
+                break;
+        }
+        diagram.dataBind();
+    }
     //Initializes diagram control
-    diagram = new ej.diagrams.Diagram({
+    var diagram = new ej.diagrams.Diagram({
         width: '100%', height: 580,
         //Configrues hierarchical tree layout
         layout: {
@@ -75,14 +75,14 @@ this.default = function () {
     });
     diagram.appendTo('#diagram');
 
-     var checkBoxObj = new ej.buttons.CheckBox({
-         checked: true, label: 'Prevent Connector Overlapping',
-          change: function (args) {
-              diagram.layout.connectionPointOrigin = args.checked ? ej.diagrams.ConnectionPointOrigin.DifferentPoint :
-               ej.diagrams.ConnectionPointOrigin.SamePoint;
-          }
-      });
-     checkBoxObj.appendTo('#checked');
+    var checkBoxObj = new ej.buttons.CheckBox({
+        checked: true, label: 'Prevent Connector Overlapping',
+        change: function (args) {
+            diagram.layout.connectionPointOrigin = args.checked ? ej.diagrams.ConnectionPointOrigin.DifferentPoint :
+                ej.diagrams.ConnectionPointOrigin.SamePoint;
+        }
+    });
+    checkBoxObj.appendTo('#checked');
 
     //used NumericTextBox for left margin of the layout.
     marginLeftObj = new ej.inputs.NumericTextBox({
@@ -124,7 +124,7 @@ this.default = function () {
         }
     });
     verticalSpacingObj.appendTo('#vertical');
-    
+
     //Click Event for Appearance of the layout.
     document.getElementById('appearance').onclick = function (args) {
         var target = args.target;

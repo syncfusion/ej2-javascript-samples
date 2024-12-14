@@ -20,7 +20,7 @@ this.default = function () {
             {
                 prefixIcon: 'e-icons e-last-page', tooltipText: 'Show last page', text: 'Last', showTextOn: 'Overflow', align: 'Left' },
             {
-                type: 'Input', align: 'Left', cssClass: 'page-count', template: "<div><input type='text' id='numeric' ><span class=total-page> of 100 </span></input></div>" },
+                type: 'Input', align: 'Left', cssClass: 'page-count', template: new ej.inputs.NumericTextBox({ format: '###.##', width: 50, value: 0, min: 0, max: 100, showSpinButton: false }) },
             {
                 type: 'Separator', align: 'Left' },
             {
@@ -60,17 +60,7 @@ this.default = function () {
             ] 
     });
     toolbarObj.appendTo('#toolbar_template');
-    
-    var numeric = new ej.inputs.NumericTextBox({
-        format: '###.##',
-        width: 50,
-        value: 0,
-        min: 0,
-        max: 100,
-        showSpinButton: false
-    });
-    numeric.appendTo("#numeric");
-    
+      
     function OnCreateSearch() {
         this.addIcon('prepend', 'e-icons e-search');
     }

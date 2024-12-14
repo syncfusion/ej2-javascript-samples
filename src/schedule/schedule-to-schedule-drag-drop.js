@@ -75,11 +75,22 @@ this.default = function () {
             if (cellData) {
                 var resourceDetails = targetSchedule.getResourcesByIndex(cellData.groupIndex);
                 sourceSchedule.deleteEvent(args.data.Id);
+                var droppedEventStartTime;
+                var droppedEventEndTime;
+                var eventDuration = new Date(args.data.EndTime).getTime() - new Date(args.data.StartTime).getTime();
+                if (!args.data.IsAllDay) {
+                    droppedEventStartTime = new Date(cellData.startTime);
+                    droppedEventStartTime.setHours(args.data.StartTime.getHours(), args.data.StartTime.getMinutes());
+                    droppedEventEndTime = new Date(droppedEventStartTime.getTime() + eventDuration);
+                } else {
+                    droppedEventStartTime = cellData.startTime;
+                    droppedEventEndTime = new Date(droppedEventStartTime.getTime() + eventDuration);
+                }
                 var eventData = {
                     Id: targetSchedule.getEventMaxID(),
                     Subject: args.data.Subject,
-                    StartTime: args.data.StartTime,
-                    EndTime: args.data.EndTime,
+                    StartTime: droppedEventStartTime,
+                    EndTime: droppedEventEndTime,
                     IsAllDay: args.data.IsAllDay,
                     Location: args.data.Location,
                     Description: args.data.Description,

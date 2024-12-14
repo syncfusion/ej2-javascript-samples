@@ -34,6 +34,10 @@ var fluent2HighContrastColors = ["#9BB449", "#2A72D5", "#43B786", "#3F579A", "#5
     "#0B6A0B", "#C19C00"];
 var bootstrap5Colors = ['#FD7E14', '#6610F2', '#6F42C1', '#D63384', '#DC3545',
     '#FFC107', '#198754', '#0DCAF0','#FD7E14', '#6610F2'];
+var pointTailwindColors = ["#5A61F6", "#65A30D", "#334155", "#14B8A6", "#8B5CF6", "#0369A1", "#F97316", "#9333EA", "#F59E0B", "#15803D"];
+var pointTailwindDarkColors =  ["#8B5CF6", "#22D3EE", "#F87171", "#4ADE80", "#E879F9", "#FCD34D", "#F97316", "#2DD4BF", "#F472B6", "#10B981"];
+var pointTailwind3Colors = ['#2F4074', '#03B4B4', '#0D72DE', '#FF5733', '#D63384', '#F39C12', '#EF291F', '#91C822', '#2F4074', '#03B4B4'];
+var pointTailwind3DarkColors = ['#8029F1', '#1ABC9C', '#0D72DE', '#FF5733', '#D63384', '#F39C12', '#EF291F', '#91C822', '#8029F1', '#1ABC9C'];
 var pointRender = function (args) {
     var dataTheme = location.hash.split('/')[1];
     if (dataTheme && dataTheme.indexOf('fabric') > -1) {
@@ -59,7 +63,15 @@ var pointRender = function (args) {
     }
     else if (dataTheme === 'bootstrap5' || dataTheme === 'bootstrap5-dark') {
         args.fill = bootstrap5Colors[args.point.index % 10];
-    }
+    } else if (dataTheme === 'tailwind') {
+        args.fill = pointTailwindColors[args.point.index % 10];
+    } else if (dataTheme === 'tailwind-dark') {
+        args.fill = pointTailwindDarkColors[args.point.index % 10];
+    } else if (dataTheme === 'tailwind3') {
+        args.fill = pointTailwind3Colors[args.point.index % 10];
+    } else if (dataTheme === 'tailwind3-dark') {
+        args.fill = pointTailwind3DarkColors[args.point.index % 10];
+    } 
     else {
         args.fill = bootstrapColors[args.point.index % 10];
     }

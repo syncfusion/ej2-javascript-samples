@@ -1,6 +1,5 @@
 {
     "name": "Markdown Editor",
-    "type": "update",
     "directory": "mark-down-editor",    
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
@@ -14,7 +13,7 @@
         {
             "url": "default-functionalities",
             "name": "Default Functionalities",
-            "description": "This demo for Syncfusion JavaScript (ECMAScript 5) Rich Text Editor control shows the markdown editing in the Rich Text Editor with complete features.",
+            "description": "This demo for Syncfusion<sup>®</sup> JavaScript (ECMAScript 5) Rich Text Editor control shows the markdown editing in the Rich Text Editor with complete features.",
             "category": "Markdown Editor",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "formatter", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
         },
@@ -31,7 +30,6 @@
             "name": "@ Mention",
             "description": "This demo shows how to convert markdown content (with the custom format) to valid HTML markup using Markdown-to-HTML of the markdown parser in JS(ECMAScript 5).",
             "category": "Markdown Editor",
-            "type": "new",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "formatter", "appendTo"], "ToolbarSettings": ["items"] }
         }
     ]

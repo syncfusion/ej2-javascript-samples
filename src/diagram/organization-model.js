@@ -4,29 +4,30 @@
 ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree, ej.diagrams.LayoutAnimation);
 
 
-//sets default value for Node.
-function getNodeDefaults(obj) {
-    obj.backgroundColor = obj.data.color;
-    obj.style = { fill: 'none', strokeColor: 'none', color: 'white' };
-    obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
-    obj.expandIcon.verticalAlignment = 'Center';
-    obj.expandIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
-    obj.collapseIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
-    obj.collapseIcon.verticalAlignment = 'Center';
-    obj.collapseIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
-    obj.width = 120;
-    obj.height = 30;
-    return obj;
-}
-//sets default value for Connector.
-function getConnectorDefaults(connector) {
-    connector.targetDecorator.shape = 'None';
-    connector.type = 'Orthogonal';
-    connector.constraints = 0;
-    connector.cornerRadius = 0;
-    return connector;
-}
+
 this.default = function () {
+    //sets default value for Node.
+    function getNodeDefaults(obj) {
+        obj.backgroundColor = obj.data.color;
+        obj.style = { fill: 'none', strokeColor: 'none', color: 'white' };
+        obj.expandIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
+        obj.expandIcon.verticalAlignment = 'Center';
+        obj.expandIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
+        obj.collapseIcon = { height: 10, width: 10, shape: 'None', fill: 'lightgray', offset: { x: 0.5, y: 1 } };
+        obj.collapseIcon.verticalAlignment = 'Center';
+        obj.collapseIcon.margin = { left: 0, right: 0, top: 0, bottom: 0 };
+        obj.width = 120;
+        obj.height = 30;
+        return obj;
+    }
+    //sets default value for Connector.
+    function getConnectorDefaults(connector) {
+        connector.targetDecorator.shape = 'None';
+        connector.type = 'Orthogonal';
+        connector.constraints = 0;
+        connector.cornerRadius = 0;
+        return connector;
+    }
     //Initializes the nodes for the diagram
     var diagram = new ej.diagrams.Diagram({
         width: '100%', height: '700px', snapSettings: { constraints: ej.diagrams.SnapConstraints.None },

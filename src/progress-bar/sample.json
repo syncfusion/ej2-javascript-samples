@@ -7,7 +7,7 @@
         {
             "url": "linear",
             "name": "Linear",
-            "description":"This demo for Essential JS2 Progress Bar control shows the linear rendering of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the linear rendering of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -21,7 +21,7 @@
         {
             "url": "circular",
             "name": "Circular",
-            "description":"This demo for Essential JS2 Progress Bar control shows the circular rendering of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the circular rendering of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -36,7 +36,7 @@
         {
             "url": "angle",
             "name": "Angle",
-            "description":"This demo for Essential JS2 Progress Bar control shows the semi circular rendering of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the semi circular rendering of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -50,7 +50,7 @@
         {
             "url": "custom-content",
             "name": "Custom Contents",
-            "description":"This demo for Essential JS2 Progress Bar control shows the progress bar rendering with custom content",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the progress bar rendering with custom content",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -63,7 +63,7 @@
         {
             "url": "tooltip",
             "name": "Tooltip",
-            "description": "This demo for Essential JS2 Progress Bar control shows the progress bar rendering with tooltip",
+            "description": "This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the progress bar rendering with tooltip",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -76,7 +76,7 @@
         {
             "url": "labels",
             "name": "Labels",
-            "description":"This demo for Essential JS2 Progress Bar control shows the label of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the label of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -91,7 +91,7 @@
         {
             "url": "radius",
             "name": "Radius",
-            "description":"This demo for Essential JS2 Progress Bar control shows the different radius of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the different radius of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -104,7 +104,7 @@
         {
             "url": "stripes",
             "name": "Stripes",
-            "description":"This demo for Essential JS2 Progress Bar control shows the striped progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows the striped progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [
@@ -117,7 +117,7 @@
         {
             "url": "progress_segment",
             "name": "Progress Segment",
-            "description":"This demo for Essential JS2 Progress Bar control shows active state of progress bar",
+            "description":"This demo for Essential<sup>®</sup> JS2 Progress Bar control shows active state of progress bar",
             "category": "Progress Bar",
             "api": {
                 "ProgressBar": [

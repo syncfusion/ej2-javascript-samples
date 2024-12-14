@@ -21,7 +21,7 @@ this.default = function () {
         legendSettings: {
             visible: false
         },
-        tooltip: {enable: true, format: '${point.x} : <b>${point.y} cal</b>',header:''},
+        tooltip: {enable: true, enableHighlight: true, format: '${point.x} : <b>${point.y} cal</b>',header:''},
         textRender: function (args) {
             args.text = args.text;
         },

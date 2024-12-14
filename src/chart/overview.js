@@ -157,7 +157,7 @@
         ],
         pointRender: labelRender,
         tooltip: {
-            enable: true, format: "${point.tooltip}" 
+            enable: true, format: "${point.tooltip}", enableHighlight: true
         },
         enableBorderOnMouseMove:false,
         legendSettings: {

@@ -24,12 +24,14 @@ this.default = function () {
     treeGridObj.appendTo('#TreeGrid');
     var dropDownColumns = new ej.dropdowns.DropDownList({
         dataSource: columnsName,
+        width: '135px',
         fields: { text: 'name', value: 'id' },
         value: 'taskID'
     });
     dropDownColumns.appendTo('#columns');
     var dropDownDirection = new ej.dropdowns.DropDownList({
         dataSource: direction,
+        width: '135px',
         fields: { text: 'name', value: 'id' },
         value: 'Ascending'
     });

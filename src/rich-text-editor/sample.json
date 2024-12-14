@@ -1,6 +1,5 @@
 {
     "name": "Rich Text Editor",
-    "type": "update",
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
@@ -10,7 +9,6 @@
             "name": "Overview",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
-            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",  
@@ -456,7 +454,6 @@
             "name": "Mail Merge",
             "description": "This sample demonstrates how to utilize the Mail Merge feature in the Rich Text Editor. It shows how to insertplaceholders into the editor, which are then replaced with actual data to create personalized content.",
             "category": "Rich Text Editor",
-            "type": "new",
             "api": {
                 "RichTextEditor": [
                     "Inject",
@@ -471,9 +468,8 @@
         {
             "url": "export-word",
             "name": "Export to Word / PDF",
-            "description": "This demo explains how to export the content of the Rich Text Editor to Word and PDF document formats using the Syncfusion Document processing libraries.",
+            "description": "This demo explains how to export the content of the Rich Text Editor to Word and PDF document formats using the Syncfusion<sup>®</sup> Document processing libraries.",
             "category": "Export / Import",
-            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",  
@@ -491,9 +487,8 @@
         {
             "url": "import-word",
             "name": "Import from Word",
-            "description": "This demo explains how to import the content from Word document to the Rich Text Editor using the Syncfusion Document processing libraries.",
+            "description": "This demo explains how to import the content from Word document to the Rich Text Editor using the Syncfusion<sup>®</sup> Document processing libraries.",
             "category": "Export / Import",
-            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",  
@@ -525,7 +520,6 @@
         {
             "url": "smart-suggestion",
             "name": "Smart Suggestion",
-            "type": "update",
             "description": "This demo explains to how to use the slash menu feature of the Rich Text Editor to apply formats, open dialogs easily. ",
             "category": "Mention Integration",
             "api": {

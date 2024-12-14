@@ -144,6 +144,8 @@ this.default = function () {
     }
     fileDetails.style.display = "block";
     document.getElementById("fileName").innerHTML = args.filesData[0].name;
+    viewer.downloadFileName = args.filesData[0].name;
+    viewer.exportAnnotationFileName = args.filesData[0].name;
     var size = document.getElementById("fileSize");
     if((args.filesData[0].size.toString()).length <= 6){
       size.innerHTML = ((args.filesData[0].size/1024).toFixed(1)).toString()+" KB";

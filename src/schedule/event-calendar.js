@@ -115,9 +115,9 @@ this.default = function () {
     var scheduleObj = new ej.schedule.Schedule({
         height: '650px',
         width: '100%',
-        selectedDate: new Date(),
         showHeaderBar: false,
         rowAutoHeight: true,
+        selectedDate: new Date(),
         views: [
             { option: 'Day' },
             { option: 'Week' },
@@ -338,13 +338,13 @@ this.default = function () {
         cssClass: 'calendar-edit-dialog',
         header: 'New Calendar',
         content: '<div>Calendar Name</div><div class="dialog-content"><input id="text-box"><input id="color-picker" type="color"></div>',
-        footerTemplate: '<button id="saveButton" class="e-control e-btn e-primary" data-ripple="true"></button>',
         showCloseIcon: true,
         animationSettings: { effect: 'Zoom' },
         visible: false,
         width: '320px',
         height: '250px',
-        isModal: true
+        isModal: true,
+        buttons: [{ buttonModel: { content: 'Add', isPrimary: true } }]
     });
     dialog.appendTo('#dialog');
     var saveButton = new ej.buttons.Button();
@@ -377,20 +377,16 @@ this.default = function () {
             var target = args.event.target;
             if (target.classList.contains('e-edit') && args && args.data != null && dialog != null) {
                 calendarsList.refresh();
-                var inputElement = dialog.element.querySelector('#text-box');
-                var dialogButton = dialog.element.querySelector('#saveButton');
-                if (inputElement) {
-                    inputElement.value = (args.data).name;
+                if (outlineTextBox) {
+                    outlineTextBox.value = (args.data).name;
                     colorPicker.value = (args.data).color;
-                    dialogButton.textContent = 'Save';
+                    dialog.buttons = [{ buttonModel: { content: 'Save', isPrimary: true } }];
                     dialog.header = 'Edit Calendar';
                     dialog.show();
-                    var send = dialog.element.querySelector('#saveButton');
-                    if (send !== null && send !== undefined) {
-                        send.onclick = function () {
-                            var enteredVal = dialog.element.querySelector('#text-box');
-                            if (enteredVal) {
-                                var newValue = enteredVal.value.trim();
+                    dialog.buttons = [{
+                        buttonModel: { isPrimary: true, content: 'Save' }, click: function () {
+                            if (outlineTextBox) {
+                                var newValue = outlineTextBox.value.trim();
                                 var newColor = colorPicker.value.trim();
                                 if (newValue.length > 0) {
                                     calendars = calendars.map(function (item) {
@@ -405,8 +401,8 @@ this.default = function () {
                                     dialog.hide();
                                 }
                             }
-                        };
-                    }
+                        }
+                    }];
                 }
             } else if (target && target.classList.contains('e-trash') && args && args.item != null && calendars.length > 1) {
                 if (calendars.length > 1) {
@@ -503,29 +499,26 @@ this.default = function () {
         if (iconAdd) {
             iconAdd.addEventListener("click", function (args) {
                 isAdd = true;
-                var dialogButton = dialog.element.querySelector('#saveButton');
-                dialogButton.textContent = 'Add';
-                var inputElement = dialog.element.querySelector('#text-box');
-                if (inputElement) {
-                    inputElement.value = "";
+                dialog.buttons = [{ buttonModel: { content: 'Add', isPrimary: true } }];
+                if (outlineTextBox) {
+                    outlineTextBox.value = "";
                     colorPicker.value = "#008000ff";
                 }
                 dialog.header = 'New Calendar';
                 dialog.show();
-                if (dialogButton != null) {
-                    dialogButton.onclick = function () {
+                dialog.buttons = [{
+                    buttonModel: { isPrimary: true, content: 'Add' }, click: function () {
                         updateTextValue();
-                    };
-                }
+                    }
+                }];
             });
         }
     }
 
     function updateTextValue() {
         if (isAdd) {
-            var enteredVal = dialog.element.querySelector('#text-box');
-            if (enteredVal) {
-                var newValue = enteredVal.value.trim();
+            if (outlineTextBox) {
+                var newValue = outlineTextBox.value.trim();
                 newValue = newValue === "" ? "New Calendar" : newValue;
                 var newId = (calendars.length + 1);
                 var newItem = { name: newValue, id: newId, color: colorPicker.value, isSelected: true };

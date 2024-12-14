@@ -16,8 +16,7 @@ this.default = function () {
   var viewer = new ej.pdfviewer.PdfViewer({
     documentPath:
       'https://cdn.syncfusion.com/content/PDFViewer/Fill+and+Sign.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
-    serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib',
     documentLoad: documentLoaded,
     pageClick: pageClick
   });

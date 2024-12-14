@@ -1,0 +1,181 @@
+<div class="control-section">
+    <div class='control-wrapper'>
+        <div class="filemanager_container">
+            <div id='smartfilemanager'>
+                <div id="customTbarDialog"></div>
+            </div>
+            <!-- Tag container -->
+            <div id="tags" class="tags" style="display: none;">
+                <div id="tagContainer">
+                    <div class="title-container">
+                        <strong>Existing File Tags:</strong>
+                        <button id="closebtn"></button>
+                    </div>
+                    <br />
+                    <p id="emptyTag" style="display: none;">No tags available</p>
+                    <div id="fileTags" class="scrollable-container">
+                        <div id="fileChips" aria-label="inputChips"></div>
+                    </div>
+                    <br />
+                    <strong style="margin-bottom: 10px;">AI suggested File Tags:</strong>
+                    <p id="emptyAiTag">Click <strong>"Generate AI Tags"</strong> button to get
+                        suggested tags from AI.</p>
+                    <div id="aiTags" class="scrollable-container">
+                        <div id="aiChips" aria-label="inputChips"></div>
+                    </div>
+                    <div class="button-container">
+                        <button id="savebtn">Save AI Tags</button>
+                        <button id="generatebtn">Generate AI Tags</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This demo showcases the tagging capabilities of the Syncfusion JavaScript File Manager, including:</p>
+    <ul>
+        <li><strong>Content Summary:</strong> Users can quickly get summaries of .txt, .pdf, and .docx files by
+            selecting a file and clicking the "Quick Summary" button in the File Manager Toolbar.</li>
+        <li><strong>AI Tagging:</strong> Users can tag files with AI-generated tag details by selecting a file and
+            clicking the "Manage Tags" button in the File Manager context menu.</li>
+        <li><strong>Tag Search:</strong> Users can search for items based on file tags. By providing a file tag in the
+            File Manager search bar and clicking the search icon, users can find files tagged with the specified term.
+        </li>
+    </ul>
+    <p>These features enhance file management by making document overview faster and making it easier to categorize and
+        locate files based on their tags.</p>
+    <p>To explore this and more Syncfusion JavaScript Smart AI integrations locally, check out our <a target='_blank'
+            href='' aria-label="Navigate to explore the syncfusion JavaScript AI Demos repository">GitHub
+            repository</a>.</p>
+</div>
+<div id="description">
+    <ul>
+        <li><strong>Content Summary:</strong> This feature extracts and summarizes file content using AI. Users can
+            access it via the "Quick Summary" button, which generates a concise overview of the file's content.</li>
+        <li><strong>AI Tagging:</strong> This feature generates tags for selected files using AI. Users can update the
+            tag details for a file by selecting it and using the "Manage Tags" option in the context menu.</li>
+        <li><strong>Tag Search:</strong> This feature allows users to search for files based on their tags. The search
+            term entered in the File Manager search bar is compared with the tags of files, and relevant files are
+            displayed based on tag similarity.
+        </li>
+    </ul>
+</div>
+<style>
+    #customTbarDialog_title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        padding: 10px 15px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .scrollable-container {
+        max-height: 25%;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    #tagContainer {
+        height: 500px;
+        border: 1px solid #d1d9e0;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: fit-content;
+    }
+
+    #tagContainer .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #tagContainer .title-container strong {
+        font-size: 15px;
+        color: #0078d4;
+    }
+
+    .filemanager_container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    #smartfilemanager {
+        flex: 1;
+    }
+
+    .tags {
+        width: 100%;
+        max-width: 28%;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+
+    #tags p {
+        margin: 10px 0;
+    }
+
+    .scrollable-container {
+        margin-bottom: 10px;
+    }
+
+    button {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .feature-description {
+        border: 1px solid #d1d9e0;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        margin: 20px 0;
+    }
+
+    .feature-description h4 {
+        color: #2a3f54;
+        font-size: 1em;
+        /* Reduced font size */
+        margin-bottom: 15px;
+    }
+
+    .feature-description ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    .feature-description li {
+        color: #596775;
+        font-size: 1em;
+        /* Reduced font size */
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .feature-description li:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .flex-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Adjust spacing between label and container */
+    }
+</style>

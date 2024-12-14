@@ -104,7 +104,8 @@ this.default = function () {
         legendSettings: { visible: true, enableHighlight: true },
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true,
+            enableHighlight: true
         },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start

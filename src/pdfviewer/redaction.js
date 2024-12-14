@@ -7,7 +7,7 @@ this.default = function () {
         enableCommentPanel: false,
         enableAnnotationToolbar: false,
         documentPath: 'https://cdn.syncfusion.com/content/pdf/programmatical-annotations.pdf',
-        serviceUrl: 'https://ej2services.syncfusion.com/js/development/api/pdfviewer'
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/27.1.55/dist/ej2-pdfviewer-lib'
     });
     viewer.appendTo('#pdfViewer');
 
@@ -27,6 +27,7 @@ this.default = function () {
     var redactionCount = 0;
     var annotation;
     var fileName = "programmatical-annotations.pdf";
+    var url = "https://ej2services.syncfusion.com/js/development/api/pdfviewer/Redaction";
     //Creation of Toolbar with open , text , image , pattern , blackout, whiteout and redaction buttons
     var primaryToolbarObj = new ej.navigations.Toolbar({
         items: [
@@ -53,7 +54,7 @@ this.default = function () {
                 type: 'Separator'
             },
             {
-                prefixIcon: 'e-icons e-redact', tooltipText: 'Redaction' , cssClass: 'e-pv-redact-sb-redaction-container', text: 'Redact', id: 'redacticon', click: redaction.bind(this), disabled: true
+                prefixIcon: 'e-icons e-redact', cssClass: 'e-pv-redact-sb-redaction-container', tooltipText: 'Redaction' , text: 'Redact', id: 'redacticon', click: redaction.bind(this), disabled: true 
             }
         ]
     });
@@ -66,13 +67,13 @@ this.default = function () {
     var secondaryToolbarObj = new ej.navigations.Toolbar({
         items: [
             {
-                prefixIcon: 'e-icon e-chevron-left', cssClass: 'e-pv-redact-sb-previous-container', id: 'previousPage', tooltipText: 'Previous Page' , click: previousClicked.bind(this), disabled: true
+                prefixIcon: 'e-icon e-chevron-left', cssClass: 'e-pv-redact-sb-previous-container', id: 'previousPage', click: previousClicked.bind(this), disabled: true , tooltipText: 'Previous Page'
             },
             {
                 template: CurrentpageNumber
             },
             {
-                prefixIcon: 'e-icon e-chevron-right', cssClass: 'e-pv-redact-sb-next-container', id: 'nextPage', tooltipText: 'Next Page' , click: nextClicked.bind(this), disabled: true
+                prefixIcon: 'e-icon e-chevron-right', cssClass: 'e-pv-redact-sb-next-container', id: 'nextPage', click: nextClicked.bind(this), disabled: true , tooltipText: 'Next Page'
             },
             {
                 type: 'Separator'
@@ -255,12 +256,85 @@ this.default = function () {
 
     //To download the redacted pdf 
     function downloadClicked() {
-        viewer.fileName = fileName;
-        viewer.downloadFileName = fileName;
-        viewer.serverActionSettings.download = "Redaction";
-        viewer.download();
-        viewer.serverActionSettings.download = "Download";
+        viewer.saveAsBlob().then(function (value) {
+            var reader = new FileReader();
+            reader.readAsDataURL(value);
+            reader.onload = function (e) {
+                var base64String = e.target ? e.target.result : null;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url, true);
+                xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+                var requestData = JSON.stringify({ base64String: base64String });
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        var blobUrl = createBlobUrl(xhr.responseText.split('base64,')[1], 'application/pdf');
+                        downloadDocument(blobUrl);
+                    }
+                    else {
+                        console.error('Download failed:', xhr.statusText);
+                    }
+                };
+                xhr.onerror = function () {
+                    console.error('An error occurred during the download:', xhr.statusText);
+                };
+                xhr.send(requestData);
+            };
+        }).catch(function (error) {
+            console.error('Error saving Blob:', error);
+        });
+    }
 
+    function createBlobUrl(base64String, contentType) {
+        var sliceSize = 512;
+        var byteCharacters = atob(base64String);
+        var byteArrays = [];
+        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[parseInt(i.toString(), 10)] = slice.charCodeAt(i);
+            }
+            var byteArray = new Uint8Array(byteNumbers);
+            byteArrays.push(byteArray);
+        }
+        var blob = new Blob(byteArrays, { type: contentType });
+        return blob;
+    }
+
+    function downloadDocument(blobUrl) {
+        var Url = URL || webkitURL;
+        blobUrl = Url.createObjectURL(blobUrl);
+        viewer.fileName = fileName;
+        var anchorElement = document.createElement('a');
+        if (anchorElement.click) {
+            (anchorElement).href = blobUrl;
+            (anchorElement).target = '_parent';
+            if ('download' in anchorElement) {
+                var downloadFileName = viewer.fileName || 'downloadedFile.pdf';
+                if (downloadFileName) {
+                    if (downloadFileName.endsWith('.pdf')) {
+                        (anchorElement).download = downloadFileName;
+                    }
+                    else {
+                        var splitPdf = downloadFileName.split('.pdf')[0] + '.pdf';
+                        (anchorElement).download = splitPdf;
+                    }
+                }
+                else {
+                    (anchorElement).download = 'Default.pdf';
+                }
+            }
+            (document.body || document.documentElement).appendChild(anchorElement);
+            anchorElement.click();
+        }
+        else {
+            if (window.top === window &&
+                blobUrl.split('#')[0] === window.location.href.split('#')[0]) {
+                var padCharacter = blobUrl.indexOf('?') === -1 ? '?' : '&';
+                blobUrl = blobUrl.replace(/#|$/, padCharacter + '$&');
+            }
+            window.open(blobUrl, '_parent');
+        }
     }
 
     function readFile(args) {
@@ -358,19 +432,32 @@ this.default = function () {
     //To redact the pdf in server side using the button click event
     function redaction() {
         if (redactionCount > 0) {
-            viewer.serverActionSettings.download = "Redaction";
             viewer.saveAsBlob().then(function (value) {
                 var data = value;
                 var reader = new FileReader();
                 reader.readAsDataURL(data);
                 reader.onload = function (e) {
                     var base64String = e.target ? e.target.result : null;
-                    viewer.load(base64String, null);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', url, true);
+                    xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+                    var requestData = JSON.stringify({ base64String: base64String });
+                    xhr.onload = function () {
+                        if (xhr.status === 200) {
+                            viewer.load(xhr.responseText, null);
+                        }
+                        else {
+                            console.error('Redaction failed:', xhr.statusText);
+                        }
+                    };
+                    xhr.onerror = function () {
+                        console.error('An error occurred during the redaction:', xhr.statusText);
+                    };
+                    xhr.send(requestData);
                 };
             });
             redactionCount = 0;
             updateRedaction();
-            viewer.serverActionSettings.download = "Download";
         }
     }
 

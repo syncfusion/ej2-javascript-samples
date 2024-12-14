@@ -1,5 +1,5 @@
-this.default = function () {
-    var dropdownlistObj;   
+this.default = function () {   
+    var dropdownlistObj;
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.resourceAllocationData,
         height: '450px',
@@ -90,31 +90,50 @@ this.default = function () {
         columns: [
             { field: 'TaskID', visible: false},
             { field: 'TaskName', headerText: 'Task Name', width: '180'},
-            { field: 'resources', headerText: 'Resources', width: '190', template: '#resColumnTemplate', editType: "dropdownedit",
+            {
+                field: 'resources',
+                headerText: 'Resources',
+                width: '190',
+                template: '#resColumnTemplate',
+                editType: "dropdownedit",
                 edit: {
                     read: function () {
+                        // Get the selected value from the dropdown
                         var value = dropdownlistObj.value;
                         if (value == null) {
-                            value = [];
+                            // If no value is selected, retain the existing resource(s)
+                            value = ganttChart.treeGridModule.currentEditRow[ganttChart.taskFields.resourceInfo];
+                        } else {
+                            // Update the resource info with the selected value
+                            ganttChart.treeGridModule.currentEditRow[ganttChart.taskFields.resourceInfo] = [value];
                         }
-                        ganttChart.treeGridModule.currentEditRow[ganttChart.taskFields.resourceInfo] = [value];
                         return value;
                     },
                     destroy: function () {
+                        // Clean up the dropdown instance
                         dropdownlistObj.destroy();
                     },
                     write: function (args) {
+                        // Ensure the currentEditRow object is initialized
                         ganttChart.treeGridModule.currentEditRow = {};
+            
+                        // Retrieve the existing resource(s) from the row data or set default
+                        var existingResourceIds = ganttChart.treeGridModule.getResourceIds(args.rowData);
+                        var selectedValue = (existingResourceIds && existingResourceIds.length > 0) ? existingResourceIds[0] : null;
+            
+                        // Initialize the DropDownList
                         dropdownlistObj = new ej.dropdowns.DropDownList({
-                        dataSource: new ej.data.DataManager(ganttChart.resources),
-                        fields: { text: ganttChart.resourceFields.name, value: ganttChart.resourceFields.id },
-                        enableRtl: ganttChart.enableRtl,
-                        popupHeight: '350px',
-                        value: ganttChart.treeGridModule.getResourceIds(args.rowData)
-                    });
-                    dropdownlistObj.appendTo(args.element);
-                    }
-                }
+                            dataSource: new ej.data.DataManager(ganttChart.resources),
+                            fields: { text: ganttChart.resourceFields.name, value: ganttChart.resourceFields.id },
+                            enableRtl: ganttChart.enableRtl,
+                            popupHeight: '350px',
+                            // Set the existing resource(s) as the selected value
+                            value: selectedValue,
+                        });
+                        // Append the dropdown to the element
+                        dropdownlistObj.appendTo(args.element);
+                    },
+                },
             },
             { field: 'work', width:'110'},
             { field: 'Duration', width: '100' },
@@ -126,10 +145,28 @@ this.default = function () {
         addDialogFields: [
             { type: 'Resources' }
         ],
+        cellEdit: function (args) {
+            // Restrict editing based on row data
+            if (args.rowData.TaskID === 1 || args.rowData.TaskID === 5) { // Example: Prevent editing Task ID 1
+                args.cancel = true; // Cancel editing for this specific cell
+            }
+        },
         actionBegin: function (args) {
             if (args.requestType === 'beforeOpenEditDialog' || args.requestType === 'beforeOpenAddDialog') {
+                // Restrict editing based on row data for dialog
+                if (args.rowData.TaskID === 1 || args.rowData.TaskID === 5) {
+                    args.cancel = true; // Cancel editing for this specific row dialog
+                }
                 args.Resources.selectionSettings = {};
                 args.Resources.columns.splice(0, 1);
+            }
+        },
+        actionComplete: function (args) {
+            if (args.requestType === 'add' && !args.data.TaskName) {
+                var taskName = 'Task Name ' + args.data.TaskID;
+                args.data.TaskName = taskName;
+                args.data.ganttProperties.taskName = taskName;
+                args.data.taskData.TaskName = taskName;
             }
         },
         toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],

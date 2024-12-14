@@ -6,7 +6,7 @@
 </div>
 
 <div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
+    <table id="property" title="Properties" style="width: 100%; table-layout: auto">
         <tr>
             <td style="width: 30%">
                 <div>Column</div>
@@ -50,10 +50,6 @@
     #columnddl {
         min-width: 120px;
     }
-
-    #columnddl {
-        min-width: 120px;
-    }
     #hide:disabled:hover,
     #show:disabled:hover {
         color: #000000;
@@ -63,7 +59,16 @@
     .fluent2-highcontrast .btn{
         outline: none !important;
     }
+    @media (min-width: 990px) and (max-width: 1300px) {
 
+        .property-section #property {
+            width: 130% !important;
+        }
+
+        .property-section #hiddencolumns {
+            width:85%;
+        }
+    }
 </style>
 
 <div id="action-description">

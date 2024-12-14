@@ -1,8 +1,28 @@
-<div class="control-section">
+<div class="col-lg-8 control-section">
     <div class='control-wrapper'>
         <div style='padding-top:60px;'>
+            <label>Select an employee</label>
             <input type="text" tabindex="1" id='filtering' />
         </div>
+    </div>
+</div>
+<div class="col-lg-4 property-section">
+    <div class="property-panel-header"> Properties </div>
+    <div class="property-panel-content">
+        <table class="property-panel-table">
+            <tbody>
+                <tr>
+                    <td> Choose filter type </td>
+                    <td style="padding-right: 10px">
+                        <select id="filterType">
+                            <option value="StartsWith">StartsWith</option>
+                            <option value="EndsWith">EndsWith</option>
+                            <option value="Contains">Contains</option>
+                        </select>                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -11,12 +31,12 @@
 </div>
 
 <div id="description">
-    <p>This sample illustrates to query the datasource and pass the resulted data when characters are typed in the search box triggers the <code>filtering</code> event and using the <code>updateData</code> method to display the list of employees in the MultiColumn ComboBox.</p>
+    <p>The <code>MultiColumn ComboBox</code> supports filtering, which allows users to search for and select items by typing keywords. The available items are dynamically filtered based on the input, ensuring quick access to the desired data.</p>
 </div>
 <style>
     .control-wrapper {
         margin: 0 auto;
-        width: 585px;
+        width: 250px;
     }
     /*custom code starts*/
     @media screen and (max-width: 480px) {

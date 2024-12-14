@@ -2,7 +2,7 @@
     "Smart Controls": ["Smart Paste", "Smart TextArea"],
     "Smart AI Solutions": ["Data Grid", "Tree Grid", "Spreadsheet", "Diagram", "Gantt Chart", "Query Builder", "ComboBox", "Image Editor", "Pivot Table", "Rich Text Editor", "Kanban", "Scheduler", "Maps", "PDF Viewer", "Document Editor"],
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
-    "Interactive Chat": [ "AI AssistView"],
+    "Interactive Chat": [ "AI AssistView", "Chat UI"],
     "Data Visualization": ["Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
     "Forms": ["Form Validation", "Query Builder"],
     "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Markdown Editor", "Document Editor", "Image Editor"],
