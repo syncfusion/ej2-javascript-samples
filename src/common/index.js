@@ -1208,13 +1208,13 @@ function setPropertySectionHeight() {
 
 function routeDefault() {
     crossroads.addRoute('', function () {
-        window.location.href = '#/' + selectedTheme + '/grid/gridoverview.html';
+        window.location.href = '#/' + selectedTheme + '/grid/grid-overview.html';
         isInitRedirected = true;
     });
     crossroads.bypassed.add(function (request) {
         var hash = request.split('.html')[0].split('/');
         if (samplePath.indexOf(hash.slice(1).join('/')) === -1) {
-            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/gridoverview.html');
+            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/grid-overview.html');
             isInitRedirected = true;
             reloadPageForRedirection = true;
         }
