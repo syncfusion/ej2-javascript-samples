@@ -36,7 +36,7 @@ this.default = function () {
             },
         ],
         tooltip: {
-            enable: true,
+            enable: true, showNearestTooltip: true,
             format: 'Temperature : <b>${point.low} - ${point.high}</b>',header :'<b>${point.x}</b>' ,
             shared: false
         },

@@ -1,7 +1,7 @@
 /**
  * Sample for RSI Indicator
  */
-this.renderChartRSI = function () {
+var renderChartRSI = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',

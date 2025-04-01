@@ -3,6 +3,7 @@
     "directory": "diagram",
     "category": "Data Visualization",
     "ftName": "diagram",
+    "type":"update",
     "dataSourcePath":"src/diagram/diagram-data.js",
     "samples": [
         {
@@ -40,6 +41,13 @@
             "name": "Line Routing",
             "description": "This sample visualizes the connectors that are automatically re-routing or moving away if any shape found on the connectors path.",
             "category": "Getting Started"
+        },        
+        {
+            "url": "avoid-connector-overlap",
+            "name": "Avoid Connector Overlap",
+            "description": "This sample visualizes the connectors that automatically adjust to minimize visual overlap, ensuring clear and distinct representations of connections within the diagram.",
+            "category": "Getting Started",
+            "type":"new"
         },
         {
             "url": "getting-started-annotation",
@@ -283,8 +291,8 @@
         },
         {
             "url": "workflow-editor",
-            "name": "WorkFlow Diagram",
-            "description": "This sample visually represents a simple workflow of a Travel Request Agency using Syncfusion<sup>®</sup> EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
+            "name": "Workflow Diagram",
+            "description": "This sample visually represents a simple Workflow of a Travel Request Agency using Syncfusion<sup>®</sup> EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
             "category": "Real-time Diagrams"
         },
         {

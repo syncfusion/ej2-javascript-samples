@@ -10,11 +10,11 @@
             </aside>
             
             <aside id="default_right_sidebar">
+                <div id="folder-info-header">
+                    <span id="fileType">Details pane</span>
+                    <button id="close-btn" class="e-icons e-close close-sidebar"></button>
+                </div>
                 <div id="single-selection-pane" style="display: none;" class="folder-info">
-                    <div id="folder-info-header">
-                        <span id="fileType"></span>
-                        <button id="close-btn" class="e-icons e-close close-sidebar"></button>
-                    </div>
                     <div class="folder-container">
                         <div id="imageType" class="e-filemanager-image"></div>
                     </div>
@@ -522,6 +522,12 @@
     .fluent-dark .tag-span,
     .fluent-dark .more-detais-container {
         color: #100f0f;
+    }
+
+    @media (max-width: 768px) {
+        .e-show-hide-panel {
+            padding: 4px 2px 0;
+        }
     }
 
 </style>

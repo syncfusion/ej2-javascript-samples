@@ -1,0 +1,53 @@
+.bootstrap5 .sb-reset-icon:before {
+    content: '\e7e7';
+}
+
+.bootstrap5 .e-tab .sb-content-tab-header.e-tab-header::before {
+    border-width: 0;
+}
+
+.bootstrap5 .copycode::before {
+    content: '\e77c';
+    font-size: 25px;
+}
+
+.bootstrap5 .sb-left-pane .e-treeview .e-list-item.e-active>.e-text-content .e-list-text {
+    color: #000;
+}
+
+.bootstrap5 .sample-navigation,
+.bootstrap5 .sb-open-new-wrapper {
+    line-height: 33px;
+}
+
+.bootstrap5 .sb-plnr-section {
+    height: 33px;
+    line-height: 30px;
+}
+
+.bootstrap5 .sb-plnr-section {
+    height: 33px;
+    line-height: 30px;
+}
+
+.bootstrap5 .e-samplestatus.new.tree,
+.bootstrap5 .e-samplestatus.update.tree,
+.bootstrap5 .e-samplestatus.preview.tree {
+    margin: 12px 0;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 2px
+}
+
+.bootstrap5 .e-samplestatus.new,
+.bootstrap5 .e-samplestatus.update,
+.bootstrap5 .e-samplestatus.preview {
+    margin: 12px 0;
+    height: 20px;
+    margin-top: -1px;
+    margin-bottom: 2px
+}
+
+.bootstrap5.e-bigger .sb-mobile-setting {
+    padding: 0;
+}

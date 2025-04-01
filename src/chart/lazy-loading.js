@@ -30,7 +30,7 @@ this.default = function () {
         height: '450',
         title: 'Network Load',
         crosshair: { enable: false, lineType: 'Vertical' },
-        tooltip: { enable: true, shared: true, header : '<b>${point.x}</b>', format : 'Server load : <b>${point.y}</b>'},
+        tooltip: { enable: true, showNearestTooltip: true, header : '<b>${point.x}</b>', format : 'Server load : <b>${point.y}</b>'},
         legendSettings: { visible: true },
         // scrollStart: function (args) {
         //         ej.popups.createSpinner({ target: spinnerEle, width: '50px', label: 'Loading' });

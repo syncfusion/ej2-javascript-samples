@@ -26,6 +26,7 @@ this.default = function () {
         dataSource: window.projects,
         fields: { text: 'Value' },
         displayTemplate: '<span class="e-success">${Value}</span>',
+        requireLeadingSpace : false ,
     });
     mentionProjectObj.appendTo('#multipleList');
 

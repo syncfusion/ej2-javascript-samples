@@ -3,7 +3,6 @@
     "directory": "context-menu",
     "category": "Navigation",
     "ftName": "context-menu",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -16,7 +15,6 @@
             "url": "template",
             "name": "Template",
             "category": "Context Menu",
-            "type": "new",
             "api": { "ContextMenu": ["target", "items", "beforeItemRender", "animationSettings", "itemTemplate"], "MenuItem":["text", "iconCss", "items", "separator"] },
             "description": "This sample demonstrates the template support functionalities of the Javascript ES5 ContextMenu"
         }

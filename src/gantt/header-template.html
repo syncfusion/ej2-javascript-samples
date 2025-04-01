@@ -1,91 +1,151 @@
 
 <style>
-    .material img.resource, .fabric img.resource, .bootstrap img.resource,
-    .tailwind img.resource, .bootstrap5 img.resource, .bootstrap4 img.resource,
-    .fluent img.resource,.fluent2 img.resource, .material3 img.resource,
-    .bootstrap5\.3 img.resource,
-    .bootstrap5\.3-lite img.resource,
-    .tailwind3 img.resource{
-        content: url("src/gantt/images/Resources.png");
+    .material .resource, .fabric .resource, .bootstrap .resource,
+    .tailwind .resource, .bootstrap5 .resource, .bootstrap4 .resource,
+    .fluent .resource,.fluent2 .resource, .material3 .resource,
+    .bootstrap5\.3 .resource,
+    .bootstrap5\.3-lite .resource,
+    .tailwind3 .resource{
+    background-image: url("src/gantt/images/Resources.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material-dark img.resource, .fabric-dark img.resource, .bootstrap-dark img.resource,
-    .tailwind-dark img.resource, .bootstrap5-dark img.resource, .highcontrast img.resource,
-    .fluent-dark img.resource,.fluent2-highcontrast img.resource,.fluent2-dark img.resource,.material3-dark img.resource,   
-    .bootstrap5\.3-dark-lite img.resource,
-    .bootstrap5\.3-dark img.resource,
-    .tailwind3-dark img.resource{
-        content: url("src/gantt/images/ResourcesDark.png");
+    .material-dark .resource, .fabric-dark .resource, .bootstrap-dark .resource,
+    .tailwind-dark .resource, .bootstrap5-dark .resource, .highcontrast .resource,
+    .fluent-dark .resource,.fluent2-highcontrast .resource,.fluent2-dark .resource,.material3-dark .resource,   
+    .bootstrap5\.3-dark-lite .resource,
+    .bootstrap5\.3-dark .resource,
+    .tailwind3-dark .resource{
+    background-image: url("src/gantt/images/ResourcesDark.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material img.taskName, .fabric img.taskName, .bootstrap img.taskName,
-    .tailwind img.taskName, .bootstrap5 img.taskName, .bootstrap4 img.taskName,
-    .fluent img.taskName,.fluent2 img.taskName, .material3 img.taskName,
-    .bootstrap5\.3 img.taskName,
-    .bootstrap5\.3-lite img.taskName,
-    .tailwind3 img.taskName{
-        content: url("src/gantt/images/Task name.png");
+    .material .taskName, .fabric .taskName, .bootstrap .taskName,
+    .tailwind .taskName, .bootstrap5 .taskName, .bootstrap4 .taskName,
+    .fluent .taskName,.fluent2 .taskName, .material3 .taskName,
+    .bootstrap5\.3 .taskName,
+    .bootstrap5\.3-lite .taskName,
+    .tailwind3 .taskName{
+    background-image: url("src/gantt/images/Task name.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material-dark img.taskName, .fabric-dark img.taskName, .bootstrap-dark img.taskName,
-    .tailwind-dark img.taskName, .bootstrap5-dark img.taskName, .highcontrast img.taskName,
-    .fluent-dark img.taskName,.fluent2-highcontrast img.taskName,.fluent2-dark img.taskName,
-    .material3-dark img.taskName,
-    .bootstrap5\.3-dark-lite img.taskName,
-    .bootstrap5\.3-dark img.taskName,
-    .tailwind3-dark img.taskName{
-        content: url("src/gantt/images/TaskNameDark.png");
+    .material-dark .taskName, .fabric-dark .taskName, .bootstrap-dark .taskName,
+    .tailwind-dark .taskName, .bootstrap5-dark .taskName, .highcontrast .taskName,
+    .fluent-dark .taskName,.fluent2-highcontrast .taskName,.fluent2-dark .taskName,
+    .material3-dark .taskName,
+    .bootstrap5\.3-dark-lite .taskName,
+    .bootstrap5\.3-dark .taskName,
+    .tailwind3-dark .taskName{
+    background-image: url("src/gantt/images/TaskNameDark.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material img.startDate, .fabric img.startDate, .bootstrap img.startDate,
-    .tailwind img.startDate, .bootstrap5 img.startDate, .bootstrap4 img.startDate,
-    .fluent img.startDate,.fluent2 img.startDate, .material3 img.startDate,
-    .bootstrap5\.3 img.startDate,
-    .bootstrap5\.3-lite img.startDate,
-    .tailwind3 img.startDate{
-        content: url("src/gantt/images/Start date.png");
+    .material .startDate, .fabric .startDate, .bootstrap .startDate,
+    .tailwind .startDate, .bootstrap5 .startDate, .bootstrap4 .startDate,
+    .fluent .startDate,.fluent2 .startDate, .material3 .startDate,
+    .bootstrap5\.3 .startDate,
+    .bootstrap5\.3-lite .startDate,
+    .tailwind3 .startDate{
+    background-image: url("src/gantt/images/Start date.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material-dark img.startDate, .fabric-dark img.startDate, .bootstrap-dark img.startDate,
-    .tailwind-dark img.startDate, .bootstrap5-dark img.startDate, .highcontrast img.startDate,
-    .fluent-dark img.startDate,.fluent2-highcontrast img.startDate, .fluent2-dark img.startDate,
-    .material3-dark img.startDate,
-    .bootstrap5\.3-dark-lite img.startDate,
-    .bootstrap5\.3-dark img.startDate,
-    .tailwind3-dark img.startDate{
-        content: url("src/gantt/images/StartDateDark.png");
+    .material-dark .startDate, .fabric-dark .startDate, .bootstrap-dark .startDate,
+    .tailwind-dark .startDate, .bootstrap5-dark .startDate, .highcontrast .startDate,
+    .fluent-dark .startDate,.fluent2-highcontrast .startDate, .fluent2-dark .startDate,
+    .material3-dark .startDate,
+    .bootstrap5\.3-dark-lite .startDate,
+    .bootstrap5\.3-dark .startDate,
+    .tailwind3-dark .startDate{
+    background-image: url("src/gantt/images/StartDateDark.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material img.duration, .fabric img.duration, .bootstrap img.duration,
-    .tailwind img.duration, .bootstrap5 img.duration, .bootstrap4 img.duration,
-    .fluent img.duration,.fluent2 img.duration, .material3 img.duration,
-    .bootstrap5\.3 img.duration,
-    .bootstrap5\.3-lite img.duration,
-    .tailwind3 img.duration{
-        content: url("src/gantt/images/Duration.png");
+    .material .duration, .fabric .duration, .bootstrap .duration,
+    .tailwind .duration, .bootstrap5 .duration, .bootstrap4 .duration,
+    .fluent .duration,.fluent2 .duration, .material3 .duration,
+    .bootstrap5\.3 .duration,
+    .bootstrap5\.3-lite .duration,
+    .tailwind3 .duration{
+    background-image: url("src/gantt/images/Duration.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material-dark img.duration, .fabric-dark img.duration, .bootstrap-dark img.duration,
-    .tailwind-dark img.duration, .bootstrap5-dark img.duration, .highcontrast img.duration,
-    .fluent-dark img.duration,.fluent2-highcontrast img.duration,.fluent2-dark img.duration, 
-    .material3-dark img.duration,
-    .bootstrap5\.3-dark-lite img.duration,
-    .bootstrap5\.3-dark img.duration,
-    .tailwind3-dark img.duration{
-        content: url("src/gantt/images/DurationDark.png");
+    .material-dark .duration, .fabric-dark .duration, .bootstrap-dark .duration,
+    .tailwind-dark .duration, .bootstrap5-dark .duration, .highcontrast .duration,
+    .fluent-dark .duration,.fluent2-highcontrast .duration,.fluent2-dark .duration, 
+    .material3-dark .duration,
+    .bootstrap5\.3-dark-lite .duration,
+    .bootstrap5\.3-dark .duration,
+    .tailwind3-dark .duration{
+    background-image: url("src/gantt/images/DurationDark.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material img.progressTemplate, .fabric img.progressTemplate, .bootstrap img.progressTemplate,
-    .tailwind img.progressTemplate, .bootstrap5 img.progressTemplate, .bootstrap4 img.progressTemplate,
-    .fluent img.progressTemplate,.fluent2 img.progressTemplate, .material3 img.progressTemplate,
-    .bootstrap5\.3 img.progressTemplate,
-    .bootstrap5\.3-lite img.progressTemplate,
-    .tailwind3 img.progressTemplate{
-        content: url("src/gantt/images/Progress.png");
+    .material .progressTemplate, .fabric .progressTemplate, .bootstrap .progressTemplate,
+    .tailwind .progressTemplate, .bootstrap5 .progressTemplate, .bootstrap4 .progressTemplate,
+    .fluent .progressTemplate,.fluent2 .progressTemplate, .material3 .progressTemplate,
+    .bootstrap5\.3 .progressTemplate,
+    .bootstrap5\.3-lite .progressTemplate,
+    .tailwind3 .progressTemplate{
+    background-image: url("src/gantt/images/Progress.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    .material-dark img.progressTemplate, .fabric-dark img.progressTemplate, .bootstrap-dark img.progressTemplate,
-    .tailwind-dark img.progressTemplate, .bootstrap5-dark img.progressTemplate, .highcontrast img.progressTemplate,
-    .fluent-dark img.progressTemplate, .fluent2-highcontrast img.progressTemplate,.fluent2-dark img.progressTemplate,
-    .material-dark3 img.progressTemplate,
-    .bootstrap5\.3-dark-lite img.progressTemplate,
-    .bootstrap5\.3-dark img.progressTemplate,
-    .tailwind3-dark img.progressTemplate,
-    .material3-dark img.progressTemplate{
-        content: url("src/gantt/images/ProgressDark.png");
+    .material-dark .progressTemplate, .fabric-dark .progressTemplate, .bootstrap-dark .progressTemplate,
+    .tailwind-dark .progressTemplate, .bootstrap5-dark .progressTemplate, .highcontrast .progressTemplate,
+    .fluent-dark .progressTemplate, .fluent2-highcontrast .progressTemplate,.fluent2-dark .progressTemplate,
+    .material-dark3 .progressTemplate,
+    .bootstrap5\.3-dark-lite .progressTemplate,
+    .bootstrap5\.3-dark .progressTemplate,
+    .tailwind3-dark .progressTemplate,
+    .material3-dark .progressTemplate{
+    background-image: url("src/gantt/images/ProgressDark.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: unset;
     }
-    img.resource, img.taskName, img.startDate, img.duration, img.progressTemplate{
+    .resource, .taskName, .startDate, .duration, .progressTemplate{
         margin-right: 8px;
         display: inline-block;
     }  
@@ -101,38 +161,33 @@
 </div>
 
 <script type="text/x-template" id="resource">
-    <div>
-        <div>
-            <img class="resource" width="20" height="20" alt="Resources"/>Resources
-        </div>
+    <div style="display: flex; align-items: center;">
+        <div class="resource" ></div>
+           <div>Resources</div>      
     </div>
 </script>
 <script type="text/x-template" id="projectName">
-    <div>
-        <div>
-            <img class="taskName" width="20" height="20" alt="TaskName" />  Task Name
-        </div>
+    <div style="display: flex; align-items: center;">
+        <div class="taskName" ></div>
+           <div>Task Name</div>      
     </div>
 </script>
 <script type="text/x-template" id="dateTemplate">
-    <div>
-        <div>
-            <img class="startDate" width="20" height="20" alt="StartDate"/>  Start Date
-        </div>
+    <div style="display: flex; align-items: center;">
+        <div class="startDate" ></div>
+           <div> Start Date</div>      
     </div>
 </script>
 <script type="text/x-template" id="durationTemplate">
-    <div>
-        <div>
-            <img class="duration" width="20" height="20" alt="Duration"/>  Duration
-        </div>
+    <div style="display: flex; align-items: center;">
+        <div class="duration" ></div>
+           <div> Duration</div>      
     </div>
 </script>
 <script type="text/x-template" id="progressTemplate">
-    <div>
-        <div>
-            <img class="progressTemplate" width="20" height="20" alt="progressTemplate"/>  Progress
-        </div>
+    <div style="display: flex; align-items: center;">
+        <div class="progressTemplate" ></div>
+           <div> Progress</div>      
     </div>
 </script>
 

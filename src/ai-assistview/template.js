@@ -71,7 +71,15 @@ this.default = function() {
     });
     carouselObj.appendTo('#bannerCarousel');
 
-    carouselObj.element.addEventListener('click', (e) => {
+    carouselObj.element.addEventListener('click', function (e) {
+        handleAction(e);
+    });
+
+    carouselObj.element.addEventListener('touchstart', function (e) {
+        handleAction(e);
+    });
+
+    function handleAction(e){
         var target = e.target;
         var prompt = '';
         if (target.tagName === 'IMG') {
@@ -81,7 +89,7 @@ this.default = function() {
         }
         if (prompt)
             templateAIAssistView.executePrompt(prompt);
-    });
+    };
 
 
     new ej.splitbuttons.DropDownButton({

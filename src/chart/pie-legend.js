@@ -13,8 +13,6 @@ this.default = function () {
 	var pieinterval;
     var pie = new ej.charts.AccumulationChart({
         enableSmartLabels: true,
-        //Initializing Selection Mode
-        selectionMode: 'Point',
         //Initializing Series
         annotations: [{
             content: ej.base.Browser.isDevice ? " " :  "<div style='font-Weight:600;font-size:15px'>Browser<br>Market<br>Share</div>" ,

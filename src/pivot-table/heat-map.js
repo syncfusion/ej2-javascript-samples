@@ -27,7 +27,7 @@ this.default = function () {
         },
         width: '100%',
         height: 500,
-        gridSettings: { rowHeight:36, columnWidth: 120 },
+        gridSettings: { rowHeight:35, columnWidth: 120 },
         cellTemplate: function (args) {
             if (args != null && args.cellInfo) {
                 if (args.cellInfo.axis === 'value') {

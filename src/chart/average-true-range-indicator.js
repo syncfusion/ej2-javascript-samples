@@ -1,7 +1,7 @@
 /**
  * Sample for ATR Indicator
  */
-this.renderChartATR = function () {
+var renderChartATR = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',

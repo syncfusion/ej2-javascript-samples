@@ -5,7 +5,7 @@
 this.default = function() {
     var hostUrl = 'https://services.syncfusion.com/js/production/';
 
-    var defaultRTE = new ej.richtexteditor.RichTextEditor({
+    var editor = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
             items: [
                 'Undo', 'Redo', '|', 'ImportWord', 'ExportWord', 'ExportPdf', '|',
@@ -43,7 +43,7 @@ this.default = function() {
     `
         },
         exportPdf: {
-            serviceUrl: 'https://ej2services.syncfusion.com/js/development/api/RichTextEditor/ExportToPdf',
+            serviceUrl: hostUrl + 'api/RichTextEditor/ExportToPdf',
             fileName: 'RichTextEditor.pdf',
             stylesheet: `
         .e-rte-content{
@@ -74,7 +74,7 @@ this.default = function() {
         actionBegin: actionBeginHandler,
         actionComplete: actionCompleteHandler,
     });
-    defaultRTE.appendTo("#defaultRTE");
+    editor.appendTo("#defaultRTE");
     var emailData = [
         { name: "Selma Rose", initial: 'SR', email: "selma@gmail.com", color: '#FAFDFF', bgColor: '#01579B' },
         { name: "Maria", initial: 'MA', email: "maria@gmail.com", color: '#004378', bgColor: '#ADDBFF' },
@@ -99,20 +99,24 @@ this.default = function() {
         popupWidth: '250px',
         popupHeight: '200px',
         sortOrder: 'Ascending',
-        target: defaultRTE.inputElement,
-        allowSpaces: true
+        target: editor.inputElement,
+        allowSpaces: true,
+        suffixText: '&nbsp;'
     });
     mention.appendTo('#editorMention');
     var myCodeMirror;
     function mirrorConversion(e) {
-        var id = defaultRTE.getID() + 'mirror-view';
-        var mirrorView = defaultRTE.element.querySelector('#' + id);
-        var rteContainer = defaultRTE.element.querySelector('.e-rte-container');
+        var id = editor.getID() + 'mirror-view';
+        var mirrorView = editor.element.querySelector('#' + id);
+        var rteContainer = editor.element.querySelector('.e-rte-container');
         if (e.targetItem === 'Preview') {
-            defaultRTE.value = myCodeMirror.getValue();
-            defaultRTE.dataBind();
+            editor.value = myCodeMirror.getValue();
+            editor.dataBind();
             rteContainer.classList.remove('e-rte-code-mirror-enabled');
-            defaultRTE.focusIn();
+            editor.focusIn();
+            if (document.querySelector('.CodeMirror')) {
+                document.querySelector('.CodeMirror').style.height = '300px';
+            }
         } else {
             rteContainer.classList.add('e-rte-code-mirror-enabled');
             rteContainer.classList.remove('e-source-code-enabled');
@@ -121,10 +125,13 @@ this.default = function() {
                 rteContainer.appendChild(mirrorView);
                 renderCodeMirror(
                     mirrorView,
-                    defaultRTE.value === null ? '' : defaultRTE.value
+                    editor.value === null ? '' : editor.value
                 );
             } else {
-                myCodeMirror.setValue(defaultRTE.value === null ? '' : defaultRTE.value);
+                myCodeMirror.setValue(editor.value === null ? '' : editor.value);
+            }
+            if (document.querySelector('.e-rte-full-screen')) {
+                document.querySelector('.CodeMirror').style.height = 'auto';
             }
             myCodeMirror.focus();
         }
@@ -138,12 +145,6 @@ this.default = function() {
         });
     }
     function actionBeginHandler(e) {
-        if (
-            e.requestType === 'EnterAction' &&
-            mention.element.classList.contains('e-popup-open')
-        ) {
-            e.cancel = true;
-        }
         if (e.requestType === 'Maximize' || e.requestType === 'Minimize') {
             handleFullScreen(e);
         }
@@ -171,6 +172,9 @@ this.default = function() {
                 transformElement.style.marginLeft = '0px';
             }
             transformElement.style.transform = 'inherit';
+            if (document.querySelector('.CodeMirror')) {
+                document.querySelector('.CodeMirror').style.height = 'auto';
+            }
         }
         else if (e.targetItem === 'Minimize') {
             if (ej.base.Browser.isDevice &&  ej.base.Browser.isIos) {
@@ -182,6 +186,9 @@ this.default = function() {
                 transformElement.style.marginLeft = leftBar.offsetWidth + 'px';
             }
             transformElement.style.transform = 'translateX(0px)';
+            if (document.querySelector('.CodeMirror')) {
+                document.querySelector('.CodeMirror').style.height = '300px';
+            }
         }
     }
     function actionCompleteHandler(e) {

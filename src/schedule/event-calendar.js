@@ -126,7 +126,7 @@ this.default = function () {
             { option: 'Year' },
             { option: 'TimelineMonth', group: { resources: ['Resources'] } }
         ],
-        currentView: 'Month',
+        currentView: 'Week',
         eventSettings: {
             dataSource: new ej.base.extend([], filteredData.planned, null, true)
         },
@@ -272,6 +272,18 @@ this.default = function () {
         }        
     }
 
+    function getWeekFirstDate(date, firstDayOfWeek) {
+        var date1 = new Date(date.getTime());
+        firstDayOfWeek = (firstDayOfWeek - date1.getDay() + 7 * (-1)) % 7;
+        return new Date(date1.setDate(date1.getDate() + (isNaN(firstDayOfWeek) ? 0 : firstDayOfWeek)));
+    }
+    
+    function getWeekLastDate(date, firstDayOfWeek) {
+        var weekFirst = getWeekFirstDate(date, firstDayOfWeek);
+        var weekLast = new Date(weekFirst.getFullYear(), weekFirst.getMonth(), weekFirst.getDate() + 6);
+        return new Date(weekLast.getTime());
+    }
+
     function updateDateRange() {
         var dateRange;
         var view = scheduleObj.currentView;
@@ -368,7 +380,7 @@ this.default = function () {
         actionComplete: onComplete,
         select: onChange,
         fields: { id: 'id', text: 'name', isChecked: 'isSelected' },
-        height: '110px'
+        height: '240px'
     });
     calendarsList.appendTo('#listview-def');
 

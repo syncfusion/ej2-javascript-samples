@@ -42,7 +42,8 @@
          popupWidth: '250px',
          popupHeight: '200px',
          target: defaultRTE.inputElement,
-         allowSpaces: true
+         allowSpaces: true,
+         suffixText: '&nbsp;'
      });
      emailObj.appendTo('#mentionEditor');
  };

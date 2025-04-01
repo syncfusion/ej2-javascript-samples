@@ -79,12 +79,18 @@ this.default = function () {
         change: function(e) {
             if (refresh) {
                 var columnName = document.getElementById("column").ej2_instances[0].value;
-                var mvblColumns = treeGridObj.grid.getMovableColumns();
+                var mvblColumns = treeGridObj.getMovableColumns();
                 if (mvblColumns.length === 1 && columnName === mvblColumns[0].field && e.value !== mvblColumns[0].freeze) {
                     alertDialogObj.show(); refresh = false; directionDropDown.value = "Center"; directionDropDown.refresh();
                 } else {
-                    treeGridObj.grid.getColumnByField(columnName).freeze = e.value === 'Center' ? undefined : e.value;
-                    treeGridObj.grid.refreshColumns();
+                    var columns = treeGridObj.getColumns();
+                    var column = columns.find(function (col) {
+                        return col.field === columnName;
+                    });
+                    if (column) {
+                        column.freeze = e.value === 'Center' ? undefined : e.value;
+                    }
+                    treeGridObj.columns = columns;
                 }
             }
             refresh = true;

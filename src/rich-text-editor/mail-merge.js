@@ -67,6 +67,7 @@ this.default = function () {
     if (args.item.text != null) {
       var value = textToValueMap[args.item.text];
       var trimmedValue = value.trim();
+      mailMergeEditor.formatter.editorManager.nodeSelection.restore();
       mailMergeEditor.executeCommand(
         'insertHTML',
         '<span contenteditable="false" class="e-mention-chip"><span>{{' +

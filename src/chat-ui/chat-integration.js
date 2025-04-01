@@ -1,4 +1,4 @@
-this.default = function(){
+this.default = function() {
 
     var chatMessages = {
         user1: window.integrationMessagedata,

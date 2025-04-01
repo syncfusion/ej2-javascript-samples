@@ -41,7 +41,7 @@ this.default = function () {
                 },
                 width: 190 },
             { field: 'startDate', headerText: 'Start Date', textAlign: 'Right', width: 155, editType: 'datepickeredit',
-                format: 'yMd', validationRules: { date: true } },
+                format: 'yMd', edit: { params: { format:'M/d/yyyy'}}, validationRules: { date: ['M/d/yyyy', 'Please enter a valid date'] }},
             {
                 field: 'duration', headerText: 'Duration', textAlign: 'Right', width: 140, editType: 'numericedit',
                 validationRules: { number: true, min: 0 }, edit: { params: { format: 'n' } }

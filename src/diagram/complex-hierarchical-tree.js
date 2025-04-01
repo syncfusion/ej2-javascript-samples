@@ -88,6 +88,7 @@ this.default = function () {
     marginLeftObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.margin.left,
         step: 1,
+        min:10,max:120,
         format: '##.##',
         change: function (args) {
             update('left');
@@ -97,6 +98,7 @@ this.default = function () {
     //used NumericTextBox for top margin of the layout.
     marginTopObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.margin.top,
+        min:10,max:120,
         step: 1,
         format: '##.##',
         change: function (args) {
@@ -107,6 +109,7 @@ this.default = function () {
     //used NumericTextBox for horizontalspacing of the layout.
     horizontalSpacingObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.horizontalSpacing,
+        min:20,max:60,
         step: 1,
         format: '##.##',
         change: function (args) {
@@ -117,6 +120,7 @@ this.default = function () {
     //used NumericTextBox for verticalspacing of the layout.
     verticalSpacingObj = new ej.inputs.NumericTextBox({
         value: diagram.layout.verticalSpacing,
+        min:20,max:60,
         step: 1,
         format: '##.##',
         change: function (args) {

@@ -5,7 +5,11 @@ this.default = function () {
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {
-            interval: 4, minimum: 2000, maximum: 2016, labelIntersectAction: 'Rotate90', minorTickLines: { width: 0 }, title:'Years'
+            valueType: 'Category',
+            minorTickLines: { width: 0 },
+            lineStyle: { width: 0 },
+            majorTickLines: { width: 0 },
+            labelPlacement: 'OnTicks'
         },
         chartArea: {
             border: {
@@ -14,42 +18,63 @@ this.default = function () {
         },
         isTransposed: true,
         //Initializing Primary Y Axis
-        primaryYAxis: {
-            labelFormat: '{value}M', minimum: 0, title: 'Sales (In Millions)', maximum: 25, interval: 5,edgeLabelPlacement: 'Shift',
+        primaryYAxis:
+        {
+            labelFormat: '{value}%',
+            title: 'Capitalization Ratio (% of GDP)',
+            interval: 40,
+            edgeLabelPlacement: 'Shift',
+            lineStyle: { width: 0 },
+            majorTickLines: { width: 0 },
+            majorGridLines: { width: 0 },
+            labelRotation: ej.base.Browser.isDevice ? -45 : 0
         },
+
         //Initializing Chart Series
         series: [
             {
                 type: 'Spline',
                 dataSource: [
-                    { Month: 2000, LDN_Temperature: -1, FR_Temperature: 10 },{ Month: 2002, LDN_Temperature: -1, FR_Temperature: 7 },{ Month: 2004, LDN_Temperature: 25, FR_Temperature: 13 },
-                    { Month: 2005, LDN_Temperature: 31, FR_Temperature: 16 },{ Month: 2007, LDN_Temperature: 14, FR_Temperature: 11 },{ Month: 2010, LDN_Temperature: 8, FR_Temperature: 10 },
-                    { Month: 2011, LDN_Temperature: 8, FR_Temperature: 15 },{ Month: 2013, LDN_Temperature: 8, FR_Temperature: 20 },{ Month: 2014, LDN_Temperature: 8, FR_Temperature: 17 },
-                    { Month: 2015, LDN_Temperature: 8, FR_Temperature: 5 }
+                    { country: 'United States', y: 194.55 },
+                    { country: 'Japan', y: 146.2 },
+                    { country: 'China', y: 65.1 },
+                    { country: 'France', y: 84.9 },
+                    { country: 'India', y: 140.1 },
+                    { country: 'Canada', y: 160.7 },
+                    { country: 'Brazil', y: 68.4 },
+                    { country: 'United Kingdom', y: 100.2 },
+                    { country: 'Sweden', y: 162 },
+                    { country: 'Netherlands', y: 132.3 },
+                    { country: 'Bangladesh', y: 27.7 }
                 ],
-                width:2,
-                marker:{ visible: true, width: 7, height: 7, isFilled: true },
-                xName: 'Month',
-                yName: 'FR_Temperature',
-                name: 'Rate'
-            }
+                width: 2,
+                marker: { visible: true, width: 7, height: 7, isFilled: true },
+                xName: 'country',
+                yName: 'y'
+            },
         ],
-        //Initializing Chart Title
-        title: 'Music Album Sales',
-        //Initializing Tooltip
+
+        //Initializing Chart title
+        title: 'Stock Market Capitalization as a Percentage of GDP by Country',
+        subTitle: 'Source: wikipedia.org',
+        //Initializing User Interaction Tooltip
         tooltip: {
-            enable: true , shared:true, header:'<b>Album Sale</b>', format:'${point.x}: <b>${point.y}</b>'
+            enable: true,
+            showNearestTooltip: true,
+            header: '<b>Stock Market Cap</b>',
+            format: '${point.x}: <b>${point.y}</b>',
+            enableHighlight: true
         },
+        legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-        legendSettings:{visible:false},
-           // custom code start
+        // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
-            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() + 
+            args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
-           // custom code end
+        // custom code end
     });
     chart.appendTo('#container');
 };

@@ -6,6 +6,7 @@ this.default = function () {
     var spreadsheet = new ej.spreadsheet.Spreadsheet({
         showRibbon: false,
         showFormulaBar: false,
+        enableContextMenu: false,
         cssClass: 'e-custom-spreadsheet',
         allowOpen: false,
         allowSave: false,
@@ -94,7 +95,7 @@ this.default = function () {
                 template: '<input />',
                 address: 'C2:C3'
             }, {
-                template: '<div><input type="radio" name="gender" value="male" /><input type="radio" name="gender" value="female"/></div>',
+                template: '<div style="padding-left: 2px"><input type="radio" name="gender" value="male" /><input type="radio" name="gender" value="female"/></div>',
                 address: 'C4'
             }, {
                 template: '<input />',
@@ -156,6 +157,10 @@ this.default = function () {
         created: function() {
             //Applies format to specified range
             spreadsheet.cellFormat({ fontWeight: 'bold' }, 'B2:B9');
+            spreadsheet.cellFormat({ verticalAlign: 'middle' }, 'B2:C9');
+        },
+        contextMenuBeforeOpen: function () {
+            spreadsheet.enableContextMenuItems(['Duplicate'], false, false);
         }
     });
     // Render initialized Spreadsheet component.

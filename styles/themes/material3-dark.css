@@ -1,0 +1,319 @@
+.material3-dark .sb-search-input .e-ddl .e-clear-icon {
+    margin-left: -30px;
+    background: transparent;
+}
+
+.material3-dark .e-samplestatus.new,
+.material3-dark .e-samplestatus.new.tree,
+.material3-dark .e-samplestatus.New,
+.material3-dark .e-samplestatus.New.tree,
+.material3-dark .e-samplestatus.update,
+.material3-dark .e-samplestatus.update.tree,
+.material3-dark .e-samplestatus.Update,
+.material3-dark .e-samplestatus.Update.tree,
+.material3-dark .e-samplestatus.preview,
+.material3-dark .e-samplestatus.preview.tree,
+.material3-dark .e-samplestatus.Preview,
+.material3-dark .e-samplestatus.Preview.tree {
+    margin: auto 0px;
+}
+
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.New,
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.new,
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.Update,
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.update,
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.Preview,
+.material3-dark.e-bigger .e-badge.sb-badge.e-samplestatus.preview {
+    padding: 6px 8px;
+    font-size: 11px;
+    border-radius: 2px;
+    height: 24px;
+    margin: 2px 0px !important;
+}
+
+
+.material3-dark .sb-content,
+.material3-dark textarea#ruleContent {
+    background: #1C1B1F;
+}
+
+.material3-dark .sb-home {
+    color: #ffffff
+}
+
+.material3-dark .sb-left-pane .e-listview .e-list-item.e-active:hover {
+    color: #000;
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-list-item.e-hover>.e-text-content .e-list-text {
+    color: #000;
+}
+
+.material3-dark .sb-content-tab .e-content.sb-sample-content-area {
+    background: transparent;
+}
+
+.material3-dark .sb-content-tab .e-tab-header.e-horizontal-bottom {
+    border-radius: 0 0 12px 12px;
+}
+
+.material3-dark .sb-content-tab .e-tab-header.sb-content-tab-header {
+    border-radius: 12px 12px 0 0;
+}
+
+.material3-dark #sb-content {
+    border-radius: 12px;
+}
+.material3-dark .sb-download-btn  {
+    font-weight: 400;
+}
+body.material3-dark,
+.material3-dark #sb-header-text,
+.material3-dark .control-name,
+.material3-dark .sample-navigation,
+.material3-dark .sb-icon-Popout,
+.material3-dark .sb-switch-popup a {
+    color: #FFFFFF;
+}
+
+.material3-dark .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item:hover>.e-tab-wrap>.e-text-wrap>.e-tab-text,
+.material3-dark .sb-source-section .e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-text,
+.material3-dark .sb-source-section .e-tab .e-tab-header .e-toolbar-item:hover .e-tab-text {
+    color: rgb(208, 188, 255);
+}
+
+.material3-dark .sb-header,
+.material3-dark .sb-search-result .e-list-item {
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.08), rgba(208, 188, 255, 0.08)), #1C1B1F;
+}
+
+.material3-dark .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-indicator {
+    background: rgb(208, 188, 255);
+}
+
+.material3-dark #left-sidebar {
+    color: #c2c0c0;
+    background: #2B2831;
+}
+
+.material3-dark #left-sidebar {
+    border: none;
+}
+
+.material3-dark .sb-mobile-right-pane {
+    background: #2B2831;
+}
+
+.material3-dark .hljs-string,
+.material3-dark .hljs-title,
+.material3-dark .hljs-section,
+.material3-dark .hljs-attribute,
+.material3-dark .hljs-literal,
+.material3-dark .hljs-template-tag,
+.material3-dark .hljs-template-variable,
+.material3-dark .hljs-type,
+.material3-dark .hljs-addition,
+.material3-dark .e-icons.back-icon,
+.material3-dark .sb-plnr-section,
+.material3-dark .sb-bread-crumb,
+.material3-dark .sb-component-name,
+.material3-dark .sb-icon-Home,
+.material3-dark .description-header,
+.material3-dark .sb-setting-translate,
+.material3-dark .sample-navigation>button:hover,
+.material3-dark .sb-switch-popup li:first-child,
+.material3-dark .sb-left-pane .e-listview .e-list-group-item,
+.material3-dark .sb-theme-popup li.active .sb-theme-select {
+    color: rgb(208, 188, 255)
+}
+
+.material3-dark .sb-theme-popup {
+    border: unset;
+}
+
+.material3-dark .sb-icon-Hamburger,
+.material3-dark .sb-footer-links a,
+.material3-dark .description-section a {
+    color: rgb(208, 188, 255)
+}
+
+.material3-dark .sb-icon-Hamburger:active {
+    color: white;
+}
+
+.material3-dark .sb-content-section,
+.material3-dark .sb-switch-popup .material3-dark .sb-content-tab-header,
+.material3-dark .sb-content-section .sb-content-tab-header {
+    background: #1C1B1F;
+    border-color: rgba(147, 143, 153);
+}
+
+.material3-dark .sample-navigation>button:hover,
+.material3-dark .sb-plnr-section,
+.material3-dark .sb-icon-Popout:hover {
+    color: rgb(208, 188, 255)
+}
+
+.material3-dark .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text,
+.material3-dark .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text {
+    color: #ffffff;
+}
+
+.material3-dark code,
+.material3-dark .sb-switch-popup,
+.material3-dark .sb-setting-popup,
+.material3-dark .sb-search-result,
+.material3-dark .sb-src-code,
+.material3-dark .sb-api-section,
+.material3-dark .sb-theme-popup,
+.material3-dark .copy-tooltip,
+.material3-dark .e-icons.copycode,
+.material3-dark #search-input-wrapper input,
+.tailwmaterial3ind-dark #search-input-wrapper input::placeholder {
+    color: #ffffff;
+    background: #2B2831;
+}
+
+.material3-dark .sb-search-btn:hover,
+.material3-dark .sb-search-btn.active,
+.material3-dark .sb-setting-btn:hover,
+.material3-dark .sb-setting-btn.active,
+.material3-dark .sb-switch-popup li:hover,
+.material3-dark .theme-wrapper:hover,
+.material3-dark .theme-wrapper.active,
+.material3-dark .sb-theme-popup li:hover,
+.material3-dark .sb-switch-btn:hover,
+.material3-dark .sb-switch-btn.active,
+.material3-dark .sb-search-result .e-list-item:hover,
+.material3-dark .sb-left-pane .e-listview .e-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.material3-dark .setting-responsive .sb-responsive-items {
+    width: 104px;
+    background-color: #363636;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    display: table-cell;
+    cursor: pointer;
+}
+
+.material3-dark .setting-responsive .sb-responsive-items.active {
+    background-color: rgb(208, 188, 255);
+    color: black;
+}
+
+.material3-dark .sb-left-pane .e-listview .e-list-item.e-active,
+.material3-dark .cont {
+    background-color: rgb(208, 188, 255);
+}
+
+.material3-dark .sb-left-pane .e-listview .e-list-item:hover {
+    color: rgb(208, 188, 255);
+}
+
+.material3-dark .control-name {
+    color: rgb(208, 188, 255);
+}
+
+.material3-dark .sb-left-pane {
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.08), rgba(208, 188, 255, 0.08)), #1C1B1F;
+}
+
+.material3-dark .sb-body-overlay {
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.08), rgba(208, 188, 255, 0.08)), #1C1B1F;
+}
+
+.material3-dark .sb-mobile-left-pane {
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.08), rgba(208, 188, 255, 0.08)), #1C1B1F;
+}
+
+.material3-dark .sb-mobilefooter>.e-btn.e-flat {
+    background: #2B2831;
+    color: #fff;
+}
+
+.material3-dark .sb-mobilefooter>.e-btn.e-flat:hover {
+    color: rgb(208, 188, 255);
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-list-item.e-hover>.e-fullrow {
+    background-color: rgb(208, 188, 255);
+}
+
+.material3-dark .sb-header-text-left,
+.material3-dark .sb-header-text-right,
+.material3-dark .sb-reset-icon {
+    color: #ffffff;
+}
+
+.material3-dark .e-samplestatus.new.tree,
+.material3-dark .e-samplestatus.update.tree,
+.material3-dark .e-samplestatus.preview.tree {
+    margin-top: -2px;
+    margin-bottom: 4.5px;
+    margin-right: -15px;
+    height: 22px;
+}
+
+.material3-dark .e-samplestatus.new,
+.material3-dark .e-samplestatus.update,
+.material3-dark .e-samplestatus.preview {
+    margin: 2px 0;
+    height: 22px;
+    margin-top: 0px;
+}
+
+.material3-dark .sb-setting-popup {
+    border: unset;
+}
+
+.material3-dark .sb-reset-icon:before {
+    content: '\e7e7';
+}
+
+.material3-dark .copycode::before {
+    content: '\e77c';
+    font-size: 25px;
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-list-item.e-hover>.e-fullrow {
+    background-color: rgb(208, 188, 255);
+    border: none;
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-list-item.e-active>.e-fullrow {
+    background-color: #4b4b4b;
+    border-color: #4b4b4b;
+}
+
+.material3-dark .sb-search-result .e-list-group-item {
+    color: rgb(208, 188, 255) !important;
+    background: #2B2831;
+}
+
+.material3-dark .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item.e-active>.e-tab-wrap>.e-text-wrap>.e-tab-text,
+.material3-dark .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item:hover>.e-tab-wrap>.e-text-wrap>.e-tab-text {
+    color: rgb(208, 188, 255) !important;
+}
+
+.material3-dark .sb-theme-select {
+    color: rgb(31, 41, 55);
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-list-item.e-active>.e-text-content .e-list-text {
+    color: rgb(255, 255, 255);
+}
+
+.material3-dark #msg,
+.material3-dark .sb-theme-popup li:hover.active .sb-theme-select,
+.material3-dark .sb-home-text,
+.material3-dark .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text {
+    color: #ffffff !important;
+}
+
+.material3-dark .sb-theme-popup li:hover .sb-theme-select {
+    color: transparent;
+}

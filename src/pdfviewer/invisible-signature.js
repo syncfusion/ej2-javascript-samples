@@ -30,11 +30,12 @@ this.default = function () {
         enableToolbar: false,
         enableNavigationToolbar: false,
         enableThumbnail: false,
-        serviceUrl: 'https://services.syncfusion.com/js/production/api/pdfviewer',
-        documentPath: 'InvisibleDigitalSignature.pdf'
+        enableAnnotationToolbar: false,
+        documentPath: 'https://cdn.syncfusion.com/content/pdf/InvisibleDigitalSignature.pdf',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/27.2.2/dist/ej2-pdfviewer-lib'
     });
-    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields,ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.PageOrganizer);
-    viewer.enableTextSelection = true;
+    ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.PageOrganizer);
+    viewer.enableTextSelection = false;
     viewer.downloadFileName = 'InvisibleDigitalSignature.pdf';
       //Triggers while adding the signature in signature field.
     viewer.addSignature = function (args) {
@@ -116,29 +117,43 @@ this.default = function () {
     msgError.appendTo('#msg_error');
    //Triggers while validating the signature in the document.
     function signDocument(e) {
-        viewer.serverActionSettings.download = 'AddSignature';
-        var data;
-        var base64data;
+        var url = "https://services.syncfusion.com/js/production/api/pdfviewer/AddSignature";
         viewer.saveAsBlob().then(function (value) {
-            data = value;
             var reader = new FileReader();
-            reader.readAsDataURL(data);
-            reader.onload = function () {
-                base64data = reader.result;
-                documentData = base64data;
-                viewer.load(base64data, null);
-                toolbarObj.items[1].disabled = true;
-                toolbarObj.items[2].disabled = false;
-                viewer.fileName = fileName;
-                viewer.downloadFileName = fileName;
+            reader.readAsDataURL(value);
+            reader.onload = function (e) {
+                var base64String = e.target ? e.target.result : null;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url, true);
+                xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+                var requestData = JSON.stringify({ base64String: base64String });
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                    documentData = xhr.responseText;
+                    viewer.load(xhr.responseText, null);
+                    toolbarObj.items[1].disabled = true;
+                    toolbarObj.items[2].disabled = false;
+                    viewer.fileName = fileName;
+                    viewer.downloadFileName = fileName;
+                    }
+                    else {
+                        console.error('Error in AddSignature API:', xhr.statusText);
+                    }
+                };
+                xhr.onerror = function () {
+                    console.error('Error reading Blob as Base64.', xhr.statusText);
+                };
+                xhr.send(requestData);
             };
+        }).catch(function (error) {
+            console.error('Error saving Blob:', error);
         });
-        viewer.serverActionSettings.download = 'Download';
     }
 //Downloads the PDF document being loaded in the PDFViewer.
 function downloadClicked(args) {
     viewer.download();
 }
+
 function readFile(args) {
     // tslint:disable-next-line
     var upoadedFiles = args.target.files;

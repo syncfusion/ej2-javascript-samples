@@ -24,7 +24,7 @@ this.default = function () {
             {
                 field: 'Ltp',
                 headerText: 'Last Traded Price',
-                width: '150',
+                width: '180',
                 format: 'C2',
                 type: 'number',
                 textAlign: 'Right',

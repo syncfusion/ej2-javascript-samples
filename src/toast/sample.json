@@ -5,7 +5,7 @@
     "ftName" :"toast",
     "samples": [{
         "url": "default",
-        "name": "Default Functionalites",
+        "name": "Default Functionalities",
         "category": "Toast",
         "description": "The sample demonstrates about default functionalities of a Toast control and helps to design reminder like an alert in JavaScript platform.",
         "api":{"Toast":["title","content"] }

@@ -21,10 +21,15 @@ this.default = function () {
    treeGridObj.appendTo('#TreeGrid');
    treeGridObj.toolbarClick = function (args) {
    if (args.item.id === 'TreeGrid_gridcontrol_pdfexport') {
-        var pdfExportProperties = {
-            isCollapsedStatePersist: collapsedStatePersist
-        };
-        treeGridObj.pdfExport(pdfExportProperties);
+        if (treeGridObj.enableRtl === true && treeGridObj.locale === 'ar') {
+            dialog.show();
+        }
+        else {
+            var pdfExportProperties = {
+                isCollapsedStatePersist: collapsedStatePersist
+            };
+            treeGridObj.pdfExport(pdfExportProperties);
+        }
    }
     if (args.item.id === 'TreeGrid_gridcontrol_excelexport') {
         var excelExportProperties = {
@@ -45,5 +50,23 @@ this.default = function () {
         else {
             collapsedStatePersist = false;
         }
+    }
+    var dialog = new ej.popups.Dialog({
+        showCloseIcon: false,
+        buttons: [{
+            click: alertDlgBtnClick, buttonModel: { content: 'OK', isPrimary: true }
+        }],
+        isModal: true,
+        content: 'You need custom fonts to export Arabic characters, refer this ' +
+            '<a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/pdf-export/pdf-export-options#add-custom-font-for-pdf-exporting">' +
+            'documentation section</a>',
+        target: document.getElementById('control-section'),
+        width: '600px',
+        visible: false,
+        height: '115px',
+    });
+    dialog.appendTo('#dialog');
+    function alertDlgBtnClick() {
+        dialog.hide();
     }
 };

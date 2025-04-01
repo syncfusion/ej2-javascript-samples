@@ -63,10 +63,13 @@ this.default = function () {
     maps.appendTo('#maps');
     // to clear the selected seats
     document.getElementById('clear-btn').onclick = function () {
-        seatInfo.innerHTML = '';
-        var selected = document.getElementsByClassName('ShapeselectionMapStyle');
-        for (var i = 0, length_1 = selected.length; i < length_1; i++) {
-            selected[0].setAttribute('class', '');
+        if (seatInfo.innerHTML === '') { return; }
+        var seats = seatInfo.innerText.split('-')[1].trim().split(',').map(function (num) {
+            return Number(num.trim());
+        });
+        for (var i = 0, length_1 = seats.length; i < length_1; i++) {
+            maps.shapeSelection(0, 'seatno', seats[i], false);
         }
+        seatInfo.innerHTML = '';
     };
 };

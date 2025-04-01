@@ -116,13 +116,20 @@ this.default = function () {
         enableGestures: false,
         target: '.mainLayout-content',       
         position: 'Right',
-        mediaQuery:'(min-width: 700px)'
+        mediaQuery:'(min-width: 700px)',
+        open: function () {
+            if (leftSideObj.isOpen) {
+                var mainContent = document.querySelector('.mainLayout-content .e-content-animation');
+                if (mainContent && !mainContent.style.marginLeft) {
+                    mainContent.style.marginLeft = leftSideObj.element.offsetWidth + 'px';
+                }
+            }
+        },
     });
     rightSideObj.appendTo("#default_right_sidebar");
 
     var dlgObj = new ej.popups.Dialog({
         header: 'Confirm delete',
-        content: "Are you sure you want to delete this file?",
         target: document.getElementById('filemanager'),
         showCloseIcon: true,
         visible: false,
@@ -197,6 +204,7 @@ this.default = function () {
                 else {
                     fileObject.path = '/';
                 }
+                fileObject.refreshFiles();
                 break;
                 
             case 'Recent':
@@ -304,6 +312,7 @@ this.default = function () {
         if (selectedItems && fileObject.selectedItems.length > 1) {
             fileManagerContainer.style.margin = '0px 10px 0px 5px';
             multipleSelectionPane.style.display = 'block';
+            document.getElementById('fileType').innerHTML = "Details Pane";
             document.getElementById('selected-count').innerHTML = fileObject.selectedItems.length + ' items selected';
         } 
         else if (selectedItems && fileObject.selectedItems.length === 1) {
@@ -339,22 +348,27 @@ this.default = function () {
             
             var lastFolderName = fileObject.path === '/' ? 'Drive' : getLastFolderName(fileObject.path);
             var currentFolderText = isFavorite ? 'Favorite' + ' ( ' + itemsCount + ' items' + ' )' : lastFolderName + ' ( ' + itemsCount + ' items' + ' )';
+            document.getElementById('fileType').innerHTML = "Details Pane";
             document.getElementById('current-folder').innerHTML = currentFolderText;
         }
     }
 
     function onFileLoad() {
         setTimeout(function() {
-            var detailsViewElement = document.getElementById('filemanager_grid').ej2_instances[0].element;
-            if (detailsViewElement) {
-                detailsViewElement.addEventListener('click', handleIconClick);
+            var iconElements = fileObject.element.querySelectorAll(".custom-icons");
+            for (var i = 0; i < iconElements.length; i++) {
+                iconElements[i].addEventListener('click', handleIconClick);
             }
         }, 0);
     }
 
     function onFileSelect() {
-        var selectedItem = fileObject.getSelectedFiles()[0];
-        viewPanedetails(selectedItem);
+        var selectedItem = fileObject.getSelectedFiles();
+        if (selectedItem.length > 0) {
+            var type = selectedItem[0].isFile ? 'file' : 'folder';
+            dlgObj.content = "Are you sure you want to delete this " + type + " ?";
+        }
+        viewPanedetails(selectedItem[0]);
     }
 
     function onToolbarClick(args) {
@@ -384,6 +398,10 @@ this.default = function () {
         var action = target.getAttribute('data-action');
         var fileName = getFileNameFromElement(target);
         selectedItems = [fileName];
+        if (event.target.parentElement.classList.contains('custom-icons') && target.closest("tr").getAttribute("aria-selected")){
+            event.preventDefault();
+            event.stopPropagation();
+        }
         switch (action) {
             case 'delete':
                 dlgObj.visible = true;

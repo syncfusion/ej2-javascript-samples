@@ -1,7 +1,7 @@
 /**
  * Sample for MACD Indicator
  */
-this.renderChartMACD = function () {
+var renderChartMACD = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', intervalType: 'Months',

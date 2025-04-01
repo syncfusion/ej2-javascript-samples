@@ -19,6 +19,18 @@
             ]
         },
         {
+            "url": "loadOn-demand",
+            "name": "Load On-demand",
+            "category": "Chat UI",
+            "type": "new",
+            "api":{ "ChatUI": ["headerText", "headerIconCss","messages", "user", "loadOnDemand"] },
+            "description": "Showcases the load on demand features in the Chat UI control",
+            "sourceFiles": [
+                { "displayName": "loadOn-demand.js", "path":"src/chat-ui/loadOn-demand.js" },
+                { "displayName": "loadOn-demand.html", "path":"src/chat-ui/loadOn-demand.html" }
+            ]
+        },
+        {
             "url": "template",
             "name": "Template",
             "category": "Chat UI",

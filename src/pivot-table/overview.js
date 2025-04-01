@@ -320,14 +320,14 @@ this.default = function () {
             var cellValue = ej.base.select('.e-cellvalue', args.targetCell);
             cellValue.classList.add('e-hyperlinkcell');
             cellValue.addEventListener('click', hyperlinkCellClick.bind(pivotObj));
-            args.targetCell.insertBefore(imgElement, cellValue);
+            args.targetCell.firstElementChild.insertBefore(imgElement, cellValue);
         }
         return '';
     };
 
     function hyperlinkCellClick(args) {
-        var cell = args.target.parentElement;
-        var pivotValue = pivotObj.pivotValues[Number(cell.getAttribute('index'))][Number(cell.getAttribute('data-colindex'))];
+        var cell = args.target.closest('.e-rowsheader');
+        var pivotValue = pivotObj.pivotValues[Number(cell.getAttribute('index'))][Number(cell.getAttribute('aria-colindex')) - 1];
         var link = window.universityData[pivotValue.index[0]].link;
         window.open(link, '_blank');
     }

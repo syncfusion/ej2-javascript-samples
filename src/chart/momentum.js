@@ -1,7 +1,7 @@
 /**
  * Sample for Momentum Indicator
  */
- this.renderChartMomentum = function () {
+var renderChartMomentum = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',

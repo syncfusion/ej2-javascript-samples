@@ -142,6 +142,7 @@ this.default = function () {
             enable: true, header: "<b>Population - 2023</b>",
             format: '${point.x}: ${point.y}M'
         },
+        subTitle: 'A Look at Population Rankings and Trends in 2023',
         pointRender: labelRender,
         legendSettings: { visible: false },
         // custom code start
@@ -208,6 +209,7 @@ this.default = function () {
                     document.getElementById("text").style.visibility = "visible";
                     if (args.point.index === 0) {
                         args.series.chart.title = "Top Populated Countries of Asia - 2023";
+                        args.series.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                         clicked = true;
                         args.series.chart.series[0].dataSource = [{
                                 y: 1422,
@@ -245,6 +247,7 @@ this.default = function () {
                     }
                     if (args.point.index === 1) {
                         args.series.chart.title = "Top Populated Countries of Africa - 2023";
+                        args.series.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                         clicked = true;
                         args.series.chart.series[0].dataSource = [{
                                 y: 223,
@@ -278,6 +281,7 @@ this.default = function () {
                     }
                     if (args.point.index === 2) {
                         args.series.chart.title = "Top Populated Countries of Europe - 2023";
+                        args.series.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                         clicked = true;
                         args.series.chart.series[0].dataSource = [{
                                 y: 143,
@@ -307,6 +311,7 @@ this.default = function () {
                     }
                     if (args.point.index === 3) {
                         args.series.chart.title = "Top Populated Countries of North America - 2023";
+                        args.series.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                         clicked = true;
                         args.series.chart.series[0].dataSource = [{
                                 y: 339,
@@ -344,6 +349,7 @@ this.default = function () {
                     }
                     if (args.point.index === 4) {
                         args.series.chart.title = "Top Populated Countries of Oceania - 2023";
+                        args.series.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                         clicked = true;
                         args.series.chart.series[0].dataSource = [
                             {
@@ -368,6 +374,11 @@ this.default = function () {
             if (args.target.indexOf('category') > -1) {
                 chart.series[0].dataSource = data;
             }
+        },
+        tooltipRender: function (args) {
+            args.text = args.text.replace(/\d+/g, function (num) {
+                return Number(num).toLocaleString('en-US');
+            });
         },
         axisLabelClick: function (args) {
             if (args.axis.name === "primaryXAxis") {
@@ -410,6 +421,7 @@ this.default = function () {
 
                         if (args.index === 0) {
                             args.chart.title = "Top Populated Countries of Asia - 2023";
+                            args.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                             clicked = true;
                             args.chart.series[0].dataSource = [{
                                 y: 1422,
@@ -447,6 +459,7 @@ this.default = function () {
                         }
                         if (args.index === 1) {
                             args.chart.title = "Top Populated Countries of Africa - 2023";
+                            args.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                             clicked = true;
                             args.chart.series[0].dataSource = [{
                                 y: 223,
@@ -480,6 +493,7 @@ this.default = function () {
                         }
                         if (args.index === 2) {
                             args.chart.title = "Top Populated Countries of Europe - 2023";
+                            args.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                             clicked = true;
                             args.chart.series[0].dataSource = [{
                                 y: 143,
@@ -509,6 +523,7 @@ this.default = function () {
                         }
                         if (args.index === 3) {
                             args.chart.title = "Top Populated Countries of North America - 2023";
+                            args.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                             clicked = true;
                             args.chart.series[0].dataSource = [{
                                 y: 339,
@@ -546,6 +561,7 @@ this.default = function () {
                         }
                         if (args.index === 4) {
                             args.chart.title = "Top Populated Countries of Oceania - 2023";
+                            args.chart.subTitle = "A Look at Population Rankings and Trends in 2023";
                             clicked = true;
                             args.chart.series[0].dataSource = [{
                                 y: 26,
@@ -573,6 +589,7 @@ this.default = function () {
     if (document.getElementById('category')) {
         ej.charts.getElement('category').onclick = function (e) {
             chart.title = "Top Populated Continents of 2023";
+            chart.subTitle = "A Look at Population Rankings and Trends in 2023";
             chart.primaryXAxis.labelStyle.color = "blue";
             chart.primaryYAxis.interval = 1000;
             chart.series[0].dataSource = data; // Ensure 'data' is defined properly

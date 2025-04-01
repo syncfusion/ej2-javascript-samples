@@ -224,6 +224,10 @@ this.default = function () {
         }
     });
     displayTextCode39Extension.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn4');
+    document.getElementById('downloadBtn4').onclick = function () {
+        barcodeCode39Extension.exportImage("Barcode", 'PNG');
+    };
 };
 

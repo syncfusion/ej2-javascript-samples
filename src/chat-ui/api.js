@@ -37,7 +37,7 @@ this.default = function() {
     new ej.dropdowns.MultiSelect({
         placeholder: 'Typing users...',
         select: (args) => {
-            const user = { user: args.itemData.value, avatarBgColor: '#bacbe4'};
+            const user = { user: args.itemData.value, avatarBgColor: '#87cefa'};
             if (['Laura', 'Charlie'].includes(args.itemData.value)) {
                 user.avatarBgColor = args.itemData.value === 'Charlie' ? '#e6cdde' : '#dec287';
                 user.avatarUrl = `./src/chat-ui/images/${args.itemData.value.toLowerCase()}.png`;

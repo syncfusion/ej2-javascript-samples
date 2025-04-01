@@ -6,7 +6,6 @@ this.default = function () {
             contentField: 'Summary',
             headerField: 'Id',
         },
-        height: 500,
         keyField: 'Status',
         columns: [
             { headerText: 'To Do', keyField: 'Open', allowToggle: true },

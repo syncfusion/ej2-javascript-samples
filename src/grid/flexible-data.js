@@ -23,6 +23,9 @@ this.default = function () {
         { field: 'Designation', headerText: 'Designation', width: 130 },
         { field: 'CurrentSalary', headerText: 'Current Salary', format: "C2", textAlign: 'Right', width: 140 }
     ];
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        document.body.classList.add('e-mac-safari');
+    }
     var serviceDropdown = new ej.dropdowns.DropDownList({
         dataSource: serviceURL,
         popupWidth: 'auto',

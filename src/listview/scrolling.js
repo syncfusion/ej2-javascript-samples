@@ -59,17 +59,20 @@ this.default = function() {
         height: 500,
         template: loadTemplate,
         cssClass: 'e-list-template',
+        actionComplete:  onActionComplete,
     });
     //Render initialized ListView component
     listObj_1.appendTo('#list-scrolling-down');
-    var ratingElements = listObj_1.element.querySelectorAll('.ratings');
-    for (var i = 0; i < ratingElements.length; i++) {
-        var ratingObj = new ej.inputs.Rating({
-            value: foodData[i].rating,
-            showTooltip: false,
-            readOnly: true
-        });
-        ratingObj.appendTo('#' + ratingElements[i].id);
+    function onActionComplete() { 
+        var ratingElements = listObj_1.element.querySelectorAll('.ratings');
+        for (var i = 0; i < ratingElements.length; i++) {
+            var ratingObj = new ej.inputs.Rating({
+                value: foodData[i].rating,
+                showTooltip: false,
+                readOnly: true
+            });
+            ratingObj.appendTo('#' + ratingElements[i].id);
+        }
     }
 
     var foodItems = [

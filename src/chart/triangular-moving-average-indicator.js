@@ -1,7 +1,7 @@
 /**
  * Sample for TMA Indicator
  */
-this.renderChartTMA = function () {
+var renderChartTMA = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', intervalType: 'Months',

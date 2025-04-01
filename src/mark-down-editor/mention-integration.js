@@ -102,7 +102,8 @@ this.default = function() {
         popupHeight: '200px',
         sortOrder: 'Ascending',
         target: markdownMention.inputElement,
-        allowSpaces: true
+        allowSpaces: true,
+        suffixText: '&nbsp;'
     });
     mention.appendTo('#editorMention');
     loadExternalFile();

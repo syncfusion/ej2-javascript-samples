@@ -1,7 +1,7 @@
 /**
  * Sample for Stochastic Indicator
  */
- this.renderChartSto =function () {
+var renderChartSto =function () {
     var chart = new ej.charts.Chart({
         primaryXAxis: {
             valueType: 'DateTime',

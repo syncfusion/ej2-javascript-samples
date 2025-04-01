@@ -1,4 +1,4 @@
-this.default = function(){
+this.default = function() {
     var chatUser1 = new ej.interactivechat.ChatUI({
         headerText: 'Albert',
         headerIconCss: "chat_user1_avatar",

@@ -14,11 +14,12 @@ this.default = function () {
             majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
             scrollbarSettings: {
-                enableZoom: false
+                enableZoom: false,
+                position: 'Bottom'
             }
         },
         primaryYAxis: {
-            title: 'Temperature',
+            title: 'Temperature Anomaly (°C)',
             intervalType: 'Months',
             labelFormat: '{value}°C',
             enableScrollbarOnZooming: false,
@@ -46,6 +47,7 @@ this.default = function () {
             draggable: true
         },
         margin : {top: 20},
+        tooltip: { enable: true, showNearestTooltip: true, header: '<b>${point.x}</b>', format: 'Temperature: <b>${point.y}</b>', enableHighlight: true },
         title: ej.base.Browser.isDevice ? 'Monthly Temperature Anomalies' : 'Global Warming: Monthly Temperature Anomalies',
         titleStyle: { textAlignment: ej.base.Browser.isDevice ? 'Near' : 'Center' },
         width: ej.base.Browser.isDevice ? '100%' : '75%',

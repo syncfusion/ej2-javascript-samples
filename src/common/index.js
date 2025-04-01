@@ -12,7 +12,7 @@ var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
-var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind', 'tailwind3', 'fluent2-highcontrast', 'highcontrast', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'tailwind3-dark', 'fluent-dark'];
+var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind3', 'fluent2-highcontrast', 'highcontrast', 'tailwind', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'tailwind3-dark', 'fluent-dark'];
 var themesToRedirect = ['material', 'material-dark', 'bootstrap4', 'bootstrap', 'bootstrap-dark', 'fabric', 'fabric-dark'];
 var darkIgnore = ['highcontrast', 'fluent2-highcontrast'];
 var themeDarkButton = document.getElementById('sb-dark-theme');
@@ -387,7 +387,7 @@ function changeTab(args) {
             let elementList = demoSection.getElementsByClassName('e-control e-lib');
             for (let i = 0; i < elementList.length; i++) {
                 let instance = elementList[i].ej2_instances;
-                if (instance && instance[0] && typeof instance[0].refresh === 'function' && componentToIgnore.indexOf(instance[0].getModuleName()) === -1 && currentControl !== 'rich-text-editor') {
+                if (instance && instance[0] && typeof instance[0].refresh === 'function' && componentToIgnore.indexOf(instance[0].getModuleName()) === -1 && !['rich-text-editor', 'ai-assistview', 'chat-ui'].includes(currentControl)) {
                     instance[0].refresh();
                 }
                 if (instance && instance[0] && instance[0].getModuleName() !== 'DashboardLayout')
@@ -840,8 +840,9 @@ function setSbLink() {
             ele.href = sb === 'aspnetcore' ? 'https://ej2.syncfusion.com/aspnetcore/' : 'https://ej2.syncfusion.com/aspnetmvc/';
 
         } else if (sb === 'nextjs') {
-            ele.href = 'https://ej2.syncfusion.com/nextjs/demos/';
-        }  
+            const defaultSamplePath = sample[1].includes('grid/grid-overview') ? sample[1].split('/')[0] + '/grid/overview' : sample[1];
+            ele.href = 'https://ej2.syncfusion.com/nextjs/demos/' + defaultSamplePath;
+        }
         else if (sb === 'blazor') {
             ele.href = 'https://blazor.syncfusion.com/demos/';
         }
@@ -1208,13 +1209,13 @@ function setPropertySectionHeight() {
 
 function routeDefault() {
     crossroads.addRoute('', function () {
-        window.location.href = '#/' + selectedTheme + '/grid/grid-overview.html';
+        window.location.href = '#/' + selectedTheme + '/grid/gridoverview.html';
         isInitRedirected = true;
     });
     crossroads.bypassed.add(function (request) {
         var hash = request.split('.html')[0].split('/');
         if (samplePath.indexOf(hash.slice(1).join('/')) === -1) {
-            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/grid-overview.html');
+            location.hash = '#/' + hash[0] + '/' + (defaultSamples[hash[1]] || 'grid/gridoverview.html');
             isInitRedirected = true;
             reloadPageForRedirection = true;
         }

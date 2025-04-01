@@ -1,7 +1,7 @@
 /**
  * Sample for SMA Indicator
  */
- this.renderChartSMA = function (chartData) {
+var renderChartSMA = function (chartData) {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', intervalType: 'Months',

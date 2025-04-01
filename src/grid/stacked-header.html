@@ -1,35 +1,366 @@
+<style>
+    #column-chooser-icon, #column-chooser-text {
+      position: relative;
+    }
+
+    #column-chooser-icon {
+        top: 3px;
+    }
+
+    #column-chooser-text {
+      left: 5px;
+    }
+
+    .e-rtl #column-chooser-icon {
+      top: 3px;
+      right: 5px;
+    }
+    
+    .e-rtl #column-chooser-text {
+        left: 0;
+    }
+    
+    .no-record-text {
+        padding: 5px;
+    }
+
+    .custom-rating.e-rating-container .e-rating-item-container,
+        .e-bigger
+          .custom-rating.e-rating-container
+          .e-rating-item-container
+          .e-rating-icon,
+        .e-bigger.custom-rating.e-rating-container
+          .e-rating-item-container
+          .e-rating-icon {
+          font-size: 11px;
+    }
+
+    .custom-rating.e-rating-container
+        .e-rating-item-container
+        .e-rating-icon {
+        -webkit-text-fill-color: lightgrey;
+        -webkit-text-stroke: 1px lightgrey;
+    }
+
+    .custom-rating.e-rating-container
+        .e-rating-item-container.e-rating-selected
+        .e-rating-icon {
+        background: linear-gradient(
+        to right,
+        #ffa600 var(--rating-value),
+        #ffa600 var(--rating-value)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #ffa600;
+    }
+
+    .e-image {
+        height: 13px;
+        width: 14px;
+    }
+
+    .fluent .e-grid .e-rowcell.e-delivered,
+    .fluent2 .e-grid .e-rowcell.e-delivered,
+    .bootstrap5 .e-grid .e-rowcell.e-delivered,
+    .bootstrap5\.3 .e-grid .e-rowcell.e-delivered,
+    .tailwind3 .e-grid .e-rowcell.e-delivered,
+    .tailwind .e-grid .e-rowcell.e-delivered,
+    .material .e-grid .e-rowcell.e-delivered,
+    .fabric .e-grid .e-rowcell.e-delivered,
+    .bootstrap4 .e-grid .e-rowcell.e-delivered,
+    .bootstrap .e-grid .e-rowcell.e-delivered,
+    .highcontrast .e-grid .e-rowcell.e-delivered,
+    .fluent
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5\.3
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind3
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .material
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fabric
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap4
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .highcontrast
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .e-grid .e-rowcell.e-delivered,
+    .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd) {
+        background-color: #dfffe2;
+        color: #00a653;
+    }
+
+    .fluent-dark .e-grid .e-rowcell.e-delivered,
+    .fluent2-dark .e-grid .e-rowcell.e-delivered,
+    .fluent2-highcontrast .e-grid .e-rowcell.e-delivered,
+    .bootstrap5-dark .e-grid .e-rowcell.e-delivered,
+    .bootstrap5\.3-dark .e-grid .e-rowcell.e-delivered,
+    .highcontrast .e-grid .e-rowcell.e-delivered,
+    .tailwind3-dark .e-grid .e-rowcell.e-delivered,
+    .tailwind-dark .e-grid .e-rowcell.e-delivered,
+    .material-dark .e-grid .e-rowcell.e-delivered,
+    .fabric-dark .e-grid .e-rowcell.e-delivered,
+    .bootstrap-dark .e-grid .e-rowcell.e-delivered,
+    .fluent-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2-highcontrast
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5\.3-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .highcontrast
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind3-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .material-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fabric-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd) {
+          background-color: #315c35;
+          color: #38ff9c;
+    }
+
+    .material3-dark .e-grid .e-rowcell.e-delivered,
+    .material3-dark
+        .e-grid
+        .e-rowcell.e-delivered:not(.e-editedbatchcell):not(.e-updatedtd) {
+          background-color: #143e17;
+          color: #8eda94;
+    }
+
+    .fluent .e-grid .e-rowcell.e-inprogress,
+    .fluent2 .e-grid .e-rowcell.e-inprogress,
+    .bootstrap5 .e-grid .e-rowcell.e-inprogress,
+    .bootstrap5\.3 .e-grid .e-rowcell.e-inprogress,
+    .tailwind3 .e-grid .e-rowcell.e-inprogress,
+    .tailwind .e-grid .e-rowcell.e-inprogress,
+    .material .e-grid .e-rowcell.e-inprogress,
+    .fabric .e-grid .e-rowcell.e-inprogress,
+    .bootstrap4 .e-grid .e-rowcell.e-inprogress,
+    .bootstrap .e-grid .e-rowcell.e-inprogress,
+    .highcontrast .e-grid .e-rowcell.e-inprogress,
+    .fluent
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5\.3
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind3
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .material
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fabric
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap4
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .highcontrast
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .e-grid .e-rowcell.e-inprogress,
+    .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd) {
+          background-color: #ffebe9;
+          color: #ff3740;
+    }
+
+    .fluent-dark .e-grid .e-rowcell.e-inprogress,
+    .fluent2-dark .e-grid .e-rowcell.e-inprogress,
+    .fluent2-highcontrast .e-grid .e-rowcell.e-inprogress,
+    .bootstrap5-dark .e-grid .e-rowcell.e-inprogress,
+    .bootstrap5\.3-dark .e-grid .e-rowcell.e-inprogress,
+    .highcontrast .e-grid .e-rowcell.e-inprogress,
+    .tailwind3-dark .e-grid .e-rowcell.e-inprogress,
+    .tailwind-dark .e-grid .e-rowcell.e-inprogress,
+    .material-dark .e-grid .e-rowcell.e-inprogress,
+    .fabric-dark .e-grid .e-rowcell.e-inprogress,
+    .bootstrap-dark .e-grid .e-rowcell.e-inprogress,
+    .fluent-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fluent2-highcontrast
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap5\.3-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .highcontrast
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind3-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .tailwind-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .material-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .fabric-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd),
+    .bootstrap-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd) {
+          background-color: #55241e;
+          color: #ff9ca0;
+    }
+
+    .material3-dark .e-grid .e-rowcell.e-inprogress,
+    .material3-dark
+        .e-grid
+        .e-rowcell.e-inprogress:not(.e-editedbatchcell):not(.e-updatedtd) {
+        background-color: #3a1618;
+        color: #ff7b81;
+    }
+    
+    .no-border {
+        border: none !important;
+    }
+</style>
 <div class="control-section">
     <div class="content-wrapper">
         <div id="Grid">
         </div>
+        <script id='ccHeadertemplate' type="text/x-template">
+            <div>
+              <span class="e-icons e-columns" id="column-chooser-icon"></span> 
+              <span id="column-chooser-text">Column Options</span>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="column-chooser-template">                
+            <div id="tree" ></div>
+        </script>
+
+        <script id='ccFootertemplate' type="text/x-template">
+            <div id="columnChooserFooter">
+                <button id="submitButton">Apply</button>
+                <button id="abortButton">Close</button>
+            </div>
+        </script>
+
+        <template>
+            <input class="feedback" />
+        </template>
+        <script type="text/x-jsrender" id="feedbackTemplate">
+            ${feedbackDetail(data)}
+        </script>
+
+        <script id="locationTemplate" type="text/x-template">
+            <div class="image">
+                <img src="//ej2.syncfusion.com/demos/src/grid/images/Map.png" class="e-image" alt=""/> &nbsp
+                <span>${ShipCountry}</span>
+            </div>
+        </script>
     </div>
 </div>
 
 <div id="action-description">
-    <p>This sample demonstrates the Grid component with the stacked header and resize feature. In this sample, we have shown multiple level of column headers.
-    </p>
+    <p>This example showcases the Syncfusion EJ2 Grid component which features stacked headers, column resizing, and a customizable column chooser template.</p>
 </div>
-<div id="description">
-    <p>The Grid columns can be stacked/grouped in order to show multiple level of column headers. 
-        It can be done by setting the <code><a aria-label="API link for documentation" target="_blank" class="code"
-        href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column#columns">
-        columns->columns
-        </a></code> property.
+<div id='description'>
+    <p><b>Stacked Headers:</b></p>
+    <p>The Grid allows grouping columns to display multiple levels of headers using the <code><a aria-label="API link for documentation" target="_blank" class="code"
+        href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column#columns"> columns->columns </a></code> property.</p>
+    <p>In this demo, the columns are grouped as follows:</p>
+    <ul>
+        <li><b>Order Details</b>: ID and Date</li>
+        <li><b>Shipping Details</b>: Country and Charges </li>
+        <li><b>Delivery Status</b>: Status and Feedback</li>
+    </ul>
+    <br/>
+    <p><b>Column Resizing:</b></p>
+    <p> 
+        <p>Columns can be resized by clicking and dragging the right edges of the column header. To enable this feature, set
+        <code><a aria-label="API link for documentation" target="_blank" class="code" href="http://ej2.syncfusion.com/javascript/documentation/api/grid#allowresizing">allowResizing
+        </a></code> to true. To disable resizing for specific columns, set
+        <code><a aria-label="API link for documentation" target="_blank" class="code" href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column#allowresizing">columns->allowResizing
+        </a></code>
+        to false.
     </p>
-    <p>The Grid columns can be resized by clicking and dragging at the right edge of columns header. To enable column, resize behavior, set <code><a aria-label="API link for documentation" target="_blank" class="code"
-        href="http://ej2.syncfusion.com/javascript/documentation/api/grid#allowresizing">allowResizing
-        </a></code> property as true. You can also prevent the resize of the particular column by setting
-        <code><a aria-label="API link for documentation" target="_blank" class="code"
-        href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column#allowresizing">columns->allowResizing
-        </a></code> as false in columns definition.
-    <p>
-        In this demo, the columns <strong>CustomerName, OrderDate</strong> are grouped under <strong>Order Details</strong>,
-        the columns <strong>ShippedDate, ShipCountry, Freight</strong> are grouped under <strong>Ship Details</strong>. 
-    </p>
-    <p>
-        More information on the stacked header configuration can be found in this
-        <a aria-label="API link for documentation" target="_blank" 
-        href="https://ej2.syncfusion.com/javascript/documentation/grid/columns/#resize-stacked-column">
-        documentation section</a>.
+    <br/>
+    <p><b>Column Chooser Templates:</b></p>
+    <p>The column chooser template is used to customize layout and manage column visibility.</p>
+    <p>Key properties: </p>
+    <ul>
+        <li>
+            <code>columnChooserSettings->headerTemplate </code> :- Defines the header template.                   
+        </li>
+        <li>
+            <code>columnChooserSettings->template </code> :- Defines the content template.
+        </li>
+        <li>
+            <code>columnChooserSettings->footerTemplate </code> :- Defines the footer template.
+        </li>
+        <li>
+            <code>columnChooserSettings->enableSearching </code> :- Enables or disables search functionality.
+        </li>
+    </ul>
+    <p>In this demo, the <code> showInColumnChooser </code> of the <b>Customer ID</b> column is set to false, preventing it from being displayed in the column chooser popup.</p>
+    <br/>
+
+    <p> More information on the Stacked Header feature configuration can be found in this
+        <a aria-label="API link for documentation" target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/grid/columns/#resize-stacked-column"> documentation section</a>.
     </p>
 </div>

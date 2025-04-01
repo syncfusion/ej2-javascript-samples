@@ -7,7 +7,7 @@ this.default = function () {
             { headerText: 'Menu', keyField: 'Menu' },
             { headerText: 'Order', keyField: 'Order' },
             { headerText: 'Ready to Serve', keyField: 'Ready to Serve' },
-            { headerText: 'Delivered', keyField: 'Delivered,Served' }
+            { headerText: 'Delivered', keyField: 'Delivered' }
         ],
         cardSettings: {
             headerField: 'Id',
@@ -20,7 +20,7 @@ this.default = function () {
         dialogClose: onEditDialogClose
     });
     kanbanObj.appendTo('#Kanban');
-    var categoryData = ['Menu', 'Order', 'Ready to Serve', 'Delivered','Served'];
+    var categoryData = ['Menu', 'Order', 'Ready to Serve', 'Delivered'];
     function onEditDialogOpen(args) {
         if (args.requestType !== 'Delete') {
             var curData = args.data;

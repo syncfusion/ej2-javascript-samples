@@ -90,20 +90,19 @@ this.default = function () {
     }
 
     function onActionBegin(args) {
-        var isHolidayDateRange = false;
-        if (args.requestType === 'eventCreate') {
-            var eventData = args.data[0];
-            isHolidayDateRange =
-                !holidayEventCollection &&
+        var requestType = args.requestType;
+        var isCreateOrChange = requestType === 'eventCreate' || requestType === 'eventChange';
+        if (isCreateOrChange) {
+            var eventData = requestType === 'eventCreate' ? args.data[0]: args.data;
+            var adjustedEndTime = eventData.IsAllDay ?
+                new Date(eventData.EndTime.setMinutes(eventData.EndTime.getMinutes() - 1)) :
+                eventData.EndTime;
+            var isHolidayDateRange = !holidayEventCollection &&
                 !eventData.RecurrenceRule &&
-                isEventWithinHolidayRange(eventData.StartTime, eventData.EndTime);
-        } else if (args.requestType === 'eventChange') {
-            isHolidayDateRange =
-                !holidayEventCollection &&
-                isEventWithinHolidayRange(data.StartTime, data.EndTime);
+                isEventWithinHolidayRange(eventData.StartTime, adjustedEndTime);
+            args.cancel = isHolidayDateRange;
+            showToastForAction(requestType, isHolidayDateRange);
         }
-        args.cancel = isHolidayDateRange;
-        showToastForAction(args.requestType, isHolidayDateRange);
     }
 
     function onEventRender(args) {

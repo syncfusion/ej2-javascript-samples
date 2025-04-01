@@ -1,0 +1,56 @@
+<div class="control-section">
+    <div class="stream-aiassistview"> 
+        <div id="streamAssistView"></div>
+    </div>
+</div>
+
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-content">
+        <div class="e-icons e-assistview-icon"></div>
+        <h3>AI Assistance</h3>
+        <i>
+            Update real-time responses with chunked streaming updates.
+        </i>
+    </div>
+</script>
+
+<style>
+
+    .stream-aiassistview {
+        height: 600px;
+        width: 60vw;
+        margin: 0 auto;
+    }
+    
+    .stream-aiassistview .banner-content .e-assistview-icon:before {
+        font-size: 35px;
+    }
+    
+    .stream-aiassistview .banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 330px;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 750px) {
+        .stream-aiassistview {
+            width: 100%;
+        }
+    }
+    
+</style>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates the streaming response update in the <code>AI AssistView</code> control.
+    </p>
+</div>
+<div id="description">
+    <p> In this example, the <code>AI AssistView</code> control dynamically updates responses in a streaming manner using the <code>addPromptResponse</code> method, while the <code>scrollToBottom</code> method ensures automatic scrolling. The <code>bannerTemplate</code> allows customization of the banner content, and <code>toolbarSettings</code> enables custom toolbar items, including a right-aligned Refresh button. Additionally, <code>promptSuggestions</code> offers AI-generated prompt suggestions, while <code>promptRequest</code> processes prompt requests when triggered.   
+    </p> 
+    <p>   
+      This implementation provides an interactive AI chat experience with real-time streaming updates, enhanced by Markdown-to-HTML conversion using the <code>Marked</code> plugin.   
+   </p>
+</div>

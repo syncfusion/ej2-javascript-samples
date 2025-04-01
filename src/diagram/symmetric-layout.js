@@ -62,6 +62,7 @@ this.default = function () {
         format: '###.##',
         value: 80,
         step: 1,
+        min: 1,
     });
     springLength.appendTo('#springlength');
     var springfactor = new ej.inputs.NumericTextBox({
@@ -69,12 +70,14 @@ this.default = function () {
         value: 0.8,
         step: 0.1,
         max: 3.5,
+        min: 0,
     });
     springfactor.appendTo('#springfactor');
     var maxiteration = new ej.inputs.NumericTextBox({
         format: '###.##',
         value: 500,
         step: 1,
+        min: 0,
     });
     maxiteration.appendTo('#maxiteration');
     var layout = new ej.buttons.Button({ cssClass: 'e-small' });

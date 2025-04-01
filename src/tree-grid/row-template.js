@@ -1,4 +1,7 @@
 var instance = new ej.base.Internationalization();
+window.format = function (value) {
+    return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
+};
 this.default = function () {
     var treegrid = new ej.treegrid.TreeGrid({
             dataSource: window.textdata,
@@ -15,7 +18,4 @@ this.default = function () {
             ]
         });
     treegrid.appendTo('#TreeGrid');
-};
-window.format = function (value) {
-    return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
 };

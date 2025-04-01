@@ -48,6 +48,7 @@ this.default = function () {
         var colLen = pivotObj.pivotValues[3].length;
         var cLen = cTable[1].children[0].children.length - 1;
         var rLen = cTable[1].children[1].children.length;
+        var rowIndx;
      
         for (let k = 0; k < rLen; k++) {
             if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {

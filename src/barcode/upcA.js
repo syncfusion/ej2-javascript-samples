@@ -222,6 +222,10 @@ this.default = function () {
         }
     });
     displayTextUpcA.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn15');
+    document.getElementById('downloadBtn15').onclick = function () {
+        barcodeUpcA.exportImage("Barcode", 'PNG');
+    };
 };
 

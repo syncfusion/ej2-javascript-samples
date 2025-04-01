@@ -200,7 +200,7 @@ this.default = function () {
         ],
         title: 'Quarterly Sales Chart',
         tooltip: {
-            enable: true,
+            enable: true
         },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendClick: function (args) {

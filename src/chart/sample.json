@@ -8,7 +8,7 @@
         {
             "url": "overview",
             "name": "Overview",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the charts",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the charts",
             "category": "Charts",
             "api": {
                 "Chart": [
@@ -23,7 +23,7 @@
             "url": "line",
             "name": "Line",
             "type": "update",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -37,7 +37,8 @@
         {
             "url": "spline",
             "name": "Spline",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the spline series.",
+            "type": "update",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -51,7 +52,7 @@
         {
             "url": "step-line",
             "name": "Step Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the step line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the step line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -65,7 +66,7 @@
         {
             "url": "dashed-line",
             "name": "Dashed Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the dashed line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the dashed line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -79,7 +80,7 @@
         {
             "url": "custom-animation",
             "name": "Custom Animation",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the spline series with delay animation.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline series with delay animation.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -93,7 +94,7 @@
         {
             "url": "spline-inversed",
             "name": "Inversed Spline",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the inversed spline series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the inversed spline series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -107,7 +108,7 @@
         {
             "url": "line-segments",
             "name": "Line Zone",
-            "description": "This demo for Essential<sup>®</sup> JS2 Chart control shows how to render and configure the points in a particular range using MultiColoredLine series.",
+            "description": "This demo for Essential JS2 Chart control shows how to render and configure the points in a particular range using MultiColoredLine series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -121,7 +122,7 @@
         {
             "url": "line-multi-color",
             "name": "Multi Colored Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the multi colored line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the multi colored line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -135,7 +136,7 @@
         {
             "url": "stacked-line",
             "name": "Stacked Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacked line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacked line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -149,7 +150,7 @@
         {
             "url": "stacked-line-100",
             "name": "100% Stacked Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100% stacked line series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100% stacked line series.",
             "category": "Line Charts",
             "api": {
                 "Chart": [
@@ -163,7 +164,7 @@
         {
             "url": "area",
             "name": "Area",
-            "description": "This demo sample for Essential<sup>®</sup> JS2 Chart control shows how to render and configure the area series chart.",
+            "description": "This demo sample for Essential JS2 Chart control shows how to render and configure the area series chart.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -176,7 +177,7 @@
         {
             "url": "spline-area",
             "name": "Spline Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the spline area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -189,7 +190,7 @@
         {
             "url": "step-area",
             "name": "Step Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the step area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the step area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -202,7 +203,7 @@
         {
             "url": "step-without-riser",
             "name": "Step Without Riser",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the step area without vertical risers.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the step area without vertical risers.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -216,7 +217,7 @@
         {
             "url": "range-step-area",
             "name": "Range Step Area",
-            "description": "This demo for Essential<sup>®</sup> JS2 Chart control shows how to render the range step area series.",
+            "description": "This demo for Essential JS2 Chart control shows how to render the range step area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -229,7 +230,7 @@
         {
             "url": "range-area",
             "name": "Range Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the range area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the range area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -244,7 +245,7 @@
         {
             "url": "spline-range-area",
             "name": "Spline Range Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the spline range area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the spline range area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -258,7 +259,7 @@
         {
             "url": "stacked-area",
             "name": "Stacked Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -271,7 +272,7 @@
         {
             "url": "stacked-step-area",
             "name": "Stacked Step Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking step area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking step area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -284,7 +285,7 @@
         {
             "url": "stacked-area-100",
             "name": "100% Stacked Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking area series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking area series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -297,7 +298,7 @@
         {
             "url": "area-empty",
             "name": "Area - Empty Points",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the area series chart with empty points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the area series chart with empty points.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -310,7 +311,7 @@
         {
             "url": "area-negative-point",
             "name": "Area - Negative Points",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the area series chart with negative points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the area series chart with negative points.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -323,7 +324,7 @@
         {
             "url": "area-segments",
             "name": "Area Zone",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render the points in a particular range using MultiColoredArea series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render the points in a particular range using MultiColoredArea series.",
             "category": "Area Charts",
             "api": {
                 "Chart": [
@@ -337,7 +338,7 @@
         {
             "url": "column",
             "name": "Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -352,22 +353,7 @@
         {
             "url": "grouped-column",
             "name": "Grouped Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the grouping in column series.",
-            "category": "Bar Charts",
-            "api": {
-                "Chart": [
-                    "primaryXAxis",
-                    "primaryYAxis",
-                    "series",
-                    "tooltip",
-                    "legendSettings"
-                ]
-            }
-        },
-        {
-            "url": "rounded-column",
-            "name": "Rounded Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the rounded column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the grouping in column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -382,7 +368,7 @@
         {
             "url": "column-placement",
             "name": "Back to Back Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the column charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the column charts.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -396,9 +382,8 @@
         },
         {
             "url": "column-drilldown",
-            "type": "new",
             "name": "Column Drilldown",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the column series with drilldown.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the column series with drilldown.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -413,7 +398,7 @@
         {
             "url": "range-column",
             "name": "Range Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the range column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the range column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -428,7 +413,7 @@
         {
             "url": "range-bar",
             "name": "Inversed Range Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the inversed range column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the inversed range column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -443,7 +428,7 @@
         {
             "url": "cylindrical-column",
             "name": "Cylindrical Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the cylindrical column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the cylindrical column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -458,7 +443,22 @@
         {
             "url": "bar",
             "name": "Bar",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bar series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bar series.",
+            "category": "Bar Charts",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
+        },
+        {
+            "url": "rounded-column",
+            "name": "Rounded Bar",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the rounded bar series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -473,8 +473,9 @@
         {
             "url": "stacked-column",
             "name": "Stacked Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking column series.",
             "category": "Bar Charts",
+            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -488,7 +489,7 @@
         {
             "url": "stacked-column-100",
             "name": "100% Stacked Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking column series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking column series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -503,7 +504,7 @@
         {
             "url": "stacked-bar",
             "name": "Stacked Bar",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stacking bar series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stacking bar series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -518,7 +519,7 @@
         {
             "url": "stacked-bar-100",
             "name": "100% Stacked Bar",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking bar series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the 100 percent stacking bar series.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -533,7 +534,7 @@
         {
             "url": "negative-stack",
             "name": "Negative Stack",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bar charts.",
             "category": "Bar Charts",
             "api": {
                 "Chart": [
@@ -548,7 +549,7 @@
         {
             "url": "scatter-plot",
             "name": "Scatter Plot",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the scatter series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the scatter series.",
             "category": "Scatter and Bubble",
             "api": {
                 "Chart": [
@@ -563,7 +564,7 @@
         {
             "url": "bubble",
             "name": "Bubble",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bubble series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bubble series.",
             "category": "Scatter and Bubble",
             "api": {
                 "Chart": [
@@ -578,7 +579,7 @@
         {
             "url": "default-pie",
             "name": "Pie",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the pie charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -591,7 +592,7 @@
         {
             "url": "pie-radius",
             "name": "Pie with Various Radius",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the various radius pie chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the various radius pie chart.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -604,7 +605,7 @@
         {
             "url": "donut",
             "name": "Donut",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the doughnut charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the doughnut charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -617,7 +618,7 @@
         {
             "url": "pyramid",
             "name": "Pyramid",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the pyramid charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pyramid charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -630,7 +631,8 @@
         {
             "url": "funnel",
             "name": "Funnel",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the funnel charts.",
+            "type": "update",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the funnel charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -642,9 +644,8 @@
         },
         {
             "url": "pie-legend",
-            "type": "update",
             "name": "Pie with Legend",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the legends in pie charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -657,7 +658,7 @@
         {
             "url": "semi-pie",
             "name": "Semi Pie",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render semi-pie and doughnut charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render semi-pie and doughnut charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -670,7 +671,7 @@
         {
             "url": "smart-labels",
             "name": "Smart Labels",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -683,7 +684,7 @@
         {
             "url": "drill-down-pie",
             "name": "Drilldown",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to achieve the drill-down concept using pie charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to achieve the drill-down concept using pie charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -696,7 +697,7 @@
         {
             "url": "grouping",
             "name": "Grouping",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to group points in pie charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to group points in pie charts.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -709,7 +710,7 @@
         {
             "url": "pie-empty-point",
             "name": "Empty Points",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -722,7 +723,7 @@
         {
             "url": "rounded-corner",
             "name": "Rounded Corner",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
@@ -734,7 +735,7 @@
         {
             "url": "pie-with-patterns",
             "name": "Pie with Patterns",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the pie chart with patterns.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the pie chart with patterns.",
             "category": "Accumulation Charts",
             "api": {
                 "Chart": [
@@ -747,7 +748,7 @@
         {
             "url": "live-update",
             "name": "Live Update",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Accumulation Charts",
             "api": {
                 "Chart": [
@@ -760,7 +761,7 @@
         {
             "url": "waterfall",
             "name": "Waterfall",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the waterfall series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the waterfall series.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -775,7 +776,7 @@
         {
             "url": "horizontal-waterfall",
             "name": "Horizontal Waterfall",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the horizontal waterfall series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the horizontal waterfall series.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -790,7 +791,7 @@
         {
             "url": "histogram",
             "name": "Histogram",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the histogram series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the histogram series.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -805,7 +806,7 @@
         {
             "url": "box-and-whisker",
             "name": "Box and Whisker",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the box and whisker series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the box and whisker series.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -821,7 +822,7 @@
         {
             "url": "error-bar",
             "name": "Error Bar",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the error bars in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the error bars in charts.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -837,7 +838,7 @@
         {
             "url": "trend-lines",
             "name": "Trendlines",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the trend lines in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the trend lines in charts.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -851,7 +852,7 @@
         {
             "url": "hilo",
             "name": "Hilo",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the hilo series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the hilo series.",
             "category": "Stock Charts",
             "api": {
                 "Chart": [
@@ -866,7 +867,7 @@
         {
             "url": "hilo-open-close",
             "name": "Hilo Open Close",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the hilo open close series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the hilo open close series.",
             "category": "Stock Charts",
             "api": {
                 "Chart": [
@@ -881,7 +882,7 @@
         {
             "url": "candle-stick",
             "name": "Candle Stick",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the candle series.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the candle series.",
             "category": "Stock Charts",
             "api": {
                 "Chart": [
@@ -896,7 +897,7 @@
         {
             "url": "accumulation-distribution-indicator",
             "name": "Accumulation Distribution",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the accumulation distribution indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the accumulation distribution indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -911,7 +912,7 @@
         {
             "url": "average-true-range-indicator",
             "name": "ATR",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the average true range indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the average true range indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -926,7 +927,7 @@
         {
             "url": "bollinger",
             "name": "Bollinger",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the bollinger band type indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bollinger band type indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -941,7 +942,7 @@
         {
             "url": "exponential-moving-average-indicator",
             "name": "EMA",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the exponential moving average indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the exponential moving average indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -956,7 +957,7 @@
         {
             "url": "moving-average-convergence-divergence-indicator",
             "name": "MACD",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the moving average convergence divergence indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the moving average convergence divergence indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -971,7 +972,7 @@
         {
             "url": "momentum",
             "name": "Momentum",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the momentum indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the momentum indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -986,7 +987,7 @@
         {
             "url": "relative-strength-index-indicator",
             "name": "RSI",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the relative strength index indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the relative strength index indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -1001,7 +1002,7 @@
         {
             "url": "simple-moving-average-indicator",
             "name": "SMA",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the simple moving average indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the simple moving average indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -1016,7 +1017,7 @@
         {
             "url": "stochastic",
             "name": "Stochastic",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the stochastic indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the stochastic indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -1031,7 +1032,7 @@
         {
             "url": "triangular-moving-average-indicator",
             "name": "TMA",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the triangular moving average indicator.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the triangular moving average indicator.",
             "category": "Technical Indicators",
             "api": {
                 "Chart": [
@@ -1046,7 +1047,7 @@
         {
             "url": "multi-series-chart",
             "name": "Multi-Series Chart",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to combine different types of charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to combine different types of charts.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -1059,7 +1060,7 @@
         {
             "url": "pareto",
             "name": "Pareto Chart",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure pareto charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure pareto charts.",
             "category": "Other Types",
             "api": {
                 "Chart": [
@@ -1072,7 +1073,7 @@
         {
             "url": "chart-performance",
             "name": "Chart Performance",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the performance when plotting large volumes of data and handling high frequency real-time data.",
+            "description": "This demo for Essential JavaScript2 Chart control shows the performance when plotting large volumes of data and handling high frequency real-time data.",
             "category": "Benchmark",
             "api": {
                 "Chart": [
@@ -1085,7 +1086,7 @@
         {
             "url": "update-spline",
             "name": "Spline updating each second",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
                 "Chart": [
@@ -1098,7 +1099,7 @@
         {
             "url": "live-stock-data",
             "name": "Live stock data",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
                 "Chart": [
@@ -1111,7 +1112,7 @@
         {
             "url": "update-data-source",
             "name": "Update data source",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
                 "Chart": [
@@ -1124,7 +1125,7 @@
         {
             "url": "click-add-point",
             "name": "Click to add a point",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
                 "Chart": [
@@ -1137,7 +1138,7 @@
         {
             "url": "live-data-sorting",
             "name": "Live Data Sorting",
-            "description": "This demo for Essential<sup>®</sup> JavaScript2 Chart control shows the real time charts",
+            "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
                 "Chart": [
@@ -1150,13 +1151,13 @@
         {
             "url": "polar-line",
             "name": "Line",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render line in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render line in polar and radar charts.",
             "category": "Polar Radar"
         },
         {
             "url": "polar-spline",
             "name": "Spline",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render spline in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render spline in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1170,7 +1171,7 @@
         {
             "url": "polar-area",
             "name": "Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render area in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render area in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1184,7 +1185,7 @@
         {
             "url": "polar-stacking-area",
             "name": "Stacked Area",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render stacking area in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render stacking area in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1198,7 +1199,7 @@
         {
             "url": "polar-scatter",
             "name": "Scatter",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render scatter in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render scatter in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1212,7 +1213,7 @@
         {
             "url": "polar-column",
             "name": "Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render column in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render column in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1226,7 +1227,7 @@
         {
             "url": "polar-stacking-column",
             "name": "Wind Rose",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render wind rose using stacking column in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render wind rose using stacking column in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1240,7 +1241,7 @@
         {
             "url": "polar-range-column",
             "name": "Range Column",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render range column in polar and radar charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render range column in polar and radar charts.",
             "category": "Polar Radar",
             "api": {
                 "Chart": [
@@ -1254,7 +1255,7 @@
         {
             "url": "local-data",
             "name": "Local Data",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to bind JSON data to chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to bind JSON data to chart.",
             "category": "Data Binding",
             "api": {
                 "Chart": [
@@ -1269,7 +1270,7 @@
         {
             "url": "remote-data",
             "name": "Remote Data",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to consume data from remote data service.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to consume data from remote data service.",
             "category": "Data Binding",
             "api": {
                 "Chart": [
@@ -1283,7 +1284,7 @@
         {
             "url": "lazy-loading",
             "name": "Lazy Loading",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the Lazy Loading behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the Lazy Loading behavior in chart.",
             "category": "Data Binding",
             "api": {
                 "Chart": [
@@ -1297,7 +1298,7 @@
         {
             "url": "numeric",
             "name": "Numeric Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to plot numeric data with the help of numeric axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to plot numeric data with the help of numeric axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1311,13 +1312,13 @@
         {
             "url": "date-time",
             "name": "Datetime Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the date-time axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the date-time axis in charts.",
             "category": "Chart Axes"
         },
         {
             "url": "date-time-category",
             "name": "DateTime Category Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the date-time category axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the date-time category axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1331,7 +1332,7 @@
         {
             "url": "category",
             "name": "Category Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the category axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the category axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1345,7 +1346,7 @@
         {
             "url": "indexed-axis",
             "name": "Indexed Category Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the indexed category axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the indexed category axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1359,7 +1360,7 @@
         {
             "url": "logarithmic-scale",
             "name": "Logarithmic Scale",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the logarithmic axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the logarithmic axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1373,7 +1374,7 @@
         {
             "url": "multiple-axis",
             "name": "Multiple Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the mulitple axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the mulitple axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1387,7 +1388,7 @@
         {
             "url": "inversed",
             "name": "Inversed Axis",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to invert the axis in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to invert the axis in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1401,7 +1402,7 @@
         {
             "url": "strip-line",
             "name": "Stripline",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the strip lines in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the strip lines in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1416,7 +1417,7 @@
         {
             "url": "strip-line-recurrence",
             "name": "Stripline Recurrence",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the strip line recurrence in charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the strip line recurrence in charts.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1431,7 +1432,7 @@
         {
             "url": "smart-axis-labels",
             "name": "Smart Labels",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to arrange the labels smartly without overlapping with each other.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1445,7 +1446,7 @@
         {
             "url": "multi-level-label",
             "name": "Multi Level Labels",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to group the axis labels .",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to group the axis labels .",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1459,7 +1460,7 @@
         {
             "url": "axes-crossing",
             "name": "Axes Crossing",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the behaviour of the axis crossing in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the behaviour of the axis crossing in chart.",
             "category": "Chart Axes",
             "api": {
                 "Chart": [
@@ -1471,7 +1472,7 @@
         {
             "url": "sorting",
             "name": "Sorting",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to sort the series data in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to sort the series data in chart.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1485,7 +1486,7 @@
         {
             "url": "marker-chart",
             "name": "Marker Chart",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the marker symbols for data points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the marker symbols for data points.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1499,7 +1500,7 @@
         {
             "url": "right-to-left",
             "name": "RTL",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the RTL feature in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the RTL feature in chart.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1514,7 +1515,7 @@
         {
             "url": "pie-annotation",
             "name": "Annotation",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to add more information to the chart using annotation.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to add more information to the chart using annotation.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1529,7 +1530,7 @@
         {
             "url": "synchronized-chart",
             "name": "Synchronized Charts",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the synchronized chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the synchronized chart.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1544,7 +1545,7 @@
         {
             "url": "data-label-template",
             "name": "DataLabel Template",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the data label template.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the data label template.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1558,7 +1559,7 @@
         {
             "url": "tooltip-template",
             "name": "Tooltip Template",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the tooltip-template.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the tooltip-template.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1573,7 +1574,7 @@
         {
             "url": "vertical",
             "name": "Vertical Charts",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the vertical type charts.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the vertical type charts.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1589,7 +1590,7 @@
         {
             "url": "empty-point",
             "name": "Empty Points",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1605,7 +1606,7 @@
         {
             "url": "range-color-mapping",
             "name": "Range Color Mapping",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure range color mapping feature",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure range color mapping feature",
             "category": "Chart Customization",
             "api": {
                 "Chart": [
@@ -1618,9 +1619,24 @@
             }
         },
         {
+            "url": "series-animation",
+            "name": "Animation",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure series animation.",
+            "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
             "url": "print",
             "name": "Print",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to print the entire chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to print the entire chart.",
             "category": "Print and Export",
             "api": {
                 "Chart": [
@@ -1636,7 +1652,7 @@
         {
             "url": "export",
             "name": "Export",
-            "description": "This demo for Essential<sup>®</sup> JS2 Chart control shows how to export the charts to Excel, PDF, and image formats such as SVG, JPEG, and PNG at client-side.",
+            "description": "This demo for Essential JS2 Chart control shows how to export the charts to Excel, PDF, and image formats such as SVG, JPEG, and PNG at client-side.",
             "category": "Print and Export",
             "api": {
                 "Chart": [
@@ -1652,7 +1668,7 @@
         {
             "url": "selection",
             "name": "Selection",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the selection behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the selection behavior in chart.",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1667,7 +1683,7 @@
         {
             "url": "range-selection",
             "name": "Range Selection",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the range selection in chart .",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the range selection in chart .",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1681,7 +1697,7 @@
         {
             "url": "keyboard",
             "name": "Keyboard Navigation",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the Keyboard Navigation in chart .",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the Keyboard Navigation in chart .",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1695,8 +1711,7 @@
         {
             "url": "cross-hair",
             "name": "Crosshair",
-            "type": "update",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the crosshair behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the crosshair behavior in chart.",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1710,7 +1725,7 @@
         {
             "url": "trackball",
             "name": "Trackball",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the trackball behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the trackball behavior in chart.",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1725,7 +1740,22 @@
             "url": "zooming",
             "name": "Zooming and Panning",
             "type": "update",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the zooming and panning behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the zooming and panning behavior in chart.",
+            "category": "User Interaction",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "zoomSettings"
+                ]
+            }
+        },
+        {
+            "url": "pagination",
+            "name": "Pagination",
+            "type": "new",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the pagination behavior in chart.",
             "category": "User Interaction",
             "api": {
                 "Chart": [
@@ -1739,7 +1769,7 @@
         {
             "url": "data-editing",
             "name": "Data Editing",
-            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates the data editing behavior in chart.",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates the data editing behavior in chart.",
             "category": "User Interaction",
             "api": {
                 "Chart": [

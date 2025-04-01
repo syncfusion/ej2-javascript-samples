@@ -17,11 +17,11 @@ this.default = function () {
             },
             {
                 field: 'startDate', headerText: 'Start Date', textAlign: 'Right', width: 150,
-                editType: 'datepickeredit', format: 'yMd', validationRules: { date: true}
+                editType: 'datepickeredit', format: 'yMd', edit: { params: { format:'M/d/yyyy',}}, validationRules: { date: ['M/d/yyyy', 'Please enter a valid date'] }
             },
             {
                 field: 'endDate', headerText: 'End Date', textAlign: 'Right', width: 150,
-                editType: 'datepickeredit', format: 'yMd', validationRules: { date: true}
+                editType: 'datepickeredit', format: 'yMd',  edit: { params: { format:'M/d/yyyy',}}, validationRules: { date: ['M/d/yyyy', 'Please enter a valid date'] }
             },
             {
                 field: 'duration', headerText: 'Duration', textAlign: 'Right', width: 110,

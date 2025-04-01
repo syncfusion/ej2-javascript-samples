@@ -16,11 +16,11 @@ this.default = function () {
     viewer.enableAnnotationToolbar = false;
     viewer.designerMode = true;
     viewer.downloadFileName = 'eSign_filling.pdf';
+    viewer.zoomMode = "FitToPage";
 
     viewer.appendTo('#pdfViewer');
     viewer.documentLoad = function () {
         currentUser = "andrew@mycompany.com";
-        viewer.magnification.fitToPage();
         viewer.designerMode = false;
         updateUserFormField();
     };
@@ -44,13 +44,13 @@ this.default = function () {
     var userDetails = [
         {
             Name: 'Andrew Fuller',
-            Eimg: 'profile2',
+            Eimg: 'profile1',
             Mail: 'andrew@mycompany.com',
             fieldIds: [],
         },
         {
             Name: 'Anne Dodsworth',
-            Eimg: 'profile1',
+            Eimg: 'profile2',
             Mail: 'anne@mycompany.com',
             fieldIds: [],
         }
@@ -63,7 +63,7 @@ this.default = function () {
         popupWidth: '215px',
         itemTemplate: function(data) {
           return '<div style="display:flex;">' +
-                 '<img class="e-pv-e-sign-empImage" style="border: 1px solid ' + getBorderColor(data.Mail) + ';" src="styles/images/pdfviewer/employees/' + data.Eimg + '.png" alt="employee" />' +
+                 '<img class="e-pv-e-sign-empImage" style="border: 1px solid ' + getBorderColor(data.Mail) + ';" src="src/pdfviewer/images/employees/' + data.Eimg + '.png" alt="employee" />' +
                  '<div>' +
                  '<div class="ename" style="font-size:14px;height:18px;">' + data.Name + '</div>' +
                  '<div class="mail" style="font-size:12px;">' + data.Mail + '</div>' +
@@ -72,7 +72,7 @@ this.default = function () {
         },
         valueTemplate: function(data) {
           return '<div style="display:flex;">' +
-                 '<img class="value" style="border: 1px solid ' + getBorderColor(data.Mail) + '; margin: 0px 0px 5px 15px; border-radius:50%;" src="styles/images/pdfviewer/employees/' + data.Eimg + '.png" height="32px" width="32px" alt="employee" />' +
+                 '<img class="value" style="border: 1px solid ' + getBorderColor(data.Mail) + '; margin: 0px 0px 5px 15px; border-radius:50%;" src="src/pdfviewer/images/employees/' + data.Eimg + '.png" height="32px" width="32px" alt="employee" />' +
                  '<div style="margin-top: 3px;">' +
                  '<div class="name" style="font-size:12px;margin-left: 12px;">' + data.Name + '</div>' +
                  '<div class="mail" style="font-size:8px;margin-left: 12px;">' + data.Mail + '</div>' +

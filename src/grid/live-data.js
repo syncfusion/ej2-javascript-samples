@@ -1184,10 +1184,7 @@ this.default = function () {
         }
     });
     grid.on(ej.grids.destroy, function () {
-        if (timerID) {
-            clearInterval(timerID);
-            timerID = undefined;
-        }
+        clearButton.element.click();
     });
     var isDataBound = true;
     function queryCellInfo(args) {

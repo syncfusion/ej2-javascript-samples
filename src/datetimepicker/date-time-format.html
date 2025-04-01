@@ -1,3 +1,5 @@
+<html>
+    <body>
 <div class="col-lg-8 control-section">
     <div id="wrapper">
         <input id="datetimepicker" type="text" />
@@ -7,16 +9,19 @@
 </div>
 
 <div class="col-lg-4 property-section">
-    
-    <div>
-        <select id="dateformats" class="form-control">
-            <option value="dd-MMM-yy hh:mm a">dd-MMM-yy hh:mm a</option>
-            <option value="yyyy-MM-dd HH:mm">yyyy-MM-dd HH:mm</option>
-            <option value="dd-MMMM HH:mm">dd-MMMM HH:mm</option>
-        </select>
-
-    </div>
-    <div id="action-description">
+            <PropertyPane title='Properties'>
+                <div class="property-panel-header">Properties</div>
+                <div class="property-panel-content">
+                    <label class="example-label">Choose a display format</label>
+                    <input id="datetimeformats" placeholder="Select a format">
+                </div>
+                <div class="property-panel-content">
+                    <label class="multi-label">Choose input formats</label>
+                    <input id="inputFormatsDateTimePicker" placeholder="e.g. MM/dd/yyyy hh:mm a">
+                </div>
+            </PropertyPane>
+</div>
+<div id="action-description">
         <p>
             In this sample, the DateTimePicker has been configured with the
             <code>dd-MMM-yy hh:mm a</code> date time format.
@@ -29,7 +34,14 @@
             Format sample illustrates the support of custom datetime format in the DateTimePicker component by using the
             <code>format</code> property. You can also change the date format by selecting it from the format options in the properties panel.
         </p>
+        <p>
+            Furthermore, this example showcases the flexible date value parsing functionality available in DateTimePicker
+            component.
+            By utilizing the <code>inputFormats</code> property, users can enter dates in various formats, which will be
+            automatically parsed and formatted according to the chosen date format.
+        </p>
     </div>
+
     <!-- custom code start -->
     <style>
         #wrapper {
@@ -40,8 +52,21 @@
 
         .property-section {
             top: 55px;
-            width: 200px;
+        width: 250px;
             margin-left: 80px;
         }
+    .property-panel-content {
+        margin-bottom: 15px;
+    }
+
+    .multi-label {
+        margin-top: 30px;
+    }
     </style>
-<!-- custom code end-->
+<!-- custom code end -->
+    </body>
+</html>
+<!-- custom code end -->
+
+    </body>
+</html>

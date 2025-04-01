@@ -1,7 +1,7 @@
 /**
  * Sample for Hilo Series
  */
-this.renderChart = function () {
+var renderChart = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',

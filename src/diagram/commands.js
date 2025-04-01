@@ -62,35 +62,35 @@ this.default = function () {
         };
     }
     //custom code start
-    if (this.location.href) {
-        if (this.location.href.includes('bootstrap5')) {
+    if (window.location.href) {
+        if (window.location.href.includes('bootstrap5')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('bootstrap4')) {
+        else if (window.location.href.includes('bootstrap4')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('bootstrap')) {
+        else if (window.location.href.includes('bootstrap')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('material3')) {
+        else if (window.location.href.includes('material3')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('material')) {
+        else if (window.location.href.includes('material')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('fabric')) {
+        else if (window.location.href.includes('fabric')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('fluent')) {
+        else if (window.location.href.includes('fluent')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('tailwind')) {
+        else if (window.location.href.includes('tailwind')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('highcontrast')) {
+        else if (window.location.href.includes('highcontrast')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
         }
-        else if (this.location.href.includes('fusion')) {
+        else if (window.location.href.includes('fusion')) {
             document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
         }
     }
@@ -295,7 +295,7 @@ this.default = function () {
     function flipObjects(flipType) {
         var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
         for (i = 0; i < selectedObjects.length; i++) {
-            selectedObjects[i].flip = flipType === 'Flip Horizontal' ? 'Horizontal' : 'Vertical';
+            selectedObjects[i].flip ^= flipType === 'Flip Horizontal' ? ej.diagrams.FlipDirection.Horizontal : ej.diagrams.FlipDirection.Vertical;
         }
         diagram.dataBind();
     }

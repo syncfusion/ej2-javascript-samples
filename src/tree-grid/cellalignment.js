@@ -39,7 +39,7 @@ this.default = function () {
             dropDownAlign.value = alignment;
         }
     });
-    dropDownColumn.appendTo('#columns');
+    dropDownColumn.appendTo('#cellalignment-columns');
     var dropDownAlign = new ej.dropdowns.DropDownList({
         dataSource: alignment,
         width: '130px',

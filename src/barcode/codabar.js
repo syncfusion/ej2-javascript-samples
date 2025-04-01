@@ -45,6 +45,7 @@ this.default = function () {
     barcodeValueCodabar.appendTo('#barcodeValue');
 
     var barcodeWidthCodabar = new ej.inputs.NumericTextBox({
+        width:100,
         enabled: true, format: '###.##',
         value: 200, step: 2, min: 150, max: 250,
         change: function (args) {
@@ -54,6 +55,7 @@ this.default = function () {
     barcodeWidthCodabar.appendTo('#width');
     
     var barcodeHeightCodabar = new ej.inputs.NumericTextBox({
+        width:100,
         enabled: true, format: '###.##',
         value: 150, step: 2, min: 100, max: 200,
         change: function (args) {
@@ -155,6 +157,7 @@ this.default = function () {
     textMarginRightCodabar.appendTo('#TextMarginRight');
 
     var textmarginTopCodabar = new ej.inputs.NumericTextBox({
+        width:100,
         enabled: true, format: '###.##',
         value: 0, step: 1, min: -10, max: 20,
         change: function (args) {
@@ -166,6 +169,7 @@ this.default = function () {
 
 
     var textMarginBottomCodabar = new ej.inputs.NumericTextBox({
+        width:100,
         enabled: true, format: '###.##',
         value: 0, step: 1, min: -10, max: 20,
         change: function (args) {
@@ -225,6 +229,10 @@ this.default = function () {
         }
     });
     displayTextCodabar.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn1');
+    document.getElementById('downloadBtn1').onclick = function () {
+        barcodeCodabar.exportImage("Barcode", 'PNG');
+    };
 };
 

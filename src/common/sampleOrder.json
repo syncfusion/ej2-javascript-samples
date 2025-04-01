@@ -1,16 +1,16 @@
 {
     "Smart Controls": ["Smart Paste", "Smart TextArea"],
-    "Smart AI Solutions": ["Data Grid", "Tree Grid", "Spreadsheet", "Diagram", "Gantt Chart", "Query Builder", "ComboBox", "Image Editor", "Pivot Table", "Rich Text Editor", "Kanban", "Scheduler", "Maps", "PDF Viewer", "Document Editor"],
+    "Smart AI Solutions": ["Data Grid", "Tree Grid", "Spreadsheet", "Diagram", "Gantt Chart", "Query Builder", "ComboBox", "Image Editor", "Pivot Table", "Rich Text Editor", "Kanban", "Scheduler", "Maps", "PDF Viewer", "Word Processor"],
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid", "Spreadsheet"],
     "Interactive Chat": [ "AI AssistView", "Chat UI"],
     "Data Visualization": ["Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
     "Forms": ["Form Validation", "Query Builder"],
-    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Markdown Editor", "Document Editor", "Image Editor"],
+    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Markdown Editor", "Word Processor", "Image Editor"],
     "Calendars": ["Scheduler", "Gantt Chart", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],
     "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box", "Mention", "MultiColumn Combobox"],
     "Navigation": ["Accordion", "AppBar", "Breadcrumb", "Carousel", "Context Menu", "Menu Bar", "Sidebar", "Tabs", "Toolbar", "Ribbon", "Stepper", "TreeView", "File Manager"],
     "Notifications": ["Badge", "Message", "Toast", "Progress Bar", "Skeleton"],
-    "Inputs": ["TextBox", "TextArea", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating", "OTP Input"],
+    "Inputs": ["TextBox", "TextArea", "Input Mask", "Numeric Textbox", "Color Picker", "File Upload", "Range Slider", "Signature", "In-place Editor", "Rating", "OTP Input", "Speech To Text"],
     "Layout": ["Avatar", "Card", "Dialog", "Predefined Dialogs", "ListView",  "Tooltip", "Splitter", "Dashboard Layout", "Timeline"]
 }

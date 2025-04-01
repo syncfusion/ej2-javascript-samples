@@ -223,6 +223,10 @@ this.default = function () {
         }
     });
     displayTextCode32.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn2');
+    document.getElementById('downloadBtn2').onclick = function () {
+        barcodeCode32.exportImage("Barcode", 'PNG');
+    };
 };
 

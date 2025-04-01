@@ -23,6 +23,9 @@ var tempChartExpenseDS = {};
 var tempChartLineDS = {};
 var curDateTime;
 var lineD = [];
+var expTotal;
+var groupValue;
+var pieRenderData = [];
 
 
 // Define predicates for filtering data based on date range
@@ -86,7 +89,7 @@ this.default = function () {
     grid.appendTo('#grid');
 
     // Initialize date range picker
-    dateRangePickerObject = new ej.calendars.DateRangePicker({
+    var dateRangePickerObject = new ej.calendars.DateRangePicker({
         format: 'MM/dd/yyyy', change: onDateRangeChange, startDate: window.startDate,
         min: new Date(2017, 5, 1), max: new Date(2017, 10, 30),
         endDate: window.endDate, showClearButton: false, allowEdit: false,
@@ -146,7 +149,7 @@ function initialRender() {
         .executeQuery(new ej.data.Query().where(predicate.and('TransactionType', 'equal', 'Income')))
         .then(function (e) {
             getColumnChartIncomeDS(e);
-            columnChartObj = new ej.charts.Chart({
+            var columnChartObj = new ej.charts.Chart({
                 width: '100%', height: '400px',
                 primaryXAxis: { labelFormat: 'MMM', valueType: 'DateTime', intervalType: 'Months', edgeLabelPlacement: 'Shift' },
                 primaryYAxis: { minimum: 3000, maximum: 9000, labelFormat: 'c0' },
@@ -175,7 +178,7 @@ function initialRender() {
             columnChartObj.appendTo('#barChart');
             var content = '<p style="font-family:Roboto;font-size: 16px;font-weight: 400;font-weight: 400;letter-spacing: 0.02em;line-height: 16px;color: #797979 !important;">Account - Balance</p>';
             getLineChartDS();
-            linechartObj = new ej.charts.Chart({
+            var linechartObj = new ej.charts.Chart({
                 width: '100%', height: '400px',
                 primaryXAxis: { valueType: 'DateTime', labelFormat: 'MMM', majorGridLines: { width: 0 }, intervalType: 'Months' },
                 primaryYAxis: { maximum: 1800, interval: 300, labelFormat: 'c0', },
@@ -207,9 +210,9 @@ function getTotalExpense() {
     //Calculate total expense
     expTotal = 0;
     //This array will store unique expense categories extracted from the data.
-    category = [];
+    var category = [];
     //This array will store the expense data for each category.
-    legendData = [];
+    var legendData = [];
     //This array will store data in a format suitable for rendering the pie chart.
     var renderingData = [];
     // Iterate through each expense item in the data
@@ -237,7 +240,7 @@ function getTotalExpense() {
     if (pieRenderingData.length > 10) {
         var temp = new ej.data.DataManager(JSON.parse(JSON.stringify(renderingData))).executeLocal((new ej.data.Query().sortByDesc('y').range(0, 9)))[8];
         groupValue = temp.y - 1;
-        hiGridData = new ej.data.DataManager(JSON.parse(JSON.stringify(renderingData))).executeLocal((new ej.data.Query().sortByDesc('y').skip(9)));
+        var hiGridData = new ej.data.DataManager(JSON.parse(JSON.stringify(renderingData))).executeLocal((new ej.data.Query().sortByDesc('y').skip(9)));
     }
 }
 // Function to get data for column chart (expense) ( bar & line chart)
@@ -326,7 +329,6 @@ function createLegendData(initiate) {
     }
     pie.legendSettings.visible = false;
     pie.dataBind();
-    pieRenderData = [];
     for (var i = 0; i < pieLegendData.length; i++) {
         var data = pieLegendData[i];
         if (data.text.indexOf('Others') > -1) {

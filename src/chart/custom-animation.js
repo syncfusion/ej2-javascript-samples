@@ -18,78 +18,82 @@ var chartDataSpline = [
 ];
 this.default = function () {
     var chart = new ej.charts.Chart({
-            primaryXAxis: {
-                valueType: 'DateTime', labelFormat: 'y',
-                majorGridLines: { width: 0 },
-                edgeLabelPlacement: 'Shift'
+        primaryXAxis: {
+            valueType: 'DateTime', labelFormat: 'y',
+            majorGridLines: { width: 0 },
+            edgeLabelPlacement: 'Shift'
+        },
+
+        //Initializing Primary Y Axis
+        primaryYAxis:
+        {
+            title: 'Yield (In Tons per Hectare)',
+            lineStyle: { width: 0 },
+            majorTickLines: { width: 0 },
+            minorTickLines: { width: 0 },
+            maximum: 8,
+            interval: 2
+        },
+        chartArea: {
+            border: {
+                width: 0
             },
-        
-            //Initializing Primary Y Axis
-            primaryYAxis:
+            margin: {
+                bottom: 12
+            }
+        },
+        //Initializing Chart Series
+        series: [
             {
-                title: 'Yield (In Tons per Hectare)',
-                lineStyle: { width: 0 },
-                majorTickLines: { width: 0 },
-                minorTickLines: { width: 0 },
-                maximum: 8,
-                interval: 2
+                type: 'Spline',
+                dataSource: chartDataSpline,
+                xName: 'x', width: 3,
+                yName: 'y1', name: 'United States', animation: { enable: true, duration: 1500 }
             },
-            chartArea: {
-                border: {
-                    width: 0
-                }
+            {
+                type: 'Spline',
+                dataSource: chartDataSpline,
+                xName: 'x', width: 3,
+                yName: 'y2', name: 'China', animation: { enable: true, delay: 2300, duration: 1500 }
             },
-            //Initializing Chart Series
-            series: [
-                {
-                    type: 'Spline',
-                    dataSource: chartDataSpline,
-                    xName: 'x', width: 3,
-                    yName: 'y1', name: 'United States', animation: { enable: true, duration: 1500 }
-                },
-                {
-                    type: 'Spline',
-                    dataSource: chartDataSpline,
-                    xName: 'x', width: 3,
-                    yName: 'y2', name: 'China', animation: { enable: true, delay: 2300, duration: 1500 }
-                },
-                {
-                    type: 'Spline',
-                    dataSource: chartDataSpline,
-                    xName: 'x', width: 3,
-                    yName: 'y3', name: 'Afghanistan', animation: { enable: true, delay: 3400, duration: 1500 }
-                },
-                {
-                    type: 'Spline',
-                    dataSource: chartDataSpline,
-                    xName: 'x', width: 3,
-                    yName: 'y4', name: 'Yemen', animation: { enable: true, delay: 4800, duration: 1500 }
-                },
-                {
-                    type: 'Spline',
-                    dataSource: chartDataSpline,
-                    xName: 'x', width: 3,
-                    yName: 'y', name: 'Australia', animation: { enable: true, delay: 6200, duration: 1500 }
-                }
-            ],
-            //Initializing Chart title
-            title: 'Almond Yield',
-            legendSettings: { visible: true, enableHighlight: true },
-            tooltip: {
-                enable: true,
-                shared: true,
-                header: '<b>Almond Yield - ${point.x}</b>',
-                format: '${series.name}: <b>${point.y}</b>'
+            {
+                type: 'Spline',
+                dataSource: chartDataSpline,
+                xName: 'x', width: 3,
+                yName: 'y3', name: 'Afghanistan', animation: { enable: true, delay: 3400, duration: 1500 }
             },
+            {
+                type: 'Spline',
+                dataSource: chartDataSpline,
+                xName: 'x', width: 3,
+                yName: 'y4', name: 'Yemen', animation: { enable: true, delay: 4800, duration: 1500 }
+            },
+            {
+                type: 'Spline',
+                dataSource: chartDataSpline,
+                xName: 'x', width: 3,
+                yName: 'y', name: 'Australia', animation: { enable: true, delay: 6200, duration: 1500 }
+            }
+        ],
+        //Initializing Chart title
+        title: 'Almond Yield Comparison Across Countries (2010–2022)',
+        legendSettings: { visible: true, enableHighlight: true },
+        tooltip: {
+            enable: true,
+            showNearestTooltip: true,
+            enableHighlight: true,
+            header: '<b>Almond Yield - ${point.x}</b>',
+            format: '${series.name}: <b>${point.y}</b>'
+        },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-         // custom code start
+        // custom code start
         load: function (args) {
             var lineTheme = location.hash.split('/')[1];
-            lineTheme = lineTheme ? lineTheme: 'Fluent2';
-            args.chart.theme = (lineTheme.charAt(0).toUpperCase() + 
+            lineTheme = lineTheme ? lineTheme : 'Fluent2';
+            args.chart.theme = (lineTheme.charAt(0).toUpperCase() +
                 lineTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         }
-         // custom code end
+        // custom code end
     });
     chart.appendTo('#line-container');
 };

@@ -30,7 +30,8 @@ this.default = function () {
             }
             if (elem.closest('.e-row')) {
               if (ej.base.isNullOrUndefined(uid) || 
-              ej.base.isNullOrUndefined(ej.base.getValue('hasChildRecords', treeGridObj.grid.getRowObjectFromUID(uid).data))) {
+              ej.base.isNullOrUndefined(ej.base.getValue('hasChildRecords', treeGridObj.grid.getRowObjectFromUID(uid).data))||
+              !ej.base.getValue('hasChildRecords', treeGridObj.grid.getRowObjectFromUID(uid).data)) {
                 arg.cancel = true;
               } else {
                 var flag = ej.base.getValue('expanded', treeGridObj.grid.getRowObjectFromUID(uid).data);

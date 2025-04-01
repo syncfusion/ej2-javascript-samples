@@ -3,7 +3,6 @@
     "directory": "maps",
     "category": "Data Visualization",
     "ftName": "maps",
-    "type": "update",
     "dataSourcePath":"src/maps/map-data.js",
     "samples": [
         {
@@ -183,7 +182,6 @@
             "url": "osm-with-marker-clustering",
             "name": "OSM with Marker Clustering",
             "category": "Map Providers",
-            "type": "new",
             "description": "This demo for Essential<sup>®</sup> JS2 Maps control depicts the OpenStreetMap with clusters for markers.",
             "sourceFiles":[
                 { "displayName": "osm-with-marker-clustering.html", "path":"src/maps/osm-with-marker-clustering.html" },

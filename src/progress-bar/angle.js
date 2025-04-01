@@ -18,10 +18,7 @@ this.default = function () {
         return ('<div id="point1" style="font-size:24px;font-weight:bold;color: ' + color + ' "><span>' + content + '</span></div>');
     }
     var progressLoad = function (args) {
-        var angleTheme = location.hash.split('/')[1];
-        angleTheme = angleTheme ? angleTheme : 'Fluent2';
-        args.progressBar.theme = (angleTheme.charAt(0).toUpperCase() +
-            angleTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+        var angleTheme = loadProgressBarTheme(args).toLowerCase();
         switch (angleTheme) {
             case 'material':
                 args.progressBar.annotations[0].content = annotationElementContent(annotationColors[0], args.progressBar.element.id);

@@ -61,5 +61,5 @@ this.default = function () {
             dropDownFilter.value = 'All';
         }
     });
-    dropDownMode.appendTo('#mode');
+    dropDownMode.appendTo('#filter-mode');
 };

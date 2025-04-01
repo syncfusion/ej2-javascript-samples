@@ -81,7 +81,7 @@ this.default = function () {
         },
         title: 'US to EURO',
         titleStyle: { textAlignment: 'Near' },
-        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, shared: true, header: '', format: '<b>€${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
+        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, shared: true, header: '', format: '<b>€${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
         crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
         load: load
     });

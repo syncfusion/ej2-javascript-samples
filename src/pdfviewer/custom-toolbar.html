@@ -5,9 +5,7 @@
             <div class= "e-message render-mode-info">
                 <span class = "e-msg-icon render-mode-info-icon" title="Turn OFF to render the PDF Viewer as server-backed"></span>
             </div>
-            <div>
-                <input id="checked" class="buttonSwitch" type="checkbox"  />
-            </div>
+            <input id="checked" class="buttonSwitch" type="checkbox"  />
         </div>
         <div id="topToolbar" style="top:0px"></div>
         <div id="editAnnotationToolbar" style="display: none;"></div>
@@ -159,6 +157,7 @@
     .flex-container {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
 
     .render-mode-info {
@@ -167,10 +166,10 @@
         padding-left: 0px;
     }
 
-        .render-mode-info .render-mode-info-icon {
-            height: 16px;
-            width: 16px;
-        }
+    .render-mode-info .render-mode-info-icon {
+        height: 16px;
+        width: 16px;
+    }
 
     .switchLabel {
         font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;        
@@ -179,15 +178,16 @@
         letter-spacing: 0.24px;
         text-align: right;
         font-size: 14px;
+        margin-bottom: 3px;
     }
 
     .render-mode-info .render-mode-info-icon::before {
-        line-height: 0.5rem;
+        line-height: normal;
     }
 
     .buttonSwitch {
         Width: 40px;
         Height: 24px;
     }
-    
+
 </style>

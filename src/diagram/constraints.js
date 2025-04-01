@@ -381,7 +381,7 @@ this.default = function () {
         // Append the Contextmenu CheckBox to the element with id 'contextMenu'
         Contextmenu.appendTo('#contextMenu');
         // Function to handle selection changes in the diagram
-        selectionChange = function (args) 
+        function selectionChange (args) 
         {
             if(args.state === 'Changing')
             {
@@ -422,7 +422,7 @@ this.default = function () {
                         }
                     }
             }
-        } ;
+        }
         //Initializes the diagram
         var diagram = new ej.diagrams.Diagram({
             width: '100%', height: '550px', nodes: nodes, connectors: connectors,

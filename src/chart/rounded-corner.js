@@ -40,35 +40,35 @@ this.default = function () {
         },
         annotations: [
             {
-                content: '<div style="padding: 5px; font-size: ' + fontSize + '">30%</div>',
+                content: '<div style="padding: 5px; color: #FFFFFF; font-size: ' + fontSize + '">30%</div>',
                 region: 'Series',
                 coordinateUnits: 'Point',
                 x: 'Operations',
                 y: 30.0
             },
             {
-                content: '<div style="padding: 5px; font-size: ' + fontSize + '">10%</div>',
+                content: '<div style="padding: 5px; color: #FFFFFF; font-size: ' + fontSize + '">10%</div>',
                 region: 'Series',
                 coordinateUnits: 'Point',
                 x: 'Miscellaneous',
                 y: 10.0
             },
             {
-                content: '<div style="padding: 5px; font-size: ' + fontSize + '">15%</div>',
+                content: '<div style="padding: 5px; color: #FFFFFF; font-size: ' + fontSize + '">15%</div>',
                 region: 'Series',
                 coordinateUnits: 'Point',
                 x: 'Human Resources',
                 y: 15.0
             },
             {
-                content: '<div style="padding: 5px; font-size: ' + fontSize + '">20%</div>',
+                content: '<div style="padding: 5px; color: #FFFFFF; font-size: ' + fontSize + '">20%</div>',
                 region: 'Series',
                 coordinateUnits: 'Point',
                 x: 'Research and Development',
                 y: 20.0
             },
             {
-                content: '<div style="padding: 5px; font-size: ' + fontSize + '">25%</div>',
+                content: '<div style="padding: 5px; color: #FFFFFF; font-size: ' + fontSize + '">25%</div>',
                 region: 'Series',
                 coordinateUnits: 'Point',
                 x: 'Marketing',

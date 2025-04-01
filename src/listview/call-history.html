@@ -119,7 +119,7 @@
     }
 
     .e-listview.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge),
-    .e-bigger.tailwind .layout #list-container .e-listview.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge) {
+    .e-bigger.tailwind .layout #list-container .e-listview.e-rtl.e-list-template .e-list-wrapper.e-list-avatar:not(.e-list-badge) {
         padding: 5px 5px 5px 50px;
     }
 
@@ -182,6 +182,16 @@
         top: 10px;
         left:0px;
     }
+
+    .tailwind3-dark .layout #list-container,
+    .tailwind3 .layout #list-container {
+        height: 409px;
+    }
+
+    .e-bigger.tailwind3-dark .layout #list-container,
+    .e-bigger.tailwind3 .layout #list-container {
+        height: 417px;
+    }
     
     .tailwind #list-container .e-tab .e-content .e-item {
         padding: 0px;
@@ -197,16 +207,6 @@
         height: 405px;
     }
 
-    .tailwind3-dark .layout #list-container,
-    .tailwind3 .layout #list-container {
-        height: 409px;
-    }
-
-    .e-bigger.tailwind3-dark .layout #list-container,
-    .e-bigger.tailwind3 .layout #list-container {
-        height: 417px;
-    }
-    
     .layout #list-container .received {
         font-family: Call-icons;
     }

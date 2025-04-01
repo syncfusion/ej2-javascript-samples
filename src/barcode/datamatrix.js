@@ -282,6 +282,10 @@ this.default = function () {
         }
     });
     displayText.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn10');
+    document.getElementById('downloadBtn10').onclick = function () {
+        barcode.exportImage("DataMatrix", 'PNG');
+    };
 };
 

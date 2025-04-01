@@ -63,6 +63,10 @@ this.default = function () {
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Alaska Weather Statistics - 2016',
+        tooltip: {
+            enable: true,
+            showNearestTooltip: true
+        },
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

@@ -5,7 +5,7 @@ this.default = function () {
 
     //Initialize Button component
     var button = new ej.buttons.Button();
-
+    var isMobile = window.matchMedia('(max-width:550px)').matches;
     //Render initialized Button component
     button.appendTo('#Tooltip');
 
@@ -13,7 +13,8 @@ this.default = function () {
     var tooltip = new ej.popups.Tooltip({
 
         //Set tooltip content
-        content: "Let's go green to save the planet!!"
+        content: "Let's go green to save the planet!!",
+        width: isMobile ? 110 : 'auto'
 
     });
 
@@ -25,5 +26,4 @@ this.default = function () {
         tooltip.position = this.value;
 
     });
-
 };

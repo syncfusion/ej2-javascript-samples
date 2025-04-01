@@ -49,5 +49,5 @@ this.default = function () {
             treeGridObj.clearFiltering();
         }
     });
-    dropDownMode.appendTo('#mode');
+    dropDownMode.appendTo('#menu-mode');
 };

@@ -1,7 +1,7 @@
 /**
  * Sample for Bollinger Band Indicator
  */
-this.renderChartBollinger = function () {
+var renderChartBollinger = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',intervalType: "Months",

@@ -90,7 +90,7 @@ this.default = function () {
         title: 'Wind Speed and Gust (km/h)',
         //Initializing Tooltip
         tooltip: {
-            enable: true, header: '', format: '<b>${point.x}</b> <br> ${series.name} : <b>${point.y}</b>', enableMarker: false
+            enable: true, header: '', format: '<b>${point.x}</b> <br> ${series.name} : <b>${point.y}</b>', enableMarker: false, enableHighlight: true, showNearestTooltip: true
         },
         legendSettings: { visible: true, enableHighlight: true, shapeHeight: 6, shapeWidth: 15 },
         width: ej.base.Browser.isDevice ? '100%' : '75%',

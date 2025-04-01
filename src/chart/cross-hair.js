@@ -171,7 +171,7 @@ this.default = function () {
         }],
         tooltip: {
             enable: true,
-            shared: true,
+            showNearestTooltip: true,
             location: { x: 70, y: 52 },
             format: '<b>${point.x}</b> <br>Stock Price : <b>${point.y}</b>',
             header: '',

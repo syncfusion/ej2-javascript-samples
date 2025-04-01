@@ -54,7 +54,7 @@ this.default = function () {
             { field: 'TaskID', width: 80 },
             { field: 'TaskName', headerText: 'Job Name', width: '250', clipMode: 'EllipsisWithTooltip', validationRules: { required: true, minLength: [5, 'Task name should have a minimum length of 5 characters'], } },
             { field: 'StartDate' },
-            { field: 'EndDate', validationRules: { date: true, required: [customFn, 'Please enter a value greater than the start date.'] } },
+            { field: 'EndDate', validationRules: { required: [customFn, 'Please enter a value greater than the start date.'] } },
             { field: 'Duration', validationRules: { required: true} },
             { field: 'Progress', validationRules: { required: true, min: 0, max: 100 } },
             { field: 'Predecessor' }
@@ -85,7 +85,8 @@ this.default = function () {
     function customFn(args) {
         var endDate;
         if (args.element && args.value) {
-            endDate = new Date(args.value);
+            var dateOptions = { format: ganttChart.dateFormat, type: 'dateTime', skeleton: 'yMd' };
+            endDate =  ganttChart.globalize.parseDate(args.value, dateOptions);
             if (!startDate && ganttChart.editModule.dialogModule.beforeOpenArgs) {
                 startDate = ganttChart.editModule.dialogModule.beforeOpenArgs.rowData.ganttProperties.startDate;
                 endDate = ganttChart.editModule.dialogModule.beforeOpenArgs.rowData.ganttProperties.endDate;

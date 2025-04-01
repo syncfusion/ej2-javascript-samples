@@ -95,6 +95,42 @@ this.default = function() {
                 dataSource: protectSheet,
                 showFieldAsHeader: true
             }],
+            rows: [{
+                index: 0,
+                cells: [
+                    {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }, {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }, {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }, {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }, {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }, {
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }
+                    }]
+            }
+            ],
             columns: [{
                 index: 1,
                 width: 110
@@ -111,8 +147,7 @@ this.default = function() {
         openUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/open',
         saveUrl: 'https://services.syncfusion.com/js/production/api/spreadsheet/save',
         created: function() {
-            //Applied style and number formatting to a range
-            spreadsheet.cellFormat({ fontWeight: 'bold' }, 'EMI Schedule!A1:F1');
+            //Applied number formatting to a range
             spreadsheet.numberFormat(numberFormat, 'EMI Schedule!C2:F13');
             spreadsheet.numberFormat('m/d/yyyy', 'EMI Calculator!C5:C5');
             spreadsheet.numberFormat('m/d/yyyy', 'EMI Schedule!B2:B13');

@@ -17,4 +17,17 @@ this.default = function () {
         ]
     });
     grid.appendTo('#Grid');
+
+    
+    var isEnableCache = new ej.buttons.Switch({ change: cacheModeChange });
+    isEnableCache.appendTo('#checked');
+
+    function cacheModeChange(args) {
+        grid.dataSource =  new ej.data.DataManager({
+            url: hostUrl,
+            adaptor: new ej.data.WebApiAdaptor(),
+            crossDomain: true,
+            enableCache : args.checked
+        });
+    }
 };

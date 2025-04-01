@@ -1,6 +1,6 @@
 <div class="col-lg-8 control-section">
     <!-- Tooltip element -->
-    <button id="Tooltip">Show Tooltip</button>
+    <button id="Tooltip" class="defaultTooltip">Show Tooltip</button>
 </div>
 
 <div class="col-lg-4 property-section">
@@ -71,5 +71,10 @@
         position: absolute;
         left: calc( 50% - 60px);
         top: 45%;
+    }
+     @media (max-width: 600px) {
+        .defaultTooltip {
+            top: 110px !important;
+        }
     }
 </style>

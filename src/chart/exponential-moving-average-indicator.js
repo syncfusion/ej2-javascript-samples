@@ -1,7 +1,7 @@
 /**
  * Sample for EMA Indicator
  */
-this.renderChartEMA = function () {
+var renderChartEMA = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime',

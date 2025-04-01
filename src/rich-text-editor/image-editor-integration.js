@@ -54,7 +54,8 @@
 
     var dialogObj = new ej.popups.Dialog({
         buttons: dlgButtons,
-        open: OnOpen,
+        open:open,
+        beforeOpen: OnBeforeOpen,
         header: header,
         visible: false,
         showCloseIcon: true,
@@ -97,23 +98,24 @@
         defaultRTE.formatter.enableUndo(defaultRTE);
         dispose();
         dialogObj.hide();
-        imageELement.crossOrigin = null;
     }
 
     function onCancel() {
         dispose();
         dialogObj.hide();
         isLoaded = true;
-        imageELement.crossOrigin = null;
     }
     function onclose() {
         dispose();
         dialogObj.hide();
         isLoaded = true;
-        imageELement.crossOrigin = null;
+    }
+    function open() {
+        imageEditorObj.update();
+        imageEditorObj.open(dataURL);
     }
 
-    function OnOpen() {
+    function OnBeforeOpen() {
             isLoaded = false;
         var selectNodes =
             defaultRTE.formatter.editorManager.nodeSelection.getNodeCollection(range);
@@ -127,16 +129,13 @@
             imageELement.onload = function () {
                 ctx.drawImage(imageELement, 0, 0, canvas.width, canvas.height);
                 dataURL = canvas.toDataURL();
-                if (!isLoaded) {
-                    imageEditorObj = new ej.imageeditor.ImageEditor({
-                        height: '450px',
-                        created: function () {
-                            imageEditorObj.open(dataURL);
-                        }
-                    });
-                    imageEditorObj.appendTo('#imageeditor');
-                }
             };
+            if (!isLoaded) {
+                imageEditorObj = new ej.imageeditor.ImageEditor({
+                    height: '450px'
+                });
+                imageEditorObj.appendTo('#imageeditor');
+            }
         }
     }
 

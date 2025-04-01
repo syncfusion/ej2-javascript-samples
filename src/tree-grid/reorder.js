@@ -52,7 +52,7 @@ this.default = function () {
             dropDownIndex.value = index.toString();
         }
     });
-    dropDownColumn.appendTo('#columns');
+    dropDownColumn.appendTo('#reorder-columns');
     var dropDownIndex = new ej.dropdowns.DropDownList({
         dataSource: columnsIndex,
         width: '140px',

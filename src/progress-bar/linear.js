@@ -3,10 +3,7 @@ this.default = function () {
   var div = document.getElementsByClassName('progressbar-label');
 
   var progressLoad = function (args) {
-      var linearTheme = location.hash.split('/')[1];
-      linearTheme = linearTheme ? linearTheme : 'Fluent2';
-      args.progressBar.theme = (linearTheme.charAt(0).toUpperCase() +
-          linearTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+      var linearTheme = loadProgressBarTheme(args).toLowerCase();
       if (args.progressBar.theme === 'HighContrast' || args.progressBar.theme === 'Bootstrap5Dark' || args.progressBar.theme === 'BootstrapDark' || args.progressBar.theme === 'FabricDark' || args.progressBar.theme === 'TailwindDark' || args.progressBar.theme === 'Tailwind3Dark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'MaterialDark' || args.progressBar.theme === 'Material3Dark' || args.progressBar.theme === 'Fluent2Dark' || args.progressBar.theme === 'Fluent2HighContrast') {
           for (var i = 0; i < div.length; i++) {
               div[i].setAttribute('style', 'color:white');

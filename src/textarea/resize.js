@@ -4,7 +4,8 @@
 this.default = function () {
     var textareaObj = new ej.inputs.TextArea({
         placeholder: 'Enter your comments',
-        floatLabelType: 'Auto'
+        floatLabelType: 'Auto',
+        resizeMode: 'Vertical'
     });
     textareaObj.appendTo('#resize');
     var resize = new ej.dropdowns.DropDownList({

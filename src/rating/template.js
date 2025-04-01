@@ -28,4 +28,14 @@ var custom = new ej.inputs.Rating({
     enableAnimation: false
 });
 custom.appendTo('#rating4');
+    
+if (document.getElementById('right-pane')) {
+    document.getElementById('right-pane').addEventListener('scroll', hideToolTipOnScroll);
+  }
+function hideToolTipOnScroll() {
+    var tooltipElement = document.querySelector('.e-rating-tooltip');
+    if (tooltipElement && ej.base.Browser.isDevice) {
+        tooltipElement.style.display = 'none';
+    }
+}
 };

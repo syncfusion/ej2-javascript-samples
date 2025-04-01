@@ -63,7 +63,7 @@ this.default = function () {
         placeholder: 'Header Text ',
         change: changeColumns,
     });
-    keyObj.appendTo('#key');
+    keyObj.appendTo('#dropdownHeader');
     function changeColumns(args) {
         var changeIndex = args.value;
         if (changeIndex !== null) {

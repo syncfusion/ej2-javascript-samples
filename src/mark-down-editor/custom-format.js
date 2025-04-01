@@ -4,6 +4,7 @@
 var textArea;
 var mdPreview;
 var mdsource;
+var tooltipObj;
 this.default = function () {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '260px',
@@ -13,9 +14,9 @@ this.default = function () {
                 'Formats', 'Blockquote', 'OrderedList', 'UnorderedList', '|',
                 'CreateLink', 'Image', '|',
                 {
-                    tooltipText: 'Preview',
-                    template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn"  aria-label="Preview Code">' +
-                        '<span class="e-btn-icon e-icons e-md-preview"></span></button>'
+                    template:
+                      '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code">' +
+                      '<span class="e-btn-icon e-icons e-md-preview"></span></button>'
                 }, 'Undo', 'Redo']
         },
         editorMode: 'Markdown',
@@ -27,6 +28,11 @@ this.default = function () {
             selectionTags: { 'Bold': '__', 'Italic': '_' }
         }),
         created: function () {
+            tooltipObj = new ej.popups.Tooltip({
+                content: "Preview",  
+                target: "#preview-code"  
+              });
+            tooltipObj.appendTo("#preview-code");
             mdPreview = document.getElementById('MD_Preview');
             textArea = defaultRTE.contentModule.getEditPanel();
             textArea.addEventListener('keyup', function (e) {
@@ -38,7 +44,7 @@ this.default = function () {
             });
         }
     });
-    defaultRTE.appendTo('#defaultRTE');
+    defaultRTE.appendTo('#defaultRTE'); 
     loadExternalFile();
     // Dynamically load the marked.js file
     function loadExternalFile() {
@@ -58,10 +64,10 @@ this.default = function () {
         var htmlPreview = defaultRTE.element.querySelector('#' + id);
         if (mdsource.classList.contains('e-active')) {
             mdsource.classList.remove('e-active');
-            mdsource.parentElement.title = 'Preview';
             defaultRTE.enableToolbarItem(defaultRTE.toolbarSettings.items);
             textArea.style.display = 'block';
             htmlPreview.style.display = 'none';
+            tooltipObj.content = "Preview";
         }
         else {
             mdsource.classList.add('e-active');
@@ -74,7 +80,7 @@ this.default = function () {
             textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
             htmlPreview.innerHTML = marked(defaultRTE.contentModule.getEditPanel().value);
-            mdsource.parentElement.title = 'Code View';
+            tooltipObj.content = "Codeview";
         }
     }
 };

@@ -68,7 +68,7 @@ this.default = function () {
 
 
   //Disables specific toolbar items based on the presence of annotations in selected items.
-  disableMultiselectedItems = function (selectedItems) {
+  function disableMultiselectedItems(selectedItems) {
     for (i = 0; i < selectedItems.length; i++) {
       if (selectedItems[i].annotations[0] !== undefined) {
         // Enable toolbar items when annotations are present
@@ -90,10 +90,10 @@ this.default = function () {
         toolbarObj.items.find(item => item.id === 'FontColor').disabled = true;
       }
     }
-  };
+  }
 
   //Handles changes in the selection state.
-  selectionChange = function (args) {
+  function selectionChange(args) {
     if (args.state === "Changed") {
       var selectedItems = diagram.selectedItems.nodes;
       selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
@@ -145,7 +145,7 @@ this.default = function () {
         diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.UserHandle };
       }
     }
-  };
+  }
 
   // Enables specific toolbar items.
   function enableItems() {
@@ -156,7 +156,7 @@ this.default = function () {
   }
 
   //method to add functionality to user handle
-  handleUserHandleClick = function (args) {
+  function handleUserHandleClick(args) {
     switch (args.element.name) {
       case 'Delete':
         diagram.remove();
@@ -171,7 +171,7 @@ this.default = function () {
         diagram.dataBind();
         break;
     }
-  };
+  }
 
   //Apply the appearence of the Annotation 
   function updateAnnotationValue(value, fontSize, fontFamily, index, isSelected) {

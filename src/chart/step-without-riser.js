@@ -79,8 +79,7 @@ this.default = function () {
             opacity: 0.1,
             border: { width: 2.5 },
             noRisers: true,
-            step: 'Center',
-            marker:{allowHighlight:false}
+            step: 'Center'
         }],
         legendSettings:{visible : false },
         title: 'Sales of Product Over Time',

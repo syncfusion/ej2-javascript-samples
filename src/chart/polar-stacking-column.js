@@ -35,12 +35,12 @@ this.default = function () {
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y', name: '6-9',
+                xName: 'x', yName: 'y', name: '6-9', border:{color:'white', width: 1}
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,
                 animation: { enable: true },
-                xName: 'x', yName: 'y1', name: '9-11',
+                xName: 'x', yName: 'y1', name: '9-11', border:{color:'white', width: 1}
             },
             {
                 type: 'Polar', drawType: 'StackingColumn', dataSource: data,

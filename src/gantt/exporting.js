@@ -1,5 +1,4 @@
 this.default = function () {
-    var isFitToWidth;
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.editingData,
         dateFormat: 'MMM dd, y',
@@ -60,12 +59,7 @@ this.default = function () {
             else if (args.item.id === 'GanttExport_csvexport') {
                 ganttChart.csvExport();
             } else if (args.item.id === 'GanttExport_pdfexport') {
-                var exportProperties = {
-                    fitToWidthSettings: {       
-                        isFitToWidth: isFitToWidth,       
-                    }       
-                };
-                ganttChart.pdfExport(exportProperties);
+                ganttChart.pdfExport();
             }
         },
         allowSelection: true,
@@ -98,15 +92,4 @@ this.default = function () {
     });
     
     ganttChart.appendTo('#GanttExport');
-
-    var taskbarDragDrop = new ej.buttons.Switch({ value: 'fitToWidth', change: dragDropChange});
-    taskbarDragDrop.appendTo('#checked');
-
-    function dragDropChange(args) {
-        if (args.checked) {
-            isFitToWidth = true;
-        } else {
-            isFitToWidth = false;
-        }
-    }
 };

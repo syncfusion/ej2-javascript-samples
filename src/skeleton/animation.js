@@ -34,16 +34,30 @@ this.default = function() {
     }
 
     function loadData() {
-        getData().then(function(data){
-            document.querySelector("#skeletonCard").style.display = 'none';
-            document.querySelector(".cardProfile .image").classList.add('profile-image');
-            document.getElementById('name').textContent = data.name;
-            document.getElementById('time').textContent = data.time;
-            document.querySelector(".cardContent .image").classList.add('post-image');
-            document.getElementById("cardLeftOptn").innerHTML = '<button class="e-btn e-outline e-primary" style="width: 100%;">Like</button>';
-            document.getElementById("cardRightOptn").innerHTML = '<button class="e-btn e-primary" style="width: 100%;">Share</button>';
-            document.getElementById("skeletondatacard").style.display = 'block';
+    getData().then(function(data) {
+        // Check if each element exists before trying to modify it
+        var skeletonCard = document.querySelector("#skeletonCard");
+        var cardProfileImage = document.querySelector(".cardProfile .image");
+        var nameElement = document.getElementById('name');
+        var timeElement = document.getElementById('time');
+        var cardContentImage = document.querySelector(".cardContent .image");
+        var cardLeftOptn = document.getElementById("cardLeftOptn");
+        var cardRightOptn = document.getElementById("cardRightOptn");
+        var skeletondatacard = document.getElementById("skeletondatacard");
+        var skeletonListView = document.getElementById('skeleton-listview');
+        var skeletonList = document.getElementById('skeleton-list');
 
+        if (skeletonCard) skeletonCard.style.display = 'none';
+        if (cardProfileImage) cardProfileImage.classList.add('profile-image');
+        if (nameElement) nameElement.textContent = data.name;
+        if (timeElement) timeElement.textContent = data.time;
+        if (cardContentImage) cardContentImage.classList.add('post-image');
+        if (cardLeftOptn) cardLeftOptn.innerHTML = '<button class="e-btn e-outline e-primary" style="width: 100%;">Like</button>';
+        if (cardRightOptn) cardRightOptn.innerHTML = '<button class="e-btn e-primary" style="width: 100%;">Share</button>';
+        if (skeletondatacard) skeletondatacard.style.display = 'block';
+
+        // Initialize ListView only if skeleton-listview exists
+        if (skeletonListView) {
             listObj = new ej.lists.ListView({
                 dataSource: data.listdata,
                 fields: { text: "text" },
@@ -52,11 +66,15 @@ this.default = function() {
                 template: template,
                 sortOrder: "Ascending"
             });
-            listObj.appendTo("#skeleton-listview");
-            listObj.element.style.display = 'block';            
-            document.getElementById('skeleton-list').style.display = 'none';
+            listObj.appendTo(skeletonListView);
+            listObj.element.style.display = 'block';
+        }
 
-            isDataLoading = false;
+        if (skeletonList) skeletonList.style.display = 'none';
+
+        isDataLoading = false;
+        }).catch(function(error) {
+            console.error('Error loading data:', error);
         });
     }
 

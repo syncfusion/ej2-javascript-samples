@@ -1,0 +1,69 @@
+.bootstrap5\.3 .e-samplestatus.new.tree,
+.bootstrap5\.3 .e-samplestatus.update.tree,
+.bootstrap5\.3 .e-samplestatus.preview.tree {
+    margin: 6px 1px;
+}
+
+.bootstrap5\.3 .e-samplestatus.new,
+.bootstrap5\.3 .e-samplestatus.update,
+.bootstrap5\.3 .e-samplestatus.preview {
+    margin-top: -0.5px;
+    padding-top: 1px;
+}
+
+.bootstrap5\.3.e-bigger .e-samplestatus.new,
+.bootstrap5\.3.e-bigger .e-samplestatus.update,
+.bootstrap5\.3.e-bigger .e-samplestatus.preview {
+    margin: 1px 0px;
+    padding-top: 1px;
+}
+
+.bootstrap5\.3.e-bigger .e-samplestatus.new.tree,
+.bootstrap5\.3.e-bigger .e-samplestatus.update.tree,
+.bootstrap5\.3.e-bigger .e-samplestatus.preview.tree {
+    margin: 2px 0;
+    margin-right: -5px;
+    padding-top: 2px;
+}
+
+
+.bootstrap5\.3 .sb-home-text {
+    color: #393B3F;
+}
+
+.bootstrap5\.3 .sb-home-link {
+    color: #353A3F;
+}
+
+.bootstrap5\.3 .sb-bread-crumb .sb-bread-crumb-text>div {
+    color: #353A3F;
+}
+
+.bootstrap5\.3 .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item.e-active>.e-tab-wrap>.e-text-wrap>.e-tab-text,
+.bootstrap5\.3 .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text:hover {
+    color: #316CF4;
+}
+
+.bootstrap5\.3 .control-name {
+    color: #316CF4;
+}
+
+.bootstrap5\.3 .sb-component-name {
+    color: #353A3F;
+}
+
+.bootstrap5\.3 .sb-left-pane .e-listview .e-list-group-item {
+    color: #222529;
+}
+
+.bootstrap5\.3 .sb-footer-links a {
+    color: #316CF4;
+}
+
+.bootstrap5\.3 .sb-reset-icon:before {
+    content: '\e7e7';
+}
+
+.bootstrap5\.3 .e-tab .sb-content-tab-header.e-tab-header::before {
+    border-width: 0;
+}

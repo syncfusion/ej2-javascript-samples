@@ -1,0 +1,111 @@
+<div class="control-section integration-control-section">
+    <div class="integration-speechToText-section">
+        <div id="aiAssistView"></div>
+        <div id="stt-toast"></div>
+    </div>  
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates the integration of SpeechToText with the AI AssistView control. It allows users to convert spoken words into text in real time and use the transcribed content as input for AI-based interactions.
+    </p>
+</div>
+<div id="description">
+    <p>
+        In this example, the SpeechToText control captures and transcribes spoken input into text, which is displayed in an editable area. Users can modify the transcribed text or send it directly to the AI AssistView for processing.
+    </p>
+    <p>
+        The AI AssistView responds based on the provided input. A toolbar option is available to clear the conversation history, and a toast notification alerts users to any speech recognition errors.
+    </p>
+</div>
+
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-info">
+        <div class="e-icons e-listen-icon"></div>    
+        <h3>Speech To Text</h3>
+        <i>Click the below mic-button to convert your voice to text.</i>
+    </div>
+</script>
+
+<script id="footerContent" type="text/x-jsrender">
+    <div class="e-footer-wrapper">
+        <div id="assistview-footer" class="content-editor" contenteditable="true" placeholder="Click to speak or start typing..."></div>
+        <div class="option-container">
+            <button id="speechToText"></button>
+            <button id="assistview-sendButton" class="e-assist-send e-icons" role="button"></button>
+        </div>
+    </div>
+</script>
+
+<style>
+
+.integration-speechToText-section {
+    height: 550px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.integration-speechToText-section .banner-info .e-listen-icon:before {
+    font-size: 35px;
+}
+
+.integration-speechToText-section .banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+    text-align: center;
+}
+
+.integration-speechToText-section .e-footer-wrapper #assistview-sendButton {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.integration-speechToText-section .e-footer-wrapper #speechToText.visible,
+.integration-speechToText-section .e-footer-wrapper #assistview-sendButton.visible {
+    display: inline-block;
+}
+
+.integration-speechToText-section .e-footer-wrapper #speechToText,
+.integration-speechToText-section .e-footer-wrapper #assistview-sendButton {
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .integration-speechToText-section {
+        width: 100%;
+    }
+}
+
+.integration-speechToText-section .e-footer-wrapper {
+    display: flex;
+    border: 1px solid #c1c1c1;
+    padding: 5px 5px 5px 10px;
+    margin: 5px 5px 0 5px;
+    border-radius: 30px;
+}
+
+.integration-speechToText-section .e-footer-wrapper .content-editor {
+    width: 100%;
+    overflow-y: auto;
+    font-size: 14px;
+    min-height: 25px;
+    max-height: 200px;
+    padding: 10px;
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+.integration-speechToText-section .e-footer-wrapper .content-editor[contentEditable=true]:empty:before {
+    content: attr(placeholder)
+}
+
+.integration-speechToText-section .option-container {
+    align-self: flex-end;
+}
+
+</style>

@@ -8,7 +8,8 @@ this.default = function () {
             allowAdding: true,
             allowEditing: true,
             allowDeleting: true,
-            mode: 'Row'
+            mode: 'Row',
+            allowEditOnDblClick: false
         },
         columns: [
             {
@@ -18,7 +19,7 @@ this.default = function () {
             { field: 'taskName', headerText: 'Task Name', editType: 'stringedit', width: 200, validationRules: { required: true } },
             {
                 field: 'startDate', headerText: 'Start Date', textAlign: 'Right', width: 140,
-                editType: 'datepickeredit', format: 'yMd', validationRules: { date: true }
+                editType: 'datepickeredit', format: 'yMd', edit: { params: { format:'M/d/yyyy',}}, validationRules: { date: ['M/d/yyyy', 'Please enter a valid date'] }
             },
             {
                 field: 'duration', headerText: 'Duration', textAlign: 'Right', width: 130, editType: 'numericedit',

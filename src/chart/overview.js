@@ -86,11 +86,11 @@
         },
         {
             'sizeX': ej.base.Browser.isDevice ? 1 : 3, 'sizeY': ej.base.Browser.isDevice ? 1 : 2, 'row': 0, 'col': ej.base.Browser.isDevice ? 1 : 5,
-            header: '<div class="title" id="header2">Product Wise Sales - 2021</div>', content: '<div id="head2"  style="height:100%; width:100%"></div>'
+            header: '<div class="title" id="header2">Product Wise Sales - 2024</div>', content: '<div id="head2"  style="height:100%; width:100%"></div>'
         },
         {
             'sizeX': ej.base.Browser.isDevice ? 1 : 8, 'sizeY': ej.base.Browser.isDevice ? 1 : 3, 'row': ej.base.Browser.isDevice ? 1 : 4, 'col': 0,
-            header: '<div class="title" id="header3">Monthly Sales for 2021</div>', content: '<div id="head3"  style="height:100%; width:100%"></div>'
+            header: '<div class="title" id="header3">Monthly Sales for 2024</div>', content: '<div id="head3"  style="height:100%; width:100%"></div>'
         }]
     
     });
@@ -106,26 +106,28 @@
         },
         tooltip:{ enable: false },
         chartArea: { border: { width: 0 } },
-        legendSettings:{ padding: 5, shapeHeight: 8, shapeWidth: 8 },
+        legendSettings:{ padding: 5, shapeHeight: 8, shapeWidth: 8, enableHighlight: true },
             height: '100%',
             width: '100%',
         //Initializing Chart Series
         series: [
             {
-                dataSource: [   { Period: '2017', Percentage: 60 },
-                { Period: '2018', Percentage: 56 },
-                { Period: '2019', Percentage: 71 },
-                { Period: '2020', Percentage: 85 },
-                { Period: '2021', Percentage: 73 },],
-                type:"Column", name:"Online" ,xName:"Period" ,yName:"Percentage", fill:'#2485FA', marker:{ dataLabel: { visible: true, position: 'Middle', font: { color: 'white' } } }
+                dataSource: [   { Period: '2020', Percentage: 60 },
+                { Period: '2021', Percentage: 56 },
+                { Period: '2022', Percentage: 71 },
+                { Period: '2023', Percentage: 85 },
+                { Period: '2024', Percentage: 73 },],
+                type:"Column", name:"Online" ,xName:"Period" ,yName:"Percentage", fill:'#2485FA', marker:{ dataLabel: { visible: true, position: 'Middle', font: { color: 'white' } } },
+                cornerRadius: { topLeft: 4, topRight: 4}
             },
             {
                 type:"Column",    name:"Retail" ,xName:"Period", yName:"Percentage", fill:'#FEC200', marker:{ dataLabel: { visible: true, position: 'Middle', font: { color: 'white' } } },
-                dataSource: [   { Period: '2017', Percentage: 40 },
-                { Period: '2018', Percentage: 44 },
-                { Period: '2019', Percentage: 29 },
-                { Period: '2020', Percentage: 15 },
-                { Period: '2021', Percentage: 27 },]                
+                cornerRadius: { topLeft: 4, topRight: 4},
+                dataSource: [   { Period: '2020', Percentage: 40 },
+                { Period: '2021', Percentage: 44 },
+                { Period: '2022', Percentage: 29 },
+                { Period: '2023', Percentage: 15 },
+                { Period: '2024', Percentage: 27 },]                
             },
         ],
         load: lineChartTheme

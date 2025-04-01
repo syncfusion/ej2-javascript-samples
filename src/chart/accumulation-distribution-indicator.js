@@ -2,7 +2,7 @@
  * Sample for ADI Indicator
  */
 
- this.renderChartADI = function () {
+var renderChartADI = function () {
         var chart = new ej.charts.Chart({
             primaryXAxis: {
                 valueType: 'DateTime', intervalType: "Months",

@@ -221,6 +221,10 @@ this.default = function () {
         }
     });
     displayTextEan13.appendTo('#displayText');
-  
+    var downloadButton = new ej.buttons.Button({});
+    downloadButton.appendTo('#downloadBtn12');
+    document.getElementById('downloadBtn12').onclick = function () {
+        barcodeEan13.exportImage("Barcode", 'PNG');
+    };
 };
 

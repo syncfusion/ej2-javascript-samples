@@ -3,7 +3,6 @@
     "directory": "image-editor",
     "category": "File Viewers & Editors",
     "ftName": "image-editor",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -47,7 +46,6 @@
             "name": "File Restriction",
             "category": "Image Editor",
             "ftName": "image-editor",
-            "type": "new",
             "api": {
               "ImageEditor": [
                 

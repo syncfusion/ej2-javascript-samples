@@ -1,8 +1,3 @@
-var selectedTheme = location.hash.split('/')[1];
-selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
-var theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
-var fill = 'url(#' + selectedTheme + '-gradient-chart)';
-
 renderStockChart = function (aapl) {
         var stockChart = new ej.charts.StockChart({
             chartArea: { border: { width: 0 } },
@@ -13,7 +8,7 @@ renderStockChart = function (aapl) {
             },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'open', type: 'Area', fill: fill
+                    dataSource: aapl, xName: 'x', yName: 'open', type: 'Area', fill: 'url(#gradient-chart)'
                 }
             ],
             enablePeriodSelector: false,
@@ -28,7 +23,13 @@ renderStockChart = function (aapl) {
             crosshair: {
                 enable: true
             },
-            theme: theme
+            load: function (args) {
+                var selectedTheme = location.hash.split('/')[1];
+                selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
+                args.stockChart.theme = (selectedTheme.charAt(0).toUpperCase() +
+                    selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
+                args.stockChart.series[0].fill = 'url(#' + selectedTheme + '-gradient-chart)';
+            },
         });
         stockChart.appendTo('#disabledPeriodChart');
     };

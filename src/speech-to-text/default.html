@@ -1,0 +1,153 @@
+<div class="col-lg-8 control-section">
+    <div class="default-speechToText-section">
+        <div class="speechToText-container">
+            <button id="speech-to-text"></button>
+            <mark class="speech-recognition-status">Click the mic button to start speaking...</mark>
+        </div>
+        <div class="output-container">
+            <h4>Live Speech Transcription</h4>
+            <textarea id="output-textarea"></textarea>
+            <div class="output-options">
+                <button id="transcript-copy-button" class="e-btn" disabled>Copy</button>
+                <button id="transcript-clear-button"  class="e-btn">Clear</button>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<div class="col-lg-4 default-speechToText property-section">
+    <div class="property-panel-header"> Properties </div>
+    <div class="property-panel-content">
+        <table>
+            <tbody>
+                <tr>
+                    <td> Styling </td>
+                    <td>
+                        <select id="stt-styling-ddl">
+                            <option value="">Normal</option>
+                            <option value="e-primary">Primary</option>                          
+                            <option value="e-success">Success</option>
+                            <option value="e-warning">Warning</option>
+                            <option value="e-danger">Danger</option>
+                            <option value="e-flat">Flat</option>
+                            <option value="e-info">Info</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Language </td>
+                    <td>
+                        <select id="stt-lang-ddl">
+                            <option value="en-US">English, US</option>
+                            <option value="de-DE">German, DE</option>
+                            <option value="zh-CN">Chinese, CN</option>
+                            <option value="fr-FR">French, FR</option>
+                            <option value="ar-SA">Arabic, SA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interim results</td>
+                    <td>
+                        <input id="interim-switch" type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Show tooltip</td>
+                    <td>
+                        <input id="tooltip-switch" type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Show icon with text</td>
+                    <td>
+                        <input id="icon-with-text-switch" type="checkbox" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample showcases the functionality of the SpeechToText control, which converts spoken words into text using your device’s microphone. It utilizes the built-in JavaScript SpeechRecognition API for speech processing. Speak into the microphone to see the transcribed text appear in the text area.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        The SpeechToText control enables real-time speech-to-text conversion using the JavaScript <code>SpeechRecognition</code> API. This demo explores its key features and customization options:
+    </p>
+    <ul>
+        <li><code>cssClass</code>: Modify the microphone button’s appearance with predefined styles such as Success, Warning, or Danger.</li>
+        <li><code>lang</code>: Select a preferred language for speech recognition.</li>
+        <li><code>allowInterimResults</code>: Choose whether to display words as you speak or only after completing a phrase.</li>
+        <li><code>showTooltip</code>: Enable or disable tooltips for additional guidance.</li>
+        <li><code>buttonSettings</code>: Configure the button to display text alongside the microphone icon.</li>
+    </ul>
+    <p>
+        These options allow you to configure the SpeechToText control to suit your needs. Try different settings in the property panel to see how they affect the control’s appearance and functionality.
+    </p>
+</div>
+
+<style>
+
+    .default-speechToText-section,
+    .default-speechToText-section .output-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .default-speechToText-section {
+        gap: 50px;
+        margin: 50px auto;
+    }
+
+    .default-speechToText-section .output-container {
+        width: 75%;
+        gap: 10px; 
+    }
+
+    .default-speechToText-section .output-container h4 {
+        margin: 0;
+        align-self: baseline;
+    }
+
+    .default-speechToText-section .speech-recognition-status{
+        font-size: 12px;
+    }
+
+    .default-speechToText .property-panel-content td {
+        padding: 10px 0px;
+        width: 50%;
+    }
+
+    .default-speechToText-section .speechToText-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #transcript-copy-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }  
+
+    @media only screen and (max-width: 750px) {
+        .default-speechToText-section .output-container {
+            width: 100%;
+        }
+
+        .default-speechToText-section .output-options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+</style>

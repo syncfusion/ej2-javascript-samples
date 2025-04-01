@@ -1,0 +1,171 @@
+.tailwind3 .e-samplestatus.new.tree,
+.tailwind3 .e-samplestatus.update.tree,
+.tailwind3 .e-samplestatus.preview.tree {
+    margin: 0px;
+    margin-top: -1px;
+    height: 22px;
+}
+
+.tailwind3 .e-samplestatus.new,
+.tailwind3 .e-samplestatus.update,
+.tailwind3 .e-samplestatus.preview {
+    margin: 1px 7px 1px 1px;
+    padding: 2px 4px;
+    height: 22px;
+}
+
+.tailwind3.e-bigger .e-samplestatus.new,
+.tailwind3.e-bigger .e-samplestatus.update,
+.tailwind3.e-bigger .e-samplestatus.preview {
+    margin: 4px 7px;
+    padding: 2px 4px;
+}
+
+.tailwind3.e-bigger .e-samplestatus.new.tree,
+.tailwind3.e-bigger .e-samplestatus.update.tree,
+.tailwind3.e-bigger .e-samplestatus.preview.tree {
+    margin: 1px !important;
+    padding: 2px 5px;
+}
+
+.tailwind3 .sb-theme-studio a {
+    color: #4f46e5;
+}
+
+
+.tailwind3 .toggle-active,
+.tailwind3 .sb-plnr-section,
+.tailwind3 .sample-navigation>button:hover,
+.tailwind3 .sb-footer-links a,
+.tailwind3 .sb-open-new-wrapper a:hover,
+.tailwind3 .description-section a,
+.tailwind3 #action-description a {
+    color: #4f46e5;
+}
+
+.tailwind3 .sb-footer {
+    border-top: 1px solid #e5e7eb;
+    color: #111827;
+}
+.tailwind3 .sb-switch-popup li:first-child{
+    color:#4f46e5;
+}
+
+.tailwind3 .sb-source-section .e-tab .e-tab-header {
+    border-top: 1px solid #e5e7eb;
+}
+
+.tailwind3 .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text {
+    color: #374151;
+}
+
+.tailwind3 .sb-content-section .sb-content-tab-header {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tailwind3 #sb-header-text,
+.tailwind3 #header-theme-switcher,
+.tailwind3 .sb-component-name,
+.tailwind3 .sb-action-description,
+.tailwind3 .e-list-item.e-level-1 .e-text-content .e-list-text {
+    color: #111827 !important;
+}
+
+.tailwind3 .sb-lang-toggler-wrapper,
+.tailwind3 .sb-theme-switcher,
+.tailwind3 .sb-search-btn,
+.tailwind3 .sb-icon-Settings-Preferences,
+.tailwind3 #sb-left-back,
+.tailwind3 .e-list-group-item.e-level-1 .e-text-content .e-list-text {
+    color: #6b7280;
+}
+
+.tailwind3 .crumb-sample,
+.tailwind3 .description-section {
+    color: #374151 !important;
+}
+
+.tailwind3 #sb-content {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.tailwind3 .sb-content-toolbar {
+    top: 4px;
+}
+
+.tailwind3 .sample-navigation, .tailwind3 .sb-open-new-wrapper {
+    color: #6b7280;
+}
+
+.tailwind3 .sb-content-section {
+    background-color: transparent;
+}
+
+.tailwind3 .sb-download-splitter,
+.tailwind3 .sb-toolbar-splitter {
+    border-left: 1px solid #e5e7eb;
+}
+
+.tailwind3 .sb-icon-Home,
+.tailwind3 .sb-home-text,
+.tailwind3 .sb-bread-crumb .sb-bread-crumb-text>div {
+    color: #4b5563;
+}
+
+.tailwind3 .sb-left-pane .e-treeview .e-list-item.e-active>.e-fullrow,
+.tailwind3 .sb-left-pane .e-treeview .e-list-item.e-active.e-hover>.e-fullrow {
+    background-color: #e5e7eb;
+}
+
+.tailwind3 .sb-left-pane .e-listview .e-list-item.e-hover,
+.tailwind3 .sb-left-pane .e-treeview .e-list-item.e-hover>.e-fullrow {
+    background-color: #f9fafb;
+    border: none;
+}
+
+.tailwind3 .sb-left-pane .e-listview .e-list-item.e-active {
+    background-color: #e5e7eb;
+}
+
+.tailwind3 .sb-content-tab > .e-tab > .e-tab-header > .e-items.e-toolbar-items > .e-toolbar-item.e-active > .e-tab-wrap > .e-text-wrap > .e-tab-text,
+.tailwind3 .sb-content-tab > .e-tab > .e-tab-header > .e-items.e-toolbar-items > .e-toolbar-item > .e-tab-wrap > .e-text-wrap > .e-tab-text:hover {
+    color: #4f46e5;
+}
+
+.tailwind3 .sb-content-tab > .e-tab > .e-tab-header > .e-items.e-toolbar-items > .e-indicator {
+    background: #4f46e5;
+}
+
+.tailwind3 .control-name {
+    color: #4f46e5;
+}
+
+.tailwind3 .sb-reset-icon:before {
+    content: '\e7e7';
+}
+
+.tailwind3 .copycode::before {
+    content: '\e77c';
+    font-size: 25px;
+}
+
+.tailwind3 .e-toolbar-items .e-toolbar-item.e-template.e-active {
+    border: none;
+}
+
+@media (max-width: 550px) {
+    .tailwind3 #sb-content-header .e-items.e-toolbar-items {
+        top: 8px;
+    }
+    
+    .tailwind3 .sb-content-tab > .e-tab > .e-tab-header > .e-items.e-toolbar-items > .e-indicator{
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tailwind3 .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap {
+        height: 70px;
+    }
+}

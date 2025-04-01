@@ -1,0 +1,854 @@
+<div>
+    <div class="col-lg-9 control-section pdfviewer-control-section">
+        <div class="content-wrapper">
+            <div class="flex-container">
+                <label class="switchLabel" for="checked">Standalone PDF Viewer</label>
+                <div class="e-message render-mode-info">
+                    <span class="e-msg-icon render-mode-info-icon"
+                        title="Turn OFF to render the PDF Viewer as server-backed"></span>
+                </div>
+                <div><input cssClass="buttonSwitch" id="checked" change="change" type="checkbox" /></div>
+            </div>
+            <div id="pdfViewer" style="height:640px; width:100%; display: block;"></div>
+        </div>
+    </div>
+    <div class="col-lg-3 pv-property-section main-panel">
+        <div class="property-panel-header header-panel sb-content-tab-header" id="pv-property-header">
+            Properties
+            <button class="e-btn e-lib e-flat e-icon-btn" id="resetbutton">
+                <span class="e-icons e-refresh e-btn-icon"></span>
+            </button>
+        </div>
+        <!-- property panel staring here -->
+        <div class="pv-property-panel-content">
+            <div class="pdfviewer-text-content"><span>Annotation Type</span></div>
+            <div class="input-item">
+                <select id="annotationsList" style="width: 100%;">
+                    <option value="Highlight">Highlight</option>
+                    <option value="Underline">Underline</option>
+                    <option value="Strikethrough">Strikethrough</option>
+                    <option value="Line">Line</option>
+                    <option value="Arrow">Arrow</option>
+                    <option value="Rectangle">Rectangle</option>
+                    <option value="Circle">Circle</option>
+                    <option value="Polygon">Polygon</option>
+                    <option value="Distance">Distance</option>
+                    <option value="Perimeter">Perimeter</option>
+                    <option value="Area">Area</option>
+                    <option value="Radius">Radius</option>
+                    <option value="Volume">Volume</option>
+                    <option value="StickyNotes">Sticky Notes</option>
+                    <option value="Ink">Ink</option>
+                    <option value="Stamp">Stamp</option>
+                    <option value="CustomStamp">Custom Stamp</option>
+                    <option value="FreeText">Free Text</option>
+                </select>
+            </div>
+            <!-- this is for selection of stamp type annotatoion -->
+            <div class="inner-container" id="stampClickedIStrue" style="display: none;">
+                <div class="pdfviewer-input-title" style="margin-top: 0%;"><span>Stamp Type</span></div>
+                <div class="input-item">
+                    <select id="stampTypeList">
+                        <option value="Dynamic">Dynamic</option>
+                        <option value="SignHere">Sign Here</option>
+                        <option value="StandardBusiness">Standard Business</option>
+                    </select>
+                </div>
+                <div class="input-title">
+                    <div class="pdfviewer-input-title"><span>Comments</span></div>
+                    <div class="input-item" id="dynamicstampListElement" style="display: none;">
+                        <select id="dynamicstampList">
+                            <option value="Approved">Approved</option>
+                            <option value="Confidential">Confidential</option>
+                            <option value="NotApproved">Not Approved</option>
+                            <option value="Received">Received</option>
+                            <option value="Reviewed">Reviewed</option>
+                            <option value="Revised">Revised</option>
+                        </select>
+                    </div>
+                    <div class="input-item" id="signHerestampListElement" style="display: none;">
+                        <select id="signHerestampList">
+                            <option value="Accepted">Accepted</option>
+                            <option value="InitialHere">Initial Here</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="SignHere">Sign Here</option>
+                            <option value="Witness">Witness</option>
+                        </select>
+                    </div>
+                    <div class="input-item" id="standardBussinessStampListElement" style="display: none;">
+                        <select id="standardBussinessStampList">
+                            <option value="Approved">Approved</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Confidential">Confidential</option>
+                            <option value="Draft">Draft</option>
+                            <option value="Final">Final</option>
+                            <option value="ForComment">For Comment</option>
+                            <option value="ForPublicRelease">For Public Release</option>
+                            <option value="InformationOnly">Information Only</option>
+                            <option value="NotApproved">Not Approved</option>
+                            <option value="NotForPublicRelease">Not For Public Release</option>
+                            <option value="PreliminaryResults">Preliminary Results</option>
+                            <option value="Void">Void</option>
+                           
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ends here -->
+        <!-- uploader need to here -->
+        <div class="pdfviewer-input-title" id="fileUploaderIsTrue" style="display: none;">
+            <!-- Initialize Uploader -->
+            <div id='dropArea' style='height: auto; overflow: auto;'>
+                <input type='file' name="Browser" id='fileupload'/>
+                <span id='drop'> </span>
+            </div>
+        </div>
+        <!--  -->
+        <div class="pdfviewer-input-title"><span>Page Number</span></div>
+        <div class="input-item">
+            <input id="pageNumber" type="text" />
+        </div>
+        <!--  -->
+        <div class="pdfviewer-input-title"><span>Settings:</span></div>
+        <div class="inner-container" style="padding: 0 0 12px 0px;">
+            <table class="inner-table settings-table">
+                <tr id="XYRowIstrue" class="table-row">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>X Position</span>
+                            <div class="input-item">
+                                <input id="Xposition" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Y Position</span>
+                            <div class="input-item">
+                                <input id="Yposition" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="heightwidthrowIstrue" class="table-row">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Width</span>
+                            <div class="input-item">
+                                <input id="width" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Height</span>
+                            <div class="input-item">
+                                <input id="height" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="X1Y1RowIstrue" style="display: none;" class="table-row">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>X1 Position</span>
+                            <div class="input-item">
+                                <input id="X1position" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Y1 Position</span>
+                            <div class="input-item">
+                                <input id="Y1position" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="X2Y2RowIstrue" style="display: none;" class="table-row">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>X2 Position</span>
+                            <div class="input-item">
+                                <input id="X2position" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Y2 Position</span>
+                            <div class="input-item">
+                                <input id="Y2position" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="display: flex;">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Shape Opacity</span>
+                            <div class="input-item">
+                                <input id="shapeOpacity" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item" id="colorFillerIstrue">
+                        <div class="pdfviewer-text-content">
+                            <span>Fill Color</span>
+                            <div class="input-item">
+                                <input id="fillColorinput" type="color">
+                            </div>
+    
+                        </div>
+                    </td>
+                </tr>
+                <tr id="strokethickenssIstrue" class="table-row">
+                    <td class="left-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Stroke Thickness</span>
+                            <div class="input-item">
+                                <input id="strokeThickeness" type="text" />
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right-item">
+                        <div class="pdfviewer-text-content">
+                            <span>Stroke Color</span>
+                            <div class="input-item">
+                                <input id="strokeColorinput" type="color">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+    
+            <div style="padding: 12px;">
+                <!-- Table to display the bounds -->
+                <table id="coordinate-table" class="pdfViewer-coordinate-table"
+                    style="width: 100%; display: none; border-collapse: collapse; ">
+                    <!-- Table rows will be dynamically added here -->
+                </table>
+            </div>
+    
+            <!-- Section for the buttons -->
+            <div id="deladdboundsButtonsIstrue" style="display: none;">
+                <div class="button-section" style="padding: 12px 12px 0px 0px; border: 0px;">
+                    <button id="deletebutton">Delete</button>
+                    <button id="addboundsbutton">Add Bounds</button>
+                </div>
+            </div>
+            <div style="padding: 0px 12px 12px 12px; display: none;" id="lineIstrue">
+                <div class="pdfviewer-input-title"><span>Line Head Start</span></div>
+                <div class="input-item">
+                    <select id="lineHeadStartList">
+                        <option value="None">None</option>
+                        <option value="Arrow">Closed Arrow</option>
+                        <option value="OpenArrow">Open Arrow</option>
+                        <option value="Square">Square</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Circle">Round</option>
+                    </select>
+    
+                </div>
+    
+                <div class="pdfviewer-input-title"><span>Line Head End</span></div>
+                <div class="input-item">
+                    <select id="lineHeadEndList">
+                        <option value="None">None</option>
+                        <option value="Arrow">Closed Arrow</option>
+                        <option value="OpenArrow">Open Arrow</option>
+                        <option value="Square">Square</option>
+                        <option value="Diamond">Diamond</option>
+                        <option value="Circle">Round</option>
+                    </select>
+                </div>
+                <div class="pdfviewer-input-title" id="distanceIstrue">
+                    <span>Leader Length</span>
+                    <div class="input-item">
+                        <input id="leaderLength" type="text" />
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <!--  -->
+            <div id="polygonIstrue" style="display: none;">
+                <div class="button-section" style="padding: 12px 12px 0px 0px; border: 0px; ">
+                    <button id="vertexdelete">Delete</button>
+                    <button id="addVertexButton">Add Vertex</button>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <!-- ink doprdown -->
+        <div style="padding: 0 0 0px 0px; display: none;" id="inkAnnotationIstrue">
+            <div class="pdfviewer-input-title"><span>Ink Annotation</span></div>
+            <div class="input-item">
+                <select id="inkAnnotationList">
+                    <option value="Syncfusion">Syncfusion</option>
+                    <option value="PdfViewer">PdfViewer</option>
+                    <option value="Star">Star</option>
+                </select>
+            </div>
+        </div>
+        <!-- strt -->
+        <div class="pdfviewer-input-title" id="freeTextIstrue" style="display: none;"><span>Text Properties:</span>
+        </div>
+        <div class="inner-container" id="innerfreeTextIstrue" style="display: none;">
+            <div class="pdfviewer-text-content" style="margin-top: 0%;"><span>Default Text</span></div>
+            <div class="input-item">
+                <input id="defaultText" type="text" />
+            </div>
+            <div class="pdfviewer-input-title"><span>Font Family</span></div>
+            <div class="input-item">
+                <select id="fontFamilyList">
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Courier">Courier</option>
+                    <option value="Symbol">Symbol</option>
+                    <option value="TimesNewRoman">Times New Roman</option>
+                </select>
+    
+            </div>
+            <div class="pdfviewer-input-title"><span>Alignment</span></div>
+            <div class="input-item">
+                <select id="textAlignmentList">
+                    <option value="Center">Center</option>
+                    <option value="Right">Right</option>
+                    <option value="Left">Left</option>
+                    <option value="Justify">Justify</option>
+                </select>
+            </div>
+            <div class="pdfviewer-input-title"><span>Font Style</span></div>
+            <div class="input-item">
+                <select id="fontStyleList">
+                    <option value="None">None</option>
+                    <option value="Bold">Bold</option>
+                    <option value="Underline">Underline</option>
+                    <option value="Italic">Italic</option>
+                    <option value="Strikethrough">Strikethrough</option>
+                </select>
+            </div>
+            <div class="pdfviewer-input-title">
+                <table class="inner-table">
+                    <tr>
+                        <td style="width:50%;padding:0;">
+                            <span>Font Size</span>
+                            <div class="input-item">
+                                <input id="fontSize" type="text" />
+                            </div>
+                        </td>
+                        <td style="padding:0;">
+                            <div style="margin-left: 12px;" class="text-content">
+                                <span>Font Color</span>
+                                <div class="input-item">
+                                    <input id="fontColorInput" type="color">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+        <!-- end -->
+        <!-- sytrta0 -->
+        <div class="pdfviewer-input-title">
+            <table>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" id="PrintAnnotation-isTrueCheckbox"></td>
+                    <td class="check-box-row"><span>Print Annotation</span></td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" id="LockAnnotation-isTrueCheckbox"></td>
+                    <td class="check-box-row"><span>Lock Annotation</span></td>
+                </tr>
+            </table>
+        </div>
+        <!-- end -->
+    
+        <!-- strt -->
+        <div id="allowinstractionsIstrue" style="display: none;">
+            <div class="pdfviewer-input-title pdfviewer-text-content"><span>Allow Interactions</span></div>
+            <div class="input-item">
+                <input type="checkbox" id='interactionDropdownTree' />
+            </div>
+        </div>
+        <!--  -->
+        <!-- strat -->
+        <div class="pdfviewer-input-title"><span>Add Comments</span></div>
+        <div class="pdfviewer-input-title"><span>Author</span></div>
+        <div class="input-item">
+            <input id="authorName" type="text" />
+        </div>
+        <div class="pdfviewer-input-title"><span>Content</span></div>
+        <div class="input-item">
+            <input id="comment" type="text" />
+        </div>
+        <div class="pdfviewer-input-title"><span>Status</span></div>
+        <div class="input-item">
+            <select id="status">
+                <option value="None">None</option>
+                <option value="Accepted">Accepted</option>
+                <option value="Cancelled">Cancelled</option>
+                <option value="Completed">Completed</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+        </div>
+        <div class="pdfviewer-input-title">
+            <table>
+                <tr>
+                    <td class="check-box-row">
+                        <input type="checkbox" id="replyCheckbox-isTrue">
+                    </td>
+                    <td class="check-box-row"><span>Reply</span></td>
+                </tr>
+            </table>
+        </div>
+    
+        <div>
+            <div class="pdfviewer-input-title" id="repliesList" hidden></div>
+            <div class="inner-container replies" id="repliesContainer" style="display: none;">
+                <div class="contextmenu-control">
+                    <div id='contextMenutarget'></div>
+                    <ul id='contextmenu'></ul>
+                </div>
+            </div>
+        </div>
+        <div class="inner-container pdfViewer-checked-Content" style="padding: 10px; display: none;" id="ischeckedReplybox">
+            <div class="pdfviewer-input-title"><span>Author</span></div>
+            <div class="input-item">
+                <input id="replyAuthorName" type="text" />
+            </div>
+            <div class="pdfviewer-input-title"><span>Content</span></div>
+            <div class="input-item">
+                <input id="replyComment" type="text" />
+            </div>
+            <div class="pdfviewer-input-title"><span>Status</span></div>
+            <div class="input-item">
+                <select id="replyStatus">
+                    <option value="None">None</option>
+                    <option value="Accepted">Accepted</option>
+                    <option value="Cancelled">Cancelled</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+            <div class="button-section" style="padding: 12px 12px 0px 0px; border: 0px;">
+                <button id="addreplyButton">Add Reply</button>
+                <button id="updateReplyButton" style="display: none;">Update Reply</button>
+            </div>
+        </div>
+        <div class="property-panel-footer sb-content-tab-header" style="border-bottom: none;" id="pv-property-footer">
+            <div class="button-section">
+                <button id="updateannotationButton">Update</button>
+                <button id="addAnnotationButton">Add Annotation</button>
+            </div>
+        </div>
+</div>
+    <!-- end -->
+
+
+</div>
+<!-- property panel ending here -->
+</div>
+<!-- col-3 ends here -->
+<div id="action-description">
+    <p>This sample demonstrates the creation of various types of annotations in the PDF viewer, including text markup, shapes, measurements, free text, stamps, handwritten signatures, ink, and sticky notes. Additionally, we can customize existing annotations or add new annotations programmatically in the PDF viewer using the provided options.</p>
+</div>
+<div id="description">
+    <p>The PDF Viewer component allows the process of programmatically adding or modifying annotations within a PDF document. With the ability to programmatically add any type of annotation using the <a target="_blank" href="https://helpej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotation/#addannotation" aria-label="Navigate to the addAnnotation method reference for PDF Viewer">addAnnotation</a> API and edit existing annotations using the editAnnotation API, users can seamlessly enhance their PDF viewing experience.</p>
+    <br />
+    <p>The creation of an annotation when clicking the ‘Add annotation’ button depends on the selected properties from the Property panel. To update an existing annotation, users can select the desired annotation, modify its properties, and then click the ‘Update’ button.</p>
+    <br />
+    <p>We can programmatically add or update the following types of annotations in the PDF viewer:</p>
+    <ul>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/text-markup-annotation" aria-label="Navigate to the documentation for Text markup annotations in PDF Viewer component">Text markup annotation</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/shape-annotation" aria-label="Navigate to the documentation for Shape annotations in PDF Viewer component">Shape annotations</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/measurement-annotation" aria-label="Navigate to the documentation for Measurements annotation in PDF Viewer component">Measurements annotation</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/free-text-annotation" aria-label="Navigate to the documentation for Free text annotation in PDF Viewer component">Free text annotation</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/stamp-annotation" aria-label="Navigate to the documentation for Stamp annotation in PDF Viewer component">Stamp annotation</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/ink-annotation" aria-label="Navigate to the documentation for Ink annotation in PDF Viewer component">Ink annotation</a></li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/pdfviewer/annotations/sticky-notes-annotation" aria-label="Navigate to the documentation for Sticky notes annotation in PDF Viewer component">Sticky notes annotation</a></li>
+    </ul>
+    <p>
+        More information on adding annotation programmatically can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/documentation/pdfviewer/getting-started">
+            documentation section</a>.
+    </p>
+</div>
+<style>
+    .flex-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .render-mode-info {
+        background: none;
+        border: none;
+        padding-left: 0px;
+    }
+
+    .render-mode-info .render-mode-info-icon {
+        height: 16px;
+        width: 16px;
+    }
+
+    .switchLabel {
+        font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.24px;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .render-mode-info .render-mode-info-icon::before {
+        line-height: 0.5rem;
+    }
+
+    .buttonSwitch {
+        Width: 40px;
+        Height: 24px;
+    }
+
+
+    .header-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+        background-color: white;
+        border-bottom: 1px solid #D7D7D7;
+        padding-bottom: 5px;
+        margin-bottom: 16px;
+    }
+
+    .inner-table td {
+        text-wrap: nowrap;
+        padding: 12px 12px 0 12px;
+        width: 50%;
+    }
+
+    .main-panel {
+        border-left: 1px solid #D7D7D7;
+        height: 700px;
+        overflow-y: scroll;
+        padding-bottom: 0px;
+
+    }
+
+    #fileUpload {
+        margin: 5px;
+    }
+
+    .control_wrapper {
+        max-width: 505px;
+        margin: auto;
+    }
+
+    #uploadicon {
+        cursor: pointer;
+        top: 5px;
+        left: 20px;
+        position: relative;
+    }
+
+    .e-file-select-wrap {
+        display: inline-block;
+    }
+
+    .e-upload {
+        border: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #drop {
+        font-size: 14px;
+    }
+
+    .e-bigger #drop {
+        font-size: 15px;
+    }
+
+    #dropArea {
+        border: 1px dashed #c3c3cc;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .e-input-group {
+        font-size: 16px;
+    }
+
+    #dropArea .e-upload .e-upload-files {
+        text-align: initial;
+        border-top: none;
+    }
+
+    .e-upload .e-file-select-wrap .e-file-select,
+    .e-upload .e-file-select-wrap .e-file-select .e-uploader {
+        display: inline-block;
+        width: 0;
+    }
+
+    .input-item {
+        margin-top: 0px;
+        /*font-size: 16px;*/
+    }
+
+    .inner-container {
+        margin-top: 15px;
+        border: 1px solid rgba(196, 199, 197, 1);
+        padding: 12px;
+    }
+
+    .inner-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    .pdfViewer-coordinate-table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+        box-sizing: border-box;
+    }
+
+    .pdfViewer-coordinate-table td {
+        border: 1px solid rgba(196, 199, 197, 1);
+        padding: 4px;
+        font-size: 10px;
+        text-align: center;
+        width: 200px;
+    }
+
+    .pdfViewer-coordinate-table th {
+        border: 1px solid rgba(196, 199, 197, 1);
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .property-panel-footer {
+        padding: 10px 0px 16px 0px;
+        position: sticky;
+        bottom: 0;
+        background-color: white;
+        z-index: 1;
+        border-top: 1px solid #D7D7D7;
+        margin-top: 16px;
+    }
+
+    .e-pv-table-items {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .button-section {
+        text-align: center;
+        display: flex;
+        justify-content: end;
+        gap: 12px;
+        flex-wrap: wrap-reverse;
+    }
+
+    .button-section button {
+        font-size: 12px;
+        padding: 8.2px 16px;
+    }
+
+    .pdfviewer-input-title .check-box-row {
+        padding: 5px;
+    }
+    
+    .fileuploader {
+        margin-top: 5px;
+
+    }
+
+    .table-items {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2px;
+
+    }
+
+    .coordinate-table {
+        margin: 20px 0;
+    }
+
+    /* this styling iss from component.css */
+
+    .flex-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .render-mode-info {
+        background: none;
+        border: none;
+        padding-left: 0px;
+    }
+
+    .render-mode-info .render-mode-info-icon {
+        height: 16px;
+        width: 16px;
+    }
+
+    .switchLabel {
+        font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.24px;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .render-mode-info .render-mode-info-icon::before {
+        line-height: 0.5rem;
+    }
+
+    .buttonSwitch {
+        Width: 40px;
+        Height: 24px;
+    }
+
+    .pdfviewer-property-section {
+        padding: 20px 15px;
+    }
+
+    .pdfviewer-contextmenu-checkbox-label {
+        padding: 10px;
+    }
+
+    .pdfviewer-control-section {
+        border-right: 1px solid #D7D7D7;
+    }
+
+    .pdfviewer-property-container {
+        padding-bottom: 30px;
+
+    }
+
+    .header-pdfviewer {
+        font-weight: 600;
+        padding: 20px 2px;
+    }
+
+    .pdfviewer-input-title {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+
+    .pdfviewer-text-content {
+        font-size: 12px;
+    }
+
+    .pdfviewer-table-input-title {
+        margin-top: 6px;
+        font-size: 11px;
+    }
+
+    .reply-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    .replies {
+        overflow-y: scroll;
+        max-height: 180px;
+        padding: 0px !important;
+        overflow: auto;
+    }
+
+    .inner-container {
+        margin-top: 15px;
+        border: 1px solid rgba(196, 199, 197, 1);
+        padding: 12px;
+    }
+
+    .e-upload {
+        margin: 0px;
+    }
+    .reply-text {
+        width: 151px;
+        font-size: 12px;
+        word-break: break-word;
+    }
+
+    .more-container {
+        width: min-content;
+    }
+
+    #contextmenutarget {
+        padding: 10px;
+        position: relative;
+        text-align: justify;
+        color: gray;
+        user-select: none;
+    }
+
+    .upload-image {
+        width: 80px;
+        height: 80px;
+        margin: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(196, 199, 197, 1);
+        padding: 4px;
+    }
+
+    .file-name {
+        font-size: 14px;
+        padding: 0px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500;
+        width: 90px;
+        white-space: nowrap;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        border-top: 1px dashed #ccc;
+    }
+    .settings-table{
+        display: flex;
+        flex-direction: column;
+    }
+    .table-row{
+        display: flex;
+        width: 100%;
+    }
+    .left-item, .right-item{
+        width: 50%;
+    }
+    .reply-main-container{
+        flex-grow: 1;
+    }
+    body.bootstrap5\.3-dark #pv-property-header {
+        background-color: #212529;
+        border-bottom: 1px solid #D7D7D7;
+    }
+    body.bootstrap5\.3-dark #pv-property-footer {
+        background-color: #212529;
+        border-top: 1px solid #D7D7D7;
+    }
+    body.tailwind3-dark #pv-property-header,
+    body.tailwind3-dark #pv-property-footer {
+        background-color: #111827;
+    }
+</style>
