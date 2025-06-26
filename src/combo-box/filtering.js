@@ -11,6 +11,7 @@ this.default = function () {
         popupHeight: '270px',
         // set true for enable the filtering support.
         allowFiltering: true,
+        debounceDelay :'300',
         // bind the filtering event
         filtering: function (e) {
             var combobox_query = new ej.data.Query();
@@ -21,4 +22,14 @@ this.default = function () {
         }
     });
     comboBoxObj.appendTo('#country');
+
+    var numeric = new ej.inputs.NumericTextBox({
+        value: 300,
+        min: 1,
+        format:'n0',
+        change: function (args) {
+            comboBoxObj.debounceDelay = args.value;
+        }
+    });
+    numeric.appendTo('#numeric');
 };

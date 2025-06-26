@@ -1,11 +1,19 @@
-<div class="control-section">
+<div class="col-lg-8 control-section">
     <div class='control-wrapper'>
         <div style='padding-top:75px;'>
             <input type="text" tabindex="1" id='country' />
         </div>
     </div>
 </div>
-
+<div class="col-lg-4 property-section" style="padding-bottom:30px;">
+        <PropertyPane title='Properties'>
+            <div class="property-panel-header">Properties:</div>
+            <div class="property-panel-content">
+                <label class="example-label">Debounce Delay</label>
+                <input id="numeric" type="text" />
+            </div>
+        </PropertyPane>
+</div>
 <div id="action-description">
     <p>This sample demonstrates the filtering functionalities of the ComboBox. Type a character in ComboBox
         element and choose an item from the filtered list based on the typed characters.</p>
@@ -15,7 +23,7 @@
     <p>The ComboBox has built-in support to filter the data source when <code>allowFiltering</code> is enabled. It performs
         when characters are typed in the search box. In <code>filtering</code> event, you can filter down the data source and
         return the resulted data to ComboBox via <code>updateData</code> method to display its list items.</p>
-    <p>This sample illustrates that, query the data source and pass the resulted data to ComboBox through the <code>updateData</code> method in <code>filtering</code> event.</p>
+    <p>This sample illustrates that, query the data source and pass the resulted data to ComboBox through the <code>updateData</code> method in <code>filtering</code> event. The debounce delay, in milliseconds, for filtering items in the ComboBox component can be set using the <a href="https://ej2.syncfusion.com/javascript/documentation/api/combo-box/#debouncedelay" aria-label="Class reference of DebounceDelay property in ComboBox">DebounceDelay</a> property.</p>
     <p> More information on the filtering feature configuration can be found in the
         <a href="http://ej2.syncfusion.com/documentation/combo-box/filtering.html" target="_blank"> documentation section</a>.
     </p>
@@ -26,6 +34,21 @@
     .control-wrapper {
         margin: 0 auto;
         width: 250px;
+    }
+    .property-section {
+        top: 55px;
+        width: 200px;
+        margin-left: 80px;
+    }
+    .example-label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .property-panel-content {
+        padding: 0px 0px 15px 0px;
+    }
+    .property-panel-content:last-child {
+        padding: 0px 0px 40px 0px;
     }
 </style>
 <!-- custom code end-->

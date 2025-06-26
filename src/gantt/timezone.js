@@ -33,7 +33,7 @@ this.default = function () {
             { field: 'progress' },
         ],
         timelineSettings: {
-            timelineUnitSize: 65,
+            timelineUnitSize: 70,
             topTier: {
               unit: 'Day',
               format: 'MMM dd, yyyy'

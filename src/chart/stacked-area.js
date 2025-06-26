@@ -86,7 +86,7 @@
             }
         ],
         //Initializing Chart Title
-        title: 'Amount of Sales by Payment Mode',tooltip:{enable:true},
+        title: 'Amount of Sales by Payment Mode',tooltip:{enable:true, enableHighlight: true, showNearestTooltip: true},
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         legendSettings: {enableHighlight:true},
            // custom code start

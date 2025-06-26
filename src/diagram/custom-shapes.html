@@ -5,7 +5,7 @@
                 <div class="pane col-xs-12 col-sm-12 col-md-12 pie-container">
                     <div class="pieChartHeader">
                         <p class="chart-title">New Expenses</p>
-                        <p id="rangeDate" class="chart-value">Jun 1 - Dec 1</p>
+                        <p id="rangeDate" class="Diagram-chart-value">Jun 1 - Dec 1</p>
                     </div>
                 
                     <div id="pieChart" style="height:100%; width:49%; overflow:hidden;float:left;" margin="20px"> 
@@ -23,7 +23,7 @@
             </div>
         ${else if(id == 'node4')}
             <div class="diagram_border_cus diagram_border_cal">
-                <div id="element_calendar"> 
+                <div id="diagram-element_calendar"> 
                     <input id="daterange" type="text" style="horizontal-align:Left;vertical-align:Top">
                 </div>
             </div>
@@ -70,7 +70,7 @@
         color: #797979 !important;
     }
 
-    .chart-value {
+    .Diagram-chart-value {
         color: #9d9d9d;
     }
 
@@ -102,7 +102,7 @@
         padding-right: 15px;
     }
 
-    #element_calendar .e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+    #diagram-element_calendar .e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
     .e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
     .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left) {
         border: none;

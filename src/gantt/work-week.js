@@ -65,4 +65,26 @@ this.default = function () {
         popupHeight: '350px'
     });
     checkList.appendTo('#WorkingDays');
+    
+    var weekendVisibilityCheckbox = new ej.buttons.CheckBox({ checked: true });
+    weekendVisibilityCheckbox.appendTo('#toggleWeekendVisibility');
+    
+    document.getElementById('toggleWeekendVisibility').onclick = function () {
+        if (weekendVisibilityCheckbox.checked) {
+            ganttChart.timelineSettings.showWeekend = true;
+        } else {
+            ganttChart.timelineSettings.showWeekend = false;
+        }
+    };
+
+    var highlightWeekendsCheckbox = new ej.buttons.CheckBox({ checked: true });
+    highlightWeekendsCheckbox.appendTo('#togglehighlightWeekends');
+    
+    document.getElementById('togglehighlightWeekends').onclick = function () {
+        if (highlightWeekendsCheckbox.checked) {
+            ganttChart.highlightWeekends = true;
+        } else {
+            ganttChart.highlightWeekends = false;
+        }
+    };
 };

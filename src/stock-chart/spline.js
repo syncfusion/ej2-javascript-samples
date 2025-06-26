@@ -3,13 +3,13 @@
         var stockChart = new ej.charts.StockChart({
             primaryXAxis: { valueType: 'DateTime', majorGridLines: { width: 0 }, crosshairTooltip: { enable: true } },
             primaryYAxis: {
-                lineStyle: { color: 'transparent' },
-                majorTickLines: { color: 'transparent', height: 0 }
+                lineStyle: { color: 'transparent' }, labelPosition: 'Outside', tickPosition: 'Outside',
+                majorTickLines: { color: 'transparent', height: 17, width: 10 }
             },
             chartArea: { border: { width: 0 } },
             series: [
                 {
-                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Spline'
+                    dataSource: aapl, xName: 'x', yName: 'high', type: 'Spline', lastValueLabel: { enable: true, dashArray: '3,2', lineWidth: 0.5 }
                 }
             ],
             seriesType: [],

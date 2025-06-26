@@ -55,7 +55,7 @@ this.default = function () {
         title: 'Top Performing Market Sectors by Growth Rate (2024)',
         subTitle: 'Source: visualcapitalist.com',
         titleStyle: { position: 'Bottom' },
-        tooltip: { enable: true, header: "<b>${point.x}</b>", format: "Growth Rate : <b>${point.text}</b>" },
+        tooltip: { enable: true, header: ej.base.Browser.isDevice ? "" : "<b>${point.x}</b>", format: "Growth Rate : <b>${point.text}</b>" },
         width: ej.base.Browser.isDevice ? '100%' : '77%',
         height: '500px',
         // custom code start

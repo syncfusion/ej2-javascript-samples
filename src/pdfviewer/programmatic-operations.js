@@ -2,7 +2,7 @@ this.default = function () {
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Annotation, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer);
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer({
-        documentPath: "https://cdn.syncfusion.com/content/pdf/annotations.pdf",
+        documentPath: "https://cdn.syncfusion.com/content/pdf/annotations-v3.pdf",
         resourceUrl: 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib',
         toolbarSettings: {
             showTooltip: true, 
@@ -16,11 +16,6 @@ this.default = function () {
                 "CommentTool",
                 "SubmitForm",
                 "FormDesignerEditTool",
-                "FreeTextAnnotationOption",
-                "InkAnnotationOption",
-                "ShapeAnnotationOption",
-                "StampAnnotation",
-                "SignatureOption",
                 "SearchOption",
                 "PrintOption",
                 "DownloadOption"
@@ -149,17 +144,21 @@ this.default = function () {
     viewer.documentLoad = function (args) {
         selectedAnnotation.totalPageNumber = viewer.pageCount;
         pageNumberObj.max = viewer.pageCount;
-        if (args.documentName === 'annotations.pdf') {
+        if (args.documentName === 'annotations-v3.pdf') {
             viewer.annotation.addAnnotation("Highlight", {
-                bounds: [{ x: 97, y: 610, width: 350, height: 14 }],
+                bounds: [{x: 97, y: 610, width: 340, height: 14 }], 
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Underline", {
-                bounds: [{ x: 97, y: 723, width: 353.5, height: 14 }],
+                bounds: [{x: 97, y: 705, width: 346, height: 14 }],
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Strikethrough", {
-                bounds: [{ x: 97, y: 836, width: 376.5, height: 14 }],
+                bounds: [{x: 97, y: 800, width: 367, height: 14 }],
+                pageNumber: 1
+            });
+            viewer.annotation.addAnnotation("Squiggly", {
+                bounds: [{x: 97, y: 895.5, width: 336, height: 14 }],
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Line", {
@@ -725,6 +724,7 @@ this.default = function () {
             case 'Highlight':
             case 'Underline':
             case 'Strikethrough':
+            case 'Squiggly':
                 {
                     document.getElementById("strokethickenssIstrue").style.display = "none";
                     document.getElementById("deladdboundsButtonsIstrue").style.display = "block";
@@ -751,6 +751,9 @@ this.default = function () {
                         selectedAnnotation.fillColor = "#00ff00";
                     }
                     else if (selectedAnnotation.annotationType === "Strikethrough") {
+                        selectedAnnotation.fillColor = "#ff0000";
+                    }
+                    else if (selectedAnnotation.annotationType === "Squiggly") {
                         selectedAnnotation.fillColor = "#ff0000";
                     }
                     clearTable();
@@ -1157,7 +1160,7 @@ this.default = function () {
                 selectedAnnotation.width = 100;
                 selectedAnnotation.height = 100;
             }
-            else if (shapeAnnotation === "Highlight" || shapeAnnotation === "Underline" || shapeAnnotation === "Strikethrough") {
+            else if (shapeAnnotation === "Highlight" || shapeAnnotation === "Underline" || shapeAnnotation === "Strikethrough" || shapeAnnotation === "Squiggly") {
                 selectedAnnotation.width = 100;
                 selectedAnnotation.height = 14;
             }
@@ -1181,7 +1184,7 @@ this.default = function () {
             selectedAnnotation.allowedInteractions = ["None"];
             selectedAnnotation.strokeColor = "#FF0000";
             if (selectedAnnotation.annotationType === "FreeText") {
-                selectedAnnotation.strokeColor = "#00000000";
+                selectedAnnotation.strokeColor = "#FFFFFF00";
             }
             selectedAnnotation.fillColor = "#00000000";
             if (selectedAnnotation.annotationType === "Highlight") {
@@ -1191,6 +1194,9 @@ this.default = function () {
                 selectedAnnotation.fillColor = "#00ff00";
             }
             else if (selectedAnnotation.annotationType === "Strikethrough") {
+                selectedAnnotation.fillColor = "#ff0000";
+            }
+            else if (selectedAnnotation.annotationType === "Squiggly") {
                 selectedAnnotation.fillColor = "#ff0000";
             }
             selectedAnnotation.opacity = 100;
@@ -1203,7 +1209,7 @@ this.default = function () {
             selectedAnnotation.replyAuthor = "Guest";
             selectedAnnotation.replyComments = [];
             selectedAnnotation.vertexPointCount = 0;
-            if (shapeAnnotation === "Highlight" || shapeAnnotation === "Underline" || shapeAnnotation === "Strikethrough" || shapeAnnotation === "FreeText" || shapeAnnotation === "Polygon" || shapeAnnotation === "Volume" || shapeAnnotation === "Area" || shapeAnnotation === "Perimeter") {
+            if (shapeAnnotation === "Highlight" || shapeAnnotation === "Underline" || shapeAnnotation === "Strikethrough" || shapeAnnotation === "Squiggly" || shapeAnnotation === "FreeText" || shapeAnnotation === "Polygon" || shapeAnnotation === "Volume" || shapeAnnotation === "Area" || shapeAnnotation === "Perimeter") {
                 selectedAnnotation.x = 10;
                 selectedAnnotation.y = 10;
             }
@@ -1341,6 +1347,7 @@ this.default = function () {
             case "Highlight":
             case "Underline":
             case "Strikethrough":
+            case "Squiggly":
                 {
                     viewer.annotation.addAnnotation(selectedAnnotation.annotationType, currentAnnotationSettings);
                     break;
@@ -1349,10 +1356,7 @@ this.default = function () {
             case "Circle":
             case "StickyNotes":
             case "FreeText":
-                {   
-                    if(selectedAnnotation.annotationType === "FreeText") {
-                        currentAnnotationSettings.borderColor = "";
-                    }
+                {
                     viewer.annotation.addAnnotation(selectedAnnotation.annotationType, currentAnnotationSettings);
                     break;
                 }
@@ -1466,7 +1470,13 @@ this.default = function () {
             thickness: selectedAnnotation.thickness,
             strokeColor: selectedAnnotation.strokeColor,
             fillColor: selectedAnnotation.fillColor,
-            bounds: [{ x: selectedAnnotation.x, y: selectedAnnotation.y, width: selectedAnnotation.width, height: selectedAnnotation.height }],
+            bounds: (selectedAnnotation.bounds && selectedAnnotation.bounds.length > 0) ? selectedAnnotation.bounds.map(function (item) { return { x: item.X, y: item.Y, width: item.Width, height: item.Height }; }) :
+                [{
+                    x: selectedAnnotation.x,
+                    y: selectedAnnotation.y,
+                    width: selectedAnnotation.width,
+                    height: selectedAnnotation.height
+                }],
             vertexPoints: selectedAnnotation.vertexPoints,
             fontFamily: selectedAnnotation.fontFamily,
             fontStyle: fontStyleMap[selectedAnnotation.fontStyle],
@@ -1542,7 +1552,7 @@ this.default = function () {
         selectedAnnotation.annotationType = collection.shapeAnnotationType;
         findStampComments("Null");
         //for updating annotation type
-        if (collection.textMarkupAnnotationType === "Highlight" || collection.textMarkupAnnotationType === "Underline" || collection.textMarkupAnnotationType === "Strikethrough") {
+        if (collection.textMarkupAnnotationType === "Highlight" || collection.textMarkupAnnotationType === "Underline" || collection.textMarkupAnnotationType === "Strikethrough" || collection.textMarkupAnnotationType === "Squiggly") {
             annotationListObj.value = collection.textMarkupAnnotationType;
             selectedAnnotation.annotationType = collection.textMarkupAnnotationType;
             annotationListObj.dataBind();
@@ -1668,7 +1678,7 @@ this.default = function () {
         pageNumberObj.value = collection.pageNumber + 1;
         pageNumberObj.dataBind();
         //for updating annotation properties
-        if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" && (collection.annotationAddMode === "Imported Annotation" || collection.annotationAddMode === "Existing Annotation")) {
+        if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" || selectedAnnotation.annotationType === "Squiggly" && (collection.annotationAddMode === "Imported Annotation" || collection.annotationAddMode === "Existing Annotation")) {
             selectedAnnotation.width = collection.bounds[0].Width;
             widthObj.value = selectedAnnotation.width;
             widthObj.dataBind();
@@ -1682,7 +1692,7 @@ this.default = function () {
             YPositionObj.value = selectedAnnotation.y;
             YPositionObj.dataBind();
         }
-        else if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" && (collection.annotationAddMode === "UI Drawn Annotation")) {
+        else if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" || selectedAnnotation.annotationType === "Squiggly" && (collection.annotationAddMode === "UI Drawn Annotation")) {
             selectedAnnotation.width = collection.bounds[0].width;
             widthObj.value = collection.bounds[0].width;
             widthObj.dataBind();
@@ -1817,7 +1827,7 @@ this.default = function () {
                 generateTable();
             }
         }
-        else if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough") {
+        else if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" || selectedAnnotation.annotationType === "Squiggly") {
             selectedAnnotation.bounds = collection.bounds;
             //showBounds();
             generateTable();
@@ -1849,7 +1859,7 @@ this.default = function () {
             document.getElementById('allowinstractionsIstrue').style.display = "none";
             selectedAnnotation.allowedInteractions = collection.allowedInteractions;
         }
-        if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough") {
+        if (selectedAnnotation.annotationType === "Highlight" || selectedAnnotation.annotationType === "Underline" || selectedAnnotation.annotationType === "Strikethrough" || selectedAnnotation.annotationType === "Squiggly") {
             selectedAnnotation.fillColor = collection.color ? (collection.color.includes("rgba") ? rgbaStringToHex(collection.color) : collection.color) : "";
             fillColorPickerObj.value = collection.color ? (collection.color.includes("rgba") ? rgbaStringToHex(collection.color) : collection.color) : "";
             fillColorPickerObj.dataBind();
@@ -2104,7 +2114,7 @@ this.default = function () {
     function updateAnnotationSettings(annotation) {
         var currentAnnotation = annotation;
         //Condition for updating position properties
-        if (currentAnnotation.textMarkupAnnotationType === "Highlight" || currentAnnotation.textMarkupAnnotationType === "Underline" || currentAnnotation.textMarkupAnnotationType === "Strikethrough") {
+        if (currentAnnotation.textMarkupAnnotationType === "Highlight" || currentAnnotation.textMarkupAnnotationType === "Underline" || currentAnnotation.textMarkupAnnotationType === "Strikethrough" || currentAnnotation.textMarkupAnnotationType === "Squiggly") {
             currentAnnotation.bounds = [];
             currentAnnotation.color = selectedAnnotation.fillColor ? (selectedAnnotation.fillColor.includes("rgba") ? rgbaStringToHex(selectedAnnotation.fillColor) : selectedAnnotation.fillColor) : "";
             if (selectedAnnotation.bounds.length <= 1) {
@@ -2207,7 +2217,7 @@ this.default = function () {
             currentAnnotation.fontColor = selectedAnnotation.fontColor ? (selectedAnnotation.fontColor.includes("rgba") ? rgbaStringToHex(selectedAnnotation.fontColor) : selectedAnnotation.fontColor) : "";
         }
         //Condition for updating fill color and stroke color properties
-        if (currentAnnotation.textMarkupAnnotationType === "Highlight" || currentAnnotation.textMarkupAnnotationType === "Underline" || currentAnnotation.textMarkupAnnotationType === "Strikethrough") {
+        if (currentAnnotation.textMarkupAnnotationType === "Highlight" || currentAnnotation.textMarkupAnnotationType === "Underline" || currentAnnotation.textMarkupAnnotationType === "Strikethrough" || currentAnnotation.textMarkupAnnotationType === "Squiggly") {
             currentAnnotation.color = selectedAnnotation.fillColor ? (selectedAnnotation.fillColor.includes("rgba") ? rgbaStringToHex(selectedAnnotation.fillColor) : selectedAnnotation.fillColor) : "";
         }
         else {

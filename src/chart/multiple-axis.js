@@ -71,7 +71,7 @@ this.default = function () {
             visible: false
         },
         //Initializing tooltip
-        tooltip: { enable: true },
+        tooltip: { enable: true, enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
         //Initializing Chart Title
         title: 'Weather Data',

@@ -66,7 +66,7 @@ this.default = function () {
             getLayoutInfo: function (node, tree) {
                 if (!tree.hasSubTree) {
                     tree.orientation = 'Vertical';
-                    tree.type = 'Right';
+                    tree.type = 'Alternate';
                 }
             }
         },

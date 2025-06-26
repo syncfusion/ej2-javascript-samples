@@ -50,7 +50,7 @@
         legendSettings: {enableHighlight:true},
         //Initializing Chart title
         title: 'Inflation Rate in Percentage',
-        tooltip: {enable: true },
+        tooltip: {enable: true, enableHighlight: true, showNearestTooltip: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start
         load: function (args) {

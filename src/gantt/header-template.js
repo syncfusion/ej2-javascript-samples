@@ -17,7 +17,7 @@ this.default = function () {
         columns: [
             { field: 'TaskName', headerText: 'Job Name', headerTemplate: '#projectName', width: 250 },
             { field: 'StartDate', headerTemplate: '#dateTemplate' },
-            { field: 'resources', headerText: 'Resources', headerTemplate: '#resource', width: 150 },
+            { field: 'resources', headerText: 'Resources', headerTemplate: '#resource', width: 170 },
             { field: 'Duration', headerTemplate: '#durationTemplate' },
             { field: 'Progress', headerTemplate: '#progressTemplate' }
         ],

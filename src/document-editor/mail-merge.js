@@ -303,7 +303,7 @@ this.default = function () {
          print = addButton('e-de-icon-Print e-de-padding-right', 'Print', btnStyles, 'de-print', 'Print this document (Ctrl+P).', false);
          openBtn = addButton('e-de-icon-Open e-de-padding-right', 'open', btnStyles, 'de-open', 'Open', false);
          var items = [
-            { text: 'Syncfusion® Document Text (*.sfdt)', id: 'sfdt' },
+            { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
             { text: 'Word Document (*.docx)', id: 'word' },
             { text: 'Word Template (*.dotx)', id: 'dotx'},
             { text: 'Plain Text (*.txt)', id: 'txt'},

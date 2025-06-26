@@ -81,7 +81,7 @@ this.default = function () {
             },
             {
                 type: 'StackingLine100', dataSource: chartData4, marker: { isFilled: true, visible: true, shape: 'Triangle', width: 6, height: 6 },
-                xName: 'x', width: 3, yName: 'y', name: 'Armenia'
+                xName: 'x', width: 2, yName: 'y', name: 'Armenia'
 
             }
         ],
@@ -100,73 +100,6 @@ this.default = function () {
             stackedTheme = stackedTheme ? stackedTheme : 'Fluent2';
             args.chart.theme = (stackedTheme.charAt(0).toUpperCase() +
                 stackedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
-        },
-        legendClick: function (args) {
-            if (args.series.index === 0) {
-                if (args.chart.series[3].visible) {
-                    args.chart.series[3].width = 3;
-                    args.chart.series[0].width = 2;
-                } else if (args.chart.series[2].visible) {
-                    args.chart.series[2].width = 3;
-                    args.chart.series[0].width = 2;
-                } else if (args.chart.series[1].visible) {
-                    args.chart.series[1].width = 3;
-                    args.chart.series[0].width = 2;
-                } else {
-                    args.chart.series[0].width = 3;
-                }
-            }
-
-            if (args.series.index === 1) {
-                if (args.chart.series[3].visible) {
-                    args.chart.series[3].width = 3;
-                    args.chart.series[1].width = 2;
-                } else if (args.chart.series[2].visible) {
-                    args.chart.series[2].width = 3;
-                    args.chart.series[1].width = 2;
-                } else if (args.series.visible && args.chart.series[0].visible) {
-                    args.chart.series[0].width = 3;
-                    args.chart.series[1].width = 2;
-                } else {
-                    args.chart.series[1].width = 3;
-                    args.chart.series[0].width = 2;
-                }
-            }
-
-            if (args.series.index === 2) {
-                if (args.chart.series[3].visible) {
-                    args.chart.series[3].width = 3;
-                    args.chart.series[2].width = 2;
-                } else if (!args.series.visible) {
-                    args.chart.series[2].width = 3;
-                    args.chart.series[1].width = 2;
-                    args.chart.series[0].width = 2;
-                } else if (args.chart.series[1].visible) {
-                    args.chart.series[1].width = 3;
-                    args.chart.series[2].width = 2;
-                } else if (args.series.visible && args.chart.series[0].visible) {
-                    args.chart.series[0].width = 3;
-                    args.chart.series[2].width = 2;
-                }
-            }
-
-            if (args.series.index === 3) {
-                if (!args.series.visible) {
-                    args.chart.series[3].width = 3;
-                    args.chart.series[2].width = 2;
-                    args.chart.series[1].width = 2;
-                    args.chart.series[0].width = 2;
-                } else if (args.chart.series[2].visible) {
-                    args.chart.series[2].width = 3;
-                    args.chart.series[3].width = 2;
-                } else if (args.chart.series[1].visible) {
-                    args.chart.series[1].width = 3;
-                    args.chart.series[3].width = 2;
-                } else if (args.series.visible && args.chart.series[0].visible) {
-                    args.chart.series[0].width = 3;
-                    args.chart.series[3].width = 2;
-                }
-            }
         }
     });
     chart.appendTo('#stacked-container-100');

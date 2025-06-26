@@ -35,7 +35,7 @@
                 'Align',
                 'Caption',
                 'Remove',
-                '-',
+                '|',
                 'InsertLink',
                 'OpenImageLink',
                 'EditImageLink',

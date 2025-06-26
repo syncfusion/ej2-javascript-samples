@@ -9,13 +9,11 @@ this.default = function() {
         toolbarSettings: {
             items: [
                 'Undo', 'Redo', '|', 'ImportWord', 'ExportWord', 'ExportPdf', '|',
-                'Bold', 'Italic', 'Underline', 'StrikeThrough', 'InlineCode', 'SuperScript', 'SubScript', '|',
-                'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-                'LowerCase', 'UpperCase', '|',
-                'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList', '|',
-                'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'FileManager', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
-                '|', 'EmojiPicker', 'Print', '|',
-                'SourceCode', 'FullScreen']
+                'Bold', 'Italic', 'Underline', 'StrikeThrough', 'InlineCode', '|', 'CreateLink', 'Image', 'CreateTable', 'CodeBlock',
+                'HorizontalLine', 'Blockquote', '|', 'BulletFormatList', 'NumberFormatList', '|', 'Formats', 'Alignments', '|', 'Outdent', 'Indent', '|',
+                'FontColor', 'BackgroundColor', 'FontName', 'FontSize', '|', 'LowerCase', 'UpperCase', '|', 'SuperScript', 'SubScript', '|',
+                'EmojiPicker', 'FileManager', 'Video', 'Audio', '|', 'FormatPainter', 'ClearFormat',
+                '|', 'Print', 'FullScreen', '|', 'SourceCode']
         },
         slashMenuSettings: {
             enable: true,
@@ -64,7 +62,8 @@ this.default = function() {
             }
         },
         quickToolbarSettings: {
-            table: ['TableHeader', 'TableRows', 'TableColumns', 'TableCell', '-', 'BackgroundColor', 'TableRemove', 'TableCellVerticalAlign', 'Styles'],
+            table: ['Tableheader', 'TableRemove', '|', 'TableRows', 'TableColumns', 'TableCell', '|' , 'Styles', 'BackgroundColor', 'Alignments', 'TableCellVerticalAlign'],
+            text: ['Formats', '|', 'Bold', 'Italic', 'Fontcolor', 'BackgroundColor', '|', 'CreateLink', 'Image', 'CreateTable', 'Blockquote', '|' , 'Unorderedlist', 'Orderedlist', 'Indent', 'Outdent'],
             showOnRightClick: true,
         },
         enableXhtml: true,

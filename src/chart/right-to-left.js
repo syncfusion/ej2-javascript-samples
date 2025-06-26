@@ -36,7 +36,7 @@ var labelRender = function (args) {
             }
         ],
         //Initializing Chart Title
-        title: 'Company Performance', tooltip: { enable: true },
+        title: 'Company Performance', tooltip: { enable: true, enableHighlight: true },
         legendSettings: { visible: true, enableHighlight: true},
         enableRtl: true,
         width: ej.base.Browser.isDevice ? '100%' : '75%',

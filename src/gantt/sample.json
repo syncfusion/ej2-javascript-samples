@@ -283,8 +283,38 @@
          "description": "This example demonstrates how to change the task modes depends upon tasks."
       },
       {
+         "url": "constraints",
+         "name": "Constraints",
+         "category": "Scheduling Concepts",
+         "type": "new",
+         "api": {
+            "Gantt": [
+               "dataSource",
+               "height",
+               "taskFields",
+               "editSettings",
+               "toolbar",
+               "columns",
+               "treeColumnIndex",
+               "allowSelection",
+               "gridLines",
+               "resourceFields",
+               "resources",
+               "highlightWeekends",
+               "timelineSettings",
+               "labelSettings",
+               "projectStartDate",
+               "projectEndDate",
+               "editDialogFields",
+               "splitterSettings"
+            ]
+         },
+         "description": "This example demonstrates the constraint feature of the gantt chart."
+      },
+      {
          "url": "work-week",
          "name": "Workweek",
+         "type": "update",
          "category": "Scheduling Concepts",
          "api": {
             "Gantt": [
@@ -293,7 +323,7 @@
                "height",
                "highlightWeekends",
                "workWeek",
-			      "labelSettings"
+               "labelSettings"
             ]
          },
          "description": "This sample demonstrates the way to bind the customizable array of working days in a week for project."
@@ -386,7 +416,7 @@
                "taskFields",
                "height",
                "toolbar",
-	       "editSettings",
+               "editSettings",
                "enableCriticalPath",
                "treeColumnIndex",
                "labelSettings",
@@ -564,7 +594,7 @@
                "projectEndDate"
             ]
          },
-         "description": "This demo explains how to reorder the columns of Gantt by simple drag and drop of columns using Syncfusion<sup>®</sup> Essential JS2 Gantt." 
+         "description": "This demo explains how to reorder the columns of Gantt by simple drag and drop of columns using Syncfusion<sup>®</sup> Essential JS2 Gantt."
       },
       {
          "url": "resizing",
@@ -631,6 +661,42 @@
          "description": "This demo explains how to hide or show the columns of Gantt dynamically using Syncfusion<sup>®</sup> Essential JS2 Gantt methods."
       },
       {
+         "url": "wbs-column",
+         "name": "WBS Column",
+         "category": "Columns",
+         "type": "new",
+         "api": {
+            "Gantt": [
+               "dataSource",
+               "allowSorting",
+               "enableContextMenu",
+               "enableWbs",
+               "enableAutoWbsUpdate",
+               "taskFields",
+               "editSettings",
+               "columns",
+               "toolbar",
+               "allowPdfExport",
+               "allowSelection",
+               "splitterSettings",
+               "selectionSettings",
+               "tooltipSettings",
+               "allowFiltering",
+               "gridLines",
+               "highlightWeekends",
+               "timelineSettings",
+               "labelSettings",
+               "taskbarHeight",
+               "rowHeight",
+               "height",
+               "allowUnscheduledTasks",
+               "projectStartDate",
+               "projectEndDate"
+            ]
+         },
+         "description": "This example demonstrates how to enable and automatically update the WBS (Work Breakdown Structure) column."
+      },
+      {
          "url": "resource-allocation",
          "name": "Resource Allocation",
          "category": "Resources",
@@ -686,11 +752,9 @@
          },
          "description": "This sample explains the Resource break down view in the Gantt chart that is how to visualize the list of tasks assigned to each resource in hierarchy manner."
       },
-      
       {
          "url": "resource-multi-taskbar",
          "name": "Resource Multi Taskbar",
-         "type": "update",
          "category": "Resources",
          "api": {
             "Gantt": [
@@ -837,8 +901,7 @@
       {
          "url": "tooltip-template",
          "name": "Tooltip Template",
-         "type": "update",
-	 "hideOnDevice": true,
+         "hideOnDevice": true,
          "category": "Templates",
          "api": {
             "Gantt": [
@@ -932,7 +995,7 @@
             ]
          },
          "description": "This sample demonstrates the integration of the QueryBuilder component for complex filtering in the Gantt"
-      }, 
+      },
       {
          "url": "exporting",
          "name": "Default Exporting",
@@ -966,7 +1029,6 @@
          "url": "advance-exporting",
          "name": "Advanced Exporting",
          "category": "Exporting",
-         "type": "new",
          "api": {
             "Gantt": [
                "dataSource",
@@ -990,7 +1052,7 @@
             ]
          },
          "description": "This demo explains how to export Gantt chart content with customization to PDF documents using the Syncfusion<sup>®</sup> TypeScript Gantt control."
-      },       
+      },
       {
          "url": "selection",
          "name": "Selection",
@@ -1061,7 +1123,7 @@
                "height",
                "highlightWeekends",
                "allowRowDragAndDrop",
-			      "splitterSettings",
+               "splitterSettings",
                "labelSettings",
                "projectStartDate",
                "projectEndDate",
@@ -1090,7 +1152,7 @@
                "splitterSettings",
                "allowSelection",
                "highlightWeekends",
-			   "workUnit",
+               "workUnit",
                "enableContextMenu"
             ]
          },
@@ -1142,7 +1204,7 @@
       {
          "url": "keyboard-interactions",
          "name": "Keyboard Navigation",
-	 "hideOnDevice": true,
+         "hideOnDevice": true,
          "category": "Miscellaneous",
          "api": {
             "Gantt": [

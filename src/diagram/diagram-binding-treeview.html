@@ -1,18 +1,18 @@
 <div class="control-section">
     <link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
     <style>
-        #palette-space {
+        .diagram_tree #palette-space {
             border-style: solid;
             border-color: #f2f2f2;
         }
 
-        #diagram-space {
+        .diagram_tree #diagram-space {
             border-color: #f2f2f2;
             border-style: solid;
         }
 
     </style>
-    <div>
+    <div class="diagram_tree">
         <div style="width: 100%;height: 50px;margin-bottom: 5px;">
             <div style="width:70%;float:left">
                 <button id="addButton">Add Node</button>
@@ -32,7 +32,7 @@
         </div>
         <div style="width: 100%;">
             <div id="palette-space" style="width:27%;float:left;height: 700px;overflow: hidden;">
-                <div id="tree" style="width:90%;"></div>
+                <div id="tree" style="width:100%;height: 700px;"></div>
             </div>
             <div id="diagram-space" style="width:72%;float:right">
                 <div id="diagram"></div>

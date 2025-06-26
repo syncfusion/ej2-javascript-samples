@@ -3,12 +3,14 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
+    "type": "update",
     "samples": [
         {
             "url": "tools",
             "name": "Overview",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
+            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",  
@@ -166,6 +168,7 @@
             "name": "IFrame",
             "description": "This demo shows how to render a  JS (ECMAScript 5) Rich Text Editor (iframe) that was designed by using the iframe element covering all tool functionalities.",
             "category": "Rich Text Editor",
+            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",
@@ -564,8 +567,9 @@
         {
             "url": "types",
             "name": "Type",
-            "description": "This demo demonstrates different types and behaviors of a toolbar used in the JS (ECMAScript 5) HTML Editor such as expand/collapse, multirow, and floating.",
+            "description": "This demo demonstrates different types and behaviors of a toolbar used in the JS (ECMAScript 5) HTML Editor such as expand/collapse, multirow, floating and popup.",
             "category": "Toolbar",
+            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",
@@ -580,6 +584,22 @@
                     "items",
                     "type",
                     "enableFloating"
+                ]
+            }
+        },
+        {
+            "url": "bottom-toolbar",
+            "name": "Bottom Toolbar",
+            "description": "This demo demonstrates the bottom toolbar in the Rich Text Editor.",
+            "category": "Toolbar",
+            "type": "new",
+            "api": {
+                "RichTextEditor": [
+                    "toolbarSettings"
+                ],
+                "ToolbarSettings": [
+                    "items",
+                    "position"
                 ]
             }
         },

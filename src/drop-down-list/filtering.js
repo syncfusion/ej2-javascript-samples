@@ -14,6 +14,7 @@ this.default = function () {
         popupHeight: '250px',
         // set true for enable the filtering support.
         allowFiltering: true,
+        debounceDelay :'300',
         // bind the filtering event
         filtering: function (e) {
             var dropdown_query = new ej.data.Query();
@@ -24,4 +25,14 @@ this.default = function () {
         }
     });
     dropDownListObj.appendTo('#country');
+
+    var numeric = new ej.inputs.NumericTextBox({
+        value: 300,
+        min: 1,
+        format:'n0',
+        change: function (args) {
+            dropDownListObj.debounceDelay = args.value;
+        }
+    });
+    numeric.appendTo('#numeric');
 };

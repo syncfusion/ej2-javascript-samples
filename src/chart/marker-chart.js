@@ -68,7 +68,7 @@ this.default = function () {
         title: 'FB Penetration of Internet Audience',
         //Initializing Tooltip
         tooltip: {
-            enable: true, header: '', format: '<b>${point.x}</b> <br> ${series.name} : <b>${point.y}</b>'
+            enable: true, header: '', format: '<b>${point.x}</b> <br> ${series.name} : <b>${point.y}</b>', enableHighlight: true
         },
         legendSettings: { visible: true, enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',

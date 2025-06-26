@@ -6,28 +6,21 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                dataSource: ej.base.Browser.isDevice ?
-                    [{ 'x': 'Chrome', y: 59.28, text: 'Chrome: 59.28%' },
-                    { 'x': 'Safari', y: 4.73, text: 'Safari <br> 4.73%' },
-                    { 'x': 'Opera', y: 6.12, text: 'Opera: 6.12%' },
-                    { 'x': 'Edge', y: 7.48, text: 'Edge: 7.48%' },
-                    { 'x': 'Others', y: 22.39, text: 'Others: 22.39%' }] :
+                dataSource: 
                     [
-                        { 'x': 'Chrome', y: 59.28, text: 'Chrome: 59.28%' },
-                        { 'x': 'UC Browser', y: 4.37, text: 'UC Browser: 4.37%' },
-                        { 'x': 'Opera', y: 3.12, text: 'Opera: 3.12%' },
-                        { 'x': 'Sogou Explorer', y: 1.73, text: 'Sogou Explorer: 1.73%' },
-                        { 'x': 'QQ', y: 3.96, text: 'QQ: 3.96%' },
-                        { 'x': 'Safari', y: 4.73, text: 'Safari: 4.73%' },
-                        { 'x': 'Internet Explorer', y: 6.12, text: 'Internet Explorer: 6.12%' },
-                        { 'x': 'Edge', y: 7.48, text: 'Edge: 7.48%' },
-                        { 'x': 'Others', y: 9.57, text: 'Others: 9.57%' }
+                        { 'x': 'Coal', y: 34.4, text: 'Coal: 34.4%' },
+                        { 'x': 'Natural Gas', y: 22.1, text: 'Natural Gas: 22.1%' },
+                        { 'x': 'Hydro', y: 14.4, text: 'Hydro: 14.4%' },
+                        { 'x': 'Nuclear', y: 9.0, text: 'Nuclear: 9.0%' },
+                        { 'x': 'Wind', y: 8.1, text: 'Wind: 8.1%' },
+                        { 'x': 'Others', y: 12.0, text: 'Others: 12.0%' }
                     ],
                 dataLabel: {
-                    visible: true, position: 'Outside', name: 'text', font: { fontWeight: '600' }, connectorStyle:{length : '20px', type: 'Curve'}
-                },radius: ej.base.Browser.isDevice ? '40%' : '70%',
-                xName: 'x', yName: 'y', startAngle: ej.base.Browser.isDevice ? 55 : 35,
-                explode: true, explodeOffset: '10%', explodeIndex: 0, name: 'Browser'
+                    visible: true, position: 'Outside', name: 'text', font: { size: ej.base.Browser.isDevice ? '8px' : '12px', fontWeight: '600' }, connectorStyle:{length: ej.base.Browser.isDevice ? '10px' : '20px', type: 'Curve'}
+                },
+                border: { color: 'white', width: 1 },
+                 xName: 'x', yName: 'y', startAngle: ej.base.Browser.isDevice ? 70 : 30,  innerRadius: '0%',radius: ej.base.Browser.isDevice ? '40%' : '60%',
+                    explode: true, explodeOffset: '10%', explodeIndex: 0, name: 'Browser', borderRadius: 3
             }
         ],
         center: {x: '50%', y: '50%'},
@@ -38,9 +31,9 @@ this.default = function () {
             visible: false,
         },
         //Initializing Tooltip
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>',header:"" ,enableHighlight: true },
-        //Initializing Title
-        title: 'Browser Market Share',
+        tooltip: {enable: true, format: '<b>${point.x}</b><br>Percentage: <b>${point.y}%</b>', header: "", enableHighlight: true },
+        title: 'Global Electricity Generation by Source - 2024',
+        subTitle: 'Source: wikipedia.org',
          // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

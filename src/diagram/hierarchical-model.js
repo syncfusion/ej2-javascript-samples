@@ -106,6 +106,7 @@ this.default = function () {
                     node.collapseIcon.shape = 'None';
                 }
             }
+            diagram.dataBind();
             diagram.doLayout();
         }
     });

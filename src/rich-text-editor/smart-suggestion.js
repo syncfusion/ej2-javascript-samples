@@ -14,7 +14,7 @@
                 'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
                 'LowerCase', 'UpperCase', '|',
                 'Formats', 'Alignments', 'Blockquote', '|', 'NumberFormatList', 'BulletFormatList', '|',
-                'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'Video', 'Audio', 'CreateTable', '|', 'FormatPainter', 'ClearFormat',
+                'Outdent', 'Indent', '|', 'CreateLink', 'Image', 'Video', 'Audio', 'CreateTable', 'CodeBlock', '|', 'FormatPainter', 'ClearFormat',
                 '|', 'EmojiPicker', '|',
                 'SourceCode', '|', 'Undo', 'Redo']
         },

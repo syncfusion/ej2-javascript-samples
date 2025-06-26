@@ -12,7 +12,7 @@ this.default = function () {
                 validationRules: { required: true, number: true}, width: 120
             },
             {
-                field: 'taskName', headerText: 'TaskName', editType: 'stringedit', width: 225,
+                field: 'taskName', headerText: 'TaskName', editType: 'stringedit', width: 230,clipMode: 'EllipsisWithTooltip',
                 validationRules: { required: true}
             },
             {

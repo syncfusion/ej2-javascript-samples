@@ -46,7 +46,7 @@ this.default = function () {
             rulerSettings: {
                 showRulers: true
             },
-            scrollSettings: { scrollLimit: 'Infinity' },
+            scrollSettings: { scrollLimit: 'Infinity', padding: { bottom: 50, right: 50 }, },
             tool: ej.diagrams.DiagramTools.ZoomPan,
             layout:{
                 type: 'Flowchart',

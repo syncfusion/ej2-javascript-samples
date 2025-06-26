@@ -116,9 +116,12 @@ this.default = function () {
                     Name: args.element.annotations[0].content, Id: args.element.id, ParentId: targetNodeId, hasChild: false, expanded: false
                 };
                 treeObj.addNodes([item], targetNodeId, null);
-                connector = { sourceID: targetNodeId, targetID: id };
-                diagram.add(connector);
-                diagram.doLayout();
+                if (args.target instanceof ej.diagrams.Node && targetNodeId && id) {
+                    connector = { sourceID: targetNodeId, targetID: id };
+                    diagram.add(connector);
+                    diagram.doLayout();
+                    diagram.fitToPage();
+                }
                 index++;
                 workingData.push(item);
             } else {

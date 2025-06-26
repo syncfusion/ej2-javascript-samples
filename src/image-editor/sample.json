@@ -3,12 +3,14 @@
     "directory": "image-editor",
     "category": "File Viewers & Editors",
     "ftName": "image-editor",
+    "type": "update",
     "samples": [
         {
             "url": "default",
             "name": "Default Functionalities",
             "category": "Image Editor",
             "ftName": "image-editor",
+            "type": "update",
             "api": {
                 "ImageEditor": [
                     "width",             
@@ -46,6 +48,7 @@
             "name": "File Restriction",
             "category": "Image Editor",
             "ftName": "image-editor",
+            "type": "update",
             "api": {
               "ImageEditor": [
                 

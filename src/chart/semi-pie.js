@@ -14,29 +14,26 @@ this.default = function () {
                     { x: 'Firefox', y: 25, text: 'Firefox (25M)<br>10%', tooltipMappingName: '10%' },
                     { x: 'Others', y: 25, text: 'Others (25M)<br>10%', tooltipMappingName: '10%' }
                 ],
-                xName: 'x',tooltipMappingName: 'tooltipMappingName',
+                xName: 'x',
                 yName: 'y',
                 startAngle: 270,
                 endAngle: 90,
-                explode: false,
-                innerRadius: '40%',
-                radius: ej.base.Browser.isDevice ? '85%' : '100%',
+                explode: false, radius : '100%', borderRadius: 3,
+                innerRadius: '50%', border: { width: 1, color: '#ffffff' },
                 dataLabel: {
                     visible: true, position: 'Inside',
                     connectorStyle: { length: '10%' }, name: 'text', enableRotation:true,
-                    font: { fontWeight: '600', size: ej.base.Browser.isDevice ? '8px' : '11px' , color:'#ffffff'}
+                    font: { fontWeight: '600', size: ej.base.Browser.isDevice ? '8px' : '11px'}
                 },
             }
         ],
         enableAnimation: false,
         annotations: [{
-            content: ej.base.Browser.isDevice ? "<div style='font-Weight:700; font-size:11px;'>Browser<br>Market<br>Shares</div>" :"<div style='font-Weight:600; font-size:14px;'>Browser<br>Market<br>Shares</div>" ,
+            content: ej.base.Browser.isDevice ? "<div style='font-Weight:600; font-size:10px;'>Browser<br>Market<br>Shares</div>" :"<div style='font-Weight:600; font-size:14px;'>Browser<br>Market<br>Shares</div>" ,
             region:"Series",
-            x: ej.base.Browser.isDevice ? "52%" :"50%",
-            y:ej.base.Browser.isDevice ? "82%" :"85%"
+            x: "50%",
+            y: "85%"
         }],
-        //Initializing Tooltip
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Browser Share: <b>${point.tooltip}</b>',header:"", enableHighlight: true },
         legendSettings: {
             visible: false,
         },

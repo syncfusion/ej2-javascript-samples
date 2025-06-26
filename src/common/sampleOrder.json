@@ -5,7 +5,7 @@
     "Interactive Chat": [ "AI AssistView", "Chat UI"],
     "Data Visualization": ["Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban"],
     "Forms": ["Form Validation", "Query Builder"],
-    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Markdown Editor", "Word Processor", "Image Editor"],
+    "File Viewers & Editors": ["PDF Viewer", "Rich Text Editor", "Markdown Editor", "Word Processor", "Image Editor", "Block Editor"],
     "Calendars": ["Scheduler", "Gantt Chart", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],
     "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],
     "Dropdowns": ["AutoComplete", "ComboBox", "Dropdown List", "Dropdown Tree", "MultiSelect Dropdown", "List Box", "Mention", "MultiColumn Combobox"],

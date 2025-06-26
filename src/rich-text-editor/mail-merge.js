@@ -63,6 +63,12 @@ this.default = function () {
     }
   }
 
+  function onDropDownClose() {
+    if (mailMergeEditor) {
+      mailMergeEditor.focusIn();
+    }
+  }
+
   function onItemSelect(args) {
     if (args.item.text != null) {
       var value = textToValueMap[args.item.text];
@@ -116,8 +122,8 @@ this.default = function () {
         'Image',
         'CreateTable',
         '|',
-        { tooltipText: 'Merge Data', template: '#merge_data' },
-        { tooltipText: 'Insert Field', template: '#insertField' },
+        { tooltipText: 'Merge Data', template: '#merge_data', command: 'Custom' },
+        { tooltipText: 'Insert Field', template: '#insertField', command: 'Custom' },
         'SourceCode',
         '|',
         'Undo',
@@ -144,6 +150,7 @@ this.default = function () {
     ],
     content: dropdownContent,
     select: onItemSelect,
+    close: onDropDownClose
   });
   insertField.appendTo('#insertField');
 

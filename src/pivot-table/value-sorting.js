@@ -3,12 +3,14 @@ this.default = function () {
     var pivotObj = new ej.pivotview.PivotView({
         dataSourceSettings: {
             valueSortSettings: {
-                headerText: 'FY 2015##In Stock',
+                columnHeaderText: 'FY 2015##In Stock',
                 headerDelimiter: '##',
-                sortOrder: 'Descending'
+                columnSortOrder: 'Descending',
+                rowHeaderText: 'France',
+                rowSortOrder: 'Ascending'
             },
             values: [{ name: 'In_Stock', caption: 'In Stock' }, { name: 'Sold', caption: 'Units Sold' },
-                { name: 'Amount', caption: 'Sold Amount' }],
+            { name: 'Amount', caption: 'Sold Amount' }],
             formatSettings: [{ name: 'Amount', format: 'C0' }],
             columns: [{ name: 'Year' }, { name: 'Order_Source', caption: 'Order Source' }],
             dataSource: window.Pivot_Data,
@@ -21,6 +23,7 @@ this.default = function () {
         enableValueSorting: true,
         height: 300,
         showFieldList: true,
+        showValuesButton: true,
         gridSettings: { columnWidth: 140 }
     });
     pivotObj.appendTo('#PivotView');

@@ -24,7 +24,7 @@ this.default = function () {
             {
                 type: 'Separator', align: 'Left' },
             {
-                showTextOn: 'Overflow', prefixIcon: 'e-icons e-zoom-out', tooltipText: 'Zoom Out', text: 'Zoom Out', align: 'Left' },
+                showTextOn: 'Overflow', prefixIcon: 'e-icons e-zoom-out', tooltipText: 'Zoom Out', text: 'Zoom Out', align: 'Left', tabIndex: 0 },
             {
                 showTextOn: 'Overflow', prefixIcon: 'e-icons e-zoom-in', tooltipText: 'Zoom In', text: 'Zoom In', align: 'Left' },
             {
@@ -32,7 +32,7 @@ this.default = function () {
             {
                 type: 'Separator', align: 'Left' },
             {
-                showTextOn: 'Overflow', cssClass: 'selection-tool', align: 'Left', prefixIcon: 'e-icons e-mouse-pointer', text: 'Selection', tooltipText: 'Text selection tool' },
+                showTextOn: 'Overflow', cssClass: 'selection-tool', align: 'Left', prefixIcon: 'e-icons e-mouse-pointer', text: 'Selection', tooltipText: 'Text selection tool', tabIndex: 0 },
             {
                 cssClass: 'pan-mode', showTextOn: 'Overflow', prefixIcon: 'e-icons e-pan', tooltipText: 'Pan Mode', text: 'Pan', align: 'Left' },
             {
@@ -44,11 +44,11 @@ this.default = function () {
             {
                 type: 'Separator' },
             {
-                prefixIcon: 'e-pv-comment-icon', showTextOn: 'Overflow', tooltipText: 'Add Comments', text: 'Add Comments', align: 'Left' },
+                prefixIcon: 'e-pv-comment-icon', showTextOn: 'Overflow', tooltipText: 'Add Comments', text: 'Add Comments', align: 'Left', tabIndex: 0 },
             {
                 type: 'Separator' },
             {
-                text: 'Submit Form', align: 'Left' },
+                text: 'Submit Form', align: 'Left', tabIndex: 0 },
             {
                 type: 'Input', tooltipText: 'Find Text', cssClass: 'find', align: 'Right', overflow: 'Show', template: new ej.inputs.TextBox({ width: 125, placeholder: 'Find Text', created: OnCreateSearch }) },
             {
@@ -57,11 +57,30 @@ this.default = function () {
                 showTextOn: 'Overflow', prefixIcon: 'e-icons e-print', tooltipText: 'Print file', text: 'Print', align: 'Right' },
             {
                 showTextOn: 'Overflow', prefixIcon: 'e-icons e-download', tooltipText: 'Download file', text: 'Download', align: 'Right' }
-            ] 
+        ],
+        keyDown: function (args) {
+            if (args.originalEvent.action === 'moveRight') {
+                focusInputElement(args.nextItem, args);
+            }
+            else if (args.originalEvent.action === 'moveLeft') {
+                focusInputElement(args.nextItem, args);
+            }
+        },
+        allowKeyboard: true 
     });
     toolbarObj.appendTo('#toolbar_template');
       
     function OnCreateSearch() {
         this.addIcon('prepend', 'e-icons e-search');
+    }
+
+    function focusInputElement(item, args) {
+        if (item && item.classList.contains('e-template')) {
+            var inputElement = item.querySelector('input');
+            if (inputElement) {
+                inputElement.focus();
+                args.cancel = true;
+            }
+        }
     }
 };

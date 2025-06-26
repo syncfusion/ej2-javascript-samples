@@ -9,7 +9,8 @@ this.default = function () {
             content: '10% of battery remaining',
             okButton: { click:alertBtnClick.bind(this)},
             position: { X: 'center', Y: 'center' },
-            closeOnEscape: true
+            closeOnEscape: true,
+            close: alertBtnClick ,
         });
     };
     function alertBtnClick() {
@@ -27,7 +28,8 @@ this.default = function () {
                 okButton: { click:confirmOkAction.bind(this)},
                 cancelButton: { click:confirmCancelAction.bind(this)},
                 position: { X: 'center', Y: 'center' },
-                closeOnEscape: true
+                closeOnEscape: true,
+                close:confirmCancelAction ,
             });
         };
         var confirmOkAction = function () {
@@ -50,7 +52,8 @@ this.default = function () {
                 okButton: { click:promptOkAction.bind(this)},
                 cancelButton: { click:promptCancelAction.bind(this)},
                 position: { X: 'center', Y: 'center' },
-                closeOnEscape: true
+                closeOnEscape: true,
+                close : promptOkAction ,
         });
         };
         function promptOkAction() {

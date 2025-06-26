@@ -65,7 +65,7 @@
         //Initializing Chart Title
         title: 'Profit and Loss',
         tooltip: {
-            enable: true
+            enable: true, enableHighlight: true, showNearestTooltip: true
         },
         legendSettings: { enableHighlight: true },
         width: ej.base.Browser.isDevice ? '100%' : '75%',

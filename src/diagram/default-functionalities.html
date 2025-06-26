@@ -47,7 +47,7 @@
             .sf-icon-same-height:before { content: "\e8c9"; }
             .sf-icon-same-size:before { content: "\e8ca"; }
         
-            .e-ddb-icons {
+            .diagram-flow .e-ddb-icons {
                 font-family: 'e-ddb-icons';
                 speak: none;
                 font-size: 16px;
@@ -85,23 +85,23 @@
                     display: none;
                 }
                 /* Toolbar width */
-                .db-toolbar-editor{
+                .diagram-flow .db-toolbar-editor{
                     width: 100%;
                 }
                 /* symbolpalette width */
-                #symbolpalette{
+                .diagram-flow #symbolpalette{
                     width: 90%;
                 }
                  /* Overall div width */
                 .main{
                     width: 100%;
                 }
-                .diagram-upload-file{
+                .diagram-flow .diagram-upload-file{
                     display: none;
                 }
         </style>
         
-    <div class="main">
+    <div class="main diagram-flow">
         <div class="diagram-upload-file"><input type="file" id="fileupload" name="UploadFiles"/>
         </div>
         <div class='db-toolbar-editor'>

@@ -63,7 +63,6 @@ this.default = function () {
         projectEndDate: new Date('05/04/2024'),
     });
     ganttChart.appendTo('#TooltipTemplate');
-};
 
 function getTooltipData(startDate, endDate, tier) {
     var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
@@ -99,7 +98,7 @@ function getTooltipData(startDate, endDate, tier) {
         overallProgress: overallProgress
     };
 }
-function topTierTooltip(value, date, tier) {
+window.topTierTooltip = function (value, date, tier) {
     var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
     var endDate;
     var startdate = new Date(date);
@@ -109,13 +108,15 @@ function topTierTooltip(value, date, tier) {
     }
     var data = getTooltipData(startdate, endDate,tier);
     return generateTooltipMarkup(value, data);  
-}
+};
 function generateTooltipMarkup(label, tooltipData) {
     var themeIsDark = document.body.classList.contains('tailwind3-dark') ||
-    document.body.classList.contains('fluent2') ||
+    document.body.classList.contains('fluent2-dark') ||
     document.body.classList.contains('material3-dark') ||
     document.body.classList.contains('bootstrap5.3-dark') ||
-    document.body.classList.contains('highcontrast');
+    document.body.classList.contains('fluent2-highcontrast') ||
+    document.body.classList.contains('highcontrast') ||
+    document.body.classList.contains('fluent2-dark');
 
     var borderColor = themeIsDark ?  'black' : 'white';
     return (
@@ -138,12 +139,13 @@ function generateTooltipMarkup(label, tooltipData) {
         '</div>'
     );
 }
-function bottomTierTooltip(date, tier) {
-    var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
-    var startdate = new Date(date);
-    if (gantt.timelineSettings.bottomTier.unit) {
-        endDate = new Date(startdate.getTime());
-    }
-    var data = getTooltipData(startdate, endDate,tier);
-    return generateTooltipMarkup(date, data);
-}
+    window.bottomTierTooltip = function (date, tier) {
+        var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        var startdate = new Date(date);
+        if (gantt.timelineSettings.bottomTier.unit) {
+            endDate = new Date(startdate.getTime());
+        }
+        var data = getTooltipData(startdate, endDate, tier);
+        return generateTooltipMarkup(date, data);
+    };
+};

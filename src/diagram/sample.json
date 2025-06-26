@@ -46,8 +46,7 @@
             "url": "avoid-connector-overlap",
             "name": "Avoid Connector Overlap",
             "description": "This sample visualizes the connectors that automatically adjust to minimize visual overlap, ensuring clear and distinct representations of connections within the diagram.",
-            "category": "Getting Started",
-            "type":"new"
+            "category": "Getting Started"
         },
         {
             "url": "getting-started-annotation",
@@ -66,6 +65,13 @@
             "name": "Swimlane",
             "description": "This sample  Different types of connectors and decorators are used to customize the appearance, path, and direction of the data flow.",
             "category": "Getting Started"
+        },
+        {
+            "url": "container",
+            "name": "Container",
+            "description": "This sample  illustrates the Container shape usage, container and its child relationship.",
+            "category": "Getting Started",
+            "type":"new"
         },
         {
             "url": "grouping-and-ordering",
@@ -262,8 +268,9 @@
         {
             "url": "sequence-diagram",
             "name": "UML Sequence Diagram",
-            "description": "This sample illustrates an employee’s leave request sequence using a UML sequence diagram. The shapes for the sequence were designed with the port feature for Diagram's nodes.",
-            "category": "Use Case Diagram"
+            "description": "This sample presents a UML sequence diagram to depict interactions in a secure transaction process involving a user, transaction system, and fraud detection using diagram model.",
+            "category": "Use Case Diagram",
+            "type": "update"
         },
         {
             "url": "uml-class-diagram",
@@ -293,7 +300,8 @@
             "url": "workflow-editor",
             "name": "Workflow Diagram",
             "description": "This sample visually represents a simple Workflow of a Travel Request Agency using Syncfusion<sup>®</sup> EJ2 TypeScript. The diagram includes BPMN nodes, connectors, and annotations to represent various diagram objects.",
-            "category": "Real-time Diagrams"
+            "category": "Real-time Diagrams",
+            "type": "update"
         },
         {
             "url": "diagram-binding-treeview",

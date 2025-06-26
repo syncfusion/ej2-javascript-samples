@@ -165,32 +165,32 @@ this.default = function () {
         }
     }
     
-};
 
- var pdfQueryTaskbarInfo =  function(args){
-    args.labelSettings.leftLabel.value = args.data.ganttProperties.taskName;
-    if (args.data.ganttProperties.resourceNames) {
-        args.labelSettings.rightLabel.value = args.data.ganttProperties.resourceNames;
-        args.labelSettings.rightLabel.image = [{
-            base64: args.data.taskData.resourcesImage, width: 20, height: 20
-        }];
-        if(args.data.ganttProperties.taskId === 7){
-            args.labelSettings.leftLabel.value = 'Custom Label';
-            args.labelSettings.leftLabel.fontStyle.fontColor = new ej.pdfexport.PdfColor(142,36,64);
+
+    function pdfQueryTaskbarInfo(args) {
+        args.labelSettings.leftLabel.value = args.data.ganttProperties.taskName;
+        if (args.data.ganttProperties.resourceNames) {
+            args.labelSettings.rightLabel.value = args.data.ganttProperties.resourceNames;
+            args.labelSettings.rightLabel.image = [{
+                base64: args.data.taskData.resourcesImage, width: 20, height: 20
+            }];
+            if (args.data.ganttProperties.taskId === 7) {
+                args.labelSettings.leftLabel.value = 'Custom Label';
+                args.labelSettings.leftLabel.fontStyle.fontColor = new ej.pdfexport.PdfColor(142, 36, 64);
+            }
+        }
+        var theme = document.body.classList.contains('tailwind3-dark') || document.body.classList.contains('fluent2-dark') ||
+            document.body.classList.contains('material3-dark') || document.body.classList.contains('bootstrap5.3-dark') ||
+            document.body.classList.contains('fluent2-highcontrast') || document.body.classList.contains('fluent2-dark');
+        if (theme && args.data.isCritical) {
+            args.taskbar.progressColor = new ej.pdfexport.PdfColor(172, 6, 136);
+            args.taskbar.taskColor = args.taskbar.taskBorderColor = new ej.pdfexport.PdfColor(73, 4, 58);
+        }
+        else if (!theme && args.data.isCritical) {
+            args.taskbar.progressColor = new ej.pdfexport.PdfColor(176, 0, 138);
+            args.taskbar.taskColor = new ej.pdfexport.PdfColor(255, 206, 244);
         }
     }
-    var theme = document.body.classList.contains('tailwind3-dark') || document.body.classList.contains('fluent2-dark') ||
-    document.body.classList.contains('material3-dark') || document.body.classList.contains('bootstrap5.3-dark') ||
-    document.body.classList.contains('fluent2-highcontrast') || document.body.classList.contains('fluent2-dark');
-    if( theme && args.data.isCritical) {
-        args.taskbar.progressColor = new ej.pdfexport.PdfColor(172, 6, 136);
-        args.taskbar.taskColor =  args.taskbar.taskBorderColor = new ej.pdfexport.PdfColor(73, 4, 58);
-    }
-    else if(!theme && args.data.isCritical){
-        args.taskbar.progressColor = new ej.pdfexport.PdfColor(176, 0, 138);
-        args.taskbar.taskColor = new ej.pdfexport.PdfColor(255, 206, 244);
-    }
-};
 window.getResourceElements = function (value) {
     var out = "";
     var img = document.createElement('img');
@@ -205,15 +205,16 @@ window.getResourceElements = function (value) {
     }
     return out;
 };
-var queryTaskbarInfo = function(args){
-    var theme = document.body.classList.contains('tailwind3-dark') || document.body.classList.contains('fluent2-dark') ||
-    document.body.classList.contains('material3-dark') || document.body.classList.contains('bootstrap5.3-dark') ||
-    document.body.classList.contains('fluent2-highcontrast') || document.body.classList.contains('fluent2-dark');
-    if(theme && args.data.isCritical){
-        args.taskbarBgColor = "#49043A";
-        args.progressBarBgColor = "#AC0688";
-    }else if(!theme && args.data.isCritical){
-        args.progressBarBgColor = "#B0008A";
-        args.taskbarBgColor = "#FFCEF4";
+    function queryTaskbarInfo(args) {
+        var theme = document.body.classList.contains('tailwind3-dark') || document.body.classList.contains('fluent2-dark') ||
+            document.body.classList.contains('material3-dark') || document.body.classList.contains('bootstrap5.3-dark') ||
+            document.body.classList.contains('fluent2-highcontrast') || document.body.classList.contains('fluent2-dark');
+        if (theme && args.data.isCritical) {
+            args.taskbarBgColor = "#49043A";
+            args.progressBarBgColor = "#AC0688";
+        } else if (!theme && args.data.isCritical) {
+            args.progressBarBgColor = "#B0008A";
+            args.taskbarBgColor = "#FFCEF4";
+        }
     }
 };

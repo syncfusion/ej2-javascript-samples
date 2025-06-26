@@ -105,7 +105,9 @@ this.default = function () {
         connectors: connectors,
         // event triggers after the diagram elements finished loading using loadDiagram method
         loaded: function () {
-            diagram.select([diagram.nodes[0]]);
+            setTimeout(() => {
+                diagram.select([diagram.nodes[0]]);
+            }, 100);
         },
         snapSettings: { horizontalGridlines: gridlines, verticalGridlines: gridlines },
         //set default value for Connectors.

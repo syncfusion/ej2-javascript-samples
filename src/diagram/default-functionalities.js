@@ -140,7 +140,9 @@ this.default = function () {
             if (node.width === undefined) {
                 node.width = 145;
             }
-            node.style = { fill: '#357BD2', strokeColor: 'white' };
+            if (node.shape.type !== 'Text') {
+                node.style = { fill: '#357BD2', strokeColor: 'white' };
+            }
             for (var i = 0; i < node.annotations.length; i++) {
                 node.annotations[i].style = {
                     color: 'white',
@@ -181,6 +183,13 @@ this.default = function () {
                 obj.offsetY += (obj.height - objHeight) / 2;
                 obj.style = { fill: '#357BD2', strokeColor: 'white' };
             }
+        },
+        textEdit: function (args) {
+            var obj = args.element;
+            obj.annotations[0].style = {
+                color: 'white',
+                fill: 'transparent',
+            };
         }
     });
     diagram.appendTo('#diagram');
@@ -270,13 +279,35 @@ this.default = function () {
 
     //To disable toolbar items while multiselection.
     function disableMultiselectedItems() {
-        const itemIds = ['Align_objects', 'Distribute_objects', 'Group'];
-        itemIds.forEach(itemId => {
-            const item = toolbarObj.items.find(item => item.id === itemId);
-            if (item) {
-                item.disabled = true;
+         var selectedItems = diagram.selectedItems.nodes;
+        selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
+        let isSelectedItemLocked = false;
+        if (selectedItems && selectedItems.length > 0) {
+            var obj = selectedItems[0];
+            if (obj instanceof ej.diagrams.Node) {
+                if (obj.constraints === (ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select | ej.diagrams.NodeConstraints.ReadOnly)) {
+                    isSelectedItemLocked = true;
+                }
+                else {
+                    isSelectedItemLocked = false;
+                }
             }
-        });
+            else if (obj instanceof ej.diagrams.Connector) {
+                if (obj.constraints === (ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select | ej.diagrams.ConnectorConstraints.ReadOnly)) {
+                    isSelectedItemLocked = true;
+                }
+                else {
+                    isSelectedItemLocked = false;
+                }
+            }
+        }
+            const itemIds = ['Cut', 'Copy', 'Lock', 'Delete', 'Order', 'Rotate', 'Flip'];
+            itemIds.forEach(itemId => {
+                const item = toolbarObj.items.find(item => item.id === itemId);
+                if (item) {
+                    item.disabled = isSelectedItemLocked;
+                }
+            });
     }
 
     //Initialize the flowshapes for the symbol palatte
@@ -781,6 +812,27 @@ this.default = function () {
             case 'Open Diagram':
                 document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
                 break;
+        }
+        var selectedItems = diagram.selectedItems.nodes;
+        selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
+        if (selectedItems && selectedItems.length > 0) {
+            var obj = selectedItems[0];
+            if (obj instanceof ej.diagrams.Node) {
+                if (obj.constraints === (ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select | ej.diagrams.NodeConstraints.ReadOnly)) {
+                    updateToolbarState(true);
+                }
+                else {
+                    updateToolbarState(false);
+                }
+            }
+            else if (obj instanceof ej.diagrams.Connector) {
+                if (obj.constraints === (ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select | ej.diagrams.ConnectorConstraints.ReadOnly)) {
+                    updateToolbarState(true);
+                }
+                else {
+                    updateToolbarState(false);
+                }
+            }
         }
         diagram.dataBind();
     }

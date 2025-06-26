@@ -1,0 +1,422 @@
+<!-- custom code start -->
+<style>
+    .treegrid-center-container .e-gridheader .e-headercelldiv {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 2.45px !important;
+    }
+
+    :root {
+        --green: #27ae60;
+        --red: #e74c3c;
+        --radius: 12px;
+        --grey-line: #e5e7eb;
+    }
+
+    [class*="veg-icon"],
+    [class*="e-veg-icon"],
+    [class*="e-nonveg-icon"] {
+        display: inline-block;
+        border-radius: 50%;
+    }
+
+    [class*="veg-icon"] {
+        width: 12px;
+        height: 12px;
+        margin: 0 0 4px 2px;
+    }
+
+    .material3 [class*="veg-icon"],
+    .tailwind3 [class*="veg-icon"] {
+        margin: 0 0 2px 2px;
+    }
+
+    .resmenu-veg-icon {
+        background: green;
+    }
+
+    .resmenu-nonveg-icon {
+        background: red;
+    }
+
+    [class*="FoodCategory_icon"] {
+        width: 20px;
+        height: 20px;
+        border: 2px solid;
+    }
+
+    .resmenu-FoodCategory_icon_veg {
+        border-color: green;
+    }
+
+    .resmenu-FoodCategory_icon_nonveg {
+        border-color: red;
+    }
+
+    .resmenu-e-veg-icon,
+    .resmenu-e-nonveg-icon {
+        border: 2px solid;
+        border-radius: 4px;
+        background: #fff;
+        position: relative;
+    }
+
+    .resmenu-e-veg-icon {
+        border-color: var(--green);
+    }
+
+    .resmenu-e-nonveg-icon {
+        border-color: var(--red);
+    }
+
+    .resmenu-e-veg-icon::after,
+    .resmenu-e-nonveg-icon::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+
+    .resmenu-e-veg-icon::after {
+        background: var(--green);
+    }
+
+    .resmenu-e-nonveg-icon::after {
+        background: var(--red);
+    }
+
+    .resmenu-price {
+        font-weight: bold;
+    }
+
+    .resmenu-old-price {
+        font-size: 12px;
+        text-decoration: line-through;
+        margin: 3px;
+    }
+
+    .resmenu-card {
+        width: 25vw;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    .resmenu-info-separator {
+        margin: 20px 0 0 0;
+    }
+
+    .resmenu-cell {
+        border-bottom: 1px solid var(--grey-line);
+    }
+
+    .resmenu-image {
+        width: 110px;
+        height: 110px;
+        float: right;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: var(--radius);
+        margin: 20px;
+        transition: transform .3s;
+    }
+
+    .resmenu-image-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .resmenu-image-wrap:hover .resmenu-image {
+        transform: scale(1.2);
+    }
+
+    .resmenu-count {
+        margin: 10px 20px 0 0;
+    }
+
+    .resmenu-food-count {
+        width: 60px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .resmenu-price-section {
+        text-align: right;
+        width: 25vw;
+    }
+
+    .resmenu-rating {
+        padding: 15px 0;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .resmenu-rating-value {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .resmenu-rating-thumbsup,
+    .resmenu-rating-count {
+        font-size: 15px;
+    }
+
+    .resmenu-foodname {
+        font-weight: 600;
+        font-size: 18px;
+        margin-left: 7px;
+    }
+
+    .resmenu-fooddesc {
+        font-weight: 400;
+        letter-spacing: .45px;
+    }
+
+    .resmenu-title {
+        float: right;
+        margin: 5px 0 0 5px;
+        font-weight: bold;
+    }
+
+    .resmenu-parentfoodname {
+        height: 48px;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    .treegrid-center-container .e-toolbar-right {
+        right: 20px !important;
+    }
+
+    #CartUpdate {
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    .treegrid-center-container,
+    .resmenu-toolbar-search {
+        width: 800px;
+        margin: 32px auto;
+    }
+
+    .resmenu-toolbar-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    #search-autocomplete {
+        width: 100%;
+        padding: 25px 12px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    #ingredientsList .e-chip.e-outline {
+        color: #222 !important;
+        border-color: #ccc !important;
+        background: #D3D3D3 !important;
+        box-shadow: none !important;
+        cursor: default !important;
+        transition: none !important;
+    }
+
+    @media (max-width: 1200px) {
+
+        .treegrid-center-container,
+        .resmenu-toolbar-search {
+            width: 100%;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+    }
+
+    #cartDialog_title {
+        text-align: center;
+    }
+
+    .treegrid-center-container .e-treegridexpand,
+    .treegrid-center-container .e-treegridcollapse {
+        vertical-align: middle !important;
+        margin-left: 7px;
+    }
+
+    .treegrid-center-container .e-toolbar {
+        height: 60px !important;
+    }
+
+    .resmenu-emptyRecord {
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    #cartbadge {
+        top: -14px;
+        font-size: 10px;
+    }
+
+    .material3-dark [class*="veg-icon"] {
+        margin: 0 0 3px 2px;
+    }
+
+    .material3 #search-autocomplete,
+    .material3-dark #search-autocomplete {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        padding-left: 13px;
+    }
+    @media (max-width: 450px) {
+    .resmenu-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .resmenu-count {
+        margin: 0 5px 0 0;
+    }
+    
+    .resmenu-price-section {
+        text-align: left;
+    }
+    }
+ 
+    @media print {
+        body {
+            font-family: sans-serif;
+        }
+
+        ul {
+            margin-bottom: 16px;
+        }
+
+        div {
+            margin-bottom: 4px;
+        }
+    }
+    .sample-order{
+        display: flex;   flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .resmenu-order-no , .order-date{
+        font-weight: bold;
+    }
+    .resmenu-order-no{
+        font-size: medium;
+    }
+    .resmenu-thank-note{
+        font-weight: bold;
+        font-style: italic;
+        margin: 30px;
+        justify-items: center;
+        font-size: medium;
+    }
+    #dialog-container td{
+        padding: 5px 0;
+    }
+    .resmenu-rating-thumbsup{
+        position: relative;
+        top: -2px;
+	}
+</style>
+<!-- custom code end -->
+<script id="emptytemplate" type="text/x-template">
+    <div class='emptyRecordTemplate'>        
+        <span class="resmenu-emptyRecord">Hmm... we could not find that dish. Want to try something else?</span>
+    </div>
+</script>
+<script id="rowTemplate" type="text/x-template">
+    <tr>
+        ${if(FoodName === FoodCategory || CategoryId == null)}
+        <td class='resmenu-cell resmenu-parentfoodname' colspan="3">
+          <span class="resmenu-title">${FoodName}&nbsp;<span> (${iterateFootType(vegCount, nonvegCount)})</span> </span>
+        </td>
+        ${else}
+        <td class='resmenu-cell'>
+          <div class='resmenu-card'>
+             <div class="foodname-row" style=" display: flex;">
+                ${if(FoodType === 'Veg')}
+                  <span class='resmenu-FoodCategory_icon_veg'><span class="resmenu-veg-icon"></span></span>
+                ${else}
+                  <span class='resmenu-FoodCategory_icon_nonveg'><span class="resmenu-nonveg-icon"></span></span>
+                ${/if}
+                <span class='resmenu-foodname'>${FoodName}</span>
+              </div>
+              <div class="resmenu-rating">
+                <span>
+                    <span class="resmenu-rating-thumbsup">👍</span>
+                    <span class="resmenu-rating-value">${Rating}</span>&nbsp;
+                    <span class="resmenu-rating-count">(${TotalReviews})</span>
+                </span>
+              </div>
+              <div class='resmenu-fooddesc'>
+                ${FoodDescription}
+              </div>
+              <div class="resmenu-info-separator">${chiptags(ingredients)}</div>
+            </div>
+        </td>
+        <td class='resmenu-cell'>
+          <div class="resmenu-price-section">
+            ${if(originalPrice> newPrice)}
+            <span class="resmenu-price">$${newPrice} &nbsp;&nbsp;</span>
+            <span class='price-direction'>  <-- </span>
+            <span class="resmenu-old-price">$${originalPrice}</span>
+            ${else}
+            <span class="resmenu-price">$${newPrice}</span>
+            ${/if}
+          </div>
+        </td>
+        <td class='resmenu-cell'>
+            <div class="menu-right">
+                <div class="resmenu-image-wrap">
+                    <img class="resmenu-image" src="${Image}" alt="${FoodName}"/>
+                <div class="resmenu-count">
+                    <input id="food-numeric" class="resmenu-food-count" type="text"  />
+                </div>
+                </div>
+            </div>
+        </td>
+        ${/if}
+    </tr>
+</script>
+<div class="control-section">
+    <div class="content-wrapper">
+        <div class="treegrid-center-container">
+            <div class="resmenu-toolbar-search">
+                <input id="search-autocomplete" type="text" placeholder="Search for DISHES" />
+                <span class="e-input-group-icon e-search-icon"></span>
+            </div>
+            <div id="cartDialog"></div>
+            <div id="TreeGrid">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This demo shows how the Tree Grid can be used to create a visually rich and interactive food menu. The demo meets
+        different viewer preferences, such as vegetarian and bestseller dishes. It uses a food dataset that includes
+        details for categories like salads, pizza, burgers, hot-dogs, chowmein, and desserts, with descriptions, prices,
+        ratings, and bestseller indicators.
+    </p>
+</div>
+<div id="description">
+    <p>The sample shows how dynamic, customizable row templates and custom cell rendering make the menu more informative
+        and attractive. The Tree Grid row template adds visual elements like images, ratings, and price comparisons
+        right in the cells. With its flexibility and easy customization, the Tree Grid is a great tool for creating
+        interesting and engaging food menu presentations.
+    </p>
+    <br />
+    <p>
+        More information on the resizing can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/columns/#column-resizing">
+            documentation section.</a>
+    </p>
+</div>
+<!-- custom code end -->

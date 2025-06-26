@@ -6,7 +6,7 @@ this.default = function () {
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         quickToolbarSettings: {
             image: [
-                'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
+                'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '|',
                 'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension',
                 {
                     tooltipText: 'Rotate Left',

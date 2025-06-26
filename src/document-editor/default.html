@@ -1,37 +1,80 @@
 <div class="control-section">
-    <title>Essential<sup>®</sup>  JS 2 - DocumentEditor</title>
-    <div id="panel">
-        <div id='documenteditor_titlebar' class="e-de-ctn-title"></div>
-        <div id="documenteditor_container_body" style="display: flex;position:relative;height:590px;">
-            <div id="container" style="width: 100%;height: 100%;"></div>
+    <title>Essential JS 2 - DocumentEditor</title>
+    <div class="content-wrapper">
+        <div class="flex-container">
+            <label class="switchLabel" for="toolbarSwitch">Ribbon UI</label>
+            <div class="e-message render-mode-info">
+                <span class="e-msg-icon render-mode-info-icon"  title="Turn OFF to switch from Ribbon to toolbar UI"></span>
+            </div>
+            <input cssClass="buttonSwitch" id="toolbarSwitch" change="onChange" type="checkbox" />
         </div>
     </div>
+    <div id='documenteditor_titlebar' class="e-de-ctn-title"></div>
+    <div id="container"></div>
 </div>
 <div id="action-description">
-    <p>This example demonstrates how to create, edit, and print Word documents (DOCX) online using document editor without any server-side dependencies.</p>
+    <p>This example demonstrates how to create, edit, and print Word documents (DOCX) online using document editor without any server-side dependencies. You can switch between the built-in Toolbar and Ribbon UI.</p>
 </div>
 <div id="description">
-        <p>In this example, you can create and edit Word documents online much faster and easier using intuitive UI options of the
-            document editor. All independent features of the document editor component are defined as separate modules to help
-            build a lightweight Word editor with the features you require.</p>
-        <p style="display: block">Features of document editor:</p>
-        <ul>
-            <li>Create and edit: Opens and saves documents in native "Syncfusion<sup>®</sup> Document Text (*.sfdt)" file format without any
-                server-side dependencies. This helps build a purely client-side Word editor application.</li>
-            <li>Supported elements: Document elements like text, images, hyperlinks, tables, bookmarks, page numbers, tables of contents,
-                headers, and footers.</li>
-            <li>Formatting: Text levels, paragraph levels, bullets and numbering, table levels, page settings, and styles.</li>
-            <li>Editing operations: Undo, redo, cut, copy, and paste.</li>
-            <li>Find and replace text within the document.</li>
-            <li>Interactions through touch, mouse, and keyboard.</li>
-        </ul>
-        <p style="display: block"> More information about the document editor features can be found in this
-            <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/document-editor/getting-started/">documentation section.</a>
-        </p>
-    </div>
+    <p>In this example, you can create and edit Word documents online much faster and easier using intuitive UI options of the document editor. All independent features of the document editor component are defined as separate modules to help build a lightweight Word editor with the features you require.</p>
+    <p style="display: block">Features of document editor:</p>
+    <ul>
+        <li>Create and edit: Opens and saves documents in native "Syncfusion Document Text (*.sfdt)" file format without any server-side dependencies. This helps build a purely client-side Word editor application.</li>
+        <li>Supported elements: Document elements like text, images, hyperlinks, tables, bookmarks, page numbers, tables of contents, headers, and footers.</li>
+        <li>Formatting: Text levels, paragraph levels, bullets and numbering, table levels, page settings, and styles.
+        </li>
+        <li>Editing operations: Undo, redo, cut, copy, and paste.</li>
+        <li>Find and replace text within the document.</li>
+        <li>Interactions through touch, mouse, and keyboard.</li>
+    </ul>
+    <p style="display: block"> More information about the document editor features can be found in this
+        <a target="_blank"
+            href="https://ej2.syncfusion.com/documentation/document-editor/getting-started/">documentation section.</a>
+    </p>
+</div>
 <style>
+    .ej2-new {
+        height: 590px;
+    }
 
-    #documenteditor_titlebar {  
+    .flex-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .render-mode-info {
+        background: none;
+        border: none;
+        padding-left: 0px;
+    }
+
+    .render-mode-info .render-mode-info-icon {
+        height: 16px;
+        width: 16px;
+    }
+
+    .switchLabel {
+        font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.24px;
+        text-align: right;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .render-mode-info .render-mode-info-icon::before {
+        line-height: normal;
+    }
+
+    .buttonSwitch {
+        Width: 40px;
+        Height: 24px;
+    }
+
+    #documenteditor_titlebar {
+        border-bottom: 1px solid #2B3481;
         height: 36px;
         line-height: 26px;
         width: 100%;
@@ -66,9 +109,6 @@
         border-color: #e4e4e4 !important;
     }
 
-    [contenteditable="true"].single-line * {
-        white-space: nowrap;
-    }
     /** Document editor sample level font icons*/
 
     @font-face {
@@ -94,7 +134,8 @@
     /** sample level font icons ends*/
 </style>
 <script>
-    window.addEventListener("beforeunload", function () {
+    window.addEventListener("beforeunload", onbeforeunload);
+    function onbeforeunload() {
         return 'Want to save your changes?';
-    });
+    };
 </script>

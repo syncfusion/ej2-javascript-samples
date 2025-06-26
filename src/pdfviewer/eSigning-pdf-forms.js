@@ -59,23 +59,23 @@ this.default = function () {
         dataSource: userDetails,
         fields: { text: 'Mail', value: 'Eimg', fieldIds: 'fieldIds' },
         index: 0,
-        width: '200px',
-        popupWidth: '215px',
+        width: '210px',
+        popupWidth: '210px',
         itemTemplate: function(data) {
           return '<div style="display:flex;">' +
                  '<img class="e-pv-e-sign-empImage" style="border: 1px solid ' + getBorderColor(data.Mail) + ';" src="src/pdfviewer/images/employees/' + data.Eimg + '.png" alt="employee" />' +
                  '<div>' +
-                 '<div class="ename" style="font-size:14px;height:18px;">' + data.Name + '</div>' +
+                 '<div class="ename" style="font-size:14px;height:14px;">' + data.Name + '</div>' +
                  '<div class="mail" style="font-size:12px;">' + data.Mail + '</div>' +
                  '</div>' +
                  '</div>';
         },
         valueTemplate: function(data) {
           return '<div style="display:flex;">' +
-                 '<img class="value" style="border: 1px solid ' + getBorderColor(data.Mail) + '; margin: 0px 0px 5px 15px; border-radius:50%;" src="src/pdfviewer/images/employees/' + data.Eimg + '.png" height="32px" width="32px" alt="employee" />' +
+                 '<img class="value" style="border: 1px solid ' + getBorderColor(data.Mail) + '; margin-left: 3px; border-radius:50%;" src="src/pdfviewer/images/employees/' + data.Eimg + '.png" height="30px" alt="employee" />' +
                  '<div style="margin-top: 3px;">' +
-                 '<div class="name" style="font-size:12px;margin-left: 12px;">' + data.Name + '</div>' +
-                 '<div class="mail" style="font-size:8px;margin-left: 12px;">' + data.Mail + '</div>' +
+                 '<div class="name" style="font-size:12px;margin-left: 11px;">' + data.Name + '</div>' +
+                 '<div class="mail" style="font-size:10px;margin-left: 10px;">' + data.Mail + '</div>' +
                  '</div>' +
                  '</div>';
         }

@@ -87,14 +87,16 @@ this.default = function () {
     var enableSingleCheckbox = new ej.buttons.CheckBox({
         change: enableSingleChange, checked: false,
     }, '#singletap');
-    enableSingleCheckbox.change = enableDoubleChange =  function (e) {
+    enableSingleCheckbox.change = enableSingleChange =  function (e) {
         maps.zoomSettings.zoomOnClick = e.checked;
         var ele1 = document.getElementById('doubletap');
         if (e.checked) {            
             ele1.disabled = true;
+            enableDoubleCheckbox.disabled = true;
         }
         else {
             ele1.disabled = false;
+            enableDoubleCheckbox.disabled = false;
         }
         maps.refresh();
     };
@@ -103,9 +105,11 @@ this.default = function () {
         var ele1 = document.getElementById('singletap');
         if (e.checked) {            
             ele1.disabled = true;
+            enableSingleCheckbox.disabled = true;
         }
         else {
             ele1.disabled = false;
+            enableSingleCheckbox.disabled = false;
         }
         maps.refresh();
     };

@@ -131,7 +131,7 @@ this.default = function () {
                 headerText: 'Customer ID',
                 textAlign: 'Right',
                 width: 160,
-                minWidth: 100,
+                minWidth: 115,
                 isPrimaryKey: true,
                 showInColumnChooser: false,
                 validationRules: { required: true, number: true }
@@ -139,8 +139,8 @@ this.default = function () {
             {
                 field: 'CustomerName',
                 headerText: 'Name',
-                width: 100,
-                minWidth: 100,
+                width: 150,
+                minWidth: 120,
             },
             {
                 headerText: 'Order Details',
@@ -157,7 +157,7 @@ this.default = function () {
                         field: 'OrderDate',
                         headerText: 'Date',
                         width: 110,
-                        minWidth: 100,
+                        minWidth: 105,
                         textAlign: 'Right',
                         format: 'yMd',
                         editType: 'datepickeredit',
@@ -172,8 +172,8 @@ this.default = function () {
                         field: 'ShipCountry',
                         headerText: 'Country',
                         textAlign: 'Left',
-                        width: 115,
-                        minWidth: 100,
+                        width: 150,
+                        minWidth: 120,
                         editType: 'dropdownedit', 
                         validationRules: { required: true },
                         template: '#locationTemplate'
@@ -183,7 +183,7 @@ this.default = function () {
                         headerText: 'Charges',
                         textAlign: 'Right',
                         width: 130,
-                        minWidth: 100,
+                        minWidth: 115,
                         editType: 'numericedit',
                         format: 'C2',
                         validationRules: { required: true, number: true }
@@ -199,8 +199,8 @@ this.default = function () {
                         headerText: 'Status',
                         textAlign: 'Center',
                         editType: 'dropdownedit', validationRules: { required: true, },
-                        width: 110,
-                        minWidth: 100,
+                        width: 150,
+                        minWidth: 120,
                     },
                     {
                         field: 'Feedback',
@@ -210,7 +210,7 @@ this.default = function () {
                         allowResizing: false,
                         validationRules: { required: true, min: 0, max: 5 },
                         width: 130,
-                        minWidth: 100,
+                        minWidth: 115,
                         template: '#feedbackTemplate',
                     },
                 ],

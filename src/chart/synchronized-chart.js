@@ -6,6 +6,7 @@ var zoomFactor = 0;
 var zoomPosition = 0;
 
 this.default = function () {
+    charts = [];
     var chart = new ej.charts.Chart({
         primaryXAxis: {
             minimum: new Date(2023, 1, 18),
@@ -81,7 +82,7 @@ this.default = function () {
         },
         title: 'US to EURO',
         titleStyle: { textAlignment: 'Near' },
-        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, shared: true, header: '', format: '<b>€${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
+        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, header: '', format: '<b>€${point.y}</b> <br> ${point.x} 2023', enableMarker: false, enableHighlight: true },
         crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
         load: load
     });
@@ -162,7 +163,7 @@ this.default = function () {
         },
         title: 'US to Yen',
         titleStyle: { textAlignment: 'Near' },
-        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, shared: true, header: '', format: '<b>¥${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
+        tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, header: '', format: '<b>¥${point.y}</b> <br> ${point.x} 2023', enableMarker: false, enableHighlight: true },
         crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
         load: load
     });

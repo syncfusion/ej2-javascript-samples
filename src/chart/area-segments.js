@@ -79,7 +79,7 @@ this.default = function () {
         title: 'US Season Retail Sales Growth',
         //Initializing User Interaction Tooltip
         tooltip: {
-            enable: true, shared: true, header: '<b>Revenue</b>', format: '${point.x} : <b>${point.y}</b>'
+            enable: true, showNearestTooltip: true, header: '<b>Revenue</b>', format: '${point.x} : <b>${point.y}</b>'
         },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start

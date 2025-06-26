@@ -3,6 +3,7 @@
     "directory": "stock-chart",
     "category": "Data Visualization",
     "ftName": "stock-chart",
+    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -59,6 +60,7 @@
         {
             "url": "spline",
             "name": "Spline",
+            "type": "update",
             "description":"This demo for Essential JS2 Stock Chart control shows the default rendering of Stock with Spline series.",
             "category": "Stock Chart",
             "api": {

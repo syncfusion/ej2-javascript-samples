@@ -2,7 +2,7 @@ this.default = function () {
     var treeGridObj = new ej.treegrid.TreeGrid({
         dataSource: window.sampleData,
         childMapping: 'subtasks',
-        treeColumnIndex: 1,  
+        treeColumnIndex: 1,
         height: 400,
         width: 'auto',
         columns: [

@@ -1,236 +1,1088 @@
 {
-    "name": "Tree Grid",
-    "directory": "tree-grid",
-    "category": "Grids",
-    "type": "update",
-    "ftName" :"treegrid",
-    "dataSourcePath": "src/tree-grid/data-source.js",
-    "samples": [
-      {  
-         "url": "treegrid.overview", "name": "Overview", "category": "Tree Grid","api":{"TreeGrid":["dataSource","childMapping","height","columns","allowReordering","allowFiltering","allowSorting","filterSettings","queryCellInfo"] },
+   "name": "Tree Grid",
+   "directory": "tree-grid",
+   "category": "Grids",
+   "type": "update",
+   "ftName": "treegrid",
+   "dataSourcePath": "src/tree-grid/data-source.js",
+   "samples": [
+      {
+         "url": "treegrid.overview",
+         "name": "Overview",
+         "category": "Tree Grid",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "height",
+               "columns",
+               "allowReordering",
+               "allowFiltering",
+               "allowSorting",
+               "filterSettings",
+               "queryCellInfo"
+            ]
+         },
          "description": "This JavaScript Tree Grid example demonstrates the overview in JavaScript Tree Grid Component. Explore here for more details."
       },
-      { "url": "live-data", "name": "Live Data", "category": "Tree Grid","description":"This demo for Essential<sup>®</sup> JS 2 grid component shows the grid Local Live Data Update","api": { "TreeGrid": ["dataSource","childMapping", "columns", "enableVirtualization", "enableVirtualMaskRow", "allowSelection", "height", "rowHeight", "queryCellInfo"]}},
-        { "url":"default", "name": "Default Functionalities", "category":"Tree Grid","description":"This example shows how the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control looks with its default configuration.","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging"] }},
-         { "url": "adaptive","name": "Adaptive Layout", "category": "Tree Grid","description":"This demo shows the Adaptive rendering of Tree Grid","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","enableAdaptiveUI"] }
+      {
+         "url": "live-data",
+         "name": "Live Data",
+         "category": "Tree Grid",
+         "description": "This demo for Essential<sup>®</sup> JS 2 grid component shows the grid Local Live Data Update",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "enableVirtualization",
+               "enableVirtualMaskRow",
+               "allowSelection",
+               "height",
+               "rowHeight",
+               "queryCellInfo"
+            ]
+         }
+      },
+      {
+         "url": "default",
+         "name": "Default Functionalities",
+         "category": "Tree Grid",
+         "description": "This example shows how the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control looks with its default configuration.",
+         "api": {
+            "TreeGrid": [
+               "columns",
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging"
+            ]
+         }
+      },
+      {
+         "url": "adaptive",
+         "name": "Adaptive Layout",
+         "category": "Tree Grid",
+         "description": "This demo shows the Adaptive rendering of Tree Grid",
+         "api": {
+            "TreeGrid": [
+               "columns",
+               "dataSource",
+               "allowSorting",
+               "allowFiltering",
+               "editSettings",
+               "toolbar",
+               "allowPaging",
+               "enableAdaptiveUI"
+            ]
+         }
+      },
+      {
+         "url": "loading-animation",
+         "name": "Loading Animation",
+         "category": "Tree Grid",
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.",
+         "api": {
+            "TreeGrid": [
+               "columns",
+               "dataSource",
+               "allowSorting",
+               "allowPaging",
+               "allowFiltering",
+               "loadingIndicator",
+               "pageSettings"
+            ]
+         }
+      },
+      {
+         "url": "employee",
+         "name": "Employee Management",
+         "category": "Product Use Case",
+         "type": "new",
+         "api": {
+            "TreeGrid": [
+               "columns",
+               "dataSource",
+               "allowSorting",
+               "allowFiltering",
+               "pageSettings"
+            ]
          },
-		 { "url": "loading-animation","name": "Loading Animation", "category": "Tree Grid","description":"This demo for Essential<sup>®</sup> JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
-       
-         {  
-            "url":"localdata", "name": "Local Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","childMapping","treeColumnIndex","allowPaging","columns"] },
-            "description": "This example shows the binding of an array of list objects in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "The Syncfusion® TreeGrid demo presents a customizable, role-specific display of comprehensive employee data with features like dynamic column generation, sorting, filtering, and visual enhancements like progress bars."
+      },
+      { "url": "restaurant-menu","name": "Restaurant Menu","type":"new", "category": "Product Use Case","description":"This demo for Essential<sup>®</sup> JS 2 Tree Grid component shows the loading indicator when tree grid loading and refreshing.","api": { "TreeGrid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
+      {
+         "url": "localdata",
+         "name": "Local Data",
+         "category": "Data Binding",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging",
+               "columns"
+            ]
          },
-         {  "url":"remote.data", "name": "Remote Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","allowPaging", "columns","treeColumnIndex", "hasChildMapping", "parentIdMapping","idMapping","height"] },
-            "description": "This example shows the binding of remote services by using the DataManager in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This example shows the binding of an array of list objects in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "remote.data",
+         "name": "Remote Data",
+         "category": "Data Binding",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "hasChildMapping",
+               "parentIdMapping",
+               "idMapping",
+               "height"
+            ]
          },
-         {  
-            "url":"selfreference", "name": "Self Reference Data", "category":"Data Binding","api":{"TreeGrid":["dataSource","allowPaging", "columns","treeColumnIndex","idMapping","parentIdMapping"] },
-            "description": "This example illustrates binding self-referential flat data with parent ID to a Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This example shows the binding of remote services by using the DataManager in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "selfreference",
+         "name": "Self Reference Data",
+         "category": "Data Binding",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "idMapping",
+               "parentIdMapping"
+            ]
          },
-         {
-            "url":"columntemplate", "name": "Column Template", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","width","height","columns","rowHeight"] },
-            "description": "This demo explains how to define template columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This example illustrates binding self-referential flat data with parent ID to a Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "columntemplate",
+         "name": "Column Template",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "width",
+               "height",
+               "columns",
+               "rowHeight"
+            ]
          },
-         {  
-            "url":"header.template", "name": "Header Template", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
-            "description": "This demo explains how to customize column headers to show additional HTML elements, such as icons, images, etc. in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how to define template columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "header.template",
+         "name": "Header Template",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex"
+            ]
          },
-         {  
-            "url":"columnformatting", "name": "Column Formatting", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","pageSettings"] },
-            "description": "This demo explains how to display the content of Tree Grid columns based on the specified format in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to customize column headers to show additional HTML elements, such as icons, images, etc. in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "columnformatting",
+         "name": "Column Formatting",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "pageSettings"
+            ]
          },
-         {  
-            "url":"cellalignment", "name": "Cell Alignment", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
-            "description": "This demo explains how to align the content inside the cells of Tree Grid columns and headers in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to display the content of Tree Grid columns based on the specified format in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "cellalignment",
+         "name": "Cell Alignment",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex"
+            ]
          },
-         {
-            "url":"reorder", "name": "Reorder", "category": "Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowReordering","actionComplete","columns","allowPaging"] },
-            "description": "This demo explains how to reorder the columns of Tree Grid by simple drag and drop of columns using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid." 
+         "description": "This demo explains how to align the content inside the cells of Tree Grid columns and headers in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "reorder",
+         "name": "Reorder",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowReordering",
+               "actionComplete",
+               "columns",
+               "allowPaging"
+            ]
          },
-         {
-            "url":"resizing", "name": "Resizing", "category": "Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowResizing","actionComplete","columns","allowPaging"] },
-            "description": "This demo explains how to resize the width of the Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid." 
+         "description": "This demo explains how to reorder the columns of Tree Grid by simple drag and drop of columns using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "resizing",
+         "name": "Resizing",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowResizing",
+               "actionComplete",
+               "columns",
+               "allowPaging"
+            ]
          },
-        
-         {
-            "url":"stacked-header", "name": "Stacked Header", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowPaging","pageSettings","columns"] },
-            "description": "This demo explains how to provide a common header for the group of columns in Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how to resize the width of the Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "stacked-header",
+         "name": "Stacked Header",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging",
+               "pageSettings",
+               "columns"
+            ]
          },
-        
-         {  
-            "url":"columnmenu", "name": "Column Menu", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns"] },
-            "description": "This demo explains the default functionalities of the Column Menu in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to provide a common header for the group of columns in Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "columnmenu",
+         "name": "Column Menu",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns"
+            ]
          },
-        
-         {  
-            "url":"auto.wrap", "name": "Auto Wrap Column Cells", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","pageSettings","allowTextWrap"] },
-            "description": "This demo explains how to wrap the content of columns within the specified width of Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains the default functionalities of the Column Menu in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "auto.wrap",
+         "name": "Auto Wrap Column Cells",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "pageSettings",
+               "allowTextWrap"
+            ]
          },
-         {  
-            "url":"column-chooser", "name": "Column Chooser", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","treeColumnIndex","allowPaging","columns","pageSettings","showColumnChooser","toolbar","showInColumnchooser"] },
-            "description": "This example demonstrates how the column chooser feature can be used to dynamically show or hide columns based on the specified format in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to wrap the content of columns within the specified width of Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "column-chooser",
+         "name": "Column Chooser",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging",
+               "columns",
+               "pageSettings",
+               "showColumnChooser",
+               "toolbar",
+               "showInColumnchooser"
+            ]
          },
-         {  
-            "url":"showhidecolumn", "name": "Show or Hide Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
-            "description": "This demo explains how to hide or show the columns of Tree Grid dynamically using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid methods."
-         },   
-        
-       
-         {
-            "url":"checkbox-column", "name": "Checkbox Column", "category":"Columns","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","enableHierarchySelection"] },
-            "description": "This demo explains how the hierarchy selection between the records using column checkboxes in Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This example demonstrates how the column chooser feature can be used to dynamically show or hide columns based on the specified format in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "showhidecolumn",
+         "name": "Show or Hide Column",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex"
+            ]
          },
-        
-         {  
-            "url": "row-template", "name": "Row Template", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
-            "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows the usage of the row template feature. We have rendered each Tree Grid row using template."
+         "description": "This demo explains how to hide or show the columns of Tree Grid dynamically using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid methods."
+      },
+      {
+         "url": "checkbox-column",
+         "name": "Checkbox Column",
+         "category": "Columns",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "enableHierarchySelection"
+            ]
          },
-         {  
-            "url": "detail-template", "name": "Detail Template", "category": "Rows","api":{"TreeGrid":["dataSource","detailTemplate","height","width","columns","childMapping","treeColumnIndex"] },
-            "description": "This demo shows Tree Grid with detail template feature and also each row contains detailed information about a row."
+         "description": "This demo explains how the hierarchy selection between the records using column checkboxes in Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "row-template",
+         "name": "Row Template",
+         "category": "Rows",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "rowTemplate",
+               "height",
+               "width",
+               "columns",
+               "childMapping",
+               "treeColumnIndex"
+            ]
          },
-         
-         {  
-            "url": "dragdrop-between-treegrid", "name": "Drag and Drop", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex","allowPaging"] },
-            "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control how the rows can be dragged between the Tree Grid using the row drag-and-drop feature."
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows the usage of the row template feature. We have rendered each Tree Grid row using template."
+      },
+      {
+         "url": "detail-template",
+         "name": "Detail Template",
+         "category": "Rows",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "detailTemplate",
+               "height",
+               "width",
+               "columns",
+               "childMapping",
+               "treeColumnIndex"
+            ]
          },
-         {  
-            "url": "drag-drop", "name": "Drag and Drop within Tree Grid", "category": "Rows","api":{"TreeGrid":["dataSource","rowTemplate","height","width","columns","childMapping","treeColumnIndex"] },
-            "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control how the rows can be dragged within the Tree Grid using the row drag-and-drop feature."
+         "description": "This demo shows Tree Grid with detail template feature and also each row contains detailed information about a row."
+      },
+      {
+         "url": "dragdrop-between-treegrid",
+         "name": "Drag and Drop",
+         "category": "Rows",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "rowTemplate",
+               "height",
+               "width",
+               "columns",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging"
+            ]
          },
-         {  
-            "url":"row.hover", "name": "Row Hover", "category":"Rows", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping","allowSelection","columns","treeColumnIndex","enableHover","height"] },
-            "description": "This demo explains how the Tree Grid row color is changed while move the mouse over a row in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid content."
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control how the rows can be dragged between the Tree Grid using the row drag-and-drop feature."
+      },
+      {
+         "url": "drag-drop",
+         "name": "Drag and Drop within Tree Grid",
+         "category": "Rows",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "rowTemplate",
+               "height",
+               "width",
+               "columns",
+               "childMapping",
+               "treeColumnIndex"
+            ]
          },
-         {  
-            "url":"rowheight", "name": "Row Height", "category":"Rows","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","height","rowHeight","allowPaging","toolbarClick","columns","toolbar"] },
-            "description": "This demo explains the way of customizing the row height of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control how the rows can be dragged within the Tree Grid using the row drag-and-drop feature."
+      },
+      {
+         "url": "row.hover",
+         "name": "Row Hover",
+         "category": "Rows",
+         "hideOnDevice": true,
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowSelection",
+               "columns",
+               "treeColumnIndex",
+               "enableHover",
+               "height"
+            ]
          },
-     
-        
-         {  
-            "url":"inline.editing", "name": "Inline Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","height","toolbar"] },
-            "description": "This example shows how to add and edit row or cell inline on the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how the Tree Grid row color is changed while move the mouse over a row in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid content."
+      },
+      {
+         "url": "rowheight",
+         "name": "Row Height",
+         "category": "Rows",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "height",
+               "rowHeight",
+               "allowPaging",
+               "toolbarClick",
+               "columns",
+               "toolbar"
+            ]
          },
-         {  
-            "url":"dialog.editing", "name": "Dialog Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","height","columns","treeColumnIndex","editSettings","toolbar"] },
-            "description": "This demo explains how to edit a Tree Grid record in the Dialog mode using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains the way of customizing the row height of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "inline.editing",
+         "name": "Inline Editing",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "height",
+               "toolbar"
+            ]
          },
-         {  
-            "url":"batch.editing", "name": "Batch Editing", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","height","columns","treeColumnIndex","editSettings","toolbar"] },
-            "description": "This example shows how to add and edit row or cell in the Batch mode using Syncfusion<sup>®</sup> TypeScript Tree Grid control."
+         "description": "This example shows how to add and edit row or cell inline on the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "dialog.editing",
+         "name": "Dialog Editing",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "height",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "toolbar"
+            ]
          },
-        
-         {
-            "url":"command-column", "name": "Command Column", "category": "Editing","api":{"TreeGrid":["dataSource", "childMapping", "treeColumnIndex", "editSettings", "columns","height"] },
-            "description": "This demo explains how to include CRUD action buttons as one of the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
-        },
-         {  
-            "url":"cell.edit.type", "name": "Cell Edit Type", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","editSettings","toolbar","height"] },
-            "description": "This demo explains how to set different edit types and how to define edit params for the Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid. "
+         "description": "This demo explains how to edit a Tree Grid record in the Dialog mode using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "batch.editing",
+         "name": "Batch Editing",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "height",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "toolbar"
+            ]
          },
-        
-         {
-            "url":"edittemplate", "name": "Edit Template", "category":"Editing","api":{"TreeGrid":["dataSource", "childMapping", "treeColumnIndex", "editSettings", "toolbar", "columns","height"] },
-            "description": "This demo explains how create a custom editor control for the Tree Grid cells when a row is edited in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This example shows how to add and edit row or cell in the Batch mode using Syncfusion<sup>®</sup> TypeScript Tree Grid control."
+      },
+      {
+         "url": "command-column",
+         "name": "Command Column",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "editSettings",
+               "columns",
+               "height"
+            ]
          },
-         {  
-            "url":"lock.row", "name": "Lock Row", "category":"Editing","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","editSettings","pageSettings","toolbar","rowDataBound","beginEdit", "enableHover"] },
-            "description": "This demo explains how to disable editing for specific rows dynamically in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how to include CRUD action buttons as one of the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "cell.edit.type",
+         "name": "Cell Edit Type",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "toolbar",
+               "height"
+            ]
          },
-         {  
-            "url":"multi.sorting", "name": "Multi Sorting", "category":"Sorting","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","sortSettings","allowSorting","pageSettings","actionComplete"] },
-            "description": "This demo demonstrates to sort multiple columns of Tree Grid by hold the CTRL key and click on the column headers of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid"
+         "description": "This demo explains how to set different edit types and how to define edit params for the Tree Grid columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid. "
+      },
+      {
+         "url": "edittemplate",
+         "name": "Edit Template",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "editSettings",
+               "toolbar",
+               "columns",
+               "height"
+            ]
          },
-         {
-            "url":"sorting.api", "name": "Sorting API", "category":"Sorting","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","allowPaging","allowSorting","columns","pageSettings"] },
-            "description": "This demo explains how to sort columns dynamically using methods of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
-        },
-         {
-            "url":"filter", "name": "Default Filtering", "category":"Filtering","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowFiltering","filterSettings","treeColumnIndex"] },
-             "description": "This demo explains the default functionalities of filtering and how to define the template for filter bar in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how create a custom editor control for the Tree Grid cells when a row is edited in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "lock.row",
+         "name": "Lock Row",
+         "category": "Editing",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "pageSettings",
+               "toolbar",
+               "rowDataBound",
+               "beginEdit",
+               "enableHover"
+            ]
          },
-         {
-             "url":"filter-menu", "name": "Menu Filter", "category":"Filtering", "type":"update","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowFiltering","treeColumnIndex","filterSettings"] },
-             "description": "This demo explains how to filter the content using menu filter type of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to disable editing for specific rows dynamically in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "multi.sorting",
+         "name": "Multi Sorting",
+         "category": "Sorting",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "sortSettings",
+               "allowSorting",
+               "pageSettings",
+               "actionComplete"
+            ]
          },
-         {
-             "url":"search", "name": "Search", "category":"Filtering","api":{"TreeGrid":["dataSource","allowPaging","pageSettings","columns","childMapping", "treeColumnIndex","toolbar"] },
-             "description": "This demo explains how to search the text entered in the search bar in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid content."
-          },
-          {  
-            "url":"default.paging", "name": "Pager Dropdown", "category":"Paging","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","pageSettings"] },
-            "description": "This demo explains how to display the records in paginated view in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo demonstrates to sort multiple columns of Tree Grid by hold the CTRL key and click on the column headers of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid"
+      },
+      {
+         "url": "sorting.api",
+         "name": "Sorting API",
+         "category": "Sorting",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging",
+               "allowSorting",
+               "columns",
+               "pageSettings"
+            ]
          },
-          {
-            "url":"paging.api", "name": "Paging API", "category":"Paging","api":{"TreeGrid":["dataSource","allowPaging","pageSettings","columns","childMapping", "treeColumnIndex"] },
-            "description": "This demo explains how to customize a pager using the APIs that are relevant to paging of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control"
-         }, 
-         { "url":"default-scrolling", "name": "Default Scrolling", "description":"This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows the usage of horizontal and vertical scrollbars to view Tree Grid content that exceeds the Tree Grid area.", "category":"Scrolling","api":{"TreeGrid":["dataSource","height","width","columns"] } },
-         {
-            "url":"frozencolumn", "name": "Frozen Columns", "category":"Scrolling", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
-            "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows frozen columns feature of Tree Grid. Scroll the movable content to view the frozen columns."
+         "description": "This demo explains how to sort columns dynamically using methods of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "filter",
+         "name": "Default Filtering",
+         "category": "Filtering",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "allowFiltering",
+               "filterSettings",
+               "treeColumnIndex"
+            ]
          },
-         {
-            "url":"freezedirection", "name": "Freeze Direction", "category":"Scrolling","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","frozenColumns"] },
-            "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content."
+         "description": "This demo explains the default functionalities of filtering and how to define the template for filter bar in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "filter-menu",
+         "name": "Menu Filter",
+         "category": "Filtering",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "allowFiltering",
+               "treeColumnIndex",
+               "filterSettings"
+            ]
          },
-         { "url":"virtual-scrolling", "name": "Virtual Scrolling", "description":"This demo demonstrates how to use Essential<sup>®</sup> JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableVirtualization","dataBound","height","columns"] } }, 
-         { "url":"infinite-scrolling", "name": "Infinite Scrolling", "description":"This sample demonstrates the Tree Grid component with infinite scrolling feature.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableInfiniteScrolling","dataBound","height","columns"] } }, 
-         {  
-            "url":"aggregate.default", "name": "Default Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","height","aggregates", "toolbar", "toolbarClick", "allowPdfExport", "allowExcelExport"] },
-            "description": "This demo explains how to display the summary values such as average, minimum, etc., for the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to filter the content using menu filter type of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "search",
+         "name": "Search",
+         "category": "Filtering",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "allowPaging",
+               "pageSettings",
+               "columns",
+               "childMapping",
+               "treeColumnIndex",
+               "toolbar"
+            ]
          },
-         {  
-            "url":"aggregate.custom", "name": "Custom Aggregate", "category":"Aggregates","api":{"TreeGrid":["dataSource","childMapping","width","height","columns","treeColumnIndex","aggregates","dataBound"] },
-            "description": "This demo explains how to display the custom aggregate for the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how to search the text entered in the search bar in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid content."
+      },
+      {
+         "url": "default.paging",
+         "name": "Pager Dropdown",
+         "category": "Paging",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "pageSettings"
+            ]
          },
-         {
-            "url":"selection", "name": "Default Selection", "category":"Selection","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowSelection","selectionSettings","treeColumnIndex"] },
-            "description": "This demo explains the customization of selection mode and toggle selection of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to display the records in paginated view in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "paging.api",
+         "name": "Paging API",
+         "category": "Paging",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "allowPaging",
+               "pageSettings",
+               "columns",
+               "childMapping",
+               "treeColumnIndex"
+            ]
          },
-         {
-            "url":"selection-api", "name": "Selection API", "category":"Selection","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","allowSelection","selectionSettings","treeColumnIndex"] },
-            "description": "This demo explains how to select and clear multiple rows using methods of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to customize a pager using the APIs that are relevant to paging of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control"
+      },
+      {
+         "url": "default-scrolling",
+         "name": "Default Scrolling",
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows the usage of horizontal and vertical scrollbars to view Tree Grid content that exceeds the Tree Grid area.",
+         "category": "Scrolling",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "height",
+               "width",
+               "columns"
+            ]
+         }
+      },
+      {
+         "url": "sticky-header",
+         "name": "Sticky Header",
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows the usage of the Sticky header scrolling to make the Tree Grid header visible while scroll its parent element.",
+         "category": "Scrolling",
+         "type": "new",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "enableStickyHeader",
+               "width",
+               "columns"
+            ]
+         }
+      },
+      {
+         "url": "frozencolumn",
+         "name": "Frozen Columns",
+         "category": "Scrolling",
+         "hideOnDevice": true,
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "frozenColumns"
+            ]
          },
-         { "url":"checkbox-selection", "name": "Checkbox Selection", "category":"Selection","api":{"Grid":["dataSource","allowPaging","pageSettings","columns","allowSelection","selectionSettings","enableHover"] },
-            "description":"This demo for Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control shows how the checkbox selection feature can be used to select Tree Grid rows."
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows frozen columns feature of Tree Grid. Scroll the movable content to view the frozen columns."
+      },
+      {
+         "url": "freezedirection",
+         "name": "Freeze Direction",
+         "category": "Scrolling",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "frozenColumns"
+            ]
          },
-         {  
-            "url":"default.exporting",  "name": "Default Exporting", "category":"Exporting","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","pageSettings","allowExcelExport","allowPdfExport","toolbar"] },
-            "description": "This demo explains how to export the Tree Grid content to Excel, PDF, and CSV documents using the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo for Essential<sup>®</sup> JS 2 Tree Grid control shows freeze direction feature of Tree Grid. Scroll the movable content horizontally to view the frozen columns with the content."
+      },
+      {
+         "url": "virtual-scrolling",
+         "name": "Virtual Scrolling",
+         "description": "This demo demonstrates how to use Essential<sup>®</sup> JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.",
+         "category": "Scrolling",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "enableVirtualization",
+               "dataBound",
+               "height",
+               "columns"
+            ]
+         }
+      },
+      {
+         "url": "loadonchilddemand",
+         "name": "Load Child on Demand",
+         "type": "new",
+         "category": "Scrolling",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "enableVirtualization",
+               "loadchildOnDemand",
+               "columns",
+               "treeColumnIndex",
+               "hasChildMapping",
+               "parentIdMapping",
+               "idMapping",
+               "height"
+            ]
          },
-         {  
-            "url":"print", "name": "Print", "category":"Exporting","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex","toolbar"] },
-            "description": "This demo explains how to print the records of the Tree Grid using the Print feature of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This example shows the binding of remote services by using the DataManager in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "infinite-scrolling",
+         "name": "Infinite Scrolling",
+         "description": "This sample demonstrates the Tree Grid component with infinite scrolling feature.",
+         "category": "Scrolling",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "enableInfiniteScrolling",
+               "dataBound",
+               "height",
+               "columns"
+            ]
+         }
+      },
+      {
+         "url": "aggregate.default",
+         "name": "Default Aggregate",
+         "category": "Aggregates",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "height",
+               "aggregates",
+               "toolbar",
+               "toolbarClick",
+               "allowPdfExport",
+               "allowExcelExport"
+            ]
          },
-       
-         {  
-            "url":"default.contextmenu", "name": "Default Context Menu", "category":"Context Menu","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex","editSettings","allowSorting","allowPdfExport","allowExcelExport","contextMenuItems"] },
-            "description": "This demo explains the usage of context menu and the default context menu items in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains how to display the summary values such as average, minimum, etc., for the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "aggregate.custom",
+         "name": "Custom Aggregate",
+         "category": "Aggregates",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "width",
+               "height",
+               "columns",
+               "treeColumnIndex",
+               "aggregates",
+               "dataBound"
+            ]
          },
-         {  
-            "url":"custom.contextmenu", "name": "Custom Context Menu", "category":"Context Menu","api":{"TreeGrid":["dataSource","childMapping","columns","treeColumnIndex", "hasChildMapping", "contextMenuItems", "parentIdMapping","contextMenuOpen","contextMenuClick"] },
-            "description": "This demo explains the usage of custom context menu items in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+         "description": "This demo explains how to display the custom aggregate for the columns in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "selection",
+         "name": "Default Selection",
+         "category": "Selection",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "allowSelection",
+               "selectionSettings",
+               "treeColumnIndex"
+            ]
          },
-         {"url":"treegridlines", "name": "Gridlines", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","childMapping","allowPaging","columns","treeColumnIndex"] },
-            "description": "This demo explains how to customize the grid lines in Tree Grid using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+         "description": "This demo explains the customization of selection mode and toggle selection of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "selection-api",
+         "name": "Selection API",
+         "category": "Selection",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "allowSelection",
+               "selectionSettings",
+               "treeColumnIndex"
+            ]
          },
-          
-         { "url":"clipboard", "name": "Clipboard",  "category":"Miscellaneous","api":{"TreeGrid":["columns","dataSource","childMapping","treeColumnIndex","allowPaging","allowSelection","copyHierarchyMode"] },
+         "description": "This demo explains how to select and clear multiple rows using methods of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "checkbox-selection",
+         "name": "Checkbox Selection",
+         "category": "Selection",
+         "api": {
+            "Grid": [
+               "dataSource",
+               "allowPaging",
+               "pageSettings",
+               "columns",
+               "allowSelection",
+               "selectionSettings",
+               "enableHover"
+            ]
+         },
+         "description": "This demo for Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control shows how the checkbox selection feature can be used to select Tree Grid rows."
+      },
+      {
+         "url": "default.exporting",
+         "name": "Default Exporting",
+         "category": "Exporting",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "pageSettings",
+               "allowExcelExport",
+               "allowPdfExport",
+               "toolbar"
+            ]
+         },
+         "description": "This demo explains how to export the Tree Grid content to Excel, PDF, and CSV documents using the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "print",
+         "name": "Print",
+         "category": "Exporting",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "toolbar"
+            ]
+         },
+         "description": "This demo explains how to print the records of the Tree Grid using the Print feature of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "default.contextmenu",
+         "name": "Default Context Menu",
+         "category": "Context Menu",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "allowSorting",
+               "allowPdfExport",
+               "allowExcelExport",
+               "contextMenuItems"
+            ]
+         },
+         "description": "This demo explains the usage of context menu and the default context menu items in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "custom.contextmenu",
+         "name": "Custom Context Menu",
+         "category": "Context Menu",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "columns",
+               "treeColumnIndex",
+               "hasChildMapping",
+               "contextMenuItems",
+               "parentIdMapping",
+               "contextMenuOpen",
+               "contextMenuClick"
+            ]
+         },
+         "description": "This demo explains the usage of custom context menu items in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control."
+      },
+      {
+         "url": "treegridlines",
+         "name": "Gridlines",
+         "category": "Miscellaneous",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "allowPaging",
+               "columns",
+               "treeColumnIndex"
+            ]
+         },
+         "description": "This demo explains how to customize the grid lines in Tree Grid using Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "clipboard",
+         "name": "Clipboard",
+         "category": "Miscellaneous",
+         "api": {
+            "TreeGrid": [
+               "columns",
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "allowPaging",
+               "allowSelection",
+               "copyHierarchyMode"
+            ]
+         },
          "description": "This sample demonstrates copy to clipboard functionality of the Tree Grid component. Select rows and click Copy button from toolbar to copy content. To copy with header click Copy with header button from toolbar."
-       },
-         {"url":"conditional-formatting", "name": "Conditional Formatting", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","columns","height","queryCellInfo"] },
-            "description": "This demo explains how to apply styles to specific cells based on certain conditions in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "conditional-formatting",
+         "name": "Conditional Formatting",
+         "category": "Miscellaneous",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "columns",
+               "height",
+               "queryCellInfo"
+            ]
          },
-         {"url":"toolbar.template", "name": "Toolbar Template", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","toolbar", "toolbarClick","allowFiltering", "childMapping","height","treeColumnIndex","filterSettings","columns"] },
+         "description": "This demo explains how to apply styles to specific cells based on certain conditions in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "toolbar.template",
+         "name": "Toolbar Template",
+         "category": "Miscellaneous",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "toolbar",
+               "toolbarClick",
+               "allowFiltering",
+               "childMapping",
+               "height",
+               "treeColumnIndex",
+               "filterSettings",
+               "columns"
+            ]
+         },
          "description": "This demo explains how to render custom template elements in a toolbar by which any custom operation can be performed in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
       },
-         {"url":"events", "name": "Events", "category":"Miscellaneous","api":{"TreeGrid":["dataSource","allowPaging","childMapping","treeColumnIndex","load","created","actionBegin","actionComplete","allowReordering","allowSorting","dataBound","rowSelecting","rowSelected","columnDragStart","columnDrag","columnDrop","columns","pageSettings"] },
-            "description": "This demo explains the basic functionalities of the events that are available in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      {
+         "url": "events",
+         "name": "Events",
+         "category": "Miscellaneous",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "allowPaging",
+               "childMapping",
+               "treeColumnIndex",
+               "load",
+               "created",
+               "actionBegin",
+               "actionComplete",
+               "allowReordering",
+               "allowSorting",
+               "dataBound",
+               "rowSelecting",
+               "rowSelected",
+               "columnDragStart",
+               "columnDrag",
+               "columnDrop",
+               "columns",
+               "pageSettings"
+            ]
          },
-         {"url":"keyboard", "name": "Keyboard Navigation", "category":"Miscellaneous", "hideOnDevice": true, "api":{"TreeGrid":["dataSource","childMapping", "treeColumnIndex","columns","height"] },
-            "description": "This demo explains the key combinations used to perform corresponding Tree Grid actions in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
-         }
-    ]
+         "description": "This demo explains the basic functionalities of the events that are available in the Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      },
+      {
+         "url": "keyboard",
+         "name": "Keyboard Navigation",
+         "category": "Miscellaneous",
+         "hideOnDevice": true,
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "childMapping",
+               "treeColumnIndex",
+               "columns",
+               "height"
+            ]
+         },
+         "description": "This demo explains the key combinations used to perform corresponding Tree Grid actions in Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid."
+      }
+   ]
 }

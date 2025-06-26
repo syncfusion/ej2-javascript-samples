@@ -50,7 +50,7 @@ this.default = function () {
         ],
         //Initializing Chart Title
         title: 'Average Sales Comparison',
-        tooltip: { enable: true },
+        tooltip: { enable: true, enableHighlight: true },
         legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {

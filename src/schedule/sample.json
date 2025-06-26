@@ -2,8 +2,8 @@
     "name": "Scheduler",
     "directory": "schedule",
     "category": "Calendars",
-    "type": "update",
     "dataSourcePath": "src/schedule/datasource.js",
+    "type": "update",
     "ftName": "scheduler",
     "samples": [
         {
@@ -40,7 +40,7 @@
                     "selectedDate"
                 ]
             }
-        }, 
+        },
         {
             "url": "event-calendar",
             "name": "Event Calendar",
@@ -75,6 +75,46 @@
                     "eventRendered",
                     "dragStop",
                     "resizeStop"
+                ]
+            }
+        },
+        {
+            "url": "employee-shift-management",
+            "name": "Shift Management",
+            "category": "Product Use Case",
+            "type": "new",
+            "hideOnDevice": true,
+            "description": "This demo show the efficient employee shift management using the Scheduler, including shift scheduling, swapping, highlighting staff unavailablity, and seamlessly assigning leave replacements using drag-and-drop.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "height",
+                    "resources",
+                    "selectedDate",
+                    "showHeaderBar",
+                    "actionComplete",
+                    "created"
+                ]
+            }
+        },
+        {
+            "url": "tech-event-organizer",
+            "name": "Tech Event Organizer",
+            "category": "Product Use Case",
+            "type": "new",
+            "hideOnDevice": true,
+            "description": "This demo illustrates a tech event management tool built with the Scheduler. It has session-based room allocation, drag-and-drop scheduling, conflict prevention, and room-based filtering.",
+            "api": {
+                "Schedule": [
+                    "actionComplete",
+                    "height",
+                    "width",
+                    "resourceHeaderTemplate",
+                    "eventSettings",
+                    "selectedDate",
+                    "cellClick",
+                    "eventRendered",
+                    "dragStop"
                 ]
             }
         },
@@ -203,7 +243,6 @@
             "url": "overlap-events",
             "name": "Conflict Free Event",
             "category": "Appointments",
-            "type": "new",
             "description": "This demo explains how to restrict overlapping appointments within the same time range.",
             "api": {
                 "Schedule": [

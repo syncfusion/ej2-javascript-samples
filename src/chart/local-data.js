@@ -64,7 +64,7 @@ this.default = function () {
         title: 'Stock Price Analysis',
         //Initializing Tooltip and Crosshair
         tooltip: {
-            enable: true, shared: true
+            enable: true, shared: true, enableHighlight: true
         }, legendSettings: { enableHighlight: true },
         // Initializing the crosshair
         crosshair: {

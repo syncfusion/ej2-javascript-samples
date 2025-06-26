@@ -3,18 +3,18 @@
         <link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
         <style>
             /* These styles are used for aligning palette and diagram */
-            .sb-mobile-palette {
+            #logicCircuit .sb-mobile-palette {
                 width: 240px;
                 height: 100%;
                 float: left;
             }
         
-            .sb-mobile-palette-bar {
+            #logicCircuit .sb-mobile-palette-bar {
                 display: none;
             }
         
 
-            .sb-mobile-diagram {
+            #logicCircuit .sb-mobile-diagram {
                 width: calc(100% - 242px);
                 height: 100%;
                 float: left;
@@ -24,7 +24,7 @@
         
             @media (max-width: 550px) {
         
-                .sb-mobile-palette {
+                 #logicCircuit .sb-mobile-palette {
                     z-index: 19;
                     position: absolute;
                     display: none;
@@ -33,7 +33,7 @@
                     height: 100%;
                 }
         
-                .sb-mobile-palette-bar {
+                 #logicCircuit .sb-mobile-palette-bar {
                     display: block;
                     width: 100%;
                     background: #fafafa;
@@ -42,19 +42,19 @@
                     min-height: 40px;
                 }
         
-                .sb-mobile-diagram {
+                 #logicCircuit .sb-mobile-diagram {
                     width: 100%;
                     height: 100%;
                     float: left;
                     left: 0px;
                 }
         
-                #palette-icon {
+                 #logicCircuit #palette-icon {
                     font-size: 20px;
                 }
             }
 
-            .e-toggle-palette::before {
+             #logicCircuit .e-toggle-palette::before {
                 content: "\e700"
             }
         </style>

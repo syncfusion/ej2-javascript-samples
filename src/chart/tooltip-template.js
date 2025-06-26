@@ -53,7 +53,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true,
-            template: '#Tooltip'
+            template: '#Tooltip', enableHighlight: true, showNearestTooltip: true
         },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
          // custom code start

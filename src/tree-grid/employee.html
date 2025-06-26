@@ -1,0 +1,340 @@
+<style>
+    /* Light Themes */
+    .tailwind #EmployeeTreeGrid .email-link,
+    .tailwind3 #EmployeeTreeGrid .email-link,
+    .bootstrap #EmployeeTreeGrid .email-link,
+    .bootstrap4 #EmployeeTreeGrid .email-link,
+    .bootstrap5 #EmployeeTreeGrid .email-link,
+    .fluent #EmployeeTreeGrid .email-link,
+    .fluent2 #EmployeeTreeGrid .email-link,
+    .fluent2-highcontrast #EmployeeTreeGrid .email-link,
+    .highcontrast #EmployeeTreeGrid .email-link,
+    .material #EmployeeTreeGrid .email-link,
+    .material3 #EmployeeTreeGrid .email-link,
+    .fabric #EmployeeTreeGrid .email-link {
+        background-color: #ebf1ff;
+        font-size: xx-small;
+    }
+
+    .tailwind #EmployeeTreeGrid .employee-title,
+    .tailwind3 #EmployeeTreeGrid .employee-title,
+    .bootstrap #EmployeeTreeGrid .employee-title,
+    .bootstrap4 #EmployeeTreeGrid .employee-title,
+    .bootstrap5 #EmployeeTreeGrid .employee-title,
+    .fluent #EmployeeTreeGrid .employee-title,
+    .fluent2 #EmployeeTreeGrid .employee-title,
+    .fluent2-highcontrast #EmployeeTreeGrid .employee-title,
+    .highcontrast #EmployeeTreeGrid .employee-title,
+    .material #EmployeeTreeGrid .employee-title,
+    .material3 #EmployeeTreeGrid .employee-title,
+    .fabric #EmployeeTreeGrid .employee-title {
+        color: gray;
+    }
+
+    /* Dark Themes */
+    .tailwind-dark #EmployeeTreeGrid .email-link,
+    .tailwind3-dark #EmployeeTreeGrid .email-link,
+    .bootstrap-dark #EmployeeTreeGrid .email-link,
+    .bootstrap5-dark #EmployeeTreeGrid .email-link,
+    .fluent-dark #EmployeeTreeGrid .email-link,
+    .fluent2-dark #EmployeeTreeGrid .email-link,
+    .material-dark #EmployeeTreeGrid .email-link,
+    .material3-dark #EmployeeTreeGrid .email-link,
+    .fabric-dark #EmployeeTreeGrid .email-link {
+        background-color: #000000aa;
+        color: #6179ff;
+        font-size: xx-small;
+    }
+
+    .tailwind-dark #EmployeeTreeGrid .employee-title,
+    .tailwind3-dark #EmployeeTreeGrid .employee-title,
+    .bootstrap-dark #EmployeeTreeGrid .employee-title,
+    .bootstrap5-dark #EmployeeTreeGrid .employee-title,
+    .fluent-dark #EmployeeTreeGrid .employee-title,
+    .fluent2-dark #EmployeeTreeGrid .employee-title,
+    .material-dark #EmployeeTreeGrid .employee-title,
+    .material3-dark #EmployeeTreeGrid .employee-title,
+    .fabric-dark #EmployeeTreeGrid .employee-title {
+        color: lightgray;
+    }
+
+    #EmployeeTreeGrid .e-headertext ,
+    #EmployeeTreeGrid .e-headercelldiv{
+       font-size: medium;
+    }
+
+    #EmployeeTreeGrid .employee-cell {
+        padding: 8px 10px;
+    }
+
+    #EmployeeTreeGrid .employee-content {
+        display: flex;
+        align-items: center;
+    }
+
+    #EmployeeTreeGrid .employee-img {
+        border-radius: 50%;
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #EmployeeTreeGrid .employee-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #EmployeeTreeGrid .employee-name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #EmployeeTreeGrid .employee-title {
+        font-size: 10px;
+    }
+
+    #EmployeeTreeGrid .flag-container {
+        display: inline-block;
+    }
+
+    #EmployeeTreeGrid .flag-img {
+        width: 20px;
+        height: 13px;
+    }
+
+    #EmployeeTreeGrid .flag-text {
+        display: inline-block;
+        padding: 0 6px;
+        vertical-align: middle;
+    }
+
+    #EmployeeTreeGrid .email-cell {
+        padding: 8px 10px;
+    }
+
+    #EmployeeTreeGrid .email-link {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .fluent2,
+    .fluent2-dark,
+    .fluent2-highcontrast {
+        #EmployeeTreeGrid #columnddl .e-input-group {
+            width: 140px !important;
+        }
+    }
+
+    #EmployeeTreeGrid .leave-bar-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 2px 0;
+    }
+
+    #EmployeeTreeGrid .leave-bar {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #EmployeeTreeGrid .leave-label {
+        text-align: right;
+    }
+
+    #EmployeeTreeGrid .bar {
+        width: 50px;
+        height: 15px;
+        background-color: #eee;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: #000000;
+        padding: 6px 4px;
+    }
+
+    #EmployeeTreeGrid .barlabel {
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #EmployeeTreeGrid .bar-fill {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #EmployeeTreeGrid .bar-fill.low {
+        background-color: #df2222;
+    }
+
+    #EmployeeTreeGrid .bar-fill.medium {
+        background-color: #ffc400;
+    }
+
+    #EmployeeTreeGrid .bar-fill.high {
+        background-color: #00b300;
+    }
+
+
+    #EmployeeTreeGrid .separator {
+        width: 1px;
+        background-color: #ccc;
+        margin: 0 8px;
+    }
+
+    .material-dark img.resources,
+    .material3-dark img.resources,
+    .fabric-dark img.resources,
+    .bootstrap-dark img.resources,
+    .tailwind-dark img.resources,
+    .tailwind3-dark img.resources,
+    .bootstrap5-dark img.resources,
+    .bootstrap5\.3-dark img.resources,
+    .highcontrast img.resources,
+    .fluent-dark img.resources,
+    .fluent2-dark img.resources,
+    .fluent2-highcontrast img.resources {
+        content: url("src/tree-grid/images/Resources.png");
+        padding-right: 5px;
+        width: 21px;
+    }
+
+    .material img.resources,
+    .material3 img.resources,
+    .fabric img.resources,
+    .bootstrap img.resources,
+    .tailwind img.resources,
+    .tailwind3 img.resources,
+    .bootstrap5 img.resources,
+    .bootstrap5\.3 img.resources,
+    .fluent img.resources,
+    .fluent2 img.resources {
+        content: url("src/tree-grid/images/__Resources.png");
+        padding-left: 3px;
+        padding-right: 5px;
+        width: 24px;
+    }
+
+    .bootstrap-dark img.resources {
+        margin-top: -6px;
+    }
+
+    .bootstrap img.resources {
+        margin-top: -4px;
+    }
+
+    .bootstrap4 img.resources {
+        content: url("src/tree-grid/images/__Resources.png");
+        padding-left: 3px;
+        padding-right: 5px;
+        margin-top: -8px;
+        width: 24px;
+    }
+
+    .viewer-container .e-input-group {
+        width: 21% !important;
+    }
+
+    @media (max-width: 1080px) {
+        .viewer-container .e-input-group {
+            width: 45% !important;
+        }
+    }
+</style>
+
+<div class="viewer-container" style="margin: 10px; display: flex; align-items: center; gap: 10px;">
+    <label for="viewer" class="viewer-label" style="width: 138px;">Select Viewer Role :</label>
+    <input id="viewer" />
+</div>
+
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="EmployeeTreeGrid"></div>
+    </div>
+</div>
+
+<script id="employeeHeaderTemplate" type="text/x-template">
+    <img class="resources" src="src/tree-grid/images/__Resources.png" alt="Employee"/>Name
+</script>
+
+<script id="employeeTemplate" type="text/x-template">
+    <td class="employee-cell">
+        <div class="employee-content">
+            <img src="src/tree-grid/images/${FullName}.png" alt="${FullName}" class="employee-img" />
+            <div class="employee-info">
+                <span class="employee-name">${Employee}</span>
+                <span class="employee-title">${JobTitle}</span>
+            </div>
+        </div>
+    </td>
+</script>
+
+<script id="flagTemplate" type="text/x-template">
+    <div class="flag-container">
+        <img src="src/tree-grid/images/${Location}.png" class="flag-img" alt="${name}" />
+    </div>
+    <div class="flag-text">${Location}</div>
+</script>
+
+<script id="emailTemplate" type="text/x-template">
+    <td class="email-cell">
+        <a href="mailto:${Email}" class="email-link">${Email}</a>
+    </td>
+</script>
+
+<script id="leaveAvailabilityTemplate" type="text/x-template">
+    <div class="leave-bar-container">
+        <div class="leave-bar">
+            <span class="leave-label">Casual</span>
+            <div class="bar casual"></div>
+        </div>
+        <div class="separator"></div>
+        <div class="leave-bar">
+            <span class="leave-label">Earned</span>
+            <div class="bar earned"></div>
+        </div>
+        <div class="separator"></div>
+        <div class="leave-bar">
+            <span class="leave-label">Sick</span>
+            <div class="bar sick"></div>
+        </div>
+    </div>
+</script>
+
+<div id="action-description">
+    <p>
+        This demo showcases the Syncfusion® Tree Grid. It presents comprehensive employee information customized for
+        various viewer roles: HR, employee, help desk, and project management. The application uses a structured
+        employee dataset with profiles, work modes, leave balances, and other relevant data. </p>
+</div>
+
+<div id="description">
+    <p>
+        This section highlights dynamic column generation and custom templates to present data that is specific and
+        relevant to each viewer role. Features such as <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/treegrid/sorting">
+            Sorting</a>, <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/treegrid/filtering/filtering#filter-hierarchy-modes">
+            Filtering with hierarchical support</a> and <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/treegrid/columns/columns#column-formatting">
+            Column formatting</a>,<a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/treegrid/columns/column-template">
+            Column template </a> and dynamic column rendering are seamlessly integrated. The Tree Grid column template
+        is utilized to render visual elements like progress bars within cells. The Tree Grids flexibility and
+        customization capabilities make it a powerful tool for organizational data representation.
+    </p>
+
+    <p>
+        <br /> More information about Tree Grid instantiation can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/getting-started">
+            documentation section</a>.
+    </p>
+</div>

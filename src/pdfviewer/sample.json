@@ -38,7 +38,7 @@
             }
         },
         {
-            "url":"organize-pages", "name": "Organize Pages" , "description":"This sample demonstrates the page organization features of the PDF Viewer component, allowing users to effortlessly insert, delete, rearrange, copy, undo, redo, and rotate pages.", "category": "Editor", "api": {
+            "url":"organize-pages", "name": "Organize Pages" , "type": "update", "description":"This sample demonstrates the page organization features of the PDF Viewer component, allowing users to effortlessly insert, delete, rearrange, copy, undo, redo, and rotate pages.", "category": "Editor", "api": {
                 "PdfViewer": [
                     "serviceUrl",
                     "documentPath"
@@ -111,7 +111,7 @@
             }
         },
         {
-            "url":"annotations", "name": "Annotations" , "description":"This sample demonstrates the creation of different types of annotations such as Text Markup, Shapes, Measurements, Free text, Stamps, Handwritten signature, ink, and sticky notes in the PDF Viewer. And also we can customize the added annotations or we can include new annotations through user interaction from the PDF Viewer.", "category": "Annotation", "api": {
+            "url":"annotations", "name": "Annotations" , "type": "update", "description":"This sample demonstrates the creation of different types of annotations such as Text Markup, Shapes, Measurements, Free text, Stamps, Handwritten signature, ink, and sticky notes in the PDF Viewer. And also we can customize the added annotations or we can include new annotations through user interaction from the PDF Viewer.", "category": "Annotation", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
@@ -119,7 +119,7 @@
             }
         },
         {
-            "url":"programmatic-operations", "name": "Programmatic Operations","type": "new" , "description":"This sample showcases how to programmatically create or edit various types of annotations in the SfPdfViewer. These annotations include Text Markup, Shapes, Measurements, Free text, Stamps, Ink, and Sticky notes. Additionally, we can programmatically insert new annotations or programmatically update existing ones.", "category": "Annotation", "api": {
+            "url":"programmatic-operations", "name": "Programmatic Operations","type": "update" , "description":"This sample showcases how to programmatically create or edit various types of annotations in the SfPdfViewer. These annotations include Text Markup, Shapes, Measurements, Free text, Stamps, Ink, and Sticky notes. Additionally, we can programmatically insert new annotations or programmatically update existing ones.", "category": "Annotation", "api": {
                 "PdfViewer": [
                     "serviceUrl",
                     "documentPath"

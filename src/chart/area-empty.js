@@ -43,7 +43,7 @@
         //Initializing Chart Title
         title: 'Data Consumption',
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>' },
+        tooltip: { enable: true, format: '${point.x} : <b>${point.y}</b>', enableHighlight: true, showNearestTooltip: true },
         legendSettings: {enableHighlight:true},
         // custom code start
         load: function (args) {

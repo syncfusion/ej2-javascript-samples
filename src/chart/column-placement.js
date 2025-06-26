@@ -71,7 +71,7 @@ this.default = function () {
             selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
             args.chart.theme = (selectedTheme.charAt(0).toUpperCase() +
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
-            if (selectedTheme.indexOf('Dark') !== -1 || selectedTheme.indexOf('HighContrast') !== -1) {
+            if (args.chart.theme.indexOf('Dark') !== -1 || args.chart.theme.indexOf('HighContrast') !== -1) {
                 args.chart.legendSettings.border = { width: 2, color: '#FFFFFF' };
             } else {
                 args.chart.legendSettings.border = { width: 2, color: '#000000' };

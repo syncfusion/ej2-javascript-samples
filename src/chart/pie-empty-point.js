@@ -6,15 +6,13 @@ this.default = function () {
         //Initializing Series
         series: [
             {
-                xName: 'x', yName: 'y',
+                xName: 'x', yName: 'y', radius: '80%', borderRadius: 3, border: { width: 1, color: 'white' },
                 type: 'Pie',
-                dataSource: [{ x: 'Rice', y: 80 }, { x: 'Wheat', y: null }, { x: 'Oil', y: 70 },
-                    { x: 'Corn', y: 60 }, { x: 'Gram', y: null },
-                    { x: 'Milk', y: 70 }, { x: 'Peas', y: 80 },
-                    { x: 'Fruit', y: 60 }, { x: 'Butter', y: null }],
+                dataSource: [{ x: 'Action', y: 35,}, { x: 'Drama', y: 25 }, { x: 'Comedy', y: null },
+                    { x: 'Romance', y: 20 }, { x: 'Horror', y: 10 }, { x: 'Sci-Fi', y: null }],
                 dataLabel: {
                     visible: true, position: 'Inside', enableRotation: true, font: {
-                        fontWeight: '600',          
+                        fontWeight: '600',  size: ej.base.Browser.isDevice ? '8px' : '12px',         
                     }
                 },
                 emptyPointSettings: {
@@ -23,7 +21,7 @@ this.default = function () {
             },
         ],
         //Initializing Title
-        title: 'Annual Product-Wise Profit Analysis',
+        title: 'Movie Genre Revenue Share',
         legendSettings: { visible: false },
         //Initializing Tooltip
         tooltip: {enable: true,header:"", format: '<b>${point.x}</b><br> Profit: <b>$${point.y}K</b>', enableHighlight: true  },

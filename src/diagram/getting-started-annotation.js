@@ -202,6 +202,10 @@ this.default = function () {
         selectionChange: function (arg) {
             // Check if the selection state has changed
             if (arg.state === 'Changed') {
+                var labelConstraintsCheckbox = document.getElementById('labelConstraints');
+                if (labelConstraintsCheckbox.ej2_instances) {
+                    labelConstraintsCheckbox = labelConstraintsCheckbox.ej2_instances[0];
+                }
                 // Remove the 'e-selected-style' class from the previously selected element
                 var selectedElement = document.getElementsByClassName('e-selected-style');
                 if (selectedElement.length) {
@@ -210,26 +214,40 @@ this.default = function () {
                 // Check if a new node is selected
                 if (arg.newValue[0]) {
                     var node = arg.newValue[0];
-                    var offset = node.annotations[0].offset;
-                    // Update the annotation position based on the offset values
-                    if (offset.x === 0 && offset.y === 0) {
-                        updateAnnotationPosition('left');
+                    if (node.annotations && node.annotations.length > 0) {
+                        var annotation = node.annotations[0];
+                        var offset = node.annotations[0].offset;
+                        // Update the annotation position based on the offset values
+                        if (offset.x === 0 && offset.y === 0) {
+                            updateAnnotationPosition('left');
+                        }
+                        else if (offset.x === 1 && offset.y === 0) {
+                            updateAnnotationPosition('right');
+                        }
+                        else if (offset.x === 0 && offset.y === 1) {
+                            updateAnnotationPosition('bottomLeft');
+                        }
+                        else if (offset.x === 1 && offset.y === 1) {
+                            updateAnnotationPosition('bottomRight');
+                        }
+                        else if (offset.x === 0.5 && offset.y === 0.5) {
+                            updateAnnotationPosition('center');
+                        }
+                        else if (offset.x === 0.5 && offset.y === 1) {
+                            updateAnnotationPosition('bottomCenter');
+                        }
+                        // Label interaction checkbox sync
+                        var hasInteraction = (annotation.constraints & ej.diagrams.AnnotationConstraints.Interaction) === ej.diagrams.AnnotationConstraints.Interaction;
+                        labelConstraintsCheckbox.disabled = false;
+                        labelConstraintsCheckbox.checked = hasInteraction;
+                    } else {
+                        labelConstraintsCheckbox.disabled = true;
+                        labelConstraintsCheckbox.checked = false;
                     }
-                    else if (offset.x === 1 && offset.y === 0) {
-                        updateAnnotationPosition('right');
-                    }
-                    else if (offset.x === 0 && offset.y === 1) {
-                        updateAnnotationPosition('bottomLeft');
-                    }
-                    else if (offset.x === 1 && offset.y === 1) {
-                        updateAnnotationPosition('bottomRight');
-                    }
-                    else if (offset.x === 0.5 && offset.y === 0.5) {
-                        updateAnnotationPosition('center');
-                    }
-                    else if (offset.x === 0.5 && offset.y === 1) {
-                        updateAnnotationPosition('bottomCenter');
-                    }
+                } else {
+                    // No node selected - disable checkbox
+                    labelConstraintsCheckbox.disabled = true;
+                    labelConstraintsCheckbox.checked = false;
                 }
                 // Enable or disable the property panel based on the selection
                 enablePropertyPanel(arg);

@@ -1,8 +1,8 @@
 {
         "name": "Data Grid",
         "directory": "grid",
-        "category": "Grids",
         "type": "update",
+        "category": "Grids",
         "ftName" :"datagrid",
         "dataSourcePath": "src/grid/data-source.js",
         "samples": [
@@ -12,16 +12,17 @@
             { "url": "adaptive-layout","name": "Adaptive Layout", "category": "Data Grid","description":"This demo for Essential JS 2 grid component shows the Grid row in vertical direction","api": { "Grid": ["columns", "dataSource","allowSorting","allowFiltering","editSettings","toolbar","allowPaging","rowRenderingMode","enableAdaptiveUI"]}},
             { "url": "loading-animation","name": "Loading Animation", "category": "Data Grid","description":"This demo for Essential JS 2 grid component shows the loading indicator when grid loading and refreshing.","api": { "Grid": ["columns", "dataSource","allowSorting","allowPaging", "allowFiltering", "loadingIndicator", "pageSettings"]}},
             { "url": "empty-record-template","name": "Empty Record Template", "category": "Data Grid","description":"This demo for Essential JS 2 grid component demonstrates usage of template in Grid to shown element or text or image or gif icon instead of displaying the empty record message.","api": { "Grid": ["columns", "dataSource", "editSettings", "toolbar", "allowPaging", "pageSettings"]}},
+            { "url": "chart", "name": "Integrate Chart in Grid", "type": "new", "category": "Data Grid", "hideOnDevice": true, "description":"This demo of the Essential JS 2 Grid component showcases the visual representation of data using a chart.","api": { "Grid": ["contextMenuItems", "columns", "dataSource", "allowSelection", "selectionSettings", "contextMenuClick", "enablePropertyPanel", "allowExport", "enableRtl", "locale"]}},
 
             { "url": "fifa-statistics", "name": "FIFA Statistics", "category": "Product Use Case", "description": "This demo for Essential JS 2 grid component shows comprehensive FIFA World Cup records and statistics, covers the history of the tournament from 1930 to 2022.", "api": { "Grid": ["dataSource","allowSorting","gridLines","enableStickyHeader", "columns", "textWrap", "textWrapSettings", "enableAltRow", "enableHover", "allowSelection"]}},
 
             { "url":"local-data", "name": "Local Data", "category": "Data Binding","description":"This demo for Essential JS 2 grid control demonstrates the way for binding a grid with a local data source.","api":{"Grid":["dataSource","allowPaging","columns","pageSettings"] }},
-            { "url":"remote-data", "name": "Remote Data", "type":"update", "category": "Data Binding","description":"This demo for Essential JS 2 grid control shows the way of data binding grid with remote service. Grid data source is bound to remote data using DataManager.","api":{"Grid":["dataSource","allowPaging","columns","pageSettings"] }},
+            { "url":"remote-data", "name": "Remote Data", "category": "Data Binding","description":"This demo for Essential JS 2 grid control shows the way of data binding grid with remote service. Grid data source is bound to remote data using DataManager.","api":{"Grid":["dataSource","allowPaging","columns","pageSettings"] }},
             { "url":"flexible-data", "name": "Flexible Data", "category": "Data Binding","description":"This demo for Essential JS 2 grid control shows the way of flexible data binding in grid from various remote services.","api":{"Grid":["dataSource","DataManager","changeDataSource"] }},
             
             { "url":"column-template", "name": "Column Template",  "category":"Columns", "description":"This demo for Essential JS 2 grid control demonstrates usage of template columns in Grid to shown custom images in the Employee Image column.", "api":{"Grid":["dataSource","width","height","columns"] }},
             { "url":"header-template", "name": "Header Template", "category":"Columns", "description":"This demo for Essential JS 2 grid control shows the Grid header template feature, we have shown custom icons in the column headers.", "api":{"Grid":["dataSource","columns"] }},
-            { "url":"stacked-header", "name": "Stacked Header", "type":"update", "category":"Columns","description":"This demo for Essential JS 2 grid control shows the usage of the sorting API in grid. Use the properties panel to sort/unsort columns using API.", "api":{"Grid":["dataSource","allowPaging","pageSettings","columns"] }},
+            { "url":"stacked-header", "name": "Stacked Header", "category":"Columns","description":"This demo for Essential JS 2 grid control shows the usage of the sorting API in grid. Use the properties panel to sort/unsort columns using API.", "api":{"Grid":["dataSource","allowPaging","pageSettings","columns"] }},
             { "url":"foreign-key", "name": "Foreign Key Column", "category":"Columns",  "description":"This demo for Essential JS 2 grid control shows the usage of a foreign key column and perform actions like filtering, sorting and editing.", "api":{"Grid":["dataSource","allowSorting","allowPaging", "columns", "allowFiltering", "filterSettings", "editSettings"]}},
             { "url":"reorder", "name": "Reorder", "category": "Columns","description":"This demo for Essential JS 2 grid control shows the reordering columns feature. Select column name and index from properties panel to reorder the columns.", "api":{"Grid":["dataSource","allowReordering","actionComplete","columns"] }},
             { "url":"column-resize", "name": "AutoFit and Resizing", "category":"Columns","description":"This demo for Essential JS 2 grid control shows column rendering with fixed width and resizing feature.", "api":{"Grid":["dataSource","allowResizing","height","columns","autoFit"] }},
@@ -50,7 +51,7 @@
 
             { "url":"filter", "name": "Default Filtering", "category":"Filtering","description":"This demo for Essential JS 2 grid control shows how to place a filter bar row in the header to filter grid rows.", "api":{"Grid":["allowFiltering","dataSource","allowPaging","pageSettings","columns"] }},
             { "url":"filter-bar-template", "name": "Filter Bar Template", "description":"This demo for Essential JS 2 grid control shows how to filter a data using custom component in filter bar .", "category":"Filtering","api":{"Grid":["allowFiltering","dataSource","allowPaging","pageSettings","columns", "filterBarTemplate"] }},
-            { "url":"filter-menu", "name": "Filter Menu", "type":"update", "category":"Filtering", "description":"This demo for Essential JS 2 grid control demonstrates a way of filtering rows using a menu, check box, and Excel filter UI.", "api":{"Grid":["allowFiltering","allowSorting","filterSettings","dataSource","allowPaging","pageSettings","columns"] }},
+            { "url":"filter-menu", "name": "Filter Menu", "category":"Filtering", "description":"This demo for Essential JS 2 grid control demonstrates a way of filtering rows using a menu, check box, and Excel filter UI.", "api":{"Grid":["allowFiltering","allowSorting","filterSettings","dataSource","allowPaging","pageSettings","columns"] }},
             { "url":"search", "name": "Search", "category":"Filtering","description":"This demo for Essential JS 2 grid control shows the content searching feature. Use the search box from toolbar to search for records in grid.", "api":{"Grid":["dataSource","allowPaging","pageSettings","columns","toolbar"] }},
 
             { "url":"pager-dropdown", "name": "Pager Dropdown", "category": "Paging","description":"This demo for Essential JS 2 grid control shows how you can display the contents of the grid in page segments using the paging feature.", "api":{"Grid":["dataSource","allowPaging","pageSettings","columns"] }},

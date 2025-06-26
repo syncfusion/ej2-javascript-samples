@@ -2,7 +2,7 @@ this.default = function () {
     ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.BookmarkView, ej.pdfviewer.ThumbnailView, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Annotation, ej.pdfviewer.FormFields, ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer);
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer ({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf",
+    documentPath: "https://cdn.syncfusion.com/content/pdf/annotations-v2.pdf",
     resourceUrl:'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib'  
     });
   
@@ -21,18 +21,22 @@ this.default = function () {
     };
 
     viewer.documentLoad = function (args) {
-        if(args.documentName === 'annotations-v1.pdf')
+        if(args.documentName === 'annotations-v2.pdf')
         {
             viewer.annotation.addAnnotation("Highlight", {
-                bounds: [{x: 97, y: 610, width: 350, height: 14}], 
+                bounds: [{x: 97, y: 610, width: 340, height: 14 }],
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Underline", {
-                bounds: [{x: 97, y: 723, width: 353.5, height: 14}],
+                bounds: [{x: 97, y: 705, width: 346, height: 14 }],
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Strikethrough", {
-                bounds: [{x: 97, y: 836, width: 376.5, height: 14}],
+                bounds: [{x: 97, y: 800, width: 367, height: 14 }],
+                pageNumber: 1
+            });
+            viewer.annotation.addAnnotation("Squiggly", {
+                bounds: [{x: 97, y: 895.5, width: 336, height: 14 }],
                 pageNumber: 1
             });
             viewer.annotation.addAnnotation("Line", {

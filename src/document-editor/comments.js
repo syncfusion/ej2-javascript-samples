@@ -28,11 +28,11 @@ this.default = function () {
         { "Name": "Andrew Fuller", "Eimg": "3", "EmailId": "andrew@mycompany.com"}
     ];
     var container = new ej.documenteditor.DocumentEditorContainer({serviceUrl:hostUrl,
-        enableToolbar: true, showPropertiesPane: false,
+        enableToolbar: true, toolbarMode: 'Ribbon', showPropertiesPane: false,
         height: '590px',
         userColor: '#b70f34', commentDelete: commentDelete,documentEditorSettings: { showRuler: true, mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }
     });
-    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
     container.appendTo('#container');
     container.documentEditor.currentUser = 'Nancy Davolio';
 
@@ -54,7 +54,19 @@ this.default = function () {
     container.documentEditor.documentName = 'Comments';    
     container.documentEditor.showComments = true;
     // TitleBar sample starts
-    titleBarDiv = document.getElementById('documenteditor_titlebar');
+    var switchObj = new ejs.buttons.Switch({ checked: true, cssClass: 'buttonSwitch' });
+    switchObj.appendTo('#toolbarSwitch');
+
+    switchObj.change = function (args) {
+        if (args.checked) {
+            container.toolbarMode = 'Ribbon';
+        }
+        else {
+            container.toolbarMode = 'Toolbar';
+        }
+        showButtons(container.toolbarMode !== 'Ribbon');
+    };
+titleBarDiv = document.getElementById('documenteditor_titlebar');
     initializeTitleBar(true); 
     updateDocumentTitle();
     wireEventsInTitleBar();
@@ -79,7 +91,7 @@ this.default = function () {
          print = addButton('e-de-icon-Print e-de-padding-right', 'Print', btnStyles, 'de-print', 'Print this document (Ctrl+P).', false);
          openBtn = addButton('e-de-icon-Open e-de-padding-right', 'open', btnStyles, 'de-open', 'Open', false);
          var items = [
-            { text: 'Syncfusion® Document Text (*.sfdt)', id: 'sfdt' },
+            { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
             { text: 'Word Document (*.docx)', id: 'word' },
             { text: 'Word Template (*.dotx)', id: 'dotx'},
             { text: 'Plain Text (*.txt)', id: 'txt'},
@@ -174,4 +186,16 @@ this.default = function () {
              return ejButton;
          }
      } 
+       function showButtons(show) {
+        var displayStyle = show ? 'block' : 'none';
+
+        if (print) {
+            print.element.style.display = displayStyle;
+        }
+        if (download) {
+            download.element.style.display = displayStyle;
+        }
+    }
+
+    showButtons(false);
 };

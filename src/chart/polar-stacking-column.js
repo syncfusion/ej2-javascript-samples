@@ -70,7 +70,7 @@ this.default = function () {
         },
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true, enableHighlight: true
         },
            // custom code start
         load: function (args) {

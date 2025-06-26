@@ -41,7 +41,7 @@ this.default = function () {
         //Initializing Chart Title
         title: 'Sales Vs Profit Margins',
         //Initializing Tooltip
-        tooltip: { enable: true },
+        tooltip: { enable: true, enableHighlight: true },
         legendSettings: { visible: false },
         width: ej.base.Browser.isDevice ? '100%' : '75%',
            // custom code start

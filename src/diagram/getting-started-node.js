@@ -20,7 +20,7 @@ function updateLock(args) {
             node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Delete | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
             node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
         } else {
-            node.constraints |= ej.diagrams.NodeConstraints.Default & ~(ej.diagrams.NodeConstraints.ReadOnly);
+            node.constraints = ej.diagrams.NodeConstraints.Default;
         }
     }
     //If the lock checkbox is checked then the Connector constraints such as DragSourceEnd,DragTargetEnd,Delete,Drag will be disabled
@@ -30,7 +30,7 @@ function updateLock(args) {
             connector.constraints &= ~(ej.diagrams.ConnectorConstraints.DragSourceEnd | ej.diagrams.ConnectorConstraints.DragTargetEnd | ej.diagrams.ConnectorConstraints.Drag | ej.diagrams.ConnectorConstraints.Delete);
             connector.constraints |= ej.diagrams.ConnectorConstraints.ReadOnly;
         } else {
-            connector.constraints |= ej.diagrams.ConnectorConstraints.Default & ~(ej.diagrams.ConnectorConstraints.ReadOnly);
+            connector.constraints = ej.diagrams.ConnectorConstraints.Default ;
         }
     }
 
@@ -81,12 +81,12 @@ function applyStyleForNodes(node, width, array, con, type) {
     diagram.dataBind();
 }
     var nodes = [
-        { id: 'sdlc', offsetX: 300, offsetY: 288, annotations: [{ content: 'SDLC' }] },
-        { id: 'support', offsetX: 150, offsetY: 250, annotations: [{ content: 'Support' }] },
-        { id: 'analysis', offsetX: 300, offsetY: 150, annotations: [{ content: 'Analysis' }] },
-        { id: 'design', offsetX: 450, offsetY: 250, annotations: [{ content: 'Design' }] },
-        { id: 'implement', offsetX: 400, offsetY: 400, annotations: [{ content: 'implement' }] },
-        { id: 'deploy', offsetX: 200, offsetY: 400, annotations: [{ content: 'Deploy' }] }
+        { id: 'sdlc', offsetX: 300, offsetY: 288, width: 100, height: 100, annotations: [{ content: 'SDLC' }] },
+        { id: 'support', offsetX: 150, offsetY: 250, width: 100, height: 100, annotations: [{ content: 'Support' }] },
+        { id: 'analysis', offsetX: 300, offsetY: 150, width: 100, height: 100, annotations: [{ content: 'Analysis' }] },
+        { id: 'design', offsetX: 450, offsetY: 250, width: 100, height: 100, annotations: [{ content: 'Design' }] },
+        { id: 'implement', offsetX: 400, offsetY: 400, width: 100, height: 100, annotations: [{ content: 'implement' }] },
+        { id: 'deploy', offsetX: 200, offsetY: 400, width: 100, height: 100, annotations: [{ content: 'Deploy' }] }
     ];
     var connections = [
         { id: 'connector1', sourceID: 'analysis', targetID: 'design' },
@@ -100,8 +100,6 @@ function applyStyleForNodes(node, width, array, con, type) {
         width: '100%', height: '645px', nodes: nodes, connectors: connections,
         //Sets the default values of a nodes
         getNodeDefaults: function (obj) {
-            obj.width = 100;
-            obj.height = 100;
             obj.shape = { shape: 'Ellipse' };
             obj.style = { fill: '#37909A', strokeColor: '#024249' };
             obj.annotations[0].margin = { left: 10, right: 10 };

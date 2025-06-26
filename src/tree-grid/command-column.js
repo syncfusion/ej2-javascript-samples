@@ -16,7 +16,7 @@ this.default = function () {
                 field: 'taskID', headerText: 'Task ID', isPrimaryKey: true, textAlign: 'Right',
                 validationRules: { required: true, number: true }, width: 80
             },
-            { field: 'taskName', headerText: 'Task Name', editType: 'stringedit', width: 200, validationRules: { required: true } },
+            { field: 'taskName', headerText: 'Task Name', editType: 'stringedit', width: 230,clipMode: 'EllipsisWithTooltip', validationRules: { required: true } },
             {
                 field: 'startDate', headerText: 'Start Date', textAlign: 'Right', width: 140,
                 editType: 'datepickeredit', format: 'yMd', edit: { params: { format:'M/d/yyyy',}}, validationRules: { date: ['M/d/yyyy', 'Please enter a valid date'] }

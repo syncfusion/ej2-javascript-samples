@@ -1,6 +1,7 @@
 {
     "name": "Word Processor",
     "directory": "document-editor",
+    "type": "update",
     "category": "File Viewers & Editors",
     "hideOnDevice": true,
     "ftName":"document-editor",
@@ -8,6 +9,7 @@
         {
             "url": "default",
             "name": "Default Functionalities",
+             "type" : "update",
             "category": "Document Editor",
             "description":"The Document Editor component is used to create, edit, view, and print Word documents in web applications.",
             "api": {
@@ -354,7 +356,7 @@
             "url": "mail-merge",
             "name": "Mail Merge",
             "category": "Mail Merge",
-            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion® DocIO.",
+            "description": "The Document Editor component provides support to mail merge document with the help of Syncfusion DocIO.",
             "api": {
                 "DocumentEditor": [
                     "isReadOnly",
@@ -453,6 +455,12 @@
                 ]
             }
 
+        }, {
+            "url": "ribbon-customization",
+            "type" : "new",
+            "name": "Ribbon Customization",
+            "category": "Customization",
+            "description": "The Document editor allows to customize the built-in ribbon for better editing experience,"
         },
         {
             "url": "custom-context-menu",
@@ -873,8 +881,9 @@
         {
             "url": "autoshapes",
             "name": "Auto Shapes",
+            "type" : "update",
             "category": "Shapes",
-            "description":"This sample shows Auto shapes preservation in Document Editor.",
+            "description":"The Document Editor supports the preservation of auto shapes and group shapes.",
             "api": {
                 "Editor": [
                     "insertShape"

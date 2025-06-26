@@ -6,7 +6,7 @@ var getData = function () {
     var series = [];
     var point;
     for (var i = 0; i < 30; i++) {
-        value = 180 + Math.round((Math.random() * 25) * Math.sin(i * Math.PI / 8));
+        value = 180 + (Math.random() * 25) * Math.sin(i * Math.PI / 8);
         value = Math.max(140, Math.min(260, value));
         if (value > 260) {
             value = 260;
@@ -14,6 +14,7 @@ var getData = function () {
         if (value < 140) {
             value = 140;
         }
+        value += Math.random() * 0.1;
         var open = value + Math.round(Math.random() * 18);
         var low = Math.min(value, open) - Math.round(Math.random() * 6);
         var high = Math.min(220, Math.max(value, open) + Math.round(Math.random() * 15));
@@ -52,40 +53,15 @@ this.default = function () {
         series: [
             {
                 type: 'Candle', bearFillColor: '#2ecd71', bullFillColor: '#e74c3d', columnWidth: 0.4,
-                dataSource: data, xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close'
+                dataSource: data, xName: 'x', low: 'low', high: 'high', open: 'open', close: 'close', lastValueLabel: { enable: true, background: 'red', dashArray: '3,2', lineWidth: 0.5, font: {size: '10px'} }
             }
         ],
         width: ej.base.Browser.isDevice ? '100%' : '90%',
         title: 'AAPL Historical',
         crosshair: { enable: true, dashArray: '5,5' },
         pointRender: function (args) {
-            if (args.series.chart.enableRtl) {
-                args.series.chart.annotations[0].x = 0;
-            }
-            if (pointAdded && args.series.points[args.series.points.length - 1] === args.point) {
-                var firstPoint = args.series.chart.enableRtl ? args.series.points[args.series.points.length - 1].x : args.series.points[0].x;
-                args.series.chart.annotations[0].x = new Date(firstPoint).getTime() + (args.series.chart.enableRtl ? 2000 : 1000);
-                args.series.chart.annotations[0].y = args.point.close + 0.25;
-                args.series.chart.annotations[0].content = '<div style="width: ' + args.series.chart.initialClipRect.width + 'px; height: 0; left: ' + 
-                (ej.base.Browser.isDevice ? -10 : -16) + 'px; position: absolute;">' +
-                '<svg width="100%" height="2" style="display: block;">' +
-                '<line x1="0" y1="1" x2="' + args.series.chart.initialClipRect.width + '" y2="1" ' +
-                'style="stroke:#868180; stroke-width:0.75; stroke-dasharray:5,5;" />' +
-                '</svg>' +
-                '</div>' +
-                '<div style="width: 40px; height: 18px; background-color: ' + args.fill + '; border: 1px solid rgba(48, 153, 245, 0.4); color: white; font-size: 11px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 18px; position: absolute; left: ' + 
-                (args.series.chart.enableRtl ? -args.series.chart.initialClipRect : args.series.chart.initialClipRect.width - 20) + 'px; top: -9px;">' + 
-                (args.point.close).toFixed(2) +
-                '</div>';
-            }
+            args.series.lastValueLabel.background = args.fill;
         },
-        annotations: [{
-            x: new Date(2000, 5, 2, 2, 0, 1),
-            region: "Series",
-            coordinateUnits: 'Point',
-            y: 140,
-            content: '<div></div>'
-        }],
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';
@@ -118,7 +94,7 @@ this.default = function () {
                         }
                     }
                     else {
-                        var change = Math.round((Math.random() < 0.49 ? 1 : -1) * Math.random() * 10);
+                        var change = (Math.random() < 0.49 ? 1 : -1) * Math.random() * 10;
                         value += change;
                         if (value > 260) {
                             value = 260;
@@ -126,6 +102,7 @@ this.default = function () {
                         if (value < 140) {
                             value = 140;
                         }
+                        value += Math.random() * 0.1;
                         var open = value + Math.round(Math.random() * 12);
                         var low = Math.min(value, open) - Math.round(Math.random() * 8);
                         var high = Math.max(value, open) + Math.round(Math.random() * 15);

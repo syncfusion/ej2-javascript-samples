@@ -79,7 +79,7 @@ this.default = function () {
             }
         }, // custom code end
         //Initializing Chart Title
-        title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>' },
+        title: 'England vs West Indies', tooltip: { enable: true, format: '${point.x}th Over : <b>${point.y} Runs</b>', enableHighlight: true },
         legendSettings: { enableHighlight: true }
     });
     chart.appendTo('#numeric-container');

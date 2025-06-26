@@ -9,13 +9,14 @@ this.default = function () {
     { Name: "JPG", Value: ".jpg" },
     { Name: "PNG", Value: ".png" },
     { Name: "SVG", Value: ".svg" },
-    { Name: "WebP", Value: ".webp" }
+    { Name: "WebP", Value: ".webp" },
+    { Name: "BMP", Value: ".bmp" }
   ];
 
   // Initial values
   var minFileSize = 1; // 1 KB
   var maxFileSize = 100; // 100 KB
-  var allowedExtensions = ".jpeg, .jpg, .png, .svg, .webp";
+  var allowedExtensions = ".jpeg, .jpg, .png, .svg, .webp, .bmp";
   var units = [{ text: 'KB' }, { text: 'MB' }];
   var defaultUnit = 'KB';
 
@@ -53,7 +54,7 @@ this.default = function () {
     value: allowedExtensions.split(', '),
     change: function (args) {
       if (args.value.length === 0) {
-        allowedExtensions = ".jpeg, .jpg, .png, .svg, .webp";
+        allowedExtensions = ".jpeg, .jpg, .png, .svg, .webp, .bmp";
       } else {
         allowedExtensions = args.value.join(', ');
       }

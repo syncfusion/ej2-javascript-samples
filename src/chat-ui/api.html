@@ -63,6 +63,16 @@
                 </td>
             </tr>
             <tr>
+                <td >
+                    <div>Compact mode</div>
+                </td>
+                <td style="padding-right: 10px">
+                    <div style="padding-left: 0;padding-top: 0">
+                        <input id="compactmode" type="checkbox" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <div>Typing users</div>
                 </td>
@@ -72,6 +82,7 @@
                             <option value="Michale">Michale</option>
                             <option value="Laura">Laura</option>
                             <option value="Charlie">Charlie</option>
+                            <option value="Jordan">Jordan</option>
                         </select>
                     </div>
                 </td>
@@ -120,7 +131,10 @@
         <li><code>showTimeBreak</code>: Enables or disables the display of time breaks in the chat interface.</li>
         <li><code>showHeader</code>: Lets users toggle the visibility of the chat header.</li>
         <li><code>showFooter</code>: Toggles the visibility of the chat footer.</li>
+        <li><code>enableCompactMode</code>: Reduces spacing and left-aligns all messages to display more content within the visible chat area. </li>
         <li><code>typingUsers</code>: Allows users to manage the list of users who are typing, updated through the multi-select options in the property pane.</li>
+        <li><code>statusIconCss</code>: Defines a CSS class for the status bar icon, with built-in styles for Online, Offline, Away, and Busy statuses, while allowing further customization.</li>
+        <li><code>messageToolbarSettings</code>: Configures the toolbar that appears on individual messages, allowing customization such as copy, forward, reply, pin and delete. Supports adding, removing, or reordering toolbar items based on application needs.</li>
     </ul>
     <p>
         These properties can be adjusted via the property pane for a highly flexible and customizable chat experience.

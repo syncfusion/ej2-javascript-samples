@@ -51,7 +51,7 @@ this.default = function () {
         //Initializing Tooltip
         tooltip: {
             enable: true, header: '',
-            format: '<b>${point.text}</b> <br> ${series.name} : <b>${point.y}</b>'
+            format: '<b>${point.text}</b> <br> ${series.name} : <b>${point.y}</b>', enableHighlight: true
         }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {

@@ -18,47 +18,54 @@
         },
         annotations: [
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 8px;">8-TRACK</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">8-TRACK</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 7px;">8-TRACK</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">8-TRACK</div>',
                 region: 'Series',
-                x: '8%',
-                y: '95%'
+                coordinateUnits: 'Point',
+                x: new Date(1976, 1, 1),
+                y: 1.5
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 8px;">VINYL</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">VINYL</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;">VINYL</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">VINYL</div>',
                 region: 'Series',
-                x: '12%',
-                y: '80%'
+                coordinateUnits: 'Point',
+                x: new Date(1977, 1, 1),
+                y: 5
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 8px;">CASSETTE</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">CASSETTE</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;">CASSETTE</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">CASSETTE</div>',
                 region: 'Series',
-                x: '35%',
-                y: '87%'
+                coordinateUnits: 'Point',
+                x: new Date(1990, 1, 1),
+                y: 3
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 8px;">COMPACT DISC</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">COMPACT DISC</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;">COMPACT DISC</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">COMPACT DISC</div>',
                 region: 'Series',
-                x: '63%',
-                y: '70%'
+                coordinateUnits: 'Point',
+                x: new Date(2001, 1, 1),
+                y: 10
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 8px;">OTHERS</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">OTHERS</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;">OTHERS</div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">OTHERS</div>',
                 region: 'Series',
-                x: '75%',
-                y: '98%'
+                coordinateUnits: 'Point',
+                x: new Date(2006, 1, 1),
+                y: 0.50
             },
             {
-                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 6px;">DOWNLOAD</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">DOWNLOAD</div>',
+                content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white; font-size: 7px;">DOWNLOAD</div>' : '<div style="font-weight: bold; color: white; font-size: 11px;">DOWNLOAD</div>',
                 region: 'Series',
-                x: '85%',
-                y: '92%'
+                coordinateUnits: 'Point',
+                x: new Date(2011, 6, 1),
+                y: 1.8
             },
             {
                 content: ej.base.Browser.isDevice ? '<div style="font-weight: bold; color: white;font-size: 7px;"></div>' : '<div style="font-weight: bold; color: white;font-size: 11px;">STREAMING</div>',
                 region: 'Series',
-                x: '93%',
-                y: '96%'
-            },
+                coordinateUnits: 'Point',
+                x: new Date(2015, 1, 1),
+                y: ej.base.Browser.isDevice ? 1.3 : 1.2
+            }
         ],
         //Initializing Chart Series
         series: [

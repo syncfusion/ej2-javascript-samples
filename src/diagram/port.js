@@ -290,6 +290,7 @@ this.default = function () {
         format: '###.##',
         value: 6,
         min: 1,
+        max: 30,
         step: 1,
         change: function (args) {
             applyPortStyle('size');
@@ -301,7 +302,8 @@ this.default = function () {
         enabled: true,
         format: '###.##',
         value: 1,
-        min: 0.5,
+        min: 1,
+        max: 15,
         step: 0.5,
         change: function (args) {
             applyPortStyle('strokewidth');

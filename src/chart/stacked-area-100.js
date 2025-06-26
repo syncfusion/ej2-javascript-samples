@@ -59,7 +59,7 @@ this.default = function () {
             }
         ],
         width: ej.base.Browser.isDevice ? '100%' : '75%',
-        legendSettings: {enableHighlight:true}, tooltip:{enable:true},
+        legendSettings: {enableHighlight:true}, tooltip:{enable:true, enableHighlight: true, showNearestTooltip: true},
            // custom code start
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];

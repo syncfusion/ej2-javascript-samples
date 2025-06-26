@@ -142,9 +142,9 @@ this.default = function () {
             };
             viewer.contextMenuOption = 'RightClick';
         }
+        dialogObj.show();
         viewer.dataBind();
         viewer.load(args.rowData.Document,null);
-        dialogObj.show();
     };
     var grid = new ej.grids.Grid({
         dataSource: data,

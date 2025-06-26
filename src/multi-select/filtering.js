@@ -10,6 +10,7 @@ this.default = function () {
         fields: { text: 'Name', value: 'Code' },
         // set true for enable the filtering support.
         allowFiltering: true,
+        debounceDelay :'300',
         // bind the filtering event
         filtering: function (e) {
             var multiselect_query = new ej.data.Query();
@@ -20,5 +21,15 @@ this.default = function () {
         }
     });
     listObj.appendTo('#list');
+
+    var numeric = new ej.inputs.NumericTextBox({
+        value: 300,
+        min: 1,
+        format:'n0',
+        change: function (args) {
+            listObj.debounceDelay = args.value;
+        }
+    });
+    numeric.appendTo('#numeric');
 
 };

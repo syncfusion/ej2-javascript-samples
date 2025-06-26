@@ -56,7 +56,7 @@ this.default = function () {
         title: 'Microphone Types Polar Patterns',
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true, enableHighlight: true
         }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {

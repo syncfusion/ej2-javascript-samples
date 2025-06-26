@@ -36,6 +36,7 @@ var renderChartSto =function () {
             enable: true,
             format: 'Temperature : <b>${point.low} - ${point.high}</b>',
             shared: false,
+            showNearestTooltip: true,
             header: '<b>${point.x}</b>'
         },
         title: "Temperature Variation by Month",

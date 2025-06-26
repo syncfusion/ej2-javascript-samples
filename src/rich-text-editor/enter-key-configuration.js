@@ -30,7 +30,7 @@ this.default = function () {
         }
         mirrorView.style.display = 'block';
         if (defaultRTE.value !== null) {
-            myCodeMirror = CodeMirror(mirrorView, {
+            var myCodeMirror = CodeMirror(mirrorView, {
                 value: defaultRTE.value,
                 mode: 'text/html',
                 lineWrapping: true,

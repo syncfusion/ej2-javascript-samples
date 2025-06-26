@@ -1,25 +1,35 @@
 var communityMessageAdmin = {
-    user: 'Alice',
-    id: 'admin'
+    user: 'Alice Brown',
+    id: 'admin',
+    statusIconCss: 'e-icons e-user-busy'
 };
 
 var communityMessageUser1 = {
     user: 'Michale Suyama',
     id: 'user1',
-    avatarBgColor: "#87cefa"
+    avatarBgColor: "#87cefa",
+    statusIconCss: 'e-icons e-user-online'
 };
 
 var communityMessageUser2 = {
     user: 'Charlie',
     id: 'user2',
     avatarUrl: "./src/chat-ui/images/charlie.png",
+    statusIconCss: 'e-icons e-user-away'
 };
 
 var communityMessageUser3 = {
     user: 'Janet',
     id: 'user3',
     avatarBgColor: "#dec287",
-    avatarUrl: './src/chat-ui/images/janet.png'
+    avatarUrl: './src/chat-ui/images/janet.png',
+    statusIconCss: 'e-icons e-user-offline'
+};
+
+var communityMessageUser4 = {
+    user: 'Jordan Peele',
+    id: 'user4',
+    statusIconCss: 'e-icons e-user-busy'
 };
 
 var chatMessageUser1 = {
@@ -102,6 +112,11 @@ window.communityMessagedata = [
         author: communityMessageUser2,
         text: 'Hey! I loved Dana’s use of color. Frank’s typography guide was great too.',
         timeStamp: new Date("October 25, 2024 11:00")
+    },
+    {
+        author: communityMessageUser4,
+        text: 'Dana’s work is so inspiring!',
+        timeStamp: new Date("October 25, 2024 11:30")
     },
     {
         author: communityMessageAdmin,

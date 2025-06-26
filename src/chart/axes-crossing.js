@@ -63,7 +63,7 @@ this.default = function () {
 				
         },
          // custom code end
-        tooltip: { enable: true },
+        tooltip: { enable: true, enableHighlight: true },
         legendSettings: { enableHighlight: true },
         title: 'Spline Interpolation',
     });

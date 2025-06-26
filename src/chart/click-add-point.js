@@ -26,7 +26,7 @@ this.default = function () {
         ],
         width: ej.base.Browser.isDevice ? '100%' : '70%',
         title: 'User supplied data',
-        tooltip: { enable: true },
+        tooltip: { enable: true, enableHighlight: true },
         load: function (args) {
             var selectedTheme = location.hash.split('/')[1];
             selectedTheme = selectedTheme ? selectedTheme : 'Fluent2';

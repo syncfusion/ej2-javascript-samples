@@ -1,0 +1,61 @@
+{
+    "name": "Block Editor",
+    "directory": "block-editor",
+    "category": "File Viewers & Editors",
+    "ftName": "BlockEditor",
+    "type": "preview",
+    "dataSourcePath": "src/block-editor/blockData.js",
+    "samples": [
+        {
+            "url": "overview",
+            "name": "Overview",
+            "category": "Block Editor",
+            "api":{ "BlockEditor": ["blocks"] },
+            "description": "This demo describes basic and advanced features of the Block Editor control with all its tools and functionalities.",
+            "sourceFiles": [
+                { "displayName": "overview.js", "path":"src/block-editor/overview.js" },
+                { "displayName": "overview.html", "path":"src/block-editor/overview.html" },
+                { "displayName": "blockData.js", "path":"src/block-editor/blockData.js" }
+            ]
+        },
+        {
+            "url": "api",
+            "name": "API",
+            "category": "Block Editor",
+            "api":{ "BlockEditor": ["blocks", "readOnly", "enableDragDrop", "enableHtmlEncode", "getJsonData", "getBlockCount", "selectAllBlocks", "focusIn", "focusOut"] },
+            "description": "This demo covers important APIs of the JS Block Editor such as HTML encoding, read-only, Drag and Drop, and more.",
+            "sourceFiles": [
+                { "displayName": "api.js", "path":"src/block-editor/api.js" },
+                { "displayName": "api.html", "path":"src/block-editor/api.html" },
+                { "displayName": "blockData.js", "path":"src/block-editor/blockData.js" }
+            ]
+        },
+                {
+            "url": "events",
+            "name": "Events",
+            "category": "Block Editor",
+            "api":{
+                "BlockEditor": [
+                    "blocks",
+                    "created",
+                    "contentChanged",
+                    "selectionChanged",
+                    "blockAdded",
+                    "blockRemoved",
+                    "blockMoved",
+                    "blockDrag",
+                    "blockDragStart",
+                    "blockDrop",
+                    "focus",
+                    "blur"
+                ]
+            },
+            "description": "This demo covers events of Block Editor control.",
+            "sourceFiles": [
+                { "displayName": "events.js", "path":"src/block-editor/events.js" },
+                { "displayName": "events.html", "path":"src/block-editor/events.html" },
+                { "displayName": "blockData.js", "path":"src/block-editor/blockData.js" }
+            ]
+        }
+    ]
+}

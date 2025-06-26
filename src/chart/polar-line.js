@@ -60,7 +60,7 @@ this.default = function () {
         title: 'Alaska Weather Statistics - 2016',
         //Initializing Tooltip
         tooltip: {
-            enable: true
+            enable: true, enableHighlight: true
         }, legendSettings: { enableHighlight: true },
            // custom code start
         load: function (args) {

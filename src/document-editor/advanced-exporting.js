@@ -21,7 +21,7 @@ this.default = function () {
 
     // Initialize datsource for ListView component.
     var dataSource = [
-        { class: 'data', text: 'Syncfusion® Document Text (*.sfdt)', id: 'sfdt', category: 'Client side exporting' },
+        { class: 'data', text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt', category: 'Client side exporting' },
         { class: 'data', text: 'Word Document(*.docx)', id: 'docx', category: 'Client side exporting' },
         { class: 'data', text: 'Word Template (*.dotx)', id: 'dotx', category: 'Client side exporting' },
         { class: 'data', text: 'Plain text (*.txt)', id: 'text', category: 'Client side exporting' },
@@ -189,7 +189,7 @@ this.default = function () {
         print = addButton('e-de-icon-Print e-de-padding-right', 'Print', btnStyles, 'de-print', 'Print this document (Ctrl+P).', false);
         openBtn = addButton('e-de-icon-Open e-de-padding-right', 'open', btnStyles, 'de-open', 'Open', false);
         var items = [
-            { text: 'Syncfusion® Document Text (*.sfdt)', id: 'sfdt' },
+            { text: 'Syncfusion Document Text (*.sfdt)', id: 'sfdt' },
             { text: 'Word Document (*.docx)', id: 'word' },
             { text: 'Word Template (*.dotx)', id: 'dotx'},
             { text: 'Plain Text (*.txt)', id: 'txt'},

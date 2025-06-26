@@ -9,6 +9,7 @@ this.default = function () {
       fields: { value: 'BookName' },
       // set placeholder to AutoComplete input element
       placeholder: 'e.g. Node.js Succinctly',
+      debounceDelay :'300',
       // Bind the filter event
       filtering: function (e) {
           var options = {
@@ -36,6 +37,15 @@ this.default = function () {
       }
   });
   atcObj.appendTo('#books');
+  var numeric = new ej.inputs.NumericTextBox({
+        value: 300,
+        min: 1,
+        format:'n0',
+        change: function (args) {
+            atcObj.debounceDelay = args.value;
+        }
+    });
+    numeric.appendTo('#numeric');
   loadExternalFile();
   // Dynamically load the fuse.js file
   function loadExternalFile() {

@@ -48,7 +48,7 @@ this.default = function () {
         ],
         title: 'Vehicle Sales by Region',
         tooltip: {
-            enable: true
+            enable: true, enableHighlight: true
         },
            // custom code start
         load: function (args) {

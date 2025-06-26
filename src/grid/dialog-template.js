@@ -25,7 +25,7 @@ this.default = function () {
             },
             {
                 field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd',
-                width: 170, validationRules: { date:  [true, 'Enter valid date'] }
+                width: 170
             },
             {
                 field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150, defaultValue: ''

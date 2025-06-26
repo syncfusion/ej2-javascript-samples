@@ -10,6 +10,7 @@ this.default = function () {
     window.getEmployeeDesignation = function (value) {
         return value.resourceData.Designation;
     };
+    var data = new ej.base.extend([], window.blockData, null, true);
     var scheduleObj = new ej.schedule.Schedule({
         width: '100%',
         height: '650px',
@@ -39,7 +40,7 @@ this.default = function () {
             textField: 'Text', idField: 'Id', groupIDField: 'GroupId', colorField: 'Color'
         }],
         eventSettings: {
-            dataSource: window.blockData
+            dataSource: data
         }
     });
     scheduleObj.appendTo('#Schedule');
