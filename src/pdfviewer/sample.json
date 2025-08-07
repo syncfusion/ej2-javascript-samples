@@ -135,7 +135,7 @@
             }
         },
         {
-            "url":"invisible-signature", "name": "Invisible Signature" ,"description":"This sample demonstrates how to digitally sign a PDF document from code behind using Syncfusion's PDF Viewer and PDF Library", "category": "Signature", "api": {
+            "url":"invisible-digital-signature", "name": "Invisible Digital Signature" ,"description":"This sample demonstrates how to digitally sign a PDF document from code behind using Syncfusion's PDF Viewer and PDF Library", "category": "Signature", "api": {
                 "PdfViewer": [
                    "serviceUrl",
                    "documentPath"
