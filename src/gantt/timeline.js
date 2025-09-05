@@ -44,10 +44,12 @@ this.default = function () {
             dependency: 'predecessor',
             child: 'subtasks',
         },
-        height: '503px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         highlightWeekends: true,
-        projectStartDate: new Date('02/03/2024'),
-        projectEndDate: new Date('03/23/2024'),
+        projectStartDate: new Date('02/05/2025'),
+        projectEndDate: new Date('03/23/2025'),
         timelineSettings: {
             topTier: {
                 format: 'MMM dd, yyyy',

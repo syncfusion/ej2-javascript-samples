@@ -235,7 +235,7 @@ this.default = function () {
             }
         }
         if (args.column.field === 'BestPlayerAward') {
-            var rowIndex = parseInt(args.cell.getAttribute('index'));
+            var rowIndex = parseInt(args.cell.getAttribute('data-index'));
             if (rowIndex > 0) {
                 if (this.currentViewData[rowIndex - 1][args.column.field] !== args.data[args.column.field]) {
                     args.rowSpan = calculateRowspan(args, rowIndex);

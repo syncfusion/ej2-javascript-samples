@@ -59,18 +59,38 @@ this.default = function () {
         }
     });
     chatUI.appendTo('#chatContainer');
+    function isValidContent(html) {
+        if (!html || html.trim().length === 0) return false;
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+        // Check for meaningful text
+        var textContent = tempDiv.innerHTML
+            .replace(/<br\s*\/?>/gi, '')
+            .replace(/&nbsp;/gi, '')
+            .replace(/<[^>]*>/g, '')
+            .trim();
+        if (textContent.length > 0) return true;
+        // Check for media elements
+        var mediaTags = ['img', 'table', 'audio', 'video', 'iframe'];
+        for (var tag of mediaTags) {
+            if (tempDiv.getElementsByTagName(tag).length > 0) return true;
+        }
+        return false;
+    }
     document.addEventListener('click', function (event) {
         if (event.target && event.target.id === 'sendMessage') {
-            if (chatRTE && chatRTE.value && chatRTE.value.length > 0) {
-                var value = chatRTE.value;
-                chatRTE.value = null;
-                chatRTE.dataBind();
-                chatUI.addMessage({
-                    author: currentUserModel,
-                    text: value
-                });
-                chatRTE.clearUndoRedo();
-                chatRTE.focusIn();
+            if (chatRTE && chatRTE.value) {
+                if (isValidContent(chatRTE.value)) {
+                    var value = chatRTE.value;
+                    chatRTE.value = null;
+                    chatRTE.dataBind();
+                    chatUI.addMessage({
+                        author: currentUserModel,
+                        text: value
+                    });
+                    chatRTE.clearUndoRedo();
+                    chatRTE.focusIn();
+                }
             }
         } else if (event.target && event.target.id === 'cancelMessage') {
             chatRTE.value = null;

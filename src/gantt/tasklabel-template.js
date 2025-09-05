@@ -1,10 +1,11 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.labelData,
-        rowHeight: 46,
         highlightWeekends: true,
         treeColumnIndex: 1,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -39,8 +40,8 @@ this.default = function () {
         splitterSettings: {
             position: "35%"
         },
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('05/04/2024'),
+        projectStartDate: new Date('03/24/2025'),
+        projectEndDate: new Date('06/10/2025'),
     });
     ganttChart.appendTo('#TasklabelTemplate');
     window.getResourceElements = function (value) {

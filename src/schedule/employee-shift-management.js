@@ -452,11 +452,6 @@ this.default = function () {
         popupClose: onPopupClose,
         cellClick: onCellClick,
         eventClick: onEventClick,
-         destroyed: function () {
-            if (dialogObj) {
-                dialogObj.destroy();
-            }
-        }
     });
     scheduleObj.appendTo('#schedule');
 

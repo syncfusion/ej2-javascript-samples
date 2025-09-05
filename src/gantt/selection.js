@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowSelection: true,
         highlightWeekends: true,
         treeColumnIndex: 1,
@@ -13,8 +15,9 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            child: 'subtasks'
+            parentID: 'ParentId'
         },
+        enableHover: true,
         selectionSettings: {
             mode: 'Row',
             type: 'Single',
@@ -26,8 +29,18 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('03/27/2024'),
-        projectEndDate: new Date('07/06/2024')
+        allowResizing: true,
+        columns: [
+            { field: 'TaskID', width: 70 },
+            { field: 'TaskName', width: 250 },
+            { field: 'StartDate'},
+            { field: 'EndDate'},
+            { field: 'Duration'},
+            { field: 'Predecessor'},
+            { field: 'Progress'},
+        ],
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('07/20/2025')
     });
     ganttChart.appendTo('#Selection');
 
@@ -36,6 +49,7 @@ this.default = function () {
             { id: 'Row', type: 'Row' },
             { id: 'Cell', type: 'Cell' }
         ],
+        width: '125px',
         popupWidth: '100px',
         value: 'Row',
         fields: { text: 'type', value: 'id' },
@@ -47,6 +61,7 @@ this.default = function () {
             { id: 'Single', type: 'Single' },
             { id: 'Multiple', type: 'Multiple' }
         ],
+        width: '125px',
         popupWidth: '100px',
         value: 'Single',
         fields: { text: 'type', value: 'id' },
@@ -58,6 +73,7 @@ this.default = function () {
             { id: true, type: 'Enable' },
             { id: false, type: 'Disable' }
         ],
+        width: '125px',
         popupWidth: '100px',
         value: false,
         fields: { text: 'type', value: 'id' },
@@ -75,4 +91,16 @@ this.default = function () {
         ganttChart.selectionSettings.type = type;
         ganttChart.selectionSettings.enableToggle = toggle;
     };
+
+    var hover = new ej.buttons.CheckBox({ checked: true });
+    hover.appendTo('#hover');
+
+     document.getElementById('hover').onclick = function () {
+        if (hover.checked) {
+            ganttChart.enableHover = true;
+        } else {
+             ganttChart.enableHover = false;
+        }
+    };
+
 };

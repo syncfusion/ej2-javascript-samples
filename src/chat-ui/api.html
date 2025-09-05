@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td >
-                    <div>Show timestamp</div>
+                    <div>Show timeStamp</div>
                 </td>
                 <td style="padding-right: 10px">
                     <div style="padding-left: 0;padding-top: 0">
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td >
-                    <div>Show timebreak</div>
+                    <div>Show timeBreak</div>
                 </td>
                 <td style="padding-right: 10px">
                     <div style="padding-left: 0;padding-top: 0">
@@ -87,6 +87,22 @@
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <div>Mention users</div>
+                </td>
+                <td style="padding-right: 10px">
+                    <div style="padding-left: 0;padding-top: 0">
+                        <select id="chat_mentionUsers">
+                            <option value="Alice Brown">Alice Brown</option>
+                            <option value="Michale Suyama">Michale Suyama</option>
+                            <option value="Charlie">Charlie</option>
+                            <option value="Janet">Janet</option>
+                            <option value="Jordan Peele">Jordan Peele</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -133,6 +149,7 @@
         <li><code>showFooter</code>: Toggles the visibility of the chat footer.</li>
         <li><code>enableCompactMode</code>: Reduces spacing and left-aligns all messages to display more content within the visible chat area. </li>
         <li><code>typingUsers</code>: Allows users to manage the list of users who are typing, updated through the multi-select options in the property pane.</li>
+        <li><code>mentionUsers</code>: Configurable list of users that can be tagged using '@' in chat messages.</li>
         <li><code>statusIconCss</code>: Defines a CSS class for the status bar icon, with built-in styles for Online, Offline, Away, and Busy statuses, while allowing further customization.</li>
         <li><code>messageToolbarSettings</code>: Configures the toolbar that appears on individual messages, allowing customization such as copy, forward, reply, pin and delete. Supports adding, removing, or reordering toolbar items based on application needs.</li>
     </ul>

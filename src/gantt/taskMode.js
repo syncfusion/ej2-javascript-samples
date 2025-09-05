@@ -3,7 +3,9 @@ this.default = function () {
         dataSource: window.taskModeData,
         allowSorting: true,
         enableContextMenu: true,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowSelection: true,
         highlightWeekends: true,
         taskFields: {
@@ -38,8 +40,8 @@ this.default = function () {
         splitterSettings:{
             position: "35%"
         },
-        projectStartDate: new Date("02/20/2024"),
-        projectEndDate: new Date('03/30/2024'),
+        projectStartDate: new Date("02/18/2025"),
+        projectEndDate: new Date('03/30/2025'),
     });
     ganttChart.appendTo('#TaskMode');
 };

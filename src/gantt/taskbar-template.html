@@ -44,14 +44,14 @@
    <div style="margin-top: -7px;">
         <div style="position: absolute; left: 3px; top: -4px;">
             <img class="moments" 
-                 src="src/gantt/images/moments.svg" 
-                 height="24" 
-                 width="48" 
-                 alt="Moments svg" 
-                 style="z-index: 1; left: 1px; top: 18px;" 
-                 role="presentation" />
+                src="src/gantt/images/moments.svg" 
+                height="24" 
+                width="48" 
+                alt="Moments svg" 
+                style="z-index: 1; left: 1px; top: 18px;" 
+                role="presentation" />
             <div class="e-gantt-milestone" 
-                 style="width: 41px; height: 41px; transform: rotate(45deg); background-color: #7ab748 !important; border: 0; left: 0px; top: 12px;">
+                style="width: 41px; height: 41px; transform: rotate(45deg); background-color: #7ab748 !important; border: 0; left: 0px; top: 12px;">
             </div>
         </div>
     </div>
@@ -63,7 +63,19 @@
                 <img class="moments" src="src/gantt/images/moments.svg" height="32" width="32" alt="Oscar moments svg"/>
             ${else}
                 <img class="moments" src="src/gantt/images/moments.svg" height="32" width="32" alt="Oscar moments svg"/>
-                <span class="e-task-label" style="position:absolute;top:15px;font-size:12px;text-overflow:ellipsis;height:90%;overflow:hidden;">${Performance}</span></div>
+                <span class="e-task-label" style="
+                    position: absolute;
+                    top: 15px;
+                    left: 40px;
+                    right: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: 90%;
+                    line-height: 1.2;
+                ">${Performance}
+                </span>
             ${/if}
         </div> 
     ${else if(TaskName == 'Oscar performance')}
@@ -71,8 +83,20 @@
             ${if(ganttProperties.duration <= 5)}
                 <img class="face-mask" src="src/gantt/images/face-mask.svg" height="32" width="32" alt="Oscar performance svg" />
             ${else}
-                <img class="face-mask" src="src/gantt/images/face-mask.svg"  height="32" width="32" alt="Oscar performance svg" />
-                <span class="e-task-label" style="position:absolute;top:5px;font-size:12px;text-overflow:ellipsis;height:90%;overflow:hidden;">${Performance}</span>
+                <img class="face-mask" src="src/gantt/images/face-mask.svg"  height="32" width="32" alt="Oscar performance svg" />               
+                <span class="e-task-label" style="
+                    position: absolute;
+                    top: 15px;
+                    left: 40px;
+                    right: 5px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: 90%;
+                    line-height: 1.2;
+                ">${Performance}
+                </span>
             ${/if} 
         </div>   
     ${else} 
@@ -81,12 +105,42 @@
                 <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32" alt="Oscar svg" />
             ${else}
                 ${if(taskData.Winner && taskData.Movie)}
-                    <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32" alt="Oscar svg" />
-                    <span class="e-task-label" style="position:absolute; top:13px;font-size:14px;">${taskData.Winner}</span>
-                    <span class="e-task-label" style="position:absolute;top:33px;font-size:10px;text-overflow:ellipsis;">${taskData.Movie}</span>
+                    <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32" alt="Oscar svg" />             
+                    <span class="e-task-label" style="
+                        position:absolute;
+                        top:8px;
+                        left:40px;
+                        right:5px;
+                        font-size:14px;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    ">${taskData.Winner}
+                    </span>
+                    <span class="e-task-label" style="
+                        position:absolute;
+                        top:28px;
+                        left:40px;
+                        right:5px;
+                        font-size:10px;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    ">${taskData.Movie}
+                    </span>
                 ${else if(taskData.Movie)}
                     <img class="oscar" src="src/gantt/images/oscar.svg" height="32" width="32" alt="Oscar svg"/>
-                    <span class="e-task-label" style="position:absolute; top:0px;font-size:12px;text-overflow:ellipsis;"></br> ${taskData.Movie} </span> 
+                    <span class="e-task-label" style="
+                        position:absolute;
+                        top:15px;
+                        left:40px;
+                        right:5px;
+                        font-size:12px;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    ">${taskData.Movie}
+                    </span>
                 ${else} 
                     <span class="e-task-label"></span> 
                 ${/if}  
@@ -121,4 +175,7 @@
         is assigned with the ID of a SCRIPT element whose content is used as the template.
         The template expression should be provided inside <code>${...}</code> interpolation syntax
     </p>
+    <br>
+    <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/appearance-customization#taskbar-template">documentation section</a>.</p>
+
 </div>

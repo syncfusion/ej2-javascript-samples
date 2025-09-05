@@ -8,7 +8,7 @@ this.default = function () {
   var pagerViewData = ['Row', 'Column', 'Both'];
 
   var remoteData = new ej.data.DataManager({
-    url: 'https://ej2services.syncfusion.com/js/release/api/order',
+    url: 'https://ej2services.syncfusion.com/js/development/api/order',
     adaptor: new ej.data.WebApiAdaptor(),
     crossDomain: true
   });

@@ -52,7 +52,7 @@ this.default = function () {
                 selectedTheme.slice(1)).replace(/-dark/i, 'Dark').replace(/contrast/i, 'Contrast').replace(/-highContrast/i, 'HighContrast');
         },
         center:{ x: '50%', y:'50%'},
-        tooltip: { enable: true, format: '<b>${point.x}</b><br>Percentage: <b>${point.y}%</b>',header:"" },
+        tooltip: { enable: true, format: '<b>${point.x}</b><br>Percentage: <b>${point.y}%</b>',header:"", enableHighlight: true },
          // custom code end
     });
     pie.appendTo('#doughnut-container');

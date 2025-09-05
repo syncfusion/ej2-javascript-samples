@@ -55,7 +55,7 @@ var setResponsiveElement = ej.base.select('.setting-responsive');
 var isMobile = window.matchMedia('(max-width:550px)').matches;
 var isTablet = window.matchMedia('(min-width:600px) and (max-width: 850px)').matches;
 var isPc = window.matchMedia('(min-width:850px)').matches;
-var selectedTheme = location.hash.split('/')[1] || 'tailwind3';
+var selectedTheme = location.hash.split('/')[1] || getThemeDefault();
 var toggleAnim = new ej.base.Animation({ duration: 500, timingFunction: 'ease' });
 var controlSampleData = {};
 var samplesList = getSampleList();
@@ -93,7 +93,7 @@ var newYear= new Date().getFullYear();
 var copyRight= document.querySelector('.sb-footer-copyright');
 copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion<sup>®</sup> Inc.";
 ej.base.registerLicense('{SyncfusionJSLicensekey}');
-
+let isUpdatingFromUrl = false;
 var matchedCurrency = {
     'en': 'USD',
     'de': 'EUR',
@@ -278,8 +278,11 @@ searchPopup = new ej.dropdowns.AutoComplete({
     switcherPopup.hide();
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
-        index: themeCollection.indexOf(selectedTheme.split('-')[0]),
-        change: function (e) { switchTheme(e.value); }
+        index: selectedTheme.includes('-dark') ? 1 : 0,
+        change: function (e) {
+              if (isUpdatingFromUrl) {
+                return;}
+              darkSwitch() }
     });
     themeDropDown.appendTo('#sb-setting-theme');
     themeModeDropDown = new ej.dropdowns.DropDownList({
@@ -513,39 +516,69 @@ function toggleSearchOverlay() {
 }
 
 function changeTheme(e) {
-    var target = e.target;
-    target = ej.base.closest(target, 'li');
-    var themeName = target.id;
-    switchTheme(themeName);
-    var imageEditorElem = document.querySelector(".e-image-editor");
-    if (imageEditorElem != null) {
-        var imageEditor = ej.base.getComponent(document.getElementById(imageEditorElem.id), 'image-editor');
-        imageEditor.theme = themeName;
+  var target = ej.base.closest(e.target, 'li');
+  if (!target || !target.id) return;
+
+  var themeName = target.id;
+
+  //Switch theme via hash logic
+  switchTheme(themeName);
+
+  //Update image editor component if present
+  var imageEditorElem = document.querySelector(".e-image-editor");
+  if (imageEditorElem) {
+    var imageEditor = ej.base.getComponent(imageEditorElem, 'image-editor');
+    if (imageEditor) {
+      imageEditor.theme = themeName;
     }
+  }
 }
 
-function switchTheme(str) {
-    var hash = location.hash.split('/');
-    if (hash[1] !== str) {
-        if (hash[1].includes('-dark') && darkIgnore.indexOf(str) === -1) {
-            str = str + '-dark';
-        }
-        hash[1] = str;
-        localStorage.setItem('ej2-switch', ej.base.select('.sb-responsive-section .active').id);
-        location.hash = hash.join('/');
-    }
+function switchTheme(theme) {
+  var hash = location.hash.split('/');
+  var currentTheme = hash[1] || '';
+
+  // Append -dark if current theme was dark and the new one isn't ignored
+  var isDarkMode = currentTheme.includes('-dark');
+  if (isDarkMode && darkIgnore.indexOf(theme) === -1 && !theme.includes('-dark')) {
+    theme += '-dark';
+  }
+
+  // Avoid redundant updates
+  if (currentTheme !== theme) {
+    //Normalize to bootstrap5 in URL, loading handled internally as bootstrap5.3
+    hash[1] = theme === 'bootstrap5.3' ? 'bootstrap5' :
+              theme === 'bootstrap5.3-dark' ? 'bootstrap5-dark' :
+              theme;
+    location.hash = hash.join('/');
+  }
 }
 
-themeDarkButton.addEventListener('click', darkSwitch);
+var themeSwitched = false;
+if (themeDarkButton) {
+  themeDarkButton.addEventListener('click', darkSwitch);
+}
 
 function darkSwitch() {
-    var hash = location.hash.split('/');
-    var darkTheme = hash[1]
-    darkTheme = darkTheme.includes("-dark") ? darkTheme.replace("-dark", "") : darkIgnore.indexOf(darkTheme) === 0 ? darkTheme : darkTheme + '-dark';
-    hash[1] = darkTheme;
-    localStorage.setItem('ej2-switch', ej.base.select('.sb-responsive-section .active').id);
-    location.hash = hash.join('/');
-    location.reload();
+  var hash = location.hash.split('/');
+  var currentTheme = hash[1] || 'tailwind3';
+
+  // Normalize Bootstrap alias
+  var normalizedTheme = currentTheme.replace('bootstrap5.3', 'bootstrap5');
+  var baseTheme = normalizedTheme.replace('-dark', '');
+  var isCurrentlyDark = normalizedTheme.includes('-dark');
+
+  // Toggle dark/light
+  var newTheme = isCurrentlyDark
+    ? baseTheme
+    : darkIgnore.indexOf(baseTheme) === -1
+      ? baseTheme + '-dark'
+      : baseTheme;
+
+  // Update hash with alias (not internal theme name)
+  hash[1] = newTheme;
+  location.hash = hash.join('/');
+  themeSwitched = true;
 }
 
 function onsearchInputChange(e) {
@@ -596,15 +629,16 @@ function setMouseOrTouch(e) {
     var switchType = ele.id;
     changeMouseOrTouch(switchType);
     sbHeaderClick('closePopup');
-    localStorage.setItem('ej2-switch', switchType);
+    localStorage.setItem('input-mode', switchType);
     location.reload();
 }
 
 function onNextButtonClick(arg) {
+    addSampleList(samplesList);
     sampleOverlay();
     var curSampleUrl = location.hash;
     var inx = samplesAr.indexOf(curSampleUrl);
-    if (inx !== -1) {
+    if (inx !== -1 && inx + 1 < samplesAr.length) {
         var prevhref = samplesAr[inx];
         var curhref = samplesAr[inx + 1];
         location.href = curhref;
@@ -614,10 +648,11 @@ function onNextButtonClick(arg) {
 }
 
 function onPrevButtonClick(arg) {
+    addSampleList(samplesList);
     sampleOverlay();
     var curSampleUrl = location.hash;
     var inx = samplesAr.indexOf(curSampleUrl);
-    if (inx !== -1) {
+    if (inx !== -1 && inx > 0) {
         var prevhref = samplesAr[inx];
         var curhref = samplesAr[inx - 1];
         location.href = curhref;
@@ -625,7 +660,40 @@ function onPrevButtonClick(arg) {
     window.hashString = location.hash;
     setSelectList();
 }
+function addSampleList(samplesList) {
+  samplesAr = [];       // Reset global sample index
+  samplePath = [];      // Reset sample paths
+  defaultSamples = {};  // Reset default samples map
 
+  if (!Array.isArray(samplesList)) {
+    console.warn("Invalid or undefined samplesList passed to addSampleList.");
+    return;
+  }
+
+  for (var i = 0; i < samplesList.length; i++) {
+    var node = samplesList[i];
+    if (!node || !node.directory || !Array.isArray(node.samples) || node.samples.length === 0) {
+      continue; // Skip invalid or empty entries
+    }
+
+    var control = node.directory;
+    var firstSample = node.samples[0];
+    defaultSamples[control] = control + '/' + firstSample.url + '.html';
+
+    // Sort samples using ej.DataManager
+    var dataManager = new ej.data.DataManager(node.samples);
+    var sortedSamples = dataManager.executeLocal(new ej.data.Query().sortBy('order', 'ascending'));
+
+    for (var j = 0; j < sortedSamples.length; j++) {
+      var sample = sortedSamples[j].url;
+      samplePath.push(control + '/' + sample);
+
+      var selectedTheme = location.hash.split('/')[1] || getThemeDefault();
+      var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
+      samplesAr.push('#' + urlString);
+    }
+  }
+}
 
 function processResize(e) {
     var toggle = sidebar.isOpen;
@@ -872,65 +940,168 @@ function changeMouseOrTouch(str) {
 }
 
 function loadTheme(theme) {
-    theme = themesToRedirect.indexOf(theme) !== -1 ? 'tailwind3' : theme;
-    theme =  theme.includes('bootstrap5') ? theme.replace('bootstrap5', 'bootstrap5.3') : theme;
-    var body = document.body;
-    if (body.classList.length > 0) {
-        for (var themeItem in themeCollection) {
-            body.classList.remove(themeCollection[themeItem]);
-            body.classList.remove(themeCollection[themeItem] + '-dark');
-        }
+  var body = document.body;
+
+  // Alias conversion for Bootstrap theme
+  var internalTheme = theme;
+  if (theme === 'bootstrap5') internalTheme = 'bootstrap5.3';
+  else if (theme === 'bootstrap5-dark') internalTheme = 'bootstrap5.3-dark';
+
+  // Remove previous theme classes
+  for (var i = 0; i < themeCollection.length; i++) {
+    body.classList.remove(themeCollection[i]);
+    body.classList.remove(themeCollection[i] + '-dark');
+  }
+  body.classList.remove('e-dark-mode');
+
+  // Add new theme classes
+  body.classList.add(internalTheme);
+  if (internalTheme.includes('-dark')) {
+    body.classList.add('e-dark-mode');
+  }
+
+  // Hide dark toggle if unsupported
+  if (darkIgnore.indexOf(theme) !== -1) {
+    if (themeDarkButton) themeDarkButton.style.display = "none";
+    var mobileSwitch = document.getElementById("mobiledarkswitch");
+    if (mobileSwitch) mobileSwitch.style.display = "none";
+  }
+
+  // Visual updates for theme selector
+  if (!isMobile && themeList) {
+    var isDark = theme.includes('-dark');
+    var activeItem = themeList.querySelector('.active');
+    if (activeItem) activeItem.classList.remove('active');
+
+    var normalizedId = theme.replace('-dark', '');
+    var newActive = themeList.querySelector('#' + normalizedId);
+    if (newActive) newActive.classList.add('active');
+
+    if (darkButton) darkButton.innerHTML = isDark ? "LIGHT" : "DARK";
+    var darkIcon = document.getElementById("dark-icon");
+    var lightIcon = document.getElementById("light-icon");
+    if (darkIcon) darkIcon.style.display = isDark ? "none" : "inline-block";
+    if (lightIcon) lightIcon.style.display = isDark ? "inline-block" : "none";
+  }
+  if (isMobile){
+            themeDarkButton.style.display = "none";}
+  // Load theme CSS
+  var link = document.getElementById('themelink');
+  if (link) {
+    link.setAttribute('href', './dist/' + internalTheme + '.css');
+  }
+
+  // Confirm theme CSS is loaded
+  var ajax = new ej.base.Ajax('./dist/' + internalTheme + '.css', 'GET', true);
+  ajax.send().then(function () {
+    selectedTheme = theme;
+
+    // App Initialization
+    renderLeftPaneComponents();
+    renderSbPopups();
+    bindEvents();
+
+    if (isTablet || isMobile) {
+      contentTab.hideTab(2);
     }
-    body.classList.add(theme);
-    if (darkIgnore.indexOf(theme) !== -1) {
-        themeDarkButton.style.display = "none";
-        document.getElementById("mobiledarkswitch").style.display = "none";
+
+    processDeviceDependables();
+    addRoutes(samplesList);
+    routeDefault();
+
+    if (isTablet && isLeftPaneOpen()) {
+      toggleLeftPane();
     }
-    if (!isMobile) {
-        if (!theme.includes('-dark')) {
-            darkButton.innerHTML = "DARK";
-            document.getElementById("dark-icon").style.display = "inline-block";
-            themeList.querySelector('.active').classList.remove('active'); 
-            theme== 'bootstrap5.3'?themeList.querySelector('#bootstrap5').classList.add('active'): 
-                themeList.querySelector('#' + theme).classList.add('active');
-        }
-        else {
-            darkButton.innerHTML = "LIGHT";
-            document.getElementById("light-icon").style.display = "inline-block";
-            themeList.querySelector('.active').classList.remove('active');
-            theme== 'bootstrap5.3-dark'? themeList.querySelector('#bootstrap5').classList.add('active'):
-                themeList.querySelector('#' + theme.replace('-dark', "")).classList.add('active');
-        }
+
+    // Search Index Setup
+    elasticlunr.clearStopWords();
+    searchInstance = elasticlunr.Index.load(window.searchIndex);
+
+    // Routing Initialization
+    hasher.initialized.add(parseHash);
+    hasher.changed.add(parseHash);
+    hasher.init();
+
+    if (reloadPageForRedirection) {
+      window.location.reload();
     }
-    var doc = document.getElementById('themelink');
-    doc.setAttribute('href','./dist/' + theme + '.css');
-    var ajax = new ej.base.Ajax('./dist/' + theme + '.css', 'GET', true);
-    ajax.send().then(function (result) {
-        selectedTheme = theme;
-        selectedTheme = selectedTheme === "bootstrap5.3" ? 'bootstrap5' : selectedTheme === "bootstrap5.3-dark" ? "bootstrap5-dark" : selectedTheme;
-        renderLeftPaneComponents();
-        renderSbPopups();
-        bindEvents();
-        if (isTablet || isMobile) {
-            contentTab.hideTab(2);
+  });
+}
+function refreshSamples() 
+{
+    var demoSection = document.querySelector('.sb-demo-section');
+    if (demoSection) {
+        var controls = demoSection.querySelectorAll('.e-control.e-lib');
+        controls.forEach(function(ctrl) {
+            var instance = ctrl.ej2_instances && ctrl.ej2_instances[0];
+            if (instance && typeof instance.refresh === 'function' && instance.getModuleName() !== 'DashboardLayout') {
+                instance.refresh();
+            }
+        });
+    }
+}
+function changeBodyClass(darkTheme) {
+  // Normalize bootstrap5 to bootstrap5.3 for internal processing
+  var internalTheme = darkTheme;
+  if (darkTheme.includes('bootstrap5') && !darkTheme.includes('bootstrap5.3')) {
+    internalTheme = darkTheme.replace('bootstrap5', 'bootstrap5.3');
+  }
+  var body = document.body;
+  // First, remove ALL theme-related classes (including both bootstrap5 and bootstrap5.3 variants)
+  for (var i = 0; i < themeCollection.length; i++) {
+    body.classList.remove(themeCollection[i]);
+    body.classList.remove(themeCollection[i] + '-dark');
+  }
+  // Also remove the bootstrap5.3 variants specifically
+  body.classList.remove('bootstrap5.3');
+  body.classList.remove('bootstrap5.3-dark');
+  body.classList.remove('e-dark-mode');
+  // Now add the new theme class (internal version)
+  body.classList.add(internalTheme);
+  var isDark = internalTheme.includes('-dark');
+  if (isDark) {
+    body.classList.add('e-dark-mode');
+    if (darkButton) darkButton.innerHTML = "LIGHT";
+    var lightIcon = document.getElementById('light-icon');
+    var darkIcon = document.getElementById('dark-icon');
+    if (lightIcon) lightIcon.style.display = 'inline-block';
+    if (darkIcon) darkIcon.style.display = 'none';
+  } else {
+    if (darkButton) darkButton.innerHTML = "DARK";
+    var lightIcon = document.getElementById('light-icon');
+    var darkIcon = document.getElementById('dark-icon');
+    if (lightIcon) lightIcon.style.display = 'none';
+    if (darkIcon) darkIcon.style.display = 'inline-block';
+  }
+  // Load the CSS with internal theme name
+  loadThemeLinkCss(internalTheme);
+  // Save theme state (using the alias version for consistency)
+  var aliasTheme = internalTheme.replace('bootstrap5.3', 'bootstrap5');
+  selectedTheme = aliasTheme;
+  setThemeDefault(aliasTheme);
+  if (isMobile && themeModeDropDown) {
+        const isDark = selectedTheme.includes('-dark');
+        // Update mobile icon
+        const mobileModeIcon = document.getElementById('mobile-mode-icon');
+        if (mobileModeIcon) {
+            mobileModeIcon.className = `sb-icons pane-${isDark ? 'light-theme' : 'dark-theme'}`;
         }
-        processDeviceDependables();
-        addRoutes(samplesList);
-        routeDefault();
-        if (isTablet && isLeftPaneOpen()) {
-            toggleLeftPane();
-        }
-        elasticlunr.clearStopWords();
-        searchInstance = elasticlunr.Index.load(window.searchIndex);
-        hasher.initialized.add(parseHash);
-        hasher.changed.add(parseHash);
-        hasher.init();
-        if (reloadPageForRedirection == true) {
-            window.location.reload();
-        }
-    });
+        isUpdatingFromUrl = true;  // Set flag BEFORE updating
+        // Update the Syncfusion dropdown index
+        themeModeDropDown.index = isDark ? 1 : 0;
+        setTimeout(() => {
+            isUpdatingFromUrl = false;  // Reset flag AFTER update
+        }, 10);
+    }
+  refreshSamples();
 }
 
+function loadThemeLinkCss(theme) {
+  var linkEl = document.getElementById('themelink');
+  if (linkEl) {
+    linkEl.setAttribute('href', './dist/' + theme + '.css');
+  }
+}
 function toggleMobileOverlay() {
 
     if (!ej.base.select('.sb-mobile-right-pane').classList.contains('sb-hide')) {
@@ -1101,7 +1272,7 @@ function controlSelect(arg) {
         controlListRefresh(arg.node || arg.item);
         if (path !== curHashCollection) {
             sampleOverlay();
-            var theme = location.hash.split('/')[1] || 'tailwind3';
+            var theme = location.hash.split('/')[1] || getThemeDefault();
             if (arg.item && ((isMobile && !ej.base.select('#left-sidebar').classList.contains('sb-hide')) ||
                 ((isTablet || (ej.base.Browser.isDevice && isPc)) && isLeftPaneOpen()))) {
                 toggleLeftPane();
@@ -1158,26 +1329,49 @@ function viewSwitch(from, to, reverse) {
 function setSelectList() {
     var hString = window.hashString || location.hash;
     var hash = hString.split('/');
-    var list = ej.base.select('#controlList').ej2_instances[0];
-    var control = ej.base.select('[control-name="' + hash[2] + '"]');
-    if (control) {
-        var data = list.dataSource;
-        var samples = controlSampleData[control.getAttribute('control-name')];
-        if (JSON.stringify(data) !== JSON.stringify(samples)) {
-            list.dataSource = samples;
-            list.dataBind();
+    var controlName = hash[2]; 
+    var sampleName = hash[3] ? hash[3].replace('.html', '') : '';
+    // Get TreeView and ListView instances
+    var treeView = ej.base.select('#controlTree').ej2_instances[0];
+    var listView = ej.base.select('#controlList').ej2_instances[0];
+    // Find the control element in TreeView
+    var controlElement = ej.base.select('[control-name="' + controlName + '"]');
+    if (controlElement && treeView) {
+        // Update TreeView selection to highlight the current component
+        var controlNodeId = controlElement.closest('.e-list-item').getAttribute('data-uid');
+        if (controlNodeId) {
+            treeView.selectedNodes = [controlNodeId];
         }
-        var selectSample = ej.base.select('[sample-name="' + hash.slice(-1)[0].split('.html')[0] + '"]');
-        if (selectSample) {
-            if (ej.base.select('#controlTree').style.display !== 'none') {
-                showHideControlTree();
-            }
-            list.selectItem(selectSample);
-            selectSample.scrollIntoView({ block: "nearest" });
+        // Update the samples list for the current control
+        var samples = controlSampleData[controlName];
+        if (samples && JSON.stringify(listView.dataSource) !== JSON.stringify(samples)) {
+            listView.dataSource = samples;
+            listView.dataBind();
+        }
+        if (ej.base.select('#controlTree').style.display !== 'none') {
+            showHideControlTree();
+        }
+        // Select the current sample in ListView
+        var sampleElement = ej.base.select('[sample-name="' + sampleName + '"]');
+        if (sampleElement && listView) {
+            listView.selectItem(sampleElement);
+            sampleElement.scrollIntoView({ block: "nearest" });
         }
     } else {
-        showHideControlTree();
-        list.selectItem(ej.base.select('[sample-name="grid-overview"]'));
+        // show tree view and select default
+        if (ej.base.select('#controlTree').style.display === 'none') {
+            showHideControlTree();
+        }
+        // If no specific control found, default to grid
+        if (treeView) {
+            var defaultControl = ej.base.select('[control-name="grid"]');
+            if (defaultControl) {
+                var defaultNodeId = defaultControl.closest('.e-list-item').getAttribute('data-uid');
+                if (defaultNodeId) {
+                    treeView.selectedNodes = [defaultNodeId];
+                }
+            }
+        }
     }
 }
 
@@ -1315,7 +1509,7 @@ function addRoutes(samplesList) {
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
                 (subNode.category + ' / ') : '') + subNode.name;
-            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : 'tailwind3';
+            var selectedTheme = location.hash.split('/')[1] ? location.hash.split('/')[1] : getThemeDefault();
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {
@@ -1467,6 +1661,7 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
         currentControlID = controlID;
         currentSampleID = sampleID;
         currentControl = node.directory;
+        addSampleList(samplesList);
         var curIndex = samplesAr.indexOf(location.hash);
         var samLength = samplesAr.length - 1;
         if (curIndex === samLength) {
@@ -1574,14 +1769,78 @@ function checkSampleLength(directory) {
     var controls = data.executeLocal(new ej.data.Query().where('directory', 'equal', directory));
     return controls[0].samples.length > 1;
 }
-
+function setThemeDefault(theme) {
+  localStorage.setItem('previousTheme', theme);
+}
+function getThemeDefault() {
+  var previousTheme = localStorage.getItem('previousTheme') || 'tailwind3';
+  return previousTheme;
+}
 function parseHash(newHash, oldHash) {
-    var newTheme = newHash.split('/')[0];
-    var control = newHash.split('/')[1];
-    if (newTheme !== selectedTheme && themeCollection.indexOf(newTheme) !== -1) {
-        location.reload();
-        crossroads.parse(newHash);
+  const parts = newHash.split('/');
+  const rawTheme = parts[0] || 'tailwind3';
+  const control = parts[1] || '';
+  const sampleName = parts[2] || '';
+
+  // Normalize theme for hash (alias form)
+  const resolveAlias = (theme) => {
+    return theme === 'bootstrap5.3' ? 'bootstrap5' :
+           theme === 'bootstrap5.3-dark' ? 'bootstrap5-dark' : theme;
+  };
+
+  const displayNewTheme = resolveAlias(rawTheme);
+  const displayOldTheme = resolveAlias(selectedTheme || 'tailwind3');
+  const baseNewTheme = displayNewTheme.replace('-dark', '');
+  const baseOldTheme = displayOldTheme.replace('-dark', '');
+
+  const componentsToAddRoutes = [
+    "Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge",
+    "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps",
+    "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts",
+    "TreeMap", "Bullet Chart"
+  ];
+
+  // Reload only if base theme has changed
+  if (baseNewTheme !== baseOldTheme && themeCollection.includes(displayNewTheme)) {
+    setThemeDefault(displayNewTheme);
+    location.reload();
+    return;
+  }
+
+  // Theme variant switched without base change
+  if (
+    baseNewTheme === baseOldTheme &&
+    displayNewTheme !== displayOldTheme &&
+    themeCollection.includes(displayNewTheme)
+  ) {
+    changeBodyClass(displayNewTheme);
+
+    const isComplexComponent = componentsToAddRoutes.some(function (item) {
+      return item.toLowerCase() === control.toLowerCase();
+    });
+
+    if (isComplexComponent) {
+      addRoutes(samplesList);
+    } else {
+      addSampleList(samplesList);
+      return;
     }
+  } else {
+    addRoutes(samplesList);
+  }
+
+  // Re-route for complex controls
+  if (
+    componentsToAddRoutes.some(function (item) {
+      return item.toLowerCase() === control.toLowerCase();
+    })
+  ) {
+    addRoutes(samplesList);
+  }
+
+  // Initialize global routing config
+  window.samplesJSON = window.samplesJSON || {};
+  samplesJSON.skipCommonChunk = window.sampleSkip || [];
     /* if (newHash.length && !ej.base.select('#' + control + '-common') && checkSampleLength(control)) {
          var scriptElement = document.createElement('script');
          scriptElement.src = 'src/' + control + '/common.js';
@@ -1689,7 +1948,7 @@ function getStringWithOutDescription(code, descRegex) {
 }
 
 function loadJSON() {
-    var switchText = localStorage.getItem('ej2-switch') || 'mouse';
+    var switchText = localStorage.getItem('input-mode') || 'mouse';
     if (ej.base.Browser.isDevice || window.screen.width <= 850) {
         switchText = 'touch';
     }
@@ -1714,6 +1973,22 @@ function loadJSON() {
     overlay();
     changeMouseOrTouch(switchText);
     localStorage.removeItem('ej2-switch');
+    // Modified: Prioritize URL theme over stored theme
+    var storedTheme = getThemeDefault();
+    var currentHash = location.hash;
+    
+    if (currentHash) {
+        var hashParts = currentHash.split('/');
+        var urlTheme = hashParts[1];
+        
+        // Use URL theme if present; otherwise, fall back to stored theme
+        selectedTheme = urlTheme || storedTheme;
+    } else {
+        // No hash present, set default with stored theme
+        var defaultHash = '#/' + storedTheme + '/grid/gridoverview.html';
+        history.replaceState(null, null, defaultHash);
+        selectedTheme = storedTheme;
+    }
     ej.base.enableRipple(selectedTheme.indexOf('material') !== -1 || !selectedTheme);
     loadTheme(selectedTheme);
 }

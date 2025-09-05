@@ -183,7 +183,7 @@
         primaryXAxis: {
             majorTickLines: { width: 0 }, valueType: "Category", majorGridLines: { width: 0 }, labelStyle: { size: '11px' } 
         },
-        legendSettings:{ enableHighlight: true }, tooltip:{ enable: true, shared: true, enableMarker: false }, chartArea:{ border: { width: 0 }},
+        legendSettings:{ enableHighlight: true }, tooltip:{ enable: true, showNearestTooltip: true, enableHighlight: true, enableMarker: false }, chartArea:{ border: { width: 0 }},
         //Initializing Chart Series
         series: [
             {

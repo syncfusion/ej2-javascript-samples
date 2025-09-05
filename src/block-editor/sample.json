@@ -47,7 +47,8 @@
                     "blockDragStart",
                     "blockDrop",
                     "focus",
-                    "blur"
+                    "blur",
+                    "keyActionExecuted"
                 ]
             },
             "description": "This demo covers events of Block Editor control.",

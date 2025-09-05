@@ -1,0 +1,189 @@
+<style>
+    .product-container {
+        width: 100px;
+        height: 130px;
+        border: 2px solid #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product {
+        background-color: red;
+        width: 100%;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .fill-animation {
+        animation: fill 40s ease-in infinite forwards;
+        animation-play-state: running;
+    }
+
+    .fill-animation.paused {
+        animation-play-state: paused;
+    }
+
+    @keyframes fill {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+
+    .pump-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        left: 25px;
+    }
+
+    .pump-body {
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, #5c5c5c 0%, #2c2c2c 100%);
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        border: 5px solid #4a4a4a;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .fan-blades {
+        position: relative;
+        margin-top: 43%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 40px;
+    }
+
+    .rotate-animation {
+        animation: rotateblades 2s linear infinite;
+    }
+
+    .blade {
+        position: absolute;
+        width: 15px;
+        height: 50px;
+        background: linear-gradient(to bottom, #bbb 0%, #888 100%);
+        top: calc(50% - 25px);
+        left: calc(50% - 7.5px);
+        border-radius: 8px;
+        transform-origin: center calc(100% - 25px);
+    }
+
+    .blade:nth-child(1) {
+        transform: rotate(0deg);
+    }
+
+    .blade:nth-child(2) {
+        transform: rotate(90deg);
+    }
+
+    .blade:nth-child(3) {
+        transform: rotate(180deg);
+    }
+
+    .blade:nth-child(4) {
+        transform: rotate(270deg);
+    }
+
+    .hub {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, #aaa 0%, #666 100%);
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    @keyframes rotateblades {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    .pressure-container {
+        display: flex;
+    }
+
+    .pressure-indicator {
+        text-align: center;
+    }
+
+    .pressure-gauge {
+        position: relative;
+        width: 70px;
+        height: 40px;
+        background: #ddd;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border: 1px solid black;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .needle {
+        width: 4px;
+        height: 70px;
+        background: red;
+        transition: transform 0.5s ease-in-out;
+        margin-left: 33px;
+        margin-top: 5px;
+    }
+
+    .pressure-value {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #111827 !important;
+    }
+
+    .switch-buttons {
+        display: block;
+        margin-top: 3px;
+    }
+
+    .switch-container {
+        left: -10px;
+        top: 20px;
+        position: absolute;
+    }
+
+    #pumpCheckBoxContainer {
+        position: relative;
+        top: 80px;
+        left: -35px;
+    }
+</style>
+
+<div class="control-section">
+    <div class="content-wrapper" style="width: 100%">
+        <div id="diagram"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample visualizes a real-time chemical reactor system as an interactive Pipeline and Instrumentation Diagram (P&ID) using the Syncfusion<sup>®</sup> EJ2 JavaScript Diagram component, showcasing dynamic fluid flows, tank levels, pressure, and temperature.
+    </p>
+</div>
+<div id="description">
+    <p>
+        Users actively control valve operations and pump states to observe real-time fluid flow, tank level changes, dynamic pressure, and temperature visualizations. Interactive toggles manage fluid flow between tanks, simulating operational conditions within an industrial process environment.
+    </p>
+    <br>
+</div>

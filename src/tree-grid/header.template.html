@@ -707,6 +707,9 @@
     img.taskName, img.progress, img.startDate, img.duration, img.resources{
         display: inline-block;
     }
+    img.progress{
+        margin-bottom:0px !important;
+    }
 </style>
 
 <script type="text/x-template" id="resource">
@@ -772,7 +775,7 @@
 <div id="description">
     <p>
         The Tree Grid provides a way to define a custom element in header element. 
-        columns->headertemplate property accepts either string or HTML element`s ID value, which will be used as the template for the header cell.  
+        <code>columns->headertemplate</code> property accepts either string or HTML element`s ID value, which will be used as the template for the header cell.  
     </p>
     <p>
         In this demo, we have render customized template for all column headers.

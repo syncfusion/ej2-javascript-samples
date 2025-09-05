@@ -1,7 +1,9 @@
 this.default = function () {
    var ganttChart = new ej.gantt.Gantt({
         dataSource: window.templateData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         highlightWeekends: true,
         taskFields: {
             id: 'TaskID',
@@ -32,8 +34,8 @@ this.default = function () {
             name: 'resourceName'
         },
         resources: editingResources,
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('07/06/2024')
+        projectStartDate: new Date('03/24/2025'),
+        projectEndDate: new Date('07/06/2025')
      });
     ganttChart.appendTo('#HeaderTemplate');
 };

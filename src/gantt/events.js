@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         treeColumnIndex: 1,
         highlightWeekends: true,
         allowSelection: true,
@@ -52,15 +54,15 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            child: 'subtasks'
+            parentID: 'ParentId'
         },
         columns: [
-            { field: 'TaskID', width: 75 },
+            { field: 'TaskID', width: 100 },
             { field: 'TaskName', width: 250 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
-            { field: 'Predecessor' },
+            { field: 'Predecessor', width: 190 },
             { field: 'Progress' },
         ],
         toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Search'],
@@ -76,8 +78,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('07/06/2024')
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('07/20/2025')
     });
     ganttChart.appendTo('#Events');
 

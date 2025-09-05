@@ -12,7 +12,7 @@ this.default = function() {
       ],
       columns: [{ name: "Country" }, { name: "Products" }],
       valueSortSettings: { headerDelimiter: " - " },
-      drilledMembers: [{ name: 'Year', items: ['FY 2015'] }],
+      drilledMembers: [{ name: 'Year', items: ['FY 2022'] }],
       dataSource: window.Pivot_Data,
       expandAll: false,
       formatSettings: [{ name: "Amount", format: "C" }],

@@ -11,7 +11,7 @@ this.default = function() {
                 uploadUrl: hostUrl + 'api/FileManager/Upload',
                 downloadUrl: hostUrl + 'api/FileManager/Download'    
             },
-            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Refresh', 'View', 'Details', 'Cut', 'Copy', 'Delete', 'Download', 'Rename'] },            
+            toolbarSettings: { items: ['NewFolder', 'SortBy', 'Cut', 'Copy', 'Paste', 'Delete', 'Refresh', 'Download', 'Rename', 'Selection', 'View', 'Details'] },            
             allowDragAndDrop: true,
             contextMenuSettings: {
                 file: [ "Cut", "Copy", "|", "Delete", "Download", "Rename", "|", "Details"],

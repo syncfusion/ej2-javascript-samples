@@ -1,0 +1,52 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div style="padding: 0px 10px">
+            <strong style="display: inline-block; font-size: 14px; margin-right: 5px;">Start Date:</strong>
+            <input type="text" id="start-datepicker">
+            <strong style="display: inline-block; font-size: 14px; margin-right: 5px;">End Date:</strong>
+            <input type="text" id="end-datepicker">
+            <button id="apply" style="width: 80px;">Apply</button>
+        </div>
+        <div id="PivotView" style="width: 100%;height:100%;"></div>
+    </div>
+</div>
+<!-- custom code start -->
+<div id="action-description">
+    <p>This sample demonstrates how to apply an external date range filter to the Pivot Table data source, enhancing
+        performance and responsiveness when working with large datasets.</p>
+</div>
+<div id="description">
+    <p>In this sample, date filtering is performed externally by updating the Pivot Table's data source based on a
+        selected date range. Users can choose a <b>Start Date</b> and <b>End Date</b> using date pickers, and the table
+        updates to show only the records that fall within that range.</p>
+    <p>This external filtering method improves performance by avoiding in-component filtering. Instead, the data is
+        pre-filtered at runtime using a custom <code>applyDateFilter</code> function, which compares the selected date
+        range with each record's date in the original dataset. This reduces the processing load on the Pivot Table and
+        results in a more responsive user experience</p>
+    <p><b> Note:</b> Aggregation in the Pivot Table is performed only on the filtered data. Any records outside the
+        selected date range are excluded from the summary calculations.</p>
+    <p>
+        More information on the Essential<sup>®</sup> JS2 Pivot Table can be found in this <a target="_blank"
+        href="https://ej2.syncfusion.com/javascript/documentation/pivotview/getting-started#adding-pivot-table-component">
+        documentation section</a>.
+    </p>
+</div>
+
+<style>
+    @media only screen and (max-width: 400px) {
+        #pivot-table-section {
+            overflow: auto;
+        }
+    }
+
+    .pivot-datepicker {
+        margin: 10px 20px 10px 0px !important;
+    }
+
+    .tailwind3 .pivot-datepicker .e-calendar .e-btn.e-today.e-flat.e-primary.e-disabled,
+    .tailwind3-dark .pivot-datepicker .e-calendar .e-btn.e-today.e-flat.e-primary.e-disabled {
+        background: #a5b4fc !important;
+        border-color: #a5b4fc !important;
+    }
+</style>
+<!-- custom code end -->

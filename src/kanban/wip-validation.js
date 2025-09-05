@@ -74,7 +74,7 @@ this.default = function () {
     var addFormObj = new ej.inputs.FormValidator('#column');
     document.getElementById('validate').onclick = function () {
         var colindex = keyObj.index;
-        var colText = document.getElementById('key').value;
+        var colText = document.getElementById('dropdownHeader').value;
         var colmin = parseInt(document.getElementById('minIndex').value, 10);
         var colmax = parseInt(document.getElementById('maxIndex').value, 10);
         if (colText === '') {

@@ -2,7 +2,9 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
         allowFiltering: true,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         highlightWeekends: true,
         treeColumnIndex: 1,
         taskFields: {
@@ -13,15 +15,15 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            child: 'subtasks'
+            parentID: 'ParentId'
         },
         columns: [
-            { field: 'TaskID', width: 80 },
+            { field: 'TaskID', width: 100 },
             { field: 'TaskName', width: 250 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
-            { field: 'Predecessor' },
+            { field: 'Predecessor', width: 190 },
             { field: 'Progress' },
         ],
         labelSettings: {
@@ -39,8 +41,8 @@ this.default = function () {
             }
         },
         toolbar: ['ExpandAll', 'CollapseAll', { text: 'Quick Filter', tooltipText: 'Quick Filter', id: 'Quick Filter', prefixIcon: 'e-quickfilter' }, { text: 'Clear Filter', tooltipText: 'Clear Filter', id: 'Clear Filter' }],
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('07/06/2024')
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('07/20/2025')
     });
     ganttChart.appendTo('#ToolbarTemplate');
 };

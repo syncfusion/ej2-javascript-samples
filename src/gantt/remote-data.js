@@ -1,62 +1,95 @@
 this.default = function () {
-    var hostUrl = 'https://services.syncfusion.com/js/production/api/GanttData';
-    var data = new ej.data.DataManager({
-        url: hostUrl,
-        adaptor: new ej.data.WebApiAdaptor(),
-        crossDomain: true
+    var recordCount = '1000';
+    function loadGanttData(recordCount) {
+        startLoadTime = new Date();
+        return new ej.data.DataManager({
+            url: 'https://services.syncfusion.com/js/production/api/GanttWebApiRemoteData?count=' + recordCount,
+            adaptor: new ej.data.WebApiAdaptor(),
+            crossDomain: true,
+        });
+    }
+    var startLoadTime, endLoadTime;
+    var shouldCalculateLoadTime = true;
+    var DLData = [
+        { Text: '1,000 Rows', Value: '1000' },
+        { Text: '2,500 Rows', Value: '2500' },
+        { Text: '5,000 Rows', Value: '5000' }
+    ];
+
+    var dropdown = new ej.dropdowns.DropDownList({
+        dataSource: DLData,
+        fields: { text: 'Text', value: 'Value' },
+        placeholder: 'Select Rows',
+        value: recordCount,
+        change: function (e) {
+            recordCount = e.value;
+            shouldCalculateLoadTime = true;
+            ganttChart.dataSource = loadGanttData(recordCount);
+        }
     });
+    dropdown.appendTo('#rowDropdown');
+
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: data,
-        height: '450px',
+        dataSource: loadGanttData(recordCount),
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         taskFields: {
             id: 'TaskId',
             name: 'TaskName',
             startDate: 'StartDate',
+            endDate: 'EndDate',
             duration: 'Duration',
             progress: 'Progress',
-            dependency: 'Predecessor',
-            child: 'SubTasks',
+            parentID: 'ParentId',
+            dependency: 'Predecessor'
+        },
+        splitterSettings:{
+            columnIndex: 2
         },
         columns: [
-		    { field: 'TaskId', visible: false },
-            { field: 'TaskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
-            { field: 'StartDate' },
-            { field: 'Duration' },
+            { field: 'TaskId' },
+            { field: 'TaskName', headerText: 'Project Activity', width: 250, clipMode: 'EllipsisWithTooltip' },
+            { field: 'StartDate', headerText: 'Planned Start Date',width: 200 },
+            { field: 'Duration', headerText: 'Duration' ,width: 160},
+            { field: 'Progress', headerText: 'Completion (%)', width: 200 }
         ],
         treeColumnIndex: 1,
         allowSelection: true,
-        gridLines: 'Both',
+        enableVirtualization: true,
+        enableTimelineVirtualization: true,
+        gridLines: 'Horizontal',
         showColumnMenu: false,
         highlightWeekends: true,
         timelineSettings: {
             timelineUnitSize: 50,
             topTier: {
-                unit: 'Month',
-                format: 'MMM dd, y',
+                unit: 'Week',
+                format: 'MMM dd, y'
             },
             bottomTier: {
                 unit: 'Day',
-                formatter: function(date) {
-                    var month = date.getMonth();
-                    if (month === 1) {
-                        return '';
-                    } else {
-                        var presentDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                        var start = new Date(presentDate.getFullYear(), 0, 0);
-                        var diff = Number(presentDate) - Number(start);
-                        var oneDay = 1000 * 60 * 60 * 24;
-                        var day = Math.floor(diff / oneDay);
-                        return 'day ' + (day - 59);
-                    }
-                },
-            },
+                format: 'dd'
+            }
         },
         labelSettings: {
-            leftLabel: 'TaskName',
+            rightLabel: 'TaskName',
+            taskLabel: 'Progress'
         },
         includeWeekend: true,
-        projectStartDate: new Date('02/24/2021'),
-        projectEndDate: new Date('06/10/2021'),
+        projectStartDate: new Date('12/29/2024'),
+        projectEndDate: new Date('03/19/2025'),
+
+        dataBound: function () {
+            if (shouldCalculateLoadTime) {
+                endLoadTime = new Date();
+                if (startLoadTime && endLoadTime) {
+                    var loadDuration = (endLoadTime.getTime() - startLoadTime.getTime())/1000;
+                    document.getElementById('loadTime').innerText = loadDuration.toFixed(2) + " sec";
+                }
+                shouldCalculateLoadTime = false;
+            }
+        }
     });
     ganttChart.appendTo('#RemoteData');
 };

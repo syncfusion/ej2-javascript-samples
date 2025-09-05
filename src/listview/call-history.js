@@ -4,11 +4,6 @@
 
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
-    if (!ej.base.Browser.isDevice.isDevice) {
-        document.getElementsByClassName('layoutWrapper')[0].classList.add('e-device-layout');
-    } else {
-        document.getElementsByClassName('tabContainer')[0].classList.add('e-visbile-layer');
-    }
     //Define an array of JSON data
 
     // Template of the list item

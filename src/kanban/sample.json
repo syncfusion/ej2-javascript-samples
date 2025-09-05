@@ -4,6 +4,7 @@
     "category": "Data Visualization",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
+    "type":"update",
     "samples": [
         {
             "url": "overview",
@@ -116,6 +117,14 @@
             "category": "Columns",
             "description": "This sample demonstrates the toggle column of JS Kanban, which is helpful to expand and collapse the columns and can be collapsed on page load also.",
             "api": { "Kanban": [ "dataSource", "keyField", "columns", "cardSettings" ] }
+        },
+        {
+            "url": "column-rearrangement",
+            "name": "Column Rearrangement",
+            "category": "Columns",
+            "description": "This example demonstrates the column rearrangement of the Kanban control. You can drag and drop the columns to rearrange them across multiple stages of the Kanban board.",
+            "api": { "Kanban": [ "dataSource", "keyField", "columns", "cardSettings", "allowColumnDragAndDrop" ] },
+            "type":"new"
         },
         {
             "url": "show-hide",

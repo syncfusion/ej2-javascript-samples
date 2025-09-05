@@ -1,0 +1,125 @@
+<div class="control-section">
+    <div class="content-wrapper" style="width: 100%;">
+        <div style="width: 100%;">
+            <div id="defaultToolbar">
+            </div>
+        </div>
+        <div id="pivot_sidebar" class="maincontent" style="width: 100%; height: 720px;">
+            <div id="PivotView" style="width: 64%;">
+            </div>
+        </div>
+        <aside id="defaultSidebar" class="default-sidebar" style="height: 100%;">
+            <div id="PivotFieldList" style="height: 100%;">
+            </div>
+        </aside>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates rendering a pivot table and pivot chart along with the Excel-like field list feature. It
+        also provides interactive controls to toggle the toolbar and dynamically switch between different display modes.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This example showcases the Syncfusion Pivot Table component alongside a Pivot Chart and a field list rendered
+        statically within a sidebar layout. The static field list allows users to configure and customize the report by
+        dragging and dropping fields into the appropriate sections such as rows, columns, values, and filters—without
+        relying on a popup interface. This enhances accessibility and usability, especially in wide-screen or dashboard
+        environments.
+    </p>
+    <p>
+        The Pivot Table component supports three display modes, which are implemented in this sample and can be
+        configurable using the <a target="_blank"
+            href="https://ej2.syncfusion.com/documentation/api/pivotview/displayOptionModel/#view">displayOption.view</a> property:
+    </p>
+    <table>
+        <tr>
+            <td style="vertical-align: top;padding: 4px 0;">
+                <code>Table :</code>
+            </td>
+            <td>Displays only the pivot table (default).</td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;padding: 4px 0;">
+                <code>Chart :</code>
+            </td>
+            <td>Displays only the pivot chart.</td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;padding: 4px 0;">
+                <code>Both :</code>
+            </td>
+            <td>Displays both the pivot table and pivot chart.</td>
+        </tr>
+    </table>
+    <br />
+    <p>
+        A <strong>Primary View</strong> dropdown lets users choose whether to prioritize the chart or table when both
+        are shown.</p>
+    <p>
+        Additionally, the <strong>Show/Hide Toolbar</strong> toggle controls the visibility of the built-in toolbar,
+        which includes
+        options for switching views and chart types.</p>
+    <br />
+    <p>
+        More information on the pivot chart can be found in this <a target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/pivotview/pivot-chart">
+        documentation section</a>.
+    </p>
+</div>
+<style>
+    #PivotViewcontainerwrapper {
+        height: auto !important;
+    }
+
+    .e-bigger .e-tbar-btn .tb-icons {
+        font-size: 20px;
+    }
+
+    .e-tbar-btn .tb-icons {
+        font-family: 'e-icons';
+        speak: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+    .e-tbar-menu-icon:before {
+        content: "\e725";
+    }
+
+    #layout_switch {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    .label_option {
+        margin-bottom: unset;
+    }
+
+    .toolbar-temp {
+        margin-left: 10px;
+    }
+
+    .display_label {
+        margin-right: 10px;
+    }
+    
+    #pivot_sidebar .e-sidebar.e-right {
+        border-left: unset !important;
+    }
+
+    .default-sidebar {
+        width: 35% !important;
+    }
+    #defaultToolbar .sb-icons {
+        font-size: 20px !important;
+    }
+    .pivot-fieldList{
+        display: none !important;
+    }
+</style>

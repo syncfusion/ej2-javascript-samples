@@ -3,7 +3,7 @@ this.default = function () {
     var pivotObj = new ej.pivotview.PivotView({
         dataSourceSettings: {
             valueSortSettings: {
-                columnHeaderText: 'FY 2015##In Stock',
+                columnHeaderText: 'FY 2022##In Stock',
                 headerDelimiter: '##',
                 columnSortOrder: 'Descending',
                 rowHeaderText: 'France',

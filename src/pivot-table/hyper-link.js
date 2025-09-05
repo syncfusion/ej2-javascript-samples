@@ -185,7 +185,7 @@ this.default = function () {
     valueInput2.appendTo('#hyperlinks-value2');
     var textInput = new ej.inputs.MaskedTextBox({
         value: '',
-        placeholder: 'Example: "FY 2015.In Stock"',
+        placeholder: 'Example: "FY 2022.In Stock"',
         width: '100%'
     });
     textInput.appendTo('#hyperlinks-text');

@@ -2,7 +2,9 @@ this.default = function () {
     var dropdownlistObj;
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.resourceAllocationData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowSelection: true,
         highlightWeekends: true,
         taskFields: {
@@ -136,8 +138,8 @@ this.default = function () {
                 },
             },
             { field: 'work', width:'110'},
-            { field: 'Duration', width: '100' },
-            { field: 'taskType', headerText: 'Task Type', width: '110'}
+            { field: 'Duration', width: 150 },
+            { field: 'taskType', headerText: 'Task Type', width: 150}
         ],
         editDialogFields: [
             { type: 'Resources' }
@@ -177,8 +179,8 @@ this.default = function () {
             rightLabel: 'resources',
             taskLabel: '${Progress}%'
         },
-        projectStartDate: new Date('03/28/2024'),
-        projectEndDate: new Date('07/28/2024')
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('07/28/2025')
      });
     ganttChart.appendTo('#resource');
 };

@@ -16,7 +16,9 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.virtualData,
         treeColumnIndex: 1,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowSelection: true,
         allowEditing:true,
         highlightWeekends: true,
@@ -35,8 +37,8 @@ this.default = function () {
         enableVirtualization: true,
         columns: [
             { field: 'TaskID' },
-            { field: 'TaskName' },
-            { field: 'StartDate' },
+            { field: 'TaskName', width:'200px'},
+            { field: 'StartDate',width: 170 },
             { field: 'Duration' },
             { field: 'Progress' }
         ],
@@ -53,6 +55,7 @@ this.default = function () {
         dataSource: indicatortypes,
         fields: { text: 'type', value: 'id' },
         value: 'Shimmer',
+        width: '125px',
         change: function (e) {
             if (dropDownListObject.value === 'Shimmer') {
                 ganttChart.loadingIndicator.indicatorType = 'Shimmer';

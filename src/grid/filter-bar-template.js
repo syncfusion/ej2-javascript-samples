@@ -119,7 +119,7 @@ this.default = function () {
         if (args.keyCode === 13) {
             var target = args.target;
             var th = ej.base.closest(target, 'th');
-            if (th && th.classList.contains('e-filterbarcell') && th.hasAttribute('e-mappinguid') && grid.getColumnByUid(th.getAttribute('e-mappinguid')).field === 'UnitPrice') {
+            if (th && th.classList.contains('e-filterbarcell') && th.hasAttribute('data-mappinguid') && grid.getColumnByUid(th.getAttribute('data-mappinguid')).field === 'UnitPrice') {
                 args.cancel = true;
                 if (minTextBox.element.value || maxTextBox.element.value) {
                     var filterColumns = grid.filterSettings.columns.filter(function (data) { return data.field !== 'UnitPrice'; });

@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.workTimeRange,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -32,8 +34,8 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName'
         },
-        projectStartDate: new Date('04/02/2024'),
-        projectEndDate: new Date('04/28/2024')
+        projectStartDate: new Date('04/02/2025'),
+        projectEndDate: new Date('04/28/2025')
     });
     ganttChart.appendTo('#WorkTimeRange');
     var workDays = [

@@ -14,23 +14,32 @@
     </div>
 </div>
 <div id="action-description">
-    <p>This sample shows an overview of the EJ2 Gantt Chart features that visualize the progress of each feature of the
-        product towards its release and make it easier to monitor the scheduling of the dependent items.</p>
+    <p>This sample provides an overview of the JavaScript Gantt Chart, showcasing its key features through an e-commerce platform redesign project 
+        timeline. It visualizes task hierarchies, dependencies, milestones, and resource allocations, enabling efficient project tracking from planning to deployment.
+    </p>
 </div>
 
 <div id="description">
-    <p>This example shows the three-quarter release planning of product features rendered in the EJ2 Gantt Chart. It
-        tracks the quarterly release planning of product status, resources, and task scheduling.</p>
-    <p>EJ2 Gantt Chart features such as Sorting, Filtering, Column resizing, Column menu, column template and so on are
-        used in this demo.</p>
+    <p>This demo presents an e-commerce platform redesign project, demonstrating key features such as task organization, customizable timeline views, 
+        resource management, and interactive controls. Users can <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/sorting">sort</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/filtering/filtering">filter tasks</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/columns/column-resizing"> resize</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/columns/column-reordering">reorder columns</a>, track progress with <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/baseline"> baselines</a>, 
+        and highlight key dates with <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/event-markers">event markers</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/holidays"> holidays</a>. The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/tool-bar"> toolbar </a> offers intuitive options to add, edit, delete, search, and expand or 
+        collapse tasks. Additionally, users can configure <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#workweek"> working days</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/scheduling-tasks#weekendnon-working-days"> highlight weekends</a>, set <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#projectstartdate"> project date ranges</a>.
+</p>
+<br>
+<p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/es5-getting-started#adding-gantt-control">documentation section</a>.</p>
 </div>
-
 
 <script type="text/x-template" id="columnTemplate">
     ${if(ganttProperties.resourceNames)}
-      <div class="image">
-           <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:25px;width:25px" /><div style="display:inline-block;width:100%;position:relative;left:5px">${ganttProperties.resourceNames}</div>
-       </div>
+        <div style="display: flex; align-items: center; gap: 8px;height: 100%;">
+            <div>
+                <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:24px;width:24px" />
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; line-height: 16px">
+                <span style="font-size:12px">${Assignee}</span>
+                <span style=" font-size: 9px; text-align:left; ">${taskData.Department}</span>
+           </div>    
+        </div>
    ${/if}
 </script>
 <script type="text/x-template" id="columnTemplate1">
@@ -40,8 +49,19 @@
 </script>
 <script type="text/x-template" id="columnTemplate2">
     ${if(taskData.Priority)}
-    <div style="${Priority(taskData.Priority)}"><span style="${PriorityContent(taskData.Priority)}">${taskData.Priority}</span></div>
+    <div style="display:flex;">
+        <div class="${PriorityIcon(taskData.Priority)}" style="${PriorityIconStyle(taskData.Priority)}" ></div> 
+        <span style="${PriorityContent(taskData.Priority)}">${taskData.Priority}</span>
+    </div>
     ${/if}
+</script>
+<script type="text/x-template" id="rightLabel">
+    <div>
+        ${if(ganttProperties.resourceInfo && ganttProperties.resourceInfo.length !==0)}
+            <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:25px;width:25px;" />
+            <span style="margin-left:3px">${Assignee}</span>
+        ${/if}
+    </div>
 </script>
 <style>
     .gantt-settings-button {
@@ -143,12 +163,6 @@
         font-family: 'e-icons';
     }
 
-    /* Gantt Chart Styling */
-    #overviewSample .e-gantt-child-taskbar,
-    #overviewSample .e-gantt-parent-taskbar {
-        border-radius: 10px !important;
-    }
-
 
     .ganttoverview-side-by-side-container {
         display: flex;
@@ -211,8 +225,11 @@
     #overviewSample .e-tbar-btn-text {
         display: none;
     }
-    .tailwind3 .ganttoverview-title-header, .tailwind3-dark .ganttoverview-title-header,
-    .tailwind .ganttoverview-title-header, .tailwind-dark .ganttoverview-title-header{
+
+    .tailwind3 .ganttoverview-title-header,
+    .tailwind3-dark .ganttoverview-title-header,
+    .tailwind .ganttoverview-title-header,
+    .tailwind-dark .ganttoverview-title-header {
         width: 262px;
     }
 </style>

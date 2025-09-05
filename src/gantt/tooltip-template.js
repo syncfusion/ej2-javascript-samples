@@ -2,7 +2,9 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.tooltipData,
         renderBaseline: true,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         highlightWeekends: true,
         treeColumnIndex: 1,
         taskFields: {
@@ -26,8 +28,8 @@ this.default = function () {
             { field: 'Duration' },
             { field: 'Predecessor' },
             { field: 'Progress' },
-            { field: 'BaselineStartDate' },
-            { field: 'BaselineEndDate' },
+            { field: 'BaselineStartDate', width: 200 },
+            { field: 'BaselineEndDate', width: 200 },
             { field: 'resources' },
         ],
         resourceFields: {
@@ -59,8 +61,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('05/04/2024'),
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('06/01/2025'),
     });
     ganttChart.appendTo('#TooltipTemplate');
 

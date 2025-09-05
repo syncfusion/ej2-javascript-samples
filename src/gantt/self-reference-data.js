@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.selfData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowSelection: true,
         highlightWeekends: true,
         treeColumnIndex: 1,
@@ -30,8 +32,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('01/28/2024'),
-        projectEndDate: new Date('03/10/2024')
+        projectStartDate: new Date('01/28/2025'),
+        projectEndDate: new Date('03/30/2025')
     });
     ganttChart.appendTo('#SelfData');
 };

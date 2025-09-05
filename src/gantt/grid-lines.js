@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         highlightWeekends: true,
         treeColumnIndex: 1,
         taskFields: {
@@ -12,7 +14,7 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            child: 'subtasks'
+            parentID: 'ParentId'
         },
         columns: [
             { field: 'TaskID', width: 80 },
@@ -30,8 +32,8 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('07/06/2024')
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('07/20/2025')
     });
     ganttChart.appendTo('#GridLines');
 

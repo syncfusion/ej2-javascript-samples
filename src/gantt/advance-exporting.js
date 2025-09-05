@@ -124,7 +124,9 @@ this.default = function () {
         queryTaskbarInfo:queryTaskbarInfo,
         allowSelection: true,
         gridLines: 'Both',
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         treeColumnIndex: 1,
         resourceFields: {
             id: 'resourceId',
@@ -146,7 +148,7 @@ this.default = function () {
              rightLabel: '#rightLabel'
         },
         splitterSettings: {
-            columnIndex: 2,
+            columnIndex: 3,
         },
         projectStartDate: new Date('03/25/2025'),
         projectEndDate: new Date('06/01/2025'),

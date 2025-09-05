@@ -3,7 +3,7 @@ this.default = function () {
      * RichTextEditor AI Assist Sample
      */
     ej.base.enableRipple(true);
-    ej.richtexteditor.RichTextEditor.Inject(ej.richtexteditor.Toolbar, ej.richtexteditor.Link, ej.richtexteditor.Image, ej.richtexteditor.QuickToolbar, ej.richtexteditor.HtmlEditor);
+    ej.richtexteditor.RichTextEditor.Inject(ej.richtexteditor.Toolbar, ej.richtexteditor.Link, ej.richtexteditor.Image, ej.richtexteditor.QuickToolbar, ej.richtexteditor.HtmlEditor, ej.richtexteditor.Table);
     let dialog;
     const queryList = [
         { ID: "Rephrase", Text: "Rephrase" },
@@ -63,11 +63,13 @@ this.default = function () {
             items: [
                 {
                     tooltipText: 'AI Assistant',
+                    command: 'Custom',
                     template:
                         '<button class="e-tbar-btn e-btn" tabindex="-1" id="ai_assistant_button_tbar" style="width:100%"><div class="e-rte-dropdown-btn-text">AIAssistant</div></button>'
                 },
                 {
                     tooltipText: 'Rephrase',
+                    command: 'Custom',
                     template:
                         '<button class="e-tbar-btn e-btn" tabindex="-1" id="ai_rephrase_button_tbar" style="width:100%"><div class="e-tbar-btn-text">Rephrase</div></button>'
                 },

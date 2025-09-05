@@ -81,10 +81,12 @@ this.default = function () {
             { field: 'Duration', headerText: 'Duration'},
             { field: 'Progress', headerText: 'Progress'},
         ],
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         allowUnscheduledTasks: true,
-        projectStartDate: new Date('03/31/2024'),
-        projectEndDate: new Date('04/23/2024'),
+        projectStartDate: new Date('03/29/2025 01:00:00 PM'),
+        projectEndDate: new Date('04/23/2025'),
         timelineTemplate:"#TimelineTemplates"
     });
     ganttChart.appendTo('#Timeline');

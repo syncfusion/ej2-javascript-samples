@@ -1,8 +1,8 @@
 this.default = function() {
+  var overviewBlockEditor = new ej.blockeditor.BlockEditor({
+    blocks: window.blockDataOverview,
+    users: window.mentionUsers
+  });
 
-    var overviewBlockEditor = new ej.blockeditor.BlockEditor({
-        blocks: window.blockDataOverview,
-    });
-    
-    overviewBlockEditor.appendTo('#block-editor');
+  overviewBlockEditor.appendTo("#block-editor");
 };

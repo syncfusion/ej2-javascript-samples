@@ -3,6 +3,7 @@ this.default = function() {
     var chatUiInst = new ej.interactivechat.ChatUI({
         messages: window.communityMessagedata,
         user: { user: 'Alice', id: 'admin' },
+        mentionUsers: [ window.communityMessageAdmin, window.communityMessageUser1, window.communityMessageUser2, window.communityMessageUser3, window.communityMessageUser4 ],
         headerIconCss: "chat_header_icon",
         headerText: 'Design Community',
         showTimeBreak: true,
@@ -22,6 +23,7 @@ this.default = function() {
                         isForwarded: true,
                         isPinned: args.message.isPinned,
                         author: args.message.author,
+                        mentionUsers: args.message.mentionUsers,
                         text: args.message.text,
                         timeStamp: args.message.timeStamp,
                         timeStampFormat: args.message.timeStampFormat,
@@ -42,7 +44,15 @@ this.default = function() {
         { id: 'chatFooter', checked: true, property: 'showFooter' },
         { id: 'compactmode', checked: false, property: 'enableCompactMode' }
     ];
-    
+
+    const mentionUsers = {
+        'Alice Brown': window.communityMessageAdmin,
+        'Michale Suyama': window.communityMessageUser1,
+        'Charlie': window.communityMessageUser2,
+        'Janet': window.communityMessageUser3,
+        'Jordan Peele': window.communityMessageUser4
+    };
+
     chatProperties.forEach(toggle => {
         new ej.buttons.Switch({
             checked: toggle.checked,
@@ -74,4 +84,18 @@ this.default = function() {
             chatUiInst.typingUsers = chatUiInst.typingUsers.filter(user => user.user !== args.itemData.value);
         }
     }, '#chat_typingUsers');
+
+    new ej.dropdowns.MultiSelect({
+        placeholder: 'Mention users...',
+        value: ["Alice Brown", "Michale Suyama", "Charlie", "Janet", "Jordan Peele"],
+        select: (args) => {
+            const user = mentionUsers[args.itemData.value];
+            chatUiInst.mentionUsers = [...chatUiInst.mentionUsers, user];
+            chatUiInst.dataBind();
+        },
+        removed: (args) => {
+            chatUiInst.mentionUsers = chatUiInst.mentionUsers.filter(user => user.user !== args.itemData.value);
+            chatUiInst.dataBind();
+        }
+    }, '#chat_mentionUsers');
 };

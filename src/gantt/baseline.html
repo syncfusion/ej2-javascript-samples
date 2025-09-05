@@ -2,10 +2,6 @@
     <div class="content-wrapper">
         <div id="Baseline">
         </div>
-        <div style="float: right; margin: 10px;">Source:
-            <a href="https://en.wikipedia.org/wiki/Service_(motor_vehicle)"
-                target='_blank'>https://en.wikipedia.org/</a>
-        </div>
     </div>
 </div>
 <script type="text/x-jsrender" id="tooltip">
@@ -31,19 +27,42 @@
         </tbody>
     </table>
 </script>
+<script type="text/x-jsrender" id="parenttask">
+    <div class="e-gantt-parent-taskbar e-row-expand e-custom-parent" style="height:10px; margin-top: 17px; background:#F3F4F6; border: 1px solid #9CA3AF; border-radius:5px;text-overflow:ellipsis;">
+        <div class="e-gantt-child-progressbar e-custom-progress" style="height:100%; width:${ganttProperties.progress}%; background:#9CA3AF; border-radius:5px;"></div>
+        <span class="e-label" style="position:absolute; top:0px; right:6px; font-size:12px; margin: 0px; text-overflow:ellipsis; white-space:nowrap;">${TaskName} | ${this.getFormatedDate(ganttProperties.startDate)} - ${this.getFormatedDate(ganttProperties.endDate)} | ${ganttProperties.duration} days</span>
+    </div>
+</script>
+<script type="text/x-template" id="rightLabel">
+        ${if(ganttProperties.parentId)}
+            <span class='e-label'>${TaskName}</span>
+        ${/if}
+</script>
 <div id="action-description">
-    <p>This sample visualizes the complete service schedule for a car.
-        Baselines are enabled to view the deviation between the planned dates and actual dates</p>
+    <p>This sample visualizes the complete car service schedule using the JavaScript Gantt Chart. Baselines are enabled to highlight deviations between planned and actual service dates, helping track schedule accuracy across all tasks and milestones.</p>
 </div>
 
 <div id="description">
-    <p>
-        The baseline feature enables the user to view the deviation between the planned dates and the actual dates of
-        the tasks in a project. Baselines can be enabled in Gantt Chart by enabling the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#renderbaseline">renderBaseline</a>
-        property along
-        with mapping the data source values for <code>baselineStartDate</code> and <code>baselineEndDate</code>
-        properties.
-        The baseline will appear for all type of tasks in the project such as child tasks, parent tasks and also for
-        milestones. You can change the color for the baselines using <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#baselinecolor">baselineColor</a> property.
-    </p>
+    <p> In this demo sample, the baseline feature in the JavaScript Gantt Chart, which helps visualize the variance between planned and actual task 
+        schedules. Baselines provide a clear reference for tracking project deviations and are rendered for all task types including child tasks, 
+        parent tasks, and milestones.</p>
+    <p>To enable baselines in the JavaScript Gantt Chart, set the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#renderbaseline">renderBaseline</a> property to <code>true</code> and define the planned schedule using the 
+        <code>baselineStartDate</code> field. You can either specify the <code>baselineEndDate</code> directly or use the <code>baselineDuration</code> property to calculate it 
+        automatically. Setting <code>baselineDuration</code> to zero is particularly useful for milestones, as it clearly marks a planned point in time. 
+        The appearance of baselines can be customized using the <code><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#baselinecolor">baselineColor</a></code> property to visually distinguish planned timelines from actual 
+        task progress.timelines from actual progress.</p>
+    <br>
+    <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/baseline">documentation section</a>.</p>
 </div>
+<style>
+    .e-baseline-bar {
+        height: 6px !important; 
+    }
+    .fluent2-highcontrast .e-custom-parent, .e-dark-mode .e-custom-parent{
+        background: #232937 !important;
+        border: 1px solid #2F3542 !important;
+    }
+    .fluent2-highcontrast .e-custom-progress, .e-dark-mode .e-custom-progress{
+        background: #2F3542 !important;
+    }
+</style>

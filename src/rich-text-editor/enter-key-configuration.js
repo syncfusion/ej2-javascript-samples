@@ -29,13 +29,26 @@ this.default = function () {
             codeView.appendChild(mirrorView);
         }
         mirrorView.style.display = 'block';
+        var existingLink = Array.from(document.getElementsByTagName('link'))
+        .some(function(link) { return link.href.includes('codemirror.css'); });
+        if (!existingLink) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '/src/common/lib/content/codemirror.css';
+            document.head.appendChild(link);
+        }
         if (defaultRTE.value !== null) {
-            var myCodeMirror = CodeMirror(mirrorView, {
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/codemirror.js';
+            script.onload = function () {
+                var myCodeMirror = CodeMirror(mirrorView, {
                 value: defaultRTE.value,
                 mode: 'text/html',
                 lineWrapping: true,
                 readOnly: true
-            });
+                });
+            };
+            document.getElementsByTagName('head')[0].appendChild(script);
         }
     }
     

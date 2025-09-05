@@ -3,6 +3,17 @@ this.default = function() {
 
     var eventsBlockEditor = new ej.blockeditor.BlockEditor({
         blocks: window.blockDataEvents,
+        inlineToolbar: {
+        open: (args) => {
+            appendElement('BlockEditor inline toolbar <b>opened</b><hr>');
+        },
+        close: (args) => {
+           appendElement('BlockEditor inline toolbar <b>closed</b><hr>');
+        },
+        itemClicked: (args) => {
+         appendElement(`BlockEditor inline toolbar <b>${args.item.item}</b> clicked<hr>`);
+        }
+    },
         created: created,
         contentChanged: contentChanged,
         selectionChanged: selectionChanged,
@@ -16,7 +27,8 @@ this.default = function() {
         blur: blurEvent,
         beforePaste: beforePasteEvent,
         afterPaste: afterPasteEvent,
-        undoRedoPerformed: undoRedoPerformedEvent
+        undoRedoPerformed: undoRedoPerformedEvent,
+        keyActionExecuted:keyActionExecutedEvent
     });
     
     eventsBlockEditor.appendTo('#events-blockeditor');
@@ -82,6 +94,26 @@ this.default = function() {
     function undoRedoPerformedEvent(args) {
         appendElement(`BlockEditor <b>${args.isUndo ? 'Undo' : 'Redo'}</b> action performed<hr>`);
     }
+
+  function keyActionExecutedEvent(args) {
+    if (args.action === 'bold') {
+        appendElement('BlockEditor <b>Bold</b> keyAction clicked<hr>');
+    } else if (args.action === 'italic') {
+        appendElement('BlockEditor <b>Italic</b> keyAction clicked<hr>');
+    } else if (args.action === 'underline') {
+        appendElement('BlockEditor <b>Underline</b> keyAction clicked<hr>');
+    } else if (args.action === 'strikethrough') {
+        appendElement('BlockEditor <b>Strikethrough</b> keyAction clicked<hr>');
+    } else if (args.action === 'link') {
+        appendElement('BlockEditor <b>Insert Link</b> keyAction clicked<hr>');
+    } else if (args.action === 'cut') {
+        appendElement('BlockEditor <b>Cut</b> keyAction clicked<hr>');
+    } else if (args.action === 'copy') {
+        appendElement('BlockEditor <b>Copy</b> keyAction clicked<hr>');
+    } else if (args.action === 'paste') {
+        appendElement('BlockEditor <b>Paste</b> keyAction clicked<hr>');
+    }
+}
 
     function appendElement(html) {
         var span = document.createElement('span');

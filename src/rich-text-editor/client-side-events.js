@@ -46,7 +46,8 @@ this.default = function() {
         beforeSanitizeHtml: beforeSanitizeHtml,
         resizing: resizing,
         resizeStart: resizeStart,
-        resizeStop: resizeStop
+        resizeStop: resizeStop,
+        selectionChanged: selectionChanged,
     });
     defaultRTE.appendTo('#defaultRTE');
     var clear = new ej.buttons.Button({});
@@ -193,5 +194,9 @@ this.default = function() {
 
     function actionCompleteHandler() {
         setTimeout(function() { defaultRTE.toolbarModule.refreshToolbarOverflow(); }, 400);
+    }
+
+    function selectionChanged() {
+        appendElement('RichTextEditor <b>selectionChanged</b> event called<hr>');
     }
 };

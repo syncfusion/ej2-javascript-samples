@@ -1,7 +1,9 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: window.projectNewData,
-        height: '450px',
+        dataSource: window.criticalPathData ,
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         enableCriticalPath: true,
         taskFields: {
             id: 'TaskID',
@@ -11,7 +13,7 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            child: 'subtasks'
+            parentID: 'ParentId'
         },
         editSettings: {
             allowAdding: true,
@@ -34,8 +36,8 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName'
         },
-        projectStartDate: new Date('03/24/2024'),
-        projectEndDate: new Date('07/06/2024')
+        projectStartDate: new Date('03/26/2025'),
+        projectEndDate: new Date('06/01/2025')
     });
     ganttChart.appendTo('#CriticalPath');
 };

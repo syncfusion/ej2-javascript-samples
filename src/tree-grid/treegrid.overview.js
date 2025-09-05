@@ -25,7 +25,7 @@ this.default = function () {
             },
             { field: 'coordinates', headerText: 'Coordinates', allowSorting: false, template: '#locationtemplate', width: 220 },
             { field: 'area', headerText: 'Area', template: '#areatemplate', width: 140 },
-            { field: 'timezone', headerText: 'Time Zone', template: '#timezonetemplate', width: 150 }
+            { field: 'timezone', headerText: 'Time Zone', template: '#timezonetemplate', width: 180,clipMode: 'EllipsisWithTooltip', }
         ]
     });
     treeGridObj.appendTo('#TreeGrid');
@@ -35,7 +35,7 @@ this.default = function () {
         img.src = 'src/tree-grid/images/__Normal.png';
         img.style.filter = "brightness(150%)";
         if (data.timezone.indexOf("-") != -1) {
-            img.className = 'negativeTimeZone';
+             img.className = 'negativeTimeZone';
         }
         return img.outerHTML;
     };

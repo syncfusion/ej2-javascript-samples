@@ -29,8 +29,7 @@ this.default = function () {
         value: 'Vertical',
         change: function (e) {
             var lines = e.value;
-            treegrid.gridLines = lines;
-            treegrid.refresh();
+            treegrid.setProperties({ gridLines: lines }, false);
         },
     });
     dropDownListObject.appendTo('#ddlelement');

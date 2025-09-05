@@ -6,51 +6,45 @@
 </div>
 <!-- custom code start -->
 <div id="action-description">
-    <p>This sample demonstrates custom aggregate functionality of the Tree Grid. In this sample, the custom aggregate 
-        value for the columns “Category” is displayed in column footer with dropdown to display the count of selected category name.</p>
+    <p>This sample demonstrates custom aggregate and exporting functionality in the Tree Grid. Aggregate values for the
+        columns are displayed in the column footer, and export options are available via the toolbar buttons.</p>
 </div>
 
 <div id="description">
-    <p>The Tree Grid supports aggregates which will be displayed at the footer and every hierarchy level.
-        The aggregate configurations can be provided by the <code>aggregates</code> property.</p>
-        <p>The built-in aggregates are,</p>
-        <ul>
-            <li><code>Sum</code></li>     
-            <li><code>Average</code></li>     
-            <li><code>Min</code></li>     
-            <li><code>Max</code></li>     
-            <li><code>Count</code></li>     
-            <li><code>TrueCount</code></li>     
-            <li><code>FalseCount</code></li>     
-            <li><code>Custom</code> - Requires the <code>customAggregate</code> property to perform aggregation.
-                The custom aggregate value can be accessed inside template using the key <code>${Custom}</code></li>     
-        </ul>    
-        <p>
-            In this demo, the footerTemplate property shows the custom aggregate value for the columns “Category” in column footer to 
-            display the count of category name.
-        </p>
-        <p>
-			<br />
-			More information about custom Aggregate can be found in this
-			<a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/aggregates/#custom-aggregate">
-				documentation section.
-			</a>
-		</p>
+    <p>The Tree Grid supports displaying aggregates in the footer, which can be configured using the
+        <code>aggregates</code> property. Here, a <code>customAggregate</code> configuration is applied to the
+        <b>Category</b> column to show a dropdown that displays the count of the selected category.</p>
+    <p>
+        The Tree Grid also supports seamless exports to <b>Excel</b>, <b>PDF</b>, or <b>CSV</b> with a single click. The
+        <code>excelAggregateQueryCellInfo</code> and <code>pdfAggregateQueryCellInfo</code> events ensure that footer
+        aggregate values are accurately preserved in the exported files.
+    </p>
+    <p>
+        More information about custom aggregate can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/aggregates/custom-aggregate">
+            documentation</a> section.
+    </p>
 </div>
 
 <style>
-    .e-input {
-        padding-bottom: 1px !important;
-    }
- 
     .e-summarycell.e-templatecell {
-        pointer-events:visible !important;
+        pointer-events: visible !important;
     }
 
-    .e-treegrid .e-summarycell.e-templatecell .e-input-group {
-        input.e-control.e-dropdownlist.e-lib.e-input {
-            padding-left: 6px !important;
-        }
+    .fluent2 input#customers {
+        padding-bottom: 8px !important;
     }
- </style>
- <!-- custom code end -->
+
+    .bootstrap5\.3 input#customers {
+        padding-bottom: 5px !important;
+    }
+
+    .material3 input#customers {
+        padding-bottom: 6px !important;
+    }
+
+    .tailwind3 input#customers {
+        padding-bottom: 3px !important;
+    }
+</style>
+<!-- custom code end -->

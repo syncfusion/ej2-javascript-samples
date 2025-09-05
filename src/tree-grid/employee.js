@@ -152,6 +152,7 @@ this.default = function () {
             treegrid.clearSorting();
             treegrid.columns = getColumns(viewer);
             treegrid.refreshColumns();
+            treegrid.refresh();
         } else {
             treegrid = new ej.treegrid.TreeGrid({
                 dataSource: window.employeeData,

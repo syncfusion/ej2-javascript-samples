@@ -35,19 +35,19 @@ this.default = function () {
     });
     radioButton.appendTo('#expand');
     radioButton = new ej.buttons.RadioButton({
-        label: 'FY 2015',
+        label: 'FY 2022',
         name: 'DrillOperation',
         checked: false,
         change: onRadioChange
     });
-    radioButton.appendTo('#fy15');
+    radioButton.appendTo('#fy22');
     radioButton = new ej.buttons.RadioButton({
-        label: 'FY 2015 >> Q1',
+        label: 'FY 2022 >> Q1',
         name: 'DrillOperation',
         checked: false,
         change: onRadioChange
     });
-    radioButton.appendTo('#fy15_q1');
+    radioButton.appendTo('#fy22_q1');
     radioButton = new ej.buttons.RadioButton({
         label: 'United States',
         name: 'DrillOperation',
@@ -77,11 +77,11 @@ this.default = function () {
         else if (id === 'expand') {
             pivotObj.dataSourceSettings.expandAll = true;
         }
-        else if (id === 'fy15') {
-            pivotObj.dataSourceSettings.drilledMembers = [{ name: 'Year', items: ['FY 2015'] }];
+        else if (id === 'fy22') {
+            pivotObj.dataSourceSettings.drilledMembers = [{ name: 'Year', items: ['FY 2022'] }];
         }
-        else if (id === 'fy15_q1') {
-            pivotObj.dataSourceSettings.drilledMembers = [{ name: 'Year', items: ['FY 2015'] },
+        else if (id === 'fy22_q1') {
+            pivotObj.dataSourceSettings.drilledMembers = [{ name: 'Year', items: ['FY 2022'] },
                 { name: 'Quarter', items: ['Q1'] }];
         }
         else if (id === 'us') {

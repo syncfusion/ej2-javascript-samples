@@ -14,23 +14,25 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskId', width: 90 },
-            { field: 'TaskName', width: 80 },
-            { field: 'StartDate', width: 120 },
+            { field: 'TaskName', width: 100},
+            { field: 'StartDate', width: 180 },
             { field: 'EndDate', width: 120 },
-            { field: 'Duration', width: 90 }
+            { field: 'Duration', width: 150 }
         ],
         splitterSettings: {
             columnIndex: 4
         },
         toolbar: [{ text: 'Insert task', tooltipText: 'Insert task at top', id: 'toolbarAdd', prefixIcon: 'e-add-icon tb-icons' }],
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         labelSettings: {
             leftLabel: 'TaskName',
             rightLabel: 'TaskType'
         },
         allowUnscheduledTasks: true,
-        projectStartDate: new Date('01/01/2024'),
-        projectEndDate: new Date('01/20/2024'),
+        projectStartDate: new Date('12/29/2024'),
+        projectEndDate: new Date('02/08/2025'),
         toolbarClick: toolbarClick,
     });
     ganttChart.appendTo('#Unscheduled');

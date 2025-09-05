@@ -30,7 +30,9 @@ this.default = function () {
         toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
         enableContextMenu: true,
         allowSelection: true,
-        height: '450px',
+        height: '650px',
+        rowHeight:46,
+        taskbarHeight:25,
         treeColumnIndex: 1,
         highlightWeekends: true,
         splitterSettings: {
@@ -40,8 +42,8 @@ this.default = function () {
             leftLabel: 'TaskName',
             taskLabel: '${Progress}%'
         },
-        projectStartDate: new Date('01/30/2024'),
-        projectEndDate: new Date('03/04/2024')
+        projectStartDate: new Date('01/29/2025'),
+        projectEndDate: new Date('04/20/2025')
      });
     ganttChart.appendTo('#SplitTasks');
 };

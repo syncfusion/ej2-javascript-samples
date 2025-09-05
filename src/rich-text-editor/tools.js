@@ -10,7 +10,7 @@ this.default = function() {
             items: [
                 'Undo', 'Redo', '|', 'ImportWord', 'ExportWord', 'ExportPdf', '|',
                 'Bold', 'Italic', 'Underline', 'StrikeThrough', 'InlineCode', '|', 'CreateLink', 'Image', 'CreateTable', 'CodeBlock',
-                'HorizontalLine', 'Blockquote', '|', 'BulletFormatList', 'NumberFormatList', '|', 'Formats', 'Alignments', '|', 'Outdent', 'Indent', '|',
+                'HorizontalLine', 'Blockquote', '|', 'BulletFormatList', 'NumberFormatList', 'Checklist', '|', 'Formats', 'Alignments', '|', 'Outdent', 'Indent', '|',
                 'FontColor', 'BackgroundColor', 'FontName', 'FontSize', '|', 'LowerCase', 'UpperCase', '|', 'SuperScript', 'SubScript', '|',
                 'EmojiPicker', 'FileManager', 'Video', 'Audio', '|', 'FormatPainter', 'ClearFormat',
                 '|', 'Print', 'FullScreen', '|', 'SourceCode']
@@ -62,7 +62,7 @@ this.default = function() {
             }
         },
         quickToolbarSettings: {
-            table: ['Tableheader', 'TableRemove', '|', 'TableRows', 'TableColumns', 'TableCell', '|' , 'Styles', 'BackgroundColor', 'Alignments', 'TableCellVerticalAlign'],
+            table: ['Tableheader', 'TableRemove', '|', 'TableRows', 'TableColumns', 'TableCell', '|', 'TableEditProperties', 'Styles', 'BackgroundColor', 'Alignments', 'TableCellVerticalAlign'],
             text: ['Formats', '|', 'Bold', 'Italic', 'Fontcolor', 'BackgroundColor', '|', 'CreateLink', 'Image', 'CreateTable', 'Blockquote', '|' , 'Unorderedlist', 'Orderedlist', 'Indent', 'Outdent'],
             showOnRightClick: true,
         },
@@ -119,15 +119,16 @@ this.default = function() {
         } else {
             rteContainer.classList.add('e-rte-code-mirror-enabled');
             rteContainer.classList.remove('e-source-code-enabled');
+            var editorValue = editor.element.querySelector('.e-rte-srctextarea').value;
             if (!mirrorView) {
                 mirrorView = ej.base.createElement('div', { className: 'rte-code-mirror', id: id, styles: 'display: none;' });
                 rteContainer.appendChild(mirrorView);
                 renderCodeMirror(
                     mirrorView,
-                    editor.value === null ? '' : editor.value
+                    editorValue === null ? '' : editorValue
                 );
             } else {
-                myCodeMirror.setValue(editor.value === null ? '' : editor.value);
+                myCodeMirror.setValue(editorValue === null ? '' : editorValue);
             }
             if (document.querySelector('.e-rte-full-screen')) {
                 document.querySelector('.CodeMirror').style.height = 'auto';

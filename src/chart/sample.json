@@ -1095,7 +1095,6 @@
         {
             "url": "live-stock-data",
             "name": "Live stock data",
-            "type": "update",
             "description": "This demo for Essential JavaScript2 Chart control shows the real time charts",
             "category": "Real-time Charts",
             "api": {
@@ -1589,6 +1588,23 @@
             "name": "Empty Points",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
             "category": "Chart Customization",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "isTransposed",
+                    "loaded",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "no-data-template",
+            "name": "No Data Template",
+            "description":"This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the empty points.",
+            "category": "Chart Customization",
+            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",

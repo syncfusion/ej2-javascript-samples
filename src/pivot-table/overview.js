@@ -295,6 +295,11 @@ this.default = function () {
                 }
             }
         },
+        load: function(args) {
+            if (ej.base.Browser.isDevice) {
+                args.dataSourceSettings.rows = [{ name: 'rank_display', caption: 'Rank', expandAll: true, allowDragAndDrop: false }];
+            }
+        },
         cellTemplate: '${getCellContent(data)}',
         enableFieldSearching: true
     });

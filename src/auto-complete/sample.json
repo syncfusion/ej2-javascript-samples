@@ -3,7 +3,6 @@
     "directory": "auto-complete",
     "category": "Dropdowns",
     "ftName": "autocomplete",
-    "type": "update",
     "samples": [
         { "url": "default", "name": "Default Functionalities", "description": "This example demonstrates the default functionalities of the JavaScript(ES5) autocomplete control with minimum configuration.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "value", "placeholder"] } },
         { "url": "grouping-icon", "name": "Grouping and Icons", "description": "This example demonstrates how to group based on the different categories with individual header and icon support using the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["fields", "placeholder"] } },
@@ -14,7 +13,7 @@
         { "url": "resize",  "name": "Popup Resize", "description": "This example demonstrates how to resize the appearance of popup in the JavaScript(ES5) autocomplete .", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "headerTemplate", "itemTemplate", "placeholder", "popupHeight" , "allowResize"] } },
         { "url": "highlight", "name": "Highlight", "description": "This example demonstrates how to highlight the searched characters in the suggested list items of the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "highlight", "placeholder"] } },
         { "url": "virtual-scroll", "name": "Virtualization", "description": "This example demonstrates how to use virtualization support of the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "fields", "enableVirtualization", "popupHeight", "placeholder"] } },
-        { "url": "custom-filtering", "name": "Custom Filtering", "type": "update", "description": "This example demonstrates how to achieve the custom filtering functionalities in the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "filtering", "fields", "placeholder"] } },
+        { "url": "custom-filtering", "name": "Custom Filtering", "description": "This example demonstrates how to achieve the custom filtering functionalities in the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "filtering", "fields", "placeholder"] } },
         { "url": "diacritics-filtering", "name": "Diacritics Filtering", "description": "This example demonstrates how to achieve the diacritics filter functionalities in the JavaScript(ES5) autocomplete control.", "category": "AutoComplete", "api": { "AutoComplete": ["dataSource", "ignoreAccent", "placeholder"] } }
     ],
     "dataSourcePath": "src/drop-down-list/data-source.js"

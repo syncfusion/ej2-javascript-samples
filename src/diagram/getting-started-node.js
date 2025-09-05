@@ -20,7 +20,8 @@ function updateLock(args) {
             node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Delete | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
             node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
         } else {
-            node.constraints = ej.diagrams.NodeConstraints.Default;
+            node.constraints |= (ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Delete | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
+            node.constraints &= ~ej.diagrams.NodeConstraints.ReadOnly;
         }
     }
     //If the lock checkbox is checked then the Connector constraints such as DragSourceEnd,DragTargetEnd,Delete,Drag will be disabled
