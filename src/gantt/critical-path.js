@@ -36,8 +36,7 @@ this.default = function () {
         labelSettings: {
             leftLabel: 'TaskName'
         },
-        projectStartDate: new Date('03/26/2025'),
-        projectEndDate: new Date('06/01/2025')
+        projectStartDate: new Date('03/26/2025')
     });
     ganttChart.appendTo('#CriticalPath');
 };

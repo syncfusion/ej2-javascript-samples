@@ -150,8 +150,7 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 3,
         },
-        projectStartDate: new Date('03/25/2025'),
-        projectEndDate: new Date('06/01/2025'),
+        projectStartDate: new Date('03/25/2025')
     });
     
     ganttChart.appendTo('#advanceExport');

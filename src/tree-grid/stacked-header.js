@@ -1,4 +1,5 @@
 this.default = function () {
+    var treeObj;
     function nodeCheck(args) {
         var checkedNode = [args.node];
         if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
@@ -11,6 +12,7 @@ this.default = function () {
         }
     }
     function renderCustomColumnChooser(targetLHTMLElement, columns) {
+        var treeData;
         var parentNodes = [
             { id: 1, name: 'Order Details', hasChild: true, expanded: true },
             { id: 2, name: 'Shipping Details', hasChild: true, expanded: true },

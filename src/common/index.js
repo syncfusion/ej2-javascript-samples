@@ -274,20 +274,20 @@ searchPopup = new ej.dropdowns.AutoComplete({
     } else {
         ej.base.select('.sb-mobile-preference').appendChild(ej.base.select('#settings-popup'));
     }
-    searchPopup.hidePopup();
+       searchPopup.hidePopup();
     switcherPopup.hide();
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
+        index: themeCollection.indexOf(selectedTheme.split('-')[0]),
+        change: function (e) { switchTheme(e.value); }
+    });
+    themeDropDown.appendTo('#sb-setting-theme');
+    themeModeDropDown = new ej.dropdowns.DropDownList({
         index: selectedTheme.includes('-dark') ? 1 : 0,
         change: function (e) {
               if (isUpdatingFromUrl) {
                 return;}
               darkSwitch() }
-    });
-    themeDropDown.appendTo('#sb-setting-theme');
-    themeModeDropDown = new ej.dropdowns.DropDownList({
-        index: (location.hash.split('/')[1] && location.hash.split('/')[1].includes('-dark')) ? 1 : 0,
-        change: function (e) { darkSwitch() }
     });
     themeModeDropDown.appendTo('#sb-theme-mode');
     cultureDropDown = new ej.dropdowns.DropDownList({
