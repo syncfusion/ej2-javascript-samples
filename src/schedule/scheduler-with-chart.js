@@ -11,7 +11,7 @@ this.default = function () {
     ej.schedule.Schedule.Inject(ej.schedule.TimelineMonth, ej.schedule.Resize, ej.schedule.DragAndDrop);
     var truckEvents = [];
     // Drivers master (used both by Scheduler resources and for lookups)
-    const driversMaster = [
+    var driversMaster = [
         { driver: 'Ben Smith', id: 1, color: '#ea7a57', truck: 'Volvo FH16', capacity: '325 t' },
         { driver: 'Sarah Johnson', id: 2, color: '#7fa900', truck: 'Scania R730', capacity: '310 t' },
         { driver: 'Mike Chen', id: 3, color: '#5978ee', truck: 'Mercedes Actros', capacity: '290 t' },
@@ -23,7 +23,7 @@ this.default = function () {
         { driver: 'Daniel Lee', id: 9, color: '#df5286', truck: 'Mack Anthem', capacity: '285 t' },
         { driver: 'Ava Thompson', id: 10, color: '#710193', truck: 'International LT', capacity: '275 t' }
     ];
-    const driversById = new Map(driversMaster.map(function (d) { return [d.id, d.driver]; }));
+    var driversById = new Map(driversMaster.map(function (d) { return [d.id, d.driver]; }));
 
     // Function to generate chart data based on mode
     function generateChartData(mode) {
@@ -43,8 +43,7 @@ this.default = function () {
                     countMap[driver] = (countMap[driver] || 0) + 1;
                 }
             }
-            // Return counts in driversMaster order (no extra referral counts)
-            return driversMaster.map(function (d) { return ({ Driver: d.driver, Value: (countMap[d.driver] || 0) }); });
+            return Object.keys(countMap).map(function (k) { return ({ Driver: k, Value: countMap[k] }); });
         }
         else if (mode === 'longest') {
             var maxMap = {};
