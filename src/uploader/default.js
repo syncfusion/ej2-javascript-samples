@@ -7,10 +7,15 @@ this.default = function () {
             removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
         },
         removing: onFileRemove,
-        dropArea: dropElement
+        dropArea: dropElement,
+        failure: onFailure
     });
     uploadObj.appendTo('#fileupload');
-
+    function onFailure(args) {
+        if (args.response && args.response.statusText !== '') {
+            args.statusText = args.response.statusText;
+        }
+    }
     function onFileRemove(args) {
         args.postRawFile = false;
     }

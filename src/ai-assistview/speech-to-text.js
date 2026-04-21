@@ -10,30 +10,27 @@ var aiAssistView = new ej.interactivechat.AIAssistView({
         items: [{ iconCss: 'e-icons e-refresh', align: 'Right' }],
         itemClicked: toolbarItemClicked,
     },
-    promptToolbarSettings: {
-        itemClicked: (args) => {
-            if (args.item.iconCss === "e-icons e-assist-edit") {
-                const assistviewFooter = document.querySelector('#assistview-footer');
-                assistviewFooter.innerHTML = aiAssistView.prompts[args.dataIndex].prompt;
-                toggleButtons();
-            }
-        }
+    footerToolbarSettings: {
+        toolbarPosition: 'Bottom',
+        items: [
+            { iconCss: 'e-icons e-assist-send', align: 'Right' },
+            { iconCss: 'e-icons e-assist-attachment-icon', align: 'Left', tooltip: 'Attach File' },
+            { iconCss: 'e-icons e-assist-speech-to-text', align: 'Left'}
+        ]
     },
-    footerTemplate: "#footerContent",
+    enableAttachments: true,
+    attachmentSettings: {
+        saveUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/js/production/api/FileUploader/Remove'
+    },
+    speechToTextSettings: {
+        enable: true
+    },
     bannerTemplate: "#bannerContent",
     promptRequest: onPromptRequest,
     stopRespondingClick: handleStopResponse
 });
 aiAssistView.appendTo('#aiAssistView');
-
-// Initialize Speech-to-Text component
-var speechToTextObj = new ej.inputs.SpeechToText({
-    transcriptChanged: onTranscriptChange,
-    onStop: onListeningStop,
-    created: onCreated,
-    cssClass: 'e-flat'
-});
-speechToTextObj.appendTo('#speechToText');
 
 function toolbarItemClicked(args) {
     if (args.item.iconCss === 'e-icons e-refresh') {
@@ -57,7 +54,6 @@ async function streamResponse(response) {
         }
         await new Promise(resolve => setTimeout(resolve, 15));
     }
-    toggleButtons();
 }
 
 function onPromptRequest(args) {
@@ -89,63 +85,11 @@ function onPromptRequest(args) {
         .catch(error => {
             aiAssistView.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.', true);
             stopStreaming = true;
-            toggleButtons();
         });
-}
-
-// Updates transcript in the input area when speech-to-text transcribes
-function onTranscriptChange(args) {
-    document.querySelector('#assistview-footer').innerText = args.transcript;
-}
-
-// Handles actions when speech listening stops
-function onListeningStop() {
-    toggleButtons();
-}
-
-// Handles actions after component creation
-function onCreated() {
-    var assistviewFooter = document.querySelector('#assistview-footer');
-    var sendButton = document.querySelector('#assistview-sendButton');
-
-    sendButton.addEventListener('click', sendIconClicked);
-    assistviewFooter.addEventListener('input', toggleButtons);
-
-    assistviewFooter.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            sendIconClicked();
-            e.preventDefault(); // Prevent the default behavior of the Enter key
-        }
-    });
-
-    toggleButtons();
-}
-
-// Toggles the visibility of the send and speech-to-text buttons
-function toggleButtons() {
-    var assistviewFooter = document.querySelector('#assistview-footer');
-    var sendButton = document.querySelector('#assistview-sendButton');
-    var speechButton = document.querySelector('#speechToText');
-
-    var hasText = assistviewFooter.innerText.trim() !== '';
-    sendButton.classList.toggle('visible', hasText);
-    speechButton.classList.toggle('visible', !hasText);
-
-    if (!hasText && (assistviewFooter.innerHTML === '<br>' || !assistviewFooter.innerHTML.trim())) {
-        assistviewFooter.innerHTML = '';
-    }
-}
-
-// Handles send button click event
-function sendIconClicked() {
-    var assistviewFooter = document.querySelector('#assistview-footer');
-    aiAssistView.executePrompt(assistviewFooter.innerText);
-    assistviewFooter.innerText = "";
 }
 
 function handleStopResponse() {
     stopStreaming = true;
-    toggleButtons();
 }
 
 function loadExternalFile() {

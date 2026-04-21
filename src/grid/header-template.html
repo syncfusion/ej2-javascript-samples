@@ -62,6 +62,14 @@
     .fluent2-highcontrast .e-grid td.e-rowcell.e-selectionbackground.e-active .e-icons {
         color: black;
     }
+    .fluent2-highcontrast .e-grid td.e-rowcell:hover .grid-asset-kit.e-chip-list .e-chip:hover,
+    .fluent2-highcontrast .e-grid td.e-rowcell.e-selectionbackground.e-active .grid-asset-kit.e-chip-list .e-chip:hover, 
+    .fluent2-highcontrast .e-grid .grid-asset-kit.e-chip-list .e-chip:active,
+    .fluent2-highcontrast .e-grid .grid-asset-kit.e-chip-list .e-chip.e-focused {
+        background: #000;
+        border-color: #fff;
+        color: #fff;
+    }
 </style>
 <div class="control-section">
     <div class="content-wrapper">
@@ -105,7 +113,7 @@
     Image
 </script>
 <script type="text/x-template" id="assetTemplate" >
-    <div id="assetElement" ></div>
+    <div id="assetElement" class="grid-asset-kit"></div>
 </script>
 <div id="action-description">
     <p>This sample demonstrates the Grid header template feature. In this sample, custom icons are shown in the column headers.

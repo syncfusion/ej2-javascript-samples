@@ -1,0 +1,30 @@
+{
+  "name": "Sankey",
+  "directory": "sankey",
+  "category": "Data Visualization",
+  "ftName": "sankey",
+  "type": "preview",
+  "samples": [
+    {
+      "url": "default",
+      "name": "Default",
+      "description": "This demo for Essential JS2 Sankey Chart control visualizes two transmissions. Impedance and admittance are the two types of rendering in the Sankey chart.",
+      "category": "Sankey",
+      "api": {}
+    },
+    {
+      "url": "orientation",
+      "name": "Vertical Mode",
+      "description": "This demo for Essential JS2 Sankey Chart control demonstrates horizontal and vertical orientation modes of the Sankey chart.",
+      "category": "Sankey",
+      "api": {}
+    },
+    {
+      "url": "print-export",
+      "name": "Print and Export",
+      "description": "This demo for Essential JS2 Sankey Chart control shows the printing and exporting features of the Sankey chart.",
+      "category": "Sankey",
+      "api": {}
+    }
+  ]
+}

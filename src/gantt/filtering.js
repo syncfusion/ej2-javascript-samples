@@ -30,6 +30,7 @@ this.default = function () {
         ],
         treeColumnIndex: 0,
         allowFiltering: true,
+        allowResizing: true,
         includeWeekend: true,
         height: '650px',
         rowHeight:46,
@@ -64,6 +65,10 @@ this.default = function () {
                 args.filterModel.dlgDiv.querySelector('.e-datetimepicker').ej2_instances[0].dataBind();
             }
         },
+        dataBound: function () {
+            var columns = ['StartDate', 'EndDate'];
+            ganttChart.autoFitColumns(columns);
+        }
     });
     ganttChart.appendTo('#Filtering');
     var dropDownFilterType = new ej.dropdowns.DropDownList({

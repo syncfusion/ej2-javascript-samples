@@ -31,8 +31,12 @@ this.default = function () {
     overviewBlockEditor = new ej.blockeditor.BlockEditor({
       blocks: data.blockDataOverview,
       users: data.users,
+      imageBlockSettings: {
+        saveUrl: 'https://services.syncfusion.com/js/production/api/RichTextEditor/SaveFile',
+        path: 'https://services.syncfusion.com/js/production/RichTextEditor/'
+      },
       inlineToolbarSettings: {
-        items: [ 'Bold', 'Italic', 'Underline', 'Strikethrough', 'Uppercase', 'Lowercase', 'Subscript', 'Superscript', 'Color', 'Backgroundcolor' ]
+        items: [ 'Transform' ,'Bold', 'Italic', 'Underline', 'Strikethrough', 'Uppercase', 'Lowercase', 'Subscript', 'Superscript', 'InlineCode', 'Link', 'Color', 'Backgroundcolor' ]
       }
     });
 

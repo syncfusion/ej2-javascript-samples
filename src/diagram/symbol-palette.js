@@ -15,6 +15,32 @@ this.default = function () {
     var symbolSize = 50;
     var htmlSymbolWidth = 91;
     var htmlSymbolHeight = 100;
+
+    //Adds EventListener based on device's viewport width.
+    function addEventsSymbol() {
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
+        if (isMobile) {
+            var paletteIcon = document.getElementById('palette-icon');
+            if (paletteIcon) {
+                paletteIcon.addEventListener('click', openPaletteSymbol, false);
+            }
+        }
+    }
+
+    //Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
+    function openPaletteSymbol() {
+        var paletteSpace = document.getElementById('palette-space');
+        isMobile = window.matchMedia('(max-width:550px)').matches;
+        if (isMobile) {
+            if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
+                paletteSpace.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpace.classList.remove('sb-mobile-palette-open');
+            }
+        }
+    }
+
     //Enable or disable the headerIcon for symbol palette headers
     function onHeaderIconChange(args) {
         for (var i = 0; i < palette.palettes.length; i++) {
@@ -172,6 +198,7 @@ this.default = function () {
         enableSearch: true
     });
     palette.appendTo('#symbolpalette');
+    addEventsSymbol();
     diagram = new ej.diagrams.Diagram({
             width: '100%', height: '900px',
             rulerSettings: { showRulers: true },

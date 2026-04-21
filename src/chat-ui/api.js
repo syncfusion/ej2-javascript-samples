@@ -76,7 +76,7 @@ this.default = function() {
             const user = { user: args.itemData.value, avatarBgColor: '#87cefa'};
             if (['Laura', 'Charlie'].includes(args.itemData.value)) {
                 user.avatarBgColor = args.itemData.value === 'Charlie' ? '#e6cdde' : '#dec287';
-                user.avatarUrl = `./src/chat-ui/images/${args.itemData.value.toLowerCase()}.png`;
+                user.avatarUrl = `https://ej2.syncfusion.com/javascript/demos/src/chat-ui/images/${args.itemData.value.toLowerCase()}.png`;
             }
             chatUiInst.typingUsers = [...chatUiInst.typingUsers, user];
         },

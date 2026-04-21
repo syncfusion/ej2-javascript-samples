@@ -1,0 +1,313 @@
+<div class="row">
+  <div class="col-lg-12 control-section">
+
+    <!-- Toolbar OUTSIDE chart-shell, above it -->
+    <div class="chart-toolbar" role="toolbar" aria-label="Chart actions">
+      <button id="btnPrint" class="toolbar-btn toolbar-btn--print">
+        <span class="e-icons e-print-icon"></span>
+        <span class="btn-text">PRINT</span>
+      </button>
+      <button id="btnExport" class="toolbar-btn toolbar-btn--export">
+        <span class="e-icons e-export-icon"></span>
+        <span class="btn-text">EXPORT</span>
+      </button>
+    </div>
+
+    <!-- Flex row: chart + panel side by side -->
+    <div class="chart-shell" id="chartShell">
+
+      <!-- Chart host -->
+      <div class="chart-host" id="chartHost">
+        <div id="sankey-print-export"></div>
+      </div>
+
+      <aside id="exportPanel" class="export-panel" inert>
+        <div class="panel-header">
+          <span class="panel-header-left">
+            <span class="e-icons e-export-icon panel-header-icon"></span>
+            <span class="panel-title">Export</span>
+          </span>
+          <button id="btnClosePanel" class="panel-close" aria-label="Close export panel">
+            <span class="e-icons e-close"></span>
+          </button>
+        </div>
+        <div class="panel-body">
+          <label class="panel-label" for="expFileName">File Name:</label>
+          <input id="expFileName" class="panel-input" type="text" value="Sankey" />
+
+          <label class="panel-label" for="fileTypeDropdown">File Type:</label>
+          <input id="fileTypeDropdown" />
+
+          <div class="panel-footer" style="background: transparent">
+            <button id="btnDoExport" class="panel-action-btn panel-action-btn--export">EXPORT</button>
+            <button id="btnCancelExport" class="panel-action-btn panel-action-btn--cancel">CANCEL</button>
+          </div>
+        </div>
+      </aside>
+
+    </div><!-- /chart-shell -->
+  </div>
+</div>
+
+<div id="action-description">
+  <p>
+    Explore supply chain flows with a Sankey chart using illustrative values in thousand
+    shipments (k). It maps product categories to transport modes, world regions, and delivery status.
+    Use built‑in print and export options (JPEG, PNG, SVG, PDF) to share or download the chart.
+  </p>
+</div>
+<div id="description">
+  <p>
+    This Sankey visualizes shipments (k) from product categories through Air, Ground, and Sea to regions and
+    final status (Delivered, Delayed, In Transit).
+    Hover or tap nodes and links to see precise shipment counts.
+  </p>
+  <p><strong>Key features:</strong></p>
+  <ul>
+    <li>End‑to‑end flow from category → mode → region → status</li>
+    <li>Export to JPEG, PNG, SVG, or PDF, and print directly</li>
+    <li>Interactive tooltips showing values in thousand shipments</li>
+  </ul>
+</div>
+
+<!-- custom code start -->
+<style>
+  .control-section { overflow: visible !important; }
+
+  /* ── Toolbar ── */
+  .chart-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+  }
+
+  /* ── Toolbar buttons ── */
+  .toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .toolbar-btn:focus-visible,
+  .panel-action-btn:focus-visible,
+  .panel-close:focus-visible {
+    outline: 2px solid #E3165B;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(227, 22, 91, 0.15);
+  }
+  .toolbar-btn--print:focus-visible {
+    background-color: #F3F4F6 !important;
+    box-shadow: inset 0 0 0 2px #E3165B;
+  }
+  .panel-input:focus {
+    border-bottom: 2px solid #E3165B !important;
+    box-shadow: 0 1px 0 #E3165B;
+  }
+  .toolbar-btn--print {
+    background-color: #FFFFFF !important;
+    color: #000000DE !important;
+    border: 1px solid #D1D5DB !important;
+  }
+  .toolbar-btn--print:hover { background-color: #F3F4F6 !important; }
+  .toolbar-btn--print:focus {
+    outline: 2px solid #E3165B !important;
+    outline-offset: 2px !important;
+  }
+  .toolbar-btn--export {
+    background-color: #E3165B !important;
+    color: #FFFFFF !important;
+    border: 1px solid #E3165B !important;
+  }
+  .toolbar-btn--export:hover { background-color: #C4134F !important; }
+  .toolbar-btn--export:focus {
+    outline: 2px solid #E3165B !important;
+    outline-offset: 2px !important;
+  }
+
+  /* ── chart-shell ── */
+  .chart-shell {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+  }
+
+  .chart-shell.mobile-panel-open .export-panel {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    border-left: none !important;
+    box-shadow: none !important;
+  }
+
+  /* ── Chart host ── */
+  .chart-host {
+    flex: 1 1 auto;
+    min-width: 0;
+    transition: flex-basis .25s ease-out;
+  }
+
+  /* ── Export panel: zero-width when closed ── */
+  .export-panel {
+    flex: 0 0 0px;
+    overflow: hidden;
+    background: transparent;
+    border-left: 0px solid #E5E7EB;
+    transition: flex-basis .25s ease-out, border-left .25s ease-out;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* ── Panel OPEN state ── */
+  .with-panel .export-panel {
+    flex: 0 0 300px;
+    border-left: 1px solid #E5E7EB;
+    overflow: visible;
+  }
+
+  /* ── Panel header ── */
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px 10px 16px;
+    border-bottom: 1px solid #E5E7EB;
+    white-space: nowrap;
+  }
+  .panel-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-header-icon { font-size: 16px; }
+  .panel-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .panel-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2px 4px;
+    color: #6B7280;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .panel-close:hover { color: #111827; }
+
+  /* ── Panel body ── */
+  .panel-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 16px 0 16px;
+    white-space: nowrap;
+  }
+  .panel-label {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  /* ── Bottom-line-only input ── */
+  .panel-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border-bottom: 1px solid #9CA3AF !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    padding: 4px 0 6px 0;
+    background: transparent;
+    font-size: 14px;
+    color: inherit;
+  }
+  .panel-input:focus { border-bottom: 2px solid #E3165B !important; }
+
+  /* ── Bottom-line-only EJ2 DropDownList ── */
+  .export-panel .e-ddl.e-input-group,
+  .export-panel .e-ddl.e-input-group.e-control-wrapper {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid #9CA3AF !important;
+  }
+  .export-panel .e-ddl.e-input-group:focus-within,
+  .export-panel .e-ddl.e-input-group.e-control-wrapper:focus-within {
+    border-bottom: 2px solid #E3165B !important;
+  }
+  .export-panel .e-input-group::before,
+  .export-panel .e-input-group::after { display: none !important; }
+
+  /* ── Footer buttons ── */
+  .panel-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 0px !important;
+  }
+  .panel-action-btn {
+    flex: 1;
+    background: transparent !important;
+    border: none !important;
+    font-size: 15px;
+    letter-spacing: .5px;
+    padding: 6px 0;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .panel-action-btn--export { color: #E3165B !important; }
+  .panel-action-btn--export:hover { color: #C4134F !important; }
+
+  /* ── Icon mappings ── */
+  .e-print-icon::before { content: '\e34b'; }
+  .e-view.tailwind  .e-print-icon::before,
+  .e-view.tailwind3 .e-print-icon::before,
+  .e-view.tailwind-dark  .e-print-icon::before,
+  .e-view.tailwind3-dark .e-print-icon::before { content: '\e75d'; }
+  .e-view.fabric .e-print-icon::before,
+  .e-view.fabric-dark .e-print-icon::before { content: '\e7df'; }
+  .e-view.bootstrap .e-print-icon::before { content: '\ebd2'; }
+  .e-view.bootstrap4 .e-print-icon::before { content: '\e743'; }
+  .e-view.highcontrast .e-print-icon::before { content: '\ebf9'; }
+  .e-view.fluent  .e-print-icon::before,
+  .e-view.fluent-dark .e-print-icon::before,
+  .e-view.fluent2 .e-print-icon::before,
+  .e-view.fluent2-dark .e-print-icon::before,
+  .e-view.fluent2-highcontrast .e-print-icon::before,
+  .e-view.material3 .e-print-icon::before,
+  .e-view.material3-dark .e-print-icon::before,
+  .e-view.bootstrap5\.3 .e-print-icon::before,
+  .e-view.bootstrap5\.3-dark .e-print-icon::before { content: '\e75d'; }
+
+  .e-export-icon::before { content: '\e728'; }
+  .e-view.tailwind  .e-export-icon::before,
+  .e-view.tailwind3 .e-export-icon::before,
+  .e-view.tailwind-dark  .e-export-icon::before,
+  .e-view.tailwind3-dark .e-export-icon::before { content: '\e7bf'; }
+  .e-view.fabric .e-export-icon::before,
+  .e-view.fabric-dark .e-export-icon::before,
+  .e-view.highcontrast .e-export-icon::before { content: '\e710'; }
+  .e-view.bootstrap4 .e-export-icon::before { content: '\e780'; }
+  .e-view.fluent  .e-export-icon::before,
+  .e-view.fluent-dark .e-export-icon::before,
+  .e-view.fluent2 .e-export-icon::before,
+  .e-view.fluent2-dark .e-export-icon::before,
+  .e-view.fluent2-highcontrast .e-export-icon::before,
+  .e-view.material3 .e-export-icon::before,
+  .e-view.material3-dark .e-export-icon::before,
+  .e-view.bootstrap5\.3 .e-export-icon::before,
+  .e-view.bootstrap5\.3-dark .e-export-icon::before { content: '\e72e'; }
+</style>
+<!-- custom code end -->

@@ -64,6 +64,11 @@ this.default = function () {
 
   var closeBtnEl = document.getElementById('left-toc-closebtn');
 
+  if (closeBtnEl && window.innerWidth < 600) {
+    closeBtnEl.style.left = '18px';
+    closeBtnEl.classList.add('expand-mode');
+  }
+
   // TreeView
   var treeview = new ej.navigations.TreeView({
     fields: {
@@ -138,7 +143,7 @@ this.default = function () {
   var inlineToolbarItems = ['Bold', 'Italic', 'Underline', 'Strikethrough'];
 
   var blockEditor = new ej.blockeditor.BlockEditor({
-    height: '602px',
+    height: '597px',
     inlineToolbarSettings: {
       width: '180px',
       enable: true,
@@ -256,12 +261,37 @@ this.default = function () {
   loadExternalFile();
 
     function loadExternalFile() {
-      var script = document.createElement('script');
-      script.src = 'https://unpkg.com/turndown/dist/turndown.js';
-      script.onload = function() {
-        turndownService = new TurndownService();
-      };
-      document.getElementsByTagName('head')[0].appendChild(script);
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/turndown/dist/turndown.js';
+        script.onload = function() {
+          var pluginScript = document.createElement('script');
+          pluginScript.src = 'https://unpkg.com/turndown-plugin-gfm/dist/turndown-plugin-gfm.js';
+          pluginScript.onload = function() {
+            try {
+              turndownService = new TurndownService({
+                codeBlockStyle: 'fenced',
+                emDelimiter: '_',
+                bulletListMarker: '-',
+                headingStyle: 'atx'
+              });
+              var plugin = (typeof gfm !== 'undefined' && gfm) ||
+                           (typeof turndownPluginGfm !== 'undefined' && turndownPluginGfm) ||
+                           (window && window.turndownPluginGfm) ||
+                           (window && window.gfm);
+              if (plugin) {
+                // plugin may expose either the plugin function or an object containing `gfm`
+                if (typeof plugin === 'function') turndownService.use(plugin);
+                else if (plugin.gfm) turndownService.use(plugin.gfm);
+                else turndownService.use(plugin);
+              }
+            } catch (e) {
+              turndownService = new TurndownService();
+            }
+          };
+          head.appendChild(pluginScript);
+        };
+        head.appendChild(script);
     }
 
   var markdownConverter = ej.markdownconverter.MarkdownConverter;

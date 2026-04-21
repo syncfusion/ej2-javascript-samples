@@ -9,7 +9,7 @@ this.default = function () {
         // set the template content for popup header element
         headerTemplate: '<div class="header"> <span>Photo</span> <span class="info">Employee Info</span></div>',
         // set the template content for list items
-        itemTemplate: '<div><img class="empImage" src="styles/images/Employees/${Eimg}.png" alt="employee"/>' +
+        itemTemplate: '<div><img class="empImage" src="src/combo-box/Employees/${Eimg}.png" alt="employee"/>' +
             '<div class="ename"> ${Name} </div><div class="job"> ${Designation} </div></div>',
         // set the placeholder to ComboBox input element
         placeholder: 'Select an employee',

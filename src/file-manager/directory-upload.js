@@ -34,12 +34,12 @@ this.default = function() {
     fileObject.appendTo('#file');
     function onSuccess() {
         if (!document.getElementById('dropButton').classList.contains('e-dropdown-btn')) {
-        var items = [{ text: 'Folder' }, { text: 'Files' }];
+        var items = [{ text: fileObject.localeObj.getConstant('Folder') }, { text: fileObject.localeObj.getConstant('File') }];
         var drpDownBtn = new ej.splitbuttons.DropDownButton({
             items: items,
             iconCss: 'e-icons e-fe-upload',
             select: function (args) {
-                if (args.item.text === 'Folder') {
+                if (args.item.text === fileObject.localeObj.getConstant('Folder')) {
                     fileObject.uploadSettings.directoryUpload = true;
                 } else {
                     fileObject.uploadSettings.directoryUpload = false;

@@ -17,7 +17,12 @@ this.default = function () {
             ],
             rows: [{ name: 'Country' }, {name: 'Products'}],
             formatSettings: [{ name: 'Amount', format: 'C0' }, { name: 'Sold', format: 'N0' }],
-            filters: []
+            filters: [],
+            fieldMapping: [
+                { name: 'ProductCategories', caption: 'Product Categories' },
+                { name: 'OrderSource', caption: 'Order Source' },
+                { name: 'InStock', caption: 'In Stock' },
+            ]
         },
         width: '100%',
         height: 450,

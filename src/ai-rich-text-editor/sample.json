@@ -9,7 +9,8 @@
             "category": "Rich Text Editor",
             "sourceFiles": [
                 { "displayName": "ai-assistant.js", "path": "src/ai-rich-text-editor/assistant.js" },
-                { "displayName": "ai-assistant.html", "path": "src/ai-rich-text-editor/ai-assistant.html" }
+                { "displayName": "ai-assistant.html", "path": "src/ai-rich-text-editor/assistant.html" },
+                { "displayName": "service.js", "path": "src/ai-rich-text-editor/service.js" }
             ],
             "description": "This demo showcases the Rich Text Editor AI feature."
         }

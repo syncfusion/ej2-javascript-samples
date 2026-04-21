@@ -3,7 +3,6 @@
     "directory": "textbox",
     "category": "Inputs",
     "ftName": "textbox",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -22,7 +21,6 @@
         {
             "url": "adornments",
             "name": "Adornments",
-            "type": "new",
             "category": "TextBox",
             "description":"The example exposes a JavaScript(ES5) TextBox with adornments support. It helps to render custom elements before or after the input element.",
             "api": { "TextBox": ["prependTemplate", "appendTemplate"]}

@@ -28,7 +28,6 @@ this.default = function () {
         labelSettings: {
             taskLabel: 'Progress'
         },
-        gridLines: 'Both',
         splitterSettings: {
             columnIndex: 2
         },

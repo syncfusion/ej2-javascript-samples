@@ -3,13 +3,14 @@
     "directory": "block-editor",
     "category": "File Viewers & Editors",
     "ftName": "BlockEditor",
-    "type": "preview",
+    "type": "update",
     "dataSourcePath": "src/block-editor/blockData.json",
     "samples": [
         {
             "url": "overview",
             "name": "Overview",
             "category": "Block Editor",
+            "type": "update",
             "api":{ "BlockEditor": ["blocks"] },
             "description": "This demo describes basic and advanced features of the Block Editor control with all its tools and functionalities.",
             "sourceFiles": [
@@ -21,7 +22,6 @@
         {
             "url": "pastesettings",
             "name": "Paste Cleanup",
-            "type": "new",
             "category": "Block Editor",
             "api":{ "BlockEditor": ["pasteSettings"] },
             "description": "This demo covers important Paste Settings of the JS Block control.",
@@ -72,7 +72,6 @@
         {
           "url": "template-gallery",
           "name": "Template Gallery",
-          "type": "new",
           "category": "Use Cases",
           "api": {
             "BlockEditor": [
@@ -90,7 +89,6 @@
         {
           "url": "markdownBlocks",
           "name": "Markdown Blocks",
-          "type": "new",
           "category": "Use Cases",
           "api": {
             "BlockEditor": [

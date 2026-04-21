@@ -1,18 +1,15 @@
 <div class="col-lg-8 control-section" style="height: 400px;">
-    <div class='control-wrapper'>
-        <div style='padding-top:70px;'>
-            <input type="text" tabindex="0" id='books' />
-        </div>
+    <div style='padding-top: 15px;'>
+        <input type="text" tabindex="0" id='books' />
     </div>
 </div>
-<div class="col-lg-4 property-section" style="padding-bottom:30px;">
-        <PropertyPane title='Properties'>
-            <div class="property-panel-header">Properties:</div>
-            <div class="property-panel-content">
-                <label class="example-label">Debounce Delay</label>
-                <input id="numeric" type="text" />
-            </div>
-        </PropertyPane>
+<div class="col-lg-4 property-section">
+    <div id="property" title="Properties">
+        <div style="display: flex; align-items: center; gap: 8px; max-width: 300px; padding: 10px 0;">
+            <label class="example-label">Debounce Delay : </label>
+            <input id="numeric" type="text" />
+        </div>
+    </div>
 </div>
 <div id="action-description">
     <p>This sample demonstrates the custom filtering functionalities of the AutoComplete. You can choose
@@ -35,20 +32,10 @@
         margin: 0 auto;
         width: 300px;
     }
-    .property-section {
-        top: 55px;
-        width: 200px;
-        margin-left: 80px;
-    }
     .example-label {
         font-size: 14px;
-        margin-bottom: 6px;
-    }
-    .property-panel-content {
-        padding: 0px 0px 15px 0px;
-    }
-    .property-panel-content:last-child {
-        padding: 0px 0px 40px 0px;
+        margin-bottom: 0;
+        white-space: nowrap;
     }
 </style>
 <!-- custom code end-->

@@ -346,37 +346,66 @@ this.default = function () {
         // Check if any node is selected in the diagram
         if (diagram.selectedItems.nodes.length > 0) {
             var bpmnShape = diagram.selectedItems.nodes[0].shape;
-            if (args.item.iconCss.indexOf('e-adhocs') > -1) {
-                bpmnShape.activity.subProcess.adhoc = args.item.id === 'AdhocNone' ? false : true;
-            }
-            if (args.item.iconCss.indexOf("e-event") > -1) {
-                bpmnShape.event.event = args.item.id;
-            }
-            if (args.item.iconCss.indexOf("e-trigger") > -1) {
-                bpmnShape.event.trigger = args.item.text;
-            }
-            if (args.item.iconCss.indexOf("e-loop") > -1) {
-                var loop = (args.item.id === 'LoopNone') ? 'None' : args.item.id;
-                if (bpmnShape.activity.activity === 'Task') {
-                    bpmnShape.activity.task.loop = loop;
+            if (args.item.iconCss) {
+                if (args.item.iconCss.indexOf('e-adhocs') > -1) {
+                    bpmnShape.activity.subProcess.adhoc = args.item.id === 'AdhocNone' ? false : true;
                 }
-                if (bpmnShape.activity.activity === 'SubProcess') {
-                    bpmnShape.activity.subProcess.loop = loop;
+                if (args.item.iconCss.indexOf("e-event") > -1) {
+                    bpmnShape.event.event = args.item.id;
                 }
-            }
-            if (args.item.iconCss.indexOf("e-compensation") > -1) {
-                var compensation = (args.item.id === 'CompensationNone') ? false : true;
-                if (bpmnShape.activity.activity === 'Task') {
-                    bpmnShape.activity.task.compensation = compensation;
+                if (args.item.iconCss.indexOf("e-trigger") > -1) {
+                    bpmnShape.event.trigger = args.item.text;
                 }
-                if (bpmnShape.activity.activity === 'SubProcess') {
-                    bpmnShape.activity.subProcess.compensation = compensation;
+                if (args.item.iconCss.indexOf("e-loop") > -1) {
+                    var loop = (args.item.id === 'LoopNone') ? 'None' : args.item.id;
+                    if (bpmnShape.activity.activity === 'Task') {
+                        bpmnShape.activity.task.loop = loop;
+                    }
+                    if (bpmnShape.activity.activity === 'SubProcess') {
+                        bpmnShape.activity.subProcess.loop = loop;
+                    }
                 }
-            }
-            if (args.item.iconCss.indexOf('e-call') > -1) {
-                var compensations = (args.item.id === 'CallNone') ? false : true;
-                if (bpmnShape.activity.activity === 'Task') {
-                    bpmnShape.activity.task.call = compensations;
+                if (args.item.iconCss.indexOf("e-compensation") > -1) {
+                    var compensation = (args.item.id === 'CompensationNone') ? false : true;
+                    if (bpmnShape.activity.activity === 'Task') {
+                        bpmnShape.activity.task.compensation = compensation;
+                    }
+                    if (bpmnShape.activity.activity === 'SubProcess') {
+                        bpmnShape.activity.subProcess.compensation = compensation;
+                    }
+                }
+                if (args.item.iconCss.indexOf('e-call') > -1) {
+                    var compensations = (args.item.id === 'CallNone') ? false : true;
+                    if (bpmnShape.activity.activity === 'Task') {
+                        bpmnShape.activity.task.call = compensations;
+                    }
+                }
+                if (args.item.iconCss.indexOf('e-boundry') > -1) {
+                    var call = args.item.id;
+                    if (args.item.id !== 'Default') {
+                        call = (args.item.id === 'BoundryEvent') ? 'Event' : 'Call';
+                    }
+                    bpmnShape.activity.subProcess.boundary = call;
+                }
+                if (args.item.iconCss.indexOf('e-data') > -1) {
+                    var data = args.item.id === 'DataObjectNone' ? 'None' : args.item.id;
+                    bpmnShape.dataObject.type = data;
+                }
+                if (args.item.iconCss.indexOf('e-collection') > -1) {
+                    var collection = (args.item.id === 'Collectioncollection') ? true : false;
+                    bpmnShape.dataObject.collection = collection;
+                }
+                if (args.item.iconCss.indexOf("e-task") > -1) {
+                    var task = task === 'TaskNone' ? 'None' : args.item.id;
+                    if (bpmnShape.activity.activity === 'Task') {
+                        bpmnShape.activity.task.type = task;
+                    }
+                }
+                if (args.item.iconCss.indexOf("e-gate") > -1) {
+                    var gate = args.item.id.replace('Gateway', '');
+                    if (bpmnShape.shape === 'Gateway') {
+                        bpmnShape.gateway.type = gate;
+                    }
                 }
             }
             if (args.item.id === 'CollapsedSubProcess' || args.item.id === 'ExpandedSubProcess') {
@@ -387,33 +416,6 @@ this.default = function () {
                 else {
                     bpmnShape.activity.activity = 'SubProcess';
                     bpmnShape.activity.subProcess.collapsed = true;
-                }
-            }
-            if (args.item.iconCss.indexOf('e-boundry') > -1) {
-                call = args.item.id;
-                if (args.item.id !== 'Default') {
-                    call = (args.item.id === 'BoundryEvent') ? 'Event' : 'Call';
-                }
-                bpmnShape.activity.subProcess.boundary = call;
-            }
-            if (args.item.iconCss.indexOf('e-data') > -1) {
-                var data = args.item.id === 'DataObjectNone' ? 'None' : args.item.id;
-                bpmnShape.dataObject.type = data;
-            }
-            if (args.item.iconCss.indexOf('e-collection') > -1) {
-                var collection = (args.item.id === 'Collectioncollection') ? true : false;
-                bpmnShape.dataObject.collection = collection;
-            }
-            if (args.item.iconCss.indexOf("e-task") > -1) {
-                var task = task === 'TaskNone' ? 'None' : args.item.id;
-                if (bpmnShape.activity.activity === 'Task') {
-                    bpmnShape.activity.task.type = task;
-                }
-            }
-            if (args.item.iconCss.indexOf("e-gate") > -1) {
-                var gate = args.item.id.replace('Gateway', '');
-                if (bpmnShape.shape === 'Gateway') {
-                    bpmnShape.gateway.type = gate;
                 }
             }
             diagram.dataBind();

@@ -3717,7 +3717,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -3728,7 +3728,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -3739,7 +3739,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -3750,7 +3750,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -3761,7 +3761,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -3772,7 +3772,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -3783,7 +3783,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -3794,7 +3794,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -3805,7 +3805,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -3816,7 +3816,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -3827,7 +3827,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -3838,7 +3838,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -3849,7 +3849,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -3860,7 +3860,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -3871,7 +3871,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -3882,7 +3882,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -3893,7 +3893,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -3904,7 +3904,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -3915,7 +3915,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -3926,7 +3926,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -3937,7 +3937,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -3948,7 +3948,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -3959,7 +3959,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -3970,7 +3970,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -3981,7 +3981,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -3992,7 +3992,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4003,7 +4003,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4014,7 +4014,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4025,7 +4025,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4036,7 +4036,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4047,7 +4047,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4058,139 +4058,139 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 42,
-    'Sold': 63,
-    'Amount': 473,
+    'Sold': 5,
+    'Amount': 891235,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 36,
-    'Sold': 456,
-    'Amount': 3876,
+    'Sold': 7,
+    'Amount': 36,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 44,
     'Sold': 155,
-    'Amount': 1201.25,
+    'Amount': 15,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 12,
-    'Sold': 140,
-    'Amount': 1050,
+    'Sold': 10,
+    'Amount': 10,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 9,
-    'Sold': 31,
+    'Sold': 1,
     'Amount': 233,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
     'In_Stock': 49,
-    'Sold': 402,
+    'Sold': 4,
     'Amount': 3417,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
     'In_Stock': 30,
-    'Sold': 254,
-    'Amount': 1968.5,
+    'Sold': 24,
+    'Amount': 15,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
     'In_Stock': 28,
-    'Sold': 314,
-    'Amount': 2355,
+    'Sold': 34,
+    'Amount': 25,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
     'In_Stock': 43,
     'Sold': 91,
-    'Amount': 683,
+    'Amount': -100000,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 44,
-    'Sold': 202,
-    'Amount': 1717,
+    'Sold': 20,
+    'Amount': 17,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 11,
-    'Sold': 298,
+    'Sold': 28,
     'Amount': 2309.5,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 39,
-    'Sold': 166,
+    'Sold': 16,
     'Amount': 1245,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -4201,7 +4201,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -4212,7 +4212,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -4223,7 +4223,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -4234,40 +4234,40 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
-    'In_Stock': 4,
+    'In_Stock': 504,
     'Sold': 199,
-    'Amount': 1691.5,
+    'Amount': 1511691.5,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 4,
+    'In_Stock': 404,
     'Sold': 103,
     'Amount': 798.25,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 42,
+    'In_Stock': 342,
     'Sold': 227,
     'Amount': 1702.5,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -4278,7 +4278,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4289,7 +4289,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4300,7 +4300,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4311,7 +4311,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4322,7 +4322,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4333,7 +4333,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4344,7 +4344,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4355,7 +4355,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4366,7 +4366,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4377,7 +4377,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4388,7 +4388,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4399,7 +4399,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4410,7 +4410,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -4421,7 +4421,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -4432,7 +4432,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -4443,7 +4443,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -4454,7 +4454,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -4465,7 +4465,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -4476,7 +4476,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -4487,7 +4487,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -4498,7 +4498,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -4509,7 +4509,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -4520,7 +4520,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -4531,7 +4531,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -4542,7 +4542,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4553,7 +4553,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4564,7 +4564,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4575,7 +4575,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -4586,7 +4586,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4597,7 +4597,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4608,7 +4608,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4619,7 +4619,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -4630,7 +4630,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -4641,7 +4641,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -4652,7 +4652,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -4663,7 +4663,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -4674,7 +4674,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -4685,7 +4685,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -4696,7 +4696,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -4707,7 +4707,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -4718,7 +4718,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -4729,7 +4729,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -4740,18 +4740,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 10,
-    'Sold': 376,
+    'Sold': 36,
     'Amount': 1504,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -4762,18 +4762,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 12,
-    'Sold': 157,
+    'Sold': 17,
     'Amount': 785,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -4784,18 +4784,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 32,
-    'Sold': 542,
+    'Sold': 52,
     'Amount': 2168,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -4806,7 +4806,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -4817,29 +4817,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 5,
+    'In_Stock': 605,
     'Sold': 342,
     'Amount': 1453.5,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 40,
+    'In_Stock': 640,
     'Sold': 84,
     'Amount': 336,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -4850,7 +4850,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4861,7 +4861,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4872,7 +4872,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4883,7 +4883,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -4894,7 +4894,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4905,7 +4905,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4916,7 +4916,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4927,7 +4927,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -4938,7 +4938,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4949,7 +4949,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4960,7 +4960,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4971,7 +4971,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -4982,7 +4982,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -4993,7 +4993,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5004,7 +5004,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5015,7 +5015,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5026,7 +5026,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5037,7 +5037,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5048,7 +5048,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5059,7 +5059,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5070,7 +5070,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5081,7 +5081,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5092,7 +5092,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5103,7 +5103,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5114,7 +5114,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5125,7 +5125,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5136,7 +5136,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5147,7 +5147,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5158,7 +5158,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5169,7 +5169,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5180,7 +5180,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5191,7 +5191,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5202,7 +5202,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5213,7 +5213,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5224,7 +5224,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5235,7 +5235,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5246,7 +5246,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5257,7 +5257,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5268,7 +5268,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5279,7 +5279,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5290,7 +5290,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5301,7 +5301,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5312,7 +5312,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5323,7 +5323,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5334,7 +5334,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5345,7 +5345,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5356,7 +5356,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5367,7 +5367,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5378,29 +5378,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 42,
+    'In_Stock': 742,
     'Sold': 145,
     'Amount': 1740,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 16,
+    'In_Stock': 516,
     'Sold': 398,
     'Amount': 4477.5,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5411,7 +5411,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5422,7 +5422,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -5433,7 +5433,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -5444,7 +5444,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -5455,7 +5455,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -5466,7 +5466,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -5477,7 +5477,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -5488,7 +5488,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -5499,7 +5499,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -5510,7 +5510,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -5521,7 +5521,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -5532,7 +5532,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -5543,7 +5543,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -5554,7 +5554,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5565,7 +5565,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5576,7 +5576,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5587,7 +5587,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -5598,7 +5598,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5609,7 +5609,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5620,7 +5620,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5631,7 +5631,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -5642,7 +5642,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5653,7 +5653,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5664,7 +5664,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5675,7 +5675,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -5686,7 +5686,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5697,7 +5697,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5708,7 +5708,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5719,7 +5719,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -5730,7 +5730,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5741,7 +5741,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5752,7 +5752,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5763,7 +5763,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -5774,7 +5774,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5785,7 +5785,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5796,7 +5796,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5807,7 +5807,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -5818,7 +5818,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5829,7 +5829,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5840,7 +5840,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5851,7 +5851,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -5862,7 +5862,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5873,7 +5873,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5884,7 +5884,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5895,7 +5895,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -5906,7 +5906,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5917,29 +5917,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 49,
-    'Sold': 469,
+    'Sold': 49,
     'Amount': 7283.57,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 31,
-    'Sold': 297,
+    'Sold': 27,
     'Amount': 4538.16,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -5950,7 +5950,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5961,7 +5961,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5972,7 +5972,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5983,7 +5983,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -5994,7 +5994,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6005,7 +6005,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6016,7 +6016,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6027,7 +6027,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6038,7 +6038,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6049,7 +6049,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6060,7 +6060,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6071,7 +6071,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6082,7 +6082,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6093,7 +6093,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6104,7 +6104,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6115,7 +6115,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6126,7 +6126,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6137,7 +6137,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6148,7 +6148,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6159,7 +6159,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6170,7 +6170,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6181,7 +6181,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6192,7 +6192,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6203,7 +6203,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6214,7 +6214,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6225,7 +6225,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6236,7 +6236,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6247,7 +6247,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6258,7 +6258,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6269,7 +6269,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6280,7 +6280,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6291,7 +6291,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6302,7 +6302,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6313,7 +6313,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6324,7 +6324,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6335,7 +6335,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6346,7 +6346,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6357,7 +6357,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6368,7 +6368,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6379,7 +6379,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6390,7 +6390,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6401,7 +6401,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6412,7 +6412,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6423,7 +6423,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6434,7 +6434,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -6445,7 +6445,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -6456,7 +6456,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -6467,7 +6467,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -6478,7 +6478,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -6489,7 +6489,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -6500,7 +6500,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -6511,7 +6511,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -6522,7 +6522,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -6533,18 +6533,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 37,
+    'In_Stock': 437,
     'Sold': 414,
     'Amount': 12627,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -6555,7 +6555,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -6566,7 +6566,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6577,7 +6577,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6588,7 +6588,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6599,7 +6599,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -6610,7 +6610,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6621,7 +6621,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6632,7 +6632,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6643,7 +6643,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -6654,7 +6654,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6665,7 +6665,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6676,7 +6676,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6687,7 +6687,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -6698,7 +6698,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6709,7 +6709,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6720,7 +6720,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6731,7 +6731,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -6742,7 +6742,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6753,7 +6753,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6764,7 +6764,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6775,7 +6775,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -6786,7 +6786,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6797,7 +6797,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6808,7 +6808,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6819,7 +6819,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -6830,7 +6830,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6841,7 +6841,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6852,7 +6852,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6863,7 +6863,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -6874,7 +6874,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6885,7 +6885,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6896,7 +6896,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6907,7 +6907,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -6918,7 +6918,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6929,7 +6929,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6940,7 +6940,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6951,7 +6951,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -6962,7 +6962,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6973,7 +6973,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6984,7 +6984,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -6995,7 +6995,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -7006,7 +7006,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7017,7 +7017,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7028,7 +7028,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7039,7 +7039,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7050,7 +7050,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7061,7 +7061,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7072,7 +7072,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7083,29 +7083,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
-    'In_Stock': 8,
+    'In_Stock': 458,
     'Sold': 58,
     'Amount': 1131,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 25,
+    'In_Stock': 325,
     'Sold': 155,
     'Amount': 3100,
     'Country': 'France',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7116,7 +7116,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7127,7 +7127,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7138,7 +7138,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7149,7 +7149,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7160,7 +7160,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7171,7 +7171,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7182,7 +7182,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7193,7 +7193,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7204,7 +7204,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7215,7 +7215,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7226,7 +7226,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7237,7 +7237,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7248,7 +7248,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7259,7 +7259,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7270,7 +7270,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7281,7 +7281,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7292,7 +7292,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7303,7 +7303,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7314,7 +7314,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7325,7 +7325,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7336,7 +7336,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7347,7 +7347,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7358,7 +7358,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7369,7 +7369,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7380,7 +7380,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7391,7 +7391,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7402,7 +7402,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7413,7 +7413,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7424,7 +7424,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7435,7 +7435,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7446,7 +7446,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -7457,7 +7457,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -7468,7 +7468,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -7479,7 +7479,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -7490,7 +7490,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -7501,7 +7501,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -7512,7 +7512,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -7523,7 +7523,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -7534,7 +7534,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -7545,7 +7545,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -7556,7 +7556,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -7567,7 +7567,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -7578,7 +7578,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7589,7 +7589,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7600,7 +7600,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7611,7 +7611,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -7622,7 +7622,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7633,7 +7633,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7644,7 +7644,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7655,7 +7655,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -7666,7 +7666,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7677,7 +7677,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7688,7 +7688,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7699,7 +7699,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -7710,7 +7710,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7721,7 +7721,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7732,7 +7732,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7743,7 +7743,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -7754,7 +7754,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7765,7 +7765,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7776,7 +7776,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7787,7 +7787,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -7798,7 +7798,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7809,7 +7809,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7820,7 +7820,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7831,7 +7831,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -7842,7 +7842,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7853,7 +7853,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7864,7 +7864,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7875,7 +7875,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -7886,7 +7886,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7897,7 +7897,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7908,7 +7908,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7919,7 +7919,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -7930,7 +7930,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7941,7 +7941,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7952,7 +7952,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7963,7 +7963,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -7974,7 +7974,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7985,7 +7985,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -7996,7 +7996,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8007,7 +8007,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8018,7 +8018,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8029,7 +8029,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8040,7 +8040,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8051,7 +8051,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8062,7 +8062,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8073,7 +8073,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8084,7 +8084,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8095,7 +8095,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8106,7 +8106,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8117,7 +8117,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8128,7 +8128,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8139,7 +8139,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8150,7 +8150,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8161,7 +8161,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8172,7 +8172,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8183,7 +8183,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8194,7 +8194,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8205,7 +8205,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8216,7 +8216,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8227,7 +8227,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8238,7 +8238,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8249,7 +8249,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8260,7 +8260,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8271,7 +8271,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8282,7 +8282,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8293,7 +8293,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8304,7 +8304,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8315,7 +8315,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8326,7 +8326,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8337,7 +8337,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8348,7 +8348,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8359,7 +8359,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8370,7 +8370,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8381,7 +8381,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8392,7 +8392,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8403,7 +8403,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8414,7 +8414,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -8425,7 +8425,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -8436,7 +8436,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -8447,7 +8447,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -8458,7 +8458,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -8469,7 +8469,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -8480,7 +8480,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -8491,7 +8491,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -8502,7 +8502,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -8513,7 +8513,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -8524,7 +8524,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -8535,7 +8535,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -8546,7 +8546,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8557,7 +8557,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8568,7 +8568,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8579,7 +8579,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -8590,7 +8590,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8601,7 +8601,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8612,7 +8612,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8623,7 +8623,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -8634,7 +8634,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8645,7 +8645,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8656,7 +8656,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8667,7 +8667,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -8678,7 +8678,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8689,7 +8689,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8700,7 +8700,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8711,7 +8711,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -8722,7 +8722,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8733,7 +8733,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8744,7 +8744,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8755,7 +8755,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -8766,7 +8766,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8777,7 +8777,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8788,7 +8788,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8799,7 +8799,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -8810,7 +8810,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8821,7 +8821,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8832,7 +8832,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8843,7 +8843,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -8854,7 +8854,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8865,7 +8865,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8876,7 +8876,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8887,7 +8887,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -8898,7 +8898,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8909,7 +8909,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8920,7 +8920,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8931,7 +8931,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -8942,7 +8942,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8953,7 +8953,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8964,7 +8964,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8975,7 +8975,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -8986,7 +8986,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -8997,7 +8997,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9008,7 +9008,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9019,7 +9019,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9030,7 +9030,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9041,7 +9041,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9052,7 +9052,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9063,7 +9063,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9074,7 +9074,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9085,7 +9085,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9096,7 +9096,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9107,7 +9107,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9118,7 +9118,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9129,7 +9129,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9140,7 +9140,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9151,7 +9151,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9162,7 +9162,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9173,7 +9173,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9184,7 +9184,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9195,7 +9195,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9206,7 +9206,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9217,7 +9217,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9228,7 +9228,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9239,7 +9239,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9250,7 +9250,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9261,7 +9261,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9272,7 +9272,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9283,7 +9283,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9294,7 +9294,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9305,7 +9305,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9316,7 +9316,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9327,7 +9327,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9338,7 +9338,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9349,7 +9349,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9360,7 +9360,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9371,7 +9371,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9382,7 +9382,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9393,7 +9393,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9404,7 +9404,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9415,7 +9415,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9426,7 +9426,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -9437,7 +9437,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -9448,7 +9448,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -9459,7 +9459,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -9470,7 +9470,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -9481,7 +9481,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -9492,7 +9492,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -9503,7 +9503,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -9514,7 +9514,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -9525,7 +9525,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -9536,7 +9536,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -9547,7 +9547,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -9558,7 +9558,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9569,7 +9569,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9580,7 +9580,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9591,7 +9591,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -9602,7 +9602,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9613,7 +9613,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9624,7 +9624,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9635,7 +9635,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -9646,7 +9646,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9657,7 +9657,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9668,7 +9668,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9679,7 +9679,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -9690,7 +9690,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9701,7 +9701,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9712,7 +9712,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9723,7 +9723,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -9734,7 +9734,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9745,7 +9745,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9756,7 +9756,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9767,7 +9767,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -9778,7 +9778,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9789,7 +9789,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9800,7 +9800,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9811,7 +9811,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -9822,7 +9822,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9833,7 +9833,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9844,7 +9844,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9855,7 +9855,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -9866,7 +9866,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9877,7 +9877,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9888,7 +9888,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9899,7 +9899,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -9910,7 +9910,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9921,7 +9921,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9932,7 +9932,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9943,7 +9943,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -9954,7 +9954,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9965,7 +9965,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9976,7 +9976,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9987,7 +9987,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -9998,7 +9998,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10009,7 +10009,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10020,7 +10020,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10031,7 +10031,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10042,7 +10042,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10053,7 +10053,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10064,7 +10064,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10075,7 +10075,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10086,7 +10086,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10097,7 +10097,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10108,7 +10108,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10119,7 +10119,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10130,7 +10130,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10141,7 +10141,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10152,7 +10152,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10163,7 +10163,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10174,7 +10174,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10185,7 +10185,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10196,7 +10196,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10207,7 +10207,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10218,7 +10218,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10229,7 +10229,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10240,7 +10240,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10251,7 +10251,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10262,7 +10262,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10273,7 +10273,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10284,7 +10284,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10295,7 +10295,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10306,7 +10306,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10317,7 +10317,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10328,7 +10328,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10339,7 +10339,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10350,7 +10350,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10361,7 +10361,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10372,7 +10372,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10383,7 +10383,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10394,7 +10394,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10405,7 +10405,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10416,7 +10416,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10427,7 +10427,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10438,7 +10438,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -10449,7 +10449,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -10460,7 +10460,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -10471,7 +10471,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -10482,7 +10482,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -10493,7 +10493,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -10504,7 +10504,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -10515,7 +10515,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -10526,7 +10526,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -10537,7 +10537,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -10548,7 +10548,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -10559,7 +10559,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -10570,7 +10570,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10581,7 +10581,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10592,7 +10592,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10603,7 +10603,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -10614,7 +10614,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10625,7 +10625,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10636,7 +10636,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10647,7 +10647,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -10658,7 +10658,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10669,7 +10669,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10680,7 +10680,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10691,7 +10691,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -10702,7 +10702,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10713,7 +10713,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10724,7 +10724,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10735,7 +10735,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -10746,7 +10746,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10757,7 +10757,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10768,7 +10768,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10779,7 +10779,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -10790,7 +10790,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10801,7 +10801,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10812,7 +10812,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10823,7 +10823,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -10834,7 +10834,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10845,7 +10845,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10856,7 +10856,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10867,7 +10867,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -10878,7 +10878,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10889,7 +10889,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10900,7 +10900,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10911,7 +10911,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -10922,7 +10922,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10933,7 +10933,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10944,7 +10944,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10955,7 +10955,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -10966,7 +10966,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10977,7 +10977,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10988,7 +10988,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -10999,7 +10999,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -11010,7 +11010,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -11021,7 +11021,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -11032,7 +11032,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -11043,7 +11043,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -11054,7 +11054,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -11065,7 +11065,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -11076,7 +11076,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -11087,7 +11087,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -11098,7 +11098,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -11109,7 +11109,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -11120,7 +11120,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -11131,7 +11131,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -11142,7 +11142,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11153,7 +11153,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11164,7 +11164,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11175,7 +11175,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11186,7 +11186,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11197,7 +11197,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11208,7 +11208,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11219,7 +11219,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11230,7 +11230,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11241,7 +11241,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11252,7 +11252,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11263,7 +11263,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11274,7 +11274,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11285,7 +11285,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11296,7 +11296,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11307,7 +11307,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11318,7 +11318,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11329,7 +11329,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11340,7 +11340,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11351,7 +11351,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11362,7 +11362,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11373,7 +11373,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11384,7 +11384,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11395,7 +11395,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11406,7 +11406,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11417,7 +11417,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11428,7 +11428,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11439,7 +11439,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11450,7 +11450,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11461,7 +11461,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11472,7 +11472,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11483,7 +11483,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11494,7 +11494,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11505,7 +11505,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11516,7 +11516,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11527,7 +11527,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11538,7 +11538,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11549,7 +11549,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11560,7 +11560,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11571,7 +11571,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11582,7 +11582,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11593,7 +11593,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11604,7 +11604,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11615,7 +11615,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11626,7 +11626,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11637,7 +11637,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11648,7 +11648,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11659,7 +11659,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11670,7 +11670,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11681,7 +11681,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11692,7 +11692,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11703,7 +11703,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -11714,7 +11714,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11725,7 +11725,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11736,7 +11736,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11747,7 +11747,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11758,7 +11758,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11769,7 +11769,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11780,7 +11780,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11791,7 +11791,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11802,7 +11802,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11813,7 +11813,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11824,7 +11824,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11835,7 +11835,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11846,7 +11846,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11857,7 +11857,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11868,7 +11868,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11879,7 +11879,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11890,7 +11890,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11901,7 +11901,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11912,7 +11912,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11923,7 +11923,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11934,7 +11934,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11945,7 +11945,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11956,7 +11956,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11967,7 +11967,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11978,7 +11978,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -11989,7 +11989,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12000,7 +12000,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12011,7 +12011,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12022,7 +12022,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12033,7 +12033,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12044,7 +12044,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12055,7 +12055,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12066,7 +12066,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12077,7 +12077,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12088,7 +12088,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12099,7 +12099,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12110,7 +12110,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12121,7 +12121,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12132,7 +12132,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12143,7 +12143,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12154,7 +12154,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12165,7 +12165,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12176,7 +12176,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12187,7 +12187,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12198,7 +12198,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12209,7 +12209,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12220,7 +12220,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12231,7 +12231,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12242,7 +12242,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12253,7 +12253,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12264,7 +12264,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12275,7 +12275,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -12286,7 +12286,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12297,7 +12297,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12308,7 +12308,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12319,7 +12319,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12330,7 +12330,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12341,7 +12341,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12352,7 +12352,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12363,7 +12363,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12374,7 +12374,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12385,7 +12385,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12396,7 +12396,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12407,7 +12407,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12418,7 +12418,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12429,7 +12429,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12440,7 +12440,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12451,7 +12451,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12462,7 +12462,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12473,7 +12473,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12484,7 +12484,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12495,7 +12495,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12506,7 +12506,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12517,7 +12517,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12528,7 +12528,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12539,7 +12539,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12550,7 +12550,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12561,7 +12561,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12572,7 +12572,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12583,7 +12583,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12594,7 +12594,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12605,7 +12605,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12616,7 +12616,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12627,7 +12627,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12638,7 +12638,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12649,7 +12649,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12660,7 +12660,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12671,7 +12671,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12682,7 +12682,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12693,7 +12693,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12704,7 +12704,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12715,7 +12715,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12726,7 +12726,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12737,7 +12737,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12748,7 +12748,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12759,7 +12759,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12770,7 +12770,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12781,7 +12781,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12792,7 +12792,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12803,7 +12803,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12814,7 +12814,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12825,7 +12825,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12836,7 +12836,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12847,7 +12847,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -12858,7 +12858,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -12869,7 +12869,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -12880,7 +12880,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -12891,7 +12891,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -12902,7 +12902,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -12913,7 +12913,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -12924,7 +12924,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -12935,7 +12935,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -12946,7 +12946,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -12957,7 +12957,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -12968,7 +12968,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -12979,7 +12979,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -12990,7 +12990,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13001,7 +13001,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13012,7 +13012,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13023,7 +13023,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13034,7 +13034,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13045,7 +13045,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13056,7 +13056,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13067,7 +13067,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13078,7 +13078,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13089,7 +13089,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13100,7 +13100,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13111,7 +13111,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13122,7 +13122,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13133,7 +13133,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13144,7 +13144,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13155,7 +13155,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13166,7 +13166,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13177,7 +13177,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13188,7 +13188,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13199,7 +13199,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13210,7 +13210,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13221,7 +13221,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13232,7 +13232,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13243,7 +13243,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13254,7 +13254,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13265,7 +13265,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13276,7 +13276,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13287,7 +13287,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13298,7 +13298,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13309,18 +13309,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 20,
     'Sold': 312,
-    'Amount': 1326,
+    'Amount': 1211504,
     'Country': 'Germany',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13331,7 +13331,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13342,7 +13342,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13353,7 +13353,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13364,7 +13364,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13375,7 +13375,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13386,7 +13386,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13397,7 +13397,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13408,7 +13408,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13419,7 +13419,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13430,7 +13430,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13441,7 +13441,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13452,7 +13452,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13463,7 +13463,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13474,7 +13474,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13485,7 +13485,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13496,7 +13496,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13507,7 +13507,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13518,7 +13518,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13529,7 +13529,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13540,7 +13540,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13551,7 +13551,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13562,7 +13562,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13573,7 +13573,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13584,7 +13584,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13595,7 +13595,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -13606,7 +13606,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13617,7 +13617,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13628,7 +13628,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13639,7 +13639,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -13650,7 +13650,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13661,7 +13661,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13672,7 +13672,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13683,7 +13683,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -13694,7 +13694,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13705,7 +13705,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13716,7 +13716,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13727,7 +13727,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -13738,7 +13738,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13749,7 +13749,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13760,7 +13760,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13771,7 +13771,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -13782,7 +13782,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13793,7 +13793,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13804,7 +13804,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13815,7 +13815,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -13826,7 +13826,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13837,7 +13837,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13848,7 +13848,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13859,7 +13859,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -13870,7 +13870,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13881,7 +13881,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13892,7 +13892,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13903,7 +13903,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -13914,7 +13914,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13925,7 +13925,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13936,7 +13936,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13947,7 +13947,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -13958,7 +13958,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13969,7 +13969,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13980,7 +13980,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -13991,7 +13991,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14002,7 +14002,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14013,7 +14013,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14024,7 +14024,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14035,7 +14035,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14046,7 +14046,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14057,7 +14057,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14068,7 +14068,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14079,7 +14079,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14090,7 +14090,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14101,7 +14101,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14112,7 +14112,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14123,7 +14123,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14134,7 +14134,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14145,7 +14145,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14156,7 +14156,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14167,7 +14167,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14178,7 +14178,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14189,7 +14189,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14200,7 +14200,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14211,7 +14211,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14222,7 +14222,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14233,7 +14233,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14244,7 +14244,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14255,7 +14255,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14266,7 +14266,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14277,7 +14277,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14288,7 +14288,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14299,7 +14299,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14310,7 +14310,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14321,7 +14321,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14332,7 +14332,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14343,7 +14343,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14354,7 +14354,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14365,7 +14365,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14376,7 +14376,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14387,7 +14387,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14398,7 +14398,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14409,7 +14409,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14420,7 +14420,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14431,7 +14431,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14442,7 +14442,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14453,7 +14453,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14464,7 +14464,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14475,7 +14475,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14486,7 +14486,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14497,7 +14497,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14508,7 +14508,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14519,7 +14519,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14530,7 +14530,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14541,7 +14541,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14552,7 +14552,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14563,7 +14563,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14574,7 +14574,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14585,7 +14585,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14596,7 +14596,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14607,7 +14607,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -14618,7 +14618,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14629,7 +14629,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14640,7 +14640,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14651,7 +14651,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -14662,7 +14662,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14673,7 +14673,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14684,7 +14684,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14695,7 +14695,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -14706,7 +14706,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14717,7 +14717,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14728,7 +14728,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14739,7 +14739,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -14750,7 +14750,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14761,7 +14761,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14772,7 +14772,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14783,7 +14783,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -14794,7 +14794,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14805,7 +14805,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14816,7 +14816,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14827,7 +14827,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -14838,7 +14838,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14849,7 +14849,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14860,7 +14860,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14871,7 +14871,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -14882,7 +14882,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14893,7 +14893,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14904,7 +14904,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14915,7 +14915,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -14926,7 +14926,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14937,7 +14937,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14948,7 +14948,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14959,7 +14959,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -14970,7 +14970,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14981,7 +14981,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -14992,7 +14992,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15003,7 +15003,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15014,7 +15014,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15025,7 +15025,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15036,7 +15036,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15047,7 +15047,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15058,7 +15058,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15069,18 +15069,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 14,
     'Sold': 97,
-    'Amount': 1867.25,
+    'Amount': 10769954,
     'Country': 'Germany',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15091,7 +15091,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15102,7 +15102,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15113,7 +15113,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15124,7 +15124,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15135,7 +15135,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15146,7 +15146,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15157,7 +15157,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15168,7 +15168,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15179,7 +15179,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15190,7 +15190,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15201,7 +15201,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15212,7 +15212,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15223,7 +15223,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15234,7 +15234,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15245,7 +15245,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15256,7 +15256,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15267,7 +15267,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15278,7 +15278,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15289,7 +15289,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15300,7 +15300,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15311,7 +15311,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15322,7 +15322,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15333,7 +15333,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15344,7 +15344,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15355,7 +15355,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15366,7 +15366,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15377,7 +15377,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15388,7 +15388,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15399,7 +15399,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15410,7 +15410,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15421,7 +15421,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15432,7 +15432,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15443,7 +15443,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15454,7 +15454,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15465,7 +15465,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15476,7 +15476,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15487,7 +15487,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15498,7 +15498,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15509,7 +15509,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15520,7 +15520,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15531,7 +15531,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15542,7 +15542,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15553,7 +15553,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15564,7 +15564,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15575,7 +15575,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15586,7 +15586,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15597,7 +15597,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15608,7 +15608,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15619,7 +15619,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -15630,7 +15630,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15641,7 +15641,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15652,7 +15652,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15663,7 +15663,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -15674,7 +15674,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15685,7 +15685,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15696,7 +15696,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15707,7 +15707,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -15718,7 +15718,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15729,7 +15729,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15740,7 +15740,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15751,7 +15751,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -15762,7 +15762,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15773,7 +15773,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15784,7 +15784,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15795,7 +15795,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -15806,7 +15806,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15817,7 +15817,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15828,7 +15828,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15839,7 +15839,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -15850,7 +15850,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15861,7 +15861,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15872,7 +15872,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15883,7 +15883,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -15894,7 +15894,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15905,7 +15905,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15916,7 +15916,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15927,7 +15927,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -15938,7 +15938,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15949,7 +15949,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15960,7 +15960,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15971,7 +15971,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -15982,7 +15982,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -15993,7 +15993,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16004,7 +16004,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16015,7 +16015,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16026,7 +16026,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16037,7 +16037,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16048,7 +16048,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16059,7 +16059,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16070,7 +16070,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16081,7 +16081,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16092,7 +16092,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16103,7 +16103,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16114,7 +16114,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16125,7 +16125,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16136,7 +16136,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16147,7 +16147,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16158,7 +16158,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16169,7 +16169,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16180,7 +16180,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16191,7 +16191,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16202,7 +16202,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16213,7 +16213,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16224,7 +16224,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16235,7 +16235,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16246,7 +16246,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16257,7 +16257,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16268,7 +16268,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16279,7 +16279,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16290,7 +16290,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16301,7 +16301,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16312,7 +16312,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16323,7 +16323,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16334,7 +16334,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16345,7 +16345,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16356,7 +16356,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16367,7 +16367,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16378,7 +16378,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16389,7 +16389,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16400,7 +16400,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16411,7 +16411,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16422,7 +16422,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16433,7 +16433,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16444,7 +16444,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16455,7 +16455,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16466,7 +16466,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16477,7 +16477,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16488,7 +16488,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16499,7 +16499,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16510,7 +16510,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16521,7 +16521,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16532,7 +16532,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16543,7 +16543,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16554,7 +16554,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16565,7 +16565,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16576,7 +16576,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16587,7 +16587,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -16598,7 +16598,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16609,7 +16609,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16620,7 +16620,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16631,7 +16631,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -16642,7 +16642,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16653,7 +16653,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16664,7 +16664,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16675,7 +16675,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -16686,7 +16686,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16697,7 +16697,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16708,7 +16708,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16719,7 +16719,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -16730,7 +16730,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16741,7 +16741,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16752,7 +16752,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16763,7 +16763,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -16774,7 +16774,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16785,7 +16785,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16796,7 +16796,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16807,7 +16807,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -16818,7 +16818,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16829,7 +16829,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16840,7 +16840,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16851,7 +16851,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -16862,7 +16862,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16873,7 +16873,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16884,7 +16884,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16895,7 +16895,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -16906,7 +16906,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16917,7 +16917,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16928,7 +16928,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16939,7 +16939,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -16950,7 +16950,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16961,7 +16961,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16972,7 +16972,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16983,7 +16983,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -16994,7 +16994,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17005,7 +17005,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17016,7 +17016,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17027,7 +17027,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17038,7 +17038,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17049,7 +17049,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17060,7 +17060,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17071,7 +17071,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17082,7 +17082,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17093,7 +17093,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17104,7 +17104,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17115,7 +17115,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17126,7 +17126,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17137,7 +17137,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17148,7 +17148,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17159,7 +17159,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17170,7 +17170,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17181,7 +17181,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17192,7 +17192,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17203,7 +17203,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17214,7 +17214,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17225,7 +17225,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17236,7 +17236,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17247,7 +17247,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17258,7 +17258,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17269,7 +17269,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17280,7 +17280,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17291,7 +17291,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17302,7 +17302,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17313,7 +17313,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17324,7 +17324,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17335,7 +17335,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17346,7 +17346,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17357,7 +17357,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17368,7 +17368,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17379,7 +17379,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17390,7 +17390,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17401,7 +17401,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17412,7 +17412,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17423,7 +17423,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17434,7 +17434,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17445,7 +17445,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17456,7 +17456,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17467,7 +17467,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17478,7 +17478,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17489,7 +17489,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17500,7 +17500,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17511,7 +17511,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17522,7 +17522,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17533,7 +17533,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17544,7 +17544,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17555,7 +17555,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17566,7 +17566,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17577,7 +17577,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17588,7 +17588,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17599,7 +17599,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -17610,7 +17610,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17621,7 +17621,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17632,7 +17632,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17643,7 +17643,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -17654,7 +17654,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17665,7 +17665,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17676,7 +17676,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17687,7 +17687,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -17698,7 +17698,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17709,7 +17709,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17720,7 +17720,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17731,7 +17731,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -17742,7 +17742,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17753,7 +17753,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17764,7 +17764,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17775,7 +17775,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -17786,7 +17786,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17797,7 +17797,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17808,7 +17808,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17819,7 +17819,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -17830,7 +17830,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17841,7 +17841,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17852,7 +17852,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17863,7 +17863,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -17874,7 +17874,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17885,7 +17885,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17896,7 +17896,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17907,7 +17907,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -17918,7 +17918,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17929,7 +17929,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17940,7 +17940,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17951,7 +17951,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -17962,7 +17962,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17973,7 +17973,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17984,7 +17984,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -17995,7 +17995,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -18006,7 +18006,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18017,7 +18017,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18028,7 +18028,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18039,7 +18039,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18050,7 +18050,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18061,7 +18061,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18072,7 +18072,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18083,7 +18083,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18094,7 +18094,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18105,7 +18105,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18116,7 +18116,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18127,7 +18127,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18138,7 +18138,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -18149,7 +18149,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -18160,7 +18160,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -18171,7 +18171,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -18182,7 +18182,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18193,7 +18193,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18204,7 +18204,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18215,7 +18215,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18226,7 +18226,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18237,7 +18237,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18248,7 +18248,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18259,7 +18259,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18270,7 +18270,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18281,7 +18281,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18292,7 +18292,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18303,7 +18303,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18314,7 +18314,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18325,7 +18325,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18336,7 +18336,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18347,7 +18347,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18358,7 +18358,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18369,7 +18369,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18380,7 +18380,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18391,7 +18391,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18402,7 +18402,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -18413,7 +18413,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -18424,7 +18424,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -18435,7 +18435,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -18446,7 +18446,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18457,7 +18457,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18468,7 +18468,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18479,7 +18479,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18490,7 +18490,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18501,7 +18501,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18512,7 +18512,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18523,7 +18523,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18534,7 +18534,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18545,7 +18545,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18556,7 +18556,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18567,7 +18567,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -18578,7 +18578,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -18589,7 +18589,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -18600,7 +18600,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -18611,7 +18611,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -18622,7 +18622,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18633,7 +18633,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18644,7 +18644,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18655,7 +18655,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -18666,7 +18666,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18677,7 +18677,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18688,7 +18688,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18699,7 +18699,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -18710,7 +18710,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18721,7 +18721,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18732,7 +18732,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18743,7 +18743,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -18754,7 +18754,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -18765,7 +18765,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -18776,7 +18776,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -18787,7 +18787,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -18798,7 +18798,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18809,7 +18809,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18820,7 +18820,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18831,7 +18831,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -18842,7 +18842,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18853,7 +18853,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18864,7 +18864,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18875,7 +18875,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -18886,7 +18886,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18897,7 +18897,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18908,7 +18908,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18919,7 +18919,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -18930,7 +18930,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -18941,7 +18941,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -18952,7 +18952,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -18963,7 +18963,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -18974,7 +18974,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18985,7 +18985,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -18996,7 +18996,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19007,7 +19007,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19018,7 +19018,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19029,7 +19029,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19040,7 +19040,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19051,7 +19051,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19062,7 +19062,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19073,7 +19073,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19084,7 +19084,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19095,51 +19095,51 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
-    'In_Stock': 23,
-    'Sold': 58,
-    'Amount': 6438.5,
+    'In_Stock': 923,
+    'Sold': 20058,
+    'Amount': 626438.5,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 41,
-    'Sold': 311,
-    'Amount': 34832,
+    'In_Stock': 841,
+    'Sold': 23311,
+    'Amount': 7234832,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 24,
+    'In_Stock': 724,
     'Sold': 317,
     'Amount': 35266.25,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 43,
+    'In_Stock': 943,
     'Sold': 192,
     'Amount': 11100,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -19150,7 +19150,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19161,7 +19161,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19172,7 +19172,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19183,7 +19183,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19194,7 +19194,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19205,7 +19205,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19216,7 +19216,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19227,7 +19227,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19238,7 +19238,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19249,7 +19249,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19260,7 +19260,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19271,7 +19271,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19282,7 +19282,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19293,7 +19293,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19304,7 +19304,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19315,7 +19315,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19326,7 +19326,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19337,7 +19337,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19348,7 +19348,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19359,7 +19359,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19370,7 +19370,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19381,7 +19381,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19392,7 +19392,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19403,7 +19403,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19414,7 +19414,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -19425,7 +19425,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -19436,7 +19436,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -19447,7 +19447,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -19458,7 +19458,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -19469,7 +19469,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -19480,7 +19480,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -19491,7 +19491,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -19502,7 +19502,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -19513,7 +19513,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -19524,7 +19524,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -19535,7 +19535,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -19546,7 +19546,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19557,7 +19557,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19568,7 +19568,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19579,7 +19579,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -19590,7 +19590,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19601,7 +19601,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19612,7 +19612,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19623,7 +19623,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -19634,7 +19634,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19645,7 +19645,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19656,7 +19656,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -19667,18 +19667,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 18,
     'Sold': 36,
-    'Amount': 774,
+    'Amount': 9993392,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -19689,7 +19689,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -19700,7 +19700,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -19711,7 +19711,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -19722,7 +19722,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19733,7 +19733,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19744,7 +19744,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19755,7 +19755,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -19766,7 +19766,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19777,7 +19777,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19788,7 +19788,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19799,7 +19799,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -19810,7 +19810,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19821,7 +19821,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19832,7 +19832,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19843,7 +19843,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -19854,7 +19854,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19865,7 +19865,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19876,7 +19876,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19887,7 +19887,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -19898,7 +19898,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19909,7 +19909,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19920,7 +19920,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19931,7 +19931,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -19942,7 +19942,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19953,7 +19953,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19964,7 +19964,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19975,7 +19975,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -19986,7 +19986,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -19997,7 +19997,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20008,7 +20008,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20019,7 +20019,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20030,7 +20030,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20041,7 +20041,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20052,7 +20052,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20063,7 +20063,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20074,7 +20074,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20085,7 +20085,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20096,7 +20096,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20107,7 +20107,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20118,7 +20118,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20129,7 +20129,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20140,7 +20140,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20151,73 +20151,73 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
     'In_Stock': 7,
     'Sold': 68,
-    'Amount': 1938,
+    'Amount': 18,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 7,
     'Sold': 442,
-    'Amount': 12818,
+    'Amount': 8,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 5,
     'Sold': 166,
-    'Amount': 4689.5,
+    'Amount': 45,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 8,
     'Sold': 79,
-    'Amount': 2212,
+    'Amount': 22,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 49,
     'Sold': 27,
-    'Amount': 769.5,
+    'Amount': 5,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 44,
     'Sold': 156,
-    'Amount': 4524,
+    'Amount': -790233,
     'Country': 'United Kingdom',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20228,7 +20228,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20239,7 +20239,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20250,7 +20250,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20261,7 +20261,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20272,7 +20272,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20283,7 +20283,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20294,7 +20294,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20305,7 +20305,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20316,7 +20316,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20327,7 +20327,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20338,7 +20338,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20349,7 +20349,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20360,7 +20360,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20371,7 +20371,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20382,7 +20382,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20393,7 +20393,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20404,7 +20404,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20415,7 +20415,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20426,7 +20426,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -20437,7 +20437,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -20448,7 +20448,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -20459,7 +20459,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -20470,7 +20470,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -20481,7 +20481,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -20492,7 +20492,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -20503,7 +20503,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -20514,7 +20514,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -20525,7 +20525,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -20536,7 +20536,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -20547,7 +20547,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -20558,7 +20558,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20569,7 +20569,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20580,7 +20580,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20591,7 +20591,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -20602,7 +20602,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20613,7 +20613,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20624,7 +20624,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20635,7 +20635,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -20646,7 +20646,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20657,7 +20657,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20668,7 +20668,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20679,7 +20679,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -20690,7 +20690,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20701,7 +20701,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20712,7 +20712,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20723,7 +20723,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -20734,7 +20734,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -20745,7 +20745,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -20756,7 +20756,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -20767,7 +20767,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -20778,7 +20778,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20789,7 +20789,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20800,7 +20800,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20811,7 +20811,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -20822,7 +20822,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20833,7 +20833,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20844,7 +20844,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20855,7 +20855,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -20866,7 +20866,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20877,7 +20877,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20888,7 +20888,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20899,7 +20899,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -20910,7 +20910,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20921,7 +20921,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20932,7 +20932,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20943,7 +20943,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -20954,7 +20954,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20965,7 +20965,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20976,7 +20976,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20987,7 +20987,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -20998,7 +20998,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21009,7 +21009,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21020,7 +21020,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21031,7 +21031,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21042,7 +21042,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21053,7 +21053,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21064,7 +21064,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21075,7 +21075,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21086,7 +21086,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21097,7 +21097,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21108,7 +21108,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21119,7 +21119,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21130,7 +21130,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21141,7 +21141,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21152,7 +21152,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21163,7 +21163,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21174,7 +21174,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -21185,7 +21185,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -21196,7 +21196,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -21207,7 +21207,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -21218,7 +21218,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -21229,7 +21229,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -21240,7 +21240,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -21251,7 +21251,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -21262,7 +21262,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -21273,7 +21273,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -21284,7 +21284,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -21295,7 +21295,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -21306,7 +21306,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -21317,7 +21317,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -21328,7 +21328,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -21339,7 +21339,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -21350,7 +21350,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -21361,7 +21361,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -21372,7 +21372,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -21383,7 +21383,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -21394,7 +21394,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -21405,7 +21405,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -21416,7 +21416,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -21427,7 +21427,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -21438,7 +21438,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21449,7 +21449,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21460,7 +21460,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21471,7 +21471,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21482,7 +21482,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21493,7 +21493,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21504,7 +21504,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21515,7 +21515,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -21526,7 +21526,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21537,7 +21537,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21548,7 +21548,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21559,7 +21559,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21570,7 +21570,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21581,7 +21581,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21592,7 +21592,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21603,7 +21603,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -21614,7 +21614,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21625,7 +21625,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21636,7 +21636,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21647,7 +21647,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21658,7 +21658,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21669,7 +21669,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21680,7 +21680,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21691,7 +21691,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -21702,7 +21702,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21713,7 +21713,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21724,7 +21724,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21735,7 +21735,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21746,7 +21746,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21757,7 +21757,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21768,7 +21768,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21779,7 +21779,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -21790,7 +21790,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21801,7 +21801,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21812,7 +21812,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21823,7 +21823,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21834,7 +21834,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21845,7 +21845,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21856,7 +21856,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21867,7 +21867,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -21878,7 +21878,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21889,7 +21889,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21900,7 +21900,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21911,7 +21911,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21922,7 +21922,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21933,7 +21933,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21944,7 +21944,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21955,7 +21955,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -21966,7 +21966,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21977,7 +21977,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21988,7 +21988,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -21999,7 +21999,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22010,7 +22010,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22021,7 +22021,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22032,7 +22032,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22043,7 +22043,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22054,7 +22054,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22065,7 +22065,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22076,7 +22076,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22087,7 +22087,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22098,7 +22098,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22109,7 +22109,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22120,7 +22120,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22131,7 +22131,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22142,7 +22142,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22153,7 +22153,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22164,7 +22164,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22175,7 +22175,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22186,7 +22186,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22197,18 +22197,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 19,
     'Sold': 286,
-    'Amount': 430716,
+    'Amount': 1030716,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22219,7 +22219,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22230,7 +22230,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22241,7 +22241,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22252,7 +22252,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22263,7 +22263,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22274,7 +22274,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22285,7 +22285,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22296,7 +22296,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22307,7 +22307,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22318,7 +22318,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22329,7 +22329,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22340,7 +22340,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22351,7 +22351,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22362,7 +22362,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22373,7 +22373,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22384,7 +22384,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22395,7 +22395,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -22406,7 +22406,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22417,7 +22417,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22428,7 +22428,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22439,7 +22439,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22450,7 +22450,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22461,7 +22461,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22472,7 +22472,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22483,7 +22483,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -22494,7 +22494,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -22505,7 +22505,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -22516,7 +22516,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -22527,7 +22527,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -22538,29 +22538,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 46,
-    'Sold': 129,
-    'Amount': 194661,
+    'In_Stock': 1146,
+    'Sold': 11129,
+    'Amount': 1194661,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 31,
-    'Sold': 401,
-    'Amount': 603906,
+    'In_Stock': 3131,
+    'Sold': 14401,
+    'Amount': 11803906,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -22571,18 +22571,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Road Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
-    'In_Stock': 13,
+    'In_Stock': 1113,
     'Sold': 40,
-    'Amount': 68160,
+    'Amount': 3775331,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -22593,7 +22593,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -22604,7 +22604,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -22615,7 +22615,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -22626,7 +22626,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -22637,7 +22637,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -22648,7 +22648,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -22659,7 +22659,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -22670,7 +22670,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -22681,7 +22681,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -22692,7 +22692,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -22703,7 +22703,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -22714,7 +22714,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -22725,7 +22725,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -22736,7 +22736,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -22747,18 +22747,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 43,
     'Sold': 69,
-    'Amount': 117576,
+    'Amount': 2117576,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -22769,7 +22769,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -22780,7 +22780,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -22791,7 +22791,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -22802,7 +22802,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -22813,7 +22813,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -22824,7 +22824,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -22835,7 +22835,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -22846,7 +22846,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22857,7 +22857,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22868,7 +22868,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22879,7 +22879,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -22890,7 +22890,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22901,7 +22901,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22912,7 +22912,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -22923,18 +22923,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 2,
-    'Sold': 83,
+    'Sold': 6683,
     'Amount': 141432,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22945,7 +22945,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22956,7 +22956,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22967,7 +22967,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -22978,7 +22978,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -22989,7 +22989,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23000,7 +23000,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23011,7 +23011,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23022,7 +23022,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -23033,7 +23033,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -23044,7 +23044,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -23055,7 +23055,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -23066,7 +23066,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -23077,7 +23077,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -23088,7 +23088,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -23099,18 +23099,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 41,
-    'Sold': 70,
+    'Sold': 3070,
     'Amount': 119280,
     'Country': 'United States',
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -23121,7 +23121,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -23132,7 +23132,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -23143,7 +23143,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Mountain Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -23154,7 +23154,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23165,7 +23165,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23176,7 +23176,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23187,7 +23187,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23198,7 +23198,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23209,7 +23209,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23220,7 +23220,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23231,7 +23231,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -23242,7 +23242,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23253,7 +23253,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23264,7 +23264,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23275,7 +23275,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23286,7 +23286,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23297,7 +23297,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23308,7 +23308,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23319,7 +23319,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -23330,7 +23330,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23341,7 +23341,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23352,7 +23352,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23363,7 +23363,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23374,7 +23374,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23385,7 +23385,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23396,7 +23396,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23407,7 +23407,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -23418,7 +23418,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23429,7 +23429,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23440,7 +23440,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23451,7 +23451,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23462,7 +23462,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23473,7 +23473,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23484,7 +23484,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23495,7 +23495,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -23506,7 +23506,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23517,7 +23517,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23528,7 +23528,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23539,7 +23539,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23550,7 +23550,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23561,7 +23561,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23572,7 +23572,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23583,7 +23583,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -23594,7 +23594,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23605,7 +23605,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23616,7 +23616,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23627,7 +23627,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23638,7 +23638,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23649,7 +23649,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23660,7 +23660,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23671,7 +23671,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -23682,7 +23682,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23693,7 +23693,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23704,7 +23704,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23715,7 +23715,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23726,7 +23726,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23737,7 +23737,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23748,7 +23748,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23759,7 +23759,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -23770,7 +23770,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23781,7 +23781,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23792,7 +23792,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23803,7 +23803,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23814,7 +23814,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23825,7 +23825,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23836,7 +23836,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23847,7 +23847,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -23858,7 +23858,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23869,7 +23869,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23880,7 +23880,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23891,7 +23891,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23902,7 +23902,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23913,7 +23913,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23924,7 +23924,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23935,7 +23935,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -23946,7 +23946,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23957,7 +23957,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23968,7 +23968,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23979,7 +23979,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -23990,7 +23990,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -24001,7 +24001,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -24012,7 +24012,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -24023,7 +24023,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -24034,7 +24034,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24045,7 +24045,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24056,7 +24056,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24067,7 +24067,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24078,7 +24078,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24089,7 +24089,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24100,7 +24100,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24111,7 +24111,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -24122,7 +24122,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24133,7 +24133,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24144,7 +24144,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24155,7 +24155,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24166,7 +24166,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24177,7 +24177,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24188,7 +24188,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24199,7 +24199,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -24210,7 +24210,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24221,7 +24221,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24232,7 +24232,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24243,7 +24243,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24254,7 +24254,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24265,7 +24265,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24276,7 +24276,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24287,7 +24287,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Bikes',
     'Products': 'Touring Bikes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -24298,7 +24298,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24309,7 +24309,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24320,7 +24320,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24331,7 +24331,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24342,7 +24342,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24353,7 +24353,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24364,7 +24364,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24375,7 +24375,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24386,7 +24386,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24397,7 +24397,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24408,7 +24408,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24419,7 +24419,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24430,7 +24430,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24441,7 +24441,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24452,7 +24452,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24463,7 +24463,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -24474,7 +24474,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24485,7 +24485,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24496,7 +24496,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24507,7 +24507,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24518,7 +24518,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24529,7 +24529,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24540,7 +24540,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24551,7 +24551,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24562,7 +24562,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24573,7 +24573,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24584,7 +24584,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24595,7 +24595,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24606,7 +24606,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24617,7 +24617,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24628,7 +24628,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24639,7 +24639,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -24650,7 +24650,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24661,7 +24661,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24672,7 +24672,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24683,7 +24683,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24694,7 +24694,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24705,7 +24705,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24716,7 +24716,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24727,7 +24727,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24738,7 +24738,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24749,7 +24749,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24760,7 +24760,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24771,7 +24771,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24782,7 +24782,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24793,7 +24793,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24804,7 +24804,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24815,7 +24815,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -24826,7 +24826,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24837,7 +24837,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24848,7 +24848,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24859,7 +24859,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24870,7 +24870,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24881,7 +24881,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24892,7 +24892,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24903,7 +24903,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24914,7 +24914,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24925,7 +24925,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24936,7 +24936,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24947,7 +24947,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24958,7 +24958,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24969,7 +24969,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24980,7 +24980,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -24991,7 +24991,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -25002,7 +25002,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25013,7 +25013,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25024,7 +25024,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25035,7 +25035,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25046,7 +25046,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25057,7 +25057,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25068,7 +25068,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25079,7 +25079,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25090,7 +25090,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25101,7 +25101,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25112,7 +25112,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25123,7 +25123,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25134,7 +25134,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25145,7 +25145,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25156,7 +25156,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25167,7 +25167,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -25178,7 +25178,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25189,7 +25189,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25200,7 +25200,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25211,7 +25211,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25222,7 +25222,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25233,7 +25233,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25244,7 +25244,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25255,7 +25255,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25266,7 +25266,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25277,7 +25277,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25288,7 +25288,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25299,7 +25299,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25310,7 +25310,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25321,7 +25321,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25332,7 +25332,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25343,7 +25343,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -25354,7 +25354,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25365,7 +25365,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25376,7 +25376,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25387,7 +25387,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25398,7 +25398,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25409,7 +25409,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25420,7 +25420,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25431,7 +25431,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25442,7 +25442,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25453,7 +25453,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25464,7 +25464,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25475,7 +25475,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25486,7 +25486,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25497,7 +25497,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25508,7 +25508,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25519,7 +25519,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -25530,7 +25530,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25541,7 +25541,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25552,7 +25552,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25563,7 +25563,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25574,7 +25574,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25585,7 +25585,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25596,7 +25596,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25607,7 +25607,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25618,7 +25618,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25629,7 +25629,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25640,7 +25640,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25651,7 +25651,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25662,7 +25662,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25673,7 +25673,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25684,7 +25684,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25695,7 +25695,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -25706,7 +25706,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25717,7 +25717,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25728,7 +25728,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25739,7 +25739,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25750,7 +25750,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25761,7 +25761,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25772,7 +25772,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25783,7 +25783,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25794,7 +25794,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25805,7 +25805,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25816,7 +25816,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25827,7 +25827,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25838,7 +25838,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25849,7 +25849,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25860,7 +25860,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25871,7 +25871,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -25882,7 +25882,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25893,7 +25893,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25904,7 +25904,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25915,7 +25915,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25926,7 +25926,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25937,7 +25937,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25948,7 +25948,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25959,7 +25959,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25970,7 +25970,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25981,7 +25981,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -25992,7 +25992,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26003,7 +26003,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26014,7 +26014,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26025,7 +26025,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26036,7 +26036,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26047,7 +26047,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -26058,7 +26058,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26069,7 +26069,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26080,7 +26080,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26091,7 +26091,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26102,7 +26102,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26113,7 +26113,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26124,7 +26124,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26135,7 +26135,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26146,7 +26146,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26157,7 +26157,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26168,7 +26168,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26179,7 +26179,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26190,7 +26190,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26201,7 +26201,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26212,7 +26212,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26223,7 +26223,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -26234,7 +26234,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26245,7 +26245,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26256,7 +26256,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26267,7 +26267,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26278,7 +26278,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26289,7 +26289,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26300,7 +26300,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26311,7 +26311,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26322,7 +26322,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26333,7 +26333,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26344,7 +26344,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26355,7 +26355,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26366,7 +26366,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26377,7 +26377,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26388,7 +26388,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -26399,29 +26399,29 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
     'In_Stock': 9,
     'Sold': 81,
-    'Amount': 486.5,
+    'Amount': 10946954,
     'Country': 'United States',
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
     'In_Stock': 19,
     'Sold': 81,
-    'Amount': 2308.5,
+    'Amount': 1122308.5,
     'Country': 'United States',
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26432,7 +26432,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26443,7 +26443,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26454,7 +26454,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26465,7 +26465,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26476,7 +26476,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26487,7 +26487,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26498,7 +26498,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26509,7 +26509,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26520,7 +26520,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26531,7 +26531,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26542,7 +26542,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Gloves',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26553,7 +26553,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Jerseys',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26564,7 +26564,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Shorts',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26575,7 +26575,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Clothing',
     'Products': 'Vests',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -26586,7 +26586,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26597,7 +26597,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26608,7 +26608,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26619,7 +26619,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26630,7 +26630,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26641,7 +26641,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26652,7 +26652,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26663,7 +26663,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26674,7 +26674,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26685,7 +26685,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26696,7 +26696,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26707,7 +26707,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26718,7 +26718,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26729,7 +26729,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26740,7 +26740,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26751,7 +26751,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26762,7 +26762,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26773,7 +26773,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26784,7 +26784,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26795,7 +26795,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26806,7 +26806,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26817,7 +26817,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26828,7 +26828,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26839,7 +26839,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q1'
 },
 {
@@ -26850,7 +26850,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26861,7 +26861,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26872,7 +26872,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26883,7 +26883,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26894,7 +26894,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26905,7 +26905,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26916,7 +26916,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26927,7 +26927,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26938,7 +26938,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26949,7 +26949,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26960,7 +26960,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26971,7 +26971,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26982,7 +26982,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -26993,7 +26993,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27004,7 +27004,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27015,7 +27015,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27026,7 +27026,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27037,7 +27037,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27048,7 +27048,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27059,7 +27059,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27070,7 +27070,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27081,7 +27081,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27092,7 +27092,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27103,7 +27103,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q1'
 },
 {
@@ -27114,7 +27114,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27125,7 +27125,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27136,7 +27136,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27147,7 +27147,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27158,7 +27158,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27169,7 +27169,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27180,7 +27180,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27191,7 +27191,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27202,7 +27202,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27213,7 +27213,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27224,7 +27224,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27235,7 +27235,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27246,7 +27246,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27257,7 +27257,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27268,7 +27268,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27279,7 +27279,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27290,7 +27290,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27301,7 +27301,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27312,7 +27312,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27323,7 +27323,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27334,7 +27334,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27345,7 +27345,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27356,7 +27356,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27367,7 +27367,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q1'
 },
 {
@@ -27378,7 +27378,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27389,7 +27389,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27400,7 +27400,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27411,7 +27411,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27422,7 +27422,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27433,7 +27433,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27444,7 +27444,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27455,7 +27455,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27466,7 +27466,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27477,7 +27477,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27488,7 +27488,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27499,7 +27499,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27510,7 +27510,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27521,7 +27521,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27532,7 +27532,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27543,7 +27543,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27554,7 +27554,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27565,7 +27565,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27576,7 +27576,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27587,7 +27587,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27598,7 +27598,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27609,7 +27609,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27620,7 +27620,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27631,7 +27631,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2025',
+    'Year': 'FY 2026',
     'Quarter': 'Q1'
 },
 {
@@ -27642,7 +27642,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27653,7 +27653,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27664,7 +27664,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27675,7 +27675,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27686,7 +27686,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27697,7 +27697,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27708,7 +27708,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27719,7 +27719,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27730,7 +27730,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27741,7 +27741,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27752,7 +27752,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27763,7 +27763,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27774,7 +27774,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27785,7 +27785,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27796,7 +27796,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27807,7 +27807,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27818,7 +27818,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27829,7 +27829,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27840,7 +27840,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27851,7 +27851,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27862,7 +27862,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27873,7 +27873,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27884,7 +27884,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27895,7 +27895,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q2'
 },
 {
@@ -27906,7 +27906,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27917,7 +27917,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27928,7 +27928,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27939,7 +27939,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27950,7 +27950,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27961,7 +27961,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27972,7 +27972,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27983,7 +27983,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -27994,7 +27994,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28005,7 +28005,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28016,7 +28016,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28027,7 +28027,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28038,7 +28038,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28049,7 +28049,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28060,7 +28060,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28071,7 +28071,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28082,7 +28082,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28093,7 +28093,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28104,7 +28104,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28115,7 +28115,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28126,7 +28126,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28137,7 +28137,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28148,7 +28148,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28159,7 +28159,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q2'
 },
 {
@@ -28170,7 +28170,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28181,7 +28181,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28192,7 +28192,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28203,7 +28203,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28214,7 +28214,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28225,7 +28225,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28236,7 +28236,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28247,7 +28247,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28258,7 +28258,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28269,7 +28269,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28280,7 +28280,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28291,7 +28291,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28302,7 +28302,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28313,7 +28313,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28324,7 +28324,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28335,7 +28335,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28346,7 +28346,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28357,7 +28357,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28368,7 +28368,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28379,7 +28379,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28390,7 +28390,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28401,7 +28401,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28412,7 +28412,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28423,7 +28423,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q2'
 },
 {
@@ -28434,7 +28434,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28445,7 +28445,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28456,7 +28456,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28467,7 +28467,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28478,7 +28478,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28489,7 +28489,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28500,7 +28500,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28511,7 +28511,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28522,7 +28522,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28533,7 +28533,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28544,7 +28544,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28555,7 +28555,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28566,7 +28566,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28577,7 +28577,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28588,7 +28588,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28599,7 +28599,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28610,7 +28610,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28621,7 +28621,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28632,7 +28632,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28643,7 +28643,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28654,7 +28654,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28665,7 +28665,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28676,7 +28676,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28687,7 +28687,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q3'
 },
 {
@@ -28698,7 +28698,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28709,7 +28709,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28720,7 +28720,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28731,7 +28731,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28742,7 +28742,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28753,7 +28753,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28764,7 +28764,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28775,7 +28775,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28786,7 +28786,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28797,7 +28797,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28808,7 +28808,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28819,7 +28819,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28830,7 +28830,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28841,7 +28841,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28852,7 +28852,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28863,7 +28863,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28874,7 +28874,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28885,7 +28885,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28896,7 +28896,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28907,7 +28907,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28918,7 +28918,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28929,7 +28929,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28940,7 +28940,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28951,7 +28951,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q3'
 },
 {
@@ -28962,7 +28962,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -28973,7 +28973,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -28984,18 +28984,18 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 1,
-    'Sold': 68,
+    'Sold': 18,
     'Amount': 306,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -29006,62 +29006,62 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 41,
-    'Sold': 82,
+    'Sold': 12,
     'Amount': 943,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 50,
-    'Sold': 312,
+    'Sold': 2,
     'Amount': 6240,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 9,
-    'Sold': 206,
+    'Sold': 26,
     'Amount': 1751,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 9,
-    'Sold': 393,
+    'Sold': 33,
     'Amount': 12281.25,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 48,
-    'Sold': 354,
+    'Sold': 34,
     'Amount': 1770,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -29072,150 +29072,150 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 36,
-    'Sold': 243,
+    'Sold': 23,
     'Amount': 2916,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 9,
-    'Sold': 430,
+    'Sold': 30,
     'Amount': 8277.5,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 12,
-    'Sold': 56,
+    'Sold': 6,
     'Amount': 434,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 37,
-    'Sold': 101,
+    'Sold': 11,
     'Amount': 3080.5,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 1,
-    'Sold': 202,
+    'Sold': 22,
     'Amount': 858.5,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 30,
-    'Sold': 472,
+    'Sold': 42,
     'Amount': 7330.16,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 28,
-    'Sold': 385,
+    'Sold': 35,
     'Amount': 4331.25,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 5,
-    'Sold': 287,
+    'Sold': 27,
     'Amount': 5453,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 24,
-    'Sold': 129,
+    'Sold': 19,
     'Amount': 967.5,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 49,
-    'Sold': 547,
+    'Sold': 57,
     'Amount': 16546.75,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 47,
-    'Sold': 276,
+    'Sold': 26,
     'Amount': 1104,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 8,
-    'Sold': 518,
+    'Sold': 58,
     'Amount': 7915.04,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
     'In_Stock': 35,
-    'Sold': 158,
+    'Sold': 18,
     'Amount': 1738,
     'Country': 'United States',
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q3'
 },
 {
@@ -29226,7 +29226,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29237,7 +29237,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29248,7 +29248,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29259,7 +29259,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29270,7 +29270,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29281,7 +29281,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29292,7 +29292,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29303,7 +29303,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29314,7 +29314,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29325,7 +29325,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29336,7 +29336,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29347,7 +29347,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29358,7 +29358,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29369,7 +29369,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29380,7 +29380,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29391,7 +29391,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29402,7 +29402,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29413,7 +29413,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29424,7 +29424,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29435,7 +29435,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29446,7 +29446,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29457,7 +29457,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29468,7 +29468,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29479,7 +29479,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2022',
+    'Year': 'FY 2023',
     'Quarter': 'Q4'
 },
 {
@@ -29490,7 +29490,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29501,7 +29501,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29512,7 +29512,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29523,7 +29523,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29534,7 +29534,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29545,7 +29545,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29556,7 +29556,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29567,7 +29567,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29578,7 +29578,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29589,7 +29589,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29600,7 +29600,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29611,7 +29611,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29622,7 +29622,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29633,7 +29633,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29644,7 +29644,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29655,7 +29655,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29666,7 +29666,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29677,7 +29677,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29688,7 +29688,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29699,7 +29699,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29710,7 +29710,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29721,7 +29721,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29732,7 +29732,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29743,7 +29743,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2023',
+    'Year': 'FY 2024',
     'Quarter': 'Q4'
 },
 {
@@ -29754,7 +29754,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29765,7 +29765,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29776,7 +29776,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29787,7 +29787,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29798,7 +29798,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29809,7 +29809,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Retail Outlets',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29820,7 +29820,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29831,7 +29831,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29842,7 +29842,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29853,7 +29853,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29864,7 +29864,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29875,7 +29875,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Sales Person',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29886,7 +29886,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29897,7 +29897,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29908,7 +29908,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29919,7 +29919,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29930,7 +29930,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29941,7 +29941,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'Teleshopping',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29952,7 +29952,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Tires and Tubes',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29963,7 +29963,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Bottles and Cages',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29974,7 +29974,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Hydration Packs',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29985,7 +29985,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Cleaners',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -29996,7 +29996,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Helmets',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 },
 {
@@ -30007,7 +30007,7 @@ window.Pivot_Data = [{
     'Product_Categories': 'Accessories',
     'Products': 'Fenders',
     'Order_Source': 'App Store',
-    'Year': 'FY 2024',
+    'Year': 'FY 2025',
     'Quarter': 'Q4'
 }
 ];

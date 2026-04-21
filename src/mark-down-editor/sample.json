@@ -3,13 +3,11 @@
     "directory": "mark-down-editor",    
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "type":"update",
     "samples": [{
         "url": "overview",
         "name": "Overview",
         "description": "This demo covers all supported features and functionalities of the JS (ECMAScript 5) Markdown editor, which  is another mode of the JavaScript Rich Text Editor.",
         "category": "Markdown Editor",
-        "type":"update",
         "api": { "RichTextEditor": ["Inject", "toolbarSettings", "height", "created", "floatingToolbarOffset", "disableToolbarItem", "enableToolbarItem", "editorMode", "actionBegin", "saveInterval", "actionComplete", "change", "maxLength", "showCharCount", "appendTo"], "ToolbarSettings": ["items", "enableFloating", "type"] }
         },
         {
@@ -17,7 +15,6 @@
             "name": "Default Functionalities",
             "description": "This demo for Syncfusion<sup>®</sup> JavaScript (ECMAScript 5) Rich Text Editor control shows the markdown editing in the Rich Text Editor with complete features.",
             "category": "Markdown Editor",
-            "type":"update",
             "api": { "RichTextEditor": ["Inject", "toolbarSettings", "formatter", "height", "created", "disableToolbarItem", "enableToolbarItem", "editorMode", "appendTo"], "ToolbarSettings": ["items"] }
         },
         

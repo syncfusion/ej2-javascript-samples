@@ -111,6 +111,9 @@ this.default = function () {
         if (args.operation === 'upload') {
             ej.base.detach(li.querySelector('.progress-bar-container'));
         }
+        if (args.response && args.response.statusText !== '') {
+            args.statusText = args.response.statusText;
+        }
     }
     function onFileRemove(args) {
         args.postRawFile = false;

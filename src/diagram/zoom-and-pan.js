@@ -21,6 +21,7 @@ this.default = function () {
                 break;
             case 'Pan Tool':
                 diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
+                diagram.clearSelection();
                 break;
             case 'Pointer':
                 diagram.clearSelection();

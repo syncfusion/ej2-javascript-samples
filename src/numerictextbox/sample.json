@@ -1,8 +1,7 @@
 { 
    "name": "Numeric Textbox", 
    "directory": "numerictextbox",
-   "category":"Inputs", 
-   "type": "update",
+   "category":"Inputs",
    "ftName": "numerictextbox",
    "samples" : [
     {"url":"default", "name": "Default Functionalities", "category":"Numeric Textbox",  "description": "The NumericTextBox is used to get the numbered inputs from the users and the currency and percentage text boxes to get the currency and percentage inputs.", "api": {
@@ -48,7 +47,6 @@
 {
         "url": "adornments",
         "name": "Adornments",
-        "type": "new",
         "category": "Numeric Textbox",
         "description":"The example exposes a JavaScript(ES5) Numeric TextBox with adornments support. It helps to render custom elements before or after the input element.",
         "api": { "NumericTextBox": ["prependTemplate", "appendTemplate"]}

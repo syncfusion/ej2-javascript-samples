@@ -41,6 +41,13 @@ this.default = function () {
     });
     barcodeValueCode93.appendTo('#barcodeValue');
 
+    var input = document.getElementById("barcodeValue");
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
     var barcodeWidthCode93 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
         value: 200, step: 2, min: 150, max: 250,

@@ -1,3 +1,4 @@
+<link href="https://ej2.syncfusion.com/javascript/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
 <style>
 
   /* Symbol palette alignment CSS */
@@ -45,6 +46,7 @@
       }
   }
 
+  /* styles for mobile palette open button */
   .diagram-events-control-section .sb-mobile-palette-open {
     position: absolute;
     display: block;
@@ -108,6 +110,9 @@
   }
 </style>
 <div class="col-lg-8 control-section">
+  <div class="sb-mobile-palette-bar">
+    <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
+  </div>
     <div id="diagramEventsControlSection" class="content-wrapper diagram-events-control-section" style="width:100%;background: white">
       <div id="palette-space" class="sb-mobile-palette">
         <div id="symbolpalette" style="width:90%;"></div>

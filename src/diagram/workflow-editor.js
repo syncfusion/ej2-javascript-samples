@@ -824,6 +824,7 @@ this.default = function () {
           break;
         case "Pan":
           diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
+          diagram.clearSelection();
           break;
       }
     },

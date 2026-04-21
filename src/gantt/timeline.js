@@ -174,39 +174,6 @@ this.default = function () {
     });
     bottomTierUnit.appendTo('#btUnit');
 
-    var topTier = new ej.buttons.CheckBox({ checked: true });
-    topTier.appendTo('#topTierCheck');
-
-    var bottomTier = new ej.buttons.CheckBox({ checked: true });
-    bottomTier.appendTo('#bottomTierCheck');
-
-    document.getElementById('topTierCheck').onclick = function () {
-        if (topTier.checked) {
-            gantt.timelineSettings.topTier.unit = 'Week';
-            topTierCount.enabled = true;
-            topTierformat.enabled = true;
-            topTierUnit.enabled = true;
-        } else {
-            gantt.timelineSettings.topTier.unit = 'None';
-            topTierCount.enabled = false;
-            topTierformat.enabled = false;
-            topTierUnit.enabled = false;
-        }
-    };
-
-    document.getElementById('bottomTierCheck').onclick = function () {
-        if (bottomTier.checked) {
-            gantt.timelineSettings.bottomTier.unit = 'Day';
-            bottomTierCount.enabled = true;
-            bottomTierformat.enabled = true;
-            bottomTierUnit.enabled = true;
-        } else {
-            gantt.timelineSettings.bottomTier.unit = 'None';
-            bottomTierCount.enabled = false;
-            bottomTierformat.enabled = false;
-            bottomTierUnit.enabled = false;
-        }
-    };
 
     var unitWidthNumObj = new ej.inputs.NumericTextBox({
         min: 10,
@@ -260,4 +227,14 @@ this.default = function () {
             gantt.enableMultiTaskbar = false;
         }
     };
+
+    var timelineDateRangePicker =  new ej.calendars.DateRangePicker({
+        startDate: new Date('02/05/2025'),
+        endDate: new Date('03/23/2025'),
+        change: function(args) {
+            gantt.timelineSettings.viewStartDate = ej.base.isNullOrUndefined(args.startDate) ? 'auto' : args.startDate;
+            gantt.timelineSettings.viewEndDate = ej.base.isNullOrUndefined(args.endDate) ? 'auto' : args.endDate;
+        }
+    });
+    timelineDateRangePicker.appendTo('#timelineDateRange');
 };

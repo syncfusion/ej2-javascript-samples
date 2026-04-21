@@ -25,7 +25,7 @@ const shapeMapping = {
                 '179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z'
         }
     },
-    'image': { shape: { type: 'Image', source: './src/diagram/employees/image16.png' } },
+    'image': { shape: { type: 'Image', source: 'https://ej2.syncfusion.com/javascript/demos/src/diagram/employees/image16.png' } },
     'svg': { shape: { type: 'Native', content: getPath() } },
     'text': { shape: { type: 'Text' } }
 };
@@ -40,6 +40,11 @@ function documentClick(event) {
         diagram.drawingObject = drawingObject;
         diagram.tool = checkBoxObj.checked ? DiagramTools.ContinuousDraw : DiagramTools.DrawOnce;
         diagram.dataBind();
+        if (target.id == "freehand") {
+            diagram.snapSettings.constraints = SnapConstraints.ShowLines;
+        } else {
+            diagram.snapSettings.constraints = (SnapConstraints.SnapToObject | SnapConstraints.SnapToLines) | SnapConstraints.ShowLines;
+        }
     }
 }
 

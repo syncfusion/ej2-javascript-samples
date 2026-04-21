@@ -13,7 +13,8 @@ this.default = function () {
         dropArea: dropElement,
         chunkFailure: onBeforeFailure,
         pausing: onPausing,
-        resuming: onResuming
+        resuming: onResuming,
+        failure: onFailure
     });
     uploadObj.appendTo('#fileupload');
 
@@ -36,7 +37,11 @@ this.default = function () {
             isInteraction = false;
         }
     }
-
+    function onFailure(args) {
+        if (args.response && args.response.statusText !== '') {
+            args.statusText = args.response.statusText;
+        }
+    }
     function onFileRemove(args) {
         args.postRawFile = false;
     }

@@ -3,7 +3,6 @@
     "directory": "maskedtextbox",
     "category": "Inputs",
     "ftName": "maskedtextbox",
-    "type": "update",
     "samples": [{
         "url": "default",
         "name": "Default Functionalities",
@@ -47,7 +46,6 @@
     {
         "url": "adornments",
         "name": "Adornments",
-        "type": "new",
         "category": "Input Mask",
         "description":"The example exposes a JavaScript(ES5) Masked TextBox with adornments support. It helps to render custom elements before or after the input element.",
         "api": { "MaskedTextBox": ["prependTemplate", "appendTemplate"]}

@@ -1,0 +1,33 @@
+{
+    "name": "Inline AI Assist",
+    "directory": "inline-ai-assist",
+    "category": "Interactive Chat",
+    "ftName": "inline-ai-assist",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "ai-overview",
+            "name": "Overview",
+            "category": "Inline AI Assist",
+            "api":{ "InlineAIAssist": ["promptRequest", "relateTo", "commandSettings", "responseSettings"] },
+            "description": "Showcases the default combinations of the Inline AI Assist control.",
+            "sourceFiles": [
+                { "displayName": "ai-overview.js", "path":"src/inline-ai-assist/ai-overview.js" },
+                { "displayName": "ai-overview.html", "path":"src/inline-ai-assist/ai-overview.html" },
+                { "displayName": "service.js", "path":"src/inline-ai-assist/service.js" }
+            ]
+        },
+        {
+            "url": "ai-rich-text-editor",
+            "name": "Rich Text Editor",
+            "category": "Integration",
+            "api":{ "InlineAIAssist": ["promptRequest", "relateTo", "commandSettings", "responseSettings", "responseMode"] },
+            "description": "Showcases the usecase of the Inline AI Assist control.",
+            "sourceFiles": [
+                { "displayName": "ai-rich-text-editor.js", "path":"src/inline-ai-assist/ai-rich-text-editor.js" },
+                { "displayName": "ai-rich-text-editor.html", "path":"src/inline-ai-assist/ai-rich-text-editor.html" },
+                { "displayName": "service.js", "path":"src/inline-ai-assist/service.js" } 
+            ]
+        }
+    ]
+}

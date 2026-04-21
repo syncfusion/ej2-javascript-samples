@@ -45,6 +45,13 @@ this.default = function () {
     });
     barcodeValue.appendTo('#barcodeValue');
 
+    var input = document.getElementById("barcodeValue");
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
     var errorCorrectionLevel = [
         { value: '7', text: 'Low' },
         { value: '15', text: 'Medium' },
