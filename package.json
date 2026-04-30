@@ -67,7 +67,6 @@
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
     "shelljs": "^0.8.5",
-    "simple-git": "^3.32.3",
     "ts-loader": "^5.2.0",
     "tslint": "^5.20.1",
     "tslint-microsoft-contrib": "^4.0.0",
