@@ -63,6 +63,7 @@ this.default = function () {
       card.setAttribute('data-index', i);
       (function (td) {
         card.addEventListener('click', function () {
+          blockEditorInstance.focusIn();
           loadPage(td);
         });
       })(templateData);

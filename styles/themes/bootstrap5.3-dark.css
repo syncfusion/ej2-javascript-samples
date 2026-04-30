@@ -1,7 +1,7 @@
 .bootstrap5\.3-dark .e-samplestatus.new.tree,
 .bootstrap5\.3-dark .e-samplestatus.update.tree,
 .bootstrap5\.3-dark .e-samplestatus.preview.tree {
-    margin: 5px 2px 0 0;
+    margin: 0px 2px 0 0 !important;
 }
 
 .bootstrap5\.3-dark .e-samplestatus.new,
@@ -278,7 +278,7 @@ body.bootstrap5-3-dark,
 .e-samplestatus.preview.tree {
     margin: 6px 0;
     height: 22px;
-    margin-top: 5px;
+    margin-top: -1px !important;
 }
 
 .bootstrap5\.3-dark .sb-reset-icon:before {

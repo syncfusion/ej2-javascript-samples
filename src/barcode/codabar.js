@@ -44,6 +44,13 @@ this.default = function () {
     });
     barcodeValueCodabar.appendTo('#barcodeValue');
 
+    var input = document.getElementById("barcodeValue");
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
     var barcodeWidthCodabar = new ej.inputs.NumericTextBox({
         width:100,
         enabled: true, format: '###.##',

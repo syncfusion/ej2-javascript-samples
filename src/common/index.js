@@ -2075,6 +2075,19 @@ function hideToast() {
 }
 
 window.addEventListener('hashchange', () => {
+    var isAiAssistView = location.hash.includes('/ai-assistview/');
+    var isAiAssistViewSample =
+        location.hash.includes('text-to-speech.html') ||
+        location.hash.includes('speech-to-text.html') ||
+        location.hash.includes('model.html');
+    if (isAiAssistView) {
+        if (isAiAssistViewSample) {
+            showToast();
+        } else {
+            hideToast();
+        }
+        return;
+    }
     if (location.hash.includes('ai-')) {
         showToast();
     } else {

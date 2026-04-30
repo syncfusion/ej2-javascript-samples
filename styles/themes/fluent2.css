@@ -95,7 +95,7 @@
 .fluent2 .e-samplestatus.preview {
     margin: 0px 8px 0px 0px;
     height: 22px;
-    margin-top: 4px;
+    margin-top: 5px !important;
 }
 
 .fluent2 .e-samplestatus.new.tree,

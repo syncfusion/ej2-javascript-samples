@@ -330,47 +330,47 @@ window.summaryData = [
     {
         ID: 'ORD-55721',
         Name: 'Seafood Order',
-        shipmentDate: new Date(2022,0,11),
+        shipmentDate: new Date(2022, 0, 11),
         units: '1395',
         unitPrice: 47,
         price: 65565,
         category: 'Seafoods',
         subtasks: [
-            { ID: 'ORD-55722', Name: 'Mackerel', shipmentDate: new Date(2022,1,5), category: 'Seafood', units: '235', unitPrice: 12, price: 2881.1 },
-            { ID: 'ORD-55723', Name: 'Yellowfin Tuna', shipmentDate: new Date(2022,1,17), category: 'Seafood', units: '324', unitPrice: 8, price: 5977.8 },
-            { ID: 'ORD-55724', Name: 'Herrings', shipmentDate: new Date(2022,4,16), category: 'Seafood', units: '488', unitPrice: 11, price: 5587.6 },
-            { ID: 'ORD-55725', Name: 'Preserved Olives', shipmentDate: new Date(2022,7,11), category: 'Edible', units: '125', unitPrice: 9, price: 2445 },
-            { ID: 'ORD-55726', Name: 'Sweet Corn Frozen', shipmentDate: new Date(2022,7,27), category: 'Edible', units: '223', unitPrice: 7, price: 2751.82 }
+            { ID: 'ORD-55722', Name: 'Mackerel', shipmentDate: new Date(2022, 1, 5), category: 'Seafood', units: '235', unitPrice: 12, price: 2881.1 },
+            { ID: 'ORD-55723', Name: 'Yellowfin Tuna', shipmentDate: new Date(2022, 1, 17), category: 'Seafood', units: '324', unitPrice: 8, price: 5977.8 },
+            { ID: 'ORD-55724', Name: 'Herrings', shipmentDate: new Date(2022, 4, 16), category: 'Seafood', units: '488', unitPrice: 11, price: 5587.6 },
+            { ID: 'ORD-55725', Name: 'Preserved Olives', shipmentDate: new Date(2022, 7, 11), category: 'Edible', units: '125', unitPrice: 9, price: 2445 },
+            { ID: 'ORD-55726', Name: 'Sweet Corn Frozen', shipmentDate: new Date(2022, 7, 27), category: 'Edible', units: '223', unitPrice: 7, price: 2751.82 }
         ]
     },
     {
         ID: 'ORD-55727',
         Name: 'Products Order',
-        shipmentDate: new Date(2023,4,25),
+        shipmentDate: new Date(2023, 4, 25),
         units: '1944',
         unitPrice: 58,
         price: 1245.73,
         category: 'Products',
         subtasks: [
-            { ID: 'ORD-55728', Name: 'Tilapias', shipmentDate: new Date(2023,5,12), category: 'Seafood', units: '278', unitPrice: 15, price: 4295.1 },
-            { ID: 'ORD-55729', Name: 'White Shrimp', shipmentDate: new Date(2023,7,23), category: 'Seafood', units: '560', unitPrice: 7, price: 9889.6 },
-            { ID: 'ORD-55730', Name: 'Fresh Cheese', shipmentDate: new Date(2023,7,30), category: 'Dairy', units: '323', unitPrice: 12, price: 3989 },
-            { ID: 'ORD-55731', Name: 'Blue Veined Cheese', shipmentDate: new Date(2023,10,15), category: 'Dairy', units: '370', unitPrice: 15, price: 5834.9 },
-            { ID: 'ORD-55732', Name: 'Butter', shipmentDate: new Date(2023,10,30), category: 'Dairy', units: '413', unitPrice: 9, price: 8032.85 }
+            { ID: 'ORD-55728', Name: 'Tilapias', shipmentDate: new Date(2023, 5, 12), category: 'Seafood', units: '278', unitPrice: 15, price: 4295.1 },
+            { ID: 'ORD-55729', Name: 'White Shrimp', shipmentDate: new Date(2023, 7, 23), category: 'Seafood', units: '560', unitPrice: 7, price: 9889.6 },
+            { ID: 'ORD-55730', Name: 'Fresh Cheese', shipmentDate: new Date(2023, 7, 30), category: 'Dairy', units: '323', unitPrice: 12, price: 3989 },
+            { ID: 'ORD-55731', Name: 'Blue Veined Cheese', shipmentDate: new Date(2023, 10, 15), category: 'Dairy', units: '370', unitPrice: 15, price: 5834.9 },
+            { ID: 'ORD-55732', Name: 'Butter', shipmentDate: new Date(2023, 10, 30), category: 'Dairy', units: '413', unitPrice: 9, price: 8032.85 }
         ]
     },
     {
         ID: 'ORD-55733',
         Name: 'Crystals Order',
-        shipmentDate: new Date(2024,2,31),
+        shipmentDate: new Date(2024, 2, 31),
         units: '1120',
         unitPrice: 33,
         price: 37464,
         category: 'Crystals',
         subtasks: [
-            { ID: 'ORD-55734', Name: 'Lead Glassware', shipmentDate: new Date(2024,6,8), category: 'Crystal', units: '542', unitPrice: 6, price: 10601.52 },
-            { ID: 'ORD-55735', Name: 'Pharmaceutical Glassware', shipmentDate: new Date(2024,6,16), category: 'Crystal', units: '324', unitPrice: 11, price: 3680.64 },
-            { ID: 'ORD-55736', Name: 'Glass Beads', shipmentDate: new Date(2024,6,23), category: 'Crystal', units: '254', unitPrice: 16, price: 4091.94 }
+            { ID: 'ORD-55734', Name: 'Lead Glassware', shipmentDate: new Date(2024, 6, 8), category: 'Crystal', units: '542', unitPrice: 6, price: 10601.52 },
+            { ID: 'ORD-55735', Name: 'Pharmaceutical Glassware', shipmentDate: new Date(2024, 6, 16), category: 'Crystal', units: '324', unitPrice: 11, price: 3680.64 },
+            { ID: 'ORD-55736', Name: 'Glass Beads', shipmentDate: new Date(2024, 6, 23), category: 'Crystal', units: '254', unitPrice: 16, price: 4091.94 }
         ]
     }
 ];
@@ -1668,7 +1668,6 @@ window.countries = [
         ]
     }
 ];
-
 
 
 window.virtualData = [];
@@ -3746,7 +3745,7 @@ window.getTradeData = [
     }
 ];
 
-window.foodMenu=[
+window.foodMenu = [
     {
         "FoodCategory": "Salads",
         "FoodName": "Salads",
@@ -5364,444 +5363,551 @@ window.employeeData = [
         ],
     },
 ];
-window.wrapData = 
-[
+window.wrapData =
+    [
+        {
+            taskID: 1001,
+            taskName: 'Project Initiation Phase',
+            startDate: new Date('2025-01-06'),
+            endDate: new Date('2025-01-17'),
+            duration: 10,
+            progress: 100,
+            priority: 'High',
+            approved: true,
+            designation: 'Project Manager',
+            employeeID: 5001,
+            employeeName: 'Robert King',
+            status: 'Completed',
+            description: 'Kickoff meetings and initial project charter approval were completed successfully.',
+            subtasks: [
+                { taskID: 1002, taskName: 'Define Project Scope', startDate: new Date('2025-01-06'), endDate: new Date('2025-01-08'), duration: 3, progress: 100, priority: 'Critical', approved: true, designation: 'Business Analyst', employeeID: 5002, employeeName: 'Nancy Davolio', status: 'Completed', description: 'Documented clear project boundaries and deliverables with full stakeholder agreement.' },
+                { taskID: 1003, taskName: 'Create Risk Register', startDate: new Date('2025-01-07'), endDate: new Date('2025-01-09'), duration: 3, progress: 100, priority: 'High', approved: true, designation: 'Risk Manager', employeeID: 5003, employeeName: 'Andrew Fuller', status: 'Completed', description: 'Identified potential risks and defined mitigation strategies early in the project.' },
+                { taskID: 1004, taskName: 'Team Onboarding Session', startDate: new Date('2025-01-10'), endDate: new Date('2025-01-11'), duration: 1, progress: 100, priority: 'Normal', approved: true, designation: 'HR Lead', employeeID: 5004, employeeName: 'Janet Leverling', status: 'Completed', description: 'Introduced team members and established communication protocols and collaboration tools.' },
+                { taskID: 1005, taskName: 'Initiation Phase Sign-off', startDate: new Date('2025-01-17'), endDate: new Date('2025-01-17'), duration: 0, progress: 100, priority: 'Normal', approved: true, designation: 'Project Sponsor', employeeID: 5005, employeeName: 'Laura Callahan', status: 'Completed', description: 'Obtained official approval to proceed to the planning phase.' }
+            ]
+        },
+        {
+            taskID: 1006,
+            taskName: 'Detailed Planning Stage',
+            startDate: new Date('2025-01-20'),
+            endDate: new Date('2025-02-07'),
+            duration: 15,
+            progress: 90,
+            priority: 'High',
+            approved: false,
+            designation: 'Project Manager',
+            employeeID: 5006,
+            employeeName: 'Michael Suyama',
+            status: 'In Progress',
+            description: 'Comprehensive schedule, resource, and budget planning for the entire project lifecycle.',
+            subtasks: [
+                { taskID: 1007, taskName: 'Work Breakdown Structure', startDate: new Date('2025-01-20'), endDate: new Date('2025-01-24'), duration: 5, progress: 100, priority: 'High', approved: true, designation: 'Planner', employeeID: 5007, employeeName: 'Steven Gray', status: 'Completed', description: 'Broke down the project into manageable tasks and work packages.' },
+                { taskID: 1008, taskName: 'Estimate Task Durations', startDate: new Date('2025-01-23'), endDate: new Date('2025-01-27'), duration: 5, progress: 100, priority: 'Normal', approved: true, designation: 'Senior Developer', employeeID: 5008, employeeName: 'Robert King', status: 'Completed', description: 'Used historical data and expert judgment to predict realistic task durations.' },
+                { taskID: 1009, taskName: 'Assign Resource Roles', startDate: new Date('2025-01-28'), endDate: new Date('2025-01-31'), duration: 4, progress: 100, priority: 'Critical', approved: true, designation: 'Resource Manager', employeeID: 5009, employeeName: 'Anne Dodsworth', status: 'Completed', description: 'Matched team members’ skills to specific project roles and responsibilities.' },
+                { taskID: 1010, taskName: 'Build Project Schedule', startDate: new Date('2025-02-03'), endDate: new Date('2025-02-07'), duration: 5, progress: 60, priority: 'High', approved: false, designation: 'Scheduler', employeeID: 5010, employeeName: 'David William', status: 'In Progress', description: 'Created a detailed Gantt chart with task dependencies, critical path, and milestones.' }
+            ]
+        },
+        {
+            taskID: 1011,
+            taskName: 'Design & Architecture Phase',
+            startDate: new Date('2025-02-10'),
+            endDate: new Date('2025-03-07'),
+            duration: 20,
+            progress: 75,
+            priority: 'Critical',
+            approved: false,
+            designation: 'Lead Architect',
+            employeeID: 5011,
+            employeeName: 'Margaret Peacock',
+            status: 'In Progress',
+            description: 'Created a scalable and secure system architecture meeting performance, reliability, and security requirements.',
+            subtasks: [
+                { taskID: 1012, taskName: 'Define System Components', startDate: new Date('2025-02-10'), endDate: new Date('2025-02-14'), duration: 5, progress: 100, priority: 'High', approved: true, designation: 'Architect', employeeID: 5012, employeeName: 'Steven Buchanan', status: 'Completed', description: 'Identified all required modules, services, and integration points.' },
+                { taskID: 1013, taskName: 'Design Database Schema', startDate: new Date('2025-02-17'), endDate: new Date('2025-02-21'), duration: 5, progress: 100, priority: 'Critical', approved: true, designation: 'DBA', employeeID: 5013, employeeName: 'Laura Callahan', status: 'Completed', description: 'Designed a normalized relational database model with optimal indexing strategy.' },
+                { taskID: 1014, taskName: 'API Design & Review', startDate: new Date('2025-02-24'), endDate: new Date('2025-02-28'), duration: 5, progress: 80, priority: 'High', approved: false, designation: 'API Lead', employeeID: 5014, employeeName: 'Michael Suyama', status: 'In Progress', description: 'Finalized RESTful API endpoints, contracts, versioning, and authentication methods.' },
+                { taskID: 1015, taskName: 'UI/UX Wireframes & Mockups', startDate: new Date('2025-02-24'), endDate: new Date('2025-03-07'), duration: 10, progress: 50, priority: 'Normal', approved: false, designation: 'UX Designer', employeeID: 5015, employeeName: 'Nancy Davolio', status: 'In Progress', description: 'Created high-fidelity wireframes and interactive prototypes for the user interface.' }
+            ]
+        },
+        {
+            taskID: 1016,
+            taskName: 'Frontend Development Sprint',
+            startDate: new Date('2025-03-10'),
+            endDate: new Date('2025-04-18'),
+            duration: 30,
+            progress: 60,
+            priority: 'High',
+            approved: false,
+            designation: 'Frontend Lead',
+            employeeID: 5016,
+            employeeName: 'Andrew Fuller',
+            status: 'In Progress',
+            description: 'Built a responsive and interactive user interface using the React framework.',
+            subtasks: [
+                { taskID: 1017, taskName: 'Set Up Project Structure', startDate: new Date('2025-03-10'), endDate: new Date('2025-03-12'), duration: 3, progress: 100, priority: 'Normal', approved: true, designation: 'DevOps', employeeID: 5017, employeeName: 'Janet Leverling', status: 'Completed', description: 'Initialized the repository with proper folder structure and tooling.' },
+                { taskID: 1018, taskName: 'Create Login Page', startDate: new Date('2025-03-13'), endDate: new Date('2025-03-18'), duration: 6, progress: 100, priority: 'High', approved: true, designation: 'Frontend Dev', employeeID: 5018, employeeName: 'Robert King', status: 'Completed', description: 'Implemented secure login with form validation, OAuth, and password recovery.' },
+                { taskID: 1019, taskName: 'Build Dashboard View', startDate: new Date('2025-03-19'), endDate: new Date('2025-03-28'), duration: 8, progress: 90, priority: 'Critical', approved: false, designation: 'Senior Developer', employeeID: 5019, employeeName: 'Anne Dodsworth', status: 'In Progress', description: 'Developed the main dashboard with real-time data visualization widgets.' },
+                { taskID: 1020, taskName: 'Implement Navigation Menu', startDate: new Date('2025-03-31'), endDate: new Date('2025-04-04'), duration: 5, progress: 70, priority: 'Normal', approved: false, designation: 'Frontend Dev', employeeID: 5020, employeeName: 'David William', status: 'In Progress', description: 'Created a responsive sidebar and top navigation system with role-based access.' },
+                { taskID: 1021, taskName: 'Add Form Components', startDate: new Date('2025-04-07'), endDate: new Date('2025-04-18'), duration: 10, progress: 30, priority: 'High', approved: false, designation: 'UI Engineer', employeeID: 5021, employeeName: 'Margaret Peacock', status: 'In Progress', description: 'Built reusable form components with validation, accessibility, and theming support.' }
+            ]
+        },
+        {
+            taskID: 1022,
+            taskName: 'Backend Services Development',
+            startDate: new Date('2025-03-10'),
+            endDate: new Date('2025-04-25'),
+            duration: 35,
+            progress: 55,
+            priority: 'Critical',
+            approved: false,
+            designation: 'Backend Lead',
+            employeeID: 5022,
+            employeeName: 'Steven Gray',
+            status: 'In Progress',
+            description: 'Developed secure and scalable REST APIs using Node.js and Express.',
+            subtasks: [
+                { taskID: 1023, taskName: 'Set Up Server Environment', startDate: new Date('2025-03-10'), endDate: new Date('2025-03-14'), duration: 5, progress: 100, priority: 'Normal', approved: true, designation: 'DevOps Engineer', employeeID: 5023, employeeName: 'Laura Callahan', status: 'Completed', description: 'Configured Node.js server with clustering, PM2, and logging.' },
+                { taskID: 1024, taskName: 'User Authentication Service', startDate: new Date('2025-03-17'), endDate: new Date('2025-03-25'), duration: 7, progress: 100, priority: 'Critical', approved: true, designation: 'Backend Dev', employeeID: 5024, employeeName: 'Michael Suyama', status: 'Completed', description: 'Implemented JWT-based authentication with refresh tokens and password hashing.' },
+                { taskID: 1025, taskName: 'Product Management API', startDate: new Date('2025-03-26'), endDate: new Date('2025-04-05'), duration: 9, progress: 80, priority: 'High', approved: false, designation: 'API Developer', employeeID: 5025, employeeName: 'Nancy Davolio', status: 'In Progress', description: 'Created CRUD endpoints for product catalog management with filtering and pagination.' },
+                { taskID: 1026, taskName: 'Order Processing Service', startDate: new Date('2025-04-07'), endDate: new Date('2025-04-18'), duration: 10, progress: 40, priority: 'High', approved: false, designation: 'Backend Dev', employeeID: 5026, employeeName: 'Andrew Fuller', status: 'In Progress', description: 'Built order creation, payment integration, and fulfillment workflows.' },
+                { taskID: 1027, taskName: 'Reporting & Analytics API', startDate: new Date('2025-04-14'), endDate: new Date('2025-04-25'), duration: 10, progress: 10, priority: 'Normal', approved: false, designation: 'Data Engineer', employeeID: 5027, employeeName: 'Janet Leverling', status: 'In Progress', description: 'Developed endpoints for sales, performance, and business intelligence analytics.' }
+            ]
+        },
+        {
+            taskID: 1028,
+            taskName: 'Testing & Quality Assurance',
+            startDate: new Date('2025-04-21'),
+            endDate: new Date('2025-05-16'),
+            duration: 20,
+            progress: 20,
+            priority: 'High',
+            approved: false,
+            designation: 'QA Lead',
+            employeeID: 5028,
+            employeeName: 'Anne Dodsworth',
+            status: 'In Progress',
+            description: 'Conducted comprehensive testing including unit, integration, performance, security, and user acceptance testing.',
+            subtasks: [
+                { taskID: 1029, taskName: 'Write Unit Tests', startDate: new Date('2025-04-21'), endDate: new Date('2025-04-30'), duration: 8, progress: 60, priority: 'Normal', approved: false, designation: 'QA Engineer', employeeID: 5029, employeeName: 'David William', status: 'In Progress', description: 'Achieved 90% code coverage across all modules using Jest and PyTest.' },
+                { taskID: 1030, taskName: 'Integration Testing Phase', startDate: new Date('2025-05-01'), endDate: new Date('2025-05-09'), duration: 7, progress: 0, priority: 'High', approved: false, designation: 'Test Lead', employeeID: 5030, employeeName: 'Margaret Peacock', status: 'Not Started', description: 'Verified seamless communication between frontend, backend, and third-party services.' },
+                { taskID: 1031, taskName: 'Performance & Load Testing', startDate: new Date('2025-05-05'), endDate: new Date('2025-05-12'), duration: 6, progress: 0, priority: 'Critical', approved: false, designation: 'Performance Tester', employeeID: 5031, employeeName: 'Steven Gray', status: 'Not Started', description: 'Simulated 10,000 concurrent users using JMeter and Gatling.' },
+                { taskID: 1032, taskName: 'Security & Vulnerability Scan', startDate: new Date('2025-05-06'), endDate: new Date('2025-05-12'), duration: 5, progress: 0, priority: 'Critical', approved: false, designation: 'Security Analyst', employeeID: 5032, employeeName: 'Laura Callahan', status: 'Not Started', description: 'Performed OWASP ZAP scans and manual penetration testing.' },
+                { taskID: 1033, taskName: 'User Acceptance Testing (UAT)', startDate: new Date('2025-05-12'), endDate: new Date('2025-05-16'), duration: 5, progress: 0, priority: 'High', approved: false, designation: 'UAT Coordinator', employeeID: 5033, employeeName: 'Robert King', status: 'Not Started', description: 'Conducted final validation with actual end users and stakeholders.' }
+            ]
+        },
+        {
+            taskID: 1034,
+            taskName: 'Deployment & Go-Live',
+            startDate: new Date('2025-05-19'),
+            endDate: new Date('2025-05-30'),
+            duration: 10,
+            progress: 0,
+            priority: 'Critical',
+            approved: false,
+            designation: 'Release Manager',
+            employeeID: 5034,
+            employeeName: 'Michael Suyama',
+            status: 'Not Started',
+            description: 'Executed final production deployment using a zero-downtime blue-green strategy.',
+            subtasks: [
+                { taskID: 1035, taskName: 'Prepare Production Servers', startDate: new Date('2025-05-19'), endDate: new Date('2025-05-21'), duration: 3, progress: 0, priority: 'High', approved: false, designation: 'SysAdmin', employeeID: 5035, employeeName: 'Nancy Davolio', status: 'Not Started', description: 'Configured load balancers, SSL certificates, and monitoring tools.' },
+                { taskID: 1036, taskName: 'Database Migration', startDate: new Date('2025-05-22'), endDate: new Date('2025-05-23'), duration: 2, progress: 0, priority: 'Critical', approved: false, designation: 'DBA', employeeID: 5036, employeeName: 'Andrew Fuller', status: 'Not Started', description: 'Executed final schema updates and data migration scripts.' },
+                { taskID: 1037, taskName: 'Blue-Green Deployment', startDate: new Date('2025-05-26'), endDate: new Date('2025-05-27'), duration: 2, progress: 0, priority: 'Critical', approved: false, designation: 'DevOps Lead', employeeID: 5037, employeeName: 'Janet Leverling', status: 'Not Started', description: 'Switched live traffic from old to new version with zero downtime.' },
+                { taskID: 1038, taskName: 'Post-Deployment Validation', startDate: new Date('2025-05-28'), endDate: new Date('2025-05-30'), duration: 3, progress: 0, priority: 'High', approved: false, designation: 'QA Lead', employeeID: 5038, employeeName: 'Anne Dodsworth', status: 'Not Started', description: 'Ran smoke tests and verified all critical features in production.' },
+                { taskID: 1039, taskName: 'Project Closure & Celebration', startDate: new Date('2025-05-30'), endDate: new Date('2025-05-30'), duration: 1, progress: 0, priority: 'Normal', approved: false, designation: 'Project Manager', employeeID: 5039, employeeName: 'Robert King', status: 'Not Started', description: 'Held project closure ceremony, lessons learned session, and team recognition event.' }
+            ]
+        }
+    ];
+
+window.rowSpanData = [
     {
-        taskID: 1001,
-        taskName: 'Project Initiation Phase',
-        startDate: new Date('2025-01-06'),
-        endDate: new Date('2025-01-17'),
-        duration: 10,
-        progress: 100,
-        priority: 'High',
-        approved: true,
-        designation: 'Project Manager',
-        employeeID: 5001,
-        employeeName: 'Robert King',
-        status: 'Completed',
-        description: 'Kickoff meetings and initial project charter approval were completed successfully.',
-        subtasks: [
-            { taskID: 1002, taskName: 'Define Project Scope', startDate: new Date('2025-01-06'), endDate: new Date('2025-01-08'), duration: 3, progress: 100, priority: 'Critical', approved: true, designation: 'Business Analyst', employeeID: 5002, employeeName: 'Nancy Davolio', status: 'Completed', description: 'Documented clear project boundaries and deliverables with full stakeholder agreement.' },
-            { taskID: 1003, taskName: 'Create Risk Register', startDate: new Date('2025-01-07'), endDate: new Date('2025-01-09'), duration: 3, progress: 100, priority: 'High', approved: true, designation: 'Risk Manager', employeeID: 5003, employeeName: 'Andrew Fuller', status: 'Completed', description: 'Identified potential risks and defined mitigation strategies early in the project.' },
-            { taskID: 1004, taskName: 'Team Onboarding Session', startDate: new Date('2025-01-10'), endDate: new Date('2025-01-11'), duration: 1, progress: 100, priority: 'Normal', approved: true, designation: 'HR Lead', employeeID: 5004, employeeName: 'Janet Leverling', status: 'Completed', description: 'Introduced team members and established communication protocols and collaboration tools.' },
-            { taskID: 1005, taskName: 'Initiation Phase Sign-off', startDate: new Date('2025-01-17'), endDate: new Date('2025-01-17'), duration: 0, progress: 100, priority: 'Normal', approved: true, designation: 'Project Sponsor', employeeID: 5005, employeeName: 'Laura Callahan', status: 'Completed', description: 'Obtained official approval to proceed to the planning phase.' }
+        activityName: 'Tower',
+        levelId: 'L1-001',
+        startDate: '2025-07-01',
+        endDate: '2025-12-29',
+        supervisor: 'John Carter',
+        team: 'Executive Oversight',
+        status: 'Active',
+        progress: 70,
+        totalBudget: 1500000,
+        paidToDate: 1050000,
+        currency: 'USD',
+        costCode: '01-00-00',
+        permitStatus: 'Approved',
+        inspectionDate: '2025-12-30',
+        inspectionStatus: 'Active',
+        followUpActions: 'Monitor progress',
+        inspectionCost: 600,
+        punchListStatus: 'Open',
+        documentReference: 'DOC-TWR-OVR',
+        materialUsed: 'Project Planning Kits',
+        materialCost: 75000,
+        materialStockRemaining: 'N/A',
+        children: [
+            {
+                activityName: 'Design Stage',
+                levelId: 'L2-001',
+                startDate: '2025-07-01',
+                endDate: '2025-08-15',
+                supervisor: 'Ethan Park',
+                team: 'Design Division',
+                status: 'Completed',
+                progress: 100,
+                totalBudget: 305000,
+                paidToDate: 350000,
+                currency: 'USD',
+                costCode: '02-01-00',
+                permitStatus: 'Issued',
+                inspectionDate: '2025-08-16',
+                inspectionStatus: 'Passed',
+                followUpActions: 'None',
+                inspectionCost: 200,
+                punchListStatus: 'Cleared',
+                documentReference: 'DOC-TWR-DES-STG',
+                materialUsed: 'Design Blueprints',
+                materialCost: 50000,
+                materialStockRemaining: 'N/A',
+                children: [
+                    { activityName: 'Architectural Design Task', levelId: 'L3-001', startDate: '2025-07-02', endDate: '2025-07-10', inspectionDate: '2025-07-11', status: 'Scheduled', progress: 100, totalBudget: 100000, paidToDate: 0, supervisor: 'David Lin', team: 'Architecture Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-ARC-TSK', materialUsed: 'CAD Drawings', materialCost: 15000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Structural Design Task', levelId: 'L3-002', startDate: '2025-07-11', endDate: '2025-07-25', inspectionDate: '2025-07-26', status: 'Scheduled', progress: 100, totalBudget: 120000, paidToDate: 0, supervisor: 'Sarah Patel', team: 'Structural Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-STR-TSK', materialUsed: 'Structural Plans', materialCost: 15000, materialStockRemaining: 'N/A' },
+                    { activityName: 'MEP Design Task', levelId: 'L3-003', startDate: '2025-07-26', endDate: '2025-08-15', inspectionDate: '2025-08-16', status: 'Scheduled', progress: 100, totalBudget: 100000, paidToDate: 0, supervisor: 'Carlos Rivera', team: 'MEP Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-MEP-TSK', materialUsed: 'Electrical Schematics', materialCost: 20000, materialStockRemaining: 'N/A' }
+                ]
+            },
+            {
+                activityName: 'Construction Stage',
+                levelId: 'L2-002',
+                startDate: '2025-08-16',
+                endDate: '2025-10-20',
+                supervisor: 'James Patel',
+                team: 'Construction Division',
+                status: 'In Progress',
+                progress: 75,
+                totalBudget: 900000,
+                paidToDate: 675000,
+                currency: 'USD',
+                costCode: '03-01-00',
+                permitStatus: 'Issued',
+                inspectionDate: '2025-10-21',
+                inspectionStatus: 'Passed with Notes',
+                followUpActions: 'Reinforce structure',
+                inspectionCost: 300,
+                punchListStatus: 'Open',
+                documentReference: 'DOC-TWR-CON-STG',
+                materialUsed: 'Construction Materials',
+                materialCost: 50000,
+                materialStockRemaining: '300 tons',
+                children: [
+                    { activityName: 'Foundation Construction Task', levelId: 'L3-004', startDate: '2025-08-16', endDate: '2025-08-25', inspectionDate: '2025-08-26', status: 'Completed', progress: 100, totalBudget: 305000, paidToDate: 350000, supervisor: 'Robert Singh', team: 'Foundation Crew', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-FND-TSK', materialUsed: 'Concrete', materialCost: 15000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Structural Construction Task', levelId: 'L3-005', startDate: '2025-08-26', endDate: '2025-09-20', inspectionDate: '2025-09-21', status: 'In Progress', progress: 80, totalBudget: 300000, paidToDate: 240000, supervisor: 'Nathan Blake', team: 'Structural Team', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Reinforce beams', inspectionCost: 100, punchListStatus: 'Open', documentReference: 'DOC-TWR-STR-TSK', materialUsed: 'Steel Beams', materialCost: 20000, materialStockRemaining: '200 tons' },
+                    { activityName: 'Exterior Construction Task', levelId: 'L3-006', startDate: '2025-09-21', endDate: '2025-10-20', inspectionDate: '2025-10-21', status: 'In Progress', progress: 40, totalBudget: 300000, paidToDate: 120000, supervisor: 'Thomas Reed', team: 'Exterior Crew', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Continue exterior work', inspectionCost: 100, punchListStatus: 'Open', documentReference: 'DOC-TWR-EXT-TSK', materialUsed: 'Metal Panels', materialCost: 15000, materialStockRemaining: '300 panels' }
+                ]
+            },
+            {
+                activityName: 'Safety Stage',
+                levelId: 'L2-003',
+                startDate: '2025-10-21',
+                endDate: '2025-11-05',
+                supervisor: 'Nathan Blake',
+                team: 'Safety Division',
+                status: 'In Progress',
+                progress: 60,
+                totalBudget: 50000,
+                paidToDate: 30000,
+                currency: 'USD',
+                costCode: '04-01-00',
+                permitStatus: 'Issued',
+                inspectionDate: '2025-11-06',
+                inspectionStatus: 'Scheduled',
+                followUpActions: 'Complete safety audit',
+                inspectionCost: 0,
+                punchListStatus: 'Open',
+                documentReference: 'DOC-TWR-SAF-STG',
+                materialUsed: 'Safety Equipment',
+                materialCost: 10000,
+                materialStockRemaining: '50 units',
+                children: [
+                    { activityName: 'OSHA Compliance Task', levelId: 'L3-007', startDate: '2025-10-21', endDate: '2025-10-27', inspectionDate: '2025-10-28', status: 'In Progress', progress: 70, totalBudget: 20000, paidToDate: 14000, supervisor: 'Laura Bennett', team: 'Safety Inspectors', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Complete briefing', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-OSHA-TSK', materialUsed: 'Safety Gear', materialCost: 4000, materialStockRemaining: '40 helmets' },
+                    { activityName: 'Fire Safety Task', levelId: 'L3-008', startDate: '2025-10-28', endDate: '2025-11-01', inspectionDate: '2025-11-02', status: 'Scheduled', progress: 30, totalBudget: 15000, paidToDate: 0, supervisor: 'Melissa Tran', team: 'Fire Safety Team', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Install exits', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FIRE-TSK', materialUsed: 'Extinguishers', materialCost: 3000, materialStockRemaining: '15 units' },
+                    { activityName: 'Structural Audit Task', levelId: 'L3-009', startDate: '2025-11-02', endDate: '2025-11-05', inspectionDate: '2025-11-06', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'David Lin', team: 'Audit Engineers', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Verify integrity', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-AUD-TSK', materialUsed: 'Inspection Tools', materialCost: 3000, materialStockRemaining: 'N/A' }
+                ]
+            },
+            {
+                activityName: 'Finishing Stage',
+                levelId: 'L2-004',
+                startDate: '2025-11-06',
+                endDate: '2025-12-10',
+                supervisor: 'Melissa Tran',
+                team: 'Finishing Division',
+                status: 'Planning',
+                progress: 30,
+                totalBudget: 250000,
+                paidToDate: 75000,
+                currency: 'USD',
+                costCode: '05-01-00',
+                permitStatus: 'Under Review',
+                inspectionDate: '2025-12-11',
+                inspectionStatus: 'Scheduled',
+                followUpActions: 'Begin interior work',
+                inspectionCost: 0,
+                punchListStatus: 'Pending',
+                documentReference: 'DOC-TWR-FIN-STG',
+                materialUsed: 'Finishing Supplies',
+                materialCost: 25000,
+                materialStockRemaining: '200 units',
+                children: [
+                    { activityName: 'Interior Drywall Task', levelId: 'L3-010', startDate: '2025-11-06', endDate: '2025-11-20', inspectionDate: '2025-11-21', status: 'In Progress', progress: 50, totalBudget: 80000, paidToDate: 40000, supervisor: 'Hannah Kim', team: 'Drywall Crew', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Check alignment', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-DRY-TSK', materialUsed: 'Drywall Sheets', materialCost: 8000, materialStockRemaining: '150 panels' },
+                    { activityName: 'Flooring Installation Task', levelId: 'L3-011', startDate: '2025-11-21', endDate: '2025-12-01', inspectionDate: '2025-12-02', status: 'Scheduled', progress: 10, totalBudget: 80000, paidToDate: 0, supervisor: 'Sarah Patel', team: 'Flooring Team', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Verify level', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FLR-TSM', materialUsed: 'Concrete Flooring', materialCost: 10000, materialStockRemaining: '200 bags' },
+                    { activityName: 'Fixture Setup Task', levelId: 'L3-012', startDate: '2025-12-02', endDate: '2025-12-10', inspectionDate: '2025-12-11', status: 'Scheduled', progress: 10, totalBudget: 90000, paidToDate: 0, supervisor: 'Lucas Nguyen', team: 'Fit-Out Crew', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Install fixtures', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FIX-TSK', materialUsed: 'Lighting Fixtures', materialCost: 7000, materialStockRemaining: '50 units' }
+                ]
+            },
+            {
+                activityName: 'Closeout Stage',
+                levelId: 'L2-005',
+                startDate: '2025-12-11',
+                endDate: '2025-12-29',
+                supervisor: 'Emma Wilson',
+                team: 'Closeout Division',
+                status: 'Planning',
+                progress: 20,
+                totalBudget: 50000,
+                paidToDate: 10000,
+                currency: 'USD',
+                costCode: '06-01-00',
+                permitStatus: 'Under Review',
+                inspectionDate: '2025-12-30',
+                inspectionStatus: 'Scheduled',
+                followUpActions: 'Finalize handover',
+                inspectionCost: 0,
+                punchListStatus: 'Open',
+                documentReference: 'DOC-TWR-CLO-STG',
+                materialUsed: 'Closeout Documents',
+                materialCost: 5000,
+                materialStockRemaining: 'N/A',
+                children: [
+                    { activityName: 'Punch List Review Task', levelId: 'L3-013', startDate: '2025-12-11', endDate: '2025-12-15', inspectionDate: '2025-12-16', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'John Carter', team: 'Closeout Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Resolve issues', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-PLR-TSK', materialUsed: 'Punch List Forms', materialCost: 2000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Final Documentation Task', levelId: 'L3-014', startDate: '2025-12-16', endDate: '2025-12-22', inspectionDate: '2025-12-23', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'Emily Foster', team: 'Documentation Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Prepare reports', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-FD-TSK', materialUsed: 'As-Built Drawings', materialCost: 2000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Client Handover Task', levelId: 'L3-015', startDate: '2025-12-23', endDate: '2025-12-29', inspectionDate: '2025-12-30', status: 'Scheduled', progress: 20, totalBudget: 20000, paidToDate: 0, supervisor: 'Emma Wilson', team: 'Client Relations', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Conduct walkthrough', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-CH-TSK', materialUsed: 'Handover Kits', materialCost: 1000, materialStockRemaining: 'Delivered' }
+                ]
+            }
         ]
     },
     {
-        taskID: 1006,
-        taskName: 'Detailed Planning Stage',
-        startDate: new Date('2025-01-20'),
-        endDate: new Date('2025-02-07'),
-        duration: 15,
-        progress: 90,
-        priority: 'High',
-        approved: false,
-        designation: 'Project Manager',
-        employeeID: 5006,
-        employeeName: 'Michael Suyama',
-        status: 'In Progress',
-        description: 'Comprehensive schedule, resource, and budget planning for the entire project lifecycle.',
-        subtasks: [
-            { taskID: 1007, taskName: 'Work Breakdown Structure', startDate: new Date('2025-01-20'), endDate: new Date('2025-01-24'), duration: 5, progress: 100, priority: 'High', approved: true, designation: 'Planner', employeeID: 5007, employeeName: 'Steven Gray', status: 'Completed', description: 'Broke down the project into manageable tasks and work packages.' },
-            { taskID: 1008, taskName: 'Estimate Task Durations', startDate: new Date('2025-01-23'), endDate: new Date('2025-01-27'), duration: 5, progress: 100, priority: 'Normal', approved: true, designation: 'Senior Developer', employeeID: 5008, employeeName: 'Robert King', status: 'Completed', description: 'Used historical data and expert judgment to predict realistic task durations.' },
-            { taskID: 1009, taskName: 'Assign Resource Roles', startDate: new Date('2025-01-28'), endDate: new Date('2025-01-31'), duration: 4, progress: 100, priority: 'Critical', approved: true, designation: 'Resource Manager', employeeID: 5009, employeeName: 'Anne Dodsworth', status: 'Completed', description: 'Matched team members’ skills to specific project roles and responsibilities.' },
-            { taskID: 1010, taskName: 'Build Project Schedule', startDate: new Date('2025-02-03'), endDate: new Date('2025-02-07'), duration: 5, progress: 60, priority: 'High', approved: false, designation: 'Scheduler', employeeID: 5010, employeeName: 'David William', status: 'In Progress', description: 'Created a detailed Gantt chart with task dependencies, critical path, and milestones.' }
-        ]
-    },
-    {
-        taskID: 1011,
-        taskName: 'Design & Architecture Phase',
-        startDate: new Date('2025-02-10'),
-        endDate: new Date('2025-03-07'),
-        duration: 20,
-        progress: 75,
-        priority: 'Critical',
-        approved: false,
-        designation: 'Lead Architect',
-        employeeID: 5011,
-        employeeName: 'Margaret Peacock',
-        status: 'In Progress',
-        description: 'Created a scalable and secure system architecture meeting performance, reliability, and security requirements.',
-        subtasks: [
-            { taskID: 1012, taskName: 'Define System Components', startDate: new Date('2025-02-10'), endDate: new Date('2025-02-14'), duration: 5, progress: 100, priority: 'High', approved: true, designation: 'Architect', employeeID: 5012, employeeName: 'Steven Buchanan', status: 'Completed', description: 'Identified all required modules, services, and integration points.' },
-            { taskID: 1013, taskName: 'Design Database Schema', startDate: new Date('2025-02-17'), endDate: new Date('2025-02-21'), duration: 5, progress: 100, priority: 'Critical', approved: true, designation: 'DBA', employeeID: 5013, employeeName: 'Laura Callahan', status: 'Completed', description: 'Designed a normalized relational database model with optimal indexing strategy.' },
-            { taskID: 1014, taskName: 'API Design & Review', startDate: new Date('2025-02-24'), endDate: new Date('2025-02-28'), duration: 5, progress: 80, priority: 'High', approved: false, designation: 'API Lead', employeeID: 5014, employeeName: 'Michael Suyama', status: 'In Progress', description: 'Finalized RESTful API endpoints, contracts, versioning, and authentication methods.' },
-            { taskID: 1015, taskName: 'UI/UX Wireframes & Mockups', startDate: new Date('2025-02-24'), endDate: new Date('2025-03-07'), duration: 10, progress: 50, priority: 'Normal', approved: false, designation: 'UX Designer', employeeID: 5015, employeeName: 'Nancy Davolio', status: 'In Progress', description: 'Created high-fidelity wireframes and interactive prototypes for the user interface.' }
-        ]
-    },
-    {
-        taskID: 1016,
-        taskName: 'Frontend Development Sprint',
-        startDate: new Date('2025-03-10'),
-        endDate: new Date('2025-04-18'),
-        duration: 30,
-        progress: 60,
-        priority: 'High',
-        approved: false,
-        designation: 'Frontend Lead',
-        employeeID: 5016,
-        employeeName: 'Andrew Fuller',
-        status: 'In Progress',
-        description: 'Built a responsive and interactive user interface using the React framework.',
-        subtasks: [
-            { taskID: 1017, taskName: 'Set Up Project Structure', startDate: new Date('2025-03-10'), endDate: new Date('2025-03-12'), duration: 3, progress: 100, priority: 'Normal', approved: true, designation: 'DevOps', employeeID: 5017, employeeName: 'Janet Leverling', status: 'Completed', description: 'Initialized the repository with proper folder structure and tooling.' },
-            { taskID: 1018, taskName: 'Create Login Page', startDate: new Date('2025-03-13'), endDate: new Date('2025-03-18'), duration: 6, progress: 100, priority: 'High', approved: true, designation: 'Frontend Dev', employeeID: 5018, employeeName: 'Robert King', status: 'Completed', description: 'Implemented secure login with form validation, OAuth, and password recovery.' },
-            { taskID: 1019, taskName: 'Build Dashboard View', startDate: new Date('2025-03-19'), endDate: new Date('2025-03-28'), duration: 8, progress: 90, priority: 'Critical', approved: false, designation: 'Senior Developer', employeeID: 5019, employeeName: 'Anne Dodsworth', status: 'In Progress', description: 'Developed the main dashboard with real-time data visualization widgets.' },
-            { taskID: 1020, taskName: 'Implement Navigation Menu', startDate: new Date('2025-03-31'), endDate: new Date('2025-04-04'), duration: 5, progress: 70, priority: 'Normal', approved: false, designation: 'Frontend Dev', employeeID: 5020, employeeName: 'David William', status: 'In Progress', description: 'Created a responsive sidebar and top navigation system with role-based access.' },
-            { taskID: 1021, taskName: 'Add Form Components', startDate: new Date('2025-04-07'), endDate: new Date('2025-04-18'), duration: 10, progress: 30, priority: 'High', approved: false, designation: 'UI Engineer', employeeID: 5021, employeeName: 'Margaret Peacock', status: 'In Progress', description: 'Built reusable form components with validation, accessibility, and theming support.' }
-        ]
-    },
-    {
-        taskID: 1022,
-        taskName: 'Backend Services Development',
-        startDate: new Date('2025-03-10'),
-        endDate: new Date('2025-04-25'),
-        duration: 35,
+        activityName: 'Warehouse',
+        levelId: 'L1-004',
+        startDate: '2025-08-01',
+        endDate: '2025-12-28',
+        supervisor: 'Emma Wilson',
+        team: 'Executive Oversight',
+        status: 'Active',
         progress: 55,
-        priority: 'Critical',
-        approved: false,
-        designation: 'Backend Lead',
-        employeeID: 5022,
-        employeeName: 'Steven Gray',
-        status: 'In Progress',
-        description: 'Developed secure and scalable REST APIs using Node.js and Express.',
-        subtasks: [
-            { taskID: 1023, taskName: 'Set Up Server Environment', startDate: new Date('2025-03-10'), endDate: new Date('2025-03-14'), duration: 5, progress: 100, priority: 'Normal', approved: true, designation: 'DevOps Engineer', employeeID: 5023, employeeName: 'Laura Callahan', status: 'Completed', description: 'Configured Node.js server with clustering, PM2, and logging.' },
-            { taskID: 1024, taskName: 'User Authentication Service', startDate: new Date('2025-03-17'), endDate: new Date('2025-03-25'), duration: 7, progress: 100, priority: 'Critical', approved: true, designation: 'Backend Dev', employeeID: 5024, employeeName: 'Michael Suyama', status: 'Completed', description: 'Implemented JWT-based authentication with refresh tokens and password hashing.' },
-            { taskID: 1025, taskName: 'Product Management API', startDate: new Date('2025-03-26'), endDate: new Date('2025-04-05'), duration: 9, progress: 80, priority: 'High', approved: false, designation: 'API Developer', employeeID: 5025, employeeName: 'Nancy Davolio', status: 'In Progress', description: 'Created CRUD endpoints for product catalog management with filtering and pagination.' },
-            { taskID: 1026, taskName: 'Order Processing Service', startDate: new Date('2025-04-07'), endDate: new Date('2025-04-18'), duration: 10, progress: 40, priority: 'High', approved: false, designation: 'Backend Dev', employeeID: 5026, employeeName: 'Andrew Fuller', status: 'In Progress', description: 'Built order creation, payment integration, and fulfillment workflows.' },
-            { taskID: 1027, taskName: 'Reporting & Analytics API', startDate: new Date('2025-04-14'), endDate: new Date('2025-04-25'), duration: 10, progress: 10, priority: 'Normal', approved: false, designation: 'Data Engineer', employeeID: 5027, employeeName: 'Janet Leverling', status: 'In Progress', description: 'Developed endpoints for sales, performance, and business intelligence analytics.' }
-        ]
-    },
-    {
-        taskID: 1028,
-        taskName: 'Testing & Quality Assurance',
-        startDate: new Date('2025-04-21'),
-        endDate: new Date('2025-05-16'),
-        duration: 20,
-        progress: 20,
-        priority: 'High',
-        approved: false,
-        designation: 'QA Lead',
-        employeeID: 5028,
-        employeeName: 'Anne Dodsworth',
-        status: 'In Progress',
-        description: 'Conducted comprehensive testing including unit, integration, performance, security, and user acceptance testing.',
-        subtasks: [
-            { taskID: 1029, taskName: 'Write Unit Tests', startDate: new Date('2025-04-21'), endDate: new Date('2025-04-30'), duration: 8, progress: 60, priority: 'Normal', approved: false, designation: 'QA Engineer', employeeID: 5029, employeeName: 'David William', status: 'In Progress', description: 'Achieved 90% code coverage across all modules using Jest and PyTest.' },
-            { taskID: 1030, taskName: 'Integration Testing Phase', startDate: new Date('2025-05-01'), endDate: new Date('2025-05-09'), duration: 7, progress: 0, priority: 'High', approved: false, designation: 'Test Lead', employeeID: 5030, employeeName: 'Margaret Peacock', status: 'Not Started', description: 'Verified seamless communication between frontend, backend, and third-party services.' },
-            { taskID: 1031, taskName: 'Performance & Load Testing', startDate: new Date('2025-05-05'), endDate: new Date('2025-05-12'), duration: 6, progress: 0, priority: 'Critical', approved: false, designation: 'Performance Tester', employeeID: 5031, employeeName: 'Steven Gray', status: 'Not Started', description: 'Simulated 10,000 concurrent users using JMeter and Gatling.' },
-            { taskID: 1032, taskName: 'Security & Vulnerability Scan', startDate: new Date('2025-05-06'), endDate: new Date('2025-05-12'), duration: 5, progress: 0, priority: 'Critical', approved: false, designation: 'Security Analyst', employeeID: 5032, employeeName: 'Laura Callahan', status: 'Not Started', description: 'Performed OWASP ZAP scans and manual penetration testing.' },
-            { taskID: 1033, taskName: 'User Acceptance Testing (UAT)', startDate: new Date('2025-05-12'), endDate: new Date('2025-05-16'), duration: 5, progress: 0, priority: 'High', approved: false, designation: 'UAT Coordinator', employeeID: 5033, employeeName: 'Robert King', status: 'Not Started', description: 'Conducted final validation with actual end users and stakeholders.' }
-        ]
-    },
-    {
-        taskID: 1034,
-        taskName: 'Deployment & Go-Live',
-        startDate: new Date('2025-05-19'),
-        endDate: new Date('2025-05-30'),
-        duration: 10,
-        progress: 0,
-        priority: 'Critical',
-        approved: false,
-        designation: 'Release Manager',
-        employeeID: 5034,
-        employeeName: 'Michael Suyama',
-        status: 'Not Started',
-        description: 'Executed final production deployment using a zero-downtime blue-green strategy.',
-        subtasks: [
-            { taskID: 1035, taskName: 'Prepare Production Servers', startDate: new Date('2025-05-19'), endDate: new Date('2025-05-21'), duration: 3, progress: 0, priority: 'High', approved: false, designation: 'SysAdmin', employeeID: 5035, employeeName: 'Nancy Davolio', status: 'Not Started', description: 'Configured load balancers, SSL certificates, and monitoring tools.' },
-            { taskID: 1036, taskName: 'Database Migration', startDate: new Date('2025-05-22'), endDate: new Date('2025-05-23'), duration: 2, progress: 0, priority: 'Critical', approved: false, designation: 'DBA', employeeID: 5036, employeeName: 'Andrew Fuller', status: 'Not Started', description: 'Executed final schema updates and data migration scripts.' },
-            { taskID: 1037, taskName: 'Blue-Green Deployment', startDate: new Date('2025-05-26'), endDate: new Date('2025-05-27'), duration: 2, progress: 0, priority: 'Critical', approved: false, designation: 'DevOps Lead', employeeID: 5037, employeeName: 'Janet Leverling', status: 'Not Started', description: 'Switched live traffic from old to new version with zero downtime.' },
-            { taskID: 1038, taskName: 'Post-Deployment Validation', startDate: new Date('2025-05-28'), endDate: new Date('2025-05-30'), duration: 3, progress: 0, priority: 'High', approved: false, designation: 'QA Lead', employeeID: 5038, employeeName: 'Anne Dodsworth', status: 'Not Started', description: 'Ran smoke tests and verified all critical features in production.' },
-            { taskID: 1039, taskName: 'Project Closure & Celebration', startDate: new Date('2025-05-30'), endDate: new Date('2025-05-30'), duration: 1, progress: 0, priority: 'Normal', approved: false, designation: 'Project Manager', employeeID: 5039, employeeName: 'Robert King', status: 'Not Started', description: 'Held project closure ceremony, lessons learned session, and team recognition event.' }
+        totalBudget: 1030000,
+        paidToDate: 566500,
+        currency: 'USD',
+        costCode: '01-00-00',
+        permitStatus: 'Approved',
+        inspectionDate: '2025-12-29',
+        inspectionStatus: 'Passed with Notes',
+        followUpActions: 'Address structural concerns',
+        inspectionCost: 400,
+        punchListStatus: 'Open',
+        documentReference: 'DOC-WH-OVR',
+        materialUsed: 'Project Planning Kits',
+        materialCost: 50000,
+        materialStockRemaining: 'N/A',
+        children: [
+            {
+                activityName: 'Design Stage',
+                levelId: 'L2-016',
+                startDate: '2025-08-01',
+                endDate: '2025-09-10',
+                supervisor: 'Ethan Park',
+                team: 'Design Division',
+                status: 'Completed',
+                progress: 100,
+                totalBudget: 202000,
+                paidToDate: 220000,
+                currency: 'USD',
+                costCode: '02-01-00',
+                permitStatus: 'Issued',
+                inspectionDate: '2025-09-11',
+                inspectionStatus: 'Passed',
+                followUpActions: 'None',
+                inspectionCost: 300,
+                punchListStatus: 'Cleared',
+                documentReference: 'DOC-WH-DES-STG',
+                materialUsed: 'Design Blueprints',
+                materialCost: 30000,
+                materialStockRemaining: 'N/A',
+                children: [
+                    { activityName: 'Architectural Design Task', levelId: 'L3-046', startDate: '2025-08-02', endDate: '2025-08-12', inspectionDate: '2025-08-13', status: 'Completed', progress: 100, totalBudget: 70000, paidToDate: 70200, supervisor: 'David Lin', team: 'Architecture Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-ARC-TSK', materialUsed: 'CAD Drawings', materialCost: 10000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Structural Design Task', levelId: 'L3-047', startDate: '2025-08-13', endDate: '2025-08-28', inspectionDate: '2025-08-29', status: 'Completed', progress: 100, totalBudget: 72000, paidToDate: 70000, supervisor: 'Sarah Patel', team: 'Structural Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-STR-TSK', materialUsed: 'Structural Plans', materialCost: 10000, materialStockRemaining: 'N/A' },
+                    { activityName: 'MEP Design Task', levelId: 'L3-048', startDate: '2025-08-29', endDate: '2025-09-10', inspectionDate: '2025-09-11', status: 'Completed', progress: 100, totalBudget: 62000, paidToDate: 60000, supervisor: 'Carlos Rivera', team: 'MEP Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-MEP-TSK', materialUsed: 'Electrical Schematics', materialCost: 10000, materialStockRemaining: 'N/A' }
+                ]
+            },
+            {
+                activityName: 'Construction Stage',
+                levelId: 'L2-017',
+                startDate: '2025-09-11',
+                endDate: '2025-11-20',
+                supervisor: 'James Patel',
+                team: 'Construction Division',
+                status: 'In Progress',
+                progress: 50,
+                totalBudget: 800000,
+                paidToDate: 400000,
+                currency: 'USD',
+                costCode: '03-01-00',
+                permitStatus: 'Issued',
+                inspectionDate: '2025-11-21',
+                inspectionStatus: 'Passed with Notes',
+                followUpActions: 'Address structural issues',
+                inspectionCost: 400,
+                punchListStatus: 'Open',
+                documentReference: 'DOC-WH-CON-STG',
+                materialUsed: 'Construction Materials',
+                materialCost: 200000,
+                materialStockRemaining: '500 tons',
+                children: [
+                    { activityName: 'Foundation Construction Task', levelId: 'L3-049', startDate: '2025-09-11', endDate: '2025-09-25', inspectionDate: '2025-09-26', status: 'Completed', progress: 100, totalBudget: 300000, paidToDate: 320000, supervisor: 'Robert Singh', team: 'Foundation Crew', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-FND-TSK', materialUsed: 'Concrete Mix', materialCost: 80000, materialStockRemaining: 'N/A' },
+                    { activityName: 'Framing Construction Task', levelId: 'L3-050', startDate: '2025-09-26', endDate: '2025-10-25', inspectionDate: '2025-10-26', status: 'In Progress', progress: 60, totalBudget: 300000, paidToDate: 180000, supervisor: 'Angela Moore', team: 'Structural Crew', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Continue framing', inspectionCost: 200, punchListStatus: 'Open', documentReference: 'DOC-WH-FRM-TSK', materialUsed: 'Steel Beams', materialCost: 60000, materialStockRemaining: '200 tons' },
+                    { activityName: 'Exterior Construction Task', levelId: 'L3-051', startDate: '2025-10-26', endDate: '2025-11-20', inspectionDate: '2025-11-21', status: 'In Progress', progress: 20, totalBudget: 200000, paidToDate: 40000, supervisor: 'Thomas Reed', team: 'Exterior Crew', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Continue exterior work', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-WH-EXT-TSK', materialUsed: 'Metal Panels', materialCost: 60000, materialStockRemaining: '300 panels' }
+                ]
+            },
+            {
+                activityName: 'Safety Stage',
+                levelId: 'L2-018',
+                startDate: '2025-11-21',
+                endDate: '2025-12-10',
+                supervisor: 'Nathan Blake',
+                team: 'Safety Division',
+                status: 'Planning',
+                progress: 30,
+                totalBudget: 30000,
+                paidToDate: 9000,
+                currency: 'USD',
+                costCode: '04-01-00',
+                permitStatus: 'Under Review',
+                inspectionDate: '2025-12-11',
+                inspectionStatus: 'Scheduled',
+                followUpActions: 'Schedule safety audit',
+                inspectionCost: 0,
+                punchListStatus: 'Scheduled',
+                documentReference: 'DOC-WH-SAF-STG',
+                materialUsed: 'Safety Equipment',
+                materialCost: 5000,
+                materialStockRemaining: '50 units',
+                children: [
+                    { activityName: 'OSHA Compliance Task', levelId: 'L3-052', startDate: '2025-11-21', endDate: '2025-11-28', inspectionDate: '2025-11-29', status: 'Scheduled', progress: 30, totalBudget: 10000, paidToDate: 0, supervisor: 'Laura Bennett', team: 'Safety Inspectors', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Conduct briefing', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-OSHA-TSK', materialUsed: 'Safety Gear', materialCost: 2000, materialStockRemaining: '40 helmets' },
+                    { activityName: 'Fire Safety Task', levelId: 'L3-053', startDate: '2025-11-29', endDate: '2025-12-05', inspectionDate: '2025-12-06', status: 'Scheduled', progress: 20, totalBudget: 10000, paidToDate: 0, supervisor: 'Melissa Tran', team: 'Fire Safety Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Install exits', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-FIRE-TSK', materialUsed: 'Extinguishers', materialCost: 1500, materialStockRemaining: '15 units' },
+                    { activityName: 'Structural Audit Task', levelId: 'L3-054', startDate: '2025-12-06', endDate: '2025-12-10', inspectionDate: '2025-12-11', status: 'Scheduled', progress: 20, totalBudget: 10000, paidToDate: 0, supervisor: 'David Lin', team: 'Audit Engineers', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Verify integrity', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-AUD-TSK', materialUsed: 'Inspection Tools', materialCost: 1500, materialStockRemaining: 'N/A' }
+                ]
+            }
         ]
     }
 ];
 
-window.rowSpanData = [
-  {
-    activityName: 'Tower',
-    levelId: 'L1-001',
-    startDate: '2025-07-01',
-    endDate: '2025-12-29',
-    supervisor: 'John Carter',
-    team: 'Executive Oversight',
-    status: 'Active',
-    progress: 70,
-    totalBudget: 1500000,
-    paidToDate: 1050000,
-    currency: 'USD',
-    costCode: '01-00-00',
-    permitStatus: 'Approved',
-    inspectionDate: '2025-12-30',
-    inspectionStatus: 'Active',
-    followUpActions: 'Monitor progress',
-    inspectionCost: 600,
-    punchListStatus: 'Open',
-    documentReference: 'DOC-TWR-OVR',
-    materialUsed: 'Project Planning Kits',
-    materialCost: 75000,
-    materialStockRemaining: 'N/A',
-    children: [
-      {
-        activityName: 'Design Stage',
-        levelId: 'L2-001',
-        startDate: '2025-07-01',
-        endDate: '2025-08-15',
-        supervisor: 'Ethan Park',
-        team: 'Design Division',
-        status: 'Completed',
-        progress: 100,
-        totalBudget: 305000,
-        paidToDate: 350000,
-        currency: 'USD',
-        costCode: '02-01-00',
-        permitStatus: 'Issued',
-        inspectionDate: '2025-08-16',
-        inspectionStatus: 'Passed',
-        followUpActions: 'None',
-        inspectionCost: 200,
-        punchListStatus: 'Cleared',
-        documentReference: 'DOC-TWR-DES-STG',
-        materialUsed: 'Design Blueprints',
-        materialCost: 50000,
-        materialStockRemaining: 'N/A',
-        children: [
-          { activityName: 'Architectural Design Task', levelId: 'L3-001', startDate: '2025-07-02', endDate: '2025-07-10', inspectionDate: '2025-07-11', status: 'Scheduled', progress: 100, totalBudget: 100000, paidToDate: 0, supervisor: 'David Lin', team: 'Architecture Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-ARC-TSK', materialUsed: 'CAD Drawings', materialCost: 15000, materialStockRemaining: 'N/A' },
-          { activityName: 'Structural Design Task', levelId: 'L3-002', startDate: '2025-07-11', endDate: '2025-07-25', inspectionDate: '2025-07-26', status: 'Scheduled', progress: 100, totalBudget: 120000, paidToDate: 0, supervisor: 'Sarah Patel', team: 'Structural Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-STR-TSK', materialUsed: 'Structural Plans', materialCost: 15000, materialStockRemaining: 'N/A' },
-          { activityName: 'MEP Design Task', levelId: 'L3-003', startDate: '2025-07-26', endDate: '2025-08-15', inspectionDate: '2025-08-16', status: 'Scheduled', progress: 100, totalBudget: 100000, paidToDate: 0, supervisor: 'Carlos Rivera', team: 'MEP Unit', permitStatus: 'Scheduled', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-MEP-TSK', materialUsed: 'Electrical Schematics', materialCost: 20000, materialStockRemaining: 'N/A' }
-        ]
-      },
-      {
-        activityName: 'Construction Stage',
-        levelId: 'L2-002',
-        startDate: '2025-08-16',
-        endDate: '2025-10-20',
-        supervisor: 'James Patel',
-        team: 'Construction Division',
-        status: 'In Progress',
-        progress: 75,
-        totalBudget: 900000,
-        paidToDate: 675000,
-        currency: 'USD',
-        costCode: '03-01-00',
-        permitStatus: 'Issued',
-        inspectionDate: '2025-10-21',
-        inspectionStatus: 'Passed with Notes',
-        followUpActions: 'Reinforce structure',
-        inspectionCost: 300,
-        punchListStatus: 'Open',
-        documentReference: 'DOC-TWR-CON-STG',
-        materialUsed: 'Construction Materials',
-        materialCost: 50000,
-        materialStockRemaining: '300 tons',
-        children: [
-          { activityName: 'Foundation Construction Task', levelId: 'L3-004', startDate: '2025-08-16', endDate: '2025-08-25', inspectionDate: '2025-08-26', status: 'Completed', progress: 100, totalBudget: 305000, paidToDate: 350000, supervisor: 'Robert Singh', team: 'Foundation Crew', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-TWR-FND-TSK', materialUsed: 'Concrete', materialCost: 15000, materialStockRemaining: 'N/A' },
-          { activityName: 'Structural Construction Task', levelId: 'L3-005', startDate: '2025-08-26', endDate: '2025-09-20', inspectionDate: '2025-09-21', status: 'In Progress', progress: 80, totalBudget: 300000, paidToDate: 240000, supervisor: 'Nathan Blake', team: 'Structural Team', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Reinforce beams', inspectionCost: 100, punchListStatus: 'Open', documentReference: 'DOC-TWR-STR-TSK', materialUsed: 'Steel Beams', materialCost: 20000, materialStockRemaining: '200 tons' },
-          { activityName: 'Exterior Construction Task', levelId: 'L3-006', startDate: '2025-09-21', endDate: '2025-10-20', inspectionDate: '2025-10-21', status: 'In Progress', progress: 40, totalBudget: 300000, paidToDate: 120000, supervisor: 'Thomas Reed', team: 'Exterior Crew', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Continue exterior work', inspectionCost: 100, punchListStatus: 'Open', documentReference: 'DOC-TWR-EXT-TSK', materialUsed: 'Metal Panels', materialCost: 15000, materialStockRemaining: '300 panels' }
-        ]
-      },
-      {
-        activityName: 'Safety Stage',
-        levelId: 'L2-003',
-        startDate: '2025-10-21',
-        endDate: '2025-11-05',
-        supervisor: 'Nathan Blake',
-        team: 'Safety Division',
-        status: 'In Progress',
-        progress: 60,
-        totalBudget: 50000,
-        paidToDate: 30000,
-        currency: 'USD',
-        costCode: '04-01-00',
-        permitStatus: 'Issued',
-        inspectionDate: '2025-11-06',
-        inspectionStatus: 'Scheduled',
-        followUpActions: 'Complete safety audit',
-        inspectionCost: 0,
-        punchListStatus: 'Open',
-        documentReference: 'DOC-TWR-SAF-STG',
-        materialUsed: 'Safety Equipment',
-        materialCost: 10000,
-        materialStockRemaining: '50 units',
-        children: [
-          { activityName: 'OSHA Compliance Task', levelId: 'L3-007', startDate: '2025-10-21', endDate: '2025-10-27', inspectionDate: '2025-10-28', status: 'In Progress', progress: 70, totalBudget: 20000, paidToDate: 14000, supervisor: 'Laura Bennett', team: 'Safety Inspectors', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Complete briefing', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-OSHA-TSK', materialUsed: 'Safety Gear', materialCost: 4000, materialStockRemaining: '40 helmets' },
-          { activityName: 'Fire Safety Task', levelId: 'L3-008', startDate: '2025-10-28', endDate: '2025-11-01', inspectionDate: '2025-11-02', status: 'Scheduled', progress: 30, totalBudget: 15000, paidToDate: 0, supervisor: 'Melissa Tran', team: 'Fire Safety Team', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Install exits', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FIRE-TSK', materialUsed: 'Extinguishers', materialCost: 3000, materialStockRemaining: '15 units' },
-          { activityName: 'Structural Audit Task', levelId: 'L3-009', startDate: '2025-11-02', endDate: '2025-11-05', inspectionDate: '2025-11-06', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'David Lin', team: 'Audit Engineers', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Verify integrity', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-AUD-TSK', materialUsed: 'Inspection Tools', materialCost: 3000, materialStockRemaining: 'N/A' }
-        ]
-      },
-      {
-        activityName: 'Finishing Stage',
-        levelId: 'L2-004',
-        startDate: '2025-11-06',
-        endDate: '2025-12-10',
-        supervisor: 'Melissa Tran',
-        team: 'Finishing Division',
-        status: 'Planning',
-        progress: 30,
-        totalBudget: 250000,
-        paidToDate: 75000,
-        currency: 'USD',
-        costCode: '05-01-00',
-        permitStatus: 'Under Review',
-        inspectionDate: '2025-12-11',
-        inspectionStatus: 'Scheduled',
-        followUpActions: 'Begin interior work',
-        inspectionCost: 0,
-        punchListStatus: 'Pending',
-        documentReference: 'DOC-TWR-FIN-STG',
-        materialUsed: 'Finishing Supplies',
-        materialCost: 25000,
-        materialStockRemaining: '200 units',
-        children: [
-          { activityName: 'Interior Drywall Task', levelId: 'L3-010', startDate: '2025-11-06', endDate: '2025-11-20', inspectionDate: '2025-11-21', status: 'In Progress', progress: 50, totalBudget: 80000, paidToDate: 40000, supervisor: 'Hannah Kim', team: 'Drywall Crew', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Check alignment', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-DRY-TSK', materialUsed: 'Drywall Sheets', materialCost: 8000, materialStockRemaining: '150 panels' },
-          { activityName: 'Flooring Installation Task', levelId: 'L3-011', startDate: '2025-11-21', endDate: '2025-12-01', inspectionDate: '2025-12-02', status: 'Scheduled', progress: 10, totalBudget: 80000, paidToDate: 0, supervisor: 'Sarah Patel', team: 'Flooring Team', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Verify level', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FLR-TSM', materialUsed: 'Concrete Flooring', materialCost: 10000, materialStockRemaining: '200 bags' },
-          { activityName: 'Fixture Setup Task', levelId: 'L3-012', startDate: '2025-12-02', endDate: '2025-12-10', inspectionDate: '2025-12-11', status: 'Scheduled', progress: 10, totalBudget: 90000, paidToDate: 0, supervisor: 'Lucas Nguyen', team: 'Fit-Out Crew', permitStatus: 'Issued', inspectionStatus: 'Scheduled', followUpActions: 'Install fixtures', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-TWR-FIX-TSK', materialUsed: 'Lighting Fixtures', materialCost: 7000, materialStockRemaining: '50 units' }
-        ]
-      },
-      {
-        activityName: 'Closeout Stage',
-        levelId: 'L2-005',
-        startDate: '2025-12-11',
-        endDate: '2025-12-29',
-        supervisor: 'Emma Wilson',
-        team: 'Closeout Division',
-        status: 'Planning',
-        progress: 20,
-        totalBudget: 50000,
-        paidToDate: 10000,
-        currency: 'USD',
-        costCode: '06-01-00',
-        permitStatus: 'Under Review',
-        inspectionDate: '2025-12-30',
-        inspectionStatus: 'Scheduled',
-        followUpActions: 'Finalize handover',
-        inspectionCost: 0,
-        punchListStatus: 'Open',
-        documentReference: 'DOC-TWR-CLO-STG',
-        materialUsed: 'Closeout Documents',
-        materialCost: 5000,
-        materialStockRemaining: 'N/A',
-        children: [
-          { activityName: 'Punch List Review Task', levelId: 'L3-013', startDate: '2025-12-11', endDate: '2025-12-15', inspectionDate: '2025-12-16', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'John Carter', team: 'Closeout Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Resolve issues', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-PLR-TSK', materialUsed: 'Punch List Forms', materialCost: 2000, materialStockRemaining: 'N/A' },
-          { activityName: 'Final Documentation Task', levelId: 'L3-014', startDate: '2025-12-16', endDate: '2025-12-22', inspectionDate: '2025-12-23', status: 'Scheduled', progress: 20, totalBudget: 15000, paidToDate: 0, supervisor: 'Emily Foster', team: 'Documentation Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Prepare reports', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-FD-TSK', materialUsed: 'As-Built Drawings', materialCost: 2000, materialStockRemaining: 'N/A' },
-          { activityName: 'Client Handover Task', levelId: 'L3-015', startDate: '2025-12-23', endDate: '2025-12-29', inspectionDate: '2025-12-30', status: 'Scheduled', progress: 20, totalBudget: 20000, paidToDate: 0, supervisor: 'Emma Wilson', team: 'Client Relations', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Conduct walkthrough', inspectionCost: 0, punchListStatus: 'Pending', documentReference: 'DOC-TWR-CH-TSK', materialUsed: 'Handover Kits', materialCost: 1000, materialStockRemaining: 'Delivered' }
-        ]
-      }
-    ]
-  },
-  {
-    activityName: 'Warehouse',
-    levelId: 'L1-004',
-    startDate: '2025-08-01',
-    endDate: '2025-12-28',
-    supervisor: 'Emma Wilson',
-    team: 'Executive Oversight',
-    status: 'Active',
-    progress: 55,
-    totalBudget: 1030000,
-    paidToDate: 566500,
-    currency: 'USD',
-    costCode: '01-00-00',
-    permitStatus: 'Approved',
-    inspectionDate: '2025-12-29',
-    inspectionStatus: 'Passed with Notes',
-    followUpActions: 'Address structural concerns',
-    inspectionCost: 400,
-    punchListStatus: 'Open',
-    documentReference: 'DOC-WH-OVR',
-    materialUsed: 'Project Planning Kits',
-    materialCost: 50000,
-    materialStockRemaining: 'N/A',
-    children: [
-      {
-        activityName: 'Design Stage',
-        levelId: 'L2-016',
-        startDate: '2025-08-01',
-        endDate: '2025-09-10',
-        supervisor: 'Ethan Park',
-        team: 'Design Division',
-        status: 'Completed',
-        progress: 100,
-        totalBudget: 202000,
-        paidToDate: 220000,
-        currency: 'USD',
-        costCode: '02-01-00',
-        permitStatus: 'Issued',
-        inspectionDate: '2025-09-11',
-        inspectionStatus: 'Passed',
-        followUpActions: 'None',
-        inspectionCost: 300,
-        punchListStatus: 'Cleared',
-        documentReference: 'DOC-WH-DES-STG',
-        materialUsed: 'Design Blueprints',
-        materialCost: 30000,
-        materialStockRemaining: 'N/A',
-        children: [
-          { activityName: 'Architectural Design Task', levelId: 'L3-046', startDate: '2025-08-02', endDate: '2025-08-12', inspectionDate: '2025-08-13', status: 'Completed', progress: 100, totalBudget: 70000, paidToDate: 70200, supervisor: 'David Lin', team: 'Architecture Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-ARC-TSK', materialUsed: 'CAD Drawings', materialCost: 10000, materialStockRemaining: 'N/A' },
-          { activityName: 'Structural Design Task', levelId: 'L3-047', startDate: '2025-08-13', endDate: '2025-08-28', inspectionDate: '2025-08-29', status: 'Completed', progress: 100, totalBudget: 72000, paidToDate: 70000, supervisor: 'Sarah Patel', team: 'Structural Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-STR-TSK', materialUsed: 'Structural Plans', materialCost: 10000, materialStockRemaining: 'N/A' },
-          { activityName: 'MEP Design Task', levelId: 'L3-048', startDate: '2025-08-29', endDate: '2025-09-10', inspectionDate: '2025-09-11', status: 'Completed', progress: 100, totalBudget: 62000, paidToDate: 60000, supervisor: 'Carlos Rivera', team: 'MEP Unit', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-MEP-TSK', materialUsed: 'Electrical Schematics', materialCost: 10000, materialStockRemaining: 'N/A' }
-        ]
-      },
-      {
-        activityName: 'Construction Stage',
-        levelId: 'L2-017',
-        startDate: '2025-09-11',
-        endDate: '2025-11-20',
-        supervisor: 'James Patel',
-        team: 'Construction Division',
-        status: 'In Progress',
-        progress: 50,
-        totalBudget: 800000,
-        paidToDate: 400000,
-        currency: 'USD',
-        costCode: '03-01-00',
-        permitStatus: 'Issued',
-        inspectionDate: '2025-11-21',
-        inspectionStatus: 'Passed with Notes',
-        followUpActions: 'Address structural issues',
-        inspectionCost: 400,
-        punchListStatus: 'Open',
-        documentReference: 'DOC-WH-CON-STG',
-        materialUsed: 'Construction Materials',
-        materialCost: 200000,
-        materialStockRemaining: '500 tons',
-        children: [
-          { activityName: 'Foundation Construction Task', levelId: 'L3-049', startDate: '2025-09-11', endDate: '2025-09-25', inspectionDate: '2025-09-26', status: 'Completed', progress: 100, totalBudget: 300000, paidToDate: 320000, supervisor: 'Robert Singh', team: 'Foundation Crew', permitStatus: 'Approved', inspectionStatus: 'Passed', followUpActions: 'None', inspectionCost: 100, punchListStatus: 'Cleared', documentReference: 'DOC-WH-FND-TSK', materialUsed: 'Concrete Mix', materialCost: 80000, materialStockRemaining: 'N/A' },
-          { activityName: 'Framing Construction Task', levelId: 'L3-050', startDate: '2025-09-26', endDate: '2025-10-25', inspectionDate: '2025-10-26', status: 'In Progress', progress: 60, totalBudget: 300000, paidToDate: 180000, supervisor: 'Angela Moore', team: 'Structural Crew', permitStatus: 'Approved', inspectionStatus: 'Passed with Notes', followUpActions: 'Continue framing', inspectionCost: 200, punchListStatus: 'Open', documentReference: 'DOC-WH-FRM-TSK', materialUsed: 'Steel Beams', materialCost: 60000, materialStockRemaining: '200 tons' },
-          { activityName: 'Exterior Construction Task', levelId: 'L3-051', startDate: '2025-10-26', endDate: '2025-11-20', inspectionDate: '2025-11-21', status: 'In Progress', progress: 20, totalBudget: 200000, paidToDate: 40000, supervisor: 'Thomas Reed', team: 'Exterior Crew', permitStatus: 'Issued', inspectionStatus: 'In Progress', followUpActions: 'Continue exterior work', inspectionCost: 0, punchListStatus: 'Open', documentReference: 'DOC-WH-EXT-TSK', materialUsed: 'Metal Panels', materialCost: 60000, materialStockRemaining: '300 panels' }
-        ]
-      },
-      {
-        activityName: 'Safety Stage',
-        levelId: 'L2-018',
-        startDate: '2025-11-21',
-        endDate: '2025-12-10',
-        supervisor: 'Nathan Blake',
-        team: 'Safety Division',
-        status: 'Planning',
-        progress: 30,
-        totalBudget: 30000,
-        paidToDate: 9000,
-        currency: 'USD',
-        costCode: '04-01-00',
-        permitStatus: 'Under Review',
-        inspectionDate: '2025-12-11',
-        inspectionStatus: 'Scheduled',
-        followUpActions: 'Schedule safety audit',
-        inspectionCost: 0,
-        punchListStatus: 'Scheduled',
-        documentReference: 'DOC-WH-SAF-STG',
-        materialUsed: 'Safety Equipment',
-        materialCost: 5000,
-        materialStockRemaining: '50 units',
-        children: [
-          { activityName: 'OSHA Compliance Task', levelId: 'L3-052', startDate: '2025-11-21', endDate: '2025-11-28', inspectionDate: '2025-11-29', status: 'Scheduled', progress: 30, totalBudget: 10000, paidToDate: 0, supervisor: 'Laura Bennett', team: 'Safety Inspectors', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Conduct briefing', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-OSHA-TSK', materialUsed: 'Safety Gear', materialCost: 2000, materialStockRemaining: '40 helmets' },
-          { activityName: 'Fire Safety Task', levelId: 'L3-053', startDate: '2025-11-29', endDate: '2025-12-05', inspectionDate: '2025-12-06', status: 'Scheduled', progress: 20, totalBudget: 10000, paidToDate: 0, supervisor: 'Melissa Tran', team: 'Fire Safety Team', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Install exits', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-FIRE-TSK', materialUsed: 'Extinguishers', materialCost: 1500, materialStockRemaining: '15 units' },
-          { activityName: 'Structural Audit Task', levelId: 'L3-054', startDate: '2025-12-06', endDate: '2025-12-10', inspectionDate: '2025-12-11', status: 'Scheduled', progress: 20, totalBudget: 10000, paidToDate: 0, supervisor: 'David Lin', team: 'Audit Engineers', permitStatus: 'Scheduled', inspectionStatus: 'Not Started', followUpActions: 'Verify integrity', inspectionCost: 0, punchListStatus: 'Not Started', documentReference: 'DOC-WH-AUD-TSK', materialUsed: 'Inspection Tools', materialCost: 1500, materialStockRemaining: 'N/A' }
-        ]
-      }
-    ]
-  }
-];
+window.virtualScrollData = [];
+window.parentMap = new Map();
+
+window.VirtualdataSource = function () {
+    if (window.virtualScrollData.length > 0) return; // Already generated
+
+    var Names = [
+        'Production West US - Resource Group', 'Production East US - Resource Group', 'Staging West US - Resource Group', 
+        'Development East US - Resource Group', 'Analytics EU West - Resource Group', 'Security Global - Resource Group', 
+        'Finance EU Central - Resource Group', 'Marketing US East - Resource Group', 'Sales Asia Pacific - Resource Group', 
+        'Shared Core - Resource Group', 'API Server 01', 'API Server 02', 'Web Server 01', 'Web Server 02', 'Batch Worker 01', 
+        'ETL Worker 01', 'ETL Worker 02', 'Redis Cache 01', 'Redis Cache 02', 'Background Worker 01', 'PostgreSQL Primary', 
+        'PostgreSQL Replica', 'MySQL Orders', 'SQL Server BI', 'MongoDB Catalog', 'Redis Session Store', 'Cosmos DB User Profile', 
+        'Analytics Warehouse', 'Time Series Metrics DB', 'Secrets Vault', 'Logs Archive Storage', 'Daily Backups Storage', 
+        'Images CDN Storage', 'Data Lake Raw Zone', 'Data Lake Curated Zone', 'Temporary Scratch Storage', 'CI Artifacts Storage', 
+        'Shared Documents Storage', 'Export Dumps Storage', 'ML Models Storage', 'Core Hub Virtual Network', 
+        'Applications Spoke Virtual Network', 'Data Spoke Virtual Network', 'Frontend Subnet', 'Backend Subnet', 
+        'Data Services Subnet', 'Frontend Network Security Group', 'Backend Network Security Group', 'Data Network Security Group', 
+        'Perimeter Firewall', 'Production Kubernetes Cluster', 'Staging Kubernetes Cluster', 'Analytics Kubernetes Cluster', 
+        'System Node Pool', 'General Node Pool', 'GPU Node Pool', 'Apps Namespace', 'Operations Namespace', 'Observability Namespace', 
+        'Ingress Gateway', 'Public Web Load Balancer', 'Internal API Load Balancer', 'Frontend Application Gateway', 
+        'Backend Application Gateway', 'Core API Gateway', 'Service Mesh Gateway', 'Edge Gateway', 'Global Traffic Manager', 
+        'Private Link Endpoint', 'NAT Gateway', 'Image Resize Function', 'Data Transform Function', 'Webhook Handler Function', 
+        'Scheduled Cleanup Function', 'ETL Trigger Function', 'PDF Generator Function', 'Notification Dispatcher Function', 
+        'Thumbnail Generator Function', 'CSV Import Function', 'Anomaly Detector Function', 'Web Portal Application', 
+        'Admin Console Application', 'Partner API Service', 'Customer API Service', 'Mobile Backend Service', 'Campaign Service', 
+        'Notification Service', 'Payment Service', 'Reporting Service', 'Search Service', 'Log Analytics Workspace', 
+        'Metrics Workspace', 'Alert Rules Collection', 'Uptime Probes', 'APM Insights', 'Grafana Dashboard', 'Prometheus Server', 
+        'Trace Collector', 'Synthetic Tests Suite', 'SIEM Platform'
+    ];
+    
+    var Types = ['Virtual Machine', 'Database', 'Storage', 'Network', 'Kubernetes', 'Gateway', 'Serverless', 'Application', 'Monitoring', 'Security'];
+    var Families = ['Compute', 'Data', 'Storage', 'Networking', 'Containers', 'Gateway', 'Serverless', 'Application', 'Observability', 'Security'];
+    var Statuses = ['Running', 'Stopped', 'Degraded', 'Maintenance'];
+    var Regions = ['West US', 'East US', 'EU West', 'EU Central', 'Asia Pacific', 'South America', 'Canada Central', 'Australia East'];
+    var Groups = ['RG-Production', 'RG-Staging', 'RG-Development', 'RG-Shared', 'RG-Analytics', 'RG-Security', 'RG-Finance', 'RG-Apps'];
+    var Owners = ['Alice', 'Bob', 'Carlos', 'Diana', 'Ethan', 'Fatima', 'Gina', 'Hiro', 'Ivan', 'Julia'];
+    var Envs = ['Production', 'Staging', 'Development'];
+    var Priorities = ['Low', 'High', 'Critical'];
+
+    var RecordID = 1220;
+    for (var i = 1; i <= 2000; i++) {
+        var nameIndex = (i % 100);
+        var parent = {
+            TaskID: ++RecordID,
+            ParentID: null,
+            ResourceId: Names[nameIndex],
+            Name: Types[i % Types.length],
+            ServiceFamily: Families[i % Families.length],
+            Status: Statuses[i % Statuses.length],
+            Region: Regions[i % Regions.length],
+            ResourceGroup: Groups[i % Groups.length],
+            Owner: Owners[i % Owners.length],
+            Environment: Envs[i % Envs.length],
+            StorageGb: (i % 2 === 0) ? 410 + 2 : (i % 5 === 0) ? 410 + 1 : 410 + 45,
+            NetworkMbps: (i % 2 === 0) ? 67 + 2 : (i % 5 === 0) ? 67 + 1 : 67 + 6,
+            MonthlyCost: (i % 2 === 0) ? 100 + 2 : (i % 5 === 0) ? 100 + 1 : 100 + 12,
+            ErrorRatePpm: (i % 2 === 0) ? 35 + 2 : (i % 5 === 0) ? 24 + 1 : 45 + 12,
+            RequestsPerSec: (i % 2 === 0) ? 46 + 2 : (i % 5 === 0) ? 46 + 1 : 64 + 6,
+            TagsCount: (i % 2 === 0) ? 67 + 2 : (i % 5 === 0) ? 67 + 1 : 67 + 6,
+            InstanceCount: (i % 2 === 0) ? 2 + 2 : (i % 5 === 0) ? 1 + 1 : 1 + 6,
+            UptimeDays: (i % 2 === 0) ? 46 + 2 : (i % 5 === 0) ? 46 + 1 : 64 + 6,
+            Cpu: (i % 2 === 0) ? 210 + 23 : (i % 5 === 0) ? 210 + 12 : 210 + 621,
+            Memory: (i % 2 === 0) ? 300 + 533 : (i % 5 === 0) ? 300 + 321 : 300 + 699,
+            Disk: (i % 2 === 0) ? 400 + 232 : (i % 5 === 0) ? 400 + 153 : 400 + 342,
+            SecurityFindings: (i % 2 === 0) ? 40 + 12 : (i % 5 === 0) ? 40 + 24 : 40 + 25,
+            ComplianceScore: ((i % 2 === 0) ? 1000 + 112 : (i % 5 === 0) ? 1000 + 153 : 1000 + 412) % 101,
+            Priority: Priorities[i % Priorities.length]
+        };
+        
+        window.virtualScrollData.push(parent);
+        window.parentMap.set(parent.TaskID, parent);
+
+        for (var j = 1; j <= 4; j++) {
+            var childIndex = ((i + j) % 100);
+            var child = {
+                TaskID: ++RecordID,
+                ParentID: parent.TaskID,
+                ResourceId: Names[childIndex],
+                Name: Types[j % Types.length],
+                ServiceFamily: Families[(i + j) % Families.length],
+                Status: Statuses[(i + j) % Statuses.length],
+                Region: Regions[(i + j) % Regions.length],
+                ResourceGroup: Groups[(i + j) % Groups.length],
+                Owner: Owners[(i + j) % Owners.length],
+                Environment: Envs[(i + j) % Envs.length],
+                StorageGb: (j % 3 === 0) ? 410 + (j + 2) : (j % 4 === 0) ? 410 + (j + 1) : 410 + (j + 14),
+                NetworkMbps: (j % 3 === 0) ? 67 + (j + 2) : (j % 4 === 0) ? 67 + (j + 1) : 67 + (j + 7),
+                MonthlyCost: (j % 3 === 0) ? 76 + (j + 2) : (j % 4 === 0) ? 23 + (j + 1) : 45 + (j + 7),
+                ErrorRatePpm: (j % 3 === 0) ? 87 + (j + 2) : (j % 4 === 0) ? 87 + (j + 1) : 87 + (j + 12),
+                RequestsPerSec: (j % 3 === 0) ? 54 + (j + 2) : (j % 4 === 0) ? 54 + (j + 1) : 54 + (j + 12),
+                TagsCount: (j % 3 === 0) ? 280 + (j + 2) : (j % 4 === 0) ? 280 + (j + 1) : 280 + (j + 12),
+                InstanceCount: (j % 3 === 0) ? 12 + (j + 2) : (j % 4 === 0) ? 12 + (j + 1) : 12 + (j + 12),
+                UptimeDays: (j % 3 === 0) ? 54 + (j + 2) : (j % 4 === 0) ? 53 + (j + 1) : 23 + (j + 12),
+                Cpu: (j % 3 === 0) ? 210 + (j + 2) : (j % 4 === 0) ? 237 + (j + 1) : 290 + (j + 12),
+                Memory: (j % 3 === 0) ? 300 + (j + 2) : (j % 4 === 0) ? 300 + (j + 1) : 300 + (j + 12),
+                Disk: (j % 3 === 0) ? 400 + (j + 2) : (j % 4 === 0) ? 400 + (j + 1) : 400 + (j + 12),
+                SecurityFindings: (j % 3 === 0) ? 40 + (j + 2) : (j % 4 === 0) ? 40 + (j + 1) : 40 + (j + 12),
+                ComplianceScore: ((j % 3 === 0) ? 1003 + (j + 2) : (j % 4 === 0) ? 1100 + (j + 1) : 1000 + (j + 12)) % 101,
+                Priority: Priorities[(i + j) % Priorities.length]
+            };
+            window.virtualScrollData.push(child);
+            window.parentMap.set(child.TaskID, child);
+        }
+    }
+};

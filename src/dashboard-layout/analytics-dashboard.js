@@ -231,10 +231,10 @@ this.default = function () {
         },
         layers: [
             {
-                shapeData: new ej.maps.MapAjax('https://ej2.syncfusion.com/demos/src/dashboard-layout/worldmap.json'),
+                shapeData: new ej.maps.MapAjax('./src/dashboard-layout/worldmap.json'),
                 shapePropertyPath: 'continent',
                 shapeDataPath: 'continent',
-                dataSource: new ej.maps.MapAjax('https://ej2.syncfusion.com/demos/src/dashboard-layout/datasource.json'),
+                dataSource: new ej.maps.MapAjax('./src/dashboard-layout/datasource.json'),
                 shapeSettings: {
                     colorValuePath: 'color',
                 },
@@ -254,7 +254,7 @@ this.default = function () {
                             { latitude: 51.5326602, longitude: -0.1262422, name: 'London' }
                         ],
                         shape: 'Image',
-                        imageUrl: 'https://ej2.syncfusion.com/demos/src/maps/images/ballon.png',
+                        imageUrl: 'src/maps/images/ballon.png',
                         height: 20,
                         width: 20,
                         offset: {

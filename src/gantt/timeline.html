@@ -8,113 +8,113 @@
 <div class="col-lg-4 property-section">
     <table id="property" title="Properties" style="width: 100%;">
         <colgroup>
-            <col style="width:30%" />
-            <col style="width:70%" />
+            <col style="width:35%" />
+            <col style="width:65%" />
         </colgroup>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
+                <div>Timeline Range</div>
+            </td>
+            <td style="width:65%">
+                <div>
+                    <input id="timelineDateRange"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:35%">
                 <div>Timeline Unit Size</div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div>
                     <input id="unitWidth" type="text" />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
-                <div><b>Top tier</b></div>
-            </td>
-            <td style="width:70%">
-                <div>
-                    <input type="checkbox" id="topTierCheck" class="checkbox" checked="checked" />
-                </div>
+            <td colspan="2" style="width:35%">
+                <div><b>Top Tier</b></div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>Count</div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div id='numericbox'>
                     <input type="text" id="count" class="form-control" />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>
                     Unit
                 </div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div>
                     <input type="text" tabindex="1" id='unit' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>
                     Format
                 </div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div>
                     <input type="text" tabindex="1" id='format' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
-                <div><b>Bottom tier</b></div>
-            </td>
-            <td style="width:70%">
-                <div>
-                    <input type="checkbox" id="bottomTierCheck" class="checkbox" checked="checked" />
-                </div>
+            <td colspan="2" style="width:35%">
+                <div><b>Bottom Tier</b></div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>Count</div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div id='numericbox'>
                     <input type="text" id="btCount" class="form-control" />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>
                     Unit
                 </div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div>
                     <input type="text" tabindex="1" id='btUnit' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
+            <td style="width:35%">
                 <div>
                     Format
                 </div>
             </td>
-            <td style="width:70%">
+            <td style="width:65%">
                 <div>
                     <input type="text" tabindex="1" id='btFormat' />
                 </div>
             </td>
         </tr>
         <tr>
-            <td style="width:30%">
-                <div><strong>Enable multitaskbar</strong></div>
+            <td style="width:35%">
+                <div>Multiple Taskbars</div>
             </td>
-            <td style="width:70%">
-                <div>
+            <td style="width:65%">
+                <div style="padding-top: 0px; padding-left: 0px">
                     <input type="checkbox" id="mutiTaskbarCheck" class="checkbox" checked="checked" />
                 </div>
             </td>
@@ -122,27 +122,21 @@
     </table>
 </div>
 <div id="action-description">
-    <p>This sample allows you to customize the Gantt Chart timeline by adjusting the timeline unit size, header text format, and count for both the top and bottom tiers, and provides an option to enable the multitaskbar feature.
+    <p>This sample demonstrates how the Gantt Chart timeline adapts to different time scales (hours, days, and months), helping users visualize project schedules at varying levels of detail.
     </p>
 </div>
 
 <div id="description">
-    <p>
-        This example demonstrates how to effectively customize the timeline settings of a Gantt Chart.
-        You can customize the timeline width by adjusting the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettingsModel/#timelineunitsize">timelineunitsize</a> property
-        in <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettingsModel/">timelineSettings</a>. 
-        The Gantt Chart supports various timeline units such as <code>minutes</code>, <code>hours</code>, <code>days</code>, <code>weeks</code>, <code>months</code>, and <code>years</code>.
-        You can easily customize these units by changing the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineTierSettings/#unit">unit</a> for both top tier and bottom tier in <code>timelineSettings</code>. 
-        The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineTierSettings/#format">format</a> of the timeline can be customized by modifying the format value for both the top and bottom tiers. 
-        You can combine timeline cells in the top and bottom tiers using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineTierSettings/#count">count</a> property in <code>timelineSettings</code>.
-    </p>
-    <p>
-        Tooltips are visible by default in the Gantt Chart timeline, You can customize the tooltip visiblity by using the  <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettings/#showtooltip">showtooltip</a> property in the timeline settings.
-    </p>
-    <p>
-        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#enablemultitaskbar">enablemultitaskbar</a> allows you to display multiple taskbars within a parent row, ensuring a clear overview even in collapsed states.
-    </p>
-    <br>
+    <p>This demo illustrates how to customize the timeline settings in a Gantt Chart. It covers:</p>
+    <ul>
+        <li><b>Timeline Date Range:</b> Define the timeline view's start and end dates using <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelinesettings#viewstartdate">viewStartDate</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelinesettings#viewenddate">viewEndDate</a>.</li>
+        <li><b>Timeline Cell Width:</b> Adjusted using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettingsModel/#timelineunitsize">timelineUnitSize</a> property.</li>
+        <li><b>Cell Combination:</b> Merge multiple timeline cells using the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineTierSettings/#count">count</a> property.</li>
+        <li><b>Timeline Units:</b> Supports minutes, hours, days, weeks, months, and years. Units can be configured for both top and bottom tiers.</li>
+        <li><b>Timeline Format:</b> Customizable by modifying the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/timelineTierSettings/#format">format</a> value for each tier.</li>
+        <li><b>Multiple Taskbars:</b> Enabled with <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#enablemultitaskbar">enableMultiTaskbar</a> to display multiple taskbars within a collapsed parent row.</li>
+    </ul>
+    <p>These settings highlight how the timeline can be customized to support different tiers, unit sizes, and ranges, while also enabling multiple task visualization within the same view.</p>
     <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/timeline/timeline">documentation section</a>.</p>
 
 </div>

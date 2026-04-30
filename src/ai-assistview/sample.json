@@ -34,6 +34,7 @@
             "url": "streaming",
             "name": "Streaming Response",
             "category": "AI AssistView",
+            "type": "update",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings"] },
             "description": "Showcases the AiAssistView control with its streaming support.",
             "sourceFiles": [
@@ -82,7 +83,6 @@
             "url": "model",
             "name": "Multiple AI Models",
             "category": "Use Cases",
-            "type": "new",
             "api":{ "AIAssitView": ["bannerTemplate", "promptItemTemplate", "responseItemTemplate", "promptSuggestionItemTemplate", "promptSuggestions", "promptSuggestionsHeader", "promptRequest"] },
             "description": "Showcases the AiAssistView control to integrate with Gemini, OpenAI Sample.",
             "sourceFiles": [
@@ -94,9 +94,9 @@
             "url": "speech-to-text",
             "name": "Speech To Text",
             "category": "Speech",
-            "type": "new",
-            "api":{ "AIAssitView": ["promptRequest", "toolbarSettings", "bannerTemplate", "footerTemplate", "promptToolbarSettings", "stopRespondingClick"] },
-            "description": "Demonstrates the AI AssistView component integrated with Speech-to-Text functionality, enabling users to interact using voice input transcribed into text.",
+            "type": "update",
+            "api":{ "AIAssitView": ["promptRequest", "toolbarSettings", "speechToTextSettings", "bannerTemplate", "attachmentSettings", "promptToolbarSettings", "stopRespondingClick"] },
+            "description": "Demonstrates the AI AssistView component integrated  the built-in Speech-to-Text functionality, enabling users to interact using voice input transcribed into text.",
             "sourceFiles": [
                 { "displayName": "ai-speech-to-text.js", "path":"src/ai-assistview/speech-to-text.js" },
                 { "displayName": "ai-speech-to-text.html", "path":"src/ai-assistview/speech-to-text.html" } 
@@ -106,7 +106,6 @@
             "url": "text-to-speech",
             "name": "Text To Speech",
             "category": "Speech",
-            "type": "new",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AiAssistView component integrated with Text-to-Speech functionality, allowing AI-generated responses to be vocalized for voice-based interaction.",
             "sourceFiles": [

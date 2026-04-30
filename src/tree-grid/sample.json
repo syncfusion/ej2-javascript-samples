@@ -2,8 +2,8 @@
    "name": "Tree Grid",
    "directory": "tree-grid",
    "category": "Grids",
-   "type": "update",
    "ftName": "treegrid",
+   "type": "update",
    "dataSourcePath": "src/tree-grid/data-source.js",
    "samples": [
       {
@@ -305,7 +305,6 @@
          "url": "auto.wrap",
          "name": "Auto Wrap Column Cells",
          "category": "Columns",
-         "type": "update",
          "api": {
             "TreeGrid": [
                "dataSource",
@@ -479,7 +478,6 @@
          "url": "row-spanning",
          "name": "Row Spanning (API)",
          "category": "Rows",
-         "type": "new",
          "api": {
             "TreeGrid": [
                "dataSource",
@@ -798,6 +796,7 @@
          "name": "Virtual Scrolling",
          "description": "This demo demonstrates how to use Essential<sup>®</sup> JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.",
          "category": "Scrolling",
+         "type": "update",
          "api": {
             "TreeGrid": [
                "dataSource",

@@ -55,7 +55,6 @@
         {
             "url": "dynamic-binding",
             "name": "Dynamic Binding",
-            "type": "new",
             "category": "Data Binding",
             "description": "Pivot Table demo for dynamic data loading from JSON, CSV, and OLAP(XMLA) sources, with toolbar options to save and reload reports as JSON files."
         },
@@ -249,6 +248,7 @@
             "url": "exporting",
             "name": "Default Export",
             "category": "Exporting",
+            "type": "update",
             "description": "This demo for Essential<sup>®</sup> JS2 Pivot Table control demonstrate client-side exporting of the pivot table to Excel, CSV and PDF formats"
         },
         {

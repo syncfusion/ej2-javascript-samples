@@ -33673,3 +33673,135 @@ window.supportData = [
         CustomerEmail: 'user200@example.com',
     }
 ];
+
+window.virtualOrderData = [];
+window.createVirtualOrderData = function() {
+    if (window.virtualOrderData.length) { return; }
+    function pmRandom(seed) {
+        var t = (seed % 2147483647);
+        if (t <= 0) t += 2147483646;
+        return function () {
+            t = (t * 16807) % 2147483647;
+            return (t - 1) / 2147483646;
+        };
+    }
+    var seed = 123456789;
+    var rand = pmRandom(seed);
+    function randInt(min, max) { return Math.floor(rand() * (max - min + 1)) + min; }
+    function randChoice(arr) { return arr[Math.floor(rand() * arr.length)]; }
+    function pickAvoidTriplet(arr, fieldName) {
+        var v = randChoice(arr);
+        if (virtualOrderData.length >= 2) {
+            var a = virtualOrderData[virtualOrderData.length - 1][fieldName];
+            var b = virtualOrderData[virtualOrderData.length - 2][fieldName];
+            if (a === b && a === v) {
+                var alt = arr.filter(function (s) { return s !== v; });
+                v = randChoice(alt);
+            }
+        }
+        return v;
+    }
+
+    var names = ['Maria', 'Ana Trujillo', 'Antonio Moreno', 'Thomas Hardy', 'Christina Berglund', 'Hanna Moos', 'Frederique Citeaux', 'Martin Sommer', 'Laurence Lebihan', 'Elizabeth Lincoln',
+    'Victoria Ashworth', 'Patricio Simpson', 'Francisco Chang', 'Yang Wang', 'Pedro Afonso', 'Elizabeth Brown', 'Sven Ottlieb', 'Janine Labrune', 'Ann Devon', 'Roland Mendel', 'Aria Cruz', 'Diego Roel',
+    'Martine Rance', 'Maria Larsson', 'Peter Franken', 'Carine Schmitt', 'Paolo Accorti', 'Lino Rodriguez', 'Eduardo Saavedra', 'Jose Pedro Freyre', 'Andre Fonseca', 'Howard Snyder', 'Manuel Pereira',
+    'Mario Pontes', 'Carlos Hernández', 'Yoshi Latimer', 'Patricia McKenna', 'Helen Bennett', 'Philip Cramer', 'Daniel Tonini', 'Annette Roulet', 'Yoshi Tannamuri', 'John Steel', 'Renate Messner', 'Jaime Yorres',
+    'Carlos Gonzalez', 'Felipe Izquierdo', 'Fran Wilson', 'Giovanni Rovelli', 'Catherine Dewey', 'Jean Fresnière', 'Alexander Feuer', 'Simon Crowther', 'Yvonne Moncada', 'Rene Phillips', 'Henriette Pfalzheim',
+    'Marie Bertrand', 'Guillermo Fernandez', 'Georg Pipps', 'Isabel de Castro', 'Bernardo Batista', 'Lucia Carvalho', 'Horst Kloss', 'Sergio Gutierrez', 'Paula Wilson', 'Maurizio Moroni', 'Janete Limeira', 'Michael Holz',
+    'Alejandra Camino', 'Jonas Bergulfsen', 'Jose Pavarotti', 'Hari Kumar', 'Jytte Petersen', 'Dominique Perrier', 'Art Braunschweiger', 'Pascale Cartrain', 'Liz Nixon', 'Liu Wong', 'Karin Josephs', 'Miguel Angel Paolino',
+    'Anabela Domingues', 'Helvetius Nagy', 'Palle Ibsen', 'Mary Saveley', 'Paul Henriot', 'Rita Muller', 'Pirkko Koskitalo', 'Paula Parente', 'Karl Jablonski', 'Matti Karttunen', 'Zbyszek Piestrzeniewicz'];
+    var products = ['Chai','Chang','Aniseed Syrup','Chef Anton\'s Cajun Seasoning','Grandma\'s Boysenberry Spread','Uncle Bob\'s Organic Dried Pears','Mishi Kobe Niku','Ikura','Queso Cabrales','Pavlova'];
+    var categories = ['Beverages', 'Condiments', 'Confections', 'Dairy Products', 'Grains/Cereals', 'Meat/Poultry', 'Seafood'];
+    var paymentMethods = ['Card','Digital','Cash'];
+    var orderStatuses = ['Ordered','Processing','Packed','Shipped','Delivered','Canceled','Returned'];
+    var priorities = ['Low','Medium','High','Critical'];
+    var cities = ['Seattle','Austin','Boston','Chicago','San Francisco','New York'];
+    var states = ['WA','TX','MA','IL','CA','NY'];
+    var countries = ['USA','Canada','Mexico','UK','Germany','France'];
+    var warehouses = ['WH-A','WH-B','WH-C','WH-D'];
+    var productToCategory = (function(){
+        var m = {};
+        for (var pi = 0; pi < products.length; pi++) { m[products[pi]] = categories[pi % categories.length]; }
+        return m;
+    })();
+
+    function computeAmounts(qty, unitPrice, discountPct, taxPct, shippingFee) {
+        var gross = qty * unitPrice;
+        var discount = gross * (discountPct / 100);
+        var subtotal = gross - discount;
+        var tax = subtotal * (taxPct / 100);
+        var total = subtotal + tax + shippingFee;
+        return { subtotal: Math.round(subtotal * 100) / 100, taxAmount: Math.round(tax * 100) / 100, totalAmount: Math.round(total * 100) / 100 };
+    }
+    var baseTime = new Date(2025, 0, 1).getTime();
+    for (var i = 1; i <= 100000; i++) {
+        var qty = randInt(1, 10);
+        var unitPrice = Math.round((rand() * 500 + 5) * 100) / 100;
+        var discountPct = randInt(0, 20);
+        var taxPct = randInt(0, 18);
+        var shippingFee = Math.round((rand() * 20) * 100) / 100;
+        var amounts = computeAmounts(qty, unitPrice, discountPct, taxPct, shippingFee);
+        var orderDate = new Date(baseTime - randInt(0, 90) * 24 * 3600 * 1000);
+        var shippedDate = new Date(orderDate.getTime() + randInt(1, 14) * 24 * 3600 * 1000);
+        var customerId = randInt(1000, 9999);
+        var custName = randChoice(names);
+        var email = custName.toLowerCase().replace(/\s+/g, '.') + '@example.com';
+        var paymentMethod = pickAvoidTriplet(paymentMethods, 'PaymentMethod');
+        var rating = randInt(1, 5);
+        var orderStatusVal = pickAvoidTriplet(orderStatuses, 'OrderStatus');
+        var priorityVal = pickAvoidTriplet(priorities, 'Priority');
+        var productName = randChoice(products);
+        var derivedCategory = productToCategory[productName] || randChoice(categories);
+        var warehouse = randChoice(warehouses);
+        var inventoryCount = randInt(0, 500);
+        var paymentStatus;
+        if (orderStatusVal === 'Delivered' || orderStatusVal === 'Shipped') {
+            paymentStatus = 'Paid';
+        } else if (orderStatusVal === 'Canceled' || orderStatusVal === 'Returned') {
+            if (rating <= 1) {
+                paymentStatus = 'Failed';
+            } else {
+                paymentStatus = (paymentMethod === 'COD') ? 'Pending' : 'Refunded';
+            }
+        } else if (orderStatusVal === 'Packed') {
+            paymentStatus = (paymentMethod === 'COD') ? 'Pending' : 'Paid';
+        } else if (orderStatusVal === 'Ordered' || orderStatusVal === 'Processing') {
+            paymentStatus = 'Pending';
+        } else {
+            paymentStatus = 'Pending';
+        }
+
+        virtualOrderData.push({
+            OrderID: 'ORD-' + (1000 + i),
+            OrderDate: orderDate,
+            ShipDate: shippedDate,
+            CustomerID: 'CUS-' + customerId,
+            CustomerName: custName,
+            Email: email,
+            Phone: '+1-' + randInt(200,999) + '-' + randInt(1000,9999),
+            ShipAddress: randInt(10,999) + ' ' + randChoice(['Main St','Market St','1st Ave','Broadway']),
+            ShipCity: randChoice(cities),
+            ShipState: randChoice(states),
+            ShipPostalCode: '' + randInt(10000,99999),
+            ShipCountry: randChoice(countries),
+            ProductID: 'PROD-' + randInt(10000, 99999),
+            ProductName: productName,
+            Category: derivedCategory,
+            Quantity: qty,
+            UnitPrice: unitPrice,
+            Discount: discountPct,
+            Tax: taxPct,
+            SubTotal: amounts.subtotal,
+            TaxAmount: amounts.taxAmount,
+            ShipFee: shippingFee,
+            TotalAmount: amounts.totalAmount,
+            PaymentMethod: paymentMethod,
+            PaymentStatus: paymentStatus,
+            Warehouse: warehouse,
+            InventoryCount: inventoryCount,
+            Priority: priorityVal,
+            OrderStatus: orderStatusVal,
+            Rating: rating,
+        });
+    }
+};

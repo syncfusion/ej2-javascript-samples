@@ -41,6 +41,13 @@ this.default = function () {
     });
     barcodeValueUpcA.appendTo('#barcodeValue');
 
+    var input = document.getElementById("barcodeValue");
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
     var barcodeWidthUpcA = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
         value: 200, step: 2, min: 150, max: 250,

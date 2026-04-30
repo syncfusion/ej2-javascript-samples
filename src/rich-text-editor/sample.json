@@ -59,7 +59,6 @@
             "name": "AI Assistant",
             "description": "This demo showcases the HTML5 JavaScript Rich Text Editor (JavaScript WYSIWYG HTML editor) control's built in AI Assistant feature.",
             "category": "Rich Text Editor",
-            "type": "new",
             "hideDisplayGif": false,
             "sourceFiles": [
                 { "displayName": "ai-assistant.html", "path": "src/rich-text-editor/ai-assistant.html" },
@@ -81,6 +80,7 @@
             "name": "Image",
             "description": "This demo explains how to insert images with a blob or base64 format, link to the images, image upload, rotate left/right, and more in JS (ECMAScript 5) Editor.",
             "category": "Rich Text Editor",
+            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",

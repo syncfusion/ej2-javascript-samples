@@ -42,6 +42,13 @@ this.default = function () {
     });
     barcodeValueCode128A.appendTo('#barcodeValue');
 
+    var input = document.getElementById("barcodeValue");
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
     var barcodeWidthCode128A = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
         value: 200, step: 2, min: 150, max: 250,

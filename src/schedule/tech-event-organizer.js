@@ -477,7 +477,7 @@ this.default = function () {
     }
 
     function onActionBegin(args) {
-        if (args.requestType === 'eventCreate') {
+        if (args.requestType === 'eventCreate' || args.requestType === 'eventChange') {
             var data = args.data;
             var roomId = data[0].RoomId;
             var startTime = data[0].StartTime;
@@ -491,7 +491,7 @@ this.default = function () {
                 return;
             }
         }
-    }
+    }    
 
     function onActionComplete(args) {
         if (args.requestType === 'toolBarItemRendered') {

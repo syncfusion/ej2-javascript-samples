@@ -3,7 +3,6 @@
     "directory": "textarea",
     "category": "Inputs",
     "ftName": "textarea",
-    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -48,7 +47,6 @@
             "url": "adornments",
             "name": "Adornments",
             "category": "TextArea",
-            "type": "new",
             "description": "The example exposes a JavaScript(ES5) textarea with adornments support. It helps to render custom elements before or after the textarea element.",
             "api": {
                 "TextArea": [

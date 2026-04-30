@@ -1,4 +1,3 @@
-
 .fluent2-dark .e-samplestatus.new,
 .fluent2-dark .e-samplestatus.new.tree,
 .fluent2-dark .e-samplestatus.New,
@@ -296,7 +295,7 @@ body.fluent2-dark,
 .fluent2-dark .e-samplestatus.new.tree,
 .fluent2-dark .e-samplestatus.update.tree,
 .fluent2-dark .e-samplestatus.preview.tree {
-    margin: 6px 0;
+    margin: 5px 0 !important;
     height: 22px;
     margin-top: 3px;
 }

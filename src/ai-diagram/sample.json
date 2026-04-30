@@ -2,10 +2,12 @@
     "name": "Diagram",
     "directory": "ai-diagram",
     "category": "Smart AI Solutions",
+    "type": "update",
     "samples": [
         {
             "url": "text-to-flowchart",
             "name": "Text to Flowchart",
+            "type": "update",
             "category": "Diagram",
             "sourceFiles": [
                 { "displayName": "text-to-flowchart.js", "path": "src/ai-diagram/text-to-flowchart.js" },
@@ -16,10 +18,22 @@
         {
             "url": "text-to-mindmap",
             "name": "Text to MindMap",
+            "type": "update",
             "category": "Diagram",
             "sourceFiles": [
                 { "displayName": "text-to-mindmap.js", "path": "src/ai-diagram/text-to-mindmap.js" },
                 { "displayName": "text-to-mindmap.html", "path": "src/ai-diagram/ai-text-to-mindmap.html" }
+            ],
+            "description": "This demo showcases the Diagram AI feature."
+        },        
+        {
+            "url": "text-to-umlSequenceDiagram",
+            "name": "Text to UML Sequence Diagram",
+            "type": "new",
+            "category": "Diagram",
+            "sourceFiles": [
+                { "displayName": "text-to-umlSequenceDiagram.js", "path": "src/ai-diagram/text-to-umlSequenceDiagram.js" },
+                { "displayName": "text-to-umlSequenceDiagram.html", "path": "src/ai-diagram/ai-text-to-umlSequenceDiagram.html" }
             ],
             "description": "This demo showcases the Diagram AI feature."
         }

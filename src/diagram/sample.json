@@ -229,6 +229,13 @@
             "category": "Data Binding"
         },
         {
+            "url": "visio-import-export",
+            "name": "Visio",
+            "description": "Syncfusion® EJ2 Diagram: Import and export Visio (VSDX), then edit with drag‑drop, group/ungroup, cut/copy/paste, text, and undo/redo.",
+            "category": "File Format",
+            "type": "preview"
+        },
+        {
             "url": "virtualization",
             "name": "Virtualization",
             "description": "This sample demonstrates the default UI virtualization functionality. Scroll the diagram for UI virtualization.",
@@ -322,29 +329,25 @@
             "url": "funnel-diagram",
             "name": "Funnel Diagram",
             "description": "Infographic funnel diagram with customizable node shapes and colors, showing stage-wise conversion and cumulative rates to assess marketing performance.",
-            "category": "Use Case Diagram",
-            "type":"new"
+            "category": "Use Case Diagram"
         },
         {
             "url": "family-tree",
             "name": "Family Tree Diagram",
             "description": "Visualize family relationships with Syncfusion® EJ2 JavaScript Diagram. Arrange members in a complex hierarchical layout, showing names, tenure, and clear connections between spouses and children.",
-            "category": "Use Case Diagram",
-            "type": "new"
+            "category": "Use Case Diagram"
         },
         {
             "url": "serpentine-diagram",
             "name": "Serpentine Diagram",
             "description": "Visualizes a custom serpentine layout with the Diagram component, featuring 20 key medical breakthroughs that revolutionized healthcare (1796–1996).",
-            "category": "Use Case Diagram",
-            "type": "new"
+            "category": "Use Case Diagram"
         },
         {
             "url": "angle-diagram",
             "name": "Solar Panel Angle",
             "description": "Demonstrate a smart solar panel tilt system using Syncfusion® EJ2 JavaScript Diagram. Interactively adjust panel angles, track efficiency, and optimize based on sun position and location.",
-            "category": "Real-time Diagrams",
-            "type": "new"
+            "category": "Real-time Diagrams"
         },
         {
             "url": "pipeline-instrumentation-diagram",
@@ -362,8 +365,7 @@
             "url": "venn-diagram",
             "name": "Venn Diagram",
             "description": "This JavaScript Venn Diagram shows set relationships and overlapping data visualization for statistical analysis and logical comparisons.",
-            "category": "Real-time Diagrams",
-            "type": "update"
+            "category": "Real-time Diagrams"
         },
         {
             "url": "network-diagram",

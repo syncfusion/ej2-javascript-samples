@@ -6,6 +6,31 @@
 
 
 this.default = function () {
+
+    //To enhance the functionality of a webpage for mobile devices by adding a click event listener 
+    function addEventsLogic() {
+        var isMobileDevice = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileDevice) {
+            var paletteIcons = document.getElementById('palette-icon');
+            if (paletteIcons) {
+                paletteIcons.addEventListener('click', openPaletteLogic, false);
+            }
+        }
+    }
+    //To manage the visibility state of the palette space on a webpage for mobile devices
+    function openPaletteLogic() {
+        var paletteSpaces = document.getElementById('palette-space');
+        isMobileDevice = window.matchMedia('(max-width:550px)').matches;
+        if (isMobileDevice) {
+            if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
+                paletteSpaces.classList.add('sb-mobile-palette-open');
+            }
+            else {
+                paletteSpaces.classList.remove('sb-mobile-palette-open');
+            }
+        }
+    }
+
     var nodeY = 30;
     // Create nodes as logic gates
     function createNode(
@@ -284,6 +309,7 @@ this.default = function () {
         }
     });
     palette.appendTo('#symbolpalette');
+    addEventsLogic();
 
 };
 

@@ -30,6 +30,7 @@
     margin-top: 20px;
     border: 1px solid #dee2e6;
     height: 95%;
+    z-index: 20 !important;
   }
   .blockeditor-marked{
     height:680px;
@@ -90,6 +91,8 @@
     position: sticky;
     top: 0;
     z-index:10 ;
+    height: 48px;
+    background: var(--color-sf-content-bg-color-alt1);
   }
   .blockeditor-marked .stick .block-content .e-chevron-right {
     font-size: 10px ;
@@ -132,6 +135,14 @@
 
   .tailwind3-dark .blockeditor-marked .sidebar-content #left-toc-closebtn {
     background: rgb(73 76 80);
+  }
+
+  .e-bigger.material3 .e-treeview .e-list-item .e-text-content,
+  .e-bigger.fluent2 .e-treeview .e-list-item .e-ul,
+  .e-bigger.fluent2 .e-treeview .e-list-item .e-text-content,
+  .e-bigger.fluent2-highcontrast .e-treeview .e-list-item .e-ul,
+  .e-bigger.fluent2-highcontrast .e-treeview .e-list-item .e-text-content{
+    padding-left: 20px;
   }
   
 </style>

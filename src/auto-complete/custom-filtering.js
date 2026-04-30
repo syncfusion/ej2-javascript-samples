@@ -50,7 +50,7 @@ this.default = function () {
   // Dynamically load the fuse.js file
   function loadExternalFile() {
       var script = document.createElement('script');
-      script.src = 'dist/fuse.min.js';
+      script.src = 'https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js';
       document.getElementsByTagName('head')[0].appendChild(script);
   }
 

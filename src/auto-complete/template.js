@@ -10,7 +10,7 @@ this.default = function () {
         headerTemplate:
         '<div class="header"> <span>Photo</span> <span class="info">Employee Info</span></div>',
         // set the template content for list items
-        itemTemplate: '<div><img class="empImage" src="styles/images/Employees/${Eimg}.png" alt="employee"/>' +
+        itemTemplate: '<div><img class="empImage" src="src/auto-complete/Employees/${Eimg}.png" alt="employee"/>' +
             '<div class="ename"> ${Name} </div><div class="job"> ${Designation} </div></div>',
         // set the placeholder to AutoComplete input element
         placeholder: 'e.g. Andrew Fuller',

@@ -307,3 +307,7 @@ body.fluent2-highcontrast,
 .fluent2-highcontrast .sb-theme-popup li:hover .sb-theme-select {
     color: transparent;
 }
+
+.fluent2-highcontrast .e-samplestatus.preview.tree{
+    margin-top: 5px !important;
+}

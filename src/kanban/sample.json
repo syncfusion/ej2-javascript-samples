@@ -4,7 +4,6 @@
     "category": "Data Visualization",
     "dataSourcePath": "src/kanban/datasource.js",
     "ftName": "kanban",
-    "type":"update",
     "samples": [
         {
             "url": "overview",
@@ -123,8 +122,7 @@
             "name": "Column Rearrangement",
             "category": "Columns",
             "description": "This example demonstrates the column rearrangement of the Kanban control. You can drag and drop the columns to rearrange them across multiple stages of the Kanban board.",
-            "api": { "Kanban": [ "dataSource", "keyField", "columns", "cardSettings", "allowColumnDragAndDrop" ] },
-            "type":"new"
+            "api": { "Kanban": [ "dataSource", "keyField", "columns", "cardSettings", "allowColumnDragAndDrop" ] }
         },
         {
             "url": "show-hide",

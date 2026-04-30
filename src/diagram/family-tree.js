@@ -226,7 +226,7 @@ this.default = function () {
                     };
                     node.visible = false;
                 } else {
-                    raw.ImageUrl = `src/diagram/Images/family-tree/${raw.Name}.png`;
+                    raw.ImageUrl = `https://ej2.syncfusion.com/javascript/demos/src/diagram/Images/family-tree/${raw.Name}.png`;
                     node.shape = { type: 'HTML' };
                     node.width = NODE_WIDTH;
                     node.height = NODE_HEIGHT;

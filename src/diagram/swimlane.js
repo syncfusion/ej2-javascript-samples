@@ -414,7 +414,7 @@ this.default = function () {
                     id: 'verticalPhase', addInfo: { tooltip: 'Vertical phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' } }],
+                        phases: [{ style: { strokeWidth: 1} }],
                         annotations: [{ text: '' }],
                         orientation: 'Vertical', isPhase: true
                     },
@@ -424,7 +424,7 @@ this.default = function () {
                     id: 'horizontalPhase', addInfo: { tooltip: 'Horizontal phase' },
                     shape: {
                         type: 'SwimLane',
-                        phases: [{ style: { strokeWidth: 1, strokeDashArray: '3,3' } }],
+                        phases: [{ style: { strokeWidth: 1} }],
                         annotations: [{ text: '' }],
                         orientation: 'Horizontal', isPhase: true
                     },

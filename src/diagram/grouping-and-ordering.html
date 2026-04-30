@@ -1,3 +1,4 @@
+<link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
 <style>
     /* For toolbar width and height */
     .diagram-group .db-toolbar-container {
@@ -5,11 +6,11 @@
        height: 44px;
     }
     /* Symbol palette alignment */
-    .diagram-group .db-palette-parent {
+    .diagram-group #palette-space {
         background-color:#fafafa;
         width: 255px!important;
         float: left;
-        height:calc(100% - 28px);
+        height: 74%;
     }
     /* Diagram alignment */
     .diagram-group .db-diagram-container {
@@ -17,16 +18,59 @@
         height: 100%;
         float: right;
     }
+
+    .diagram-group .sb-mobile-palette {
+        width: 100%;
+        height: 559px;
+        float: left;
+    }
+
+    .diagram-group .sb-mobile-palette-bar {
+        display: none;
+    }
+
+    .diagram-group .sb-mobile-diagram {
+        width: calc(100% - 260px);
+        height: 559px;
+        float: left;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-left: none;
+    }
+
+    @media (max-width: 550px) {
+        .diagram-group .sb-mobile-palette {
+            z-index: 19;
+            position: absolute;
+            transition: transform 300ms linear, visibility 0s linear 300ms;
+            width: 39%;
+            height: 100%;
+        }
+        .diagram-group .sb-mobile-diagram {
+            width: 100%;
+        }
+        .diagram-group .sb-mobile-palette-bar {
+            display: block;
+            width: 100%;
+            background: #fafafa;
+            padding: 10px 10px;
+            border: 0.5px solid #e0e0e0;
+            min-height: 40px;
+        }
+    }
+
 </style>
 <div class="control-section diagram-group" style="width: 100%">
     <div class="db-toolbar-container">
         <div id="toolbarEditor"></div>
     </div>
-    <div>
-        <div class="db-palette-parent">
-            <div id="symbolpalette"></div>
+    <div >
+        <div  class="sb-mobile-palette-bar">
+            <div id="palette-icon" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
         </div>
-        <div class="db-diagram-container">
+        <div id="palette-space" class="sb-mobile-palette">
+            <div id="symbolpalette" ></div>
+        </div>
+        <div class="db-diagram-container sb-mobile-diagram">
             <div id="diagram"></div>
         </div>
     </div>

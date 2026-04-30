@@ -49,7 +49,7 @@ this.default = function () {
                     node.annotations[0].width = 25;
                     node.annotations[0].height = 25;
                     node.annotations[0].template =
-                        '<img src="src/diagram/Images/annotation/' + fontFamily + '.svg" style="width:100%;height:100%"/>';
+                        '<img src="https://ej2.syncfusion.com/javascript/demos/src/diagram/Images/annotation/' + fontFamily + '.svg" style="width:100%;height:100%"/>';
                 }
                 // Toggle the interaction constraint of the annotation
             } else if (value === 'interaction') {

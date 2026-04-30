@@ -90,7 +90,7 @@ this.default = function () {
             var keys = Object.keys(obj);
             for (var i = 0; i < Object.keys(obj).length; i++) {
                 sparkline = new ej.charts.Sparkline({
-                    height: '30px',
+                    height: '55px',
                     lineWidth: 1,
                     type: chartType,
                     valueType: 'Category',

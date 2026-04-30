@@ -132,8 +132,8 @@ this.default = function () {
                 color: '#34495e', fill: 'transparent', fontFamily: 'Segoe UI', fontSize: 14, bold: true
             }),
             createRectNode('groundLine', 500, 5, 489, 657, '#2E485F', '#2E485F', 2),
-            createImageNode('supportPost', 215, 185, 465, 565, './src/diagram/Images/angle/panelSupport.png'),
-            createImageNode('solarPanelFrame', 260, 50, 478.25, 485, './src/diagram/Images/angle/solarPanel.png', solarData.currentAngle, (ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.ReadOnly) & ~ej.diagrams.NodeConstraints.Drag, 0.5, 0.8),
+            createImageNode('supportPost', 215, 185, 465, 565, 'https://ej2.syncfusion.com/javascript/demos/src/diagram/Images/angle/panelSupport.png'),
+            createImageNode('solarPanelFrame', 260, 50, 478.25, 485, 'https://ej2.syncfusion.com/javascript/demos/src/diagram/Images/angle/solarPanel.png', solarData.currentAngle, (ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.ReadOnly) & ~ej.diagrams.NodeConstraints.Drag, 0.5, 0.8),
             createEllipseNode('pivotPoint', 16, 16, 478.5, 488, '#FF5F1F', '#2E485F', 1),
             createHtmlNode('location', 300, 150, 1130, 100, getLocationHtml()),
             createHtmlNode('efficiency', 300, 350, 1130, 383, getEfficiencyHtml()),
@@ -186,7 +186,7 @@ this.default = function () {
             pageSettings: {
                 width: 1300,
                 height: 820,
-                background: { source: './src/diagram/Images/angle/background.png', scale: 'Meet' }
+                background: { source: 'https://ej2.syncfusion.com/javascript/demos/src/diagram/Images/angle/background.png', scale: 'Meet' }
             }
         });
         diagram.appendTo('#diagram');

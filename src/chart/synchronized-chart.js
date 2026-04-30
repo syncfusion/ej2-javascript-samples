@@ -83,7 +83,7 @@ this.default = function () {
         title: 'US to EURO',
         titleStyle: { textAlignment: 'Near' },
         tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, header: '', format: '<b>€${point.y}</b> <br> ${point.x} 2023', enableMarker: false, enableHighlight: true },
-        crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
+        crosshair: { enable: true, lineType: 'Vertical', snapToData: true, dashArray: '2,2' },
         load: load
     });
     chart.appendTo('#container3');
@@ -164,7 +164,7 @@ this.default = function () {
         title: 'US to Yen',
         titleStyle: { textAlignment: 'Near' },
         tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, showNearestTooltip: true, header: '', format: '<b>¥${point.y}</b> <br> ${point.x} 2023', enableMarker: false, enableHighlight: true },
-        crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
+        crosshair: { enable: true, lineType: 'Vertical', snapToData: true, dashArray: '2,2' },
         load: load
     });
     chartobj.appendTo('#container4');
@@ -243,7 +243,7 @@ this.default = function () {
         title: 'US to SGD',
         titleStyle: { textAlignment: 'Near' },
         tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, shared: true, header: '', format: '<b>$${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
-        crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
+        crosshair: { enable: true, lineType: 'Vertical', snapToData: true, dashArray: '2,2' },
         load: load
     });
     chart3.appendTo('#container1');
@@ -322,7 +322,7 @@ this.default = function () {
         title: 'US to INR',
         titleStyle: { textAlignment: 'Near' },
         tooltip: { enable: true, fadeOutDuration: ej.base.Browser.isDevice ? 2500 : 1000, shared: true, header: '', format: '<b>₹${point.y}</b> <br> ${point.x} 2023', enableMarker: false },
-        crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
+        crosshair: { enable: true, lineType: 'Vertical', snapToData: true, dashArray: '2,2' },
         load: load
     });
     chart4.appendTo('#container2');

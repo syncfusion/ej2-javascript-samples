@@ -164,6 +164,9 @@ this.default = function () {
             ej.base.EventHandler.remove(li.querySelector('#iconUpload'), 'click', uploadFile);
             li.querySelector('.progressbar').style.visibility = 'hidden';
         }
+        if (args.response && args.response.statusText !== '') {
+            args.statusText = args.response.statusText;
+        }
     }
     function onFileRemove(args) {
         args.postRawFile = false;

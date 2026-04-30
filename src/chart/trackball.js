@@ -78,7 +78,7 @@ this.default = function () {
         //Initializing Tooltip and Crosshair
         tooltip: { enable: true, shared: true },
         legendSettings: { enableHighlight: true },
-        crosshair: { enable: true, lineType: 'Vertical' },
+        crosshair: { enable: true, lineType: 'Vertical', snapToData: true },
         //Initializing Chart Title
         title: 'Average Sales per Person',
         width: ej.base.Browser ? '100' : '75%',

@@ -61,6 +61,9 @@ this.default = function () {
         var li = getLiElement(args);
         li.querySelector('.upload-status').innerHTML = args.file.status;
         li.querySelector('.upload-status').classList.add('upload-failed');
+        if (args.response && args.response.statusText !== '') {
+            args.statusText = args.response.statusText;
+        }
     }
     function onUploadInProgress(args) {
         var progressValue = Math.round((args.e.loaded / args.e.total) * 100) + '%';

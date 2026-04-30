@@ -207,10 +207,8 @@ this.default = function () {
                         item.disabled = true;
                     }
                 });
-                disableMultiselectedItems();
             }
             if (selectedItems.length === 1) {
-                enableItems();
                 disableMultiselectedItems();
 
                 var groupIndex = toolbarObj.items.findIndex(item => item.id === 'Group');
@@ -301,13 +299,22 @@ this.default = function () {
                 }
             }
         }
+        if(!isSelectedItemLocked){
             const itemIds = ['Cut', 'Copy', 'Lock', 'Delete', 'Order', 'Rotate', 'Flip'];
             itemIds.forEach(itemId => {
                 const item = toolbarObj.items.find(item => item.id === itemId);
                 if (item) {
-                    item.disabled = isSelectedItemLocked;
+                    item.disabled = false;
                 }
             });
+        }
+        else {
+            const item = toolbarObj.items.find(item => item.id === 'Lock');
+            if (item) {
+                item.disabled = false;
+            }
+        }
+
     }
 
     //Initialize the flowshapes for the symbol palatte

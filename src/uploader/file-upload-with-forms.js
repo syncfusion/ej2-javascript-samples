@@ -4,13 +4,19 @@ this.default = function () {
             autoUpload: false,
             multiple: false,
 			allowedExtensions: 'image/*',
-            selected: onFileSelect
+            selected: onFileSelect,
+            failure: onFailure
         });
         uploadObj.appendTo('#fileupload');
         document.getElementById('browse').onclick = function () {
             document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
             return false;
         };
+        function onFailure(args) {
+            if (args.response && args.response.statusText !== '') {
+                args.statusText = args.response.statusText;
+            }
+        }
         function onFileSelect(args) {
             var inputElement = document.getElementById('upload');
             inputElement.value = args.filesData[0].name;

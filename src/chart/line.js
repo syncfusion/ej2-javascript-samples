@@ -51,7 +51,7 @@ this.default = function () {
                     shape: 'Circle',
                     isFilled: true
                 },
-                yName: 'y', name: 'Vietnam',
+                labelSettings: {visible: true}, yName: 'y', name: 'Vietnam',
             },
             {
                 type: 'Line',
@@ -73,7 +73,7 @@ this.default = function () {
                     shape: 'Triangle',
                     isFilled: true
                 },
-                yName: 'y', name: 'Indonesia',
+                labelSettings: {visible: true}, yName: 'y', name: 'Indonesia',
             },
             {
                 type: 'Line',
@@ -95,7 +95,7 @@ this.default = function () {
                     shape: 'Diamond',
                     isFilled: true
                 },
-                yName: 'y', name: 'France',
+                labelSettings: {visible: true}, yName: 'y', name: 'France',
             },
             {
                 type: 'Line',
@@ -117,7 +117,7 @@ this.default = function () {
                     shape: 'Rectangle',
                     isFilled: true
                 },
-                yName: 'y', name: 'Poland',
+                labelSettings: {visible: true}, yName: 'y', name: 'Poland',
             },
             {
                 type: 'Line',
@@ -139,7 +139,7 @@ this.default = function () {
                     shape: 'Pentagon',
                     isFilled: true
                 },
-                yName: 'y', name: 'Mexico',
+                labelSettings: {visible: true}, yName: 'y', name: 'Mexico',
             }
         ],
         //Initializing Chart title
