@@ -116,6 +116,22 @@
             }
         },
         {
+            "url": "scheduler-with-chart",
+            "name": "Scheduler With Chart",
+            "category": "Product Use Case",
+            "type": "new",
+            "description": "Fleet Management Dashboard combining a Timeline Month Scheduler with a real-time Analytics Chart (scheduler-with-chart.html + scheduler-with-chart.js).",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate",
+                    "group",
+                    "resources",
+                    "actionComplete"
+                ]
+            }
+        },
+        {
             "url": "local-data",
             "name": "Local Data",
             "category": "Data Binding",

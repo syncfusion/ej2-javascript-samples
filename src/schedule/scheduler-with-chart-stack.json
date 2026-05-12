@@ -1,0 +1,7 @@
+{
+  "html": "scheduler-with-chart.html",
+  "files": [
+    { "path": "scheduler-with-chart.js" },
+    { "path": "datasource.json" }
+  ]
+}
