@@ -140,10 +140,20 @@
             padding-left: 0px;
         }
 
+        @media (max-width: 550px) {
+            .sb-mobile-right-pane {
+                width: 100% !important;
+            }
+
+            .e-sidebar.e-right.e-open, .e-sidebar.e-left.e-open {
+                width: 85% !important;
+            }
+        }
+
     </style>
     <div class="content-wrapper" style="width: 100%;height: 590px;">
         <div class='center'>
-            <div class='centercontrol' id="barcode"></div>
+            <div class='centercontrol' id="barcode_code39Extd"></div>
         </div>
 
         <div class='allowedText'>
@@ -157,7 +167,7 @@
     <div class="property-panel-header">
         Appearance
     </div>
-    <div id="propertypanel" class="e-remove-selection">
+    <div id="propertypanel_code39Extd" class="e-remove-selection">
         <div class="property-section-content">
             <div class="row sb-child-row">
                 <div class="col-xs-2 top barcode-panel-left">
@@ -166,7 +176,7 @@
                 <div class="col-xs-10 barcode-panel-left">
                     <form id="form-element" class="form-horizontal">
                         <div id='barcodevaluediv'>
-                            <input type="text" id="barcodeValue" name="password" class="form-control" />
+                            <input type="text" id="barcodeValue_code39Extd" name="password" class="form-control" />
                         </div>
                     </form>
                 </div>
@@ -177,7 +187,7 @@
                         Width
                     </div>
                     <div class="col-xs-4 barcode-panel-left" >
-                        <input type="text" id='width' />
+                        <input type="text" id='width_code39Extd' />
                     </div>
                 </div>
                 <div>
@@ -185,7 +195,7 @@
                         Height
                     </div>
                     <div class="col-xs-4 barcode-panel-left" >
-                        <input type="text" id='height' />
+                        <input type="text" id='height_code39Extd' />
 
                     </div>
                 </div>
@@ -194,13 +204,13 @@
             <div class="row sb-child-row" style="padding-top: 10px;">
                 <div class="col-xs-6 barcode-panel-left">
                     <div class="col-xs-12 barcode-panel-left">
-                        <input type="checkbox" id="textVisibility" unchecked="false">
+                        <input type="checkbox" id="textVisibility_code39Extd" unchecked="false">
                         <div style="display: inline-block; vertical-align: middle; padding-left: 4px;">Text Visibility</div>
                     </div>
                 </div>
                 <div class="col-xs-6 barcode-panel-left">
                     <div class="col-xs-12 barcode-panel-left">
-                        <input type="checkbox" id="svgMode" unchecked="false">
+                        <input type="checkbox" id="svgMode_code39Extd" unchecked="false">
                         <div style="display: inline-block; vertical-align: middle; padding-left: 4px;">SVG Mode</div>
                     </div>
                 </div>
@@ -209,11 +219,11 @@
                 <div style="padding-top: 10px;">
                     <div class="col-xs-3 barcode-panel-left" style="padding-top: 5px;">BG Color</div>
                     <div class="col-xs-3 barcode-panel-left" >
-                        <input id='bgColor' type="color" />
+                        <input id='bgColor_code39Extd' type="color" />
                     </div>
                     <div class="col-xs-3 barcode-panel-left"style="padding-top: 5px;">Fore Color</div>
                     <div class="col-xs-3" style="padding-left: 2px;">
-                        <input id='foreColor' type="color" />
+                        <input id='foreColor_code39Extd' type="color" />
                     </div>
                 </div>
             </div>
@@ -223,11 +233,11 @@
             <div class="row sb-child-row">
                 <div class="col-xs-2 top barcode-panel-left">Left</div>
                 <div class="col-xs-4 barcode-panel-left">
-                    <input type="text" id='marginLeft' />
+                    <input type="text" id='marginLeft_code39Extd' />
                 </div>
                 <div class="col-xs-2 top barcode-panel-left" >Right</div>
                 <div class="col-xs-4 barcode-panel-left">
-                    <input type="text" id='MarginRight' />
+                    <input type="text" id='MarginRight_code39Extd' />
                 </div>
             </div>
 
@@ -235,12 +245,12 @@
                 <div class="col-xs-2 top barcode-panel-left">Top</div>
                 <div class="col-xs-4 barcode-panel-left" >
                     <div style="padding-bottom: 8px">
-                        <input type="text" id='marginTop' />
+                        <input type="text" id='marginTop_code39Extd' />
                     </div>
                 </div>
                 <div class="col-xs-2 top barcode-panel-left" >Bottom</div>
                 <div class="col-xs-4 barcode-panel-left">
-                    <input type="text" id='MarginBottom' />
+                    <input type="text" id='MarginBottom_code39Extd' />
                     <!-- </div> -->
                 </div>
             </div>
@@ -251,11 +261,11 @@
             <div class="row sb-child-row">
                 <div class="col-xs-2 top barcode-panel-left" >Top</div>
                 <div class="col-xs-4 barcode-panel-left">
-                    <input type="text" id='TextmarginTop' />
+                    <input type="text" id='TextmarginTop_code39Extd' />
                 </div>
                 <div class="col-xs-2 top barcode-panel-left" >Bottom</div>
                 <div class="col-xs-4 barcode-panel-left">
-                    <input type="text" id='TextMarginBottom' />
+                    <input type="text" id='TextMarginBottom_code39Extd' />
                 </div>
             </div>
 
@@ -264,7 +274,7 @@
                     Position
                 </div>
                 <div class="col-xs-9 ">
-                    <input type="text" id='textPosition' />
+                    <input type="text" id='textPosition_code39Extd' />
 
                 </div>
             </div>
@@ -273,7 +283,7 @@
                     Alignment
                 </div>
                 <div class="col-xs-9 ">
-                    <input type="text" id='textAlignment' />
+                    <input type="text" id='textAlignment_code39Extd' />
                 </div>
             </div>
             <div class="row sb-child-row">
@@ -281,12 +291,12 @@
                     Display Text
                 </div>
                 <div class="col-xs-9">
-                    <input id='displayText' />
+                    <input id='displayText_code39Extd' />
                 </div>
             </div>
             <div class="row sb-child-row">
                 <div class="col-xs-6 top barcode-panel-left">
-                    <button id="downloadBtn4">Download</button>
+                    <button id="downloadBtn4_code39Extd">Download</button>
                 </div>
             </div>
         </div>

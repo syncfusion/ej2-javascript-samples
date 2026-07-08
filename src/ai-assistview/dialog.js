@@ -1,5 +1,6 @@
 this.default = function() {
 
+    var abortController;
     var splitterObj = new ej.layouts.Splitter({
         height: '600px',
         paneSettings: [
@@ -21,6 +22,7 @@ this.default = function() {
 
     var dialogAIAssistView = new ej.interactivechat.AIAssistView({ 
         promptSuggestions: window.defaultSuggestions,
+        enableStreaming: true,
         promptRequest: onPromptRequest,
         bannerTemplate: "#bannerContent",
         toolbarSettings: {
@@ -34,15 +36,12 @@ this.default = function() {
     });
     dialogAIAssistView.appendTo('#aiAssistView');
 
-    function onPromptRequest(args) {
-        setTimeout(() => {
-            var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
-            var defaultResponse = 'For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            
-            dialogAIAssistView.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
-            dialogAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
-            
-        }, 2000);
+    async function onPromptRequest(args) {
+        abortController = new AbortController();
+        var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
+        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        dialogAIAssistView.addPromptResponse(response);
+        dialogAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
     }
 
     function toolbarItemClicked(args) {

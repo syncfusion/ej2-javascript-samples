@@ -13,7 +13,7 @@ this.default = function () {
         value: '11223344',
         invalid: invalidInputEan8,
     });
-    barcodeEan8.appendTo('#barcode');
+    barcodeEan8.appendTo('#barcode_ean8');
 
 
     var canShowErrorEan8 = false;
@@ -42,9 +42,9 @@ this.default = function () {
             
         }
     });
-    barcodeValueEan8.appendTo('#barcodeValue');
+    barcodeValueEan8.appendTo('#barcodeValue_ean8');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_ean8");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -58,7 +58,7 @@ this.default = function () {
             barcodeEan8.width = args.value.toString();
         }
     });
-    barcodeWidthEan8.appendTo('#width');
+    barcodeWidthEan8.appendTo('#width_ean8');
     
     var barcodeHeightEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -67,7 +67,7 @@ this.default = function () {
             barcodeEan8.height = args.value.toString();
         }
     });
-    barcodeHeightEan8.appendTo('#height');
+    barcodeHeightEan8.appendTo('#height_ean8');
 
     var textVisibilityEan8 = new ej.buttons.CheckBox({
         checked: true,
@@ -75,7 +75,7 @@ this.default = function () {
             barcodeEan8.displayText.visibility = args.checked;
         }
     });
-    textVisibilityEan8.appendTo('#textVisibility');
+    textVisibilityEan8.appendTo('#textVisibility_ean8');
 
     var svgModeEan8 = new ej.buttons.CheckBox({
         checked: true,
@@ -83,7 +83,7 @@ this.default = function () {
             barcodeEan8.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeEan8.appendTo('#svgMode');
+    svgModeEan8.appendTo('#svgMode_ean8');
 
     var bgColorEan8 = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -91,7 +91,7 @@ this.default = function () {
             barcodeEan8.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorEan8.appendTo('#bgColor');
+    bgColorEan8.appendTo('#bgColor_ean8');
 
     var foreColorEan8 = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -99,7 +99,7 @@ this.default = function () {
             barcodeEan8.foreColor = args.currentValue.hex;
         }
     });
-    foreColorEan8.appendTo('#foreColor');
+    foreColorEan8.appendTo('#foreColor_ean8');
 
     var marginLeftEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -109,7 +109,7 @@ this.default = function () {
             barcodeEan8.margin.left = args.value;
         }
     });
-    marginLeftEan8.appendTo('#marginLeft');
+    marginLeftEan8.appendTo('#marginLeft_ean8');
 
     var marginRightEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -119,7 +119,7 @@ this.default = function () {
             barcodeEan8.margin.right = args.value;
         }
     });
-    marginRightEan8.appendTo('#MarginRight');
+    marginRightEan8.appendTo('#MarginRight_ean8');
 
     var marginTopEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -129,7 +129,7 @@ this.default = function () {
             barcodeEan8.margin.top = args.value;
         }
     });
-    marginTopEan8.appendTo('#marginTop');
+    marginTopEan8.appendTo('#marginTop_ean8');
 
 
 
@@ -141,7 +141,7 @@ this.default = function () {
             barcodeEan8.margin.bottom = args.value;
         }
     });
-    marginBottomEan8.appendTo('#MarginBottom');
+    marginBottomEan8.appendTo('#MarginBottom_ean8');
 
     var textmarginLeftEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -150,7 +150,7 @@ this.default = function () {
             barcodeEan8.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftEan8.appendTo('#TextmarginLeft');
+    textmarginLeftEan8.appendTo('#TextmarginLeft_ean8');
 
     var textMarginRightEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -159,7 +159,7 @@ this.default = function () {
             barcodeEan8.displayText.margin.right = args.value;
         }
     });
-    textMarginRightEan8.appendTo('#TextMarginRight');
+    textMarginRightEan8.appendTo('#TextMarginRight_ean8');
 
     var textmarginTopEan8 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -168,7 +168,7 @@ this.default = function () {
             barcodeEan8.displayText.margin.top = args.value;
         }
     });
-    textmarginTopEan8.appendTo('#TextmarginTop');
+    textmarginTopEan8.appendTo('#TextmarginTop_ean8');
 
 
 
@@ -179,7 +179,7 @@ this.default = function () {
             barcodeEan8.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomEan8.appendTo('#TextMarginBottom');
+    textMarginBottomEan8.appendTo('#TextMarginBottom_ean8');
 
 
     //FontType Collection
@@ -194,12 +194,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionEan8(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_ean8')).ej2_instances[0]);
         barcodeEan8.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntEan8(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_ean8')).ej2_instances[0]);
         barcodeEan8.displayText.alignment = (positionValue.value);
     }
 
@@ -212,7 +212,7 @@ this.default = function () {
             updatePositionEan8(args.value.toString());
         }
     });
-    textPositionEan8.appendTo('#textPosition');
+    textPositionEan8.appendTo('#textPosition_ean8');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignEan8 = new ej.dropdowns.DropDownList({
@@ -223,7 +223,7 @@ this.default = function () {
             updateAligntEan8(args.value.toString());
         }
     });
-    textAlignEan8.appendTo('#textAlignment');
+    textAlignEan8.appendTo('#textAlignment_ean8');
 
     var displayTextEan8 = new ej.inputs.TextBox({
         value: '11223344',
@@ -231,7 +231,7 @@ this.default = function () {
             barcodeEan8.displayText.text = args.value.toString();
         }
     });
-    displayTextEan8.appendTo('#displayText');
+    displayTextEan8.appendTo('#displayText_ean8');
     var downloadButton = new ej.buttons.Button({});
     downloadButton.appendTo('#downloadBtn11');
     document.getElementById('downloadBtn11').onclick = function () {

@@ -186,9 +186,9 @@ this.default = function () {
         },
         items: [
             { id: 'palette-icon', prefixIcon: 'e-ddb-icons2 e-toggle-palette', align: 'Right' },
-            { text: 'New', tooltipText: 'New', prefixIcon: 'e-ddb-icons e-new' },
-            { type: 'Separator' }, { text: 'Save', tooltipText: 'Save', prefixIcon: 'e-diagram-icons e-diagram-save' },
-            { type: 'Separator' }, { text: 'Load', tooltipText: 'Load', prefixIcon: 'e-ddb-icons e-open' }
+            { text: 'New', tooltipText: 'New', prefixIcon: 'e-icons e-plus' },
+            { type: 'Separator' }, { text: 'Save', tooltipText: 'Save', prefixIcon: 'e-icons e-save' },
+            { type: 'Separator' }, { text: 'Load', tooltipText: 'Load', prefixIcon: 'e-icons e-folder-open' }
         ]
     });
     toolbarObj.appendTo('#toolbar');
@@ -196,8 +196,8 @@ this.default = function () {
     var palette = new ej.diagrams.SymbolPalette({
         expandMode: 'Multiple',
         palettes: [
-            { id: 'flow', expanded: true, symbols: flowshapes, iconCss: 'e-ddb-icons1 e-flow', title: 'Flow Shapes' },
-            { id: 'connectors', expanded: true, symbols: connectorSymbols, iconCss: 'e-ddb-icons1 e-connector', title: 'Connectors' }
+            { id: 'flow', expanded: true, symbols: flowshapes, iconCss: 'e-ddb-icons e-flow', title: 'Flow Shapes' },
+            { id: 'connectors', expanded: true, symbols: connectorSymbols, iconCss: 'e-ddb-icons e-connector', title: 'Connectors' }
         ],
         //set default value for Node.
         getNodeDefaults: function (symbol) {

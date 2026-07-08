@@ -11,7 +11,7 @@ this.default = function () {
         displayText: { visibility: false },
         height: 200, width: 200,
     });
-    barcode.appendTo('#barcode');
+    barcode.appendTo('#barcode_datamatrix');
     var canShowError = false;
     var customFn = function (args) {
         if (canShowError) {
@@ -38,9 +38,9 @@ this.default = function () {
         }
         
     });
-    barcodeValue.appendTo('#barcodeValue');
+    barcodeValue.appendTo('#barcodeValue_datamatrix');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_datamatrix");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -54,7 +54,7 @@ this.default = function () {
             barcode.width = args.value.toString();
         }
     });
-    barcodeWidth.appendTo('#width');
+    barcodeWidth.appendTo('#width_datamatrix');
     
     var barcodeHeight = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -63,7 +63,7 @@ this.default = function () {
             barcode.height = args.value.toString();
         }
     });
-    barcodeHeight.appendTo('#height');
+    barcodeHeight.appendTo('#height_datamatrix');
 
     var textVisibility = new ej.buttons.CheckBox({
         checked: false,
@@ -71,7 +71,7 @@ this.default = function () {
             barcode.displayText.visibility = args.checked;
         }
     });
-    textVisibility.appendTo('#textVisibility');
+    textVisibility.appendTo('#textVisibility_datamatrix');
 
     var svgMode = new ej.buttons.CheckBox({
         checked: true,
@@ -79,7 +79,7 @@ this.default = function () {
             barcode.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgMode.appendTo('#svgMode');
+    svgMode.appendTo('#svgMode_datamatrix');
 
     var bgColor = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -87,7 +87,7 @@ this.default = function () {
             barcode.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColor.appendTo('#bgColor');
+    bgColor.appendTo('#bgColor_datamatrix');
 
     var foreColor = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -95,7 +95,7 @@ this.default = function () {
             barcode.foreColor = args.currentValue.hex;
         }
     });
-    foreColor.appendTo('#foreColor');
+    foreColor.appendTo('#foreColor_datamatrix');
 
     var marginLeft = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -105,7 +105,7 @@ this.default = function () {
             barcode.margin.left = args.value;
         }
     });
-    marginLeft.appendTo('#marginLeft');
+    marginLeft.appendTo('#marginLeft_datamatrix');
 
     var marginRight = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -115,7 +115,7 @@ this.default = function () {
             barcode.margin.right = args.value;
         }
     });
-    marginRight.appendTo('#MarginRight');
+    marginRight.appendTo('#MarginRight_datamatrix');
 
     var marginTop = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -125,7 +125,7 @@ this.default = function () {
             barcode.margin.top = args.value;
         }
     });
-    marginTop.appendTo('#marginTop');
+    marginTop.appendTo('#marginTop_datamatrix');
 
 
 
@@ -137,7 +137,7 @@ this.default = function () {
             barcode.margin.bottom = args.value;
         }
     });
-    marginBottom.appendTo('#MarginBottom');
+    marginBottom.appendTo('#MarginBottom_datamatrix');
 
     var textmarginLeft = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -146,7 +146,7 @@ this.default = function () {
             barcode.displayText.margin.left = args.value;
         }
     });
-    textmarginLeft.appendTo('#TextmarginLeft');
+    textmarginLeft.appendTo('#TextmarginLeft_datamatrix');
 
     var textMarginRight = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -155,7 +155,7 @@ this.default = function () {
             barcode.displayText.margin.right = args.value;
         }
     });
-    textMarginRight.appendTo('#TextMarginRight');
+    textMarginRight.appendTo('#TextMarginRight_datamatrix');
 
     var textmarginTop = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -164,7 +164,7 @@ this.default = function () {
             barcode.displayText.margin.top = args.value;
         }
     });
-    textmarginTop.appendTo('#TextmarginTop');
+    textmarginTop.appendTo('#TextmarginTop_datamatrix');
 
 
 
@@ -175,7 +175,7 @@ this.default = function () {
             barcode.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottom.appendTo('#TextMarginBottom');
+    textMarginBottom.appendTo('#TextMarginBottom_datamatrix');
 
 
     //FontType Collection
@@ -190,12 +190,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePosition(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_datamatrix')).ej2_instances[0]);
         barcode.displayText.position = (positionValue.value) ;
     }
 
     function updateAlignt(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_datamatrix')).ej2_instances[0]);
         barcode.displayText.alignment = (positionValue.value);
     }
 
@@ -208,7 +208,7 @@ this.default = function () {
             updatePosition(args.value.toString());
         }
     });
-    textPosition.appendTo('#textPosition');
+    textPosition.appendTo('#textPosition_datamatrix');
 
     var pdfDataMatrixEncodingValue = [
         { value: 'Auto', text: 'Auto' },
@@ -258,7 +258,7 @@ this.default = function () {
             barcode.encoding = ((args.itemData.value.toString()));
         }
     });
-    encoding.appendTo('#PdfDataMatrixEncoding');
+    encoding.appendTo('#PdfDataMatrixEncoding_datamatrix');
 
     var size = new ej.dropdowns.DropDownList({
         dataSource: matrixSize,
@@ -267,7 +267,7 @@ this.default = function () {
             barcode.size = (Number(args.itemData.value));
         }
     });
-    size.appendTo('#MatrixSize');
+    size.appendTo('#MatrixSize_datamatrix');
 
 
 
@@ -280,7 +280,7 @@ this.default = function () {
             updateAlignt(args.value.toString());
         }
     });
-    textAlign.appendTo('#textAlignment');
+    textAlign.appendTo('#textAlignment_datamatrix');
 
     var displayText = new ej.inputs.TextBox({
         value: '123456',
@@ -288,10 +288,10 @@ this.default = function () {
             barcode.displayText.text = args.value.toString();
         }
     });
-    displayText.appendTo('#displayText');
+    displayText.appendTo('#displayText_datamatrix');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn10');
-    document.getElementById('downloadBtn10').onclick = function () {
+    downloadButton.appendTo('#downloadBtn10_datamatrix');
+    document.getElementById('downloadBtn10_datamatrix').onclick = function () {
         barcode.exportImage("DataMatrix", 'PNG');
     };
 };

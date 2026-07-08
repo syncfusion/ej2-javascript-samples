@@ -138,6 +138,7 @@
         },
         {
             "url": "data-sample",
+            "ignoreOnBuild": true,
             "name": "Data Sample",
             "description": "This demo for Essential<sup>®</sup> JS2 Circular Gauge control demonstrates live data, along with the data grid control.",
             "category": "Use Cases"

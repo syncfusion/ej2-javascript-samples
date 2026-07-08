@@ -1,0 +1,324 @@
+{
+    "build_scheduler": {
+        "components": [
+            "schedule",
+            "calendar",
+            "datepicker",
+            "daterangepicker",
+            "datetimepicker",
+            "timepicker",
+            "ai-schedule"
+        ],
+        "sampleOrder": {
+            "Calendars": [
+                "Scheduler",
+                "Calendar",
+                "DatePicker",
+                "DateRangePicker",
+                "DateTimePicker",
+                "TimePicker"
+            ],
+            "Smart AI Solutions": [ "Scheduler" ]
+        },
+        "defaultComponent": "schedule",
+        "defaultSample": "overview.html"
+    },
+    "build_gantt": {
+        "components": [
+            "gantt",
+            "kanban",
+            "ai-gantt",
+            "ai-kanban"
+        ],
+        "sampleOrder": {
+            "Calendars": [
+                "Gantt Chart"
+            ],
+            "Smart AI Solutions": ["Gantt Chart", "Kanban"],
+            "Data Visualization": [
+                "kanban"
+            ]
+        },
+        "defaultComponent": "gantt",
+        "defaultSample": "default.html"
+    },
+    "build_diagram": {
+        "components": [
+            "diagram",
+            "ai-diagram"
+        ],
+        "sampleOrder": {
+            "Data Visualization": [
+                "Diagram"
+            ],
+             "Smart AI Solutions": ["Diagram"]
+        },
+        "defaultComponent": "diagram",
+        "defaultSample": "default-functionalities.html"
+    },
+    "build_RTE": {
+        "components": [
+            "rich-text-editor",
+            "block-editor"
+        ],
+        "sampleOrder": {
+            "File Viewers & Editors": [
+                "Rich Text Editor",
+                "Block Editor"
+            ]
+        },
+        "defaultComponent": "rich-text-editor",
+        "defaultSample": "tools.html"
+    },
+    "build_grid": {
+        "components": [
+            "grid",
+            "treegrid",
+            "pivot-table",
+            "ai-grid",
+            "ai-tree-grid",
+            "ai-pivot-table"
+        ],
+        "sampleOrder": {
+            "Grids": [
+                "Data Grid",
+                "Tree Grid",
+                "Pivot Table"
+            ],
+            "Smart AI Solutions": [
+                "Data Grid",
+                "Tree Grid",
+                "Pivot Table"
+            ]
+        },
+        "defaultComponent": "grid",
+        "defaultSample": "grid-overview.html"
+    },
+    "build_charts": {
+        "components": [
+            "chart",
+            "three-dimentional-chart",
+            "circular-3d-chart",
+            "sankey",
+            "stock-chart",
+            "circular-gauge",
+            "linear-gauge",
+            "heatmap-chart",
+            "maps",
+            "range-selector",
+            "smith-chart",
+            "sparkline-charts",
+            "barcode",
+            "treemap",
+            "bullet-chart",
+            "dashboard-layout",
+            "ai-maps"
+        ],
+        "sampleOrder": {
+            "Data Visualization": [
+                "Chart",
+                "3D Chart",
+                "3D Circular Chart",
+                "Sankey",
+                "Stock Chart",
+                "Circular Gauge",
+                "Linear Gauge",
+                "HeatMap Chart",
+                "Maps",
+                "Range Selector",
+                "Smith Chart",
+                "Sparkline Charts",
+                "Barcode",
+                "TreeMap",
+                "Bullet Chart"
+            ],
+            "Smart AI Solutions": [
+                "Maps"
+            ],
+            "Layout": [
+                "Dashboard Layout"
+            ]
+        },
+        "defaultComponent": "chart",
+        "defaultSample": "overview.html"
+    },
+    "build_ui_smart_components": {
+        "components": [
+            "ai-smart-paste",
+            "ai-smart-textarea",
+            "ai-assistview",
+            "chat-ui",
+            "inline-ai-assist"
+        ],
+        "sampleOrder": {
+            "Smart Controls": [
+                "Smart Paste",
+                "Smart TextArea"
+            ],
+            "Interactive Chat": [
+                "AI AssistView",
+                "Chat UI",
+                "Inline AI Assist"
+            ]
+        },
+        "defaultComponent": "file-manager",
+        "defaultSample": "overview.html"
+    },
+    "build_filemanager": {
+        "components": [
+            "file-manager"
+        ],
+        "sampleOrder": {
+            "Navigation": [
+                "File Manager"
+            ]
+        },
+        "defaultComponent": "file-manager",
+        "defaultSample": "overview.html"
+    },
+    "build_ui_components": {
+        "Components": [
+            "button",
+            "chips",
+            "floating-action-button",
+            "speed-dial",
+            "calendar",
+            "datepicker",
+            "daterangepicker",
+            "datetimepicker",
+            "timepicker",
+            "auto-complete",
+            "list-box",
+            "combo-box",
+            "drop-down-list",
+            "multi-select",
+            "drop-down-tree",
+            "mention",
+            "multicolumn-combobox",
+            "inplace-editor",
+            "speech-to-text",
+            "textbox",
+            "textarea",
+            "maskedtextbox",
+            "numberictextbox",
+            "color-picker",
+            "uploader",
+            "signature",
+            "rating",
+            "otp-input",
+            "avatar",
+            "card",
+            "dialog",
+            "predefined-dialogs",
+            "listview",
+            "tooltip",
+            "splitter",
+            "dashboard-layout",
+            "timeline",
+            "accordion",
+            "appbar",
+            "breadcrumb",
+            "carousel",
+            "context-menu",
+            "menu",
+            "sidebar",
+            "tab",
+            "toolbar",
+            "ribbon",
+            "stepper",
+            "message",
+            "toast",
+            "progress-bar",
+            "skeleton",
+            "query-builder",
+            "image-editor",
+            "form-validator",
+            "ai-querybuilder",
+            "ai-combo-box",
+            "ai-image-editor"
+        ],
+        "sampleOrder": {
+            "Forms": [
+                "Query Builder",
+                "Form Validation"
+            ],
+            "Smart AI Solutions": [
+                "Query Builder",
+                "ComboBox",
+                "Image Editor"
+            ],
+            "File Viewers & Editors": [
+                "Image Editor"
+            ],
+            "Buttons": [
+                "Button",
+                "Chips",
+                "Floating Action Button",
+                "SpeedDial"
+            ],
+            "Calendars": [
+                "Calendar",
+                "DatePicker",
+                "DateRangePicker",
+                "DateTimePicker",
+                "TimePicker"
+            ],
+            "Dropdowns": [
+                "AutoComplete",
+                "ComboBox",
+                "Dropdown List",
+                "Dropdown Tree",
+                "MultiSelect Dropdown",
+                "List Box",
+                "Mention",
+                "MultiColumn Combobox"
+            ],
+            "Inputs": [
+                "TextBox",
+                "TextArea",
+                "Numeric Textbox",
+                "Color Picker",
+                "File Upload",
+                "Signature",
+                "In-place Editor",
+                "Rating",
+                "OTP Input",
+                "Speech To Text"
+            ],
+            "Notifications": [
+                "Badge",
+                "Message",
+                "Toast",
+                "Progress Bar",
+                "Skeleton"
+            ],
+            "Navigation": [
+                "Accordion",
+                "AppBar",
+                "Breadcrumb",
+                "Carousel",
+                "Context Menu",
+                "Menu Bar",
+                "Sidebar",
+                "Tabs",
+                "Toolbar",
+                "Ribbon",
+                "Stepper",
+                "TreeView"
+            ],
+            "Layout": [
+                "Avatar",
+                "Card",
+                "Dialog",
+                "Predefined Dialogs",
+                "ListView",
+                "Tooltip",
+                "Splitter",
+                "Dashboard Layout",
+                "Timeline"
+            ]
+        },
+        "defaultComponent": "button",
+        "defaultSample": "default.html"
+    }
+}

@@ -5,7 +5,7 @@ this.default = function () {
     ej.base.enableRipple(false);
     var fieldCollections = {};
         var operators = ['Equals', 'DoesNotEquals', 'GreaterThan', 'GreaterThanOrEqualTo',
-            'LessThan', 'LessThanOrEqualTo', 'Between', 'NotBetween'];
+            'LessThan', 'LessThanOrEqualTo', 'Between', 'NotBetween', 'Top', 'Bottom'];
         var fields = ['Country', 'Products', 'Year'];
         var measures = [
             { value: 'In_Stock', text: 'In Stock' },

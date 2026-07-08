@@ -3,8 +3,8 @@ this.default = function () {
         dataSource: window.projectNewData,
         allowFiltering: true,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         highlightWeekends: true,
         treeColumnIndex: 1,
         taskFields: {
@@ -19,12 +19,12 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskID', width: 100 },
-            { field: 'TaskName', width: 250 },
+            { field: 'TaskName', width: 280 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor', width: 190 },
-            { field: 'Progress' },
+            { field: 'Progress' }
         ],
         labelSettings: {
             leftLabel: 'TaskName'

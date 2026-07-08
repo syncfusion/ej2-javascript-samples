@@ -3,8 +3,8 @@ this.default = function () {
         dataSource: window.virtualData,
         treeColumnIndex: 1,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         enableTimelineVirtualization: true,
@@ -20,7 +20,7 @@ this.default = function () {
         enableVirtualization: true,
         columns: [
             { field: 'TaskID' },
-            { field: 'TaskName', width: '200px' },
+            { field: 'TaskName', width: 300 },
             { field: 'StartDate' },
             { field: 'Duration' },
             { field: 'Progress' }
@@ -32,7 +32,7 @@ this.default = function () {
             columnIndex: 2
         },
         projectStartDate: new Date('04/01/2025'),
-        projectEndDate: new Date('12/31/2030')
+        projectEndDate: new Date('12/31/2029')
     });
     ganttChart.appendTo('#VirtualScroll');
 };

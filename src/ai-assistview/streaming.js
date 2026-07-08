@@ -1,5 +1,6 @@
 this.default = function() {
 
+    var abortController;
     var streamingAIAssistView = new ej.interactivechat.AIAssistView({
         enableStreaming: true,
         promptSuggestions: window.streamingSuggestions,
@@ -18,15 +19,11 @@ this.default = function() {
         }
     }
 
-    function onPromptRequest(args) {
+    async function onPromptRequest(args) {
+        abortController = new AbortController();
         let streamingResponse = window.streamingData.find(data => data.prompt === args.prompt);
-        let defaultResponse = "For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        if (streamingResponse) {
-            streamingAIAssistView.addPromptResponse(streamingResponse.response);
-            streamingAIAssistView.promptSuggestions = streamingResponse?.suggestions || window.streamingSuggestions;
-        } else {
-            streamingAIAssistView.addPromptResponse(defaultResponse);
-            streamingAIAssistView.promptSuggestions = window.streamingSuggestions;
-        }
+        var response = streamingResponse ? streamingResponse.response : await window.getAIResponse(args, abortController);
+        streamingAIAssistView.addPromptResponse(response);
+        streamingAIAssistView.promptSuggestions = streamingResponse ? streamingResponse.suggestions : window.streamingSuggestions;
     }
 };

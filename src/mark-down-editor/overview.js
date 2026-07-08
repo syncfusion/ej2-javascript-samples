@@ -77,6 +77,7 @@ this.default = function () {
     defaultRTE = new ej.richtexteditor.RichTextEditor({
         height: '100%',
         placeholder : "Enter your text here...",
+        formatter: new ej.richtexteditor.MarkdownFormatter({ listTags: { 'OL': '1., 2., 3.' } }),
         floatingToolbarOffset: 0,
         editorMode: 'Markdown',
         toolbarSettings: {
@@ -105,7 +106,7 @@ this.default = function () {
         updateValue();
     }
     function updateValue() {
-        srcArea.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value);
+        srcArea.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value, { lineBreak: true });
     }
     function updateOrientation() {
         if (ej.base.Browser.isDevice) {

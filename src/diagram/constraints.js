@@ -440,6 +440,10 @@ this.default = function () {
             },
             getNodeDefaults: function (nodes) {
                 return nodeDefaults(nodes); // Set the default node settings
+            },
+            created: function () {
+                diagram.fitToPage(); // Fit the diagram to the page when created    
             }
-        }, '#diagram');
+        });
+        diagram.appendTo('#diagram');
 };

@@ -50,7 +50,7 @@ this.default = function () {
         if (mdPreview && mdPreview.classList.contains('e-active')) {
             var id = defaultRTE.getID() + 'html-view';
             var htmlPreview = defaultRTE.element.querySelector('#' + id);
-            htmlPreview.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value, { lineBreak: true });
         }
     }
     function fullPreview() {
@@ -73,7 +73,7 @@ this.default = function () {
             }
             textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = markdownConverter.toHtml(defaultRTE.contentModule.getEditPanel().value, { lineBreak: true });
             tooltipObj.content = "Codeview";
         }
     }

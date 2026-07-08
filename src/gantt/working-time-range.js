@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.workTimeRange,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -15,27 +15,30 @@ this.default = function () {
             child: 'subtasks'
         },
         columns: [
-            { field: 'TaskName',headerText: 'Name', width: 270 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor' },
-            { field: 'Progress' },
+            { field: 'Progress' }
         ],
         timelineSettings: {
             topTier: {
-                unit: 'Day',
+                unit: 'Day'
             },
             bottomTier: {
-                unit: 'Hour',
+                unit: 'Hour'
             }
         },
         durationUnit: 'hour',
         labelSettings: {
             leftLabel: 'TaskName'
         },
+        splitterSettings: {
+            columnIndex: 1
+        },
         projectStartDate: new Date('04/02/2025'),
-        projectEndDate: new Date('04/28/2025')
+        projectEndDate: new Date('04/15/2025')
     });
     ganttChart.appendTo('#WorkTimeRange');
     var workDays = [
@@ -43,7 +46,7 @@ this.default = function () {
         { id: 'Tuesday', day: 'Tuesday' },
         { id: 'Wednesday', day: 'Wednesday' },
         { id: 'Thursday', day: 'Thursday' },
-        { id: 'Friday', day: 'Friday' },
+        { id: 'Friday', day: 'Friday' }
     ];
     var workStartTime = new ej.inputs.NumericTextBox({
         min: 0,
@@ -90,7 +93,7 @@ this.default = function () {
     var checkList1 = new ej.dropdowns.DropDownList ({
         dataSource: workDays,
         value: 'Monday',
-        width:'100%',
+        width: '100%',
         select: function (args) {
             var startTime = 8;
             var endTime = 17;

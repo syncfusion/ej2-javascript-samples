@@ -2,7 +2,7 @@ this.default = function () {
    var ganttChart = new ej.gantt.Gantt({
         dataSource: window.templateData,
         height: '650px',
-        taskbarHeight:25,
+        taskbarHeight: 25,
         highlightWeekends: true,
         taskFields: {
             id: 'TaskID',
@@ -17,11 +17,11 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left' },
-            { field: 'TaskName', headerText: 'Task Name', width: '250' },
-			{ field: 'resources', headerText: 'Resources', width: '250',template: '#columnTemplate' },
-            { field: 'StartDate', headerText: 'Start Date', width: '150' },
-            { field: 'Duration', headerText: 'Duration', width: '150' },
-            { field: 'Progress', headerText: 'Progress', width: '150' },
+            { field: 'TaskName', headerText: 'Task Name', width: 280 },
+			{ field: 'resources', headerText: 'Resources', width: 250, template: '#columnTemplate' },
+            { field: 'StartDate', headerText: 'Start Date', width: 150 },
+            { field: 'Duration', headerText: 'Duration', width: 150 },
+            { field: 'Progress', headerText: 'Progress', width: 150 },
         ],
         treeColumnIndex: 1,
         labelSettings: {
@@ -30,22 +30,22 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 3
         },
-        rowHeight:60,
+        rowHeight: 60,
         resourceFields: {
             id: 'resourceId',
             name: 'resourceName'
         },
         resources: editingResources,
         projectStartDate: new Date('03/24/2025'),
-        projectEndDate: new Date('07/06/2025')
+        projectEndDate: new Date('05/31/2025')
      });
     ganttChart.appendTo('#ColumnTemplate');
     window.isRtl = function (value) {
         var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
         if (gantt.enableRtl) {
             return 'right:30px;';
-          } else {
-            return 'left:30px;';
-          }
+        } else {
+            return 'left:10px;';
+        }
     };
 };

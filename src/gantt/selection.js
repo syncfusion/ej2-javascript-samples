@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         treeColumnIndex: 1,
@@ -32,12 +32,12 @@ this.default = function () {
         allowResizing: true,
         columns: [
             { field: 'TaskID', width: 70 },
-            { field: 'TaskName', width: 250 },
+            { field: 'TaskName', width: 280 },
             { field: 'StartDate'},
             { field: 'EndDate'},
             { field: 'Duration'},
             { field: 'Predecessor'},
-            { field: 'Progress'},
+            { field: 'Progress'}
         ],
         projectStartDate: new Date('03/26/2025'),
         projectEndDate: new Date('07/20/2025')
@@ -52,7 +52,7 @@ this.default = function () {
         width: '125px',
         popupWidth: '100px',
         value: 'Row',
-        fields: { text: 'type', value: 'id' },
+        fields: { text: 'type', value: 'id' }
     });
     selectionModeList.appendTo('#mode');
 
@@ -64,7 +64,7 @@ this.default = function () {
         width: '125px',
         popupWidth: '100px',
         value: 'Single',
-        fields: { text: 'type', value: 'id' },
+        fields: { text: 'type', value: 'id' }
     });
     selectionTypeList.appendTo('#type');
 
@@ -76,7 +76,7 @@ this.default = function () {
         width: '125px',
         popupWidth: '100px',
         value: false,
-        fields: { text: 'type', value: 'id' },
+        fields: { text: 'type', value: 'id' }
     });
     toggleList.appendTo('#toggle');
 
@@ -95,12 +95,11 @@ this.default = function () {
     var hover = new ej.buttons.CheckBox({ checked: true });
     hover.appendTo('#hover');
 
-     document.getElementById('hover').onclick = function () {
+    document.getElementById('hover').onclick = function () {
         if (hover.checked) {
             ganttChart.enableHover = true;
         } else {
-             ganttChart.enableHover = false;
+            ganttChart.enableHover = false;
         }
     };
-
 };

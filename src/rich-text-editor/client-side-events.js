@@ -3,7 +3,7 @@
  * Rich Text Editor client side events samples
  */
 this.default = function() {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://services.syncfusion.com/js/production/';
     var defaultRTE = new ej.richtexteditor.RichTextEditor({
         toolbarSettings: {
             items: ['Bold', 'Italic', 'Underline', 'StrikeThrough', 'SuperScript', 'SubScript', '|',
@@ -16,12 +16,11 @@ this.default = function() {
         },
         fileManagerSettings: {
             enable: true,
-            path: '/Pictures/Food',
             ajaxSettings: {
-                url: hostUrl + 'api/FileManager/FileOperations',
-                getImageUrl: hostUrl + 'api/FileManager/GetImage',
-                uploadUrl: hostUrl + 'api/FileManager/Upload',
-                downloadUrl: hostUrl + 'api/FileManager/Download'
+                url: hostUrl + 'api/RichTextEditor/FileOperations',
+                getImageUrl: hostUrl + 'api/RichTextEditor/GetImage',
+                uploadUrl: hostUrl + 'api/RichTextEditor/Upload',
+                downloadUrl: hostUrl + 'api/RichTextEditor/Download'
             }
         },
         created: create,

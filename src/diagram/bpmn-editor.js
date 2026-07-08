@@ -552,7 +552,7 @@ this.default = function () {
     // Function to toggle the visibility of the palette toolbar in a mobile view
     function showPaletteToolbar() {
         var element = document.getElementById('palette-space');
-        isMobile = window.matchMedia('(max-width:550px)').matches;
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!element.classList.contains('sb-mobile-palette-open')) {
                 element.classList.add('sb-mobile-palette-open');

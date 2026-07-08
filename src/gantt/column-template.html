@@ -10,9 +10,10 @@
 
 <script type="text/x-template" id="columnTemplate">
     ${if(ganttProperties.resourceNames)}
-      <div class="image">
-        <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:40px;width:40px" alt="${ganttProperties.resourceNames}"/><div style="display:inline-block;width:100%;position:relative;${isRtl()}">${ganttProperties.resourceNames}</div>
-       </div>
+        <div class="image">
+            <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:40px;width:40px" aria-hidden="true"/>
+            <div style="display:inline-block;width:100%;position:relative;${isRtl()}">${ganttProperties.resourceNames}</div>
+        </div>
    ${/if}
 </script>
 
@@ -22,14 +23,13 @@
     </div>
 <div id="description">
     <p>
-      The Gantt provides a way to use a custom layout for each cell using the column template feature.  The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/columnModel/#template">columns -> template</a> property accepts either string or HTML element`s ID value,
+        The Gantt provides a way to use a custom layout for each cell using the column template feature. The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/columnModel/#template"><span style="font-family:Consolas, 'Courier New', monospace;">columns-&gt;template</span></a> property accepts either string or HTML element`s ID value,
         which will be used as the template for the cell.
     </p>
     <p>
         In this demo, using column template, resource column has been presented with employee photo, 
-        and the <a target="_blank" href="hhttps://ej2.syncfusion.com/javascript/documentation/api/gantt/columnModel/#template">columns -> template</a> is assigned with the ID of a SCRIPT element whose content is used as the template.
+        and the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/columnModel/#template"><span style="font-family:Consolas, 'Courier New', monospace;">columns-&gt;template</span></a> is assigned with the ID of a SCRIPT element whose content is used as the template.
     </p>
     <p> The template expression should be provided inside <code>${...}</code> interpolation syntax</p>
-    <br>
     <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/columns/column-template">documentation section</a>.</p>
 </div>

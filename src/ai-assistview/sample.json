@@ -7,6 +7,19 @@
     "dataSourcePath": "src/ai-assistview/promptResponseData.js",
     "samples": [
         {
+            "url": "overview",
+            "name": "Overview",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
+            "description": "Combines streaming, attachments, speech-to-text, text-to-speech and regenerate functionality in one overview UI.",
+            "sourceFiles": [
+                { "displayName": "overview.js", "path":"src/ai-assistview/overview.js" },
+                { "displayName": "overview.html", "path":"src/ai-assistview/overview.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
             "url": "default",
             "name": "Default Functionalities",
             "category": "AI AssistView",
@@ -34,7 +47,6 @@
             "url": "streaming",
             "name": "Streaming Response",
             "category": "AI AssistView",
-            "type": "update",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings"] },
             "description": "Showcases the AiAssistView control with its streaming support.",
             "sourceFiles": [
@@ -56,6 +68,32 @@
             ]
         },
         {
+            "url": "generative-ui",
+            "name": "Generative UI Responses",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
+            "description": "Demonstrates the AI generated UI responses in the AiAssistView component",
+            "sourceFiles": [
+                { "displayName": "generative-ui.js", "path":"src/ai-assistview/generative-ui.js" },
+                { "displayName": "generative-ui.html", "path":"src/ai-assistview/generative-ui.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
+            "url": "thinking",
+            "name": "Chain of Thoughts",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
+            "description": "Demonstrates the AI generated thinking UI in the AiAssistView component",
+            "sourceFiles": [
+                { "displayName": "thinking.js", "path":"src/ai-assistview/thinking.js" },
+                { "displayName": "thinking.html", "path":"src/ai-assistview/thinking.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
             "url": "template",
             "name": "Template",
             "category": "AI AssistView",
@@ -64,6 +102,68 @@
             "sourceFiles": [
                 { "displayName": "template.js", "path":"src/ai-assistview/template.js" },
                 { "displayName": "template.html", "path":"src/ai-assistview/template.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+            ]
+        },
+        {
+            "url": "speech-to-text",
+            "name": "Speech To Text",
+            "category": "Speech",
+            "api":{ "AIAssitView": ["promptRequest", "toolbarSettings", "speechToTextSettings", "bannerTemplate", "attachmentSettings", "promptToolbarSettings", "stopRespondingClick"] },
+            "description": "Demonstrates the AI AssistView component integrated  the built-in Speech-to-Text functionality, enabling users to interact using voice input transcribed into text.",
+            "sourceFiles": [
+                { "displayName": "ai-speech-to-text.js", "path":"src/ai-assistview/speech-to-text.js" },
+                { "displayName": "ai-speech-to-text.html", "path":"src/ai-assistview/speech-to-text.html" } 
+            ]
+        },
+        {
+            "url": "text-to-speech",
+            "name": "Text To Speech",
+            "category": "Speech",
+            "type": "update",
+            "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
+            "description": "Demonstrates the AiAssistView component integrated with Text-to-Speech functionality, allowing AI-generated responses to be vocalized for voice-based interaction.",
+            "sourceFiles": [
+                { "displayName": "ai-text-to-speech.js", "path":"src/ai-assistview/text-to-speech.js" },
+                { "displayName": "ai-text-to-speech.html", "path":"src/ai-assistview/text-to-speech.html" } 
+            ]
+        },
+        {
+            "url": "notion-ai-clone",
+            "name": "Notion AI-like",
+            "category": "UI Customization",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
+            "description": "Notion-like AI Assist UI with multi-mode chat (floating, sidebar, fullscreen), model selection, chat history, streaming responses, attachments, speech-to-text, text-to-speech, and session management.",
+            "sourceFiles": [
+                { "displayName": "notion-ai-clone.js", "path":"src/ai-assistview/notion-ai-clone.js" },
+                { "displayName": "notion-ai-clone.html", "path":"src/ai-assistview/notion-ai-clone.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+            ]
+        },
+        {
+            "url": "claude-clone",
+            "name": "Claude AI-like",
+            "category": "UI Customization",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
+            "description": "Claude line UI appearance with ai assistview supported features with footer toolbar and banner template",
+            "sourceFiles": [
+                { "displayName": "claude-clone.js", "path":"src/ai-assistview/claude-clone.js" },
+                { "displayName": "claude-clone.html", "path":"src/ai-assistview/claude-clone.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+            ]
+        },
+        {
+            "url": "gemini-clone",
+            "name": "Gemini AI-like",
+            "category": "UI Customization",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
+            "description": "Gemini-inspired UI appearance with ai assistview supported features with footer toolbar and banner template",
+            "sourceFiles": [
+                { "displayName": "gemini-clone.js", "path":"src/ai-assistview/gemini-clone.js" },
+                { "displayName": "gemini-clone.html", "path":"src/ai-assistview/gemini-clone.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
@@ -81,36 +181,13 @@
         },
         {
             "url": "model",
-            "name": "Multiple AI Models",
+            "name": "Multiple AI Conversation",
             "category": "Use Cases",
             "api":{ "AIAssitView": ["bannerTemplate", "promptItemTemplate", "responseItemTemplate", "promptSuggestionItemTemplate", "promptSuggestions", "promptSuggestionsHeader", "promptRequest"] },
             "description": "Showcases the AiAssistView control to integrate with Gemini, OpenAI Sample.",
             "sourceFiles": [
                 { "displayName": "ai-integrations.js", "path":"src/ai-assistview/model.js" },
                 { "displayName": "ai-integrations.html", "path":"src/ai-assistview/model.html" } 
-            ]
-        },
-        {
-            "url": "speech-to-text",
-            "name": "Speech To Text",
-            "category": "Speech",
-            "type": "update",
-            "api":{ "AIAssitView": ["promptRequest", "toolbarSettings", "speechToTextSettings", "bannerTemplate", "attachmentSettings", "promptToolbarSettings", "stopRespondingClick"] },
-            "description": "Demonstrates the AI AssistView component integrated  the built-in Speech-to-Text functionality, enabling users to interact using voice input transcribed into text.",
-            "sourceFiles": [
-                { "displayName": "ai-speech-to-text.js", "path":"src/ai-assistview/speech-to-text.js" },
-                { "displayName": "ai-speech-to-text.html", "path":"src/ai-assistview/speech-to-text.html" } 
-            ]
-        },
-        {
-            "url": "text-to-speech",
-            "name": "Text To Speech",
-            "category": "Speech",
-            "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
-            "description": "Demonstrates the AiAssistView component integrated with Text-to-Speech functionality, allowing AI-generated responses to be vocalized for voice-based interaction.",
-            "sourceFiles": [
-                { "displayName": "ai-text-to-speech.js", "path":"src/ai-assistview/text-to-speech.js" },
-                { "displayName": "ai-text-to-speech.html", "path":"src/ai-assistview/text-to-speech.html" } 
             ]
         }
     ]

@@ -1,0 +1,48 @@
+<div class="control-section">
+    <div class="thinking-aiassistview"> 
+        <div id="aiAssistView"></div>
+    </div>
+</div>
+
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-content">
+        <div class="e-icons e-brain"></div>
+        <h3>💭 Thinking Support</h3>
+        <i>Break down complex problems and think through decisions.</i>
+    </div>
+</script>
+
+<style>
+
+.thinking-aiassistview {
+    height: 600px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.thinking-aiassistview .banner-content .e-brain:before {
+    font-size: 35px;
+}
+
+.thinking-aiassistview .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .thinking-aiassistview {
+        width: 100%;
+    }
+}
+
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the thinking support of the AI AssistView control.</p>
+</div>
+<div id="description">
+    <p>In this example, the  <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#bannertemplate">bannerTemplate</a> customizes the banner content, and  <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#toolbarsettings">toolbarSettings</a> adds custom toolbar items like a right-aligned <code>Refresh</code> button. The  <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptsuggestions">promptSuggestions</a> provides AI prompt suggestions, and  <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptrequest">promptRequest</a> handles prompt requests when triggered.</p>
+</div>

@@ -150,7 +150,7 @@ this.default = function () {
     //Creates pallatte space
     function openPalette() {
         var paletteSpaces = document.getElementById('palette-space');
-        isMobile = window.matchMedia('(max-width:550px)').matches;
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
                 paletteSpaces.classList.add('sb-mobile-palette-open');

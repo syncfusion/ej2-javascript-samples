@@ -26,8 +26,8 @@ this.default = function () {
         allowSelection: true,
         gridLines: 'Both',
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         treeColumnIndex: 1,
         resourceFields: {
             id: 'resourceId',
@@ -38,16 +38,16 @@ this.default = function () {
         timelineSettings: {
             topTier: {
                 unit: 'Week',
-                format: 'MMM dd, y',
+                format: 'MMM dd, y'
             },
             bottomTier: {
-                unit: 'Day',
+                unit: 'Day'
             },
         },
         allowResizing: true,
         columns: [
             { field: 'TaskID', width: 80 },
-            { field: 'TaskName', headerText: 'Job Name', width: '250', clipMode: 'EllipsisWithTooltip' },
+            { field: 'TaskName', headerText: 'Job Name', width: 250, clipMode: 'EllipsisWithTooltip' },
             { field: 'StartDate' },
             { field: 'Duration' },
             { field: 'Progress' },
@@ -58,19 +58,19 @@ this.default = function () {
             rightLabel: 'resources'
         },
         splitterSettings: {
-            position: "35%"
+            columnIndex: 3
         },
         editDialogFields: [
             { type: 'General', headerText: 'General' },
             { type: 'Dependency' },
             { type: 'Resources' },
-            { type: 'Notes' },
+            { type: 'Notes' }
         ],
         enableContextMenu: true,
         contextMenuItems: ['AutoFitAll', 'AutoFit', 'TaskInformation', 'DeleteTask', 'Save', 'Cancel',
             'SortAscending', 'SortDescending', 'Add', 'DeleteDependency', 'Convert', 'Indent', 'Outdent',
             { text: 'Collapse the Row', target: '.e-content', id: 'collapserow' },
-            { text: 'Expand the Row', target: '.e-content', id: 'expandrow' },
+            { text: 'Expand the Row', target: '.e-content', id: 'expandrow' }
         ],
         contextMenuClick: function (args) {
             var record = args.rowData;
@@ -97,7 +97,7 @@ this.default = function () {
             }
         },
         projectStartDate: new Date('03/25/2025'),
-        projectEndDate: new Date('09/01/2025')
+        projectEndDate: new Date('09/07/2025')
     });
     ganttChart.appendTo('#ContextMenu');
 };

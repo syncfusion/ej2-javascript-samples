@@ -33,26 +33,24 @@
             <li><code>Finish No Earlier Than</code> - Task cannot finish before the specified date.</li>
             <li><code>Finish No Later Than</code> - Task must finish on or before the specified date.</li>
         </ul>
-        <br />
         <p>
-            You can assign constraints to a task using the <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/taskFieldsModel/#constraintType">taskFields.constraintType</a></code> and <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/taskFieldsModel/#constraintDate">taskFields.constraintDate</a></code> properties.
+            You can assign constraints to a task using the <code><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/taskfieldsmodel#constrainttype">taskFields.constraintType</a></code> and <code><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/taskfieldsmodel#constraintdate">taskFields.constraintDate</a></code> properties.
             Constraints can also be updated interactively through the task edit dialog.
         </p>
     </p>
-<p><strong>Handling constraint violation popup:</strong></p>
-<p>
-    To control or suppress the constraint violation dialog, handle the <code>actionBegin</code> event with <code>requestType</code> as <code>validateTaskViolation</code>. 
-    Use <code>args.validateMode</code> to specify how to respond to constraint conflicts. Available properties include:
-</p>
-<ul>
-    <li><code>respectMustStartOn</code></li>
-    <li><code>respectMustFinishOn</code></li>
-    <li><code>respectStartNoLaterThan</code></li>
-    <li><code>respectFinishNoLaterThan</code></li>
-</ul>
-<p>
-    These options are false by default, which means the violation popup appears. To suppress the popup and cancel conflicting changes silently, set the relevant flag(s) to <strong>true</strong>.
-</p>
-<br>
-<p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/task-constraints">documentation section</a>.</p>
+    <p><strong>Handling constraint violation popup:</strong></p>
+    <p>
+        To control or suppress the constraint violation dialog, handle the <code>actionBegin</code> event with <code>requestType</code> as <code>validateTaskViolation</code>. 
+        Use <code>args.validateMode</code> to specify how to respond to constraint conflicts. Available properties include:
+    </p>
+    <ul>
+        <li><code>respectMustStartOn</code></li>
+        <li><code>respectMustFinishOn</code></li>
+        <li><code>respectStartNoLaterThan</code></li>
+        <li><code>respectFinishNoLaterThan</code></li>
+    </ul>
+    <p>
+        These options are false by default, which means the violation popup appears. To suppress the popup and cancel conflicting changes silently, set the relevant flag(s) to <strong>true</strong>.
+    </p>
+    <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/task-constraints">documentation section</a>.</p>
 </div>

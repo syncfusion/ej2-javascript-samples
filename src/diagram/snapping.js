@@ -66,7 +66,7 @@ var handles = [
 // Initialize the diagram with specified settings and properties
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '645px', nodes: nodes,
-    scrollSettings:{scrollLimit:'Infinity'},
+    scrollSettings:{scrollLimit:'Diagram'},
     drawingObject:{type:'Orthogonal'},
     contextMenuSettings: contextMenu,
     onUserHandleMouseDown:userHandelClick,

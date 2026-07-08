@@ -1,9 +1,4 @@
 this.default = function() {
-const azureOpenAIApiKey = 'Your_AzureOpenAIApiKey'; // replace your key
-const azureOpenAIEndpoint = 'Your_AzureOpenAIEndpoint'; // replace your endpoint
-const azureOpenAIApiVersion = 'Your_AzureOpenAIApiVersion'; // replace to match your resource
-const azureDeploymentName = 'Your_AzureDeploymentName'; // your Azure OpenAI deployment name
-var stopStreaming = false;
 loadExternalFile();
 var aiAssistView = new ej.interactivechat.AIAssistView({
     toolbarSettings: {
@@ -28,68 +23,21 @@ var aiAssistView = new ej.interactivechat.AIAssistView({
     },
     bannerTemplate: "#bannerContent",
     promptRequest: onPromptRequest,
-    stopRespondingClick: handleStopResponse
+    enableStreaming: true
 });
 aiAssistView.appendTo('#aiAssistView');
 
 function toolbarItemClicked(args) {
     if (args.item.iconCss === 'e-icons e-refresh') {
         aiAssistView.prompts = [];
-        stopStreaming = true; // Ensure streaming is stopped on refresh
     }
 }
 
-async function streamResponse(response) {
-    var lastResponse = "";
-    var responseUpdateRate = 10;
-    var i = 0;
-    var responseLength = response.length;
-    while (i < responseLength && !stopStreaming) {
-        lastResponse += response[i];
-        i++;
-        if (i % responseUpdateRate === 0 || i === responseLength) {
-            var htmlResponse = marked.parse(lastResponse);
-            aiAssistView.addPromptResponse(htmlResponse, i === responseLength);
-            aiAssistView.scrollToBottom();
-        }
-        await new Promise(resolve => setTimeout(resolve, 15));
-    }
-}
-
-function onPromptRequest(args) {
+async function onPromptRequest(args) {
     if (!args?.prompt?.trim() || !aiAssistView) return;
-    stopStreaming = false;
-    var url =
-        azureOpenAIEndpoint.replace(/\/$/, '') +
-        `/openai/deployments/${encodeURIComponent(azureDeploymentName)}/chat/completions` +
-        `?api-version=${encodeURIComponent(azureOpenAIApiVersion)}`;
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: azureOpenAIApiKey,
-        },
-        body: JSON.stringify({
-            model: 'gpt-4o-mini',
-            messages: [{ role: 'user', content: args.prompt }],
-            max_tokens: 150,
-            stream: false
-        }),
-    })
-        .then(response => response.json())
-        .then(reply => {
-            var responseText = reply.choices[0].message.content.trim() || 'No response received.';
-            stopStreaming = false;
-            streamResponse(responseText);
-        })
-        .catch(error => {
-            aiAssistView.addPromptResponse('⚠️ Something went wrong while connecting to the AI service. Please check your API key, Deployment model, endpoint or try again later.', true);
-            stopStreaming = true;
-        });
-}
-
-function handleStopResponse() {
-    stopStreaming = true;
+    abortController = new AbortController();
+    var response = await window.getAIResponse(args, abortController);
+    aiAssistView.addPromptResponse(response);
 }
 
 function loadExternalFile() {

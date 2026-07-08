@@ -154,6 +154,7 @@ function contextMenuClick(args) {
     getEventDetails(args);
 }
 
+
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
 
@@ -299,10 +300,13 @@ this.default = function () {
             data.removeChild(data.childNodes[i]);
         }
     };
+
+    // Initialize mobile palette events after DOM is ready
+    addDiagramEvents();
 };
 
 function addDiagramEvents() {
-    isMobile = window.matchMedia('(max-width:550px)').matches;
+    var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
         var paletteIcon = document.getElementById('palette-icon');
         if (paletteIcon) {
@@ -312,7 +316,7 @@ function addDiagramEvents() {
 }
 function openPalette() {
     var paletteSpace = document.getElementById('palette-space');
-    isMobile = window.matchMedia('(max-width:550px)').matches;
+    var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
         if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
             paletteSpace.classList.add('sb-mobile-palette-open');
@@ -322,7 +326,6 @@ function openPalette() {
         }
     }
 }
-addDiagramEvents();
 
 // Function to get event details based on selected items
 function getEventDetails(args) {

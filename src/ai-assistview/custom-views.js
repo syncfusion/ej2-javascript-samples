@@ -1,5 +1,6 @@
 this.default = function() {
 
+    var abortController;
     var viewsAIAssistView = new ej.interactivechat.AIAssistView({
         views: [
             {
@@ -44,7 +45,7 @@ this.default = function() {
                 </div>`;
     }
 
-    function updateResponseView(prompt) {
+    async function updateResponseView(prompt) {
         var responseView = viewsAIAssistView.element.querySelector('.view-container');
         var separatorElem = '<hr style="height: 1px;margin: 0;">';
         var responseItemElem = `<div class="responseItemContent e-card">
@@ -64,11 +65,11 @@ this.default = function() {
             defaultResponse.remove();
         }
         responseView.innerHTML = responseItemElem + responseView.innerHTML;
-        setTimeout(() => {
+        setTimeout(async () => {
+            abortController = new AbortController();
             var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === prompt);
-            var defaultResponse = 'For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            
-            var response = foundPrompt ? foundPrompt.response : defaultResponse;
+            var args = { prompt: prompt };
+            var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
             responseView.children[0].querySelector('.content').innerHTML = response;
             var copyBtn = responseView.children[0].querySelector('#copyBtn');
             copyBtn.classList.remove('e-skeleton', 'e-shimmer-wave');
@@ -116,5 +117,4 @@ this.default = function() {
             }
         });
     }
-
 };

@@ -1,5 +1,36 @@
 <div class="control-pane">
     <div class="control-section">
+        <!-- Toolbar (styled like original) -->
+        <div class="custom-toolbar">
+
+            <!-- LEFT GROUP -->
+            <div class="toolbar-left">
+                <div class="timezone-label">
+                    <label class="showhide">Time Zone:</label>
+                </div>
+
+                <div id="timezonelist"></div>
+            </div>
+
+            <!-- RIGHT GROUP -->
+            <div class="toolbar-right">
+                <div class="timeline-section">
+                    <button id="previous-timespan" class="previous-timespan">
+                        <span class="e-icons e-chevron-left-fill"></span>
+                    </button>
+                </div>
+
+                <div id="timeline"></div>
+
+                <div class="timeline-section">
+                    <button id="next-timespan" class="next-timespan">
+                        <span class="e-icons e-chevron-right-fill"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gantt -->
         <div id="timezone"></div>
     </div>
 </div>
@@ -13,82 +44,76 @@
         For example, in this demo, the timezone of Gantt is set to UTC, and the task named <code>Plan timeline</code> has start time as <code>08:00 am</code> but converted based on UTC and rendered at <code>2.30 am</code>.
     </p>
     <p>
-        When a user sets any timezone, dates are converted based on the value set to <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt#timezone">timezone</a></code> property of Gantt control.
+        When a user sets any timezone, dates are converted based on the value set to the <code><a target="_blank" class="code" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt#timezone">timezone</a></code> property of Gantt control.
     </p>
-    <br>
     <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/timezone">documentation section</a>.</p>
-
 </div>
 
 <style>
-.e-bigger .previous-timespan, .e-bigger .next-timespan {
-            height: 38px !important;
-            width: 38px !important;
-            padding: 0 !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .previous-timespan,
-        .next-timespan {
-            height: 32px !important;
-            width: 32px !important;
-            padding: 0 !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #timezone .e-gantt-toolbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 5px;
-            flex-wrap: nowrap;
-        }
-        .showhide {
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0;
-        }
-        .e-bigger .showhide {
-            font-size: 16px;
-            font-weight: 700;
-        }
-        .timezone-label {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-        }
-        .timezone-dropdown {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-            min-width: 300px;
-        }
-        .timeline-section {
-            display: flex;
-            align-items: center;
-            padding: 0 5px;
-        }
-        .timeline-dropdown {
-            display: flex;
-            align-items: center;
-            padding: 0 5px;
-            min-width: 100px;
-        }
-        #timezone .e-toolbar-item.e-separator {
-            margin: 0 2px;
-        }
-        #timezone .e-separator{
-            padding: 0px;
-        }
-        #timezone .e-toolbar-item.e-template{
-            padding: 0px !important;
-        }
-        .bootstrap5\.3 #timezone .e-icons, .bootstrap5\.3-dark #timezone .e-icons{
-            color: white;
-        }
+    .custom-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* space only between groups */
+        padding: 5px;
+        width: 100%;
+    }
+
+    /* LEFT GROUP */
+    .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* RIGHT GROUP */
+    .toolbar-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Label */
+    .showhide {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    /* Dropdown widths */
+    #timezonelist {
+        min-width: 250px;
+    }
+
+    #timeline {
+        min-width: 100px;
+    }
+
+    /* Buttons */
+    .previous-timespan,
+    .next-timespan {
+        height: 32px !important;
+        width: 32px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ✅ RTL support */
+    html[dir="rtl"] .custom-toolbar {
+        flex-direction: row-reverse;  /* ✅ reverse layout */
+    }
+
+    /* Fix spacing in RTL */
+    html[dir="rtl"] .timezone-label {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    /* Fix dropdown alignment */
+    html[dir="rtl"] #timezonelist,
+    html[dir="rtl"] #timeline {
+        text-align: right;
+    }
+    .bootstrap5\.3 #timezone .e-icons, .bootstrap5\.3-dark #timezone .e-icons{
+        color: white;
+    }
 </style>

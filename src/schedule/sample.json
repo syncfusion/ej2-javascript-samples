@@ -4,6 +4,7 @@
     "category": "Calendars",
     "dataSourcePath": "src/schedule/datasource.js",
     "ftName": "scheduler",
+    "type": "update",
     "samples": [
         {
             "url": "overview",
@@ -42,6 +43,7 @@
         },
         {
             "url": "event-calendar",
+            "ignoreOnBuild": true,
             "name": "Event Calendar",
             "category": "Product Use Case",
             "description": "This demo shows the way to organize and filter multiple types of events such as Personal, Birthdays, Work, and Holidays in the scheduler.",
@@ -112,6 +114,49 @@
                     "cellClick",
                     "eventRendered",
                     "dragStop"
+                ]
+            }
+        },
+        {
+            "url": "task-progress-tracker",
+            "name": "Task Progress Tracker",
+            "category": "Product Use Case",
+            "type": "new",
+            "description": "This demo presents a task-oriented Scheduler view with customized event rendering, featuring status indicators and progress tracking for effective project monitoring.",
+            "api": {
+                "Schedule": [
+                    "cssClass",
+                    "width",
+                    "height",
+                    "selectedDate",
+                    "currentView",
+                    "popupOpen",
+                    "allowOverlap",
+                    "startHour",
+                    "endHour",
+                    "showWeekend",
+                    "views",
+                    "group",
+                    "resources",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "integration-with-chart",
+            "ignoreOnBuild": true,
+            "name": "Integration with Chart",
+            "category": "Product Use Case",
+            "type": "new",
+            "hideOnDevice": true,
+            "description": "This demo shows driver and truck details in a scheduler, with a chart that toggles to summarize each driver's capacity or trip count.",
+            "api": {
+                "Schedule": [
+                    "eventSettings",
+                    "selectedDate",
+                    "group",
+                    "resources",
+                    "actionComplete"
                 ]
             }
         },
@@ -196,6 +241,7 @@
         },
         {
             "url": "search-events",
+            "ignoreOnBuild": true,
             "name": "Search Events",
             "category": "Appointments",
             "description": "This example shows how to filter the appointments or events of the JS (ES5) Scheduler based on a search string in a particular field or all fields.",
@@ -303,6 +349,7 @@
         },
         {
             "url": "grid-to-schedule",
+            "ignoreOnBuild": true,
             "name": "Drag Events From DataGrid",
             "category": "Drag and Drop",
             "description": " This example illustrates how to drag and drop events between the DataGrid and the Scheduler.",
@@ -453,6 +500,21 @@
             "name": "View Intervals",
             "category": "Views",
             "description": "This demo shows how to design own custom views like 3 days, 2 weeks, 4 months apart from the default day, work week, month in JS Event Scheduler.",
+            "api": {
+                "Schedule": [
+                    "currentView",
+                    "views",
+                    "selectedDate",
+                    "eventSettings"
+                ]
+            }
+        },
+        {
+            "url": "limit-concurrent-events",
+            "name": "Limit Concurrent Event",
+            "category": "Views",
+            "type":"new",
+            "description": "This demo shows how to limit the number of concurrent events displayed in a single time slot on the Schedule.",
             "api": {
                 "Schedule": [
                     "currentView",

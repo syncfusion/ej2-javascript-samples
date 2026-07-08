@@ -158,69 +158,81 @@ this.default = function () {
     }
 
     //create the Toolbar and adding items in ToolBar.
+    // Conditionally build items array - exclude FitToPage and its separator on mobile
+    var isMobileView = window.innerWidth <= 550;
+    var toolbarItems = [
+        {
+            id: 'ZoomIn',
+            type: 'Button',
+            tooltipText: 'Zoom In',
+            prefixIcon: 'e-icons e-zoom-in',
+        },
+        {
+            id: 'ZoomOut',
+            type: 'Button',
+            tooltipText: 'Zoom Out',
+            prefixIcon: 'e-icons e-zoom-out',
+        },
+        {
+            id: 'Separator1', type: 'Separator'
+        },
+        {
+            id: 'Pointer',
+            type: 'Button',
+            tooltipText: 'Pointer',
+            prefixIcon: 'e-icons e-mouse-pointer',
+        },
+        {
+            id: 'PanTool',
+            type: 'Button',
+            tooltipText: 'Pan Tool',
+            prefixIcon: 'e-icons e-pan',
+        },
+        {
+            id: 'Separator2', type: 'Separator'
+        },
+        {
+            id: 'Reset',
+            type: 'Button',
+            tooltipText: 'Reset',
+            prefixIcon: 'e-icons e-reset',
+        },
+    ];
+    
+    // Add FitToPage and separator only on desktop view
+    if (!isMobileView) {
+        toolbarItems.push({
+            id: 'FitToPage',
+            type: 'Button',
+            tooltipText: 'Fit To Page',
+            prefixIcon: 'e-icons e-zoom-to-fit',
+        });
+        toolbarItems.push({
+            id: 'Separator3', type: 'Separator'
+        });
+    }
+    
+    // Add the remaining items
+    toolbarItems.push(
+        {
+            id: 'BringIntoView',
+            type: 'Button',
+            tooltipText: 'Bring Into View',
+            prefixIcon: 'e-icons e-bring-to-view',
+            disabled: true
+        },
+        {
+            id: 'BringIntoCenter',
+            type: 'Button',
+            tooltipText: 'Bring Into Center',
+            prefixIcon: 'e-icons e-bring-to-center',
+            disabled: true
+        }
+    );
+    
     var toolbarEditor = new ej.navigations.Toolbar({
         clicked: handleToolbarClick, // Event handler for toolbar item click
-        items: [
-            {
-                id: 'ZoomIn',
-                type: 'Button',
-                tooltipText: 'Zoom In',
-                prefixIcon: 'e-icons e-zoom-in',
-            },
-            {
-                id: 'ZoomOut',
-                type: 'Button',
-                tooltipText: 'Zoom Out',
-                prefixIcon: 'e-icons e-zoom-out',
-            },
-            {
-                id: 'Separator1', type: 'Separator'
-            },
-            {
-                id: 'Pointer',
-                type: 'Button',
-                tooltipText: 'Pointer',
-                prefixIcon: 'e-icons e-mouse-pointer',
-            },
-            {
-                id: 'PanTool',
-                type: 'Button',
-                tooltipText: 'Pan Tool',
-                prefixIcon: 'e-icons e-pan',
-            },
-            {
-                id: 'Separator2', type: 'Separator'
-            },
-            {
-                id: 'Reset',
-                type: 'Button',
-                tooltipText: 'Reset',
-                prefixIcon: 'e-icons e-reset',
-            },
-            {
-                id: 'FitToPage',
-                type: 'Button',
-                tooltipText: 'Fit To Page',
-                prefixIcon: 'e-icons e-zoom-to-fit',
-            },
-            {
-                id: 'Separator3', type: 'Separator'
-            },
-            {
-                id: 'BringIntoView',
-                type: 'Button',
-                tooltipText: 'Bring Into View',
-                prefixIcon: 'e-icons e-bring-to-view',
-                disabled: true
-            },
-            {
-                id: 'BringIntoCenter',
-                type: 'Button',
-                tooltipText: 'Bring Into Center',
-                prefixIcon: 'e-icons e-bring-to-center',
-                disabled: true
-            },
-        ]
+        items: toolbarItems
     });
     toolbarEditor.appendTo('#toolbar');
 };

@@ -40,11 +40,11 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            parentID:'ParentId'
+            parentID: 'ParentId'
         },
         columns: [
             { field: 'TaskID', width: 120 },
-            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 250 },
             { field: 'StartDate' },
             { field: 'Duration' },
             { field: 'EndDate' },
@@ -55,17 +55,17 @@ this.default = function () {
         allowFiltering: true,
         includeWeekend: true,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         splitterSettings: {
             columnIndex: 2
         },
         rowSelected: rowSelectEvent,
         labelSettings: {
-            rightLabel: 'TaskName',
+            rightLabel: 'TaskName'
         },
         projectStartDate: new Date('03/30/2025'),
-        projectEndDate: new Date('07/20/2025')
+        projectEndDate: new Date('06/21/2025')
     });
     ganttChart.appendTo('#AdvancedFiltering');
 
@@ -136,7 +136,7 @@ this.default = function () {
                         { field: 'Duration', label: 'Duration', type: 'number' },
                         { field: 'EndDate', label: 'End Date', type: 'date', format: 'MM/dd/yyyy' },
                         { field: 'Progress', label: 'Progress', type: 'number' },
-                        { field: 'Predecessor', label: 'Predecessor', type: 'string', width:190 }
+                        { field: 'Predecessor', label: 'Predecessor', type: 'string', width: 190 }
                     ],
                     ruleChange: updateRule,
                     created: created

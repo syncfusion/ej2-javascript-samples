@@ -52,7 +52,7 @@ function getPorts(obj) {
 //Connector style customization
 function applyConnectorStyle(dashedLine, sourceDec, isRounded, type, target, strokeWidth) {
     for (var i = 0; i < diagram.connectors.length; i++) {
-        connector = diagram.connectors[i];
+        var connector = diagram.connectors[i];
         connector.style.strokeWidth = !strokeWidth ? 2 : strokeWidth;
         connector.type = type;
         connector.cornerRadius = isRounded ? 5 : 0;
@@ -257,6 +257,9 @@ function segmentDecoratorShapeChange(args)
                 return canvas;
             }
             return null;
+        },
+        created: function () {
+            diagram.fitToPage();
         },
     });
     diagram.appendTo('#diagram');

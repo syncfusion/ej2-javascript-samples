@@ -24,6 +24,9 @@ this.default = function () {
             connector.type = 'Straight';
             return connector;
         },
+        created: function (args) {
+            diagram.fitToPage();
+        },
         //customize the visual representation of nodes within a diagram.
         setNodeTemplate: function (node) {
             var shape = { type: 'Basic', shape: 'Ellipse' };

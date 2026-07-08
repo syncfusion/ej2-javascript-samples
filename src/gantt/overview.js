@@ -2,7 +2,7 @@
 this.default = function () {
     var theme;
     var style;
-    var CurrentTheme;
+    var currentTheme;
     var statusStyleColor;
     var priorityStyle;
     var IconClass;
@@ -28,7 +28,7 @@ this.default = function () {
         enableAutoWbsUpdate: true,
         viewType: 'ProjectView',
         pdfQueryCellInfo: pdfQueryCellInfo,
-        pdfQueryTaskbarInfo:pdfQueryTaskbarInfo,
+        pdfQueryTaskbarInfo: pdfQueryTaskbarInfo,
         taskFields: {
             id: 'TaskId',
             name: 'TaskName',
@@ -44,19 +44,19 @@ this.default = function () {
         },
         resourceFields: {
             id: 'resourceId',
-            name: 'resourceName',
+            name: 'resourceName'
         },
         columns: [
-            { field: 'WBSCode', headerText: 'WBS ID', width: 120 },
-            { field: 'TaskName', width: 200, headerText: 'Product Release' },
-            { field: 'Assignee', width: 179, allowSorting: false, headerText: 'Assignee', template: '#columnTemplate' },
+            { field: 'WBSCode', headerText: 'WBS ID', width: 110 },
+            { field: 'TaskName', width: 230, headerText: 'Product Release' },
+            { field: 'Assignee', width: 160, allowSorting: false, headerText: 'Assignee', template: '#columnTemplate' },
             { field: 'Status', minWidth: 100, width: 120, headerText: 'Status', template: '#columnTemplate1' },
             { field: 'Priority', minWidth: 80, width: 120, headerText: 'Priority', template: '#columnTemplate2' },
-            { field: 'WBSPredecessor', headerText: 'WBS Predecessor', width: 200},
-            { field: 'ConstraintType', width: 200 },
-            { field: 'ConstraintDate', width: 200 },
-            { field: 'Progress',  headerText: 'Completion (%)',width:205},
-            { field: 'TimeLog',  headerText: 'Work Log', width:150}
+            { field: 'WBSPredecessor', headerText: 'WBS Predecessor', width: 220 },
+            { field: 'ConstraintType', width: 170 },
+            { field: 'ConstraintDate', width: 170 },
+            { field: 'Progress', headerText: 'Completion (%)', width: 160 },
+            { field: 'TimeLog', headerText: 'Work Log', width: 140 }
         ],
         toolbar: ['ExpandAll', 'CollapseAll', 'ZoomIn', 'ZoomOut', 'ZoomToFit', 'ExcelExport', 'CsvExport', 'PdfExport'],
         allowExcelExport: true,
@@ -67,17 +67,18 @@ this.default = function () {
             }
             else if (args.item.id === 'overviewSample_csvexport') {
                 gantt.csvExport();
-            } else if (args.item.id === 'overviewSample_pdfexport') {
+            }
+            else if (args.item.id === 'overviewSample_pdfexport') {
                 gantt.pdfExport();
             }
         },
         load: function (args) {
-           var themeCollection = ['bootstrap5', 'bootstrap', 'bootstrap4', 'fluent', 'fabric', 'fusionnew', 'material3', 'material', 'highcontrast', 'tailwind', 'fluent2', 'tailwind3', 'bootstrap5.3'];
+            var themeCollection = ['bootstrap5', 'bootstrap', 'bootstrap4', 'fluent', 'fabric', 'fusionnew', 'material3', 'material', 'highcontrast', 'tailwind', 'fluent2', 'tailwind3', 'bootstrap5.3'];
             var theme = document.body.className.split(' ').find(function(cls) { return themeCollection.includes(cls); }) || '';
-            CurrentTheme = theme ? true : false;
+            currentTheme = theme ? true : false;
         },
         splitterSettings: {
-            columnIndex: 4,
+            columnIndex: 4
         },
         selectionSettings: {
             mode: 'Row',
@@ -94,6 +95,7 @@ this.default = function () {
         gridLines: "Both",
         showColumnMenu: true,
         timelineSettings: {
+            timelineUnitSize: 60,
             showTooltip: true,
             topTier: {
                 unit: 'Month',
@@ -125,7 +127,7 @@ this.default = function () {
                 day: new Date('2025-11-25'),
                 cssClass: 'e-custom-event-marker',
                 label: 'Deployment'
-            },
+            }
         ],
         holidays: [{
             from: new Date("01/01/2025"),
@@ -145,16 +147,15 @@ this.default = function () {
         },
         allowResizing: true,
         projectStartDate: new Date('01/25/2025'),
-        projectEndDate: new Date('01/30/2026'),
+        projectEndDate: new Date('01/30/2026')
     });
     gantt.appendTo('#overviewSample');
     function pdfQueryCellInfo(args) {
         // Format Assignee column
-       
-            if (args.column.headerText === 'Assignee' && args.data.taskData.resourcesImage) {
-                args.image = { height: 30, width: 30, base64: args.data.taskData.resourcesImage};
-                args.value = `${args.data.Assignee}\n${args.data.taskData.Department}`; 
-            }
+        if (args.column.headerText === 'Assignee' && args.data.taskData.resourcesImage) {
+            args.image = { height: 30, width: 30, base64: args.data.taskData.resourcesImage};
+            args.value = `${args.data.Assignee}\n${args.data.taskData.Department}`; 
+        }
 
         // Set font color for Status or Priority columns
         if (args.column.field === 'Status' || args.column.field === 'Priority') {
@@ -178,18 +179,18 @@ this.default = function () {
     window.Status = function (status) {
         switch (status) {
             case "In Progress":
-                statusStyleColor =  (CurrentTheme) ? "#006aa6ff" : "#34B6FF";
+                statusStyleColor =  (currentTheme) ? "#006aa6ff" : "#34B6FF";
                 style = "display: flex; padding: 2px 10px; gap: 10px; width: 96px; height: 24px; border: solid 1px" + statusStyleColor;
                 break;
             case "Open":
                 style = "display: flex; justify-content:center; gap: 10px; width: 96px; height: 24px; border: solid 1px red";
                 break;
             case "On Hold":
-                statusStyleColor =  (CurrentTheme) ? "#766B7C" : "#CDCBD7";
+                statusStyleColor =  (currentTheme) ? "#766B7C" : "#CDCBD7";
                 style = "display: flex; justify-content:center; gap: 10px; width: 96px; height: 24px; border: solid 1px" + statusStyleColor;
                 break;
             case "Completed":
-                statusStyleColor = (CurrentTheme) ? "#00A653" : "#92FFC8";
+                statusStyleColor = (currentTheme) ? "#00A653" : "#92FFC8";
                 style = "display: flex; padding: 2px 10px; gap: 10px; width: 96px; height: 24px; border: solid 1px" + statusStyleColor;
                 break;
         }
@@ -198,22 +199,22 @@ this.default = function () {
     window.StatusContent = function (status) {
         switch (status) {
             case "In Progress":
-                statusContentstyleColor = (CurrentTheme) ? "rgb(0, 106, 166)" : "rgb(52, 182, 255)";
+                statusContentstyleColor = (currentTheme) ? "rgb(0, 106, 166)" : "rgb(52, 182, 255)";
                 style = "width: 72px; height: 22px; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; color: " + statusContentstyleColor;
                 break;
             case "Open":
                 style = "width: 54px; height: 22px; font-style: normal;  font-weight: 400; font-size: 14px; line-height: 22px; text-align: center; color: rgb(255, 0, 0); ";
                 break;
             case "On Hold":
-                statusContentstyleColor = (CurrentTheme) ? "rgb(118, 107, 124)" : "rgb(205, 203, 215)";
+                statusContentstyleColor = (currentTheme) ? "rgb(118, 107, 124)" : "rgb(205, 203, 215)";
                 style = "width: 54px; height: 22px; font-style: normal;  font-weight: 400; font-size: 14px; line-height: 22px; text-align: center; color: " + statusContentstyleColor;
                 break;
             case "Completed":
-                statusContentstyleColor = (CurrentTheme) ? "rgb(0, 166, 83)" : "rgb(146, 255, 200)";
+                statusContentstyleColor = (currentTheme) ? "rgb(0, 166, 83)" : "rgb(146, 255, 200)";
                 style = "width: 74px; height: 22px; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; color: " + statusContentstyleColor;
                 break;
             case "High":
-                statusContentstyleColor = (CurrentTheme) ? "rgb(243, 86, 32)" : "rgb(255, 181, 184)";
+                statusContentstyleColor = (currentTheme) ? "rgb(243, 86, 32)" : "rgb(255, 181, 184)";
                 style = "width: 31px; height: 22px; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; color: " + statusContentstyleColor;
                 break;
         }
@@ -222,19 +223,19 @@ this.default = function () {
     window.PriorityIconStyle = function (priority) {
         switch (priority) {
             case "Low":
-                priorityStyle = (CurrentTheme) ? "#00A653" : "#FDFF88";
+                priorityStyle = (currentTheme) ? "#00A653" : "#FDFF88";
                 style = " margin-top:2px; color: " + priorityStyle + "!important";
                 break;
             case "Normal":
-                priorityStyle = (CurrentTheme) ? "#7100A6" : "#E3A9FF";
+                priorityStyle = (currentTheme) ? "#7100A6" : "#E3A9FF";
                 style = " margin-top:2px; !important; color: " + priorityStyle + "!important"; 
                 break;
             case "Critical":
-                priorityStyle = (CurrentTheme) ? "#FF3740" : "#FFB5B8";
+                priorityStyle = (currentTheme) ? "#FF3740" : "#FFB5B8";
                 style = "margin-top:2px; color: " + priorityStyle + "!important"; 
                 break;
             case "High":
-                priorityStyle = (CurrentTheme) ? "#f35620" : "#FFB5B8";
+                priorityStyle = (currentTheme) ? "#f35620" : "#FFB5B8";
                 style = "margin-top:2px; color: " + priorityStyle + "!important"; 
                 break;
         }
@@ -243,19 +244,19 @@ this.default = function () {
     window.PriorityContent = function (priority) {
         switch (priority) {
             case "Low":
-                priorityContentStyle = (CurrentTheme) ? "rgb(0, 166, 83)" : "rgb(253, 255, 136)";
-                style = "width: 28px; height: 22px; font-style: normal;  font-size: 14px; margin-left:3px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
+                priorityContentStyle = (currentTheme) ? "rgb(0, 166, 83)" : "rgb(253, 255, 136)";
+                style = "width: 28px; height: 22px; font-style: normal; font-size: 14px; margin-left:3px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
                 break;
             case "Normal":
-                priorityContentStyle = (CurrentTheme) ? "rgb(113, 0, 166)" : "#rgb(227, 169, 255)";
-                style = "width: 28px; height: 22px; font-style: normal;  margin-left:3px; font-size: 14px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
+                priorityContentStyle = (currentTheme) ? "rgb(113, 0, 166)" : "rgb(227, 169, 255)";
+                style = "width: 28px; height: 22px; font-style: normal; margin-left:3px; font-size: 14px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
                 break;
             case "Critical":
-                priorityContentStyle = (CurrentTheme) ? "rgb(255, 55, 64)" : "rgb(255, 181, 184)";
-                style = "width: 48px; height: 22px; font-style: normal;  font-size: 14px; margin-left:3px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
+                priorityContentStyle = (currentTheme) ? "rgb(255, 55, 64)" : "rgb(255, 181, 184)";
+                style = "width: 48px; height: 22px; font-style: normal; font-size: 14px; margin-left:3px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
                 break;
             case "High":
-                priorityContentStyle = (CurrentTheme) ? "rgb(235, 99, 67)" : "rgb(255, 181, 184)";
+                priorityContentStyle = (currentTheme) ? "rgb(235, 99, 67)" : "rgb(255, 181, 184)";
                 style = "width: 31px; height: 22px; font-style: normal; font-size: 14px; margin-left:3px; line-height: 20px; text-align: center; color: " + priorityContentStyle;
                 break;
         }

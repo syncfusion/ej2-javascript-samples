@@ -1,30 +1,62 @@
+<style>
+    #immediateContainer {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
 <div class="control-section">
     <div class="content-wrapper">
+        <div id="immediateContainer">
+            <input type="text" tabindex="1" id="columnChooserMode">
+        </div>
         <div id="Grid">
         </div>
     </div>
 </div>
-
 <div id="action-description">
-    <p>This sample demonstrates the Grid column chooser feature. Click the column chooser icon in the toolbar to open
-        column chooser and you can select columns to hide/show from the checkbox list.</p>
-</div>
-
-<div id="description">
-    <p>The Grid columns can be shown/hidden dynamically by using column chooser. To enable column chooser behavior, set
-        <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/#showcolumnchooser">showColumnChooser
-            </a></code> property as true. You can also prevent the display of a column by setting
-        <code><a aria-label="API link for documentation" target="_blank" class="code"
-                href="http://ej2.syncfusion.com/javascript/documentation/api/grid/column/#showincolumnchooser">columns->showInColumnChooser
-            </a></code> as false in columns definition.
-
-    </p>
-    <br />
-
     <p>
-        In this demo, when the user clicks column chooser icon from the toolbar then the column chooser menu will open,
-        User can
-        show or hide the columns by changing the state of the checkbox.
+        This sample demonstrates how users can dynamically show or hide columns using the Column Chooser feature. It
+        highlights flexible column visibility management through an interactive Grid interface.
     </p>
+</div>
+<div id="description">
+    <p>
+        The Column Chooser feature enables users to dynamically control the visibility of columns in the Grid. To enable
+        this functionality, set the
+        <code><a target="_blank" class="code"
+        href="https://ej2.syncfusion.com/javascript/documentation/api/grid#showcolumnchooser">showColumnChooser</a></code>
+        property to <code>true</code> and include the “ColumnChooser” item in the <code><a target="_blank" class="code"
+        href="https://ej2.syncfusion.com/javascript/documentation/api/grid/index-default#toolbar">toolbar</a></code>.
+        To prevent
+        specific columns from appearing in the Column Chooser, set the
+        <code><a target="_blank" class="code"
+        href="https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#showincolumnchooser">columns.showInColumnChooser</a></code>
+        property to <code>false</code>.
+    </p>
+    <p>
+        Column visibility is managed by selecting or deselecting checkboxes in the Column Chooser dialog:
+    </p>
+    <ul>
+        <li>By default, changes are applied to the Grid only after clicking the “OK” button.</li>
+        <li>To apply changes instantly, set the
+            <code><a target="_blank" class="code"
+        href="https://ej2.syncfusion.com/javascript/documentation/api/grid/filterSettings/#type">columnChooserSettings.mode</a></code>
+            property to
+            <code>Immediate</code>.
+        </li>
+    </ul>
+    <p>
+        In this demo, the column chooser mode can be switched using the "Immediate Column Chooser Mode" checkbox. When
+        the column chooser button in the toolbar is clicked, it opens the dialog according to the selected mode,
+        allowing users to show or hide columns by selecting or clearing the corresponding checkboxes.
+    </p>
+    <p>More information on column chooser configuration can be found in the <a aria-label="API link for documentation"
+            target="_blank"
+            href="https://ej2.syncfusion.com/javascript/documentation/grid/columns/column-chooser">documentation.</a>
+    </p>
+    <p>Looking for the full JavaScript Data Grid component overview, features, pricing, and documentation? Visit our <a
+            target="_blank" href="https://www.syncfusion.com/javascript-ui-controls/js-data-grid">
+            JavaScript Data Grid component</a> page</p>
 </div>

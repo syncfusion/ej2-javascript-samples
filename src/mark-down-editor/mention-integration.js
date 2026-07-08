@@ -30,7 +30,7 @@ this.default = function() {
             mdsource = document.getElementById('preview-code');
             mdsource.addEventListener('click', function(e) {
                 fullPreview();
-                if (e.currentTarget.classList.contains('e-active')) {
+                if (e.currentTarget.parentElement.querySelector('.e-md-codeview')) {
                     markdownMention.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'OrderedList',
                         'UnorderedList', 'SuperScript', 'SubScript', 'CreateLink', 'Image', 'CreateTable', 'Formats', 'Blockquote', 'Undo', 'Redo'
                     ]);
@@ -43,25 +43,28 @@ this.default = function() {
         }
     });
     function markdownConversion() {
-        if (mdsource.classList.contains('e-active')) {
+        if (mdsource.firstElementChild.classList.contains('e-md-codeview')) {
             var id = markdownMention.getID() + 'html-view';
             var htmlPreview = document.body.querySelector('#markdownMentionhtml-preview');
-            htmlPreview.innerHTML = markdownConverter.toHtml(markdownMention.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = markdownConverter.toHtml(markdownMention.contentModule.getEditPanel().value, { lineBreak: true });
         }
     }
     function fullPreview() {
         var id = markdownMention.getID() + 'html-preview';
         var htmlPreview = markdownMention.element.querySelector('#' + id);
         var previewTextArea = markdownMention.element.querySelector('.e-rte-content');
-        if (mdsource.classList.contains('e-active')) {
-            mdsource.classList.remove('e-active');
-            mdsource.parentElement.title = 'Preview';
+        if (mdsource.firstElementChild.classList.contains('e-md-codeview')) {
+            mdsource.parentElement.setAttribute('data-content', 'Preview');
+            mdsource.firstElementChild.classList.remove('e-md-codeview');
+            mdsource.firstElementChild.classList.add('e-md-preview');
             textArea.style.display = 'block';
             htmlPreview.style.display = 'none';
             previewTextArea.style.overflow = 'hidden';
         }
         else {
-            mdsource.classList.add('e-active');
+            mdsource.parentElement.setAttribute('data-content', 'Code View');
+            mdsource.firstElementChild.classList.remove('e-md-preview');
+            mdsource.firstElementChild.classList.add('e-md-codeview');
             if (!htmlPreview) {
                 htmlPreview = ej.base.createElement('div', { className: 'e-content e-pre-source' });
                 htmlPreview.id = id;
@@ -73,7 +76,7 @@ this.default = function() {
             }
             textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = markdownConverter.toHtml(markdownMention.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = markdownConverter.toHtml(markdownMention.contentModule.getEditPanel().value, { lineBreak: true });
             mdsource.parentElement.title = 'Code View';
         }
     }

@@ -1,0 +1,282 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="BaselineTemplate">
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f4f6fb;
+        color: #202124;
+    }
+
+    .sample-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .sample-header {
+        text-align: center;
+        margin-bottom: 22px;
+        padding: 0 12px;
+    }
+
+    .sample-header h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+    }
+
+    .sample-subtitle {
+        margin: 10px auto 0;
+        max-width: 760px;
+        font-size: 16px;
+        color: #475569;
+        line-height: 1.7;
+        letter-spacing: 0.01em;
+    }
+
+    .sample-description {
+        margin: 16px auto 20px;
+        max-width: 960px;
+        line-height: 1.75;
+        font-size: 15px;
+        color: #475569;
+    }
+
+    .sample-footer {
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid #d1d5db;
+        color: #475569;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .sample-footer a {
+        color: #3f7dde;
+        text-decoration: none;
+    }
+
+    .sample-footer a:hover {
+        text-decoration: underline;
+    }
+
+    .legend-block {
+        display: inline-flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 18px;
+    }
+
+    .legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: #374151;
+    }
+
+    .legend-swatch {
+        width: 40px;
+        height: 16px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .legend-swatch.taskbar {
+        background: #3f7dde;
+    }
+
+    .legend-swatch.baseline,
+    .legend-swatch.baseline-red {
+        width: 62px;
+        background: transparent;
+        position: relative;
+    }
+
+    .legend-swatch.baseline::before,
+    .legend-swatch.baseline-red::before {
+        content: '';
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        top: 50%;
+        height: 0;
+        border-top: 2px dashed #16a34a;
+        transform: translateY(-50%);
+    }
+
+    .legend-swatch.baseline-red::before {
+        border-top-color: #dc2626;
+    }
+
+    .legend-marker {
+        position: absolute;
+        top: 50%;
+        width: 2px;
+        height: 10px;
+        border-radius: 2px;
+        transform: translateY(-50%);
+    }
+
+    .legend-marker.start {
+        left: 7px;
+        background: #16a34a;
+    }
+
+    .legend-marker.end {
+        right: 7px;
+        background: #16a34a;
+    }
+
+    .legend-swatch.baseline-red .legend-marker.start,
+    .legend-swatch.baseline-red .legend-marker.end {
+        background: #dc2626;
+    }
+
+    .gantt-card {
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+        padding: 24px;
+        margin-top: 12px;
+    }
+
+    #ganttContainer {
+        width: 100%;
+        min-height: 580px;
+    }
+
+    #ganttContainer::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    #ganttContainer::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    #ganttContainer::-webkit-scrollbar-thumb {
+        background-color: rgba(71, 85, 105, 0.28);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+
+    .sample-wrapper ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .sample-wrapper ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sample-wrapper ::-webkit-scrollbar-thumb {
+        background-color: rgba(71, 85, 105, 0.22);
+        border-radius: 10px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+    }
+
+    .sample-wrapper ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(71, 85, 105, 0.32);
+    }
+
+    .sample-wrapper {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(71, 85, 105, 0.22) transparent;
+    }
+
+    .e-baseline-bar {
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        margin-top: -8px;
+    }
+
+    .e-baseline-bar.delayed .baseline-line {
+        border-top-color: #DC2626;
+    }
+
+    .e-baseline-bar.delayed .baseline-marker {
+        background-color: #DC2626;
+    }
+
+    .e-baseline-bar.ontrack .baseline-line {
+        border-top-color: #17df1e;
+    }
+
+    .e-baseline-bar.ontrack .baseline-marker {
+        background-color: #17df1e;
+    }
+
+    .baseline-line {
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        right: 6px;
+        height: 0;
+        border-top: 2px dashed;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .baseline-marker {
+        position: absolute;
+        top: 50%;
+        width: 2px;
+        height: 8px;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .baseline-marker.left {
+        left: 6px;
+    }
+
+    .baseline-marker.right {
+        right: 0px;
+    }
+</style>
+
+
+
+<div id="action-description">
+    <p>
+        This sample demonstrates how multiple baselines can be displayed within a single task
+        to highlight variations across different planning stages and improve visibility into project changes.
+    </p>
+</div>
+ 
+<div id="description">
+    <p>
+        In this example, the Gantt Chart visualizes a product workflow where each task includes
+        multiple baseline bars using custom baseline fields. This allows users to view different
+        planned schedules such as initial, revised, and final plans together. The <a target="_blank" rel="noopener noreferrer"
+            href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/index-default#baselinetemplate">
+            baselineTemplate
+        </a> property is used to customize the appearance of each
+        baseline bar. It provides control over styling, colors, and positioning, making it easy
+        to distinguish between baseline representations.
+    </p>
+    <br/>
+    <p>
+        More information on the Essential® JS2 Gantt Chart can be found in the 
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/baseline">
+            baseline
+        </a> documentation section.
+    </p>
+</div>

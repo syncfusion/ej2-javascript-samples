@@ -6,21 +6,51 @@
             pointer-events: none;
             opacity: 0.4;
         }
+        .diagram-scroll .e-symbolpalette {
+            display: block;
+        }
+        @media (max-width: 550px) {
+            /* Palette toggle bar: shown on mobile via shared diagram-common.style.css */
+            /* Diagram fills full width on mobile */
+            .diagram-scroll #diagram-space.sb-mobile-diagram {
+                width: 100% !important;
+            }
+            /* Property panel: hidden by app shell (sb-hide), shown as fixed slide-in panel */
+           .diagram-scroll #properties.property-section {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 260px !important;
+                height: 100%;
+                background: #fff;
+                z-index: 1000;
+                overflow-y: auto;
+                box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+                padding: 10px;
+                float: left !important;
+            }
+            .diagram-scroll .property-panel-section, .property-section {
+                width: 90% !important;
+            }
+            .diagram-scroll .sb-mobile-palette {
+                width: 40% !important;
+            }
+        }
     </style>
     <div style="width: 100%;" class="diagram-scroll">
         <div class="sb-mobile-palette-bar">
             <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
         </div>
-        <div id="palette-space" style="width:20%;float:left">
+        <div id="palette-space" style="width:22%;float:left" class="sb-mobile-palette">
             <div id="symbolpalette" style="width:90%;"></div>
         </div>
-        <div id="diagram-space" style="width:59%;float:left">
+        <div id="diagram-space" style="width:55%;float:left" class="sb-mobile-diagram">
             <div id="diagram"></div>
         </div>
-        <div id="properties" style="width:20%;float:right">
-            <div class="property-panel-header">
-                Properties
-            </div>
+        <div id="properties" class="property-section" style="width:22%;float:right">
+        <div class="property-panel-header">
+            Properties
+        </div>
             <div class="row db-prop-row">        
                 
                 <div class="col-xs-4 db-col-right db-prop-text-style" style="padding-top: 14px">
@@ -149,4 +179,6 @@
         The scrollSettings <code>autoScrollBorder</code> property is used to specify the distance from the edge of a control at which auto-scrolling should occur. 
     </p>
     <br>
+
+    <p>Looking for the full JavaScript Diagram component overview, features, pricing, and documentation? Visit the <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a> page.</p>
 </div>

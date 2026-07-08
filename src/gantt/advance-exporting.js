@@ -1,6 +1,5 @@
 this.default = function () {
     var isFitToWidth;
-    
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.pdfExportData,
         enableCriticalPath: true,
@@ -16,27 +15,28 @@ this.default = function () {
             child: 'subtasks',
             resourceInfo: 'resources'
         },
-     
         eventMarkers: [
-                {
-                    day: new Date('04/09/2025'),
-                    label: 'Research phase'
-                }, 
-                {
-                    day: new Date('06/20/2025'),
-                    label: 'Sales and marketing phase'
-                }
-            ],
+            {
+                day: new Date('04/09/2025'),
+                label: 'Research phase'
+            }, 
+            {
+                day: new Date('06/20/2025'),
+                label: 'Sales and marketing phase'
+            }
+        ],
         holidays: [
             {
                 from: new Date('04/04/2025'),
                 to: new Date('04/04/2025'),
                 label: 'Local Holiday'
-            }, {
+            },
+            {
                 from: new Date('04/19/2025'),
                 to: new Date('04/19/2025'),
                 label: 'Good Friday'
-            }, {
+            },
+            {
                 from: new Date('04/30/2025'),
                 to: new Date('04/30/2025'),
                 label: 'Release Holiday'
@@ -44,23 +44,23 @@ this.default = function () {
         ],
         columns: [
             { field: 'TaskID', width: 80 },
-            { field: 'TaskName', width: 250 },
+            { field: 'TaskName', width: 280 },
             { field: 'StartDate'},
             { field: 'EndDate'},
-            { field: 'Progress'},
+            { field: 'Progress'}
         ],
         allowExcelExport: true,
         allowPdfExport: true,
         toolbar: ['PdfExport'],
         toolbarClick: function (args) {
-             if (args.item.id === 'advanceExport_pdfexport') {     
+            if (args.item.id === 'advanceExport_pdfexport') {     
                 var borderWidth = 1;
                 var borderColor = new ej.pdfexport.PdfColor(227, 22, 91);
-                var pdfpen = new ej.pdfexport.PdfPen(borderColor, borderWidth);
-                pdfpen.dashStyle = ej.pdfexport.PdfDashStyle.Dash;
+                var pdfPen = new ej.pdfexport.PdfPen(borderColor, borderWidth);
+                pdfPen.dashStyle = ej.pdfexport.PdfDashStyle.Dash;
                 var exportProperties = {
                     pageSize: 'A2',
-                    fileName:"Product Development Report.pdf.pdf",
+                    fileName:"Product Development Report.pdf",
                     ganttStyle: {
                         eventMarker: {
                             label: {
@@ -68,7 +68,7 @@ this.default = function () {
                                 fontStyle: ej.pdfexport.PdfFontStyle.Bold,
                                 backgroundColor: new ej.pdfexport.PdfColor(253, 191, 100),
                             },
-                            lineStyle: pdfpen,
+                            lineStyle: pdfPen,
                         },
                         holiday: {
                             fontColor: new ej.pdfexport.PdfColor(33, 33, 33),
@@ -79,19 +79,19 @@ this.default = function () {
                         fromTop: 0,
                         height: 150,
                         contents: [
-                          {
-                            type: 'Text',
-                            value:'Product Development Lifecycle Gantt Chart Report March 2025 - June 2025',
-                            position: { x: 20, y: 20 },
-                            style: { textBrushColor: '#00008B', fontSize: 24 },
-                          },
-                          {
-                            type: 'Line',
-                            style: { penColor: '#00008B', penSize: 2, dashStyle: 'Solid' },
-                            points: { x1: 20, y1: 70, x2: 755, y2: 70 }, 
-                          },
+                            {
+                                type: 'Text',
+                                value:'Product Development Lifecycle Gantt Chart Report March 2025 - June 2025',
+                                position: { x: 20, y: 20 },
+                                style: { textBrushColor: '#00008B', fontSize: 24 }
+                            },
+                            {
+                                type: 'Line',
+                                style: { penColor: '#00008B', penSize: 2, dashStyle: 'Solid' },
+                                points: { x1: 20, y1: 70, x2: 755, y2: 70 },
+                            },
                         ],
-                      },
+                    },
                     footer: {
                         fromBottom: 160,
                         height: 100,
@@ -109,24 +109,24 @@ this.default = function () {
                                             hour12: true
                                        }),
                                 position: { x: 1950, y: 40 },
-                                style: { textBrushColor: '#3a435e', fontSize: 20 },
+                                style: { textBrushColor: '#3a435e', fontSize: 20 }
                             }
                         ],
                     },
-                    fitToWidthSettings: {       
-                        isFitToWidth: isFitToWidth,       
-                    }       
+                    fitToWidthSettings: {
+                        isFitToWidth: isFitToWidth
+                    }
                 };
                 ganttChart.pdfExport(exportProperties);
             }
         },
-        pdfQueryTaskbarInfo:pdfQueryTaskbarInfo,
-        queryTaskbarInfo:queryTaskbarInfo,
+        pdfQueryTaskbarInfo: pdfQueryTaskbarInfo,
+        queryTaskbarInfo: queryTaskbarInfo,
         allowSelection: true,
         gridLines: 'Both',
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         treeColumnIndex: 1,
         resourceFields: {
             id: 'resourceId',
@@ -137,18 +137,19 @@ this.default = function () {
         timelineSettings: {
             topTier: {
                 unit: 'Week',
-                format: 'MMM dd, y',
+                format: 'MMM dd, y'
             },
             bottomTier: {
-                unit: 'Day',
+                unit: 'Day'
             },
+            viewEndDate: new Date('05/31/2025')
         },
         labelSettings: {
             leftLabel: '#leftLabel',
-             rightLabel: '#rightLabel'
+            rightLabel: '#rightLabel'
         },
         splitterSettings: {
-            columnIndex: 3,
+            columnIndex: 3
         },
         projectStartDate: new Date('03/25/2025')
     });
@@ -165,8 +166,6 @@ this.default = function () {
             isFitToWidth = false;
         }
     }
-    
-
 
     function pdfQueryTaskbarInfo(args) {
         args.labelSettings.leftLabel.value = args.data.ganttProperties.taskName;
@@ -192,20 +191,22 @@ this.default = function () {
             args.taskbar.taskColor = new ej.pdfexport.PdfColor(255, 206, 244);
         }
     }
-window.getResourceElements = function (value) {
-    var out = "";
-    var img = document.createElement('img');
-    img.height = 20;
-    var span = document.createElement('span');
-    span.style.marginLeft = "5px";
-    span.style.marginRight = "5px";
-    for (var index = 0; index < value.length; index++) {
-        img.src = 'https://ej2.syncfusion.com/demos/src/gantt/images/' + value[index].resourceName + '.png';
-        span.innerHTML = value[index].resourceName;
-        out = out + img.outerHTML + span.outerHTML;
-    }
-    return out;
-};
+    
+    window.getResourceElements = function (value) {
+        var out = "";
+        var img = document.createElement('img');
+        img.height = 20;
+        var span = document.createElement('span');
+        span.style.marginLeft = "5px";
+        span.style.marginRight = "5px";
+        for (var index = 0; index < value.length; index++) {
+            img.src = 'https://ej2.syncfusion.com/demos/src/gantt/images/' + value[index].resourceName + '.png';
+            span.innerHTML = value[index].resourceName;
+            out = out + img.outerHTML + span.outerHTML;
+        }
+        return out;
+    };
+
     function queryTaskbarInfo(args) {
         var theme = document.body.classList.contains('tailwind3-dark') || document.body.classList.contains('fluent2-dark') ||
             document.body.classList.contains('material3-dark') || document.body.classList.contains('bootstrap5.3-dark') ||

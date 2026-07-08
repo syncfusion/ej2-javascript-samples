@@ -1825,7 +1825,7 @@
             "content": [
                 {
                     "contentType": "Text",
-                    "content": "pasteCleanupSettings: {\n allowedStyles: ['color', 'font-weight'], // Styles to keep\n deniedTags: ['script', 'iframe'], // Tags to remove\n keepFormat: true, // Keep original formatting\n plainPaste: false // Force plain text paste\n};"
+                    "content": "pasteCleanupSettings: {\n deniedTags: ['script', 'iframe'], // Tags to remove\n keepFormat: true, // Keep original formatting\n plainPaste: false // Force plain text paste\n};"
                 }
             ]
         },

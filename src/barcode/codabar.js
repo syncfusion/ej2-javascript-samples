@@ -13,7 +13,7 @@ this.default = function () {
         type: 'Codabar',
         value: '123456789',
     });
-    barcodeCodabar.appendTo('#barcode');
+    barcodeCodabar.appendTo('#barcode_codabar');
     
     var canShowErrorCodabar = false;
     var customFn = function (args) {
@@ -42,9 +42,9 @@ this.default = function () {
             barcodeCodabar.value = args.value.toString();
         }
     });
-    barcodeValueCodabar.appendTo('#barcodeValue');
+    barcodeValueCodabar.appendTo('#barcodeValue_codabar');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_codabar");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -59,7 +59,7 @@ this.default = function () {
             barcodeCodabar.width = args.value.toString();
         }
     });
-    barcodeWidthCodabar.appendTo('#width');
+    barcodeWidthCodabar.appendTo('#width_codabar');
     
     var barcodeHeightCodabar = new ej.inputs.NumericTextBox({
         width:100,
@@ -69,7 +69,7 @@ this.default = function () {
             barcodeCodabar.height = args.value.toString();
         }
     });
-    barcodeHeightCodabar.appendTo('#height');
+    barcodeHeightCodabar.appendTo('#height_codabar');
 
     var textVisibilityCodabar = new ej.buttons.CheckBox({
         checked: true,
@@ -77,7 +77,7 @@ this.default = function () {
             barcodeCodabar.displayText.visibility = args.checked;
         }
     });
-    textVisibilityCodabar.appendTo('#textVisibility');
+    textVisibilityCodabar.appendTo('#textVisibility_codabar');
 
     var svgModeCodabar = new ej.buttons.CheckBox({
         checked: true,
@@ -85,7 +85,7 @@ this.default = function () {
             barcodeCodabar.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeCodabar.appendTo('#svgMode');
+    svgModeCodabar.appendTo('#svgMode_codabar');
 
     var bgColorCodabar = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -93,7 +93,7 @@ this.default = function () {
             barcodeCodabar.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorCodabar.appendTo('#bgColor');
+    bgColorCodabar.appendTo('#bgColor_codabar');
 
     var foreColorCodabar = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -101,7 +101,7 @@ this.default = function () {
             barcodeCodabar.foreColor = args.currentValue.hex;
         }
     });
-    foreColorCodabar.appendTo('#foreColor');
+    foreColorCodabar.appendTo('#foreColor_codabar');
 
     var marginLeftCodabar = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -111,7 +111,7 @@ this.default = function () {
             barcodeCodabar.margin.left = args.value;
         }
     });
-    marginLeftCodabar.appendTo('#marginLeft');
+    marginLeftCodabar.appendTo('#marginLeft_codabar');
 
     var marginRightCodabar = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -121,7 +121,7 @@ this.default = function () {
             barcodeCodabar.margin.right = args.value;
         }
     });
-    marginRightCodabar.appendTo('#MarginRight');
+    marginRightCodabar.appendTo('#MarginRight_codabar');
 
     var marginTopCodabar = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -131,7 +131,7 @@ this.default = function () {
             barcodeCodabar.margin.top = args.value;
         }
     });
-    marginTopCodabar.appendTo('#marginTop');
+    marginTopCodabar.appendTo('#marginTop_codabar');
 
 
 
@@ -143,7 +143,7 @@ this.default = function () {
             barcodeCodabar.margin.bottom = args.value;
         }
     });
-    marginBottomCodabar.appendTo('#MarginBottom');
+    marginBottomCodabar.appendTo('#MarginBottom_codabar');
 
     var textmarginLeftCodabar = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -152,7 +152,7 @@ this.default = function () {
             barcodeCodabar.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftCodabar.appendTo('#TextmarginLeft');
+    textmarginLeftCodabar.appendTo('#TextmarginLeft_codabar');
 
     var textMarginRightCodabar = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -161,7 +161,7 @@ this.default = function () {
             barcodeCodabar.displayText.margin.right = args.value;
         }
     });
-    textMarginRightCodabar.appendTo('#TextMarginRight');
+    textMarginRightCodabar.appendTo('#TextMarginRight_codabar');
 
     var textmarginTopCodabar = new ej.inputs.NumericTextBox({
         width:100,
@@ -171,7 +171,7 @@ this.default = function () {
             barcodeCodabar.displayText.margin.top = args.value;
         }
     });
-    textmarginTopCodabar.appendTo('#TextmarginTop');
+    textmarginTopCodabar.appendTo('#TextmarginTop_codabar');
 
 
 
@@ -183,7 +183,7 @@ this.default = function () {
             barcodeCodabar.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomCodabar.appendTo('#TextMarginBottom');
+    textMarginBottomCodabar.appendTo('#TextMarginBottom_codabar');
 
 
     //FontType Collection
@@ -198,12 +198,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionCodabar(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_codabar')).ej2_instances[0]);
         barcodeCodabar.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntCodabar(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_codabar')).ej2_instances[0]);
         barcodeCodabar.displayText.alignment = (positionValue.value);
     }
 
@@ -216,7 +216,7 @@ this.default = function () {
             updatePositionCodabar(args.value.toString());
         }
     });
-    textPositionCodabar.appendTo('#textPosition');
+    textPositionCodabar.appendTo('#textPosition_codabar');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignCodabar = new ej.dropdowns.DropDownList({
@@ -227,7 +227,7 @@ this.default = function () {
             updateAligntCodabar(args.value.toString());
         }
     });
-    textAlignCodabar.appendTo('#textAlignment');
+    textAlignCodabar.appendTo('#textAlignment_codabar');
 
     var displayTextCodabar = new ej.inputs.TextBox({
         value: '123456789',
@@ -235,10 +235,10 @@ this.default = function () {
             barcodeCodabar.displayText.text = args.value.toString();
         }
     });
-    displayTextCodabar.appendTo('#displayText');
+    displayTextCodabar.appendTo('#displayText_codabar');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn1');
-    document.getElementById('downloadBtn1').onclick = function () {
+    downloadButton.appendTo('#downloadBtn1_codabar');
+    document.getElementById('downloadBtn1_codabar').onclick = function () {
         barcodeCodabar.exportImage("Barcode", 'PNG');
     };
 };

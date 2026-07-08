@@ -2,34 +2,34 @@ this.default = function () {
     var yearformat = [
         { id: 'MMM "yy', format: 'Jan "18' },
         { id: 'y', format: '2018' },
-        { id: 'MMMM, y', format: 'January, 18' },
+        { id: 'MMMM, y', format: 'January, 18' }
     ];
     var monthformat = [
         { id: 'MMM dd, yyyy', format: 'Jan 01, 2018' },
         { id: 'MMMM', format: 'January' },
-        { id: 'MMM', format: 'Jan' },
+        { id: 'MMM', format: 'Jan' }
     ];
     var weekformat = [
         { id: 'MMM dd, yyyy', format: 'Jan 01, 2019' },
         { id: 'EEE MMM dd, "yy', format: 'Mon Jan 01, "19' },
-        { id: 'EEE MMM dd', format: 'Mon Jan 01' },
+        { id: 'EEE MMM dd', format: 'Mon Jan 01' }
     ];
     var dayformat = [
         { id: '', format: 'M' },
         { id: 'EEE', format: 'Mon' },
-        { id: 'dd', format: '01' },
+        { id: 'dd', format: '01' }
     ];
     var hourformat = [
         { id: 'hh', format: '00' },
         { id: 'hh : mm a', format: '00 : 00 AM' },
-        { id: 'h : mm a', format: '0 : 00 AM' },
+        { id: 'h : mm a', format: '0 : 00 AM' }
     ];
     var unit = [
         { id: 'Year', unit: 'Year' },
         { id: 'Month', unit: 'Month' },
         { id: 'Week', unit: 'Week' },
         { id: 'Day', unit: 'Day' },
-        { id: 'Hour', unit: 'Hour' },
+        { id: 'Hour', unit: 'Hour' }
     ];
     
     var gantt = new ej.gantt.Gantt({
@@ -42,29 +42,29 @@ this.default = function () {
             duration: 'duration',
             progress: 'progress',
             dependency: 'predecessor',
-            child: 'subtasks',
+            child: 'subtasks'
         },
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         highlightWeekends: true,
-        projectStartDate: new Date('02/05/2025'),
-        projectEndDate: new Date('03/23/2025'),
         timelineSettings: {
             topTier: {
                 format: 'MMM dd, yyyy',
-                unit: 'Week',
+                unit: 'Week'
             },
             bottomTier: {
-                unit: 'Day',
-            }
+                unit: 'Day'
+            },
+            viewStartDate: new Date('02/09/2025'),
+            viewEndDate:  new Date('03/23/2025')
         },
         splitterSettings: {
             columnIndex: 1
         },
         treeColumnIndex: 1,
         labelSettings: {
-            rightLabel: 'taskName',
+            rightLabel: 'taskName'
         },
         columns: [
             { field: 'taskID', visible: false },
@@ -174,7 +174,6 @@ this.default = function () {
     });
     bottomTierUnit.appendTo('#btUnit');
 
-
     var unitWidthNumObj = new ej.inputs.NumericTextBox({
         min: 10,
         format: 'n',
@@ -228,12 +227,14 @@ this.default = function () {
         }
     };
 
+    var startDate = new Date('02/05/2025');
+    var endDate = new Date('03/23/2025');
     var timelineDateRangePicker =  new ej.calendars.DateRangePicker({
-        startDate: new Date('02/05/2025'),
-        endDate: new Date('03/23/2025'),
+        startDate: startDate,
+        endDate: endDate,
         change: function(args) {
-            gantt.timelineSettings.viewStartDate = ej.base.isNullOrUndefined(args.startDate) ? 'auto' : args.startDate;
-            gantt.timelineSettings.viewEndDate = ej.base.isNullOrUndefined(args.endDate) ? 'auto' : args.endDate;
+            gantt.timelineSettings.viewStartDate = ej.base.isNullOrUndefined(args.startDate) ? startDate : args.startDate;
+            gantt.timelineSettings.viewEndDate = ej.base.isNullOrUndefined(args.endDate) ? endDate : args.endDate;
         }
     });
     timelineDateRangePicker.appendTo('#timelineDateRange');

@@ -16,7 +16,7 @@ this.default = function () {
             work: 'work',
             child: 'subtasks'
         },
-	taskType:'FixedWork',
+	    taskType: 'FixedWork',
         resourceFields: {
             id: 'resourceId',
             name: 'resourceName',
@@ -32,12 +32,12 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskID', visible: false },
-            { field: 'TaskName', headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'work', headerText: 'Work' },
             { field: 'Progress' },
             { field: 'resourceGroup', headerText: 'Group' },
             { field: 'StartDate' },
-            { field: 'Duration' },
+            { field: 'Duration' }
         ],
 		toolbarClick: function (args) {
             if (args.item.id === 'showhidebar') {
@@ -56,8 +56,8 @@ this.default = function () {
         highlightWeekends: true,
         treeColumnIndex: 1,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         projectStartDate: new Date('03/26/2025'),
         projectEndDate: new Date('05/18/2025')
      });

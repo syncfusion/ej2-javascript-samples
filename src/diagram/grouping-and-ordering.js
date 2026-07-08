@@ -20,7 +20,7 @@ this.default = function () {
   //Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
   function openPaletteGroup() {
     var paletteSpace = document.getElementById('palette-space');
-    isMobile = window.matchMedia('(max-width:550px)').matches;
+    var isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
       if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
         paletteSpace.classList.add('sb-mobile-palette-open');

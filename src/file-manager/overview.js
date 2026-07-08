@@ -5,7 +5,7 @@
 
 this.default = function () {
 
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
     var favoriteFiles = {};
     var selectedItems = [];
     var isFavoriteAjax = false;

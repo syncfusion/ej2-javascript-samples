@@ -151,6 +151,7 @@ body.tailwind3-dark,
 .tailwind3-dark .sb-src-code,
 .tailwind3-dark .sb-api-section,
 .tailwind3-dark .sb-theme-popup,
+.tailwind3-dark .sb-products-popup,
 .tailwind3-dark .copy-tooltip,
 .tailwind3-dark .e-icons.copycode,
 .tailwind3-dark #search-input-wrapper input,
@@ -166,7 +167,10 @@ body.tailwind3-dark,
 .tailwind3-dark .sb-switch-popup li:hover,
 .tailwind3-dark .theme-wrapper:hover,
 .tailwind3-dark .theme-wrapper.active,
+.tailwind3-dark .products-wrapper:hover,
+.tailwind3-dark .products-wrapper.active,
 .tailwind3-dark .sb-theme-popup li:hover,
+.tailwind3-dark .sb-products-popup li:hover,
 .tailwind3-dark .sb-switch-btn:hover,
 .tailwind3-dark .sb-switch-btn.active,
 .tailwind3-dark .sb-search-result .e-list-item:hover,
@@ -174,6 +178,10 @@ body.tailwind3-dark,
     background-color: #1A212F;
 }
 
+.tailwind3-dark .sb-icon-Dropdown,
+.tailwind3-dark .sb-icon-Dropdown:before {
+    color: #3B82F6;
+}
 .tailwind3-dark .setting-responsive .sb-responsive-items {
     width: 104px;
     background-color: rgb(107, 114, 128);

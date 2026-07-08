@@ -37,13 +37,54 @@ this.default = function () {
             input.type = 'text'; input.className = 'e-input'; input.value = defaultValue || ''; input.style.width = '100%';
             wrapper.appendChild(input);
             var dialog = new ej.popups.Dialog({
-                header: title || 'Prompt', content: wrapper, isModal: true, showCloseIcon: true, visible: true, target: document.body, width: '480px',
+                header: title || 'Prompt',
+                content: wrapper,
+                isModal: true,
+                showCloseIcon: true,
+                visible: true,
+                target: document.body,
+                width: '480px',
                 buttons: [
-                    { click: function () { resolved = true; var v = input.value; dialog.hide(); resolve(v); }, buttonModel: { content: 'OK', isPrimary: true } },
-                    { click: function () { resolved = true; dialog.hide(); resolve(null); }, buttonModel: { content: 'Cancel' } }
+                    {
+                        click: function () {
+                            resolved = true;
+                            var v = input.value;
+                            dialog.hide();
+                            resolve(v);
+                        },
+                        isFlat: false,
+                        buttonModel: {
+                            content: 'OK',
+                            isPrimary: true,
+                        },
+                    },
+                    {
+                        click: function () {
+                            resolved = true;
+                            dialog.hide();
+                            resolve(null);
+                        },
+                        isFlat: false,
+                        buttonModel: {
+                            content: 'Cancel',
+                        },
+                    },
                 ],
-                created: function () { setTimeout(function () { input.focus(); input.select(); }, 0); },
-                close: function () { if (!resolved) { resolve(null); } dialog.destroy(); try { host.remove(); } catch (_) { } }
+                created: function () {
+                    setTimeout(function () {
+                        input.focus();
+                        input.select();
+                    }, 0);
+                },
+                close: function () {
+                    if (!resolved) {
+                        resolve(null);
+                    }
+                    dialog.destroy();
+                    try {
+                        host.remove();
+                    } catch (_) { }
+                },
             });
             dialog.appendTo(host);
         });
@@ -52,7 +93,7 @@ this.default = function () {
     var defaultUrls = {
         CSV: 'https://cdn.syncfusion.com/data/sales-analysis.csv',
         JSON: 'https://cdn.syncfusion.com/data/sales-analysis.json',
-        REPORT: 'https://api.jsonbin.io/v3/b/6912d9ecd0ea881f40e12335'
+        REPORT: 'https://cdn.syncfusion.com/data/report.json'
     };
 
     var pivot;
@@ -130,6 +171,7 @@ this.default = function () {
                     pv.refresh();
                     shouldAutoConfig = false;
                     pv.refresh();
+                    pv.engineModule = new ej.pivotview.PivotEngine();
                     resolve();
                 }
                 else {
@@ -187,8 +229,10 @@ this.default = function () {
                                 finalize_1();
                             })
                                 .catch(function () {
-                                reportSettings.dataSource = currentData;
-                                reportSettings.type = pv.dataSourceSettings.type || 'JSON';
+                                    if (!(reportSettings.url !== '' && reportSettings.type === 'CSV')) {
+                                        reportSettings.dataSource = currentData;
+                                        reportSettings.type = pv.dataSourceSettings.type || 'JSON';
+                                    }
                                 finalize_1();
                             });
                         }
@@ -217,8 +261,12 @@ this.default = function () {
                             });
                         }
                         else {
-                            reportSettings.dataSource = currentData;
-                            reportSettings.type = pv.dataSourceSettings.type || 'JSON';
+                            if (reportSettings.type === 'JSON' && !reportSettings.url) {
+                                reportSettings.dataSource = window.Pivot_Data;
+                            } else {
+                                reportSettings.dataSource = currentData;
+                                reportSettings.type = pv.dataSourceSettings.type || 'JSON';
+                            }
                             finalize_1();
                         }
                     }
@@ -268,9 +316,14 @@ this.default = function () {
                             unwrapped.values ||
                             unwrapped.url ||
                             unwrapped.providerType);
+                    if (unwrapped && unwrapped.chartSettings && unwrapped.chartSettings.zoomSettings) {
+                        unwrapped.chartSettings.zoomSettings.toolbarPosition = {};
+                        unwrapped.chartSettings.zoomSettings.accessibility = {};
+                    }
                     if (looksLikeReport) {
                         var reportSettings = unwrapped.dataSourceSettings || unwrapped;
                         var isOlapReport = reportSettings && reportSettings.providerType === 'SSAS';
+                        reportSettings.dataSource = window.Pivot_Data;
                         if (reportSettings.dataUrl) {
                             lastRemote = { kind: 'JSON', url: reportSettings.dataUrl };
                         }
@@ -510,8 +563,39 @@ this.default = function () {
                 container.appendChild(addLabel('Catalogs')); var catDropEl = document.createElement('input'); container.appendChild(catDropEl);
                 container.appendChild(addLabel('Cubes')); var cubeDropEl = document.createElement('input'); container.appendChild(cubeDropEl);
                 var errorEl = document.createElement('div'); errorEl.className = 'error-message'; errorEl.style.gridColumn = '1 / span 2'; errorEl.style.marginTop = '6px'; errorEl.textContent = ''; container.appendChild(errorEl);
-
-                var dialog = new ej.popups.Dialog({ header: 'Connect to OLAP(XMLA)', content: container, isModal: true, showCloseIcon: true, visible: true, width: '620px', target: document.body, buttons: [{ buttonModel: { content: 'OK', isPrimary: true }, click: onOk }, { buttonModel: { content: 'Cancel' }, click: function () { dialog.hide(); } }], close: function () { dialog.destroy(); host.remove(); } });
+                var dialog = new ej.popups.Dialog({
+                    header: 'Connect to OLAP(XMLA)',
+                    content: container,
+                    isModal: true,
+                    showCloseIcon: true,
+                    visible: true,
+                    width: '620px',
+                    target: document.body,
+                    buttons: [
+                        {
+                            click: onOk,
+                            isFlat: false,
+                            buttonModel: {
+                                content: 'OK',
+                                isPrimary: true,
+                                disabled: true
+                            },
+                        },
+                        {
+                            click: function () {
+                                dialog.hide();
+                            },
+                            isFlat: false,
+                            buttonModel: {
+                                content: 'Cancel',
+                            },
+                        },
+                    ],
+                    close: function () {
+                        dialog.destroy();
+                        host.remove();
+                    },
+                });
                 dialog.appendTo(host);
 
                 var connectBtn = new ej.buttons.Button({ content: 'Connect', isPrimary: true }, connectBtnEl);
@@ -530,11 +614,12 @@ this.default = function () {
 
                         discoverDataSources(urlInput.value.trim()).then(function (list) {
                             if (!list.length) { errorEl.textContent = 'No data sources found.'; return; }
-                            dsDrop.placeholder = 'Select data source'; dsDrop.dataSource = list; dsDrop.enabled = true; dsDrop.dataBind();
-                        }).catch(function (e) { errorEl.textContent = 'Connect failed: ' + e.message + '. If the browser blocks this due to CORS, configure a proxy base URL and try again.'; })
+                            dsDrop.placeholder = 'Select data source'; dsDrop.dataSource = list; dialog.btnObj[0].disabled = false; dsDrop.enabled = true; dsDrop.dataBind();
+                        }).catch(function (e) { dialog.btnObj[0].disabled = false; errorEl.textContent = 'Connect failed: ' + e.message + '. If the browser blocks this due to CORS, configure a proxy base URL and try again.'; })
                             .finally(function () { if (connectBtn && connectBtn.setProperties) { connectBtn.setProperties({ content: 'Connect' }); connectBtn.dataBind(); } connectBtn.disabled = false; });
                     } catch (e) {
                         errorEl.textContent = 'Connect failed: ' + e.message;
+                        dialog.btnObj[0].disabled = false;
                         if (connectBtn && connectBtn.setProperties) { connectBtn.setProperties({ content: 'Connect' }); connectBtn.dataBind(); }
                         connectBtn.disabled = false;
                     }

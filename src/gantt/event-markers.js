@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.EventmarkerData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         taskFields: {
@@ -29,12 +29,12 @@ this.default = function () {
         treeColumnIndex: 1,
         columns: [
             { field: 'TaskID', width: 80 },
-            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor' },
-            { field: 'Progress' },
+            { field: 'Progress' }
         ],
         eventMarkers: [
             {
@@ -76,6 +76,9 @@ this.default = function () {
         ],
         labelSettings: {
             leftLabel: 'TaskName'
+        },
+        splitterSettings: {
+            columnIndex: 2
         },
         projectStartDate: new Date('03/26/2025'),
         projectEndDate: new Date('07/20/2025')

@@ -9,14 +9,14 @@ this.default = function () {
         { id: 'Predecessor', name: 'Dependency'},
         { id: 'Resources', name: 'Assignee' },
         { id: 'Designation', name: 'Designation' },
-        { id: 'Status', name: 'Status' },
+        { id: 'Status', name: 'Status' }
     ];
  
     var directions = [
         { id: 'Left', name: 'Left' },
         { id: 'Right', name: 'Right' },
         { id: 'Fixed', name: 'Fixed' },
-        { id: 'None', name: 'None' },
+        { id: 'None', name: 'None' }
     ];
     
     var ColumnsDropdown = new ej.dropdowns.DropDownList({
@@ -32,18 +32,18 @@ this.default = function () {
     });
 
     var directionDropDown = new ej.dropdowns.DropDownList({
-      dataSource: directions,
-      value: "Left",
-      fields: { value: "id", text: "name" },
-      change: function (e) {
+        dataSource: directions,
+        value: "Left",
+        fields: { value: "id", text: "name" },
+        change: function (e) {
         var columnName = ColumnsDropdown.value;
         var columns = ganttChart.getGanttColumns();
         var column = columns.find(function (col) {
-          return col.field === columnName;
+            return col.field === columnName;
         });
         if (column) {
-          column.freeze = e.value === "None" ? "None" : e.value;
-          ganttChart.columns = columns;
+            column.freeze = e.value === "None" ? "None" : e.value;
+            ganttChart.columns = columns;
         }
       },
     });
@@ -63,24 +63,23 @@ this.default = function () {
         resources: resourceCollection,
         resourceFields: {
             id: 'resourceId',
-            name: 'resourceName',
+            name: 'resourceName'
         },
         columns: [
-            { field: 'TaskID', headerText: 'Task ID', freeze: 'Left', },
-            { field: 'TaskName', headerText: 'Task Name', width: 150, freeze: 'Left'},
-            { field: 'StartDate', headerText: 'Start Date', },
-            { field: 'Duration', headerText: 'Duration',},
-            { field: 'EndDate', headerText: 'End Date', },
-            { field: 'Progress', headerText: 'Progress', },
+            { field: 'TaskID', headerText: 'Task ID', freeze: 'Left' },
+            { field: 'TaskName', headerText: 'Task Name', width: 200, freeze: 'Left' },
+            { field: 'StartDate', headerText: 'Start Date' },
+            { field: 'Duration', headerText: 'Duration' },
+            { field: 'EndDate', headerText: 'End Date' },
+            { field: 'Progress', headerText: 'Progress' },
             { field: 'Predecessor', headerText: 'Dependency' },
-            { field: 'Resources', headerText: 'Assignee', freeze: 'Right' },
+            { field: 'Resources', headerText: 'Assignee', freeze: 'Right', width: 200 },
             { field: 'Designation', headerText: 'Designation' },
-            { field: 'Status', headerText: 'Status', },
-        
+            { field: 'Status', headerText: 'Status' }
         ],
         treeColumnIndex: 1,
         splitterSettings: {
-            position: "70%",
+            position: "70%"
         },
         allowSelection: false,
         toolbar: [
@@ -115,14 +114,13 @@ this.default = function () {
             }
         },
         labelSettings: {
-            leftLabel: 'TaskName',
             taskLabel: 'Progress'
         },
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         height: '650px',
         projectStartDate: new Date('02/27/2025'),
-        projectEndDate: new Date('05/04/2025'),
+        projectEndDate: new Date('05/04/2025')
      });
     ganttChart.appendTo('#frozenColumns');
 };

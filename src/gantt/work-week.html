@@ -12,7 +12,7 @@
         </colgroup>
         <tr>
             <td style="width:30%; padding-right: 11px;">
-                <div>Working Days</div>
+                <label for="WorkingDays">Working Days</label>
             </td>
             <td style="width:70%; padding-left: 9px;">
                 <div style="padding-top: 0px; width: 210px;">
@@ -22,7 +22,7 @@
         </tr>
         <tr style="height: 60px">
             <td style="width:30%">
-                <div>Show Weekends</div>
+                <label for="toggleWeekendVisibility">Show Weekends</label>
             </td>
             <td style="width:70%">
                 <div>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td style="width:30%">
-                <div>Highlight Weekends</div>
+                <label for="togglehighlightWeekends">Highlight Weekends</label>
             </td>
             <td style="width:70%">
                 <div>
@@ -46,7 +46,11 @@
     .property-panel-table div {
         padding-left: 10px;
         padding-top: 0px;
-}              
+    }
+
+    #property label {
+        font-weight: normal;
+    }
 </style>
 
 <div id="action-description">
@@ -55,13 +59,11 @@
 
 <div id="description">
     <p>
-        In this example, you can customize which days of the week are considered working days using the <code><a target="_blank" class="code" href="https://helpej2.syncfusion.com/javascript/documentation/api/gantt/#workweek">workWeek</a></code> property. 
-        Simply select your preferred working days from the dropdown list in the property panel, and they will be applied to the Gantt Chart. Weekends can be highlighted using the <code><a target="_blank" href="https://helpej2.syncfusion.com/javascript/documentation/api/gantt/#highlightweekends">highlightWeekends</a></code> property for easy identification.     
+        In this example, you can customize which days of the week are considered working days using the <code><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/index-default#workweek">workWeek</a></code> property. 
+        Simply select your preferred working days from the dropdown list in the property panel, and they will be applied to the Gantt Chart. Weekends can be highlighted using the <code><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/index-default#highlightweekends">highlightWeekends</a></code> property for easy identification.     
     </p>        
     <p>
-        Non-working days are visible by default in the Gantt Chart timeline, their visibility can be customized using the <code><a target="_blank" class="code" href="https://helpej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettingsModel/#showWeekend">timelineSettings.showWeekend</a></code> property. Setting this to false will hide non-working days from the timeline.
+        Non-working days are visible by default in the Gantt Chart timeline, their visibility can be customized using the <code><a target="_blank" href="https://helpej2.syncfusion.com/javascript/documentation/api/gantt/timelineSettingsModel/#showWeekend">timelineSettings.showWeekend</a></code> property. Setting this to false will hide non-working days from the timeline.
     </p>
-    <br>
     <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/task-scheduling#weekendnon-working-days">documentation section</a>.</p>
-
 </div>

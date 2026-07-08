@@ -2,7 +2,7 @@
  * File Manager Sequential upload feature sample
  */
 this.default = function() {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
     // Initialize the FileManager component
     var fileObject = new ej.filemanager.FileManager({
         ajaxSettings: {

@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.selfData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         treeColumnIndex: 1,
@@ -24,7 +24,7 @@ this.default = function () {
             { field: 'endDate' },
             { field: 'duration' },
             { field: 'predecessor' },
-            { field: 'progress' },
+            { field: 'progress' }
         ],
         labelSettings: {
             leftLabel: 'taskName'

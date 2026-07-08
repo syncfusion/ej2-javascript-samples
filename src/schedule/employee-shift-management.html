@@ -66,11 +66,12 @@
     <p><b>Filtering</b></p>
     <p>Filtering shifts by role or employee name in the agenda view to check staff availability and for shift
         management.</p>
+    <p>Looking for the full JavaScript Scheduler component overview, features, pricing, and documentation? Visit our <a href="https://www.syncfusion.com/javascript-ui-controls/js-scheduler" target="_blank">JavaScript Scheduler</a> page.</p>
 </div>
 <script id="treeTemplate" type="text/x-template">
     <div id="waiting">
         <div id="waitdetails">
-            <img class="employee-image" src="${ImageSrc}" alt="Employee" />
+            <img class="employee-image" src="src/schedule/images/${ImageSrc}.png" alt="Employee" />
             <div class="text-container">
                 <div id="waitlist">${Name}</div>
                 <div id="waitcategory">${Description}</div>
@@ -568,7 +569,6 @@
                     display: flex;
                     align-items: center;
                     width: 95%;
-                    float: left;
                     height: 100%;
                     padding: 0;
 
@@ -603,6 +603,16 @@
                 }
             }
         }
+    }
+
+    .shift-management-treeview:not(.e-rtl) #waitdetails,
+    .e-drag-item.shift-management-treeview:not(.e-rtl) #waitdetails {
+      float: left;
+    }
+    
+    .shift-management-treeview.e-rtl #waitdetails,
+    .e-drag-item.shift-management-treeview.e-rtl #waitdetails {
+      float: right;
     }
 
     .shift-management-treeview:not(.e-rtl) {
@@ -787,7 +797,6 @@
       .highcontrast .e-leave::before {
     content: '\e607'!important;
 }
-
     .schedule-shift-management .agenda-toolbar.e-toolbar .e-toolbar-items .e-toolbar-left .e-toolbar-item:first-child {
         width: 300px;
     }

@@ -115,6 +115,12 @@
     color: #fff;
 }
 
+.bootstrap5\.3-dark .sb-products-popup {
+    background-color: #343a40;
+    border: 1px solid #495057;
+    color: #fff;
+}
+
 .bootstrap5\.3-dark .sb-content-section {
     border-radius: 8px;
     border: 1px solid #495057;
@@ -165,7 +171,10 @@
 .bootstrap5\.3-dark .sb-switch-popup li:hover,
 .bootstrap5\.3-dark .theme-wrapper:hover,
 .bootstrap5\.3-dark .theme-wrapper.active,
+.bootstrap5\.3-dark .products-wrapper:hover,
+.bootstrap5\.3-dark .products-wrapper.active,
 .bootstrap5\.3-dark .sb-theme-popup li:hover,
+.bootstrap5\.3-dark .sb-products-popup li:hover,
 .bootstrap5\.3-dark .sb-switch-btn:hover,
 .bootstrap5\.3-dark .sb-switch-btn.active,
 .bootstrap5\.3-dark .sb-search-result .e-list-item:hover {
@@ -225,6 +234,11 @@ body.bootstrap5-3-dark,
 .bootstrap5\.3-dark .control-name,
 .bootstrap5\.3-dark .sb-switch-popup a {
     color: #FFFFFF;
+}
+
+.bootstrap5\.3-dark .sb-icon-Dropdown,
+.bootstrap5\.3-dark .sb-icon-Dropdown:before {
+    color: #0D6EFD;
 }
 
 .bootstrap5\.3-dark .setting-responsive .sb-responsive-items {

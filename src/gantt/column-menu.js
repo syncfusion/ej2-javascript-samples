@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.projectNewData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         highlightWeekends: true,
         showColumnMenu: true,
         allowFiltering: true,
@@ -17,16 +17,16 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            parentID:'ParentId'
+            parentID: 'ParentId'
         },
         columns: [
             { field: 'TaskID', headerText: 'ID', width: 100 },
-            { field: 'TaskName', headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Progress' },
-            { field: 'Predecessor', headerText: 'Dependency', width:190 }
+            { field: 'Predecessor', headerText: 'Dependency', width: 190 }
         ],
         columnMenuOpen: columnMenuOpen,
         treeColumnIndex: 1,

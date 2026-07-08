@@ -4,8 +4,8 @@ this.default = function () {
         allowSorting: true,
         enableContextMenu: true,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         taskFields: {
@@ -17,14 +17,14 @@ this.default = function () {
             endDate: 'EndDate',
             dependency:'Predecessor',
             child: 'Children',
-            manual: 'isManual',    
+            manual: 'isManual'   
         },
-        taskMode :'Custom',
-        toolbar:['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Search'],
-        columns:[       
-            { field: 'TaskID', visible: false},
-            {field: 'TaskName'},
-            { field: 'isManual'}
+        taskMode:'Custom',
+        toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Search'],
+        columns: [       
+            { field: 'TaskID', visible: false },
+            { field: 'TaskName', width: 130 },
+            { field: 'isManual', width: 120 }
         ],
         validateManualTasksOnLinking: true,
         treeColumnIndex: 1,
@@ -38,14 +38,10 @@ this.default = function () {
             leftLabel: 'TaskName'
         },
         splitterSettings:{
-            position: "35%"
+            columnIndex: 2
         },
         projectStartDate: new Date("02/18/2025"),
-        projectEndDate: new Date('03/30/2025'),
+        projectEndDate: new Date('03/30/2025')
     });
     ganttChart.appendTo('#TaskMode');
 };
-    
-    
-   
-   

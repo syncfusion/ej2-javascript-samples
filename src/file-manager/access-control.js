@@ -2,7 +2,7 @@
  * File Manager API sample
  */
 this.default = function () {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
 
     // initialize File Manager component
     var filemanagerInstance = new ej.filemanager.FileManager({

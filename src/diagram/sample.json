@@ -10,6 +10,7 @@
             "url": "default-functionalities",
             "name": "Flow Chart",
             "description": "This sample visualizes the processing of an order placed using credit card with built-in flow shapes.",
+            "type":"update",
             "category": "Getting Started"
         },
         {
@@ -27,6 +28,7 @@
         {
             "url": "custom-shapes",
             "name": "HTML Shapes",
+            "ignoreOnBuild": true,
             "description":"This sample demonstrates how to host a HTML element inside a node. In this example, a Gauge control is hosted inside a HTML Node.",
             "category": "Getting Started"
         },
@@ -225,6 +227,7 @@
         {
             "url": "remote-data",
             "name": "Remote Data",
+            "ignoreOnBuild": true,
             "description": "This sample demonstrates how to bind an remote data with the diagram using the Data Manager support.",
             "category": "Data Binding"
         },
@@ -266,6 +269,13 @@
             "category": "Use Case Diagram"
         },
         {
+            "url": "entity-relationship-diagram",
+            "name": "Entity Relationship Diagram",
+            "description": "This sample demonstrates a healthcare appointment management ER diagram created using the Syncfusion® JavaScript Diagram.",
+            "category": "Use Case Diagram",
+            "type": "new"
+        },
+        {
             "url": "uml-activity",
             "name": "UML Activity Diagram",
             "description": "This sample visually represents the hotel booking reservation system. It is built with readymade BPMN shapes.",
@@ -275,6 +285,7 @@
             "url": "sequence-diagram",
             "name": "UML Sequence Diagram",
             "description": "This sample presents a UML sequence diagram to depict interactions in a secure transaction process involving a user, transaction system, and fraud detection using diagram model.",
+            "type":"update",
             "category": "Use Case Diagram"
         },
         {

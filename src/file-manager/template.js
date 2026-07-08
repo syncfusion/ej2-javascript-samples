@@ -7,7 +7,7 @@ this.default = function() {
     { text: 'Refresh', iconCss: 'e-icons e-refresh' },
     { text: 'Delete', iconCss: 'e-icons e-trash' },
     ];
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
     var fileManager = new ej.filemanager.FileManager({
         ajaxSettings: {
             url: hostUrl + "api/FileManager/FileOperations",
@@ -165,7 +165,8 @@ this.default = function() {
             "mp3": "background-audio",
             "docx": "background-doc",
             "txt": "background-txt",
-            "xlsx": "background-xlsx"
+            "xlsx": "background-xlsx",
+            "zip": "background-zip"
         };
         if (!item.isFile)
             return "file-icon background-folder";

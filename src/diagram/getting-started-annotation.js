@@ -270,6 +270,9 @@ this.default = function () {
             obj.type = 'Orthogonal';
             obj.constraints = ej.diagrams.ConnectorConstraints.None;
         },
+        created: function (args) {
+            diagram.fitToPage();
+        }
     });
     // Append the diagram to the HTML element with id 'diagram'
     diagram.appendTo('#diagram');

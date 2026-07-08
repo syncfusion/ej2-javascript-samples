@@ -61,40 +61,6 @@ this.default = function () {
             style: { fill: fill, strokeColor: 'white' }
         };
     }
-    //custom code start
-    if (window.location.href) {
-        if (window.location.href.includes('bootstrap5')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('bootstrap4')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('bootstrap')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('material3')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('material')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fabric')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fluent')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('tailwind')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('highcontrast')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fusion')) {
-            document.getElementById('change_icons').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
-        }
-    }
-    //custom code end
 
     //Initialize the diagram control.
     var diagram = new ej.diagrams.Diagram({
@@ -107,6 +73,9 @@ this.default = function () {
         rulerSettings: { showRulers: true },
         selectionChange: selectionChange,
         historyChange: historyChange,
+        created: function (args) {
+            diagram.fitToPage();
+        }
     });
     diagram.appendTo('#diagram');
 

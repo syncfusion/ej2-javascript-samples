@@ -1,81 +1,4 @@
 this.default = function () {
-    function getAzureOpenAIAssist(req) {
-        var apiKey = req.apiKey;
-        var endpoint = req.endpoint;
-        var deployment = req.deployment;
-        var prompt = req.prompt;
-        var apiVersion = req.apiVersion || '2024-07-01-preview';
-        
-        if (apiKey === "") {
-            return Promise.reject(new Error('Missing Azure OpenAI configuration: ' ));
-        }
-
-        var url = endpoint.replace(/\/$/, '') +
-            '/openai/deployments/' + encodeURIComponent(deployment) + '/chat/completions' +
-            '?api-version=' + encodeURIComponent(apiVersion);
-        return fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
-            body: JSON.stringify({
-                messages: [{ role: 'user', content: prompt }],
-                temperature: 0.7,
-                max_tokens: 200
-            })
-        })
-        .then(function(res) {
-            return res.json().then(function(data) {
-                if (!res.ok) {
-                    var apiMsg = data && data.error && data.error.message || 'HTTP ' + res.status + ' ' + res.statusText;
-                    throw new Error(apiMsg);
-                }
-                return data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content.trim() || 'No response received.';
-            }, function() {
-                return {};
-            });
-        });
-    }
-    // Calls DeepSeek Chat Completions API and returns the message content string.
-    function getDeepSeekAIAssist(apiKey, prompt) {
-        var url = 'https://api.deepseek.com/chat/completions';
-        return fetch(url, {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer ' + apiKey,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                model: 'deepseek-reasoner',
-                messages: [{ role: 'user', content: prompt }]
-            })
-        })
-        .then(function(response) {
-            if (!response.ok) throw new Error('API request failed');
-            return response.json();
-        })
-        .then(function(data) {
-            return data.choices[0].message.content;
-        });
-    }
-
-    // Calls Google Gemini (Generative Language) API and returns the response text.
-    function getGeminiAIAssist(apiKey, model, prompt) {
-        var url = 'https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(model) +
-            ':generateContent?key=' + encodeURIComponent(apiKey);
-        return fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
-            })
-        })
-        .then(function(response) {
-            if (!response.ok) throw new Error('API request failed');
-            return response.json();
-        })
-        .then(function(data) {
-            return data.candidates[0].content.parts[0].text;
-        });
-    }
 
     var AIAssistView = ej.interactivechat.AIAssistView;
     var Sidebar = ej.navigations.Sidebar;
@@ -84,15 +7,6 @@ this.default = function () {
     var ListView = ej.lists.ListView;
     var Toast = ej.notifications.Toast;
 
-    // API Keys and Configuration
-    var geminiApiKey = '';
-    var geminiModel = '';
-    var deepseekApiKey = '';
-    var azureApiKey = '';
-    var azureEndpoint = '';
-    var azureDeployment = '';
-    var azureApiVersion = '';
-
     var suggestions = [
         'What are the best tools for organizing tasks?',
         'How can I maintain work-life balance?',
@@ -100,7 +14,6 @@ this.default = function () {
 
     var selectedConvId = '';
     var listData = [];
-    var stopStreaming = false;
     var isMobile = false;
     var aiAssistViewInst;
     var sideObj;
@@ -112,6 +25,7 @@ this.default = function () {
 
     ];
     var selectedModel = 'openai';
+    var abortController;
 
     // Initializes the app state, loads conversations, sets up layout, and shows initial toast
     function InitializingApp() {
@@ -135,7 +49,7 @@ this.default = function () {
         }
     }
 
-    function promptRequest(args) {
+    async function promptRequest(args) {
         if (!args.prompt || !args.prompt.trim()) {
             return;
         }
@@ -144,15 +58,10 @@ this.default = function () {
         }
         updateBannerStyle();
         updateConversationName(args.prompt);
-        if (selectedModel === 'gemini') {
-            handleGeminiRequest(args);
-        } 
-        else if(selectedModel === 'deepseek') {
-            handleDeepSeekRequest(args);
-        }
-        else {
-            handleOpenAIRequest(args);
-        }
+        abortController = new AbortController();
+        var response = selectedModel === 'openai' ? await window.getAIResponse(args, abortController) : '⚠️ Something went wrong while connecting to the AI service. Please check your API key.';
+        aiAssistViewInst.addPromptResponse(response);
+        checkAndUpdateLocalStorage();
     }
 
     // Toggles the sidebar on mobile when the close button is pressed
@@ -332,111 +241,6 @@ this.default = function () {
         return newId;
     }
 
-    function handleStopResponse() {
-        stopStreaming = true;
-    }
-
-    // Simulates token streaming behavior by progressively appending characters
-    function streamAIResponse(fullResponse) {
-        return new Promise(function(resolve) {
-            var streamedResponseText = '';
-            if (!fullResponse) {
-                resolve(streamedResponseText);
-                return;
-            }
-            setTimeout(function() {
-                var i = 0;
-                function streamLoop() {
-                    if (i >= fullResponse.length || stopStreaming) {
-                        resolve(streamedResponseText);
-                        return;
-                    }
-                    streamedResponseText += fullResponse[i];
-                    i++;
-                    aiAssistViewInst.addPromptResponse(streamedResponseText, false);
-                    aiAssistViewInst.scrollToBottom();
-                    setTimeout(streamLoop, 10);
-                }
-                streamLoop();
-            }, 300);
-        });
-    }
-
-    // Sends a prompt to Gemini, streams the response, and finalizes it if not stopped
-    function handleGeminiRequest(args) {
-        stopStreaming = false;
-        if (!aiAssistViewInst) return;
-        getGeminiAIAssist(geminiApiKey, geminiModel, args.prompt)
-            .then(function(fullResponse) {
-                return streamAIResponse(fullResponse);
-            })
-            .then(function(streamedText) {
-                if (!stopStreaming) {
-                    aiAssistViewInst.addPromptResponse(streamedText, true);
-                    checkAndUpdateLocalStorage();
-                }
-            })
-            .catch(function(error) {
-                setTimeout(() => {
-                    var errorMessage = '⚠️ Something went wrong while connecting to the Gemini service. Please check your API key.';
-                    aiAssistViewInst.addPromptResponse(errorMessage, true);
-                    checkAndUpdateLocalStorage();
-                },1000);
-            });
-    }
-
-    // Sends a prompt to DeepSeek, streams the response, and finalizes it if not stopped
-    function handleDeepSeekRequest(args) {
-        stopStreaming = false;
-        if (!aiAssistViewInst) return;
-        getDeepSeekAIAssist(deepseekApiKey, args.prompt)
-            .then(function(fullResponse) {
-                return streamAIResponse(fullResponse);
-            })
-            .then(function(streamedText) {
-                if (!stopStreaming) {
-                    aiAssistViewInst.addPromptResponse(streamedText, true);
-                    checkAndUpdateLocalStorage();
-                }
-            })
-            .catch(function(error) {
-                setTimeout(() => {
-                    var errorMessage = '⚠️ Something went wrong while connecting to the DeepSeek service. Please check your API key.';
-                    aiAssistViewInst.addPromptResponse(errorMessage, true);
-                    checkAndUpdateLocalStorage();
-                },1000);
-            });
-    }
-
-    function handleOpenAIRequest(args) {
-        stopStreaming = false;
-        if (!aiAssistViewInst) return;
-        getAzureOpenAIAssist({
-            apiKey: azureApiKey,
-            endpoint: azureEndpoint,
-            deployment: azureDeployment,
-            apiVersion: azureApiVersion,
-            prompt: args.prompt
-          })
-            .then(function(fullResponse) {
-                return streamAIResponse(fullResponse);
-            })
-            .then(function(streamedText) {
-                if (!stopStreaming) {
-                    aiAssistViewInst.addPromptResponse(streamedText, true);
-                    checkAndUpdateLocalStorage();
-                }
-            })
-            .catch(function(error) 
-            {
-                setTimeout(() => {
-                var errorMessage = '⚠️ Something went wrong while connecting to the OpenAI service. Please check your API key.';
-                aiAssistViewInst.addPromptResponse(errorMessage, true);
-                checkAndUpdateLocalStorage();
-                },1000);
-            });
-    }
-
     // Binds click handlers to per-item delete icons in the conversation list
     function refreshDeleteListeners() {
         var deletes = document.querySelectorAll('.delete-icon');
@@ -453,10 +257,10 @@ this.default = function () {
     // Instantiate the AIAssistView component and attach to DOM
     aiAssistViewInst = new AIAssistView({
         bannerTemplate: "#bannerTemplate",
+        enableStreaming: true,
         promptSuggestions: suggestions,
         promptRequest: promptRequest,
         showHeader: false,
-        stopRespondingClick: handleStopResponse,
         width: 'auto',
         enableAttachments: true,
         attachmentSettings: {

@@ -20,7 +20,7 @@ this.default = function () {
     //To manage the visibility state of the palette space on a webpage for mobile devices
     function openPaletteLogic() {
         var paletteSpaces = document.getElementById('palette-space');
-        isMobileDevice = window.matchMedia('(max-width:550px)').matches;
+        var isMobileDevice = window.matchMedia('(max-width:550px)').matches;
         if (isMobileDevice) {
             if (!paletteSpaces.classList.contains('sb-mobile-palette-open')) {
                 paletteSpaces.classList.add('sb-mobile-palette-open');

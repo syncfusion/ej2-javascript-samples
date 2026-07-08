@@ -12,7 +12,7 @@ this.default = function () {
                 constraintDate: 'ConstraintDate',
                 dependency: 'Predecessor',
                 parentID: 'parentID',
-                notes: 'info',
+                notes: 'info'
             },
             editSettings: {
                 allowAdding: true,
@@ -25,48 +25,49 @@ this.default = function () {
             allowSelection: true,
             gridLines: 'Both',
             height: '650px',
-            rowHeight:46,
-            taskbarHeight:25,
+            rowHeight: 46,
+            taskbarHeight: 25,
             treeColumnIndex: 1,
             highlightWeekends: true,
             timelineSettings: {
                 topTier: {
                     unit: 'Week',
-                    format: 'MMM dd, y',
+                    format: 'MMM dd, y'
                 },
                 bottomTier: {
-                    unit: 'Day',
+                    unit: 'Day'
                 }
             },
             eventMarkers: [
-              {
-                day: new Date('03/25/2025'),
-                label: 'Project StartDate'
-              }, {
-                day: new Date('08/28/2025'),
-                label: 'Project EndDate'
-              }
+                {
+                    day: new Date('03/25/2025'),
+                    label: 'Project StartDate'
+                },
+                {
+                    day: new Date('09/06/2025'),
+                    label: 'Project EndDate'
+                }
            ],
             columns: [
-                { field: 'TaskID', visible: false},
-                { field: 'TaskName', headerText: 'Job Name', width: '200', clipMode: 'EllipsisWithTooltip'},
+                { field: 'TaskID', visible: false },
+                { field: 'TaskName', headerText: 'Job Name', width: 230, clipMode: 'EllipsisWithTooltip' },
                 { field: 'StartDate'},
                 { field: 'Duration'},
-                { field: 'ConstraintType',width: '180'},
-                { field: 'ConstraintDate',width:200 },
+                { field: 'ConstraintType', width: 180 },
+                { field: 'ConstraintDate', width: 200 },
                 { field: 'EndDate'},
                 { field: 'Predecessor' },
-                { field: 'Progress'},
+                { field: 'Progress'}
             ],
             labelSettings: {
                 leftLabel: 'TaskName',
-                rightLabel: '#rightLabel',
+                rightLabel: '#rightLabel'
             },
             splitterSettings: {
                 columnIndex: 4
             },
             projectStartDate: new Date('03/25/2025'),
-            projectEndDate: new Date('09/01/2025')
+            projectEndDate: new Date('09/06/2025')
     });
     ganttChart.appendTo('#Constraint');
     window.getConstraintText = function (value) {

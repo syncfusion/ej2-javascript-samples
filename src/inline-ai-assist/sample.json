@@ -18,6 +18,7 @@
             ]
         },
         {
+            "ignoreOnBuild": true,
             "url": "ai-rich-text-editor",
             "name": "Rich Text Editor",
             "category": "Integration",

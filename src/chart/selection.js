@@ -17,6 +17,7 @@ this.default = function () {
             interval: 20,
             lineStyle : {width : 0}
         },
+        highlightColor: '',
         chartArea: {
             border: {
                 width: 0
@@ -119,7 +120,7 @@ this.default = function () {
         mode: 'Palette',
         change : function(args) {
             chart.highlightColor = args.currentValue.hex;
-            chart.dataBind();
+            chart.refresh();
         }
     });
     colorPicker.appendTo('#color-picker');

@@ -26,9 +26,8 @@ var lineD = [];
 var expTotal;
 var groupValue;
 var pieRenderData = [];
-
-var isCreated = false;
 var dateRangePickerObject;
+var isCreated;
 
 // Define predicates for filtering data based on date range
 var predicateStart = new ej.data.Predicate('DateTime', 'greaterthanorequal', window.startDate);
@@ -36,6 +35,7 @@ var predicateEnd = new ej.data.Predicate('DateTime', 'lessthanorequal', window.e
 //Compound predicate by combining predicateStart and predicateEnd
 var predicate = predicateStart.and(predicateEnd);
 this.default = function () {
+    isCreated = false;
 
     var shape = { type: 'HTML' };
     var constraints = ej.diagrams.NodeConstraints.Default & ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Rotate);

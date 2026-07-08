@@ -13,7 +13,7 @@ this.default = function () {
         value: 'SYNCFUSION',
         invalid: invalidInputCode39Extension,
     });
-    barcodeCode39Extension.appendTo('#barcode');
+    barcodeCode39Extension.appendTo('#barcode_code39Extd');
     
     var canShowError39 = false;
     var customFn =  function (args) {
@@ -40,9 +40,9 @@ this.default = function () {
             displayTextCode39Extension.value = args.value.toString();
         }
     });
-    barcodeValueCode39Extension.appendTo('#barcodeValue');
+    barcodeValueCode39Extension.appendTo('#barcodeValue_code39Extd');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_code39Extd");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -56,7 +56,7 @@ this.default = function () {
             barcodeCode39Extension.width = args.value.toString();
         }
     });
-    barcodeWidthCode39Extension.appendTo('#width');
+    barcodeWidthCode39Extension.appendTo('#width_code39Extd');
     
     var barcodeHeightCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -65,7 +65,7 @@ this.default = function () {
             barcodeCode39Extension.height = args.value.toString();
         }
     });
-    barcodeHeightCode39Extension.appendTo('#height');
+    barcodeHeightCode39Extension.appendTo('#height_code39Extd');
 
     var textVisibilityCode39Extension = new ej.buttons.CheckBox({
         checked: true,
@@ -73,7 +73,7 @@ this.default = function () {
             barcodeCode39Extension.displayText.visibility = args.checked;
         }
     });
-    textVisibilityCode39Extension.appendTo('#textVisibility');
+    textVisibilityCode39Extension.appendTo('#textVisibility_code39Extd');
 
     var svgModeCode39Extension = new ej.buttons.CheckBox({
         checked: true,
@@ -81,7 +81,7 @@ this.default = function () {
             barcodeCode39Extension.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeCode39Extension.appendTo('#svgMode');
+    svgModeCode39Extension.appendTo('#svgMode_code39Extd');
 
     var bgColorCode39Extension = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -89,7 +89,7 @@ this.default = function () {
             barcodeCode39Extension.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorCode39Extension.appendTo('#bgColor');
+    bgColorCode39Extension.appendTo('#bgColor_code39Extd');
 
     var foreColorCode39Extension = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -97,7 +97,7 @@ this.default = function () {
             barcodeCode39Extension.foreColor = args.currentValue.hex;
         }
     });
-    foreColorCode39Extension.appendTo('#foreColor');
+    foreColorCode39Extension.appendTo('#foreColor_code39Extd');
 
     var marginLeftCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -107,7 +107,7 @@ this.default = function () {
             barcodeCode39Extension.margin.left = args.value;
         }
     });
-    marginLeftCode39Extension.appendTo('#marginLeft');
+    marginLeftCode39Extension.appendTo('#marginLeft_code39Extd');
 
     var marginRightCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -117,7 +117,7 @@ this.default = function () {
             barcodeCode39Extension.margin.right = args.value;
         }
     });
-    marginRightCode39Extension.appendTo('#MarginRight');
+    marginRightCode39Extension.appendTo('#MarginRight_code39Extd');
 
     var marginTopCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -127,7 +127,7 @@ this.default = function () {
             barcodeCode39Extension.margin.top = args.value;
         }
     });
-    marginTopCode39Extension.appendTo('#marginTop');
+    marginTopCode39Extension.appendTo('#marginTop_code39Extd');
 
 
 
@@ -139,7 +139,7 @@ this.default = function () {
             barcodeCode39Extension.margin.bottom = args.value;
         }
     });
-    marginBottomCode39Extension.appendTo('#MarginBottom');
+    marginBottomCode39Extension.appendTo('#MarginBottom_code39Extd');
 
     var textmarginLeftCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -148,7 +148,7 @@ this.default = function () {
             barcodeCode39Extension.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftCode39Extension.appendTo('#TextmarginLeft');
+    textmarginLeftCode39Extension.appendTo('#TextmarginLeft_code39Extd');
 
     var textMarginRightCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -157,7 +157,7 @@ this.default = function () {
             barcodeCode39Extension.displayText.margin.right = args.value;
         }
     });
-    textMarginRightCode39Extension.appendTo('#TextMarginRight');
+    textMarginRightCode39Extension.appendTo('#TextMarginRight_code39Extd');
 
     var textmarginTopCode39Extension = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -166,7 +166,7 @@ this.default = function () {
             barcodeCode39Extension.displayText.margin.top = args.value;
         }
     });
-    textmarginTopCode39Extension.appendTo('#TextmarginTop');
+    textmarginTopCode39Extension.appendTo('#TextmarginTop_code39Extd');
 
 
 
@@ -177,7 +177,7 @@ this.default = function () {
             barcodeCode39Extension.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomCode39Extension.appendTo('#TextMarginBottom');
+    textMarginBottomCode39Extension.appendTo('#TextMarginBottom_code39Extd');
 
 
     //FontType Collection
@@ -193,12 +193,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionCode39Extension(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_code39Extd')).ej2_instances[0]);
         barcodeCode39Extension.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntCode39Extension(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_code39Extd')).ej2_instances[0]);
         barcodeCode39Extension.displayText.alignment = (positionValue.value);
     }
 
@@ -211,7 +211,7 @@ this.default = function () {
             updatePositionCode39Extension(args.value.toString());
         }
     });
-    textPositionCode39Extension.appendTo('#textPosition');
+    textPositionCode39Extension.appendTo('#textPosition_code39Extd');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignCode39Extension = new ej.dropdowns.DropDownList({
@@ -222,7 +222,7 @@ this.default = function () {
             updateAligntCode39Extension(args.value.toString());
         }
     });
-    textAlignCode39Extension.appendTo('#textAlignment');
+    textAlignCode39Extension.appendTo('#textAlignment_code39Extd');
 
     var displayTextCode39Extension = new ej.inputs.TextBox({
         value: 'SYNCFUSION',
@@ -230,10 +230,10 @@ this.default = function () {
             barcodeCode39Extension.displayText.text = args.value.toString();
         }
     });
-    displayTextCode39Extension.appendTo('#displayText');
+    displayTextCode39Extension.appendTo('#displayText_code39Extd');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn4');
-    document.getElementById('downloadBtn4').onclick = function () {
+    downloadButton.appendTo('#downloadBtn4_code39Extd');
+    document.getElementById('downloadBtn4_code39Extd').onclick = function () {
         barcodeCode39Extension.exportImage("Barcode", 'PNG');
     };
 };

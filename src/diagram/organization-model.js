@@ -63,6 +63,9 @@ this.default = function () {
         },
         getConnectorDefaults: function (connector, diagram) {
             return getConnectorDefaults(connector, diagram);
+        },
+        created: function (args) {
+            diagram.fitToPage();
         }
     });
     diagram.appendTo('#diagram');

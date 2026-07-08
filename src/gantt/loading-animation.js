@@ -1,7 +1,7 @@
 this.default = function () {
     var indicatortypes = [
         { id: 'Shimmer', type: 'Shimmer' },
-        { id: 'Spinner', type: 'Spinner' },
+        { id: 'Spinner', type: 'Spinner' }
     ];
     function isFluent2OrBootstrap() {
         // Check for Bootstrap 5 or Bootstrap 5 dark theme
@@ -17,10 +17,10 @@ this.default = function () {
         dataSource: window.virtualData,
         treeColumnIndex: 1,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
-        allowEditing:true,
+        allowEditing: true,
         highlightWeekends: true,
         loadingIndicator: { indicatorType: 'Shimmer' },
         allowSorting: true,
@@ -37,8 +37,8 @@ this.default = function () {
         enableVirtualization: true,
         columns: [
             { field: 'TaskID' },
-            { field: 'TaskName', width:'200px'},
-            { field: 'StartDate',width: 170 },
+            { field: 'TaskName', width: 300 },
+            { field: 'StartDate', width: 170 },
             { field: 'Duration' },
             { field: 'Progress' }
         ],
@@ -49,6 +49,7 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
+        projectEndDate: new Date('09/21/2025')
     });
     ganttChart.appendTo('#loading-animation');
     var dropDownListObject = new ej.dropdowns.DropDownList({

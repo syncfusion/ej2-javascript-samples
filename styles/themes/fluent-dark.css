@@ -102,6 +102,7 @@ body.fluent-dark,
 .fluent-dark .sb-src-code,
 .fluent-dark .sb-api-section,
 .fluent-dark .sb-theme-popup,
+.fluent-dark .sb-products-popup,
 .fluent-dark .copy-tooltip,
 .fluent-dark .e-icons.copycode,
 .fluent-dark #search-input-wrapper input,
@@ -117,10 +118,18 @@ body.fluent-dark,
 .fluent-dark .sb-switch-popup li:hover,
 .fluent-dark .theme-wrapper:hover,
 .fluent-dark .theme-wrapper.active,
+.fluent-dark .products-wrapper:hover,
+.fluent-dark .products-wrapper.active,
 .fluent-dark .sb-theme-popup li:hover,
+.fluent-dark .sb-products-popup li:hover,
 .fluent-dark .sb-search-result .e-list-item:hover,
 .fluent-dark .sb-left-pane .e-listview .e-list-item:hover {
     background-color: #363636;
+}
+
+.fluent-dark .sb-icon-Dropdown,
+.fluent-dark .sb-icon-Dropdown:before {
+    color: #0078D4;
 }
 
 .fluent-dark .setting-responsive .sb-responsive-items {
@@ -338,6 +347,8 @@ body.fluent-dark,
 .fluent-dark .sb-switch-popup li:hover,
 .fluent-dark .theme-wrapper:hover,
 .fluent-dark .theme-wrapper.active,
+.fluent-dark .products-wrapper:hover,
+.fluent-dark .products-wrapper.active,
 .fluent-dark .sb-theme-popup li:hover,
 .fluent-dark .sb-search-result .e-list-item:hover,
 .fluent-dark .sb-switch-btn:hover,

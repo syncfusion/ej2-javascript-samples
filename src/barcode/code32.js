@@ -12,7 +12,7 @@ this.default = function () {
         invalid: invalidInputCode32,
         mode: 'SVG'
     });
-    barcodeCode32.appendTo('#barcode');
+    barcodeCode32.appendTo('#barcode_code32');
     
     var canShowError32 = false;
     var customFn =  function (args) {
@@ -39,9 +39,9 @@ this.default = function () {
             displayTextCode32.value = args.value.toString();
         }
     });
-    barcodeValue.appendTo('#barcodeValue');
+    barcodeValue.appendTo('#barcodeValue_code32');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_code32");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -55,7 +55,7 @@ this.default = function () {
             barcodeCode32.width = args.value.toString();
         }
     });
-    barcodeWidthCode32.appendTo('#width');
+    barcodeWidthCode32.appendTo('#width_code32');
     
     var barcodeHeightCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -64,7 +64,7 @@ this.default = function () {
             barcodeCode32.height = args.value.toString();
         }
     });
-    barcodeHeightCode32.appendTo('#height');
+    barcodeHeightCode32.appendTo('#height_code32');
 
     var textVisibilityCode32 = new ej.buttons.CheckBox({
         checked: true,
@@ -72,7 +72,7 @@ this.default = function () {
             barcodeCode32.displayText.visibility = args.checked;
         }
     });
-    textVisibilityCode32.appendTo('#textVisibility');
+    textVisibilityCode32.appendTo('#textVisibility_code32');
 
     var svgModeCode32 = new ej.buttons.CheckBox({
         checked: true,
@@ -80,7 +80,7 @@ this.default = function () {
             barcodeCode32.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeCode32.appendTo('#svgMode');
+    svgModeCode32.appendTo('#svgMode_code32');
 
     var bgColorCode32 = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -88,7 +88,7 @@ this.default = function () {
             barcodeCode32.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorCode32.appendTo('#bgColor');
+    bgColorCode32.appendTo('#bgColor_code32');
 
     var foreColorCode32 = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -96,7 +96,7 @@ this.default = function () {
             barcodeCode32.foreColor = args.currentValue.hex;
         }
     });
-    foreColorCode32.appendTo('#foreColor');
+    foreColorCode32.appendTo('#foreColor_code32');
 
     var marginLeftCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -106,7 +106,7 @@ this.default = function () {
             barcodeCode32.margin.left = args.value;
         }
     });
-    marginLeftCode32.appendTo('#marginLeft');
+    marginLeftCode32.appendTo('#marginLeft_code32');
 
     var marginRightCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -116,7 +116,7 @@ this.default = function () {
             barcodeCode32.margin.right = args.value;
         }
     });
-    marginRightCode32.appendTo('#MarginRight');
+    marginRightCode32.appendTo('#MarginRight_code32');
 
     var marginTopCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -126,7 +126,7 @@ this.default = function () {
             barcodeCode32.margin.top = args.value;
         }
     });
-    marginTopCode32.appendTo('#marginTop');
+    marginTopCode32.appendTo('#marginTop_code32');
 
 
 
@@ -138,7 +138,7 @@ this.default = function () {
             barcodeCode32.margin.bottom = args.value;
         }
     });
-    marginBottomCode32.appendTo('#MarginBottom');
+    marginBottomCode32.appendTo('#MarginBottom_code32');
 
     var textmarginLeftCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -147,7 +147,7 @@ this.default = function () {
             barcodeCode32.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftCode32.appendTo('#TextmarginLeft');
+    textmarginLeftCode32.appendTo('#TextmarginLeft_code32');
 
     var textMarginRightCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -156,7 +156,7 @@ this.default = function () {
             barcodeCode32.displayText.margin.right = args.value;
         }
     });
-    textMarginRightCode32.appendTo('#TextMarginRight');
+    textMarginRightCode32.appendTo('#TextMarginRight_code32');
 
     var textmarginTopCode32 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -165,7 +165,7 @@ this.default = function () {
             barcodeCode32.displayText.margin.top = args.value;
         }
     });
-    textmarginTopCode32.appendTo('#TextmarginTop');
+    textmarginTopCode32.appendTo('#TextmarginTop_code32');
 
 
 
@@ -176,7 +176,7 @@ this.default = function () {
             barcodeCode32.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomCode32.appendTo('#TextMarginBottom');
+    textMarginBottomCode32.appendTo('#TextMarginBottom_code32');
 
 
     //FontType Collection
@@ -192,12 +192,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionCode32(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_code32')).ej2_instances[0]);
         barcodeCode32.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntCode32(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_code32')).ej2_instances[0]);
         barcodeCode32.displayText.alignment = (positionValue.value);
     }
 
@@ -210,7 +210,7 @@ this.default = function () {
             updatePositionCode32(args.value.toString());
         }
     });
-    textPositionCode32.appendTo('#textPosition');
+    textPositionCode32.appendTo('#textPosition_code32');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignCode32 = new ej.dropdowns.DropDownList({
@@ -221,7 +221,7 @@ this.default = function () {
             updateAligntCode32(args.value.toString());
         }
     });
-    textAlignCode32.appendTo('#textAlignment');
+    textAlignCode32.appendTo('#textAlignment_code32');
 
     var displayTextCode32 = new ej.inputs.TextBox({
         value: '01234567',
@@ -229,10 +229,10 @@ this.default = function () {
             barcodeCode32.displayText.text = args.value.toString();
         }
     });
-    displayTextCode32.appendTo('#displayText');
+    displayTextCode32.appendTo('#displayText_code32');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn2');
-    document.getElementById('downloadBtn2').onclick = function () {
+    downloadButton.appendTo('#downloadBtn2_code32');
+    document.getElementById('downloadBtn2_code32').onclick = function () {
         barcodeCode32.exportImage("Barcode", 'PNG');
     };
 };

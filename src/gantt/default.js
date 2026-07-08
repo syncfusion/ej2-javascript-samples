@@ -11,20 +11,20 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            parentID:'ParentId'
+            parentID: 'ParentId'
         },
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         treeColumnIndex: 1,
         columns: [
             { field: 'TaskID', width: 80 },
-            { field: 'TaskName',headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor' },
-            { field: 'Progress' },
+            { field: 'Progress' }
         ],
         labelSettings: {
             leftLabel: 'TaskName'
@@ -32,11 +32,10 @@ this.default = function () {
         splitterSettings: {
             columnIndex: 2
         },
-        created:function() {
-            if(document.querySelector('.e-bigger'))
-            {
-                ganttChart.rowHeight=48;
-                ganttChart.taskbarHeight=28;
+        created: function() {
+            if (document.querySelector('.e-bigger')) {
+                ganttChart.rowHeight = 48;
+                ganttChart.taskbarHeight = 28;
             }
         },
         projectStartDate: new Date('03/26/2025'),

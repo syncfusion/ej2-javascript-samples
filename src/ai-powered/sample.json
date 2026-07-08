@@ -1,0 +1,212 @@
+{
+  "name": "AI-Powered Samples",
+  "directory": "ai-grid",
+  "category": "Smart AI Solutions",
+  "dataSourcePath": "src/ai-grid/data-source.js",
+  "samples": [
+    {
+      "url": "predictive-entry",
+      "name": "Predictive Data Entry",
+      "category": "Data Grid",
+      "dir": "ai-grid",
+      "sourceFiles": [
+        { "displayName": "predictive-entry.js", "path": "src/ai-grid/predictive-entry.js" },
+        { "displayName": "predictive-entry.html", "path": "src/ai-grid/ai-predictive-entry.html" },
+        { "displayName": "data-source.js", "path": "src/ai-grid/data-source.js" }
+      ],
+      "description": "This demo shows the predictive data entry AI feature in Data Grid."
+    },
+    {
+      "url": "anomaly-detection",
+      "name": "Anomaly Detection",
+      "category": "Data Grid",
+      "dir": "ai-grid",
+      "sourceFiles": [
+        { "displayName": "anomaly-detection.js", "path": "src/ai-grid/anomaly-detection.js" },
+        { "displayName": "anomaly-detection.html", "path": "src/ai-grid/ai-anomaly-detection.html" },
+        { "displayName": "data-source.js", "path": "src/ai-grid/data-source.js" }
+      ],
+      "description": "This demo shows the anomaly detection AI feature in Data Grid."
+    },
+    {
+      "url": "semantic-filtering",
+      "name": "Semantic Filtering (Embedding)",
+      "category": "Data Grid",
+      "dir": "ai-grid",
+      "sourceFiles": [
+        { "displayName": "semantic-filtering.js", "path": "src/ai-grid/semantic-filtering.js" },
+        { "displayName": "semantic-filtering.html", "path": "src/ai-grid/ai-semantic-filtering.html" },
+        { "displayName": "data-source.js", "path": "src/ai-grid/data-source.js" }
+      ],
+      "description": "This demo shows the semantic filtering AI feature in Data Grid."
+    },
+    {
+      "url": "text-to-flowchart",
+      "name": "Text to Flowchart",
+      "category": "Diagram",
+      "dir": "ai-diagram",
+      "sourceFiles": [
+        { "displayName": "text-to-flowchart.js", "path": "src/ai-diagram/text-to-flowchart.js" },
+        { "displayName": "text-to-flowchart.html", "path": "src/ai-diagram/ai-text-to-flowchart.html" }
+      ],
+      "description": "This demo showcases the Diagram AI feature."
+    },
+    {
+      "url": "text-to-mindmap",
+      "name": "Text to MindMap",
+      "category": "Diagram",
+      "dir": "ai-diagram",
+      "sourceFiles": [
+        { "displayName": "text-to-mindmap.js", "path": "src/ai-diagram/text-to-mindmap.js" },
+        { "displayName": "text-to-mindmap.html", "path": "src/ai-diagram/ai-text-to-mindmap.html" }
+      ],
+      "description": "This demo showcases the Diagram AI feature."
+    },
+    {
+      "url": "text-to-umlSequenceDiagram",
+      "name": "Text to UML Sequence Diagram",
+      "category": "Diagram",
+      "dir": "ai-diagram",
+      "sourceFiles": [
+        { "displayName": "text-to-umlSequenceDiagram.js", "path": "src/ai-diagram/text-to-umlSequenceDiagram.js" },
+        { "displayName": "text-to-umlSequenceDiagram.html", "path": "src/ai-diagram/ai-text-to-umlSequenceDiagram.html" }
+      ],
+      "description": "This demo showcases the Diagram AI feature."
+    },
+    {
+      "url": "semantic-searching",
+      "name": "Semantic Searching (Embedding)",
+      "category": "ComboBox",
+      "dir": "ai-combo-box",
+      "sourceFiles": [
+        { "displayName": "semantic-searching.js", "path": "src/ai-combo-box/semantic-searching.js" },
+        { "displayName": "semantic-searching.html", "path": "src/ai-combo-box/ai-semantic-searching.html" }
+      ],
+      "description": "This demo shows the semantic search AI feature in Combo Box."
+    },
+    {
+      "url": "task-prioritizer",
+      "name": "Smart Task Prioritizer",
+      "category": "Gantt",
+      "dir": "ai-gantt",
+      "sourceFiles": [
+        { "displayName": "task-prioritizer.js", "path": "src/ai-gantt/task-prioritizer.js" },
+        { "displayName": "task-prioritizer.html", "path": "src/ai-gantt/ai-task-prioritizer.html" }
+      ],
+      "description": "This demo showcases the Gantt AI feature."
+    },
+    {
+      "url": "progress-predictor",
+      "name": "Smart Progress Predictor",
+      "category": "Gantt",
+      "dir": "ai-gantt",
+      "sourceFiles": [
+        { "displayName": "progress-predictor.js", "path": "src/ai-gantt/progress-predictor.js" },
+        { "displayName": "progress-predictor.html", "path": "src/ai-gantt/ai-progress-predictor.html" }
+      ],
+      "description": "This demo showcases the Gantt AI feature."
+    },
+    {
+        "url": "resource-manager",
+        "name": "Smart Resource Allocation",
+        "category": "Gantt",
+        "dir": "ai-gantt",
+        "sourceFiles": [
+            { "displayName": "resource-manager.js", "path": "src/ai-gantt/resource-manager.js" },
+            { "displayName": "resource-manager.html", "path": "src/ai-gantt/ai-resource-manager.html" }
+        ],
+        "description": "This demo showcases the Pivot Table AI feature."
+    },
+    {
+      "url": "smart-image-editor",
+      "name": "Smart Image Editor",
+      "category": "Image Editor",
+      "dir": "ai-image-editor",
+      "sourceFiles": [
+        { "displayName": "smart-image-editor.js", "path": "src/ai-image-editor/smart-image-editor.js" },
+        { "displayName": "stability-model.js", "path": "src/ai-image-editor/stability-model.js" },
+        { "displayName": "smart-image-editor.html", "path": "src/ai-image-editor/ai-smart-image-editor.html" }
+      ],
+      "description": "This demo highlights the advanced features of the Syncfusion JavaScript Image Editor."
+    },
+    {
+      "url": "task-recommendation",
+      "name": "AI Task Recommendation",
+      "category": "Kanban",
+      "dir": "ai-kanban",
+      "sourceFiles": [
+        { "displayName": "task-recommendation.js", "path": "src/ai-kanban/task-recommendation.js" },
+        { "displayName": "task-recommendation.html", "path": "src/ai-kanban/ai-task-recommendation.html" }
+      ],
+      "description": "This demo shows the AI task recommendation feature in Kanban."
+    },
+    {
+        "url": "sentiment-analysis",
+        "name": "Sentiment Analysis",
+        "category": "Kanban",
+        "dir": "ai-kanban",
+        "sourceFiles":[
+            { "displayName": "sentiment-analysis.js", "path":"src/ai-kanban/sentiment-analysis.js" },
+            { "displayName": "sentiment-analysis.html", "path":"src/ai-kanban/ai-sentiment-analysis.html" }
+        ],
+        "description": "This demo shows the anomaly detection AI feature in kanban"
+    },
+    {
+      "url": "weather-prediction",
+      "name": "Weather Prediction",
+      "category": "Maps",
+      "dir": "ai-maps",
+      "sourceFiles": [
+        { "displayName": "weather-prediction.js", "path": "src/ai-maps/weather-prediction.js" },
+        { "displayName": "weather-prediction.html", "path": "src/ai-maps/ai-weather-prediction.html" }
+      ],
+      "description": "This demo showcases the Maps AI feature."
+    },
+    {
+      "url": "smart-pivot",
+      "name": "Smart Pivot",
+      "category": "Pivot Table",
+      "dir": "ai-pivot-table",
+      "dataSourcePath": "src/ai-pivot-table/data-source.js",
+      "sourceFiles": [
+        { "displayName": "smart-pivot.js", "path": "src/ai-pivot-table/smart-pivot.js" },
+        { "displayName": "smart-pivot.html", "path": "src/ai-pivot-table/ai-smart-pivot.html" }
+      ],
+      "description": "This demo showcases the Pivot Table AI feature."
+    },
+    {
+      "url": "natural-language-query",
+      "name": "Natural Language Query",
+      "category": "Query Builder",
+      "dir": "ai-querybuilder",
+      "sourceFiles": [
+        { "displayName": "natural-language-query.js", "path": "src/ai-querybuilder/natural-language-query.js" },
+        { "displayName": "natural-language-query.html", "path": "src/ai-querybuilder/ai-natural-language-query.html" }
+      ],
+      "description": "This demo shows the natural language query AI feature in Query Builder."
+    },
+    {
+      "url": "default",
+      "name": "Smart Event Window",
+      "category": "Scheduler",
+      "dir": "ai-schedule",
+      "sourceFiles": [
+        { "displayName": "smart-event-window.js", "path": "src/ai-schedule/default.js" },
+        { "displayName": "smart-event-window.html", "path": "src/ai-schedule/ai-default.html" }
+      ],
+      "description": "This demo demonstrates AI-powered scheduler events."
+    },
+    {
+      "url": "adaptive-datastructuring",
+      "name": "Adaptive Data Structuring",
+      "category": "Tree Grid",
+      "dir": "ai-tree-grid",
+      "sourceFiles": [
+        { "displayName": "adaptive-datastructuring.js", "path": "src/ai-tree-grid/adaptive-datastructuring.js" },
+        { "displayName": "adaptive-datastructuring.html", "path": "src/ai-tree-grid/ai-adaptive-datastructuring.html" }
+      ],
+      "description": "This demo shows the adaptive data structuring AI feature in Tree Grid."
+    }
+
+  ]
+}

@@ -22,6 +22,10 @@ this.default = function () {
         width: '100%',
         height: 450,
         showFieldList: true,
+        showToolbar: true,
+        toolbar: ['Export', 'FieldList'],
+        allowExcelExport: true,
+        allowPdfExport: true,
         gridSettings: {
             columnWidth: ej.base.Browser.isDevice ? 100 : 120,
             layout: 'Tabular'
@@ -36,11 +40,29 @@ this.default = function () {
     });
     layoutSwitch.appendTo('#layout-switch');
 
+    var repeatLabelSwitch = new ej.buttons.Switch({
+        cssClass: 'pivot-repeatlabel-switch',
+        change: onRepeatLabelSwitchChange
+    });
+    repeatLabelSwitch.appendTo('#repeatlabel-switch');
+
     function onSwitchChange(args) {
         if (pivotObj.gridSettings.layout === 'Compact') {
             pivotObj.gridSettings.layout = 'Tabular';
+            repeatLabelSwitch.disabled = false;
         } else {
             pivotObj.gridSettings.layout = 'Compact';
+            repeatLabelSwitch.disabled = true;
+        }
+    }
+
+    function onRepeatLabelSwitchChange(args) {
+        if (pivotObj.gridSettings.repeatItemLabels) {
+            pivotObj.setProperties({ gridSettings: { repeatItemLabels: false } });
+            pivotObj.refreshData();
+        } else {
+            pivotObj.setProperties({ gridSettings: { repeatItemLabels: true } });
+            pivotObj.refreshData(); 
         }
     }
 };

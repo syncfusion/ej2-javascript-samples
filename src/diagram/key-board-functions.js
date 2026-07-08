@@ -159,7 +159,10 @@ function selectNode(node) {
                 };
             }
         },
-        commandManager: getCommandManagerSettings()
+        commandManager: getCommandManagerSettings(),
+        created: function (args) {
+            diagram.fitToPage();
+        }
     });
     diagram.appendTo('#diagram');
    

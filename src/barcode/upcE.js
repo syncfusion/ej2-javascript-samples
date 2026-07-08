@@ -12,7 +12,7 @@ this.default = function () {
         mode: 'SVG',
         invalid: invalidInputUpcE,
     });
-    barcodeUpcE.appendTo('#barcode');
+    barcodeUpcE.appendTo('#barcode_upcE');
     
     var canShowErrorupcE = false;
     var customFn = function (args) {
@@ -39,9 +39,9 @@ this.default = function () {
             displayTextUpcE.value = args.value.toString();
         }
     });
-    barcodeValueUpcE.appendTo('#barcodeValue');
+    barcodeValueUpcE.appendTo('#barcodeValue_upcE');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_upcE");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -55,7 +55,7 @@ this.default = function () {
             barcodeUpcE.width = args.value.toString();
         }
     });
-    barcodeWidthUpcE.appendTo('#width');
+    barcodeWidthUpcE.appendTo('#width_upcE');
     
     var barcodeHeightUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -64,7 +64,7 @@ this.default = function () {
             barcodeUpcE.height = args.value.toString();
         }
     });
-    barcodeHeightUpcE.appendTo('#height');
+    barcodeHeightUpcE.appendTo('#height_upcE');
 
     var textVisibilityUpcE = new ej.buttons.CheckBox({
         checked: true,
@@ -72,7 +72,7 @@ this.default = function () {
             barcodeUpcE.displayText.visibility = args.checked;
         }
     });
-    textVisibilityUpcE.appendTo('#textVisibility');
+    textVisibilityUpcE.appendTo('#textVisibility_upcE');
 
     var svgModeUpcE = new ej.buttons.CheckBox({
         checked: true,
@@ -80,7 +80,7 @@ this.default = function () {
             barcodeUpcE.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeUpcE.appendTo('#svgMode');
+    svgModeUpcE.appendTo('#svgMode_upcE');
 
     var bgColorUpcE = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -88,7 +88,7 @@ this.default = function () {
             barcodeUpcE.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorUpcE.appendTo('#bgColor');
+    bgColorUpcE.appendTo('#bgColor_upcE');
 
     var foreColorUpcE = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -96,7 +96,7 @@ this.default = function () {
             barcodeUpcE.foreColor = args.currentValue.hex;
         }
     });
-    foreColorUpcE.appendTo('#foreColor');
+    foreColorUpcE.appendTo('#foreColor_upcE');
 
     var marginLeftUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -106,7 +106,7 @@ this.default = function () {
             barcodeUpcE.margin.left = args.value;
         }
     });
-    marginLeftUpcE.appendTo('#marginLeft');
+    marginLeftUpcE.appendTo('#marginLeft_upcE');
 
     var marginRightUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -116,7 +116,7 @@ this.default = function () {
             barcodeUpcE.margin.right = args.value;
         }
     });
-    marginRightUpcE.appendTo('#MarginRight');
+    marginRightUpcE.appendTo('#MarginRight_upcE');
 
     var marginTopUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -126,7 +126,7 @@ this.default = function () {
             barcodeUpcE.margin.top = args.value;
         }
     });
-    marginTopUpcE.appendTo('#marginTop');
+    marginTopUpcE.appendTo('#marginTop_upcE');
 
 
 
@@ -138,7 +138,7 @@ this.default = function () {
             barcodeUpcE.margin.bottom = args.value;
         }
     });
-    marginBottomUpcE.appendTo('#MarginBottom');
+    marginBottomUpcE.appendTo('#MarginBottom_upcE');
 
     var textmarginLeftUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -147,7 +147,7 @@ this.default = function () {
             barcodeUpcE.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftUpcE.appendTo('#TextmarginLeft');
+    textmarginLeftUpcE.appendTo('#TextmarginLeft_upcE');
 
     var textMarginRightUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -156,7 +156,7 @@ this.default = function () {
             barcodeUpcE.displayText.margin.right = args.value;
         }
     });
-    textMarginRightUpcE.appendTo('#TextMarginRight');
+    textMarginRightUpcE.appendTo('#TextMarginRight_upcE');
 
     var textmarginTopUpcE = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -165,7 +165,7 @@ this.default = function () {
             barcodeUpcE.displayText.margin.top = args.value;
         }
     });
-    textmarginTopUpcE.appendTo('#TextmarginTop');
+    textmarginTopUpcE.appendTo('#TextmarginTop_upcE');
 
 
 
@@ -176,7 +176,7 @@ this.default = function () {
             barcodeUpcE.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomUpcE.appendTo('#TextMarginBottom');
+    textMarginBottomUpcE.appendTo('#TextMarginBottom_upcE');
 
 
     //FontType Collection
@@ -191,12 +191,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionUpcE(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_upcE')).ej2_instances[0]);
         barcodeUpcE.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntUpcE(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_upcE')).ej2_instances[0]);
         barcodeUpcE.displayText.alignment = (positionValue.value);
     }
 
@@ -209,7 +209,7 @@ this.default = function () {
             updatePositionUpcE(args.value.toString());
         }
     });
-    textPositionUpcE.appendTo('#textPosition');
+    textPositionUpcE.appendTo('#textPosition_upcE');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignUpcE = new ej.dropdowns.DropDownList({
@@ -220,7 +220,7 @@ this.default = function () {
             updateAligntUpcE(args.value.toString());
         }
     });
-    textAlignUpcE.appendTo('#textAlignment');
+    textAlignUpcE.appendTo('#textAlignment_upcE');
 
     var displayTextUpcE = new ej.inputs.TextBox({
         value: '123456',
@@ -228,10 +228,10 @@ this.default = function () {
             barcodeUpcE.displayText.text = args.value.toString();
         }
     });
-    displayTextUpcE.appendTo('#displayText');
+    displayTextUpcE.appendTo('#displayText_upcE');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn14');
-    document.getElementById('downloadBtn14').onclick = function () {
+    downloadButton.appendTo('#downloadBtn14_upcE');
+    document.getElementById('downloadBtn14_upcE').onclick = function () {
         barcodeUpcE.exportImage("Barcode", 'PNG');
     };
 };

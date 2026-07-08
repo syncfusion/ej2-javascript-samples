@@ -75,9 +75,7 @@ this.default = function () {
             switch (field) {
                 case 'Host':
                     value = args.target.title;
-                    imageSource =
-                        'src/grid/images/country/' +
-                        (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
+                    imageSource = 'src/grid/images/country/' + (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
                     cellInfo = window.countryInfo[0][value.replace(/ /g, '_')];
                     break;
                 case 'Champions':
@@ -87,18 +85,13 @@ this.default = function () {
                 case 'Coach':
                     if (args.target.tagName === 'IMG') {
                         value = rowInfo.rowData.Champions;
-                        imageSource =
-                            'src/grid/images/country/' +
-                            (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
+                        imageSource = 'src/grid/images/country/' + (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
                         cellInfo = window.countryInfo[0][value.replace(/ /g, '_')];
                     } else {
                         if (value === 'Juan López') {
                             hideImage = true;
                         }
-                        imageSource =
-                            'src/grid/images/coach/' +
-                            value +
-                            (value === 'Aymoré Moreira' ? '.png' : '.jpg');
+                        imageSource = 'src/grid/images/coach/' + value + (value === 'Aymoré Moreira' ? '.png' : '.jpg');
                         cellInfo = window.coachInfo[0][value.replace(/ /g, '_')];
                     }
                     break;
@@ -285,9 +278,7 @@ this.default = function () {
                 value = rowDetails.BestPlayerCountry;
                 break;
         }
-        var src =
-            'src/grid/images/country/' +
-            (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
+        var src = 'src/grid/images/country/' + (window.webpfiles.indexOf(value) > -1 ? value + '.webp' : value + '.png');
 
         var img = document.createElement('img');
         img.alt = '';

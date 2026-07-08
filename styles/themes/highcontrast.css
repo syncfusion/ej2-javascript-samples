@@ -15,6 +15,7 @@
 .highcontrast .sb-src-code,
 .highcontrast .sb-api-section,
 .highcontrast .sb-theme-popup,
+.highcontrast .sb-products-popup,
 .highcontrast .copy-tooltip,
 .highcontrast .e-icons.copycode,
 .highcontrast #search-input-wrapper input,
@@ -65,6 +66,10 @@ body.highcontrast,
 }
 
 .highcontrast .sb-theme-popup {
+    background: #000000;
+}
+
+.highcontrast .sb-products-popup {
     background: #000000;
 }
 
@@ -133,7 +138,10 @@ body.highcontrast,
 .highcontrast .sb-switch-popup li:hover,
 .highcontrast .theme-wrapper:hover,
 .highcontrast .theme-wrapper.active,
+.highcontrast .products-wrapper:hover,
+.highcontrast .products-wrapper.active,
 .highcontrast .sb-theme-popup li:hover,
+.highcontrast .sb-products-popup li:hover,
 .highcontrast .sb-search-result .e-list-item:hover,
 .highcontrast .sb-left-pane .e-listview .e-list-item:hover {
     background-color: #685708;

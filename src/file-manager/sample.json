@@ -2,6 +2,7 @@
     "name": "File Manager",
     "directory": "file-manager",
     "category": "Navigation",
+    "type": "update",
     "ftName": "file-manager",
     "samples": [
         {
@@ -88,18 +89,27 @@
             "description": "This example of FileManager for JavaScript(ES5) with how to restrict the file operations in the File Manager component."
         },
         {
+            "url": "custom-toolbar-items",
+            "name": "Custom Toolbar Items",
+            "category": "Use Case",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings"] },
+            "description":"This example shows how to customize the File Manager toolbar with a live search box, view toggle buttons, and a Preview Pane for detailed file information."
+        },
+        {
+            "url": "custom-sorting",
+            "name": "Custom Sorting",
+            "category": "Use Case",
+            "type": "new",
+            "api": { "FileManager": ["ajaxSettings"] },
+            "description": "This example shows how to perform custom sorting in the File Manager by defining a sortComparer function. It demonstrates natural sorting for the LargeIconsView and the Name column in DetailsView."
+        },
+        {
             "url": "azure-service",
             "name": "Azure Blob Provider",
             "category": "Cloud Service Providers",
             "api": { "FileManager": [ "ajaxSettings" ] },
             "description": "This example of FileManager for JavaScript(ES5) with how to configure and use the azure cloud service."
-        },
-        {
-            "url": "nodejs-file-provider",
-            "name": "NodeJS File Provider",
-            "category": "Cloud Service Providers",
-            "api": { "FileManager": ["ajaxSettings", "view"] },
-            "description": "This example demonstrates how to configure and use the nodejs server database service in a JavaScript(ES5)  File Manager."
         },
         {
             "url": "amazon-s3-provider",

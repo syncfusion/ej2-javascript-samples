@@ -13,11 +13,12 @@ this.default = function () {
                 id: "User",
                 content: "User",
                 // Indicates that User is an actor
-                isActor: true
+                stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Actor
             },
             {
                 id: "Transaction",
                 content: "Transaction",
+                stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Control,
                 // Activation periods for the Transaction participant
                 activationBoxes: [
                     { id: "act1", startMessageID: 'msg1', endMessageID: 'msg4' }
@@ -26,6 +27,7 @@ this.default = function () {
             {
                 id: "FraudDetectionSystem",
                 content: "Fraud Detection System",
+                stereotype: ej.diagrams.UmlSequenceParticipantStereotype.Entity,
                 // Activation periods for the Fraud Detection System participant
                 activationBoxes: [
                     { id: "act2", startMessageID: 'msg2', endMessageID: 'msg3' },
@@ -80,14 +82,7 @@ this.default = function () {
     }
     // Define default properties for nodes used in the diagram
     function getNodeDefaults(node) {
-        // participant node
-        if (node.data instanceof ej.diagrams.UmlSequenceParticipant) {
-            if (!node.data.isActor) {
-                node.annotations[0].style.color = 'white';
-            }
-        }
-        // activation node
-        else if (node.data instanceof ej.diagrams.UmlSequenceActivationBox) {
+        if (node.data instanceof ej.diagrams.UmlSequenceActivationBox) {
             node.style = { fill: 'orange', strokeColor: 'orange' };
         }
     }

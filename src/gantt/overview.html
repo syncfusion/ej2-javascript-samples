@@ -23,17 +23,17 @@
     <p>This demo presents an e-commerce platform redesign project, demonstrating key features such as task organization, customizable timeline views, 
         resource management, and interactive controls. Users can <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/sorting">sort</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/filtering/filtering">filter tasks</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/columns/column-resizing"> resize</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/columns/column-reordering">reorder columns</a>, track progress with <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/baseline"> baselines</a>, 
         and highlight key dates with <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/event-markers">event markers</a> and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/holidays"> holidays</a>. The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/tool-bar"> toolbar </a> offers intuitive options to add, edit, delete, search, and expand or 
-        collapse tasks. Additionally, users can configure <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#workweek"> working days</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/scheduling-tasks#weekendnon-working-days"> highlight weekends</a>, set <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#projectstartdate"> project date ranges</a>.
-</p>
-<br>
-<p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/es5-getting-started#adding-gantt-control">documentation section</a>.</p>
+        collapse tasks. Additionally, users can configure <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#workweek"> working days</a>, <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/index-default#highlightweekends"> highlight weekends</a>, set <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/gantt/#projectstartdate"> project date ranges</a>.
+    </p>
+    <br>
+    <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/es5-getting-started#adding-gantt-control">documentation section</a>.</p>
 </div>
 
 <script type="text/x-template" id="columnTemplate">
     ${if(ganttProperties.resourceNames)}
         <div style="display: flex; align-items: center; gap: 8px;height: 100%;">
             <div>
-                <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:24px;width:24px" />
+                <img src="src/gantt/images/${ganttProperties.resourceNames}.png" alt="src/gantt/images/${ganttProperties.resourceNames}" style="height:24px;width:24px" />
             </div>
             <div style="display: flex; flex-direction: column; justify-content: center; line-height: 16px">
                 <span style="font-size:12px">${Assignee}</span>
@@ -58,7 +58,7 @@
 <script type="text/x-template" id="rightLabel">
     <div>
         ${if(ganttProperties.resourceInfo && ganttProperties.resourceInfo.length !==0)}
-            <img src="src/gantt/images/${ganttProperties.resourceNames}.png" style="height:25px;width:25px;" />
+            <img src="src/gantt/images/${ganttProperties.resourceNames}.png" alt="src/gantt/images/${ganttProperties.resourceNames}" style="height:25px;width:25px;" />
             <span style="margin-left:3px">${Assignee}</span>
         ${/if}
     </div>

@@ -95,7 +95,7 @@ this.default = function () {
     // Function to open or close the palette on mobile devices
     function openPalette() {
         var paletteSpace = document.getElementById('palette-space');
-        isMobile = window.matchMedia('(max-width:550px)').matches;
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
                 paletteSpace.classList.add('sb-mobile-palette-open');
@@ -127,18 +127,18 @@ this.default = function () {
     // Node configurations 
     //Initializes the nodes for the diagram.
     var nodes = [
-        getDefaultNode("Start", 40, 40, 300, 20, "UmlActivity", "InitialNode"),
-        getDefaultNode("ReceiveCall", 40, 105, 300, 100, "UmlActivity", "Action", [{ content: "Receive Customer Call" }]),
-        getDefaultNode("ForkNode", 10, 70, 300, 170, "UmlActivity", "ForkNode"),
-        getDefaultNode("Determine", 40, 105, 190, 250, "UmlActivity", "Action", [{ content: "Determine Type of Call" }]),
-        getDefaultNode("Log", 40, 105, 410, 250, "UmlActivity", "Action", [{ content: "Customer Logging a Call" }]),
-        getDefaultNode("Decision", 50, 50, 190, 350, "UmlActivity", "Decision"),
-        getDefaultNode("transfer_sales", 40, 105, 100, 450, "UmlActivity", "Action", [{ content: "Transfer the Call to Sales" }]),
-        getDefaultNode("transfer_desk", 40, 105, 280, 450, "UmlActivity", "Action", [{ content: "Transfer the Call to Help Desk" }]),
-        getDefaultNode("MergeNode", 50, 50, 190, 540, "UmlActivity", "MergeNode"),
-        getDefaultNode("JoinNode", 10, 70, 300, 630, "UmlActivity", "JoinNode"),
-        getDefaultNode("CloseCall", 40, 105, 300, 710, "UmlActivity", "Action", [{ content: "Close Call", margin: { left: 25, right: 25 } }]),
-        getDefaultNode("FinalNode", 40, 40, 300, 800, "UmlActivity", "FinalNode")
+        getDefaultNode("Start", 40, 40, 700, 20, "UmlActivity", "InitialNode"),
+        getDefaultNode("ReceiveCall", 40, 105, 700, 100, "UmlActivity", "Action", [{ content: "Receive Customer Call" }]),
+        getDefaultNode("ForkNode", 10, 70, 700, 170, "UmlActivity", "ForkNode"),
+        getDefaultNode("Determine", 40, 105, 590, 250, "UmlActivity", "Action", [{ content: "Determine Type of Call" }]),
+        getDefaultNode("Log", 40, 105, 810, 250, "UmlActivity", "Action", [{ content: "Customer Logging a Call" }]),
+        getDefaultNode("Decision", 50, 50, 590, 350, "UmlActivity", "Decision"),
+        getDefaultNode("transfer_sales", 40, 105, 500, 450, "UmlActivity", "Action", [{ content: "Transfer the Call to Sales" }]),
+        getDefaultNode("transfer_desk", 40, 105, 680, 450, "UmlActivity", "Action", [{ content: "Transfer the Call to Help Desk" }]),
+        getDefaultNode("MergeNode", 50, 50, 590, 540, "UmlActivity", "MergeNode"),
+        getDefaultNode("JoinNode", 10, 70, 700, 630, "UmlActivity", "JoinNode"),
+        getDefaultNode("CloseCall", 40, 105, 700, 710, "UmlActivity", "Action", [{ content: "Close Call", margin: { left: 25, right: 25 } }]),
+        getDefaultNode("FinalNode", 40, 40, 700, 800, "UmlActivity", "FinalNode")
     ];
 
     // Common function to get default connector properties

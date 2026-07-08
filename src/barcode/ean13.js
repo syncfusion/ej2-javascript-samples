@@ -12,7 +12,7 @@ this.default = function () {
         mode: 'SVG',
         invalid: invalidInputEan13,
     });
-    barcodeEan13.appendTo('#barcode');
+    barcodeEan13.appendTo('#barcode_ean13');
     
     var canShowErrorEan13 = false;
     var customFn = function (args) {
@@ -39,9 +39,9 @@ this.default = function () {
             displayTextEan13.value = args.value.toString();
         }
     });
-    barcodeValueEan13.appendTo('#barcodeValue');
+    barcodeValueEan13.appendTo('#barcodeValue_ean13');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_ean13");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -55,7 +55,7 @@ this.default = function () {
             barcodeEan13.width = args.value.toString();
         }
     });
-    barcodeWidthEan13.appendTo('#width');
+    barcodeWidthEan13.appendTo('#width_ean13');
     
     var barcodeHeightEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -64,7 +64,7 @@ this.default = function () {
             barcodeEan13.height = args.value.toString();
         }
     });
-    barcodeHeightEan13.appendTo('#height');
+    barcodeHeightEan13.appendTo('#height_ean13');
 
     var textVisibilityEan13 = new ej.buttons.CheckBox({
         checked: true,
@@ -72,7 +72,7 @@ this.default = function () {
             barcodeEan13.displayText.visibility = args.checked;
         }
     });
-    textVisibilityEan13.appendTo('#textVisibility');
+    textVisibilityEan13.appendTo('#textVisibility_ean13');
 
     var svgModeEan13 = new ej.buttons.CheckBox({
         checked: true,
@@ -80,7 +80,7 @@ this.default = function () {
             barcodeEan13.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeEan13.appendTo('#svgMode');
+    svgModeEan13.appendTo('#svgMode_ean13');
 
     var bgColorEan13 = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -88,7 +88,7 @@ this.default = function () {
             barcodeEan13.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorEan13.appendTo('#bgColor');
+    bgColorEan13.appendTo('#bgColor_ean13');
 
     var foreColorEan13 = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -96,7 +96,7 @@ this.default = function () {
             barcodeEan13.foreColor = args.currentValue.hex;
         }
     });
-    foreColorEan13.appendTo('#foreColor');
+    foreColorEan13.appendTo('#foreColor_ean13');
 
     var marginLeftEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -106,7 +106,7 @@ this.default = function () {
             barcodeEan13.margin.left = args.value;
         }
     });
-    marginLeftEan13.appendTo('#marginLeft');
+    marginLeftEan13.appendTo('#marginLeft_ean13');
 
     var marginRightEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -116,7 +116,7 @@ this.default = function () {
             barcodeEan13.margin.right = args.value;
         }
     });
-    marginRightEan13.appendTo('#MarginRight');
+    marginRightEan13.appendTo('#MarginRight_ean13');
 
     var marginTopEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -126,7 +126,7 @@ this.default = function () {
             barcodeEan13.margin.top = args.value;
         }
     });
-    marginTopEan13.appendTo('#marginTop');
+    marginTopEan13.appendTo('#marginTop_ean13');
 
 
 
@@ -138,7 +138,7 @@ this.default = function () {
             barcodeEan13.margin.bottom = args.value;
         }
     });
-    marginBottomEan13.appendTo('#MarginBottom');
+    marginBottomEan13.appendTo('#MarginBottom_ean13');
 
     var textmarginLeftEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -147,7 +147,7 @@ this.default = function () {
             barcodeEan13.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftEan13.appendTo('#TextmarginLeft');
+    textmarginLeftEan13.appendTo('#TextmarginLeft_ean13');
 
     var textMarginRightEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -156,7 +156,7 @@ this.default = function () {
             barcodeEan13.displayText.margin.right = args.value;
         }
     });
-    textMarginRightEan13.appendTo('#TextMarginRight');
+    textMarginRightEan13.appendTo('#TextMarginRight_ean13');
 
     var textmarginTopEan13 = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -165,7 +165,7 @@ this.default = function () {
             barcodeEan13.displayText.margin.top = args.value;
         }
     });
-    textmarginTopEan13.appendTo('#TextmarginTop');
+    textmarginTopEan13.appendTo('#TextmarginTop_ean13');
 
 
 
@@ -176,7 +176,7 @@ this.default = function () {
             barcodeEan13.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomEan13.appendTo('#TextMarginBottom');
+    textMarginBottomEan13.appendTo('#TextMarginBottom_ean13');
 
 
     //FontType Collection
@@ -191,12 +191,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionEan13(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_ean13')).ej2_instances[0]);
         barcodeEan13.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntEan13(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_ean13')).ej2_instances[0]);
         barcodeEan13.displayText.alignment = (positionValue.value);
     }
 
@@ -209,7 +209,7 @@ this.default = function () {
             updatePositionEan13(args.value.toString());
         }
     });
-    textPositionEan13.appendTo('#textPosition');
+    textPositionEan13.appendTo('#textPosition_ean13');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignEan13 = new ej.dropdowns.DropDownList({
@@ -220,7 +220,7 @@ this.default = function () {
             updateAligntEan13(args.value.toString());
         }
     });
-    textAlignEan13.appendTo('#textAlignment');
+    textAlignEan13.appendTo('#textAlignment_ean13');
 
     var displayTextEan13 = new ej.inputs.TextBox({
         value: '9735940564824',
@@ -228,10 +228,10 @@ this.default = function () {
             barcodeEan13.displayText.text = args.value.toString();
         }
     });
-    displayTextEan13.appendTo('#displayText');
+    displayTextEan13.appendTo('#displayText_ean13');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#downloadBtn12');
-    document.getElementById('downloadBtn12').onclick = function () {
+    downloadButton.appendTo('#downloadBtn12_ean13');
+    document.getElementById('downloadBtn12_ean13').onclick = function () {
         barcodeEan13.exportImage("Barcode", 'PNG');
     };
 };

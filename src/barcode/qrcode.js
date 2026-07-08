@@ -17,7 +17,7 @@ this.default = function () {
         invalid: invalidInputQrCode,
         value: 'Syncfusion',
     });
-    barcodeQrCode.appendTo('#barcode');
+    barcodeQrCode.appendTo('#barcode_qrcode');
     var canShowQrCode = false;
     var customFn = function (args) {
         if (canShowQrCode) {
@@ -43,9 +43,9 @@ this.default = function () {
             displayTextQrCode.value = args.value.toString();
         }
     });
-    barcodeValue.appendTo('#barcodeValue');
+    barcodeValue.appendTo('#barcodeValue_qrcode');
 
-    var input = document.getElementById("barcodeValue");
+    var input = document.getElementById("barcodeValue_qrcode");
     input.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -65,7 +65,7 @@ this.default = function () {
             barcodeQrCode.width = args.value.toString();
         }
     });
-    barcodeWidthQrCode.appendTo('#width');
+    barcodeWidthQrCode.appendTo('#width_qrcode');
     
     var barcodeHeightQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -74,7 +74,7 @@ this.default = function () {
             barcodeQrCode.height = args.value.toString();
         }
     });
-    barcodeHeightQrCode.appendTo('#height');
+    barcodeHeightQrCode.appendTo('#height_qrcode');
 
     var textVisibilityQrCode = new ej.buttons.CheckBox({
         checked: true,
@@ -82,7 +82,7 @@ this.default = function () {
             barcodeQrCode.displayText.visibility = args.checked;
         }
     });
-    textVisibilityQrCode.appendTo('#textVisibility');
+    textVisibilityQrCode.appendTo('#textVisibility_qrcode');
 
     var logo = new ej.buttons.CheckBox({
         checked: true,
@@ -92,7 +92,7 @@ this.default = function () {
             }
         }
     });
-    logo.appendTo('#logo');
+    logo.appendTo('#logo_qrcode');
 
     var svgModeQrCode = new ej.buttons.CheckBox({
         checked: true,
@@ -100,7 +100,7 @@ this.default = function () {
             barcodeQrCode.mode = args.checked ? 'SVG' : 'Canvas';
         }
     });
-    svgModeQrCode.appendTo('#svgMode');
+    svgModeQrCode.appendTo('#svgMode_qrcode');
 
     var bgColorQrCode = new  ej.inputs.ColorPicker({
         value: '#ffffff',
@@ -108,7 +108,7 @@ this.default = function () {
             barcodeQrCode.backgroundColor = args.currentValue.hex;
         }
     });
-    bgColorQrCode.appendTo('#bgColor');
+    bgColorQrCode.appendTo('#bgColor_qrcode');
 
     var foreColorQrCode = new  ej.inputs.ColorPicker({
         value: '#000000',
@@ -116,7 +116,7 @@ this.default = function () {
             barcodeQrCode.foreColor = args.currentValue.hex;
         }
     });
-    foreColorQrCode.appendTo('#foreColor');
+    foreColorQrCode.appendTo('#foreColor_qrcode');
 
     var marginLeftQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -126,7 +126,7 @@ this.default = function () {
             barcodeQrCode.margin.left = args.value;
         }
     });
-    marginLeftQrCode.appendTo('#marginLeft');
+    marginLeftQrCode.appendTo('#marginLeft_qrcode');
 
     var marginRightQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -136,7 +136,7 @@ this.default = function () {
             barcodeQrCode.margin.right = args.value;
         }
     });
-    marginRightQrCode.appendTo('#MarginRight');
+    marginRightQrCode.appendTo('#MarginRight_qrcode');
 
     var marginTopQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -146,7 +146,7 @@ this.default = function () {
             barcodeQrCode.margin.top = args.value;
         }
     });
-    marginTopQrCode.appendTo('#marginTop');
+    marginTopQrCode.appendTo('#marginTop_qrcode');
 
 
 
@@ -158,7 +158,7 @@ this.default = function () {
             barcodeQrCode.margin.bottom = args.value;
         }
     });
-    marginBottomQrCode.appendTo('#MarginBottom');
+    marginBottomQrCode.appendTo('#MarginBottom_qrcode');
 
     var textmarginLeftQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -167,7 +167,7 @@ this.default = function () {
             barcodeQrCode.displayText.margin.left = args.value;
         }
     });
-    textmarginLeftQrCode.appendTo('#TextmarginLeft');
+    textmarginLeftQrCode.appendTo('#TextmarginLeft_qrcode');
 
     var textMarginRightQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -176,7 +176,7 @@ this.default = function () {
             barcodeQrCode.displayText.margin.right = args.value;
         }
     });
-    textMarginRightQrCode.appendTo('#TextMarginRight');
+    textMarginRightQrCode.appendTo('#TextMarginRight_qrcode');
 
     var textmarginTopQrCode = new ej.inputs.NumericTextBox({
         enabled: true, format: '###.##',
@@ -185,7 +185,7 @@ this.default = function () {
             barcodeQrCode.displayText.margin.top = args.value;
         }
     });
-    textmarginTopQrCode.appendTo('#TextmarginTop');
+    textmarginTopQrCode.appendTo('#TextmarginTop_qrcode');
 
 
 
@@ -196,7 +196,7 @@ this.default = function () {
             barcodeQrCode.displayText.margin.bottom = args.value;
         }
     });
-    textMarginBottomQrCode.appendTo('#TextMarginBottom');
+    textMarginBottomQrCode.appendTo('#TextMarginBottom_qrcode');
 
 
     var version = new ej.inputs.NumericTextBox({
@@ -207,7 +207,7 @@ this.default = function () {
             barcodeQrCode.version = (Number(args.value));
         }
     });
-    version.appendTo('#Version');
+    version.appendTo('#Version_qrcode');
 
 
     //FontType Collection
@@ -223,12 +223,12 @@ this.default = function () {
         { type: 'Right', text: 'Right' },
     ];
     function updatePositionQrCode(value) {
-        var positionValue = ((document.getElementById('textPosition')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textPosition_qrcode')).ej2_instances[0]);
         barcodeQrCode.displayText.position = (positionValue.value) ;
     }
 
     function updateAligntQrCode(value) {
-        var positionValue = ((document.getElementById('textAlignment')).ej2_instances[0]);
+        var positionValue = ((document.getElementById('textAlignment_qrcode')).ej2_instances[0]);
         barcodeQrCode.displayText.alignment = (positionValue.value);
     }
 
@@ -241,7 +241,7 @@ this.default = function () {
             updatePositionQrCode(args.value.toString());
         }
     });
-    textPositionQrCode.appendTo('#textPosition');
+    textPositionQrCode.appendTo('#textPosition_qrcode');
 
     var errorCorrectionQrCode= new ej.dropdowns.DropDownList({
         dataSource: errorCorrectionLevel,
@@ -250,7 +250,7 @@ this.default = function () {
             barcodeQrCode.errorCorrectionLevel = (Number(args.itemData.value));
         }
     });
-    errorCorrectionQrCode.appendTo('#errorCorrection');
+    errorCorrectionQrCode.appendTo('#errorCorrection_qrcode');
 
     //DropDownList used to apply for fontFamily of the Annotation
     var textAlignQrCode = new ej.dropdowns.DropDownList({
@@ -261,7 +261,7 @@ this.default = function () {
             updateAligntQrCode(args.value.toString());
         }
     });
-    textAlignQrCode.appendTo('#textAlignment');
+    textAlignQrCode.appendTo('#textAlignment_qrcode');
 
     var displayTextQrCode = new ej.inputs.TextBox({
         value: '123456',
@@ -269,10 +269,10 @@ this.default = function () {
             barcodeQrCode.displayText.text = args.value.toString();
         }
     });
-    displayTextQrCode.appendTo('#displayText');
+    displayTextQrCode.appendTo('#displayText_qrcode');
     var downloadButton = new ej.buttons.Button({});
-    downloadButton.appendTo('#qrDownloadBtn');
-    document.getElementById('qrDownloadBtn').onclick = function () {
+    downloadButton.appendTo('#qrDownloadBtn_qrcode');
+    document.getElementById('qrDownloadBtn_qrcode').onclick = function () {
         barcodeQrCode.exportImage("SyncfusionQR", 'PNG');
     };  
 };

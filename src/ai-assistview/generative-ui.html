@@ -1,0 +1,109 @@
+<div class="control-section">
+    <div class="generative-aiassistview"> 
+        <div id="aiAssistView"></div>
+    </div>
+</div>
+
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-content">
+        <div class="e-icons e-assistview-icon"></div>
+        <h3>AI Assistance Generative UI</h3>
+        <i>Render interactive tools such as weather cards, charts, data grids etc directly inside AI responses.</i>
+    </div>
+</script>
+
+<style>
+
+    .generative-aiassistview {
+        height: 600px;
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .generative-aiassistview .banner-content .e-assistview-icon:before {
+        font-size: 35px;
+    }
+
+    .generative-aiassistview .banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 330px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .generative-aiassistview {
+            width: 100%;
+        }
+    }
+
+    .generative-aiassistview .chartContainer {
+        width: max-content;
+    }
+
+    .generative-aiassistview .chartContainer svg text {
+       fill: rgba(0, 0, 0, 1);
+    }
+
+    body[class*="highcontrast"] .generative-aiassistview .chartContainer svg text,
+    body[class*="dark"] .generative-aiassistview .chartContainer svg text {
+        fill: white;
+    }
+
+    /* Weather Card Layout Customization */
+
+    .generative-aiassistview #weather_card.e-card {
+        background-image: url('https://ej2.syncfusion.com/javascript/demos/src/card/images/weather.png');
+        width: 420px;
+    }
+    
+    .generative-aiassistview .material3-dark .e-card .e-card-header,
+    .generative-aiassistview .material-dark .e-card .e-card-header {
+        padding: 10px;
+    }
+
+    .generative-aiassistview #weather_card.e-card .e-card-header-caption .e-card-header-title,
+    .generative-aiassistview #weather_card.e-card .e-card-header-caption .e-card-sub-title {
+        color: white;
+    }
+
+    .generative-aiassistview .highcontrast #weather_card.e-card .e-card-header.weather_report .e-card-header-image {
+        border: none;
+    }
+
+    .generative-aiassistview #weather_card.e-card .weather_report .e-card-header-caption {
+        text-align: right;
+    }
+
+    .generative-aiassistview #weather_card.e-card .e-card-header.weather_report .e-card-header-image {
+        background-image: url('https://ej2.syncfusion.com/javascript/demos/src/card/images/rainy.svg');
+    }
+
+    .generative-aiassistview .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .generative-aiassistview .card-layout {
+        margin: auto;
+        max-width: 400px;
+    }
+
+</style>
+
+
+<div id="action-description">
+    <p>This sample demonstrates how to render interactive generative UI tools directly within AI responses using user prompts in the AI AssistView control. By configuring an appropriate <code>system prompt</code>, the AI can generate well-structured prompts that automatically invoke the registered tools, enabling seamless integration of dynamic and interactive UI elements within responses.</p>
+</div>
+<div id="description">
+    <p>In this example, the AI AssistView is configured with the UI tools:</p>
+    <ul>
+        <li>The <code>addPromptResponse</code> method adds AI responses to the AIAssistView by accepting a blocks array that defines content structure. Tools are registered using <code>registerToolUI()</code>, which defines a template and handler function for rendering.</li>
+        <li>Tool registration - Three registered tools deliver rich content: <code>weather-card</code> for forecast displays, <code>chart-tool</code> for GDP growth visualization, and <code>sales-grid</code> for regional performance data.</li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#bannertemplate">bannerTemplate</a> - Customizes the initial banner content with icon and heading.</li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptsuggestions">promptSuggestions</a> - Provides predefined prompts for weather forecasts, sales analysis, and economic trend data.</li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptrequest">promptRequest</a> - Handles prompt execution and dynamically renders custom tools.</li>
+        <li><a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#enablestreaming">enableStreaming</a> - Enables real-time response streaming with simulated delay.</li>
+    </ul>
+</div>

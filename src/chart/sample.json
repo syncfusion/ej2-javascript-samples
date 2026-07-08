@@ -24,7 +24,6 @@
             "name": "Line",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the line series.",
             "category": "Line Charts",
-            "type": "update",
             "api": {
                 "Chart": [
                     "primaryXAxis",
@@ -457,7 +456,6 @@
         {
             "url": "bar-with-gradient",
             "name": "Bar with Gradient",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the bar series with gradient.",
             "category": "Bar Charts",
             "api": {
@@ -631,12 +629,26 @@
         {
             "url": "donut-with-gradient",
             "name": "Donut with Gradient",
-            "type": "new",
             "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render and configure the doughnut charts with gradients.",
             "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
                     "series",
+                    "legendSettings",
+                    "tooltip"
+                ]
+            }
+        },
+        {
+            "url": "nested-donut",
+            "name": "Nested Donut",
+            "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure nested donut charts with multiple series.",
+            "category": "Accumulation Charts",    
+            "type": "new",    
+            "api": {
+                "AccumulationChart": [
+                    "series",
+                    "centerLabel",
                     "legendSettings",
                     "tooltip"
                 ]
@@ -686,7 +698,6 @@
             "name": "Pie with Legend Template",
             "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the legends template in pie charts.",
             "category": "Accumulation Charts",
-            "type": "new",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -1662,7 +1673,6 @@
             "name": "Legend Template",
             "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure the legend template in legendSettings.",
             "category": "Chart Customization",
-            "type": "new",
             "api": {
                 "Chart": [
                     "primaryXAxis",

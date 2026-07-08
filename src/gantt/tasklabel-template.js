@@ -4,8 +4,8 @@ this.default = function () {
         highlightWeekends: true,
         treeColumnIndex: 1,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -19,13 +19,13 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskID', width: 80 },
-            { field: 'TaskName', width: 250 },
+            { field: 'TaskName', width: 270 },
             { field: 'StartDate' },
             { field: 'EndDate' },
             { field: 'Duration' },
             { field: 'Predecessor' },
             { field: 'Progress' },
-            { field: 'resources' },
+            { field: 'resources' }
         ],
         resourceFields: {
             id: 'resourceId',
@@ -38,10 +38,10 @@ this.default = function () {
             taskLabel: '${Progress}%'
         },
         splitterSettings: {
-            position: "35%"
+            columnIndex: 3
         },
         projectStartDate: new Date('03/24/2025'),
-        projectEndDate: new Date('06/10/2025'),
+        projectEndDate: new Date('06/10/2025')
     });
     ganttChart.appendTo('#TasklabelTemplate');
     window.getResourceElements = function (value) {

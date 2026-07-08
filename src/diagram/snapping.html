@@ -1,12 +1,6 @@
 
 <div class="col-lg-8 control-section">
     <style>
-        /* Diagram Div CSS */
-        .db-diagram-container {
-        width:calc(100% - 300px);
-        height: 100%;
-        float: left;
-        }
         /* Property panel CSS */
         .db-prop-row {
         margin-top: 6px;
@@ -26,10 +20,14 @@
         margin-top: 10px;
         }
         .diagram-Snapping #properties_Container{
-        width: 300px;
-        float: left;
-        height: 600px;
         margin-top: 30px;
+        }
+
+        /* Mobile view adjustment */
+        @media (max-width: 767px) {
+            .diagram-Snapping #properties_Container {
+                padding-left: 10px;
+            }
         }
        
     </style>
@@ -114,4 +112,6 @@
         The <code>constraints</code> property controls the visibility of gridlines and enables or disables snapping. 
     </p>
     <br>
+
+    <p>Looking for the full JavaScript Diagram component overview, features, pricing, and documentation? Visit the <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a> page.</p>
 </div>

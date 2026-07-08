@@ -166,6 +166,7 @@ body.material3-dark,
 .material3-dark .sb-src-code,
 .material3-dark .sb-api-section,
 .material3-dark .sb-theme-popup,
+.material3-dark .sb-products-popup,
 .material3-dark .copy-tooltip,
 .material3-dark .e-icons.copycode,
 .material3-dark #search-input-wrapper input,
@@ -181,12 +182,20 @@ body.material3-dark,
 .material3-dark .sb-switch-popup li:hover,
 .material3-dark .theme-wrapper:hover,
 .material3-dark .theme-wrapper.active,
+.material3-dark .products-wrapper:hover,
+.material3-dark .products-wrapper.active,
 .material3-dark .sb-theme-popup li:hover,
+.material3-dark .sb-products-popup li:hover,
 .material3-dark .sb-switch-btn:hover,
 .material3-dark .sb-switch-btn.active,
 .material3-dark .sb-search-result .e-list-item:hover,
 .material3-dark .sb-left-pane .e-listview .e-list-item:hover {
     background-color: rgba(255, 255, 255, 0.12);
+}
+
+.material3-dark .sb-icon-Dropdown,
+.material3-dark .sb-icon-Dropdown:before {
+    color: #80D8FF;
 }
 
 .material3-dark .setting-responsive .sb-responsive-items {

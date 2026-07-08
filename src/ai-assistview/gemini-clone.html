@@ -1,0 +1,148 @@
+<div class="control-section gemini-clone">
+        <div class="gemini-aiassist" id="geminiContainer">
+            <div id="gemini_aiassistview"></div>
+            <div id="buttonsContainer" class="gemini-buttons-container">
+                <button id="imgBtn">Create image</button>
+                <button id="iplBtn">Follow IPL</button>
+                <button id="musicBtn">Create Music</button>
+                <button id="writeBtn">Write anything</button>
+            </div>
+        </div>
+    </div>
+    
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-content">
+        <div class="gemini-header">
+            <h3>Meet Gemini, your personal AI assistant </h3> 
+        </div>
+    </div>
+</script>
+
+<style>
+    .control-section.gemini-clone {
+        min-height: 550px;
+    }
+    .gemini-aiassist {
+        width: 60vw;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gemini-aiassist.middle-footer {
+        height: 350px; 
+        gap: 10px;
+    }
+
+    .gemini-aiassist.bottom-footer {
+        height: 500px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .gemini-aiassist {
+            width: 100%;
+        }
+    }
+
+    .gemini-aiassist .gemini-header {
+        display: flex;
+        justify-content: flex-start;
+        height: 150px;
+        align-items: end;
+    }
+
+    .gemini_model .model-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .gemini_model .model-item .model-description {
+        font-size: 11px;
+    }
+
+    .gemini_model .model-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .gemini_model.e-dropdown-popup ul .e-item {
+        line-height: 18px;
+        padding: 25px 20px 25px 12px;
+    }
+    
+    .gemini-aiassist .gemini-buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        flex-shrink: 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .gemini-aiassist.bottom-footer .gemini-buttons-container {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .gemini-aiassist .gemini-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gemini-aiassist #gemini_aiassistview  {
+        border: none;
+    }
+    .gemini-aiassist h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .gemini-aiassist .e-footer .e-dropdown-btn.e-btn:hover,
+    .gemini-aiassist .e-footer .e-dropdown-btn.e-btn:active {
+        color: var(--color-sf-icon-color);
+    }
+
+    .gemini-aiassist .e-dropdown-btn, .gemini-aiassist .e-dropdown-btn.e-btn {
+        box-shadow: none;
+    }
+
+    .gemini-aiassist .e-btn.e-flat.e-active,
+    .gemini-aiassist .e-dropdown-btn:active,
+    .gemini-aiassist .e-dropdown-btn.e-btn:active,
+    .gemini-aiassist .e-dropdown-btn.e-btn:hover,
+    .gemini-aiassist .e-dropdown-btn:focus,
+    .gemini-aiassist .e-dropdown-btn.e-btn:focus {
+        background: unset;
+        border: 1px solid transparent;
+        box-shadow: none;
+        color: unset;
+    }
+</style>
+
+<div id="action-description">
+    <p> This sample demonstrates a Gemini-inspired AI AssistView that provides a focused conversational experience with attachment support, simulated AI responses, and a configurable AI model selector embedded within the chat footer.</p>
+</div>
+<div id="description">
+    <p>
+        The AI AssistView in this sample showcases how a branded, lightweight assistant interface can be
+        created using Syncfusion’s <code>AIAssistView</code> control while offering essential interaction
+        features and UI customization options:
+    </p>
+    <ul>
+        <li>Minimal header-less chat layout for distraction-free conversations.</li>
+        <li>Custom banner template displaying branded assistant visuals and contextual messaging.</li>
+        <li>Simulated AI response handling using the <code>promptRequest</code> callback.</li>
+        <li>File attachment support with configurable save and remove endpoints.</li>
+        <li>Footer toolbar customization with attachment actions and a model selector.</li>
+        <li>Speech-to-text input for hands-free interaction.</li>
+        <li>Dropdown-based AI model switching (Fast, Thinking, Pro).</li>
+    </ul>
+    <p>
+        This example serves as a foundation for integrating real LLM services and building branded conversational interfaces with modular UI controls.
+    </p>
+</div>

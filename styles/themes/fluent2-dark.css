@@ -216,6 +216,7 @@ body.fluent2-dark,
 .fluent2-dark .sb-src-code,
 .fluent2-dark .sb-api-section,
 .fluent2-dark .sb-theme-popup,
+.fluent2-dark .sb-products-popup,
 .fluent2-dark .copy-tooltip,
 .fluent2-dark .e-icons.copycode,
 .fluent2-dark #search-input-wrapper input,
@@ -231,7 +232,10 @@ body.fluent2-dark,
 .fluent2-dark .sb-switch-popup li:hover,
 .fluent2-dark .theme-wrapper:hover,
 .fluent2-dark .theme-wrapper.active,
+.fluent2-dark .products-wrapper:hover,
+.fluent2-dark .products-wrapper.active,
 .fluent2-dark .sb-theme-popup li:hover,
+.fluent2-dark .sb-products-popup li:hover,
 .fluent2-dark .sb-switch-btn:hover,
 .fluent2-dark .sb-switch-btn.active,
 .fluent2-dark .sb-search-result .e-list-item:hover,
@@ -239,6 +243,10 @@ body.fluent2-dark,
     background-color: #333333;
 }
 
+.fluent2-dark .sb-icon-Dropdown,
+.fluent2-dark .sb-icon-Dropdown:before {
+    color: #107C10;
+}
 .fluent2-dark .setting-responsive .sb-responsive-items {
     width: 104px;
     background-color: #363636;

@@ -114,8 +114,8 @@ this.default = function () {
             {
                 field: 'Name',
                 headerText: 'Type',
-                width: '150',
-                editType: 'dropdownedit'
+                editType: 'dropdownedit',
+                width: '150'
             },
             {
                 field: 'Status',
@@ -131,8 +131,8 @@ this.default = function () {
                 headerText: 'Region',
                 width: '180',
                 template: regionTemplate,
-                validationRules: { required: true },
-                editType: 'dropdownedit'
+                editType: 'dropdownedit',
+                validationRules: { required: true }
             },
             {
                 field: 'Environment',
@@ -264,7 +264,7 @@ this.default = function () {
     treegrid.appendTo('#TreeGrid');
     
     treegrid.actionBegin = function (args) {
-        if(args.requestType === 'save') {
+        if(args.requestType === 'save' && args.action !== 'edit') {
             args.data.TaskID = 10000 + Math.floor(Math.random() * 10001);
         }
     };

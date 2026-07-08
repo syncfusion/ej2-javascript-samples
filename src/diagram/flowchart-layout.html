@@ -1,9 +1,5 @@
 <style>
-    /* Container for diagram and property panel */
-    .control-section {
-        width: 75%;
-        float: left; /* Keep the diagram section on the left */
-    }
+
     .property-panel-header {
         font-size: larger;
     }
@@ -13,12 +9,6 @@
         background: white;
     }
 
-    /* Property panel style */
-    .property-section {
-        width: 24%; /* Adjusted to fill the remaining space */
-        float: right; /* Ensure the property panel is on the right */
-        padding: 10px;
-    }
 
     /* Align labels and inputs within the property panel */
     .row {
@@ -51,7 +41,7 @@
 
 <div>
 
-<div class="control-section">
+<div class="col-lg-9 control-section">
 <div class="content-wrapper" style="width:100%;background: white">
     <div id="diagram" class="flow-diagram-container"></div>
 </div>
@@ -90,9 +80,11 @@
         <code>Diagram.Inject(FlowchartLayout)</code> method.
     </p>
     <br>
+
+    <p>Looking for the full JavaScript Diagram component overview, features, pricing, and documentation? Visit the <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a> page.</p>
 </div>
 </div>
-<div class="property-section">
+<div class=" col-lg-3 property-section">
     <div class="property-panel-header">
        Properties
     </div>

@@ -1,4 +1,3 @@
-<link id="change_themes" href="../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css" rel="stylesheet" type="text/css"/>
 <div class="control-section">
         <link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
         <style>
@@ -99,6 +98,12 @@
                 .diagram-flow .diagram-upload-file{
                     display: none;
                 }
+
+            #diagram-unsaved-dialog .e-footer-content {
+                padding: 10px 0px 10px 0px;
+                text-align: center;
+            }
+
         </style>
         
     <div class="main diagram-flow">
@@ -118,37 +123,44 @@
         </div>
         <div id="diagram-space" class="sb-mobile-diagram" >
             <div id="diagram"></div>
+            <div id="diagram-unsaved-dialog" style="display:none;"></div>
         </div>
     </div>
 </div>
-    <div id="action-description">
-        <p>
-            This sample visualizes the processing of an order placed using credit card with built-in flow shapes in Syncfusion<sup>®</sup> EJ2 JavaScript Diagram.
-        </p>
-    </div>
-    <div id="description">
-        <p>
-            This example shows how to create a simple flow chart using the diagram control. The
-            <code>nodes</code> property can be used to define different stages of a process. To define the flow between different stages, the
-            <code>connectors</code> property can be used. The
-            <code>getNodeDefaults</code> and
-            <code>getConnectorDefaults</code> properties define the default behavior of shapes and connectors.
-        </p>
-
-        <p>
-            To easily build flow diagrams, few shapes are predefined and added to symbol palette. You can drag-and-drop predefined shapes
-            into the drawing area. The
-            <code>symbols</code> property allows you to add predefined symbols to the palette.
-        </p>
-
-        <p>
-            In this example, undo and redo support is enabled.
-        </p>
-        <p style="font-weight: 500">Injecting Module</p>
-        <p>
-            The diagram component’s features are segregated into individual feature-wise modules. To enable undo and redo support, inject
-            <code>UndoRedo</code> module using
-            <code>Diagram.Inject(UndoRedo)</code> method.
-        </p>
-        <br>
-    </div>
+<div id="action-description">
+    <p>
+        This sample demonstrates a credit card order-processing workflow created using built-in flow shapes in the
+        <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a>.
+    </p>
+</div>
+<div id="description">
+    <p>
+        This sample demonstrates how to create, edit, and manage a credit card order-processing workflow using the
+        <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a>. The workflow is designed with nodes and connectors, where
+        each node represents a specific stage in the order process and each connector defines the flow between stages.
+    </p>
+    <p>
+        The <code>nodes</code> property is used to define the workflow stages, and the <code>connectors</code> property
+        is used to establish the relationships between these stages. The <code>getNodeDefaults</code> and
+        <code>getConnectorDefaults</code> properties are configured to apply common appearance and behavior settings to
+        nodes and connectors.
+    </p>
+    <p>
+        A symbol palette with predefined flowchart shapes and connectors is provided to help users build diagrams
+        through drag-and-drop interactions. The symbols displayed in the palette are configured using the
+        <code>symbols</code> property.
+    </p>
+    <p>
+        The sample includes a toolbar with common diagram-editing actions, such as <strong>New</strong>,
+        <strong>Open</strong>, <strong>Save</strong>, <strong>Export</strong>, <strong>Print</strong>,
+        <strong>Cut</strong>, <strong>Copy</strong>, <strong>Paste</strong>, <strong>Undo</strong>, and
+        <strong>Redo</strong>. It also provides options for drawing shapes and connectors, panning, zooming, rotating,
+        flipping, grouping, aligning, and distributing diagram elements.
+    </p>
+    <p>
+        The read-only <code>isModified</code> property is used to track unsaved changes in the diagram. When users
+        attempt to click the <strong>New</strong> or <strong>Open</strong> button in the toolbar, or try to close the
+        browser tab without saving the current changes, a confirmation dialog is displayed.
+    </p>
+    <br>
+</div>

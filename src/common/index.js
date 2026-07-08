@@ -1,6 +1,7 @@
 var cBlock = ['sb-src-code.hljs.javascript', 'sb-src-code.hljs.xml'];
 var switcherPopup;
 var themeSwitherPopup;
+var productsSwitcherPopup;
 var openedPopup;
 var searchPopup;
 var settingsPopup;
@@ -10,6 +11,7 @@ var preventToggle;
 var prevAction;
 var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
+var headerProductsSwitch = document.getElementById('header-products-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
 var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind3', 'fluent2-highcontrast', 'highcontrast', 'tailwind', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'tailwind3-dark', 'fluent-dark'];
@@ -94,7 +96,7 @@ var demoSection = ej.base.select('.sb-demo-section');
 var newYear= new Date().getFullYear();
 var copyRight= document.querySelector('.sb-footer-copyright');
 copyRight.innerHTML = "Copyright © 2001 - " + newYear + " Syncfusion<sup>®</sup> Inc.";
-ej.base.registerLicense('{SyncfusionJSLicensekey}');
+ej.base.registerLicense(window.syncfusion_license);
 let isUpdatingFromUrl = false;
 var matchedCurrency = {
     'en': 'USD',
@@ -102,6 +104,12 @@ var matchedCurrency = {
     'ar': 'AED',
     'zh': 'CNY',
     'fr-CH': 'CHF'
+};
+// Product URLs configuration
+var productUrls = {
+    'pdf-viewer': 'https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html',
+    'spreadsheet-editor': 'https://document.syncfusion.com/demos/spreadsheet-editor/javascript-es5/#/tailwind3/spreadsheet/default.html',
+    'docx-editor': 'https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/default.html'
 };
 settingsidebar = new ej.navigations.Sidebar({
     position: 'Right', width: '282', zIndex: '1003', showBackdrop: true, type: 'Over', enableGestures: false,
@@ -212,6 +220,12 @@ function renderSbPopups() {
         position: { X: 'left', Y: 'bottom' },
         collision: { X: 'flip', Y: 'flip' }
     });
+    productsSwitcherPopup = new ej.popups.Popup(document.getElementById('products-switcher-popup'), {
+        offsetY: 2,
+        relateTo: document.querySelector('.products-wrapper'),
+        position: { X: 'left', Y: 'bottom' },
+        collision: { X: 'flip', Y: 'flip' }
+    });
 
 // Initialize AutoComplete
 searchPopup = new ej.dropdowns.AutoComplete({
@@ -255,7 +269,7 @@ searchPopup = new ej.dropdowns.AutoComplete({
         searchOverlay.classList.add('e-search-hidden');
         if (location.hash !== hashval) {
             sampleOverlay();
-            location.hash = hashval;
+            window.hashString = hashval;
             setSelectList();
         }
     }
@@ -279,12 +293,23 @@ searchPopup = new ej.dropdowns.AutoComplete({
     }
        searchPopup.hidePopup();
     switcherPopup.hide();
+    productsSwitcherPopup.hide();
     themeSwitherPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
         index: themeCollection.indexOf(selectedTheme.split('-')[0]),
         change: function (e) { switchTheme(e.value); }
     });
     themeDropDown.appendTo('#sb-setting-theme');
+    var productsDropDown = new ej.dropdowns.DropDownList({
+        index: 0,
+        change: function (e) {
+            var productUrl = productUrls[e.value];
+            if (productUrl) {
+                window.open(productUrl, '_blank');
+            }
+        }
+    });
+    productsDropDown.appendTo('#sb-setting-products');
     themeModeDropDown = new ej.dropdowns.DropDownList({
         index: selectedTheme.includes('-dark') ? 1 : 0,
         change: function (e) {
@@ -479,6 +504,11 @@ function sbHeaderClick(action, preventSearch) {
         case 'changeSampleBrowser':
             curPopup = switcherPopup;
             break;
+        case 'changeProducts':
+            headerProductsSwitch.classList.toggle('active');
+            setPressedAttribute(headerProductsSwitch);
+            curPopup = productsSwitcherPopup;
+            break;
         case 'changeTheme':
             headerThemeSwitch.classList.toggle('active');
             setPressedAttribute(headerThemeSwitch);
@@ -493,8 +523,10 @@ function sbHeaderClick(action, preventSearch) {
     }
     if (action === 'closePopup') {
         headerThemeSwitch.classList.remove('active');
+        headerProductsSwitch.classList.remove('active');
         settingElement.classList.remove('active');
         setPressedAttribute(headerThemeSwitch);
+        setPressedAttribute(headerProductsSwitch);
         setPressedAttribute(settingElement);
     }
     if (curPopup && curPopup !== openedPopup) {
@@ -687,14 +719,14 @@ function addSampleList(samplesList) {
     var dataManager = new ej.data.DataManager(node.samples);
     var sortedSamples = dataManager.executeLocal(new ej.data.Query().sortBy('order', 'ascending'));
 
-    for (var j = 0; j < sortedSamples.length; j++) {
-      var sample = sortedSamples[j].url;
-      samplePath.push(control + '/' + sample);
-
-      var selectedTheme = location.hash.split('/')[1] || getThemeDefault();
-      var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
-      samplesAr.push('#' + urlString);
-    }
+        for (var j = 0; j < sortedSamples.length; j++) {
+            var sample = sortedSamples[j];
+            // ✅ routing directory (never affects left pane)
+            var routeDir = sample.dir || node.directory;
+            samplePath.push(routeDir + '/' + sample.url);
+            var selectedTheme = location.hash.split('/')[1] || getThemeDefault();
+            samplesAr.push('#/' + selectedTheme + '/' + routeDir + '/' + sample.url + '.html');
+        }
   }
 }
 
@@ -800,6 +832,18 @@ function bindEvents() {
         e.stopPropagation();
         sbHeaderClick('changeSampleBrowser');
     });
+    headerProductsSwitch.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        sbHeaderClick('changeProducts');
+    });
+    headerProductsSwitch.addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            sbHeaderClick('changeProducts');
+        }
+    });
     headerThemeSwitch.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -811,6 +855,25 @@ function bindEvents() {
         }
     });
     themeList.addEventListener('click', changeTheme);
+    var productsList = document.getElementById('productslist');
+    if (productsList) {
+        productsList.addEventListener('click', function (e) {
+            var target = ej.base.closest(e.target, 'li');
+            if (target) {
+                var productName = target.querySelector('.switch-text').innerHTML;
+                var productKey = productName.includes('PDF Viewer') ? 'pdf-viewer' :
+                                productName.includes('Spreadsheet') ? 'spreadsheet-editor' :
+                                productName.includes('DOCX') ? 'docx-editor' : null;
+                var productUrl = productKey ? productUrls[productKey] : '';
+                
+                // Open the URL in a new tab if found
+                if (productUrl) {
+                    window.open(productUrl, '_blank');
+                }
+                sbHeaderClick('closePopup');
+            }
+        });
+    }
     document.addEventListener('click', sbHeaderClick.bind(this, 'closePopup'));
     settingElement.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1254,16 +1317,25 @@ function getTreeviewList(list) {
                 'control-name': list[i].directory,
             }
         });
-        controlSampleData[list[i].directory] = getSamples(list[i].samples);
+        controlSampleData[list[i].directory] = getSamples(list[i].samples, list[i].directory);
     }
     return tempList;
 }
 
-function getSamples(samples) {
+function getSamples(samples, groupPath) {
     var tempSamples = [];
+    var groupName = '';
+    var sampleNameAttr = '';
+    var isAISample = !!groupPath && groupPath.startsWith('ai-') && ['ai-assistview', 'ai-smart-paste', 'ai-smart-textarea'].indexOf(groupPath) === -1;
     for (var i = 0; i < samples.length; i++) {
         tempSamples[i] = samples[i];
+        groupName = samples[i].dir;
+        sampleNameAttr = samples[i].name.toLowerCase().replace(/ /g, '-');
         tempSamples[i].data = { 'sample-name': samples[i].url, 'data-path': '/' + samples[i].dir + '/' + samples[i].url + '.html' };
+        if (isAISample) {
+            tempSamples[i].data['group-name'] = groupName;
+            tempSamples[i].data['ai-sample-name'] = sampleNameAttr;
+        }
     }
     return tempSamples;
 }
@@ -1329,6 +1401,23 @@ function viewSwitch(from, to, reverse) {
     anim.animate(to, { name: reverse ? 'SlideLeftIn' : 'SlideRightIn' });
 }
 
+function updateGroupItemAttributes() {
+    var groupItems = document.querySelectorAll('#controlList .e-list-group-item.e-level-1');
+    groupItems.forEach(function (groupItem) {
+        var sibling = groupItem.nextElementSibling;
+        while (sibling && !sibling.classList.contains('e-list-group-item')) {
+            if (!groupItem.hasAttribute('group-name')) {
+                var groupName = sibling.getAttribute('group-name');
+                if (groupName) {
+                    groupItem.setAttribute('group-name', groupName);
+                }
+            }
+            sibling.removeAttribute('group-name');
+            sibling = sibling.nextElementSibling;
+        }
+    });
+}
+
 function setSelectList() {
     var hString = window.hashString || location.hash;
     var hash = hString.split('/');
@@ -1338,7 +1427,12 @@ function setSelectList() {
     var treeView = ej.base.select('#controlTree').ej2_instances[0];
     var listView = ej.base.select('#controlList').ej2_instances[0];
     // Find the control element in TreeView
-    var controlElement = ej.base.select('[control-name="' + controlName + '"]');
+    if (controlName && controlName.startsWith('ai-') && ['ai-assistview', 'ai-smart-paste', 'ai-smart-textarea'].indexOf(controlName) === -1) {
+        controlName = 'ai-grid';
+    }
+ 
+    var controlElement = ej.base.select('[control-name="' + controlName + '"]') || ej.base.select('[control-name="grid"]');
+
     if (controlElement && treeView) {
         // Update TreeView selection to highlight the current component
         var controlNodeId = controlElement.closest('.e-list-item').getAttribute('data-uid');
@@ -1351,6 +1445,7 @@ function setSelectList() {
             listView.dataSource = samples;
             listView.dataBind();
         }
+        updateGroupItemAttributes();
         if (ej.base.select('#controlTree').style.display !== 'none') {
             showHideControlTree();
         }
@@ -1424,14 +1519,12 @@ function destroyControls() {
     for (var i = 0; i < elementlist.length; i++) {
         var control = elementlist[i];
         if (control.ej2_instances) {
-            for (var a = 0; a < control.ej2_instances.length; a++) {
-                var instance = control.ej2_instances[a];
+            control.ej2_instances.forEach(function(instance) {
                 if (instance.element && document.contains(instance.element)){
                     instance.destroy();
                 }
-            }
+            });
         }
-
     }
 }
 
@@ -1507,7 +1600,7 @@ function addRoutes(samplesList) {
         var dataManager = new ej.data.DataManager(node.samples);
         var samples = dataManager.executeLocal(new ej.data.Query().sortBy('order', 'ascending'));
         var loop2 = function (subNode) {
-            var control = node.directory;
+            var control = subNode.dir || node.directory;
             var sample = subNode.url;
             samplePath = samplePath.concat(control + '/' + sample);
             var sampleName = node.name + ' / ' + ((node.name !== subNode.category) ?
@@ -1516,19 +1609,22 @@ function addRoutes(samplesList) {
             var urlString = '/' + selectedTheme + '/' + control + '/' + sample + '.html';
             samplesAr.push('#' + urlString);
             crossroads.addRoute(urlString, function () {
-                var dataSourceLoad = document.getElementById(node.dataSourcePath);
-                if (node.dataSourcePath && !dataSourceLoad) {
-                    var dataAjax = new ej.base.Ajax(node.dataSourcePath, 'GET', true);
+            var dsPath = subNode.dataSourcePath || node.dataSourcePath;
+            var dataSourceLoad = dsPath && document.getElementById(dsPath);
+                if (dsPath && !dataSourceLoad) {
+                    var dataAjax = new ej.base.Ajax(dsPath, 'GET', true);
                     dataAjax.send().then(function (result) {
-                        var ele = ej.base.createElement('script', { id: node.dataSourcePath, innerHTML: result });
+                        var ele = ej.base.createElement('script', {
+                            id: dsPath,
+                            innerHTML: result
+                        });
                         document.getElementsByTagName('head')[0].appendChild(ele);
                         onDataSourceLoad(node, subNode, control, sample, sampleName);
                     });
-                } else {
+                }
+                else {
                     onDataSourceLoad(node, subNode, control, sample, sampleName);
                 }
-
-
             });
         };
         for (var i = 0; i < samples.length; i++) {
@@ -1563,7 +1659,14 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
     document.getElementById('open-plnkr').disabled = true;
     var openNew = ej.base.select('#openNew');
     if (openNew) {
-        openNew.href = location.href.split('#')[0] +  node.directory + '/' + subNode.url + '/';
+        let baseUrl = location.href.split('#')[0];
+        // remove index.html if present in build
+        baseUrl = baseUrl.replace(/index\.html$/i, '');
+        // ensure trailing slash
+        if (baseUrl.charAt(baseUrl.length - 1) !== '/') {
+             baseUrl += '/';
+        }
+        openNew.href = baseUrl + node.directory + '/' + subNode.url + '/';
     }
     setSbLink();
     const desktopSettings = ej.base.select('.sb-desktop-setting');

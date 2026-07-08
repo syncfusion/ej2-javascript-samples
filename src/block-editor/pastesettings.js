@@ -46,26 +46,18 @@ this.default = function () {
       overviewBlockEditor.dataBind();
     }
 
-    // Inputs for allowed styles and denied tags
-    var allowedStylePropsElem = document.getElementById('allowedStyleProperties');
+    
     var deniedTagsElem = document.getElementById('deniedTags');
-
-    if (allowedStylePropsElem) {
-      allowedStylePropsElem.addEventListener('blur', function (e) {
-        onPasteCleanupSettingsChange(e.target.value, 'allowedStyles');
-        if (overviewBlockEditor) { overviewBlockEditor.dataBind(); }
-      });
-    }
 
     if (deniedTagsElem) {
       deniedTagsElem.addEventListener('blur', function (e) {
-        onPasteCleanupSettingsChange(e.target.value, 'deniedTags');
+        onPasteCleanupSettingsChange(e.target.value);
         if (overviewBlockEditor) { overviewBlockEditor.dataBind(); }
       });
     }
 
     // Update the specified paste settings property with parsed array value
-    function onPasteCleanupSettingsChange(value, settingsProperty) {
+    function onPasteCleanupSettingsChange(value) {
       if (!overviewBlockEditor) { return; }
       if (value) {
         var parts = value.split(',');
@@ -77,7 +69,7 @@ this.default = function () {
             arrayValue.push(trimmed);
           }
         }
-        overviewBlockEditor.pasteCleanupSettings[settingsProperty] = arrayValue;
+        overviewBlockEditor.pasteCleanupSettings.deniedTags = arrayValue;
       }
     }
   }

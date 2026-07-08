@@ -1,7 +1,9 @@
 this.default = function() {
 
+    var abortController;
     var templateAIAssistView = new ej.interactivechat.AIAssistView({
         bannerTemplate: '#bannerContent',
+        enableStreaming: true,
         promptItemTemplate: promptItemContent,
         responseItemTemplate: responseItemContent,
         promptSuggestionItemTemplate: suggestionItemContent,
@@ -16,15 +18,12 @@ this.default = function() {
     });
     templateAIAssistView.appendTo('#aiAssistView');
 
-    function onPromptRequest(args) {
-        setTimeout(() => {
-            var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
-            var defaultResponse = 'For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
-            
-            templateAIAssistView.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
-            templateAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
-            
-        }, 2000);
+    async function onPromptRequest(args) {
+        abortController = new AbortController();
+        var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
+        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        templateAIAssistView.addPromptResponse(response);
+        templateAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
     }
 
 

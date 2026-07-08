@@ -51,7 +51,7 @@ this.default = function () {
   // Sidebar
   var sidebar = new ej.navigations.Sidebar({
     enableDock: true,
-    width: '220px',
+    width: '240px',
     dockSize: '33px',
     enableGestures: false,
     mediaQuery: '(min-width: 600px)',
@@ -117,7 +117,7 @@ this.default = function () {
     setTimeout(function () {
       treeview.expandAll();
       if (closeBtnEl) {
-        closeBtnEl.style.left = '202px';
+        closeBtnEl.style.left = '225px';
         closeBtnEl.classList.remove('expand-mode');
       }
       treeview.element.style.display = 'block';

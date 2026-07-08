@@ -1,0 +1,154 @@
+<div class="control-section claude-clone">
+    <div class="claude-aiassist" id="claudeContainer">
+        <div id="claude_aiassistview"></div>
+        <div id="buttonsContainer" class="claude-buttons-container">
+            <button id="codeBtn">Code</button>
+            <button id="writeBtn">Write</button>
+            <button id="choiceBtn">Claude's Choice</button>
+            <button id="learnBtn">Learn</button>
+            <button id="lifeBtn">Life stuff</button>
+        </div>
+    </div>
+</div>
+
+<script id="bannerContent" type="text/x-jsrender">
+    <div class="banner-content">
+        <div class="claude-header">
+            <img src="https://freepnglogo.com/images/all_img/claude-ai-icon-65aa.png" alt="Claude">
+            <h2>Golden hour thinking</h2>
+        </div>
+    </div>
+</script>
+
+<style>
+    .control-section.claude-clone {
+        min-height: 550px;
+    }
+    .claude-aiassist {
+        width: 60vw;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .claude-aiassist.middle-footer {
+        height: 350px; 
+        gap: 10px;
+    }
+
+    .claude-aiassist.bottom-footer {
+        height: 500px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .claude-aiassist {
+            width: 100%;
+        }
+    }
+
+    .claude-aiassist .claude-header img {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 12px;
+    }
+
+    .claude-aiassist .claude-header {
+        display: flex;
+        justify-content: center;
+        height: 150px;
+        text-align: center;
+        gap: 10px;
+        align-items: end;
+    }
+
+    .claude_model .model-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .claude_model .model-item .model-description {
+        font-size: 11px;
+    }
+
+    .claude_model .model-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .claude_model.e-dropdown-popup ul .e-item {
+        line-height: 18px;
+        padding: 25px 20px 25px 12px;
+    }
+ 
+    .claude-aiassist .claude-buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        flex-shrink: 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .claude-aiassist.bottom-footer .claude-buttons-container {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .claude-aiassist .claude-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .claude-aiassist #claude_aiassistview  {
+        border: none;
+    }
+
+    .claude-aiassist .e-footer .e-dropdown-btn.e-btn:hover,
+    .claude-aiassist .e-footer .e-dropdown-btn.e-btn:active {
+        color: var(--color-sf-icon-color);
+    }
+
+    .claude-aiassist .e-dropdown-btn, .claude-aiassist .e-dropdown-btn.e-btn {
+        box-shadow: none;
+    }
+
+    .claude-aiassist .e-btn.e-flat.e-active,
+    .claude-aiassist .e-dropdown-btn:active,
+    .claude-aiassist .e-dropdown-btn.e-btn:active,
+    .claude-aiassist .e-dropdown-btn.e-btn:hover,
+    .claude-aiassist .e-dropdown-btn:focus,
+    .claude-aiassist .e-dropdown-btn.e-btn:focus {
+        background: unset;
+        border: 1px solid transparent;
+        box-shadow: none;
+        color: unset;
+    }
+
+</style>
+
+<div id="action-description">
+    <p> This sample demonstrates a Claude-inspired AI AssistView that provides a focused conversational experience with attachment support, simulated AI responses, and a configurable AI model selector embedded within the chat footer.</p>
+</div>
+<div id="description">
+    <p>
+        The AI AssistView in this sample showcases how a branded, lightweight assistant interface can be
+        created using Syncfusion’s <code>AIAssistView</code> control while offering essential interaction
+        features and UI customization options:
+    </p>
+    <ul>
+        <li>Minimal header-less chat layout for distraction-free conversations.</li>
+        <li>Custom banner template displaying branded assistant visuals and contextual messaging.</li>
+        <li>Simulated AI response handling using the <code>promptRequest</code> callback.</li>
+        <li>File attachment support with configurable save and remove endpoints.</li>
+        <li>Footer toolbar customization with attachment actions and a model selector.</li>
+        <li>Dropdown-based AI model switching (Opus, Sonet, Haiku, Extended thinking).</li>
+    </ul>
+    <p>
+        This example serves as a foundation for integrating real LLM services and building branded conversational interfaces with modular UI controls.
+    </p>
+</div>

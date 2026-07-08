@@ -97,6 +97,7 @@ body.bootstrap5-dark,
 .bootstrap5-dark .sb-src-code,
 .bootstrap5-dark .sb-api-section,
 .bootstrap5-dark .sb-theme-popup,
+.bootstrap5-dark .sb-products-popup,
 .bootstrap5-dark .copy-tooltip,
 .bootstrap5-dark .e-icons.copycode,
 .bootstrap5-dark #search-input-wrapper input,
@@ -112,12 +113,20 @@ body.bootstrap5-dark,
 .bootstrap5-dark .sb-switch-popup li:hover,
 .bootstrap5-dark .theme-wrapper:hover,
 .bootstrap5-dark .theme-wrapper.active,
+.bootstrap5-dark .products-wrapper:hover,
+.bootstrap5-dark .products-wrapper.active,
 .bootstrap5-dark .sb-theme-popup li:hover,
+.bootstrap5-dark .sb-products-popup li:hover,
 .bootstrap5-dark .sb-switch-btn:hover,
 .bootstrap5-dark .sb-switch-btn.active,
 .bootstrap5-dark .sb-search-result .e-list-item:hover,
 .bootstrap5-dark .sb-left-pane .e-listview .e-list-item:hover {
     background-color: #363636;
+}
+
+.bootstrap5-dark .sb-icon-Dropdown,
+.bootstrap5-dark .sb-icon-Dropdown:before {
+    color: #0d6efd;
 }
 
 .bootstrap5-dark .setting-responsive .sb-responsive-items {

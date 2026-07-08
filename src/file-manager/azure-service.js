@@ -2,7 +2,7 @@
  * File Manager sample with Azure service
  */
 this.default = function() {
-    var hostUrl = 'https://ej2-azure-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://azure-service.syncfusion.com/';
     var fileObject = new ej.filemanager.FileManager({
             ajaxSettings: {
                 url: hostUrl + 'api/AzureFileManager/AzureFileOperations',

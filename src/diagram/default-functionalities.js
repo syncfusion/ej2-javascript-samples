@@ -18,10 +18,13 @@ this.default = function () {
         }
     }
 
+    var bounds = document.getElementById('diagram-space').getBoundingClientRect();
+    var centerX = bounds.width / 2;
+
     //Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
     function openPalette() {
         var paletteSpace = document.getElementById('palette-space');
-        isMobile = window.matchMedia('(max-width:550px)').matches;
+        var isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
                 paletteSpace.classList.add('sb-mobile-palette-open');
@@ -31,43 +34,7 @@ this.default = function () {
             }
         }
     }
-    //custom code start
-    if (window.location.href) {
-        if (window.location.href.includes('bootstrap5')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap5_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('bootstrap4')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/bootstrap4_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('bootstrap')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Bootstrap_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('material3')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material3_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('material')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Material_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fabric')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/fabric_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('tailwind')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Tailwind_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fusion')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fusion_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('highcontrast')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/HighContrast_Diagram_Builder/style.css';
-        }
-        else if (window.location.href.includes('fluent')) {
-            document.getElementById('change_themes').href = '../../src/diagram/styles/Diagram_Builder_EJ2_Icon/Font/Fluent_Diagram_Builder/style.css';
-        }
 
-    }
-    //custom code end
-    var bounds = document.getElementById('diagram-space').getBoundingClientRect();
-    var centerX = bounds.width / 2;
 
     // Function to create a node with given properties
     function createNode(id, height, offsetX, offsetY, shape, content, margin) {
@@ -190,6 +157,9 @@ this.default = function () {
                 color: 'white',
                 fill: 'transparent',
             };
+        },
+        created: function (args) {
+            diagram.fitToPage();
         }
     });
     diagram.appendTo('#diagram');
@@ -277,7 +247,7 @@ this.default = function () {
 
     //To disable toolbar items while multiselection.
     function disableMultiselectedItems() {
-         var selectedItems = diagram.selectedItems.nodes;
+        var selectedItems = diagram.selectedItems.nodes;
         selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
         let isSelectedItemLocked = false;
         if (selectedItems && selectedItems.length > 0) {
@@ -299,7 +269,7 @@ this.default = function () {
                 }
             }
         }
-        if(!isSelectedItemLocked){
+        if (!isSelectedItemLocked) {
             const itemIds = ['Cut', 'Copy', 'Lock', 'Delete', 'Order', 'Rotate', 'Flip'];
             itemIds.forEach(itemId => {
                 const item = toolbarObj.items.find(item => item.id === itemId);
@@ -610,7 +580,6 @@ this.default = function () {
                 flipBtn.appendTo('#flipBtn');
                 toolbarObj.refreshOverflow();
             }
-
         },
         items: toolbarItems(),
         overflowMode: 'Scrollable',
@@ -755,7 +724,7 @@ this.default = function () {
         var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
         for (i = 0; i < selectedObjects.length; i++) {
             selectedObjects[i].flip ^= args.item.text === 'Flip Horizontal' ?
-            ej.diagrams.FlipDirection.Horizontal : ej.diagrams.FlipDirection.Vertical;
+                ej.diagrams.FlipDirection.Horizontal : ej.diagrams.FlipDirection.Vertical;
         }
         diagram.dataBind();
     }
@@ -807,7 +776,11 @@ this.default = function () {
                 diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
                 break;
             case 'New Diagram':
-                diagram.clear();
+                if (diagram.isModified) {
+                    showConfirm(() => diagram.clear());
+                } else {
+                    diagram.clear();
+                }
                 historyChange();
                 break;
             case 'Print Diagram':
@@ -864,7 +837,11 @@ this.default = function () {
 
     //Load the diagraming object.
     function loadDiagram(event) {
-        diagram.loadDiagram(event.target.result);
+        if (diagram.isModified) {
+            showConfirm(() => diagram.loadDiagram(event.target.result));
+        } else {
+            diagram.loadDiagram(event.target.result);
+        }
     }
 
     // Set up print options and initiate printing of the diagram.
@@ -936,6 +913,63 @@ this.default = function () {
         if (index !== -1) {
             toolbarObj.items[index].disabled = false;
         }
+    }
+
+    // Browser / tab close protection
+    window.addEventListener('beforeunload', function (e) {
+        if (diagram.isModified) {
+            e.preventDefault();
+            e.returnValue = 'You have unsaved changes.\n\nDo you want to continue without saving?';
+        }
+    });
+
+    var pendingAction = null;
+
+    var dialogObj = new ej.popups.Dialog({
+        header: 'Unsaved Changes',
+        content: 'Do you want to save your changes?',
+        target: document.getElementById('diagram'),
+        buttons: [
+            {
+                click: saveButtonClick,
+                buttonModel: { content: 'Save', isPrimary: true }
+            },
+            {
+                click: dontSaveButtonClick,
+                buttonModel: { content: "Don't Save" }
+            },
+            {
+                click: cancelButtonClick,
+                buttonModel: { content: 'Cancel' }
+            }
+        ],
+        width: '300px',
+        isModal: false
+    });
+    dialogObj.appendTo('#diagram-unsaved-dialog');
+
+    function showConfirm(action) {
+        pendingAction = action;
+        dialogObj.isModal = true;
+        dialogObj.show();
+        document.getElementById('diagram-unsaved-dialog').style.display = 'flex';
+    }
+
+    function hideConfirm() {
+        dialogObj.hide();
+        document.getElementById('diagram-unsaved-dialog').style.display = 'none';
+    }
+    function saveButtonClick() {
+        download(diagram.saveDiagram());
+        hideConfirm();
+        pendingAction();
+    }
+    function dontSaveButtonClick() {
+        hideConfirm();
+        pendingAction();
+    }
+    function cancelButtonClick() {
+        hideConfirm();
     }
 
 };

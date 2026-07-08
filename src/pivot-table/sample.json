@@ -20,6 +20,7 @@
             "url": "classic-layout",
             "name": "Classic Layout",
             "category": "Pivot Table",
+            "type": "update",
             "description": "This sample demonstrates the classic (also known as tabular) layout view option of the pivot table."
         },
         {
@@ -98,6 +99,7 @@
             "url": "field-list",
             "name": "Field List",
             "category": "User Interaction",
+            "type": "update",
             "description": "This demo for Essential<sup>®</sup> JS2 Pivot Table control demonstrate the field list feature of the pivot table"
         },
         {
@@ -158,6 +160,7 @@
             "url": "aggregation",
             "name": "Aggregation",
             "category": "Formula",
+            "type": "update",
             "description": "This demo for Essential<sup>®</sup> JS2 Pivot Table control shows different types of aggregation for value fields"
         },
         {
@@ -194,6 +197,7 @@
             "url": "value-filtering",
             "name": "Value Filtering",
             "category": "Filtering",
+            "type": "update",
             "description": "This demo for Essential<sup>®</sup> JS2 Pivot Table control demonstrate the filtering of field headers based on the grand total (value based)"
         },
         {
@@ -248,7 +252,6 @@
             "url": "exporting",
             "name": "Default Export",
             "category": "Exporting",
-            "type": "update",
             "description": "This demo for Essential<sup>®</sup> JS2 Pivot Table control demonstrate client-side exporting of the pivot table to Excel, CSV and PDF formats"
         },
         {

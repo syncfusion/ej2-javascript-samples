@@ -3,7 +3,6 @@
    "directory": "tree-grid",
    "category": "Grids",
    "ftName": "treegrid",
-   "type": "update",
    "dataSourcePath": "src/tree-grid/data-source.js",
    "samples": [
       {
@@ -796,7 +795,6 @@
          "name": "Virtual Scrolling",
          "description": "This demo demonstrates how to use Essential<sup>®</sup> JS 2 Tree Grid to show a large data view without performance degradation by rendering only the required rows.",
          "category": "Scrolling",
-         "type": "update",
          "api": {
             "TreeGrid": [
                "dataSource",

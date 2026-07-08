@@ -8,11 +8,6 @@ this.default = function () {
                 args.treemap.levels[2].showHeader = false;
             }
         },
-        tooltipRendering: function (args) {
-            if (args.item.groupIndex !== 2) {
-                args.cancel = true;
-            }
-        },
         // custom code start
         load: function (args) {
             var drilltheme = location.hash.split('/')[1];

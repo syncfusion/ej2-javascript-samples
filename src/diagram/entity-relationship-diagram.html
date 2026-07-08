@@ -1,0 +1,84 @@
+<div class="control-section diagram-ER">
+    <link href="https://ej2.syncfusion.com/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
+    <div class="er-mobile-palette-bar">
+        <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
+    </div>
+    <div class="er-mobile-palette" id="palette-space">
+        <div id="symbolpalette" style="width:90%;"></div>
+    </div>
+    <div class="er-mobile-diagram" id="diagram-space">
+        <div id="diagram"></div>
+    </div>
+    <div id="action-description">
+        <p>
+            This sample demonstrates a <b>healthcare appointment management ER diagram</b> created using the
+            <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a>. It visualizes how core entities such as doctors, patients,
+            appointments, diagnoses, and prescriptions are structured and interconnected in a real-world hospital
+            database system.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            This sample showcases how to create and interact with an ER diagram using the 
+            <a href="https://www.syncfusion.com/javascript-ui-controls/js-diagram" target="_blank">JavaScript Diagram</a>. The diagram is built using nodes of <code>type: 'Er'</code> to represent database
+            entities and their fields, while connectors define relationships with cardinality between entities.
+        </p>
+        <p>
+            <b>User handles</b> allow adding or removing fields within entities. When an entity node is selected, a “+”
+            handle appears, enabling the addition of new fields. These fields can then be interactively reordered using
+            drag‑and‑drop actions. When an individual field is selected, a “−” handle is displayed to remove that
+            specific field. The diagram supports built‑in interactions such as selecting entities and editing their
+            fields.<br>
+        </p>
+    </div>
+    <style>
+        /* --- ER Diagram Responsive Styles --- */
+
+        .er-mobile-palette-bar {
+            display: none;
+        }
+
+        .er-mobile-palette {
+            width: 195px;
+            height: 500px;
+            float: left;
+        }
+
+        .er-mobile-diagram {
+            width: calc(100% - 197px);
+            height: 500px;
+            float: left;
+            border-left: none;
+        }
+
+        @media (max-width: 550px) {
+            .er-mobile-palette {
+                z-index: 19;
+                position: absolute;
+                transition: transform 300ms linear, visibility 0s linear 300ms;
+                display: none;
+                width: 39%;
+                height: 500px;
+            }
+
+            .er-mobile-palette-bar {
+                display: block;
+                width: 100%;
+                background: #fafafa;
+                padding: 10px 10px;
+                border: 0.5px solid #e0e0e0;
+                min-height: 40px;
+            }
+
+            .er-mobile-palette.er-mobile-palette-open {
+                position: absolute;
+                display: block;
+                float: right;
+            }
+
+            .er-mobile-diagram {
+                width: 100%;
+            }
+        }
+    </style>
+</div>

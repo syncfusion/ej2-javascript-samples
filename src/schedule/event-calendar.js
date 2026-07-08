@@ -371,6 +371,7 @@ this.default = function () {
     var colorPicker = new ej.inputs.ColorPicker({ cssClass: 'calendar-color' }, '#color-picker');
 
     var calendarsList = new ej.lists.ListView({
+        cssClass: 'event-resourceList',
         dataSource: calendars,
         template: "<div class='calendar-list-item'><div class='calendar-name' title='${name}'>${name}</div>${if(id !== 1)}<div class='calendar-buttons'><span id='calendar-edit-btn' class='e-icons e-edit' data-calendar-id='${id}'></span><span id='calendar-delete-btn' class='e-icons e-trash' data-calendar-id='${id}'></span></div>${/if}</div>",
         headerTemplate: '<div class="calendars-list-header"><div class="header-text">Calendars</div><div class="header-icon e-icons e-plus"></div></div>',
@@ -547,6 +548,7 @@ this.default = function () {
     var leftSidebar = new ej.navigations.Sidebar({
         width: '300px',
         target: '.main-content',
+        enableGestures: false
     });
     leftSidebar.appendTo('#sidebar-left');
 
@@ -571,6 +573,7 @@ this.default = function () {
         target: '.main-content',
         position: 'Right',
         type: 'Push',
+        enableGestures: false,
         isOpen: false,
         created: function () {
             var open = rightSidebar.element.parentElement.querySelector('#plannedOpen');

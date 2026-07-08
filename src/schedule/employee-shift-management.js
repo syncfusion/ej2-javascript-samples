@@ -15,49 +15,31 @@ this.default = function () {
     var shiftsData = [];
     var toolbarChipsRef = { current: null };
     var eventsdata = new ej.base.extend([], window.employeeShiftData, null, true);
-    var imagePath = 'src/schedule/images/';
-    var salamanImage = imagePath + 'salman@3x.png';
-    var brianImage = imagePath + 'brian@3x.png';
-    var jakeImage = imagePath + 'jake@3x.png';
-    var jenniferImage = imagePath + 'Jennifer.png';
-    var davidImage = imagePath + 'David.png';
-    var williammImage = imagePath + 'William.png';
-    var emmaImage = imagePath + 'Emma.png';
-    var lilyImage = imagePath + 'Lily.png';
-    var avaImage = imagePath + 'Ava.png';
-    var graceImage = imagePath + 'Grace.png';
-    var michaelImage = imagePath + 'Michael.png';
-    var thomasImage = imagePath + 'Thomas.png';
-    var rickyImage = imagePath + 'Ricky.png';
-    var jamesImage = imagePath + 'James.png';
-    var benjaminImage = imagePath + 'Benjamin.png';
-    var oliviaImage = imagePath + 'Olivia.png';
-    var chloeImage = imagePath + 'Chloe.png';
 
     var employeeImages = [
-        { name: 'John', image: imagePath + 'robert.png' },
-        { name: 'Nashil', image: imagePath + 'nancy.png' },
-        { name: 'Jennifer', image: jenniferImage },
-        { name: 'William', image: williammImage },
-        { name: 'David', image: davidImage },
-        { name: 'Michael', image: michaelImage },
-        { name: 'Thomas', image: thomasImage },
-        { name: 'Daniel', image: imagePath + 'robson.png' },
-        { name: 'Mark', image: imagePath + 'will-smith.png' },
-        { name: 'Brian', image: brianImage },
-        { name: 'Kevin', image: imagePath + 'alice.png' },
-        { name: 'Salman', image: salamanImage },
-        { name: 'Emma', image: emmaImage },
-        { name: 'Lily', image: lilyImage },
-        { name: 'Ava', image: avaImage },
-        { name: 'Grace', image: graceImage },
-        { name: 'Zoe', image: imagePath + 'laura.png' },
-        { name: 'James', image: jamesImage },
-        { name: 'Benjamin', image: benjaminImage },
-        { name: 'Olivia', image: oliviaImage },
-        { name: 'Chloe', image: chloeImage },
-        { name: 'Ricky', image: rickyImage },
-        { name: 'Jake', image: jakeImage }
+        { name: 'John', image: 'robert' },
+        { name: 'Nashil', image: 'nancy' },
+        { name: 'Jennifer', image: 'Jennifer' },
+        { name: 'William', image: 'William' },
+        { name: 'David', image: 'David' },
+        { name: 'Michael', image: 'Michael' },
+        { name: 'Thomas', image: 'Thomas' },
+        { name: 'Daniel', image: 'robson' },
+        { name: 'Mark', image: 'will-smith' },
+        { name: 'Brian', image: 'brian@3x' },
+        { name: 'Kevin', image: 'alice' },
+        { name: 'Salman', image: 'salman@3x' },
+        { name: 'Emma', image: 'Emma' },
+        { name: 'Lily', image: 'Lily' },
+        { name: 'Ava', image: 'Ava' },
+        { name: 'Grace', image: 'Grace' },
+        { name: 'Zoe', image: 'laura' },
+        { name: 'James', image: 'James' },
+        { name: 'Benjamin', image: 'Benjamin' },
+        { name: 'Olivia', image: 'Olivia' },
+        { name: 'Chloe', image: 'Chloe' },
+        { name: 'Ricky', image: 'Ricky' },
+        { name: 'Jake', image: 'jake@3x' }
     ];
     var employeeRole = [
         { role: 'Doctors', id: 1 },
@@ -76,14 +58,14 @@ this.default = function () {
     ];
 
     var imageMap = {
-        mark: imagePath + 'will-smith.png',
-        brian: imagePath + 'brian@3x.png',
-        kevin: imagePath + 'alice.png',
-        salman: imagePath + 'salman@3x.png',
-        olivia: imagePath + 'Olivia.png',
-        zoe: imagePath + 'laura.png',
-        ricky: imagePath + 'Ricky.png',
-        jake: imagePath + 'jake@3x.png'
+        mark: 'will-smith',
+        brian: 'brian@3x',
+        kevin: 'alice',
+        salman: 'salman@3x',
+        olivia: 'Olivia',
+        zoe: 'laura',
+        ricky: 'Ricky',
+        jake: 'jake@3x'
     };
     var allowDragAndDrop = true;
     var doctorsData = [
@@ -113,7 +95,7 @@ this.default = function () {
     var staffsTreeFields = { dataSource: staffsData, id: 'Id', text: 'Name' };
     var mergedList = doctorsData.concat(nursesData).concat(staffsData);
     mergedList.forEach(function (item) {
-        item.ImageSrc = imageMap[item.Name.toLowerCase()] || 'path/to/default.png';
+        item.ImageSrc = imageMap[item.Name.toLowerCase()];
     });
     function setAgendaContentHeight() {
         // Locate the Agenda view content wrapper
@@ -291,7 +273,7 @@ this.default = function () {
         staffWrap.className = 'e-staff';
         var staffImage = document.createElement('img');
         staffImage.className = 'staff-image';
-        staffImage.src = imageUrl;
+        staffImage.src = 'src/schedule/images/' + imageUrl + '.png';
         var staffInfo = document.createElement('div');
         staffInfo.className = 'staff-info';
         var name = document.createElement('div');
@@ -642,8 +624,7 @@ this.default = function () {
     //     // Handle chip before click
     var handleChipBeforeClick = function (args, isExternalChipClick) {
         currentChipIndex = args.index;
-        previousChipIndex = isExternalChipClick ? externalChipsRef.selectedChips : toolbarChipsRef.current.selectedChips;
-
+        var previousChipIndex = isExternalChipClick ? externalChipsRef.selectedChips : toolbarChipsRef.current.selectedChips;
         if (currentChipIndex === previousChipIndex) {
             args.cancel = true;
         }

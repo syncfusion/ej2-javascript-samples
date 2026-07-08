@@ -2,8 +2,8 @@ this.default = function () {
    var ganttChart = new ej.gantt.Gantt({
         dataSource: window.templateData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         highlightWeekends: true,
         taskFields: {
             id: 'TaskID',
@@ -17,7 +17,7 @@ this.default = function () {
             child: 'subtasks'
         },
         columns: [
-            { field: 'TaskName', headerText: 'Job Name', headerTemplate: '#projectName', width: 250 },
+            { field: 'TaskName', headerText: 'Job Name', headerTemplate: '#projectName', width: 280 },
             { field: 'StartDate', headerTemplate: '#dateTemplate' },
             { field: 'resources', headerText: 'Resources', headerTemplate: '#resource', width: 170 },
             { field: 'Duration', headerTemplate: '#durationTemplate' },

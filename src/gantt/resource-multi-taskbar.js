@@ -5,7 +5,7 @@ this.default = function () {
         viewType: 'ResourceView',
         enableMultiTaskbar: true,
         showOverAllocation: true,
-        taskType:'FixedWork',
+        taskType: 'FixedWork',
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -34,12 +34,12 @@ this.default = function () {
         },
         columns: [
             { field: 'TaskID', visible: false },
-            { field: 'TaskName', headerText: 'Name', width: 250 },
+            { field: 'TaskName', headerText: 'Name', width: 280 },
             { field: 'work', headerText: 'Work' },
             { field: 'Progress' },
             { field: 'resourceGroup', headerText: 'Group' },
             { field: 'StartDate' },
-            { field: 'Duration' },
+            { field: 'Duration' }
         ],
         toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
         labelSettings: {
@@ -53,8 +53,8 @@ this.default = function () {
         highlightWeekends: true,
         treeColumnIndex: 1,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         projectStartDate: new Date('03/26/2025'),
         projectEndDate: new Date('05/18/2025')
     });
@@ -67,7 +67,7 @@ this.default = function () {
     taskbarOverlap.appendTo('#unchecked');
 
     function dragDropChange(args) {
-        var gantt =document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
         if (args.checked) {
             gantt.allowTaskbarDragAndDrop = true;
         } else {
@@ -75,7 +75,7 @@ this.default = function () {
         }
     }
     function overlapChange(args) {
-        var gantt =document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
+        var gantt = document.getElementsByClassName('e-gantt')[0].ej2_instances[0];
         if (args.checked) {
             gantt.allowTaskbarOverlap = true;
         } else {

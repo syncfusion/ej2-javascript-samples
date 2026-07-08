@@ -2,7 +2,7 @@
  * File Manager Directory upload feature sample
  */
 this.default = function() {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
     var buttonTemplate = '<button id="dropButton" class="e-tbar-btn e-tbtn-txt"> <span class="e-tbar-btn-text">Upload</span> </button>';
     // Initialize the FileManager component
     var fileObject = new ej.filemanager.FileManager({

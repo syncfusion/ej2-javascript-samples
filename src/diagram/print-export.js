@@ -120,7 +120,17 @@ this.default = function () {
             {
                 type: 'Input', template: checkBoxObj
             },
-        ]
+        ],
+        beforeCreate: function (args) {
+            if (toolbarObj && toolbarObj.refreshing) {
+                setTimeout(() => {
+                    btnObj = new ej.splitbuttons.DropDownButton({
+                        items: items, content: 'Export', select: onSelect,
+                    });
+                    btnObj.appendTo('#custombtn');
+                }, 1);
+            }
+        },
     });
     // Append elements to DOM.
     toolbarObj.appendTo('#toolbar_default');

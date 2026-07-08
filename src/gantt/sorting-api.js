@@ -2,8 +2,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.editingData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSorting: true,
         highlightWeekends: true,
         treeColumnIndex: 1,
@@ -15,10 +15,10 @@ this.default = function () {
             duration: 'Duration',
             progress: 'Progress',
             dependency: 'Predecessor',
-            parentID:'ParentId'
+            parentID: 'ParentId'
         },
         columns: [
-            { field: 'TaskID', visible:false ,headerText: 'ID', width: 80 },
+            { field: 'TaskID', visible: false, headerText: 'ID', width: 80 },
             { field: 'TaskName', headerText: 'TaskName', width: 250 },
             { field: 'StartDate', headerText: 'StartDate' },
             { field: 'EndDate', headerText: 'EndDate' },
@@ -32,7 +32,7 @@ this.default = function () {
             columnIndex: 2
         },
         projectStartDate: new Date('03/26/2025'),
-        projectEndDate: new Date('09/01/2025'),
+        projectEndDate: new Date('09/01/2025')
     });
     ganttChart.appendTo('#SortingAPI');
 
@@ -46,18 +46,18 @@ this.default = function () {
         ],
         popupWidth: '150px',
         value: 'TaskName',
-        fields: { text: 'type', value: 'id' },
+        fields: { text: 'type', value: 'id' }
     });
     dropDownColumnList.appendTo('#columns');
 
     var dropDownDirectionList = new ej.dropdowns.DropDownList({
         dataSource: [
             { id: 'Ascending', type: 'Ascending' },
-            { id: 'Descending', type: 'Descending' },
+            { id: 'Descending', type: 'Descending' }
         ],
         popupWidth: '150px',
         value: 'Ascending',
-        fields: { text: 'type', value: 'id' },
+        fields: { text: 'type', value: 'id' }
     });
     dropDownDirectionList.appendTo('#direction');
 

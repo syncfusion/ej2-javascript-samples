@@ -290,7 +290,7 @@ this.default = function () {
                 cellSelectionMode: 'Box'
             },
             excelQueryCellInfo: function (args) {
-                if (args.cell.axis === 'value' && args.cell.value === undefined) {
+                if (args.cell.axis === 'value' && args.value === undefined) {
                     args.style.numberFormat = undefined;
                 }
             }

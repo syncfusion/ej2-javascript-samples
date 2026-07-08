@@ -56,7 +56,6 @@ this.default = function () {
         },
         format: 'n',
         useGroupingSeparator: true,
-        rangeColorValuePath: 'WinPercentage',
         equalColorValuePath: 'Winner',
         leafItemSettings: {
             labelPath: 'State',

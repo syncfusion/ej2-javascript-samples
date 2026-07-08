@@ -5,7 +5,7 @@ this.default = function () {
         return new ej.data.DataManager({
             url: 'https://services.syncfusion.com/js/production/api/GanttWebApiRemoteData?count=' + recordCount,
             adaptor: new ej.data.WebApiAdaptor(),
-            crossDomain: true,
+            crossDomain: true
         });
     }
     var startLoadTime, endLoadTime;
@@ -32,8 +32,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: loadGanttData(recordCount),
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         taskFields: {
             id: 'TaskId',
             name: 'TaskName',
@@ -44,14 +44,14 @@ this.default = function () {
             parentID: 'ParentId',
             dependency: 'Predecessor'
         },
-        splitterSettings:{
+        splitterSettings: {
             columnIndex: 2
         },
         columns: [
             { field: 'TaskId' },
-            { field: 'TaskName', headerText: 'Project Activity', width: 250, clipMode: 'EllipsisWithTooltip' },
-            { field: 'StartDate', headerText: 'Planned Start Date',width: 200 },
-            { field: 'Duration', headerText: 'Duration' ,width: 160},
+            { field: 'TaskName', headerText: 'Project Activity', width: 270, clipMode: 'EllipsisWithTooltip' },
+            { field: 'StartDate', headerText: 'Planned Start Date', width: 200 },
+            { field: 'Duration', headerText: 'Duration' , width: 160 },
             { field: 'Progress', headerText: 'Completion (%)', width: 200 }
         ],
         treeColumnIndex: 1,

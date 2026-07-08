@@ -14,14 +14,14 @@ this.default = function () {
                 onTimeProgress: '#22C55E',
                 delayedProgress: '#FB923C'
             },
-            'tailwind3':{
+            'tailwind3': {
                 onTime: '#F0FDF4', 
                 delayed: '#FFF7ED' ,
                 baseline:'#DAA520',
                 onTimeProgress: '#15803D',
                 delayedProgress: '#C2410C'
             },
-            'tailwind3-dark':{
+            'tailwind3-dark': {
                 onTime: '#122A2C', 
                 delayed: '#282125' ,
                 baseline:'#9CA3AF',
@@ -42,21 +42,21 @@ this.default = function () {
                 onTimeProgress: '#22C55E',
                 delayedProgress: '#FB923C'
             },
-            'fluent2':{
+            'fluent2': {
                 onTime: '#F0FDF4', 
                 delayed: '#FFF7ED' ,
                 baseline:'#DAA520',
                 onTimeProgress: '#15803D',
                 delayedProgress: '#C2410C'
             },
-            'fluent2-dark':{
+            'fluent2-dark': {
                 onTime: '#122A2C', 
                 delayed: '#282125' ,
                 baseline:'#9CA3AF',
                 onTimeProgress: '#22C55E',
                 delayedProgress: '#FB923C'
             },
-           'fluent2-highcontrast':{
+           'fluent2-highcontrast': {
                 onTime: '#122A2C', 
                 delayed: '#282125' ,
                 baseline:'#9CA3AF',
@@ -69,8 +69,6 @@ this.default = function () {
                 return document.body.classList.contains(theme);
             }) || 'material3';
         }
-        var currentTheme = getCurrentTheme();
-        var colors = themeColors[currentTheme]; 
         var ganttChart = new ej.gantt.Gantt({
         dataSource: baselineData,
         taskFields: {
@@ -89,24 +87,24 @@ this.default = function () {
         renderBaseline: true,
         gridLines: "Horizontal",    
         columns: [
-            { field: "TaskId", visible: false, headerText: "Task ID"},
-            { field: "TaskName", headerText: "Task Name", allowReordering: false, width: 200},
-            { field: 'StartDate', width: 140, },
-            { field: 'Duration',  width: 125,},
-            { field: "BaselineStartDate", headerText: "Baseline Start Date", width: 195,  },
-            { field: "baselineDur", type: "string", editType: "stringedit",width: 195, },
-            { field: "variance", headerText: "Variance",allowEditing: false, width: 140,},
+            { field: "TaskId", visible: false, headerText: "Task ID" },
+            { field: "TaskName", headerText: "Task Name", allowReordering: false, width: 200 },
+            { field: 'StartDate', width: 140 },
+            { field: 'Duration',  width: 125 },
+            { field: "BaselineStartDate", headerText: "Baseline Start Date", width: 195 },
+            { field: "baselineDur", type: "string", editType: "stringedit", width: 195 },
+            { field: "variance", headerText: "Variance", allowEditing: false, width: 140 },
         ],
         treeColumnIndex: 1,
         allowSelection: true,
         includeWeekend: true,
         splitterSettings: {
-            columnIndex: 4,
+            columnIndex: 4
         },
         allowResizing: true,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         timelineSettings:{
             topTier:{
                 unit: 'Month',
@@ -117,11 +115,11 @@ this.default = function () {
             }
         },
         labelSettings:{
-            rightLabel: '#rightLabel',
+            rightLabel: '#rightLabel'
         },
         allowPdfExport: true,
         tooltipSettings: {
-            taskbar: "#tooltip",
+            taskbar: "#tooltip"
         },
         parentTaskbarTemplate: '#parenttask',
         queryTaskbarInfo: function (args) {
@@ -129,9 +127,9 @@ this.default = function () {
             var colors = themeColors[currentTheme];
             var taskbarColor = !args.data.ganttProperties.baselineStartDate || !args.data.ganttProperties.baselineEndDate || args.data.ganttProperties.startDate <= args.data.ganttProperties.baselineStartDate ? colors.onTime : colors.delayed;
             var progressColor = !args.data.ganttProperties.baselineStartDate || !args.data.ganttProperties.baselineEndDate || args.data.ganttProperties.startDate <= args.data.ganttProperties.baselineStartDate ? colors.onTimeProgress : colors.delayedProgress;
-            if(args.taskbarType!='ParentTask'){
-                if(currentTheme==='material3' || currentTheme==='material3-dark'){
-                    if(args.taskbarType !='Milestone'){
+            if(args.taskbarType !== 'ParentTask'){
+                if(currentTheme === 'material3' || currentTheme === 'material3-dark'){
+                    if(args.taskbarType !== 'Milestone'){
                         args.taskbarElement.querySelectorAll('.e-gantt-child-taskbar-inner-div')[0].style.setProperty('background',taskbarColor,'important');
                     }
                     else{
@@ -142,7 +140,7 @@ this.default = function () {
                 args.taskbarBgColor = taskbarColor;
                 args.milestoneColor = progressColor;
                 args.taskbarBorderColor = progressColor;
-                args.progressBarBgColor =progressColor;
+                args.progressBarBgColor = progressColor;
             }
             args.baselineColor = colors.baseline;
         },

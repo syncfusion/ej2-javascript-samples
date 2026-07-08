@@ -3,8 +3,8 @@ this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.resourceAllocationData,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         allowSelection: true,
         highlightWeekends: true,
         taskFields: {
@@ -16,9 +16,9 @@ this.default = function () {
             progress: 'Progress',
             dependency: 'Predecessor',
             child: 'subtasks',
-            work:'work',
+            work: 'work',
             resourceInfo: 'resources',
-            type:'taskType'
+            type: 'taskType'
         },
         resources: resourceAllocationResources,
         resourceFields: {
@@ -79,8 +79,8 @@ this.default = function () {
                 }
             }
         },
-        taskType:"FixedWork",
-        workUnit:"Hour",
+        taskType: "FixedWork",
+        workUnit: "Hour",
         editSettings: {
             allowAdding: true,
             allowEditing: true,
@@ -90,12 +90,12 @@ this.default = function () {
         },
         treeColumnIndex: 1,
         columns: [
-            { field: 'TaskID', visible: false},
-            { field: 'TaskName', headerText: 'Task Name', width: '180'},
+            { field: 'TaskID', visible: false },
+            { field: 'TaskName', headerText: 'Task Name', width: 180 },
             {
                 field: 'resources',
                 headerText: 'Resources',
-                width: '190',
+                width: 190,
                 template: '#resColumnTemplate',
                 editType: "dropdownedit",
                 edit: {
@@ -130,16 +130,16 @@ this.default = function () {
                             enableRtl: ganttChart.enableRtl,
                             popupHeight: '350px',
                             // Set the existing resource(s) as the selected value
-                            value: selectedValue,
+                            value: selectedValue
                         });
                         // Append the dropdown to the element
                         dropdownlistObj.appendTo(args.element);
                     },
                 },
             },
-            { field: 'work', width:'110'},
+            { field: 'work', width: 110 },
             { field: 'Duration', width: 150 },
-            { field: 'taskType', headerText: 'Task Type', width: 150}
+            { field: 'taskType', headerText: 'Task Type', width: 150 }
         ],
         editDialogFields: [
             { type: 'Resources' }

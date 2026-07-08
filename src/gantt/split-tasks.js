@@ -31,8 +31,8 @@ this.default = function () {
         enableContextMenu: true,
         allowSelection: true,
         height: '650px',
-        rowHeight:46,
-        taskbarHeight:25,
+        rowHeight: 46,
+        taskbarHeight: 25,
         treeColumnIndex: 1,
         highlightWeekends: true,
         splitterSettings: {
@@ -43,7 +43,7 @@ this.default = function () {
             taskLabel: '${Progress}%'
         },
         projectStartDate: new Date('01/29/2025'),
-        projectEndDate: new Date('04/20/2025')
+        projectEndDate: new Date('03/30/2025')
      });
     ganttChart.appendTo('#SplitTasks');
 };

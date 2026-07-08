@@ -100,6 +100,7 @@ function getPath() {
             diagram.drawingObject = shapeMapping.shape1; // Initial shape
             diagram.tool = DiagramTools.ContinuousDraw; // Continuous draw by default
             diagram.dataBind();
+            diagram.fitToPage();
         }
     });
     diagram.appendTo('#diagram');
