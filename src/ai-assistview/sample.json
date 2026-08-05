@@ -7,187 +7,187 @@
     "dataSourcePath": "src/ai-assistview/promptResponseData.js",
     "samples": [
         {
-            "url": "overview",
+            "url": "ai-overview",
             "name": "Overview",
             "category": "AI AssistView",
             "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
             "description": "Combines streaming, attachments, speech-to-text, text-to-speech and regenerate functionality in one overview UI.",
             "sourceFiles": [
-                { "displayName": "overview.js", "path":"src/ai-assistview/overview.js" },
-                { "displayName": "overview.html", "path":"src/ai-assistview/overview.html" },
+                { "displayName": "ai-overview.js", "path":"src/ai-assistview/ai-overview.js" },
+                { "displayName": "ai-overview.html", "path":"src/ai-assistview/ai-overview.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
             ]
         },
         {
-            "url": "default",
+            "url": "ai-default",
             "name": "Default Functionalities",
             "category": "AI AssistView",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings"] },
             "description": "Showcases the default combinations of the AiAssistView control.",
             "sourceFiles": [
-                { "displayName": "default.js", "path":"src/ai-assistview/default.js" },
-                { "displayName": "default.html", "path":"src/ai-assistview/default.html" },
+                { "displayName": "ai-default.js", "path":"src/ai-assistview/ai-default.js" },
+                { "displayName": "ai-default.html", "path":"src/ai-assistview/ai-default.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "custom-views",
+            "url": "ai-custom-views",
             "name": "Custom Views",
             "category": "AI AssistView",
             "api":{ "AIAssitView": ["views", "promptRequest"] },
             "description": "Showcases the different views of the AiAssistView control",
             "sourceFiles": [
-                { "displayName": "custom-views.js", "path":"src/ai-assistview/custom-views.js" },
-                { "displayName": "custom-views.html", "path":"src/ai-assistview/custom-views.html" },
+                { "displayName": "ai-custom-views.js", "path":"src/ai-assistview/ai-custom-views.js" },
+                { "displayName": "ai-custom-views.html", "path":"src/ai-assistview/ai-custom-views.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "streaming",
+            "url": "ai-streaming",
             "name": "Streaming Response",
             "category": "AI AssistView",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings"] },
             "description": "Showcases the AiAssistView control with its streaming support.",
             "sourceFiles": [
-                { "displayName": "streaming.js", "path":"src/ai-assistview/streaming.js" },
-                { "displayName": "streaming.html", "path":"src/ai-assistview/streaming.html" },
+                { "displayName": "ai-streaming.js", "path":"src/ai-assistview/ai-streaming.js" },
+                { "displayName": "ai-streaming.html", "path":"src/ai-assistview/ai-streaming.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "attachments",
+            "url": "ai-attachments",
             "name": "File Attachments",
             "category": "AI AssistView",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "attachmentSettings", "enableAttachments", "bannerTemplate"] },
             "description": "Showcases the AiAssistView control with its attachment support.",
             "sourceFiles": [
-                { "displayName": "attachments.js", "path":"src/ai-assistview/attachments.js" },
-                { "displayName": "attachments.html", "path":"src/ai-assistview/attachments.html" },
+                { "displayName": "ai-attachments.js", "path":"src/ai-assistview/ai-attachments.js" },
+                { "displayName": "ai-attachments.html", "path":"src/ai-assistview/ai-attachments.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
             ]
         },
         {
-            "url": "generative-ui",
+            "url": "ai-generative-ui",
             "name": "Generative UI Responses",
             "category": "AI AssistView",
             "type": "new",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AI generated UI responses in the AiAssistView component",
             "sourceFiles": [
-                { "displayName": "generative-ui.js", "path":"src/ai-assistview/generative-ui.js" },
-                { "displayName": "generative-ui.html", "path":"src/ai-assistview/generative-ui.html" },
+                { "displayName": "ai-generative-ui.js", "path":"src/ai-assistview/ai-generative-ui.js" },
+                { "displayName": "ai-generative-ui.html", "path":"src/ai-assistview/ai-generative-ui.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
             ]
         },
         {
-            "url": "thinking",
+            "url": "ai-thinking",
             "name": "Chain of Thoughts",
             "category": "AI AssistView",
             "type": "new",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AI generated thinking UI in the AiAssistView component",
             "sourceFiles": [
-                { "displayName": "thinking.js", "path":"src/ai-assistview/thinking.js" },
-                { "displayName": "thinking.html", "path":"src/ai-assistview/thinking.html" },
+                { "displayName": "ai-thinking.js", "path":"src/ai-assistview/ai-thinking.js" },
+                { "displayName": "ai-thinking.html", "path":"src/ai-assistview/ai-thinking.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
             ]
         },
         {
-            "url": "template",
+            "url": "ai-template",
             "name": "Template",
             "category": "AI AssistView",
             "api":{ "AIAssitView": ["bannerTemplate", "promptItemTemplate", "responseItemTemplate", "promptSuggestionItemTemplate", "promptSuggestions", "promptSuggestionsHeader", "promptRequest"] },
             "description": "Showcases the template properties of the AiAssistView control.",
             "sourceFiles": [
-                { "displayName": "template.js", "path":"src/ai-assistview/template.js" },
-                { "displayName": "template.html", "path":"src/ai-assistview/template.html" },
+                { "displayName": "ai-template.js", "path":"src/ai-assistview/ai-template.js" },
+                { "displayName": "ai-template.html", "path":"src/ai-assistview/ai-template.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "speech-to-text",
+            "url": "ai-speech-to-text",
             "name": "Speech To Text",
             "category": "Speech",
             "api":{ "AIAssitView": ["promptRequest", "toolbarSettings", "speechToTextSettings", "bannerTemplate", "attachmentSettings", "promptToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AI AssistView component integrated  the built-in Speech-to-Text functionality, enabling users to interact using voice input transcribed into text.",
             "sourceFiles": [
-                { "displayName": "ai-speech-to-text.js", "path":"src/ai-assistview/speech-to-text.js" },
-                { "displayName": "ai-speech-to-text.html", "path":"src/ai-assistview/speech-to-text.html" } 
+                { "displayName": "ai-speech-to-text.js", "path":"src/ai-assistview/ai-speech-to-text.js" },
+                { "displayName": "ai-speech-to-text.html", "path":"src/ai-assistview/ai-speech-to-text.html" } 
             ]
         },
         {
-            "url": "text-to-speech",
+            "url": "ai-text-to-speech",
             "name": "Text To Speech",
             "category": "Speech",
             "type": "update",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AiAssistView component integrated with Text-to-Speech functionality, allowing AI-generated responses to be vocalized for voice-based interaction.",
             "sourceFiles": [
-                { "displayName": "ai-text-to-speech.js", "path":"src/ai-assistview/text-to-speech.js" },
-                { "displayName": "ai-text-to-speech.html", "path":"src/ai-assistview/text-to-speech.html" } 
+                { "displayName": "ai-text-to-speech.js", "path":"src/ai-assistview/ai-text-to-speech.js" },
+                { "displayName": "ai-text-to-speech.html", "path":"src/ai-assistview/ai-text-to-speech.html" } 
             ]
         },
         {
-            "url": "notion-ai-clone",
+            "url": "ai-notion-like",
             "name": "Notion AI-like",
             "category": "UI Customization",
             "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Notion-like AI Assist UI with multi-mode chat (floating, sidebar, fullscreen), model selection, chat history, streaming responses, attachments, speech-to-text, text-to-speech, and session management.",
             "sourceFiles": [
-                { "displayName": "notion-ai-clone.js", "path":"src/ai-assistview/notion-ai-clone.js" },
-                { "displayName": "notion-ai-clone.html", "path":"src/ai-assistview/notion-ai-clone.html" },
+                { "displayName": "ai-notion-like.js", "path":"src/ai-assistview/ai-notion-like.js" },
+                { "displayName": "ai-notion-like.html", "path":"src/ai-assistview/ai-notion-like.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "claude-clone",
+            "url": "ai-claude-like",
             "name": "Claude AI-like",
             "category": "UI Customization",
             "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Claude line UI appearance with ai assistview supported features with footer toolbar and banner template",
             "sourceFiles": [
-                { "displayName": "claude-clone.js", "path":"src/ai-assistview/claude-clone.js" },
-                { "displayName": "claude-clone.html", "path":"src/ai-assistview/claude-clone.html" },
+                { "displayName": "ai-claude-like.js", "path":"src/ai-assistview/ai-claude-like.js" },
+                { "displayName": "ai-claude-like.html", "path":"src/ai-assistview/ai-claude-like.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "gemini-clone",
+            "url": "ai-gemini-like",
             "name": "Gemini AI-like",
             "category": "UI Customization",
             "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
             "description": "Gemini-inspired UI appearance with ai assistview supported features with footer toolbar and banner template",
             "sourceFiles": [
-                { "displayName": "gemini-clone.js", "path":"src/ai-assistview/gemini-clone.js" },
-                { "displayName": "gemini-clone.html", "path":"src/ai-assistview/gemini-clone.html" },
+                { "displayName": "ai-gemini-like.js", "path":"src/ai-assistview/ai-gemini-like.js" },
+                { "displayName": "ai-gemini-like.html", "path":"src/ai-assistview/ai-gemini-like.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "dialog",
+            "url": "ai-dialog",
             "name": "Notes Assistant",
             "category": "Use Cases",
             "api":{ "AIAssitView": ["promptSuggestions", "prompts", "promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "cssClass"] },
             "description": "Showcases the AiAssistView control with other component integration",
             "sourceFiles": [
-                { "displayName": "dialog.js", "path":"src/ai-assistview/dialog.js" },
-                { "displayName": "dialog.html", "path":"src/ai-assistview/dialog.html" },
+                { "displayName": "ai-dialog.js", "path":"src/ai-assistview/ai-dialog.js" },
+                { "displayName": "ai-dialog.html", "path":"src/ai-assistview/ai-dialog.html" },
                 { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
             ]
         },
         {
-            "url": "model",
+            "url": "ai-model",
             "name": "Multiple AI Conversation",
             "category": "Use Cases",
             "api":{ "AIAssitView": ["bannerTemplate", "promptItemTemplate", "responseItemTemplate", "promptSuggestionItemTemplate", "promptSuggestions", "promptSuggestionsHeader", "promptRequest"] },
             "description": "Showcases the AiAssistView control to integrate with Gemini, OpenAI Sample.",
             "sourceFiles": [
-                { "displayName": "ai-integrations.js", "path":"src/ai-assistview/model.js" },
-                { "displayName": "ai-integrations.html", "path":"src/ai-assistview/model.html" } 
+                { "displayName": "ai-integrations.js", "path":"src/ai-assistview/ai-model.js" },
+                { "displayName": "ai-integrations.html", "path":"src/ai-assistview/ai-model.html" } 
             ]
         }
     ]

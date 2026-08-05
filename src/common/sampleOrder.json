@@ -4,7 +4,7 @@
     "Grids": ["Data Grid", "Pivot Table", "Tree Grid"],
     "Interactive Chat": [ "AI AssistView", "Chat UI", "Inline AI Assist"],
     "Data Visualization": ["Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge", "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps", "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts", "TreeMap", "Bullet Chart", "Kanban", "Sankey"],
-    "Forms": ["Form Validation", "Query Builder"],
+    "Forms": ["Form Validation", "Query Builder", "Form Renderer"],
     "File Viewers & Editors": ["Rich Text Editor", "Markdown Editor", "Image Editor", "Block Editor"],
     "Calendars": ["Scheduler", "Gantt Chart", "Calendar", "DatePicker", "DateRangePicker", "DateTimePicker", "TimePicker"],
     "Buttons": ["Button", "Chips", "Floating Action Button", "SpeedDial"],

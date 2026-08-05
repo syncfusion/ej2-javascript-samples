@@ -7,6 +7,7 @@ this.default = function () {
         enableVirtualization: true, // To enable virtual scrolling feature.
         dataSource: window.kanbanVirtualData,
         keyField: 'Status',
+        height: '525px',
         enableTooltip: true,
         columns: [
             { headerText: 'To Do', keyField: 'Open' },

@@ -1,0 +1,20 @@
+{
+    "name": "Form Renderer",
+    "directory": "form-renderer",
+    "category": "Forms",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default Functionalities ",
+            "category": "Form Renderer",
+            "api": {
+                "FormRenderer": [
+                    "schema"
+                ]
+            },
+            "type": "new"
+        }
+    ],
+    "dataSourcePath": "src/form-renderer/datasource.js"
+}

@@ -191,4 +191,4 @@ this.default = function() {
         aiAssistView.addPromptResponse(responseHtml);
         aiAssistView.promptSuggestions = foundPrompt?.suggestions || window.overviewSuggesstions || [];
     }
-}
+};
