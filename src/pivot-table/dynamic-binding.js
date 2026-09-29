@@ -278,10 +278,30 @@ this.default = function () {
                 }
             });
         }
+        function isSafeRemoteUrl(cleanUrl) {
+            var parsed;
+            try {
+                parsed = new URL(cleanUrl, window.location.href);
+            }
+            catch (e) {
+                return false;
+            }
+            if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:')
+                return false;
+            var host = parsed.hostname.toLowerCase();
+            if (host === 'localhost' || host === '0.0.0.0' || host === '169.254.169.254' || host === '::1')
+                return false;
+            if (/^127\./.test(host) || /^10\./.test(host) || /^192\.168\./.test(host) ||
+                /^172\.(1[6-9]|2\d|3[0-1])\./.test(host) || /^169\.254\./.test(host) || /^\[?::1\]?$/.test(host))
+                return false;
+            return true;
+        }
         function loadRemoteAndBind(kind, url) {
             var cleanUrl = (url || '').trim();
             if (!cleanUrl)
                 return Promise.reject(new Error('Empty URL'));
+            if (!isSafeRemoteUrl(cleanUrl))
+                return Promise.reject(new Error('Invalid or disallowed URL'));
             if (kind === 'CSV') {
                 return fetch(cleanUrl, { cache: 'no-store' })
                     .then(function (rc) {
