@@ -13,7 +13,27 @@
                     "schema"
                 ]
             },
-            "type": "new"
+             "sourceFiles":[
+                { "displayName": "default.html", "path":"src/form-renderer/default.html" },
+                { "displayName": "default.js", "path":"src/form-renderer/default.js" },
+                { "displayName": "datasource.js", "path":"src/form-renderer/datasource.js" }
+            ]
+        },
+        {
+            "url": "custom-components",
+            "name": "Custom Components",
+            "category": "Form Renderer",
+            "type": "new",
+            "api": {
+                "FormRenderer": [
+                    "schema"
+                ]
+            },
+             "sourceFiles":[
+                { "displayName": "custom-components.html", "path":"src/form-renderer/custom-components.html" },
+                { "displayName": "custom-components.js", "path":"src/form-renderer/custom-components.js" },
+                { "displayName": "datasource.js", "path":"src/form-renderer/datasource.js" }
+            ]
         }
     ],
     "dataSourcePath": "src/form-renderer/datasource.js"

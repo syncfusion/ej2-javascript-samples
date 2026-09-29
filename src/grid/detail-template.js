@@ -21,6 +21,7 @@ this.default = function () {
             taskData = window.taskDetail.filter(function (task) { return task.Assignee === rowData.Name; });
             salesData = generateData(taskData);
             var tabObj = new ej.navigations.Tab({
+                enableRtl: grid.enableRtl,
                 animation: {
                     previous: { effect: 'None', duration: 0, easing: '' },
                     next: { effect: 'None', duration: 0, easing: '' }
@@ -29,6 +30,7 @@ this.default = function () {
             tabObj.appendTo(args.detailElement.querySelector('#tab'));
             var kanbanObj = new ej.kanban.Kanban({
                 dataSource: taskData,
+                enableRtl: grid.enableRtl,
                 keyField: 'Status',
                 columns: [
                     { headerText: 'Open', keyField: 'Open' },
@@ -47,6 +49,7 @@ this.default = function () {
                     valueType: 'Category',
                     title: 'Status'
                 },
+                enableRtl: grid.enableRtl,
                 height: '302px',
                 title: 'Burndown Chart',
                 tooltip: { enable: true },

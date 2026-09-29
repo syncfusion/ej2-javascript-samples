@@ -20,6 +20,7 @@ var aiAssistView = new ej.interactivechat.AIAssistView({
         ],
     },
     prompts: promptsData,
+    stopRespondingClick: stopAIResponse,
     promptRequest: onPromptRequest,
     enableStreaming: true
 });
@@ -28,6 +29,7 @@ var aiAssistView = new ej.interactivechat.AIAssistView({
 function toolbarItemClicked(args) {
     if (args.item.iconCss === 'e-icons e-refresh') {
         aiAssistView.prompts = [];
+        stopAIResponse();
     }
 }
 
@@ -35,6 +37,12 @@ function toolbarItemClicked(args) {
 async function onPromptRequest(args) {
     abortController = new AbortController();
     aiAssistView.addPromptResponse(await window.getAIResponse(args, abortController));
+}
+
+function stopAIResponse() {
+    if (abortController) {
+        abortController.abort();
+    }
 }
 
 // Loads the external marked.js library for markdown parsing

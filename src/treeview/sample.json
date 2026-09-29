@@ -3,6 +3,7 @@
     "directory": "treeview",
     "category":"Navigation",
     "ftName" :"treeview",
+    "type": "update",
     "samples" : [
         {"url":"default", "name": "Default Functionalities", "category": "TreeView", "description": "This demo demonstrates the basic tree view component that display the data in a hierarchical structure with the configuration options.",
         "api": {
@@ -67,6 +68,14 @@
                     "fields",
                     "cssClass",
                     "nodeTemplate"
+                ]
+            }
+        },
+        {"url":"virtualization", "name": "Virtualization", "type": "new", "category": "TreeView", "description": "This demo demonstrates the virtualization support of the tree view. The component has 8000 items bound to it including children; however, when you open the suggestion list, only few items are loaded based on the height specified, and the remaining items are loaded while scrolling.", "api": {
+                "TreeView": [
+                    "fields",
+                    "enableVirtualization",
+                    "height"
                 ]
             }
         }

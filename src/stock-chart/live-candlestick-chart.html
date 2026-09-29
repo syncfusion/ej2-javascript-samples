@@ -1,0 +1,293 @@
+<style>
+    /* Scoped styles for the live-candlestick-chart sample. */
+    .local-stock-page {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .local-stock-page .app-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 2px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .local-stock-page .app-title {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .local-stock-page .app-subtitle {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .local-stock-page .connection-status {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 12px;
+        border-radius: 14px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .local-stock-page .connection-status.connecting {
+   
+        color: #92400e;
+    }
+
+
+    .local-stock-page .connection-status.error {
+
+        color: #991b1b;
+    }
+
+    .local-stock-page .info-panel {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+        padding: 16px 20px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+  
+    }
+
+    .local-stock-page .info-cell {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 0;
+    }
+
+    .local-stock-page .info-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .local-stock-page .info-value {
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .local-stock-page .chart-shell {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .local-stock-page .status-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 2px;
+          font-size: 12px;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 720px) {
+        .local-stock-page .app-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .local-stock-page .info-panel {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 12px 16px;
+        }
+
+        .local-stock-page .info-value {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .local-stock-page .info-panel {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="control-section">
+    <div class="local-stock-page">
+        <div class="app-header">
+            <div>
+                <h1 class="app-title">
+                    Real-Time Candlestick Chart
+                </h1>
+
+                <span class="app-subtitle">
+                    Syncfusion EJ2 StockChart &middot;
+                    Simulated one-minute OHLCV data streaming
+                </span>
+            </div>
+
+            <span
+                id="connection-status"
+                class="connection-status connecting"
+                role="status"
+                aria-live="polite">
+                Initializing local data
+            </span>
+        </div>
+
+        <div
+            class="info-panel"
+            aria-label="Current candlestick OHLCV values">
+            <div class="info-cell">
+                <span class="info-label">Open</span>
+                <span
+                    id="open-value"
+                    class="info-value"
+                    aria-label="Current candle open value">
+                    &mdash;
+                </span>
+            </div>
+
+            <div class="info-cell">
+                <span class="info-label">High</span>
+                <span
+                    id="high-value"
+                    class="info-value"
+                    aria-label="Current candle high value">
+                    &mdash;
+                </span>
+            </div>
+
+            <div class="info-cell">
+                <span class="info-label">Low</span>
+                <span
+                    id="low-value"
+                    class="info-value"
+                    aria-label="Current candle low value">
+                    &mdash;
+                </span>
+            </div>
+
+            <div class="info-cell">
+                <span class="info-label">Close</span>
+                <span
+                    id="close-value"
+                    class="info-value"
+                    aria-label="Current candle close value">
+                    &mdash;
+                </span>
+            </div>
+
+            <div class="info-cell">
+                <span class="info-label">Volume</span>
+                <span
+                    id="volume-value"
+                    class="info-value"
+                    aria-label="Current candle volume value">
+                    &mdash;
+                </span>
+            </div>
+        </div>
+
+        <div class="chart-shell">
+            <div
+                id="liveStock"
+                role="img"
+                aria-label="Real-time candlestick stock chart with simulated local OHLCV data">
+            </div>
+
+            <div class="status-row" aria-live="polite">
+                <span class="info-label">Last candle status</span>
+                <span id="candle-status">Initializing data stream</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This
+        <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.syncfusion.com/javascript-ui-controls/js-stock-chart"
+            aria-label="JavaScript Stock Chart with simulated real-time local data">
+            JavaScript Stock Chart
+        </a>
+        example demonstrates a
+        <strong>real-time candlestick chart</strong> driven by continuously
+        updated local data. The chart starts with 120 simulated one-minute
+        OHLCV candles and then dynamically updates the active candle or
+        appends a new candle using <code>series.setData()</code> and
+        <code>series.addPoint()</code>.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this example, the chart uses a plain in-memory array as its data
+        source, so no network request is required. A timer simulates a
+        real-time stock data stream by generating frequent price updates for
+        one-minute OHLCV candles.
+    </p>
+
+    <p>
+        Each generated record is processed in one of the following ways:
+    </p>
+
+    <ul>
+        <li>
+            When the generated record has the
+            <strong>same timestamp</strong> as the latest candle, the existing
+            candle is updated using
+            <code>series.setData(candle, 0)</code>. Animation is disabled for
+            this operation because updates occur frequently.
+        </li>
+
+        <li>
+            When the generated record has a
+            <strong>newer timestamp</strong>, a new one-minute candlestick is
+            appended using
+            <code>series.addPoint(candle, 100)</code> with a short animation.
+        </li>
+    </ul>
+
+    <p>
+        The open, high, low, close, and volume values shown above the chart
+        represent the latest simulated candle. The values are refreshed
+        whenever the local data stream updates the active candle or adds a
+        new one.
+    </p>
+
+    <p>
+        You can replace the simulated data returned by
+        <code>createInitialLocalData()</code> with data from an API,
+        WebSocket, or another local data source. The same update logic can be
+        used to build real-time stock market visualizations, financial
+        dashboards, and live trading charts.
+    </p>
+
+    <br>
+
+   
+    <p>
+        More information about configuring the Stock Chart component is
+        available in the
+        <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ej2.syncfusion.com/javascript/documentation/stock-chart/es5-getting-started"
+            aria-label="Navigate to the JavaScript Stock Chart getting started documentation">
+            Stock Chart documentation
+        </a>.
+    </p>
+</div>

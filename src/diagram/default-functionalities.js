@@ -24,7 +24,7 @@ this.default = function () {
     //Toggles the visibility of the palette space on mobile devices when the palette icon is clicked.
     function openPalette() {
         var paletteSpace = document.getElementById('palette-space');
-        var isMobile = window.matchMedia('(max-width:550px)').matches;
+        isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
                 paletteSpace.classList.add('sb-mobile-palette-open');
@@ -153,10 +153,12 @@ this.default = function () {
         },
         textEdit: function (args) {
             var obj = args.element;
-            obj.annotations[0].style = {
-                color: 'white',
-                fill: 'transparent',
-            };
+            if (obj && obj instanceof ej.diagrams.Node) {
+                obj.annotations[0].style = {
+                    color: 'white',
+                    fill: 'transparent',
+                };
+            }
         },
         created: function (args) {
             diagram.fitToPage();

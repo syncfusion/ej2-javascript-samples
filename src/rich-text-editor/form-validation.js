@@ -19,8 +19,14 @@ this.default = function() {
           },
         },
       };
+      var resetBtn = document.getElementById('resetbtn');
       var formObject = new ej.inputs.FormValidator('#form-element',formValidatorOptions);
       
       var defaultRTE = new ej.richtexteditor.RichTextEditor({ showCharCount: true, maxLength: 100, placeholder: 'Type something' });
       defaultRTE.appendTo('#defaultRTE');
+      
+      resetBtn.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        formObject.reset();
+    });
 };

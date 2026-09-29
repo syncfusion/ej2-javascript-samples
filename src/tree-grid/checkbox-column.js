@@ -1,18 +1,101 @@
 this.default = function () {
-    var treeGridObj = new ej.treegrid.TreeGrid({
-        dataSource: window.sampleData,
-        childMapping: 'subtasks',
-        treeColumnIndex: 1,
-        height: '410',
-        autoCheckHierarchy: true,
-        columns: [
-            { field: 'taskID', headerText: 'Task ID', width: 60, textAlign: 'Right' },
-            { field: 'taskName', headerText: 'Task Name', width: 150, textAlign: 'Left', showCheckbox: true },
-            { field: 'startDate', headerText: 'Start Date', width: 90, textAlign: 'Right', type: 'date', format: 'yMd' },
-            { field: 'endDate', headerText: 'End Date', width: 90, textAlign: 'Right', type: 'date', format: 'yMd' },
-            { field: 'duration', headerText: 'Duration', width: 80, textAlign: 'Right' },
-            { field: 'progress', headerText: 'Progress', width: 80, textAlign: 'Right' },
-        ]
-    });
-    treeGridObj.appendTo('#TreeGrid');
+var treeGridObj = new ej.treegrid.TreeGrid({
+    dataSource: window.showCheckBoxData,
+    childMapping: 'subTasks',
+    treeColumnIndex: 1,
+    hierarchyCheckboxMode: 'self',
+    editSettings: {allowDeleting: true},
+    toolbar: ['Delete', 'Search'],
+    allowFiltering: true,
+    height: 380,
+    columns: [
+        {
+            field: 'taskID',
+            visible: false,
+            isPrimaryKey: true
+        },
+        {
+            field: 'taskName',
+            headerText: 'Task Name',
+            width: 270,
+            showCheckbox: true
+        },
+        {
+            field: 'assignee',
+            headerText: 'Employee',
+            width: 180
+        },
+        {
+            field: 'designation',
+            headerText: 'Designation',
+            width: 220
+        },
+        {
+            field: 'priority',
+            headerText: 'Priority',
+            width: 140
+        },
+        {
+            field: 'status',
+            headerText: 'Status',
+            width: 120,
+            textAlign: 'Center'
+        },
+        {
+            field: 'progress',
+            headerText: 'Progress',
+            width: 120,
+            textAlign: 'Right'
+        }
+    ],
+    queryCellInfo: function (args) {
+        if (args.column.field === 'status') {
+            var status = args.data.status;
+            var statusClass = status
+                .toLowerCase()
+                .replace(/\s+/g, '-');
+            args.cell.innerHTML =
+                '<span class="status-badge ' +
+                statusClass +
+                '">' +
+                status +
+                '</span>';
+        }
+    }
+});
+treeGridObj.appendTo('#TreeGrid');
+var hierarchyModeData = [
+    {
+        id: 'Self',
+        name: 'Self'
+    },
+    {
+        id: 'Hierarchy',
+        name: 'Hierarchy'
+    },
+    {
+        id: 'FilteredHierarchy',
+        name: 'Filtered Hierarchy'
+    }
+];
+var hierarchyModeDropDown = new ej.dropdowns.DropDownList({
+    dataSource: hierarchyModeData,
+    fields: {
+        text: 'name',
+        value: 'id'
+    },
+    value: 'Self',
+    width: '180px',
+    change: function (args) {
+        if (args.value === 'Hierarchy') {
+            treeGridObj.hierarchyCheckboxMode = 'hierarchy';
+        } else if (args.value === 'FilteredHierarchy') {
+            treeGridObj.hierarchyCheckboxMode =
+                'filteredHierarchy';
+        } else {
+            treeGridObj.hierarchyCheckboxMode = 'self';
+        }
+    }
+});
+hierarchyModeDropDown.appendTo('#hierarchyModes');
 };

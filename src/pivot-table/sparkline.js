@@ -97,6 +97,7 @@ this.default = function () {
                     dataSource: obj[keys[i]],
                     xName: 'xval',
                     yName: 'yval',
+                    enableRtl: pivotObj ? pivotObj.enableRtl : false,
                     markerSettings: {
                         visible: ['High', 'Low'],
                         size: 3,

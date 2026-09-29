@@ -95,7 +95,7 @@ this.default = function () {
     // Function to open or close the palette on mobile devices
     function openPalette() {
         var paletteSpace = document.getElementById('palette-space');
-        var isMobile = window.matchMedia('(max-width:550px)').matches;
+        isMobile = window.matchMedia('(max-width:550px)').matches;
         if (isMobile) {
             if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
                 paletteSpace.classList.add('sb-mobile-palette-open');

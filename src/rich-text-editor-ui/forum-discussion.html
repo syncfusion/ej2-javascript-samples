@@ -1,0 +1,224 @@
+<div class="control-section">
+    <div class="sample-container">
+        <div class="forum-section">
+            <div class="forum-header">
+                <span class="forum-icon">&#128172;</span>
+                <span class="forum-title">Discussion</span>
+            </div>
+
+            <div class="rte-container">
+                <img id="userAvatar" class="comment-avatar" src="src/rich-text-editor-ui/images/1.png" alt="Selma Rose">
+                <div class="rte-input">
+                    <div id="editor"></div>
+                    <div class="button-group">
+                        <button id="updateBtn" class="e-btn e-primary">Post</button>
+                        <button id="discardBtn" class="e-btn e-outline">Discard</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments-container">
+                <label class="comments-title">Comments</label>
+                <div id="commentsList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates a forum discussion component with Rich Text Editor UI and ListView for displaying and managing comments.</p>
+</div>
+
+<div id="description">
+    <p>The Rich Text Editor UI is integrated with Syncfusion ListView component to create a forum discussion interface. Users can write formatted comments using the RTE, then submit them to display in the ListView. Each comment item shows the author's avatar, name, timestamp, and provides copy and delete action buttons.</p>
+</div>
+
+<style>
+.forum-section {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #e2e4e8;
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px;
+}
+
+.forum-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e4e8;
+    margin-bottom: 20px;
+}
+
+.forum-icon {
+    font-size: 18px;
+}
+
+.forum-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.rte-container {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.rte-container .comment-avatar {
+    flex-shrink: 0;
+    margin: 2px 0 0 2px;
+}
+
+.rte-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.rte-input #editor {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.button-group .e-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.button-group .e-outline {
+    border: 1px solid #d3d3d3;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.button-group .e-outline:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.comments-container {
+    border-top: 1px solid #e2e4e8;
+    padding-top: 16px;
+}
+
+.comments-title {
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 14px;
+    color: #1a1a1a;
+}
+
+.comment-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 2px;
+}
+
+/* ListView container styling - target through container ID */
+#commentsList {
+    margin: 0;
+    padding: 0;
+}
+
+#commentsList .e-list-item {
+    display: block;
+    height: auto;
+    padding: 0 0 0 2px;
+    border: none;
+    margin: 0 0 16px 0;
+}
+
+#commentsList .e-list-item:last-child {
+    margin-bottom: 0;
+}
+
+#commentsList .e-text-content {
+    display: block;
+}
+
+.comment-item {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.comment-body {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #ebedf0;
+    border-radius: 5px;
+    padding: 10px 40px 10px 14px;
+    position: relative;
+}
+
+.comment-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.comment-author {
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 13.5px;
+}
+
+.comment-time {
+    font-size: 11.5px;
+    color: #8a8a8a;
+}
+
+.comment-text {
+    color: #333;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 13.5px;
+}
+
+.comment-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 2px;
+}
+
+.action-btn {
+    cursor: pointer;
+    color: #777;
+}
+
+.action-btn:hover {
+    background: #e3eefc !important;
+    color: #2196F3 !important;
+}
+
+.delete-btn:hover {
+    background: #fdeaea !important;
+    color: #f44336 !important;
+}
+
+.no-comments {
+    color: #999;
+    font-size: 13px;
+    padding: 10px 0;
+}
+</style>

@@ -103,6 +103,7 @@ this.default = function() {
         },
         speechToTextSettings: { enable: true },
         bannerTemplate: '#bannerContent',
+        stopRespondingClick: stopAIResponse,
         promptRequest: onPromptRequest,
     });
 
@@ -181,14 +182,21 @@ this.default = function() {
     function toolbarItemClicked(args) {
         if (args.item.iconCss === 'e-icons e-refresh') {
             aiAssistView.prompts = [];
+            stopAIResponse();
         }
     }
 
     async function onPromptRequest(args) {
         abortController = new AbortController();
         var foundPrompt = (window.defaultPromptResponseData || []).find(p => p.prompt === args.prompt);
-        var responseHtml = foundPrompt ? (foundPrompt.regeneratedResponses ? getRandomResponse(foundPrompt.regeneratedResponses) : foundPrompt.response) : await window.getAIResponse(args, abortController);
+        var responseHtml = await window.getAIResponse(args, abortController);
         aiAssistView.addPromptResponse(responseHtml);
         aiAssistView.promptSuggestions = foundPrompt?.suggestions || window.overviewSuggesstions || [];
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 };

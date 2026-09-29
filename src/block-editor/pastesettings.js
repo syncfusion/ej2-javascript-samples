@@ -75,7 +75,7 @@ this.default = function () {
   }
 
   // Load JSON and initialize editor
-  loadJson('./src/block-editor/blockData.json', function (data) {
+  loadJson('./src/block-editor/data/paste-settings.json', function (data) {
     overviewBlockEditor = new ej.blockeditor.BlockEditor({
       blocks: data.blockDataPaste,
       height: '600px',
@@ -91,13 +91,13 @@ this.default = function () {
     wireUi();
   }, function (message) {
     if (window.console && console.error) {
-      console.error('Failed to load blockData.json:', message);
+      console.error('Failed to load paste-settings.json:', message);
     }
     // Fallback UI message if desired
     var container = document.getElementById('block-editor');
     if (container) {
       container.innerHTML = '<div style="color:#b91c1c;padding:8px;">Unable to load paste data. ' +
-        'Ensure blockData.json is served over HTTP and the path is correct.<br/>Details: ' + message +
+        'Ensure paste-settings.json is served over HTTP and the path is correct.<br/>Details: ' + message +
         '</div>';
     }
   });

@@ -7,6 +7,7 @@ this.default = function() {
             'Explain how climate change affects everyday life'
         ],
         promptRequest: onPromptRequest,
+        stopRespondingClick: stopAIResponse,
         enableStreaming: true
     });
     thinkingAIAssistView.appendTo('#aiAssistView');
@@ -60,6 +61,12 @@ this.default = function() {
                 thinkingAIAssistView.addPromptResponse({ response: error.message });
             }
             thinkingAIAssistView.addPromptResponse({ response: "We could not reach the AI service; please try again later." });
+        }
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
         }
     }
 };

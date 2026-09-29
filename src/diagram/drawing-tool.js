@@ -2,7 +2,7 @@
 /**
  * Drawing tools sample
  */
-const { Diagram, UndoRedo, Snapping, DiagramTools, SnapConstraints } = ej.diagrams;
+var { Diagram, UndoRedo, Snapping, DiagramTools, SnapConstraints } = ej.diagrams;
 Diagram.Inject(UndoRedo, Snapping);
 
 // Initialize diagram and checkbox

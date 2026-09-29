@@ -1,7 +1,7 @@
 this.default = function() {
 
     var abortController;
-    var splitterObj = new ej.layouts.Splitter({
+    var splitterObj = new ej.layouts.Splitter({ 
         height: '600px',
         paneSettings: [
             { size: '22%', resizable: false },
@@ -24,7 +24,8 @@ this.default = function() {
         promptSuggestions: window.defaultSuggestions,
         enableStreaming: true,
         promptRequest: onPromptRequest,
-        bannerTemplate: "#bannerContent",
+        stopRespondingClick: stopAIResponse,
+        bannerTemplate: bannerContent,
         toolbarSettings: {
             items: [ { iconCss: 'e-icons e-close', align: 'Right' } ],
             itemClicked: toolbarItemClicked
@@ -39,7 +40,7 @@ this.default = function() {
     async function onPromptRequest(args) {
         abortController = new AbortController();
         var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
-        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        var response = await window.getAIResponse(args, abortController);
         dialogAIAssistView.addPromptResponse(response);
         dialogAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
     }
@@ -47,6 +48,7 @@ this.default = function() {
     function toolbarItemClicked(args) {
         if (args.item.iconCss === 'e-icons e-close') {
             dialogOpenClose();
+            stopAIResponse();
         }
         if (args.item.iconCss === 'e-icons e-assist-copy') {
             var targetElem = document.querySelector('.right-content .content');
@@ -70,5 +72,19 @@ this.default = function() {
 
     function dialogOpenClose() {
         dialogInst.visible = !dialogInst.visible;
+    }
+
+    function bannerContent() {
+        return `<div class="banner-content">
+                    <div class="e-icons e-assistview-icon">
+                    </div><h3>AI Assistance</h3>
+                    <i>To get started, provide input or choose a suggestion.</i>
+                </div>`;
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 };

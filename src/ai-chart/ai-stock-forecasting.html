@@ -1,0 +1,175 @@
+<div class="control-section">
+    <div class="left-panel">
+        <!-- Symbol selector (DropDownButton with MSFT/GOOG/AMZN/TSLA) -->
+        <div class="symbol-row">
+            <button id="stock-selector"></button>
+        </div>
+
+        <div class="button-and-chart-controls">
+            <div class="left-buttons">
+                <div class="e-btn-group">
+                    <button id="btn3m">3 Month</button>
+                    <button id="btn6m">6 Month</button>
+                    <button id="btn12m">1 Year</button>
+                </div>
+            </div>
+
+            <div class="chart-controls">
+                <!-- Series type dropdown (Candle / Line / HiloOpenClose) -->
+                <input id="series-type" />
+                <!-- AI Forecast button -->
+                <button id="forecastBtn" class="chart-action-button">
+                </button>
+            </div>
+        </div>
+
+        <div style="position:relative">
+            <div id="stock-chart" align="center"></div>
+
+            <div id="chartSpinner"
+                class="chart-spinner-overlay">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates AI-powered stock price forecasting for a
+        configurable symbol (MSFT, GOOG, AMZN, or TSLA) and time range
+        (3 / 6 / 12 months). Pick a symbol and series type, then click
+        <strong>AI Forecast</strong> to ask the AI service to project the
+        next 35 trading days of OHLC data.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The chart visualises daily OHLC (open / high / low / close) data
+        fetched from the Syncfusion CDN. The <strong>AI Forecast</strong>
+        action sends the most recent 10 trading days to the AI service,
+        which returns a delta payload describing the projected candlesticks
+        and the strip line that separates observed data from the forecast.
+    </p>
+    <p>
+        The series can be toggled between
+        <strong>Candle</strong>, <strong>Line</strong>, and
+        <strong>HiloOpenClose</strong> rendering, and the chart re-renders
+        in place without losing its scroll / zoom state.
+    </p>
+</div>
+
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+    .para {
+        padding-top: 5px;
+    }
+
+    .stock-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-left: 10px;
+    }
+
+    /* Wrapper for the symbol selector (DropDownButton). */
+    .symbol-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .e-logo-msft::before,
+    .e-logo-goog::before,
+    .e-logo-amzn::before,
+    .e-logo-tsla::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 2px 2px 2px 2px;
+        vertical-align: middle;
+        position: relative;
+    }
+
+    .e-logo-msft::before {
+        background-image: url("https://cdn.syncfusion.com/blazor/images/chart/microsoft.png");
+    }
+
+    .e-logo-goog::before {
+        background-image: url("https://cdn.syncfusion.com/blazor/images/chart/google.png");
+    }
+
+    .e-logo-amzn::before {
+        background-image: url("https://cdn.syncfusion.com/blazor/images/chart/amazon.png");
+    }
+
+    .e-logo-tsla::before {
+        background-image: url("https://cdn.syncfusion.com/blazor/images/chart/tesla.png");
+    }
+
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chart-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px
+    }
+
+    .button-and-chart-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .chart-action-button {
+        width: 40px;
+        height: 30px;
+    }
+
+    .chart-action-button .e-icons {
+        color: white;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-size: large;
+    }
+
+    .chart-spinner-overlay {
+        position: absolute;
+        inset: 0;
+        display: none;
+        place-content: center;
+        background: rgba(0, 0, 0, 0.08);
+        z-index: 20;
+    }
+
+    .chart-spinner-overlay.visible {
+        display: grid;
+    }
+
+    .loader {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 4px solid #ccc;
+        border-top-color: #0078d4;
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>

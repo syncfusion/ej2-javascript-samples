@@ -24,6 +24,7 @@ this.default = function() {
         promptSuggestions: window.notionSuggestions,
         promptSuggestionItemTemplate: suggestionItemContent,
         promptRequest: onPromptRequest,
+        stopRespondingClick: stopAIResponse,
         bannerTemplate: function () {
             return `<div class="banner-content">
             <div class="e-icons e-assistview-icon"></div>
@@ -155,6 +156,12 @@ this.default = function() {
         isFirstSessionAdded = true;
         }
         defaultAIAssistView.promptSuggestions = [];
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 
     function toolbarItemClicked(args) {

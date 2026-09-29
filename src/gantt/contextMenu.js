@@ -1,6 +1,6 @@
 this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
-        dataSource: window.editingData,
+        dataSource: window.contextMenuData,
         dateFormat: 'MMM dd, y',
         taskFields: {
             id: 'TaskID',
@@ -20,7 +20,8 @@ this.default = function () {
             allowEditing: true,
             allowDeleting: true,
             allowTaskbarEditing: true,
-            showDeleteConfirmDialog: true
+            showDeleteConfirmDialog: true,
+            allowTaskbarDraw: true
         },
         toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
         allowSelection: true,
@@ -45,10 +46,12 @@ this.default = function () {
             },
         },
         allowResizing: true,
+        allowUnscheduledTasks: true,
         columns: [
-            { field: 'TaskID', width: 80 },
+            { field: 'TaskID', width: 80, visible: false },
             { field: 'TaskName', headerText: 'Job Name', width: 250, clipMode: 'EllipsisWithTooltip' },
             { field: 'StartDate' },
+            { field: 'EndDate'},
             { field: 'Duration' },
             { field: 'Progress' },
             { field: 'Predecessor' }

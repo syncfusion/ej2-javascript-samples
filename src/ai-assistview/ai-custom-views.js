@@ -67,9 +67,8 @@ this.default = function() {
         responseView.innerHTML = responseItemElem + responseView.innerHTML;
         setTimeout(async () => {
             abortController = new AbortController();
-            var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === prompt);
             var args = { prompt: prompt };
-            var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+            var response = await window.getAIResponse(args, abortController);
             responseView.children[0].querySelector('.content').innerHTML = response;
             var copyBtn = responseView.children[0].querySelector('#copyBtn');
             copyBtn.classList.remove('e-skeleton', 'e-shimmer-wave');

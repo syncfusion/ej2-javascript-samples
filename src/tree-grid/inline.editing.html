@@ -1,23 +1,9 @@
-<div class="col-lg-9 control-section">
+<div class="control-section">
     <div class="content-wrapper">
         <div id="TreeGrid" role="grid" aria-label="Tree Grid"></div>
     </div>
 </div>
 
-<div class="col-lg-3 property-section">
-    <table id="property" title="Properties" style="width: 100%">
-        <tr style="height: 50px">
-            <td>
-                <div>Edit Mode</div>
-            </td>
-            <td class="editmode-data" style="width: 70%;padding-right: 10px">
-                <div id='columnddl'>
-                    <input type="text" tabindex="0" id='editmodes' />
-               </div>
-            </td>
-         </tr>
-    </table>
-</div>
 <!-- custom code start -->
 <div id="action-description">
     <p>This sample demonstrates CRUD operations in Grid. You can perform CRUD operations as follows,</p>
@@ -41,13 +27,11 @@
     <ul>
         <li><code>Row </code></li>
         <li><code>Cell</code></li>
+        <li><code>Batch</code></li>
         <li><code>Dialog</code></li>
     </ul>
     <p>
-        In this demo, Row mode is enabled for editing by default. You can start editing any row by double clicking on it or clicking on toolbar’s Edit button, then the currently selected row will be changed to edited state. You can change the row values and save edited data to the datasource.
-    </p>
-    <p>
-        We have also provided an option in property panel to select the edit mode as Cell or Row to change <code>mode</code> of editing.
+        In this demo, Row mode is enabled for editing. You can start editing any row by double clicking on it or clicking on toolbar’s Edit button, then the currently selected row will be changed to edited state. You can change the row values and save edited data to the datasource.
     </p>
     <p>
         More information on the Inline Editing can be found in

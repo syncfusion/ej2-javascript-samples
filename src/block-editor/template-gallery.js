@@ -71,7 +71,7 @@ this.default = function () {
   }
 
   // Load JSON and initialize templates + UI
-  loadJson('./src/block-editor/blockData.json', function (data) {
+  loadJson('./src/block-editor/data/template-gallery.json', function (data) {
     // Expect data.blockTemplate[0].page to contain the template pages
     if (data && data.blockTemplate && data.blockTemplate[0] && data.blockTemplate[0].page) {
       templates = data.blockTemplate[0].page;
@@ -91,13 +91,13 @@ this.default = function () {
     }
   }, function (message) {
     if (window.console && console.error) {
-      console.error('Failed to load blockData.json:', message);
+      console.error('Failed to load template-gallery.json:', message);
     }
     // Optional: show a small message near the cards container
     var note = document.createElement('div');
     note.style.color = '#b91c1c';
     note.style.padding = '8px';
-    note.textContent = 'Unable to load templates. Ensure blockData.json is served over HTTP and the path is correct. Details: ' + message;
+    note.textContent = 'Unable to load templates. Ensure template-gallery.json is served over HTTP and the path is correct. Details: ' + message;
     if (cardsContainer && cardsContainer.parentNode) {
       cardsContainer.parentNode.insertBefore(note, cardsContainer);
     }

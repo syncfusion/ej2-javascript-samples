@@ -62,9 +62,8 @@ this.default = function () {
     };
 
     // Adjust this path if your folder structure differs
-    loadJson('./src/block-editor/blockData.json', function (data) {
-        // data has keys: blockDataAPI, blockDataOverview, blockDataEvents, blockDataPaste, users, blockTemplate
-
+    loadJson('./src/block-editor/data/api.json', function (data) {
+        // data has key: blockDataAPI
         // Initialize BlockEditor with JSON blocks
         apiBlockEditor = new ej.blockeditor.BlockEditor({
             blocks: data.blockDataAPI,
@@ -125,9 +124,9 @@ this.default = function () {
         });
     }, function (message) {
         if (window.console && console.error) {
-            console.error('Failed to load blockData.json:', message);
+            console.error('Failed to load api.json:', message);
         }
-        openDialog('Load Error', 'Unable to load blockData.json. ' +
+        openDialog('Load Error', 'Unable to load api.json. ' +
             'Ensure the file is served over HTTP and the path is correct.\n\nDetails: ' + message);
     });
 };

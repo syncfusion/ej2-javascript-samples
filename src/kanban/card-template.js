@@ -50,7 +50,7 @@ this.default = function () {
             textareaObj.appendTo(args.element.querySelector('#Description'));
            
             var datepicker = new ej.calendars.DatePicker({
-               value: curData.Date ,
+               value: curData.Date ? new Date(curData.Date) : null, 
                format:'MM/dd/yyyy',
 
             });
@@ -59,9 +59,14 @@ this.default = function () {
         }
     }
     function onEditDialogClose(args) {
-        if(args.element.querySelector('#Date'))
-        {
-            args.data.Date = args.element.querySelector('#Date').ej2_instances[0].value.toLocaleString('es-PR').split(",")[0];
+        var datePicker = args.element.querySelector('#Date');
+        if (datePicker) {
+            var selectedDate = datePicker.ej2_instances[0].value;
+            if (selectedDate instanceof Date) {
+                args.data.Date = selectedDate.toLocaleDateString('es-PR');
+            } else {
+                args.data.Date = '\u200B';
+            }
         }
       
     }

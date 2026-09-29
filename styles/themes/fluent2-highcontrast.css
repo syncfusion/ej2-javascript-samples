@@ -124,6 +124,10 @@ body.fluent2-highcontrast,
 .fluent2-highcontrast .sb-bread-crumb .sb-bread-crumb-text>div {
     color: #ffffff;
 }
+.fluent2-highcontrast .sb-sdk-popup li.active .sb-sdk-select,
+.fluent2-highcontrast .sb-sdk-popup li:hover.active .sb-sdk-select {
+    color: #ffffff;
+}
 
 .fluent2-highcontrast .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item.e-active>.e-tab-wrap>.e-text-wrap>.e-tab-text,
 .fluent2-highcontrast .sb-content-tab>.e-tab.e-nested>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item:hover>.e-tab-wrap>.e-text-wrap>.e-tab-text {
@@ -169,8 +173,12 @@ body.fluent2-highcontrast,
 .fluent2-highcontrast .sb-src-code,
 .fluent2-highcontrast .sb-api-section,
 .fluent2-highcontrast .sb-theme-popup,
-.fluent2-highcontrast .sb-products-popup,
 .fluent2-highcontrast .copy-tooltip,
+.fluent2-highcontrast .sdk-wrapper:hover,
+.fluent2-highcontrast .sdk-wrapper.active,
+.fluent2-highcontrast .sb-sdk-popup li:hover,
+.fluent2-highcontrast .sb-sdk-popup,
+.fluent2-highcontrast .sb-sdk-popup li:hover,
 .fluent2-highcontrast .e-icons.copycode,
 .fluent2-highcontrast #search-input-wrapper input,
 .tailwfluent2ind-dark #search-input-wrapper input::placeholder {
@@ -185,13 +193,15 @@ body.fluent2-highcontrast,
 .fluent2-highcontrast .sb-switch-popup li:hover,
 .fluent2-highcontrast .theme-wrapper:hover,
 .fluent2-highcontrast .theme-wrapper.active,
-.fluent2-highcontrast .products-wrapper:hover,
-.fluent2-highcontrast .products-wrapper.active,
-.fluent2-highcontrast .sb-theme-popup li:hover,
-.fluent2-highcontrast .sb-products-popup li:hover {
+.fluent2-highcontrast .sb-theme-popup li:hover{
     background-color: rgba(255, 255, 255, 0.12);
 }
-
+.fluent2-highcontrast .sb-sdk-popup li:hover .sb-sdk-select {
+    color: transparent;
+}
+.fluent2-highcontrast .sb-sdk-popup {
+    border: unset;
+}
 .fluent2-highcontrast .sb-left-pane .e-listview .e-list-item:hover,
 .fluent2-highcontrast .sb-search-result .e-list-item:hover {
     background-color: #1AEBFF;
@@ -318,4 +328,12 @@ body.fluent2-highcontrast,
 
 .fluent2-highcontrast .e-samplestatus.preview.tree{
     margin-top: 5px !important;
+}
+
+.sdk-wrapper {
+    background:none;
+}
+.fluent2-highcontrast .sf-axe-msg.e-message {
+    background-color: #1C1B1F;
+    border: 1px solid #FFFFFF;
 }

@@ -1,7 +1,7 @@
 var cBlock = ['sb-src-code.hljs.javascript', 'sb-src-code.hljs.xml'];
 var switcherPopup;
 var themeSwitherPopup;
-var productsSwitcherPopup;
+var sdkPopup;
 var openedPopup;
 var searchPopup;
 var settingsPopup;
@@ -11,7 +11,7 @@ var preventToggle;
 var prevAction;
 var searchInstance;
 var headerThemeSwitch = document.getElementById('header-theme-switcher');
-var headerProductsSwitch = document.getElementById('header-products-switcher');
+var headerSdkSwitch = document.getElementById('header-sdk-switcher');
 var settingElement = ej.base.select('.sb-setting-btn');
 var themeList = document.getElementById('themelist');
 var themeCollection = ['material3', 'bootstrap5', 'fluent2', 'tailwind3', 'fluent2-highcontrast', 'highcontrast', 'tailwind', 'fluent', 'material3-dark', 'bootstrap5-dark', 'fluent2-dark', 'tailwind-dark', 'tailwind3-dark', 'fluent-dark'];
@@ -37,6 +37,7 @@ var resetSearch = ej.base.select('.sb-reset-icon');
 var urlRegex = /(npmci\.syncfusion\.com|ej2\.syncfusion\.com)(\/)(development|production)*/;
 var aiUrlRegex = /\/ai-[^\/]+\//;
 var aiControlRegex = /^ai-.*/;
+var aiRegex = /ai-(?!assistview\b)[a-z-]+/;
 var sampleRegex = /#\/(([^\/]+\/)+[^\/\.]+)/;
 let toastObjt = null;
 let isToastVisible = false;
@@ -76,8 +77,10 @@ var breadCrumbSample = document.querySelector('.sb-bread-crumb-text>.crumb-sampl
 var hsplitter = '<div class="sb-toolbar-splitter sb-custom-item"></div>';
 var openNewTemplate = "<div class=\"sb-custom-item sb-open-new-wrapper\"><a id=\"openNew\" role='tab' target=\"_blank\" aria-label=\"Open new sample\">\n<div class=\"sb-icons sb-icon-Popout\"></div></a></div>";
 var sampleNavigation = "<div class=\"sb-custom-item sample-navigation\"><button id='prev-sample' role='tab' class=\"sb-navigation-prev\" \n    aria-label=\"Navigate to previous sample\">\n<span class='sb-icons sb-icon-Previous'></span>\n</button>\n<button role='tab' id='next-sample' class=\"sb-navigation-next\" aria-label=\"Navigate to next sample\">\n<span class='sb-icons sb-icon-Next'></span>\n</button>\n</div>";
+var wcagTemplate = '<span class="sb-wcag-text">WCAG 2.2</span>';
 var plnrTemplate = '<span class="sb-icons sb-icons-plnkr" role="presentation"></span><span class="sb-plnkr-text">Edit in StackBlitz</span>';
-var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="open-plnkr" role="tab" aria-label="Open Edit in StackBlitz" tabindex="0" class="sb-custom-item sb-plnr-section">' +
+var contentToolbarTemplate = '<div class="sb-desktop-setting"><button id="sf-wcag-btn" role="tab" aria-label="WCAG 2.2 Accessibility Report" tabindex="0" class="sb-custom-item sb-plnr-section sb-wcag-btn">' +
+    wcagTemplate + '</button>' + hsplitter + '<button id="open-plnkr" role="tab" aria-label="Open Edit in StackBlitz" tabindex="0" class="sb-custom-item sb-plnr-section">' +
     plnrTemplate + '</button>' + hsplitter + openNewTemplate + hsplitter +
     '</div>' + sampleNavigation + '<div class="sb-icons sb-mobile-setting"></div>';
 var tabContentToolbar = ej.base.createElement('div', { className: 'sb-content-toolbar', innerHTML: contentToolbarTemplate });
@@ -92,6 +95,7 @@ var currentSampleID;
 var currentControl;
 var currencyDropDown;
 var cultureDropDown;
+var sdkDropDown;
 var demoSection = ej.base.select('.sb-demo-section');
 var newYear= new Date().getFullYear();
 var copyRight= document.querySelector('.sb-footer-copyright');
@@ -105,16 +109,31 @@ var matchedCurrency = {
     'zh': 'CNY',
     'fr-CH': 'CHF'
 };
-// Product URLs configuration
-var productUrls = {
-    'pdf-viewer': 'https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html',
-    'spreadsheet-editor': 'https://document.syncfusion.com/demos/spreadsheet-editor/javascript-es5/#/tailwind3/spreadsheet/default.html',
-    'docx-editor': 'https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/default.html'
-};
 settingsidebar = new ej.navigations.Sidebar({
     position: 'Right', width: '282', zIndex: '1003', showBackdrop: true, type: 'Over', enableGestures: false,
     closeOnDocumentClick: true, close: closeRightSidebar
 });
+
+// WCAG button and tooltip will be initialized later after DOM is ready
+var wcagButtonInitialized = false;
+
+// Hide the accessibility message for AI samples and on mobile viewports
+function toggleAxeMessageVisibility() {
+    var wrapper = document.querySelector('.sf-axe-section');
+    if (!wrapper) return;
+
+    var hashStr = (location.hash || '').replace(/^#\//, '');
+    var hashControl = hashStr.split('/')[1] || '';
+    var isAi = aiRegex.test(hashControl);
+
+    wrapper.classList.toggle('sb-hide', isMobile || isAi);
+}
+toggleAxeMessageVisibility();
+// Re-evaluate on hashchange so the message disappears/shows as the user navigates between samples
+window.addEventListener('hashchange', toggleAxeMessageVisibility);
+// Re-evaluate on resize so a desktop -> mobile switch hides it (and vice versa)
+window.addEventListener('resize', toggleAxeMessageVisibility);
+
 function closeRightSidebar(args) {
   let targetEle = args.event ? args.event.target : null;
   if (targetEle && targetEle.closest('.e-popup')) args.cancel = true;
@@ -206,6 +225,68 @@ function dynamicTab(e) {
     }
 }
 
+/**
+ * Helper function: Get the currently active SDK key from DOM
+ */
+function getActiveSdk() {
+    var activeItem = document.querySelector('#sdklist li.active');
+    if (!activeItem) return 'all';
+    return activeItem.getAttribute('data-sdk') || 'all';
+}
+
+/**
+ * SDK Control Map - Explicit definition of which controls belong to each SDK
+ * All AI samples live under a single 'ai-grid' tree node (AI-Powered Samples)
+ * This map lists individual ai-* controls that belong to each SDK
+ */
+var sdkControlMap = {
+    // 'all' shows everything — no filter applied
+    all: [],
+
+    // Grid SDK: Data Grid, Pivot Table, Tree Grid + AI variants
+    grid: [
+        'grid', 'pivot-table', 'tree-grid',
+        'ai-grid', 'ai-pivot-table', 'ai-tree-grid',
+    ],
+
+    // Chart SDK: all visualization components + AI Maps
+    chart: [
+        'chart', 'three-dimension-chart', 'circular-3d-chart', 'stock-chart',
+        'arc-gauge', 'circular-gauge', 'heatmap-chart', 'linear-gauge', 'maps',
+        'range-navigator', 'smith-chart', 'barcode', 'sparkline', 'treemap',
+        'bullet-chart', 'sankey', 'dashboard-layout', 'dashboards',
+        'ai-maps',
+    ],
+
+    // Scheduler SDK: calendar & date/time pickers + AI Scheduler
+    schedule: [
+        'schedule', 'calendar', 'datepicker', 'daterangepicker', 'datetimepicker', 'timepicker',
+        'ai-schedule',
+    ],
+
+    // Gantt SDK: Gantt + Kanban + AI variants
+    gantt: [
+        'gantt', 'kanban',
+        'ai-gantt', 'ai-kanban',
+    ],
+
+    // Rich Text Editor SDK
+    'rich-text-editor': [
+        'rich-text-editor', 'block-editor', 'markdown-editor',
+    ],
+
+    // File Manager SDK
+    'file-manager': [
+        'file-manager',
+    ],
+
+    // Diagram SDK
+    diagram: [
+        'diagram',
+        'ai-diagram',
+    ]
+};
+
 function renderSbPopups() {
     switcherPopup = new ej.popups.Popup(document.getElementById('sb-switcher-popup'), {
         relateTo: document.querySelector('.sb-header-text-right'),
@@ -220,12 +301,14 @@ function renderSbPopups() {
         position: { X: 'left', Y: 'bottom' },
         collision: { X: 'flip', Y: 'flip' }
     });
-    productsSwitcherPopup = new ej.popups.Popup(document.getElementById('products-switcher-popup'), {
+    sdkPopup = new ej.popups.Popup(document.getElementById('sdk-popup'), {
         offsetY: 2,
-        relateTo: document.querySelector('.products-wrapper'),
+        zIndex: 10012,
+        relateTo: document.querySelector('.sdk-wrapper'),
         position: { X: 'left', Y: 'bottom' },
         collision: { X: 'flip', Y: 'flip' }
     });
+    sdkPopup.hide();
 
 // Initialize AutoComplete
 searchPopup = new ej.dropdowns.AutoComplete({
@@ -267,6 +350,49 @@ searchPopup = new ej.dropdowns.AutoComplete({
         let hashval = '#/' + location.hash.split('/')[1] + '/' + data.dir + '/' + data.url + '.html';
         searchPopup.hidePopup();
         searchOverlay.classList.add('e-search-hidden');
+        var selectedControl = data.dir;
+        var activeSdk = document.querySelector('#sdklist li.active')
+            ? document.querySelector('#sdklist li.active').getAttribute('data-sdk')
+            : 'all';
+        var currentSdkControls = sdkControlMap[activeSdk] || [];
+        if (currentSdkControls.indexOf(selectedControl) === -1) {
+            var matchedSdk = 'all';
+            // Find which SDK owns this control
+            for (var sdkKey in sdkControlMap) {
+                if (
+                    sdkKey !== 'all' &&
+                    sdkControlMap[sdkKey] &&
+                    sdkControlMap[sdkKey].indexOf(selectedControl) !== -1
+                ) {
+                    matchedSdk = sdkKey;
+                    break;
+                }
+            }
+            localStorage.setItem('selectedSdk', matchedSdk);
+            var sdkList = document.getElementById('sdklist');
+            if (sdkList) {
+                sdkList.querySelectorAll('li').forEach(function (li) {
+                    li.classList.remove('active');
+                });
+                var sdkItem = sdkList.querySelector('[data-sdk="' + matchedSdk + '"]');
+                if (sdkItem) {
+                    sdkItem.classList.add('active');
+                }
+                var targetLi =sdkList.querySelector('[data-sdk="' + matchedSdk + '"]') ||
+                    sdkList.querySelector('li[data-sdk="all"]');
+                var sdkTextSpan = document.querySelector('#sb-sdk-text .sb-header-text-left');
+                if (sdkTextSpan && targetLi) {
+                    var switchText = targetLi.querySelector('.switch-text');
+                    var selectedText = switchText? switchText.textContent: 'ALL DEMOS';
+                    sdkTextSpan.textContent =matchedSdk === 'all'? 'ALL DEMOS'
+                            : selectedText.toUpperCase();
+                }
+            }
+            if (sdkDropDown) {
+                sdkDropDown.value = matchedSdk;
+            }
+            applySdkFilter(matchedSdk);
+        }
         if (location.hash !== hashval) {
             sampleOverlay();
             window.hashString = hashval;
@@ -293,23 +419,17 @@ searchPopup = new ej.dropdowns.AutoComplete({
     }
        searchPopup.hidePopup();
     switcherPopup.hide();
-    productsSwitcherPopup.hide();
     themeSwitherPopup.hide();
+    sdkPopup.hide();
     themeDropDown = new ej.dropdowns.DropDownList({
         index: themeCollection.indexOf(selectedTheme.split('-')[0]),
         change: function (e) { switchTheme(e.value); }
     });
     themeDropDown.appendTo('#sb-setting-theme');
-    var productsDropDown = new ej.dropdowns.DropDownList({
-        index: 0,
-        change: function (e) {
-            var productUrl = productUrls[e.value];
-            if (productUrl) {
-                window.open(productUrl, '_blank');
-            }
-        }
+    sdkDropDown = new ej.dropdowns.DropDownList({
+        select: handleSdkSelectionMobile
     });
-    productsDropDown.appendTo('#sb-setting-products');
+    sdkDropDown.appendTo('#sb-setting-sdk');
     themeModeDropDown = new ej.dropdowns.DropDownList({
         index: selectedTheme.includes('-dark') ? 1 : 0,
         change: function (e) {
@@ -360,6 +480,16 @@ searchPopup = new ej.dropdowns.AutoComplete({
     var nextbutton = new ej.buttons.Button({ iconCss: 'sb-icons sb-icon-Next', cssClass: 'e-flat', iconPosition: 'Right' }, '#mobile-next-sample');
     var tabHeader = document.getElementById('sb-content-header');
     tabHeader.appendChild(tabContentToolbar);
+    
+    // Initialize WCAG button tooltip
+    let axeTooltip = new ej.popups.Tooltip({
+        content: 'Supports WCAG and Section 508 standards. View the accessibility report for this demo\'s compliance details.',
+        position: 'BottomCenter',
+        width: 280,
+        cssClass: 'sb-axe-tooltip'
+    });
+    axeTooltip.appendTo('#sf-wcag-btn');
+    
     var openNew = new ej.popups.Tooltip({
         content: 'Open in New Window'
     });
@@ -504,15 +634,15 @@ function sbHeaderClick(action, preventSearch) {
         case 'changeSampleBrowser':
             curPopup = switcherPopup;
             break;
-        case 'changeProducts':
-            headerProductsSwitch.classList.toggle('active');
-            setPressedAttribute(headerProductsSwitch);
-            curPopup = productsSwitcherPopup;
-            break;
         case 'changeTheme':
             headerThemeSwitch.classList.toggle('active');
             setPressedAttribute(headerThemeSwitch);
             curPopup = themeSwitherPopup;
+            break;
+        case 'changeSdk':
+            headerSdkSwitch.classList.toggle('active');
+            setPressedAttribute(headerSdkSwitch);
+            curPopup = sdkPopup;
             break;
         case 'toggleSettings':
             settingElement.classList.toggle('active');
@@ -523,10 +653,10 @@ function sbHeaderClick(action, preventSearch) {
     }
     if (action === 'closePopup') {
         headerThemeSwitch.classList.remove('active');
-        headerProductsSwitch.classList.remove('active');
+        headerSdkSwitch.classList.remove('active');
         settingElement.classList.remove('active');
         setPressedAttribute(headerThemeSwitch);
-        setPressedAttribute(headerProductsSwitch);
+        setPressedAttribute(headerSdkSwitch);
         setPressedAttribute(settingElement);
     }
     if (curPopup && curPopup !== openedPopup) {
@@ -672,10 +802,12 @@ function onNextButtonClick(arg) {
     addSampleList(samplesList);
     sampleOverlay();
     var curSampleUrl = location.hash;
-    var inx = samplesAr.indexOf(curSampleUrl);
-    if (inx !== -1 && inx + 1 < samplesAr.length) {
-        var prevhref = samplesAr[inx];
-        var curhref = samplesAr[inx + 1];
+    // Use SDK-filtered samples if an SDK is active
+    var activeSamples = getActiveSdkSampleOrder(samplesAr);
+    var inx = activeSamples.indexOf(curSampleUrl);
+    if (inx !== -1 && inx + 1 < activeSamples.length) {
+        var prevhref = activeSamples[inx];
+        var curhref = activeSamples[inx + 1];
         location.href = curhref;
     }
     window.hashString = location.hash;
@@ -686,10 +818,12 @@ function onPrevButtonClick(arg) {
     addSampleList(samplesList);
     sampleOverlay();
     var curSampleUrl = location.hash;
-    var inx = samplesAr.indexOf(curSampleUrl);
+    // Use SDK-filtered samples if an SDK is active
+    var activeSamples = getActiveSdkSampleOrder(samplesAr);
+    var inx = activeSamples.indexOf(curSampleUrl);
     if (inx !== -1 && inx > 0) {
-        var prevhref = samplesAr[inx];
-        var curhref = samplesAr[inx - 1];
+        var prevhref = activeSamples[inx];
+        var curhref = activeSamples[inx - 1];
         location.href = curhref;
     }
     window.hashString = location.hash;
@@ -816,6 +950,295 @@ function resetInput(arg) {
     document.getElementById('search-input-wrapper').setAttribute('data-value', '');
     searchPopup.hidePopup();
 }
+
+/**
+ * Returns a filtered sampleOrder array containing only samples belonging to
+ * the currently active SDK. Falls back to the full sampleOrder when no SDK
+ * filter is active (all).
+ */
+function getActiveSdkSampleOrder(fullOrder) {
+    var activeItem = document.querySelector('#sdklist li.active');
+    if (!activeItem) return fullOrder;
+    
+    var sdkKey = activeItem.getAttribute('data-sdk') || 'all';
+    if (sdkKey === 'all') return fullOrder;
+
+    var allowedControls = sdkControlMap[sdkKey] || [];
+    if (!allowedControls.length) return fullOrder;
+
+    return fullOrder.filter(function(samplePath) {
+        // Handle full hash URLs like "#/tailwind3/ai-smart-paste/default.html"
+        // Split: ['#', 'tailwind3', 'ai-smart-paste', 'default.html']
+        // Control name is always at index [2] (after # and theme)
+        var controlName = samplePath.split('/')[2];
+        
+        // For ai- prefixed controls: match the exact ai-* variant
+        return allowedControls.indexOf(controlName) !== -1;
+    });
+}
+
+/**
+ * Apply SDK filter to the left pane tree and list views.
+ * CRITICAL: All AI samples live under ONE tree node with control-name="ai-grid" (AI-Powered Samples).
+ * When an SDK allows any ai-* controls, we show the ai-grid node (not individual ai-* nodes).
+ */
+function applySdkFilter(sdkKey) {
+    var controlTree = document.getElementById('controlTree');
+    var controlList = document.getElementById('controlList');
+
+    // 'all' shows everything - remove filter
+    if (sdkKey === 'all') {
+        // Remove sdk-hidden from tree nodes and parent category nodes
+        if (controlTree) {
+            var treeItems = controlTree.querySelectorAll('[control-name]');
+            treeItems.forEach(function(item) { item.classList.remove('sdk-hidden'); });
+            var parentItems = controlTree.querySelectorAll('.e-list-item.e-level-1');
+            parentItems.forEach(function(item) { item.classList.remove('sdk-parent-hidden'); });
+        }
+        // Remove sdk-hidden from list items and groups
+        if (controlList) {
+            var listItems = controlList.querySelectorAll('.e-list-item, .e-list-group-item');
+            listItems.forEach(function(item) {
+                item.classList.remove('sdk-hidden');
+                item.classList.remove('sdk-sample-hidden');
+                item.classList.remove('sdk-group-hidden');
+            });
+        }
+        var leftPane = document.querySelector('.sb-left-pane');
+        if (leftPane) leftPane.classList.remove('sdk-filter-active');
+        return;
+    }
+
+    var allowedControls = sdkControlMap[sdkKey] || [];
+    var leftPane = document.querySelector('.sb-left-pane');
+    if (leftPane) leftPane.classList.add('sdk-filter-active');
+
+    // Check if this SDK allows any ai-* controls
+    // If yes, we must SHOW the 'ai-grid' tree node (which hosts ALL AI samples)
+    var showAiNode = allowedControls.some(function(c) { return c.startsWith('ai-'); });
+
+    // Filter tree view nodes (child items with control-name)
+    if (controlTree) {
+        var treeItems = controlTree.querySelectorAll('[control-name]');
+        treeItems.forEach(function(item) {
+            var cn = item.getAttribute('control-name') || '';
+            // Special case: 'ai-grid' tree node is a CONTAINER for all AI samples
+            // Show it if this SDK allows ANY ai-* variants
+            var isVisible = cn === 'ai-grid' ? showAiNode : allowedControls.indexOf(cn) !== -1;
+            if (!isVisible) {
+                item.classList.add('sdk-hidden');
+            } else {
+                item.classList.remove('sdk-hidden');
+            }
+        });
+
+        // Hide parent category nodes (e-level-1) when all their children are hidden
+        var parentItems = controlTree.querySelectorAll('.e-list-item.e-level-1');
+        parentItems.forEach(function(parent) {
+            var children = parent.querySelectorAll('[control-name]');
+            var hasVisible = Array.from(children).some(function(child) { 
+                return !child.classList.contains('sdk-hidden'); 
+            });
+            if (!hasVisible) {
+                parent.classList.add('sdk-parent-hidden');
+            } else {
+                parent.classList.remove('sdk-parent-hidden');
+            }
+        });
+    }
+
+    // Filter list view items using data-path attribute
+    if (controlList) {
+        var listItems = controlList.querySelectorAll('.e-list-item');
+        listItems.forEach(function(item) {
+            var dataPath = item.getAttribute('data-path') || '';
+            // data-path is like "/grid/overview" or "/ai-gantt/task-prioritize"
+            // First segment is the control name.
+            var controlName = dataPath.replace(/^\//, '').split('/')[0] || '';
+            // Direct match: the path's control prefix must be in the allowedControls list.
+            var isMatch = allowedControls.indexOf(controlName) !== -1;
+            if (!isMatch) {
+                item.classList.add('sdk-sample-hidden');
+            } else {
+                item.classList.remove('sdk-sample-hidden');
+            }
+        });
+
+        // Hide group headers that have no visible list items or don't belong to this SDK
+        var groupItems = controlList.querySelectorAll('.e-list-group-item');
+        groupItems.forEach(function(groupItem) {
+            var groupName = groupItem.getAttribute('group-name') || '';
+            // Check if this AI group is allowed for this SDK
+            var isGroupAllowed = !groupName.startsWith('ai-') || allowedControls.indexOf(groupName) !== -1;
+            
+            if (!isGroupAllowed) {
+                groupItem.classList.add('sdk-group-hidden');
+            } else {
+                // Now check if there are visible items under this group
+                var sibling = groupItem.nextElementSibling;
+                var hasVisible = false;
+                while (sibling && !sibling.classList.contains('e-list-group-item')) {
+                    if (!sibling.classList.contains('sdk-sample-hidden')) {
+                        hasVisible = true;
+                        break;
+                    }
+                    sibling = sibling.nextElementSibling;
+                }
+                if (!hasVisible) {
+                    groupItem.classList.add('sdk-group-hidden');
+                } else {
+                    groupItem.classList.remove('sdk-group-hidden');
+                }
+            }
+        });
+    }
+}
+/**
+ * Product keys appended to the SDK dropdown that open an external demo in a new tab.
+ */
+var productSdkKeys = ['pdf', 'spreadsheet', 'docx'];
+
+/**
+ * Opens the corresponding external product demo in a new tab.
+ * Used by the SDK dropdown when a product item (PDF / Spreadsheet / Docx) is selected.
+ */
+function openProductSdkInNewTab(key) {
+    var url = '';
+    if (key === 'pdf') {
+        url = 'https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/default.html';
+    } else if (key === 'spreadsheet') {
+        url = 'https://document.syncfusion.com/demos/spreadsheet-editor/javascript-es5/#/tailwind3/spreadsheet/default.html';
+    } else if (key === 'docx') {
+        url = 'https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/default.html';
+    }
+    if (url) {
+        window.open(url, '_blank');
+    }
+}
+// Navigate to the default sample for the selected SDK
+    var sdkDefaultPaths = {
+        'all': 'grid/grid-overview.html',
+        'grid': 'grid/grid-overview.html',
+        'chart': 'chart/overview.html',
+        'schedule': 'schedule/overview.html',
+        'gantt': 'gantt/overview.html',
+        'rich-text-editor': 'rich-text-editor/tools.html',
+        'file-manager': 'file-manager/overview.html',
+        'diagram': 'diagram/default-functionalities.html'
+    };
+/**
+ * SDK Selection Handler
+ */
+function handleSdkSelection(e) {
+    var target = ej.base.closest(e.target, 'li');
+    if (!target) return;
+
+    var sdkKey = target.getAttribute('data-sdk') || 'all';
+    // Product items (PDF / Spreadsheet / Docx) open in a new tab and stop here.
+    if (productSdkKeys.indexOf(sdkKey) !== -1) {
+        sbHeaderClick('closePopup');
+        openProductSdkInNewTab(sdkKey);
+        return;
+    }
+
+    // Update active highlight in the SDK list
+    var sdkList = document.getElementById('sdklist');
+    if (sdkList) {
+        sdkList.querySelectorAll('li').forEach(function(li) { li.classList.remove('active'); });
+        target.classList.add('active');
+    }
+
+    // Update button text to reflect selection
+    var sdkTextSpan = document.querySelector('#sb-sdk-text .sb-header-text-left');
+    if (sdkTextSpan) {
+        var selectedText = ej.base.select('.switch-text', target) ? ej.base.select('.switch-text', target).textContent : 'ALL DEMOS';
+        sdkTextSpan.textContent = sdkKey === 'all' ? 'ALL DEMOS' : selectedText.toUpperCase();
+    }
+    sampleOverlay();
+    // Shared logic for both desktop & mobile
+    processSdkSelection(sdkKey);
+    setTimeout(() => {
+       removeOverlay();
+      }, 900);
+}
+
+/**
+ * Mobile SDK Selection Handler — invoked by the mobile <select> dropdown
+ * in the settings popup. Keeps the desktop header popup list in sync and
+ * delegates filtering/navigation to processSdkSelection().
+ */
+function handleSdkSelectionMobile(e) {
+    // select event args don't have .value; the value lives in itemData
+    var sdkKey = (e.itemData && e.itemData.value) || 'all';
+    // Product items (PDF / Spreadsheet / Docx) open in a new tab and stop here.
+    if (productSdkKeys.indexOf(sdkKey) !== -1) {
+        // Prevent the dropdown from committing the product key as its new value
+        e.cancel = true;
+        if (e.event) {
+            e.event.preventDefault();
+            e.event.stopPropagation();
+        }
+        sbHeaderClick('closePopup');
+        openProductSdkInNewTab(sdkKey);
+        return;
+    }
+    localStorage.setItem('selectedSdk', sdkKey);
+    // Update active highlight in the header popup list (keeps desktop & mobile in sync)
+    var sdkList = document.getElementById('sdklist');
+    if (sdkList) {
+        sdkList.querySelectorAll('li').forEach(function (li) { li.classList.remove('active'); });
+        var activeItem = sdkList.querySelector('[data-sdk="' + sdkKey + '"]');
+        if (activeItem) {
+            activeItem.classList.add('active');
+        }
+    }
+    var sdkTextSpan = document.querySelector('#sb-sdk-text .sb-header-text-left');
+    if (sdkTextSpan) {
+        var activeItem = sdkList ? sdkList.querySelector('[data-sdk="' + sdkKey + '"]') : null;
+        var selectedText = (activeItem && activeItem.querySelector('.switch-text')) ?
+            activeItem.querySelector('.switch-text').textContent : 'ALL DEMOS';
+        sdkTextSpan.textContent = sdkKey === 'all' ? 'ALL DEMOS' : selectedText.toUpperCase();
+    }
+    // Apply filter / navigate via shared logic
+    processSdkSelection(sdkKey);
+}
+
+/**
+ * Shared SDK selection logic — used by both desktop (handleSdkSelection)
+ * and mobile (handleSdkSelectionMobile). Decides whether to just apply the
+ * filter to the left pane (when the current control is already part of the
+ * chosen SDK) or to navigate to the SDK's default sample.
+ */
+function processSdkSelection(sdkKey) {
+    var currentPath = location.hash.replace(/^#\/[^\/]+\//, '');
+    var currentControl = currentPath.split('/')[0];
+    var defaultPath = sdkDefaultPaths[sdkKey];
+    var defaultControl = defaultPath ? defaultPath.split('/')[0] : '';
+    var shouldRedirect = currentPath !== defaultPath;
+    localStorage.setItem('selectedSdk', sdkKey);
+    if (!shouldRedirect) {
+        sbHeaderClick('closePopup');
+        applySdkFilter(sdkKey);
+        // If tree view is visible, switch to list view
+        const tree = document.querySelector('#controlTree');
+        if (tree && tree.style.display !== 'none') {
+          showHideControlTree();
+        }
+        return;
+    } else {
+        var newHash = '#/' + selectedTheme + '/' + defaultPath;
+        if (location.hash !== newHash) {
+            sampleOverlay();
+            location.hash = newHash;
+            window.hashString = location.hash;
+            applySdkFilter(sdkKey);
+            setSelectList();
+        }
+    }
+    sbHeaderClick('closePopup');
+}
+
+
 function bindEvents() {
     document.getElementById('sb-switcher').addEventListener('click', function (e) {
         e.preventDefault();
@@ -832,18 +1255,6 @@ function bindEvents() {
         e.stopPropagation();
         sbHeaderClick('changeSampleBrowser');
     });
-    headerProductsSwitch.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        sbHeaderClick('changeProducts');
-    });
-    headerProductsSwitch.addEventListener('keydown', function (e) {
-        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
-            e.preventDefault();
-            e.stopPropagation();
-            sbHeaderClick('changeProducts');
-        }
-    });
     headerThemeSwitch.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -855,23 +1266,25 @@ function bindEvents() {
         }
     });
     themeList.addEventListener('click', changeTheme);
-    var productsList = document.getElementById('productslist');
-    if (productsList) {
-        productsList.addEventListener('click', function (e) {
-            var target = ej.base.closest(e.target, 'li');
-            if (target) {
-                var productName = target.querySelector('.switch-text').innerHTML;
-                var productKey = productName.includes('PDF Viewer') ? 'pdf-viewer' :
-                                productName.includes('Spreadsheet') ? 'spreadsheet-editor' :
-                                productName.includes('DOCX') ? 'docx-editor' : null;
-                var productUrl = productKey ? productUrls[productKey] : '';
-                
-                // Open the URL in a new tab if found
-                if (productUrl) {
-                    window.open(productUrl, '_blank');
-                }
-                sbHeaderClick('closePopup');
-            }
+
+    headerSdkSwitch.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        sbHeaderClick('changeSdk');
+    });
+    headerSdkSwitch.addEventListener('keydown', function (e) {
+        if (e.keyCode === 'Enter' || e.keyCode === ' ') {
+            sbHeaderClick('changeSdk');
+        }
+    });
+    var sdkList = document.getElementById('sdklist');
+    if (sdkList) {
+        sdkList.addEventListener('click', handleSdkSelection);
+    }
+    var sdkPopupEle = document.getElementById('sdk-popup');
+    if (sdkPopupEle) {
+        sdkPopupEle.addEventListener('click', function (e) {
+            e.stopPropagation();
         });
     }
     document.addEventListener('click', sbHeaderClick.bind(this, 'closePopup'));
@@ -942,6 +1355,12 @@ function bindEvents() {
         }
     });
     // ej.base.select('.copycode').addEventListener('click', copyCode);
+    var wcagReportBtn = ej.base.select("#sf-wcag-btn");
+    if (wcagReportBtn) {
+        wcagReportBtn.addEventListener('click', () => {
+            window.runAxeReport();
+        });
+    }
 }
 
 function copyCode() {
@@ -1084,7 +1503,9 @@ function loadTheme(theme) {
     searchInstance = elasticlunr.Index.load(window.searchIndex);
 
     // Routing Initialization
-    hasher.initialized.add(parseHash);
+    hasher.initialized.add(function (newHash, oldHash) {
+        parseHash(newHash, oldHash);
+    });
     hasher.changed.add(parseHash);
     hasher.init();
 
@@ -1341,10 +1762,28 @@ function getSamples(samples, groupPath) {
 }
 
 function controlSelect(arg) {
-    var path = (arg.node || arg.item).getAttribute('data-path');
+    var element = arg.node || arg.item;
+    var path = element.getAttribute('data-path');
     var curHashCollection = '/' + location.hash.split('/').slice(2).join('/');
+    // Handle AI grid node special case - redirect to SDK-specific AI sample
+    if (arg.node && path && path.startsWith('/ai-grid/')) {
+        var sdkKey = getActiveSdk();
+        if (sdkKey !== 'all') {
+            var aiSampleMap = {
+                'schedule': '/ai-schedule/default.html',
+                'gantt': '/ai-gantt/task-prioritizer.html',
+                'grid': '/ai-grid/predictive-entry.html',
+                'diagram': '/ai-diagram/text-to-flowchart.html',
+                'chart': '/ai-maps/weather-prediction.html'
+            };
+            if (aiSampleMap[sdkKey]) {
+                path = aiSampleMap[sdkKey];
+            }
+        }
+    }
+    
     if (path) {
-        controlListRefresh(arg.node || arg.item);
+        controlListRefresh(element);
         if (path !== curHashCollection) {
             sampleOverlay();
             var theme = location.hash.split('/')[1] || getThemeDefault();
@@ -1355,6 +1794,7 @@ function controlSelect(arg) {
             window.hashString = '#/' + theme + path;
             setTimeout(function () { location.hash = '#/' + theme + path; }, 600);
         }
+        reapplyActiveSdkFilter();
     }
 }
 
@@ -1363,7 +1803,14 @@ function controlListRefresh(ele) {
     if (samples) {
         var listView = ej.base.select('#controlList').ej2_instances[0];
         listView.dataSource = samples;
-        showHideControlTree();
+        showHideControlTree();      
+    }
+}
+
+function reapplyActiveSdkFilter() {
+    var sdkKey = getActiveSdk();
+    if (sdkKey !== 'all') {
+        applySdkFilter(sdkKey);
     }
 }
 
@@ -1768,8 +2215,10 @@ function onDataSourceLoad(node, subNode, control, sample, sampleName) {
         currentSampleID = sampleID;
         currentControl = node.directory;
         addSampleList(samplesList);
-        var curIndex = samplesAr.indexOf(location.hash);
-        var samLength = samplesAr.length - 1;
+        // Use SDK-filtered samples for next/prev navigation
+        var activeSamples = getActiveSdkSampleOrder(samplesAr);
+        var curIndex = activeSamples.indexOf(location.hash);
+        var samLength = activeSamples.length - 1;
         if (curIndex === samLength) {
             toggleButtonState('next-sample', true);
         } else {
@@ -1903,7 +2352,7 @@ function parseHash(newHash, oldHash) {
     "Chart", "3D Chart", "3D Circular Chart", "Stock Chart", "Arc Gauge",
     "Circular Gauge", "Diagram", "HeatMap Chart", "Linear Gauge", "Maps",
     "Range Selector", "Smith Chart", "Barcode", "Sparkline Charts",
-    "TreeMap", "Bullet Chart"
+    "TreeMap", "Bullet Chart","ai-chart"
   ];
 
   // Reload only if base theme has changed
@@ -2197,3 +2646,67 @@ window.addEventListener('hashchange', () => {
         hideToast();
     }
 });
+
+// Canonical URLs Management
+let canonicalUrlsMap = {};
+let canonicalDataLoaded;
+
+// Load canonical URLs on app init
+canonicalDataLoaded = fetch('./canonical-urls.json')
+  .then(response => response.json())
+  .then(data => {
+    canonicalUrlsMap = data;
+  })
+  .catch(error => console.error('Error loading canonical-urls.json:', error));
+
+// Function to update canonical tag based on current hash
+function updateCanonicalTag() {
+  const hash = window.location.hash;
+  const hashParts = hash.replace('#/', '').split('/');
+
+  if (hashParts.length >= 3) {
+    const controlKey = hashParts[1]; // e.g. 'grid', 'treegrid'
+    const displaySampleName = (hashParts[2] || 'default').replace(/\.html$/i, ''); // e.g. 'default', 'overview', 'editing'
+
+    if (aiRegex.test(controlKey)) {
+      var existingAiCanonical = document.querySelector('link[rel="canonical"]');
+      if (existingAiCanonical) {
+        existingAiCanonical.parentNode.removeChild(existingAiCanonical);
+      }
+      return;
+    }
+
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      document.head.appendChild(canonicalLink);
+    }
+
+    // Build canonical URL: mapped for default/overview, self-referenced for other samples
+    var canonicalUrl = '';
+    if ((displaySampleName === 'default' || displaySampleName === 'overview' || (displaySampleName && displaySampleName.indexOf('-overview') !== -1) || (displaySampleName && displaySampleName.indexOf('default-') === 0)) && canonicalUrlsMap[controlKey]) {
+      // Use mapped canonical URL for default/overview samples
+      canonicalUrl = canonicalUrlsMap[controlKey];
+    }
+    else {
+      var desiredPart = controlKey + '/' + displaySampleName + '/';
+      canonicalUrl = 'https://ej2.syncfusion.com/javascript/demos/' + desiredPart;
+    }
+    canonicalLink.href = canonicalUrl;
+  }
+}
+
+// Set up hash change listener
+window.addEventListener('hashchange', updateCanonicalTag);
+
+// Handle initial load - wait for canonical data to load first
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.hash) {
+    // Wait for the canonical data to load before updating
+    canonicalDataLoaded.then(() => {
+      updateCanonicalTag();
+    });
+  }
+});
+ 

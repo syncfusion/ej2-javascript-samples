@@ -26,7 +26,7 @@ this.default = function () {
   }
 
   // Load JSON and initialize editor
-  loadJson('./src/block-editor/blockData.json', function (data) {
+  loadJson('./src/block-editor/data/overview.json', function (data) {
     // data has keys: blockDataOverview, users, etc.
     overviewBlockEditor = new ej.blockeditor.BlockEditor({
       blocks: data.blockDataOverview,
@@ -43,12 +43,12 @@ this.default = function () {
     overviewBlockEditor.appendTo('#block-editor');
   }, function (message) {
     if (window.console && console.error) {
-      console.error('Failed to load blockData.json:', message);
+      console.error('Failed to load overview.json:', message);
     }
     var container = document.getElementById('block-editor');
     if (container) {
       container.innerHTML = '<div style="color:#b91c1c;padding:8px;">Unable to load overview data. ' +
-        'Ensure blockData.json is served over HTTP and the path is correct.<br/>Details: ' + message +
+        'Ensure overview.json is served over HTTP and the path is correct.<br/>Details: ' + message +
         '</div>';
     }
   });

@@ -1,5 +1,4 @@
 this.default = function () {
-
     var AIAssistView = ej.interactivechat.AIAssistView;
     var Sidebar = ej.navigations.Sidebar;
     var DropDownList = ej.dropdowns.DropDownList;
@@ -62,6 +61,12 @@ this.default = function () {
         var response = selectedModel === 'openai' ? await window.getAIResponse(args, abortController) : '⚠️ Something went wrong while connecting to the AI service. Please check your API key.';
         aiAssistViewInst.addPromptResponse(response);
         checkAndUpdateLocalStorage();
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 
     // Toggles the sidebar on mobile when the close button is pressed
@@ -254,11 +259,19 @@ this.default = function () {
         });
     }
 
+    function bannerContent() {
+        return `<div class="banner-content e-no-content">
+                    <div class="e-icons e-assistview-icon">
+                    </div><h3 class="ai-assist-banner-subtitle">Chat with AI Model</h3>
+                </div>`;
+    }
+
     // Instantiate the AIAssistView component and attach to DOM
     aiAssistViewInst = new AIAssistView({
-        bannerTemplate: "#bannerTemplate",
+        bannerTemplate: bannerContent,
         enableStreaming: true,
         promptSuggestions: suggestions,
+        stopRespondingClick: stopAIResponse,
         promptRequest: promptRequest,
         showHeader: false,
         width: 'auto',

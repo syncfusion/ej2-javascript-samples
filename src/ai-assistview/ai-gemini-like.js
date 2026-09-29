@@ -12,6 +12,7 @@ this.default = function() {
         speechToTextSettings: { 
             enable: true
         },
+        stopRespondingClick: stopAIResponse,
         bannerTemplate: "#bannerContent",
         created: created,
         attachmentSettings: {
@@ -52,10 +53,15 @@ this.default = function() {
             isFirstPrompt = false;
         }
         abortController = new AbortController();
-        var foundPrompt = window.defaultPromptResponseData.find(p => p.prompt === args.prompt);
-        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        var response = await window.getAIResponse(args, abortController);
         geminiAIAssistView.addPromptResponse(response);
         toggleButtons();
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 
     function toggleButtons() {

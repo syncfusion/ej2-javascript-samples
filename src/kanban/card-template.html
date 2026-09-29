@@ -82,7 +82,7 @@
                                                 </td>
                                                 ${else}
                                                 <td><div class='e-description'>${OrderID}</div></td>
-                                                <td><span class='e-icons e-done'></span></td>
+                                                <td><span class='e-icons e-circle-check'></span></td>
                                                 ${/if}
                                             </tr>
                                             <tr>
@@ -167,13 +167,11 @@
     }
 
     .e-kanban .e-clock::before {
-        content: '\e20c';
         color: #ffa500;
         font-size: 10px;
     }
 
-    .e-kanban .e-done::before {
-        content: '\ea84';
+    .e-kanban .e-circle-check::before {
         color: #008000;
         font-size: 16px;
     }
@@ -282,16 +280,27 @@
 </style>
 <div id="action-description">
     <p>
-        This sample demonstrates how to customize the Kanban cards using templates. In this demo, the cards are
-        customized with
-        icons, images, and tags.
+        This sample demonstrates how to customize the appearance and editing experience of Kanban cards using card and dialog templates.
     </p>
 </div>
 <div id="description">
     <p>
-        You can customize the default design of the Kanban cards using templates. This can be achieved using the
-        <code>cardSettings</code> -> <code>template</code> property, which accepts the string or HTML element`s ID
-        value.
+        This sample demonstrates how to customize the appearance of Kanban cards and dialogs using templates. The
+        <a href="https://ej2.syncfusion.com/javascript/documentation/kanban/cards#template" target="_blank">cardSettings.template</a>
+        property allows you to define a custom card layout using a string template or an HTML element. In this sample, the card template displays order details such as the pizza image, title, description, status indicators, and tags.
     </p>
-    <p>In this demo, all the cards are customized with templating as text, images, and tags.</p>
+    <p>
+        The editing dialog is customized using the <a href="https://ej2.syncfusion.com/javascript/documentation/kanban/dialog" target="_blank">dialogSettings.template</a> property. The
+        <a href="https://ej2.syncfusion.com/javascript/documentation/api/kanban/index-default#dialogopen" target="_blank">dialogOpen</a> and 
+        <a href="https://ej2.syncfusion.com/javascript/documentation/api/kanban/index-default#dialogclose" target="_blank">dialogClose</a>
+        events are used to initialize and update the dialog fields during the editing process.
+    </p>
+    <p>
+        More information on the Essential<sup>®</sup> JS2 Kanban board can be found in this
+        <a href="https://ej2.syncfusion.com/javascript/documentation/kanban/cards#template" target="_blank">card template </a> documentation section.
+    </p>
+    <p>
+        Looking for the full JavaScript Kanban component overview, features, pricing and documentation?
+        Visit the <a href="https://www.syncfusion.com/javascript-ui-controls/js-kanban-board" target="_blank">JavaScript Kanban</a> page.
+    </p>
 </div>

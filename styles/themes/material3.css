@@ -98,3 +98,6 @@
 .material3 .sb-plnr-section:hover {
     color: #6750a4;
 }
+.material3 .sf-axe-msg.e-message{
+    background-image: none !important;
+}

@@ -371,11 +371,12 @@ this.default = function () {
                 // If context menu is enabled, show the context menu
                 diagram.contextMenuSettings.show = true;
                 diagram.refresh();
-                } 
+                diagram.fitToPage();
+            }
             else {
                 // If context menu is disabled, hide the context menu
                 diagram.contextMenuSettings.show = false;
-                }
+            }
             diagram.dataBind(); // Update the diagram with the new settings
         }});
         // Append the Contextmenu CheckBox to the element with id 'contextMenu'

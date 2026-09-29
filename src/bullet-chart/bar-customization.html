@@ -69,4 +69,32 @@
 #control-container {
    padding: 0px !important;
 }
+
+@media only screen and (max-width: 767px) {
+    .property-section table {
+        height: auto !important;
+        table-layout: auto;
+    }
+
+    .property-section table tr {
+        display: block;
+        height: auto !important;
+        margin-bottom: 12px;
+    }
+
+    .property-section table td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .property-section table td .e-slider,
+    .property-section table td .e-dropdownlist,
+    .property-section table td .e-colorpicker {
+        width: 100% !important;
+    }
+
+    .property-section table td > div {
+        width: 100%;
+    }
+}
 </style>

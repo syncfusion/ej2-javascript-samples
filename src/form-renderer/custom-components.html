@@ -1,0 +1,89 @@
+<main>
+    <div>
+        <div class="col-lg-12 control-section">
+            <div id="form-control control-wrapper" style="padding-left: 100px; padding-right:100px">
+                <div id="form-renderer-control"></div>
+            </div>
+        </div>
+    </div>
+    <div id="action-description">
+        <p>
+            This sample demonstrates how to render custom components for individual form field components in the Form Renderer control.
+            Templates allow you to replace the built-in form components with custom or third-party UI components, enabling greater flexibility and customization.
+        </p>
+    </div>
+    <div id="description">
+        <p>
+            In this sample, a "Contact Us" form is rendered using the Form Renderer control. The text box, text area, drop-down list, checkbox, and button fields are customized using HTML templates.
+        </p>
+        <p>
+            Users can interactively fill out the form, benefit from built-in validation, and submit their responses for data collection.
+        </p>
+         <p>
+            Design custom forms visually and export their schema in seconds with our interactive 
+            <a href="https://ej2.syncfusion.com/javascript/demos/#/tailwind3/form-builder/default.html">Form Builder</a> — a powerful no-code tool for 
+            building responsive forms through an intuitive drag-and-drop interface.
+        </p>
+    </div>
+    <!-- custom code start -->
+    <style>
+        .fr-dropdown {
+            width: 100%;
+            height: 32px;
+            border-radius: 5px;
+            background-color: inherit;
+            color: inherit;
+        }
+
+        .bootstrap5\.3 .fr-dropdown,
+        .bootstrap5\.3-dark .fr-dropdown,
+        .fluent2 .fr-dropdown,
+        .fluent2-dark .fr-dropdown,
+        .fluent2-highcontrast .fr-dropdown,
+        .tailwind3 .fr-dropdown,
+        .tailwind3-dark .fr-dropdown {
+            border-color: var(--color-sf-border);
+        }
+
+        .material3 .fr-dropdown,
+        .material3-dark .fr-dropdown {
+            border-color: rgba(var(--color-sf-outline));
+        }
+
+        .bootstrap5\.3 .fr-dropdown option,
+        .bootstrap5\.3-dark .fr-dropdown option,
+        .fluent2 .fr-dropdown option,
+        .fluent2-dark .fr-dropdown option,
+        .fluent2-highcontrast .fr-dropdown option {
+            background-color: var(--color-sf-flyout-bg-color);
+            color: var(--color-sf-content-text-color);
+        }
+        
+        .material3 .fr-dropdown option {
+            background-color: linear-gradient(0deg, rgba(var(--color-sf-surface), 1), rgba(var(--color-sf-surface), 1)), rgba(var(--color-sf-surface));
+            color: rgba(var(--color-sf-on-surface));
+        }
+
+        .material3-dark .fr-dropdown option {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .tailwind3 .fr-dropdown option,
+        .tailwind3-dark .fr-dropdown option {
+            background-color: var(--color-sf-flyout-bg-color);
+            color: var(--color-sf-flyout-text-color);
+        }
+
+        .fluent2 #form-renderer-control-message,
+        .fluent2-dark #form-renderer-control-message,
+        .fluent2-highcontrast #form-renderer-control-message {
+            height: auto;
+        }
+
+        #form-renderer-control .form-group {
+            margin-bottom: 0px;
+        }
+    </style>
+    <!-- custom code end -->
+</main>

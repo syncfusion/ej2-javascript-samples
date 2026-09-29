@@ -1,4 +1,4 @@
-this.default = function (){
+this.default = function () {
     var ganttChart = new ej.gantt.Gantt({
         dataSource: window.WBSData,
         allowSorting: true,

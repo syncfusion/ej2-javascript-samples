@@ -462,10 +462,6 @@
     background-color: rgb(216, 216, 216);
 }
 
-.products-wrapper:hover,
-.products-wrapper.active {
-    background-color: rgb(216, 216, 216);
-}
 
 .theme-wrapper {
     height: 32px;
@@ -482,21 +478,6 @@
     flex-shrink: 0;
 }
 
-.products-wrapper {
-    height: 32px;
-    width: auto;
-    min-width: 35px;
-    margin-top: 5px;
-    margin-right: 2px;
-    cursor: default;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 2px;
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
 
 .theme-wrapper>div {
     float: none;
@@ -507,14 +488,6 @@
     align-items: center;
 }
 
-.products-wrapper>div {
-    float: none;
-    padding-left: 3px;
-    line-height: 32px;
-    letter-spacing: .5px;
-    display: flex;
-    align-items: center;
-}
 
 .sb-theme-text {
     font-size: 12px;
@@ -524,13 +497,6 @@
     white-space: nowrap;
 }
 
-.sb-products-text {
-    font-size: 12px;
-    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-    opacity: 54;
-    margin-right: 4px;
-    display: none;
-}
 
 .sb-theme-switch,
 .sb-products-switch {
@@ -613,14 +579,6 @@
     z-index: 1001;
 }
 
-.sb-products-popup {
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
-    border-radius: 4px;
-    width: 200px;
-    z-index: 1001;
-}
 
 .sb-theme-popup li {
     line-height: 30px;
@@ -628,12 +586,6 @@
     padding-top: 4px;
 }
 
-.sb-products-popup li {
-    line-height: 30px;
-    cursor: default;
-    padding: 4px 38px 6px 15px;
-    font-size: 14px;
-}
 
 .sb-products-popup li:hover {
     background: rgb(238, 238, 238);
@@ -850,9 +802,6 @@
     display: none;
 }
 
-.sb-setting-products-section {
-    display: none;
-}
 
 .theme-switch span.e-switch-on {
     background-color: #3c78ef;
@@ -1064,6 +1013,15 @@
     width: 100%;
     display: table;
     cursor: pointer;
+}
+
+.sb-left-pane .e-treeview .e-list-text > div {
+    display: flex;
+    gap: 8px;
+}
+
+.sb-left-pane .e-treeview .tree-text {
+    flex: 1;
 }
 
 .sb-adjust-juggle {
@@ -1633,7 +1591,7 @@ input:checked+.slider:before {
         display: none;
     }
 
-    .products-wrapper {
+    .sdk-wrapper {
         display: none;
     }
 
@@ -1641,9 +1599,6 @@ input:checked+.slider:before {
         display: block;
     }
 
-    .sb-setting-products-section {
-        display: block;
-    }
 
     .sb-responsive-section {
         display: none;
@@ -1651,8 +1606,7 @@ input:checked+.slider:before {
 }
 
 @media (min-width: 900px) {
-    .sb-theme-text,
-    .sb-products-text {
+    .sb-theme-text{
         display: inline;
     }
 }
@@ -1776,10 +1730,6 @@ aside#left-sidebar {
 .sb-left-pane .e-treeview .e-list-text {
     width: 100%;
     font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-}
-
-.sb-left-pane .e-treeview .e-text-content {
-    padding-right: 16px;
 }
 
 .sb-control-navigation .e-treeview .tree-text {
@@ -2370,8 +2320,7 @@ aside#left-sidebar {
 @media (max-width: 550px) {
 
     .e-ddl.e-popup,
-    #sb-setting-theme_popup,
-    #sb-setting-products_popup {
+    #sb-setting-theme_popup {
         z-index: 100001;
     }
 
@@ -2517,11 +2466,6 @@ aside#left-sidebar {
         overflow: visible;
     }
 
-    .sb-setting-products-section {
-        display: block;
-        padding: 16px 0px;
-        overflow: visible;
-    }
 
     .sb-icon-Palette {
         padding-right: 10px;
@@ -2554,16 +2498,6 @@ aside#left-sidebar {
         z-index: 100001 !important;
     }
 
-    #sb-setting-products {
-        width: 100%;
-        height: 32px;
-        border-radius: 3px;
-    }
-
-    #sb-setting-products_popup {
-        width: 200px !important;
-        z-index: 100001 !important;
-    }
 
     .sb-setting-item {
         padding: 16px 0px;
@@ -2658,6 +2592,10 @@ aside#left-sidebar {
 
     .sb-mobilefooter>.e-btn.e-disabled:hover {
         color: #5a5a5a;
+    }
+
+    .sb-navigation-prev.e-disabled,.sb-navigation-next.e-disabled {
+    color: #a8a4a4 !important;
     }
 
     .sb-mobilefooter>.e-btn.e-flat:hover {
@@ -2805,3 +2743,199 @@ aside#left-sidebar {
     padding-left: 12px !important;
     padding-bottom: 12px !important;
 }
+
+/* ===== WCAG Button Styles ===== */
+.sb-wcag-btn {
+    padding-right: 17px;
+    font-size: 14px;
+    height: 38px;
+    line-height: 35px;
+    color: #3C78EF;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sb-wcag-btn:hover {
+    color: #1783ff;
+}
+
+.sb-wcag-btn:focus,
+.sb-wcag-btn:focus-visible {
+    color: #1783ff;
+    outline: none;
+}
+
+.sb-wcag-text {
+    font-size: 15px;
+}
+
+.sb-axe-tooltip .e-tip-content {
+    white-space: normal;
+    line-height: 1.45;
+    text-align: left;
+    font-size: 13px;
+}
+
+/* ===== Accessibility Compliance Banner ===== */
+.sf-axe-section {
+    margin-bottom: 20px;
+}
+
+
+/* Dark mode styles for WCAG button */
+.e-dark-mode .sb-wcag-btn,
+.fluent2-highcontrast .sb-wcag-btn {
+    color: #b3e5fc;
+}
+
+.e-dark-mode .sb-wcag-btn:hover,
+.fluent2-highcontrast .sb-wcag-btn:hover {
+    color: #e3f2fd;
+}
+
+.e-dark-mode .sb-wcag-btn:focus,
+.e-dark-mode .sb-wcag-btn:focus-visible,
+.fluent2-highcontrast .sb-wcag-btn:focus,
+.fluent2-highcontrast .sb-wcag-btn:focus-visible {
+    color: #e3f2fd;
+    outline: none;
+}
+
+/* ===== End Accessibility Compliance Banner ===== */
+
+@media (max-width: 550px) {
+    /* Hide the accessibility compliance banner entirely on mobile */
+    .sf-axe-section {
+        display: none !important;
+    }
+}
+
+/* Hide SDK settings section by default (desktop/tablet) */
+.sb-setting-sdk-section {
+    display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 550px) {
+    .sb-setting-sdk-section {
+        display: block;
+    }
+}
+
+/* ===== SDK Samples Dropdown ===== */
+.sb-sdk-popup {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 4px;
+    width: 200px;
+    z-index: 10012;
+}
+
+.sb-sdk-popup li {
+    line-height: 30px;
+    cursor: default;
+    padding-top: 4px;
+}
+
+.sb-sdk-popup li:hover {
+    background: rgb(238, 238, 238);
+}
+
+.sb-sdk-popup li.active .sb-sdk-select {
+    color: rgb(255, 109, 63);
+}
+
+.sb-sdk-popup li:hover .sb-sdk-select {
+    color: rgb(238, 238, 238);
+}
+
+.sb-sdk-popup li:hover.active .sb-sdk-select {
+    color: rgb(255, 109, 63);
+}
+
+.sb-sdk-select {
+    padding-left: 3px;
+    vertical-align: middle;
+    color: transparent;
+}
+
+.sb-sdk-text {
+    font-size: 13px;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    white-space: nowrap;
+}
+
+.sb-sdk-switch,
+.sb-sdk-switcher-wrapper {
+    display: inline-block;
+}
+
+.sdk-wrapper:hover,
+.sdk-wrapper.active {
+    background-color: rgb(216, 216, 216);
+}
+
+#sb-sdk-switcher {
+    z-index: 1003 !important;
+    font-size: 20px;
+}
+
+.sb-sdk-switcher-wrapper{
+    padding-top:3px;
+}
+.sdk-wrapper {
+    width: 200px;
+    height: 32px;
+    margin-top: 5px;
+    margin-left: 8px;
+    cursor: default;
+    padding: 0px 10px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    border-radius: 4px;
+    background: #fff;
+    color: #1f2937;
+    font-size: 14px;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.sdk-wrapper > div {
+    padding-left: 3px;
+    line-height: 32px;
+    letter-spacing: .5px;
+}
+
+/* Hide SDK button on mobile */
+@media (max-width: 550px) {
+    .sdk-wrapper {
+        display: none !important;
+    }
+}
+
+/* Left pane SDK filter: hide non-matching tree nodes and list items */
+.sdk-filter-active [control-name].sdk-hidden {
+    display: none !important;
+}
+
+/* Hide tree parent category nodes when all children are hidden */
+.sdk-filter-active .e-list-item.sdk-parent-hidden {
+    display: none !important;
+}
+
+.sdk-filter-active .e-list-item.sdk-sample-hidden {
+    display: none !important;
+}
+
+/* Hide group headers that have no visible items */
+.sdk-filter-active .e-list-group-item.sdk-group-hidden {
+    display: none !important;
+}
+
+/* ===== End SDK Samples Dropdown ===== */

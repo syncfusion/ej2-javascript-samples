@@ -59,11 +59,13 @@
     "build_RTE": {
         "components": [
             "rich-text-editor",
+            "rich-text-editor-ui",
             "block-editor"
         ],
         "sampleOrder": {
             "File Viewers & Editors": [
                 "Rich Text Editor",
+                "Modern Rich Text Editor",
                 "Block Editor"
             ]
         },

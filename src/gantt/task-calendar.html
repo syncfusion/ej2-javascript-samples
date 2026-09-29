@@ -1,0 +1,54 @@
+<div class="control-section task-calendar-container">
+    <div class="task-calendar-left">
+        <div class="hours-input-row">
+            <label>Hours per day</label>
+            <input id="hoursInput" />
+            <button id="updateHoursBtn">Update</button>
+            <span id="hoursWarning" class="hours-warning"></span>
+        </div>
+        <div id="TaskCalendarGantt"></div>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates how different tasks can use different calendars in the Gantt chart. Leadership, compliance, and technical reviews each have their own working rules, while the hours per day field still controls the default duration calculation for the project.
+    </p>
+</div>
+
+<div id="description">
+    <p>This task calendar sample shows that a Gantt Chart project can assign a unique <code>calendar</code> to each task. Different tasks can follow different working patterns without changing the rest of the schedule.</p>
+    <p>This sample uses the following calendar configurations:</p>
+    <ul>
+        <li><strong>Project Calendar:</strong> Standard working hours from 8:00 AM to 12:00 PM and 1:00 PM to 5:00 PM, with a holiday on 07/06/2026 (Company Foundation Day) and an exception working day on 07/05/2026 (Extended Work Day).</li>
+        <li><strong>Steering-committee:</strong> Holidays on 07/07/2026 (SC Strategy Day) and 07/22/2026 (Board Offsite), with exception working days on 07/05/2026 and 07/19/2026 (Compensatory Working).</li>
+        <li><strong>Tech-review:</strong> Holiday period from 07/16/2026 to 07/17/2026 (Architecture Review Freeze), with an exception working day on 07/26/2026 (Extra Review Slot).</li>
+        <li><strong>Compliance-audit:</strong> Holiday period from 07/09/2026 to 07/10/2026 (Compliance Blackout), with an exception working day on 07/25/2026 (Mandatory Audit Working Day).</li>
+    </ul>
+    <p>The <code>hoursPerDay</code> property controls the working hours considered for duration calculations, while the project calendar serves as the default schedule for tasks that do not specify a custom calendar.</p>
+    <p>More information on the Essential<sup>®</sup> JS2 Gantt Chart can be found in this <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/gantt/es5-getting-started#adding-gantt-control">documentation section</a>.</p>
+    <p>Looking for the full JavaScript Gantt Chart component overview, features, pricing, and documentation? Visit the <a target="_blank" href="https://www.syncfusion.com/javascript-ui-controls/js-gantt-chart">JavaScript Gantt Chart</a> page.</p>
+</div>
+<style>
+    .hours-input-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 8px;
+        flex-wrap: wrap;
+        max-width: 760px;
+    }
+
+    .hours-warning {
+        color: #b71c1c;
+        font-size: 13px;
+        margin-left: 4px;
+    }
+
+    .task-calendar-container {
+        padding: 10px;
+    }
+
+    .task-calendar-left {
+        width: 100%;
+    }
+</style>

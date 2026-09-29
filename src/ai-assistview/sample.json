@@ -10,7 +10,6 @@
             "url": "ai-overview",
             "name": "Overview",
             "category": "AI AssistView",
-            "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
             "description": "Combines streaming, attachments, speech-to-text, text-to-speech and regenerate functionality in one overview UI.",
             "sourceFiles": [
@@ -71,7 +70,6 @@
             "url": "ai-generative-ui",
             "name": "Generative UI Responses",
             "category": "AI AssistView",
-            "type": "new",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AI generated UI responses in the AiAssistView component",
             "sourceFiles": [
@@ -84,7 +82,6 @@
             "url": "ai-thinking",
             "name": "Chain of Thoughts",
             "category": "AI AssistView",
-            "type": "new",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AI generated thinking UI in the AiAssistView component",
             "sourceFiles": [
@@ -94,9 +91,62 @@
             ]
         },
         {
+            "url": "ai-loading-indicator",
+            "name": "Loading Indicator",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView":["promptRequest", "bannerTemplate", "responseAnimationTemplate", "toolbarSettings"] },
+            "description": "Demonstrates different AI response loading indicator styles that can be shown while the AI response is being generated in the AiAssistView component.",
+            "sourceFiles": [
+                { "displayName": "ai-loading-indicator.js", "path":"src/ai-assistview/ai-loading-indicator.js" },
+                { "displayName": "ai-loading-indicator.html", "path":"src/ai-assistview/ai-loading-indicator.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
+            "url": "ai-mention",
+            "name": "Mentions",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView": ["mentions", "bannerTemplate", "promptSuggestions", "promptRequest", "toolbarSettings"] },
+            "description": "Demonstrates the AIAssistView component with mention functionality, allowing users to trigger suggestion lists and enhance interactions with relevant references.",
+            "sourceFiles": [
+                { "displayName": "ai-mention.js", "path":"src/ai-assistview/ai-mention.js" },
+                { "displayName": "ai-mention.html", "path":"src/ai-assistview/ai-mention.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+            ]
+        },
+        {
+            "url": "ai-telemetry",
+            "name": "Telemetry",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "telemetrySettings"] },
+            "description": "Showcases the telemetry feature of the AiAssistView control.",
+            "sourceFiles": [
+                { "displayName": "ai-telemetry.js", "path":"src/ai-assistview/ai-telemetry.js" },
+                { "displayName": "ai-telemetry.html", "path":"src/ai-assistview/ai-telemetry.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
+            "url": "ai-mermaid",
+            "name": "Mermaid Diagram",
+            "category": "AI AssistView",
+            "type": "new",
+            "api":{ "AIAssitView": ["bannerTemplate", "promptSuggestions", "promptRequest", "toolbarSettings"] },
+            "description": "Demonstrates the AIAssistView component with mermaid integration, allowing users to trigger suggestion lists and enhance interactions with relevant diagrams.",
+            "sourceFiles": [
+                { "displayName": "ai-mermaid.js", "path":"src/ai-assistview/ai-mermaid.js" },
+                { "displayName": "ai-mermaid.html", "path":"src/ai-assistview/ai-mermaid.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+            ]
+        },
+        {
             "url": "ai-template",
             "name": "Template",
             "category": "AI AssistView",
+            "type": "update",
             "api":{ "AIAssitView": ["bannerTemplate", "promptItemTemplate", "responseItemTemplate", "promptSuggestionItemTemplate", "promptSuggestions", "promptSuggestionsHeader", "promptRequest"] },
             "description": "Showcases the template properties of the AiAssistView control.",
             "sourceFiles": [
@@ -120,7 +170,6 @@
             "url": "ai-text-to-speech",
             "name": "Text To Speech",
             "category": "Speech",
-            "type": "update",
             "api":{ "AIAssitView":["promptRequest", "toolbarSettings", "bannerTemplate", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Demonstrates the AiAssistView component integrated with Text-to-Speech functionality, allowing AI-generated responses to be vocalized for voice-based interaction.",
             "sourceFiles": [
@@ -132,7 +181,6 @@
             "url": "ai-notion-like",
             "name": "Notion AI-like",
             "category": "UI Customization",
-            "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Notion-like AI Assist UI with multi-mode chat (floating, sidebar, fullscreen), model selection, chat history, streaming responses, attachments, speech-to-text, text-to-speech, and session management.",
             "sourceFiles": [
@@ -145,7 +193,6 @@
             "url": "ai-claude-like",
             "name": "Claude AI-like",
             "category": "UI Customization",
-            "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
             "description": "Claude line UI appearance with ai assistview supported features with footer toolbar and banner template",
             "sourceFiles": [
@@ -158,13 +205,25 @@
             "url": "ai-gemini-like",
             "name": "Gemini AI-like",
             "category": "UI Customization",
-            "type": "new",
             "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
             "description": "Gemini-inspired UI appearance with ai assistview supported features with footer toolbar and banner template",
             "sourceFiles": [
                 { "displayName": "ai-gemini-like.js", "path":"src/ai-assistview/ai-gemini-like.js" },
                 { "displayName": "ai-gemini-like.html", "path":"src/ai-assistview/ai-gemini-like.html" },
-                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
+            ]
+        },
+        {
+            "url": "ai-chatgpt-like",
+            "name": "ChatGPT AI-like",
+            "category": "UI Customization",
+            "type": "new",
+            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "speechToTextSettings", "responseToolbarSettings"] },
+            "description": "ChatGPT-inspired UI appearance with ai assistview supported features, a pill-shaped input bar and a circular send button.",
+            "sourceFiles": [
+                { "displayName": "ai-chatgpt-like.js", "path":"src/ai-assistview/ai-chatgpt-like.js" },
+                { "displayName": "ai-chatgpt-like.html", "path":"src/ai-assistview/ai-chatgpt-like.html" },
+                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
             ]
         },
         {

@@ -1,0 +1,85 @@
+<div class="control-section">
+    <!-- toolbar -->
+    <div class="headless-toolbar-wrapper">
+        <div id="toolbar"></div>
+    </div>
+    <!-- editor -->
+    <div class="headless-editor-surface">
+        <div id="headless-editor"></div>
+    </div>
+</div>
+
+<style>
+    .headless-toolbar-wrapper {
+        width: 100%;
+        display: block;
+        position: sticky;
+        z-index: 1000;
+        top: 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.04),
+            0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .headless-editor-surface {
+        width: 100%;
+        min-height: 420px;
+        padding: 24px;
+        margin-top: 15px;
+        border: 1px solid #d7dce3;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .headless-toolbar-wrapper .e-toolbar-item.e-active .e-tbar-btn {
+        background: #dbdbdb;
+    }
+
+    .headless-toolbar-wrapper .e-toolbar-item .e-headless-dropdown.e-dropdown-btn:not(.e-active):not(:hover),
+    .material3 .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-split-btn,
+    .material3 .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-dropdown-btn,
+    .tailwind3 .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-split-btn,
+    .tailwind3 .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-dropdown-btn {
+        background: transparent;
+    }
+
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-toolbar-item:not(.e-active)>.e-headless-dropdown.e-dropdown-btn,
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-toolbar-item:not(.e-active)>.e-headless-dropdown.e-dropdown-btn .e-btn-content,
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-toolbar-item:not(.e-active)>.e-headless-dropdown.e-dropdown-btn .e-btn-icon,
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-toolbar-item:not(.e-active)>.e-headless-dropdown.e-dropdown-btn .e-caret,
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-split-btn *,
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-dropdown-btn * {
+        color: #212529 !important;
+    }
+
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-split-btn,
+    body[class*="bootstrap5"] .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown>.e-dropdown-btn {
+        background: #f8f9fa !important;
+        border: 1px solid #212529;
+    }
+
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown:hover>.e-split-btn,
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown:hover>.e-dropdown-btn,
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown.e-active>.e-split-btn,
+    body[class*="bootstrap5"]:not([class*="dark"]) .headless-toolbar-wrapper #toolbar .e-split-btn-wrapper.e-headless-dropdown.e-active>.e-dropdown-btn {
+        background-color: #565e64 !important;
+        color: #fff !important;
+    }
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the default formatting features of the <code>Headless Editor</code>.</p>
+</div>
+<div id="description">
+    <p>The <code>Headless Editor</code> provides a lightweight and flexible editing experience with commonly used text and block formatting options.</p>
+    <p>Key features demonstrated in this sample:</p>
+    <ul>
+        <li>Text formatting with <code>Bold</code>, <code>Italic</code>, <code>Underline</code>, <code>Strikethrough</code>, and <code>Code</code>.</li>
+        <li>Block formatting through the <code>Format</code> menu.</li>
+        <li>Insertion of <code>Horizontal Rules</code> and <code>Block Quotes</code>.</li>
+        <li>Support for <code>Bullet Lists</code> and <code>Numbered Lists</code>.</li>
+    </ul>
+</div>

@@ -1,3 +1,5 @@
+var currentYear = new Date().getFullYear();
+
 window.applyCategoryColor = function (args, currentView) {
     var categoryColor = args.data.CategoryColor;
     if (!args.element || !categoryColor) {
@@ -11905,4 +11907,116 @@ window.CloudSecurityEventData = [
         Progress: 0,
         Description: 'Setup post‑release monitoring'
     }  
+];
+
+window.actionEventData = [
+    {
+        Id: 1,
+        Subject: 'Story Time for Kids',
+        StartTime: new Date(currentYear, 0, 12, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 12, 11, 30, 0),
+        CategoryColor: '#1aaa55'
+    }, {
+        Id: 2,
+        Subject: 'Camping with Turtles',
+        StartTime: new Date(currentYear, 0, 13, 12, 0, 0),
+        EndTime: new Date(currentYear, 0, 13, 14, 0, 0),
+        CategoryColor: '#357cd2'
+    }, {
+        Id: 3,
+        Subject: 'Wildlife Warriors',
+        StartTime: new Date(currentYear, 0, 14, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 14, 11, 30, 0),
+        CategoryColor: '#7fa900'
+    }, {
+        Id: 4,
+        Subject: 'Parrot Talk',
+        StartTime: new Date(currentYear, 0, 15, 9, 0, 0),
+        EndTime: new Date(currentYear, 0, 15, 10, 0, 0),
+        CategoryColor: '#ea7a57'
+    }, {
+        Id: 5,
+        Subject: 'Birds of Prey',
+        StartTime: new Date(currentYear, 0, 16, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 16, 11, 30, 0),
+        CategoryColor: '#00bdae'
+    }, {
+        Id: 6,
+        Subject: 'Croco World',
+        StartTime: new Date(currentYear, 0, 17, 12, 0, 0),
+        EndTime: new Date(currentYear, 0, 17, 14, 0, 0),
+        CategoryColor: '#f57f17'
+    }, {
+        Id: 7,
+        Subject: 'Venomous Snake Hunt',
+        StartTime: new Date(currentYear, 0, 18, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 18, 11, 30, 0),
+        CategoryColor: '#1aaa55'
+    }, {
+        Id: 8,
+        Subject: 'Face Painting & Drawing Events',
+        StartTime: new Date(currentYear, 0, 20, 9, 30, 0),
+        EndTime: new Date(currentYear, 0, 20, 11, 0, 0),
+        CategoryColor: '#357cd2'
+    }, {
+        Id: 9,
+        Subject: 'Pony Rides',
+        StartTime: new Date(currentYear, 0, 22, 11, 0, 0),
+        EndTime: new Date(currentYear, 0, 22, 13, 0, 0),
+        CategoryColor: '#7fa900'
+    }, {
+        Id: 10,
+        Subject: 'Feed the Giants',
+        StartTime: new Date(currentYear, 0, 23, 9, 30, 0),
+        EndTime: new Date(currentYear, 0, 23, 11, 0, 0),
+        CategoryColor: '#ea7a57'
+    }, {
+        Id: 11,
+        Subject: 'Jungle Treasure Hunt',
+        StartTime: new Date(currentYear, 0, 10, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 10, 11, 30, 0),
+        CategoryColor: '#00bdae'
+    }, {
+        Id: 12,
+        Subject: 'Endangered Species Program',
+        StartTime: new Date(currentYear, 0, 8, 10, 30, 0),
+        EndTime: new Date(currentYear, 0, 8, 12, 30, 0),
+        CategoryColor: '#f57f17'
+    }, {
+        Id: 13,
+        Subject: 'Black Cockatoos Playtime',
+        StartTime: new Date(currentYear, 0, 6, 10, 0, 0),
+        EndTime: new Date(currentYear, 0, 6, 11, 30, 0),
+        CategoryColor: '#1aaa55'
+    }, {
+        Id: 14,
+        Subject: 'Walk with Jungle King',
+        StartTime: new Date(currentYear, 0, 15, 12, 0, 0),
+        EndTime: new Date(currentYear, 0, 15, 14, 0, 0),
+        CategoryColor: '#357cd2'
+    }, {
+        Id: 15,
+        Subject: 'Trained Climbers',
+        StartTime: new Date(currentYear, 0, 20, 13, 0, 0),
+        EndTime: new Date(currentYear, 0, 20, 14, 30, 0),
+        CategoryColor: '#7fa900'
+    }, {
+        Id: 16,
+        Subject: 'Playtime with Chimpanzees',
+        StartTime: new Date(currentYear, 0, 23, 13, 0, 0),
+        EndTime: new Date(currentYear, 0, 23, 14, 30, 0),
+        CategoryColor: '#ea7a57'
+    }, {
+        Id: 17,
+        Subject: 'Story Time for Kids',
+        StartTime: new Date(currentYear, 0, 14, 14, 30, 0),
+        EndTime: new Date(currentYear, 0, 14, 16, 0, 0),
+        CategoryColor: '#1aaa55'
+    }, {
+        Id: 18,
+        Subject: 'Black Cockatoos Playtime',
+        StartTime: new Date(currentYear, 0, 16, 14, 30, 0),
+        EndTime: new Date(currentYear, 0, 16, 16, 0, 0),
+        CategoryColor: '#7fa900'
+    }
 ];

@@ -1,0 +1,78 @@
+<div class="control-section">
+    <div id="chart-container" align='center'></div>
+    <div id="chartSpinner" class="chart-spinner-overlay">
+        <div class="loader"></div>
+    </div>
+    <button id="chart-action-button"></button>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates AI-powered data cleaning and preprocessing
+        for an e-commerce website's hourly traffic data. Click the
+        <strong>AI Clean</strong> button to automatically fill missing values
+        and resolve outliers with the help of the AI assist service.
+    </p>
+</div>
+<div id="description">
+     <p>The chart visualises hourly visitor counts for a single day. Several
+        hourly slots are intentionally left as <code>null</code> in the
+        original data so that the AI can impute them. The
+        <strong>AI Clean</strong> action sends the dataset to the AI
+        service, which returns a cleaned version that fills the gaps and
+        smooths outliers. Originally missing slots are highlighted in
+        <code>#D84227</code> so they remain visually distinguishable from
+        real, observed values.
+    </p>
+</div>
+<style>
+    #control-container {
+        padding: 0px !important;
+    }
+
+    #chart-action-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        height: 38px;
+        justify-content: center;
+    }
+
+    #chart-action-button .e-icons {
+        color: white;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-size: large;
+    }
+
+    .chart-spinner-overlay {
+        position: absolute;
+        inset: 0;
+        display: none;
+        place-content: center;
+        background: rgba(0, 0, 0, 0.08);
+        z-index: 20;
+    }
+
+    .chart-spinner-overlay.visible {
+        display: grid;
+    }
+
+    .loader {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 4px solid #ccc;
+        border-top-color: #0078d4;
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+</style>

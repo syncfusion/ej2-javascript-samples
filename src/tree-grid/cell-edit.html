@@ -1,0 +1,83 @@
+<style>
+    .status-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .status-active {
+        color: #166534;
+        background-color: #dcfce7;
+    }
+
+    .status-low-stock {
+        color: #92400e;
+        background-color: #fef3c7;
+    }
+
+    .status-pending {
+        color: #1d4ed8;
+        background-color: #dbeafe;
+    }
+
+    .status-out-stock {
+        color: #991b1b;
+        background-color: #fee2e2;
+    }
+
+    .status-discontinued {
+        color: #374151;
+        background-color: #e5e7eb;
+    }
+</style>
+<script type="text/x-template" id="statusTemplate">
+      ${if(status === 'Active')}
+          <span class="status-badge status-active">${status}</span>
+      ${else if(status === 'Low Stock')}
+          <span class="status-badge status-low-stock">${status}</span>
+      ${else if(status === 'Pending Restock')}
+          <span class="status-badge status-pending">${status}</span>
+      ${else if(status === 'Out of Stock')}
+          <span class="status-badge status-out-stock">${status}</span>
+      ${else}
+          <span class="status-badge status-discontinued">${status}</span>
+      ${/if}
+</script>
+
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="TreeGrid"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates cell editing in the TreeGrid, allowing users to quickly update individual field values
+        directly within the data view.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        Cell editing enables users to modify one cell at a time without opening a separate edit form. This mode is
+        enabled by setting
+        <code><a target="_blank" class="code"
+      href="https://ej2.syncfusion.com/javascript/documentation/api/treegrid/editsettings#mode">editSettings.mode</a></code>
+        double-clicking it, and changes are saved when the user presses the <strong>Enter</strong> key or shifts focus
+        to another cell.
+    </p>
+
+    <p>
+        This mode provides a streamlined way to update data while working within the TreeGrid. It can be used together
+        with features such as validation, custom editors, and formatting to deliver an efficient editing experience.
+    </p>
+
+    <p>
+        More information about TreeGrid cell editing can be found in the
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/treegrid/editing/cell-editing">
+            documentation section </a>.
+    </p>
+</div>

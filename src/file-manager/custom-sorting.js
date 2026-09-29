@@ -1,5 +1,5 @@
 this.default = function () {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+    var hostUrl = 'https://physical-service.syncfusion.com/';
     ej.filemanager.FileManager.Inject(ej.filemanager.DetailsView, ej.filemanager.Toolbar, ej.filemanager.NavigationPane);
 
     var filemanagerInstance = new ej.filemanager.FileManager({

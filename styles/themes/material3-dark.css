@@ -166,7 +166,6 @@ body.material3-dark,
 .material3-dark .sb-src-code,
 .material3-dark .sb-api-section,
 .material3-dark .sb-theme-popup,
-.material3-dark .sb-products-popup,
 .material3-dark .copy-tooltip,
 .material3-dark .e-icons.copycode,
 .material3-dark #search-input-wrapper input,
@@ -182,10 +181,10 @@ body.material3-dark,
 .material3-dark .sb-switch-popup li:hover,
 .material3-dark .theme-wrapper:hover,
 .material3-dark .theme-wrapper.active,
-.material3-dark .products-wrapper:hover,
-.material3-dark .products-wrapper.active,
 .material3-dark .sb-theme-popup li:hover,
-.material3-dark .sb-products-popup li:hover,
+.material3-dark .sdk-wrapper:hover,
+.material3-dark .sdk-wrapper.active,
+.material3-dark .sb-sdk-popup li:hover,
 .material3-dark .sb-switch-btn:hover,
 .material3-dark .sb-switch-btn.active,
 .material3-dark .sb-search-result .e-list-item:hover,
@@ -322,7 +321,36 @@ body.material3-dark,
 .material3-dark .sb-content-tab>.e-tab>.e-tab-header>.e-items.e-toolbar-items>.e-toolbar-item>.e-tab-wrap>.e-text-wrap>.e-tab-text {
     color: #ffffff !important;
 }
+.material3-dark .sb-sdk-popup li:hover .sb-sdk-select {
+    color: transparent !important;
+}
 
+.material3-dark .sb-sdk-popup li:hover.active .sb-sdk-select {
+    color: rgb(208, 188, 255) !important;
+}
+.material3-dark .sb-sdk-popup {
+    color: #ffffff;
+    background: #2B2831;
+    border: unset;
+}
+.material3-dark .sb-sdk-popup li.active .sb-sdk-select {
+    color: rgb(208, 188, 255);
+}
 .material3-dark .sb-theme-popup li:hover .sb-theme-select {
     color: transparent;
+}
+
+.material3-dark .sb-left-pane .e-treeview .e-text-content {
+    padding-right: 16px;
+}
+
+.sdk-wrapper {
+    background:none;
+}
+.material3-dark .sf-axe-msg.e-message {
+    background-color: #1C1B1F;
+    border: 2px solid #36343B;
+}
+.material3-dark .sf-axe-msg.e-message{
+    background-image: none !important;
 }

@@ -3,14 +3,12 @@
     "directory": "rich-text-editor",
     "category": "File Viewers & Editors",
     "ftName": "wysiwyg-rich-text-editor",
-    "type": "update",
     "samples": [
         {
             "url": "tools",
             "name": "Overview",
             "description": "This demo describes basic and advanced features of the JS(ECMAScript 5) Rich Text Editor control (WYSIWYG HTML Editor) with all its tools and functionalities.",
             "category": "Rich Text Editor",
-            "type": "update",
             "api": {
                 "RichTextEditor": [
                     "Inject",  
@@ -96,7 +94,6 @@
         {
             "url": "insert-media",
             "name": "Insert Media",
-            "type":"update",
             "description": "This demo shows how to insert audio and video, Embed video, upload audio and video, and more in Insert Media.",
             "category": "Rich Text Editor",
             "api": {
@@ -198,7 +195,6 @@
         {
             "url": "iframe",
             "name": "IFrame",
-            "type":"update",
             "description": "This demo shows how to render a  JS (ECMAScript 5) Rich Text Editor (iframe) that was designed by using the iframe element covering all tool functionalities.",
             "category": "Rich Text Editor",
             "api": {
@@ -503,7 +499,6 @@
         {
             "url": "export-word",
             "name": "Export to Word / PDF",
-            "type":"update",
             "description": "This demo explains how to export the content of the Rich Text Editor to Word and PDF document formats using the Syncfusion<sup>®</sup> Document processing libraries.",
             "category": "Export / Import",
             "api": {
@@ -554,8 +549,8 @@
             }
         },
         {
-            "url": "smart-suggestion",
-            "name": "Smart Suggestion",
+            "url": "slash-commands",
+            "name": "Slash Commands",
             "description": "This demo explains to how to use the slash menu feature of the Rich Text Editor to apply formats, open dialogs easily. ",
             "category": "Mention Integration",
             "api": {

@@ -2,6 +2,7 @@
    "name": "Tree Grid",
    "directory": "tree-grid",
    "category": "Grids",
+   "type": "update",
    "ftName": "treegrid",
    "dataSourcePath": "src/tree-grid/data-source.js",
    "samples": [
@@ -355,6 +356,7 @@
          "url": "checkbox-column",
          "name": "Checkbox Column",
          "category": "Columns",
+         "type": "update",
          "api": {
             "TreeGrid": [
                "dataSource",
@@ -540,6 +542,25 @@
             ]
          },
          "description": "This example shows how to add and edit row or cell in the Batch mode using Syncfusion<sup>®</sup> TypeScript Tree Grid control."
+      },
+      {
+         "url": "cell-edit",
+         "name": "Cell Editing",
+         "category": "Editing",
+         "type": "new",
+         "api": {
+            "TreeGrid": [
+               "dataSource",
+               "parentIdMapping",
+               "idMapping",
+               "height",
+               "columns",
+               "treeColumnIndex",
+               "editSettings",
+               "toolbar"
+            ]
+         },
+         "description": "This example shows how to add and edit row or cell in the Cell mode using Syncfusion<sup>®</sup> TypeScript Tree Grid control."
       },
       {
          "url": "command-column",
@@ -731,6 +752,7 @@
          },
          "description": "This demo explains how to customize a pager using the APIs that are relevant to paging of Syncfusion<sup>®</sup> Essential<sup>®</sup> JS2 Tree Grid control"
       },
+
       {
          "url": "default-scrolling",
          "name": "Default Scrolling",
@@ -804,6 +826,9 @@
                "columns"
             ]
          }
+      },
+      {
+        "url": "dom-virtualization", "name": "DOM Virtualization",  "type": "new","description":"This demo showcases DOM virtualization in the Tree Grid by rendering only the rows needed for the current viewport while working with a large self-referential data source.", "category":"Scrolling","api":{"TreeGrid":["dataSource","enableDomVirtualization","domVirtualizationSettings","idMapping","parentIdMapping","height","rowHeight","columns"] }
       },
       {
          "url": "loadonchilddemand",

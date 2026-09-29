@@ -41,6 +41,43 @@
       "description": "This demo shows the semantic filtering AI feature in Data Grid."
     },
     {
+      "url": "chart-assist",
+      "name": "Chart Assist",
+      "category": "Chart",
+      "type": "new",
+      "dir": "ai-chart",
+      "sourceFiles": [
+        { "displayName": "chart-assist.js", "path": "src/ai-chart/chart-assist.js" },
+        { "displayName": "chart-assist.html", "path": "src/ai-chart/ai-chart-assist.html" },
+        { "displayName": "promptResponseData.js", "path":"src/ai-chart/promptResponseData.js" }
+      ],
+      "description": "This demo sample for rendering and configuring chart series using natural language prompts."
+    },
+    {
+      "url": "data-preprocessing",
+      "name": "Data Preprocessing",
+      "category": "Chart",
+      "type": "new",
+      "dir": "ai-chart",
+      "sourceFiles": [
+        { "displayName": "data-preprocessing.js", "path": "src/ai-chart/data-preprocessing.js" },
+        { "displayName": "data-preprocessing.html", "path": "src/ai-chart/ai-data-preprocessing.html" }
+      ],
+      "description": "This demo for the AI-powered data cleaning and preprocessing for tracking hourly website visitor data."
+    },
+    {
+      "url": "stock-forecasting",
+      "name": "Stock Forecasting",
+      "category": "Chart",
+      "type": "new",
+      "dir": "ai-chart",
+      "sourceFiles": [
+        { "displayName": "stock-forecasting.js", "path": "src/ai-chart/stock-forecasting.js" },
+        { "displayName": "stock-forecasting.html", "path": "src/ai-chart/ai-stock-forecasting.html" }
+      ],
+      "description": "This demo sample demonstrates how to Predict future stock values from historical series using the AI assistant panel."
+    },
+    {
       "url": "text-to-flowchart",
       "name": "Text to Flowchart",
       "category": "Diagram",

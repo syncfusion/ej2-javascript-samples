@@ -12,10 +12,12 @@ this.default = function () {
         readonly: true,
         views: [{
             option: 'TimelineMonth',
+            overscanCount:20,
             enableLazyLoading: true
         },
         {
             option: 'Month',
+            overscanCount:20,
             enableLazyLoading: true
         }],
         group: {

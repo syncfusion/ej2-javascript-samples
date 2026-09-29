@@ -1,48 +1,47 @@
 /**
  * Sample for StackingArea Series
  */
-var chartData1 = [
-    { x: 'O+ve', y: 39.0 },
-    { x: 'A+ve', y: 36.0 },
-    { x: 'B+ve', y: 7.6 },
-    { x: 'AB+ve', y: 2.5 },
-    { x: 'O-ve', y: 7.0 },
-    { x: 'A-ve', y: 6.0 },
-    { x: 'B-ve', y: 1.4 },
-    { x: 'AB-ve', y: 0.5 }
-];
-var chartData2 = [
-    { x: 'O+ve', y: 40.0 },
-    { x: 'A+ve', y: 30.0 },
-    { x: 'B+ve', y: 15.0 },
-    { x: 'AB+ve', y: 4.25 },
-    { x: 'O-ve', y: 6.6 },
-    { x: 'A-ve', y: 2.3 },
-    { x: 'B-ve', y: 1.1 },
-    { x: 'AB-ve', y: 0.75 }
-];
-var chartData3 = [
-    { x: 'O+ve', y: 47.0 },
-    { x: 'A+ve', y: 26.0 },
-    { x: 'B+ve', y: 9.0 },
-    { x: 'AB+ve', y: 2.0 },
-    { x: 'O-ve', y: 8.0 },
-    { x: 'A-ve', y: 5.0 },
-    { x: 'B-ve', y: 2.0 },
-    { x: 'AB-ve', y: 1.0 }
-];
-var chartData4 = [
-    { x: 'O+ve', y: 29.0 },
-    { x: 'A+ve', y: 46.3 },
-    { x: 'B+ve', y: 12.0 },
-    { x: 'AB+ve', y: 5.6 },
-    { x: 'O-ve', y: 2.0 },
-    { x: 'A-ve', y: 3.7 },
-    { x: 'B-ve', y: 1.0 },
-    { x: 'AB-ve', y: 0.4 }
-];
 this.default = function () {
-
+    var chartData1 = [
+        { x: 'O+ve', y: 39.0 },
+        { x: 'A+ve', y: 36.0 },
+        { x: 'B+ve', y: 7.6 },
+        { x: 'AB+ve', y: 2.5 },
+        { x: 'O-ve', y: 7.0 },
+        { x: 'A-ve', y: 6.0 },
+        { x: 'B-ve', y: 1.4 },
+        { x: 'AB-ve', y: 0.5 }
+    ];
+    var chartData2 = [
+        { x: 'O+ve', y: 40.0 },
+        { x: 'A+ve', y: 30.0 },
+        { x: 'B+ve', y: 15.0 },
+        { x: 'AB+ve', y: 4.25 },
+        { x: 'O-ve', y: 6.6 },
+        { x: 'A-ve', y: 2.3 },
+        { x: 'B-ve', y: 1.1 },
+        { x: 'AB-ve', y: 0.75 }
+    ];
+    var chartData3 = [
+        { x: 'O+ve', y: 47.0 },
+        { x: 'A+ve', y: 26.0 },
+        { x: 'B+ve', y: 9.0 },
+        { x: 'AB+ve', y: 2.0 },
+        { x: 'O-ve', y: 8.0 },
+        { x: 'A-ve', y: 5.0 },
+        { x: 'B-ve', y: 2.0 },
+        { x: 'AB-ve', y: 1.0 }
+    ];
+    var chartData4 = [
+        { x: 'O+ve', y: 29.0 },
+        { x: 'A+ve', y: 46.3 },
+        { x: 'B+ve', y: 12.0 },
+        { x: 'AB+ve', y: 5.6 },
+        { x: 'O-ve', y: 2.0 },
+        { x: 'A-ve', y: 3.7 },
+        { x: 'B-ve', y: 1.0 },
+        { x: 'AB-ve', y: 0.4 }
+    ];
     var chart = new ej.charts.Chart({
         //Initializing Primary X Axis
         primaryXAxis: {

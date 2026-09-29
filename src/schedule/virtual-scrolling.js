@@ -8,11 +8,13 @@ this.default = function () {
         cssClass:'virtual-scroll',
         views: [{
             option: 'TimelineMonth',
+            overscanCount:20,
             eventTemplate: '#timeline-event-template',
             allowVirtualScrolling: true
         },
         { 
             option: 'Month',
+            overscanCount:20,
             eventTemplate: '#timeline-event-template',
             allowVirtualScrolling: true 
         }

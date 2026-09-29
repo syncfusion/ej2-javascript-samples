@@ -1,0 +1,96 @@
+<div class="control-section">
+    <div class="content-wrapper">
+        <div id="Schedule"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This demo showcases the event action buttons for editing and deleting events in day and week views. Click the edit or delete icons to manage your events.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        In this demo, we have implemented custom event templates with action buttons for each event displayed in the Scheduler. These action buttons allow users to edit or delete events directly from the event cells. When the Edit button is clicked, the event editor is opened using the <code>openEditor</code> method. When the Delete button is clicked, the selected event is removed using the <code>deleteEvent</code> method.
+    </p>
+    <p>
+        Looking for the full JavaScript Scheduler component overview, features, pricing, and documentation? Visit our <a href="https://www.syncfusion.com/scheduler-sdk/javascript-scheduler" target="_blank">JavaScript Scheduler</a> page.
+    </p>
+</div>
+
+<style>
+    .event-action-buttons.e-schedule .custom-event {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 2px 4px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .event-action-buttons.e-schedule .event-subject {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .event-action-buttons.e-schedule .event-title {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .event-action-buttons.e-schedule .event-time {
+        font-size: 12px;
+        text-wrap: auto;
+    }
+
+    .event-action-buttons.e-schedule .event-actions {
+        display: flex;
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .event-action-buttons.e-schedule .icon-btn {
+        background: transparent;
+        border: none;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    .event-action-buttons.e-schedule .icon-btn .e-icons {
+        font-size: 12px;
+    }
+
+    .event-action-buttons.e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment .event-time {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+    .event-action-buttons.e-schedule .e-week-view .event-title {
+        font-size: 10px;
+    }
+
+    .event-action-buttons.e-schedule .e-week-view .icon-btn .e-icons {
+        font-size: 10px;
+    }
+
+    .event-action-buttons.e-schedule .e-week-view .event-time {
+        font-size: 10px;
+    }
+
+    .event-action-buttons.e-schedule .e-week-view .event-actions {
+        gap: 2px;
+        padding: 0px;
+    }
+
+    .event-action-buttons.e-schedule .e-week-view .custom-event {
+        display: contents;
+    }
+}
+</style>

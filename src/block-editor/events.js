@@ -127,7 +127,7 @@ this.default = function () {
   }
 
   // Load JSON and initialize editor
-  loadJson('./src/block-editor/blockData.json', function (data) {
+  loadJson('./src/block-editor/data/events.json', function (data) {
     // Initialize BlockEditor with JSON blocks
     eventsBlockEditor = new ej.blockeditor.BlockEditor({
       blocks: data.blockDataEvents,
@@ -164,6 +164,6 @@ this.default = function () {
       }
     };
   }, function (message) {
-    reportError('Failed to load blockData.json: ' + message);
+    reportError('Failed to load events.json: ' + message);
   });
 };

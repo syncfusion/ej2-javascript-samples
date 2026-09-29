@@ -59,7 +59,6 @@ this.default = function () {
         tool: ej.diagrams.DiagramTools.ZoomPan
     });
     diagram.appendTo('#diagram');
-    diagram.pan(0, 0);
     // Initialization of input elements for layout customization
     var springLength = new ej.inputs.NumericTextBox({
         format: '###.##',

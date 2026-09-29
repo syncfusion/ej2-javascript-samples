@@ -1,0 +1,150 @@
+<div class="row">
+    <div class="col-lg-8 control-section">
+        <div class="control-wrapper">
+            <div class="sample-container">
+                <div class="default-section">
+                    <div id="editor"></div>
+                </div>
+            </div>
+        </div>
+        <div id="methods-output-panel" class="e-rte-api-methods">
+            <h4>Method Result</h4>
+            <pre id="methods-output" aria-live="polite"></pre>
+        </div>
+    </div>
+    <div class="col-lg-4 property-section">
+        <div id="property" title="API Methods" class="property-panel">
+            <div class="property-content">
+                <div class="method-item">
+                    <span class="method-name">getHtml</span>
+                    <button id="btn-getHtml" class="e-btn e-primary method-btn">Invoke</button>
+                </div>
+                <div class="method-item">
+                    <span class="method-name">getText</span>
+                    <button id="btn-getText" class="e-btn e-primary method-btn">Invoke</button>
+                </div>
+                <div class="method-item">
+                    <span class="method-name">getDocument</span>
+                    <button id="btn-getDocument" class="e-btn e-primary method-btn">Invoke</button>
+                </div>
+                <div class="method-item">
+                    <span class="method-name">focus</span>
+                    <button id="btn-focus" class="e-btn e-primary method-btn">Invoke</button>
+                </div>
+                <div class="method-item">
+                    <span class="method-name">blur</span>
+                    <button id="btn-blur" class="e-btn e-primary method-btn">Invoke</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates the public methods exposed by the Rich Text Editor UI component. Use the
+        property panel on the right to invoke each method and observe the resulting behavior.</p>
+</div>
+
+<div id="description">
+    <p>The Rich Text Editor UI exposes a rich set of public methods that allow you to programmatically interact
+        with the editor instance. The methods shown here are grouped into a single property panel for quick
+        access.</p>
+    <ul>
+        <li><code>getHtml()</code> &mdash; returns the editor content as an HTML string.</li>
+        <li><code>getText()</code> &mdash; returns the editor content as plain text.</li>
+        <li><code>getDocument()</code> &mdash; returns the document markup of the editor content area as a string.</li>
+        <li><code>focus()</code> &mdash; focuses the editor.</li>
+        <li><code>blur()</code> &mdash; removes focus from the editor.</li>
+    </ul>
+    <p>Type or paste some content into the editor, then click an <strong>Invoke</strong> button to see each
+        method in action. The result of the invoked method is displayed in the panel below the editor.</p>
+</div>
+
+<style>
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -12px;
+    }
+    .col-lg-8 {
+        flex: 0 0 72%;
+        max-width: 72%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+    .col-lg-4 {
+        flex: 0 0 28%;
+        max-width: 28%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+    .control-section .sample-container,
+    #methods-output-panel,
+    .property-section .property-panel {
+        border-radius: 4px;
+        padding: 12px;
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+    .property-section .property-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .property-section .method-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 0;
+        gap: 8px;
+    }
+    .property-section .method-name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .property-section .method-btn {
+        flex: 0 0 auto;
+        padding: 5px 14px;
+        border-radius: 3px;
+        font-size: 11px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    #methods-output-panel {
+        margin-top: 16px;
+    }
+    #methods-output-panel h4 {
+        margin: 0 0 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    #methods-output {
+        margin: 0;
+        padding: 12px;
+        font-family: inherit;
+        font-size: 13px;
+        line-height: 1.5;
+        min-height: 200px;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        box-sizing: border-box;
+        background: transparent;
+    }
+    #methods-output:empty::before {
+        content: "Method result will appear here.";
+        font-style: italic;
+        opacity: 0.6;
+    }
+    @media (max-width: 991px) {
+        .col-lg-8,
+        .col-lg-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .property-section {
+            margin-top: 16px;
+        }
+    }
+</style>

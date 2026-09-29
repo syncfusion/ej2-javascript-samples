@@ -2,10 +2,11 @@ this.default = function() {
 
     var abortController;
     var templateAIAssistView = new ej.interactivechat.AIAssistView({
-        bannerTemplate: '#bannerContent',
+        bannerTemplate: bannerContent,
         enableStreaming: true,
         promptItemTemplate: promptItemContent,
         responseItemTemplate: responseItemContent,
+        responseAnimationTemplate: responseAnimationContent,
         promptSuggestionItemTemplate: suggestionItemContent,
         promptSuggestionsHeader: 'Hello! Ask Questions, to better understand how your prompt interacts with AI AssistView!',
         promptSuggestions: window.defaultSuggestions,
@@ -14,6 +15,7 @@ this.default = function() {
                 { type: 'Input', template: '<button id="ddMenu"></button>', align: 'Right' }
             ]
         },
+        stopRespondingClick: stopAIResponse,
         promptRequest: onPromptRequest
     });
     templateAIAssistView.appendTo('#aiAssistView');
@@ -21,11 +23,16 @@ this.default = function() {
     async function onPromptRequest(args) {
         abortController = new AbortController();
         var foundPrompt = window.defaultPromptResponseData.find((promptObj) => promptObj.prompt === args.prompt);
-        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        var response = await window.getAIResponse(args, abortController);
         templateAIAssistView.addPromptResponse(response);
         templateAIAssistView.promptSuggestions = foundPrompt?.suggestions || window.defaultSuggestions;
     }
 
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
+    }
 
     function promptItemContent(ctx) {
         var prompt = ctx.prompt.replace('<span class="e-icons e-circle-info"></span>', '');
@@ -44,6 +51,17 @@ this.default = function() {
                         AI Assist
                     </div>
                     <div class="content">${ctx.response}</div>
+                </div>`;
+    }
+
+      function responseAnimationContent(){
+        return `<div class="assistview-loading-status">
+                    <div class="assistview-grid-icon">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                     </div>
+                     <span class="assistview-loading-label">Generating</span>
                 </div>`;
     }
 
@@ -66,7 +84,7 @@ this.default = function() {
             { imagePath: 'src/ai-assistview/images/london.jpg', suggestion: 'Steps to publish a e-book with marketing strategy'  },
             { imagePath: 'src/ai-assistview/images/tokyo.jpg', suggestion: 'What tools or apps can help me prioritize tasks?'  }
         ],
-        itemTemplate: '#carouselTemplate'
+        itemTemplate: carouselTemplate
     });
     carouselObj.appendTo('#bannerCarousel');
 
@@ -101,4 +119,21 @@ this.default = function() {
         cssClass: 'e-caret-hide',
     }, '#ddMenu');
 
+    function bannerContent() {
+        return `<div class="banner-content">
+                    <h3><span class="e-icons e-assistview-icon"></span>AI Assistance</h3>
+                    <div id="bannerCarousel"></div>
+                </div>`;
+    }
+
+       function carouselTemplate(data) {
+        return `<div class="carousel-template">
+                    <img src=${data.imagePath} />
+                    <div class="e-card">
+                        <div class="e-card-header">
+                         ${data.suggestion}
+                        </div>
+                    </div>
+                </div>`;
+    }
 };

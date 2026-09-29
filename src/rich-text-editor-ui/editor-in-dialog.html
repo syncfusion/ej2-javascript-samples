@@ -1,0 +1,70 @@
+<div class="control-section">
+    <div class="sample-container">
+        <button id="dialogBtn" class="e-btn e-primary">Open Editor</button>
+        <div id="editorDialog"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>This sample demonstrates how to render the Rich Text Editor UI component inside a Dialog component for composing messages or content.</p>
+</div>
+
+<div id="description">
+    <p>The Rich Text Editor UI is integrated with the Syncfusion Dialog component to create a message composer. Click the "Open Editor" button to launch the dialog with the RTE. Users can compose formatted content using the toolbar and send or cancel their message. The editor automatically initializes when the dialog opens and clears when closed.</p>
+</div>
+
+<style>
+.control-section {
+    padding: 20px;
+}
+
+.sample-container {
+    position: relative;
+    min-height: 400px;
+    border: 1px solid #e2e4e8;
+    border-radius: 8px;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dialogBtn {
+    padding: 10px 20px;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#editorDialog {
+    position: absolute;
+}
+
+#mainDialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    z-index: 10000;
+}
+
+#dialogHeader {
+    padding: 16px;
+}
+
+#dialogContent {
+    padding: 16px;
+}
+
+#dialogFooter {
+    padding: 12px 16px;
+}
+
+#dialogEditorContent {
+    min-height: 200px;
+}
+</style>

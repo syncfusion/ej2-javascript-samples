@@ -357,7 +357,7 @@ this.default = function () {
             updateAnnotation('template', null, args.value.toString());
         }
     });
-    template.appendTo('#template');
+    template.appendTo('#annotationTemplate');
     //CheckBox used to enable intractions with templates
     labelConstraints = new ej.buttons.CheckBox({
         checked: false,

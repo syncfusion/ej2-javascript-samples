@@ -1,0 +1,40 @@
+<div class="control-section">
+    <div class="mermaid-aiassistview"> 
+        <div id="aiAssistView"></div>
+    </div>
+</div>
+
+<style>
+
+.mermaid-aiassistview {
+    height: 600px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.mermaid-aiassistview .banner-content .e-assistview-icon:before {
+    font-size: 35px;
+}
+
+.mermaid-aiassistview .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .mermaid-aiassistview {
+        width: 100%;
+    }
+}
+
+</style>
+
+<div id="action-description">
+    <p>This sample demonstrates the integration of the AI AssistView with Mermaid diagram rendering. The generated Mermaid diagrams are rendered directly within the response for visualizations.</p>
+</div>
+<div id="description">
+    <p>In this example, the <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#bannertemplate">bannerTemplate</a> customizes the banner content, and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#toolbarsettings">toolbarSettings</a> adds a right-aligned <code>Refresh</code> button. The <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptsuggestions">promptSuggestions</a> provide quick-start diagram examples, and <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/api/ai-assistview#promptrequest">promptRequest</a> handles user prompts using a system prompt that guides AI responses. The sample generates Mermaid diagram code and renders it using the <code>Mermaid</code> library, supporting six diagram types: <strong>Flowchart</strong>, <strong>Sequence Diagram</strong>, <strong>Class Diagram</strong>, <strong>State Diagram</strong>, <strong>Entity-Relationship Diagram</strong>, and <strong>XY Chart</strong>.</p>
+</div>

@@ -36,17 +36,23 @@ this.default = function () {
     });
     maps.appendTo('#mapszooming');
     // Code for Property Panel
-    var sliderChange;
-        var slider = new ej.inputs.Slider({
-            value: 500,
-            min: 0, max: 1000, step: 250,
-            change: sliderChange
-        }, '#range');
-        slider.change = sliderChange = function (e) {
-            maps.layers[0].animationDuration = e.value;
-            maps.refresh();
-            document.getElementById('dur').innerHTML = e.value.toString();
-        };    
+    var slider = new ej.inputs.Slider({
+        value: 500,
+        min: 0,
+        max: 1000,
+        step: 250,
+        change: function (args) {
+            setAnimationDuration(args.value);
+        }
+    });
+    slider.appendTo('#range');
+    function setAnimationDuration(value) {
+        value = Number(value);
+        maps.layers[0].animationDuration = value;
+        document.getElementById('dur').textContent =
+            value.toString() + 'ms';
+        maps.refresh();
+    }
     var enableMouseWheelChange;
     var enableMouseWheelCheckbox = new ej.buttons.CheckBox({
         change: enableMouseWheelChange, checked: true,

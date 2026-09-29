@@ -23,7 +23,7 @@ this.default = function () {
     //To manage the visibility state of the palette space on the webpage on a mobile device
     function openSymbolPalette() {
         var paletteSpace = document.getElementById('palette-space');
-        var isMobileMode = window.matchMedia('(max-width:550px)').matches;
+        isMobileMode = window.matchMedia('(max-width:550px)').matches;
         if (isMobileMode) {
             if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
                 paletteSpace.classList.add('sb-mobile-palette-open');

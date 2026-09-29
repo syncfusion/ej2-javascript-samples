@@ -1,0 +1,789 @@
+<div class="control-section">
+    <div class="smart-chart-layout">
+        <div class="assistview-pane">
+            <div class="default-aiassistview">
+                <div id="ai-assist-container"></div>
+            </div>
+        </div>
+        <div class="history-pane" id="history-pane" role="region" aria-labelledby="history-heading" style="display: none;">
+            <div class="history-header">
+                <h3 id="history-heading">Chat History</h3>
+                <button class="icon-btn" id="history-close-btn" type="button" title="Close" aria-label="Close">
+                    <span class="e-icons e-close" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="history-scroll" id="history-scroll">
+                <div class="empty" id="history-empty">No history yet.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This sample demonstrates the Syncfusion <strong>AI AssistView</strong> component as a
+        <strong>Chart Assist</strong> solution. Enter natural-language instructions to create,
+        visualize, modify, analyze, export, or print charts. The assistant generates interactive
+        chart previews, configuration updates, and complete TypeScript code directly within the
+        conversation.
+    </p>
+</div>
+
+<div id="description">
+    <p>
+        The <strong>Chart Assist</strong> experience enables users to create and edit charts using
+        natural-language prompts. The <strong>AI AssistView</strong> component interprets user
+        requests and returns structured <code>ChartConfig</code> objects that are rendered as
+        interactive chart visualizations.
+    </p>
+
+    <p>
+        Responses are organized into generative <code>blocks</code> that provide explanations,
+        configuration change summaries, generated TypeScript code, and live chart previews. The
+        registered <code>chart-tool</code> dynamically renders either <code>Chart</code> or
+        <code>AccumulationChart</code> based on the generated <code>chartType</code>.
+    </p>
+
+    <p>
+        Users can generate charts from scratch, change chart types, update data points, add
+        annotations, apply strip lines, configure technical indicators, and enable interactive
+        features such as tooltips, crosshairs, zooming, selection, and highlighting. Generated
+        charts can also be exported in multiple formats or printed directly from the interface.
+    </p>
+
+    <p>
+        Session-based chat history allows users to revisit previous chart conversations and continue
+        refining existing visualizations. Restored sessions automatically rebuild associated chart
+        previews while preserving the full interaction history.
+    </p>
+
+    <p><strong>Injecting modules</strong></p>
+
+    <p>
+        Chart functionality is organized into feature modules. The sample dynamically injects the
+        required chart series, axis, interaction, annotation, indicator, and export modules based on
+        the generated chart configuration. This ensures that generated charts are rendered correctly
+        without requiring manual configuration.
+    </p>
+
+    <p>
+        More information about the AI AssistView component is available in the
+        <a href="https://ej2.syncfusion.com/documentation/ai-assistview/getting-started"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Navigate to the AI AssistView getting started documentation">
+            documentation section
+        </a>.
+    </p>
+</div>
+
+<style>
+    :root,
+    .light-theme,
+    .smart-chart-layout {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f5f6f8;
+        --bg-code: #1e1e1e;
+        --border-primary: #e0e0e0;
+        --border-secondary: #dfe3e8;
+        --text-primary: #242424;
+        --text-secondary: #616161;
+        --text-code: #d4d4d4;
+        --shadow: #00000014;
+        --accent: #0f6cbd;
+        --accent-hover: #115ea3;
+        --history-item-hover: #eef4ff;
+        --suggestion-bg: #ffffff;
+        --suggestion-border: #d1d5db;
+        --suggestion-hover: #f5f5f5;
+        --chart-surface: #ffffff;
+    }
+
+    .dark-theme,
+    .-highcontrast-theme,
+    .fluent-dark-theme,
+    .bootstrap-dark-theme,
+    .tailwind-dark-theme,
+    .material-dark-theme,
+    .fabric-dark-theme,
+    [class*="-dark"] .smart-chart-layout,
+    [class*="dark-"] .smart-chart-layout,
+    [class*="-highcontrast"] .smart-chart-layout,
+    [class*="high-contrast"] .smart-chart-layout,
+    .e-dark-mode .smart-chart-layout,
+    .e-dark .smart-chart-layout,
+    .dark .smart-chart-layout,
+    body.e-dark-mode .smart-chart-layout,
+    body[class*="-dark"] .smart-chart-layout,
+    html[class*="-dark"] .smart-chart-layout,
+    body[class*="-highcontrast"] .smart-chart-layout,
+    html[class*="-highcontrast"] .smart-chart-layout {
+        --bg-primary: #111827;
+        --bg-secondary: #1f2937;
+        --bg-code: #090d16;
+        --border-primary: #475569;
+        --border-secondary: #475569;
+        --text-primary: #f3f4f6;
+        --text-secondary: #cbd5e1;
+        --text-code: #f8fafc;
+        --shadow: #00000066;
+        --accent: #60a5fa;
+        --accent-hover: #3b82f6;
+        --history-item-hover: #1e293b;
+        --suggestion-bg: #1f2937;
+        --suggestion-border: #64748b;
+        --suggestion-hover: #334155;
+        --chart-surface: #111827;
+    }
+
+    .smart-chart-layout,
+    .smart-chart-layout * {
+        box-sizing: border-box;
+    }
+
+    .smart-chart-layout {
+        display: flex;
+        width: 100%;
+        height: clamp(620px, 78vh, 760px);
+        min-height: 620px;
+        gap: 16px;
+        color: var(--text-primary);
+    }
+
+    .smart-chart-layout .assistview-pane {
+        flex: 1 1 auto;
+        min-width: 0;
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border: 1px solid var(--border-primary);
+        border-radius: 12px;
+        box-shadow: 0 8px 28px var(--shadow);
+    }
+
+    .smart-chart-layout .default-aiassistview,
+    .smart-chart-layout #ai-assist-container,
+    .smart-chart-layout .e-aiassistview {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+    }
+
+    .smart-chart-layout .e-aiassistview .e-view-container,
+    .smart-chart-layout .e-aiassistview .e-content-container,
+    .smart-chart-layout .e-aiassistview .e-content-body,
+    .smart-chart-layout .e-aiassistview .e-response,
+    .smart-chart-layout .e-aiassistview .e-assist-tool,
+    .smart-chart-layout .e-aiassistview .e-response-panel {
+        min-width: 0;
+        min-height: 0;
+        max-width: 100%;
+    }
+
+    .smart-chart-layout .e-aiassistview .e-response-panel {
+        flex: 1 1 auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .smart-chart-layout .banner-content {
+        display: flex;
+        min-height: clamp(150px, 24vh, 240px);
+        max-height: 240px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(14px, 2.5vh, 24px);
+        text-align: center;
+    }
+
+    .smart-chart-layout .banner-content .e-assistview-icon {
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 36px;
+    }
+
+    .smart-chart-layout .banner-content h2,
+    .smart-chart-layout .banner-content h3 {
+        margin: 4px 0;
+        color: var(--text-primary);
+        line-height: 1.3;
+    }
+
+    .smart-chart-layout .banner-content h2 {
+        font-size: clamp(20px, 2vw, 24px);
+    }
+
+    .smart-chart-layout .banner-content p,
+    .smart-chart-layout .banner-content i {
+        margin: 4px 0;
+        color: var(--text-secondary);
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions {
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions ul {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+        padding: 8px 16px 16px;
+        margin: 0;
+        overflow: visible;
+        list-style: none;
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
+        min-height: 48px;
+        height: auto !important;
+        padding: 10px 14px;
+        color: var(--text-primary);
+        line-height: 20px;
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: anywhere;
+        background: var(--suggestion-bg);
+        border-color: var(--suggestion-border);
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions ul li > div,
+    .smart-chart-layout .e-aiassistview .e-suggestions ul li > span {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        color: inherit;
+        line-height: inherit;
+        white-space: normal;
+        text-align: inherit;
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions ul li {
+        background: var(--suggestion-bg);
+        border-color: var(--suggestion-border);
+    }
+
+    .smart-chart-layout .e-aiassistview .e-suggestions ul li:hover {
+        background: var(--suggestion-hover);
+    }
+
+    .smart-chart-layout.history-visible {
+        gap: 8px;
+    }
+
+    .smart-chart-layout.history-visible .assistview-pane {
+        flex: 0 0 calc(100% - 306px);
+    }
+
+    .smart-chart-layout.history-visible .e-aiassistview .e-suggestions ul li {
+        min-width: 0;
+        max-width: none;
+    }
+
+    .smart-chart-layout .generated-code-container,
+    .smart-chart-layout .generated-chart-container,
+    .smart-chart-layout .change-summary-container {
+        width: 100%;
+        min-width: 0;
+        margin: 12px 0;
+        overflow: hidden;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border: 1px solid var(--border-secondary);
+        border-radius: 10px;
+    }
+
+    .smart-chart-layout .generated-code-header,
+    .smart-chart-layout .generated-chart-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 44px;
+        padding: 10px 14px;
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 400;
+        line-height: inherit;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-secondary);
+    }
+
+    .smart-chart-layout .generated-code-header > div,
+    .smart-chart-layout .generated-code-heading {
+        min-width: 0;
+    }
+
+    .smart-chart-layout .generated-code-title,
+    .smart-chart-layout .generated-chart-header > strong,
+    .smart-chart-layout .change-summary-container > strong {
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: inherit;
+        font-style: normal;
+        font-weight: 600;
+        line-height: inherit;
+    }
+
+    .smart-chart-layout .generated-code-description {
+        margin-top: 3px;
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    .smart-chart-layout .generated-code-switch {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 14px 0;
+        overflow-x: auto;
+        color: var(--text-primary);
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-secondary);
+    }
+
+    .smart-chart-layout .generated-code-switch-button {
+        flex: 0 0 auto;
+        padding: 8px 12px;
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        white-space: nowrap;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .generated-code-switch-button:hover {
+        color: var(--accent);
+        background: var(--history-item-hover);
+    }
+
+    .smart-chart-layout .generated-code-switch-button.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+    }
+
+    .smart-chart-layout .generated-code-switch-button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+    }
+
+    .smart-chart-layout .copy-code-button {
+        flex: 0 0 auto;
+        min-width: 76px;
+        padding: 6px 12px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        background: var(--accent);
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .copy-code-button:hover {
+        background: var(--accent-hover);
+    }
+
+    .smart-chart-layout .copy-code-button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    .smart-chart-layout .generated-code-wrapper {
+        width: 100%;
+        max-height: 420px;
+        padding: 16px;
+        margin: 0;
+        overflow: auto;
+        color: var(--text-code);
+        background: var(--bg-code);
+        border-color: var(--border-secondary);
+        font-family: Consolas, Monaco, "Courier New", monospace;
+        font-size: 13px;
+        line-height: 1.6;
+        white-space: pre;
+    }
+
+    .smart-chart-layout .generated-code-wrapper:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+    }
+
+    .smart-chart-layout .generated-code {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .smart-chart-layout .json-property {
+        color: #4ec9b0;
+    }
+
+    .smart-chart-layout .json-string {
+        color: #ce9178;
+    }
+
+    .smart-chart-layout .json-number {
+        color: #b5cea8;
+    }
+
+    .smart-chart-layout .json-literal {
+        color: #569cd6;
+    }
+
+    .smart-chart-layout .chart-preview-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .smart-chart-layout .chart-export-select {
+        min-width: 120px;
+        height: 36px;
+        padding: 0 30px 0 10px;
+        color: var(--text-primary);
+        color-scheme: light dark;
+        background: var(--bg-primary);
+        border: 1px solid var(--suggestion-border);
+        border-radius: 6px;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .chart-export-select option {
+        color: var(--text-primary);
+        background: var(--bg-primary);
+    }
+
+    .smart-chart-layout .chart-print-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        padding: 0 14px;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border: 1px solid var(--suggestion-border);
+        border-radius: 6px;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .chart-export-select:hover,
+    .smart-chart-layout .chart-print-button:hover {
+        background: var(--suggestion-hover);
+        border-color: #94a3b8;
+    }
+
+    .smart-chart-layout .chart-export-select:focus-visible,
+    .smart-chart-layout .chart-print-button:focus-visible {
+        border-color: var(--accent);
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+    }
+
+    .smart-chart-layout .chart-preview-status {
+        min-height: 20px;
+        padding: 4px 16px 0;
+        color: var(--text-secondary);
+        background: var(--bg-primary);
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .smart-chart-layout .chart-tool-container {
+        width: 100%;
+        height: 420px;
+        min-width: 0;
+        min-height: 420px;
+        padding: 12px;
+        overflow: hidden;
+        color: var(--text-primary);
+        background: var(--chart-surface);
+    }
+
+    .smart-chart-layout .generated-chart-container .chart-tool-container {
+        overflow: hidden;
+    }
+
+    .smart-chart-layout .chart-tool-container > div,
+    .smart-chart-layout .chart-tool-container .e-chart,
+    .smart-chart-layout .chart-tool-container .e-accumulationchart {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+
+
+    .smart-chart-layout .chart-annotation {
+        padding: 4px 8px;
+        color: var(--text-primary);
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        background: var(--bg-secondary);
+        border: 1px solid var(--accent);
+        border-radius: 4px;
+        box-shadow: 0 2px 5px var(--shadow);
+    }
+
+    .smart-chart-layout .change-summary-container {
+        padding: 10px 12px;
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 400;
+        line-height: inherit;
+    }
+
+    .smart-chart-layout .change-summary-list {
+        padding-left: 20px;
+        margin: 8px 0 0;
+    }
+
+    .smart-chart-layout .change-summary-list li {
+        margin-bottom: 4px;
+        color: var(--text-primary);
+        overflow-wrap: anywhere;
+        font-weight: 400;
+    }
+
+    .smart-chart-layout .history-pane {
+        display: flex;
+        flex: 0 0 290px;
+        height: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border: 1px solid var(--border-primary);
+        border-radius: 12px;
+        box-shadow: 0 8px 28px var(--shadow);
+    }
+
+    .smart-chart-layout .history-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 48px;
+        padding: 10px 16px;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-secondary);
+    }
+
+    .smart-chart-layout .history-header h3 {
+        margin: 0;
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    .smart-chart-layout .history-header button,
+    .smart-chart-layout .icon-btn {
+        padding: 4px 6px;
+        color: var(--text-secondary);
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .icon-btn.danger {
+        color: #ef4444;
+    }
+
+    .smart-chart-layout .icon-btn:hover {
+        color: var(--accent);
+    }
+
+    .smart-chart-layout .icon-btn:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    .smart-chart-layout .history-scroll {
+        flex: 1 1 auto;
+        padding: 10px;
+        overflow: auto;
+        background: var(--bg-primary);
+    }
+
+    .smart-chart-layout .history-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px 12px;
+        color: var(--text-primary);
+        background: var(--bg-primary);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .smart-chart-layout .history-item:hover,
+    .smart-chart-layout .history-item.active {
+        background: var(--history-item-hover);
+    }
+
+    .smart-chart-layout .history-item.active {
+        box-shadow: inset 3px 0 0 var(--accent);
+    }
+
+    .smart-chart-layout .history-text {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .smart-chart-layout .history-title {
+        display: -webkit-box;
+        overflow: hidden;
+        color: var(--text-primary);
+        font-family: inherit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        overflow-wrap: anywhere;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .smart-chart-layout .history-date {
+        margin-top: 4px;
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .smart-chart-layout .history-item .icon-btn {
+        flex: 0 0 auto;
+        margin-top: 1px;
+        padding: 3px 5px;
+        font-size: 13px;
+    }
+
+    .smart-chart-layout .empty {
+        padding: 16px;
+        color: var(--text-secondary);
+        font-size: 12px;
+        font-style: italic;
+        text-align: center;
+    }
+
+    [class*="-dark"] .smart-chart-layout .chart-export-select,
+    [class*="dark-"] .smart-chart-layout .chart-export-select,
+    [class*="-highcontrast"] .smart-chart-layout .chart-export-select,
+    .e-dark-mode .smart-chart-layout .chart-export-select,
+    .e-dark .smart-chart-layout .chart-export-select,
+    .dark .smart-chart-layout .chart-export-select {
+        color-scheme: dark;
+    }
+
+    @media (max-width: 1050px) {
+        .smart-chart-layout .e-aiassistview .e-suggestions ul {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 720px) {
+        .smart-chart-layout {
+            height: clamp(620px, 82vh, 720px);
+            gap: 0;
+        }
+
+        .smart-chart-layout .history-pane {
+            position: fixed;
+            z-index: 20;
+            inset: 8px auto 8px 8px;
+            width: min(290px, calc(100vw - 16px));
+            height: auto;
+            max-height: calc(100vh - 16px);
+        }
+
+        .smart-chart-layout.history-visible .assistview-pane {
+            flex: 1 1 auto;
+        }
+
+        .smart-chart-layout .generated-code-header,
+        .smart-chart-layout .generated-chart-header {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .smart-chart-layout .generated-code-switch {
+            padding: 6px 10px 0;
+        }
+
+        .smart-chart-layout .generated-code-switch-button {
+            padding: 7px 10px;
+            font-size: 11px;
+        }
+
+        .smart-chart-layout .chart-preview-actions {
+            flex-wrap: wrap;
+        }
+
+        .smart-chart-layout .generated-code-wrapper {
+            max-height: 300px;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .smart-chart-layout .chart-tool-container {
+            height: 360px;
+            min-height: 360px;
+            padding: 6px;
+        }
+
+        .smart-chart-layout .e-aiassistview .e-suggestions ul {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 8px;
+            padding: 6px 12px 12px;
+        }
+    }
+
+    @media (max-height: 700px) {
+        .smart-chart-layout {
+            height: clamp(620px, 82vh, 720px);
+        }
+
+        .smart-chart-layout .banner-content {
+            min-height: 130px;
+            max-height: 180px;
+        }
+    }
+</style>
+

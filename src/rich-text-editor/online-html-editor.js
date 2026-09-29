@@ -81,12 +81,13 @@ this.default = function () {
         mirrorView.style.display = 'block';
       }
       var srcViewEle = document.querySelector('#src-view');
-      var codemirrorEle = document.querySelector('.CodeMirror-wrap');
-      if (codemirrorEle) {
-        codemirrorEle.remove();
-      }
-      if(defaultRTE.value){
+      if (!myCodeMirror) {
         renderCodeMirror(srcViewEle, defaultRTE.value);
+      } else if (!myCodeMirror.hasFocus() && myCodeMirror.getValue() !== defaultRTE.value)
+        {
+        var cursor = myCodeMirror.getCursor();
+        myCodeMirror.setValue(defaultRTE.value);
+        myCodeMirror.setCursor(cursor);
       }
     }
     function updateOrientation() {

@@ -27,6 +27,18 @@ this.default = function () {
     });
     chart.appendTo('#dotCustomization');
 
+    var actualValueSlider;
+    var targetValueSlider;
+
+    function refreshPropertyControls() {
+        if (actualValueSlider) {
+            actualValueSlider.refresh();
+        }
+        if (targetValueSlider) {
+            targetValueSlider.refresh();
+        }
+    }
+
     var colorPicker = new ej.inputs.ColorPicker({
         value:  '#000000',
         mode: 'Palette',
@@ -57,11 +69,12 @@ this.default = function () {
     });
     featureType.appendTo('#featureType');
 
-    var actualValueSlider = new ej.inputs.Slider({
+    actualValueSlider = new ej.inputs.Slider({
         value: 270,
         min: 0,
         max: 300,
         step: 10,
+        width: '100%',
         tooltip: { isVisible: true},
         change : function(args) {
             chart.dataSource[0].value = args.value;
@@ -70,11 +83,12 @@ this.default = function () {
     });
     actualValueSlider.appendTo('#actualValue');
 
-    var targetValueSlider = new ej.inputs.Slider({
+    targetValueSlider = new ej.inputs.Slider({
         value: 250,
         min: 0,
         max: 300,
         step: 10,
+        width: '100%',
         tooltip: { isVisible: true},
         change : function(args) {
             chart.dataSource[0].target = args.value;
@@ -82,4 +96,20 @@ this.default = function () {
         }
     });
     targetValueSlider.appendTo('#targetValue');
+
+    if (ej.base.Browser.isDevice) {
+        window.addEventListener('orientationchange', function () {
+            setTimeout(refreshPropertyControls, 200);
+        });
+        window.addEventListener('resize', function () {
+            setTimeout(refreshPropertyControls, 200);
+        });
+        var mobilePropertyButton = document.querySelector('.sb-mobile-setting');
+        if (mobilePropertyButton) {
+            mobilePropertyButton.addEventListener('click', function () {
+                setTimeout(refreshPropertyControls, 200);
+            });
+        }
+        setTimeout(refreshPropertyControls, 0);
+    }
 };

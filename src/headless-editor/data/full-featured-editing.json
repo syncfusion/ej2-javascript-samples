@@ -1,0 +1,1944 @@
+{
+    "type": "document",
+    "schemaVersion": 1,
+    "attrs": {},
+    "children": [{
+            "type": "heading",
+            "attrs": {
+                "level": 2,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Welcome to the Headless Editor Demo!",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                    "type": "text",
+                    "text": "Welcome to the ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "Headless editor",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "bold",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": "! This demo highlights all supported block types and inline formatting options. Each section below explains the purpose of the block and shows how it appears in the editor.",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Paragraph",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Paragraph blocks are used for writing regular text. They are the most common block type and support inline formatting to enhance readability and emphasis.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Inline Formatting",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                    "type": "text",
+                    "text": "Use ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "bold",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "bold",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": ", ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "italic",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "italic",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": ", and ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "underline",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "underline",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": " for emphasis; or ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "strikethrough",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "strikethrough",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": " to indicate removals or outdated text.",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                    "type": "text",
+                    "text": "Math and chemistry: E = mc",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "2",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "superscript",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": ", H",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "2",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "subscript",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": "O - with superscript and subscript. Add inline code ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "const x = 10;",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "code",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": " and helpful ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "links",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "link",
+                        "attrs": {
+                            "href": "https://ej2.syncfusion.com/documentation/block-editor/getting-started",
+                            "title": null,
+                            "target": null,
+                            "rel": null
+                        }
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": " for quick references.",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Transform text to UPPERCASE or lowercase. Add color or background highlights as needed.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Table Block",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Table blocks organize data in rows and columns for easy comparison or presentation. They support headers and basic styling",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "table",
+            "attrs": {},
+            "children": [{
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Name",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Age",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Gender",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Occupation",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableHeader",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Mode of Transport",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                },
+                {
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Selma Rose",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "30",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Female",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Engineer",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "🚴",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                },
+                {
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Robert",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "28",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Male",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Graphic Designer",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "🚗",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                },
+                {
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "William",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "35",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Male",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Teacher",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "🚗",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                },
+                {
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Laura Grace",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "42",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Female",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Doctor",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "🚌",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                },
+                {
+                    "type": "tableRow",
+                    "attrs": {},
+                    "children": [{
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Andrew James",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "45",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Male",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "Lawyer",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        },
+                        {
+                            "type": "tableCell",
+                            "attrs": {
+                                "colspan": 1,
+                                "rowspan": 1,
+                                "colwidth": null,
+                                "align": null,
+                                "verticalAlign": null,
+                                "backgroundColor": null,
+                                "color": null,
+                                "borderColor": null
+                            },
+                            "children": [{
+                                "type": "paragraph",
+                                "attrs": {
+                                    "align": null,
+                                    "indent": 0
+                                },
+                                "children": [{
+                                    "type": "text",
+                                    "text": "🚕",
+                                    "attrs": {},
+                                    "children": [],
+                                    "marks": []
+                                }],
+                                "marks": []
+                            }],
+                            "marks": []
+                        }
+                    ],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Image Block",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Image blocks allow you to insert visuals to support or enhance your content.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "image",
+            "attrs": {
+                "src": "https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png",
+                "alt": "Headless Editor",
+                "title": "Headless Editor",
+                "width": 600,
+                "height": 300,
+                "display": "block",
+                "align": "none",
+                "wrap": "none",
+                "attributes": "",
+                "indent": 0
+            },
+            "children": [],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Checklist",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Checklists help track tasks or steps:",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "taskList",
+            "attrs": {},
+            "children": [{
+                    "type": "taskItem",
+                    "attrs": {
+                        "checked": true,
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Apply inline formatting",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "taskItem",
+                    "attrs": {
+                        "checked": false,
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Invite reviewer ",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "taskItem",
+                    "attrs": {
+                        "checked": false,
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                                "type": "text",
+                                "text": "Publish guide and share ",
+                                "attrs": {},
+                                "children": [],
+                                "marks": []
+                            },
+                            {
+                                "type": "text",
+                                "text": "the link",
+                                "attrs": {},
+                                "children": [],
+                                "marks": [{
+                                    "type": "link",
+                                    "attrs": {
+                                        "href": "https://ej2.syncfusion.com/documentation/block-editor/getting-started",
+                                        "title": null,
+                                        "target": null,
+                                        "rel": null
+                                    }
+                                }]
+                            }
+                        ],
+                        "marks": []
+                    }],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Lists",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Lists organize information clearly:",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 5,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Unordered List",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "bulletList",
+            "attrs": {
+                "listStyleType": "disc"
+            },
+            "children": [{
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Concise points for quick scanning",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Great for features or tips",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Easy to reorder and nest",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 5,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Ordered List",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "orderedList",
+            "attrs": {
+                "order": 1,
+                "listStyleType": "decimal"
+            },
+            "children": [{
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Start a new document",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Add structure with headings",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "listItem",
+                    "attrs": {
+                        "align": null
+                    },
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Fill in content and review",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Headings",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                    "type": "text",
+                    "text": "Headings help organize content into sections. Use different levels ",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                },
+                {
+                    "type": "text",
+                    "text": "(h1, h2, h3 or h4)",
+                    "attrs": {},
+                    "children": [],
+                    "marks": [{
+                        "type": "bold",
+                        "attrs": {}
+                    }]
+                },
+                {
+                    "type": "text",
+                    "text": " to create a hierarchy:",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Quote",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Use quote blocks to emphasize important statements or references.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "blockquote",
+            "attrs": {},
+            "children": [{
+                "type": "paragraph",
+                "attrs": {
+                    "align": null,
+                    "indent": 0
+                },
+                "children": [{
+                    "type": "text",
+                    "text": "“Quotes are perfect for highlighting key messages or testimonials.”",
+                    "attrs": {},
+                    "children": [],
+                    "marks": []
+                }],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Callout",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Callouts are great for tips, warnings, or notes that need attention.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "callout",
+            "attrs": {
+                "variant": "info"
+            },
+            "children": [{
+                "type": "paragraph",
+                "attrs": {
+                    "align": null,
+                    "indent": 0
+                },
+                "children": [{
+                        "type": "text",
+                        "text": "Note: ",
+                        "attrs": {},
+                        "children": [],
+                        "marks": [{
+                            "type": "bold",
+                            "attrs": {}
+                        }]
+                    },
+                    {
+                        "type": "text",
+                        "text": "Callouts highlight important content such as tips, warnings, or notes.",
+                        "attrs": {},
+                        "children": [],
+                        "marks": []
+                    }
+                ],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Code Block",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Use code blocks to display syntax-highlighted code snippets for technical documentation or tutorials.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "codeBlock",
+            "attrs": {
+                "language": "plaintext"
+            },
+            "children": [{
+                "type": "text",
+                "text": "function greet(name) {\n return `Hello, ${name}!`;\n}",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Toggle Block",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Toggle blocks are interactive and help manage long or optional content.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "collapsible",
+            "attrs": {
+                "collapsed": true
+            },
+            "children": [{
+                    "type": "collapsibleHeader",
+                    "attrs": {},
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "Click to expand",
+                            "attrs": {},
+                            "children": [],
+                            "marks": [{
+                                "type": "bold",
+                                "attrs": {}
+                            }]
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                },
+                {
+                    "type": "collapsibleBody",
+                    "attrs": {},
+                    "children": [{
+                        "type": "paragraph",
+                        "attrs": {
+                            "align": null,
+                            "indent": 0
+                        },
+                        "children": [{
+                            "type": "text",
+                            "text": "This is a toggle block. You can hide or show content as needed. Useful for FAQs or detailed sections.",
+                            "attrs": {},
+                            "children": [],
+                            "marks": []
+                        }],
+                        "marks": []
+                    }],
+                    "marks": []
+                }
+            ],
+            "marks": []
+        },
+        {
+            "type": "heading",
+            "attrs": {
+                "level": 3,
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Divider",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "paragraph",
+            "attrs": {
+                "align": null,
+                "indent": 0
+            },
+            "children": [{
+                "type": "text",
+                "text": "Dividers are horizontal lines used to separate sections or indicate a break in content.",
+                "attrs": {},
+                "children": [],
+                "marks": []
+            }],
+            "marks": []
+        },
+        {
+            "type": "horizontalRule",
+            "attrs": {},
+            "children": [],
+            "marks": []
+        }
+    ],
+    "marks": []
+}

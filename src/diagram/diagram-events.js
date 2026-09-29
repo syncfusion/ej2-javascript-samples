@@ -154,6 +154,7 @@ function contextMenuClick(args) {
     getEventDetails(args);
 }
 
+var isMobile;
 
 // tslint:disable-next-line:max-func-body-length
 this.default = function () {
@@ -306,7 +307,7 @@ this.default = function () {
 };
 
 function addDiagramEvents() {
-    var isMobile = window.matchMedia('(max-width:550px)').matches;
+    isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
         var paletteIcon = document.getElementById('palette-icon');
         if (paletteIcon) {
@@ -316,7 +317,7 @@ function addDiagramEvents() {
 }
 function openPalette() {
     var paletteSpace = document.getElementById('palette-space');
-    var isMobile = window.matchMedia('(max-width:550px)').matches;
+    isMobile = window.matchMedia('(max-width:550px)').matches;
     if (isMobile) {
         if (!paletteSpace.classList.contains('sb-mobile-palette-open')) {
             paletteSpace.classList.add('sb-mobile-palette-open');

@@ -3,6 +3,7 @@
     "directory": "stock-chart",
     "category": "Data Visualization",
     "ftName": "stock-chart",
+    "type": "update",
     "samples": [
         {
             "url": "default",
@@ -198,8 +199,22 @@
                     "intervalType"
                 ]
             }
+        },
+        {
+            "url": "live-candlestick-chart",
+            "name": "Live Candlestick Chart",
+             "type": "new",
+            "description":"This demo for Essential JS2 Stock Chart control shows a real-time candlestick chart driven by a local data source and updated with series.setData and series.addPoint.",
+            "category": "Stock Chart",
+            "api": {
+                "RangeNavigator": [
+                    "valueType",
+                    "series",
+                    "intervalType"
+                ]
+            }
         }
     ],
     "dataSourcePath": "src/stock-chart/stock-data.js"
-    
+
 }

@@ -1,4 +1,5 @@
 this.default = function() {
+
     var templateChatUI = new ej.interactivechat.ChatUI({
         headerText: "Order Assistant",
         headerIconCss: "chat-bot",
@@ -6,7 +7,7 @@ this.default = function() {
         showFooter: false,
         autoScrollToBottom: true,
         user: { id: 'admin', user: 'Admin', avatarUrl: './src/chat-ui/images/bot.png' },
-        emptyChatTemplate: '#emptyChatTemplate',
+        emptyChatTemplate: emptyChatTemplate,
         messageTemplate: (context) => messageTemplate(context),
         timeBreakTemplate: (context) => timeBreakTemplate(context),
         messageSend: () => {
@@ -83,4 +84,11 @@ this.default = function() {
         templateChatUI.addMessage(message);
         bindClickAction();
     }, 1500);
+
+    function emptyChatTemplate() {
+        return `<div class="emptychat-content">
+                    <h3><span class="e-icons e-comment-show"></span></h3>
+                    <div class="emptyChatText" style="font-size: 16px;">Just a second, we're preparing your chat...</div>
+                </div>`;
+    }
 };

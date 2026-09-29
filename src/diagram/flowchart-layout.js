@@ -125,7 +125,17 @@ var yesBranchDirection = new ej.dropdowns.DropDownList({
     dataSource:[{text: 'Left in flow', value: 'LeftInFlow'},{text:'Right in flow', value: 'RightInFlow'},{text:'Same as flow', value: 'SameAsFlow'}],
     change: function(args){
         var value = args.value;
-        diagram.layout.flowchartLayoutSettings.yesBranchDirection = value === 'Same as flow' ? 'SameAsFlow' :  value === 'Right in flow' ? 'RightInFlow' : 'LeftInFlow';
+        var yesValue = value === 'Same as flow' ? 'SameAsFlow' :  value === 'Right in flow' ? 'RightInFlow' : 'LeftInFlow';
+        diagram.layout.flowchartLayoutSettings.yesBranchDirection = yesValue;
+        if (yesValue !== 'SameAsFlow' && diagram.layout.flowchartLayoutSettings.noBranchDirection === yesValue) {
+            var flippedValue = yesValue === 'LeftInFlow' ? 'RightInFlow' : 'LeftInFlow';
+            diagram.layout.flowchartLayoutSettings.noBranchDirection = flippedValue;
+            //Sync the No branch dropdown with the flipped value
+            if (noBranchDirection) {
+                noBranchDirection.index = flippedValue === 'LeftInFlow' ? 0 : 1;
+            }
+        }
+        diagram.dataBind();
         diagram.doLayout();
     }
 });
@@ -138,7 +148,17 @@ var noBranchDirection = new ej.dropdowns.DropDownList({
      dataSource:[{text: 'Left in flow', value: 'LeftInFlow'},{text:'Right in flow', value: 'RightInFlow'},{text:'Same as flow', value: 'SameAsFlow'}],
     change: function(args){
         var value = args.value;
-        diagram.layout.flowchartLayoutSettings.noBranchDirection = value === 'Same as flow' ? 'SameAsFlow' :  value === 'Right in flow' ? 'RightInFlow' : 'LeftInFlow';
+        var noValue = value === 'Same as flow' ? 'SameAsFlow' :  value === 'Right in flow' ? 'RightInFlow' : 'LeftInFlow';
+        diagram.layout.flowchartLayoutSettings.noBranchDirection = noValue;
+        if (noValue !== 'SameAsFlow' && diagram.layout.flowchartLayoutSettings.yesBranchDirection === noValue) {
+            var flippedValue = noValue === 'LeftInFlow' ? 'RightInFlow' : 'LeftInFlow';
+            diagram.layout.flowchartLayoutSettings.yesBranchDirection = flippedValue;
+            //Sync the Yes branch dropdown with the flipped value
+            if (yesBranchDirection) {
+                yesBranchDirection.index = flippedValue === 'LeftInFlow' ? 0 : 1;
+            }
+        }
+        diagram.dataBind();
         diagram.doLayout();
     }
 });

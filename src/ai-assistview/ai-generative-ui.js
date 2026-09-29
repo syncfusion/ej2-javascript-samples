@@ -10,6 +10,7 @@ this.default = function() {
             items: [ { iconCss: 'e-icons e-refresh', align: 'Right' } ],
             itemClicked: toolbarItemClicked
         },
+        stopRespondingClick: stopAIResponse,
         promptRequest: onPromptRequest
     });
 
@@ -123,6 +124,13 @@ this.default = function() {
         if (args.item.iconCss === 'e-icons e-refresh') {
             aiAssistViewInst.prompts = [];
             aiAssistViewInst.promptSuggestions = window.generativeSuggestions;
+            stopAIResponse();
+        }
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
         }
     }
 };

@@ -1,0 +1,48 @@
+{
+    "name": "Headless Editor",
+    "directory": "headless-editor",
+    "category": "File Viewers & Editors",
+    "ftName": "HeadlessEditor",
+    "type": "preview",
+    "samples": [{
+            "url": "basic-editing",
+            "name": "Basic Editing",
+            "category": "Headless Editor",
+            "api": {
+                "HeadlessEditor": ["content"]
+            },
+            "description": "This demo describes the basic and advanced features of the Headless Editor, including content management, extensibility, and custom rendering capabilities without a built-in UI.",
+            "sourceFiles": [{
+                    "displayName": "basic-editing.js",
+                    "path": "src/headless-editor/basic-editing.js"
+                },
+                {
+                    "displayName": "basic-editing.html",
+                    "path": "src/headless-editor/basic-editing.html"
+                }
+            ]
+        },
+        {
+            "url": "full-featured-editing",
+            "name": "Full-Featured Editing",
+            "category": "Headless Editor",
+            "api": {
+                "HeadlessEditor": ["content"]
+            },
+            "description": "This demo describes the basic and advanced features of the Headless Editor, including content management, extensibility, and custom rendering capabilities without a built-in UI.",
+            "sourceFiles": [{
+                    "displayName": "full-featured-editing.js",
+                    "path": "src/headless-editor/full-featured-editing.js"
+                },
+                {
+                    "displayName": "full-featured-editing.html",
+                    "path": "src/headless-editor/full-featured-editing.html"
+                },
+                {
+                    "displayName": "full-featured-editing.json",
+                    "path": "src/headless-editor/data/full-featured-editing.json"
+                }
+            ]
+        }
+    ]
+}

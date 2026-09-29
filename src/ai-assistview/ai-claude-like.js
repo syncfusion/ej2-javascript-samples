@@ -10,6 +10,7 @@ this.default = function() {
         showHeader: false,
         promptPlaceholder: 'How can i help you today?', 
         enableAttachments: true,
+        stopRespondingClick: stopAIResponse,
         bannerTemplate: "#bannerContent",
         created: created,
         attachmentSettings: {
@@ -47,9 +48,14 @@ this.default = function() {
             isFirstPrompt = false;
         }
         abortController = new AbortController();
-        var foundPrompt = window.defaultPromptResponseData.find(p => p.prompt === args.prompt);
-        var response = foundPrompt ? foundPrompt.response : await window.getAIResponse(args, abortController);
+        var response = await window.getAIResponse(args, abortController);
         claudeAIAssistView.addPromptResponse(response);
+    }
+
+    function stopAIResponse() {
+        if (abortController) {
+            abortController.abort();
+        }
     }
 
     function created() {

@@ -511,6 +511,22 @@
                     "legendSettings"
                 ]
             }
+        },   
+        {
+            "url": "stacked-smart-labels",
+            "name": "Stacked Smart Labels",
+            "description": "This demo sample for Essential JavaScript2 Chart control demonstrates how to render stacked column series with smart labels that relocate to avoid overlap.",
+            "category": "Bar Charts",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "series",
+                    "tooltip",
+                    "legendSettings"
+                ]
+            }
         },
         {
             "url": "stacked-bar",
@@ -643,8 +659,7 @@
             "url": "nested-donut",
             "name": "Nested Donut",
             "description": "This demo sample for Essential<sup>®</sup> JavaScript2 Chart control demonstrates how to render and configure nested donut charts with multiple series.",
-            "category": "Accumulation Charts",    
-            "type": "new",    
+            "category": "Accumulation Charts",
             "api": {
                 "AccumulationChart": [
                     "series",
@@ -1531,6 +1546,25 @@
                 "Chart": [
                     "primaryXAxis",
                     "primaryYAxis"
+                ]
+            }
+        },
+         {
+            "url": "multi-axis-combination",
+            "name": "Multi Axis Combination",
+            "description": "This demo sample for the Essential JavaScript2 Chart control demonstrates how to render multiple axes in a single chart.",
+            "category": "Chart Axes",
+            "type": "new",
+            "api": {
+                "Chart": [
+                    "primaryXAxis",
+                    "primaryYAxis",
+                    "axes",
+                    "series",
+                    "tooltip",
+                    "crosshair",
+                    "legendSettings",
+                    "annotations"
                 ]
             }
         },

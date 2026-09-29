@@ -1,0 +1,258 @@
+<div class="control-section">
+    <div class="climate-chart-wrapper">
+        <div id="climate-chart-container" align="center"></div>
+    </div>
+</div>
+
+<div id="action-description">
+    <p>
+        This example visualizes monthly global climate signals during 2025
+        using temperature anomaly, atmospheric CO₂, and Arctic sea ice extent
+        data. Multiple axes are used to compare measurements with different
+        units and value ranges in a single chart.
+    </p>
+</div>
+<div id="description">
+    <p>
+        The chart demonstrates how unrelated datasets with very different value ranges can be plotted together for a unified view of climate signals.
+    </p>
+
+    <p>
+       In this example, you can see how to render and configure multiple axes in a single chart. The combination chart is created with the following features:
+    </p>
+    <ul>
+        <li>An area series for Arctic sea ice extent on the outer-right Y axis</li>
+        <li>A line series for temperature anomalies on the primary Y axis</li>
+        <li>A spline series for atmospheric CO₂ on the inner-right Y axis</li>
+        <li>Distinct color-coded axes, labels, and legends for each measurement</li>
+        <li>Annotations that highlight the seasonal CO₂ peak and the annual sea ice low</li>
+    </ul>
+    <p><code>Tooltip</code> and <code>Crosshair</code> are enabled in this example. Hover over a point or tap on one on touch-enabled devices to see the shared tooltip, and move the cursor along the chart to track values across the three axes.</p>
+
+     <p>
+        More information on multiple axes can be found in this
+        <a target="_blank" href="https://ej2.syncfusion.com/javascript/documentation/chart/axis-customization#multiple-axis" aria-label="Navigate to the documentation for Multiple Axes of JavaScript Chart control">documentation section</a>.
+    </p>
+</div>
+
+<style>
+    #control-container {
+        padding: 0 !important;
+    }
+
+    .climate-chart-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 18px 20px 8px;
+        border: 1px solid #dce5ef;
+        border-radius: 18px;
+        background: transparent;
+        box-shadow:
+            0 1px 2px rgba(15, 23, 42, 0.03),
+            0 10px 28px rgba(15, 23, 42, 0.06);
+    }
+
+    .climate-insight {
+        position: relative;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+    }
+
+    .climate-insight-marker {
+        position: absolute;
+        top: -7px;
+        left: -7px;
+        z-index: 3;
+        width: 14px;
+        height: 14px;
+        box-sizing: border-box;
+        border: 2px solid #fff;
+        background: currentColor;
+    }
+
+    .climate-insight-marker-circle {
+        border-radius: 50%;
+    }
+
+    .climate-insight-marker-diamond {
+        transform: rotate(45deg);
+    }
+
+    .climate-insight-marker-rectangle {
+        border-radius: 2px;
+    }
+
+    .climate-insight-leader {
+        position: absolute;
+        z-index: 2;
+        background: currentColor;
+        opacity: 0.55;
+    }
+
+    .climate-insight-pill {
+        position: absolute;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 32px;
+        box-sizing: border-box;
+        padding: 6px 12px 6px 8px;
+        border: 1px solid #dbe4ee;
+        border-radius: 8px;
+        background: var(--sf-chart-bg, #fff);
+        box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+        color: #334155;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 14px;
+        white-space: nowrap;
+    }
+
+    .climate-insight-anchor-down .climate-insight-pill {
+        top: 34px;
+        left: 0;
+        transform: translate(-50%, 0);
+    }
+
+    .climate-insight-anchor-down .climate-insight-leader {
+        top: 9px;
+        left: 0;
+        width: 1.5px;
+        height: 23px;
+        transform: translateX(-50%);
+    }
+
+    .climate-insight-anchor-up .climate-insight-pill {
+        top: -34px;
+        left: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    .climate-insight-anchor-up .climate-insight-leader {
+        top: -32px;
+        left: 0;
+        width: 1.5px;
+        height: 23px;
+        transform: translateX(-50%);
+    }
+
+    .climate-insight-anchor-right .climate-insight-pill {
+        top: 0;
+        left: 34px;
+        transform: translate(0, -50%);
+    }
+
+    .climate-insight-anchor-right .climate-insight-leader {
+        top: 0;
+        left: 9px;
+        width: 23px;
+        height: 1.5px;
+        transform: translateY(-50%);
+    }
+
+    .climate-chart-rtl
+    .climate-insight-anchor-right
+    .climate-insight-pill {
+        right: 34px;
+        left: auto;
+        transform: translate(0, -50%);
+    }
+
+    .climate-chart-rtl
+    .climate-insight-anchor-right
+    .climate-insight-leader {
+        right: 9px;
+        left: auto;
+        width: 23px;
+        height: 1.5px;
+        transform: translateY(-50%);
+    }
+
+    .climate-insight-pin {
+        width: 9px;
+        height: 9px;
+        flex: 0 0 9px;
+    }
+
+    .climate-insight-pin-circle {
+        border-radius: 50%;
+    }
+
+    .climate-insight-pin-diamond {
+        transform: rotate(45deg);
+    }
+
+    .climate-insight-pin-rectangle {
+        border-radius: 1.5px;
+    }
+
+    .climate-insight-label {
+        color: #334155;
+        font-weight: 600;
+    }
+
+    .climate-insight-value {
+        padding: 1px 6px;
+        border-radius: 4px;
+        background: rgba(15, 23, 42, 0.04);
+        font-weight: 700;
+    }
+
+    .climate-insight-blue {
+        color: #2563eb;
+    }
+
+    .climate-insight-blue .climate-insight-pin {
+        background: #2563eb;
+    }
+
+    .climate-insight-blue .climate-insight-value {
+        color: #1d4ed8;
+        background: rgba(37, 99, 235, 0.1);
+    }
+
+    .climate-insight-green {
+        color: #059669;
+    }
+
+    .climate-insight-green .climate-insight-pin {
+        background: #059669;
+    }
+
+    .climate-insight-green .climate-insight-value {
+        color: #047857;
+        background: rgba(5, 150, 105, 0.1);
+    }
+
+    .climate-insight-orange {
+        color: #ea580c;
+    }
+
+    .climate-insight-orange .climate-insight-pin {
+        background: #ea580c;
+    }
+
+    .climate-insight-orange .climate-insight-value {
+        color: #c2410c;
+        background: rgba(234, 88, 12, 0.1);
+    }
+
+    @media only screen and (max-width: 640px) {
+        .climate-chart-wrapper {
+            padding: 12px 8px 6px;
+        }
+
+        .climate-insight-pill {
+            min-height: 26px;
+            padding: 4px 8px 4px 6px;
+            font-size: 10px;
+        }
+
+        .climate-insight-value {
+            display: none;
+        }
+    }
+</style>

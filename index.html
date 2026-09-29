@@ -165,6 +165,16 @@
                     <span id='sb-switcher' role="button" tabindex="0" class='sb-lang-toggler sb-icons sb-icon-Dropdown'
                         aria-label="change the samplebrowser"></span>
                 </div>
+                <div class="sb-header-item sb-table-cell">
+                    <div id="header-sdk-switcher" role="button" tabindex="0" class="sdk-wrapper" title='Choose SDK samples'>
+                        <div id="sb-sdk-text" class="sb-sdk-text">
+                            <span class="sb-header-text-left">CHOOSE SDK</span>
+                        </div>
+                        <div class="sb-sdk-switcher-wrapper">
+                            <span id="sb-sdk-switcher" class="sb-sdk-switcher sb-icons sb-icon-Dropdown" role="presentation" aria-label="SDK selection"></span>
+                        </div>
+                    </div>
+                </div>
                 <!-- <div class='sb-header-item sb-table-cell sb-preview-wrapper'>
                 <div>
                     <img src='./styles/images/Vol 3 beta_Option 2.svg'>
@@ -172,17 +182,6 @@
             </div>  -->
             </div>
             <div class='sb-header-right sb-right sb-table'>
-                <div class="sb-header-item sb-table-cell">
-                    <div id="header-products-switcher" role="button" tabindex="0" class="products-wrapper"
-                        title='Other Products'>
-                        <div id="sb-products-text" class="sb-products-text">
-                            <span class="sb-header-text-left">OTHER PRODUCTS</span>
-                        </div>
-                        <div class="sb-products-switcher-wrapper">
-                            <span id="sb-products-switcher" class="sb-products-switch sb-icons sb-icon-Dropdown" role="presentation" aria-label="Other Products selection"></span>
-                        </div>
-                    </div>
-                </div>
                 <div class="sb-header-item sb-table-cell">
                     <div id="header-theme-switcher" role="button" tabindex="0" class="theme-wrapper"
                         title='Change theme of sample browser'>
@@ -243,16 +242,51 @@
 
         </div>
         <div id='sb-popup-section' class='sb-popups'>
-            <div id='products-switcher-popup' class='sb-products-popup'>
-                <ul id="productslist" class="options" role="list">
-                    <li class='active' role="listitem">
-                        <span class="switch-text">PDF Viewer</span>
+            <div id='sdk-popup' role='navigation' class='sb-sdk-popup'>
+                <ul id='sdklist' role="list">
+                    <li class='active' data-sdk="all" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">All Demos</span>
                     </li>
-                    <li class="e-list" role="listitem">
-                        <span class="switch-text">Spreadsheet Editor</span>
+                    <li data-sdk="grid" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Grid SDK</span>
                     </li>
-                    <li class="e-list" role="listitem">
-                        <span class="switch-text">DOCX Editor</span>
+                    <li data-sdk="chart" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Chart SDK</span>
+                    </li>
+                    <li data-sdk="schedule" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Schedule SDK</span>
+                    </li>
+                    <li data-sdk="gantt" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Gantt SDK</span>
+                    </li>
+                    <li data-sdk="rich-text-editor" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Rich Text Editor SDK</span>
+                    </li>
+                    <li data-sdk="file-manager" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">File Manager SDK</span>
+                    </li>
+                    <li data-sdk="diagram" role="listitem">
+                        <span class='sb-icons sb-sdk-select sb-icon-icon-selection'></span>
+                        <span class="switch-text">Diagram SDK</span>
+                    </li>
+                    <li class="e-list" data-sdk="pdf">
+                        <span class="sb-icons sb-sdk-select sb-icon-icon-selection"></span>
+                        <span class="switch-text">PDF Viewer SDK</span>
+                    </li>
+                    <li class="e-list" data-sdk="spreadsheet">
+                        <span class="sb-icons sb-sdk-select sb-icon-icon-selection"></span>
+                        <span class="switch-text">Spreadsheet Editor SDK</span>
+                    </li>
+                    <li class="e-list" data-sdk="docx">
+                        <span class="sb-icons sb-sdk-select sb-icon-icon-selection"></span>
+                        <span class="switch-text">Docx Editor SDK</span>
                     </li>
                 </ul>
             </div>
@@ -330,16 +364,24 @@
                     </span>
                 </div>
                 <div class='sb-setting-content'>
-                    <div class='sb-setting-item sb-setting-products-section'>
+                     <div class='sb-setting-item sb-setting-sdk-section'>
                         <div class='setting-label'>
                             <div class='sb-icons sb-setting-icons sb-icon-Products'></div>
-                            <div class='sb-setting-text'>Other Products</div>
+                            <div class='sb-setting-text'>CHOOSE SDK</div>
                         </div>
-                        <div class='setting-content setting-products-change'>
-                            <select id='sb-setting-products' class='sb-setting-products-select'>
-                                <option value="pdf-viewer">PDF Viewer</option>
-                                <option value="spreadsheet-editor">Spreadsheet Editor</option>
-                                <option value="docx-editor">DOCX Editor</option>
+                        <div class='setting-content'>
+                            <select id='sb-setting-sdk'>
+                                <option value="all">All Samples</option>
+                                <option value="grid">Grid SDK</option>
+                                <option value="rich-text-editor">Rich Text Editor SDK</option>
+                                <option value="schedule">Scheduler SDK</option>
+                                <option value="chart">Chart SDK</option>
+                                <option value="gantt">Gantt SDK</option>
+                                <option value="file-manager">File Manager SDK</option>
+                                <option value="diagram">Diagram SDK</option>
+                                <option value="pdf">PDF Viewer SDK</option>
+                                <option value="spreadsheet">Spreadsheet Editor SDK</option>
+                                <option value="docx">Docx Editor SDK</option>
                             </select>
                         </div>
                     </div>
@@ -601,6 +643,7 @@
             document.getElementById('download-now').style.display = 'none';
         }
     </script>
+    <script src="src/common/accessibility/axe-integration.js" type="text/javascript"></script>
     <script src="src/common/index.min.js" type="text/javascript"></script>
 </body>
 

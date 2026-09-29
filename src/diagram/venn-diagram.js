@@ -146,7 +146,7 @@ function createConnector(id, lineDashArray, source, target,
 }
 
 /**
- * Creates a node object for the JavaScript Diagram.
+ * Creates a node object for the Syncfusion EJ2 Diagram.
  * @param id The unique identifier for the node.
  * @param offsetX The x-coordinate of the node's position.
  * @param offsetY The y-coordinate of the node's position.
