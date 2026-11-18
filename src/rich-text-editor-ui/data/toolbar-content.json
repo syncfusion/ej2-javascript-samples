@@ -1,0 +1,898 @@
+{
+  "id": "78f87f46-216e-4f14-b2e8-83d6959a6276",
+  "type": "document",
+  "schemaVersion": 1,
+  "attrs": {},
+  "children": [
+    {
+      "id": "3216d79d-dd71-41ca-8ee2-cb02d9e1ead7",
+      "type": "heading",
+      "attrs": {
+        "level": 4,
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "e3dfded4-abd9-4a72-92b8-97ee075082fd",
+          "type": "text",
+          "text": "Exploring the Toolbar",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "6f784406-91b8-42bc-a5a4-a1df9d24693d",
+      "type": "paragraph",
+      "attrs": {
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "3c248aeb-2d0b-4d9e-b0a5-0e8f89215224",
+          "type": "text",
+          "text": "This editor comes with a full set of formatting tools right above (or below) the content area. Use the panel on the side to switch the ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "9cbc0f92-ae5d-4924-9d07-8bc46975e2b6",
+          "type": "text",
+          "text": "toolbar type",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "a5f57ddc-a672-4ee9-b6b6-95a2af3c091c",
+          "type": "text",
+          "text": ", change its ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "6abe9a41-0409-4211-934d-9613d46f82de",
+          "type": "text",
+          "text": "position",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "924bc01b-083f-429e-a55a-1ebe6ab4c55d",
+          "type": "text",
+          "text": ", and toggle ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "23f3fa10-2d12-45ea-b7d2-9374565cb0f1",
+          "type": "text",
+          "text": "floating",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "546f8b5c-28c7-4cfd-916f-9730b1270620",
+          "type": "text",
+          "text": " mode to see how the toolbar adapts.",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "7802e930-6ea5-4882-b27d-2ec5504445e2",
+      "type": "heading",
+      "attrs": {
+        "level": 4,
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "50a9ea25-49eb-4caa-8956-88429aeebbc7",
+          "type": "text",
+          "text": "Try It Out",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "de85a6ec-9f60-41cc-89b6-e4cecaec2c3d",
+      "type": "bulletList",
+      "attrs": {
+        "listStyleType": "disc"
+      },
+      "children": [
+        {
+          "id": "3b919e69-c462-4eff-baba-c6dc45c74720",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "77ccf3c0-a005-4fa7-97d4-4045fac9ef94",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "d2bc8173-009e-423c-864b-682bc1b4ca17",
+                  "type": "text",
+                  "text": "Switch the type to ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "e03b26fa-bef1-49c2-92d9-86e3b0b3b7a8",
+                  "type": "text",
+                  "text": "MultiRow",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "235d0b77-a0cc-47f4-bbbc-eb4313d740ac",
+                  "type": "text",
+                  "text": " to see every tool laid out across multiple lines \u2014 no hidden overflow.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "c93556e8-2206-4bf6-8cdf-c46aa072eaf2",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "ca23514c-1e72-487c-aed0-8717a6b65ec8",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "f4a08815-02e2-4375-ab64-20c2abc9a939",
+                  "type": "text",
+                  "text": "Switch to ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "1616c655-1f82-4f44-9164-4b41ac4ddd5f",
+                  "type": "text",
+                  "text": "Scrollable",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "26b9f237-85f5-43f1-acf8-6e2f87e62d40",
+                  "type": "text",
+                  "text": " to see the same tools squeeze into a single row with horizontal scrolling.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "650f2322-d73b-447c-b78e-08ae5d76fed6",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "4304ee64-263e-4ddf-b418-7fce0a31fdcb",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "89b525e9-c6b6-45c1-b6aa-64ae56f6eeeb",
+                  "type": "text",
+                  "text": "Move the toolbar ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "92f6bd21-7276-4690-9794-610723248114",
+                  "type": "text",
+                  "text": "position",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "ec102953-ac46-467e-8ec2-eb338d82797b",
+                  "type": "text",
+                  "text": " from Top to Bottom and watch the editor rearrange instantly.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "da5b17e7-7bf9-4305-b6e2-ff62ef83adb0",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "cb97f7f9-d73b-4c4f-8958-69c047f14e4f",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "ec7b5dc8-3618-40c0-b247-19948008059a",
+                  "type": "text",
+                  "text": "Scroll this content up and down with ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "4fa8abd9-410c-483a-85bd-32033d75d4f4",
+                  "type": "text",
+                  "text": "floating",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "0d4193de-db27-4223-8ac0-c9d8ffd6ec63",
+                  "type": "text",
+                  "text": " enabled \u2014 the toolbar will follow along and stay within reach.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "879bbbe8-220f-4bd1-baa7-82e638a516ad",
+      "type": "heading",
+      "attrs": {
+        "level": 4,
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "cdfc2bff-f37e-4058-bb29-3c8ca906f097",
+          "type": "text",
+          "text": "Formatting Playground",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "114f01df-2a64-4463-9998-332f53b85e7b",
+      "type": "paragraph",
+      "attrs": {
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "7fc8cda4-1438-481d-b583-bde2922fdc5b",
+          "type": "text",
+          "text": "Select this sentence and try ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "8c1e7c22-6f27-4275-8b85-6ba343293995",
+          "type": "text",
+          "text": "Bold",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "da09a424-1457-4974-b3ad-d658ffad4b29",
+          "type": "text",
+          "text": ", ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "c99e3251-23de-45c5-bf10-ba5ba5c93eb6",
+          "type": "text",
+          "text": "Italic",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "italic",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "ded241e1-5a43-4ee1-b605-41a613d37468",
+          "type": "text",
+          "text": ", ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "8d27d46b-f107-44a5-b879-a8fd14e83e13",
+          "type": "text",
+          "text": "Underline",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "underline",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "1ac86e9e-656d-4f3b-a38b-625d443c6303",
+          "type": "text",
+          "text": ", and ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "6d1aa939-91f1-41e3-933b-927f00be9f81",
+          "type": "text",
+          "text": "Strikethrough",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "strikethrough",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "e0b7e234-33c8-4730-9538-dbcfaadb6162",
+          "type": "text",
+          "text": " from the toolbar above.",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "e04388a0-320c-4d3c-9242-b6bd70d21bc7",
+      "type": "paragraph",
+      "attrs": {
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "5d8e034d-a40d-426f-8cf4-f46f95012a8b",
+          "type": "text",
+          "text": "Try the ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "40204fd9-6c56-4f94-b628-72f0bd6da614",
+          "type": "text",
+          "text": "Font Color",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "09e90124-b932-496a-9aa2-8a24c024e8a3",
+          "type": "text",
+          "text": " and ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "8c976d05-f190-47dd-afdd-7c5db9f139e2",
+          "type": "text",
+          "text": "Background Color",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "20cb0ae6-2637-4c34-b62f-b84424543bb7",
+          "type": "text",
+          "text": " tools on a highlighted phrase like this one.",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "e6b87ba7-64f0-4031-b3a0-e7228779c1ed",
+      "type": "table",
+      "attrs": {},
+      "children": [
+        {
+          "id": "e5c5b5ec-e6da-481c-818e-96542dee62f5",
+          "type": "tableRow",
+          "attrs": {},
+          "children": [
+            {
+              "id": "215f452c-751c-4767-8a2e-7fefe3c77cea",
+              "type": "tableHeader",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "5cda6b07-bc93-4fbe-aa76-d9f5737789a9",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "b405d939-6e3a-4f05-9e67-bacdb3008296",
+                      "type": "text",
+                      "text": "Toolbar Type",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            },
+            {
+              "id": "d61a7da1-36c9-42f1-9e47-c7292d12a0d0",
+              "type": "tableHeader",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "5550765a-e182-40c9-8b83-36d691e1f7ae",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "235ce394-c429-4108-a625-d29419ae8841",
+                      "type": "text",
+                      "text": "Best For",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "81419616-853f-40d0-9ca9-21380e1d009f",
+          "type": "tableRow",
+          "attrs": {},
+          "children": [
+            {
+              "id": "050efbe3-15d9-4475-b83f-d97b75bec889",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "a674ce5a-baaa-4a54-a6cb-df0292a89a3b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "fc09fa66-ad9d-4350-a66c-78f8b1ad83b7",
+                      "type": "text",
+                      "text": "Expanded",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            },
+            {
+              "id": "866c7bc5-f4ac-4106-b1ae-9b7e9d5a2196",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "269fc1df-654e-49c7-8c97-d13d03eb69ab",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "0f2cb725-084a-482d-ad1a-79293d76be99",
+                      "type": "text",
+                      "text": "Showing all tools at once, wide screens",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "6d51a283-529b-4159-a103-2aeb8763085e",
+          "type": "tableRow",
+          "attrs": {},
+          "children": [
+            {
+              "id": "5b8dbc7b-a97e-426a-82a2-39a5886b60be",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "5b796cd9-9184-4128-a2ca-ebadf806d889",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "953a0cac-9671-46a2-98d7-cac042f2559d",
+                      "type": "text",
+                      "text": "MultiRow",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            },
+            {
+              "id": "d3b0b6cc-a150-44bd-910a-3e0c31c390e9",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "c826ec7b-f2c3-4ab4-9abf-a83857c2880a",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "b210b777-41b0-4d16-b75f-0afd9898666a",
+                      "type": "text",
+                      "text": "Compact widths without losing tools",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "2a61144c-bdd6-4e13-a4a8-9f0ee9e97f54",
+          "type": "tableRow",
+          "attrs": {},
+          "children": [
+            {
+              "id": "3c047a51-d199-4eeb-924f-c00570ec9977",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "ff23e4d7-e492-4125-92be-572f15628066",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "c64a9835-9e13-40bc-9e07-b1c0bd9caa2a",
+                      "type": "text",
+                      "text": "Scrollable",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            },
+            {
+              "id": "72ac0df3-6fb0-4020-90e8-243d3f0a5f80",
+              "type": "tableCell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": null,
+                "align": null,
+                "verticalAlign": null,
+                "backgroundColor": null,
+                "color": null,
+                "borderColor": null
+              },
+              "children": [
+                {
+                  "id": "1b0d5c35-0a07-4ffa-a720-b51e54ff20bd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "align": null,
+                    "indent": 0
+                  },
+                  "children": [
+                    {
+                      "id": "683150e3-ef09-4f13-bfaa-c847daef27ac",
+                      "type": "text",
+                      "text": "Minimal footprint, swipe/scroll to explore",
+                      "attrs": {},
+                      "children": [],
+                      "marks": []
+                    }
+                  ],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "c21f937b-2e21-42fc-ac98-b886b4e66eba",
+      "type": "paragraph",
+      "attrs": {
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "653dcbe4-e8b8-46bb-8466-852ffaf76ff2",
+          "type": "text",
+          "text": "Add an image, insert a ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "a9c455ca-b5d4-4cb7-ace5-f82741defb9b",
+          "type": "text",
+          "text": "link",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "https://ej2.syncfusion.com/",
+                "title": null,
+                "target": null,
+                "rel": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "4ef81327-eae7-46e2-a56b-a9754f5248b3",
+          "type": "text",
+          "text": ", or drop in a table of your own \u2014 then keep experimenting with the dropdowns above to see how the toolbar reshapes itself around your content.",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    }
+  ],
+  "marks": []
+}

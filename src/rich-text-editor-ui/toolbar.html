@@ -7,16 +7,19 @@
         </div>
     </div>
 </div>
+
 <div class="col-lg-4 property-section">
     <div id="property" title="Properties" class="editor-toolbar-properties">
         <div class="form-group">
             <label class="form-label property-label">Toolbar Type</label>
             <input type="text" id="toolbarType" name="toolbarType" class="form-control" />
         </div>
+
         <div class="form-group">
             <label class="form-label property-label">Toolbar Position</label>
             <input type="text" id="toolbarPosition" name="toolbarPosition" class="form-control" />
         </div>
+
         <div class="form-group">
             <input type="checkbox" id="float" checked="false">
         </div>
@@ -24,24 +27,55 @@
 </div>
 
 <div id="action-description">
-    <p>This sample demonstrates the different toolbar configurations of the Rich Text Editor UI component. Use the dropdown controls to change the toolbar type and position dynamically.</p>
+    <p>
+        This sample demonstrates the different toolbar configurations of the
+        Rich Text Editor UI component. Use the dropdown controls to change the
+        toolbar type and position dynamically.
+    </p>
 </div>
 
 <div id="description">
-    <p>The Rich Text Editor UI toolbar can be configured using the <code>toolbarSettings</code> property. The toolbar supports different types and positions:</p>
+    <p>
+        The Rich Text Editor UI toolbar can be configured using the
+        <code>toolbarSettings</code> property. The toolbar supports different
+        types and positions:
+    </p>
+
     <ul>
-        <li><code>Toolbar Type</code> - Controls how toolbar items are displayed:
+        <li>
+            <code>Toolbar Type</code> - Controls how toolbar items are displayed:
             <ul>
-                <li><code>Expanded</code>: Hides overflowing items in the next row, with an expand arrow to view them</li>
-                <li><code>MultiRow</code>: Automatically wraps items to the next row</li>
-                <li><code>Scrollable</code>: Displays all items in a single row with horizontal scrolling</li>
+                <li>
+                    <code>Expanded</code>: Hides overflowing items in the next
+                    row, with an expand arrow to view them.
+                </li>
+                <li>
+                    <code>MultiRow</code>: Automatically wraps items to the next row.
+                </li>
+                <li>
+                    <code>Scrollable</code>: Displays all items in a single row
+                    with horizontal scrolling.
+                </li>
             </ul>
         </li>
-        <li><code>Toolbar Position</code> - Controls where the toolbar is placed:
+
+        <li>
+            <code>Toolbar Position</code> - Controls where the toolbar is placed:
             <ul>
-                <li><code>Top</code>: Toolbar appears above the editor (default)</li>
-                <li><code>Bottom</code>: Toolbar appears below the editor</li>
+                <li>
+                    <code>Top</code>: Toolbar appears above the editor (default).
+                </li>
+                <li>
+                    <code>Bottom</code>: Toolbar appears below the editor.
+                </li>
             </ul>
+        </li>
+
+        <li>
+            <code>Enable Floating</code> - The
+            <code>enableFloating</code> property enables floating mode for the
+            toolbar, allowing the toolbar to remain accessible while scrolling
+            through the editor content.
         </li>
     </ul>
 </div>

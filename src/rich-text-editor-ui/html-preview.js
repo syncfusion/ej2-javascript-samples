@@ -60,7 +60,8 @@ this.default = function () {
                 value: rteHtml,
                 lineNumbers: true,
                 mode: 'text/html',
-                lineWrapping: true
+                lineWrapping: true,
+                readOnly: true
             });
             codeMirrorObj.on('change', handleCodeMirrorChange);
         } else if (!codeMirrorObj.hasFocus() && codeMirrorObj.getValue() !== rteHtml) {

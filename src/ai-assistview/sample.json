@@ -178,55 +178,6 @@
             ]
         },
         {
-            "url": "ai-notion-like",
-            "name": "Notion AI-like",
-            "category": "UI Customization",
-            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
-            "description": "Notion-like AI Assist UI with multi-mode chat (floating, sidebar, fullscreen), model selection, chat history, streaming responses, attachments, speech-to-text, text-to-speech, and session management.",
-            "sourceFiles": [
-                { "displayName": "ai-notion-like.js", "path":"src/ai-assistview/ai-notion-like.js" },
-                { "displayName": "ai-notion-like.html", "path":"src/ai-assistview/ai-notion-like.html" },
-                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
-            ]
-        },
-        {
-            "url": "ai-claude-like",
-            "name": "Claude AI-like",
-            "category": "UI Customization",
-            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings", "stopRespondingClick"] },
-            "description": "Claude line UI appearance with ai assistview supported features with footer toolbar and banner template",
-            "sourceFiles": [
-                { "displayName": "ai-claude-like.js", "path":"src/ai-assistview/ai-claude-like.js" },
-                { "displayName": "ai-claude-like.html", "path":"src/ai-assistview/ai-claude-like.html" },
-                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }   
-            ]
-        },
-        {
-            "url": "ai-gemini-like",
-            "name": "Gemini AI-like",
-            "category": "UI Customization",
-            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "attachmentSettings", "enableAttachments", "speechToTextSettings", "responseToolbarSettings"] },
-            "description": "Gemini-inspired UI appearance with ai assistview supported features with footer toolbar and banner template",
-            "sourceFiles": [
-                { "displayName": "ai-gemini-like.js", "path":"src/ai-assistview/ai-gemini-like.js" },
-                { "displayName": "ai-gemini-like.html", "path":"src/ai-assistview/ai-gemini-like.html" },
-                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
-            ]
-        },
-        {
-            "url": "ai-chatgpt-like",
-            "name": "ChatGPT AI-like",
-            "category": "UI Customization",
-            "type": "new",
-            "api":{ "AIAssitView": ["promptRequest", "promptSuggestions", "bannerTemplate", "toolbarSettings", "footerToolbarSettings", "speechToTextSettings", "responseToolbarSettings"] },
-            "description": "ChatGPT-inspired UI appearance with ai assistview supported features, a pill-shaped input bar and a circular send button.",
-            "sourceFiles": [
-                { "displayName": "ai-chatgpt-like.js", "path":"src/ai-assistview/ai-chatgpt-like.js" },
-                { "displayName": "ai-chatgpt-like.html", "path":"src/ai-assistview/ai-chatgpt-like.html" },
-                { "displayName": "promptResponseData.js", "path":"src/ai-assistview/promptResponseData.js" }
-            ]
-        },
-        {
             "url": "ai-dialog",
             "name": "Notes Assistant",
             "category": "Use Cases",

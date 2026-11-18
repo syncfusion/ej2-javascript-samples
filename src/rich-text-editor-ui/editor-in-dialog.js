@@ -145,10 +145,7 @@ this.default = function () {
         initializeEditor();
 
         if (editorObj) {
-            var editableEl = document.querySelector('#dialogEditorContent .e-rte-content, #dialogEditorContent [contenteditable="true"]');
-            if (editableEl) {
-                editableEl.focus();
-            }
+            editorObj.focusIn();
         }
     }
 };

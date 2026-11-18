@@ -54,7 +54,8 @@ this.default = function () {
             { field: 'EndDate'},
             { field: 'Duration' },
             { field: 'Progress' },
-            { field: 'Predecessor' }
+            { field: 'Predecessor' },
+            { field: 'info', disableHtmlEncode: true }
         ],
         labelSettings: {
             leftLabel: 'TaskName',

@@ -76,7 +76,6 @@ this.default = function () {
             if (isDropDownExist) {
                 isDropDownExist = false;
                 var chartTypeDropDown = new ej.dropdowns.DropDownList({
-                    floatLabelType: 'Auto',
                     dataSource: chartData,
                     value: chartType,
                     width: 200,

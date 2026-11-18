@@ -41,12 +41,12 @@ this.default = function () {
     };
 
     document.getElementById('btn-focus').onclick = function () {
-        editor.focus();
+        editor.focusIn();
         log('editor focused');
     };
 
     document.getElementById('btn-blur').onclick = function () {
-        editor.blur();
+        editor.focusOut();
         log('editor blurred');
     };
 };

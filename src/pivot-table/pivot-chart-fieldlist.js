@@ -20,7 +20,6 @@ this.default = function () {
       if (document.getElementById('displayOptionddl') && document.getElementById('displayOptionddl') && document.getElementById('toolbar-switch') && !isInitial) {
         isInitial = true;
         displayOptionDropDown = new ej.dropdowns.DropDownList({
-          floatLabelType: 'Auto',
           width: 100,
           value: displayOption,
           change: function (args) {
@@ -40,7 +39,6 @@ this.default = function () {
         });
         displayOptionDropDown.appendTo('#displayOptionddl');
         primaryViewDropDown = new ej.dropdowns.DropDownList({
-          floatLabelType: 'Auto',
           width: 100,
           value: preference,
           change: function (args) {

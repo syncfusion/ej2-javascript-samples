@@ -42,7 +42,6 @@ this.default = function () {
     });
     pivotObj.appendTo('#PivotView');
     var modeddl = new ej.dropdowns.DropDownList({
-        floatLabelType: 'Auto',
         width: 150,
         change: function (args) {
             pivotObj.gridSettings.selectionSettings.mode = args.value;
@@ -51,7 +50,6 @@ this.default = function () {
     });
     modeddl.appendTo('#mode');
     var typeddl = new ej.dropdowns.DropDownList({
-        floatLabelType: 'Auto',
         width: 150,
         change: function (args) {
             pivotObj.gridSettings.selectionSettings.type = args.value;

@@ -84,7 +84,7 @@ this.default = function () {
 
         customBtn.onclick = function () {
 
-            defaultRTE.focus();
+            defaultRTE.focusIn();
 
             dialog.element.style.display = '';
 
@@ -126,7 +126,7 @@ this.default = function () {
 
         if (activeEle && saveSelection && defaultRTE.inputElement) {
 
-            defaultRTE.focus();
+            defaultRTE.focusIn();
 
             var select = window.getSelection();
 

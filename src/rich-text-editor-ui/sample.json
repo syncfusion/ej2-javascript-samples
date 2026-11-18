@@ -9,25 +9,45 @@
             "url": "basic-editing",
             "name": "Basic Editing",
             "description": "This demo shows how to render the Modern Rich Text Editor with a minimum configuration setting.",
-            "category": "Editor"
+            "category": "Editor",
+             "sourceFiles": [
+                { "displayName": "basic-editing.html", "path": "src/rich-text-editor-ui/basic-editing.html" },
+                { "displayName": "basic-editing.js", "path": "src/rich-text-editor-ui/basic-editing.js" },
+                { "displayName": "basic-editing-content.json", "path": "src/rich-text-editor-ui/data/basic-editing-content.json" }
+            ]
         },
         {
             "url": "full-featured-editing",
             "name": "Full-Featured Editing",
             "description": "This demo shows how to render the Modern Rich Text Editor with a minimum configuration setting.",
-            "category": "Editor"
+            "category": "Editor",
+            "sourceFiles": [
+                { "displayName": "full-featured.html", "path": "src/rich-text-editor-ui/full-featured-editing.html" },
+                { "displayName": "full-featured.js", "path": "src/rich-text-editor-ui/full-featured-editing.js" },
+                { "displayName": "full-featured-content.json", "path": "src/rich-text-editor-ui/data/full-featured-content.json" }
+            ]
         },
         {
             "url": "inline-editing",
             "name": "Inline Editing",
             "description": "An inline Modern Rich Text Editor sample configured for in-place editing with a compact toolbar.",
-            "category": "Editor"
+            "category": "Editor",
+            "sourceFiles": [
+                { "displayName": "inline-editing.html", "path": "src/rich-text-editor-ui/inline-editing.html" },
+                { "displayName": "inline-editing.js", "path": "src/rich-text-editor-ui/inline-editing.js" },
+                { "displayName": "inline-editing-content.json", "path": "src/rich-text-editor-ui/data/inline-editing-content.json" }
+            ]
         },
         {
             "url": "toolbar",
             "name": "Toolbar",
             "description": "This demo shows how to configure the toolbar type and position of the Modern Rich Text Editor.",
-            "category": "Features"
+            "category": "Features",
+            "sourceFiles": [
+                { "displayName": "toolbar.html", "path": "src/rich-text-editor-ui/toolbar.html" },
+                { "displayName": "toolbar.js", "path": "src/rich-text-editor-ui/toolbar.js" },
+                { "displayName": "toolbar-content.json", "path": "src/rich-text-editor-ui/data/toolbar-content.json" }
+            ]
         },
         {
             "url": "slash-commands",

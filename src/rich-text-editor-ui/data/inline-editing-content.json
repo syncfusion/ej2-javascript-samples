@@ -1,0 +1,322 @@
+{
+  "id": "aa5e7283-54d5-4b4e-83a5-b298fc8c0b93",
+  "type": "document",
+  "schemaVersion": 1,
+  "attrs": {},
+  "children": [
+    {
+      "id": "353efd60-0592-487d-80f5-15e64f029507",
+      "type": "heading",
+      "attrs": {
+        "level": 4,
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "652e9ca5-c890-452b-991e-4e3185f01427",
+          "type": "text",
+          "text": "Inline Editing Demo",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "8b255a0d-bf91-409a-9fc8-f90cb6ffbeb0",
+      "type": "paragraph",
+      "attrs": {
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "1c4a18bc-efa6-47bd-839e-46ef0d8719b3",
+          "type": "text",
+          "text": "Welcome to the ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "c2b6b1ea-5b9f-4266-87ac-4d871c2bf00b",
+          "type": "text",
+          "text": "Rich Text Editor",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "bold",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "eb0e59c9-0cfe-4a8e-a9ca-32a339dd610a",
+          "type": "text",
+          "text": " inline editing demo. Select any part of this text to see the ",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        },
+        {
+          "id": "13b3934c-1473-48bf-8c1b-e9b234558f8c",
+          "type": "text",
+          "text": "quick toolbar",
+          "attrs": {},
+          "children": [],
+          "marks": [
+            {
+              "type": "italic",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "id": "8dd882f4-143b-4087-babf-ea5912d150c7",
+          "type": "text",
+          "text": " appear with formatting options like Bold, Italic, Underline, and more.",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "17bf5e35-7868-4d54-bb2e-eafdc8e39240",
+      "type": "heading",
+      "attrs": {
+        "level": 4,
+        "align": null,
+        "indent": 0
+      },
+      "children": [
+        {
+          "id": "d9ec9d68-e2e0-4e2d-9285-60457a9cb088",
+          "type": "text",
+          "text": "Try These Interactions",
+          "attrs": {},
+          "children": [],
+          "marks": []
+        }
+      ],
+      "marks": []
+    },
+    {
+      "id": "1ad4051d-e211-4280-bc6c-bfdc227a3172",
+      "type": "bulletList",
+      "attrs": {
+        "listStyleType": "disc"
+      },
+      "children": [
+        {
+          "id": "1c28f40a-6422-423b-af6f-789a904b63a8",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "97ffc6bb-c444-4381-a08b-9451ba60193a",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "03b74c52-74cb-4f41-b296-70bca82fa652",
+                  "type": "text",
+                  "text": "Select a word or sentence to trigger the ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "78026e67-28ad-426b-99ce-36d53ffb4d70",
+                  "type": "text",
+                  "text": "quick toolbar",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "67af2c68-e113-42d2-9edc-f3488d99f14d",
+                  "type": "text",
+                  "text": " with text formatting options.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "27bacdda-0928-40b2-887a-143c3280cb8d",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "904bf073-8c10-45d8-afa3-f4d53388f2e8",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "2155a700-c90a-43a8-a9cd-d94fc08d0907",
+                  "type": "text",
+                  "text": "Type ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "a5d38b5b-f953-4fe4-94a4-0a67c3f07ddd",
+                  "type": "text",
+                  "text": "/",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "code",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "31648a5e-6330-43a1-8395-19aaf24cfe67",
+                  "type": "text",
+                  "text": " on a new line to open the ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "e8d81ecf-dd25-4347-b955-a4e513587abe",
+                  "type": "text",
+                  "text": "slash command",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "bold",
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "49ca0622-d105-4e04-b71d-d60e66b7efa3",
+                  "type": "text",
+                  "text": " menu and insert elements like tables, images, or lists.",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        },
+        {
+          "id": "d8915e82-86f2-4b22-a8d7-39422c4b3bcf",
+          "type": "listItem",
+          "attrs": {
+            "align": null
+          },
+          "children": [
+            {
+              "id": "8ea97d78-4d79-4655-8592-08df13d9df83",
+              "type": "paragraph",
+              "attrs": {
+                "align": null,
+                "indent": 0
+              },
+              "children": [
+                {
+                  "id": "32926bf1-94ee-437a-b63e-d6ec050a7639",
+                  "type": "text",
+                  "text": "Highlight text and try changing the ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "efa55648-9028-4dfd-896e-279de557b9af",
+                  "type": "text",
+                  "text": "font color",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": "#e74c3c",
+                        "backgroundColor": null,
+                        "fontFamily": null,
+                        "fontSize": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "bfdbd67e-2f4e-419c-95eb-8c8b3d2ee36a",
+                  "type": "text",
+                  "text": " or ",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                },
+                {
+                  "id": "c2d7e03c-47a8-4d35-8f31-ddc297864ef3",
+                  "type": "text",
+                  "text": "background color",
+                  "attrs": {},
+                  "children": [],
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": null,
+                        "backgroundColor": "#fff3cd",
+                        "fontFamily": null,
+                        "fontSize": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "3319010a-0137-402a-b4e6-695f3eaf1342",
+                  "type": "text",
+                  "text": ".",
+                  "attrs": {},
+                  "children": [],
+                  "marks": []
+                }
+              ],
+              "marks": []
+            }
+          ],
+          "marks": []
+        }
+      ],
+      "marks": []
+    }
+  ],
+  "marks": []
+}

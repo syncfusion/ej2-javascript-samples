@@ -37,18 +37,22 @@ this.default = function () {
         { Name: 'William', Eimg: '10', EmailId: 'william@gmail.com' }
     ];
 
-    var itemTemplate =
-        '<table class="mail-item"><tr>' +
-        '<td><img class="mail-item-img" src="src/rich-text-editor-ui/images/${Eimg}.png" alt="${Name}" /></td>' +
-        '<td><span class="mail-item-name">${Name}</span>' +
-        '<span class="mail-item-email">${EmailId}</span></td>' +
-        '</tr></table>';
+    var itemTemplate = function (data) {
+        var image = data.Eimg ? String(data.Eimg) : 'dp';
+        return '<table class="mail-item"><tr>' +
+            '<td><img class="mail-item-img" src="src/rich-text-editor-ui/images/' + image + '.png" alt="' + data.Name + '" /></td>' +
+            '<td><span class="mail-item-name">' + data.Name + '</span>' +
+            '<span class="mail-item-email">' + data.EmailId + '</span></td>' +
+            '</tr></table>';
+    };
 
-    var valueTemplate =
-        '<div class="mail-value">' +
-        '<img class="mail-value-img" src="src/rich-text-editor-ui/images/${Eimg}.png" alt="${Name}" />' +
-        '<span class="mail-value-name">${Name}</span>' +
-        '</div>';
+    var valueTemplate = function (data) {
+        var image = data.Eimg ? String(data.Eimg) : 'dp';
+        return '<div class="mail-value">' +
+            '<img class="mail-value-img" src="src/rich-text-editor-ui/images/' + image + '.png" alt="' + data.Name + '" />' +
+            '<span class="mail-value-name">' + data.Name + '</span>' +
+            '</div>';
+    };
 
     var toRecipient = new ej.dropdowns.MultiSelect({
         dataSource: emailData,

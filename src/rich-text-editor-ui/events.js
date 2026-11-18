@@ -20,13 +20,12 @@ this.default = function () {
         },
         created: create,
         destroyed: destroyed,
-        focused: focus,
-        blurred: blur,
+        focus: focus,
+        blur: blur,
         actionBegin: actionBegin,
         actionComplete: actionComplete,
         change: change,
         itemClick: itemClick,
-        updatedToolbarStatus: updatedToolbarStatus,
         beforeDialogOpen: beforeDialogOpen,
         beforeDialogClose: beforeDialogClose,
         beforeFileUpload: beforeFileUpload
@@ -79,10 +78,6 @@ this.default = function () {
 
     function itemClick(args) {
         appendElement('Rich Text Editor UI <b>toolbar click</b> event called (itemId: ' + args.itemId + ')<hr>');
-    }
-
-    function updatedToolbarStatus() {
-        appendElement('Rich Text Editor UI <b>updatedToolbarStatus</b> event called<hr>');
     }
 
     function beforeDialogOpen() {

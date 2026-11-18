@@ -67,7 +67,8 @@ this.default = function () {
             { field: 'StartDate' },
             { field: 'EndDate', validationRules: { required: [customFn, 'Please enter a value greater than the start date.'] } },
             { field: 'Progress', validationRules: { required: true, min: 0, max: 100 } },
-            { field: 'Predecessor' }
+            { field: 'Predecessor' },
+            { field: 'info', disableHtmlEncode: true }
         ],
         labelSettings: {
             leftLabel: 'TaskName',

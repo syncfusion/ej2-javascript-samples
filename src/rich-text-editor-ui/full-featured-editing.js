@@ -35,8 +35,11 @@ this.default = function () {
             value: data,
             toolbarSettings: {
                 items: [
-                    'Undo', 'Redo', '|', 'Formats', '|', 'Bold', 'Italic', 'Underline', 'Strikethrough', 'InlineCode', '|', 'FontName', 'FontSize', '|', 'LowerCase', 'UpperCase', '|', 'Superscript', 'Subscript' , '|', 'FontColor', 'BackgroundColor', '|', 'BulletFormatList', 'NumberFormatList', '|', 'Link', 'Image', 'Table', '|', 'Indent', 'Outdent', '|', 'Alignment', '|', 'HorizontalLine', 'Quote', 'CodeBlock', '|', 'ClearFormat'
+                    'Undo', 'Redo', '|', 'Bold', 'Italic', 'Underline', 'Strikethrough', 'InlineCode', '|', 'Link', 'Image', 'Table', 'CodeBlock', 'HorizontalLine', 'Quote', '|', 'Formats', 'Alignment', 'Callout', '|', 'BulletFormatList', 'NumberFormatList', 'Checklist', '|', 'Outdent', 'Indent', '|', 'FontColor', 'BackgroundColor', 'FontName', 'FontSize', '|', 'LowerCase', 'UpperCase', '|', 'Superscript', 'Subscript', '|', 'ClearFormat'
                 ]
+            },
+            quickToolbarSettings: {
+                text: ['Bold', 'Italic', 'Underline', 'Strikethrough', 'BackgroundColor', 'FontColor', '|', 'Formats', '|', 'Link', 'Table', 'Image', 'ClearFormat']
             },
             slashCommandSettings: {
                 enable: true

@@ -1,5 +1,10 @@
 <div class="col-lg-8 control-section">
     <div id="editor"></div>
+
+    <div id="value-format-output-panel" class="e-rte-api-methods">
+        <h4>Value Format Result</h4>
+        <pre id="value-format-output" aria-live="polite"></pre>
+    </div>
 </div>
 <div class="col-lg-4 property-section">
     <div id="property" title="Properties" class="editor-properties">
@@ -41,5 +46,28 @@
 <style>
     .editor-properties div {
         padding-left: 0px;
+    }
+    #value-format-output-panel {
+        margin-top: 16px;
+    }
+    #value-format-output-panel h4 {
+        margin: 0 0 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    #value-format-output {
+        margin: 0;
+        padding: 12px;
+        font-family: inherit;
+        font-size: 13px;
+        line-height: 1.5;
+        min-height: 200px;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        box-sizing: border-box;
+        background: transparent;
     }
 </style>

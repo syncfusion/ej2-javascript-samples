@@ -1,10 +1,30 @@
 this.default = function () {
     var propertiesRTE = new ej.richtexteditorui.RichTextEditorUI({
         value: '<p>Welcome to Rich Text Editor</p>',
-        valueFormat: 'html'
+        valueFormat: 'html',
+        enablePersistence: true,
+        saveInterval: 100,
+        change: function () {
+            log(propertiesRTE.value);
+        }
     });
-
     propertiesRTE.appendTo('#editor');
+
+    var output = document.getElementById('value-format-output');
+
+    function log(value) {
+        var text;
+
+        if (value === undefined || value === null) {
+            text = String(value);
+        } else if (typeof value === 'string') {
+            text = value;
+        } else {
+            text = JSON.stringify(value, null, 2);
+        }
+
+        output.textContent = text;
+    }
 
     var valueFormatData = [
         { text: 'HTML', value: 'html' },
@@ -22,6 +42,8 @@ this.default = function () {
             propertiesRTE.valueFormat = args.value;
             propertiesRTE.value = currentValue;
             propertiesRTE.dataBind();
+
+            log(propertiesRTE.value);
         }
     });
 
@@ -58,12 +80,14 @@ this.default = function () {
     enableRTLCheckbox.appendTo('#enableRTL');
 
     var enablePersistenceCheckbox = new ej.buttons.CheckBox({
-        checked: false,
+        checked: true,
         label: 'Enable Persistence',
         change: function (args) {
             propertiesRTE.enablePersistence = args.checked;
+            propertiesRTE.dataBind();
         }
     });
 
     enablePersistenceCheckbox.appendTo('#enablePersistence');
+    log(propertiesRTE.value);
 };

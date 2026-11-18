@@ -54,6 +54,9 @@ this.default = function () {
             return;
         }
 
+        sendBtn.classList.remove('e-tbar-btn');
+        sendBtn.classList.add('e-primary');
+
         sendBtn.onclick = function () {
 
             var html = chatRTE.getHtml();
@@ -90,7 +93,7 @@ this.default = function () {
 
             chatRTE.value = '';
             chatRTE.dataBind();
-            chatRTE.focus();
+            chatRTE.focusIn();
         };
     }
 
@@ -131,14 +134,19 @@ this.default = function () {
                         'Bold',
                         'Italic',
                         'Underline',
-                        '|',
-                        'FontColor',
-                        'BackgroundColor',
+                        'Strikethrough',
                         '|',
                         'BulletFormatList',
                         'NumberFormatList',
                         '|',
+                        'Formats',
+                        'FontColor',
+                        'FontSize',
+                        'BackgroundColor',
+                        '|',
+                        'Quote',
                         'Link',
+                        'CodeBlock',
                         'Image',
                         '|',
                         {
@@ -146,9 +154,11 @@ this.default = function () {
                             id: 'send_tbar',
                             tooltipText: 'Send Message',
                             actionId: 'sendMessage',
-                            prefixIcon: 'e-icons e-send'
+                            prefixIcon: 'e-icons e-send',
+                            overflow: 'Show'
                         }
-                    ]
+                    ],
+                    type: 'Expanded'
                 },
 
                 created: onCreate

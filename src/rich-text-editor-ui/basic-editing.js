@@ -29,7 +29,7 @@ this.default = function () {
             value: data,
             toolbarSettings: {
                 items: [
-                    'Undo', 'Redo', '|', 'Bold', 'Italic', 'Underline', 'Strikethrough', 'Subscript', 'Superscript', '|', 'Formats', 'Alignment', '|', 'Link', 'Image', '|', 'FontColor', 'BackgroundColor', '|' , 'NumberedList', 'BulletList', '|', 'ClearFormat'
+                    'Undo', 'Redo', '|', 'Bold', 'Italic', 'Underline', 'Strikethrough', 'Subscript', 'Superscript', '|', 'FontColor', 'BackgroundColor',  '|', 'Formats', 'Alignment', '|', 'Link', 'Image', 'Table' , '|', 'NumberedList', 'BulletList', '|', 'Quote', 'ClearFormat'
                 ]
             },
             placeholder: 'Type something.'
